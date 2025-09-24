@@ -60,6 +60,50 @@ export const DNGToWebPConverter: React.FC = () => {
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Utility function to properly decode UTF-8 filenames
+  const decodeFilename = (filename: string): string => {
+    if (!filename) return filename;
+    
+    try {
+      // First try to decode if it's URL encoded
+      const urlDecoded = decodeURIComponent(filename);
+      
+      // Check if the result contains garbled characters (like â instead of ą)
+      if (urlDecoded.includes('â') || urlDecoded.includes('Ä') || urlDecoded.includes('Å')) {
+        // Try to fix common encoding issues
+        let fixed = urlDecoded
+          .replace(/â/g, 'ą')
+          .replace(/Ä/g, 'Ą') 
+          .replace(/Å/g, 'Ą')
+          .replace(/Ä/g, 'ć')
+          .replace(/Ä/g, 'Ć')
+          .replace(/Ä/g, 'ę')
+          .replace(/Ä/g, 'Ę')
+          .replace(/Å/g, 'ł')
+          .replace(/Å/g, 'Ł')
+          .replace(/Å/g, 'ń')
+          .replace(/Å/g, 'Ń')
+          .replace(/Ã³/g, 'ó')
+          .replace(/Ã/g, 'Ó')
+          .replace(/Å/g, 'ś')
+          .replace(/Å/g, 'Ś')
+          .replace(/Å/g, 'ź')
+          .replace(/Å/g, 'Ź')
+          .replace(/Å/g, 'ż')
+          .replace(/Å/g, 'Ż');
+        
+        console.log('Fixed encoding:', filename, '->', fixed);
+        return fixed;
+      }
+      
+      return urlDecoded;
+    } catch (e) {
+      console.log('Could not decode filename:', filename, e);
+      // If decoding fails, return original filename
+      return filename;
+    }
+  };
+
   const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
@@ -163,6 +207,17 @@ export const DNGToWebPConverter: React.FC = () => {
       };
 
       const result = await apiService.convertBatch(batchFiles, options);
+      
+      // Debug: Log the received results
+      console.log('Frontend received batch results:', result.results);
+      result.results.forEach((res, index) => {
+        console.log(`Result ${index + 1}:`, {
+          originalName: res.originalName,
+          outputFilename: res.outputFilename,
+          originalNameHex: Buffer.from(res.originalName || '', 'utf8').toString('hex'),
+          outputFilenameHex: Buffer.from(res.outputFilename || '', 'utf8').toString('hex')
+        });
+      });
       
       if (result.success) {
         // Store the results and show download buttons instead of auto-downloading
@@ -503,7 +558,7 @@ export const DNGToWebPConverter: React.FC = () => {
                               <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
                             )}
                             <span className="text-sm font-medium text-gray-900">
-                              {result.outputFilename || result.originalName}
+                              {decodeFilename(result.outputFilename || result.originalName)}
                             </span>
                             {result.size && (
                               <span className="text-xs text-gray-500 ml-2">
