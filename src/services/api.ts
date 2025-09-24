@@ -79,7 +79,13 @@ class ApiService {
 
   async convertFile(file: File, options: ConversionOptions = {}): Promise<ConversionResult> {
     const formData = new FormData();
-    formData.append('file', file);
+    
+    // Create a new File object to ensure proper UTF-8 encoding
+    const fileWithProperName = new File([file], file.name, {
+      type: file.type,
+      lastModified: file.lastModified
+    });
+    formData.append('file', fileWithProperName);
     
     // Add conversion options
     if (options.quality) formData.append('quality', options.quality);
@@ -106,9 +112,14 @@ class ApiService {
   async convertBatch(files: File[], options: ConversionOptions = {}): Promise<BatchConversionResult> {
     const formData = new FormData();
     
-    // Add files
+    // Add files with proper UTF-8 handling
     files.forEach(file => {
-      formData.append('files', file);
+      // Create a new File object to ensure proper UTF-8 encoding
+      const fileWithProperName = new File([file], file.name, {
+        type: file.type,
+        lastModified: file.lastModified
+      });
+      formData.append('files', fileWithProperName);
     });
     
     // Add conversion options
