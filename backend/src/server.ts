@@ -7,9 +7,53 @@ import sharp from 'sharp';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import os from 'os';
+
+const execAsync = promisify(exec);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// RAW file extensions
+const RAW_EXTENSIONS = ['dng', 'cr2', 'cr3', 'nef', 'arw', 'rw2', 'pef', 'orf', 'raf', 'x3f', 'raw'];
+
+// Function to check if file is RAW
+const isRAWFile = (filename: string): boolean => {
+  const ext = filename.split('.').pop()?.toLowerCase();
+  return RAW_EXTENSIONS.includes(ext || '');
+};
+
+// Function to process RAW file with dcraw
+const processRAWFile = async (inputBuffer: Buffer, filename: string): Promise<Buffer> => {
+  const tempDir = os.tmpdir();
+  const inputPath = path.join(tempDir, `input_${Date.now()}_${filename}`);
+  
+  try {
+    // Write input buffer to temporary file
+    await fs.writeFile(inputPath, inputBuffer);
+    
+    // Use dcraw to convert RAW to TIFF
+    // -T: write TIFF instead of PPM
+    // -w: use camera white balance
+    // -6: 16-bit output
+    // -c: write to stdout
+    const dcrawCommand = `dcraw -T -w -6 -c "${inputPath}"`;
+    
+    const { stdout } = await execAsync(dcrawCommand);
+    const convertedBuffer = Buffer.from(stdout, 'binary');
+    
+    return convertedBuffer;
+  } finally {
+    // Clean up temporary files
+    try {
+      await fs.unlink(inputPath);
+    } catch (cleanupError) {
+      console.warn('Failed to clean up temporary file:', cleanupError);
+    }
+  }
+};
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -86,7 +130,20 @@ app.post('/api/convert', upload.single('file'), async (req, res) => {
     const qualityValue = quality === 'high' ? 95 : quality === 'medium' ? 80 : 60;
     const isLossless = lossless === 'true';
 
-    let sharpInstance = sharp(file.buffer, { 
+    // Check if this is a RAW file and process it first
+    let imageBuffer = file.buffer;
+    if (isRAWFile(file.originalname)) {
+      console.log(`Detected RAW file: ${file.originalname}, processing with dcraw...`);
+      try {
+        imageBuffer = await processRAWFile(file.buffer, file.originalname);
+        console.log(`RAW file processed successfully, converted buffer size: ${imageBuffer.length} bytes`);
+      } catch (rawError) {
+        console.error('RAW processing error:', rawError);
+        return res.status(400).json({ error: 'Failed to process RAW file. Please ensure the file is a valid RAW format.' });
+      }
+    }
+
+    let sharpInstance = sharp(imageBuffer, { 
       failOn: 'truncated',
       unlimited: true // Allow very large images
     });
@@ -220,7 +277,24 @@ app.post('/api/convert/batch', upload.array('files', 10), async (req, res) => {
 
     for (const file of files) {
       try {
-        let sharpInstance = sharp(file.buffer, { 
+        // Check if this is a RAW file and process it first
+        let imageBuffer = file.buffer;
+        if (isRAWFile(file.originalname)) {
+          console.log(`Processing RAW file in batch: ${file.originalname}`);
+          try {
+            imageBuffer = await processRAWFile(file.buffer, file.originalname);
+          } catch (rawError) {
+            console.error(`RAW processing error for ${file.originalname}:`, rawError);
+            results.push({
+              originalName: file.originalname,
+              success: false,
+              error: 'Failed to process RAW file'
+            });
+            continue;
+          }
+        }
+
+        let sharpInstance = sharp(imageBuffer, { 
           failOn: 'truncated',
           unlimited: true
         });
