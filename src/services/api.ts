@@ -128,6 +128,17 @@ class ApiService {
   private extractFilename(contentDisposition: string | null): string | null {
     if (!contentDisposition) return null;
     
+    // First try to get UTF-8 encoded filename (RFC 5987)
+    const utf8Matches = contentDisposition.match(/filename\*=UTF-8''([^;]+)/);
+    if (utf8Matches) {
+      try {
+        return decodeURIComponent(utf8Matches[1]);
+      } catch (e) {
+        console.warn('Failed to decode UTF-8 filename:', e);
+      }
+    }
+    
+    // Fallback to regular filename
     const matches = contentDisposition.match(/filename="([^"]+)"/);
     return matches ? matches[1] : null;
   }
@@ -138,6 +149,10 @@ class ApiService {
     const link = document.createElement('a');
     link.href = url;
     link.download = filename;
+    
+    // Set charset to ensure proper handling of international characters
+    link.setAttribute('charset', 'UTF-8');
+    
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -150,8 +165,12 @@ class ApiService {
       const response = await this.makeRequest(`/download/${filename}`);
       const blob = await response.blob();
       
-      // Use original filename if provided, otherwise use the server filename
-      const downloadFilename = originalFilename || filename.replace(/^\d+_/, ''); // Remove timestamp prefix
+      // Try to extract filename from Content-Disposition header first
+      const contentDisposition = response.headers.get('Content-Disposition');
+      const extractedFilename = this.extractFilename(contentDisposition);
+      
+      // Use extracted filename, then originalFilename, then fallback to cleaned filename
+      const downloadFilename = extractedFilename || originalFilename || filename.replace(/^\d+_/, '');
       
       this.downloadBlob(blob, downloadFilename);
     } catch (error) {
