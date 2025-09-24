@@ -85,6 +85,22 @@ export const DNGToWebPConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
+    
+    // Check total batch size
+    const totalSize = files.reduce((sum, file) => sum + file.size, 0);
+    const maxBatchSize = 100 * 1024 * 1024; // 100MB limit
+    
+    if (totalSize > maxBatchSize) {
+      const totalSizeMB = Math.round(totalSize / 1024 / 1024);
+      setError(`Batch too large! Total size: ${totalSizeMB}MB. Maximum allowed: 100MB. Please select fewer files or smaller files.`);
+      setBatchFiles([]);
+      // Clear the input
+      if (event.target) {
+        event.target.value = '';
+      }
+      return;
+    }
+    
     setBatchFiles(files);
     setError(null);
   };
@@ -254,12 +270,17 @@ export const DNGToWebPConverter: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple DNG Files' : 'Upload DNG File'}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-2">
                   {batchMode 
                     ? 'Select multiple RAW (DNG, CR2, NEF...) or image files to convert them all at once' 
                     : 'Drag and drop your RAW (DNG, CR2, NEF...) or image file here or click to browse'
                   }
                 </p>
+                {batchMode && (
+                  <p className="text-sm text-amber-600 mb-4">
+                    💡 Maximum batch size: 100MB total. For best performance, process 5-10 files at once.
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -335,15 +356,42 @@ export const DNGToWebPConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, file) => sum + file.size, 0);
+                    const totalSizeMB = Math.round(totalSize / 1024 / 1024 * 10) / 10; // 1 decimal place
+                    const isNearLimit = totalSize > 80 * 1024 * 1024; // 80MB warning threshold
+                    
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${isNearLimit ? 'text-orange-600' : 'text-gray-600'}`}>
+                            Total: {totalSizeMB}MB / 100MB limit
+                          </div>
+                        </div>
+                        
+                        {isNearLimit && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
