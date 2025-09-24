@@ -40,6 +40,7 @@ export interface BatchConversionResult {
     size?: number;
     success: boolean;
     error?: string;
+    downloadPath?: string; // New field for file-based downloads
   }>;
 }
 
@@ -141,6 +142,22 @@ class ApiService {
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+  }
+
+  // Method to download file from the new file-based endpoint
+  async downloadFile(filename: string, originalFilename?: string): Promise<void> {
+    try {
+      const response = await this.makeRequest(`/download/${filename}`);
+      const blob = await response.blob();
+      
+      // Use original filename if provided, otherwise use the server filename
+      const downloadFilename = originalFilename || filename.replace(/^\d+_/, ''); // Remove timestamp prefix
+      
+      this.downloadBlob(blob, downloadFilename);
+    } catch (error) {
+      console.error('Download failed:', error);
+      throw new Error('Failed to download file');
+    }
   }
 }
 

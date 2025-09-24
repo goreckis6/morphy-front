@@ -49,6 +49,14 @@ export const DNGToWebPConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{
+    originalName: string;
+    outputFilename?: string;
+    size?: number;
+    success: boolean;
+    error?: string;
+    downloadPath?: string;
+  }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -157,18 +165,8 @@ export const DNGToWebPConverter: React.FC = () => {
       const result = await apiService.convertBatch(batchFiles, options);
       
       if (result.success) {
-        // Download each successfully converted file
-        for (const fileResult of result.results) {
-          if (fileResult.success && fileResult.outputFilename) {
-            // For batch API, we need to download each file individually
-            const file = batchFiles.find(f => f.name === fileResult.originalName);
-            if (file) {
-              const converted = await handleConvert(file);
-              apiService.downloadBlob(converted, fileResult.outputFilename);
-              await new Promise(resolve => setTimeout(resolve, 500));
-            }
-          }
-        }
+        // Store the results and show download buttons instead of auto-downloading
+        setBatchResults(result.results);
         setBatchConverted(true);
       } else {
         setError('Batch conversion failed. Please try again.');
@@ -184,6 +182,21 @@ export const DNGToWebPConverter: React.FC = () => {
     if (convertedFile && selectedFile) {
       const filename = selectedFile.name.replace(/\.[^.]+$/, '.webp');
       apiService.downloadBlob(convertedFile, filename);
+    }
+  };
+
+  const handleBatchDownload = async (result: any) => {
+    if (result.downloadPath) {
+      try {
+        // Extract filename from download path (e.g., "/download/1234567890_file.webp" -> "1234567890_file.webp")
+        const filename = result.downloadPath.split('/').pop();
+        if (filename) {
+          await apiService.downloadFile(filename, result.outputFilename);
+        }
+      } catch (error) {
+        console.error('Download failed:', error);
+        setError('Failed to download file. Please try again.');
+      }
     }
   };
 
@@ -206,6 +219,7 @@ export const DNGToWebPConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
+    setBatchResults([]);
     setImagePreview(null);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
@@ -466,22 +480,63 @@ export const DNGToWebPConverter: React.FC = () => {
               )}
 
               {/* Batch Conversion Success */}
-              {batchConverted && batchMode && (
+              {batchConverted && batchMode && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
-                  <p className="text-green-700 mb-4">
-                    All {batchFiles.length} DNG files have been successfully converted to WebP format and downloaded.
-                  </p>
-                  <button
-                    onClick={resetForm}
-                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
+                  
+                  <div className="mb-4">
+                    <p className="text-green-700 mb-3">
+                      {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    </p>
+                    
+                    {/* Show successful conversions with download buttons */}
+                    <div className="space-y-2 max-h-60 overflow-y-auto">
+                      {batchResults.map((result, index) => (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border">
+                          <div className="flex items-center">
+                            {result.success ? (
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                            ) : (
+                              <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                            )}
+                            <span className="text-sm font-medium text-gray-900">
+                              {result.outputFilename || result.originalName}
+                            </span>
+                            {result.size && (
+                              <span className="text-xs text-gray-500 ml-2">
+                                ({Math.round(result.size / 1024)} KB)
+                              </span>
+                            )}
+                          </div>
+                          
+                          {result.success && result.downloadPath ? (
+                            <button
+                              onClick={() => handleBatchDownload(result)}
+                              className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors flex items-center"
+                            >
+                              <Download className="w-3 h-3 mr-1" />
+                              Download
+                            </button>
+                          ) : result.error ? (
+                            <span className="text-xs text-red-600">{result.error}</span>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
