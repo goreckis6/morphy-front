@@ -65,38 +65,62 @@ export const DNGToWebPConverter: React.FC = () => {
     if (!filename) return filename;
     
     try {
-      // First try to decode if it's URL encoded
-      const urlDecoded = decodeURIComponent(filename);
+      // The issue is that UTF-8 bytes are being displayed as literal \x80\x94 text
+      // We need to convert these back to proper characters
+      let fixed = filename;
       
-      // Check if the result contains garbled characters (like â instead of ą)
-      if (urlDecoded.includes('â') || urlDecoded.includes('Ä') || urlDecoded.includes('Å')) {
-        // Try to fix common encoding issues
-        let fixed = urlDecoded
-          .replace(/â/g, 'ą')
-          .replace(/Ä/g, 'Ą') 
-          .replace(/Å/g, 'Ą')
-          .replace(/Ä/g, 'ć')
-          .replace(/Ä/g, 'Ć')
-          .replace(/Ä/g, 'ę')
-          .replace(/Ä/g, 'Ę')
-          .replace(/Å/g, 'ł')
-          .replace(/Å/g, 'Ł')
-          .replace(/Å/g, 'ń')
-          .replace(/Å/g, 'Ń')
-          .replace(/Ã³/g, 'ó')
-          .replace(/Ã/g, 'Ó')
-          .replace(/Å/g, 'ś')
-          .replace(/Å/g, 'Ś')
-          .replace(/Å/g, 'ź')
-          .replace(/Å/g, 'Ź')
-          .replace(/Å/g, 'ż')
-          .replace(/Å/g, 'Ż');
-        
-        console.log('Fixed encoding:', filename, '->', fixed);
-        return fixed;
+      // Handle the specific pattern we're seeing: â\x80\x94 (which should be —)
+      // This is the UTF-8 encoding of em dash being displayed incorrectly
+      fixed = fixed.replace(/â\\x80\\x94/g, '—'); // Replace â\x80\x94 with proper em dash
+      fixed = fixed.replace(/â\x80\x94/g, '—');   // Replace â\x80\x94 with proper em dash
+      
+      // Handle other common UTF-8 sequences that might appear as literal text
+      fixed = fixed.replace(/\\x80\\x94/g, '—'); // Em dash
+      fixed = fixed.replace(/\\x80\\x93/g, '–'); // En dash
+      fixed = fixed.replace(/\\x80\\x99/g, '');  // Right single quotation mark
+      fixed = fixed.replace(/\\x80\\x9c/g, '"'); // Left double quotation mark
+      fixed = fixed.replace(/\\x80\\x9d/g, '"'); // Right double quotation mark
+      
+      // Also handle actual UTF-8 bytes if they exist
+      fixed = fixed.replace(/\x80\x94/g, '—'); // Convert actual UTF-8 bytes to em dash
+      
+      // Handle other common UTF-8 encoding issues
+      fixed = fixed
+        .replace(/â/g, 'ą')      // a with ogonek
+        .replace(/Ä/g, 'Ą')      // A with ogonek (uppercase)
+        .replace(/Ä/g, 'ć')      // c with acute
+        .replace(/Ä/g, 'Ć')      // C with acute (uppercase)
+        .replace(/Ä/g, 'ę')      // e with ogonek
+        .replace(/Ä/g, 'Ę')      // E with ogonek (uppercase)
+        .replace(/Å/g, 'ł')      // l with stroke
+        .replace(/Å/g, 'Ł')      // L with stroke (uppercase)
+        .replace(/Å/g, 'ń')      // n with acute
+        .replace(/Å/g, 'Ń')      // N with acute (uppercase)
+        .replace(/Ã³/g, 'ó')     // o with acute
+        .replace(/Ã/g, 'Ó')      // O with acute (uppercase)
+        .replace(/Å/g, 'ś')      // s with acute
+        .replace(/Å/g, 'Ś')      // S with acute (uppercase)
+        .replace(/Å/g, 'ź')      // z with acute
+        .replace(/Å/g, 'Ź')      // Z with acute (uppercase)
+        .replace(/Å/g, 'ż')      // z with dot above
+        .replace(/Å/g, 'Ż');     // Z with dot above (uppercase)
+      
+      // Try URL decoding as well
+      try {
+        const urlDecoded = decodeURIComponent(fixed);
+        if (urlDecoded !== fixed) {
+          console.log('URL decoded filename:', fixed, '->', urlDecoded);
+          return urlDecoded;
+        }
+      } catch (e) {
+        // URL decoding failed, continue with fixed version
       }
       
-      return urlDecoded;
+      if (fixed !== filename) {
+        console.log('Fixed encoding:', filename, '->', fixed);
+      }
+      
+      return fixed;
     } catch (e) {
       console.log('Could not decode filename:', filename, e);
       // If decoding fails, return original filename
