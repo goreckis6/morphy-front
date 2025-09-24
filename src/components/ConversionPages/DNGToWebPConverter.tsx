@@ -56,6 +56,7 @@ export const DNGToWebPConverter: React.FC = () => {
     success: boolean;
     error?: string;
     downloadPath?: string;
+    storedFilename?: string;
   }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -265,17 +266,17 @@ export const DNGToWebPConverter: React.FC = () => {
   };
 
   const handleBatchDownload = async (result: any) => {
-    if (result.downloadPath) {
-      try {
-        // Extract filename from download path (e.g., "/download/1234567890_file.webp" -> "1234567890_file.webp")
-        const filename = result.downloadPath.split('/').pop();
-        if (filename) {
-          await apiService.downloadFile(filename, result.outputFilename);
-        }
-      } catch (error) {
-        console.error('Download failed:', error);
-        setError('Failed to download file. Please try again.');
-      }
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert the file.');
+      return;
+    }
+
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (error) {
+      console.error('Download failed:', error);
+      setError('Failed to download file. Please try again.');
     }
   };
 
