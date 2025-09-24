@@ -86,6 +86,18 @@ export const DNGToWebPConverter: React.FC = () => {
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
     
+    // Check file count limit
+    const maxFiles = 20;
+    if (files.length > maxFiles) {
+      setError(`Too many files! Selected: ${files.length} files. Maximum allowed: ${maxFiles} files. Please select fewer files.`);
+      setBatchFiles([]);
+      // Clear the input
+      if (event.target) {
+        event.target.value = '';
+      }
+      return;
+    }
+    
     // Check total batch size
     const totalSize = files.reduce((sum, file) => sum + file.size, 0);
     const maxBatchSize = 100 * 1024 * 1024; // 100MB limit
@@ -278,7 +290,7 @@ export const DNGToWebPConverter: React.FC = () => {
                 </p>
                 {batchMode && (
                   <p className="text-sm text-amber-600 mb-4">
-                    💡 Maximum batch size: 100MB total. For best performance, process 5-10 files at once.
+                    💡 Maximum batch size: 100MB total. Maximum 20 files. For best performance, process 5-10 files at once.
                   </p>
                 )}
                 <input
