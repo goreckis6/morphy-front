@@ -1,5 +1,20 @@
 // API service for backend communication
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+const getApiBaseUrl = () => {
+  // If environment variable is set, use it
+  if (import.meta.env.VITE_API_BASE_URL) {
+    return import.meta.env.VITE_API_BASE_URL;
+  }
+  
+  // If we're in production (deployed), use the production backend
+  if (import.meta.env.PROD) {
+    return 'https://morphy-2-n2tb.onrender.com';
+  }
+  
+  // Default to localhost for development
+  return 'http://localhost:3000';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 export interface ConversionOptions {
   quality?: 'high' | 'medium' | 'low';
