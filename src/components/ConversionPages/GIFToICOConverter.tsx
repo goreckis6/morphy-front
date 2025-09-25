@@ -269,6 +269,9 @@ export const GIFToICOConverter: React.FC = () => {
                     : 'Drag and drop your GIF file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-purple-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
                 {batchMode && (
                   <p className="text-sm text-purple-600 mb-4">
                     {getBatchInfoMessage()}

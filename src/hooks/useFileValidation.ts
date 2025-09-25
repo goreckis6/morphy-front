@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // Standard file validation limits - can be adjusted based on user account in the future
 export const FILE_LIMITS = {
-  SINGLE_FILE_MAX_SIZE: 200 * 1024 * 1024, // 200MB per file
+  SINGLE_FILE_MAX_SIZE: 100 * 1024 * 1024, // 100MB per file (aligned with backend)
   BATCH_MAX_TOTAL_SIZE: 100 * 1024 * 1024, // 100MB total for batch
   BATCH_MAX_FILES: 20, // Maximum 20 files per batch
   RECOMMENDED_BATCH_SIZE: '5-10', // Recommended batch size for performance
@@ -78,6 +78,10 @@ export const useFileValidation = () => {
     return `💡 Maximum batch size: ${formatFileSize(FILE_LIMITS.BATCH_MAX_TOTAL_SIZE)} total. Maximum ${FILE_LIMITS.BATCH_MAX_FILES} files. For best performance, process ${FILE_LIMITS.RECOMMENDED_BATCH_SIZE} files at once.`;
   };
 
+  const getSingleInfoMessage = (): string => {
+    return `💡 Maximum file size: ${formatFileSize(FILE_LIMITS.SINGLE_FILE_MAX_SIZE)} per file.`;
+  };
+
   const getBatchSizeDisplay = (currentSize: number): { text: string; isWarning: boolean } => {
     const percentage = (currentSize / FILE_LIMITS.BATCH_MAX_TOTAL_SIZE) * 100;
     const isWarning = percentage >= 80;
@@ -97,6 +101,7 @@ export const useFileValidation = () => {
     validateSingleFile,
     validateBatchFiles,
     getBatchInfoMessage,
+    getSingleInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
     clearValidationError,

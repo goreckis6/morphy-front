@@ -334,6 +334,9 @@ export const DNGToWebPConverter: React.FC = () => {
                     {getBatchInfoMessage()}
                   </p>
                 )}
+                {!batchMode && (
+                  <p className="text-xs text-amber-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"

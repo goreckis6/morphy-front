@@ -231,6 +231,12 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                     : 'Drag and drop your AVRO file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-blue-600 mb-4">{getBatchInfoMessage()}</p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"

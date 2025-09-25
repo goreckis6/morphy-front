@@ -298,6 +298,9 @@ export const EPSToICOConverter: React.FC = () => {
                     : 'Drag and drop your EPS file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-emerald-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
                 {batchMode && (
                   <p className="text-sm text-emerald-600 mb-4">
                     {getBatchInfoMessage()}

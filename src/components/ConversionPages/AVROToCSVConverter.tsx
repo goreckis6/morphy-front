@@ -267,6 +267,10 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
                     : 'Drag and drop your AVRO file here or click to browse'
                   }
                 </p>
+                {/* Single-file limit info */}
+                {!batchMode && (
+                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
                 {batchMode && (
                   <p className="text-sm text-blue-600 mb-4">
                     {getBatchInfoMessage()}
