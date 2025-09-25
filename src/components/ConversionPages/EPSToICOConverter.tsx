@@ -274,7 +274,7 @@ export const EPSToICOConverter: React.FC = () => {
                   <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <Vector className="w-12 h-12 text-gray-400" />
+                      <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
                       {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
@@ -417,32 +417,28 @@ export const EPSToICOConverter: React.FC = () => {
                 ICO Settings
               </h3>
               
-              {/* Icon Sizes */}
+              {/* Icon Size Selector */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Icon Sizes
+                  Icon Size
                 </label>
-                <div className="grid grid-cols-3 gap-2">
+                <select
+                  value={iconSizes[0]}
+                  onChange={(e) => {
+                    const size = parseInt(e.target.value);
+                    setIconSizes([size]);
+                  }}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                >
                   {[16, 32, 48, 64, 128, 256].map(size => (
-                    <label key={size} className={`flex items-center ${size === 16 ? 'opacity-60' : ''}`}>
-                      <input
-                        type="checkbox"
-                        checked={iconSizes.includes(size)}
-                        disabled={size === 16}
-                        onChange={(e) => {
-                          if (size === 16) return;
-                          if (e.target.checked) {
-                            setIconSizes([...iconSizes, size]);
-                          } else {
-                            setIconSizes(iconSizes.filter(s => s !== size));
-                          }
-                        }}
-                        className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500 disabled:cursor-not-allowed"
-                      />
-                      <span className="ml-2 text-sm">{size}px{size === 16 ? ' (default)' : ''}</span>
-                    </label>
+                    <option key={size} value={size}>
+                      {size}px{size === 16 ? ' (default)' : ''}
+                    </option>
                   ))}
-                </div>
+                </select>
+                <p className="text-sm text-gray-500 mt-2">
+                  ICO files are generated at the selected size. Default is 16×16 pixels.
+                </p>
               </div>
 
               {/* Quality */}
