@@ -37,6 +37,7 @@ export const EPSToICOConverter: React.FC = () => {
     downloadPath?: string;
     storedFilename?: string;
   }>>([]);
+  const [usedIconSize, setUsedIconSize] = useState<number>(16);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -94,6 +95,7 @@ export const EPSToICOConverter: React.FC = () => {
       const result = await handleConvert(selectedFile);
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
+      setUsedIconSize(getPrimaryIconSize());
       setBatchConverted(false);
       setBatchResults([]);
     } catch (err) {
@@ -340,9 +342,7 @@ export const EPSToICOConverter: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
                   </div>
-                  <p className="text-green-700 mb-4">
-                    Your EPS file has been successfully converted to ICO format (default size 16×16).
-                  </p>
+                  <p className="text-green-700 mb-4">Your EPS file has been successfully converted to ICO format (size {usedIconSize}×{usedIconSize}).</p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={handleDownload}
@@ -369,9 +369,7 @@ export const EPSToICOConverter: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
-                  <p className="text-green-700 mb-4">
-                    {batchResults.filter(item => item.success).length} file(s) converted successfully at 16×16 default size.
-                  </p>
+                  <p className="text-green-700 mb-4">{batchResults.filter(item => item.success).length} file(s) converted successfully at {getPrimaryIconSize()}×{getPrimaryIconSize()}.</p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
                       <div key={index} className="flex items-center justify-between bg-white border border-green-100 rounded-lg p-3">
