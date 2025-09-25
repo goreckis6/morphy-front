@@ -166,7 +166,7 @@ export const DNGToWebPConverter: React.FC = () => {
       };
 
       const result = await apiService.convertBatch(batchFiles, options);
-      
+
       // Debug: Log the received results
       console.log('Frontend received batch results:', result.results);
       result.results.forEach((res, index) => {
@@ -177,12 +177,21 @@ export const DNGToWebPConverter: React.FC = () => {
           outputFilenameHex: Buffer.from(res.outputFilename || '', 'utf8').toString('hex')
         });
       });
-      
-      if (result.success) {
-        // Store the results and show download buttons instead of auto-downloading
+
+      const successes = result.results?.filter(r => r.success) ?? [];
+      const failures = result.results?.filter(r => !r.success) ?? [];
+
+      if (successes.length > 0) {
         setBatchResults(result.results);
         setBatchConverted(true);
+        if (failures.length > 0) {
+          setError(`${failures.length} file${failures.length > 1 ? 's' : ''} failed to convert.`);
+        } else {
+          setError(null);
+        }
       } else {
+        setBatchResults(result.results);
+        setBatchConverted(false);
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
