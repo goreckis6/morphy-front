@@ -39,6 +39,7 @@ export const EPSToWebPConverter: React.FC = () => {
     validationError,
     validateSingleFile,
     validateBatchFiles,
+    getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,

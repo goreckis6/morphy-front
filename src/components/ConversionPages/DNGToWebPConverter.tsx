@@ -67,6 +67,7 @@ export const DNGToWebPConverter: React.FC = () => {
     validationError,
     validateSingleFile,
     validateBatchFiles,
+    getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,

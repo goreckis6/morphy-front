@@ -35,6 +35,7 @@ export const AVROToNDJSONConverter: React.FC = () => {
     validationError,
     validateSingleFile,
     validateBatchFiles,
+    getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
