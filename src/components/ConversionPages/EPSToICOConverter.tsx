@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -16,18 +16,32 @@ import {
   File,
   BarChart3
 } from 'lucide-react';
+import { apiService } from '../../services/api';
 
 export const EPSToICOConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSizes, setIconSizes] = useState<number[]>([16, 32, 48, 64, 128, 256]);
+  const [iconSizes, setIconSizes] = useState<number[]>([16]);
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{
+    originalName: string;
+    outputFilename?: string;
+    success: boolean;
+    downloadPath?: string;
+    storedFilename?: string;
+  }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    setIconSizes(prev => (prev.length ? prev : [16]));
+  }, []);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -51,10 +65,18 @@ export const EPSToICOConverter: React.FC = () => {
     setError(null);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would use a library like sharp
-    const icoContent = `Mock ICO content for ${file.name} - Quality: ${quality}, Sizes: ${iconSizes.join(',')}`;
-    return new Blob([icoContent], { type: 'image/x-icon' });
+  const getPrimaryIconSize = () => {
+    if (!iconSizes.length) return 16;
+    return Math.min(...iconSizes);
+  };
+
+  const handleConvert = async (file: File) => {
+    const iconSizeValue = getPrimaryIconSize();
+    return await apiService.convertFile(file, {
+      format: 'ico',
+      iconSize: iconSizeValue,
+      quality
+    });
   };
 
   const handleSingleConvert = async () => {
@@ -64,8 +86,11 @@ export const EPSToICOConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await handleConvert(selectedFile);
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
+      setBatchConverted(false);
+      setBatchResults([]);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -75,18 +100,37 @@ export const EPSToICOConverter: React.FC = () => {
 
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
-    
+
     setIsConverting(true);
     setError(null);
-    
+
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const iconSizeValue = getPrimaryIconSize();
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'ico',
+        iconSize: iconSizeValue,
+        quality
+      });
+
+      setBatchResults(result.results ?? []);
+      const successes = (result.results ?? []).filter((item: any) => item.success);
+      if (successes.length > 0) {
+        setBatchConverted(true);
+        const failures = (result.results ?? []).filter((item: any) => !item.success);
+        setError(failures.length > 0
+          ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed to convert.`
+          : null
+        );
+      } else {
+        setBatchConverted(false);
+        setError('Batch conversion failed. Please try again.');
       }
-      setError(null);
+      setConvertedFile(null);
+      setConvertedFilename(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      setBatchConverted(false);
+      setBatchResults([]);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -94,14 +138,23 @@ export const EPSToICOConverter: React.FC = () => {
 
   const handleDownload = () => {
     if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.eps', '.ico') : 'converted.ico';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      const filename = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.[^.]+$/, '.ico') : 'converted.ico');
+      apiService.downloadBlob(convertedFile, filename);
+    }
+  };
+
+  const handleBatchDownload = async (result: any) => {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert the file.');
+      return;
+    }
+
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (downloadError) {
+      console.error('Download failed:', downloadError);
+      setError('Failed to download file. Please try again.');
     }
   };
 
@@ -112,9 +165,12 @@ export const EPSToICOConverter: React.FC = () => {
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchConverted(false);
+    setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -271,7 +327,7 @@ export const EPSToICOConverter: React.FC = () => {
                 </button>
               </div>
 
-              {/* Success Message & Download */}
+              {/* Single conversion success */}
               {convertedFile && !batchMode && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
@@ -279,7 +335,7 @@ export const EPSToICOConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPS file has been successfully converted to ICO format.
+                    Your EPS file has been successfully converted to ICO format (default size 16×16).
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -295,6 +351,55 @@ export const EPSToICOConverter: React.FC = () => {
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch conversion success */}
+              {batchMode && batchConverted && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <p className="text-green-700 mb-4">
+                    {batchResults.filter(item => item.success).length} file(s) converted successfully at 16×16 default size.
+                  </p>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white border border-green-100 rounded-lg p-3">
+                        <div className="flex items-center gap-3">
+                          {result.success ? (
+                            <CheckCircle className="w-4 h-4 text-green-500" />
+                          ) : (
+                            <AlertCircle className="w-4 h-4 text-red-500" />
+                          )}
+                          <span className="text-sm font-medium text-gray-900">
+                            {result.outputFilename || result.originalName}
+                          </span>
+                        </div>
+                        {result.success && result.downloadPath ? (
+                          <button
+                            onClick={() => handleBatchDownload(result)}
+                            className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors flex items-center"
+                          >
+                            <Download className="w-3 h-3 mr-1" />
+                            Download
+                          </button>
+                        ) : result.error ? (
+                          <span className="text-xs text-red-600">{result.error}</span>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
                     </button>
                   </div>
                 </div>
@@ -319,20 +424,22 @@ export const EPSToICOConverter: React.FC = () => {
                 </label>
                 <div className="grid grid-cols-3 gap-2">
                   {[16, 32, 48, 64, 128, 256].map(size => (
-                    <label key={size} className="flex items-center">
+                    <label key={size} className={`flex items-center ${size === 16 ? 'opacity-60' : ''}`}>
                       <input
                         type="checkbox"
                         checked={iconSizes.includes(size)}
+                        disabled={size === 16}
                         onChange={(e) => {
+                          if (size === 16) return;
                           if (e.target.checked) {
                             setIconSizes([...iconSizes, size]);
                           } else {
                             setIconSizes(iconSizes.filter(s => s !== size));
                           }
                         }}
-                        className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                        className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500 disabled:cursor-not-allowed"
                       />
-                      <span className="ml-2 text-sm">{size}px</span>
+                      <span className="ml-2 text-sm">{size}px{size === 16 ? ' (default)' : ''}</span>
                     </label>
                   ))}
                 </div>
