@@ -71,12 +71,17 @@ export const EPSToICOConverter: React.FC = () => {
   };
 
   const handleConvert = async (file: File) => {
-    const iconSizeValue = getPrimaryIconSize();
-    return await apiService.convertFile(file, {
-      format: 'ico',
-      iconSize: iconSizeValue,
-      quality
-    });
+    try {
+      const iconSizeValue = getPrimaryIconSize();
+      return await apiService.convertFile(file, {
+        format: 'ico',
+        iconSize: iconSizeValue,
+        quality
+      });
+    } catch (error) {
+      console.error('Conversion failed:', error);
+      throw error;
+    }
   };
 
   const handleSingleConvert = async () => {
@@ -92,7 +97,8 @@ export const EPSToICOConverter: React.FC = () => {
       setBatchConverted(false);
       setBatchResults([]);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
+      setError(message);
     } finally {
       setIsConverting(false);
     }
