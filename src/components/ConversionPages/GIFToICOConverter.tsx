@@ -430,19 +430,6 @@ export const GIFToICOConverter: React.FC = () => {
                   <option value="low">Low Quality</option>
                 </select>
               </div>
-
-              {/* Preserve Animation */}
-              <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={preserveAnimation}
-                    onChange={(e) => setPreserveAnimation(e.target.checked)}
-                    className="rounded border-gray-300 text-pink-600 focus:ring-pink-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Preserve animation frames</span>
-                </label>
-              </div>
             </div>
 
             {/* Features */}
