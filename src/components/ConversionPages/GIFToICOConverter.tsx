@@ -17,6 +17,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { apiService } from '../../services/api';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const GIFToICOConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -33,12 +34,33 @@ export const GIFToICOConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ originalName: string; outputFilename?: string; success: boolean; downloadPath?: string; storedFilename?: string }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.type === 'image/gif' || file.name.toLowerCase().endsWith('.gif')) {
+        // Validate single file size using shared validation
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (fileInputRef.current) fileInputRef.current.value = '';
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid GIF file');
@@ -48,11 +70,29 @@ export const GIFToICOConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
+    
+    // Filter to only GIF files
     const gifFiles = files.filter(file => 
       file.type === 'image/gif' || file.name.toLowerCase().endsWith('.gif')
     );
+    
+    if (gifFiles.length === 0) {
+      setError('No valid GIF files selected.');
+      return;
+    }
+
+    // Validate batch files using shared validation
+    const validation = validateBatchFiles(gifFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
     setBatchFiles(gifFiles);
     setError(null);
+    clearValidationError();
   };
 
   const getPrimaryIconSize = () => (iconSizes.length ? Math.min(...iconSizes) : 16);
@@ -229,6 +269,11 @@ export const GIFToICOConverter: React.FC = () => {
                     : 'Drag and drop your GIF file here or click to browse'
                   }
                 </p>
+                {batchMode && (
+                  <p className="text-sm text-purple-600 mb-4">
+                    {getBatchInfoMessage()}
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -267,15 +312,16 @@ export const GIFToICOConverter: React.FC = () => {
                 <div className="mt-6">
                   {(() => {
                     const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
-                    const totalSizeMB = Math.round((totalSize / 1024 / 1024) * 10) / 10;
-                    const isNearLimit = totalSize > 80 * 1024 * 1024;
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${isNearLimit ? 'text-pink-700' : 'text-gray-600'}`}>Total: {totalSizeMB}MB / 100MB limit</div>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-pink-700' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
                         </div>
-                        {isNearLimit && (
+                        {sizeDisplay.isWarning && (
                           <div className="mb-4 p-3 bg-pink-50 border border-pink-200 rounded-lg">
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-pink-600 mr-2" />
@@ -298,10 +344,10 @@ export const GIFToICOConverter: React.FC = () => {
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 

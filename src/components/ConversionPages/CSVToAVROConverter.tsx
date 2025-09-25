@@ -16,6 +16,7 @@ import {
   File,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CSVToAVROConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -28,6 +29,17 @@ export const CSVToAVROConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
   const [csvPreview, setCsvPreview] = useState<{headers: string[], data: any[], totalRows: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 

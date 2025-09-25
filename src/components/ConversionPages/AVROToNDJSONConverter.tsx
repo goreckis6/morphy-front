@@ -16,6 +16,7 @@ import {
   Database,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const AVROToNDJSONConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -28,6 +29,17 @@ export const AVROToNDJSONConverter: React.FC = () => {
   const [streamingMode, setStreamingMode] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
   const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 

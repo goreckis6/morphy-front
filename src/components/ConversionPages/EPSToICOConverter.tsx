@@ -17,6 +17,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { apiService } from '../../services/api';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const EPSToICOConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -40,6 +41,17 @@ export const EPSToICOConverter: React.FC = () => {
   const [usedIconSize, setUsedIconSize] = useState<number>(16);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
+
   useEffect(() => {
     setIconSizes(prev => (prev.length ? prev : [16]));
   }, []);
@@ -48,8 +60,18 @@ export const EPSToICOConverter: React.FC = () => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.eps')) {
+        // Validate single file size using shared validation
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (fileInputRef.current) fileInputRef.current.value = '';
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid EPS file');
@@ -59,11 +81,27 @@ export const EPSToICOConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const epsFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.eps')
-    );
+    
+    // Filter to only EPS files
+    const epsFiles = files.filter(file => file.name.toLowerCase().endsWith('.eps'));
+    
+    if (epsFiles.length === 0) {
+      setError('No valid EPS files selected.');
+      return;
+    }
+
+    // Validate batch files using shared validation
+    const validation = validateBatchFiles(epsFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
     setBatchFiles(epsFiles);
     setError(null);
+    clearValidationError();
   };
 
   const getPrimaryIconSize = () => {
@@ -262,7 +300,7 @@ export const EPSToICOConverter: React.FC = () => {
                 </p>
                 {batchMode && (
                   <p className="text-sm text-emerald-600 mb-4">
-                    💡 Maximum batch size: 100MB total. Maximum 20 files. For best performance, process 5-10 files at once.
+                    {getBatchInfoMessage()}
                   </p>
                 )}
                 <input
@@ -301,17 +339,16 @@ export const EPSToICOConverter: React.FC = () => {
                 <div className="mt-6">
                   {(() => {
                     const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
-                    const totalSizeMB = Math.round((totalSize / 1024 / 1024) * 10) / 10;
-                    const isNearLimit = totalSize > 80 * 1024 * 1024;
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${isNearLimit ? 'text-emerald-700' : 'text-gray-600'}`}>
-                            Total: {totalSizeMB}MB / 100MB limit
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-emerald-700' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
                           </div>
                         </div>
-                        {isNearLimit && (
+                        {sizeDisplay.isWarning && (
                           <div className="mb-4 p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-emerald-600 mr-2" />
@@ -334,10 +371,10 @@ export const EPSToICOConverter: React.FC = () => {
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 

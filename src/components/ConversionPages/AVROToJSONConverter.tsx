@@ -16,6 +16,7 @@ import {
   Database,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const AVROToJSONConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -28,14 +29,37 @@ export const AVROToJSONConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.avro')) {
+        // Validate single file size using shared validation
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (event.target) {
+            event.target.value = '';
+          }
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid AVRO file');

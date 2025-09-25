@@ -16,6 +16,7 @@ import {
   Camera,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CR2ToWebPConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -31,6 +32,17 @@ export const CR2ToWebPConverter: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
 
   const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];

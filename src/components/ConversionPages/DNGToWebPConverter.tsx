@@ -17,6 +17,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { apiService, ConversionOptions } from '../../services/api';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 const RAW_MIME_TYPES = [
   'image/x-dng',
@@ -61,13 +62,39 @@ export const DNGToWebPConverter: React.FC = () => {
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
+
   const decodeFilename = (filename: string): string => filename;
 
   const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
+      // Validate single file size
+      const validation = validateSingleFile(file);
+      if (!validation.isValid) {
+        setError(validation.error?.message || 'File validation failed');
+        setSelectedFile(null);
+        setPreviewUrl(null);
+        setImagePreview(null);
+        // Clear the input
+        if (event.target) {
+          event.target.value = '';
+        }
+        return;
+      }
+
       setSelectedFile(file);
       setError(null);
+      clearValidationError();
       
       // Create preview URL
       const previewUrl = URL.createObjectURL(file);
@@ -97,25 +124,10 @@ export const DNGToWebPConverter: React.FC = () => {
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
     
-    // Check file count limit
-    const maxFiles = 20;
-    if (files.length > maxFiles) {
-      setError(`Too many files! Selected: ${files.length} files. Maximum allowed: ${maxFiles} files. Please select fewer files.`);
-      setBatchFiles([]);
-      // Clear the input
-      if (event.target) {
-        event.target.value = '';
-      }
-      return;
-    }
-    
-    // Check total batch size
-    const totalSize = files.reduce((sum, file) => sum + file.size, 0);
-    const maxBatchSize = 100 * 1024 * 1024; // 100MB limit
-    
-    if (totalSize > maxBatchSize) {
-      const totalSizeMB = Math.round(totalSize / 1024 / 1024);
-      setError(`Batch too large! Total size: ${totalSizeMB}MB. Maximum allowed: 100MB. Please select fewer files or smaller files.`);
+    // Validate batch files using shared validation
+    const validation = validateBatchFiles(files);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
       setBatchFiles([]);
       // Clear the input
       if (event.target) {
@@ -126,6 +138,7 @@ export const DNGToWebPConverter: React.FC = () => {
     
     setBatchFiles(files);
     setError(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
@@ -318,7 +331,7 @@ export const DNGToWebPConverter: React.FC = () => {
                 </p>
                 {batchMode && (
                   <p className="text-sm text-amber-600 mb-4">
-                    💡 Maximum batch size: 100MB total. Maximum 20 files. For best performance, process 5-10 files at once.
+                    {getBatchInfoMessage()}
                   </p>
                 )}
                 <input
@@ -398,19 +411,18 @@ export const DNGToWebPConverter: React.FC = () => {
                 <div className="mt-6">
                   {(() => {
                     const totalSize = batchFiles.reduce((sum, file) => sum + file.size, 0);
-                    const totalSizeMB = Math.round(totalSize / 1024 / 1024 * 10) / 10; // 1 decimal place
-                    const isNearLimit = totalSize > 80 * 1024 * 1024; // 80MB warning threshold
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
                     
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${isNearLimit ? 'text-orange-600' : 'text-gray-600'}`}>
-                            Total: {totalSizeMB}MB / 100MB limit
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
                           </div>
                         </div>
                         
-                        {isNearLimit && (
+                        {sizeDisplay.isWarning && (
                           <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
@@ -436,10 +448,10 @@ export const DNGToWebPConverter: React.FC = () => {
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
