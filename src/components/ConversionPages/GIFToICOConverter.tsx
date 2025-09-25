@@ -16,18 +16,21 @@ import {
   Image,
   BarChart3
 } from 'lucide-react';
+import { apiService } from '../../services/api';
 
 export const GIFToICOConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSizes, setIconSizes] = useState<number[]>([16, 32, 48, 64, 128, 256]);
+  const [iconSizes, setIconSizes] = useState<number[]>([16]);
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
-  const [preserveAnimation, setPreserveAnimation] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{ originalName: string; outputFilename?: string; success: boolean; downloadPath?: string; storedFilename?: string }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,10 +55,14 @@ export const GIFToICOConverter: React.FC = () => {
     setError(null);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would use a library like sharp
-    const icoContent = `Mock ICO content for ${file.name} - Quality: ${quality}, Sizes: ${iconSizes.join(',')}, Animation: ${preserveAnimation}`;
-    return new Blob([icoContent], { type: 'image/x-icon' });
+  const getPrimaryIconSize = () => (iconSizes.length ? Math.min(...iconSizes) : 16);
+
+  const handleConvert = async (file: File) => {
+    return await apiService.convertFile(file, {
+      format: 'ico',
+      iconSize: getPrimaryIconSize(),
+      quality
+    });
   };
 
   const handleSingleConvert = async () => {
@@ -65,8 +72,11 @@ export const GIFToICOConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await handleConvert(selectedFile);
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
+      setBatchConverted(false);
+      setBatchResults([]);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -81,12 +91,27 @@ export const GIFToICOConverter: React.FC = () => {
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'ico',
+        iconSize: getPrimaryIconSize(),
+        quality
+      });
+
+      setBatchResults(result.results ?? []);
+      const successes = (result.results ?? []).filter(r => r.success);
+      if (successes.length > 0) {
+        setBatchConverted(true);
+        const failures = (result.results ?? []).filter(r => !r.success);
+        setError(failures.length > 0 ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed to convert.` : null);
+      } else {
+        setBatchConverted(false);
+        setError('Batch conversion failed. Please try again.');
       }
-      setError(null);
+      setConvertedFile(null);
+      setConvertedFilename(null);
     } catch (err) {
+      setBatchConverted(false);
+      setBatchResults([]);
       setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
@@ -95,14 +120,21 @@ export const GIFToICOConverter: React.FC = () => {
 
   const handleDownload = () => {
     if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.gif', '.ico') : 'converted.ico';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      const filename = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.[^.]+$/, '.ico') : 'converted.ico');
+      apiService.downloadBlob(convertedFile, filename);
+    }
+  };
+
+  const handleBatchDownload = async (result: any) => {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert the file.');
+      return;
+    }
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (e) {
+      setError('Failed to download file. Please try again.');
     }
   };
 
@@ -230,18 +262,38 @@ export const GIFToICOConverter: React.FC = () => {
                 </div>
               )}
 
-              {/* Batch Files List */}
+              {/* Batch Files List with total */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const totalSizeMB = Math.round((totalSize / 1024 / 1024) * 10) / 10;
+                    const isNearLimit = totalSize > 80 * 1024 * 1024;
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${isNearLimit ? 'text-pink-700' : 'text-gray-600'}`}>Total: {totalSizeMB}MB / 100MB limit</div>
+                        </div>
+                        {isNearLimit && (
+                          <div className="mb-4 p-3 bg-pink-50 border border-pink-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-pink-600 mr-2" />
+                              <span className="text-sm text-pink-800">Batch size is getting close to the 100MB limit. Consider 5–10 files for best performance.</span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
@@ -299,6 +351,28 @@ export const GIFToICOConverter: React.FC = () => {
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
                     </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch Conversion Success */}
+              {batchMode && batchConverted && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, i) => (
+                      <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
+                        <span className="text-sm font-medium text-gray-900">{r.outputFilename || r.originalName}</span>
+                        {r.success && r.downloadPath ? (
+                          <button onClick={() => handleBatchDownload(r)} className="bg-pink-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-pink-700 transition-colors">Download</button>
+                        ) : r.error ? (
+                          <span className="text-xs text-red-600">{r.error}</span>
+                        ) : null}
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
