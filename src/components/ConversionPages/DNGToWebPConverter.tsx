@@ -169,28 +169,19 @@ export const DNGToWebPConverter: React.FC = () => {
 
       // Debug: Log the received results
       console.log('Frontend received batch results:', result.results);
-      result.results.forEach((res, index) => {
-        console.log(`Result ${index + 1}:`, {
-          originalName: res.originalName,
-          outputFilename: res.outputFilename,
-          originalNameHex: Buffer.from(res.originalName || '', 'utf8').toString('hex'),
-          outputFilenameHex: Buffer.from(res.outputFilename || '', 'utf8').toString('hex')
-        });
-      });
 
-      const successes = result.results?.filter(r => r.success) ?? [];
-      const failures = result.results?.filter(r => !r.success) ?? [];
+      const successes = (result.results ?? []).filter(r => r.success);
+      const failures = (result.results ?? []).filter(r => !r.success);
 
       if (successes.length > 0) {
-        setBatchResults(result.results);
+        setBatchResults(result.results ?? []);
         setBatchConverted(true);
-        if (failures.length > 0) {
-          setError(`${failures.length} file${failures.length > 1 ? 's' : ''} failed to convert.`);
-        } else {
-          setError(null);
-        }
+        setError(failures.length > 0
+          ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed to convert.`
+          : null
+        );
       } else {
-        setBatchResults(result.results);
+        setBatchResults(result.results ?? []);
         setBatchConverted(false);
         setError('Batch conversion failed. Please try again.');
       }
