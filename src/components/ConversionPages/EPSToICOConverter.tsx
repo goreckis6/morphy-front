@@ -254,12 +254,17 @@ export const EPSToICOConverter: React.FC = () => {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple EPS Files' : 'Upload EPS File'}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-2">
                   {batchMode 
                     ? 'Select multiple EPS files to convert them all at once' 
                     : 'Drag and drop your EPS file here or click to browse'
                   }
                 </p>
+                {batchMode && (
+                  <p className="text-sm text-emerald-600 mb-4">
+                    💡 Maximum batch size: 100MB total. Maximum 20 files. For best performance, process 5-10 files at once.
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -440,9 +445,6 @@ export const EPSToICOConverter: React.FC = () => {
                     </option>
                   ))}
                 </select>
-                <p className="text-sm text-gray-500 mt-2">
-                  ICO files are generated at the selected size. Default is 16×16 pixels.
-                </p>
               </div>
 
               {/* Quality */}
