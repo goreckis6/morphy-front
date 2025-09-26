@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -18,102 +19,35 @@ import {
 } from 'lucide-react';
 
 export const CSVToDOCXConverter: React.FC = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
-  const [isConverting, setIsConverting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const {
+    selectedFile,
+    convertedFile,
+    convertedFilename,
+    isConverting,
+    error,
+    setError,
+    validationError,
+    previewUrl,
+    batchMode,
+    setBatchMode,
+    batchFiles,
+    batchResults,
+    fileInputRef,
+    getSingleInfoMessage,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    handleFileSelect,
+    handleBatchFileSelect,
+    handleSingleConvert,
+    handleBatchConvert,
+    handleDownload,
+    resetForm
+  } = useCsvConversion({ targetFormat: 'docx' });
   const [includeHeaders, setIncludeHeaders] = useState(true);
   const [preserveFormatting, setPreserveFormatting] = useState(true);
-  const [batchMode, setBatchMode] = useState(false);
-  const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      if (file.name.toLowerCase().endsWith('.csv')) {
-        setSelectedFile(file);
-        setError(null);
-        setPreviewUrl(URL.createObjectURL(file));
-      } else {
-        setError('Please select a valid CSV file');
-      }
-    }
-  };
-
-  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    const csvFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.csv')
-    );
-    setBatchFiles(csvFiles);
-    setError(null);
-  };
-
-  const handleConvert = async (file: File): Promise<Blob> => {
-    const docxContent = `Mock DOCX content for ${file.name} - Headers: ${includeHeaders}, Formatting: ${preserveFormatting}`;
-    return new Blob([docxContent], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
-  };
-
-  const handleSingleConvert = async () => {
-    if (!selectedFile) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
-    } catch (err) {
-      setError('Conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleBatchConvert = async () => {
-    if (batchFiles.length === 0) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      for (const file of batchFiles) {
-        await handleConvert(file);
-      }
-      setError(null);
-    } catch (err) {
-      setError('Batch conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.csv', '.docx') : 'converted.docx';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-  };
 
   const handleBack = () => {
     window.location.href = '/';
-  };
-
-  const resetForm = () => {
-    setSelectedFile(null);
-    setConvertedFile(null);
-    setError(null);
-    setPreviewUrl(null);
-    setBatchFiles([]);
-    if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (
@@ -190,6 +124,12 @@ export const CSVToDOCXConverter: React.FC = () => {
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-blue-600 mb-4">{getBatchInfoMessage()}</p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -223,6 +163,13 @@ export const CSVToDOCXConverter: React.FC = () => {
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-blue-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                    );
+                  })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -285,6 +232,34 @@ export const CSVToDOCXConverter: React.FC = () => {
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
                     </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch Results */}
+              {batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete</h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, idx) => (
+                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
+                        <div className="text-sm">
+                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.docx')}</div>
+                          {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
+                        </div>
+                        {r.success && r.downloadPath && (
+                          <button
+                            onClick={() => apiService.downloadFile((r as any).storedFilename || decodeURIComponent(r.downloadPath!.replace('/download/', '')), r.outputFilename)}
+                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                          >
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}

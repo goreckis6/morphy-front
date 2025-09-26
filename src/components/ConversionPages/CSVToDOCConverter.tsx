@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { apiService } from '../../services/api';
-import { useFileValidation } from '../../hooks/useFileValidation';
+import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,130 +20,36 @@ import {
 } from 'lucide-react';
 
 export const CSVToDOCConverter: React.FC = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
-  const [isConverting, setIsConverting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [tableStyle, setTableStyle] = useState<'simple' | 'grid' | 'elegant'>('simple');
-  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
-  const [batchMode, setBatchMode] = useState(false);
-  const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const [batchResults, setBatchResults] = useState<Array<{ originalName: string; outputFilename?: string; success: boolean; downloadPath?: string; storedFilename?: string; error?: string }>>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
   const {
+    selectedFile,
+    convertedFile,
+    convertedFilename,
+    isConverting,
+    error,
+    setError,
     validationError,
-    validateSingleFile,
-    validateBatchFiles,
+    previewUrl,
+    batchMode,
+    setBatchMode,
+    batchFiles,
+    batchResults,
+    fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
-    clearValidationError
-  } = useFileValidation();
-
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      if (file.name.toLowerCase().endsWith('.csv')) {
-        const v = validateSingleFile(file);
-        if (!v.isValid) {
-          setError(v.error?.message || 'File too large.');
-          if (fileInputRef.current) fileInputRef.current.value = '';
-          return;
-        }
-        setSelectedFile(file);
-        setError(null);
-        setPreviewUrl(URL.createObjectURL(file));
-        clearValidationError();
-      } else {
-        setError('Please select a valid CSV file');
-      }
-    }
-  };
-
-  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    const csvFiles = files.filter(file => file.name.toLowerCase().endsWith('.csv'));
-    if (csvFiles.length === 0) {
-      setError('No valid CSV files selected.');
-      return;
-    }
-    const v = validateBatchFiles(csvFiles);
-    if (!v.isValid) {
-      setError(v.error?.message || 'Batch validation failed');
-      if (fileInputRef.current) fileInputRef.current.value = '';
-      setBatchFiles([]);
-      return;
-    }
-    setBatchFiles(csvFiles);
-    setError(null);
-    clearValidationError();
-  };
-
-  const handleConvert = async (file: File): Promise<Blob> => {
-    const result = await apiService.convertFile(file, { format: 'doc' });
-    return result.blob;
-  };
-
-  const handleSingleConvert = async () => {
-    if (!selectedFile) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
-    } catch (err) {
-      setError('Conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleBatchConvert = async () => {
-    if (batchFiles.length === 0) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      const result = await apiService.convertBatch(batchFiles, { format: 'doc' });
-      setBatchResults(result.results as any);
-      setError(null);
-    } catch (err) {
-      setError('Batch conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.csv', '.doc') : 'converted.doc';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-  };
+    handleFileSelect,
+    handleBatchFileSelect,
+    handleSingleConvert,
+    handleBatchConvert,
+    handleDownload,
+    resetForm
+  } = useCsvConversion({ targetFormat: 'doc' });
+  const [tableStyle, setTableStyle] = useState<'simple' | 'grid' | 'elegant'>('simple');
+  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
+  const [includeHeaders, setIncludeHeaders] = useState(true);
 
   const handleBack = () => {
     window.location.href = '/';
-  };
-
-  const resetForm = () => {
-    setSelectedFile(null);
-    setConvertedFile(null);
-    setError(null);
-    setPreviewUrl(null);
-    setBatchFiles([]);
-    if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (

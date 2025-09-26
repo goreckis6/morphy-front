@@ -1,4 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { apiService } from '../../services/api';
+import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -13,126 +15,47 @@ import {
   Shield,
   Clock,
   Star,
-  File,
+  FileType,
   BarChart3
 } from 'lucide-react';
 
 export const CSVToTXTConverter: React.FC = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
-  const [isConverting, setIsConverting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [delimiter, setDelimiter] = useState<',' | ';' | '\t' | '|'>('|');
+  const {
+    selectedFile,
+    convertedFile,
+    convertedFilename,
+    isConverting,
+    error,
+    setError,
+    validationError,
+    previewUrl,
+    batchMode,
+    setBatchMode,
+    batchFiles,
+    batchResults,
+    fileInputRef,
+    getSingleInfoMessage,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    handleFileSelect,
+    handleBatchFileSelect,
+    handleSingleConvert,
+    handleBatchConvert,
+    handleDownload,
+    resetForm
+  } = useCsvConversion({ targetFormat: 'txt' });
+  const [delimiter, setDelimiter] = useState<'tab' | 'space' | 'pipe'>('tab');
   const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [batchMode, setBatchMode] = useState(false);
-  const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      if (file.name.toLowerCase().endsWith('.csv')) {
-        setSelectedFile(file);
-        setError(null);
-        setPreviewUrl(URL.createObjectURL(file));
-      } else {
-        setError('Please select a valid CSV file');
-      }
-    }
-  };
-
-  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    const csvFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.csv')
-    );
-    setBatchFiles(csvFiles);
-    setError(null);
-  };
-
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse CSV and format as TXT
-    const txtContent = `CSV Data Converted to Text Format
-=====================================
-
-Name${delimiter}Age${delimiter}City
-John Doe${delimiter}30${delimiter}New York
-Jane Smith${delimiter}25${delimiter}Los Angeles
-
-Generated from CSV file: ${file.name}
-Delimiter: ${delimiter}
-Headers included: ${includeHeaders}`;
-    return new Blob([txtContent], { type: 'text/plain' });
-  };
-
-  const handleSingleConvert = async () => {
-    if (!selectedFile) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
-    } catch (err) {
-      setError('Conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleBatchConvert = async () => {
-    if (batchFiles.length === 0) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
-      }
-      setError(null);
-    } catch (err) {
-      setError('Batch conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.csv', '.txt') : 'converted.txt';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-  };
 
   const handleBack = () => {
     window.location.href = '/';
   };
 
-  const resetForm = () => {
-    setSelectedFile(null);
-    setConvertedFile(null);
-    setError(null);
-    setPreviewUrl(null);
-    setBatchFiles([]);
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-slate-50">
       <Header />
       
-      {/* Hero Section - Narrowed */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-gray-600 via-blue-600 to-indigo-700">
+      <div className="relative overflow-hidden bg-gradient-to-r from-gray-600 via-slate-600 to-zinc-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
@@ -140,7 +63,7 @@ Headers included: ${includeHeaders}`;
               CSV to TXT Converter
             </h1>
             <p className="text-lg sm:text-xl text-gray-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to plain text format for universal compatibility. Transform tabular data into simple text format with customizable delimiters.
+              Convert CSV files to TXT format. Transform tabular data into plain text files with customizable delimiters.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-200">
               <div className="flex items-center gap-2">
@@ -163,11 +86,9 @@ Headers included: ${includeHeaders}`;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
-              {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
                   onClick={() => setBatchMode(false)}
@@ -193,7 +114,6 @@ Headers included: ${includeHeaders}`;
                 </button>
               </div>
 
-              {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-gray-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -205,6 +125,12 @@ Headers included: ${includeHeaders}`;
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-gray-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-gray-600 mb-4">{getBatchInfoMessage()}</p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -221,13 +147,12 @@ Headers included: ${includeHeaders}`;
                 </button>
               </div>
 
-              {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <File className="w-12 h-12 text-gray-400" />
+                      <FileType className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
                       {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
@@ -236,10 +161,16 @@ Headers included: ${includeHeaders}`;
                 </div>
               )}
 
-              {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-gray-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                    );
+                  })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -251,7 +182,6 @@ Headers included: ${includeHeaders}`;
                 </div>
               )}
 
-              {/* Error Message */}
               {error && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
@@ -259,12 +189,11 @@ Headers included: ${includeHeaders}`;
                 </div>
               )}
 
-              {/* Convert Button */}
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-gray-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-gray-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-gray-600 to-slate-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-gray-700 hover:to-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
                     <div className="flex items-center justify-center">
@@ -280,7 +209,6 @@ Headers included: ${includeHeaders}`;
                 </button>
               </div>
 
-              {/* Success Message & Download */}
               {convertedFile && !batchMode && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
@@ -308,37 +236,59 @@ Headers included: ${includeHeaders}`;
                   </div>
                 </div>
               )}
+
+              {batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete</h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, idx) => (
+                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
+                        <div className="text-sm">
+                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.txt')}</div>
+                          {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
+                        </div>
+                        {r.success && r.downloadPath && (
+                          <button
+                            onClick={() => apiService.downloadFile((r as any).storedFilename || decodeURIComponent(r.downloadPath!.replace('/download/', '')), r.outputFilename)}
+                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                          >
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Settings & Info Panel */}
           <div className="space-y-6">
             
-            {/* Conversion Settings */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-gray-600" />
                 TXT Settings
               </h3>
               
-              {/* Delimiter */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Text Delimiter
+                  Column Delimiter
                 </label>
                 <select
                   value={delimiter}
-                  onChange={(e) => setDelimiter(e.target.value as ',' | ';' | '\t' | '|')}
+                  onChange={(e) => setDelimiter(e.target.value as 'tab' | 'space' | 'pipe')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                 >
-                  <option value="|">Pipe (|)</option>
-                  <option value=",">Comma (,)</option>
-                  <option value=";">Semicolon (;)</option>
-                  <option value="\t">Tab</option>
+                  <option value="tab">Tab</option>
+                  <option value="space">Space</option>
+                  <option value="pipe">Pipe (|)</option>
                 </select>
               </div>
 
-              {/* Include Headers */}
               <div className="mb-6">
                 <label className="flex items-center">
                   <input
@@ -352,7 +302,6 @@ Headers included: ${includeHeaders}`;
               </div>
             </div>
 
-            {/* Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
@@ -360,12 +309,12 @@ Headers included: ${includeHeaders}`;
               </h3>
               <div className="space-y-4">
                 {[
-                  "Universal text format",
+                  "Plain text compatibility",
                   "Customizable delimiters",
-                  "Cross-platform compatibility",
-                  "Simple data representation",
-                  "Legacy system support",
-                  "Batch processing support"
+                  "Universal file format",
+                  "Small file sizes",
+                  "Cross-platform support",
+                  "Batch conversion support"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -375,7 +324,6 @@ Headers included: ${includeHeaders}`;
               </div>
             </div>
 
-            {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
@@ -383,12 +331,12 @@ Headers included: ${includeHeaders}`;
               </h3>
               <div className="space-y-3">
                 {[
-                  "Universal data sharing",
-                  "Legacy system integration",
-                  "Simple data export",
-                  "Cross-platform compatibility",
-                  "Text-based data storage",
-                  "Data migration"
+                  "Data exchange",
+                  "Legacy systems",
+                  "Simple data storage",
+                  "Text processing",
+                  "Configuration files",
+                  "Command-line tools"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-gray-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -400,7 +348,6 @@ Headers included: ${includeHeaders}`;
           </div>
         </div>
 
-        {/* Back Button */}
         <div className="mt-12 text-center">
           <button
             onClick={handleBack}
@@ -409,111 +356,8 @@ Headers included: ${includeHeaders}`;
             ← Back to Home
           </button>
         </div>
-
-        {/* SEO Content Section */}
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to TXT?
-          </h2>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to plain text (TXT) format is essential for universal data sharing, legacy system integration, and cross-platform compatibility. While CSV files are excellent for structured data storage, TXT format provides the simplest possible representation that can be read by any system, application, or device.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of TXT Format</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Universal Compatibility</h4>
-                <p className="text-gray-700">
-                  TXT files can be opened and read by virtually any text editor, word processor, or application across all operating systems and platforms.
-                </p>
-              </div>
-              
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Legacy System Support</h4>
-                <p className="text-gray-700">
-                  Plain text format is supported by even the oldest computer systems and can be processed by any programming language or database system.
-                </p>
-              </div>
-              
-              <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Simple Data Representation</h4>
-                <p className="text-gray-700">
-                  TXT format provides the simplest possible representation of data, making it easy to understand and process without special software.
-                </p>
-              </div>
-              
-              <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Cross-Platform Compatibility</h4>
-                <p className="text-gray-700">
-                  Plain text files work seamlessly across Windows, macOS, Linux, and any other operating system without compatibility issues.
-                </p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
-            
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-gray-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Universal Data Sharing</h4>
-                  <p className="text-gray-700">Convert CSV data to TXT format for sharing across different systems and applications without compatibility concerns.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Legacy System Integration</h4>
-                  <p className="text-gray-700">Convert modern CSV files to TXT format for integration with older systems that don't support CSV format.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Simple Data Export</h4>
-                  <p className="text-gray-700">Export data in the simplest possible format for easy viewing, editing, and processing by any text editor.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Migration</h4>
-                  <p className="text-gray-700">Use TXT format as an intermediate step in data migration processes, ensuring compatibility with all systems.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-gray-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
-              <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to TXT converter to transform your tabular data into universal text format.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-gray-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Start Converting Now
-                </button>
-                <button
-                  onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-600 transition-colors"
-                >
-                  Back to Home
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

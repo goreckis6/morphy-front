@@ -1,4 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { apiService } from '../../services/api';
+import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -13,124 +15,57 @@ import {
   Shield,
   Clock,
   Star,
-  File,
+  FileEdit,
   BarChart3
 } from 'lucide-react';
 
 export const CSVToODTConverter: React.FC = () => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
-  const [isConverting, setIsConverting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const {
+    selectedFile,
+    convertedFile,
+    convertedFilename,
+    isConverting,
+    error,
+    setError,
+    validationError,
+    previewUrl,
+    batchMode,
+    setBatchMode,
+    batchFiles,
+    batchResults,
+    fileInputRef,
+    getSingleInfoMessage,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    handleFileSelect,
+    handleBatchFileSelect,
+    handleSingleConvert,
+    handleBatchConvert,
+    handleDownload,
+    resetForm
+  } = useCsvConversion({ targetFormat: 'odt' });
   const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [preserveFormatting, setPreserveFormatting] = useState(true);
-  const [batchMode, setBatchMode] = useState(false);
-  const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      if (file.name.toLowerCase().endsWith('.csv')) {
-        setSelectedFile(file);
-        setError(null);
-        setPreviewUrl(URL.createObjectURL(file));
-      } else {
-        setError('Please select a valid CSV file');
-      }
-    }
-  };
-
-  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    const csvFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.csv')
-    );
-    setBatchFiles(csvFiles);
-    setError(null);
-  };
-
-  const handleConvert = async (file: File): Promise<Blob> => {
-    const odtContent = `Mock ODT content for ${file.name} - Headers: ${includeHeaders}, Formatting: ${preserveFormatting}`;
-    return new Blob([odtContent], { type: 'application/vnd.oasis.opendocument.text' });
-  };
-
-  const handleSingleConvert = async () => {
-    if (!selectedFile) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
-    } catch (err) {
-      setError('Conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleBatchConvert = async () => {
-    if (batchFiles.length === 0) return;
-    
-    setIsConverting(true);
-    setError(null);
-    
-    try {
-      for (const file of batchFiles) {
-        await handleConvert(file);
-      }
-      setError(null);
-    } catch (err) {
-      setError('Batch conversion failed. Please try again.');
-    } finally {
-      setIsConverting(false);
-    }
-  };
-
-  const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.csv', '.odt') : 'converted.odt';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-  };
+  const [tableStyle, setTableStyle] = useState<'simple' | 'bordered' | 'elegant'>('simple');
 
   const handleBack = () => {
     window.location.href = '/';
   };
 
-  const resetForm = () => {
-    setSelectedFile(null);
-    setConvertedFile(null);
-    setError(null);
-    setPreviewUrl(null);
-    setBatchFiles([]);
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
       <Header />
       
-      <div className="relative overflow-hidden bg-gradient-to-r from-green-600 via-teal-600 to-cyan-700">
+      <div className="relative overflow-hidden bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               CSV to ODT Converter
             </h1>
-            <p className="text-lg sm:text-xl text-green-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to ODT format for open-source documents. Transform tabular data into LibreOffice Writer documents with tables and formatting.
+            <p className="text-lg sm:text-xl text-sky-100 mb-6 max-w-2xl mx-auto">
+              Convert CSV files to OpenDocument Text (ODT) format. Transform tabular data into LibreOffice Writer documents.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-sky-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
                 <span>Lightning Fast</span>
@@ -159,7 +94,7 @@ export const CSVToODTConverter: React.FC = () => {
                   onClick={() => setBatchMode(false)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
-                      ? 'bg-green-600 text-white shadow-lg' 
+                      ? 'bg-sky-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -170,7 +105,7 @@ export const CSVToODTConverter: React.FC = () => {
                   onClick={() => setBatchMode(true)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
-                      ? 'bg-green-600 text-white shadow-lg' 
+                      ? 'bg-sky-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -179,7 +114,7 @@ export const CSVToODTConverter: React.FC = () => {
                 </button>
               </div>
 
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
+              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-sky-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
@@ -190,6 +125,12 @@ export const CSVToODTConverter: React.FC = () => {
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-sky-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-sky-600 mb-4">{getBatchInfoMessage()}</p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -200,7 +141,7 @@ export const CSVToODTConverter: React.FC = () => {
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+                  className="bg-sky-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-700 transition-colors"
                 >
                   Choose Files
                 </button>
@@ -211,7 +152,7 @@ export const CSVToODTConverter: React.FC = () => {
                   <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <File className="w-12 h-12 text-gray-400" />
+                      <FileEdit className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
                       {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
@@ -223,6 +164,13 @@ export const CSVToODTConverter: React.FC = () => {
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-sky-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                    );
+                  })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -245,7 +193,7 @@ export const CSVToODTConverter: React.FC = () => {
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-700 hover:to-teal-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-sky-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-sky-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
                     <div className="flex items-center justify-center">
@@ -288,6 +236,33 @@ export const CSVToODTConverter: React.FC = () => {
                   </div>
                 </div>
               )}
+
+              {batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete</h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, idx) => (
+                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
+                        <div className="text-sm">
+                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.odt')}</div>
+                          {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
+                        </div>
+                        {r.success && r.downloadPath && (
+                          <button
+                            onClick={() => apiService.downloadFile((r as any).storedFilename || decodeURIComponent(r.downloadPath!.replace('/download/', '')), r.outputFilename)}
+                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                          >
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -295,31 +270,34 @@ export const CSVToODTConverter: React.FC = () => {
             
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-green-600" />
+                <Settings className="w-5 h-5 mr-2 text-sky-600" />
                 ODT Settings
               </h3>
               
               <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={includeHeaders}
-                    onChange={(e) => setIncludeHeaders(e.target.checked)}
-                    className="rounded border-gray-300 text-green-600 focus:ring-green-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Table Style
                 </label>
+                <select
+                  value={tableStyle}
+                  onChange={(e) => setTableStyle(e.target.value as 'simple' | 'bordered' | 'elegant')}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
+                >
+                  <option value="simple">Simple</option>
+                  <option value="bordered">Bordered</option>
+                  <option value="elegant">Elegant</option>
+                </select>
               </div>
 
               <div className="mb-6">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
-                    checked={preserveFormatting}
-                    onChange={(e) => setPreserveFormatting(e.target.checked)}
-                    className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+                    checked={includeHeaders}
+                    onChange={(e) => setIncludeHeaders(e.target.checked)}
+                    className="rounded border-gray-300 text-sky-600 focus:ring-sky-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve table formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
                 </label>
               </div>
             </div>
@@ -331,12 +309,12 @@ export const CSVToODTConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "Open-source format",
                   "LibreOffice compatibility",
+                  "Open document standard",
                   "Cross-platform support",
-                  "Professional document creation",
-                  "Table formatting",
-                  "Batch processing support"
+                  "Professional formatting",
+                  "Free software friendly",
+                  "Batch conversion support"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -348,20 +326,20 @@ export const CSVToODTConverter: React.FC = () => {
 
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
+                <BarChart3 className="w-5 h-5 mr-2 text-sky-600" />
                 Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  "Open-source documents",
                   "LibreOffice Writer",
-                  "Cross-platform compatibility",
-                  "Professional reporting",
-                  "Document formatting",
-                  "Data presentation"
+                  "Open source workflows",
+                  "Document collaboration",
+                  "Academic papers",
+                  "Government documents",
+                  "Standards compliance"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-sky-500 rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
@@ -377,71 +355,6 @@ export const CSVToODTConverter: React.FC = () => {
           >
             ← Back to Home
           </button>
-        </div>
-
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to ODT?
-          </h2>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to ODT format is essential for open-source document creation, LibreOffice compatibility, and cross-platform document sharing. While CSV files are excellent for data storage, ODT format provides the perfect solution for creating professional documents that work seamlessly with LibreOffice Writer and other open-source word processors.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ODT Format</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">Open-Source Format</h4>
-                <p className="text-gray-700">
-                  ODT is an open standard format that ensures your documents are not locked into proprietary software, providing long-term accessibility and compatibility.
-                </p>
-              </div>
-              
-              <div className="bg-teal-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-teal-900 mb-3">LibreOffice Compatibility</h4>
-                <p className="text-gray-700">
-                  ODT files can be opened directly in LibreOffice Writer and other open-source word processors, ensuring perfect compatibility with free software.
-                </p>
-              </div>
-              
-              <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Cross-Platform Support</h4>
-                <p className="text-gray-700">
-                  ODT format works seamlessly across Windows, macOS, and Linux, making it perfect for cross-platform document sharing and collaboration.
-                </p>
-              </div>
-              
-              <div className="bg-emerald-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-emerald-900 mb-3">Professional Document Creation</h4>
-                <p className="text-gray-700">
-                  ODT format supports professional document features including tables, formatting, styles, and multimedia elements for comprehensive document creation.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
-              <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to ODT converter to transform your tabular data into open-source documents.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Start Converting Now
-                </button>
-                <button
-                  onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-                >
-                  Back to Home
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
