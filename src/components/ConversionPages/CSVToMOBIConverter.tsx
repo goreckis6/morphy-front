@@ -168,7 +168,10 @@ export const CSVToMOBIConverter: React.FC = () => {
                     const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
-                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-amber-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                      <div className="flex items-center justify-between text-sm font-medium mb-2">
+                        <span className="text-gray-600">Total size</span>
+                        <span className={`ml-3 ${sizeDisplay.isWarning ? 'text-amber-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
+                      </div>
                     );
                   })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">

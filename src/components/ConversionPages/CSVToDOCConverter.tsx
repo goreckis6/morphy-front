@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
-import { 
-  Upload, 
-  Download, 
-  Settings, 
+import {
+  Upload,
+  Download,
   FileText,
   FileImage,
   RefreshCw,
@@ -44,10 +43,6 @@ export const CSVToDOCConverter: React.FC = () => {
     handleDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'doc' });
-  const [tableStyle, setTableStyle] = useState<'simple' | 'grid' | 'elegant'>('simple');
-  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
-  const [includeHeaders, setIncludeHeaders] = useState(true);
-
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -175,7 +170,10 @@ export const CSVToDOCConverter: React.FC = () => {
                     const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
-                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-blue-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                      <div className="flex items-center justify-between text-sm font-medium mb-2">
+                        <span className="text-gray-600">Total size</span>
+                        <span className={`ml-3 ${sizeDisplay.isWarning ? 'text-blue-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
+                      </div>
                     );
                   })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
@@ -280,59 +278,6 @@ export const CSVToDOCConverter: React.FC = () => {
           {/* Settings & Info Panel */}
           <div className="space-y-6">
             
-            {/* Conversion Settings */}
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-blue-600" />
-                DOC Settings
-              </h3>
-              
-              {/* Table Style */}
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Table Style
-                </label>
-                <select
-                  value={tableStyle}
-                  onChange={(e) => setTableStyle(e.target.value as 'simple' | 'grid' | 'elegant')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="simple">Simple</option>
-                  <option value="grid">Grid</option>
-                  <option value="elegant">Elegant</option>
-                </select>
-              </div>
-
-              {/* Font Size */}
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Font Size
-                </label>
-                <select
-                  value={fontSize}
-                  onChange={(e) => setFontSize(e.target.value as 'small' | 'medium' | 'large')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
-                  <option value="small">Small (10pt)</option>
-                  <option value="medium">Medium (12pt)</option>
-                  <option value="large">Large (14pt)</option>
-                </select>
-              </div>
-
-              {/* Include Headers */}
-              <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={includeHeaders}
-                    onChange={(e) => setIncludeHeaders(e.target.checked)}
-                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
-                </label>
-              </div>
-            </div>
-
             {/* Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
@@ -351,29 +296,6 @@ export const CSVToDOCConverter: React.FC = () => {
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                     <span className="text-sm text-gray-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Use Cases */}
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-blue-600" />
-                Perfect For
-              </h3>
-              <div className="space-y-3">
-                {[
-                  "Report generation",
-                  "Data presentation",
-                  "Business documentation",
-                  "Academic papers",
-                  "Client deliverables",
-                  "Document management"
-                ].map((useCase, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
               </div>
