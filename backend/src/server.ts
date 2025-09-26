@@ -10,6 +10,10 @@ import { fileURLToPath } from 'url';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import os from 'os';
+import papaparse from 'papaparse';
+import { Document, Packer, Paragraph, Table, TableRow, TableCell } from 'docx';
+import * as XLSX from 'xlsx';
+import pptxgen from 'pptxgenjs';
 
 const execAsync = promisify(exec);
 
@@ -77,7 +81,7 @@ app.use('/api/', limiter);
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Configure multer for file uploads
+// Configure multer for image file uploads
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
@@ -102,13 +106,250 @@ const upload = multer({
   }
 });
 
+// Configure multer for single CSV file uploads
+const uploadSingle = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 100 * 1024 * 1024, // 100MB limit
+    files: 1
+  },
+  fileFilter: (req, file, cb) => {
+    // Decode filename for proper UTF-8 handling
+    try {
+      file.originalname = decodeURIComponent(file.originalname);
+    } catch (e) {
+      // If decoding fails, use original name
+    }
+    
+    const allowedMimes = [
+      'text/csv', 'application/csv', 'text/plain'
+    ];
+    
+    if (allowedMimes.includes(file.mimetype) || file.originalname.toLowerCase().endsWith('.csv')) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only CSV files are allowed'), false);
+    }
+  }
+});
+
+// Configure multer for batch CSV file uploads  
+const uploadBatch = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 100 * 1024 * 1024, // 100MB per file
+    files: 20 // Max 20 files
+  },
+  fileFilter: (req, file, cb) => {
+    // Decode filename for proper UTF-8 handling
+    try {
+      file.originalname = decodeURIComponent(file.originalname);
+    } catch (e) {
+      // If decoding fails, use original name
+    }
+    
+    const allowedMimes = [
+      'text/csv', 'application/csv', 'text/plain'
+    ];
+    
+    if (allowedMimes.includes(file.mimetype) || file.originalname.toLowerCase().endsWith('.csv')) {
+      cb(null, true);
+    } else {
+      cb(new Error('Only CSV files are allowed'), false);
+    }
+  }
+});
+
+// CSV processing helper functions
+const processCSVToDocx = async (csvBuffer: Buffer, options: any) => {
+  const csvText = csvBuffer.toString('utf-8');
+  const parsed = papaparse.parse(csvText, { header: true });
+  
+  const doc = new Document({
+    sections: [{
+      properties: {},
+      children: [
+        new Paragraph({
+          children: [{ text: "CSV Data", bold: true }]
+        }),
+        new Table({
+          rows: [
+            // Header row
+            new TableRow({
+              children: Object.keys(parsed.data[0] || {}).map(header => 
+                new TableCell({ children: [new Paragraph(header)] })
+              )
+            }),
+            // Data rows
+            ...parsed.data.map((row: any) => 
+              new TableRow({
+                children: Object.values(row).map((cell: any) => 
+                  new TableCell({ children: [new Paragraph(String(cell || ''))] })
+                )
+              })
+            )
+          ]
+        })
+      ]
+    }]
+  });
+  
+  return await Packer.toBuffer(doc);
+};
+
+const processCSVToXlsx = async (csvBuffer: Buffer, options: any) => {
+  const csvText = csvBuffer.toString('utf-8');
+  const parsed = papaparse.parse(csvText, { header: true });
+  
+  const ws = XLSX.utils.json_to_sheet(parsed.data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Data');
+  
+  return XLSX.write(wb, { type: 'buffer', bookType: 'xlsx' });
+};
+
+const processCSVToPptx = async (csvBuffer: Buffer, options: any) => {
+  const csvText = csvBuffer.toString('utf-8');
+  const parsed = papaparse.parse(csvText, { header: true });
+  
+  const pres = new pptxgen();
+  const slide = pres.addSlide();
+  
+  const headers = Object.keys(parsed.data[0] || {});
+  const tableData = [
+    headers,
+    ...parsed.data.map((row: any) => headers.map(header => String(row[header] || '')))
+  ];
+  
+  slide.addTable(tableData, {
+    x: 1, y: 1, w: 8, h: 5,
+    fontSize: 12,
+    border: { pt: 1, color: '363636' }
+  });
+  
+  return await pres.write({ outputType: 'nodebuffer' });
+};
+
+const processCSVToText = async (csvBuffer: Buffer) => {
+  const csvText = csvBuffer.toString('utf-8');
+  const parsed = papaparse.parse(csvText, { header: true });
+  
+  let output = '';
+  const headers = Object.keys(parsed.data[0] || {});
+  
+  // Add headers
+  output += headers.join('\t') + '\n';
+  
+  // Add data rows
+  parsed.data.forEach((row: any) => {
+    output += headers.map(header => String(row[header] || '')).join('\t') + '\n';
+  });
+  
+  return Buffer.from(output, 'utf-8');
+};
+
+const processCSVToHtml = async (csvBuffer: Buffer) => {
+  const csvText = csvBuffer.toString('utf-8');
+  const parsed = papaparse.parse(csvText, { header: true });
+  
+  let html = `<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Data</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>CSV Data</h1>
+  <table>
+    <thead>
+      <tr>`;
+  
+  const headers = Object.keys(parsed.data[0] || {});
+  headers.forEach(header => {
+    html += `<th>${header}</th>`;
+  });
+  
+  html += `</tr>
+    </thead>
+    <tbody>`;
+  
+  parsed.data.forEach((row: any) => {
+    html += '<tr>';
+    headers.forEach(header => {
+      html += `<td>${String(row[header] || '')}</td>`;
+    });
+    html += '</tr>';
+  });
+  
+  html += `</tbody>
+  </table>
+</body>
+</html>`;
+  
+  return Buffer.from(html, 'utf-8');
+};
+
+const processCSVToMarkdown = async (csvBuffer: Buffer) => {
+  const csvText = csvBuffer.toString('utf-8');
+  const parsed = papaparse.parse(csvText, { header: true });
+  
+  let markdown = '# CSV Data\n\n';
+  const headers = Object.keys(parsed.data[0] || {});
+  
+  // Table header
+  markdown += '| ' + headers.join(' | ') + ' |\n';
+  markdown += '| ' + headers.map(() => '---').join(' | ') + ' |\n';
+  
+  // Table data
+  parsed.data.forEach((row: any) => {
+    markdown += '| ' + headers.map(header => String(row[header] || '')).join(' | ') + ' |\n';
+  });
+  
+  return Buffer.from(markdown, 'utf-8');
+};
+
+const convertWithLibreOffice = async (inputPath: string, outputPath: string, format: string) => {
+  const command = `soffice --headless --convert-to ${format} --outdir "${path.dirname(outputPath)}" "${inputPath}"`;
+  await execAsync(command);
+};
+
+const convertWithCalibre = async (inputPath: string, outputPath: string, format: string) => {
+  const command = `ebook-convert "${inputPath}" "${outputPath}"`;
+  await execAsync(command);
+};
+
+// Helper function to send buffer as download
+const sendBufferAsDownload = (res: express.Response, buffer: Buffer, filename: string, mimeType: string) => {
+  res.set({
+    'Content-Type': mimeType,
+    'Content-Disposition': `attachment; filename="${filename}"`,
+    'Content-Length': buffer.length.toString()
+  });
+  res.send(buffer);
+};
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Main conversion endpoint
-app.post('/api/convert', upload.single('file'), async (req, res) => {
+// Main conversion endpoint - handle both images and CSV files
+app.post('/api/convert', (req, res, next) => {
+  // Determine if this is a CSV request based on the format parameter
+  const format = req.body.format || req.query.format;
+  
+  if (format && ['doc', 'docx', 'pdf', 'html', 'md', 'txt', 'xlsx', 'xls', 'ppt', 'pptx', 'rtf', 'odt', 'odp', 'mobi'].includes(format.toLowerCase())) {
+    // Use CSV upload configuration
+    uploadSingle.single('file')(req, res, next);
+  } else {
+    // Use image upload configuration
+    upload.single('file')(req, res, next);
+  }
+}, async (req, res) => {
   try {
     const file = req.file;
     const { 
@@ -125,6 +366,106 @@ app.post('/api/convert', upload.single('file'), async (req, res) => {
     }
 
     console.log(`Processing file: ${file.originalname}, size: ${file.size} bytes`);
+
+    // Handle CSV conversion early
+    if (file.originalname.toLowerCase().endsWith('.csv') && ['doc', 'docx', 'pdf', 'html', 'md', 'txt', 'xlsx', 'xls', 'ppt', 'pptx', 'rtf', 'odt', 'odp', 'mobi'].includes(format.toLowerCase())) {
+      console.log(`Processing CSV to ${format} conversion`);
+      
+      try {
+        let outputBuffer: Buffer;
+        let mimeType: string;
+        let filename = file.originalname.replace(/\.csv$/i, `.${format.toLowerCase()}`);
+        
+        switch (format.toLowerCase()) {
+          case 'doc':
+          case 'docx':
+            outputBuffer = await processCSVToDocx(file.buffer, req.body);
+            mimeType = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+            break;
+          case 'xlsx':
+            outputBuffer = await processCSVToXlsx(file.buffer, req.body);
+            mimeType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+            break;
+          case 'ppt':
+          case 'pptx':
+            outputBuffer = await processCSVToPptx(file.buffer, req.body);
+            mimeType = 'application/vnd.openxmlformats-officedocument.presentationml.presentation';
+            break;
+          case 'txt':
+            outputBuffer = await processCSVToText(file.buffer);
+            mimeType = 'text/plain';
+            break;
+          case 'html':
+            outputBuffer = await processCSVToHtml(file.buffer);
+            mimeType = 'text/html';
+            break;
+          case 'md':
+            outputBuffer = await processCSVToMarkdown(file.buffer);
+            mimeType = 'text/markdown';
+            break;
+          case 'pdf':
+          case 'rtf':
+          case 'odt':
+          case 'odp':
+          case 'xls':
+          case 'mobi':
+            // For formats requiring LibreOffice/Calibre, use file-based conversion
+            const tempDir = os.tmpdir();
+            const inputPath = path.join(tempDir, `input_${Date.now()}.csv`);
+            const outputPath = path.join(tempDir, `output_${Date.now()}.${format.toLowerCase()}`);
+            
+            try {
+              await fs.writeFile(inputPath, file.buffer);
+              
+              if (['pdf', 'rtf', 'odt', 'odp', 'xls'].includes(format.toLowerCase())) {
+                await convertWithLibreOffice(inputPath, outputPath, format.toLowerCase());
+              } else if (['mobi'].includes(format.toLowerCase())) {
+                // First convert to HTML, then to MOBI
+                const htmlBuffer = await processCSVToHtml(file.buffer);
+                const htmlPath = path.join(tempDir, `temp_${Date.now()}.html`);
+                await fs.writeFile(htmlPath, htmlBuffer);
+                await convertWithCalibre(htmlPath, outputPath, format.toLowerCase());
+                await fs.unlink(htmlPath);
+              }
+              
+              outputBuffer = await fs.readFile(outputPath);
+              
+              // Set appropriate MIME type
+              const mimeTypes: Record<string, string> = {
+                pdf: 'application/pdf',
+                rtf: 'application/rtf',
+                odt: 'application/vnd.oasis.opendocument.text',
+                odp: 'application/vnd.oasis.opendocument.presentation',
+                xls: 'application/vnd.ms-excel',
+                mobi: 'application/x-mobipocket-ebook'
+              };
+              mimeType = mimeTypes[format.toLowerCase()] || 'application/octet-stream';
+              
+              // Cleanup
+              await fs.unlink(inputPath);
+              await fs.unlink(outputPath);
+            } catch (conversionError) {
+              console.error('External conversion error:', conversionError);
+              return res.status(500).json({ 
+                error: 'Conversion failed', 
+                details: `Failed to convert CSV to ${format.toUpperCase()}` 
+              });
+            }
+            break;
+          default:
+            return res.status(400).json({ error: `Unsupported CSV conversion format: ${format}` });
+        }
+        
+        return sendBufferAsDownload(res, outputBuffer, filename, mimeType);
+        
+      } catch (csvError) {
+        console.error('CSV conversion error:', csvError);
+        return res.status(500).json({ 
+          error: 'CSV conversion failed', 
+          details: csvError instanceof Error ? csvError.message : 'Unknown error' 
+        });
+      }
+    }
 
     // Parse quality value
     const qualityValue = quality === 'high' ? 95 : quality === 'medium' ? 80 : 60;
