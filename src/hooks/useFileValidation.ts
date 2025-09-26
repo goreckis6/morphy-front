@@ -102,11 +102,11 @@ export const useFileValidation = () => {
   const getBatchInfoMessage = () =>
     `Batch conversion supports up to ${BATCH_MAX_FILES} files, ${getReadableSize(BATCH_FILE_LIMIT_BYTES)} per file, ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} total.`;
 
-  const getBatchSizeDisplay = useMemo(() => (totalSize: number) => {
+  const getBatchSizeDisplay = (totalSize: number) => {
     const text = `Total size: ${formatFileSize(totalSize)} of ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} allowed.`;
     const isWarning = totalSize > BATCH_TOTAL_LIMIT_BYTES * 0.8;
     return { text, isWarning };
-  }, []);
+  };
 
   return {
     validationError,
