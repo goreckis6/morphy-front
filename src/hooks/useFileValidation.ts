@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 interface ValidationError {
-  code: 'too-many-files' | 'file-too-large' | 'batch-too-large';
+  code: 'too-many-files' | 'file-too-large' | 'batch-too-large' | 'invalid-type';
   message: string;
 }
 
@@ -15,81 +15,98 @@ const BATCH_FILE_LIMIT_BYTES = 100 * 1024 * 1024; // 100MB per file
 const BATCH_TOTAL_LIMIT_BYTES = 100 * 1024 * 1024; // 100MB total per batch
 const BATCH_MAX_FILES = 20;
 
-const formatFileSize = (bytes: number): string => {
-  if (bytes >= 1024 * 1024 * 1024) return `${(bytes / (1024 * 1024 * 1024)).toFixed(2)} GB`;
-  if (bytes >= 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
-  if (bytes >= 1024) return `${(bytes / 1024).toFixed(2)} KB`;
-  return `${bytes} bytes`;
-};
-
-const buildFileTooLargeError = (file: File, limitBytes: number): ValidationError => ({
-  code: 'file-too-large',
-  message: `File "${file.name}" is too large (${formatFileSize(file.size)}). Maximum allowed size is ${formatFileSize(limitBytes)}.`
-});
-
-const buildTooManyFilesError = (count: number): ValidationError => ({
-  code: 'too-many-files',
-  message: `Too many files selected (${count}). Maximum allowed is ${BATCH_MAX_FILES}.`
-});
-
-const buildBatchTooLargeError = (totalSize: number): ValidationError => ({
-  code: 'batch-too-large',
-  message: `Total batch size ${formatFileSize(totalSize)} exceeds the limit of ${formatFileSize(BATCH_TOTAL_LIMIT_BYTES)}.`
-});
-
 export const useFileValidation = () => {
   const [validationError, setValidationError] = useState<ValidationError | null>(null);
 
   const clearValidationError = () => setValidationError(null);
 
-  const validateSingleFile = (file: File): ValidationResult => {
-    if (file.size > SINGLE_FILE_LIMIT_BYTES) {
-      const error = buildFileTooLargeError(file, SINGLE_FILE_LIMIT_BYTES);
-      setValidationError(error);
-      return { isValid: false, error };
+  const getReadableSize = (bytes: number) => {
+    if (bytes >= 1024 * 1024 * 1024) {
+      return `${(bytes / (1024 * 1024 * 1024)).toFixed(2)} GB`;
     }
+    if (bytes >= 1024 * 1024) {
+      return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+    }
+    if (bytes >= 1024) {
+      return `${(bytes / 1024).toFixed(2)} KB`;
+    }
+    return `${bytes} bytes`;
+  };
 
-    clearValidationError();
+  const validateFileSize = (file: File, limitBytes: number): ValidationResult => {
+    if (file.size > limitBytes) {
+      return {
+        isValid: false,
+        error: {
+          code: 'file-too-large',
+          message: `File "${file.name}" is too large (${getReadableSize(file.size)}). Maximum allowed size is ${getReadableSize(limitBytes)}.`
+        }
+      };
+    }
     return { isValid: true };
   };
 
-  const validateBatchFiles = (files: File[]): ValidationResult => {
+  const validateBatchSize = (files: File[]): ValidationResult => {
     if (files.length > BATCH_MAX_FILES) {
-      const error = buildTooManyFilesError(files.length);
-      setValidationError(error);
-      return { isValid: false, error };
+      return {
+        isValid: false,
+        error: {
+          code: 'too-many-files',
+          message: `Too many files selected (${files.length}). Maximum allowed is ${BATCH_MAX_FILES}.`
+        }
+      };
     }
 
     const totalSize = files.reduce((sum, file) => sum + file.size, 0);
     if (totalSize > BATCH_TOTAL_LIMIT_BYTES) {
-      const error = buildBatchTooLargeError(totalSize);
-      setValidationError(error);
-      return { isValid: false, error };
+      return {
+        isValid: false,
+        error: {
+          code: 'batch-too-large',
+          message: `Total batch size ${getReadableSize(totalSize)} exceeds the limit of ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)}.`
+        }
+      };
     }
 
     for (const file of files) {
-      if (file.size > BATCH_FILE_LIMIT_BYTES) {
-        const error = buildFileTooLargeError(file, BATCH_FILE_LIMIT_BYTES);
-        setValidationError(error);
-        return { isValid: false, error };
+      const result = validateFileSize(file, BATCH_FILE_LIMIT_BYTES);
+      if (!result.isValid) {
+        return result;
       }
     }
 
-    clearValidationError();
     return { isValid: true };
   };
 
+  const validateSingleFile = (file: File): ValidationResult => {
+    const result = validateFileSize(file, SINGLE_FILE_LIMIT_BYTES);
+    if (!result.isValid) {
+      setValidationError(result.error!);
+    }
+    return result;
+  };
+
+  const validateBatchFiles = (files: File[]): ValidationResult => {
+    const result = validateBatchSize(files);
+    if (!result.isValid) {
+      setValidationError(result.error!);
+    }
+    return result;
+  };
+
+  const formatFileSize = (bytes: number) => getReadableSize(bytes);
+
   const getSingleInfoMessage = () =>
-    `Single file limit: ${formatFileSize(SINGLE_FILE_LIMIT_BYTES)} per file.`;
+    `Single file limit: ${getReadableSize(SINGLE_FILE_LIMIT_BYTES)} per file.`;
 
   const getBatchInfoMessage = () =>
-    `Batch conversion supports up to ${BATCH_MAX_FILES} files, ${formatFileSize(BATCH_FILE_LIMIT_BYTES)} per file, ${formatFileSize(BATCH_TOTAL_LIMIT_BYTES)} total.`;
+    `Batch conversion supports up to ${BATCH_MAX_FILES} files, ${getReadableSize(BATCH_FILE_LIMIT_BYTES)} per file, ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} total.`;
 
-  const getBatchSizeDisplay = (totalSize: number) => {
-    const text = `Total size: ${formatFileSize(totalSize)} of ${formatFileSize(BATCH_TOTAL_LIMIT_BYTES)} allowed.`;
+  const getBatchSizeDisplay = useMemo(() => (totalSize: number) => {
+    const text = `Total size: ${formatFileSize(totalSize)} of ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} allowed.`;
     const isWarning = totalSize > BATCH_TOTAL_LIMIT_BYTES * 0.8;
     return { text, isWarning };
-  };
+  }, []);
 
   return {
     validationError,
