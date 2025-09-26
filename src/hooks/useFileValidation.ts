@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 
 interface ValidationError {
   code: 'too-many-files' | 'file-too-large' | 'batch-too-large' | 'invalid-type';
@@ -94,16 +94,27 @@ export const useFileValidation = () => {
     return result;
   };
 
-  const formatFileSize = (bytes: number) => getReadableSize(bytes);
+  const formatFileSize = (bytes: number) => {
+    if (bytes >= 1024 * 1024 * 1024) {
+      return `${(bytes / (1024 * 1024 * 1024)).toFixed(2)} GB`;
+    }
+    if (bytes >= 1024 * 1024) {
+      return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+    }
+    if (bytes >= 1024) {
+      return `${(bytes / 1024).toFixed(2)} KB`;
+    }
+    return `${bytes} bytes`;
+  };
 
   const getSingleInfoMessage = () =>
-    `Single file limit: ${getReadableSize(SINGLE_FILE_LIMIT_BYTES)} per file.`;
+    `Single file limit: ${formatFileSize(SINGLE_FILE_LIMIT_BYTES)} per file.`;
 
   const getBatchInfoMessage = () =>
-    `Batch conversion supports up to ${BATCH_MAX_FILES} files, ${getReadableSize(BATCH_FILE_LIMIT_BYTES)} per file, ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} total.`;
+    `Batch conversion supports up to ${BATCH_MAX_FILES} files, ${formatFileSize(BATCH_FILE_LIMIT_BYTES)} per file, ${formatFileSize(BATCH_TOTAL_LIMIT_BYTES)} total.`;
 
   const getBatchSizeDisplay = (totalSize: number) => {
-    const text = `Total size: ${formatFileSize(totalSize)} of ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} allowed.`;
+    const text = `Total size: ${formatFileSize(totalSize)} of ${formatFileSize(BATCH_TOTAL_LIMIT_BYTES)} allowed.`;
     const isWarning = totalSize > BATCH_TOTAL_LIMIT_BYTES * 0.8;
     return { text, isWarning };
   };
