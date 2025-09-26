@@ -13,9 +13,10 @@ export interface BatchResultItem {
 
 interface UseCsvConversionOptions {
   targetFormat: string;
+  extraOptions?: Record<string, string | number | boolean | undefined | null>;
 }
 
-export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
+export const useCsvConversion = ({ targetFormat, extraOptions = {} }: UseCsvConversionOptions) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -93,13 +94,26 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setBatchResults([]);
   };
 
+  const buildConversionOptions = () => {
+    const options: Record<string, string | number | boolean> = { format: targetFormat };
+
+    Object.entries(extraOptions).forEach(([key, value]) => {
+      if (value === undefined || value === null) {
+        return;
+      }
+      options[key] = value;
+    });
+
+    return options;
+  };
+
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
     setIsConverting(true);
     setError(null);
     try {
-      const result = await apiService.convertFile(selectedFile, { format: targetFormat });
+      const result = await apiService.convertFile(selectedFile, buildConversionOptions());
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
     } catch (err) {
@@ -116,7 +130,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setIsConverting(true);
     setError(null);
     try {
-      const result = await apiService.convertBatch(batchFiles, { format: targetFormat });
+      const result = await apiService.convertBatch(batchFiles, buildConversionOptions());
       setBatchResults(result.results as BatchResultItem[]);
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';

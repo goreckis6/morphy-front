@@ -43,7 +43,14 @@ export const CSVToDOCConverter: React.FC = () => {
     handleBatchConvert,
     handleDownload,
     resetForm
-  } = useCsvConversion({ targetFormat: 'doc' });
+  } = useCsvConversion({
+    targetFormat: 'doc',
+    extraOptions: {
+      tableStyle,
+      fontSize,
+      includeHeaders
+    }
+  });
   const [tableStyle, setTableStyle] = useState<'simple' | 'grid' | 'elegant'>('simple');
   const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>('medium');
   const [includeHeaders, setIncludeHeaders] = useState(true);
