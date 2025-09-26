@@ -23,11 +23,8 @@ export const CSVToMDConverter: React.FC = () => {
   const {
     selectedFile,
     convertedFile,
-    convertedFilename,
     isConverting,
     error,
-    setError,
-    validationError,
     previewUrl,
     batchMode,
     setBatchMode,
