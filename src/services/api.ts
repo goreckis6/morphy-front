@@ -19,7 +19,8 @@ const API_BASE_URL = getApiBaseUrl();
 export interface ConversionOptions {
   quality?: 'high' | 'medium' | 'low';
   lossless?: boolean;
-  format?: 'webp' | 'png' | 'jpeg' | 'ico';
+  // Allow arbitrary formats (csv/doc/docx/epub/html/md/mobi/odp/odt/pdf/ppt/pptx/rtf/txt/xls/xlsx/webp/png/jpeg/ico)
+  format?: string;
   width?: number;
   height?: number;
   iconSize?: number;
@@ -103,7 +104,7 @@ class ApiService {
     const blob = await response.blob();
     const contentDisposition = response.headers.get('Content-Disposition');
     const filename = this.extractFilename(contentDisposition) || 
-                   `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'webp'}`;
+                   `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'bin'}`;
 
     return {
       blob,
