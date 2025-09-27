@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
+import { useFileValidation } from '../../hooks/useFileValidation';
 import { 
   Upload, 
   Download, 
@@ -34,12 +35,33 @@ export const EPUBToDOCXConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.epub')) {
+        // Validate single file size using shared validation
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (fileInputRef.current) fileInputRef.current.value = '';
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid EPUB file');
@@ -49,11 +71,29 @@ export const EPUBToDOCXConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
+    
+    // Filter to only EPUB files
     const epubFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.epub')
     );
+    
+    if (epubFiles.length === 0) {
+      setError('No valid EPUB files selected.');
+      return;
+    }
+
+    // Validate batch files using shared validation
+    const validation = validateBatchFiles(epubFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
     setBatchFiles(epubFiles);
     setError(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File) => {
@@ -222,6 +262,11 @@ export const EPUBToDOCXConverter: React.FC = () => {
                     Single file limit: 100.00 MB per file.
                   </p>
                 )}
+                {batchMode && (
+                  <p className="text-sm text-blue-600 mb-4">
+                    {getBatchInfoMessage()}
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -247,7 +292,7 @@ export const EPUBToDOCXConverter: React.FC = () => {
                       <BookOpen className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -256,23 +301,44 @@ export const EPUBToDOCXConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-blue-700' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-blue-600 mr-2" />
+                              <span className="text-sm text-blue-800">Batch size is getting close to the 100MB limit. Consider 5–10 files for best performance.</span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
