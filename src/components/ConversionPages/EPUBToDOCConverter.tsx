@@ -121,6 +121,19 @@ export const EPUBToDOCConverter: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
+  const handleBatchDownload = async (result: any) => {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert.');
+      return;
+    }
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (e) {
+      setError('Failed to download file. Please try again.');
+    }
+  };
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -319,6 +332,28 @@ export const EPUBToDOCConverter: React.FC = () => {
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
                     </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch Conversion Success */}
+              {batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, i) => (
+                      <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
+                        <span className="text-sm font-medium text-gray-900">{r.outputFilename || r.originalName}</span>
+                        {r.success && r.downloadPath ? (
+                          <button onClick={() => handleBatchDownload(r)} className="bg-slate-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-slate-700 transition-colors">Download</button>
+                        ) : r.error ? (
+                          <span className="text-xs text-red-600">{r.error}</span>
+                        ) : null}
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
