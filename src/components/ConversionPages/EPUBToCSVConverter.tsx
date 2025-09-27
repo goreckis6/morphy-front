@@ -3,7 +3,6 @@ import { Header } from '../Header';
 import { 
   Upload, 
   Download, 
-  Settings, 
   FileText,
   FileImage,
   RefreshCw,
@@ -26,9 +25,7 @@ export const EPUBToCSVConverter: React.FC = () => {
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [delimiter, setDelimiter] = useState<',' | ';' | '\t'>(',');
-  const [includeMetadata, setIncludeMetadata] = useState(true);
-  const [extractTables, setExtractTables] = useState(true);
+  
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
@@ -95,12 +92,7 @@ export const EPUBToCSVConverter: React.FC = () => {
   };
 
   const handleConvert = async (file: File) => {
-    return await apiService.convertFile(file, {
-      format: 'csv',
-      delimiter,
-      includeMetadata,
-      extractTables
-    } as any);
+    return await apiService.convertFile(file, { format: 'csv' } as any);
   };
 
   const handleSingleConvert = async () => {
@@ -126,12 +118,7 @@ export const EPUBToCSVConverter: React.FC = () => {
     setIsConverting(true);
     setError(null);
     try {
-      const result = await apiService.convertBatch(batchFiles, {
-        format: 'csv',
-        delimiter,
-        includeMetadata,
-        extractTables
-      } as any);
+      const result = await apiService.convertBatch(batchFiles, { format: 'csv' } as any);
 
       setBatchResults(result.results ?? []);
       const successes = (result.results ?? []).filter(r => r.success);
@@ -265,6 +252,11 @@ export const EPUBToCSVConverter: React.FC = () => {
                     ? 'Select multiple EPUB files to convert them all at once' 
                     : 'Drag and drop your EPUB file here or click to browse'}
                 </p>
+                {!batchMode && (
+                  <p className="text-sm text-violet-600 mb-4">
+                    Single file limit: {formatFileSize(100 * 1024 * 1024)} per file.
+                  </p>
+                )}
                 {batchMode && (
                   <p className="text-sm text-violet-600 mb-4">
                     {getBatchInfoMessage()}

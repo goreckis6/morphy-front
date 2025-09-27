@@ -101,16 +101,34 @@ class ApiService {
 
     const response = await this.makeRequest('/api/convert', 'POST', formData);
     
-    const blob = await response.blob();
-    const contentDisposition = response.headers.get('Content-Disposition');
-    const filename = this.extractFilename(contentDisposition) || 
-                   `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'bin'}`;
+    // Check if response is JSON (new file-based approach) or blob (legacy)
+    const contentType = response.headers.get('Content-Type');
+    if (contentType && contentType.includes('application/json')) {
+      // New file-based approach - get download link
+      const jsonResult = await response.json();
+      
+      // Download the file from the provided link
+      const downloadResponse = await this.makeRequest(jsonResult.downloadPath);
+      const blob = await downloadResponse.blob();
+      
+      return {
+        blob,
+        filename: jsonResult.filename,
+        size: jsonResult.size
+      };
+    } else {
+      // Legacy approach - file streamed directly
+      const blob = await response.blob();
+      const contentDisposition = response.headers.get('Content-Disposition');
+      const filename = this.extractFilename(contentDisposition) || 
+                     `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'bin'}`;
 
-    return {
-      blob,
-      filename,
-      size: blob.size
-    };
+      return {
+        blob,
+        filename,
+        size: blob.size
+      };
+    }
   }
 
   async convertBatch(files: File[], options: ConversionOptions = {}): Promise<BatchConversionResult> {

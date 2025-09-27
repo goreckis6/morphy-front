@@ -217,6 +217,11 @@ export const EPUBToMDConverter: React.FC = () => {
                     : 'Drag and drop your EPUB file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-sm text-gray-600 mb-4">
+                    Single file limit: 100.00 MB per file.
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
