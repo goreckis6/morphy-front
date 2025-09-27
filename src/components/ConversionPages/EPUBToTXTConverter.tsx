@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,6 +21,7 @@ import {
 export const EPUBToTXTConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -29,6 +31,7 @@ export const EPUBToTXTConverter: React.FC = () => {
   const [lineEndings, setLineEndings] = useState<'unix' | 'windows' | 'mac'>('unix');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,25 +56,14 @@ export const EPUBToTXTConverter: React.FC = () => {
     setError(null);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse EPUB and extract text
-    const txtContent = `E-book Content
-==============
-
-Chapter 1
----------
-
-This is the converted content from EPUB to plain text format.
-The content would be properly extracted from the e-book.
-
-Chapter 2
----------
-
-More content would be extracted here.
-
-Generated from EPUB file conversion.
-Structure: ${preserveStructure}, Metadata: ${includeMetadata}, Encoding: ${encoding}, Line endings: ${lineEndings}`;
-    return new Blob([txtContent], { type: 'text/plain' });
+  const handleConvert = async (file: File) => {
+    return await apiService.convertFile(file, {
+      format: 'txt',
+      preserveStructure: preserveStructure ? 'true' : 'false',
+      includeMetadata: includeMetadata ? 'true' : 'false',
+      encoding,
+      lineEndings
+    } as any);
   };
 
   const handleSingleConvert = async () => {
@@ -81,8 +73,10 @@ Structure: ${preserveStructure}, Metadata: ${includeMetadata}, Encoding: ${encod
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await handleConvert(selectedFile);
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
+      setBatchResults([]);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -97,28 +91,53 @@ Structure: ${preserveStructure}, Metadata: ${includeMetadata}, Encoding: ${encod
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'txt',
+        preserveStructure: preserveStructure ? 'true' : 'false',
+        includeMetadata: includeMetadata ? 'true' : 'false',
+        encoding,
+        lineEndings
+      } as any);
+      setBatchResults(result.results ?? []);
+      const successes = (result.results ?? []).filter(r => r.success);
+      if (successes.length > 0) {
+        const failures = (result.results ?? []).filter(r => !r.success);
+        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
+      } else {
+        setError('Batch conversion failed. Please try again.');
       }
-      setError(null);
+      setConvertedFile(null);
+      setConvertedFilename(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchResults([]);
     } finally {
       setIsConverting(false);
     }
   };
 
   const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.epub', '.txt') : 'converted.txt';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+    if (!convertedFile) return;
+    const url = URL.createObjectURL(convertedFile);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.epub$/i, '.txt') : 'converted.txt');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleBatchDownload = async (result: any) => {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert.');
+      return;
+    }
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (e) {
+      setError('Failed to download file. Please try again.');
     }
   };
 
@@ -129,9 +148,11 @@ Structure: ${preserveStructure}, Metadata: ${includeMetadata}, Encoding: ${encod
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -313,6 +334,37 @@ Structure: ${preserveStructure}, Metadata: ${includeMetadata}, Encoding: ${encod
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
                     </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch Conversion Results */}
+              {batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Results</h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
+                        <div>
+                          <div className="text-sm font-medium text-gray-900">{result.outputFilename || result.originalName}</div>
+                          {!result.success && (
+                            <div className="text-xs text-red-600">{result.error || 'Conversion failed'}</div>
+                          )}
+                        </div>
+                        {result.success && result.downloadPath && (
+                          <button
+                            onClick={() => handleBatchDownload(result)}
+                            className="flex items-center bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                          >
+                            <Download className="w-4 h-4 mr-1" />
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}

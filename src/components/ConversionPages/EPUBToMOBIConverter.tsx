@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,6 +21,7 @@ import {
 export const EPUBToMOBIConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -29,6 +31,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
   const [kindleOptimized, setKindleOptimized] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,10 +56,14 @@ export const EPUBToMOBIConverter: React.FC = () => {
     setError(null);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse EPUB and generate MOBI
-    const mobiContent = `Mock MOBI content for ${file.name} - Formatting: ${preserveFormatting}, Images: ${includeImages}, Metadata: ${extractMetadata}, Kindle: ${kindleOptimized}`;
-    return new Blob([mobiContent], { type: 'application/x-mobipocket-ebook' });
+  const handleConvert = async (file: File) => {
+    return await apiService.convertFile(file, {
+      format: 'mobi',
+      preserveFormatting: preserveFormatting ? 'true' : 'false',
+      includeImages: includeImages ? 'true' : 'false',
+      extractMetadata: extractMetadata ? 'true' : 'false',
+      kindleOptimized: kindleOptimized ? 'true' : 'false'
+    } as any);
   };
 
   const handleSingleConvert = async () => {
@@ -66,8 +73,10 @@ export const EPUBToMOBIConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await handleConvert(selectedFile);
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
+      setBatchResults([]);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -82,28 +91,53 @@ export const EPUBToMOBIConverter: React.FC = () => {
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'mobi',
+        preserveFormatting: preserveFormatting ? 'true' : 'false',
+        includeImages: includeImages ? 'true' : 'false',
+        extractMetadata: extractMetadata ? 'true' : 'false',
+        kindleOptimized: kindleOptimized ? 'true' : 'false'
+      } as any);
+      setBatchResults(result.results ?? []);
+      const successes = (result.results ?? []).filter(r => r.success);
+      if (successes.length > 0) {
+        const failures = (result.results ?? []).filter(r => !r.success);
+        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
+      } else {
+        setError('Batch conversion failed. Please try again.');
       }
-      setError(null);
+      setConvertedFile(null);
+      setConvertedFilename(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchResults([]);
     } finally {
       setIsConverting(false);
     }
   };
 
   const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.epub', '.mobi') : 'converted.mobi';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+    if (!convertedFile) return;
+    const url = URL.createObjectURL(convertedFile);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.epub$/i, '.mobi') : 'converted.mobi');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleBatchDownload = async (result: any) => {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert.');
+      return;
+    }
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (e) {
+      setError('Failed to download file. Please try again.');
     }
   };
 
@@ -114,9 +148,11 @@ export const EPUBToMOBIConverter: React.FC = () => {
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,16 +21,17 @@ import {
 export const EPUBToPPTXConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [preserveFormatting, setPreserveFormatting] = useState(true);
   const [includeImages, setIncludeImages] = useState(true);
   const [extractMetadata, setExtractMetadata] = useState(true);
-  const [slideLayout, setSlideLayout] = useState<'auto' | 'title' | 'content' | 'mixed'>('auto');
-  const [enableAnimations, setEnableAnimations] = useState(true);
+  const [animationSupport, setAnimationSupport] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,10 +56,14 @@ export const EPUBToPPTXConverter: React.FC = () => {
     setError(null);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse EPUB and generate PPTX
-    const pptxContent = `Mock PPTX content for ${file.name} - Formatting: ${preserveFormatting}, Images: ${includeImages}, Metadata: ${extractMetadata}, Layout: ${slideLayout}, Animations: ${enableAnimations}`;
-    return new Blob([pptxContent], { type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation' });
+  const handleConvert = async (file: File) => {
+    return await apiService.convertFile(file, {
+      format: 'pptx',
+      preserveFormatting: preserveFormatting ? 'true' : 'false',
+      includeImages: includeImages ? 'true' : 'false',
+      extractMetadata: extractMetadata ? 'true' : 'false',
+      animationSupport: animationSupport ? 'true' : 'false'
+    } as any);
   };
 
   const handleSingleConvert = async () => {
@@ -67,8 +73,10 @@ export const EPUBToPPTXConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await handleConvert(selectedFile);
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
+      setBatchResults([]);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -83,28 +91,53 @@ export const EPUBToPPTXConverter: React.FC = () => {
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'pptx',
+        preserveFormatting: preserveFormatting ? 'true' : 'false',
+        includeImages: includeImages ? 'true' : 'false',
+        extractMetadata: extractMetadata ? 'true' : 'false',
+        animationSupport: animationSupport ? 'true' : 'false'
+      } as any);
+      setBatchResults(result.results ?? []);
+      const successes = (result.results ?? []).filter(r => r.success);
+      if (successes.length > 0) {
+        const failures = (result.results ?? []).filter(r => !r.success);
+        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
+      } else {
+        setError('Batch conversion failed. Please try again.');
       }
-      setError(null);
+      setConvertedFile(null);
+      setConvertedFilename(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchResults([]);
     } finally {
       setIsConverting(false);
     }
   };
 
   const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.epub', '.pptx') : 'converted.pptx';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+    if (!convertedFile) return;
+    const url = URL.createObjectURL(convertedFile);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.epub$/i, '.pptx') : 'converted.pptx');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleBatchDownload = async (result: any) => {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert.');
+      return;
+    }
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (e) {
+      setError('Failed to download file. Please try again.');
     }
   };
 
@@ -115,14 +148,16 @@ export const EPUBToPPTXConverter: React.FC = () => {
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -299,6 +334,37 @@ export const EPUBToPPTXConverter: React.FC = () => {
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
                     </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch Conversion Results */}
+              {batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Results</h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
+                        <div>
+                          <div className="text-sm font-medium text-gray-900">{result.outputFilename || result.originalName}</div>
+                          {!result.success && (
+                            <div className="text-xs text-red-600">{result.error || 'Conversion failed'}</div>
+                          )}
+                        </div>
+                        {result.success && result.downloadPath && (
+                          <button
+                            onClick={() => handleBatchDownload(result)}
+                            className="flex items-center bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                          >
+                            <Download className="w-4 h-4 mr-1" />
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
