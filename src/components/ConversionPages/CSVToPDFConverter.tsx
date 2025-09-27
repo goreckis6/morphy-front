@@ -256,7 +256,7 @@ export const CSVToPDFConverter: React.FC = () => {
                         </div>
                         {r.success && r.downloadPath && (
                           <button
-                            onClick={() => apiService.downloadFile((r as any).storedFilename || decodeURIComponent(r.downloadPath!.replace('/download/', '')), r.outputFilename)}
+                            onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
                           >
                             Download
@@ -361,6 +361,13 @@ export const CSVToPDFConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
               </div>
             </div>
           </div>

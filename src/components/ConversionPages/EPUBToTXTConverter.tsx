@@ -524,6 +524,13 @@ export const EPUBToTXTConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
               </div>
             </div>
           </div>
