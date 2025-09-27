@@ -114,7 +114,8 @@ export const EPUBToCSVConverter: React.FC = () => {
       setBatchConverted(false);
       setBatchResults([]);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
+      setError(message);
     } finally {
       setIsConverting(false);
     }
@@ -145,9 +146,10 @@ export const EPUBToCSVConverter: React.FC = () => {
       setConvertedFile(null);
       setConvertedFilename(null);
     } catch (err) {
+      const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';
       setBatchConverted(false);
       setBatchResults([]);
-      setError('Batch conversion failed. Please try again.');
+      setError(message);
     } finally {
       setIsConverting(false);
     }
