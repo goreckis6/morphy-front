@@ -33,6 +33,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -140,6 +141,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
       } as any);
 
       setBatchResults(result.results ?? []);
+      setBatchConverted(true);
       const successes = (result.results ?? []).filter(r => r.success);
       if (successes.length > 0) {
         const failures = (result.results ?? []).filter(r => !r.success);
@@ -152,6 +154,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
       setBatchResults([]);
+      setBatchConverted(false);
     } finally {
       setIsConverting(false);
     }
@@ -194,6 +197,8 @@ export const EPUBToHTMLConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchResults([]);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -408,7 +413,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
               )}
 
               {/* Batch Conversion Success */}
-              {batchMode && batchResults.length > 0 && (
+              {batchMode && batchConverted && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
