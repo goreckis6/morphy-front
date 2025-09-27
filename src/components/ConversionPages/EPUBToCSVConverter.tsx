@@ -414,55 +414,6 @@ export const EPUBToCSVConverter: React.FC = () => {
           {/* Settings & Info Panel */}
           <div className="space-y-6">
             
-            {/* Conversion Settings */}
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-violet-600" />
-                CSV Settings
-              </h3>
-              
-              {/* Delimiter */}
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Delimiter
-                </label>
-                <select
-                  value={delimiter}
-                  onChange={(e) => setDelimiter(e.target.value as ',' | ';' | '\t')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
-                >
-                  <option value=",">Comma (,)</option>
-                  <option value=";">Semicolon (;)</option>
-                  <option value="\t">Tab</option>
-                </select>
-              </div>
-
-              {/* Include Metadata */}
-              <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={includeMetadata}
-                    onChange={(e) => setIncludeMetadata(e.target.checked)}
-                    className="rounded border-gray-300 text-violet-600 focus:ring-violet-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Include book metadata</span>
-                </label>
-              </div>
-
-              {/* Extract Tables */}
-              <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={extractTables}
-                    onChange={(e) => setExtractTables(e.target.checked)}
-                    className="rounded border-gray-300 text-violet-600 focus:ring-violet-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Extract table data only</span>
-                </label>
-              </div>
-            </div>
 
             {/* Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
