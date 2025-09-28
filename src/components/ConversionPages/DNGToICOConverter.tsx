@@ -21,6 +21,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 export const DNGToICOConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -28,6 +29,7 @@ export const DNGToICOConverter: React.FC = () => {
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -209,70 +211,11 @@ ICO_FILE_END`;
     }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    return new Promise((resolve, reject) => {
-      try {
-        const reader = new FileReader();
-        reader.onload = async (e) => {
-          try {
-            const arrayBuffer = e.target?.result as ArrayBuffer;
-            const uint8Array = new Uint8Array(arrayBuffer);
-            
-            // Look for embedded JPEG preview to convert to ICO
-            const jpegStart = findJPEGStart(uint8Array);
-            const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
-            
-            if (jpegStart !== -1 && jpegEnd !== -1) {
-              // Extract the JPEG preview and convert to ICO
-              const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
-              const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
-              const jpegUrl = URL.createObjectURL(jpegBlob);
-              
-              const img = new Image();
-              img.onload = () => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                if (!ctx) {
-                  URL.revokeObjectURL(jpegUrl);
-                  generateSampleICO(file, resolve);
-                  return;
-                }
-                
-                canvas.width = iconSize;
-                canvas.height = iconSize;
-                ctx.drawImage(img, 0, 0, iconSize, iconSize);
-                
-                canvas.toBlob((blob) => {
-                  URL.revokeObjectURL(jpegUrl);
-                  if (blob) {
-                    resolve(blob);
-                  } else {
-                    generateSampleICO(file, resolve);
-                  }
-                }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
-              };
-              
-              img.onerror = () => {
-                URL.revokeObjectURL(jpegUrl);
-                generateSampleICO(file, resolve);
-              };
-              
-              img.src = jpegUrl;
-            } else {
-              // No JPEG preview found, generate sample
-              generateSampleICO(file, resolve);
-            }
-          } catch (error) {
-            generateSampleICO(file, resolve);
-          }
-        };
-        reader.onerror = () => {
-          generateSampleICO(file, resolve);
-        };
-        reader.readAsArrayBuffer(file);
-      } catch (error) {
-        generateSampleICO(file, resolve);
-      }
+  const handleConvert = async (file: File) => {
+    return await apiService.convertFile(file, {
+      format: 'ico',
+      iconSize: iconSize,
+      quality: quality
     });
   };
 
@@ -283,8 +226,9 @@ ICO_FILE_END`;
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await handleConvert(selectedFile);
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -299,30 +243,25 @@ ICO_FILE_END`;
     setError(null);
     
     try {
-      for (let i = 0; i < batchFiles.length; i++) {
-        const file = batchFiles[i];
-        const converted = await handleConvert(file);
-        
-        // Create download link
-        const url = URL.createObjectURL(converted);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = file.name.replace('.dng', '.ico');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        // Small delay between downloads
-        if (i < batchFiles.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 500));
-        }
-      }
-      
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'ico',
+        iconSize: iconSize,
+        quality: quality
+      });
+
+      setBatchResults(result.results ?? []);
       setBatchConverted(true);
-      setError(null);
+      const successes = (result.results ?? []).filter(r => r.success);
+      if (successes.length > 0) {
+        const failures = (result.results ?? []).filter(r => !r.success);
+        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
+      } else {
+        setError('Batch conversion failed. Please try again.');
+      }
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchResults([]);
+      setBatchConverted(false);
     } finally {
       setIsConverting(false);
     }
