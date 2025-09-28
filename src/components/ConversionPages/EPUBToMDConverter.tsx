@@ -145,6 +145,8 @@ export const EPUBToMDConverter: React.FC = () => {
       }
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchResults([]);
+      setBatchConverted(false);
     } finally {
       setIsConverting(false);
     }
@@ -188,8 +190,8 @@ export const EPUBToMDConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchResults([]);
-      setBatchConverted(false);
-      setBatchConverted(true);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
