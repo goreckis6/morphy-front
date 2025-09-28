@@ -380,7 +380,7 @@ AVRO_FILE_END`;
                       <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -436,7 +436,7 @@ AVRO_FILE_END`;
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                         <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                       </div>
                     ))}
                   </div>

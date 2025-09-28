@@ -305,7 +305,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                       <BookOpen className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -319,7 +319,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                         <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                       </div>
                     ))}
                   </div>
@@ -408,7 +408,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                           )}
                           <span className="text-sm font-medium truncate">{result.originalName}</span>
                           {result.success && result.size && (
-                            <span className="text-xs text-gray-500 ml-2">({(result.size / 1024).toFixed(1)} KB)</span>
+                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(.size)})</span>
                           )}
                         </div>
                         {result.success && result.downloadPath && (

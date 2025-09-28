@@ -431,7 +431,7 @@ ICO_FILE_END`;
                         />
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
+                            <strong>{selectedFile?.name}</strong> ({formatFileSize(selectedFile?.size || 0)})
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
                             <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
@@ -449,7 +449,7 @@ ICO_FILE_END`;
                         </div>
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
+                            <strong>{selectedFile?.name}</strong> ({formatFileSize(selectedFile?.size || 0)})
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
                             <p>Adobe Digital Negative (DNG) camera file</p>
@@ -475,7 +475,7 @@ ICO_FILE_END`;
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                         <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                       </div>
                     ))}
                   </div>
@@ -553,7 +553,7 @@ ICO_FILE_END`;
                         <div className="text-sm">
                           <div className="font-medium text-gray-900">{r.originalName}</div>
                           {r.success ? (
-                            <div className="text-gray-500 text-xs">{r.outputFilename} {(r.size ? `- ${(r.size/1024).toFixed(1)} KB` : '')}</div>
+                            <div className="text-gray-500 text-xs">{r.outputFilename} {(r.size ? `- ${formatFileSize(r.size)}` : '')}</div>
                           ) : (
                             <div className="text-red-600 text-xs">{r.error || 'Conversion failed'}</div>
                           )}

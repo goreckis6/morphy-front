@@ -33,10 +33,12 @@ export const CSVToMOBIConverter: React.FC = () => {
     setBatchMode,
     batchFiles,
     batchResults,
+    batchConverted,
     fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
+    formatFileSize,
     handleFileSelect,
     handleBatchFileSelect,
     handleSingleConvert,
@@ -155,7 +157,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                       <FileText className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -178,7 +180,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                         <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                       </div>
                     ))}
                   </div>
@@ -240,7 +242,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                 </div>
               )}
 
-              {batchMode && batchResults.length > 0 && (
+              {batchMode && batchConverted && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
@@ -251,6 +253,9 @@ export const CSVToMOBIConverter: React.FC = () => {
                       <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
                         <div className="text-sm">
                           <div className="font-medium text-gray-900">{r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.mobi')}</div>
+                          {r.success && r.size && (
+                            <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
+                          )}
                           {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
                         {r.success && r.downloadPath && (
@@ -264,6 +269,13 @@ export const CSVToMOBIConverter: React.FC = () => {
                       </div>
                     ))}
                   </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
                 </div>
               )}
             </div>

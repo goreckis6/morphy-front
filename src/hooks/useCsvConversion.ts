@@ -25,6 +25,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<BatchResultItem[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const {
@@ -34,6 +35,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
+    formatFileSize,
     clearValidationError
   } = useFileValidation();
 
@@ -60,6 +62,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setConvertedFile(null);
     setConvertedFilename(null);
     setBatchResults([]);
+    setBatchConverted(false);
     setError(null);
     clearValidationError();
   };
@@ -91,6 +94,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setConvertedFilename(null);
     setPreviewUrl(null);
     setBatchResults([]);
+    setBatchConverted(false);
   };
 
   const handleSingleConvert = async () => {
@@ -117,10 +121,18 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setError(null);
     try {
       const result = await apiService.convertBatch(batchFiles, { format: targetFormat });
-      setBatchResults(result.results as BatchResultItem[]);
+      const results = (result.results as BatchResultItem[]) ?? [];
+      setBatchResults(results);
+      const successCount = results.filter(item => item.success).length;
+      setBatchConverted(successCount > 0);
+      if (successCount === 0) {
+        setError('Batch conversion failed. Please try again.');
+      }
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';
       setError(message);
+      setBatchConverted(false);
+      setBatchResults([]);
     } finally {
       setIsConverting(false);
     }
@@ -146,6 +158,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchResults([]);
+    setBatchConverted(false);
     clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
@@ -163,10 +176,12 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setBatchMode,
     batchFiles,
     batchResults,
+    batchConverted,
     fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
+    formatFileSize,
     handleFileSelect,
     handleBatchFileSelect,
     handleSingleConvert,

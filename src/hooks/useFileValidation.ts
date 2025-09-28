@@ -21,16 +21,11 @@ export const useFileValidation = () => {
   const clearValidationError = () => setValidationError(null);
 
   const getReadableSize = (bytes: number) => {
-    if (bytes >= 1024 * 1024 * 1024) {
-      return `${(bytes / (1024 * 1024 * 1024)).toFixed(2)} GB`;
+    const sizeInMb = bytes / (1024 * 1024);
+    if (sizeInMb >= 1024) {
+      return `${(sizeInMb / 1024).toFixed(2)} GB`;
     }
-    if (bytes >= 1024 * 1024) {
-      return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
-    }
-    if (bytes >= 1024) {
-      return `${(bytes / 1024).toFixed(2)} KB`;
-    }
-    return `${bytes} bytes`;
+    return `${sizeInMb.toFixed(2)} MB`;
   };
 
   const validateFileSize = (file: File, limitBytes: number): ValidationResult => {
