@@ -190,6 +190,20 @@ ICO_FILE_END`;
     }
   };
 
+  
+  const handleBatchDownload = async (result: any) => {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
+      setError('Download link is missing. Please reconvert.');
+      return;
+    }
+    try {
+      await apiService.downloadFile(filename, result.outputFilename);
+    } catch (error) {
+      setError('Download failed. Please try again.');
+    }
+  };
+
   const handleDownload = () => {
     if (convertedFile) {
       const url = URL.createObjectURL(convertedFile);
