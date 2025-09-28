@@ -17,6 +17,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
 
 export const DNGToICOConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -230,7 +231,8 @@ ICO_FILE_END`;
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
+      setError(message);
     } finally {
       setIsConverting(false);
     }
@@ -259,7 +261,8 @@ ICO_FILE_END`;
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';
+      setError(message);
       setBatchResults([]);
       setBatchConverted(false);
     } finally {
@@ -537,16 +540,35 @@ ICO_FILE_END`;
                 </div>
               )}
 
-              {/* Batch Conversion Success */}
+              {/* Batch Conversion Results */}
               {batchConverted && batchMode && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
-                  <p className="text-green-700 mb-4">
-                    All {batchFiles.length} DNG files have been successfully converted to ICO format and downloaded.
-                  </p>
+                  <div className="space-y-2 max-h-64 overflow-y-auto mb-4">
+                    {batchResults.map((r, idx) => (
+                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
+                        <div className="text-sm">
+                          <div className="font-medium text-gray-900">{r.originalName}</div>
+                          {r.success ? (
+                            <div className="text-gray-500 text-xs">{r.outputFilename} {(r.size ? `- ${(r.size/1024).toFixed(1)} KB` : '')}</div>
+                          ) : (
+                            <div className="text-red-600 text-xs">{r.error || 'Conversion failed'}</div>
+                          )}
+                        </div>
+                        {r.success && (
+                          <button
+                            onClick={() => handleBatchDownload(r)}
+                            className="bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700"
+                          >
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                   <button
                     onClick={resetForm}
                     className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
