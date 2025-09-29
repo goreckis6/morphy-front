@@ -485,8 +485,8 @@ export const EPUBToPPTXConverter: React.FC = () => {
                 <label className="flex items-center">
                   <input
                     type="checkbox"
-                    checked={enableAnimations}
-                    onChange={(e) => setEnableAnimations(e.target.checked)}
+                    checked={animationSupport}
+                    onChange={(e) => setAnimationSupport(e.target.checked)}
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Enable slide animations</span>
