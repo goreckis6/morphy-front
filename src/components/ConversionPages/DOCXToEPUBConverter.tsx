@@ -393,32 +393,39 @@ export const DOCXToEPUBConverter: React.FC = () => {
                     {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
-                        <div className="flex items-center">
-                          {result.success ? (
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          ) : (
-                            <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
-                          )}
-                          <span className="text-sm font-medium">{result.originalName}</span>
-                          {result.success && result.size !== undefined && (
-                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
-                          )}
-                        </div>
-                        {result.success && result.downloadPath && (
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.epub`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex flex-col">
+                            <div className="flex items-center">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                              )}
+                              <span className="text-sm font-medium">{displayName}</span>
+                            </div>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
+                            )}
+                            {!result.success && result.error && (
+                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadPath && (
                           <button
-                            onClick={() => handleBatchDownload(result.downloadPath!, result.outputFilename || 'converted.epub')}
-                            className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                            onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
+                            className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                           >
+                            <Download className="w-4 h-4 inline mr-1" />
                             Download
                           </button>
-                        )}
-                        {!result.success && result.error && (
-                          <span className="text-xs text-red-600">{result.error}</span>
-                        )}
-                      </div>
-                    ))}
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
