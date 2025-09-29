@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
+import { BatchConversionResult } from '../../services/api';
 
 type BatchResult = {
   originalName: string;
@@ -126,8 +127,32 @@ export const DOCXToEPUBConverter: React.FC = () => {
 
     try {
       const result = await apiService.convertBatch(batchFiles, buildOptions() as any);
-      setBatchResults(result.results ?? []);
-      const successes = (result.results ?? []).filter(r => r.success);
+      const processedResults = (result.results ?? []).map(r => {
+        if (!r || !r.originalName) {
+          return {
+            originalName: 'Unknown file',
+            success: false,
+            error: 'Invalid backend response'
+          } as BatchResult;
+        }
+
+        const baseName = r.originalName.replace(/\.[^.]+$/, '') || 'converted';
+        const outputFilename = r.outputFilename || `${baseName}.epub`;
+        const size = r.size && r.size > 0 ? r.size : undefined;
+
+        return {
+          originalName: r.originalName,
+          outputFilename,
+          size,
+          success: !!r.success,
+          error: r.error,
+          downloadPath: r.downloadPath,
+          storedFilename: r.storedFilename
+        } as BatchResult;
+      });
+
+      setBatchResults(processedResults);
+      const successes = processedResults.filter(r => r.success);
       if (successes.length > 0) {
         setBatchConverted(true);
       } else {
@@ -155,13 +180,20 @@ export const DOCXToEPUBConverter: React.FC = () => {
     }
   };
 
-  const handleBatchDownload = (downloadPath: string, filename: string) => {
-    const link = document.createElement('a');
-    link.href = downloadPath;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleBatchDownload = async (result: BatchResult) => {
+    if (!result.downloadPath) return;
+    try {
+      if (result.storedFilename) {
+        await apiService.downloadFile(result.storedFilename, result.outputFilename);
+      } else {
+        const response = await fetch(result.downloadPath);
+        const blob = await response.blob();
+        apiService.downloadBlob(blob, result.outputFilename || 'converted.epub');
+      }
+    } catch (error) {
+      console.error('Batch download failed:', error);
+      setError('Failed to download one of the converted files.');
+    }
   };
 
   const handleBack = () => {
