@@ -36,6 +36,7 @@ export const CSVToDOCConverter: React.FC = () => {
     getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
+    formatFileSize,
     handleFileSelect,
     handleBatchFileSelect,
     handleSingleConvert,

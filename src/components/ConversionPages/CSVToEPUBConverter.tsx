@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Header } from '../Header';
+import { useFileValidation } from '../../hooks/useFileValidation';
 import { 
   Upload, 
   Download, 
@@ -29,6 +30,17 @@ export const CSVToEPUBConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
