@@ -29,6 +29,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
   const [extractTables, setExtractTables] = useState(true);
   const [includeMetadata, setIncludeMetadata] = useState(true);
   const [sheetPerChapter, setSheetPerChapter] = useState(false);
+  const [includeChapters, setIncludeChapters] = useState(true);
   const [dataFormat, setDataFormat] = useState<'structured' | 'flat' | 'mixed'>('structured');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
@@ -99,6 +100,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
       extractTables: extractTables ? 'true' : 'false',
       includeMetadata: includeMetadata ? 'true' : 'false',
       sheetPerChapter: sheetPerChapter ? 'true' : 'false',
+      includeChapters: includeChapters ? 'true' : 'false',
       dataFormat
     } as any);
   };
@@ -134,6 +136,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
         extractTables: extractTables ? 'true' : 'false',
         includeMetadata: includeMetadata ? 'true' : 'false',
         sheetPerChapter: sheetPerChapter ? 'true' : 'false',
+        includeChapters: includeChapters ? 'true' : 'false',
         dataFormat
       } as any);
       setBatchResults(result.results ?? []);
