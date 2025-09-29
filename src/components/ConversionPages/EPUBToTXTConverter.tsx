@@ -19,7 +19,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export const EPUBToTXTConverter: React.FC = () => {
+export const EPUBToTXTConverter: React.FC = () => { {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);

@@ -19,7 +19,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export const EPUBToMOBIConverter: React.FC = () => {
+export const EPUBToMOBIConverter: React.FC = () => { {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -115,7 +115,6 @@ export const EPUBToMOBIConverter: React.FC = () => {
       setConvertedFilename(result.filename);
       setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -152,7 +151,6 @@ export const EPUBToMOBIConverter: React.FC = () => {
       setError('Batch conversion failed. Please try again.');
       setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     } finally {
       setIsConverting(false);
     }
@@ -196,7 +194,6 @@ export const EPUBToMOBIConverter: React.FC = () => {
     setBatchFiles([]);
     setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 

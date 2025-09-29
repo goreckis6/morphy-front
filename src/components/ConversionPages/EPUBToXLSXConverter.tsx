@@ -19,7 +19,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export const EPUBToXLSXConverter: React.FC = () => {
+export const EPUBToXLSXConverter: React.FC = () => { {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -113,7 +113,6 @@ export const EPUBToXLSXConverter: React.FC = () => {
       setConvertedFilename(result.filename);
       setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -149,7 +148,6 @@ export const EPUBToXLSXConverter: React.FC = () => {
       setError('Batch conversion failed. Please try again.');
       setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     } finally {
       setIsConverting(false);
     }
@@ -193,7 +191,6 @@ export const EPUBToXLSXConverter: React.FC = () => {
     setBatchFiles([]);
     setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 

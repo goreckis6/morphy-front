@@ -115,7 +115,6 @@ export const EPUBToODPConverter: React.FC = () => {
       setConvertedFilename(result.filename);
       setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -152,7 +151,6 @@ export const EPUBToODPConverter: React.FC = () => {
       setError('Batch conversion failed. Please try again.');
       setBatchResults([]);
       setBatchConverted(false);
-      setBatchConverted(true);
     } finally {
       setIsConverting(false);
     }
