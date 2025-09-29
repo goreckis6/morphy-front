@@ -16,6 +16,8 @@ import {
   File,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
 
 export const DOCToCSVConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -28,15 +30,41 @@ export const DOCToCSVConverter: React.FC = () => {
   const [extractTables, setExtractTables] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<Array<{
+    originalName: string;
+    outputFilename?: string;
+    size?: number;
+    success: boolean;
+    error?: string;
+    downloadPath?: string;
+    storedFilename?: string;
+  }>>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.doc')) {
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error || 'File validation failed');
+          return;
+        }
         setSelectedFile(file);
         setError(null);
         setPreviewUrl(URL.createObjectURL(file));
+        clearValidationError();
       } else {
         setError('Please select a valid DOC file');
       }
@@ -48,16 +76,16 @@ export const DOCToCSVConverter: React.FC = () => {
     const docFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.doc')
     );
+    
+    const validation = validateBatchFiles(docFiles);
+    if (!validation.isValid) {
+      setError(validation.error || 'Batch validation failed');
+      return;
+    }
+    
     setBatchFiles(docFiles);
     setError(null);
-  };
-
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse DOC and extract table data
-    const csvContent = `Name,Age,City
-John Doe,30,New York
-Jane Smith,25,Los Angeles`;
-    return new Blob([csvContent], { type: 'text/csv' });
+    clearValidationError();
   };
 
   const handleSingleConvert = async () => {
@@ -65,10 +93,20 @@ Jane Smith,25,Los Angeles`;
     
     setIsConverting(true);
     setError(null);
+    setBatchConverted(false);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await apiService.convertFile(selectedFile, {
+        format: 'csv',
+        delimiter: delimiter,
+        includeHeaders: includeHeaders ? 'true' : 'false',
+        extractTables: extractTables ? 'true' : 'false'
+      });
+      
+      // Download the converted file
+      const response = await fetch(result.downloadPath);
+      const blob = await response.blob();
+      setConvertedFile(blob);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -83,13 +121,27 @@ Jane Smith,25,Los Angeles`;
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'csv',
+        delimiter: delimiter,
+        includeHeaders: includeHeaders ? 'true' : 'false',
+        extractTables: extractTables ? 'true' : 'false'
+      });
+      
+      setBatchResults(result.results ?? []);
+      setBatchConverted(true);
+      
+      const successes = (result.results ?? []).filter(r => r.success);
+      if (successes.length > 0) {
+        setError(null);
+      } else {
+        setError('Batch conversion failed. Please try again.');
+        setBatchConverted(false);
       }
-      setError(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchResults([]);
+      setBatchConverted(false);
     } finally {
       setIsConverting(false);
     }
@@ -118,7 +170,19 @@ Jane Smith,25,Los Angeles`;
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchResults([]);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const handleBatchDownload = (downloadPath: string, filename: string) => {
+    const link = document.createElement('a');
+    link.href = downloadPath;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -224,7 +288,7 @@ Jane Smith,25,Los Angeles`;
                       <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -233,15 +297,28 @@ Jane Smith,25,Los Angeles`;
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  <h4 className="text-lg font-semibold mb-4">
+                    Selected Files ({batchFiles.length}) {getBatchSizeDisplay(batchFiles)}
+                  </h4>
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                         <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                       </div>
                     ))}
                   </div>
+                  {getBatchInfoMessage(batchFiles) && (
+                    <p className="text-sm text-blue-600 mt-2">{getBatchInfoMessage(batchFiles)}</p>
+                  )}
+                </div>
+              )}
+
+              {/* Validation Error */}
+              {validationError && (
+                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
+                  <span className="text-red-700">{validationError}</span>
                 </div>
               )}
 
@@ -302,6 +379,53 @@ Jane Smith,25,Los Angeles`;
                   </div>
                 </div>
               )}
+
+              {/* Batch Conversion Results */}
+              {batchMode && batchConverted && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <p className="text-green-700 mb-4">
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                  </p>
+                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                        <div className="flex items-center">
+                          {result.success ? (
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          ) : (
+                            <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                          )}
+                          <span className="text-sm font-medium">{result.originalName}</span>
+                          {result.success && result.size && (
+                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
+                          )}
+                        </div>
+                        {result.success && result.downloadPath && (
+                          <button
+                            onClick={() => handleBatchDownload(result.downloadPath!, result.outputFilename || 'converted.csv')}
+                            className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          >
+                            Download
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -314,6 +438,19 @@ Jane Smith,25,Los Angeles`;
                 <Settings className="w-5 h-5 mr-2 text-blue-600" />
                 CSV Settings
               </h3>
+              
+              {/* File Limits */}
+              <div className="mb-6 p-4 bg-blue-50 rounded-lg">
+                <h4 className="text-sm font-semibold text-blue-900 mb-2">File Limits</h4>
+                <p className="text-sm text-blue-700">
+                  Single file limit: 100.00 MB per file.
+                </p>
+                {batchMode && (
+                  <p className="text-sm text-blue-700 mt-1">
+                    Batch limit: 100.00 MB per file, 20 files maximum.
+                  </p>
+                )}
+              </div>
               
               {/* Delimiter */}
               <div className="mb-6">
