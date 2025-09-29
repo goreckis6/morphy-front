@@ -434,7 +434,7 @@ export const EPUBToDOCXConverter: React.FC = () => {
                           )}
                           <span className="text-sm font-medium truncate">{result.originalName}</span>
                           {result.success && result.size && (
-                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(.size)})</span>
+                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
                           )}
                         </div>
                         {result.success && result.downloadPath && (
