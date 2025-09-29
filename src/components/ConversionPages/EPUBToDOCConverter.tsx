@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
+import { useFileValidation } from '../../hooks/useFileValidation';
 import { 
   Upload, 
   Download, 
@@ -31,15 +32,34 @@ export const EPUBToDOCConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.epub')) {
+        // Validate single file size using shared validation
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error || 'File validation failed');
+          return;
+        }
         setSelectedFile(file);
         setError(null);
         setPreviewUrl(URL.createObjectURL(file));
+        clearValidationError();
       } else {
         setError('Please select a valid EPUB file');
       }
@@ -51,8 +71,17 @@ export const EPUBToDOCConverter: React.FC = () => {
     const epubFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.epub')
     );
+    
+    // Validate batch files using shared validation
+    const validation = validateBatchFiles(epubFiles);
+    if (!validation.isValid) {
+      setError(validation.error || 'Batch validation failed');
+      return;
+    }
+    
     setBatchFiles(epubFiles);
     setError(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File) => {
