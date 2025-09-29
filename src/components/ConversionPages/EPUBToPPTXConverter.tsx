@@ -29,10 +29,12 @@ export const EPUBToPPTXConverter: React.FC = () => {
   const [preserveFormatting, setPreserveFormatting] = useState(true);
   const [includeImages, setIncludeImages] = useState(true);
   const [extractMetadata, setExtractMetadata] = useState(true);
+  const [slideLayout, setSlideLayout] = useState<'auto' | 'title' | 'content' | 'mixed'>('auto');
   const [animationSupport, setAnimationSupport] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
