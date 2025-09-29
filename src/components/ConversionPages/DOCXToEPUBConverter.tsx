@@ -293,7 +293,20 @@ export const DOCXToEPUBConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length}) {getBatchSizeDisplay(batchFiles)}</h4>
+                  <h4 className="text-lg font-semibold mb-4">
+                    Selected Files ({batchFiles.length})
+                    {(() => {
+                      const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                      const batchDisplay = getBatchSizeDisplay(totalSize);
+                      return (
+                        <span
+                          className={`block text-sm mt-1 ${batchDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}
+                        >
+                          {batchDisplay.text}
+                        </span>
+                      );
+                    })()}
+                  </h4>
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -302,9 +315,7 @@ export const DOCXToEPUBConverter: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  {getBatchInfoMessage(batchFiles) && (
-                    <p className="text-sm text-purple-600 mt-2">{getBatchInfoMessage(batchFiles)}</p>
-                  )}
+                  <p className="text-sm text-purple-600 mt-2">{getBatchInfoMessage()}</p>
                 </div>
               )}
 
