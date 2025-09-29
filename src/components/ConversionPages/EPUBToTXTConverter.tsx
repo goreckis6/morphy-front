@@ -33,6 +33,7 @@ export const EPUBToTXTConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -135,18 +136,21 @@ export const EPUBToTXTConverter: React.FC = () => {
         lineEndings
       } as any);
       setBatchResults(result.results ?? []);
+      setBatchConverted(true);
       const successes = (result.results ?? []).filter(r => r.success);
       if (successes.length > 0) {
         const failures = (result.results ?? []).filter(r => !r.success);
         setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
       } else {
         setError('Batch conversion failed. Please try again.');
+        setBatchConverted(false);
       }
       setConvertedFile(null);
       setConvertedFilename(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
       setBatchResults([]);
+      setBatchConverted(false);
     } finally {
       setIsConverting(false);
     }
@@ -189,6 +193,8 @@ export const EPUBToTXTConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchResults([]);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
