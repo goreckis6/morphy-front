@@ -444,7 +444,7 @@ export const AVROToJSONConverter: React.FC = () => {
                           {result.success && result.downloadPath && (
                             <button
                               onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
-                              className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                             >
                               Download
                             </button>

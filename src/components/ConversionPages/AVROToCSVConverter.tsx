@@ -138,25 +138,22 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
     
     try {
       // Mock batch conversion - process each file
+      const results = [];
       for (let i = 0; i < batchFiles.length; i++) {
         const file = batchFiles[i];
         const converted = await handleConvert(file);
         
-        // Download each converted file
-        const url = URL.createObjectURL(converted);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = file.name.replace('.avro', '.csv');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        // Small delay between downloads
-        if (i < batchFiles.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 500));
-        }
+        results.push({
+          originalName: file.name,
+          outputFilename: file.name.replace('.avro', '.csv'),
+          size: converted.size,
+          success: true,
+          downloadPath: URL.createObjectURL(converted),
+          blob: converted
+        });
       }
+      
+      setBatchResults(results);
       setBatchConverted(true);
       setError(null);
     } catch (err) {
@@ -167,17 +164,13 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
   };
 
   
-  const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-      setError('Download link is missing. Please reconvert.');
-      return;
-    }
-    try {
-      await apiService.downloadFile(filename, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
-    }
+  const handleBatchDownload = (downloadPath: string, filename: string) => {
+    const link = document.createElement('a');
+    link.href = downloadPath;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleDownload = () => {
@@ -204,6 +197,9 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
+    setBatchResults([]);
+    setConvertedFilename(null);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -422,15 +418,49 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
               )}
 
               {/* Batch Conversion Success Message */}
-              {batchConverted && batchMode && (
+              {batchMode && batchConverted && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchFiles.length} AVRO files have been successfully converted to CSV format and downloaded.
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
+                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.csv`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex flex-col">
+                            <div className="flex items-center">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                              )}
+                              <span className="text-sm font-medium">{displayName}</span>
+                            </div>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
+                            )}
+                            {!result.success && result.error && (
+                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadPath && (
+                            <button
+                              onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                            >
+                              Download
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={resetForm}
