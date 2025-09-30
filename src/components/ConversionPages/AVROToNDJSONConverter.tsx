@@ -29,6 +29,9 @@ export const AVROToNDJSONConverter: React.FC = () => {
   const [streamingMode, setStreamingMode] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
 
   // Use shared validation hook
   const {
@@ -41,15 +44,26 @@ export const AVROToNDJSONConverter: React.FC = () => {
     formatFileSize,
     clearValidationError
   } = useFileValidation();
-  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.avro')) {
+        // Validate single file size using shared validation
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (event.target) {
+            event.target.value = '';
+          }
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid AVRO file');
@@ -59,11 +73,29 @@ export const AVROToNDJSONConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const avroFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.avro')
-    );
+    
+    // Filter to only AVRO files
+    const avroFiles = files.filter(file => file.name.toLowerCase().endsWith('.avro'));
+    
+    if (avroFiles.length === 0) {
+      setError('No valid AVRO files selected.');
+      return;
+    }
+
+    // Validate batch files using shared validation
+    const validation = validateBatchFiles(avroFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (event.target) {
+        event.target.value = '';
+      }
+      return;
+    }
+
     setBatchFiles(avroFiles);
     setError(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
@@ -84,6 +116,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
     try {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
+      setConvertedFilename(selectedFile.name.replace('.avro', '.ndjson'));
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -99,25 +132,22 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
     
     try {
       // Mock batch conversion - process each file
+      const results = [];
       for (let i = 0; i < batchFiles.length; i++) {
         const file = batchFiles[i];
         const converted = await handleConvert(file);
         
-        // Download each converted file
-        const url = URL.createObjectURL(converted);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = file.name.replace('.avro', '.ndjson');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        // Small delay between downloads
-        if (i < batchFiles.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 500));
-        }
+        results.push({
+          originalName: file.name,
+          outputFilename: file.name.replace('.avro', '.ndjson'),
+          size: converted.size,
+          success: true,
+          downloadPath: URL.createObjectURL(converted),
+          blob: converted
+        });
       }
+      
+      setBatchResults(results);
       setBatchConverted(true);
       setError(null);
     } catch (err) {
@@ -128,17 +158,13 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
   };
 
   
-  const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-      setError('Download link is missing. Please reconvert.');
-      return;
-    }
-    try {
-      await apiService.downloadFile(filename, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
-    }
+  const handleBatchDownload = (downloadPath: string, filename: string) => {
+    const link = document.createElement('a');
+    link.href = downloadPath;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleDownload = () => {
@@ -165,6 +191,9 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
+    setBatchResults([]);
+    setConvertedFilename(null);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -277,7 +306,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                       <Database className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -286,23 +315,46 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
@@ -357,15 +409,49 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
               )}
 
               {/* Batch Conversion Success Message */}
-              {batchConverted && batchMode && (
+              {batchMode && batchConverted && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchFiles.length} AVRO files have been successfully converted to NDJSON format and downloaded.
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
+                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.ndjson`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex flex-col">
+                            <div className="flex items-center">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                              )}
+                              <span className="text-sm font-medium">{displayName}</span>
+                            </div>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
+                            )}
+                            {!result.success && result.error && (
+                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadPath && (
+                            <button
+                              onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                            >
+                              Download
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={resetForm}
