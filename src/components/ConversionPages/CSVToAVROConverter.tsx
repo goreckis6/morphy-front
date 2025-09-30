@@ -29,6 +29,8 @@ export const CSVToAVROConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
 
   // Use shared validation hook
   const {
@@ -48,8 +50,20 @@ export const CSVToAVROConverter: React.FC = () => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.csv')) {
+        // Validate single file size using shared validation
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (event.target) {
+            event.target.value = '';
+          }
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
         
         // Parse CSV for preview
@@ -85,11 +99,29 @@ export const CSVToAVROConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const csvFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.csv')
-    );
+    
+    // Filter to only CSV files
+    const csvFiles = files.filter(file => file.name.toLowerCase().endsWith('.csv'));
+    
+    if (csvFiles.length === 0) {
+      setError('No valid CSV files selected.');
+      return;
+    }
+
+    // Validate batch files using shared validation
+    const validation = validateBatchFiles(csvFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (event.target) {
+        event.target.value = '';
+      }
+      return;
+    }
+
     setBatchFiles(csvFiles);
     setError(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
@@ -191,6 +223,7 @@ AVRO_FILE_END`;
     try {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
+      setConvertedFilename(selectedFile.name.replace('.csv', '.avro'));
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -206,25 +239,22 @@ AVRO_FILE_END`;
     
     try {
       // Mock batch conversion - process each file
+      const results = [];
       for (let i = 0; i < batchFiles.length; i++) {
         const file = batchFiles[i];
         const converted = await handleConvert(file);
         
-        // Download each converted file
-        const url = URL.createObjectURL(converted);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = file.name.replace('.csv', '.avro');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        // Small delay between downloads
-        if (i < batchFiles.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 500));
-        }
+        results.push({
+          originalName: file.name,
+          outputFilename: file.name.replace('.csv', '.avro'),
+          size: converted.size,
+          success: true,
+          downloadPath: URL.createObjectURL(converted),
+          blob: converted
+        });
       }
+      
+      setBatchResults(results);
       setBatchConverted(true);
       setError(null);
     } catch (err) {
@@ -235,17 +265,13 @@ AVRO_FILE_END`;
   };
 
   
-  const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-      setError('Download link is missing. Please reconvert.');
-      return;
-    }
-    try {
-      await apiService.downloadFile(filename, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
-    }
+  const handleBatchDownload = (downloadPath: string, filename: string) => {
+    const link = document.createElement('a');
+    link.href = downloadPath;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleDownload = () => {
@@ -272,7 +298,10 @@ AVRO_FILE_END`;
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
+    setBatchResults([]);
+    setConvertedFilename(null);
     setCsvPreview(null);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -431,22 +460,45 @@ AVRO_FILE_END`;
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
@@ -499,15 +551,49 @@ AVRO_FILE_END`;
               )}
 
               {/* Batch Conversion Success Message */}
-              {batchConverted && batchMode && (
+              {batchMode && batchConverted && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchFiles.length} CSV files have been successfully converted to AVRO format and downloaded.
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
+                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.avro`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex flex-col">
+                            <div className="flex items-center">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                              )}
+                              <span className="text-sm font-medium">{displayName}</span>
+                            </div>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
+                            )}
+                            {!result.success && result.error && (
+                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadPath && (
+                            <button
+                              onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                            >
+                              Download
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={resetForm}
