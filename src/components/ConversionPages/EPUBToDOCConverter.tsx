@@ -115,6 +115,7 @@ export const EPUBToDOCConverter: React.FC = () => {
     
     setIsConverting(true);
     setError(null);
+    setBatchConverted(false);
     
     try {
       const result = await apiService.convertBatch(batchFiles, {
@@ -126,12 +127,15 @@ export const EPUBToDOCConverter: React.FC = () => {
       setBatchResults(result.results ?? []);
       const successes = (result.results ?? []).filter(r => r.success);
       if (successes.length > 0) {
+        setBatchConverted(true);
         const failures = (result.results ?? []).filter(r => !r.success);
         setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
       } else {
+        setBatchConverted(false);
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
+      setBatchConverted(false);
       setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
@@ -175,6 +179,8 @@ export const EPUBToDOCConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchResults([]);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
