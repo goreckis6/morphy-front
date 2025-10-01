@@ -399,7 +399,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                       <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
                         <span className="text-sm font-medium text-gray-900">{r.outputFilename || r.originalName}</span>
                         {r.success && r.downloadPath ? (
-                          <button onClick={() => handleBatchDownload(r)} className="bg-violet-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-violet-700 transition-colors">Download</button>
+                          <button onClick={() => handleBatchDownload(r)} className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">Download</button>
                         ) : r.error ? (
                           <span className="text-xs text-red-600">{r.error}</span>
                         ) : null}
@@ -458,13 +458,6 @@ export const EPUBToCSVConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
               </div>
             </div>
           </div>
