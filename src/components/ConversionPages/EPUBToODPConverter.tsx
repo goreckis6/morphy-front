@@ -282,7 +282,7 @@ export const EPUBToODPConverter: React.FC = () => {
                   </p>
                 )}
                 {batchMode && (
-                  <p className="text-sm text-amber-600 mb-4">
+                  <p className="text-sm text-emerald-600 mb-4">
                     Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
                   </p>
                 )}
