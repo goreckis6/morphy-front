@@ -51,8 +51,17 @@ export const EPUBToPPTConverter: React.FC = () => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.epub')) {
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (fileInputRef.current) fileInputRef.current.value = '';
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid EPUB file');
@@ -65,8 +74,23 @@ export const EPUBToPPTConverter: React.FC = () => {
     const epubFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.epub')
     );
+    
+    if (epubFiles.length === 0) {
+      setError('No valid EPUB files selected.');
+      return;
+    }
+
+    const validation = validateBatchFiles(epubFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+
     setBatchFiles(epubFiles);
     setError(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File) => {
@@ -254,8 +278,13 @@ export const EPUBToPPTConverter: React.FC = () => {
                   }
                 </p>
                 {!batchMode && (
-                  <p className="text-sm text-orange-600 mb-4">
+                  <p className="text-sm text-red-600 mb-4">
                     Single file limit: 100.00 MB per file.
+                  </p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-red-600 mb-4">
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
                   </p>
                 )}
                 <input
@@ -292,23 +321,46 @@ export const EPUBToPPTConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
@@ -370,26 +422,47 @@ export const EPUBToPPTConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Results</h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
-                        <div>
-                          <div className="text-sm font-medium text-gray-900">{result.outputFilename || result.originalName}</div>
-                          {!result.success && (
-                            <div className="text-xs text-red-600">{result.error || 'Conversion failed'}</div>
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.epub$/i, '.ppt')}`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
+                          <div className="flex items-center flex-1">
+                            {result.success ? (
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                            ) : (
+                              <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                            )}
+                            <div>
+                              <div className="text-sm font-medium text-gray-900">{displayName}</div>
+                              {displaySize && (
+                                <div className="text-xs text-gray-500">({displaySize})</div>
+                              )}
+                              {!result.success && (
+                                <div className="text-xs text-red-600">{result.error || 'Conversion failed'}</div>
+                              )}
+                            </div>
+                          </div>
+                          {result.success && result.downloadPath && (
+                            <button
+                              onClick={() => handleBatchDownload(result)}
+                              className="flex items-center bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                            >
+                              <Download className="w-4 h-4 mr-1" />
+                              Download
+                            </button>
                           )}
                         </div>
-                        {result.success && result.downloadPath && (
-                          <button
-                            onClick={() => handleBatchDownload(result)}
-                            className="flex items-center bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
-                          >
-                            <Download className="w-4 h-4 mr-1" />
-                            Download
-                          </button>
-                        )}
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
                 </div>
               )}
             </div>
@@ -505,13 +578,6 @@ export const EPUBToPPTConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
               </div>
             </div>
           </div>
