@@ -267,6 +267,11 @@ export const EPUBToDOCConverter: React.FC = () => {
                     Single file limit: 100.00 MB per file.
                   </p>
                 )}
+                {batchMode && (
+                  <p className="text-sm text-slate-600 mb-4">
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
