@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
+import { apiService } from '../../services/api';
 import { Header } from '../Header';
+import { useFileValidation } from '../../hooks/useFileValidation';
 import { 
   Upload, 
   Download, 
@@ -20,6 +22,7 @@ import {
 export const EPUBToODTConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -29,7 +32,20 @@ export const EPUBToODTConverter: React.FC = () => {
   const [openSourceCompatible, setOpenSourceCompatible] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -77,10 +93,14 @@ export const EPUBToODTConverter: React.FC = () => {
     clearValidationError();
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse EPUB and generate ODT
-    const odtContent = `Mock ODT content for ${file.name} - Formatting: ${preserveFormatting}, Images: ${includeImages}, Metadata: ${extractMetadata}, OpenSource: ${openSourceCompatible}`;
-    return new Blob([odtContent], { type: 'application/vnd.oasis.opendocument.text' });
+  const handleConvert = async (file: File) => {
+    return await apiService.convertFile(file, {
+      format: 'odt',
+      preserveFormatting: preserveFormatting ? 'true' : 'false',
+      includeImages: includeImages ? 'true' : 'false',
+      extractMetadata: extractMetadata ? 'true' : 'false',
+      openSourceCompatible: openSourceCompatible ? 'true' : 'false'
+    } as any);
   };
 
   const handleSingleConvert = async () => {
@@ -90,8 +110,11 @@ export const EPUBToODTConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await handleConvert(selectedFile);
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
+      setBatchResults([]);
+      setBatchConverted(false);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -104,21 +127,49 @@ export const EPUBToODTConverter: React.FC = () => {
     
     setIsConverting(true);
     setError(null);
+    setBatchConverted(false);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'odt',
+        preserveFormatting: preserveFormatting ? 'true' : 'false',
+        includeImages: includeImages ? 'true' : 'false',
+        extractMetadata: extractMetadata ? 'true' : 'false',
+        openSourceCompatible: openSourceCompatible ? 'true' : 'false'
+      } as any);
+      setBatchResults(result.results ?? []);
+      const successes = (result.results ?? []).filter(r => r.success);
+      if (successes.length > 0) {
+        setBatchConverted(true);
+        const failures = (result.results ?? []).filter(r => !r.success);
+        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
+      } else {
+        setBatchConverted(false);
+        setError('Batch conversion failed. Please try again.');
       }
-      setError(null);
+      setConvertedFile(null);
+      setConvertedFilename(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchResults([]);
+      setBatchConverted(false);
     } finally {
       setIsConverting(false);
     }
   };
 
-  
+  const handleDownload = () => {
+    if (!convertedFile) return;
+    const url = URL.createObjectURL(convertedFile);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.epub$/i, '.odt') : 'converted.odt');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const handleBatchDownload = async (result: any) => {
     const filename = result.storedFilename || result.downloadPath?.split('/').pop();
     if (!filename) {
@@ -127,21 +178,8 @@ export const EPUBToODTConverter: React.FC = () => {
     }
     try {
       await apiService.downloadFile(filename, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
-    }
-  };
-
-  const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.epub', '.odt') : 'converted.odt';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+    } catch (e) {
+      setError('Failed to download file. Please try again.');
     }
   };
 
@@ -152,9 +190,13 @@ export const EPUBToODTConverter: React.FC = () => {
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchResults([]);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -236,6 +278,16 @@ export const EPUBToODTConverter: React.FC = () => {
                     : 'Drag and drop your EPUB file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-sm text-green-600 mb-4">
+                    Single file limit: 100.00 MB per file.
+                  </p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-green-600 mb-4">
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -270,23 +322,46 @@ export const EPUBToODTConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
@@ -339,7 +414,6 @@ export const EPUBToODTConverter: React.FC = () => {
                   </div>
                 </div>
               )}
-            
 
               {/* Batch Conversion Success */}
               {batchMode && batchConverted && batchResults.length > 0 && (
@@ -352,32 +426,36 @@ export const EPUBToODTConverter: React.FC = () => {
                     {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
                   <div className="space-y-3 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
-                        result.success ? 'bg-white border border-green-200' : 'bg-red-50 border border-red-200'
-                      }`}>
-                        <div className="flex items-center flex-1">
-                          {result.success ? (
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          ) : (
-                            <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
-                          )}
-                          <span className="text-sm font-medium truncate">{result.originalName}</span>
-                          {result.success && result.size && (
-                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.epub$/i, '.odt')}`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
+                          result.success ? 'bg-white border border-green-200' : 'bg-red-50 border border-red-200'
+                        }`}>
+                          <div className="flex items-center flex-1">
+                            {result.success ? (
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                            ) : (
+                              <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                            )}
+                            <span className="text-sm font-medium truncate">{displayName}</span>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-2">({displaySize})</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadPath && (
+                            <button
+                              onClick={() => handleBatchDownload(result)}
+                              className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
+                            >
+                              <Download className="w-3 h-3 mr-1 inline" />
+                              Download
+                            </button>
                           )}
                         </div>
-                        {result.success && result.downloadPath && (
-                          <button
-                            onClick={() => handleBatchDownload(result)}
-                            className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
-                          >
-                            <Download className="w-3 h-3 mr-1 inline" />
-                            Download
-                          </button>
-                        )}
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                   <button
                     onClick={resetForm}
@@ -387,7 +465,8 @@ export const EPUBToODTConverter: React.FC = () => {
                     Convert More Files
                   </button>
                 </div>
-              )}</div>
+              )}
+            </div>
           </div>
 
           {/* Settings & Info Panel */}
