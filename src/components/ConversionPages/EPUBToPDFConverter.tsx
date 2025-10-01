@@ -192,7 +192,8 @@ export const EPUBToPDFConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchResults([]);
-      setBatchConverted(false);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -279,6 +280,11 @@ export const EPUBToPDFConverter: React.FC = () => {
                     Single file limit: 100.00 MB per file.
                   </p>
                 )}
+                {batchMode && (
+                  <p className="text-sm text-purple-600 mb-4">
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -313,23 +319,46 @@ export const EPUBToPDFConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
@@ -395,32 +424,36 @@ export const EPUBToPDFConverter: React.FC = () => {
                     {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
                   <div className="space-y-3 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
-                        result.success ? 'bg-white border border-green-200' : 'bg-red-50 border border-red-200'
-                      }`}>
-                        <div className="flex items-center flex-1">
-                          {result.success ? (
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          ) : (
-                            <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
-                          )}
-                          <span className="text-sm font-medium truncate">{result.originalName}</span>
-                          {result.success && result.size && (
-                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.epub$/i, '.pdf')}`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
+                          result.success ? 'bg-white border border-green-200' : 'bg-red-50 border border-red-200'
+                        }`}>
+                          <div className="flex items-center flex-1">
+                            {result.success ? (
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                            ) : (
+                              <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                            )}
+                            <span className="text-sm font-medium truncate">{displayName}</span>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-2">({displaySize})</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadPath && (
+                            <button
+                              onClick={() => handleBatchDownload(result)}
+                              className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
+                            >
+                              <Download className="w-3 h-3 mr-1 inline" />
+                              Download
+                            </button>
                           )}
                         </div>
-                        {result.success && result.downloadPath && (
-                          <button
-                            onClick={() => handleBatchDownload(result)}
-                            className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
-                          >
-                            <Download className="w-3 h-3 mr-1 inline" />
-                            Download
-                          </button>
-                        )}
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                   <button
                     onClick={resetForm}
