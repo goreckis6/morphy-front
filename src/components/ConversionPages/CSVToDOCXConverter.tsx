@@ -259,7 +259,7 @@ export const CSVToDOCXConverter: React.FC = () => {
                           )}
                           {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
-                        {r.success && r.downloadPath && (
+                        {r.success && (
                           <button
                             onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
