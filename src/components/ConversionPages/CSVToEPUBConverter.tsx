@@ -166,8 +166,11 @@ export const CSVToEPUBConverter: React.FC = () => {
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchResults([]);
+    setBatchConverted(false);
     setBookTitle('');
     setAuthor('');
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
