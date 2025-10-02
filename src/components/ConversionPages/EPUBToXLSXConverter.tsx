@@ -320,7 +320,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
               )}
 
               {/* Batch Files List */}
-              {batchMode && (
+              {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   {(() => {
                     const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
@@ -343,16 +343,14 @@ export const EPUBToXLSXConverter: React.FC = () => {
                             </div>
                           </div>
                         )}
-                        {batchFiles.length > 0 && (
-                          <div className="space-y-2 max-h-40 overflow-y-auto">
-                            {batchFiles.map((file, index) => (
-                              <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                                <span className="text-sm font-medium">{file.name}</span>
-                                <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                              </div>
-                            ))}
-                          </div>
-                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
                       </>
                     );
                   })()}
