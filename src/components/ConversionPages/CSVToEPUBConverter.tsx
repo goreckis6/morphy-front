@@ -136,7 +136,8 @@ export const CSVToEPUBConverter: React.FC = () => {
       return;
     }
     try {
-      await apiService.downloadFile(filename, result.outputFilename);
+      const downloadName = result.outputFilename || result.originalName.replace(/\.[^.]+$/, '.epub');
+      await apiService.downloadFile(filename, downloadName);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
