@@ -150,6 +150,16 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     URL.revokeObjectURL(url);
   };
 
+  const handleBatchDownload = (result: BatchResultItem) => {
+    if (!result.downloadPath) return;
+    const a = document.createElement('a');
+    a.href = result.downloadPath;
+    a.download = result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
@@ -187,6 +197,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   };
 };

@@ -32,6 +32,7 @@ export const CSVToDOCConverter: React.FC = () => {
     setBatchMode,
     batchFiles,
     batchResults,
+    batchConverted,
     fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,
@@ -42,6 +43,7 @@ export const CSVToDOCConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'doc' });
   const handleBack = () => {
