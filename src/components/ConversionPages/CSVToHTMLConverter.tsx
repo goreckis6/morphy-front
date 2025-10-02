@@ -44,6 +44,7 @@ export const CSVToHTMLConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'html' });
   const [includeHeaders, setIncludeHeaders] = useState(true);
