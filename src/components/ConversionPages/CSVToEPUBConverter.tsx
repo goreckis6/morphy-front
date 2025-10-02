@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { 
@@ -36,6 +37,7 @@ export const CSVToEPUBConverter: React.FC = () => {
     validationError,
     validateSingleFile,
     validateBatchFiles,
+    getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
@@ -59,13 +61,25 @@ export const CSVToEPUBConverter: React.FC = () => {
     }
   };
 
+  const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
     const csvFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.csv')
     );
+    const validation = validateBatchFiles(csvFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed.');
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      setBatchFiles([]);
+      return;
+    }
     setBatchFiles(csvFiles);
     setError(null);
+    setBatchResults([]);
+    setBatchConverted(false);
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
@@ -97,13 +111,18 @@ export const CSVToEPUBConverter: React.FC = () => {
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const result = await apiService.convertBatch(batchFiles, { format: 'epub' });
+      const results = (result.results as any[]) ?? [];
+      setBatchResults(results);
+      const successCount = results.filter(r => r.success).length;
+      setBatchConverted(successCount > 0);
+      if (successCount === 0) {
+        setError('Batch conversion failed. Please try again.');
       }
-      setError(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
+      setBatchConverted(false);
+      setBatchResults([]);
     } finally {
       setIsConverting(false);
     }
@@ -229,6 +248,12 @@ export const CSVToEPUBConverter: React.FC = () => {
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-green-700 mb-2">{getSingleInfoMessage()}</p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-green-700 mb-4">{getBatchInfoMessage()}</p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -254,7 +279,7 @@ export const CSVToEPUBConverter: React.FC = () => {
                       <BookOpen className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {formatFileSize(selectedFile?.size || 0)})
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -264,6 +289,16 @@ export const CSVToEPUBConverter: React.FC = () => {
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <div className="flex items-center justify-between text-sm font-medium mb-2">
+                        <span className="text-gray-600">Total size</span>
+                        <span className={`ml-3 ${sizeDisplay.isWarning ? 'text-green-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
+                      </div>
+                    );
+                  })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -360,7 +395,7 @@ export const CSVToEPUBConverter: React.FC = () => {
                             <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
                           )}
                         </div>
-                        {result.success && result.downloadPath && (
+                        {result.success && (
                           <button
                             onClick={() => handleBatchDownload(result)}
                             className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
