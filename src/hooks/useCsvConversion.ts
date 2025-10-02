@@ -150,14 +150,26 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     URL.revokeObjectURL(url);
   };
 
-  const handleBatchDownload = (result: BatchResultItem) => {
-    if (!result.downloadPath) return;
-    const a = document.createElement('a');
-    a.href = result.downloadPath;
-    a.download = result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+  const handleBatchDownload = async (result: BatchResultItem) => {
+    try {
+      if (result.storedFilename) {
+        // Use backend API to fetch the file from the correct origin
+        await apiService.downloadFile(result.storedFilename, result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`));
+        return;
+      }
+      if (result.downloadPath) {
+        // Fallback: construct an absolute URL via the API service if needed
+        const link = document.createElement('a');
+        link.href = `${(import.meta as any).env.VITE_API_BASE_URL || (import.meta as any).env.PROD ? 'https://morphy-2-n2tb.onrender.com' : 'http://localhost:3000'}${result.downloadPath}`;
+        link.download = result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        return;
+      }
+    } catch (e) {
+      console.error('Batch download failed:', e);
+    }
   };
 
   const resetForm = () => {
