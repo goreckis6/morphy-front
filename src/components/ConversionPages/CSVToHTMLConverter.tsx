@@ -359,13 +359,6 @@ export const CSVToHTMLConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
               </div>
             </div>
           </div>
@@ -437,10 +430,31 @@ export const CSVToHTMLConverter: React.FC = () => {
               </div>
             </div>
           </div>
+          {/* CTA inside content like AVRO page */}
+          <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center mt-8">
+            <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+            <p className="text-lg mb-6 opacity-90">
+              Use our free online CSV to HTML converter to transform your data into clean, web-ready tables.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Start Converting Now
+              </button>
+              <button
+                onClick={handleBack}
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              >
+                Back to Home
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <footer className="bg-gray-900 text-white py-8 mt-8">
+      <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
