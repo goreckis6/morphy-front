@@ -162,12 +162,14 @@ export const CSVToMDConverter: React.FC = () => {
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
                   {(() => {
                     const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
-                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-purple-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                      <div className="flex items-center justify-between mb-4">
+                        <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                        <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-purple-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                      </div>
                     );
                   })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
@@ -352,13 +354,6 @@ export const CSVToMDConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
               </div>
             </div>
           </div>
@@ -371,6 +366,82 @@ export const CSVToMDConverter: React.FC = () => {
           >
             ← Back to Home
           </button>
+        </div>
+        {/* SEO Content Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+            Why Convert CSV to Markdown?
+          </h2>
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Converting CSV files to Markdown (MD) is perfect for documentation, READMEs, and wikis.
+              Markdown tables are easy to version-control, review in pull requests, and display on platforms like GitHub and GitLab.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of Markdown</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">Developer Friendly</h4>
+                <p className="text-gray-700">Plain text format that works seamlessly with git, reviews, and diffs.</p>
+              </div>
+              <div className="bg-indigo-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Documentation Ready</h4>
+                <p className="text-gray-700">Render tables in READMEs and docs with clean, readable formatting.</p>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">Lightweight</h4>
+                <p className="text-gray-700">No heavy editors required; edit anywhere from IDEs to browsers.</p>
+              </div>
+              <div className="bg-sky-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-sky-900 mb-3">Portable</h4>
+                <p className="text-gray-700">Works across platforms and static site generators like Docusaurus and MkDocs.</p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Project READMEs</h4>
+                  <p className="text-gray-700">Share data samples and results directly in repository READMEs.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Documentation & Wikis</h4>
+                  <p className="text-gray-700">Publish tables in knowledge bases and team wikis with minimal overhead.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Static Site Content</h4>
+                  <p className="text-gray-700">Embed tables in static documentation sites and blogs without extra tooling.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+              <p className="text-lg mb-6 opacity-90">Use our free CSV to Markdown converter to generate clean MD tables.</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Start Converting Now
+                </button>
+                <button
+                  onClick={handleBack}
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  Back to Home
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
