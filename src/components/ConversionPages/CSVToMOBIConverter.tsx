@@ -482,10 +482,6 @@ export const CSVToMOBIConverter: React.FC = () => {
             <p className="text-gray-400 mb-6">
               Convert and view files online for free. Support for 50+ formats.
             </p>
-          </div>
-        </div>
-        <div className="border-t border-gray-700 mt-8 pt-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-center space-x-6 text-sm text-gray-400">
               <span>© 2024 MorphyIMG</span>
               <span>•</span>
