@@ -44,6 +44,7 @@ export const CSVToPPTXConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'pptx' });
   const [includeHeaders, setIncludeHeaders] = useState(true);

@@ -44,6 +44,7 @@ export const CSVToODTConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'odt' });
   const [includeHeaders, setIncludeHeaders] = useState(true);

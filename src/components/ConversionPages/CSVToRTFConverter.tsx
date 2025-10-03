@@ -44,6 +44,7 @@ export const CSVToRTFConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'rtf' });
   const [includeHeaders, setIncludeHeaders] = useState(true);

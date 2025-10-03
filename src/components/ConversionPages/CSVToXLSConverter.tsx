@@ -32,6 +32,7 @@ export const CSVToXLSConverter: React.FC = () => {
     batchMode,
     setBatchMode,
     batchFiles,
+    batchResults,
     batchConverted,
     fileInputRef,
     getSingleInfoMessage,
@@ -43,6 +44,7 @@ export const CSVToXLSConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'xls' });
   const [includeHeaders, setIncludeHeaders] = useState(true);

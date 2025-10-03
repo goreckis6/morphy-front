@@ -44,6 +44,7 @@ export const CSVToMOBIConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'mobi' });
   const [includeHeaders, setIncludeHeaders] = useState(true);

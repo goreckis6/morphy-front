@@ -44,6 +44,7 @@ export const CSVToPDFConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'pdf' });
   const [pageSize, setPageSize] = useState<'A4' | 'A3' | 'Letter'>('A4');
