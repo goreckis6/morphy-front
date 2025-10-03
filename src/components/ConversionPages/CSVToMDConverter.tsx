@@ -41,6 +41,7 @@ export const CSVToMDConverter: React.FC = () => {
     handleSingleConvert,
     handleBatchConvert,
     handleDownload,
+    handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'md' });
   const [includeHeaders, setIncludeHeaders] = useState(true);
@@ -254,7 +255,7 @@ export const CSVToMDConverter: React.FC = () => {
                           )}
                           {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
-                        {r.success && r.downloadPath && (
+                        {r.success && (
                           <button
                             onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
