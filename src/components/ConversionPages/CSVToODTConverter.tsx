@@ -365,6 +365,16 @@ export const CSVToODTConverter: React.FC = () => {
           </div>
         </div>
 
+        {/* Back Button */}
+        <div className="mt-12 text-center">
+          <button
+            onClick={handleBack}
+            className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+          >
+            ← Back to Home
+          </button>
+        </div>
+
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -465,15 +475,6 @@ export const CSVToODTConverter: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-12 text-center">
-          <button
-            onClick={handleBack}
-            className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
-          >
-            ← Back to Home
-          </button>
         </div>
       </div>
 
