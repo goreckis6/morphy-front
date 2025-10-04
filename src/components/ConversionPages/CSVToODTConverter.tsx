@@ -5,6 +5,7 @@ import {
   Upload, 
   Download, 
   FileText,
+  FileImage,
   RefreshCw,
   CheckCircle,
   AlertCircle,
