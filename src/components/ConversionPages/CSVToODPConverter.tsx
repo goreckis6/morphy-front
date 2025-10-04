@@ -58,6 +58,7 @@ export const CSVToODPConverter: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50">
       <Header />
       
+      {/* Hero Section - Narrowed */}
       <div className="relative overflow-hidden bg-gradient-to-r from-lime-600 via-green-600 to-emerald-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -89,9 +90,12 @@ export const CSVToODPConverter: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
+          {/* Main Conversion Panel */}
+          
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
+              {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
                   onClick={() => setBatchMode(false)}
@@ -117,6 +121,7 @@ export const CSVToODPConverter: React.FC = () => {
                 </button>
               </div>
 
+              {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-lime-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -128,11 +133,14 @@ export const CSVToODPConverter: React.FC = () => {
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
+                {/* Single-file limit info */}
                 {!batchMode && (
                   <p className="text-xs text-lime-600 mb-2">{getSingleInfoMessage()}</p>
                 )}
                 {batchMode && (
-                  <p className="text-sm text-lime-600 mb-4">{getBatchInfoMessage()}</p>
+                  <p className="text-sm text-lime-600 mb-4">
+                    {getBatchInfoMessage()}
+                  </p>
                 )}
                 <input
                   ref={fileInputRef}
