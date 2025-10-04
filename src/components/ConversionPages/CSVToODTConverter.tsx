@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
-import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
   Upload, 
   Download, 
-  Settings, 
   FileText,
-  FileImage,
   RefreshCw,
   CheckCircle,
   AlertCircle,
@@ -15,7 +12,6 @@ import {
   Shield,
   Clock,
   Star,
-  FileText,
   BarChart3
 } from 'lucide-react';
 
@@ -23,10 +19,8 @@ export const CSVToODTConverter: React.FC = () => {
   const {
     selectedFile,
     convertedFile,
-    convertedFilename,
     isConverting,
     error,
-    setError,
     validationError,
     previewUrl,
     batchMode,
@@ -47,8 +41,6 @@ export const CSVToODTConverter: React.FC = () => {
     handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'odt' });
-  const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [tableStyle, setTableStyle] = useState<'simple' | 'bordered' | 'elegant'>('simple');
 
   const handleBack = () => {
     window.location.href = '/';
@@ -166,31 +158,58 @@ export const CSVToODTConverter: React.FC = () => {
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
                   {(() => {
-                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
-                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-sky-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
                     );
                   })()}
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               )}
 
-              {error && (
+              {/* Error Message */}
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
+
+              {/* Conversion Time Info */}
+              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 text-blue-500 mr-2" />
+                  <span className="text-sm text-blue-700 font-medium">
+                    Conversion may take 2-5 minutes for large files
+                  </span>
+                </div>
+              </div>
 
               <div className="mt-8">
                 <button
@@ -244,36 +263,54 @@ export const CSVToODTConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete</h4>
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {batchResults.map((r, idx) => (
-                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
-                        <div className="text-sm">
-                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.odt')}</div>
-                          {r.success && r.size && (
-                            <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
+                  <p className="text-green-700 mb-4">
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                  </p>
+                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
+                    {batchResults.map((result, index) => {
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.odt`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex flex-col">
+                            <div className="flex items-center">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                              )}
+                              <span className="text-sm font-medium">{displayName}</span>
+                            </div>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
+                            )}
+                            {!result.success && result.error && (
+                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadPath && (
+                            <button
+                              onClick={() => handleBatchDownload(result)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                            >
+                              Download
+                            </button>
                           )}
-                          {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
-                        {r.success && r.downloadPath && (
-                          <button
-                            onClick={() => handleBatchDownload(r)}
-                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
-                          >
-                            Download
-                          </button>
-                        )}
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
@@ -281,40 +318,6 @@ export const CSVToODTConverter: React.FC = () => {
 
           <div className="space-y-6">
             
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-sky-600" />
-                ODT Settings
-              </h3>
-              
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Table Style
-                </label>
-                <select
-                  value={tableStyle}
-                  onChange={(e) => setTableStyle(e.target.value as 'simple' | 'bordered' | 'elegant')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
-                >
-                  <option value="simple">Simple</option>
-                  <option value="bordered">Bordered</option>
-                  <option value="elegant">Elegant</option>
-                </select>
-              </div>
-
-              <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={includeHeaders}
-                    onChange={(e) => setIncludeHeaders(e.target.checked)}
-                    className="rounded border-gray-300 text-sky-600 focus:ring-sky-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
-                </label>
-              </div>
-            </div>
-
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
@@ -356,13 +359,108 @@ export const CSVToODTConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SEO Content Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+            Why Convert CSV to ODT?
+          </h2>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Converting CSV files to ODT format opens up powerful document editing capabilities that aren't available in simple spreadsheet formats. While CSV is excellent for data storage and analysis, ODT format provides professional document features, making it the ideal choice for reports, documentation, and collaborative editing.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ODT Format</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-sky-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-sky-900 mb-3">Professional Documents</h4>
+                <p className="text-gray-700">
+                  Transform raw CSV data into polished, professional documents that can be easily edited and formatted in LibreOffice Writer.
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">Open Standard Format</h4>
+                <p className="text-gray-700">
+                  ODT is an open document standard that works everywhere, ensuring your documents are accessible across all platforms and software.
+                </p>
+              </div>
+              
+              <div className="bg-indigo-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Enhanced Formatting</h4>
+                <p className="text-gray-700">
+                  Break down complex CSV data into well-formatted documents with tables, headers, and professional styling that makes your data readable and presentable.
+                </p>
+              </div>
+              
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">Universal Compatibility</h4>
+                <p className="text-gray-700">
+                  ODT files work perfectly in LibreOffice, OpenOffice, Google Docs, and most word processors, ensuring maximum compatibility.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-sky-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Reports</h4>
+                  <p className="text-gray-700">Convert sales data, financial reports, and analytics from CSV format into professional business documents for stakeholders and clients.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Academic Papers</h4>
+                  <p className="text-gray-700">Transform research data and survey results from CSV format into well-formatted academic documents for publications and presentations.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h4>
+                  <p className="text-gray-700">Create comprehensive documentation by converting CSV data into structured, easy-to-read documents with proper formatting and styling.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Collaborative Editing</h4>
+                  <p className="text-gray-700">Enable team collaboration by converting CSV data into ODT format that can be easily shared and edited by multiple team members.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-sky-600 to-blue-600 text-white p-8 rounded-xl text-center">
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+              <p className="text-lg mb-6 opacity-90">
+                Use our free online CSV to ODT converter to transform your data into professional documents.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Start Converting Now
+                </button>
+                <button
+                  onClick={handleBack}
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-sky-600 transition-colors"
+                >
+                  Back to Home
+                </button>
               </div>
             </div>
           </div>
