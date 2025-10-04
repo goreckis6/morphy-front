@@ -55,7 +55,7 @@ export const CSVToODPConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-lime-600 via-green-600 to-emerald-700">
@@ -86,7 +86,7 @@ export const CSVToODPConverter: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           <div className="lg:col-span-2">
@@ -433,7 +433,7 @@ export const CSVToODPConverter: React.FC = () => {
         </div>
       </div>
 
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
