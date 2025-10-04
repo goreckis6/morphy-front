@@ -55,7 +55,7 @@ export const CSVToODPConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50 flex flex-col">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-lime-600 via-green-600 to-emerald-700">
@@ -86,7 +86,7 @@ export const CSVToODPConverter: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           <div className="lg:col-span-2">
@@ -368,43 +368,43 @@ export const CSVToODPConverter: React.FC = () => {
         <div className="mt-16 bg-gray-50 rounded-2xl p-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-              Professional CSV to ODP Conversion
+              Why Convert CSV to ODP?
             </h2>
             <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              Transform your tabular data into professional presentations with our advanced CSV to ODP converter. 
-              Perfect for creating reports, data visualizations, and business presentations.
+              Converting CSV data to ODP format opens up powerful presentation capabilities that aren't available in simple spreadsheet formats. 
+              Transform your raw data into compelling, professional presentations that tell a story.
             </p>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-lime-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Reporting and Presentations</h4>
-                  <p className="text-gray-700">Convert CSV data to professional ODP presentations for executive reports, quarterly reviews, and stakeholder presentations using LibreOffice Impress.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Enhanced Data Storytelling</h4>
+                  <p className="text-gray-700">CSV files show raw data, but ODP presentations let you tell a compelling story with your data. Add context, insights, and visual elements that make your data meaningful and actionable.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Academic and Research Presentations</h4>
-                  <p className="text-gray-700">Transform research data into academic presentations with proper formatting, charts, and tables suitable for conferences and academic submissions.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Professional Presentation Format</h4>
+                  <p className="text-gray-700">Transform boring spreadsheets into polished presentations that command attention. ODP format ensures your data looks professional and is ready for any business or academic setting.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Visualization Projects</h4>
-                  <p className="text-gray-700">Create data-driven presentations with tables, charts, and visual elements to effectively communicate insights from your CSV datasets.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Universal Compatibility</h4>
+                  <p className="text-gray-700">ODP is an open standard that works everywhere. Unlike proprietary formats, your presentations will open perfectly in LibreOffice, OpenOffice, Google Slides, and most presentation software.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Cross-Platform Collaboration</h4>
-                  <p className="text-gray-700">Generate ODP files that work seamlessly across LibreOffice, OpenOffice, and other open-source presentation software for team collaboration.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Better Data Organization</h4>
+                  <p className="text-gray-700">Large CSV files can be overwhelming. ODP presentations break your data into digestible slides, making it easier for your audience to understand and retain the information you're presenting.</p>
                 </div>
               </div>
             </div>
