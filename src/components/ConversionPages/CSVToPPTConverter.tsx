@@ -133,7 +133,6 @@ export const CSVToPPTConverter: React.FC = () => {
                 {batchMode && (
                   <div className="text-sm text-violet-600 mb-4">
                     <p>Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.</p>
-                    <p className="text-xs text-gray-500 mt-1">Converting can take 2-5 minutes for large files.</p>
                   </div>
                 )}
                 <input
