@@ -352,20 +352,19 @@ export const CSVToODPConverter: React.FC = () => {
                   "Academic presentations",
                   "Government presentations",
                   "Standards compliance",
-                  "Collaborative work"
+                  "Collaborative work",
+                  "Business reports",
+                  "Data visualization",
+                  "Educational materials",
+                  "Conference presentations",
+                  "Project documentation",
+                  "Financial reports"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-lime-500 rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
               </div>
             </div>
           </div>
@@ -381,7 +380,7 @@ export const CSVToODPConverter: React.FC = () => {
         </div>
       </div>
 
-      <footer className="bg-gray-900 text-white py-8 mt-16">
+      <footer className="bg-gray-900 text-white py-8 mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
