@@ -352,13 +352,7 @@ export const CSVToODPConverter: React.FC = () => {
                   "Academic presentations",
                   "Government presentations",
                   "Standards compliance",
-                  "Collaborative work",
-                  "Business reports",
-                  "Data visualization",
-                  "Educational materials",
-                  "Conference presentations",
-                  "Project documentation",
-                  "Financial reports"
+                  "Collaborative work"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-lime-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -370,17 +364,76 @@ export const CSVToODPConverter: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <button
-            onClick={handleBack}
-            className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
-          >
-            ← Back to Home
-          </button>
+        {/* Detailed Use Cases Section */}
+        <div className="mt-16 bg-gray-50 rounded-2xl p-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
+              Professional CSV to ODP Conversion
+            </h2>
+            <p className="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+              Transform your tabular data into professional presentations with our advanced CSV to ODP converter. 
+              Perfect for creating reports, data visualizations, and business presentations.
+            </p>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-lime-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Reporting and Presentations</h4>
+                  <p className="text-gray-700">Convert CSV data to professional ODP presentations for executive reports, quarterly reviews, and stakeholder presentations using LibreOffice Impress.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Academic and Research Presentations</h4>
+                  <p className="text-gray-700">Transform research data into academic presentations with proper formatting, charts, and tables suitable for conferences and academic submissions.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Visualization Projects</h4>
+                  <p className="text-gray-700">Create data-driven presentations with tables, charts, and visual elements to effectively communicate insights from your CSV datasets.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Cross-Platform Collaboration</h4>
+                  <p className="text-gray-700">Generate ODP files that work seamlessly across LibreOffice, OpenOffice, and other open-source presentation software for team collaboration.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-lime-600 to-green-600 text-white p-8 rounded-xl text-center">
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+              <p className="text-lg mb-6 opacity-90">
+                Use our free online CSV to ODP converter to transform your data into professional presentations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="bg-white text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Start Converting Now
+                </button>
+                <button
+                  onClick={handleBack}
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-lime-600 transition-colors"
+                >
+                  Back to Home
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <footer className="bg-gray-900 text-white py-8 mt-8">
+      <footer className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
