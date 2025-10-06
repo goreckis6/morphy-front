@@ -4,7 +4,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 import { Download, Upload, Settings, Image as ImageIcon, Zap, Shield, Clock, CheckCircle } from 'lucide-react';
 
-const DNGToWebPConverter: React.FC = () => {
+export const DNGToWebPConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState('');
@@ -530,5 +530,3 @@ const DNGToWebPConverter: React.FC = () => {
     </div>
   );
 };
-
-export default DNGToWebPConverter;
