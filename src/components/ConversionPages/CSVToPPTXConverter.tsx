@@ -202,7 +202,7 @@ export const CSVToPPTXConverter: React.FC = () => {
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 text-blue-500 mr-2" />
                   <span className="text-sm text-blue-700 font-medium">
-                    Optimized conversion - faster processing for large files
+                    Conversion may take 2-5 minutes for large files
                   </span>
                 </div>
               </div>

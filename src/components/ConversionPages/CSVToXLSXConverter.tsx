@@ -15,6 +15,7 @@ import {
   Shield,
   Clock,
   Star,
+  FileText,
   BarChart3
 } from 'lucide-react';
 
@@ -22,19 +23,22 @@ export const CSVToXLSXConverter: React.FC = () => {
   const {
     selectedFile,
     convertedFile,
+    convertedFilename,
     isConverting,
     error,
-    batchConverted,
-    formatFileSize,
+    setError,
+    validationError,
     previewUrl,
     batchMode,
     setBatchMode,
     batchFiles,
     batchResults,
+    batchConverted,
     fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
+    formatFileSize,
     handleFileSelect,
     handleBatchFileSelect,
     handleSingleConvert,
@@ -44,27 +48,27 @@ export const CSVToXLSXConverter: React.FC = () => {
     resetForm
   } = useCsvConversion({ targetFormat: 'xlsx' });
   const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [sheetFormat, setSheetFormat] = useState<'data' | 'formatted' | 'summary'>('formatted');
+  const [preserveFormatting, setPreserveFormatting] = useState(true);
 
   const handleBack = () => {
     window.location.href = '/';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
       <Header />
       
-      <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
+      <div className="relative overflow-hidden bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               CSV to XLSX Converter
             </h1>
-            <p className="text-lg sm:text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to Excel XLSX format. Transform tabular data into modern Excel spreadsheets with advanced formatting and multiple sheets.
+            <p className="text-lg sm:text-xl text-teal-100 mb-6 max-w-2xl mx-auto">
+              Convert CSV files to XLSX format. Transform tabular data into modern Excel spreadsheets with advanced features.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-200">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-teal-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
                 <span>Lightning Fast</span>
@@ -93,7 +97,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                   onClick={() => setBatchMode(false)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
-                      ? 'bg-purple-600 text-white shadow-lg' 
+                      ? 'bg-teal-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -104,7 +108,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                   onClick={() => setBatchMode(true)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
-                      ? 'bg-purple-600 text-white shadow-lg' 
+                      ? 'bg-teal-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -113,7 +117,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                 </button>
               </div>
 
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
+              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-teal-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
@@ -125,10 +129,10 @@ export const CSVToXLSXConverter: React.FC = () => {
                   }
                 </p>
                 {!batchMode && (
-                  <p className="text-xs text-purple-600 mb-2">{getSingleInfoMessage()}</p>
+                  <p className="text-xs text-teal-600 mb-2">{getSingleInfoMessage()}</p>
                 )}
                 {batchMode && (
-                  <p className="text-sm text-purple-600 mb-4">{getBatchInfoMessage()}</p>
+                  <p className="text-sm text-teal-600 mb-4">{getBatchInfoMessage()}</p>
                 )}
                 <input
                   ref={fileInputRef}
@@ -140,7 +144,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+                  className="bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors"
                 >
                   Choose Files
                 </button>
@@ -154,7 +158,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                       <FileText className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
+                      {formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -162,14 +166,12 @@ export const CSVToXLSXConverter: React.FC = () => {
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
+                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
                   {(() => {
                     const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                        <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-purple-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
-                      </div>
+                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-teal-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
                     );
                   })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
@@ -194,7 +196,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-teal-700 hover:to-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
                     <div className="flex items-center justify-center">
@@ -217,7 +219,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CSV file has been successfully converted to XLSX format with multiple sheets, professional formatting, and advanced features.
+                    Your CSV file has been successfully converted to XLSX format.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -254,7 +256,7 @@ export const CSVToXLSXConverter: React.FC = () => {
                           )}
                           {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
-                        {r.success && (
+                        {r.success && r.downloadPath && (
                           <button
                             onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
@@ -281,34 +283,31 @@ export const CSVToXLSXConverter: React.FC = () => {
             
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-purple-600" />
+                <Settings className="w-5 h-5 mr-2 text-teal-600" />
                 XLSX Settings
               </h3>
               
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Sheet Format
-                </label>
-                <select
-                  value={sheetFormat}
-                  onChange={(e) => setSheetFormat(e.target.value as 'data' | 'formatted' | 'summary')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-                >
-                  <option value="data">Data Only</option>
-                  <option value="formatted">Formatted (Default)</option>
-                  <option value="summary">With Summary Sheets</option>
-                </select>
-              </div>
-
               <div className="mb-6">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={includeHeaders}
                     onChange={(e) => setIncludeHeaders(e.target.checked)}
-                    className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                    className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                </label>
+              </div>
+
+              <div className="mb-6">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={preserveFormatting}
+                    onChange={(e) => setPreserveFormatting(e.target.checked)}
+                    className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Preserve data formatting</span>
                 </label>
               </div>
             </div>
@@ -320,12 +319,12 @@ export const CSVToXLSXConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "Modern XLSX format",
-                  "Multiple sheets included",
-                  "Professional formatting",
-                  "Auto-sized columns",
-                  "Summary statistics",
-                  "Excel 2016+ compatibility"
+                  "Modern Excel format",
+                  "Advanced features support",
+                  "Large file capacity",
+                  "Cross-platform compatibility",
+                  "Professional spreadsheets",
+                  "Batch conversion support"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -337,23 +336,30 @@ export const CSVToXLSXConverter: React.FC = () => {
 
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
+                <BarChart3 className="w-5 h-5 mr-2 text-teal-600" />
                 Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  "Modern Excel workflows",
-                  "Business reports",
-                  "Data analysis",
+                  "Modern Excel files",
+                  "Advanced data analysis",
+                  "Business intelligence",
                   "Financial modeling",
-                  "Project management",
-                  "Advanced spreadsheets"
+                  "Cloud collaboration",
+                  "Office 365 integration"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
               </div>
             </div>
           </div>
@@ -366,82 +372,6 @@ export const CSVToXLSXConverter: React.FC = () => {
           >
             ← Back to Home
           </button>
-        </div>
-        {/* SEO Content Section */}
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to XLSX?
-          </h2>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to Excel XLSX format provides the most advanced spreadsheet functionality available.
-              XLSX files support modern Excel features, multiple sheets, advanced formatting, and are perfect for professional business use.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of XLSX Format</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Modern Excel Format</h4>
-                <p className="text-gray-700">Uses the latest Excel format with support for advanced features, formulas, and modern Excel versions.</p>
-              </div>
-              <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Advanced Formatting</h4>
-                <p className="text-gray-700">Professional formatting with borders, colors, auto-sized columns, and alternating row styles.</p>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Multiple Sheets</h4>
-                <p className="text-gray-700">Organize data across multiple worksheets with data, summary, and column information sheets.</p>
-              </div>
-              <div className="bg-sky-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-sky-900 mb-3">Excel 2016+ Compatible</h4>
-                <p className="text-gray-700">Perfect compatibility with modern Excel versions and other spreadsheet applications.</p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Intelligence</h4>
-                  <p className="text-gray-700">Create professional business reports and dashboards with advanced Excel features.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Financial Analysis</h4>
-                  <p className="text-gray-700">Transform financial data into Excel format for complex calculations and modeling.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Collaboration</h4>
-                  <p className="text-gray-700">Share structured data in a format that supports collaboration and advanced Excel features.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
-              <p className="text-lg mb-6 opacity-90">Use our free CSV to XLSX converter to generate modern Excel spreadsheets.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Start Converting Now
-                </button>
-                <button
-                  onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-                >
-                  Back to Home
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
