@@ -37,13 +37,14 @@ export const BMPToICOConverter: React.FC = () => {
   const [originalSize, setOriginalSize] = useState<number | null>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
+    try {
+      const file = event.target.files?.[0];
+      if (!file) return;
 
-    clearValidationError();
-    setError(null);
-    setConvertedFile(null);
-    setConvertedFilename('');
+      clearValidationError();
+      setError(null);
+      setConvertedFile(null);
+      setConvertedFilename('');
 
     // Check if file is a valid BMP
     if (!file.name.toLowerCase().endsWith('.bmp') && !file.type.includes('bmp')) {
@@ -85,13 +86,25 @@ export const BMPToICOConverter: React.FC = () => {
         // Set only the original size as selected by default
         setIconSizes([size]);
       };
+      img.onerror = () => {
+        console.warn('Could not load image for size detection, using default size');
+        setOriginalSize(32); // Default size
+        setIconSizes([32]);
+      };
       img.src = url;
+    };
+    reader.onerror = () => {
+      setError('Error reading file. Please try a different file.');
     };
     reader.readAsArrayBuffer(file.slice(0, 10)); // Read only first 10 bytes
 
     const validation = validateSingleFile(file);
     if (!validation.isValid) {
       return;
+    }
+    } catch (error) {
+      console.error('Error in file selection:', error);
+      setError('Error processing file. Please try a different file.');
     }
   };
 
