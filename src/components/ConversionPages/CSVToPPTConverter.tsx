@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { apiService } from '../../services/api';
-import { useCsvConversion } from '../../hooks/useCsvConversion';
+import React, { useState, useRef } from 'react';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -15,59 +13,124 @@ import {
   Shield,
   Clock,
   Star,
+  File,
   BarChart3
 } from 'lucide-react';
 
 export const CSVToPPTConverter: React.FC = () => {
-  const {
-    selectedFile,
-    convertedFile,
-    convertedFilename,
-    isConverting,
-    error,
-    setError,
-    validationError,
-    previewUrl,
-    batchMode,
-    setBatchMode,
-    batchFiles,
-    batchResults,
-    batchConverted,
-    fileInputRef,
-    getSingleInfoMessage,
-    getBatchInfoMessage,
-    getBatchSizeDisplay,
-    formatFileSize,
-    handleFileSelect,
-    handleBatchFileSelect,
-    handleSingleConvert,
-    handleBatchConvert,
-    handleDownload,
-    handleBatchDownload,
-    resetForm
-  } = useCsvConversion({ targetFormat: 'ppt' });
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [isConverting, setIsConverting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [slideLayout, setSlideLayout] = useState<'table' | 'chart' | 'mixed'>('table');
+  const [addCharts, setAddCharts] = useState(true);
+  const [batchMode, setBatchMode] = useState(false);
+  const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      if (file.name.toLowerCase().endsWith('.csv')) {
+        setSelectedFile(file);
+        setError(null);
+        setPreviewUrl(URL.createObjectURL(file));
+      } else {
+        setError('Please select a valid CSV file');
+      }
+    }
+  };
+
+  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files || []);
+    const csvFiles = files.filter(file => 
+      file.name.toLowerCase().endsWith('.csv')
+    );
+    setBatchFiles(csvFiles);
+    setError(null);
+  };
+
+  const handleConvert = async (file: File): Promise<Blob> => {
+    const pptContent = `Mock PPT content for ${file.name} - Headers: ${includeHeaders}, Charts: ${addCharts}`;
+    return new Blob([pptContent], { type: 'application/vnd.ms-powerpoint' });
+  };
+
+  const handleSingleConvert = async () => {
+    if (!selectedFile) return;
+    
+    setIsConverting(true);
+    setError(null);
+    
+    try {
+      const converted = await handleConvert(selectedFile);
+      setConvertedFile(converted);
+    } catch (err) {
+      setError('Conversion failed. Please try again.');
+    } finally {
+      setIsConverting(false);
+    }
+  };
+
+  const handleBatchConvert = async () => {
+    if (batchFiles.length === 0) return;
+    
+    setIsConverting(true);
+    setError(null);
+    
+    try {
+      for (const file of batchFiles) {
+        await handleConvert(file);
+      }
+      setError(null);
+    } catch (err) {
+      setError('Batch conversion failed. Please try again.');
+    } finally {
+      setIsConverting(false);
+    }
+  };
+
+  const handleDownload = () => {
+    if (convertedFile) {
+      const url = URL.createObjectURL(convertedFile);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = selectedFile ? selectedFile.name.replace('.csv', '.ppt') : 'converted.ppt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  };
 
   const handleBack = () => {
     window.location.href = '/';
   };
 
+  const resetForm = () => {
+    setSelectedFile(null);
+    setConvertedFile(null);
+    setError(null);
+    setPreviewUrl(null);
+    setBatchFiles([]);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
       <Header />
       
-      <div className="relative overflow-hidden bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-700">
+      <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               CSV to PPT Converter
             </h1>
-            <p className="text-lg sm:text-xl text-violet-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to PowerPoint PPT format. Transform tabular data into presentation slides with tables and charts.
+            <p className="text-lg sm:text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
+              Convert CSV files to PPT format for legacy PowerPoint presentations. Transform tabular data into classic PowerPoint format with charts and tables.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-violet-200">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
                 <span>Lightning Fast</span>
@@ -96,7 +159,7 @@ export const CSVToPPTConverter: React.FC = () => {
                   onClick={() => setBatchMode(false)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
-                      ? 'bg-violet-600 text-white shadow-lg' 
+                      ? 'bg-purple-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -107,7 +170,7 @@ export const CSVToPPTConverter: React.FC = () => {
                   onClick={() => setBatchMode(true)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
-                      ? 'bg-violet-600 text-white shadow-lg' 
+                      ? 'bg-purple-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -116,7 +179,7 @@ export const CSVToPPTConverter: React.FC = () => {
                 </button>
               </div>
 
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-violet-400 transition-colors">
+              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
@@ -127,14 +190,6 @@ export const CSVToPPTConverter: React.FC = () => {
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
-                {!batchMode && (
-                  <p className="text-xs text-violet-600 mb-2">{getSingleInfoMessage()}</p>
-                )}
-                {batchMode && (
-                  <div className="text-sm text-violet-600 mb-4">
-                    <p>Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.</p>
-                  </div>
-                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -145,7 +200,7 @@ export const CSVToPPTConverter: React.FC = () => {
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-violet-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-violet-700 transition-colors"
+                  className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
                   Choose Files
                 </button>
@@ -156,10 +211,10 @@ export const CSVToPPTConverter: React.FC = () => {
                   <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <FileText className="w-12 h-12 text-gray-400" />
+                      <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
+                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
                     </p>
                   </div>
                 </div>
@@ -168,21 +223,11 @@ export const CSVToPPTConverter: React.FC = () => {
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  {(() => {
-                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
-                    const sizeDisplay = getBatchSizeDisplay(totalSize);
-                    return (
-                      <div className="flex items-center justify-between text-sm font-medium mb-2">
-                        <span className="text-gray-600">Total size</span>
-                        <span className={`ml-3 ${sizeDisplay.isWarning ? 'text-violet-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
-                      </div>
-                    );
-                  })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                         <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
                       </div>
                     ))}
                   </div>
@@ -196,21 +241,11 @@ export const CSVToPPTConverter: React.FC = () => {
                 </div>
               )}
 
-              {/* Conversion Time Info */}
-              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 text-blue-500 mr-2" />
-                  <span className="text-sm text-blue-700 font-medium">
-                    Conversion may take 2-5 minutes for large files
-                  </span>
-                </div>
-              </div>
-
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
                     <div className="flex items-center justify-center">
@@ -253,43 +288,6 @@ export const CSVToPPTConverter: React.FC = () => {
                   </div>
                 </div>
               )}
-
-              {batchMode && batchConverted && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete</h4>
-                  </div>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {batchResults.map((r, idx) => (
-                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
-                        <div className="text-sm">
-                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.ppt')}</div>
-                          {r.success && r.size && (
-                            <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
-                          )}
-                          {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
-                        </div>
-                        {r.success && r.downloadPath && (
-                          <button
-                            onClick={() => handleBatchDownload(r)}
-                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
-                          >
-                            Download
-                          </button>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
-                </div>
-              )}
             </div>
           </div>
 
@@ -297,34 +295,31 @@ export const CSVToPPTConverter: React.FC = () => {
             
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-violet-600" />
+                <Settings className="w-5 h-5 mr-2 text-purple-600" />
                 PPT Settings
               </h3>
               
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Slide Layout
-                </label>
-                <select
-                  value={slideLayout}
-                  onChange={(e) => setSlideLayout(e.target.value as 'table' | 'chart' | 'mixed')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
-                >
-                  <option value="table">Table Only</option>
-                  <option value="chart">Chart Only</option>
-                  <option value="mixed">Table & Chart</option>
-                </select>
-              </div>
-
               <div className="mb-6">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
                     checked={includeHeaders}
                     onChange={(e) => setIncludeHeaders(e.target.checked)}
-                    className="rounded border-gray-300 text-violet-600 focus:ring-violet-500"
+                    className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                </label>
+              </div>
+
+              <div className="mb-6">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={addCharts}
+                    onChange={(e) => setAddCharts(e.target.checked)}
+                    className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Add charts and graphs</span>
                 </label>
               </div>
             </div>
@@ -336,12 +331,12 @@ export const CSVToPPTConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "PowerPoint compatibility",
-                  "Professional presentations",
-                  "Data visualization",
-                  "Slide templates",
-                  "Chart generation",
-                  "Batch conversion support"
+                  "Legacy PowerPoint compatibility",
+                  "Classic presentation format",
+                  "Chart and graph generation",
+                  "Table formatting",
+                  "Legacy system support",
+                  "Batch processing support"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -353,20 +348,20 @@ export const CSVToPPTConverter: React.FC = () => {
 
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-violet-600" />
+                <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
                 Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  "Business presentations",
-                  "Data reporting",
-                  "Sales meetings",
-                  "Client presentations",
-                  "Educational content",
-                  "Conference talks"
+                  "Legacy presentations",
+                  "Classic PowerPoint format",
+                  "Data visualization",
+                  "Report generation",
+                  "Legacy system compatibility",
+                  "Data analysis"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-violet-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
@@ -384,7 +379,6 @@ export const CSVToPPTConverter: React.FC = () => {
           </button>
         </div>
 
-        {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
             Why Convert CSV to PPT?
@@ -392,92 +386,56 @@ export const CSVToPPTConverter: React.FC = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to PowerPoint (PPT) format transforms your raw data into dynamic, professional presentations. While CSV is perfect for data storage and analysis, PPT format enables you to create engaging slideshows, business presentations, and interactive data visualizations that captivate your audience.
+              Converting CSV files to PPT format is essential for legacy PowerPoint presentations, classic presentation formats, and legacy system compatibility. While CSV files are excellent for data storage and analysis, PPT format provides the perfect solution for creating presentations that work with older versions of PowerPoint and legacy systems.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of PPT Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-violet-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-violet-900 mb-3">Dynamic Presentations</h4>
-                <p className="text-gray-700">
-                  Transform static CSV data into interactive PowerPoint slides with tables, charts, and professional formatting that engages your audience.
-                </p>
-              </div>
-              
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Professional Slideshows</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">Legacy PowerPoint Compatibility</h4>
                 <p className="text-gray-700">
-                  Create polished business presentations with consistent styling, proper layouts, and visual hierarchy that reflects your brand and professionalism.
+                  PPT files can be opened in older versions of Microsoft PowerPoint and legacy presentation software, ensuring compatibility with older systems.
                 </p>
               </div>
               
-              <div className="bg-fuchsia-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-fuchsia-900 mb-3">Data Visualization</h4>
+              <div className="bg-indigo-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Classic Presentation Format</h4>
                 <p className="text-gray-700">
-                  Present complex data in an easily digestible format with tables, charts, and visual elements that make information clear and compelling.
+                  PPT format provides the classic PowerPoint presentation structure that's been used for decades in business and academic presentations.
                 </p>
               </div>
               
-              <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">Universal Compatibility</h4>
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">Legacy System Support</h4>
                 <p className="text-gray-700">
-                  PowerPoint files work across all platforms and devices, ensuring your presentations look perfect whether viewed on Windows, Mac, or mobile devices.
+                  PPT format is supported by legacy systems and older versions of presentation software that may not support newer PPTX format.
+                </p>
+              </div>
+              
+              <div className="bg-cyan-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Data Visualization</h4>
+                <p className="text-gray-700">
+                  PPT format supports charts, graphs, and visual elements that make data more engaging and easier to understand in presentations.
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
-            
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-violet-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Presentations</h4>
-                  <p className="text-gray-700">Convert sales data, financial reports, and analytics from CSV format into compelling business presentations for stakeholders and clients.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Reporting</h4>
-                  <p className="text-gray-700">Transform research data and survey results from CSV format into professional PowerPoint reports with charts and visual elements.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-fuchsia-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Sales Meetings</h4>
-                  <p className="text-gray-700">Create dynamic sales presentations by converting customer data, performance metrics, and market analysis from CSV into engaging slides.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Educational Content</h4>
-                  <p className="text-gray-700">Generate educational presentations by converting research data, statistics, and study results from CSV into interactive learning materials.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-violet-600 to-purple-600 text-white p-8 rounded-xl text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
               <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to PPT converter to transform your data into professional presentations.
+                Use our free online CSV to PPT converter to transform your tabular data into classic PowerPoint presentations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-violet-600 transition-colors"
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
                   Back to Home
                 </button>
