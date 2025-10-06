@@ -51,27 +51,48 @@ export const BMPToICOConverter: React.FC = () => {
       return;
     }
 
+    // Additional validation for BMP files
+    if (file.size < 1000) {
+      setError('BMP file appears to be too small or corrupted.');
+      return;
+    }
+
+    // Check file header for BMP signature
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const arrayBuffer = e.target?.result as ArrayBuffer;
+      const uint8Array = new Uint8Array(arrayBuffer);
+      
+      // Check for BMP signature (BM)
+      if (uint8Array[0] !== 0x42 || uint8Array[1] !== 0x4D) {
+        setError('File does not appear to be a valid BMP file.');
+        return;
+      }
+      
+      // If validation passes, proceed with file selection
+      setSelectedFile(file);
+      
+      // Create preview URL and detect image size
+      const url = URL.createObjectURL(file);
+      setPreviewUrl(url);
+      
+      // Detect original image size
+      const img = new Image();
+      img.onload = () => {
+        const size = Math.min(img.width, img.height);
+        setOriginalSize(size);
+        
+        // Set only the original size as selected by default
+        setIconSizes([size]);
+      };
+      img.src = url;
+    };
+    reader.readAsArrayBuffer(file.slice(0, 10)); // Read only first 10 bytes
+
     const validation = validateSingleFile(file);
     if (!validation.isValid) {
       return;
     }
-
-        setSelectedFile(file);
-    
-    // Create preview URL and detect image size
-    const url = URL.createObjectURL(file);
-    setPreviewUrl(url);
-    
-    // Detect original image size
-        const img = new Image();
-        img.onload = () => {
-      const size = Math.min(img.width, img.height);
-      setOriginalSize(size);
-      
-      // Set only the original size as selected by default
-      setIconSizes([size]);
-    };
-    img.src = url;
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -90,8 +111,15 @@ export const BMPToICOConverter: React.FC = () => {
     
     if (invalidFiles.length > 0) {
       setError(`Please select only BMP files. Found ${invalidFiles.length} invalid file(s).`);
-        return;
-      }
+      return;
+    }
+
+    // Additional validation for BMP files
+    const corruptedFiles = files.filter(file => file.size < 1000);
+    if (corruptedFiles.length > 0) {
+      setError(`Some BMP files appear to be too small or corrupted. Found ${corruptedFiles.length} file(s).`);
+      return;
+    }
       
     const validation = validateBatchFiles(files);
     if (!validation.isValid) {
