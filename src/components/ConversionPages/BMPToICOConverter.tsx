@@ -34,6 +34,7 @@ export const BMPToICOConverter: React.FC = () => {
   
   const [iconSizes, setIconSizes] = useState<number[]>([16, 24, 32, 48, 64, 128, 256]);
   const [includeAlpha, setIncludeAlpha] = useState(true);
+  const [originalSize, setOriginalSize] = useState<number | null>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -44,6 +45,12 @@ export const BMPToICOConverter: React.FC = () => {
     setConvertedFile(null);
     setConvertedFilename('');
 
+    // Check if file is a valid BMP
+    if (!file.name.toLowerCase().endsWith('.bmp') && !file.type.includes('bmp')) {
+      setError('Please select a valid BMP file.');
+      return;
+    }
+
     const validation = validateSingleFile(file);
     if (!validation.isValid) {
       return;
@@ -51,9 +58,23 @@ export const BMPToICOConverter: React.FC = () => {
 
     setSelectedFile(file);
     
-    // Create preview URL
+    // Create preview URL and detect image size
     const url = URL.createObjectURL(file);
     setPreviewUrl(url);
+    
+    // Detect original image size
+    const img = new Image();
+    img.onload = () => {
+      const size = Math.min(img.width, img.height);
+      setOriginalSize(size);
+      
+      // Add original size to icon sizes if it doesn't exist
+      if (!iconSizes.includes(size)) {
+        const newSizes = [...iconSizes, size].sort((a, b) => a - b);
+        setIconSizes(newSizes);
+      }
+    };
+    img.src = url;
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -64,6 +85,16 @@ export const BMPToICOConverter: React.FC = () => {
     setError(null);
     setBatchResults([]);
     setBatchConverted(false);
+
+    // Check if all files are valid BMP files
+    const invalidFiles = files.filter(file => 
+      !file.name.toLowerCase().endsWith('.bmp') && !file.type.includes('bmp')
+    );
+    
+    if (invalidFiles.length > 0) {
+      setError(`Please select only BMP files. Found ${invalidFiles.length} invalid file(s).`);
+      return;
+    }
 
     const validation = validateBatchFiles(files);
     if (!validation.isValid) {
@@ -168,6 +199,8 @@ export const BMPToICOConverter: React.FC = () => {
     setBatchFiles([]);
     setBatchResults([]);
     setBatchConverted(false);
+    setOriginalSize(null);
+    setIconSizes([16, 24, 32, 48, 64, 128, 256]);
     clearValidationError();
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
@@ -427,8 +460,8 @@ export const BMPToICOConverter: React.FC = () => {
                   Icon Sizes
                 </label>
                 <div className="grid grid-cols-2 gap-2">
-                  {[16, 24, 32, 48, 64, 128, 256].map(size => (
-                    <label key={size} className="flex items-center">
+                  {iconSizes.map(size => (
+                    <label key={size} className={`flex items-center p-2 rounded ${originalSize === size ? 'bg-purple-50 border border-purple-200' : ''}`}>
                       <input
                         type="checkbox"
                         checked={iconSizes.includes(size)}
@@ -441,10 +474,17 @@ export const BMPToICOConverter: React.FC = () => {
                         }}
                         className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                       />
-                      <span className="ml-2 text-sm text-gray-700">{size}px</span>
+                      <span className={`ml-2 text-sm ${originalSize === size ? 'text-purple-700 font-medium' : 'text-gray-700'}`}>
+                        {size}px {originalSize === size ? '(Original)' : ''}
+                      </span>
                     </label>
                   ))}
                 </div>
+                {originalSize && (
+                  <p className="text-xs text-gray-500 mt-2">
+                    Original image size: {originalSize}px (automatically added and selected)
+                  </p>
+                )}
               </div>
 
               <div className="mb-6">
