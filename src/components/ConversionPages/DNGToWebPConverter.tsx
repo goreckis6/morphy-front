@@ -279,21 +279,21 @@ export const DNGToWebPConverter: React.FC = () => {
                     : 'Drag and drop your DNG file here or click to browse'
                   }
                 </p>
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept=".dng"
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".dng"
                   multiple={batchMode}
                   onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
-                  className="hidden"
-                />
+                    className="hidden"
+                  />
                 <button
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
                   Choose Files
                 </button>
-              </div>
+                </div>
 
               {previewUrl && !batchMode && (
                 <div className="mt-6">
@@ -305,9 +305,9 @@ export const DNGToWebPConverter: React.FC = () => {
                     <p className="text-sm text-gray-600 mt-2 text-center">
                       {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
@@ -327,18 +327,18 @@ export const DNGToWebPConverter: React.FC = () => {
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
                   <span className="text-red-700">{error || validationError}</span>
-                </div>
-              )}
+                  </div>
+                )}
 
-              {/* Conversion Time Info */}
+                {/* Conversion Time Info */}
               <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-center">
-                  <Clock className="w-4 h-4 text-blue-600 mr-2" />
-                  <p className="text-blue-800 text-sm">
-                    Conversion may take 2-5 minutes for large DNG files
-                  </p>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 text-blue-600 mr-2" />
+                    <p className="text-blue-800 text-sm">
+                      Conversion may take 2-5 minutes for large DNG files
+                    </p>
+                  </div>
                 </div>
-              </div>
 
               <div className="mt-8">
                 <button
@@ -355,8 +355,8 @@ export const DNGToWebPConverter: React.FC = () => {
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
                       {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to WebP'}
-                    </div>
-                  )}
+                  </div>
+                )}
                 </button>
               </div>
 
@@ -365,7 +365,7 @@ export const DNGToWebPConverter: React.FC = () => {
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
-                  </div>
+            </div>
                   <p className="text-green-700 mb-4">
                     Your DNG file has been successfully converted to WebP format.
                   </p>
@@ -384,41 +384,41 @@ export const DNGToWebPConverter: React.FC = () => {
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
                     </button>
-                  </div>
-                </div>
-              )}
-
-              {/* Batch Results */}
-              {batchConverted && batchResults.length > 0 && (
-                <div className="mt-6 space-y-3">
-                  <h3 className="font-medium text-gray-900">Conversion Results:</h3>
-                  {batchResults.map((result, index) => (
-                    <div key={index} className="flex items-center justify-between bg-gray-50 rounded p-3">
-                      <div className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
-                        <span className="text-sm text-gray-700">{result.outputFilename}</span>
-                      </div>
-                      <button
-                        onClick={() => handleBatchDownload(result.downloadPath!, result.outputFilename)}
-                        className="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700 transition-colors"
-                      >
-                        Download
-                      </button>
                     </div>
-                  ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors"
-                  >
-                    Convert More Files
-                  </button>
-                </div>
-              )}
+                  </div>
+                )}
+
+                {/* Batch Results */}
+                {batchConverted && batchResults.length > 0 && (
+                <div className="mt-6 space-y-3">
+                    <h3 className="font-medium text-gray-900">Conversion Results:</h3>
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded p-3">
+                        <div className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
+                          <span className="text-sm text-gray-700">{result.outputFilename}</span>
+                        </div>
+                        <button
+                          onClick={() => handleBatchDownload(result.downloadPath!, result.outputFilename)}
+                          className="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700 transition-colors"
+                        >
+                          Download
+                        </button>
+                      </div>
+                    ))}
+                    <button
+                      onClick={resetForm}
+                      className="w-full bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors"
+                    >
+                      Convert More Files
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
 
           <div className="space-y-6">
-            
+
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-purple-600" />
@@ -518,7 +518,7 @@ export const DNGToWebPConverter: React.FC = () => {
                 ))}
               </div>
             </div>
-
+            
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
@@ -584,8 +584,8 @@ export const DNGToWebPConverter: React.FC = () => {
                 <p className="text-gray-700">
                   WebP is supported by all modern browsers and is becoming the standard for web images, ensuring your content remains compatible and optimized.
                 </p>
-              </div>
-              
+          </div>
+
               <div className="bg-cyan-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-cyan-900 mb-3">RAW Processing</h4>
                 <p className="text-gray-700">
