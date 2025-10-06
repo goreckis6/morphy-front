@@ -132,7 +132,9 @@ export const CSVToRTFConverter: React.FC = () => {
                   <p className="text-xs text-orange-600 mb-2">{getSingleInfoMessage()}</p>
                 )}
                 {batchMode && (
-                  <p className="text-sm text-orange-600 mb-4">{getBatchInfoMessage()}</p>
+                  <div className="text-sm text-orange-600 mb-4">
+                    <p>Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.</p>
+                  </div>
                 )}
                 <input
                   ref={fileInputRef}
@@ -171,7 +173,10 @@ export const CSVToRTFConverter: React.FC = () => {
                     const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
-                      <div className={`text-sm font-medium mb-2 ${sizeDisplay.isWarning ? 'text-orange-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                      <div className="flex items-center justify-between text-sm font-medium mb-2">
+                        <span className="text-gray-600">Total size</span>
+                        <span className={`ml-3 ${sizeDisplay.isWarning ? 'text-orange-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
+                      </div>
                     );
                   })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
@@ -191,6 +196,16 @@ export const CSVToRTFConverter: React.FC = () => {
                   <span className="text-red-700">{error}</span>
                 </div>
               )}
+
+              {/* Conversion Time Info */}
+              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 text-blue-500 mr-2" />
+                  <span className="text-sm text-blue-700 font-medium">
+                    Conversion may take 2-5 minutes for large files
+                  </span>
+                </div>
+              </div>
 
               <div className="mt-8">
                 <button
@@ -356,13 +371,6 @@ export const CSVToRTFConverter: React.FC = () => {
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
               </div>
             </div>
           </div>
@@ -375,6 +383,108 @@ export const CSVToRTFConverter: React.FC = () => {
           >
             ← Back to Home
           </button>
+        </div>
+
+        {/* SEO Content Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+            Why Convert CSV to RTF?
+          </h2>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Converting CSV files to Rich Text Format (RTF) transforms your raw data into formatted, cross-platform documents. While CSV is perfect for data storage and analysis, RTF format enables you to create professional documents with rich formatting, tables, and styling that work seamlessly across all word processors and text editors.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of RTF Format</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">Universal Compatibility</h4>
+                <p className="text-gray-700">
+                  RTF files work across all platforms, operating systems, and word processors including Microsoft Word, Google Docs, LibreOffice, and Apple Pages.
+                </p>
+              </div>
+              
+              <div className="bg-amber-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-amber-900 mb-3">Rich Text Formatting</h4>
+                <p className="text-gray-700">
+                  Create professional documents with bold text, italics, colors, fonts, tables, and other formatting that preserves your data's visual structure.
+                </p>
+              </div>
+              
+              <div className="bg-yellow-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-yellow-900 mb-3">Legacy Support</h4>
+                <p className="text-gray-700">
+                  RTF format has been around since the 1980s, ensuring compatibility with older systems and applications that don't support modern formats.
+                </p>
+              </div>
+              
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">Human Readable</h4>
+                <p className="text-gray-700">
+                  RTF files are text-based and human-readable, making them easy to debug, modify, and understand without specialized software.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Cross-Platform Documents</h4>
+                  <p className="text-gray-700">Convert data reports and analytics from CSV format into RTF documents that work perfectly on Windows, Mac, and Linux systems.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Legacy Applications</h4>
+                  <p className="text-gray-700">Transform business data and reports from CSV format into RTF files for older systems and applications that require this format.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-yellow-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Text Processors</h4>
+                  <p className="text-gray-700">Create formatted documents by converting CSV data into RTF format for use in word processors and text editing applications.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Document Exchange</h4>
+                  <p className="text-gray-700">Generate professional reports and data summaries from CSV format into RTF files for easy sharing and collaboration.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-orange-600 to-amber-600 text-white p-8 rounded-xl text-center">
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+              <p className="text-lg mb-6 opacity-90">
+                Use our free online CSV to RTF converter to transform your data into formatted documents.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Start Converting Now
+                </button>
+                <button
+                  onClick={handleBack}
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                >
+                  Back to Home
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
