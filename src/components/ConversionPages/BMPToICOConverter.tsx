@@ -29,10 +29,10 @@ export const BMPToICOConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  
+
   const { validationError, validateSingleFile, validateBatchFiles, getSingleInfoMessage, getBatchInfoMessage, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
   
-  const [iconSizes, setIconSizes] = useState<number[]>([16, 24, 32, 48, 64, 128, 256]);
+  const [iconSizes, setIconSizes] = useState<number[]>([]);
   const [includeAlpha, setIncludeAlpha] = useState(true);
   const [originalSize, setOriginalSize] = useState<number | null>(null);
 
@@ -56,23 +56,20 @@ export const BMPToICOConverter: React.FC = () => {
       return;
     }
 
-    setSelectedFile(file);
+        setSelectedFile(file);
     
     // Create preview URL and detect image size
     const url = URL.createObjectURL(file);
     setPreviewUrl(url);
     
     // Detect original image size
-    const img = new Image();
-    img.onload = () => {
+        const img = new Image();
+        img.onload = () => {
       const size = Math.min(img.width, img.height);
       setOriginalSize(size);
       
-      // Add original size to icon sizes if it doesn't exist
-      if (!iconSizes.includes(size)) {
-        const newSizes = [...iconSizes, size].sort((a, b) => a - b);
-        setIconSizes(newSizes);
-      }
+      // Set only the original size as selected by default
+      setIconSizes([size]);
     };
     img.src = url;
   };
@@ -93,9 +90,9 @@ export const BMPToICOConverter: React.FC = () => {
     
     if (invalidFiles.length > 0) {
       setError(`Please select only BMP files. Found ${invalidFiles.length} invalid file(s).`);
-      return;
-    }
-
+        return;
+      }
+      
     const validation = validateBatchFiles(files);
     if (!validation.isValid) {
       return;
@@ -107,9 +104,15 @@ export const BMPToICOConverter: React.FC = () => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
+    // Check if at least one icon size is selected
+    if (iconSizes.length === 0) {
+      setError('Please select at least one icon size.');
+      return;
+    }
+    
     setIsConverting(true);
     setError(null);
-
+    
     try {
       const formData = new FormData();
       formData.append('file', selectedFile);
@@ -139,9 +142,15 @@ export const BMPToICOConverter: React.FC = () => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
 
+    // Check if at least one icon size is selected
+    if (iconSizes.length === 0) {
+      setError('Please select at least one icon size.');
+      return;
+    }
+    
     setIsConverting(true);
     setError(null);
-
+    
     try {
       const formData = new FormData();
       batchFiles.forEach(file => {
@@ -169,14 +178,14 @@ export const BMPToICOConverter: React.FC = () => {
   const handleDownload = () => {
     if (!convertedFile) return;
 
-    const url = URL.createObjectURL(convertedFile);
-    const a = document.createElement('a');
-    a.href = url;
+      const url = URL.createObjectURL(convertedFile);
+      const a = document.createElement('a');
+      a.href = url;
     a.download = convertedFilename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
   };
 
   const handleBatchDownload = (result: any) => {
@@ -200,7 +209,7 @@ export const BMPToICOConverter: React.FC = () => {
     setBatchResults([]);
     setBatchConverted(false);
     setOriginalSize(null);
-    setIconSizes([16, 24, 32, 48, 64, 128, 256]);
+    setIconSizes([]);
     clearValidationError();
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
@@ -435,13 +444,13 @@ export const BMPToICOConverter: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  <button
-                    onClick={resetForm}
+                    <button
+                      onClick={resetForm}
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
+                    </button>
                 </div>
               )}
             </div>
@@ -460,7 +469,7 @@ export const BMPToICOConverter: React.FC = () => {
                   Icon Sizes
                 </label>
                 <div className="grid grid-cols-2 gap-2">
-                  {iconSizes.map(size => (
+                  {[16, 24, 32, 48, 64, 128, 256].map(size => (
                     <label key={size} className={`flex items-center p-2 rounded ${originalSize === size ? 'bg-purple-50 border border-purple-200' : ''}`}>
                       <input
                         type="checkbox"
@@ -479,10 +488,29 @@ export const BMPToICOConverter: React.FC = () => {
                       </span>
                     </label>
                   ))}
+                  {originalSize && !iconSizes.includes(originalSize) && (
+                    <label className="flex items-center p-2 rounded bg-purple-50 border border-purple-200">
+                      <input
+                        type="checkbox"
+                        checked={iconSizes.includes(originalSize)}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setIconSizes([...iconSizes, originalSize].sort((a, b) => a - b));
+                          } else {
+                            setIconSizes(iconSizes.filter(s => s !== originalSize));
+                          }
+                        }}
+                        className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                      />
+                      <span className="ml-2 text-sm text-purple-700 font-medium">
+                        {originalSize}px (Original)
+                      </span>
+                    </label>
+                  )}
                 </div>
                 {originalSize && (
                   <p className="text-xs text-gray-500 mt-2">
-                    Original image size: {originalSize}px (automatically added and selected)
+                    Original image size: {originalSize}px (automatically selected by default)
                   </p>
                 )}
               </div>
