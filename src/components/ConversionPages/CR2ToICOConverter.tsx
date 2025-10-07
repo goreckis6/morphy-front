@@ -188,12 +188,15 @@ export const CR2ToICOConverter: React.FC = () => {
                   return;
                 }
                 
+                // Determine the actual size to use
+                const actualSize = iconSize === 'default' ? Math.min(img.width, img.height) : iconSize;
+                
                 // Set canvas to icon size
-                canvas.width = iconSize;
-                canvas.height = iconSize;
+                canvas.width = actualSize;
+                canvas.height = actualSize;
                 
                 // Draw the extracted image scaled to icon size
-                ctx.drawImage(img, 0, 0, iconSize, iconSize);
+                ctx.drawImage(img, 0, 0, actualSize, actualSize);
                 
                 // Convert to ICO format
                 canvas.toBlob((blob) => {
@@ -201,7 +204,7 @@ export const CR2ToICOConverter: React.FC = () => {
                   if (blob) {
                     resolve(blob);
                   } else {
-                    reject(new Error('Failed to convert extracted image'));
+                    reject(new Error('Failed to convert extracted image to blob'));
                   }
                 }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
               };
@@ -259,11 +262,14 @@ export const CR2ToICOConverter: React.FC = () => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     
+    // Determine the actual size to use
+    const actualSize = iconSize === 'default' ? 256 : iconSize;
+    
     if (!ctx) {
       const fallbackContent = `ICO_FILE_START
 ORIGINAL_FILE: ${file.name}
 FILE_TYPE: Canon RAW (CR2)
-ICON_SIZE: ${iconSize}x${iconSize} pixels
+ICON_SIZE: ${actualSize}x${actualSize} pixels
 QUALITY: ${quality}
 CONVERSION_DETAILS: CR2 to ICO conversion (sample generated)
 ICO_FILE_END`;
@@ -271,34 +277,34 @@ ICO_FILE_END`;
       return;
     }
     
-    canvas.width = iconSize;
-    canvas.height = iconSize;
+    canvas.width = actualSize;
+    canvas.height = actualSize;
     
     // Create a professional camera-themed icon
-    const gradient = ctx.createRadialGradient(iconSize/2, iconSize/2, 0, iconSize/2, iconSize/2, iconSize/2);
+    const gradient = ctx.createRadialGradient(actualSize/2, actualSize/2, 0, actualSize/2, actualSize/2, actualSize/2);
     gradient.addColorStop(0, '#1f2937');
     gradient.addColorStop(0.7, '#374151');
     gradient.addColorStop(1, '#111827');
     
     ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, iconSize, iconSize);
+    ctx.fillRect(0, 0, actualSize, actualSize);
     
     // Add camera lens effect
     ctx.beginPath();
-    ctx.arc(iconSize/2, iconSize/2, iconSize * 0.3, 0, 2 * Math.PI);
+    ctx.arc(actualSize/2, actualSize/2, actualSize * 0.3, 0, 2 * Math.PI);
     ctx.fillStyle = '#6b7280';
     ctx.fill();
     
     ctx.beginPath();
-    ctx.arc(iconSize/2, iconSize/2, iconSize * 0.2, 0, 2 * Math.PI);
+    ctx.arc(actualSize/2, actualSize/2, actualSize * 0.2, 0, 2 * Math.PI);
     ctx.fillStyle = '#1f2937';
     ctx.fill();
     
     // Add "CR2" text
     ctx.fillStyle = '#e5e7eb';
-    ctx.font = `bold ${Math.max(6, iconSize / 6)}px Arial`;
+    ctx.font = `bold ${Math.max(6, actualSize / 6)}px Arial`;
     ctx.textAlign = 'center';
-    ctx.fillText('CR2', iconSize / 2, iconSize * 0.8);
+    ctx.fillText('CR2', actualSize / 2, actualSize * 0.8);
     
     canvas.toBlob((blob) => {
       if (blob) {
@@ -307,7 +313,7 @@ ICO_FILE_END`;
         const fallbackContent = `ICO_FILE_START
 ORIGINAL_FILE: ${file.name}
 FILE_TYPE: Canon RAW (CR2) - Professional Camera File
-ICON_SIZE: ${iconSize}x${iconSize} pixels
+ICON_SIZE: ${actualSize}x${actualSize} pixels
 QUALITY: ${quality}
 ICO_FILE_END`;
         resolve(new Blob([fallbackContent], { type: 'image/x-icon' }));
@@ -543,7 +549,7 @@ ICO_FILE_END`;
                           <div className="mt-2 text-sm text-gray-500">
                             <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
                             <p className="text-orange-600 font-medium">
-                              Will convert to: {iconSize} × {iconSize} pixels ({quality} quality)
+                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
                             </p>
                           </div>
                         </div>
@@ -561,7 +567,7 @@ ICO_FILE_END`;
                           <div className="mt-2 text-sm text-gray-500">
                             <p>Canon RAW (CR2) camera file</p>
                             <p className="text-orange-600 font-medium">
-                              Will convert to: {iconSize} × {iconSize} pixels ({quality} quality)
+                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
                             </p>
                             <p className="text-gray-400 text-xs mt-1">
                               No embedded preview found - will generate sample icon
