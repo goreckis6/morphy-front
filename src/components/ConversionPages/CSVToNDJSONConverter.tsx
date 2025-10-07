@@ -139,10 +139,13 @@ export const CSVToNDJSONConverter: React.FC = () => {
       const results: Array<{ file: File; blob: Blob }> = [];
       for (let i = 0; i < batchFiles.length; i++) {
         const apiResult = result.results?.[i];
-        if (apiResult && apiResult.success && apiResult.downloadPath) {
-          // Download the file from the server
-          const blob = await apiService.downloadFile(apiResult.downloadPath);
-          results.push({ file: batchFiles[i], blob });
+        if (apiResult && apiResult.success) {
+          const filename = apiResult.storedFilename || apiResult.downloadPath?.split('/').pop();
+          if (filename) {
+            // Fetch the blob from the server
+            const blob = await apiService.downloadFile(filename);
+            results.push({ file: batchFiles[i], blob });
+          }
         }
       }
       

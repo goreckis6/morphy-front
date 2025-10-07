@@ -625,15 +625,18 @@ function App() {
 
 
   const features = [
-    { icon: <Zap className="w-6 h-6 text-yellow-600" />, title: 'Lightning Fast', description: 'Process files in seconds with our optimized conversion engine' },
-    { icon: <Shield className="w-6 h-6 text-green-600" />, title: 'Secure & Private', description: 'Your files are processed locally and never stored on our servers' },
-    { icon: <Globe className="w-6 h-6 text-blue-600" />, title: 'Universal Support', description: 'Support for 15+ file formats with more being added regularly' },
+    { icon: <Zap className="w-12 h-12 text-yellow-500" />, title: 'Lightning Fast', description: 'Process files in seconds with our optimized conversion engine powered by Python and Sharp' },
+    { icon: <Shield className="w-12 h-12 text-green-500" />, title: 'Secure & Private', description: 'All conversions happen server-side with enterprise-grade security. Files are automatically deleted after processing' },
+    { icon: <Globe className="w-12 h-12 text-blue-500" />, title: 'Universal Support', description: 'Convert between 300+ format combinations including images, documents, ebooks, and data formats' },
+    { icon: <BarChart3 className="w-12 h-12 text-purple-500" />, title: 'Batch Processing', description: 'Convert up to 20 files at once with our powerful batch processing engine' },
+    { icon: <Eye className="w-12 h-12 text-pink-500" />, title: 'File Viewer', description: 'Preview and view your files directly in the browser before or after conversion' },
+    { icon: <Star className="w-12 h-12 text-orange-500" />, title: 'Professional Quality', description: 'Industry-standard conversion with quality controls and customizable settings for every format' },
   ];
 
   const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-600" />, value: '50K+', label: 'Active Users' },
-    { icon: <RefreshCw className="w-8 h-8 text-green-600" />, value: '1M+', label: 'Files Converted' },
-    { icon: <TrendingUp className="w-8 h-8 text-purple-600" />, value: '99.9%', label: 'Success Rate' },
+    { icon: <FileText className="w-8 h-8 text-blue-600" />, value: '300+', label: 'Supported Formats' },
+    { icon: <RefreshCw className="w-8 h-8 text-green-600" />, value: '100MB', label: 'Max File Size' },
+    { icon: <Zap className="w-8 h-8 text-purple-600" />, value: '20 Files', label: 'Batch Processing' },
   ];
 
   return (
@@ -642,47 +645,76 @@ function App() {
         <Header />
         
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Transform Your Files
-              <span className="block text-yellow-300">Instantly</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              The most comprehensive file conversion and viewing platform. 
-              Convert between formats, preview files, and manage your digital assets with ease.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button 
-                onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-blue-600 font-bold py-4 px-8 rounded-full hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Start Converting Free
-              </button>
-              <button 
-                onClick={() => document.getElementById('viewer')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                Try File Viewer
-              </button>
+        <section className="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white py-24 overflow-hidden">
+          {/* Animated Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+            <div className="absolute top-0 right-10 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Convert Any File.
+                <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
+                  Instantly.
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-50 max-w-4xl mx-auto leading-relaxed">
+                Fast, secure, and easy file conversions between <span className="font-bold text-yellow-300">300+ formats</span> — directly in your browser. 
+                No registration required.
+              </p>
+              
+              {/* Feature Pills */}
+              <div className="flex flex-wrap justify-center gap-3 mb-10">
+                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <span className="text-sm font-medium">🚀 Lightning Fast</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <span className="text-sm font-medium">🔒 100% Secure</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <span className="text-sm font-medium">⚡ No Registration</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                  <span className="text-sm font-medium">📦 Batch Processing</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button 
+                  onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-white text-blue-600 font-bold py-4 px-10 rounded-full hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-2"
+                >
+                  <RefreshCw className="w-5 h-5" />
+                  Try It Now - Free
+                </button>
+                <button 
+                  onClick={() => document.getElementById('supported-formats')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="border-2 border-white/50 backdrop-blur-sm bg-white/10 text-white font-bold py-4 px-10 rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center gap-2"
+                >
+                  <FileText className="w-5 h-5" />
+                  See Supported Formats
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
+                <div key={index} className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <div className="flex justify-center mb-4 bg-gradient-to-br from-blue-100 to-purple-100 w-16 h-16 rounded-full items-center mx-auto">
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-gray-800 mb-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-gray-600">
+                  <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
                 </div>
@@ -692,10 +724,10 @@ function App() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gray-100">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Why Choose MorphyIMG?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -703,16 +735,18 @@ function App() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                  <div className="mb-4">
-                    {feature.icon}
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+                  <div className="mb-6 flex justify-center">
+                    <div className="p-4 bg-white rounded-2xl shadow-md">
+                      {feature.icon}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 text-center leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -721,11 +755,57 @@ function App() {
           </div>
         </section>
 
+        {/* How It Works Section */}
+        <section id="how-it-works" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                How It Works
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Simple, fast, and secure file conversion in just 3 steps
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <span className="text-3xl font-bold text-white">1</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Upload File</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Drag & drop your file or click to browse. Supports up to 100MB per file.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <span className="text-3xl font-bold text-white">2</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Select Format</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Choose your desired output format from 300+ supported formats.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-green-500 to-teal-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <span className="text-3xl font-bold text-white">3</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Download</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Click convert and download your converted file instantly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* File Converter Section */}
         <section id="converter" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Universal File Converter
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -733,12 +813,14 @@ function App() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <FileUpload onFilesSelected={setSelectedFiles} />
-              </div>
-              <div>
-                <ConversionPanel files={selectedFiles} />
+            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <FileUpload onFilesSelected={setSelectedFiles} />
+                </div>
+                <div>
+                  <ConversionPanel files={selectedFiles} />
+                </div>
               </div>
             </div>
           </div>

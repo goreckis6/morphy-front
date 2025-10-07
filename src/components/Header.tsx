@@ -240,7 +240,17 @@ export const Header: React.FC = () => {
                 <a href="/#supported-formats" className="text-gray-700 hover:text-blue-600 transition-colors">
                   Formats
                 </a>
+                <a href="/#how-it-works" className="text-gray-700 hover:text-blue-600 transition-colors">
+                  How It Works
+                </a>
               </nav>
+
+              <button
+                onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg ml-4"
+              >
+                Convert Now
+              </button>
 
               {user ? (
                 <div className="flex items-center space-x-3">
