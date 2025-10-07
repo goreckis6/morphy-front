@@ -80,10 +80,10 @@ export const FileUpload: React.FC<FileUploadProps> = ({
     <div className="w-full">
       <div
         className={`
-          border-2 border-dashed rounded-xl p-8 text-center transition-all duration-200
+          border-3 border-dashed rounded-2xl p-12 md:p-16 text-center transition-all duration-300
           ${dragActive 
-            ? 'border-blue-400 bg-blue-50' 
-            : 'border-gray-300 hover:border-blue-400'
+            ? 'border-blue-500 bg-gradient-to-br from-blue-50 to-indigo-50 scale-105 shadow-xl' 
+            : 'border-gray-300 hover:border-blue-400 hover:bg-gray-50'
           }
         `}
         onDragEnter={handleDrag}
@@ -91,65 +91,71 @@ export const FileUpload: React.FC<FileUploadProps> = ({
         onDragOver={handleDrag}
         onDrop={handleDrop}
       >
-        <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-        <h3 className="text-xl font-semibold text-gray-700 mb-2">
-          Drop any files here or click to browse
-        </h3>
-        <p className="text-gray-500 mb-4">
-          {acceptedFormats && acceptedFormats.length > 0 
-            ? `Supports: ${acceptedFormats.map(f => f.toUpperCase()).join(', ')} files`
-            : 'Supports all file formats - images, documents, code, spreadsheets, and more'
-          }
-        </p>
-        <input
-          type="file"
-          multiple
-          onChange={handleFileInput}
-          accept={acceptedFormats ? acceptedFormats.map(f => `.${f}`).join(',') : undefined}
-          className="hidden"
-          id="file-upload"
-        />
-        <label
-          htmlFor="file-upload"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg cursor-pointer transition-colors"
-        >
-          Choose Files
-        </label>
-        <div className="text-sm text-gray-500 mt-2">
-          Max {maxFiles} files, up to {FileProcessor.formatFileSize(maxSize)} each • {acceptedFormats && acceptedFormats.length > 0 
-            ? `${acceptedFormats.map(f => f.toUpperCase()).join(', ')} supported`
-            : 'All formats supported'
-          }
+        <div className={`transition-all duration-300 ${dragActive ? 'scale-110' : ''}`}>
+          <div className="bg-gradient-to-br from-blue-100 to-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Upload className="w-10 h-10 text-blue-600" />
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            Drag & Drop Your Files Here
+          </h3>
+          <p className="text-lg text-gray-600 mb-6">
+            or click the button below to browse
+          </p>
+          <input
+            type="file"
+            multiple
+            onChange={handleFileInput}
+            accept={acceptedFormats ? acceptedFormats.map(f => `.${f}`).join(',') : undefined}
+            className="hidden"
+            id="file-upload"
+          />
+          <label
+            htmlFor="file-upload"
+            className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-xl cursor-pointer transition-all transform hover:scale-105 shadow-lg"
+          >
+            Choose Files
+          </label>
+          <div className="text-sm text-gray-500 mt-4 space-y-1">
+            <p className="font-medium">✓ Max {maxFiles} files • Up to {FileProcessor.formatFileSize(maxSize)} each</p>
+            <p>✓ CSV, AVRO, EPUB, DOC, DOCX, DNG, CR2, EPS, GIF, BMP & more</p>
+          </div>
         </div>
       </div>
 
       {selectedFiles.length > 0 && (
         <div className="mt-6">
-          <h4 className="text-lg font-semibold text-gray-700 mb-3">
-            Selected Files ({selectedFiles.length})
-          </h4>
-          <div className="space-y-2">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl p-4 mb-4">
+            <div className="flex items-center justify-center">
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                <span className="text-white font-bold">{selectedFiles.length}</span>
+              </div>
+              <p className="text-green-800 font-semibold text-lg">
+                {selectedFiles.length} file{selectedFiles.length > 1 ? 's' : ''} ready for conversion
+              </p>
+            </div>
+          </div>
+          <div className="space-y-2 max-h-64 overflow-y-auto">
             {selectedFiles.map((file, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                className="flex items-center justify-between p-4 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center space-x-3">
                   {getFileIcon(file)}
                   <div>
-                    <div className="text-sm font-medium text-gray-700">
+                    <div className="text-sm font-semibold text-gray-900">
                       {file.name}
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-xs text-gray-600 font-medium">
                       {FileProcessor.formatFileSize(file.size)}
                     </div>
                   </div>
                 </div>
                 <button
                   onClick={() => removeFile(index)}
-                  className="p-1 hover:bg-gray-200 rounded-full transition-colors"
+                  className="p-2 hover:bg-red-100 rounded-full transition-colors group"
                 >
-                  <X className="w-4 h-4 text-gray-500" />
+                  <X className="w-5 h-5 text-gray-400 group-hover:text-red-600" />
                 </button>
               </div>
             ))}

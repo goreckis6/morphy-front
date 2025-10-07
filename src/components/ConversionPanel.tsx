@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { SupportedFormat, ConversionOptions, FileConversionJob } from '../types';
 import { FileProcessor } from '../utils/fileProcessing';
 import { ConversionEngine } from '../utils/conversionEngine';
-import { RefreshCw, Download, Settings, CheckCircle, XCircle } from 'lucide-react';
+import { RefreshCw, Download, Settings, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
+import { apiService } from '../services/api';
 
 interface ConversionPanelProps {
   files: File[];
@@ -61,14 +62,8 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
 
   const startConversion = async () => {
     // Check if this is an implemented conversion
-    if (implementedConversions[inputFormat] && implementedConversions[inputFormat].includes(outputFormat)) {
-      // Redirect to specific converter page
-      const converterPath = `/convert/${inputFormat}-to-${outputFormat}`;
-      window.location.href = converterPath;
-      return;
-    }
+    const isImplemented = implementedConversions[inputFormat]?.includes(outputFormat);
 
-    // Otherwise, use local conversion (for basic image conversions)
     const newJobs: FileConversionJob[] = files.map(file => ({
       id: Math.random().toString(36).substr(2, 9),
       filename: file.name,
@@ -92,6 +87,13 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
         ));
 
         let result: Blob;
+
+        // Use API for implemented conversions
+        if (isImplemented) {
+          const apiResult = await apiService.convertFile(file, { format: outputFormat } as any);
+          result = apiResult.blob;
+        } else {
+          // Use local conversion for basic formats
         
         // Handle different conversion types
         switch (outputFormat) {
@@ -183,6 +185,7 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
                 }
               );
             }
+          }
         }
 
         // Create download URL
@@ -351,16 +354,16 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
             <span>
               {jobs.some(job => job.status === 'processing') 
                 ? 'Converting...' 
-                : implementedConversions[inputFormat]?.includes(outputFormat)
-                  ? `Go to ${inputFormat.toUpperCase()} → ${outputFormat.toUpperCase()} Converter`
-                  : 'Start Conversion'
+                : 'Convert Files'
               }
             </span>
           </button>
           {implementedConversions[inputFormat]?.includes(outputFormat) && (
-            <p className="text-xs text-center text-gray-500 mt-2">
-              You'll be redirected to the specialized converter for better quality and features
-            </p>
+            <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-blue-800 text-center">
+                ✨ Using specialized {inputFormat.toUpperCase()} → {outputFormat.toUpperCase()} converter with advanced features
+              </p>
+            </div>
           )}
         </div>
       </div>
