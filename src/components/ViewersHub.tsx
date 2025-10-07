@@ -16,8 +16,8 @@ export const ViewersHub: React.FC = () => {
       title: "STANDARD IMAGE FORMATS",
       icon: <Image className="w-6 h-6 text-blue-600" />,
       formats: [
-        { name: "JPEG Viewer", description: "View JPEG images with zoom and pan controls", path: "/viewer/jpg", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "PNG Viewer", description: "View PNG images with transparency support", path: "/viewer/png", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "JPEG Viewer", description: "View JPEG images with zoom and pan controls", path: "/viewers/jpg", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "PNG Viewer", description: "View PNG images with transparency support", path: "/viewers/png", category: "Image", icon: <Image className="w-5 h-5" /> },
         { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewer/webp", category: "Image", icon: <Image className="w-5 h-5" /> },
         { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewer/gif", category: "Image", icon: <Image className="w-5 h-5" /> },
         { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewer/svg", category: "Image", icon: <Image className="w-5 h-5" /> },
@@ -149,7 +149,7 @@ export const ViewersHub: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        {(viewer.path === '/viewer/jpg' || viewer.path === '/viewer/png') ? (
+                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png') ? (
                           <a
                             href={viewer.path}
                             className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"

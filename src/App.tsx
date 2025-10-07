@@ -666,7 +666,7 @@ function App() {
   }
 
   // Viewer Routes
-  if (currentPath === '/viewer/jpg' || currentPath === '/viewer/jpeg' || currentPath === '/viewers/jpeg') {
+  if (currentPath === '/viewers/jpg' || currentPath === '/viewers/jpeg') {
     return (
       <AuthProvider>
         <JPEGViewer />
@@ -674,7 +674,7 @@ function App() {
     );
   }
 
-  if (currentPath === '/viewer/png' || currentPath === '/viewers/png') {
+  if (currentPath === '/viewers/png') {
     return (
       <AuthProvider>
         <PNGViewer />
