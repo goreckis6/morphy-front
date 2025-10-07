@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
 import { 
   Upload, 
   Download, 
@@ -93,10 +94,13 @@ export const CSVToNDJSONConverter: React.FC = () => {
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    const ndjsonContent = `{"name": "John Doe", "age": 30, "city": "New York"}
-{"name": "Jane Smith", "age": 25, "city": "Los Angeles"}
-{"name": "Bob Johnson", "age": 35, "city": "Chicago"}`;
-    return new Blob([ndjsonContent], { type: 'application/x-ndjson' });
+    const options = {
+      format: 'ndjson',
+      includeHeaders: includeHeaders ? 'true' : 'false'
+    };
+    
+    const result = await apiService.convertFile(file, options as any);
+    return result.blob;
   };
 
   const handleSingleConvert = async () => {
