@@ -60,6 +60,15 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
   const vectorFormats: SupportedFormat[] = ['eps', 'ps', 'ai'];
   const specialFormats: SupportedFormat[] = ['psd', 'tga'];
 
+  // Auto-select first available format when files change
+  React.useEffect(() => {
+    if (files.length > 0 && availableOutputFormats.length > 0) {
+      if (!availableOutputFormats.includes(outputFormat)) {
+        setOutputFormat(availableOutputFormats[0] as SupportedFormat);
+      }
+    }
+  }, [files, availableOutputFormats]);
+
   const startConversion = async () => {
     // Check if this is an implemented conversion
     const isImplemented = implementedConversions[inputFormat]?.includes(outputFormat);

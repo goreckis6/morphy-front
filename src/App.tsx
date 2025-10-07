@@ -751,11 +751,11 @@ function App() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-r from-gray-50 to-blue-50">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                <div key={index} className="text-center bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-200">
                   <div className="flex justify-center mb-4 bg-gradient-to-br from-blue-100 to-purple-100 w-16 h-16 rounded-full items-center mx-auto">
                     {stat.icon}
                   </div>
@@ -772,7 +772,7 @@ function App() {
         </section>
 
         {/* How It Works Section */}
-        <section id="how-it-works" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <section id="how-it-works" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -818,7 +818,7 @@ function App() {
         </section>
 
         {/* Universal File Converter Section */}
-        <section id="converter" className="py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-50">
+        <section id="converter" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <div className="inline-flex items-center justify-center space-x-3 mb-6">
@@ -848,7 +848,7 @@ function App() {
         </section>
 
         {/* Popular Converters Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -998,7 +998,7 @@ function App() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
