@@ -17,7 +17,7 @@ const getApiBaseUrl = () => {
 const API_BASE_URL = getApiBaseUrl();
 
 export interface ConversionOptions {
-  quality?: 'high' | 'medium' | 'low';
+  quality?: 'high' | 'medium' | 'low' | string | number; // Support both string quality levels and numeric quality values
   lossless?: boolean;
   // Allow arbitrary formats (csv/doc/docx/epub/html/md/mobi/odp/odt/pdf/ppt/pptx/rtf/txt/xls/xlsx/webp/png/jpeg/ico)
   format?: string;
@@ -92,12 +92,12 @@ class ApiService {
     formData.append('file', fileWithProperName);
     
     // Add conversion options
-    if (options.quality) formData.append('quality', options.quality);
+    if (options.quality !== undefined) formData.append('quality', String(options.quality));
     if (options.lossless !== undefined) formData.append('lossless', options.lossless.toString());
     if (options.format) formData.append('format', options.format);
-    if (options.width) formData.append('width', options.width.toString());
-    if (options.height) formData.append('height', options.height.toString());
-    if (options.iconSize) formData.append('iconSize', options.iconSize.toString());
+    if (options.width !== undefined) formData.append('width', options.width.toString());
+    if (options.height !== undefined) formData.append('height', options.height.toString());
+    if (options.iconSize !== undefined) formData.append('iconSize', options.iconSize.toString());
 
     const response = await this.makeRequest('/api/convert', 'POST', formData);
     
@@ -145,9 +145,11 @@ class ApiService {
     });
     
     // Add conversion options
-    if (options.quality) formData.append('quality', options.quality);
+    if (options.quality !== undefined) formData.append('quality', String(options.quality));
     if (options.lossless !== undefined) formData.append('lossless', options.lossless.toString());
     if (options.format) formData.append('format', options.format);
+    if (options.width !== undefined) formData.append('width', options.width.toString());
+    if (options.height !== undefined) formData.append('height', options.height.toString());
 
     const response = await this.makeRequest('/api/convert/batch', 'POST', formData);
     return await response.json();

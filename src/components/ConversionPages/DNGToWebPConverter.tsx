@@ -102,26 +102,22 @@ export const DNGToWebPConverter: React.FC = () => {
     setError(null);
 
     try {
-      const formData = new FormData();
-      formData.append('file', selectedFile);
-      formData.append('format', 'webp');
-      formData.append('quality', quality.toString());
-      formData.append('lossless', lossless.toString());
+      const options: any = {
+        format: 'webp',
+        quality: quality,
+        lossless: lossless
+      };
       
-      if (width) formData.append('width', width);
-      if (height) formData.append('height', height);
+      if (width) options.width = parseInt(width);
+      if (height) options.height = parseInt(height);
 
-      const response = await apiService.convertFile(formData);
+      const result = await apiService.convertFile(selectedFile, options);
       
-      if (response.success) {
-        const blob = await fetch(response.downloadPath).then(res => res.blob());
-        setConvertedFile(blob);
-        setConvertedFilename(response.filename);
-      } else {
-        setError('Conversion failed. Please try again.');
-      }
+      setConvertedFile(result.blob);
+      setConvertedFilename(result.filename);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      console.error('Conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -134,18 +130,16 @@ export const DNGToWebPConverter: React.FC = () => {
     setError(null);
 
     try {
-      const formData = new FormData();
-      batchFiles.forEach(file => {
-        formData.append('files', file);
-      });
-      formData.append('format', 'webp');
-      formData.append('quality', quality.toString());
-      formData.append('lossless', lossless.toString());
+      const options: any = {
+        format: 'webp',
+        quality: quality,
+        lossless: lossless
+      };
       
-      if (width) formData.append('width', width);
-      if (height) formData.append('height', height);
+      if (width) options.width = parseInt(width);
+      if (height) options.height = parseInt(height);
 
-      const response = await apiService.convertBatch(formData);
+      const response = await apiService.convertBatch(batchFiles, options);
       
       if (response.success) {
         setBatchResults(response.results);
@@ -154,7 +148,8 @@ export const DNGToWebPConverter: React.FC = () => {
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('Batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
