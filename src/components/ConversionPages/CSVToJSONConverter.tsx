@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -177,8 +178,14 @@ export const CSVToJSONConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
-      <Header />
+    <>
+      <Helmet>
+        <title>CSV to JSON Converter - Free Online Data Format Converter</title>
+        <meta name="description" content="Convert CSV files to JSON format for web applications and REST APIs. Free online converter with multiple JSON structures, pretty-print formatting, and batch processing. No registration required." />
+        <meta name="keywords" content="CSV to JSON, data converter, JSON format, REST API, web development, batch conversion, array of objects, data processing" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+        <Header />
       
       {/* Hero Section - Narrowed */}
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
@@ -692,6 +699,7 @@ export const CSVToJSONConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 };

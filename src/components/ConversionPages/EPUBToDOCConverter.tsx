@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -185,7 +186,13 @@ export const EPUBToDOCConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
+    <>
+      <Helmet>
+        <title>EPUB to DOC Converter - Convert eBooks to Word Documents</title>
+        <meta name="description" content="Convert EPUB ebook files to DOC format for Microsoft Word. Transform digital books into editable Word documents. Free online converter with batch support." />
+        <meta name="keywords" content="EPUB to DOC, ebook to Word, ebook converter, Word document, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -663,6 +670,7 @@ export const EPUBToDOCConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 };

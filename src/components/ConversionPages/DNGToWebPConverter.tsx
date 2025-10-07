@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { useImageConversion } from '../../hooks/useImageConversion';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -201,7 +202,13 @@ export const DNGToWebPConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <>
+      <Helmet>
+        <title>DNG to WebP Converter - Convert Adobe DNG RAW to WebP</title>
+        <meta name="description" content="Convert DNG (Digital Negative) RAW files to WebP format for modern web. Professional camera RAW to WebP conversion with quality control. Free online tool." />
+        <meta name="keywords" content="DNG to WebP, Adobe DNG, RAW converter, WebP format, image optimization, photography" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
@@ -599,8 +606,8 @@ export const DNGToWebPConverter: React.FC = () => {
                 <p className="text-gray-700">
                   WebP images are 25-35% smaller than JPEG files while maintaining the same visual quality, resulting in faster loading times and better user experience.
                 </p>
-              </div>
-              
+          </div>
+
               <div className="bg-indigo-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-indigo-900 mb-3">Professional Quality</h4>
                 <p className="text-gray-700">
@@ -664,6 +671,10 @@ export const DNGToWebPConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

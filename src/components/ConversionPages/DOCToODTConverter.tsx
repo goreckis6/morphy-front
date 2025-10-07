@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -119,7 +120,13 @@ export const DOCToODTConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>DOC to ODT Converter - Convert Word to OpenDocument</title>
+        <meta name="description" content="Convert DOC files to ODT format for LibreOffice. Transform Microsoft Word documents to OpenDocument text format. Free online converter." />
+        <meta name="keywords" content="DOC to ODT, Word to OpenDocument, LibreOffice converter, ODT format, document conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -518,6 +525,10 @@ export const DOCToODTConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

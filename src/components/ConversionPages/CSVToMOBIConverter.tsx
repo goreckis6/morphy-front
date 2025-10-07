@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -55,7 +56,13 @@ export const CSVToMOBIConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-yellow-50">
+    <>
+      <Helmet>
+        <title>CSV to MOBI Converter - Convert CSV to Kindle Format</title>
+        <meta name="description" content="Convert CSV data to MOBI format for Amazon Kindle. Transform spreadsheet data into Kindle-compatible ebooks. Free online converter with batch support." />
+        <meta name="keywords" content="CSV to MOBI, data to Kindle, Kindle format, ebook converter" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-yellow-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-amber-600 via-yellow-600 to-orange-700">
@@ -502,6 +509,10 @@ export const CSVToMOBIConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -201,7 +202,13 @@ export const EPUBToRTFConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>EPUB to RTF Converter - Convert eBooks to Rich Text</title>
+        <meta name="description" content="Convert EPUB ebook files to RTF format for universal word processing. Transform digital books into Rich Text Format. Free online tool with batch support." />
+        <meta name="keywords" content="EPUB to RTF, ebook converter, Rich Text Format, word processing" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -707,6 +714,10 @@ export const EPUBToRTFConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

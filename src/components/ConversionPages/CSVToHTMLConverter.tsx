@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -55,7 +56,13 @@ export const CSVToHTMLConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
+    <>
+      <Helmet>
+        <title>CSV to HTML Converter - Convert CSV to Web Tables</title>
+        <meta name="description" content="Convert CSV files to HTML format for web publishing. Transform spreadsheet data into formatted HTML tables. Free online converter with styling options." />
+        <meta name="keywords" content="CSV to HTML, data to web, HTML tables, web conversion, data visualization" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-green-600 via-emerald-600 to-teal-700">
@@ -473,6 +480,10 @@ export const CSVToHTMLConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

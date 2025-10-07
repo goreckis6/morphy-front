@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -306,7 +307,13 @@ AVRO_FILE_END`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <>
+      <Helmet>
+        <title>CSV to AVRO Converter - Convert CSV to Apache AVRO Format</title>
+        <meta name="description" content="Convert CSV files to Apache AVRO binary format for big data processing. Professional data conversion with schema validation. Free online converter with batch support." />
+        <meta name="keywords" content="CSV to AVRO, Apache AVRO, big data, data conversion, batch processing" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-700">
@@ -793,6 +800,10 @@ AVRO_FILE_END`;
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

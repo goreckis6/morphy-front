@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -119,7 +120,13 @@ export const CSVToNDJSONConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <>
+      <Helmet>
+        <title>CSV to NDJSON Converter - Convert CSV to Newline Delimited JSON</title>
+        <meta name="description" content="Convert CSV files to NDJSON (Newline Delimited JSON) format for streaming data processing. Professional converter with batch support. Free online tool." />
+        <meta name="keywords" content="CSV to NDJSON, newline delimited JSON, streaming data, data processing, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700">
@@ -464,6 +471,10 @@ export const CSVToNDJSONConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

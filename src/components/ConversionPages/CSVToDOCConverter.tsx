@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -51,7 +52,13 @@ export const CSVToDOCConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <>
+      <Helmet>
+        <title>CSV to DOC Converter - Convert CSV to Word Documents</title>
+        <meta name="description" content="Convert CSV spreadsheet files to DOC format for Microsoft Word. Transform tabular data into formatted Word documents. Free online converter." />
+        <meta name="keywords" content="CSV to DOC, CSV to Word, data converter, Word document, table conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -447,6 +454,10 @@ export const CSVToDOCConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

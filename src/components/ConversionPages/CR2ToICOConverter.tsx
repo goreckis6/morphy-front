@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -428,7 +429,13 @@ ICO_FILE_END`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-purple-50">
+    <>
+      <Helmet>
+        <title>CR2 to ICO Converter - Convert Canon RAW to Windows Icons</title>
+        <meta name="description" content="Convert CR2 (Canon RAW) camera files to ICO format for Windows icons. Professional RAW image to icon conversion with multiple sizes. Free online tool." />
+        <meta name="keywords" content="CR2 to ICO, Canon RAW converter, Windows icons, icon converter, camera RAW, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-purple-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -965,6 +972,10 @@ ICO_FILE_END`;
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

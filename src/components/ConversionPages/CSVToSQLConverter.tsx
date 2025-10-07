@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -133,7 +134,13 @@ INSERT INTO ${tableName} (name, age, city) VALUES
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
+    <>
+      <Helmet>
+        <title>CSV to SQL Converter - Generate SQL INSERT Statements</title>
+        <meta name="description" content="Convert CSV files to SQL INSERT statements for database import. Generate SQL scripts from spreadsheet data. Free online converter with batch processing." />
+        <meta name="keywords" content="CSV to SQL, SQL INSERT, database import, SQL scripts, data migration" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-slate-600 via-gray-600 to-zinc-700">
@@ -479,6 +486,10 @@ INSERT INTO ${tableName} (name, age, city) VALUES
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

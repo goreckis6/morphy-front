@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
@@ -48,7 +49,13 @@ export const CSVToPDFConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
+    <>
+      <Helmet>
+        <title>CSV to PDF Converter - Convert CSV to PDF Documents</title>
+        <meta name="description" content="Convert CSV files to PDF format for universal compatibility. Professional spreadsheet to PDF conversion with formatting preservation. Free online tool." />
+        <meta name="keywords" content="CSV to PDF, data to PDF, PDF converter, document conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-red-600 via-orange-600 to-amber-700">
@@ -495,6 +502,10 @@ export const CSVToPDFConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

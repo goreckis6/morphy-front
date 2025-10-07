@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -222,7 +223,13 @@ export const EPSToICOConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
+    <>
+      <Helmet>
+        <title>EPS to ICO Converter - Convert Vector Graphics to Icons</title>
+        <meta name="description" content="Convert EPS (Encapsulated PostScript) files to ICO format for Windows icons. Professional vector to icon conversion. Free online converter." />
+        <meta name="keywords" content="EPS to ICO, vector to icon, PostScript converter, Windows icons, graphic design" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -706,6 +713,10 @@ export const EPSToICOConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

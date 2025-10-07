@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -132,7 +133,13 @@ metadata:
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50">
+    <>
+      <Helmet>
+        <title>CSV to YAML Converter - Convert CSV to YAML Format</title>
+        <meta name="description" content="Convert CSV files to YAML format for configuration and data serialization. Transform spreadsheet data into human-readable YAML. Free online converter." />
+        <meta name="keywords" content="CSV to YAML, YAML format, configuration files, data serialization, Kubernetes" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -533,6 +540,10 @@ metadata:
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

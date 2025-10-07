@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -364,8 +365,14 @@ ICO_FILE_END`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
-      <Header />
+    <>
+      <Helmet>
+        <title>DNG to ICO Converter - Free Online RAW to Windows Icon</title>
+        <meta name="description" content="Convert DNG (Digital Negative) raw camera files to ICO format for Windows icons. Free online converter with multiple icon sizes, batch processing, and high-quality output. No registration required." />
+        <meta name="keywords" content="DNG to ICO, Digital Negative converter, RAW to ICO, Adobe DNG, Windows icons, icon converter, batch conversion, photography tools, camera RAW" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
+        <Header />
       
       {/* Hero Section - Narrowed */}
       <div className="relative overflow-hidden bg-gradient-to-r from-amber-600 via-orange-600 to-red-700">
@@ -913,6 +920,7 @@ ICO_FILE_END`;
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 };

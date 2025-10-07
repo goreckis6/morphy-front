@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -175,7 +176,13 @@ export const CSVToEPUBConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50">
+    <>
+      <Helmet>
+        <title>CSV to EPUB Converter - Convert CSV to eBook Format</title>
+        <meta name="description" content="Convert CSV data to EPUB ebook format. Transform spreadsheet data into digital books with chapters and metadata. Free online converter." />
+        <meta name="keywords" content="CSV to EPUB, data to ebook, ebook converter, EPUB format" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -653,6 +660,10 @@ export const CSVToEPUBConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

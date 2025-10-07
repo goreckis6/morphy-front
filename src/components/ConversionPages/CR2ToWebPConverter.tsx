@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -404,7 +405,13 @@ WEBP_FILE_END`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>CR2 to WebP Converter - Convert Canon RAW to WebP Format</title>
+        <meta name="description" content="Convert CR2 (Canon RAW) camera files to WebP format for modern web. High-quality RAW image conversion with compression. Free online converter." />
+        <meta name="keywords" content="CR2 to WebP, Canon RAW, WebP converter, image optimization, photography, batch processing" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -930,6 +937,10 @@ WEBP_FILE_END`;
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

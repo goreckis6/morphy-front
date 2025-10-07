@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -132,7 +133,13 @@ export const CSVToXMLConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <>
+      <Helmet>
+        <title>CSV to XML Converter - Convert CSV to XML Format</title>
+        <meta name="description" content="Convert CSV files to XML format for data interchange and web services. Professional spreadsheet to XML conversion. Free online tool with batch support." />
+        <meta name="keywords" content="CSV to XML, data conversion, XML format, web services, SOAP, data interchange" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -546,6 +553,10 @@ export const CSVToXMLConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

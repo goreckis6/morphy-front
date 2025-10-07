@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
@@ -48,7 +49,13 @@ export const CSVToODTConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>CSV to ODT Converter - Convert CSV to OpenDocument</title>
+        <meta name="description" content="Convert CSV files to ODT format for LibreOffice Writer. Professional spreadsheet to document conversion with table formatting. Free online converter." />
+        <meta name="keywords" content="CSV to ODT, data converter, OpenDocument, LibreOffice, table conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700">
@@ -495,6 +502,10 @@ export const CSVToODTConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -51,7 +52,13 @@ export const CSVToTXTConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <>
+      <Helmet>
+        <title>CSV to TXT Converter - Convert CSV to Plain Text</title>
+        <meta name="description" content="Convert CSV files to plain text format for data extraction. Simple, clean conversion from spreadsheets to text files. Free online tool with batch support." />
+        <meta name="keywords" content="CSV to TXT, data to text, plain text, text extraction" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
@@ -462,6 +469,10 @@ export const CSVToTXTConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

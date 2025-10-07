@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -200,7 +201,13 @@ export const EPUBToPPTConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50">
+    <>
+      <Helmet>
+        <title>EPUB to PPT Converter - Convert eBooks to PowerPoint</title>
+        <meta name="description" content="Convert EPUB ebook files to PPT presentation format. Transform ebook content into classic PowerPoint presentations. Free online tool." />
+        <meta name="keywords" content="EPUB to PPT, ebook to PowerPoint, presentation converter, PowerPoint format" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -714,6 +721,10 @@ export const EPUBToPPTConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

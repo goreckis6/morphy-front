@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -193,7 +194,13 @@ export const GIFToICOConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <>
+      <Helmet>
+        <title>GIF to ICO Converter - Convert Animated GIF to Windows Icons</title>
+        <meta name="description" content="Convert GIF images to ICO format for Windows icons. Transform animated or static GIFs into icon files. Free online converter with multiple sizes." />
+        <meta name="keywords" content="GIF to ICO, GIF to icon, Windows icons, icon converter, animated GIF, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -668,6 +675,10 @@ export const GIFToICOConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

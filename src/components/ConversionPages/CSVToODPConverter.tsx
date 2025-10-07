@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { 
@@ -51,7 +52,13 @@ export const CSVToODPConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50">
+    <>
+      <Helmet>
+        <title>CSV to ODP Converter - Convert CSV to Presentations</title>
+        <meta name="description" content="Convert CSV files to ODP presentation format for LibreOffice Impress. Transform data into professional presentations with charts. Free online tool." />
+        <meta name="keywords" content="CSV to ODP, data to presentation, LibreOffice, presentation converter" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-lime-50 via-white to-green-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -542,6 +549,10 @@ export const CSVToODPConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

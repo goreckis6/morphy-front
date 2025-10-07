@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -55,7 +56,13 @@ export const CSVToXLSXConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+    <>
+      <Helmet>
+        <title>CSV to XLSX Converter - Convert CSV to Modern Excel</title>
+        <meta name="description" content="Convert CSV files to XLSX format for Microsoft Excel. Professional spreadsheet conversion with formatting and formulas. Free online tool with batch processing." />
+        <meta name="keywords" content="CSV to XLSX, Excel converter, spreadsheet conversion, batch processing" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-700">
@@ -392,6 +399,10 @@ export const CSVToXLSXConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

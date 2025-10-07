@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -186,7 +187,13 @@ export const DOCToCSVConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <>
+      <Helmet>
+        <title>DOC to CSV Converter - Extract Tables from Word to CSV</title>
+        <meta name="description" content="Convert DOC files to CSV format. Extract tables from Microsoft Word documents into spreadsheet format. Free online converter with batch processing." />
+        <meta name="keywords" content="DOC to CSV, Word to CSV, table extraction, document converter, data extraction" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -674,6 +681,10 @@ export const DOCToCSVConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -199,7 +200,13 @@ export const EPUBToODPConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+    <>
+      <Helmet>
+        <title>EPUB to ODP Converter - Convert eBooks to Presentations</title>
+        <meta name="description" content="Convert EPUB ebook files to ODP presentation format. Transform ebook content into LibreOffice presentations. Free online converter with batch support." />
+        <meta name="keywords" content="EPUB to ODP, ebook to presentation, LibreOffice, presentation format" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -713,6 +720,10 @@ export const EPUBToODPConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

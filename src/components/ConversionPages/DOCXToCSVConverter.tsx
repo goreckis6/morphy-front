@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -122,7 +123,13 @@ Jane Smith,25,Los Angeles`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <>
+      <Helmet>
+        <title>DOCX to CSV Converter - Extract Tables from Word to CSV</title>
+        <meta name="description" content="Convert DOCX files to CSV format. Extract tables from modern Word documents into spreadsheet format. Free online converter with batch support." />
+        <meta name="keywords" content="DOCX to CSV, Word to CSV, table extraction, document converter, data extraction" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -537,6 +544,10 @@ Jane Smith,25,Los Angeles`;
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

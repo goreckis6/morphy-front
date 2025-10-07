@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -198,7 +199,13 @@ export const EPUBToMOBIConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-yellow-50">
+    <>
+      <Helmet>
+        <title>EPUB to MOBI Converter - Convert eBooks for Kindle</title>
+        <meta name="description" content="Convert EPUB ebook files to MOBI format for Amazon Kindle devices. Professional ebook conversion with metadata preservation. Free online converter." />
+        <meta name="keywords" content="EPUB to MOBI, Kindle converter, ebook format, Amazon Kindle, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-yellow-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -704,6 +711,10 @@ export const EPUBToMOBIConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

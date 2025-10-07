@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -199,7 +200,13 @@ export const EPUBToTXTConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-slate-50">
+    <>
+      <Helmet>
+        <title>EPUB to TXT Converter - Convert eBooks to Plain Text</title>
+        <meta name="description" content="Convert EPUB ebook files to plain text format. Extract clean text from digital books for reading and analysis. Free online converter with batch processing." />
+        <meta name="keywords" content="EPUB to TXT, ebook to text, plain text, text extraction, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-slate-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -694,6 +701,10 @@ export const EPUBToTXTConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

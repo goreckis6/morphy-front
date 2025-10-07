@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -127,7 +128,13 @@ Formatting removed: ${removeFormatting}`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>DOC to TXT Converter - Extract Text from Word Documents</title>
+        <meta name="description" content="Convert DOC files to plain text format. Extract clean text from Microsoft Word documents. Free online converter with batch processing." />
+        <meta name="keywords" content="DOC to TXT, Word to text, text extraction, plain text, document converter" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -526,6 +533,10 @@ Formatting removed: ${removeFormatting}`;
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

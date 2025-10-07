@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -198,7 +199,13 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <>
+      <Helmet>
+        <title>AVRO to NDJSON Converter - Convert AVRO to Newline Delimited JSON</title>
+        <meta name="description" content="Convert Apache AVRO files to NDJSON format for streaming data. Professional big data conversion tool. Free online converter." />
+        <meta name="keywords" content="AVRO to NDJSON, Apache AVRO, streaming data, newline delimited JSON, big data" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -695,6 +702,10 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

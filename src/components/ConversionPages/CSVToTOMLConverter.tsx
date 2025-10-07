@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -136,7 +137,13 @@ export const CSVToTOMLConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
+    <>
+      <Helmet>
+        <title>CSV to TOML Converter - Convert CSV to TOML Configuration</title>
+        <meta name="description" content="Convert CSV files to TOML configuration format. Transform tabular data into TOML files for application configuration. Free online converter." />
+        <meta name="keywords" content="CSV to TOML, configuration files, TOML format, data conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-amber-600 via-orange-600 to-red-700">
@@ -483,6 +490,10 @@ export const CSVToTOMLConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

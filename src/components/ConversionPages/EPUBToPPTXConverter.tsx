@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -200,7 +201,13 @@ export const EPUBToPPTXConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>EPUB to PPTX Converter - Convert eBooks to PowerPoint</title>
+        <meta name="description" content="Convert EPUB ebook files to PPTX format for Microsoft PowerPoint. Transform digital books into modern presentation format. Free online converter." />
+        <meta name="keywords" content="EPUB to PPTX, ebook to PowerPoint, presentation converter, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -706,6 +713,10 @@ export const EPUBToPPTXConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -55,7 +56,13 @@ export const CSVToRTFConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
+    <>
+      <Helmet>
+        <title>CSV to RTF Converter - Convert CSV to Rich Text Format</title>
+        <meta name="description" content="Convert CSV files to RTF format for universal word processing. Transform spreadsheet data into Rich Text Format documents. Free online converter." />
+        <meta name="keywords" content="CSV to RTF, data converter, Rich Text Format, word processing" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-700">
@@ -505,6 +512,10 @@ export const CSVToRTFConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

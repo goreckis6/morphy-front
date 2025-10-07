@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -198,7 +199,13 @@ export const EPUBToPDFConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>EPUB to PDF Converter - Convert eBooks to PDF Format</title>
+        <meta name="description" content="Convert EPUB ebook files to PDF format for universal compatibility. Professional ebook conversion with layout preservation. Free online converter." />
+        <meta name="keywords" content="EPUB to PDF, ebook converter, PDF format, document conversion, batch processing" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -714,6 +721,10 @@ export const EPUBToPDFConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

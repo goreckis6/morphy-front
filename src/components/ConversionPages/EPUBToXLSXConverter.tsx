@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -201,7 +202,13 @@ export const EPUBToXLSXConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <>
+      <Helmet>
+        <title>EPUB to XLSX Converter - Convert eBooks to Excel Format</title>
+        <meta name="description" content="Convert EPUB ebook files to XLSX spreadsheet format. Extract ebook metadata and content into Excel-compatible format. Free online tool." />
+        <meta name="keywords" content="EPUB to XLSX, ebook to Excel, spreadsheet converter, Excel format" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -710,6 +717,10 @@ export const EPUBToXLSXConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

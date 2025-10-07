@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -120,7 +121,13 @@ export const DOCToMOBIConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
+    <>
+      <Helmet>
+        <title>DOC to MOBI Converter - Convert Word to Kindle Format</title>
+        <meta name="description" content="Convert DOC files to MOBI format for Amazon Kindle. Transform Word documents into Kindle-compatible ebooks. Free online converter with batch support." />
+        <meta name="keywords" content="DOC to MOBI, Word to Kindle, Kindle converter, ebook format, Amazon Kindle" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -532,6 +539,10 @@ export const DOCToMOBIConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

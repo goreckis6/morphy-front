@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -190,7 +191,13 @@ export const EPSToWebPConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
+    <>
+      <Helmet>
+        <title>EPS to WebP Converter - Convert Vector to WebP Format</title>
+        <meta name="description" content="Convert EPS vector graphics to WebP format for modern web. High-quality PostScript to WebP conversion. Free online tool with batch support." />
+        <meta name="keywords" content="EPS to WebP, vector converter, PostScript to WebP, web graphics, image conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -650,6 +657,10 @@ export const EPSToWebPConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -199,7 +200,13 @@ export const AVROToJSONConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>AVRO to JSON Converter - Convert Apache AVRO to JSON</title>
+        <meta name="description" content="Convert Apache AVRO files to JSON format for web applications. Transform binary data schemas into JSON. Free online converter with batch support." />
+        <meta name="keywords" content="AVRO to JSON, Apache AVRO, JSON converter, data transformation, web development" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -683,6 +690,10 @@ export const AVROToJSONConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

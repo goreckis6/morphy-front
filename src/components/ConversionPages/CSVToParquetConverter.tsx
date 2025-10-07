@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -117,7 +118,13 @@ export const CSVToParquetConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+    <>
+      <Helmet>
+        <title>CSV to Parquet Converter - Convert CSV to Apache Parquet Format</title>
+        <meta name="description" content="Convert CSV files to Apache Parquet columnar storage format for big data analytics. High-performance data conversion with compression. Free online converter." />
+        <meta name="keywords" content="CSV to Parquet, Apache Parquet, columnar storage, big data, analytics, data compression" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-700">
@@ -465,6 +472,10 @@ export const CSVToParquetConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

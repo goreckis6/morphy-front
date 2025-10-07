@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -52,7 +53,13 @@ export const CSVToMDConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <>
+      <Helmet>
+        <title>CSV to Markdown Converter - Convert CSV to MD Tables</title>
+        <meta name="description" content="Convert CSV files to Markdown table format for documentation. Professional data to Markdown conversion with formatting. Free online tool." />
+        <meta name="keywords" content="CSV to Markdown, data to MD, Markdown tables, documentation" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
@@ -463,6 +470,10 @@ export const CSVToMDConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

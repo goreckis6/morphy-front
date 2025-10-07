@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -117,7 +118,13 @@ export const CSVToPPTConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <>
+      <Helmet>
+        <title>CSV to PPT Converter - Convert CSV to PowerPoint</title>
+        <meta name="description" content="Convert CSV files to PPT presentation format. Transform spreadsheet data into classic PowerPoint presentations with charts. Free online converter." />
+        <meta name="keywords" content="CSV to PPT, data to PowerPoint, presentation converter, PowerPoint format" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
@@ -462,6 +469,10 @@ export const CSVToPPTConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };

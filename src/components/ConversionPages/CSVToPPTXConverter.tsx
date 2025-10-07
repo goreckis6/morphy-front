@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
@@ -55,7 +56,13 @@ export const CSVToPPTXConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-rose-50">
+    <>
+      <Helmet>
+        <title>CSV to PPTX Converter - Convert CSV to PowerPoint</title>
+        <meta name="description" content="Convert CSV files to PPTX format for Microsoft PowerPoint. Professional data visualization with charts and tables. Free online tool with batch processing." />
+        <meta name="keywords" content="CSV to PPTX, data to PowerPoint, presentation converter, batch conversion" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-rose-50">
       <Header />
       
       <div className="relative overflow-hidden bg-gradient-to-r from-pink-600 via-rose-600 to-red-700">
@@ -505,6 +512,10 @@ export const CSVToPPTXConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+
+      </div>
+
+      </>
+
+      );
 };
