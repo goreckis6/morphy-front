@@ -331,7 +331,8 @@ ICO_FILE_END`;
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.dng', '.ico') : 'converted.ico';
+      // Use the filename from the API response, or fallback to replacing extension
+      a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.dng$/i, '.ico') : 'converted.ico');
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
