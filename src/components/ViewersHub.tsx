@@ -149,10 +149,20 @@ export const ViewersHub: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        <div className="inline-flex items-center space-x-2 bg-gray-400 text-white px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
-                          <Eye className="w-4 h-4" />
-                          <span>Coming Soon</span>
-                        </div>
+                        {viewer.path === '/viewer/jpg' ? (
+                          <a
+                            href={viewer.path}
+                            className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                          >
+                            <Eye className="w-4 h-4" />
+                            <span>Open Viewer</span>
+                          </a>
+                        ) : (
+                          <div className="inline-flex items-center space-x-2 bg-gray-400 text-white px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
+                            <Eye className="w-4 h-4" />
+                            <span>Coming Soon</span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
