@@ -344,7 +344,7 @@ export const DNGToWebPConverter: React.FC = () => {
                 {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error || validationError}</span>
+                  <span className="text-red-700">{error || (validationError ? validationError.message : '')}</span>
                   </div>
                 )}
 
