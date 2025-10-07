@@ -68,6 +68,7 @@ import { GIFToICOConverter } from './components/ConversionPages/GIFToICOConverte
 import { ConversionHub } from './components/ConversionHub';
 import { ConverterHub } from './components/ConverterHub';
 import { ViewersHub } from './components/ViewersHub';
+import { JPEGViewer } from './components/FormatViewers/JPEGViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -659,6 +660,15 @@ function App() {
     return (
       <AuthProvider>
         <ViewersHub />
+      </AuthProvider>
+    );
+  }
+
+  // Viewer Routes
+  if (currentPath === '/viewer/jpg' || currentPath === '/viewer/jpeg' || currentPath === '/viewers/jpeg') {
+    return (
+      <AuthProvider>
+        <JPEGViewer />
       </AuthProvider>
     );
   }

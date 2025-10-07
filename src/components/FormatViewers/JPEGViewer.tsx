@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Image, Upload, Eye, Download, Share2, ArrowLeft, Camera, Palette, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Image, Upload, Eye, Download, Share2, ArrowLeft, Camera, Palette, Zap, Info, CheckCircle, Star } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
@@ -18,29 +19,54 @@ export const JPEGViewer: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
+    <>
+      <Helmet>
+        <title>JPEG Viewer & Converter - View and Convert JPG Images Online</title>
+        <meta name="description" content="Professional JPEG viewer and converter. View JPG images online, extract EXIF metadata, convert to PNG, WebP, PDF and more. Free online tool with batch processing support." />
+        <meta name="keywords" content="JPEG viewer, JPG viewer, image viewer, JPEG converter, JPG to PNG, view JPEG online, EXIF viewer, photo viewer" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
       
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => window.history.back()}
-              className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div className="p-3 bg-blue-100 rounded-xl">
-              <Image className="w-8 h-8 text-blue-600" />
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => window.location.href = '/viewers'}
+                className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                <Image className="w-12 h-12 text-white" />
+              </div>
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                  JPEG Viewer & Converter
+                </h1>
+                <p className="text-xl text-blue-100">
+                  View, analyze, and convert JPEG images with professional tools
+                </p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                JPEG Viewer & Converter
-              </h1>
-              <p className="text-lg text-gray-600 mt-2">
-                Upload, view, and convert JPEG image files online with professional quality
-              </p>
+          </div>
+
+          {/* Feature Pills */}
+          <div className="flex flex-wrap gap-3 mt-8">
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+              <span className="text-sm font-medium text-white">📸 EXIF Metadata</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+              <span className="text-sm font-medium text-white">🔍 High-Quality Preview</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+              <span className="text-sm font-medium text-white">⚡ Batch Processing</span>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+              <span className="text-sm font-medium text-white">🎨 Format Conversion</span>
             </div>
           </div>
         </div>
@@ -49,10 +75,18 @@ export const JPEGViewer: React.FC = () => {
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Upload Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Upload JPEG Files
-          </h2>
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
+              <Upload className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900">
+              Upload JPEG Files
+            </h2>
+          </div>
+          <p className="text-gray-600 mb-6">
+            Drag and drop your JPEG images or click to browse. Supports .jpg, .jpeg, and .jpe files up to 100MB each.
+          </p>
           <FileUpload 
             onFilesSelected={handleFilesSelected}
             acceptedFormats={['jpg', 'jpeg', 'jpe']}
@@ -62,39 +96,55 @@ export const JPEGViewer: React.FC = () => {
 
         {/* Preview Section */}
         {selectedFiles.length > 0 && (
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Preview JPEG Files ({selectedFiles.length})
-            </h2>
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  Your JPEG Files ({selectedFiles.length})
+                </h2>
+              </div>
+            </div>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {selectedFiles.map((file, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
-                  <div className="aspect-square bg-gray-200 rounded-lg mb-3 overflow-hidden">
+                <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                  <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md">
                     <img
                       src={URL.createObjectURL(file)}
                       alt={file.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <div className="text-sm font-medium text-gray-700 truncate mb-2">
+                  <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
                     {file.name}
                   </div>
-                  <div className="text-xs text-gray-500 mb-3">
-                    {(file.size / 1024).toFixed(1)} KB • JPEG
+                  <div className="text-xs text-gray-600 mb-3 font-medium">
+                    {(file.size / 1024 / 1024).toFixed(2)} MB • JPEG
                   </div>
-                  <div className="flex space-x-2">
+                  <div className="flex gap-2">
                     <button
                       onClick={() => setViewerFile(file)}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center space-x-1"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                     >
-                      <Eye className="w-3 h-3" />
+                      <Eye className="w-4 h-4" />
                       <span>View</span>
                     </button>
-                    <button className="p-2 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors">
-                      <Download className="w-3 h-3" />
-                    </button>
-                    <button className="p-2 text-gray-500 hover:text-purple-500 hover:bg-purple-50 rounded-lg transition-colors">
-                      <Share2 className="w-3 h-3" />
+                    <button 
+                      onClick={() => {
+                        const url = URL.createObjectURL(file);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = file.name;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                      }}
+                      className="p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
+                      title="Download"
+                    >
+                      <Download className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -104,43 +154,54 @@ export const JPEGViewer: React.FC = () => {
         )}
 
         {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Camera className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="bg-white p-3 rounded-xl w-fit mb-4">
+              <Camera className="w-8 h-8 text-blue-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
               Professional Quality
             </h3>
-            <p className="text-gray-600">
-              View JPEG images with full quality preservation and zoom capabilities for detailed inspection
+            <p className="text-gray-600 leading-relaxed">
+              View JPEG images with full quality preservation, zoom capabilities, and detailed EXIF metadata inspection
             </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Zap className="w-8 h-8 text-yellow-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 border border-yellow-200 hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="bg-white p-3 rounded-xl w-fit mb-4">
+              <Zap className="w-8 h-8 text-yellow-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
               Fast Processing
             </h3>
-            <p className="text-gray-600">
-              Lightning-fast JPEG processing and conversion with optimized algorithms
+            <p className="text-gray-600 leading-relaxed">
+              Lightning-fast JPEG processing with instant previews and optimized rendering for large batches
             </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Palette className="w-8 h-8 text-purple-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="bg-white p-3 rounded-xl w-fit mb-4">
+              <Palette className="w-8 h-8 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
               Format Conversion
             </h3>
-            <p className="text-gray-600">
-              Convert JPEG to PNG, WebP, AVIF, and other formats with quality control
+            <p className="text-gray-600 leading-relaxed">
+              Convert JPEG to PNG, WebP, PDF and other formats with advanced quality control settings
             </p>
           </div>
         </div>
 
         {/* JPEG Information */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            About JPEG Format
-          </h2>
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl">
+              <Info className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900">
+              About JPEG Format
+            </h2>
+          </div>
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4">
               JPEG (Joint Photographic Experts Group) is one of the most widely used image compression formats 
@@ -178,10 +239,15 @@ export const JPEGViewer: React.FC = () => {
         </div>
 
         {/* Technical Specifications */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            JPEG Technical Specifications
-          </h2>
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="p-3 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl">
+              <Star className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900">
+              JPEG Technical Specifications
+            </h2>
+          </div>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
@@ -230,10 +296,15 @@ export const JPEGViewer: React.FC = () => {
         </div>
 
         {/* SEO Content */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            JPEG Viewer and Converter Features
-          </h2>
+        <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+          <div className="flex items-center space-x-3 mb-6">
+            <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl">
+              <Star className="w-6 h-6 text-white" />
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900">
+              JPEG Viewer and Converter Features
+            </h2>
+          </div>
           
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4">
@@ -296,6 +367,7 @@ export const JPEGViewer: React.FC = () => {
           onClose={() => setViewerFile(null)}
         />
       )}
-    </div>
+      </div>
+    </>
   );
 };
