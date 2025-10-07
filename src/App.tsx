@@ -80,7 +80,9 @@ import {
   Globe,
   Star,
   Users,
-  TrendingUp
+  TrendingUp,
+  ArrowRight,
+  File
 } from 'lucide-react';
 
 function App() {
