@@ -219,6 +219,12 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
     }
   };
 
+  const resetAll = () => {
+    setJobs([]);
+    // Also clear the files by triggering a page reload or clearing parent state
+    window.location.reload();
+  };
+
   const getStatusIcon = (status: FileConversionJob['status']) => {
     switch (status) {
       case 'pending':
@@ -359,10 +365,23 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
             </span>
           </button>
           {implementedConversions[inputFormat]?.includes(outputFormat) && (
-            <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-              <p className="text-sm text-blue-800 text-center">
-                ✨ Using specialized {inputFormat.toUpperCase()} → {outputFormat.toUpperCase()} converter with advanced features
-              </p>
+            <div className="mt-3 space-y-2">
+              <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                <p className="text-sm text-blue-800 text-center">
+                  ✨ Using specialized {inputFormat.toUpperCase()} → {outputFormat.toUpperCase()} converter with advanced features
+                </p>
+              </div>
+              <div className="p-3 bg-purple-50 border border-purple-200 rounded-lg">
+                <p className="text-sm text-purple-800 text-center">
+                  📦 Need batch conversion? 
+                  <a 
+                    href={`/convert/${inputFormat}-to-${outputFormat}`}
+                    className="font-bold underline hover:text-purple-600 ml-1"
+                  >
+                    Click here
+                  </a> for up to 20 files at once
+                </p>
+              </div>
             </div>
           )}
         </div>
@@ -412,6 +431,19 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
               </div>
             ))}
           </div>
+
+          {/* Reset Button - Show when all jobs are completed or failed */}
+          {jobs.length > 0 && jobs.every(job => job.status === 'completed' || job.status === 'failed') && (
+            <div className="mt-6">
+              <button
+                onClick={resetAll}
+                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+              >
+                <RefreshCw className="w-5 h-5" />
+                <span>Convert More Files</span>
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>
