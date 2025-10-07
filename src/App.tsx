@@ -10,7 +10,6 @@ import { JPGToPNGConverter } from './components/ConversionPages/JPGToPNGConverte
 import { AVROToCSVConverter } from './components/ConversionPages/AVROToCSVConverter';
 import { AVROToJSONConverter } from './components/ConversionPages/AVROToJSONConverter';
 import { AVROToNDJSONConverter } from './components/ConversionPages/AVROToNDJSONConverter';
-import { BMPToICOConverter } from './components/ConversionPages/BMPToICOConverter';
 import { BMPToWebPConverter } from './components/ConversionPages/BMPToWebPConverter';
 import { CR2ToICOConverter } from './components/ConversionPages/CR2ToICOConverter';
 import { CR2ToWebPConverter } from './components/ConversionPages/CR2ToWebPConverter';
@@ -163,13 +162,6 @@ function App() {
   }
 
   // BMP Conversion Routes
-  if (currentPath === '/convert/bmp-to-ico') {
-    return (
-      <AuthProvider>
-        <BMPToICOConverter />
-      </AuthProvider>
-    );
-  }
 
   if (currentPath === '/convert/bmp-to-webp') {
     return (

@@ -60,9 +60,6 @@ export const Header: React.FC = () => {
                     </a>
                     <div className="border-t border-gray-200 my-1"></div>
                     <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">Image Converters</div>
-                    <a href="/convert/bmp-to-ico" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                      BMP to ICO
-                    </a>
                     <a href="/convert/bmp-to-webp" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                       BMP to WebP
                     </a>
@@ -312,9 +309,6 @@ export const Header: React.FC = () => {
                       CSV to AVRO
                     </a>
                     <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-2">Image Converters</div>
-                    <a href="/convert/bmp-to-ico" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      BMP to ICO
-                    </a>
                     <a href="/convert/bmp-to-webp" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
                       BMP to WebP
                     </a>
