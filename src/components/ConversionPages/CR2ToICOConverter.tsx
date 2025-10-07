@@ -472,6 +472,12 @@ ICO_FILE_END`;
                     : 'Drag and drop your CR2 file here or click to browse'
                   }
                 </p>
+                <p className="text-sm text-gray-500 mb-4">
+                  {batchMode 
+                    ? 'Max 100MB per file, 100MB total batch size, up to 20 files' 
+                    : 'Max file size: 100MB'
+                  }
+                </p>
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -552,6 +558,11 @@ ICO_FILE_END`;
                         <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
                       </div>
                     ))}
+                  </div>
+                  <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <p className="text-sm text-blue-800">
+                      {getBatchSizeDisplay(batchFiles)}
+                    </p>
                   </div>
                 </div>
               )}

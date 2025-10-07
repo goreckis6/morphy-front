@@ -456,6 +456,12 @@ WEBP_FILE_END`;
                     : 'Drag and drop your CR2 file here or click to browse'
                   }
                 </p>
+                <p className="text-sm text-gray-500 mb-4">
+                  {batchMode 
+                    ? 'Max 100MB per file, 100MB total batch size, up to 20 files' 
+                    : 'Max file size: 100MB'
+                  }
+                </p>
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -543,6 +549,11 @@ WEBP_FILE_END`;
                       </div>
                     ))}
                   </div>
+                  <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <p className="text-sm text-blue-800">
+                      {getBatchSizeDisplay(batchFiles)}
+                    </p>
+                  </div>
                 </div>
               )}
 
@@ -614,13 +625,15 @@ WEBP_FILE_END`;
                   <p className="text-green-700 mb-4">
                     All {batchFiles.length} CR2 files have been successfully converted to WebP format and downloaded.
                   </p>
-                  <button
-                    onClick={resetForm}
-                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
