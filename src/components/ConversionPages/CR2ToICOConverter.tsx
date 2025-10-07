@@ -24,7 +24,7 @@ export const CR2ToICOConverter: React.FC = () => {
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSize, setIconSize] = useState<number | 'default'>(16);
+  const [iconSize, setIconSize] = useState<number | 'default'>('default');
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
@@ -682,8 +682,7 @@ ICO_FILE_END`;
                     {batchResults.map((result, index) => (
                       <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
                         <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">{result.file.name}</p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-sm font-medium text-gray-900">
                             {result.file.name.replace('.cr2', '.ico')} • {(result.blob.size / 1024).toFixed(1)} KB
                           </p>
                         </div>
