@@ -561,7 +561,7 @@ ICO_FILE_END`;
                   </div>
                   <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
                     <p className="text-sm text-blue-800">
-                      {getBatchSizeDisplay(batchFiles)}
+                      {getBatchSizeDisplay(batchFiles.reduce((sum, f) => sum + f.size, 0)).text}
                     </p>
                   </div>
                 </div>
