@@ -325,7 +325,8 @@ ICO_FILE_END`;
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      console.error('CR2 to ICO conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -351,7 +352,8 @@ ICO_FILE_END`;
       setBatchConverted(true);
       setError(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('CR2 to ICO batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
