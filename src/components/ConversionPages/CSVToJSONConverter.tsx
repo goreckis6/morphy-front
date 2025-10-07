@@ -292,7 +292,7 @@ export const CSVToJSONConverter: React.FC = () => {
                       <Code className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({((selectedFile?.size || 0) / (1024 * 1024)).toFixed(2)} MB)
                     </p>
                   </div>
                 </div>
