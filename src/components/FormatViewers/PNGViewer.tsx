@@ -91,6 +91,7 @@ export const PNGViewer: React.FC = () => {
             onFilesSelected={handleFilesSelected}
             acceptedFormats={['png']}
             maxFiles={50}
+            hideFormatList={true}
           />
         </div>
 
@@ -277,7 +278,7 @@ export const PNGViewer: React.FC = () => {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">2,147,483,647 × 2,147,483,647 pixels</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">6,500 × 6,500 pixels</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm font-medium text-gray-800">Transparency</td>
@@ -337,49 +338,14 @@ export const PNGViewer: React.FC = () => {
           </div>
         </div>
 
-        {/* Back to Viewers Section */}
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border-2 border-green-300">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-            Explore More Viewers
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Standard Image Formats</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• JPEG (Joint Photographic Experts Group)</li>
-                <li>• JPEG 2000 Core Image File</li>
-                <li>• JPEG 2000 Image</li>
-                <li>• PNG (Portable Network Graphics)</li>
-                <li>• Web Picture Format</li>
-                <li>• AV1 Image File Format</li>
-                <li>• GIF (Graphics Interchange Format)</li>
-                <li>• TIFF (Tagged Image File Format)</li>
-                <li>• Pyramid encoded TIFF</li>
-                <li>• Bitmap Image</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Professional & Specialized</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• High Efficiency Image Container</li>
-                <li>• Scalable Vector Graphics</li>
-                <li>• Icon formats (ICO, CUR)</li>
-                <li>• RAW Camera formats</li>
-                <li>• Professional editing formats</li>
-                <li>• Document formats (PDF, DOCX, ODT)</li>
-                <li>• Spreadsheet formats (XLSX, CSV, ODS)</li>
-                <li>• Code formats (JS, Python, CSS, HTML)</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center mt-6">
-            <a
-              href="/viewers"
-              className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Back to All Viewers
-            </a>
-          </div>
+        {/* Back to Viewers Button */}
+        <div className="text-center">
+          <a
+            href="/viewers"
+            className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            ← Back to All Viewers
+          </a>
         </div>
       </div>
       

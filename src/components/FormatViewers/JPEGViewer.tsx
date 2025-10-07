@@ -91,6 +91,7 @@ export const JPEGViewer: React.FC = () => {
             onFilesSelected={handleFilesSelected}
             acceptedFormats={['jpg', 'jpeg', 'jpe']}
             maxFiles={50}
+            hideFormatList={true}
           />
         </div>
 
@@ -276,7 +277,7 @@ export const JPEGViewer: React.FC = () => {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">65,535 × 65,535 pixels</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">6,500 × 6,500 pixels</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm font-medium text-gray-800">Transparency</td>
@@ -335,6 +336,16 @@ export const JPEGViewer: React.FC = () => {
               and social media sharing where file size matters.
             </p>
           </div>
+        </div>
+
+        {/* Back to Viewers Button */}
+        <div className="text-center">
+          <a
+            href="/viewers"
+            className="inline-block bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            ← Back to All Viewers
+          </a>
         </div>
       </div>
       
