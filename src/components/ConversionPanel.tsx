@@ -188,17 +188,28 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
 
   if (files.length === 0) {
     return (
-      <div className="text-center text-gray-500 py-12">
-        <RefreshCw className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-        <p>Select files to begin conversion</p>
+      <div className="text-center text-gray-500 py-12 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl border-2 border-dashed border-gray-300">
+        <RefreshCw className="w-16 h-16 mx-auto mb-4 text-gray-400" />
+        <p className="text-lg font-medium text-gray-700 mb-2">No files selected</p>
+        <p className="text-sm text-gray-500">Upload files on the left to begin conversion</p>
       </div>
     );
   }
 
   return (
     <div className="space-y-6">
+      {/* Files Selected Indicator */}
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-4">
+        <div className="flex items-center justify-center">
+          <CheckCircle className="w-5 h-5 text-green-600 mr-2" />
+          <p className="text-green-800 font-medium">
+            {files.length} file{files.length > 1 ? 's' : ''} ready for conversion
+          </p>
+        </div>
+      </div>
+
       {/* Conversion Settings */}
-      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-200">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-800">
             Conversion Settings
@@ -301,7 +312,7 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
           <button
             onClick={startConversion}
             disabled={jobs.some(job => job.status === 'processing')}
-            className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:bg-gray-400 text-white font-bold py-4 px-6 rounded-xl transition-all transform hover:scale-105 shadow-lg disabled:transform-none disabled:shadow-none flex items-center justify-center space-x-2"
           >
             <RefreshCw className={`w-5 h-5 ${jobs.some(job => job.status === 'processing') ? 'animate-spin' : ''}`} />
             <span>

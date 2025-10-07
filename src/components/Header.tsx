@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
+            <a href="/" className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="p-2 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
                 <RefreshCw className="w-6 h-6 text-white" />
               </div>
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
                 </h1>
                 <p className="text-xs text-gray-500">File Conversion & Viewer</p>
               </div>
-            </div>
+            </a>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
