@@ -90,7 +90,8 @@ export const JPEGViewer: React.FC = () => {
           <FileUpload 
             onFilesSelected={handleFilesSelected}
             acceptedFormats={['jpg', 'jpeg', 'jpe']}
-            maxFiles={50}
+            maxFiles={20}
+            maxSize={100 * 1024 * 1024}
             hideFormatList={true}
           />
         </div>

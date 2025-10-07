@@ -90,7 +90,8 @@ export const PNGViewer: React.FC = () => {
           <FileUpload 
             onFilesSelected={handleFilesSelected}
             acceptedFormats={['png']}
-            maxFiles={50}
+            maxFiles={20}
+            maxSize={100 * 1024 * 1024}
             hideFormatList={true}
           />
         </div>
