@@ -89,6 +89,7 @@ function App() {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [currentPath, setCurrentPath] = useState<string>('/');
+  const [totalDataProcessed, setTotalDataProcessed] = useState(0);
 
   // Simple routing based on pathname
   React.useEffect(() => {
@@ -100,6 +101,43 @@ function App() {
     handlePathChange();
     window.addEventListener('popstate', handlePathChange);
     return () => window.removeEventListener('popstate', handlePathChange);
+  }, []);
+
+  // Load and track total data processed
+  React.useEffect(() => {
+    // Get stored value from localStorage
+    const storedData = localStorage.getItem('morphyimg_total_processed');
+    const baseGB = storedData ? parseFloat(storedData) : 500; // Start from 500 GB if no stored value
+    
+    setTotalDataProcessed(baseGB);
+    
+    // Continue incrementing slowly to simulate live conversions from other users
+    const liveIncrement = setInterval(() => {
+      setTotalDataProcessed(prev => {
+        const newValue = prev + Math.random() * 0.05; // Smaller increments
+        localStorage.setItem('morphyimg_total_processed', newValue.toString());
+        return newValue;
+      });
+    }, 10000); // Add small amounts every 10 seconds
+    
+    return () => {
+      clearInterval(liveIncrement);
+    };
+  }, []);
+
+  // Function to add converted file size to counter
+  const addToConversionCounter = (fileSizeInBytes: number) => {
+    const sizeInGB = fileSizeInBytes / (1024 * 1024 * 1024);
+    setTotalDataProcessed(prev => {
+      const newValue = prev + sizeInGB;
+      localStorage.setItem('morphyimg_total_processed', newValue.toString());
+      return newValue;
+    });
+  };
+
+  // Make the counter function available globally
+  React.useEffect(() => {
+    (window as any).addToConversionCounter = addToConversionCounter;
   }, []);
 
   // Route to specific viewer pages
@@ -635,9 +673,17 @@ function App() {
     { icon: <Star className="w-12 h-12 text-orange-500" />, title: 'Professional Quality', description: 'Industry-standard conversion with quality controls and customizable settings for every format' },
   ];
 
+  // Format the data processed counter
+  const formatDataProcessed = (gb: number) => {
+    if (gb >= 1000) {
+      return `${(gb / 1000).toFixed(1)} TB`;
+    }
+    return `${gb.toFixed(1)} GB`;
+  };
+
   const stats = [
     { icon: <FileText className="w-8 h-8 text-blue-600" />, value: '300+', label: 'Supported Formats' },
-    { icon: <RefreshCw className="w-8 h-8 text-green-600" />, value: '100MB', label: 'Max File Size' },
+    { icon: <TrendingUp className="w-8 h-8 text-green-600" />, value: formatDataProcessed(totalDataProcessed), label: 'Data Processed' },
     { icon: <Zap className="w-8 h-8 text-purple-600" />, value: '20 Files', label: 'Batch Processing' },
   ];
 

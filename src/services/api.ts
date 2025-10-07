@@ -1,3 +1,5 @@
+import { ConversionTracker } from '../utils/conversionTracker';
+
 // API service for backend communication
 const getApiBaseUrl = () => {
   // If environment variable is set, use it
@@ -111,6 +113,9 @@ class ApiService {
       const downloadResponse = await this.makeRequest(jsonResult.downloadPath);
       const blob = await downloadResponse.blob();
       
+      // Track conversion in global counter
+      ConversionTracker.addConversion(blob.size);
+      
       return {
         blob,
         filename: jsonResult.filename,
@@ -122,6 +127,9 @@ class ApiService {
       const contentDisposition = response.headers.get('Content-Disposition');
       const filename = this.extractFilename(contentDisposition) || 
                      `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'bin'}`;
+
+      // Track conversion in global counter
+      ConversionTracker.addConversion(blob.size);
 
       return {
         blob,
@@ -152,7 +160,17 @@ class ApiService {
     if (options.height !== undefined) formData.append('height', options.height.toString());
 
     const response = await this.makeRequest('/api/convert/batch', 'POST', formData);
-    return await response.json();
+    const result = await response.json();
+    
+    // Track batch conversions
+    if (result.success && result.results) {
+      const totalSize = result.results.reduce((sum: number, r: any) => {
+        return sum + (r.size || 0);
+      }, 0);
+      ConversionTracker.addConversion(totalSize);
+    }
+    
+    return result;
   }
 
   async healthCheck(): Promise<{ status: string; timestamp: string }> {
