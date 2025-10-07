@@ -26,7 +26,7 @@ export const DNGToICOConverter: React.FC = () => {
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSize, setIconSize] = useState<number>(16);
+  const [iconSize, setIconSize] = useState<number | 'default'>('default');
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
@@ -130,8 +130,30 @@ export const DNGToICOConverter: React.FC = () => {
     const dngFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.dng')
     );
+    
+    // Check for files larger than 1000MB
+    const MAX_FILE_SIZE = 1000 * 1024 * 1024; // 1000MB
+    const oversizedFile = dngFiles.find(file => file.size > MAX_FILE_SIZE);
+    
+    if (oversizedFile) {
+      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 1000MB.`);
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    // Use existing validation
+    const validation = validateBatchFiles(dngFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
     setBatchFiles(dngFiles);
     setError(null);
+    clearValidationError();
   };
 
   const findJPEGStart = (data: Uint8Array): number => {
@@ -158,11 +180,15 @@ export const DNGToICOConverter: React.FC = () => {
     // Create a simple colored canvas as fallback
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
+    
+    // Determine the actual size to use
+    const actualSize = iconSize === 'default' ? 256 : iconSize;
+    
     if (!ctx) {
       const fallbackContent = `SAMPLE_ICO_FILE_START
 ORIGINAL_FILE: ${file.name}
 DNG_TO_ICO_CONVERSION: Sample conversion
-ICON_SIZE: ${iconSize}x${iconSize} pixels
+ICON_SIZE: ${actualSize}x${actualSize} pixels
 QUALITY: ${quality}
 NOTE: This is a sample ICO file generated because the DNG could not be processed in browser
 ICO_FILE_END`;
@@ -170,29 +196,29 @@ ICO_FILE_END`;
       return;
     }
 
-    canvas.width = iconSize;
-    canvas.height = iconSize;
+    canvas.width = actualSize;
+    canvas.height = actualSize;
     
     // Create a gradient background
-    const gradient = ctx.createLinearGradient(0, 0, iconSize, iconSize);
+    const gradient = ctx.createLinearGradient(0, 0, actualSize, actualSize);
     gradient.addColorStop(0, '#6366f1');
     gradient.addColorStop(1, '#8b5cf6');
     ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, iconSize, iconSize);
+    ctx.fillRect(0, 0, actualSize, actualSize);
     
     // Add camera icon effect
-    const centerX = iconSize / 2;
-    const centerY = iconSize / 2;
-    const cameraSize = iconSize * 0.6;
+    const centerX = actualSize / 2;
+    const centerY = actualSize / 2;
+    const cameraSize = actualSize * 0.6;
     
     ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
     ctx.fillRect(centerX - cameraSize/2, centerY - cameraSize/4, cameraSize, cameraSize/2);
     ctx.fillRect(centerX - cameraSize/4, centerY - cameraSize/2, cameraSize/2, cameraSize/4);
     
     // Add text if icon size is large enough
-    if (iconSize >= 48) {
+    if (actualSize >= 48) {
       ctx.fillStyle = 'white';
-      ctx.font = `${Math.max(8, iconSize / 8)}px Arial`;
+      ctx.font = `${Math.max(8, actualSize / 8)}px Arial`;
       ctx.textAlign = 'center';
       ctx.fillText('DNG', centerX, centerY + cameraSize/4 + 10);
     }
@@ -204,7 +230,7 @@ ICO_FILE_END`;
         const fallbackContent = `SAMPLE_ICO_FILE_START
 ORIGINAL_FILE: ${file.name}
 DNG_TO_ICO_CONVERSION: Sample conversion
-ICON_SIZE: ${iconSize}x${iconSize} pixels
+ICON_SIZE: ${actualSize}x${actualSize} pixels
 QUALITY: ${quality}
 ICO_FILE_END`;
         resolve(new Blob([fallbackContent], { type: 'image/x-icon' }));
@@ -213,11 +239,17 @@ ICO_FILE_END`;
   };
 
   const handleConvert = async (file: File) => {
-    return await apiService.convertFile(file, {
+    const options: any = {
       format: 'ico',
-      iconSize: iconSize,
       quality: quality
-    });
+    };
+    
+    // Only add iconSize if it's not 'default'
+    if (iconSize !== 'default') {
+      options.iconSize = iconSize;
+    }
+    
+    return await apiService.convertFile(file, options);
   };
 
   const handleSingleConvert = async () => {
@@ -245,11 +277,17 @@ ICO_FILE_END`;
     setError(null);
     
     try {
-      const result = await apiService.convertBatch(batchFiles, {
+      const options: any = {
         format: 'ico',
-        iconSize: iconSize,
         quality: quality
-      });
+      };
+      
+      // Only add iconSize if it's not 'default'
+      if (iconSize !== 'default') {
+        options.iconSize = iconSize;
+      }
+      
+      const result = await apiService.convertBatch(batchFiles, options);
 
       setBatchResults(result.results ?? []);
       setBatchConverted(true);
@@ -398,6 +436,12 @@ ICO_FILE_END`;
                     : 'Drag and drop your DNG file here or click to browse'
                   }
                 </p>
+                <p className="text-sm text-gray-500 mb-4">
+                  {batchMode 
+                    ? 'Max 100MB per file, 100MB total batch size, up to 20 files' 
+                    : 'Max file size: 100MB'
+                  }
+                </p>
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -436,7 +480,7 @@ ICO_FILE_END`;
                           <div className="mt-2 text-sm text-gray-500">
                             <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
                             <p className="text-amber-600 font-medium">
-                              Will convert to: {iconSize} × {iconSize} pixels ({quality} quality)
+                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
                             </p>
                           </div>
                         </div>
@@ -454,7 +498,7 @@ ICO_FILE_END`;
                           <div className="mt-2 text-sm text-gray-500">
                             <p>Adobe Digital Negative (DNG) camera file</p>
                             <p className="text-amber-600 font-medium">
-                              Will convert to: {iconSize} × {iconSize} pixels ({quality} quality)
+                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
                             </p>
                             <p className="text-gray-400 text-xs mt-1">
                               No embedded preview found - will generate sample icon
@@ -470,15 +514,38 @@ ICO_FILE_END`;
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
@@ -541,28 +608,29 @@ ICO_FILE_END`;
               )}
 
               {/* Batch Conversion Results */}
-              {batchConverted && batchMode && (
+              {batchConverted && batchMode && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
-                  <div className="space-y-2 max-h-64 overflow-y-auto mb-4">
+                  <p className="text-green-700 mb-4">
+                    All {batchResults.length} DNG files have been successfully converted to ICO format.
+                  </p>
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((r, idx) => (
                       <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
-                        <div className="text-sm">
-                          <div className="font-medium text-gray-900">{r.originalName}</div>
-                          {r.success ? (
-                            <div className="text-gray-500 text-xs">{r.outputFilename} {(r.size ? `- ${formatFileSize(r.size)}` : '')}</div>
-                          ) : (
-                            <div className="text-red-600 text-xs">{r.error || 'Conversion failed'}</div>
-                          )}
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">
+                            {r.outputFilename} {r.size ? `• ${formatFileSize(r.size)}` : ''}
+                          </p>
                         </div>
                         {r.success && (
                           <button
                             onClick={() => handleBatchDownload(r)}
-                            className="bg-green-600 text-white px-4 py-2 rounded-md text-sm hover:bg-green-700"
+                            className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                           >
+                            <Download className="w-4 h-4 mr-1" />
                             Download
                           </button>
                         )}
@@ -571,7 +639,7 @@ ICO_FILE_END`;
                   </div>
                   <button
                     onClick={resetForm}
-                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
                     Convert More Files
@@ -598,10 +666,11 @@ ICO_FILE_END`;
                 </label>
                 <select
                   value={iconSize}
-                  onChange={(e) => setIconSize(Number(e.target.value))}
+                  onChange={(e) => setIconSize(e.target.value === 'default' ? 'default' : Number(e.target.value))}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                 >
-                  <option value={16}>16x16 pixels (Default)</option>
+                  <option value="default">Default (Original Size)</option>
+                  <option value={16}>16x16 pixels</option>
                   <option value={32}>32x32 pixels</option>
                   <option value={48}>48x48 pixels</option>
                   <option value={64}>64x64 pixels</option>
@@ -609,6 +678,9 @@ ICO_FILE_END`;
                   <option value={256}>256x256 pixels</option>
                 </select>
                 <div className="mt-2 text-sm text-gray-600">
+                  {iconSize === 'default' && (
+                    <span className="text-cyan-600">✓ Preserves original image dimensions</span>
+                  )}
                   {iconSize === 16 && (
                     <span className="text-amber-600">✓ Standard Windows icon size (recommended)</span>
                   )}
