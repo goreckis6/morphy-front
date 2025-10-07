@@ -817,8 +817,33 @@ function App() {
           </div>
         </section>
 
-        {/* Popular Converters Section */}
+        {/* Universal File Converter Section */}
         <section id="converter" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Universal File Converter
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Convert between formats with professional-grade quality controls and batch processing capabilities.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-gray-200">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                  <FileUpload onFilesSelected={setSelectedFiles} />
+                </div>
+                <div>
+                  <ConversionPanel files={selectedFiles} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Popular Converters Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -995,31 +1020,6 @@ function App() {
                   </p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* File Converter Section */}
-        <section id="file-upload" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Universal File Converter
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Convert between formats with professional-grade quality controls and batch processing capabilities.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                  <FileUpload onFilesSelected={setSelectedFiles} />
-                </div>
-                <div>
-                  <ConversionPanel files={selectedFiles} />
-                </div>
-              </div>
             </div>
           </div>
         </section>
