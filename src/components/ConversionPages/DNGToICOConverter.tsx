@@ -244,9 +244,13 @@ ICO_FILE_END`;
       quality: quality
     };
     
-    // Only add iconSize if it's not 'default'
-    if (iconSize !== 'default') {
-      options.iconSize = iconSize;
+    // For DNG to ICO, send sizes parameter for Python backend
+    if (iconSize === 'default') {
+      // Send multiple sizes for maximum compatibility
+      options.sizes = '16,32,48,64,128,256';
+    } else {
+      // Send the specific size
+      options.sizes = iconSize.toString();
     }
     
     return await apiService.convertFile(file, options);
@@ -371,7 +375,7 @@ ICO_FILE_END`;
               DNG to ICO Converter
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
-              Convert Adobe DNG raw images to ICO format for Windows icons. Transform professional camera files into high-quality Windows icons with multiple sizes.
+              Convert Adobe DNG (Digital Negative) raw camera files to ICO format for Windows icons. Professional RAW image processing with multiple icon sizes and high-quality output.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
@@ -727,12 +731,12 @@ ICO_FILE_END`;
               </h3>
               <div className="space-y-4">
                 {[
-                  "Adobe Digital Negative support",
-                  "High-resolution icon creation",
-                  "Multiple icon size support",
-                  "Professional camera file processing",
-                  "Windows icon compatibility",
-                  "Batch processing support"
+                  "Professional RAW image processing",
+                  "Multiple icon sizes (16px to 256px)",
+                  "Original size preservation option",
+                  "High-quality DNG decoding",
+                  "Windows icon format support",
+                  "Fast batch conversion"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -750,12 +754,12 @@ ICO_FILE_END`;
               </h3>
               <div className="space-y-3">
                 {[
-                  "Professional photography workflows",
-                  "High-quality Windows icons",
-                  "Adobe Lightroom integration",
-                  "Digital asset management",
-                  "Brand identity creation",
-                  "Professional icon design"
+                  "Photography studio workflows",
+                  "Desktop application icons",
+                  "Professional software development",
+                  "Digital camera file processing",
+                  "Windows icon creation",
+                  "RAW image conversion"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
