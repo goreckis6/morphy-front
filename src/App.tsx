@@ -69,6 +69,7 @@ import { ConversionHub } from './components/ConversionHub';
 import { ConverterHub } from './components/ConverterHub';
 import { ViewersHub } from './components/ViewersHub';
 import { JPEGViewer } from './components/FormatViewers/JPEGViewer';
+import { PNGViewer } from './components/FormatViewers/PNGViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -669,6 +670,14 @@ function App() {
     return (
       <AuthProvider>
         <JPEGViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewer/png' || currentPath === '/viewers/png') {
+    return (
+      <AuthProvider>
+        <PNGViewer />
       </AuthProvider>
     );
   }
