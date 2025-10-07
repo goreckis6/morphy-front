@@ -17,6 +17,42 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
   const [jobs, setJobs] = useState<FileConversionJob[]>([]);
   const [showOptions, setShowOptions] = useState(false);
 
+  // Get input format from the first file
+  const inputFormat = files.length > 0 ? files[0].name.split('.').pop()?.toLowerCase() || '' : '';
+
+  // Define implemented conversions based on what we actually have
+  const implementedConversions: Record<string, string[]> = {
+    'csv': ['doc', 'docx', 'epub', 'html', 'md', 'mobi', 'odp', 'odt', 'pdf', 'ppt', 'pptx', 'rtf', 'txt', 'xls', 'xlsx', 'json', 'ndjson', 'parquet', 'sql', 'toml', 'xml', 'yaml', 'avro'],
+    'avro': ['csv', 'json', 'ndjson'],
+    'epub': ['csv', 'doc', 'docx', 'html', 'md', 'mobi', 'odp', 'odt', 'pdf', 'ppt', 'pptx', 'rtf', 'txt', 'xlsx'],
+    'doc': ['csv', 'epub', 'mobi', 'odt', 'txt'],
+    'docx': ['csv', 'epub', 'mobi', 'odt', 'txt'],
+    'dng': ['webp', 'ico'],
+    'cr2': ['webp', 'ico'],
+    'eps': ['webp', 'ico'],
+    'gif': ['ico'],
+    'bmp': ['webp']
+  };
+
+  // Get available output formats for the current input
+  const availableOutputFormats = implementedConversions[inputFormat] || ['jpg', 'png', 'webp', 'pdf'];
+
+  // Group formats by category
+  const getFormatsByCategory = () => {
+    const categories: Record<string, string[]> = {
+      'Images': availableOutputFormats.filter(f => ['jpg', 'png', 'webp', 'gif', 'bmp', 'tiff', 'ico', 'svg'].includes(f)),
+      'Documents': availableOutputFormats.filter(f => ['pdf', 'doc', 'docx', 'odt', 'rtf', 'txt'].includes(f)),
+      'eBooks': availableOutputFormats.filter(f => ['epub', 'mobi'].includes(f)),
+      'Presentations': availableOutputFormats.filter(f => ['ppt', 'pptx', 'odp'].includes(f)),
+      'Spreadsheets': availableOutputFormats.filter(f => ['xlsx', 'xls', 'csv', 'ods'].includes(f)),
+      'Web': availableOutputFormats.filter(f => ['html', 'md', 'xml'].includes(f)),
+      'Data': availableOutputFormats.filter(f => ['json', 'ndjson', 'avro', 'parquet', 'sql', 'toml', 'yaml'].includes(f))
+    };
+    
+    // Remove empty categories
+    return Object.entries(categories).filter(([_, formats]) => formats.length > 0);
+  };
+
   const imageFormats: SupportedFormat[] = ['jpg', 'png', 'webp', 'gif', 'bmp', 'tiff', 'ico', 'svg'];
   const documentFormats: SupportedFormat[] = ['pdf', 'docx', 'doc', 'txt'];
   const spreadsheetFormats: SupportedFormat[] = ['xlsx', 'csv', 'ods'];
@@ -24,6 +60,15 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
   const specialFormats: SupportedFormat[] = ['psd', 'tga'];
 
   const startConversion = async () => {
+    // Check if this is an implemented conversion
+    if (implementedConversions[inputFormat] && implementedConversions[inputFormat].includes(outputFormat)) {
+      // Redirect to specific converter page
+      const converterPath = `/convert/${inputFormat}-to-${outputFormat}`;
+      window.location.href = converterPath;
+      return;
+    }
+
+    // Otherwise, use local conversion (for basic image conversions)
     const newJobs: FileConversionJob[] = files.map(file => ({
       id: Math.random().toString(36).substr(2, 9),
       filename: file.name,
@@ -223,51 +268,39 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
         </div>
 
         <div className="space-y-4">
+          {/* Show detected input format */}
+          {inputFormat && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+              <p className="text-sm text-blue-800">
+                <span className="font-semibold">Input Format:</span> {inputFormat.toUpperCase()}
+              </p>
+            </div>
+          )}
+
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Output Format
+              Output Format ({availableOutputFormats.length} available)
             </label>
             <select
               value={outputFormat}
               onChange={(e) => setOutputFormat(e.target.value as SupportedFormat)}
-              className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full p-3 border-2 border-gray-300 rounded-lg bg-white text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
-              <optgroup label="Image Formats">
-                {imageFormats.map(format => (
-                  <option key={format} value={format}>
-                    {format.toUpperCase()}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label="Vector Graphics">
-                {vectorFormats.map(format => (
-                  <option key={format} value={format}>
-                    {format.toUpperCase()}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label="Document Formats">
-                {documentFormats.map(format => (
-                  <option key={format} value={format}>
-                    {format.toUpperCase()}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label="Spreadsheet Formats">
-                {spreadsheetFormats.map(format => (
-                  <option key={format} value={format}>
-                    {format.toUpperCase()}
-                  </option>
-                ))}
-              </optgroup>
-              <optgroup label="Professional Formats">
-                {specialFormats.map(format => (
-                  <option key={format} value={format}>
-                    {format.toUpperCase()}
-                  </option>
-                ))}
-              </optgroup>
+              {getFormatsByCategory().map(([categoryName, formats]) => (
+                <optgroup key={categoryName} label={categoryName}>
+                  {formats.map(format => (
+                    <option key={format} value={format}>
+                      {format.toUpperCase()}
+                    </option>
+                  ))}
+                </optgroup>
+              ))}
             </select>
+            {availableOutputFormats.length === 0 && (
+              <p className="mt-2 text-sm text-red-600">
+                No converters available for {inputFormat.toUpperCase()} files. Please use a specific converter from the menu.
+              </p>
+            )}
           </div>
 
           {showOptions && FileProcessor.isImageFormat(outputFormat) && (
@@ -311,14 +344,24 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
 
           <button
             onClick={startConversion}
-            disabled={jobs.some(job => job.status === 'processing')}
+            disabled={jobs.some(job => job.status === 'processing') || availableOutputFormats.length === 0}
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:bg-gray-400 text-white font-bold py-4 px-6 rounded-xl transition-all transform hover:scale-105 shadow-lg disabled:transform-none disabled:shadow-none flex items-center justify-center space-x-2"
           >
             <RefreshCw className={`w-5 h-5 ${jobs.some(job => job.status === 'processing') ? 'animate-spin' : ''}`} />
             <span>
-              {jobs.some(job => job.status === 'processing') ? 'Converting...' : 'Start Conversion'}
+              {jobs.some(job => job.status === 'processing') 
+                ? 'Converting...' 
+                : implementedConversions[inputFormat]?.includes(outputFormat)
+                  ? `Go to ${inputFormat.toUpperCase()} → ${outputFormat.toUpperCase()} Converter`
+                  : 'Start Conversion'
+              }
             </span>
           </button>
+          {implementedConversions[inputFormat]?.includes(outputFormat) && (
+            <p className="text-xs text-center text-gray-500 mt-2">
+              You'll be redirected to the specialized converter for better quality and features
+            </p>
+          )}
         </div>
       </div>
 

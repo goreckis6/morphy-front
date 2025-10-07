@@ -562,32 +562,6 @@ export const ConverterHub: React.FC = () => {
           </div>
         </div>
 
-        {/* Universal Converter */}
-        <div className="mb-12">
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-200">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
-                <Database className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">Universal Converter</h2>
-                <p className="text-gray-600">Convert between any supported formats</p>
-              </div>
-            </div>
-            <p className="text-gray-700 mb-6">
-              Our universal converter supports 50+ file formats and can convert between any compatible types. 
-              Perfect for general file conversion needs.
-            </p>
-            <a
-              href="/#converter"
-              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-            >
-              <RefreshCw className="w-5 h-5" />
-              <span>Open Universal Converter</span>
-            </a>
-          </div>
-        </div>
-
         {/* Results Count */}
         {searchQuery && (
           <div className="mb-8 text-center">
