@@ -296,7 +296,7 @@ export const DNGToWebPConverter: React.FC = () => {
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <File className="w-12 h-12 text-gray-400" />
-                    </div>
+                      </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
                       {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
@@ -341,7 +341,7 @@ export const DNGToWebPConverter: React.FC = () => {
                 </div>
               )}
 
-              {(error || validationError) && (
+                {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
                   <span className="text-red-700">{error || validationError}</span>
@@ -420,8 +420,7 @@ export const DNGToWebPConverter: React.FC = () => {
                     {batchResults.map((result, index) => (
                       <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
                         <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">{result.originalName}</p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-sm font-medium text-gray-900">
                             {result.outputFilename} {result.size ? `• ${formatFileSize(result.size)}` : ''}
                           </p>
                         </div>
@@ -435,14 +434,14 @@ export const DNGToWebPConverter: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                  <button
-                    onClick={resetForm}
+                    <button
+                      onClick={resetForm}
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
+                    >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
-                </div>
+                      Convert More Files
+                    </button>
+                  </div>
                 )}
               </div>
             </div>
@@ -607,8 +606,8 @@ export const DNGToWebPConverter: React.FC = () => {
                 <p className="text-gray-700">
                   WebP supports both lossy and lossless compression, advanced color spaces, and transparency, making it perfect for professional photography and design work.
                 </p>
-              </div>
-              
+          </div>
+
               <div className="bg-blue-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-blue-900 mb-3">Future-Proof Format</h4>
                 <p className="text-gray-700">
