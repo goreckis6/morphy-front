@@ -723,38 +723,6 @@ function App() {
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Why Choose MorphyIMG?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Built for professionals and everyday users alike. Experience the difference with our cutting-edge technology.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-                  <div className="mb-6 flex justify-center">
-                    <div className="p-4 bg-white rounded-2xl shadow-md">
-                      {feature.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 text-center leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* How It Works Section */}
         <section id="how-it-works" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -801,8 +769,190 @@ function App() {
           </div>
         </section>
 
-        {/* File Converter Section */}
+        {/* Popular Converters Section */}
         <section id="converter" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Popular File Converters
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose from our most popular conversion tools. All converters support batch processing and quality controls.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Data Format Converters */}
+              <a href="/convert/csv-to-json" className="group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-blue-300">
+                <div className="text-center">
+                  <div className="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <FileText className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">CSV to JSON</h3>
+                  <p className="text-sm text-gray-600">Convert spreadsheet data to JSON</p>
+                </div>
+              </a>
+
+              <a href="/convert/csv-to-ndjson" className="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-purple-300">
+                <div className="text-center">
+                  <div className="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <BarChart3 className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">CSV to NDJSON</h3>
+                  <p className="text-sm text-gray-600">Streaming data format</p>
+                </div>
+              </a>
+
+              <a href="/convert/avro-to-csv" className="group bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-green-300">
+                <div className="text-center">
+                  <div className="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <BarChart3 className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">AVRO to CSV</h3>
+                  <p className="text-sm text-gray-600">Big data to spreadsheet</p>
+                </div>
+              </a>
+
+              <a href="/convert/avro-to-json" className="group bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-orange-300">
+                <div className="text-center">
+                  <div className="bg-orange-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <FileText className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">AVRO to JSON</h3>
+                  <p className="text-sm text-gray-600">Apache AVRO to JSON</p>
+                </div>
+              </a>
+
+              {/* Image Converters */}
+              <a href="/convert/dng-to-webp" className="group bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-pink-300">
+                <div className="text-center">
+                  <div className="bg-pink-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Image className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">DNG to WebP</h3>
+                  <p className="text-sm text-gray-600">RAW to modern web format</p>
+                </div>
+              </a>
+
+              <a href="/convert/dng-to-ico" className="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-cyan-300">
+                <div className="text-center">
+                  <div className="bg-cyan-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Image className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">DNG to ICO</h3>
+                  <p className="text-sm text-gray-600">RAW to Windows icons</p>
+                </div>
+              </a>
+
+              <a href="/convert/cr2-to-webp" className="group bg-gradient-to-br from-violet-50 to-purple-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-violet-300">
+                <div className="text-center">
+                  <div className="bg-violet-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Image className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">CR2 to WebP</h3>
+                  <p className="text-sm text-gray-600">Canon RAW to web</p>
+                </div>
+              </a>
+
+              <a href="/convert/cr2-to-ico" className="group bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-amber-300">
+                <div className="text-center">
+                  <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Image className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">CR2 to ICO</h3>
+                  <p className="text-sm text-gray-600">Canon RAW to icons</p>
+                </div>
+              </a>
+
+              {/* Document/eBook Converters */}
+              <a href="/convert/epub-to-pdf" className="group bg-gradient-to-br from-red-50 to-pink-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-red-300">
+                <div className="text-center">
+                  <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <File className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">EPUB to PDF</h3>
+                  <p className="text-sm text-gray-600">eBook to document</p>
+                </div>
+              </a>
+
+              <a href="/convert/epub-to-mobi" className="group bg-gradient-to-br from-emerald-50 to-green-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-emerald-300">
+                <div className="text-center">
+                  <div className="bg-emerald-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <File className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">EPUB to MOBI</h3>
+                  <p className="text-sm text-gray-600">eBook for Kindle</p>
+                </div>
+              </a>
+
+              <a href="/convert/csv-to-xlsx" className="group bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-teal-300">
+                <div className="text-center">
+                  <div className="bg-teal-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <BarChart3 className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">CSV to XLSX</h3>
+                  <p className="text-sm text-gray-600">Spreadsheet to Excel</p>
+                </div>
+              </a>
+
+              <a href="/convert/docx-to-pdf" className="group bg-gradient-to-br from-slate-50 to-gray-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-slate-300">
+                <div className="text-center">
+                  <div className="bg-slate-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <File className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2">DOCX to PDF</h3>
+                  <p className="text-sm text-gray-600">Word to document</p>
+                </div>
+              </a>
+            </div>
+
+            <div className="text-center mt-12">
+              <a 
+                href="/converters" 
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                <RefreshCw className="w-5 h-5" />
+                View All 300+ Converters
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Choose MorphyIMG?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Built for professionals and everyday users alike. Experience the difference with our cutting-edge technology.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+                  <div className="mb-6 flex justify-center">
+                    <div className="p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-md">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 text-center leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* File Converter Section */}
+        <section id="file-upload" className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
