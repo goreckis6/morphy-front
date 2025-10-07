@@ -30,6 +30,7 @@ export const CR2ToWebPConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -297,28 +298,18 @@ WEBP_FILE_END`;
     
     setIsConverting(true);
     setError(null);
+    setBatchResults([]);
     
     try {
+      const results: Array<{ file: File; blob: Blob }> = [];
+      
       for (let i = 0; i < batchFiles.length; i++) {
         const file = batchFiles[i];
         const converted = await handleConvert(file);
-        
-        // Create download link
-        const url = URL.createObjectURL(converted);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = file.name.replace('.cr2', '.webp');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        // Small delay between downloads
-        if (i < batchFiles.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 500));
-        }
+        results.push({ file, blob: converted });
       }
       
+      setBatchResults(results);
       setBatchConverted(true);
       setError(null);
     } catch (err) {
@@ -374,8 +365,20 @@ WEBP_FILE_END`;
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
+    setBatchResults([]);
     setImagePreview(null);
     if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const handleBatchFileDownload = (file: File, blob: Blob) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name.replace('.cr2', '.webp');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -634,24 +637,41 @@ WEBP_FILE_END`;
               )}
 
               {/* Batch Conversion Success */}
-              {batchConverted && batchMode && (
+              {batchConverted && batchMode && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchFiles.length} CR2 files have been successfully converted to WebP format and downloaded.
+                    All {batchResults.length} CR2 files have been successfully converted to WebP format.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button
-                      onClick={resetForm}
-                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                    >
-                      <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
-                    </button>
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">{result.file.name}</p>
+                          <p className="text-xs text-gray-500">
+                            {result.file.name.replace('.cr2', '.webp')} • {(result.blob.size / 1024).toFixed(1)} KB
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => handleBatchFileDownload(result.file, result.blob)}
+                          className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          Download
+                        </button>
+                      </div>
+                    ))}
                   </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
                 </div>
               )}
             </div>

@@ -24,7 +24,7 @@ export const CR2ToICOConverter: React.FC = () => {
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSize, setIconSize] = useState<number>(16);
+  const [iconSize, setIconSize] = useState<number | 'default'>(16);
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
@@ -127,8 +127,30 @@ export const CR2ToICOConverter: React.FC = () => {
     const cr2Files = files.filter(file => 
       file.name.toLowerCase().endsWith('.cr2')
     );
+    
+    // Check for files larger than 1000MB
+    const MAX_FILE_SIZE = 1000 * 1024 * 1024; // 1000MB
+    const oversizedFile = cr2Files.find(file => file.size > MAX_FILE_SIZE);
+    
+    if (oversizedFile) {
+      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 1000MB.`);
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    // Use existing validation
+    const validation = validateBatchFiles(cr2Files);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
     setBatchFiles(cr2Files);
     setError(null);
+    clearValidationError();
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
@@ -684,10 +706,11 @@ ICO_FILE_END`;
                 </label>
                 <select
                   value={iconSize}
-                  onChange={(e) => setIconSize(Number(e.target.value))}
+                  onChange={(e) => setIconSize(e.target.value === 'default' ? 'default' : Number(e.target.value))}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 >
-                  <option value={16}>16x16 pixels (Default)</option>
+                  <option value="default">Default (Original Size)</option>
+                  <option value={16}>16x16 pixels</option>
                   <option value={32}>32x32 pixels</option>
                   <option value={48}>48x48 pixels</option>
                   <option value={64}>64x64 pixels</option>
@@ -695,6 +718,9 @@ ICO_FILE_END`;
                   <option value={256}>256x256 pixels</option>
                 </select>
                 <div className="mt-2 text-sm text-gray-600">
+                  {iconSize === 'default' && (
+                    <span className="text-cyan-600">✓ Preserves original image dimensions</span>
+                  )}
                   {iconSize === 16 && (
                     <span className="text-orange-600">✓ Standard Windows icon size (recommended)</span>
                   )}
