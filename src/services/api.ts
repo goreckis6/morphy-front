@@ -195,17 +195,32 @@ class ApiService {
   }
 
   // Method to download file from the new file-based endpoint
-  async downloadFile(filename: string, originalFilename?: string): Promise<void> {
+  async downloadFile(filename: string, originalFilename?: string): Promise<Blob> {
     try {
-      const response = await this.makeRequest(`/download/${filename}`);
+      // If filename already starts with /download/, don't add it again
+      const endpoint = filename.startsWith('/download/') ? filename : `/download/${filename}`;
+      const response = await this.makeRequest(endpoint);
       const blob = await response.blob();
       
+      return blob;
+    } catch (error) {
+      console.error('Download failed:', error);
+      throw new Error('Failed to download file');
+    }
+  }
+
+  // Method to download file and trigger browser download
+  async downloadAndSaveFile(filename: string, originalFilename?: string): Promise<void> {
+    try {
+      const blob = await this.downloadFile(filename);
+      
       // Try to extract filename from Content-Disposition header first
+      const response = await this.makeRequest(filename.startsWith('/download/') ? filename : `/download/${filename}`);
       const contentDisposition = response.headers.get('Content-Disposition');
       const extractedFilename = this.extractFilename(contentDisposition);
       
       // Use extracted filename, then originalFilename, then fallback to cleaned filename
-      const downloadFilename = extractedFilename || originalFilename || filename.replace(/^\d+_/, '');
+      const downloadFilename = extractedFilename || originalFilename || filename.replace(/^\d+_/, '').replace('/download/', '');
       
       this.downloadBlob(blob, downloadFilename);
     } catch (error) {
