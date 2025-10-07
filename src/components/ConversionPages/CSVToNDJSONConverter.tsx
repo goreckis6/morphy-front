@@ -128,17 +128,35 @@ export const CSVToNDJSONConverter: React.FC = () => {
     setBatchResults([]);
     
     try {
+      const options = {
+        format: 'ndjson',
+        includeHeaders: includeHeaders ? 'true' : 'false'
+      };
+
+      const result = await apiService.convertBatch(batchFiles, options as any);
+      
+      // Map the API results to our format
       const results: Array<{ file: File; blob: Blob }> = [];
-      for (const file of batchFiles) {
-        const result = await handleConvert(file);
-        results.push({ file, blob: result });
+      for (let i = 0; i < batchFiles.length; i++) {
+        const apiResult = result.results?.[i];
+        if (apiResult && apiResult.success && apiResult.downloadPath) {
+          // Download the file from the server
+          const blob = await apiService.downloadFile(apiResult.downloadPath);
+          results.push({ file: batchFiles[i], blob });
+        }
+      }
+      
+      if (results.length === 0) {
+        throw new Error('No files were converted successfully');
       }
       
       setBatchResults(results);
       setBatchConverted(true);
       setError(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('Batch conversion error:', err);
+      const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';
+      setError(message);
       setBatchConverted(false);
       setBatchResults([]);
     } finally {
