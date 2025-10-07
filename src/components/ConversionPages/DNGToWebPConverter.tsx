@@ -408,29 +408,41 @@ export const DNGToWebPConverter: React.FC = () => {
 
                 {/* Batch Results */}
                 {batchConverted && batchResults.length > 0 && (
-                <div className="mt-6 space-y-3">
-                    <h3 className="font-medium text-gray-900">Conversion Results:</h3>
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <p className="text-green-700 mb-4">
+                    All {batchResults.length} DNG files have been successfully converted to WebP format.
+                  </p>
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded p-3">
-                        <div className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-600 mr-2" />
-                          <span className="text-sm text-gray-700">{result.outputFilename}</span>
+                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">{result.originalName}</p>
+                          <p className="text-xs text-gray-500">
+                            {result.outputFilename} {result.size ? `• ${formatFileSize(result.size)}` : ''}
+                          </p>
                         </div>
                         <button
                           onClick={() => handleBatchDownload(result.downloadPath!, result.outputFilename)}
-                          className="bg-green-600 text-white px-3 py-1 rounded text-sm hover:bg-green-700 transition-colors"
+                          className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                         >
+                          <Download className="w-4 h-4 mr-1" />
                           Download
                         </button>
                       </div>
                     ))}
-                    <button
-                      onClick={resetForm}
-                      className="w-full bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors"
-                    >
-                      Convert More Files
-                    </button>
                   </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
+                </div>
                 )}
               </div>
             </div>

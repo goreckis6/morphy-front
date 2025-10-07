@@ -129,8 +129,30 @@ export const CR2ToWebPConverter: React.FC = () => {
     const cr2Files = files.filter(file => 
       file.name.toLowerCase().endsWith('.cr2')
     );
+    
+    // Check for files larger than 1000MB
+    const MAX_FILE_SIZE = 1000 * 1024 * 1024; // 1000MB
+    const oversizedFile = cr2Files.find(file => file.size > MAX_FILE_SIZE);
+    
+    if (oversizedFile) {
+      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 1000MB.`);
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    // Use existing validation
+    const validation = validateBatchFiles(cr2Files);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
     setBatchFiles(cr2Files);
     setError(null);
+    clearValidationError();
   };
 
   const findJPEGStart = (data: Uint8Array): number => {
@@ -650,8 +672,7 @@ WEBP_FILE_END`;
                     {batchResults.map((result, index) => (
                       <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
                         <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">{result.file.name}</p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-sm font-medium text-gray-900">
                             {result.file.name.replace('.cr2', '.webp')} • {(result.blob.size / 1024).toFixed(1)} KB
                           </p>
                         </div>
