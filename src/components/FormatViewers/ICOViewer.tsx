@@ -221,7 +221,7 @@ export const ICOViewer: React.FC = () => {
         </div>
 
         {/* Back to Viewers Button */}
-        <div className="text-center mb-4">
+        <div className="text-center mt-8">
           <a
             href="/viewers"
             className="inline-block bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"

@@ -171,22 +171,22 @@ export const PDFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>PDF Viewer - View PDF Documents Online | MorphyIMG</title>
-        <meta name="description" content="Professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering, zoom controls, and document navigation. Free PDF viewer tool." />
-        <meta name="keywords" content="PDF viewer, view PDF online, PDF preview, PDF reader, document viewer, PDF viewer tool, online PDF viewer, PDF viewer free" />
-        <meta property="og:title" content="PDF Viewer - View PDF Documents Online | MorphyIMG" />
-        <meta property="og:description" content="Professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and document navigation." />
+        <title>Free PDF Viewer - View PDF Documents Online | MorphyIMG</title>
+        <meta name="description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDFs with search, zoom, full-screen mode, and navigation tools. Supports batch viewing up to 20 files. 100% free PDF viewer tool." />
+        <meta name="keywords" content="PDF viewer, view PDF online, PDF preview, PDF reader, document viewer, PDF viewer tool, online PDF viewer, PDF viewer free, PDF search" />
+        <meta property="og:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
+        <meta property="og:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and document navigation." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyimg.com/viewers/pdf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PDF Viewer - View PDF Documents Online | MorphyIMG" />
-        <meta name="twitter:description" content="Professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and document navigation." />
+        <meta name="twitter:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
+        <meta name="twitter:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and document navigation." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "PDF Viewer",
-            "description": "Professional PDF viewer for viewing PDF documents online",
+            "name": "Free PDF Viewer",
+            "description": "Free professional PDF viewer for viewing PDF documents online",
             "url": "https://morphyimg.com/viewers/pdf",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
@@ -219,10 +219,10 @@ export const PDFViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    PDF Viewer
+                    Free PDF Viewer
                   </h1>
                   <p className="text-xl text-red-100">
-                    View and analyze PDF documents with professional tools
+                    View, analyze, and manage PDF documents with professional tools - 100% free
                   </p>
                 </div>
               </div>
@@ -243,7 +243,8 @@ export const PDFViewer: React.FC = () => {
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your PDF documents or click to browse. Supports .pdf files up to 100MB each.
+              Drag and drop your PDF documents or click to browse. View PDFs with search, zoom, and navigation tools. 
+              Supports .pdf files up to 100MB each, with batch upload support for up to 20 files.
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -275,6 +276,20 @@ export const PDFViewer: React.FC = () => {
                   <h2 className="text-3xl font-bold text-gray-900">
                     Your PDF Files ({selectedFiles.length})
                   </h2>
+                </div>
+              </div>
+
+              {/* How to View Instructions */}
+              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-1">How to View PDFs</h4>
+                    <p className="text-sm text-blue-700">
+                      Click the <strong>"View PDF"</strong> button to open the document in a professional viewer with search, 
+                      zoom, print, and full-screen capabilities. The viewer opens in a new window for the best experience.
+                    </p>
+                  </div>
                 </div>
               </div>
               
@@ -332,14 +347,14 @@ export const PDFViewer: React.FC = () => {
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">PDF Viewing Features</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• High-quality PDF rendering</li>
-                  <li>• Zoom in/out controls</li>
-                  <li>• Page navigation</li>
-                  <li>• Full-screen viewing mode</li>
-                  <li>• Document search functionality</li>
-                  <li>• Print and download options</li>
-                  <li>• Text selection and copying</li>
-                  <li>• Bookmark navigation</li>
+                  <li>• <strong>High-quality rendering</strong> - Crystal clear PDF display</li>
+                  <li>• <strong>Zoom controls</strong> - Zoom in/out for detailed viewing</li>
+                  <li>• <strong>Page navigation</strong> - Easy multi-page browsing</li>
+                  <li>• <strong>Full-screen mode</strong> - Distraction-free reading</li>
+                  <li>• <strong>Document search</strong> - Find text within PDFs instantly</li>
+                  <li>• <strong>Print support</strong> - Print directly from viewer</li>
+                  <li>• <strong>Text selection</strong> - Copy and paste PDF content</li>
+                  <li>• <strong>Download options</strong> - Save PDFs locally</li>
                 </ul>
               </div>
               <div>
@@ -380,9 +395,9 @@ export const PDFViewer: React.FC = () => {
                 <h2 className="text-2xl font-bold">MorphyIMG</h2>
               </div>
               
-              <p className="text-gray-300 mb-6">
-                Professional PDF viewer for all your document viewing needs.
-              </p>
+            <p className="text-gray-300 mb-6">
+              Free professional PDF viewer for all your document viewing needs.
+            </p>
               
               <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
                 <span>© 2025 MorphyIMG. Built for PDF professionals.</span>
