@@ -28,8 +28,8 @@ export const FileViewer: React.FC<FileViewerProps> = ({ file, onClose }) => {
       
       if (FileProcessor.isImageFormat(format) || RAWProcessor.isRAWFormat(format)) {
         let url;
-        if (RAWProcessor.isRAWFormat(format) || RAWProcessor.isHEICFormat(file.name)) {
-          // For RAW files, try to get a processed preview
+        if (RAWProcessor.isRAWFormat(format) || RAWProcessor.isHEICFormat(file.name) || RAWProcessor.isTIFFFormat(file.name)) {
+          // For RAW files, HEIC, and TIFF, try to get a processed preview
           url = await RAWProcessor.createRAWPreview(file);
         } else {
           // For standard image formats

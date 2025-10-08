@@ -220,6 +220,31 @@ export class RAWProcessor {
       
       await this.initializeProcessor();
 
+      // For TIFF files - use backend API
+      if (this.isTIFFFormat(file.name)) {
+        try {
+          const formData = new FormData();
+          formData.append('file', file);
+
+          const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/tiff', {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (response.ok) {
+            const blob = await response.blob();
+            return URL.createObjectURL(blob);
+          } else {
+            console.warn('TIFF backend preview failed:', await response.text());
+            // Try direct display as fallback
+            return URL.createObjectURL(file);
+          }
+        } catch (error) {
+          console.warn('TIFF preview error:', error);
+          return URL.createObjectURL(file);
+        }
+      }
+
       // For HEIC/HEIF files - use backend API
       if (this.isHEICFormat(file.name)) {
         try {
@@ -667,6 +692,11 @@ export class RAWProcessor {
   static isHEICFormat(filename: string): boolean {
     const extension = filename.split('.').pop()?.toLowerCase();
     return ['heic', 'heif'].includes(extension || '');
+  }
+
+  static isTIFFFormat(filename: string): boolean {
+    const extension = filename.split('.').pop()?.toLowerCase();
+    return ['tif', 'tiff', 'tiff64', 'ptif'].includes(extension || '');
   }
 
   static formatFileSize(bytes: number): string {
