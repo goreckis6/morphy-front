@@ -338,13 +338,14 @@ export const HEICViewer: React.FC = () => {
         </div>
       </footer>
 
-      {/* File Viewer Modal */}
-      {viewerFile && (
-        <FileViewer
-          file={viewerFile}
-          onClose={() => setViewerFile(null)}
-        />
-      )}
+        {/* File Viewer Modal */}
+        {viewerFile && (
+          <FileViewer
+            file={viewerFile}
+            onClose={() => setViewerFile(null)}
+          />
+        )}
+      </div>
     </>
   );
 };
