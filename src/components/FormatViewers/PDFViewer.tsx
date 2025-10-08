@@ -270,6 +270,73 @@ export const PDFViewer: React.FC = () => {
             )}
           </div>
 
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your PDF Files ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+
+              {/* How to View Instructions */}
+              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-1">How to View PDFs</h4>
+                    <p className="text-sm text-blue-700">
+                      Click the <strong>"View PDF"</strong> button to open the document in a professional viewer with search, 
+                      zoom, print, and full-screen capabilities. The viewer opens in a new window for the best experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-red-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 bg-red-100 rounded-lg">
+                        <FileText className="w-6 h-6 text-red-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-gray-800 truncate">
+                          {file.name}
+                        </h3>
+                        <p className="text-xs text-gray-500">
+                          {(file.size / 1024 / 1024).toFixed(2)} MB
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <button
+                        onClick={() => handleViewPDF(file)}
+                        className="w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>View PDF</span>
+                      </button>
+                      <button
+                        onClick={() => handleDownload(file)}
+                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                      >
+                        <Download className="w-4 h-4" />
+                        <span>Download</span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* About PDF Format Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
             <div className="flex items-center space-x-3 mb-6">
@@ -356,110 +423,40 @@ export const PDFViewer: React.FC = () => {
             </div>
           </div>
 
-          {/* Preview Section */}
-          {selectedFiles.length > 0 && (
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                    <CheckCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900">
-                    Your PDF Files ({selectedFiles.length})
-                  </h2>
-                </div>
-              </div>
-
-              {/* How to View Instructions */}
-              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-start space-x-3">
-                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View PDFs</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View PDF"</strong> button to open the document in a professional viewer with search, 
-                      zoom, print, and full-screen capabilities. The viewer opens in a new window for the best experience.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {selectedFiles.map((file, index) => (
-                  <div key={index} className="bg-gradient-to-br from-gray-50 to-red-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="p-2 bg-red-100 rounded-lg">
-                        <FileText className="w-6 h-6 text-red-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-gray-800 truncate">
-                          {file.name}
-                        </h3>
-                        <p className="text-xs text-gray-500">
-                          {(file.size / 1024 / 1024).toFixed(2)} MB
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <button
-                        onClick={() => handleViewPDF(file)}
-                        className="w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>View PDF</span>
-                      </button>
-                      <button
-                        onClick={() => handleDownload(file)}
-                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>Download</span>
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Information Section */}
+          {/* Key Features Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
-                <Info className="w-6 h-6 text-white" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Why Choose PDF Format?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-pink-50 rounded-xl border border-red-100">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Universal Compatibility</h3>
+                <p className="text-gray-600">
+                  Works seamlessly on all platforms, devices, and operating systems without requiring special software - true document portability
+                </p>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900">
-                About PDF Viewer
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">PDF Viewing Features</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• <strong>High-quality rendering</strong> - Crystal clear PDF display</li>
-                  <li>• <strong>Zoom controls</strong> - Zoom in/out for detailed viewing</li>
-                  <li>• <strong>Page navigation</strong> - Easy multi-page browsing</li>
-                  <li>• <strong>Full-screen mode</strong> - Distraction-free reading</li>
-                  <li>• <strong>Document search</strong> - Find text within PDFs instantly</li>
-                  <li>• <strong>Print support</strong> - Print directly from viewer</li>
-                  <li>• <strong>Text selection</strong> - Copy and paste PDF content</li>
-                  <li>• <strong>Download options</strong> - Save PDFs locally</li>
-                </ul>
+
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Preserved Formatting</h3>
+                <p className="text-gray-600">
+                  Maintains exact layout, fonts, images, and formatting across all devices - what you see is what you get everywhere
+                </p>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Supported PDF Types</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Standard PDF documents</li>
-                  <li>• PDF/A (archival format)</li>
-                  <li>• PDF/X (print-ready format)</li>
-                  <li>• Password-protected PDFs</li>
-                  <li>• PDF forms and annotations</li>
-                  <li>• Multi-page documents</li>
-                  <li>• High-resolution PDFs</li>
-                  <li>• Vector and raster content</li>
-                </ul>
+
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-100">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">Advanced Security</h3>
+                <p className="text-gray-600">
+                  Built-in encryption, password protection, and digital signatures keep your documents secure and tamper-proof
+                </p>
               </div>
             </div>
           </div>

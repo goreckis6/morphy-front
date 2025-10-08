@@ -1,20 +1,30 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Upload, Eye, Download, ArrowLeft, File } from 'lucide-react';
+import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
-import { FileViewer } from '../FileViewer';
+import { Header } from '../Header';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const DOCXViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
 
   const handleFilesSelected = (files: File[]) => {
-    // Filter only DOCX files
+    // Clear previous validation errors
+    clearValidationError();
+    
+    // Filter only DOCX/DOC files
     const docxFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return ['docx', 'doc', 'docm', 'dotx', 'dotm'].includes(extension || '');
     });
-    setSelectedFiles(docxFiles);
+    
+    // Validate the files
+    const validation = validateBatchFiles(docxFiles);
+    
+    if (validation.isValid) {
+      setSelectedFiles(docxFiles);
+    }
   };
 
   const handleDownload = (file: File) => {
@@ -31,130 +41,245 @@ export const DOCXViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG</title>
-        <meta name="description" content="Professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM, DOTX, and DOTM files online with our advanced document viewer." />
-        <meta name="keywords" content="DOCX viewer, Word document viewer, Microsoft Word, DOC viewer, document preview, online DOCX reader, DOCX viewer online" />
-        <meta property="og:title" content="DOCX Viewer - View Microsoft Word Documents Online" />
-        <meta property="og:description" content="Professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM, DOTX, and DOTM files online." />
+        <title>Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG</title>
+        <meta name="description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools. Supports batch viewing up to 20 files. 100% free DOCX viewer tool." />
+        <meta name="keywords" content="DOCX viewer, Word document viewer, Microsoft Word viewer, DOC viewer, document preview, online DOCX reader, DOCX viewer online, DOCX viewer free" />
+        <meta property="og:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG" />
+        <meta property="og:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyimg.com/viewers/docx" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DOCX Viewer - View Microsoft Word Documents Online" />
-        <meta name="twitter:description" content="Professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM, DOTX, and DOTM files online." />
-        
+        <meta name="twitter:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG" />
+        <meta name="twitter:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "DOCX Viewer",
-            "description": "Professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM, DOTX, and DOTM files online.",
+            "name": "Free DOCX Viewer",
+            "description": "Free professional DOCX viewer for Microsoft Word documents",
             "url": "https://morphyimg.com/viewers/docx",
-            "applicationCategory": "Document Viewer",
+            "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "USD"
-            },
-            "creator": {
-              "@type": "Organization",
-              "name": "MorphyIMG"
             }
           })}
         </script>
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
+        <Header />
+        
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-6">
-                <div className="p-4 bg-white/20 backdrop-blur-sm rounded-2xl">
+        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => window.location.href = '/viewers'}
+                  className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                </button>
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                   <FileText className="w-12 h-12 text-white" />
                 </div>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                DOCX Viewer
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Professional Microsoft Word document viewer. Upload and preview DOCX, DOC, DOCM, DOTX, and DOTM files online.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <span className="bg-white/20 px-3 py-1 rounded-full">✓ DOCX Support</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full">✓ DOC Support</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full">✓ DOCM Support</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full">✓ DOTX Support</span>
-                <span className="bg-white/20 px-3 py-1 rounded-full">✓ DOTM Support</span>
+                <div>
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Free DOCX Viewer
+                  </h1>
+                  <p className="text-xl text-blue-100">
+                    View and analyze Microsoft Word documents with professional tools - 100% free
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Upload Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                Upload DOCX Documents
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Upload DOCX Files
               </h2>
-              <p className="text-lg text-gray-600">
-                Drag and drop your Microsoft Word documents or click to browse
-              </p>
             </div>
-            
+            <p className="text-gray-600 mb-6">
+              Drag and drop your Microsoft Word documents or click to browse. Supports DOCX, DOC, DOCM, DOTX, DOTM files up to 100MB each, with batch upload support for up to 20 files.
+            </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
               acceptedFormats={['docx', 'doc', 'docm', 'dotx', 'dotm']}
               maxFiles={20}
-              maxSize={100 * 1024 * 1024} // 100MB
+              maxSize={100 * 1024 * 1024}
               hideFormatList={true}
               showTotalSize={true}
             />
+            
+            {validationError && (
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div className="flex items-center">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-2" />
+                  <span className="text-red-700 text-sm">{validationError.message}</span>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* About DOCX Format Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
+                <FileText className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                About DOCX Format
+              </h2>
+            </div>
+            
+            <div className="prose max-w-none text-gray-600">
+              <p className="mb-6">
+                DOCX (Office Open XML Document) is the default file format for Microsoft Word documents since Word 2007. 
+                It's based on the Open XML standard and uses ZIP compression to reduce file size while maintaining 
+                rich formatting capabilities. DOCX files support advanced features like styles, themes, embedded objects, 
+                charts, tables, and complex formatting options.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Smaller file sizes</strong> - ZIP compression reduces size by up to 75%</li>
+                    <li>• <strong>Better recovery</strong> - Improved file corruption recovery</li>
+                    <li>• <strong>Enhanced security</strong> - Built-in encryption and digital signatures</li>
+                    <li>• <strong>Cross-platform</strong> - Compatible with multiple office suites</li>
+                    <li>• <strong>Rich formatting</strong> - Advanced typography and layout options</li>
+                    <li>• <strong>Collaboration</strong> - Track changes and comments support</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Business documents</strong> - Reports, proposals, contracts</li>
+                    <li>• <strong>Academic papers</strong> - Research papers, theses, publications</li>
+                    <li>• <strong>Legal documents</strong> - Contracts, agreements, court documents</li>
+                    <li>• <strong>Templates</strong> - Document templates and forms</li>
+                    <li>• <strong>Collaboration</strong> - Multi-author document editing</li>
+                    <li>• <strong>Publishing</strong> - Books, manuals, and documentation</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Technical Specifications */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">File Extensions</td>
+                        <td className="py-2 text-sm text-gray-900">.docx, .doc, .docm, .dotx, .dotm</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
+                        <td className="py-2 text-sm text-gray-900">application/vnd.openxmlformats-officedocument.wordprocessingml.document</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
+                        <td className="py-2 text-sm text-gray-900">Office Open XML (OOXML) - ISO/IEC 29500</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
+                        <td className="py-2 text-sm text-gray-900">Microsoft Corporation (2007)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
+                        <td className="py-2 text-sm text-gray-900">ZIP-based compression</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
+                        <td className="py-2 text-sm text-gray-900">UTF-8</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Max File Size</td>
+                        <td className="py-2 text-sm text-gray-900">512 MB (practical limit)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Preview Section */}
           {selectedFiles.length > 0 && (
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-gray-800">
-                  Selected Documents ({selectedFiles.length})
-                </h2>
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your DOCX Files ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+
+              {/* How to View Instructions */}
+              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-1">How to View DOCX Files</h4>
+                    <p className="text-sm text-blue-700">
+                      Click the <strong>"View Document"</strong> button to open the Word document in a preview modal. 
+                      You can also download the original file for offline viewing or editing.
+                    </p>
+                  </div>
+                </div>
               </div>
               
-              <div className="grid gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {selectedFiles.map((file, index) => (
-                  <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 bg-gray-50">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        <div className="p-3 bg-blue-100 rounded-xl">
-                          <FileText className="w-8 h-8 text-blue-600" />
-                        </div>
-                        <div>
-                          <h3 className="text-lg font-semibold text-gray-800">
-                            {file.name}
-                          </h3>
-                          <p className="text-sm text-gray-600">
-                            {(file.size / 1024 / 1024).toFixed(2)} MB • {file.name.split('.').pop()?.toUpperCase()} Document
-                          </p>
-                        </div>
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 bg-blue-100 rounded-lg">
+                        <FileText className="w-6 h-6 text-blue-600" />
                       </div>
-                      <div className="flex space-x-3">
-                        <button
-                          onClick={() => setViewerFile(file)}
-                          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2"
-                        >
-                          <Eye className="w-5 h-5" />
-                          <span>View Document</span>
-                        </button>
-                        <button
-                          onClick={() => handleDownload(file)}
-                          className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2"
-                        >
-                          <Download className="w-5 h-5" />
-                          <span>Download</span>
-                        </button>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-gray-800 truncate">
+                          {file.name}
+                        </h3>
+                        <p className="text-xs text-gray-500">
+                          {(file.size / 1024 / 1024).toFixed(2)} MB
+                        </p>
                       </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <button
+                        onClick={() => alert('DOCX preview feature coming soon! Use download for now.')}
+                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>View Document</span>
+                      </button>
+                      <button
+                        onClick={() => handleDownload(file)}
+                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                      >
+                        <Download className="w-4 h-4" />
+                        <span>Download</span>
+                      </button>
                     </div>
                   </div>
                 ))}
@@ -162,145 +287,49 @@ export const DOCXViewer: React.FC = () => {
             </div>
           )}
 
-          {/* Information Sections */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
-            {/* About DOCX */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <FileText className="w-6 h-6 text-blue-600 mr-3" />
-                About DOCX Format
-              </h3>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  DOCX (Office Open XML Document) is the default file format for Microsoft Word documents since Word 2007. 
-                  It's based on the Open XML standard and uses ZIP compression to reduce file size while maintaining 
-                  rich formatting capabilities.
-                </p>
-                <p>
-                  DOCX files support advanced features like styles, themes, embedded objects, charts, tables, 
-                  and complex formatting options, making them ideal for professional document creation and collaboration.
-                </p>
+          {/* Information Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl">
+                <Info className="w-6 h-6 text-white" />
               </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                About DOCX Viewer
+              </h2>
             </div>
-
-            {/* Technical Specs */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <File className="w-6 h-6 text-blue-600 mr-3" />
-                Technical Specifications
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="font-semibold text-gray-700">File Extensions</span>
-                  <span className="text-gray-600 font-mono text-sm">.docx, .doc, .docm, .dotx, .dotm</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="font-semibold text-gray-700">MIME Type</span>
-                  <span className="text-gray-600 font-mono text-sm">application/vnd.openxmlformats-officedocument.wordprocessingml.document</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="font-semibold text-gray-700">Standard</span>
-                  <span className="text-gray-600">Office Open XML (OOXML)</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="font-semibold text-gray-700">Compression</span>
-                  <span className="text-gray-600">ZIP-based compression</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-gray-100">
-                  <span className="font-semibold text-gray-700">Max File Size</span>
-                  <span className="text-gray-600">512 MB (practical limit)</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span className="font-semibold text-gray-700">Character Encoding</span>
-                  <span className="text-gray-600">UTF-8</span>
-                </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">DOCX Viewing Features</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• <strong>Document preview</strong> - View DOCX files online</li>
+                  <li>• <strong>Batch upload</strong> - Process multiple files at once</li>
+                  <li>• <strong>Format preservation</strong> - Maintains original formatting</li>
+                  <li>• <strong>Text extraction</strong> - Copy text from documents</li>
+                  <li>• <strong>Download support</strong> - Save files locally</li>
+                  <li>• <strong>File info display</strong> - View file size and type</li>
+                  <li>• <strong>Security</strong> - Client-side processing only</li>
+                  <li>• <strong>No registration</strong> - Free to use instantly</li>
+                </ul>
               </div>
-            </div>
-          </div>
-
-          {/* Key Features */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-              Key Features of DOCX
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-blue-50 rounded-xl">
-                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Smaller File Sizes</h4>
-                <p className="text-sm text-gray-600">ZIP compression reduces file size by up to 75% compared to legacy DOC format</p>
-              </div>
-              <div className="text-center p-6 bg-green-50 rounded-xl">
-                <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Better Recovery</h4>
-                <p className="text-sm text-gray-600">Improved file corruption recovery capabilities with modular structure</p>
-              </div>
-              <div className="text-center p-6 bg-purple-50 rounded-xl">
-                <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Enhanced Security</h4>
-                <p className="text-sm text-gray-600">Built-in encryption and digital signature support for document protection</p>
-              </div>
-              <div className="text-center p-6 bg-orange-50 rounded-xl">
-                <div className="w-12 h-12 bg-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Cross-Platform</h4>
-                <p className="text-sm text-gray-600">Compatible with multiple office suites and operating systems</p>
-              </div>
-              <div className="text-center p-6 bg-red-50 rounded-xl">
-                <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Rich Formatting</h4>
-                <p className="text-sm text-gray-600">Advanced typography and layout options for professional documents</p>
-              </div>
-              <div className="text-center p-6 bg-indigo-50 rounded-xl">
-                <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">Collaboration</h4>
-                <p className="text-sm text-gray-600">Track changes and comments support for team collaboration</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Use Cases */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
-              Best Use Cases for DOCX
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
-                <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-3">Business Documents</h4>
-                <p className="text-gray-600">Reports, proposals, contracts, and official correspondence</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
-                <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-3">Academic Papers</h4>
-                <p className="text-gray-600">Research papers, theses, dissertations, and academic publications</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl">
-                <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-3">Legal Documents</h4>
-                <p className="text-gray-600">Contracts, agreements, legal briefs, and court documents</p>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Supported File Types</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• DOCX - Microsoft Word Document</li>
+                  <li>• DOC - Legacy Word Document</li>
+                  <li>• DOCM - Word Macro-Enabled Document</li>
+                  <li>• DOTX - Word Template</li>
+                  <li>• DOTM - Word Macro-Enabled Template</li>
+                  <li>• All Word 2007+ formats</li>
+                  <li>• Office Open XML compliant files</li>
+                  <li>• Password-protected documents (limited)</li>
+                </ul>
               </div>
             </div>
           </div>
 
           {/* Back to Viewers Button */}
-          <div className="text-center">
+          <div className="text-center mt-8">
             <a
               href="/viewers"
               className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -322,7 +351,7 @@ export const DOCXViewer: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6">
-                Professional DOCX viewer for all your document processing needs.
+                Free professional DOCX viewer for all your document viewing needs.
               </p>
               
               <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
@@ -331,14 +360,6 @@ export const DOCXViewer: React.FC = () => {
             </div>
           </div>
         </footer>
-
-        {/* File Viewer Modal */}
-        {viewerFile && (
-          <FileViewer
-            file={viewerFile}
-            onClose={() => setViewerFile(null)}
-          />
-        )}
       </div>
     </>
   );
