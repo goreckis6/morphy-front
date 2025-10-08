@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { ArrowLeft, Upload, FileText, Download, Share2, Eye, X } from 'lucide-react';
 import { Header } from '../Header';
+import { Helmet } from 'react-helmet-async';
+import { FileUpload } from '../FileUpload';
 
 interface RTFFile {
   file: File;

@@ -78,6 +78,9 @@ import { BMPViewer } from './components/FormatViewers/BMPViewer';
 import { ICOViewer } from './components/FormatViewers/ICOViewer';
 import { HEICViewer } from './components/FormatViewers/HEICViewer';
 import { AVIFViewer } from './components/FormatViewers/AVIFViewer';
+import { PDFViewer } from './components/FormatViewers/PDFViewer';
+import { DOCXViewer } from './components/FormatViewers/DOCXViewer';
+import { ODTViewer } from './components/FormatViewers/ODTViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -754,6 +757,29 @@ function App() {
     );
   }
 
+  if (currentPath === '/viewers/pdf') {
+    return (
+      <AuthProvider>
+        <PDFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/docx' || currentPath === '/viewers/doc') {
+    return (
+      <AuthProvider>
+        <DOCXViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/odt') {
+    return (
+      <AuthProvider>
+        <ODTViewer />
+      </AuthProvider>
+    );
+  }
 
   const features = [
     { icon: <Zap className="w-12 h-12 text-yellow-500" />, title: 'Lightning Fast', description: 'Process files in seconds with our optimized conversion engine powered by Python and Sharp' },

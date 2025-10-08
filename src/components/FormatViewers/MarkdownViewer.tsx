@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FileText, Upload, Eye, Download, Share2, ArrowLeft, Code, BookOpen, Edit } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
+import { Helmet } from 'react-helmet-async';
 
 export const MarkdownViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -17,31 +18,69 @@ export const MarkdownViewer: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => window.location.href = '/viewer'}
-              className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div className="p-3 bg-gray-100 rounded-xl">
-              <FileText className="w-8 h-8 text-gray-600" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                Markdown Viewer & Editor
+    <>
+      <Helmet>
+        <title>Markdown Viewer - View & Preview Markdown Files Online | MorphyIMG</title>
+        <meta name="description" content="Professional Markdown viewer for viewing, previewing, and analyzing Markdown (.md) files online. Support for .md, .markdown, .mdown, .mkd, .mdx files with syntax highlighting and live preview." />
+        <meta name="keywords" content="markdown viewer, markdown preview, .md viewer, markdown editor, markdown files, documentation viewer, README viewer, markdown syntax highlighting" />
+        <meta property="og:title" content="Markdown Viewer - View & Preview Markdown Files Online" />
+        <meta property="og:description" content="Professional Markdown viewer for viewing, previewing, and analyzing Markdown files online with syntax highlighting and live preview." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://morphyimg.com/viewers/markdown" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Markdown Viewer - View & Preview Markdown Files Online" />
+        <meta name="twitter:description" content="Professional Markdown viewer for viewing, previewing, and analyzing Markdown files online with syntax highlighting and live preview." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Markdown Viewer",
+            "description": "Professional Markdown viewer for viewing, previewing, and analyzing Markdown files online",
+            "url": "https://morphyimg.com/viewers/markdown",
+            "applicationCategory": "DocumentViewer",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Markdown file viewing",
+              "Syntax highlighting",
+              "Live preview",
+              "Multiple format support",
+              "File upload and analysis"
+            ]
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-br from-gray-600 via-gray-700 to-gray-800 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-6">
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl">
+                  <FileText className="w-12 h-12 text-white" />
+                </div>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Markdown Viewer
               </h1>
-              <p className="text-lg text-gray-600 mt-2">
-                Upload, view, and analyze Markdown (.md) files
+              <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                Professional Markdown viewer for viewing, previewing, and analyzing Markdown files online. 
+                Support for .md, .markdown, .mdown, .mkd, .mdx files with syntax highlighting and live preview.
               </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">✓ Syntax Highlighting</span>
+                <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">✓ Live Preview</span>
+                <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">✓ Multiple Formats</span>
+                <span className="bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">✓ Fast Processing</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -53,7 +92,10 @@ export const MarkdownViewer: React.FC = () => {
           <FileUpload 
             onFilesSelected={handleFilesSelected}
             acceptedFormats={['md', 'markdown', 'mdown', 'mkd', 'mdx']}
-            maxFiles={40}
+            maxFiles={20}
+            maxSize={100}
+            hideFormatList={true}
+            showTotalSize={true}
           />
         </div>
 
@@ -73,7 +115,7 @@ export const MarkdownViewer: React.FC = () => {
                     {file.name}
                   </div>
                   <div className="text-xs text-gray-500 mb-3">
-                    {(file.size / 1024).toFixed(1)} KB • Markdown
+                    {(file.size / 1024 / 1024).toFixed(2)} MB • Markdown
                   </div>
                   <div className="flex space-x-2">
                     <button
@@ -223,50 +265,16 @@ export const MarkdownViewer: React.FC = () => {
           </div>
         </div>
 
-        {/* SEO Content */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Back to Home - All Supported Formats
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Standard Image Formats</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• JPEG (Joint Photographic Experts Group)</li>
-                <li>• JPEG 2000 Core Image File</li>
-                <li>• JPEG 2000 Image</li>
-                <li>• PNG (Portable Network Graphics)</li>
-                <li>• Web Picture Format</li>
-                <li>• AV1 Image File Format</li>
-                <li>• GIF (Graphics Interchange Format)</li>
-                <li>• TIFF (Tagged Image File Format)</li>
-                <li>• Pyramid encoded TIFF</li>
-                <li>• Bitmap Image</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Professional & Specialized</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• High Efficiency Image Container</li>
-                <li>• Scalable Vector Graphics</li>
-                <li>• Icon formats (ICO, CUR)</li>
-                <li>• RAW Camera formats</li>
-                <li>• Professional editing formats</li>
-                <li>• Document formats (PDF, DOCX, ODT)</li>
-                <li>• Spreadsheet formats (XLSX, CSV, ODS)</li>
-                <li>• Code formats (JS, Python, CSS, HTML)</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center mt-6">
-            <a
-              href="/"
-              className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Back to Home
-            </a>
-          </div>
+        {/* Back to Viewers Button */}
+        <div className="text-center">
+          <a
+            href="/viewers"
+            className="inline-block bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            ← Back to All Viewers
+          </a>
         </div>
+      </div>
         
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-12 mt-20">
@@ -280,7 +288,7 @@ export const MarkdownViewer: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6">
-                Professional Markdown viewer and converter for all your documentation needs.
+                Professional Markdown viewer for all your documentation needs.
               </p>
               
               <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
@@ -298,6 +306,7 @@ export const MarkdownViewer: React.FC = () => {
           onClose={() => setViewerFile(null)}
         />
       )}
-    </div>
+      </div>
+    </>
   );
 };

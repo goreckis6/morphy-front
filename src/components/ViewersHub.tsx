@@ -32,10 +32,10 @@ export const ViewersHub: React.FC = () => {
       title: "DOCUMENT FORMATS",
       icon: <FileText className="w-6 h-6 text-green-600" />,
       formats: [
-        { name: "PDF Viewer", description: "View PDF documents with page navigation", path: "/viewer/pdf", category: "Document", icon: <FileText className="w-5 h-5" /> },
-        { name: "DOCX Viewer", description: "View Microsoft Word documents", path: "/viewer/docx", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "PDF Viewer", description: "View PDF documents with page navigation", path: "/viewers/pdf", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "DOCX Viewer", description: "View Microsoft Word documents", path: "/viewers/docx", category: "Document", icon: <FileText className="w-5 h-5" /> },
         { name: "RTF Viewer", description: "View Rich Text Format documents", path: "/viewer/rtf", category: "Document", icon: <FileText className="w-5 h-5" /> },
-        { name: "ODT Viewer", description: "View OpenDocument Text files", path: "/viewer/odt", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "ODT Viewer", description: "View OpenDocument Text files", path: "/viewers/odt", category: "Document", icon: <FileText className="w-5 h-5" /> },
         { name: "TXT Viewer", description: "View plain text files with syntax highlighting", path: "/viewer/txt", category: "Document", icon: <FileText className="w-5 h-5" /> },
         { name: "Markdown Viewer", description: "View Markdown files with rendered formatting", path: "/viewer/md", category: "Document", icon: <FileText className="w-5 h-5" /> }
       ]
@@ -149,7 +149,7 @@ export const ViewersHub: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif') ? (
+                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif' || viewer.path === '/viewers/pdf' || viewer.path === '/viewers/docx' || viewer.path === '/viewers/odt') ? (
                           <a
                             href={viewer.path}
                             className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
