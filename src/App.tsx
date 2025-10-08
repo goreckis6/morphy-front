@@ -80,6 +80,8 @@ import { HEICViewer } from './components/FormatViewers/HEICViewer';
 import { AVIFViewer } from './components/FormatViewers/AVIFViewer';
 import { PDFViewer } from './components/FormatViewers/PDFViewer';
 import { RTFViewer } from './components/FormatViewers/RTFViewer';
+import { TXTViewer } from './components/FormatViewers/TXTViewer';
+import { MarkdownViewer } from './components/FormatViewers/MarkdownViewer';
 import { DOCXViewer } from './components/FormatViewers/DOCXViewer';
 import { ODTViewer } from './components/FormatViewers/ODTViewer';
 import { AuthProvider } from './contexts/AuthContext';
@@ -770,6 +772,22 @@ function App() {
     return (
       <AuthProvider>
         <RTFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/txt') {
+    return (
+      <AuthProvider>
+        <TXTViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/md' || currentPath === '/viewers/markdown') {
+    return (
+      <AuthProvider>
+        <MarkdownViewer />
       </AuthProvider>
     );
   }
