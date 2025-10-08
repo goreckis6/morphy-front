@@ -43,6 +43,21 @@ export const TXTViewer: React.FC = () => {
       // Read file content
       const content = await file.text();
       
+      // Escape HTML to prevent XSS
+      const escapeHtml = (text: string) => {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+      };
+
+      // Prepare lines with line numbers
+      const lines = content.split('\n');
+      const numberedLines = lines.map((line, i) => {
+        const lineNum = (i + 1).toString().padStart(4, ' ');
+        const escapedLine = escapeHtml(line);
+        return `<span class="line-numbers">${lineNum}</span>${escapedLine}`;
+      }).join('\n');
+      
       // Open in new window with styled viewer
       const viewerWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!viewerWindow) {
@@ -50,27 +65,12 @@ export const TXTViewer: React.FC = () => {
         return;
       }
 
-      // Detect file type for syntax highlighting class
-      const extension = file.name.split('.').pop()?.toLowerCase() || 'txt';
-      const languageClass = {
-        'js': 'language-javascript',
-        'py': 'language-python',
-        'java': 'language-java',
-        'c': 'language-c',
-        'cpp': 'language-cpp',
-        'css': 'language-css',
-        'html': 'language-html',
-        'xml': 'language-xml',
-        'json': 'language-json',
-        'md': 'language-markdown',
-      }[extension] || 'language-plaintext';
-
       viewerWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
           <meta charset="UTF-8">
-          <title>${file.name}</title>
+          <title>${escapeHtml(file.name)}</title>
           <style>
             * {
               margin: 0;
@@ -181,8 +181,8 @@ export const TXTViewer: React.FC = () => {
             <div class="toolbar-info">
               <span>📄</span>
               <div class="file-info">
-                <span class="file-name">${file.name}</span>
-                <span class="file-meta">${(file.size / 1024).toFixed(2)} KB • ${content.split('\\n').length} lines</span>
+                <span class="file-name">${escapeHtml(file.name)}</span>
+                <span class="file-meta">${(file.size / 1024).toFixed(2)} KB • ${lines.length} lines</span>
               </div>
             </div>
             <div>
@@ -193,20 +193,13 @@ export const TXTViewer: React.FC = () => {
           </div>
           <div class="content-container">
             <div class="text-container">
-              <pre id="content">${content.split('\\n').map((line, i) => 
-                `<span class="line-numbers">${(i + 1).toString().padStart(4, ' ')}</span>${escapeHtml(line)}`
-              ).join('\\n')}</pre>
+              <pre id="content">${numberedLines}</pre>
             </div>
           </div>
           <script>
-            function escapeHtml(text) {
-              const div = document.createElement('div');
-              div.textContent = text;
-              return div.innerHTML;
-            }
+            const rawContent = ${JSON.stringify(content)};
             function copyContent() {
-              const content = document.getElementById('content').textContent;
-              navigator.clipboard.writeText(content).then(() => {
+              navigator.clipboard.writeText(rawContent).then(() => {
                 alert('Content copied to clipboard!');
               }).catch(() => {
                 alert('Failed to copy content');
