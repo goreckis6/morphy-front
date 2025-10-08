@@ -327,6 +327,7 @@ export const AVIFViewer: React.FC = () => {
           </div>
         </div>
       )}
+      </div>
     </>
   );
 };
