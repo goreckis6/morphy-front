@@ -18,9 +18,9 @@ export const ViewersHub: React.FC = () => {
       formats: [
         { name: "JPEG Viewer", description: "View JPEG images with zoom and pan controls", path: "/viewers/jpg", category: "Image", icon: <Image className="w-5 h-5" /> },
         { name: "PNG Viewer", description: "View PNG images with transparency support", path: "/viewers/png", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewer/webp", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewer/gif", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewer/svg", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewers/webp", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewers/gif", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewers/svg", category: "Image", icon: <Image className="w-5 h-5" /> },
         { name: "TIFF Viewer", description: "View TIFF images with multi-page support", path: "/viewer/tiff", category: "Image", icon: <Image className="w-5 h-5" /> },
         { name: "BMP Viewer", description: "View bitmap images with color depth support", path: "/viewer/bmp", category: "Image", icon: <Image className="w-5 h-5" /> },
         { name: "ICO Viewer", description: "View Windows icon files with multiple sizes", path: "/viewer/ico", category: "Image", icon: <Image className="w-5 h-5" /> },
@@ -149,7 +149,7 @@ export const ViewersHub: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png') ? (
+                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg') ? (
                           <a
                             href={viewer.path}
                             className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"

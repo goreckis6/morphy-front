@@ -53,22 +53,6 @@ export const JPEGViewer: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Feature Pills */}
-          <div className="flex flex-wrap gap-3 mt-8">
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-              <span className="text-sm font-medium text-white">📸 EXIF Metadata</span>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-              <span className="text-sm font-medium text-white">🔍 High-Quality Preview</span>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-              <span className="text-sm font-medium text-white">⚡ Batch Processing</span>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-              <span className="text-sm font-medium text-white">🎨 Format Conversion</span>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -93,6 +77,7 @@ export const JPEGViewer: React.FC = () => {
             maxFiles={20}
             maxSize={100 * 1024 * 1024}
             hideFormatList={true}
+            showTotalSize={true}
           />
         </div>
 

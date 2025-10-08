@@ -8,6 +8,7 @@ interface FileUploadProps {
   maxSize?: number;
   acceptedFormats?: string[];
   hideFormatList?: boolean;
+  showTotalSize?: boolean;
 }
 
 export const FileUpload: React.FC<FileUploadProps> = ({
@@ -15,7 +16,8 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   maxFiles = 10,
   maxSize = 100 * 1024 * 1024, // 100MB
   acceptedFormats,
-  hideFormatList = false
+  hideFormatList = false,
+  showTotalSize = false
 }) => {
   const [dragActive, setDragActive] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -118,7 +120,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
             Choose Files
           </label>
           <div className="text-sm text-gray-500 mt-4 space-y-1">
-            <p className="font-medium">✓ Max {maxFiles} files • Up to {FileProcessor.formatFileSize(maxSize)} each</p>
+            <p className="font-medium">✓ Max {maxFiles} files • Up to {FileProcessor.formatFileSize(maxSize)} {showTotalSize ? 'Total' : 'each'}</p>
             {!hideFormatList && (
               <p>✓ CSV, AVRO, EPUB, DOC, DOCX, DNG, CR2, EPS, GIF, BMP & more</p>
             )}

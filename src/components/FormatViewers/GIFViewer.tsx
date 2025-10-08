@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Image, Upload, Eye, Download, Share2, ArrowLeft, Play, Palette, Zap } from 'lucide-react';
+import { Image, Upload, Eye, Download, Share2, ArrowLeft, Play, Palette, Zap, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
+import { Helmet } from 'react-helmet-async';
 
 export const GIFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -18,94 +19,131 @@ export const GIFViewer: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => window.location.href = '/viewer'}
-              className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div className="p-3 bg-purple-100 rounded-xl">
-              <Image className="w-8 h-8 text-purple-600" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                GIF Viewer & Converter
-              </h1>
-              <p className="text-lg text-gray-600 mt-2">
-                Upload, view, and convert animated GIF images online
-              </p>
+    <>
+      <Helmet>
+        <title>GIF Viewer - Free Online Animated GIF Viewer and Converter</title>
+        <meta name="description" content="View and convert animated GIF images online for free. Support for animations, transparency, and frame extraction. Up to 20 files, 100MB total. No registration required." />
+        <meta name="keywords" content="GIF viewer, animated GIF, GIF to MP4, GIF to WebP, animation viewer, frame extraction, meme viewer, batch processing" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-purple-600 via-pink-500 to-fuchsia-600 text-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <a
+                  href="/viewers"
+                  className="p-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-xl transition-all border border-white/20"
+                >
+                  <ArrowLeft className="w-6 h-6 text-white" />
+                </a>
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                  <Image className="w-12 h-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-5xl font-bold mb-3">
+                    GIF Viewer
+                  </h1>
+                  <p className="text-xl text-purple-100">
+                    View and convert animated GIF images with playback controls
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Upload Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Upload GIF Files
-          </h2>
-          <FileUpload 
-            onFilesSelected={handleFilesSelected}
-            acceptedFormats={['gif']}
-            maxFiles={30}
-          />
-        </div>
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Upload Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Upload GIF Files
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Drag and drop your animated GIF images or click to browse. Supports animations, transparency, and frame extraction up to 100MB total.
+            </p>
+            <FileUpload 
+              onFilesSelected={handleFilesSelected}
+              acceptedFormats={['gif']}
+              maxFiles={20}
+              maxSize={100 * 1024 * 1024}
+              hideFormatList={true}
+              showTotalSize={true}
+            />
+          </div>
 
-        {/* Preview Section */}
-        {selectedFiles.length > 0 && (
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Preview GIF Files ({selectedFiles.length})
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {selectedFiles.map((file, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
-                  <div className="aspect-square bg-gray-200 rounded-lg mb-3 overflow-hidden relative">
-                    <img
-                      src={URL.createObjectURL(file)}
-                      alt={file.name}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full flex items-center space-x-1">
-                      <Play className="w-3 h-3" />
-                      <span>GIF</span>
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your GIF Files ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md relative">
+                      <img
+                        src={URL.createObjectURL(file)}
+                        alt={file.name}
+                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                      />
+                      <div className="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full flex items-center space-x-1">
+                        <Play className="w-3 h-3" />
+                        <span>GIF</span>
+                      </div>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
+                      {file.name}
+                    </div>
+                    <div className="text-xs text-gray-600 mb-3 font-medium">
+                      {(file.size / 1024 / 1024).toFixed(2)} MB • Animated GIF
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => setViewerFile(file)}
+                        className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>View</span>
+                      </button>
+                      <button 
+                        onClick={() => {
+                          const url = URL.createObjectURL(file);
+                          const a = document.createElement('a');
+                          a.href = url;
+                          a.download = file.name;
+                          a.click();
+                          URL.revokeObjectURL(url);
+                        }}
+                        className="p-2 text-purple-600 hover:bg-purple-100 rounded-lg transition-colors"
+                        title="Download"
+                      >
+                        <Download className="w-4 h-4" />
+                      </button>
                     </div>
                   </div>
-                  <div className="text-sm font-medium text-gray-700 truncate mb-2">
-                    {file.name}
-                  </div>
-                  <div className="text-xs text-gray-500 mb-3">
-                    {(file.size / 1024).toFixed(1)} KB • Animated GIF
-                  </div>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => setViewerFile(file)}
-                      className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center space-x-1"
-                    >
-                      <Eye className="w-3 h-3" />
-                      <span>View</span>
-                    </button>
-                    <button className="p-2 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors">
-                      <Download className="w-3 h-3" />
-                    </button>
-                    <button className="p-2 text-gray-500 hover:text-purple-500 hover:bg-purple-50 rounded-lg transition-colors">
-                      <Share2 className="w-3 h-3" />
-                    </button>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -215,7 +253,7 @@ export const GIFViewer: React.FC = () => {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">65,535 × 65,535 pixels</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">6,500 × 6,500 pixels</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm font-medium text-gray-800">Transparency</td>
@@ -234,51 +272,16 @@ export const GIFViewer: React.FC = () => {
           </div>
         </div>
 
-        {/* SEO Content */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Back to Home - All Supported Formats
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Standard Image Formats</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• JPEG (Joint Photographic Experts Group)</li>
-                <li>• JPEG 2000 Core Image File</li>
-                <li>• JPEG 2000 Image</li>
-                <li>• PNG (Portable Network Graphics)</li>
-                <li>• Web Picture Format</li>
-                <li>• AV1 Image File Format</li>
-                <li>• GIF (Graphics Interchange Format)</li>
-                <li>• TIFF (Tagged Image File Format)</li>
-                <li>• Pyramid encoded TIFF</li>
-                <li>• Bitmap Image</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Professional & Specialized</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• High Efficiency Image Container</li>
-                <li>• Scalable Vector Graphics</li>
-                <li>• Icon formats (ICO, CUR)</li>
-                <li>• RAW Camera formats</li>
-                <li>• Professional editing formats</li>
-                <li>• Document formats (PDF, DOCX, ODT)</li>
-                <li>• Spreadsheet formats (XLSX, CSV, ODS)</li>
-                <li>• Code formats (JS, Python, CSS, HTML)</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center mt-6">
+          {/* Back to Viewers Button */}
+          <div className="text-center">
             <a
-              href="/"
-              className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/viewers"
+              className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Back to Home
+              ← Back to All Viewers
             </a>
           </div>
         </div>
-      </div>
       
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12 mt-20">

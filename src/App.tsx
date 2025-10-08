@@ -70,6 +70,9 @@ import { ConverterHub } from './components/ConverterHub';
 import { ViewersHub } from './components/ViewersHub';
 import { JPEGViewer } from './components/FormatViewers/JPEGViewer';
 import { PNGViewer } from './components/FormatViewers/PNGViewer';
+import { WebPViewer } from './components/FormatViewers/WebPViewer';
+import { GIFViewer } from './components/FormatViewers/GIFViewer';
+import { SVGViewer } from './components/FormatViewers/SVGViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -678,6 +681,30 @@ function App() {
     return (
       <AuthProvider>
         <PNGViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/webp') {
+    return (
+      <AuthProvider>
+        <WebPViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/gif') {
+    return (
+      <AuthProvider>
+        <GIFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/svg') {
+    return (
+      <AuthProvider>
+        <SVGViewer />
       </AuthProvider>
     );
   }
