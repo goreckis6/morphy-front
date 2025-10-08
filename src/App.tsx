@@ -79,6 +79,7 @@ import { ICOViewer } from './components/FormatViewers/ICOViewer';
 import { HEICViewer } from './components/FormatViewers/HEICViewer';
 import { AVIFViewer } from './components/FormatViewers/AVIFViewer';
 import { PDFViewer } from './components/FormatViewers/PDFViewer';
+import { RTFViewer } from './components/FormatViewers/RTFViewer';
 import { DOCXViewer } from './components/FormatViewers/DOCXViewer';
 import { ODTViewer } from './components/FormatViewers/ODTViewer';
 import { AuthProvider } from './contexts/AuthContext';
@@ -761,6 +762,14 @@ function App() {
     return (
       <AuthProvider>
         <PDFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/rtf') {
+    return (
+      <AuthProvider>
+        <RTFViewer />
       </AuthProvider>
     );
   }
