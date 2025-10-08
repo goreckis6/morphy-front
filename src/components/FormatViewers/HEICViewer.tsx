@@ -305,7 +305,7 @@ export const HEICViewer: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6">
-                Professional HEIC viewer for all your image viewing needs.
+                Professional HEIC viewer for all your image processing needs.
               </p>
               
               <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
