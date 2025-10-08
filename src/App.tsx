@@ -73,6 +73,11 @@ import { PNGViewer } from './components/FormatViewers/PNGViewer';
 import { WebPViewer } from './components/FormatViewers/WebPViewer';
 import { GIFViewer } from './components/FormatViewers/GIFViewer';
 import { SVGViewer } from './components/FormatViewers/SVGViewer';
+import { TIFFViewer } from './components/FormatViewers/TIFFViewer';
+import { BMPViewer } from './components/FormatViewers/BMPViewer';
+import { ICOViewer } from './components/FormatViewers/ICOViewer';
+import { HEICViewer } from './components/FormatViewers/HEICViewer';
+import { AVIFViewer } from './components/FormatViewers/AVIFViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -705,6 +710,46 @@ function App() {
     return (
       <AuthProvider>
         <SVGViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/tiff' || currentPath === '/viewers/tif') {
+    return (
+      <AuthProvider>
+        <TIFFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/bmp') {
+    return (
+      <AuthProvider>
+        <BMPViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/ico') {
+    return (
+      <AuthProvider>
+        <ICOViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/heic' || currentPath === '/viewers/heif') {
+    return (
+      <AuthProvider>
+        <HEICViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/avif') {
+    return (
+      <AuthProvider>
+        <AVIFViewer />
       </AuthProvider>
     );
   }

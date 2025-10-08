@@ -1,44 +1,21 @@
 import React, { useState, useCallback } from 'react';
-import { ArrowLeft, Upload, Download, Share2, Eye, X, ZoomIn, ZoomOut } from 'lucide-react';
+import { ArrowLeft, Upload, Download, Share2, Eye, X, ZoomIn, ZoomOut, CheckCircle, Smartphone } from 'lucide-react';
 import { Header } from '../Header';
+import { Helmet } from 'react-helmet-async';
+import { FileUpload } from '../FileUpload';
 
-export function AVIFViewer() {
-  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+export const AVIFViewer: React.FC = () => {
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [dragActive, setDragActive] = useState(false);
 
-  const handleDrag = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (e.type === "dragenter" || e.type === "dragover") {
-      setDragActive(true);
-    } else if (e.type === "dragleave") {
-      setDragActive(false);
-    }
-  }, []);
-
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-
-    const files = Array.from(e.dataTransfer.files).filter(file => 
-      file.type === 'image/avif' || file.name.toLowerCase().endsWith('.avif')
-    );
-    
-    if (files.length > 0) {
-      setUploadedFiles(prev => [...prev, ...files]);
-    }
-  }, []);
-
-  const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []).filter(file => 
-      file.type === 'image/avif' || file.name.toLowerCase().endsWith('.avif')
-    );
-    
-    if (files.length > 0) {
-      setUploadedFiles(prev => [...prev, ...files]);
-    }
+  const handleFilesSelected = (files: File[]) => {
+    // Filter only AVIF files
+    const avifFiles = files.filter(file => {
+      const extension = file.name.split('.').pop()?.toLowerCase();
+      return extension === 'avif';
+    });
+    setSelectedFiles(avifFiles);
   };
 
   const getImageUrl = (file: File) => {
@@ -73,131 +50,124 @@ export function AVIFViewer() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Breadcrumb */}
-        <div className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
-          <button 
-            onClick={() => window.location.href = '/viewer'}
-            className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back to Viewer</span>
-          </button>
-          <span>/</span>
-          <span className="text-gray-800 font-medium">AVIF Viewer</span>
-        </div>
+    <>
+      <Helmet>
+        <title>AVIF Viewer - Free Online AV1 Image File Viewer</title>
+        <meta name="description" content="View AVIF (AV1 Image File Format) images online for free. Next-generation image viewer with superior compression, HDR support, and wide color gamut. Up to 20 files, 100MB total. No registration required." />
+        <meta name="keywords" content="AVIF viewer, AV1 image viewer, next-gen image viewer, HDR image viewer, AVIF image viewer, modern image format, batch viewing" />
+      </Helmet>
 
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            AVIF Image Viewer
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            View and manage AVIF (AV1 Image File Format) images with our professional viewer. 
-            Experience next-generation image compression with superior quality and smaller file sizes.
-          </p>
-        </div>
-
-        {/* Upload Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Upload AVIF Images</h2>
-          
-          <div
-            className={`border-2 border-dashed rounded-xl p-12 text-center transition-all ${
-              dragActive 
-                ? 'border-blue-400 bg-blue-50' 
-                : 'border-gray-300 hover:border-blue-400 hover:bg-blue-50'
-            }`}
-            onDragEnter={handleDrag}
-            onDragLeave={handleDrag}
-            onDragOver={handleDrag}
-            onDrop={handleDrop}
-          >
-            <Upload className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
-              Drop AVIF files here or click to browse
-            </h3>
-            <p className="text-gray-500 mb-6">
-              Supports .avif files with advanced AV1 compression
-            </p>
-            <input
-              type="file"
-              multiple
-              accept=".avif,image/avif"
-              onChange={handleFileInput}
-              className="hidden"
-              id="avif-upload"
-            />
-            <label
-              htmlFor="avif-upload"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer inline-block"
-            >
-              Choose AVIF Files
-            </label>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-rose-600 via-pink-500 to-fuchsia-600 text-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <a
+                  href="/viewers"
+                  className="p-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-xl transition-all border border-white/20"
+                >
+                  <ArrowLeft className="w-6 h-6 text-white" />
+                </a>
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                  <Smartphone className="w-12 h-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-5xl font-bold mb-3">
+                    AVIF Viewer
+                  </h1>
+                  <p className="text-xl text-rose-100">
+                    View next-generation AVIF images with superior compression
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Image Grid */}
-        {uploadedFiles.length > 0 && (
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Uploaded AVIF Images ({uploadedFiles.length})
-            </h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {uploadedFiles.map((file, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-4 hover:shadow-md transition-shadow">
-                  <div className="aspect-square bg-white rounded-lg mb-4 overflow-hidden">
-                    <img
-                      src={getImageUrl(file)}
-                      alt={file.name}
-                      className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform"
-                      onClick={() => handleImageClick(file)}
-                    />
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Upload Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Upload AVIF Files
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Drag and drop your AVIF images or click to browse. Supports HDR, wide color gamut, and transparency up to 100MB total.
+            </p>
+            <FileUpload 
+              onFilesSelected={handleFilesSelected}
+              acceptedFormats={['avif']}
+              maxFiles={20}
+              maxSize={100 * 1024 * 1024}
+              hideFormatList={true}
+              showTotalSize={true}
+            />
+          </div>
+
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
                   </div>
-                  
-                  <div className="space-y-2">
-                    <h3 className="font-medium text-gray-800 truncate" title={file.name}>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your AVIF Files ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-rose-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md">
+                      <img
+                        src={URL.createObjectURL(file)}
+                        alt={file.name}
+                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300 cursor-pointer"
+                        onClick={() => handleImageClick(file)}
+                      />
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
                       {file.name}
-                    </h3>
-                    <p className="text-sm text-gray-500">
-                      {(file.size / 1024 / 1024).toFixed(2)} MB
-                    </p>
-                    
-                    <div className="flex space-x-2">
+                    </div>
+                    <div className="text-xs text-gray-600 mb-3 font-medium">
+                      {(file.size / 1024 / 1024).toFixed(2)} MB • AVIF
+                    </div>
+                    <div className="flex gap-2">
                       <button
                         onClick={() => handleImageClick(file)}
-                        className="flex-1 bg-blue-600 text-white px-3 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm flex items-center justify-center space-x-1"
+                        className="flex-1 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
                         <Eye className="w-4 h-4" />
                         <span>View</span>
                       </button>
-                      <button
+                      <button 
                         onClick={() => handleDownload(file)}
-                        className="bg-gray-600 text-white px-3 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                        className="p-2 text-rose-600 hover:bg-rose-100 rounded-lg transition-colors"
+                        title="Download"
                       >
                         <Download className="w-4 h-4" />
                       </button>
-                      <button
-                        onClick={() => handleShare(file)}
-                        className="bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-colors"
-                      >
-                        <Share2 className="w-4 h-4" />
-                      </button>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {/* About AVIF Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">About AVIF Format</h2>
+          {/* About AVIF Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">About AVIF Format</h2>
           
           <div className="prose max-w-none">
             <p className="text-lg text-gray-600 mb-6">
@@ -305,71 +275,59 @@ export function AVIFViewer() {
           </div>
         </div>
 
-        {/* Professional Features */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Back to Home - All Supported Formats
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Standard Image Formats</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• JPEG (Joint Photographic Experts Group)</li>
-                <li>• JPEG 2000 Core Image File</li>
-                <li>• JPEG 2000 Image</li>
-                <li>• PNG (Portable Network Graphics)</li>
-                <li>• Web Picture Format</li>
-                <li>• AV1 Image File Format</li>
-                <li>• GIF (Graphics Interchange Format)</li>
-                <li>• TIFF (Tagged Image File Format)</li>
-                <li>• Pyramid encoded TIFF</li>
-                <li>• Bitmap Image</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Professional & Specialized</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• High Efficiency Image Container</li>
-                <li>• Scalable Vector Graphics</li>
-                <li>• Icon formats (ICO, CUR)</li>
-                <li>• RAW Camera formats</li>
-                <li>• Professional editing formats</li>
-                <li>• Document formats (PDF, DOCX, ODT)</li>
-                <li>• Spreadsheet formats (XLSX, CSV, ODS)</li>
-                <li>• Code formats (JS, Python, CSS, HTML)</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center mt-6">
+          {/* Back to Viewers Button */}
+          <div className="text-center">
             <a
-              href="/"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/viewers"
+              className="inline-block bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Back to Home
+              ← Back to All Viewers
             </a>
+          </div>
+        </div>
+        
+        {/* Footer */}
+        <footer className="bg-gray-800 text-white py-12 mt-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-2 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl">
+                  <Smartphone className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">MorphyIMG</h2>
+              </div>
+              
+              <p className="text-gray-300 mb-6">
+                Professional AVIF viewer for all your image viewing needs.
+              </p>
+              
+              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+                <span>© 2025 MorphyIMG. Built for AVIF professionals.</span>
+              </div>
             </div>
           </div>
-        </div>
+        </footer>
 
-      {/* Full Image Viewer Modal */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
-          <div className="relative max-w-full max-h-full">
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors z-10"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            
-            <img
-              src={selectedImage}
-              alt="Full size AVIF"
-              className="max-w-full max-h-full object-contain rounded-lg"
-            />
+        {/* Full Image Viewer Modal */}
+        {selectedImage && (
+          <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
+            <div className="relative max-w-full max-h-full">
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors z-10"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              
+              <img
+                src={selectedImage}
+                alt="Full size AVIF"
+                className="max-w-full max-h-full object-contain rounded-lg"
+              />
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
-}
+};
