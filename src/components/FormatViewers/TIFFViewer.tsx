@@ -81,6 +81,23 @@ export const TIFFViewer: React.FC = () => {
             />
           </div>
 
+          {/* Browser Compatibility Note */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
+              <div className="flex items-start space-x-3">
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Camera className="w-5 h-5 text-blue-600" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-sm font-semibold text-blue-900 mb-1">Browser Compatibility Note</h4>
+                  <p className="text-sm text-blue-700">
+                    TIFF files have limited browser support and may not display directly. Download the file to view it with a dedicated image editor or use our conversion tools to convert to JPEG/PNG.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Preview Section */}
           {selectedFiles.length > 0 && (
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
@@ -98,12 +115,12 @@ export const TIFFViewer: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {selectedFiles.map((file, index) => (
                   <div key={index} className="bg-gradient-to-br from-gray-50 to-orange-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                    <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md">
-                      <img
-                        src={URL.createObjectURL(file)}
-                        alt={file.name}
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                      />
+                    <div className="aspect-square bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl mb-3 overflow-hidden shadow-md flex items-center justify-center">
+                      <div className="text-center p-4">
+                        <Camera className="w-16 h-16 text-orange-400 mx-auto mb-2" />
+                        <p className="text-xs text-orange-600 font-medium">TIFF Image</p>
+                        <p className="text-xs text-gray-500 mt-1">Download to view</p>
+                      </div>
                     </div>
                     <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
                       {file.name}
