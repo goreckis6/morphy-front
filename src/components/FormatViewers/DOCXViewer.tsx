@@ -38,6 +38,124 @@ export const DOCXViewer: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
+  const handleViewDOCX = async (file: File) => {
+    try {
+      // Show loading state
+      const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+      if (!loadingWindow) {
+        alert('Please allow pop-ups to view the document');
+        return;
+      }
+
+      loadingWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Loading ${file.name}...</title>
+          <style>
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              font-family: Arial, sans-serif;
+              background: #f5f5f5;
+              margin: 0;
+            }
+            .loader {
+              text-align: center;
+            }
+            .spinner {
+              border: 4px solid #f3f3f3;
+              border-top: 4px solid #3498db;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+              margin: 0 auto 20px;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="loader">
+            <div class="spinner"></div>
+            <h2>Loading ${file.name}...</h2>
+            <p>Converting DOCX to HTML preview...</p>
+          </div>
+        </body>
+        </html>
+      `);
+
+      // Send file to backend for conversion
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/docx', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const html = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(html);
+        loadingWindow.document.close();
+      } else {
+        const error = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #f5f5f5;
+              }
+              .error {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                max-width: 600px;
+                margin: 0 auto;
+              }
+              h1 { color: #e74c3c; }
+              button {
+                background: #3498db;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+              }
+              button:hover { background: #2980b9; }
+            </style>
+          </head>
+          <body>
+            <div class="error">
+              <h1>⚠️ Preview Error</h1>
+              <p>Failed to generate DOCX preview. Please try downloading the file instead.</p>
+              <button onclick="window.close()">Close</button>
+            </div>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      }
+    } catch (error) {
+      console.error('DOCX view error:', error);
+      alert('Failed to open DOCX preview. Please try again or download the file.');
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -134,6 +252,112 @@ export const DOCXViewer: React.FC = () => {
             )}
           </div>
 
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your DOCX Files ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+
+              {/* How to View Instructions */}
+              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-1">How to View DOCX Files</h4>
+                    <p className="text-sm text-blue-700">
+                      Click the <strong>"View Document"</strong> button to open the Word document in a preview modal. 
+                      You can also download the original file for offline viewing or editing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 bg-blue-100 rounded-lg">
+                        <FileText className="w-6 h-6 text-blue-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-gray-800 truncate">
+                          {file.name}
+                        </h3>
+                        <p className="text-xs text-gray-500">
+                          {(file.size / 1024 / 1024).toFixed(2)} MB
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <button
+                        onClick={() => handleViewDOCX(file)}
+                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>View Document</span>
+                      </button>
+                      <button
+                        onClick={() => handleDownload(file)}
+                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                      >
+                        <Download className="w-4 h-4" />
+                        <span>Download</span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <FileText className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Rich Formatting
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Advanced typography, styles, themes, and layout options for professional document creation with full formatting control
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <FileText className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Collaboration Tools
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Track changes, comments, and version control support for seamless team collaboration and document review workflows
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <FileText className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Cross-Platform Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Compatible with Microsoft Word, Google Docs, LibreOffice, and other office suites across all operating systems
+              </p>
+            </div>
+          </div>
+
           {/* About DOCX Format Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
             <div className="flex items-center space-x-3 mb-6">
@@ -216,114 +440,6 @@ export const DOCXViewer: React.FC = () => {
                     </tbody>
                   </table>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Preview Section */}
-          {selectedFiles.length > 0 && (
-            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                    <CheckCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-gray-900">
-                    Your DOCX Files ({selectedFiles.length})
-                  </h2>
-                </div>
-              </div>
-
-              {/* How to View Instructions */}
-              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-start space-x-3">
-                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View DOCX Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View Document"</strong> button to open the Word document in a preview modal. 
-                      You can also download the original file for offline viewing or editing.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {selectedFiles.map((file, index) => (
-                  <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="p-2 bg-blue-100 rounded-lg">
-                        <FileText className="w-6 h-6 text-blue-600" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-gray-800 truncate">
-                          {file.name}
-                        </h3>
-                        <p className="text-xs text-gray-500">
-                          {(file.size / 1024 / 1024).toFixed(2)} MB
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <button
-                        onClick={() => alert('DOCX preview feature coming soon! Use download for now.')}
-                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>View Document</span>
-                      </button>
-                      <button
-                        onClick={() => handleDownload(file)}
-                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>Download</span>
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Information Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl">
-                <Info className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900">
-                About DOCX Viewer
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">DOCX Viewing Features</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• <strong>Document preview</strong> - View DOCX files online</li>
-                  <li>• <strong>Batch upload</strong> - Process multiple files at once</li>
-                  <li>• <strong>Format preservation</strong> - Maintains original formatting</li>
-                  <li>• <strong>Text extraction</strong> - Copy text from documents</li>
-                  <li>• <strong>Download support</strong> - Save files locally</li>
-                  <li>• <strong>File info display</strong> - View file size and type</li>
-                  <li>• <strong>Security</strong> - Client-side processing only</li>
-                  <li>• <strong>No registration</strong> - Free to use instantly</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Supported File Types</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• DOCX - Microsoft Word Document</li>
-                  <li>• DOC - Legacy Word Document</li>
-                  <li>• DOCM - Word Macro-Enabled Document</li>
-                  <li>• DOTX - Word Template</li>
-                  <li>• DOTM - Word Macro-Enabled Template</li>
-                  <li>• All Word 2007+ formats</li>
-                  <li>• Office Open XML compliant files</li>
-                  <li>• Password-protected documents (limited)</li>
-                </ul>
               </div>
             </div>
           </div>
