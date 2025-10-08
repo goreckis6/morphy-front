@@ -276,7 +276,7 @@ export const AVIFViewer: React.FC = () => {
         </div>
 
           {/* Back to Viewers Button */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-4">
             <a
               href="/viewers"
               className="inline-block bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -288,7 +288,7 @@ export const AVIFViewer: React.FC = () => {
       </div>
       
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
+      <footer className="bg-gray-800 text-white py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-6">
