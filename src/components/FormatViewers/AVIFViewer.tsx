@@ -285,49 +285,49 @@ export const AVIFViewer: React.FC = () => {
             </a>
           </div>
         </div>
-        
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl">
-                  <Smartphone className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold">MorphyIMG</h2>
-              </div>
-              
-              <p className="text-gray-300 mb-6">
-                Professional AVIF viewer for all your image processing needs.
-              </p>
-              
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-                <span>© 2025 MorphyIMG. Built for AVIF professionals.</span>
-              </div>
-            </div>
-          </div>
-        </footer>
-
-        {/* Full Image Viewer Modal */}
-        {selectedImage && (
-          <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
-            <div className="relative max-w-full max-h-full">
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors z-10"
-              >
-                <X className="w-6 h-6" />
-              </button>
-              
-              <img
-                src={selectedImage}
-                alt="Full size AVIF"
-                className="max-w-full max-h-full object-contain rounded-lg"
-              />
-            </div>
-          </div>
-        )}
       </div>
+      
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12 mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="p-2 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl">
+                <Smartphone className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold">MorphyIMG</h2>
+            </div>
+            
+            <p className="text-gray-300 mb-6">
+              Professional AVIF viewer for all your image processing needs.
+            </p>
+            
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+              <span>© 2025 MorphyIMG. Built for AVIF professionals.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      {/* Full Image Viewer Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4">
+          <div className="relative max-w-full max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors z-10"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            <img
+              src={selectedImage}
+              alt="Full size AVIF"
+              className="max-w-full max-h-full object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 };

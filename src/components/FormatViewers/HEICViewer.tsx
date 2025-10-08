@@ -30,6 +30,7 @@ export const HEICViewer: React.FC = () => {
     setLoadingPreviews(prev => new Set(prev).add(fileKey));
 
     try {
+      console.log('Generating HEIC preview for:', file.name);
       const formData = new FormData();
       formData.append('file', file);
 
@@ -38,15 +39,37 @@ export const HEICViewer: React.FC = () => {
         body: formData,
       });
 
+      console.log('HEIC preview response status:', response.status);
+
       if (response.ok) {
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
+        console.log('HEIC preview generated successfully:', url);
         setPreviewUrls(prev => new Map(prev).set(fileKey, url));
       } else {
-        console.error('Preview generation failed:', await response.text());
+        const errorText = await response.text();
+        console.error('Preview generation failed:', response.status, errorText);
+        
+        // Fallback: try to display HEIC directly (may work in Safari)
+        try {
+          const directUrl = URL.createObjectURL(file);
+          setPreviewUrls(prev => new Map(prev).set(fileKey, directUrl));
+          console.log('Using direct HEIC URL as fallback');
+        } catch (fallbackError) {
+          console.error('Direct HEIC display also failed:', fallbackError);
+        }
       }
     } catch (error) {
       console.error('Error generating preview:', error);
+      
+      // Fallback: try to display HEIC directly
+      try {
+        const directUrl = URL.createObjectURL(file);
+        setPreviewUrls(prev => new Map(prev).set(fileKey, directUrl));
+        console.log('Using direct HEIC URL as fallback after error');
+      } catch (fallbackError) {
+        console.error('Direct HEIC display also failed:', fallbackError);
+      }
     } finally {
       setLoadingPreviews(prev => {
         const newSet = new Set(prev);
@@ -292,37 +315,37 @@ export const HEICViewer: React.FC = () => {
             </a>
           </div>
         </div>
-        
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl">
-                  <Smartphone className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold">MorphyIMG</h2>
+      </div>
+      
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12 mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="p-2 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl">
+                <Smartphone className="w-6 h-6 text-white" />
               </div>
-              
-              <p className="text-gray-300 mb-6">
-                Professional HEIC viewer for all your image processing needs.
-              </p>
-              
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-                <span>© 2025 MorphyIMG. Built for HEIC professionals.</span>
-              </div>
+              <h2 className="text-2xl font-bold">MorphyIMG</h2>
+            </div>
+            
+            <p className="text-gray-300 mb-6">
+              Professional HEIC viewer for all your image processing needs.
+            </p>
+            
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+              <span>© 2025 MorphyIMG. Built for HEIC professionals.</span>
             </div>
           </div>
-        </footer>
+        </div>
+      </footer>
 
-        {/* File Viewer Modal */}
-        {viewerFile && (
-          <FileViewer
-            file={viewerFile}
-            onClose={() => setViewerFile(null)}
-          />
-        )}
-      </div>
+      {/* File Viewer Modal */}
+      {viewerFile && (
+        <FileViewer
+          file={viewerFile}
+          onClose={() => setViewerFile(null)}
+        />
+      )}
     </>
   );
 };

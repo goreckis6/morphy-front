@@ -30,6 +30,7 @@ export const TIFFViewer: React.FC = () => {
     setLoadingPreviews(prev => new Set(prev).add(fileKey));
 
     try {
+      console.log('Generating TIFF preview for:', file.name);
       const formData = new FormData();
       formData.append('file', file);
 
@@ -38,15 +39,37 @@ export const TIFFViewer: React.FC = () => {
         body: formData,
       });
 
+      console.log('TIFF preview response status:', response.status);
+
       if (response.ok) {
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
+        console.log('TIFF preview generated successfully:', url);
         setPreviewUrls(prev => new Map(prev).set(fileKey, url));
       } else {
-        console.error('Preview generation failed:', await response.text());
+        const errorText = await response.text();
+        console.error('Preview generation failed:', response.status, errorText);
+        
+        // Fallback: try to display TIFF directly (may work in some browsers)
+        try {
+          const directUrl = URL.createObjectURL(file);
+          setPreviewUrls(prev => new Map(prev).set(fileKey, directUrl));
+          console.log('Using direct TIFF URL as fallback');
+        } catch (fallbackError) {
+          console.error('Direct TIFF display also failed:', fallbackError);
+        }
       }
     } catch (error) {
       console.error('Error generating preview:', error);
+      
+      // Fallback: try to display TIFF directly
+      try {
+        const directUrl = URL.createObjectURL(file);
+        setPreviewUrls(prev => new Map(prev).set(fileKey, directUrl));
+        console.log('Using direct TIFF URL as fallback after error');
+      } catch (fallbackError) {
+        console.error('Direct TIFF display also failed:', fallbackError);
+      }
     } finally {
       setLoadingPreviews(prev => {
         const newSet = new Set(prev);
