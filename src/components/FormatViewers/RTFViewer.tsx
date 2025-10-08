@@ -38,6 +38,124 @@ export const RTFViewer: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
+  const handleViewRTF = async (file: File) => {
+    try {
+      // Show loading state
+      const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+      if (!loadingWindow) {
+        alert('Please allow pop-ups to view the document');
+        return;
+      }
+
+      loadingWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Loading ${file.name}...</title>
+          <style>
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              font-family: Arial, sans-serif;
+              background: #f5f5f5;
+              margin: 0;
+            }
+            .loader {
+              text-align: center;
+            }
+            .spinner {
+              border: 4px solid #f3f3f3;
+              border-top: 4px solid #e67e22;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+              margin: 0 auto 20px;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="loader">
+            <div class="spinner"></div>
+            <h2>Loading ${file.name}...</h2>
+            <p>Converting RTF to HTML preview...</p>
+          </div>
+        </body>
+        </html>
+      `);
+
+      // Send file to backend for conversion
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/rtf', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const html = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(html);
+        loadingWindow.document.close();
+      } else {
+        const error = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #f5f5f5;
+              }
+              .error {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                max-width: 600px;
+                margin: 0 auto;
+              }
+              h1 { color: #e74c3c; }
+              button {
+                background: #e67e22;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+              }
+              button:hover { background: #f39c12; }
+            </style>
+          </head>
+          <body>
+            <div class="error">
+              <h1>⚠️ Preview Error</h1>
+              <p>Failed to generate RTF preview. Please try downloading the file instead.</p>
+              <button onclick="window.close()">Close</button>
+            </div>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      }
+    } catch (error) {
+      console.error('RTF view error:', error);
+      alert('Failed to open RTF preview. Please try again or download the file.');
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -181,7 +299,7 @@ export const RTFViewer: React.FC = () => {
                     
                     <div className="space-y-2">
                       <button
-                        onClick={() => alert('RTF preview feature coming soon! Use download for now.')}
+                        onClick={() => handleViewRTF(file)}
                         className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
@@ -200,6 +318,45 @@ export const RTFViewer: React.FC = () => {
               </div>
             </div>
           )}
+
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-lg p-8 border border-orange-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <FileText className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Universal Compatibility
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Opens in virtually any word processor on any platform - from modern Microsoft Word to legacy applications and open-source alternatives
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <FileText className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Text-Based Format
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Human-readable ASCII format that can be edited with any text editor - perfect for debugging and manual formatting adjustments
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <FileText className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Lightweight & Efficient
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Smaller file sizes compared to modern formats for simple documents - ideal for email attachments and legacy system compatibility
+              </p>
+            </div>
+          </div>
 
           {/* About RTF Format Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
@@ -283,44 +440,6 @@ export const RTFViewer: React.FC = () => {
                     </tbody>
                   </table>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Key Features Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Why Choose RTF Format?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-xl border border-orange-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Universal Compatibility</h3>
-                <p className="text-gray-600">
-                  Opens in virtually any word processor on any platform - from modern Microsoft Word to legacy applications and open-source alternatives
-                </p>
-              </div>
-
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Text-Based Format</h3>
-                <p className="text-gray-600">
-                  Human-readable ASCII format that can be edited with any text editor - perfect for debugging and manual formatting adjustments
-                </p>
-              </div>
-
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Lightweight & Efficient</h3>
-                <p className="text-gray-600">
-                  Smaller file sizes compared to modern formats for simple documents - ideal for email attachments and legacy system compatibility
-                </p>
               </div>
             </div>
           </div>
