@@ -55,7 +55,6 @@ export const WebPViewer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -277,9 +276,9 @@ export const WebPViewer: React.FC = () => {
             </a>
           </div>
         </div>
-      
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 mt-20">
+        
+        {/* Footer */}
+        <footer className="bg-gray-800 text-white py-12 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-6">
@@ -296,17 +295,18 @@ export const WebPViewer: React.FC = () => {
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
               <span>© 2025 MorphyIMG. Built for WebP professionals.</span>
             </div>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
 
-      {/* File Viewer Modal */}
-      {viewerFile && (
-        <FileViewer
-          file={viewerFile}
-          onClose={() => setViewerFile(null)}
-        />
-      )}
-    </div>
+        {/* File Viewer Modal */}
+        {viewerFile && (
+          <FileViewer
+            file={viewerFile}
+            onClose={() => setViewerFile(null)}
+          />
+        )}
+      </div>
+    </>
   );
 };

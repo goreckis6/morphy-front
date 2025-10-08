@@ -55,7 +55,6 @@ export const SVGViewer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -298,17 +297,18 @@ export const SVGViewer: React.FC = () => {
                 <span>© 2025 MorphyIMG. Built for SVG professionals.</span>
               </div>
             </div>
+            </div>
           </div>
         </footer>
-      </div>
 
-      {/* File Viewer Modal */}
-      {viewerFile && (
-        <FileViewer
-          file={viewerFile}
-          onClose={() => setViewerFile(null)}
-        />
-      )}
-    </div>
+        {/* File Viewer Modal */}
+        {viewerFile && (
+          <FileViewer
+            file={viewerFile}
+            onClose={() => setViewerFile(null)}
+          />
+        )}
+      </div>
+    </>
   );
 };
