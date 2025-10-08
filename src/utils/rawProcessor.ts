@@ -220,17 +220,36 @@ export class RAWProcessor {
       
       await this.initializeProcessor();
 
-      // For HEIC/HEIF files
+      // For HEIC/HEIF files - use backend API
       if (this.isHEICFormat(file.name)) {
         try {
-          const heic2any = await import('heic2any');
-          const convertedBlob = await heic2any.default({
-            blob: file,
-            toType: 'image/jpeg',
-            quality: 0.9
+          const formData = new FormData();
+          formData.append('file', file);
+
+          const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/heic', {
+            method: 'POST',
+            body: formData,
           });
-          const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
-          return URL.createObjectURL(blob);
+
+          if (response.ok) {
+            const blob = await response.blob();
+            return URL.createObjectURL(blob);
+          } else {
+            console.warn('HEIC backend preview failed:', await response.text());
+            // Fallback to heic2any if backend fails
+            try {
+              const heic2any = await import('heic2any');
+              const convertedBlob = await heic2any.default({
+                blob: file,
+                toType: 'image/jpeg',
+                quality: 0.9
+              });
+              const blob = Array.isArray(convertedBlob) ? convertedBlob[0] : convertedBlob;
+              return URL.createObjectURL(blob);
+            } catch (fallbackError) {
+              console.warn('HEIC fallback conversion also failed:', fallbackError);
+            }
+          }
         } catch (error) {
           console.warn('HEIC conversion failed:', error);
         }
