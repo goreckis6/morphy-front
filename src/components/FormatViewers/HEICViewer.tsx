@@ -8,14 +8,52 @@ import { Helmet } from 'react-helmet-async';
 export const HEICViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const [previewUrls, setPreviewUrls] = useState<Map<string, string>>(new Map());
+  const [loadingPreviews, setLoadingPreviews] = useState<Set<string>>(new Set());
 
-  const handleFilesSelected = (files: File[]) => {
+  const handleFilesSelected = async (files: File[]) => {
     // Filter only HEIC files
     const heicFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return ['heic', 'heif'].includes(extension || '');
     });
     setSelectedFiles(heicFiles);
+
+    // Generate previews for each HEIC file
+    for (const file of heicFiles) {
+      generatePreview(file);
+    }
+  };
+
+  const generatePreview = async (file: File) => {
+    const fileKey = `${file.name}-${file.size}`;
+    setLoadingPreviews(prev => new Set(prev).add(fileKey));
+
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/heic', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        setPreviewUrls(prev => new Map(prev).set(fileKey, url));
+      } else {
+        console.error('Preview generation failed:', await response.text());
+      }
+    } catch (error) {
+      console.error('Error generating preview:', error);
+    } finally {
+      setLoadingPreviews(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(fileKey);
+        return newSet;
+      });
+    }
   };
 
   return (
@@ -81,23 +119,6 @@ export const HEICViewer: React.FC = () => {
             />
           </div>
 
-          {/* Browser Compatibility Note */}
-          {selectedFiles.length > 0 && (
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
-              <div className="flex items-start space-x-3">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <Smartphone className="w-5 h-5 text-blue-600" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-sm font-semibold text-blue-900 mb-1">Browser Compatibility Note</h4>
-                  <p className="text-sm text-blue-700">
-                    HEIC preview thumbnails may not display in all browsers. Click "View" to open the full image viewer for best compatibility. Safari 16+ has native HEIC support.
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Preview Section */}
           {selectedFiles.length > 0 && (
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
@@ -113,46 +134,66 @@ export const HEICViewer: React.FC = () => {
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {selectedFiles.map((file, index) => (
-                  <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                    <div className="aspect-square bg-gradient-to-br from-violet-100 to-purple-100 rounded-xl mb-3 overflow-hidden shadow-md flex items-center justify-center">
-                      <div className="text-center p-4">
-                        <Image className="w-16 h-16 text-violet-400 mx-auto mb-2" />
-                        <p className="text-xs text-violet-600 font-medium">HEIC Image</p>
-                        <p className="text-xs text-gray-500 mt-1">Click View to preview</p>
+                {selectedFiles.map((file, index) => {
+                  const fileKey = `${file.name}-${file.size}`;
+                  const previewUrl = previewUrls.get(fileKey);
+                  const isLoading = loadingPreviews.has(fileKey);
+
+                  return (
+                    <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                      <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md flex items-center justify-center">
+                        {isLoading ? (
+                          <div className="text-center p-4">
+                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-violet-600 mx-auto mb-2"></div>
+                            <p className="text-xs text-gray-500">Generating preview...</p>
+                          </div>
+                        ) : previewUrl ? (
+                          <img
+                            src={previewUrl}
+                            alt={file.name}
+                            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                          />
+                        ) : (
+                          <div className="text-center p-4">
+                            <Image className="w-16 h-16 text-violet-400 mx-auto mb-2" />
+                            <p className="text-xs text-violet-600 font-medium">HEIC Image</p>
+                            <p className="text-xs text-gray-500 mt-1">Processing...</p>
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
+                        {file.name}
+                      </div>
+                      <div className="text-xs text-gray-600 mb-3 font-medium">
+                        {(file.size / 1024 / 1024).toFixed(2)} MB • HEIC
+                      </div>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => setViewerFile(file)}
+                          className="flex-1 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
+                          disabled={isLoading}
+                        >
+                          <Eye className="w-4 h-4" />
+                          <span>View</span>
+                        </button>
+                        <button 
+                          onClick={() => {
+                            const url = URL.createObjectURL(file);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = file.name;
+                            a.click();
+                            URL.revokeObjectURL(url);
+                          }}
+                          className="p-2 text-violet-600 hover:bg-violet-100 rounded-lg transition-colors"
+                          title="Download"
+                        >
+                          <Download className="w-4 h-4" />
+                        </button>
                       </div>
                     </div>
-                    <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
-                      {file.name}
-                    </div>
-                    <div className="text-xs text-gray-600 mb-3 font-medium">
-                      {(file.size / 1024 / 1024).toFixed(2)} MB • HEIC
-                    </div>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => setViewerFile(file)}
-                        className="flex-1 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>View</span>
-                      </button>
-                      <button 
-                        onClick={() => {
-                          const url = URL.createObjectURL(file);
-                          const a = document.createElement('a');
-                          a.href = url;
-                          a.download = file.name;
-                          a.click();
-                          URL.revokeObjectURL(url);
-                        }}
-                        className="p-2 text-violet-600 hover:bg-violet-100 rounded-lg transition-colors"
-                        title="Download"
-                      >
-                        <Download className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
