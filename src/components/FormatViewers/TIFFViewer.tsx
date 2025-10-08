@@ -8,14 +8,52 @@ import { Helmet } from 'react-helmet-async';
 export const TIFFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const [previewUrls, setPreviewUrls] = useState<Map<string, string>>(new Map());
+  const [loadingPreviews, setLoadingPreviews] = useState<Set<string>>(new Set());
 
-  const handleFilesSelected = (files: File[]) => {
+  const handleFilesSelected = async (files: File[]) => {
     // Filter only TIFF files
     const tiffFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return ['tif', 'tiff', 'tiff64', 'ptif'].includes(extension || '');
     });
     setSelectedFiles(tiffFiles);
+
+    // Generate previews for each TIFF file
+    for (const file of tiffFiles) {
+      generatePreview(file);
+    }
+  };
+
+  const generatePreview = async (file: File) => {
+    const fileKey = `${file.name}-${file.size}`;
+    setLoadingPreviews(prev => new Set(prev).add(fileKey));
+
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/tiff', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        setPreviewUrls(prev => new Map(prev).set(fileKey, url));
+      } else {
+        console.error('Preview generation failed:', await response.text());
+      }
+    } catch (error) {
+      console.error('Error generating preview:', error);
+    } finally {
+      setLoadingPreviews(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(fileKey);
+        return newSet;
+      });
+    }
   };
 
   return (
@@ -89,9 +127,9 @@ export const TIFFViewer: React.FC = () => {
                   <Camera className="w-5 h-5 text-blue-600" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-sm font-semibold text-blue-900 mb-1">Browser Compatibility Note</h4>
+                  <h4 className="text-sm font-semibold text-blue-900 mb-1">Generating Previews</h4>
                   <p className="text-sm text-blue-700">
-                    TIFF files have limited browser support and may not display directly. Download the file to view it with a dedicated image editor or use our conversion tools to convert to JPEG/PNG.
+                    TIFF files are being converted to PNG format for web preview. This may take a few moments for large files.
                   </p>
                 </div>
               </div>
@@ -113,46 +151,66 @@ export const TIFFViewer: React.FC = () => {
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {selectedFiles.map((file, index) => (
-                  <div key={index} className="bg-gradient-to-br from-gray-50 to-orange-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                    <div className="aspect-square bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl mb-3 overflow-hidden shadow-md flex items-center justify-center">
-                      <div className="text-center p-4">
-                        <Camera className="w-16 h-16 text-orange-400 mx-auto mb-2" />
-                        <p className="text-xs text-orange-600 font-medium">TIFF Image</p>
-                        <p className="text-xs text-gray-500 mt-1">Download to view</p>
+                {selectedFiles.map((file, index) => {
+                  const fileKey = `${file.name}-${file.size}`;
+                  const previewUrl = previewUrls.get(fileKey);
+                  const isLoading = loadingPreviews.has(fileKey);
+
+                  return (
+                    <div key={index} className="bg-gradient-to-br from-gray-50 to-orange-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                      <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md flex items-center justify-center">
+                        {isLoading ? (
+                          <div className="text-center p-4">
+                            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto mb-2"></div>
+                            <p className="text-xs text-gray-500">Generating preview...</p>
+                          </div>
+                        ) : previewUrl ? (
+                          <img
+                            src={previewUrl}
+                            alt={file.name}
+                            className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                          />
+                        ) : (
+                          <div className="text-center p-4">
+                            <Camera className="w-16 h-16 text-orange-400 mx-auto mb-2" />
+                            <p className="text-xs text-orange-600 font-medium">TIFF Image</p>
+                            <p className="text-xs text-gray-500 mt-1">Processing...</p>
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
+                        {file.name}
+                      </div>
+                      <div className="text-xs text-gray-600 mb-3 font-medium">
+                        {(file.size / 1024 / 1024).toFixed(2)} MB • TIFF
+                      </div>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => setViewerFile(file)}
+                          className="flex-1 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
+                          disabled={isLoading}
+                        >
+                          <Eye className="w-4 h-4" />
+                          <span>View</span>
+                        </button>
+                        <button 
+                          onClick={() => {
+                            const url = URL.createObjectURL(file);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = file.name;
+                            a.click();
+                            URL.revokeObjectURL(url);
+                          }}
+                          className="p-2 text-orange-600 hover:bg-orange-100 rounded-lg transition-colors"
+                          title="Download"
+                        >
+                          <Download className="w-4 h-4" />
+                        </button>
                       </div>
                     </div>
-                    <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
-                      {file.name}
-                    </div>
-                    <div className="text-xs text-gray-600 mb-3 font-medium">
-                      {(file.size / 1024 / 1024).toFixed(2)} MB • TIFF
-                    </div>
-                    <div className="flex gap-2">
-                      <button
-                        onClick={() => setViewerFile(file)}
-                        className="flex-1 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>View</span>
-                      </button>
-                      <button 
-                        onClick={() => {
-                          const url = URL.createObjectURL(file);
-                          const a = document.createElement('a');
-                          a.href = url;
-                          a.download = file.name;
-                          a.click();
-                          URL.revokeObjectURL(url);
-                        }}
-                        className="p-2 text-orange-600 hover:bg-orange-100 rounded-lg transition-colors"
-                        title="Download"
-                      >
-                        <Download className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
