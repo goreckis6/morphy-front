@@ -433,10 +433,6 @@ export const DOCXViewer: React.FC = () => {
                         <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
                         <td className="py-2 text-sm text-gray-900">UTF-8</td>
                       </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Max File Size</td>
-                        <td className="py-2 text-sm text-gray-900">512 MB (practical limit)</td>
-                      </tr>
                     </tbody>
                   </table>
                 </div>
