@@ -7,16 +7,21 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const PDFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  const { validateFiles, validationError } = useFileValidation();
+  const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
 
   const handleFilesSelected = (files: File[]) => {
+    // Clear previous validation errors
+    clearValidationError();
+    
     // Filter only PDF files
     const pdfFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return extension === 'pdf';
     });
     
-    const validation = validateFiles(pdfFiles);
+    // Validate the files
+    const validation = validateBatchFiles(pdfFiles);
+    
     if (validation.isValid) {
       setSelectedFiles(pdfFiles);
     }
@@ -263,6 +268,92 @@ export const PDFViewer: React.FC = () => {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* About PDF Format Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl">
+                <FileText className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                About PDF Format
+              </h2>
+            </div>
+            
+            <div className="prose max-w-none text-gray-600">
+              <p className="mb-6">
+                PDF (Portable Document Format) is a file format developed by Adobe in 1993 for presenting documents 
+                in a manner independent of application software, hardware, and operating systems. Each PDF file 
+                encapsulates a complete description of a fixed-layout flat document, including text, fonts, vector 
+                graphics, raster images, and other information needed to display it.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Universal compatibility</strong> - Works on all platforms and devices</li>
+                    <li>• <strong>Preserved formatting</strong> - Maintains exact layout and fonts</li>
+                    <li>• <strong>Security features</strong> - Password protection and encryption</li>
+                    <li>• <strong>Compact file size</strong> - Efficient compression algorithms</li>
+                    <li>• <strong>Interactive elements</strong> - Forms, hyperlinks, and multimedia</li>
+                    <li>• <strong>Professional standard</strong> - Industry-standard for documents</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Business documents</strong> - Contracts, invoices, reports</li>
+                    <li>• <strong>Academic papers</strong> - Research papers, theses, publications</li>
+                    <li>• <strong>eBooks and manuals</strong> - Technical documentation, guides</li>
+                    <li>• <strong>Forms and applications</strong> - Fillable forms, job applications</li>
+                    <li>• <strong>Archival storage</strong> - Long-term document preservation</li>
+                    <li>• <strong>Print-ready files</strong> - High-quality printing materials</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Technical Specifications */}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
+                        <td className="py-2 text-sm text-gray-900">.pdf</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
+                        <td className="py-2 text-sm text-gray-900">application/pdf</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
+                        <td className="py-2 text-sm text-gray-900">Adobe Systems (1993)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Current Standard</td>
+                        <td className="py-2 text-sm text-gray-900">PDF 2.0 (ISO 32000-2:2020)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
+                        <td className="py-2 text-sm text-gray-900">Multiple algorithms (ZIP, JPEG, JBIG2)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Security</td>
+                        <td className="py-2 text-sm text-gray-900">Password protection, 256-bit AES encryption</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Metadata Support</td>
+                        <td className="py-2 text-sm text-gray-900">XMP, Dublin Core, custom properties</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Preview Section */}
