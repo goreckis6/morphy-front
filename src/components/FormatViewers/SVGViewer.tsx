@@ -297,7 +297,6 @@ export const SVGViewer: React.FC = () => {
                 <span>© 2025 MorphyIMG. Built for SVG professionals.</span>
               </div>
             </div>
-            </div>
           </div>
         </footer>
 
