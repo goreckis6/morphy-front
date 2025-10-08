@@ -40,176 +40,119 @@ export const TXTViewer: React.FC = () => {
 
   const handleViewTXT = async (file: File) => {
     try {
-      // Read file content
-      const content = await file.text();
-      
-      // Escape HTML to prevent XSS
-      const escapeHtml = (text: string) => {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
-      };
-
-      // Prepare lines with line numbers
-      const lines = content.split('\n');
-      const numberedLines = lines.map((line, i) => {
-        const lineNum = (i + 1).toString().padStart(4, ' ');
-        const escapedLine = escapeHtml(line);
-        return `<span class="line-numbers">${lineNum}</span>${escapedLine}`;
-      }).join('\n');
-      
-      // Open in new window with styled viewer
-      const viewerWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
-      if (!viewerWindow) {
+      // Show loading state
+      const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+      if (!loadingWindow) {
         alert('Please allow pop-ups to view the document');
         return;
       }
 
-      viewerWindow.document.write(`
+      loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <meta charset="UTF-8">
-          <title>${escapeHtml(file.name)}</title>
+          <title>Loading ${file.name}...</title>
           <style>
-            * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
             body {
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              font-family: Arial, sans-serif;
               background: #1e1e1e;
               color: #d4d4d4;
-              line-height: 1.6;
-            }
-            .toolbar {
-              position: sticky;
-              top: 0;
-              background: #2d2d30;
-              color: white;
-              padding: 15px 20px;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-              z-index: 1000;
-              border-bottom: 1px solid #3e3e42;
-            }
-            .toolbar-info {
-              display: flex;
-              align-items: center;
-              gap: 15px;
-            }
-            .file-info {
-              display: flex;
-              flex-direction: column;
-            }
-            .file-name {
-              font-weight: bold;
-              font-size: 14px;
-            }
-            .file-meta {
-              font-size: 12px;
-              color: #858585;
-            }
-            .toolbar button {
-              background: #0e639c;
-              color: white;
-              border: none;
-              padding: 8px 16px;
-              border-radius: 4px;
-              cursor: pointer;
-              margin-left: 10px;
-              font-size: 14px;
-              transition: background 0.2s;
-            }
-            .toolbar button:hover {
-              background: #1177bb;
-            }
-            .content-container {
-              padding: 20px;
-              max-width: 1400px;
-              margin: 0 auto;
-            }
-            .text-container {
-              background: #1e1e1e;
-              border: 1px solid #3e3e42;
-              border-radius: 8px;
-              padding: 20px;
-              overflow-x: auto;
-            }
-            pre {
               margin: 0;
-              font-family: 'Consolas', 'Courier New', monospace;
-              font-size: 14px;
-              line-height: 1.6;
-              color: #d4d4d4;
-              white-space: pre-wrap;
-              word-wrap: break-word;
             }
-            .line-numbers {
-              display: inline-block;
-              padding-right: 20px;
-              margin-right: 20px;
-              border-right: 1px solid #3e3e42;
-              color: #858585;
-              user-select: none;
-              text-align: right;
-              min-width: 50px;
+            .loader {
+              text-align: center;
             }
-            @media print {
-              body {
-                background: white;
-                color: black;
-              }
-              .toolbar {
-                display: none;
-              }
-              .text-container {
-                border: none;
-                background: white;
-              }
-              pre {
-                color: black;
-              }
+            .spinner {
+              border: 4px solid #3e3e42;
+              border-top: 4px solid #0e639c;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+              margin: 0 auto 20px;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
             }
           </style>
         </head>
         <body>
-          <div class="toolbar">
-            <div class="toolbar-info">
-              <span>📄</span>
-              <div class="file-info">
-                <span class="file-name">${escapeHtml(file.name)}</span>
-                <span class="file-meta">${(file.size / 1024).toFixed(2)} KB • ${lines.length} lines</span>
-              </div>
-            </div>
-            <div>
-              <button onclick="copyContent()">📋 Copy</button>
-              <button onclick="window.print()">🖨️ Print</button>
-              <button onclick="window.close()">✖️ Close</button>
-            </div>
+          <div class="loader">
+            <div class="spinner"></div>
+            <h2>Loading ${file.name}...</h2>
+            <p>Processing text file...</p>
           </div>
-          <div class="content-container">
-            <div class="text-container">
-              <pre id="content">${numberedLines}</pre>
-            </div>
-          </div>
-          <script>
-            const rawContent = ${JSON.stringify(content)};
-            function copyContent() {
-              navigator.clipboard.writeText(rawContent).then(() => {
-                alert('Content copied to clipboard!');
-              }).catch(() => {
-                alert('Failed to copy content');
-              });
-            }
-          </script>
         </body>
         </html>
       `);
-      viewerWindow.document.close();
+
+      // Send file to backend for conversion
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/txt', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const html = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(html);
+        loadingWindow.document.close();
+      } else {
+        const error = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #1e1e1e;
+                color: #d4d4d4;
+              }
+              .error {
+                background: #2d2d30;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.3);
+                max-width: 600px;
+                margin: 0 auto;
+                border: 1px solid #3e3e42;
+              }
+              h1 { color: #f48771; }
+              button {
+                background: #0e639c;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+              }
+              button:hover { background: #1177bb; }
+            </style>
+          </head>
+          <body>
+            <div class="error">
+              <h1>⚠️ Preview Error</h1>
+              <p>Failed to generate text file preview. Please try downloading the file instead.</p>
+              <button onclick="window.close()">Close</button>
+            </div>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      }
     } catch (error) {
       console.error('TXT view error:', error);
       alert('Failed to open text file preview. Please try again or download the file.');

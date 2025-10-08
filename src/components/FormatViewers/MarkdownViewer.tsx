@@ -40,222 +40,117 @@ export const MarkdownViewer: React.FC = () => {
 
   const handleViewMarkdown = async (file: File) => {
     try {
-      // Read file content
-      const content = await file.text();
-      
-      // Open in new window with Markdown viewer
-      const viewerWindow = window.open('', '_blank', 'width=1400,height=900,scrollbars=yes,resizable=yes');
-      if (!viewerWindow) {
+      // Show loading state
+      const loadingWindow = window.open('', '_blank', 'width=1400,height=900,scrollbars=yes,resizable=yes');
+      if (!loadingWindow) {
         alert('Please allow pop-ups to view the document');
         return;
       }
 
-      viewerWindow.document.write(`
+      loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <meta charset="UTF-8">
-          <title>${file.name}</title>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
-          <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+          <title>Loading ${file.name}...</title>
           <style>
-            * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
             body {
-              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-              background: #f6f8fa;
-              color: #24292f;
-              line-height: 1.6;
-            }
-            .toolbar {
-              position: sticky;
-              top: 0;
-              background: #24292f;
-              color: white;
-              padding: 15px 20px;
               display: flex;
-              justify-content: space-between;
+              justify-content: center;
               align-items: center;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-              z-index: 1000;
-            }
-            .toolbar-info {
-              display: flex;
-              align-items: center;
-              gap: 15px;
-            }
-            .file-info {
-              display: flex;
-              flex-direction: column;
-            }
-            .file-name {
-              font-weight: bold;
-              font-size: 14px;
-            }
-            .file-meta {
-              font-size: 12px;
-              color: #8b949e;
-            }
-            .toolbar button {
-              background: #238636;
-              color: white;
-              border: none;
-              padding: 8px 16px;
-              border-radius: 6px;
-              cursor: pointer;
-              margin-left: 10px;
-              font-size: 14px;
-              transition: background 0.2s;
-            }
-            .toolbar button:hover {
-              background: #2ea043;
-            }
-            .content-container {
-              max-width: 980px;
-              margin: 40px auto;
-              padding: 0 20px;
-            }
-            .markdown-body {
-              background: white;
-              border: 1px solid #d0d7de;
-              border-radius: 8px;
-              padding: 48px;
-              box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            }
-            .tab-bar {
-              background: white;
-              border: 1px solid #d0d7de;
-              border-bottom: none;
-              border-radius: 8px 8px 0 0;
-              padding: 10px 20px;
-              display: flex;
-              gap: 10px;
-              margin-bottom: -1px;
-            }
-            .tab {
-              padding: 8px 16px;
-              border-radius: 6px;
-              cursor: pointer;
-              background: transparent;
-              border: none;
-              font-size: 14px;
-              font-weight: 500;
-              color: #57606a;
-              transition: background 0.2s;
-            }
-            .tab.active {
+              height: 100vh;
+              font-family: Arial, sans-serif;
               background: #f6f8fa;
+              margin: 0;
             }
-            .tab:hover {
-              background: #f6f8fa;
+            .loader {
+              text-align: center;
             }
-            .raw-content {
-              background: #f6f8fa;
-              border: 1px solid #d0d7de;
-              border-radius: 8px;
-              padding: 16px;
-              font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-              font-size: 12px;
-              line-height: 1.6;
-              white-space: pre-wrap;
-              word-wrap: break-word;
-              display: none;
+            .spinner {
+              border: 4px solid #f3f3f3;
+              border-top: 4px solid #238636;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+              margin: 0 auto 20px;
             }
-            .raw-content.active {
-              display: block;
-            }
-            @media print {
-              .toolbar, .tab-bar {
-                display: none;
-              }
-              body {
-                background: white;
-              }
-              .content-container {
-                max-width: 100%;
-                margin: 0;
-                padding: 0;
-              }
-              .markdown-body {
-                border: none;
-                box-shadow: none;
-              }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
             }
           </style>
         </head>
         <body>
-          <div class="toolbar">
-            <div class="toolbar-info">
-              <span>📝</span>
-              <div class="file-info">
-                <span class="file-name">${file.name}</span>
-                <span class="file-meta">${(file.size / 1024).toFixed(2)} KB • Markdown</span>
-              </div>
-            </div>
-            <div>
-              <button onclick="copyContent()">📋 Copy</button>
-              <button onclick="window.print()">🖨️ Print</button>
-              <button onclick="window.close()">✖️ Close</button>
-            </div>
+          <div class="loader">
+            <div class="spinner"></div>
+            <h2 style="color: #24292f;">Loading ${file.name}...</h2>
+            <p style="color: #57606a;">Rendering Markdown preview...</p>
           </div>
-          <div class="content-container">
-            <div class="tab-bar">
-              <button class="tab active" onclick="showPreview()">📖 Preview</button>
-              <button class="tab" onclick="showRaw()">📄 Raw</button>
-            </div>
-            <div class="markdown-body" id="preview"></div>
-            <div class="raw-content" id="raw"></div>
-          </div>
-          <script>
-            const markdownContent = ${JSON.stringify(content)};
-            
-            // Configure marked
-            marked.setOptions({
-              breaks: true,
-              gfm: true,
-              highlight: function(code, lang) {
-                if (lang && hljs.getLanguage(lang)) {
-                  return hljs.highlight(code, { language: lang }).value;
-                }
-                return hljs.highlightAuto(code).value;
-              }
-            });
-            
-            // Render markdown
-            document.getElementById('preview').innerHTML = marked.parse(markdownContent);
-            document.getElementById('raw').textContent = markdownContent;
-            
-            function showPreview() {
-              document.getElementById('preview').style.display = 'block';
-              document.getElementById('raw').classList.remove('active');
-              document.querySelectorAll('.tab')[0].classList.add('active');
-              document.querySelectorAll('.tab')[1].classList.remove('active');
-            }
-            
-            function showRaw() {
-              document.getElementById('preview').style.display = 'none';
-              document.getElementById('raw').classList.add('active');
-              document.querySelectorAll('.tab')[0].classList.remove('active');
-              document.querySelectorAll('.tab')[1].classList.add('active');
-            }
-            
-            function copyContent() {
-              navigator.clipboard.writeText(markdownContent).then(() => {
-                alert('Markdown content copied to clipboard!');
-              }).catch(() => {
-                alert('Failed to copy content');
-              });
-            }
-          </script>
         </body>
         </html>
       `);
-      viewerWindow.document.close();
+
+      // Send file to backend for conversion
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/md', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const html = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(html);
+        loadingWindow.document.close();
+      } else {
+        const error = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #f6f8fa;
+              }
+              .error {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                max-width: 600px;
+                margin: 0 auto;
+                border: 1px solid #d0d7de;
+              }
+              h1 { color: #cf222e; }
+              button {
+                background: #238636;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 6px;
+                cursor: pointer;
+                margin-top: 20px;
+              }
+              button:hover { background: #2ea043; }
+            </style>
+          </head>
+          <body>
+            <div class="error">
+              <h1>⚠️ Preview Error</h1>
+              <p>Failed to generate Markdown preview. Please try downloading the file instead.</p>
+              <button onclick="window.close()">Close</button>
+            </div>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      }
     } catch (error) {
       console.error('Markdown view error:', error);
       alert('Failed to open Markdown file preview. Please try again or download the file.');
