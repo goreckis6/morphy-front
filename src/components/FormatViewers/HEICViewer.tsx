@@ -305,15 +305,14 @@ export const HEICViewer: React.FC = () => {
           </div>
         </div>
 
-          {/* Back to Viewers Button */}
-          <div className="text-center mb-4">
-            <a
-              href="/viewers"
-              className="inline-block bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              ← Back to All Viewers
-            </a>
-          </div>
+        {/* Back to Viewers Button */}
+        <div className="text-center">
+          <a
+            href="/viewers"
+            className="inline-block bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            ← Back to All Viewers
+          </a>
         </div>
       </div>
       
