@@ -85,6 +85,7 @@ import { MarkdownViewer } from './components/FormatViewers/MarkdownViewer';
 import { DOCXViewer } from './components/FormatViewers/DOCXViewer';
 import { ODTViewer } from './components/FormatViewers/ODTViewer';
 import { XLSXViewer } from './components/FormatViewers/XLSXViewer';
+import { CSVViewer } from './components/FormatViewers/CSVViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -813,6 +814,14 @@ function App() {
     return (
       <AuthProvider>
         <XLSXViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/csv') {
+    return (
+      <AuthProvider>
+        <CSVViewer />
       </AuthProvider>
     );
   }
