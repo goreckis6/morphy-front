@@ -84,6 +84,7 @@ import { TXTViewer } from './components/FormatViewers/TXTViewer';
 import { MarkdownViewer } from './components/FormatViewers/MarkdownViewer';
 import { DOCXViewer } from './components/FormatViewers/DOCXViewer';
 import { ODTViewer } from './components/FormatViewers/ODTViewer';
+import { XLSXViewer } from './components/FormatViewers/XLSXViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -804,6 +805,14 @@ function App() {
     return (
       <AuthProvider>
         <ODTViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/xlsx' || currentPath === '/viewers/excel') {
+    return (
+      <AuthProvider>
+        <XLSXViewer />
       </AuthProvider>
     );
   }
