@@ -99,200 +99,22 @@ export const Header: React.FC = () => {
           {showMobileMenu && (
             <div className="md:hidden border-t border-gray-200 py-4">
               <nav className="flex flex-col space-y-4">
-                <div>
-                  <a href="/converters" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                    All Converters
-                  </a>
-                  <div className="ml-4 mt-2 space-y-1">
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Developer Tools</div>
-                    <a href="/convert/avro-to-csv" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      AVRO to CSV
-                    </a>
-                    <a href="/convert/avro-to-json" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      AVRO to JSON
-                    </a>
-                    <a href="/convert/avro-to-ndjson" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      AVRO to NDJSON
-                    </a>
-                    <a href="/convert/csv-to-avro" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to AVRO
-                    </a>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-2">Image Converters</div>
-                    <a href="/convert/bmp-to-webp" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      BMP to WebP
-                    </a>
-                    <a href="/convert/cr2-to-ico" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CR2 to ICO
-                    </a>
-                    <a href="/convert/cr2-to-webp" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CR2 to WebP
-                    </a>
-                    <a href="/convert/dng-to-ico" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DNG to ICO
-                    </a>
-                    <a href="/convert/dng-to-webp" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DNG to WebP
-                    </a>
-                    <a href="/convert/eps-to-ico" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPS to ICO
-                    </a>
-                    <a href="/convert/eps-to-webp" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPS to WebP
-                    </a>
-                    <a href="/convert/gif-to-ico" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      GIF to ICO
-                    </a>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-2">Document Converters</div>
-                    <a href="/convert/csv-to-doc" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to DOC
-                    </a>
-                    <a href="/convert/csv-to-docx" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to DOCX
-                    </a>
-                    <a href="/convert/csv-to-epub" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to EPUB
-                    </a>
-                    <a href="/convert/csv-to-html" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to HTML
-                    </a>
-                    <a href="/convert/csv-to-md" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to MD
-                    </a>
-                    <a href="/convert/csv-to-mobi" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to MOBI
-                    </a>
-                    <a href="/convert/csv-to-odp" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to ODP
-                    </a>
-                    <a href="/convert/csv-to-odt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to ODT
-                    </a>
-                    <a href="/convert/csv-to-pdf" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to PDF
-                    </a>
-                    <a href="/convert/csv-to-ppt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to PPT
-                    </a>
-                    <a href="/convert/csv-to-pptx" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to PPTX
-                    </a>
-                    <a href="/convert/csv-to-rtf" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to RTF
-                    </a>
-                    <a href="/convert/csv-to-txt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to TXT
-                    </a>
-                    <a href="/convert/csv-to-xls" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to XLS
-                    </a>
-                    <a href="/convert/csv-to-xlsx" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to XLSX
-                    </a>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-2">DOC Converters</div>
-                    <a href="/convert/doc-to-csv" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOC to CSV
-                    </a>
-                    <a href="/convert/doc-to-epub" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOC to EPUB
-                    </a>
-                    <a href="/convert/doc-to-mobi" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOC to MOBI
-                    </a>
-                    <a href="/convert/doc-to-odt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOC to ODT
-                    </a>
-                    <a href="/convert/doc-to-txt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOC to TXT
-                    </a>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-2">DOCX Converters</div>
-                    <a href="/convert/docx-to-csv" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOCX to CSV
-                    </a>
-                    <a href="/convert/docx-to-epub" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOCX to EPUB
-                    </a>
-                    <a href="/convert/docx-to-mobi" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOCX to MOBI
-                    </a>
-                    <a href="/convert/docx-to-odt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOCX to ODT
-                    </a>
-                    <a href="/convert/docx-to-txt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      DOCX to TXT
-                    </a>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-2">E-book Converters (EPUB)</div>
-                    <a href="/convert/epub-to-csv" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to CSV
-                    </a>
-                    <a href="/convert/epub-to-doc" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to DOC
-                    </a>
-                    <a href="/convert/epub-to-docx" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to DOCX
-                    </a>
-                    <a href="/convert/epub-to-html" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to HTML
-                    </a>
-                    <a href="/convert/epub-to-md" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to MD
-                    </a>
-                    <a href="/convert/epub-to-mobi" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to MOBI
-                    </a>
-                    <a href="/convert/epub-to-odp" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to ODP
-                    </a>
-                    <a href="/convert/epub-to-odt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to ODT
-                    </a>
-                    <a href="/convert/epub-to-pdf" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to PDF
-                    </a>
-                    <a href="/convert/epub-to-ppt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to PPT
-                    </a>
-                    <a href="/convert/epub-to-pptx" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to PPTX
-                    </a>
-                    <a href="/convert/epub-to-rtf" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to RTF
-                    </a>
-                    <a href="/convert/epub-to-txt" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to TXT
-                    </a>
-                    <a href="/convert/epub-to-xlsx" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      EPUB to XLSX
-                    </a>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-2">Developer Tools (CSV)</div>
-                    <a href="/convert/csv-to-json" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to JSON
-                    </a>
-                    <a href="/convert/csv-to-ndjson" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to NDJSON
-                    </a>
-                    <a href="/convert/csv-to-parquet" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to Parquet
-                    </a>
-                    <a href="/convert/csv-to-sql" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to SQL
-                    </a>
-                    <a href="/convert/csv-to-toml" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to TOML
-                    </a>
-                    <a href="/convert/csv-to-xml" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to XML
-                    </a>
-                    <a href="/convert/csv-to-yaml" className="block text-sm text-gray-600 hover:text-blue-600 transition-colors">
-                      CSV to YAML
-                    </a>
-                  </div>
-                </div>
-                <a href="/converters" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <a href="/converters" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Converters
                 </a>
-                <a href="/viewers" className="text-gray-700 hover:text-blue-600 transition-colors">
+                <a href="/viewers" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Viewers
                 </a>
+                
+                <button
+                  onClick={() => {
+                    setShowMobileMenu(false);
+                    document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300 shadow-lg text-center"
+                >
+                  Convert Now
+                </button>
                 
                 <div className="pt-4 border-t border-gray-200">
                   {user ? (
