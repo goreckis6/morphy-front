@@ -94,6 +94,8 @@ import { CSSViewer } from './components/FormatViewers/CSSViewer';
 import { JSViewer } from './components/FormatViewers/JSViewer';
 import { PythonViewer } from './components/FormatViewers/PythonViewer';
 import { NEFViewer } from './components/FormatViewers/NEFViewer';
+import { CR2Viewer } from './components/FormatViewers/CR2Viewer';
+import { DCRViewer } from './components/FormatViewers/DCRViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -894,6 +896,22 @@ function App() {
     return (
       <AuthProvider>
         <NEFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/cr2') {
+    return (
+      <AuthProvider>
+        <CR2Viewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/dcr') {
+    return (
+      <AuthProvider>
+        <DCRViewer />
       </AuthProvider>
     );
   }

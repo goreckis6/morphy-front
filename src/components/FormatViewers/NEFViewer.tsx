@@ -155,6 +155,11 @@ export const NEFViewer: React.FC = () => {
                 align-items: center;
                 gap: 10px;
               }
+              .header-controls {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+              }
               .btn {
                 padding: 8px 20px;
                 border: none;
@@ -166,6 +171,16 @@ export const NEFViewer: React.FC = () => {
                 align-items: center;
                 gap: 8px;
                 transition: all 0.2s;
+              }
+              .btn-rotate {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+                padding: 8px 16px;
+              }
+              .btn-rotate:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
               }
               .btn-print {
                 background: white;
@@ -179,7 +194,6 @@ export const NEFViewer: React.FC = () => {
                 background: rgba(255,255,255,0.2);
                 color: white;
                 border: 1px solid rgba(255,255,255,0.3);
-                margin-left: 10px;
               }
               .btn-close:hover {
                 background: rgba(255,255,255,0.3);
@@ -202,6 +216,7 @@ export const NEFViewer: React.FC = () => {
                 max-height: 100%;
                 object-fit: contain;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+                transition: transform 0.3s ease;
               }
               @media print {
                 .header-bar { display: none; }
@@ -215,7 +230,13 @@ export const NEFViewer: React.FC = () => {
                 <span>📷</span>
                 <span>${file.name}</span>
               </div>
-              <div>
+              <div class="header-controls">
+                <button onclick="rotateLeft()" class="btn btn-rotate">
+                  ↶ Rotate Left
+                </button>
+                <button onclick="rotateRight()" class="btn btn-rotate">
+                  Rotate Right ↷
+                </button>
                 <button onclick="window.print()" class="btn btn-print">
                   🖨️ Print
                 </button>
@@ -225,8 +246,22 @@ export const NEFViewer: React.FC = () => {
               </div>
             </div>
             <div class="image-container">
-              <img src="${imageUrl}" alt="${file.name}">
+              <img id="preview-image" src="${imageUrl}" alt="${file.name}">
             </div>
+            <script>
+              let rotation = 0;
+              const img = document.getElementById('preview-image');
+              
+              function rotateLeft() {
+                rotation -= 90;
+                img.style.transform = 'rotate(' + rotation + 'deg)';
+              }
+              
+              function rotateRight() {
+                rotation += 90;
+                img.style.transform = 'rotate(' + rotation + 'deg)';
+              }
+            </script>
           </body>
           </html>
         `);
