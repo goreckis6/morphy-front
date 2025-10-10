@@ -37,6 +37,13 @@ export const ODSViewer: React.FC = () => {
   };
 
   const handleViewODS = async (file: File) => {
+    // Check file size (max 100MB for preview)
+    const maxSize = 100 * 1024 * 1024; // 100MB
+    if (file.size > maxSize) {
+      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      return;
+    }
+    
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
@@ -182,9 +189,9 @@ export const ODSViewer: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-r from-green-600 via-emerald-600 to-teal-700">
           <div className="absolute inset-0 bg-black/20"></div>
@@ -215,7 +222,7 @@ export const ODSViewer: React.FC = () => {
 
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Upload Section */}
+        {/* Upload Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
             <div className="flex items-center space-x-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
@@ -243,7 +250,7 @@ export const ODSViewer: React.FC = () => {
                   <AlertCircle className="w-5 h-5 text-red-500 mr-2" />
                   <span className="text-red-700 text-sm">{validationError.message}</span>
                 </div>
-              </div>
+            </div>
             )}
           </div>
 
@@ -288,9 +295,9 @@ export const ODSViewer: React.FC = () => {
                         <p className="text-xs text-gray-500">
                           {(file.size / 1024 / 1024).toFixed(2)} MB
                         </p>
-                      </div>
-                    </div>
-                    
+          </div>
+        </div>
+
                     <div className="space-y-2">
                       <button
                         onClick={() => handleViewODS(file)}
@@ -306,12 +313,12 @@ export const ODSViewer: React.FC = () => {
                         <Download className="w-4 h-4" />
                         <span>Download</span>
                       </button>
-                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          )}
+          </div>
+        )}
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -381,7 +388,7 @@ export const ODSViewer: React.FC = () => {
                     <li>• <strong>XML-based</strong> - Human-readable and easy to process</li>
                     <li>• <strong>Compression</strong> - ZIP compression for smaller file sizes</li>
                   </ul>
-                </div>
+              </div>
                 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
@@ -393,7 +400,7 @@ export const ODSViewer: React.FC = () => {
                     <li>• <strong>Cross-platform work</strong> - Teams using different OS</li>
                     <li>• <strong>Long-term archival</strong> - Future-proof data storage</li>
                   </ul>
-                </div>
+              </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
@@ -427,10 +434,10 @@ export const ODSViewer: React.FC = () => {
                       </tr>
                     </tbody>
                   </table>
-                </div>
               </div>
             </div>
           </div>
+        </div>
 
           {/* Back to Viewers Button */}
           <div className="text-center mt-8">
@@ -442,7 +449,7 @@ export const ODSViewer: React.FC = () => {
             </a>
           </div>
         </div>
-        
+
         {/* Footer */}
         <footer className="bg-gray-800 text-white py-12 mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -464,7 +471,7 @@ export const ODSViewer: React.FC = () => {
             </div>
           </div>
         </footer>
-      </div>
+        </div>
     </>
   );
 };

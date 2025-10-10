@@ -88,6 +88,11 @@ import { XLSXViewer } from './components/FormatViewers/XLSXViewer';
 import { CSVViewer } from './components/FormatViewers/CSVViewer';
 import { ODSViewer } from './components/FormatViewers/ODSViewer';
 import { JSONViewer } from './components/FormatViewers/JSONViewer';
+import { XMLViewer } from './components/FormatViewers/XMLViewer';
+import { HTMLViewer } from './components/FormatViewers/HTMLViewer';
+import { CSSViewer } from './components/FormatViewers/CSSViewer';
+import { JSViewer } from './components/FormatViewers/JSViewer';
+import { PythonViewer } from './components/FormatViewers/PythonViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -840,6 +845,46 @@ function App() {
     return (
       <AuthProvider>
         <JSONViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/xml') {
+    return (
+      <AuthProvider>
+        <XMLViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/html' || currentPath === '/viewers/htm') {
+    return (
+      <AuthProvider>
+        <HTMLViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/css') {
+    return (
+      <AuthProvider>
+        <CSSViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/js' || currentPath === '/viewers/javascript') {
+    return (
+      <AuthProvider>
+        <JSViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/py' || currentPath === '/viewers/python') {
+    return (
+      <AuthProvider>
+        <PythonViewer />
       </AuthProvider>
     );
   }

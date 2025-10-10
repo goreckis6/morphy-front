@@ -37,6 +37,13 @@ export const CSVViewer: React.FC = () => {
   };
 
   const handleViewCSV = async (file: File) => {
+    // Check file size (max 100MB for preview)
+    const maxSize = 100 * 1024 * 1024; // 100MB
+    if (file.size > maxSize) {
+      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      return;
+    }
+    
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {

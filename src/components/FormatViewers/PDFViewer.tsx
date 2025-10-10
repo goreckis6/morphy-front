@@ -39,6 +39,13 @@ export const PDFViewer: React.FC = () => {
   };
 
   const handleViewPDF = (file: File) => {
+    // Check file size (max 100MB for preview)
+    const maxSize = 100 * 1024 * 1024; // 100MB
+    if (file.size > maxSize) {
+      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      return;
+    }
+    
     const url = URL.createObjectURL(file);
     // Open PDF directly in new tab with browser's native PDF viewer
     const newWindow = window.open(url, '_blank');
