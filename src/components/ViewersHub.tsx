@@ -65,7 +65,7 @@ export const ViewersHub: React.FC = () => {
       title: "RAW CAMERA FORMATS",
       icon: <Image className="w-6 h-6 text-red-600" />,
       formats: [
-        { name: "NEF Viewer", description: "View Nikon raw camera files", path: "/viewer/nef", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "NEF Viewer", description: "View Nikon raw camera files with RAW processing", path: "/viewers/nef", category: "Raw", icon: <Image className="w-5 h-5" /> },
         { name: "CR2 Viewer", description: "View Canon raw camera files", path: "/viewer/cr2", category: "Raw", icon: <Image className="w-5 h-5" /> },
         { name: "DCR Viewer", description: "View Kodak raw camera files", path: "/viewer/dcr", category: "Raw", icon: <Image className="w-5 h-5" /> },
         { name: "X3F Viewer", description: "View Sigma raw camera files", path: "/viewer/x3f", category: "Raw", icon: <Image className="w-5 h-5" /> },
@@ -149,7 +149,7 @@ export const ViewersHub: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif' || viewer.path === '/viewers/pdf' || viewer.path === '/viewers/rtf' || viewer.path === '/viewers/txt' || viewer.path === '/viewers/md' || viewer.path === '/viewers/docx' || viewer.path === '/viewers/odt' || viewer.path === '/viewers/xlsx' || viewer.path === '/viewers/csv' || viewer.path === '/viewers/ods' || viewer.path === '/viewers/json' || viewer.path === '/viewers/xml' || viewer.path === '/viewers/html' || viewer.path === '/viewers/css' || viewer.path === '/viewers/js' || viewer.path === '/viewers/py') ? (
+                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif' || viewer.path === '/viewers/pdf' || viewer.path === '/viewers/rtf' || viewer.path === '/viewers/txt' || viewer.path === '/viewers/md' || viewer.path === '/viewers/docx' || viewer.path === '/viewers/odt' || viewer.path === '/viewers/xlsx' || viewer.path === '/viewers/csv' || viewer.path === '/viewers/ods' || viewer.path === '/viewers/json' || viewer.path === '/viewers/xml' || viewer.path === '/viewers/html' || viewer.path === '/viewers/css' || viewer.path === '/viewers/js' || viewer.path === '/viewers/py' || viewer.path === '/viewers/nef') ? (
                           <a
                             href={viewer.path}
                             className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"

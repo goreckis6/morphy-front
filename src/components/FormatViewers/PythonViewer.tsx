@@ -12,16 +12,29 @@ export const PythonViewer: React.FC = () => {
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
     
+    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
+    
     // Filter only Python files
     const pyFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return ['py', 'pyw', 'pyx', 'pyi'].includes(extension || '');
     });
     
+    console.log('Python files after filter:', pyFiles.map(f => ({ name: f.name, size: f.size })));
+    
+    if (pyFiles.length === 0) {
+      console.warn('No valid Python files found');
+      return;
+    }
+    
     const validation = validateBatchFiles(pyFiles);
+    console.log('Validation result:', validation);
     
     if (validation.isValid) {
       setSelectedFiles(pyFiles);
+      console.log('Files set successfully');
+    } else {
+      console.error('Validation failed:', validation.error);
     }
   };
 

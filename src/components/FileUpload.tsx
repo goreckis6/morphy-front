@@ -24,10 +24,28 @@ export const FileUpload: React.FC<FileUploadProps> = ({
 
   const handleFiles = useCallback((files: FileList) => {
     const fileArray = Array.from(files).slice(0, maxFiles);
+    
+    // Check for files that are too large
+    const oversizedFiles = fileArray.filter(file => file.size > maxSize);
+    if (oversizedFiles.length > 0) {
+      const fileList = oversizedFiles.map(f => `${f.name} (${(f.size / 1024 / 1024).toFixed(2)} MB)`).join(', ');
+      alert(`The following file(s) exceed the ${(maxSize / 1024 / 1024).toFixed(0)} MB limit and were not uploaded:\n\n${fileList}\n\nPlease choose smaller files or download them directly.`);
+    }
+    
     let validFiles = fileArray.filter(file => file.size <= maxSize);
     
     // Filter by accepted formats if specified
     if (acceptedFormats && acceptedFormats.length > 0) {
+      const invalidFormatFiles = validFiles.filter(file => {
+        const extension = file.name.split('.').pop()?.toLowerCase();
+        return !acceptedFormats.includes(extension || '');
+      });
+      
+      if (invalidFormatFiles.length > 0) {
+        const fileList = invalidFormatFiles.map(f => f.name).join(', ');
+        alert(`The following file(s) have invalid formats:\n\n${fileList}\n\nAccepted formats: ${acceptedFormats.join(', ')}`);
+      }
+      
       validFiles = validFiles.filter(file => {
         const extension = file.name.split('.').pop()?.toLowerCase();
         return acceptedFormats.includes(extension || '');

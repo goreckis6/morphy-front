@@ -12,16 +12,29 @@ export const JSONViewer: React.FC = () => {
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
     
+    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
+    
     // Filter only JSON files
     const jsonFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return ['json', 'jsonl', 'geojson'].includes(extension || '');
     });
     
+    console.log('JSON files after filter:', jsonFiles.map(f => ({ name: f.name, size: f.size })));
+    
+    if (jsonFiles.length === 0) {
+      console.warn('No valid JSON files found');
+      return;
+    }
+    
     const validation = validateBatchFiles(jsonFiles);
+    console.log('Validation result:', validation);
     
     if (validation.isValid) {
       setSelectedFiles(jsonFiles);
+      console.log('Files set successfully');
+    } else {
+      console.error('Validation failed:', validation.error);
     }
   };
 

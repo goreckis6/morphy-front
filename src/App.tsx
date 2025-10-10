@@ -93,6 +93,7 @@ import { HTMLViewer } from './components/FormatViewers/HTMLViewer';
 import { CSSViewer } from './components/FormatViewers/CSSViewer';
 import { JSViewer } from './components/FormatViewers/JSViewer';
 import { PythonViewer } from './components/FormatViewers/PythonViewer';
+import { NEFViewer } from './components/FormatViewers/NEFViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -885,6 +886,14 @@ function App() {
     return (
       <AuthProvider>
         <PythonViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/nef') {
+    return (
+      <AuthProvider>
+        <NEFViewer />
       </AuthProvider>
     );
   }

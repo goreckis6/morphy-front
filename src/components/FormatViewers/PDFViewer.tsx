@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
+import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Book, Search, ZoomIn } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -10,8 +10,9 @@ export const PDFViewer: React.FC = () => {
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
 
   const handleFilesSelected = (files: File[]) => {
-    // Clear previous validation errors
     clearValidationError();
+    
+    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
     
     // Filter only PDF files
     const pdfFiles = files.filter(file => {
@@ -19,11 +20,21 @@ export const PDFViewer: React.FC = () => {
       return extension === 'pdf';
     });
     
-    // Validate the files
+    console.log('PDF files after filter:', pdfFiles.map(f => ({ name: f.name, size: f.size })));
+    
+    if (pdfFiles.length === 0) {
+      console.warn('No valid PDF files found');
+      return;
+    }
+    
     const validation = validateBatchFiles(pdfFiles);
+    console.log('Validation result:', validation);
     
     if (validation.isValid) {
       setSelectedFiles(pdfFiles);
+      console.log('Files set successfully');
+    } else {
+      console.error('Validation failed:', validation.error);
     }
   };
 
@@ -38,7 +49,7 @@ export const PDFViewer: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
-  const handleViewPDF = (file: File) => {
+  const handleViewPDF = async (file: File) => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
@@ -46,15 +57,117 @@ export const PDFViewer: React.FC = () => {
       return;
     }
     
-    const url = URL.createObjectURL(file);
-    // Open PDF directly in new tab with browser's native PDF viewer
-    const newWindow = window.open(url, '_blank');
-    
-    // Clean up the URL after a delay to allow the browser to load it
-    if (newWindow) {
-      setTimeout(() => {
-        URL.revokeObjectURL(url);
-      }, 1000);
+    try {
+      const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+      if (!loadingWindow) {
+        alert('Please allow pop-ups to view the PDF file');
+        return;
+      }
+
+      loadingWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Loading ${file.name}...</title>
+          <style>
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              font-family: Arial, sans-serif;
+              background: #f3f4f6;
+              margin: 0;
+            }
+            .loader {
+              text-align: center;
+            }
+            .spinner {
+              border: 4px solid #e5e7eb;
+              border-top: 4px solid #dc2626;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+              margin: 0 auto 20px;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="loader">
+            <div class="spinner"></div>
+            <h2>Loading PDF...</h2>
+            <p>Rendering ${file.name}...</p>
+          </div>
+        </body>
+        </html>
+      `);
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/pdf', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const html = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(html);
+        loadingWindow.document.close();
+      } else {
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #f3f4f6;
+              }
+              .error {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                max-width: 600px;
+                margin: 0 auto;
+              }
+              h1 { color: #dc2626; }
+              button {
+                background: #dc2626;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+              }
+              button:hover { background: #b91c1c; }
+            </style>
+          </head>
+          <body>
+            <div class="error">
+              <h1>⚠️ Preview Error</h1>
+              <p>Failed to generate PDF preview. Please try downloading the file instead.</p>
+              <button onclick="window.close()">Close</button>
+            </div>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      }
+    } catch (error) {
+      console.error('PDF view error:', error);
+      alert('Failed to open PDF preview. Please try again or download the file.');
     }
   };
 
@@ -62,15 +175,15 @@ export const PDFViewer: React.FC = () => {
     <>
       <Helmet>
         <title>Free PDF Viewer - View PDF Documents Online | MorphyIMG</title>
-        <meta name="description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDFs with search, zoom, full-screen mode, and navigation tools. Supports batch viewing up to 20 files. 100% free PDF viewer tool." />
-        <meta name="keywords" content="PDF viewer, view PDF online, PDF preview, PDF reader, document viewer, PDF viewer tool, online PDF viewer, PDF viewer free, PDF search" />
+        <meta name="description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDFs with page navigation and zoom controls. Supports batch viewing up to 20 files. 100% free PDF viewer tool." />
+        <meta name="keywords" content="PDF viewer, view PDF online, PDF preview, PDF reader, document viewer, PDF viewer tool, online PDF viewer, PDF viewer free, PDF page viewer" />
         <meta property="og:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
-        <meta property="og:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and document navigation." />
+        <meta property="og:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyimg.com/viewers/pdf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
-        <meta name="twitter:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and document navigation." />
+        <meta name="twitter:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -112,7 +225,7 @@ export const PDFViewer: React.FC = () => {
                     Free PDF Viewer
                   </h1>
                   <p className="text-xl text-red-100">
-                    View, analyze, and manage PDF documents with professional tools - 100% free
+                    View PDF documents with page navigation and zoom - 100% free
                   </p>
                 </div>
               </div>
@@ -133,8 +246,7 @@ export const PDFViewer: React.FC = () => {
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your PDF documents or click to browse. View PDFs with search, zoom, and navigation tools. 
-              Supports .pdf files up to 100MB each, with batch upload support for up to 20 files.
+              Drag and drop your PDF documents or click to browse. Supports PDF files up to 100MB each, with batch upload support for up to 20 files.
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -160,7 +272,7 @@ export const PDFViewer: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+                  <div className="p-3 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
@@ -169,15 +281,14 @@ export const PDFViewer: React.FC = () => {
                 </div>
               </div>
 
-              {/* How to View Instructions */}
-              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                 <div className="flex items-start space-x-3">
-                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
+                  <Info className="w-5 h-5 text-red-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View PDFs</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View PDF"</strong> button to open the document in a professional viewer with search, 
-                      zoom, print, and full-screen capabilities. The viewer opens in a new window for the best experience.
+                    <h4 className="font-semibold text-red-900 mb-1">How to View PDF Files</h4>
+                    <p className="text-sm text-red-700">
+                      Click the <strong>"View PDF"</strong> button to open the PDF in a preview window with page navigation and zoom controls. 
+                      Files under 100 MB can be previewed. You can also download the original file.
                     </p>
                   </div>
                 </div>
@@ -226,37 +337,37 @@ export const PDFViewer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-red-200 hover:shadow-xl transition-all transform hover:scale-105">
               <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-red-600" />
+                <Book className="w-8 h-8 text-red-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Universal Compatibility
+                Page Navigation
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Works seamlessly on all platforms, devices, and operating systems without requiring special software - true document portability
+                Navigate through PDF pages with next/previous buttons and page jump controls
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl shadow-lg p-8 border border-pink-200 hover:shadow-xl transition-all transform hover:scale-105">
               <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-blue-600" />
+                <ZoomIn className="w-8 h-8 text-pink-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Preserved Formatting
+                Zoom & Pan
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Maintains exact layout, fonts, images, and formatting across all devices - what you see is what you get everywhere
+                Zoom in/out and pan across pages for detailed viewing of PDF content
               </p>
             </div>
             
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
+            <div className="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl shadow-lg p-8 border border-rose-200 hover:shadow-xl transition-all transform hover:scale-105">
               <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-green-600" />
+                <Search className="w-8 h-8 text-rose-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Advanced Security
+                Print & Download
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Built-in encryption, password protection, and digital signatures keep your documents secure and tamper-proof
+                Print PDF pages directly or download the original file for offline use
               </p>
             </div>
           </div>
@@ -274,39 +385,37 @@ export const PDFViewer: React.FC = () => {
             
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
-                PDF (Portable Document Format) is a file format developed by Adobe in 1993 for presenting documents 
-                in a manner independent of application software, hardware, and operating systems. Each PDF file 
-                encapsulates a complete description of a fixed-layout flat document, including text, fonts, vector 
-                graphics, raster images, and other information needed to display it.
+                PDF (Portable Document Format) is a file format developed by Adobe that presents documents, 
+                including text formatting and images, independently of application software, hardware, and operating systems. 
+                PDFs are widely used for sharing documents while preserving their layout and formatting across different platforms.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Features</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Universal compatibility</strong> - Works on all platforms and devices</li>
-                    <li>• <strong>Preserved formatting</strong> - Maintains exact layout and fonts</li>
-                    <li>• <strong>Security features</strong> - Password protection and encryption</li>
-                    <li>• <strong>Compact file size</strong> - Efficient compression algorithms</li>
-                    <li>• <strong>Interactive elements</strong> - Forms, hyperlinks, and multimedia</li>
-                    <li>• <strong>Professional standard</strong> - Industry-standard for documents</li>
+                    <li>• <strong>Platform independent</strong> - Same appearance on all devices</li>
+                    <li>• <strong>Preserves formatting</strong> - Fonts, images, layout intact</li>
+                    <li>• <strong>Secure</strong> - Password protection and encryption</li>
+                    <li>• <strong>Interactive</strong> - Forms, links, multimedia support</li>
+                    <li>• <strong>Compact</strong> - Efficient compression algorithms</li>
+                    <li>• <strong>Searchable</strong> - Text search and indexing</li>
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Common Uses</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Business documents</strong> - Contracts, invoices, reports</li>
-                    <li>• <strong>Academic papers</strong> - Research papers, theses, publications</li>
-                    <li>• <strong>eBooks and manuals</strong> - Technical documentation, guides</li>
-                    <li>• <strong>Forms and applications</strong> - Fillable forms, job applications</li>
-                    <li>• <strong>Archival storage</strong> - Long-term document preservation</li>
-                    <li>• <strong>Print-ready files</strong> - High-quality printing materials</li>
+                    <li>• <strong>Business documents</strong> - Contracts, reports, invoices</li>
+                    <li>• <strong>Academic papers</strong> - Research papers, dissertations</li>
+                    <li>• <strong>eBooks</strong> - Digital books and manuals</li>
+                    <li>• <strong>Forms</strong> - Fillable forms and applications</li>
+                    <li>• <strong>Presentations</strong> - Slide decks and portfolios</li>
+                    <li>• <strong>Archives</strong> - Long-term document storage</li>
                   </ul>
                 </div>
               </div>
 
-              {/* Technical Specifications */}
               <div className="bg-gray-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
                 <div className="overflow-x-auto">
@@ -321,24 +430,20 @@ export const PDFViewer: React.FC = () => {
                         <td className="py-2 text-sm text-gray-900">application/pdf</td>
                       </tr>
                       <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Adobe Systems (1993)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Current Standard</td>
+                        <td className="py-2 text-sm font-medium text-gray-500">Current Version</td>
                         <td className="py-2 text-sm text-gray-900">PDF 2.0 (ISO 32000-2:2020)</td>
                       </tr>
                       <tr>
                         <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">Multiple algorithms (ZIP, JPEG, JBIG2)</td>
+                        <td className="py-2 text-sm text-gray-900">Flate, JPEG, JBIG2, JPEG 2000</td>
                       </tr>
                       <tr>
                         <td className="py-2 text-sm font-medium text-gray-500">Security</td>
-                        <td className="py-2 text-sm text-gray-900">Password protection, 256-bit AES encryption</td>
+                        <td className="py-2 text-sm text-gray-900">128/256-bit AES encryption</td>
                       </tr>
                       <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Metadata Support</td>
-                        <td className="py-2 text-sm text-gray-900">XMP, Dublin Core, custom properties</td>
+                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
+                        <td className="py-2 text-sm text-gray-900">Adobe Systems (1993)</td>
                       </tr>
                     </tbody>
                   </table>
@@ -348,7 +453,7 @@ export const PDFViewer: React.FC = () => {
           </div>
 
           {/* Back to Viewers Button */}
-          <div className="text-center">
+          <div className="text-center mt-8">
             <a
               href="/viewers"
               className="inline-block bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -369,9 +474,9 @@ export const PDFViewer: React.FC = () => {
                 <h2 className="text-2xl font-bold">MorphyIMG</h2>
               </div>
               
-            <p className="text-gray-300 mb-6">
-              Free professional PDF viewer for all your document viewing needs.
-            </p>
+              <p className="text-gray-300 mb-6">
+                Free professional PDF viewer for all your document needs.
+              </p>
               
               <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
                 <span>© 2025 MorphyIMG. Built for PDF professionals.</span>
@@ -379,7 +484,6 @@ export const PDFViewer: React.FC = () => {
             </div>
           </div>
         </footer>
-
       </div>
     </>
   );
