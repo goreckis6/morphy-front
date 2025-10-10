@@ -46,14 +46,14 @@ export const ViewersHub: React.FC = () => {
       formats: [
         { name: "Excel Viewer", description: "View Excel spreadsheets with formula support", path: "/viewers/xlsx", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> },
         { name: "CSV Viewer", description: "View CSV files with table formatting", path: "/viewers/csv", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> },
-        { name: "ODS Viewer", description: "View OpenDocument Spreadsheet files", path: "/viewer/ods", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> }
+        { name: "ODS Viewer", description: "View OpenDocument Spreadsheet files", path: "/viewers/ods", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> }
       ]
     },
     {
       title: "CODE & DATA FORMATS",
       icon: <Code className="w-6 h-6 text-orange-600" />,
       formats: [
-        { name: "JSON Viewer", description: "View JSON files with syntax highlighting and formatting", path: "/viewer/json", category: "Code", icon: <Code className="w-5 h-5" /> },
+        { name: "JSON Viewer", description: "View JSON files with syntax highlighting and validation", path: "/viewers/json", category: "Code", icon: <Code className="w-5 h-5" /> },
         { name: "XML Viewer", description: "View XML files with tree structure", path: "/viewer/xml", category: "Code", icon: <Code className="w-5 h-5" /> },
         { name: "HTML Viewer", description: "View HTML files with rendered content", path: "/viewer/html", category: "Code", icon: <Code className="w-5 h-5" /> },
         { name: "CSS Viewer", description: "View CSS files with syntax highlighting", path: "/viewer/css", category: "Code", icon: <Code className="w-5 h-5" /> },
@@ -149,7 +149,7 @@ export const ViewersHub: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif' || viewer.path === '/viewers/pdf' || viewer.path === '/viewers/rtf' || viewer.path === '/viewers/txt' || viewer.path === '/viewers/md' || viewer.path === '/viewers/docx' || viewer.path === '/viewers/odt' || viewer.path === '/viewers/xlsx' || viewer.path === '/viewers/csv') ? (
+                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif' || viewer.path === '/viewers/pdf' || viewer.path === '/viewers/rtf' || viewer.path === '/viewers/txt' || viewer.path === '/viewers/md' || viewer.path === '/viewers/docx' || viewer.path === '/viewers/odt' || viewer.path === '/viewers/xlsx' || viewer.path === '/viewers/csv' || viewer.path === '/viewers/ods' || viewer.path === '/viewers/json') ? (
                           <a
                             href={viewer.path}
                             className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"

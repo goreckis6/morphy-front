@@ -86,6 +86,8 @@ import { DOCXViewer } from './components/FormatViewers/DOCXViewer';
 import { ODTViewer } from './components/FormatViewers/ODTViewer';
 import { XLSXViewer } from './components/FormatViewers/XLSXViewer';
 import { CSVViewer } from './components/FormatViewers/CSVViewer';
+import { ODSViewer } from './components/FormatViewers/ODSViewer';
+import { JSONViewer } from './components/FormatViewers/JSONViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -822,6 +824,22 @@ function App() {
     return (
       <AuthProvider>
         <CSVViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/ods') {
+    return (
+      <AuthProvider>
+        <ODSViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/json') {
+    return (
+      <AuthProvider>
+        <JSONViewer />
       </AuthProvider>
     );
   }
