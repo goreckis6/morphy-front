@@ -99,6 +99,8 @@ import { DCRViewer } from './components/FormatViewers/DCRViewer';
 import { X3FViewer } from './components/FormatViewers/X3FViewer';
 import { RAFViewer } from './components/FormatViewers/RAFViewer';
 import { ORFViewer } from './components/FormatViewers/ORFViewer';
+import { DNGViewer } from './components/FormatViewers/DNGViewer';
+import { PEFViewer } from './components/FormatViewers/PEFViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -947,6 +949,22 @@ function App() {
     return (
       <AuthProvider>
         <ORFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/dng') {
+    return (
+      <AuthProvider>
+        <DNGViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/pef') {
+    return (
+      <AuthProvider>
+        <PEFViewer />
       </AuthProvider>
     );
   }
