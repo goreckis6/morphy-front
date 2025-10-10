@@ -194,21 +194,21 @@ export const RTFViewer: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50">
-        <Header />
-        
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-r from-orange-600 via-red-600 to-pink-700">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <button
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <button
                   onClick={() => window.location.href = '/viewers'}
                   className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                </button>
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
                 <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
                   <FileText className="w-12 h-12 text-white" />
                 </div>
@@ -270,12 +270,12 @@ export const RTFViewer: React.FC = () => {
                   <h2 className="text-3xl font-bold text-gray-900">
                     Your RTF Files ({selectedFiles.length})
                   </h2>
-                </div>
-              </div>
+          </div>
+        </div>
 
               {/* How to View Instructions */}
               <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-start space-x-3">
+                  <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
                     <h4 className="font-semibold text-blue-900 mb-1">How to View RTF Files</h4>
@@ -294,37 +294,37 @@ export const RTFViewer: React.FC = () => {
                       <div className="p-2 bg-orange-100 rounded-lg">
                         <FileText className="w-6 h-6 text-orange-600" />
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-gray-800 truncate">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-sm font-medium text-gray-800 truncate">
                           {file.name}
-                        </h3>
+                      </h3>
                         <p className="text-xs text-gray-500">
                           {(file.size / 1024 / 1024).toFixed(2)} MB
-                        </p>
+                      </p>
                       </div>
                     </div>
                     
                     <div className="space-y-2">
-                      <button
+                        <button
                         onClick={() => handleViewRTF(file)}
                         className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                      >
+                        >
                         <Eye className="w-4 h-4" />
                         <span>View Document</span>
-                      </button>
-                      <button
+                        </button>
+                        <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                      >
+                        >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
-                      </button>
-                    </div>
+                          <span>Download</span>
+                        </button>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          )}
+          </div>
+        )}
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -378,15 +378,15 @@ export const RTFViewer: React.FC = () => {
             
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
-                Rich Text Format (RTF) is a proprietary document file format developed by Microsoft in 1987 
-                for cross-platform document interchange. RTF files can contain formatted text, images, and 
-                other document elements while maintaining compatibility across different word processors and platforms. 
+              Rich Text Format (RTF) is a proprietary document file format developed by Microsoft in 1987 
+              for cross-platform document interchange. RTF files can contain formatted text, images, and 
+              other document elements while maintaining compatibility across different word processors and platforms.
                 The format uses simple ASCII text with control codes to define formatting.
-              </p>
+            </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
                   <ul className="space-y-2 text-sm">
                     <li>• <strong>Cross-platform compatibility</strong> - Works on Windows, Mac, and Linux</li>
                     <li>• <strong>Preserves text formatting</strong> - Maintains fonts, colors, and styles</li>
@@ -394,11 +394,11 @@ export const RTFViewer: React.FC = () => {
                     <li>• <strong>Wide application support</strong> - Opens in most word processors</li>
                     <li>• <strong>Human-readable</strong> - Text-based format that can be edited manually</li>
                     <li>• <strong>Legacy compatibility</strong> - Supports older systems and software</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
                   <ul className="space-y-2 text-sm">
                     <li>• <strong>Document exchange</strong> - Between different platforms and applications</li>
                     <li>• <strong>Legacy systems</strong> - Compatibility with older software</li>
@@ -406,50 +406,50 @@ export const RTFViewer: React.FC = () => {
                     <li>• <strong>Simple formatted documents</strong> - Letters, memos, basic reports</li>
                     <li>• <strong>Template files</strong> - Reusable document templates</li>
                     <li>• <strong>Backup format</strong> - Preserving document content and formatting</li>
-                  </ul>
-                </div>
+                </ul>
               </div>
+            </div>
 
-              {/* Technical Specifications */}
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full">
-                    <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.rtf</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/rtf, text/rtf</td>
-                      </tr>
-                      <tr>
+            {/* Technical Specifications */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+              <div className="overflow-x-auto">
+                <table className="min-w-full">
+                  <tbody className="divide-y divide-gray-200">
+                    <tr>
+                      <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
+                      <td className="py-2 text-sm text-gray-900">.rtf</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
+                      <td className="py-2 text-sm text-gray-900">application/rtf, text/rtf</td>
+                    </tr>
+                    <tr>
                         <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
                         <td className="py-2 text-sm text-gray-900">Microsoft Corporation (1987)</td>
-                      </tr>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td className="py-2 text-sm font-medium text-gray-500">Current Version</td>
                         <td className="py-2 text-sm text-gray-900">RTF 1.9.1 (2008)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Format Type</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-sm font-medium text-gray-500">Format Type</td>
                         <td className="py-2 text-sm text-gray-900">Text-based document format</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">ASCII with control words</td>
-                      </tr>
+                    </tr>
+                    <tr>
+                      <td className="py-2 text-sm font-medium text-gray-500">Encoding</td>
+                      <td className="py-2 text-sm text-gray-900">ASCII with control words</td>
+                    </tr>
                       <tr>
                         <td className="py-2 text-sm font-medium text-gray-500">Character Set</td>
                         <td className="py-2 text-sm text-gray-900">Unicode support (UTF-8, UTF-16)</td>
                       </tr>
-                    </tbody>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
+        </div>
 
           {/* Back to Viewers Button */}
           <div className="text-center mt-8">
@@ -459,31 +459,31 @@ export const RTFViewer: React.FC = () => {
             >
               ← Back to All Viewers
             </a>
-          </div>
         </div>
-        
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold">MorphyIMG</h2>
+      </div>
+      
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12 mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="p-2 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">
+                <FileText className="w-6 h-6 text-white" />
               </div>
-              
-              <p className="text-gray-300 mb-6">
+              <h2 className="text-2xl font-bold">MorphyIMG</h2>
+            </div>
+            
+            <p className="text-gray-300 mb-6">
                 Free professional RTF viewer for all your document viewing needs.
-              </p>
-              
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-                <span>© 2025 MorphyIMG. Built for RTF professionals.</span>
-              </div>
+            </p>
+            
+            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+              <span>© 2025 MorphyIMG. Built for RTF professionals.</span>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
+            </div>
     </>
   );
 };
