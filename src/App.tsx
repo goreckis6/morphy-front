@@ -96,6 +96,7 @@ import { PythonViewer } from './components/FormatViewers/PythonViewer';
 import { NEFViewer } from './components/FormatViewers/NEFViewer';
 import { CR2Viewer } from './components/FormatViewers/CR2Viewer';
 import { DCRViewer } from './components/FormatViewers/DCRViewer';
+import { X3FViewer } from './components/FormatViewers/X3FViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -912,6 +913,14 @@ function App() {
     return (
       <AuthProvider>
         <DCRViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/x3f') {
+    return (
+      <AuthProvider>
+        <X3FViewer />
       </AuthProvider>
     );
   }

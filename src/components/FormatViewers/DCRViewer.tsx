@@ -117,8 +117,9 @@ export const DCRViewer: React.FC = () => {
       });
 
       if (response.ok) {
-        const blob = await response.blob();
-        const imageUrl = URL.createObjectURL(blob);
+        const data = await response.json();
+        const imageUrl = data.imageUrl;
+        const metadata = data.metadata || {};
         
         loadingWindow.document.open();
         loadingWindow.document.write(`
@@ -172,6 +173,25 @@ export const DCRViewer: React.FC = () => {
                 gap: 8px;
                 transition: all 0.2s;
               }
+              .btn-zoom {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+                padding: 8px 12px;
+                min-width: 40px;
+                font-size: 16px;
+              }
+              .btn-zoom:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
+              }
+              .zoom-level {
+                color: white;
+                font-size: 14px;
+                font-weight: 600;
+                min-width: 50px;
+                text-align: center;
+              }
               .btn-rotate {
                 background: rgba(255,255,255,0.2);
                 color: white;
@@ -199,9 +219,39 @@ export const DCRViewer: React.FC = () => {
                 background: rgba(255,255,255,0.3);
                 transform: scale(1.05);
               }
-              .image-container {
+              .metadata-bar {
+                background: rgba(0,0,0,0.7);
+                color: white;
+                padding: 15px 30px;
                 position: fixed;
                 top: 70px;
+                left: 0;
+                right: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                font-size: 13px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+              }
+              .metadata-item {
+                display: flex;
+                flex-direction: column;
+              }
+              .metadata-label {
+                color: #8b5cf6;
+                font-size: 11px;
+                font-weight: 600;
+                margin-bottom: 3px;
+                text-transform: uppercase;
+              }
+              .metadata-value {
+                color: white;
+                font-size: 13px;
+              }
+              .image-container {
+                position: fixed;
+                top: 145px;
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -212,14 +262,13 @@ export const DCRViewer: React.FC = () => {
                 padding: 20px;
               }
               img {
-                max-width: 100%;
-                max-height: 100%;
-                object-fit: contain;
                 box-shadow: 0 4px 20px rgba(0,0,0,0.5);
                 transition: transform 0.3s ease;
+                cursor: move;
               }
               @media print {
                 .header-bar { display: none; }
+                .metadata-bar { display: none; }
                 .image-container { top: 0; }
               }
             </style>
@@ -231,6 +280,9 @@ export const DCRViewer: React.FC = () => {
                 <span>${file.name}</span>
               </div>
               <div class="header-controls">
+                <button onclick="zoomOut()" class="btn btn-zoom">−</button>
+                <span class="zoom-level" id="zoom-level">100%</span>
+                <button onclick="zoomIn()" class="btn btn-zoom">+</button>
                 <button onclick="rotateLeft()" class="btn btn-rotate">
                   ↶ Rotate Left
                 </button>
@@ -245,21 +297,68 @@ export const DCRViewer: React.FC = () => {
                 </button>
               </div>
             </div>
+            <div class="metadata-bar">
+              <div class="metadata-item">
+                <span class="metadata-label">Date Taken</span>
+                <span class="metadata-value">${metadata.dateTaken || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Dimensions</span>
+                <span class="metadata-value">${metadata.dimensions || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">File Size</span>
+                <span class="metadata-value">${metadata.fileSize || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">ISO</span>
+                <span class="metadata-value">${metadata.iso || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Camera Model</span>
+                <span class="metadata-value">${metadata.camera || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Exposure</span>
+                <span class="metadata-value">${metadata.exposure || 'N/A'}</span>
+              </div>
+            </div>
             <div class="image-container">
               <img id="preview-image" src="${imageUrl}" alt="${file.name}">
             </div>
             <script>
               let rotation = 0;
+              let scale = 1.0;
               const img = document.getElementById('preview-image');
+              
+              function updateTransform() {
+                img.style.transform = 'rotate(' + rotation + 'deg) scale(' + scale + ')';
+              }
               
               function rotateLeft() {
                 rotation -= 90;
-                img.style.transform = 'rotate(' + rotation + 'deg)';
+                updateTransform();
               }
               
               function rotateRight() {
                 rotation += 90;
-                img.style.transform = 'rotate(' + rotation + 'deg)';
+                updateTransform();
+              }
+              
+              function zoomIn() {
+                if (scale < 3.0) {
+                  scale += 0.25;
+                  document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+                  updateTransform();
+                }
+              }
+              
+              function zoomOut() {
+                if (scale > 0.25) {
+                  scale -= 0.25;
+                  document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+                  updateTransform();
+                }
               }
             </script>
           </body>

@@ -1,258 +1,736 @@
 import React, { useState } from 'react';
-import { Camera, Upload, Eye, Download, Share2, ArrowLeft, Image, Zap, Palette } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
-import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
-import { RAWProcessor } from '../../utils/rawProcessor';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const X3FViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  const [viewerFile, setViewerFile] = useState<File | null>(null);
-  const [previewUrls, setPreviewUrls] = useState<Map<string, string>>(new Map());
-  const [loadingPreviews, setLoadingPreviews] = useState<Set<string>>(new Set());
+  const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
 
   const handleFilesSelected = (files: File[]) => {
+    clearValidationError();
+    
+    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
+    
     // Filter only X3F files
     const x3fFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return extension === 'x3f';
     });
-    setSelectedFiles(x3fFiles);
     
-    // Initialize RAW processor and process files
-    RAWProcessor.initializeProcessor();
+    console.log('X3F files after filter:', x3fFiles.map(f => ({ name: f.name, size: f.size })));
     
-    x3fFiles.forEach(async (file) => {
-      setLoadingPreviews(prev => new Set(prev.add(file.name)));
-      try {
-        const previewUrl = await RAWProcessor.createRAWPreview(file);
-        if (previewUrl) {
-          setPreviewUrls(prev => new Map(prev.set(file.name, previewUrl)));
-        }
-      } catch (error) {
-        console.warn('Failed to create RAW preview for', file.name);
-      } finally {
-        setLoadingPreviews(prev => {
-          const newSet = new Set(prev);
-          newSet.delete(file.name);
-          return newSet;
-        });
+    if (x3fFiles.length === 0) {
+      console.warn('No valid X3F files found');
+      return;
+    }
+    
+    const validation = validateBatchFiles(x3fFiles);
+    console.log('Validation result:', validation);
+    
+    if (validation.isValid) {
+      setSelectedFiles(x3fFiles);
+      console.log('Files set successfully');
+    } else {
+      console.error('Validation failed:', validation.error);
+    }
+  };
+
+  const handleDownload = (file: File) => {
+    const url = URL.createObjectURL(file);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleViewX3F = async (file: File) => {
+    // Check file size (max 100MB for preview)
+    const maxSize = 100 * 1024 * 1024; // 100MB
+    if (file.size > maxSize) {
+      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      return;
+    }
+    
+    try {
+      const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+      if (!loadingWindow) {
+        alert('Please allow pop-ups to view the X3F file');
+        return;
       }
-    });
+
+      loadingWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Loading ${file.name}...</title>
+          <style>
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              font-family: Arial, sans-serif;
+              background: #1a1a1a;
+              margin: 0;
+            }
+            .loader {
+              text-align: center;
+            }
+            .spinner {
+              border: 4px solid #333;
+              border-top: 4px solid #0ea5e9;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+              margin: 0 auto 20px;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            h2, p { color: white; }
+          </style>
+        </head>
+        <body>
+          <div class="loader">
+            <div class="spinner"></div>
+            <h2>Processing X3F RAW Image...</h2>
+            <p>Rendering ${file.name} (Foveon Sensor)...</p>
+          </div>
+        </body>
+        </html>
+      `);
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/x3f', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const imageUrl = data.imageUrl;
+        const metadata = data.metadata || {};
+        
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>${file.name} - X3F Preview</title>
+            <style>
+              body {
+                margin: 0;
+                padding: 0;
+                background: #1a1a1a;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+              }
+              .header-bar {
+                background: linear-gradient(to right, #0ea5e9, #0284c7);
+                color: white;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+              }
+              .header-title {
+                font-size: 18px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+              .header-controls {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+              }
+              .btn {
+                padding: 8px 20px;
+                border: none;
+                border-radius: 6px;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.2s;
+              }
+              .btn-zoom {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+                padding: 8px 12px;
+                min-width: 40px;
+                font-size: 16px;
+              }
+              .btn-zoom:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
+              }
+              .zoom-level {
+                color: white;
+                font-size: 14px;
+                font-weight: 600;
+                min-width: 50px;
+                text-align: center;
+              }
+              .btn-rotate {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+                padding: 8px 16px;
+              }
+              .btn-rotate:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
+              }
+              .btn-print {
+                background: white;
+                color: #0ea5e9;
+              }
+              .btn-print:hover {
+                background: #e0f2fe;
+                transform: scale(1.05);
+              }
+              .btn-close {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+              }
+              .btn-close:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
+              }
+              .metadata-bar {
+                background: rgba(0,0,0,0.7);
+                color: white;
+                padding: 15px 30px;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                font-size: 13px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+              }
+              .metadata-item {
+                display: flex;
+                flex-direction: column;
+              }
+              .metadata-label {
+                color: #0ea5e9;
+                font-size: 11px;
+                font-weight: 600;
+                margin-bottom: 3px;
+                text-transform: uppercase;
+              }
+              .metadata-value {
+                color: white;
+                font-size: 13px;
+              }
+              .image-container {
+                position: fixed;
+                top: 145px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: auto;
+                padding: 20px;
+              }
+              img {
+                box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+                transition: transform 0.3s ease;
+                cursor: move;
+              }
+              @media print {
+                .header-bar { display: none; }
+                .metadata-bar { display: none; }
+                .image-container { top: 0; }
+              }
+            </style>
+          </head>
+          <body>
+            <div class="header-bar">
+              <div class="header-title">
+                <span>📷</span>
+                <span>${file.name}</span>
+              </div>
+              <div class="header-controls">
+                <button onclick="zoomOut()" class="btn btn-zoom">−</button>
+                <span class="zoom-level" id="zoom-level">100%</span>
+                <button onclick="zoomIn()" class="btn btn-zoom">+</button>
+                <button onclick="rotateLeft()" class="btn btn-rotate">
+                  ↶ Rotate Left
+                </button>
+                <button onclick="rotateRight()" class="btn btn-rotate">
+                  Rotate Right ↷
+                </button>
+                <button onclick="window.print()" class="btn btn-print">
+                  🖨️ Print
+                </button>
+                <button onclick="window.close()" class="btn btn-close">
+                  ✖️ Close
+                </button>
+              </div>
+            </div>
+            <div class="metadata-bar">
+              <div class="metadata-item">
+                <span class="metadata-label">Date Taken</span>
+                <span class="metadata-value">${metadata.dateTaken || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Dimensions</span>
+                <span class="metadata-value">${metadata.dimensions || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">File Size</span>
+                <span class="metadata-value">${metadata.fileSize || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">ISO</span>
+                <span class="metadata-value">${metadata.iso || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Camera Model</span>
+                <span class="metadata-value">${metadata.camera || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Exposure</span>
+                <span class="metadata-value">${metadata.exposure || 'N/A'}</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <img id="preview-image" src="${imageUrl}" alt="${file.name}">
+            </div>
+            <script>
+              let rotation = 0;
+              let scale = 1.0;
+              const img = document.getElementById('preview-image');
+              
+              function updateTransform() {
+                img.style.transform = 'rotate(' + rotation + 'deg) scale(' + scale + ')';
+              }
+              
+              function rotateLeft() {
+                rotation -= 90;
+                updateTransform();
+              }
+              
+              function rotateRight() {
+                rotation += 90;
+                updateTransform();
+              }
+              
+              function zoomIn() {
+                if (scale < 3.0) {
+                  scale += 0.25;
+                  document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+                  updateTransform();
+                }
+              }
+              
+              function zoomOut() {
+                if (scale > 0.25) {
+                  scale -= 0.25;
+                  document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+                  updateTransform();
+                }
+              }
+            </script>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      } else {
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #1a1a1a;
+              }
+              .error {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.3);
+                max-width: 600px;
+                margin: 0 auto;
+              }
+              h1 { color: #0ea5e9; }
+              button {
+                background: #0ea5e9;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+              }
+              button:hover { background: #0284c7; }
+            </style>
+          </head>
+          <body>
+            <div class="error">
+              <h1>⚠️ Preview Error</h1>
+              <p>Failed to generate X3F preview. Please try downloading the file instead.</p>
+              <button onclick="window.close()">Close</button>
+            </div>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      }
+    } catch (error) {
+      console.error('X3F view error:', error);
+      alert('Failed to open X3F preview. Please try again or download the file.');
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => window.location.href = '/viewer'}
-              className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div className="p-3 bg-blue-100 rounded-xl">
-              <Camera className="w-8 h-8 text-blue-600" />
+    <>
+      <Helmet>
+        <title>Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG</title>
+        <meta name="description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview X3F Foveon sensor files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free X3F viewer tool." />
+        <meta name="keywords" content="X3F viewer, Sigma RAW viewer, X3F file viewer online, RAW viewer, Sigma SD viewer, Foveon viewer, camera RAW viewer, free X3F viewer, X3F preview" />
+        <meta property="og:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG" />
+        <meta property="og:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma Foveon sensor files online with EXIF metadata." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://morphyimg.com/viewers/x3f" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG" />
+        <meta name="twitter:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma RAW files online." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Free X3F Viewer",
+            "description": "Free professional X3F (Sigma RAW) viewer with high-quality rendering",
+            "url": "https://morphyimg.com/viewers/x3f",
+            "applicationCategory": "ImageViewer",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        {/* Hero Section */}
+        <div className="relative overflow-hidden bg-gradient-to-r from-sky-600 via-cyan-600 to-blue-700">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => window.location.href = '/viewers'}
+                  className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                </button>
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                  <Camera className="w-12 h-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Free X3F Viewer
+                  </h1>
+                  <p className="text-xl text-sky-100">
+                    View Sigma Foveon RAW files with professional rendering - 100% free
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                X3F Viewer & Converter
-              </h1>
-              <p className="text-lg text-gray-600 mt-2">
-                Upload, view, and convert Sigma RAW (X3F) image files
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Upload Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-sky-500 to-cyan-600 rounded-xl">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Upload X3F Files
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Drag and drop your Sigma X3F (RAW) files or click to browse. Supports X3F Foveon sensor files up to 100MB each, with batch upload support for up to 20 files.
+            </p>
+            <FileUpload 
+              onFilesSelected={handleFilesSelected}
+              acceptedFormats={['x3f']}
+              maxFiles={20}
+              maxSize={100 * 1024 * 1024}
+              hideFormatList={true}
+              showTotalSize={true}
+            />
+            
+            {validationError && (
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div className="flex items-center">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-2" />
+                  <span className="text-red-700 text-sm">{validationError.message}</span>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-sky-500 to-cyan-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your X3F Files ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+
+              <div className="mb-6 p-4 bg-sky-50 border border-sky-200 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-sky-600 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-sky-900 mb-1">How to View X3F Files</h4>
+                    <p className="text-sm text-sky-700">
+                      Click the <strong>"View RAW"</strong> button to render and preview the X3F file with professional quality. 
+                      The viewer will process the Foveon sensor RAW data and display it as a high-quality image. Files under 100 MB can be previewed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-sky-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 bg-sky-100 rounded-lg">
+                        <Camera className="w-6 h-6 text-sky-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-gray-800 truncate">
+                          {file.name}
+                        </h3>
+                        <p className="text-xs text-gray-500">
+                          {(file.size / 1024 / 1024).toFixed(2)} MB
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <button
+                        onClick={() => handleViewX3F(file)}
+                        className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>View RAW</span>
+                      </button>
+                      <button
+                        onClick={() => handleDownload(file)}
+                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                      >
+                        <Download className="w-4 h-4" />
+                        <span>Download</span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-2xl shadow-lg p-8 border border-sky-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <ImageIcon className="w-8 h-8 text-sky-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Foveon Processing
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Professional Foveon X3 sensor processing with rawpy (LibRaw) for true color accuracy
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl shadow-lg p-8 border border-cyan-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <Maximize2 className="w-8 h-8 text-cyan-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Full Resolution
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                View X3F files at full resolution with Foveon's unique 3-layer color capture
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <Zap className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Fast Preview
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Quick preview generation with embedded JPEG extraction for instant viewing
               </p>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Upload Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Upload X3F Files
-          </h2>
-          <FileUpload 
-            onFilesSelected={handleFilesSelected}
-            acceptedFormats={['x3f']}
-            maxFiles={20}
-          />
-        </div>
+          {/* About X3F Format Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-sky-500 to-cyan-600 rounded-xl">
+                <Camera className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                About X3F Format
+              </h2>
+            </div>
+            
+            <div className="prose max-w-none text-gray-600">
+              <p className="mb-6">
+                X3F is Sigma's proprietary RAW image format used by Sigma cameras with the unique Foveon X3 sensor. 
+                Unlike conventional Bayer sensors, Foveon X3 captures all three primary colors (RGB) at each pixel location 
+                using three vertically stacked photodiodes. This results in exceptional color accuracy and sharpness without 
+                interpolation artifacts. X3F files preserve the full sensor data for maximum post-processing flexibility.
+              </p>
 
-        {/* Preview Section */}
-        {selectedFiles.length > 0 && (
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Preview Sigma RAW Files ({selectedFiles.length})
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {selectedFiles.map((file, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-md transition-shadow">
-                  <div className="aspect-square bg-gray-200 rounded-lg mb-4 overflow-hidden">
-                    {loadingPreviews.has(file.name) ? (
-                      <div className="w-full h-full flex items-center justify-center bg-gray-100">
-                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                      </div>
-                    ) : previewUrls.has(file.name) ? (
-                      <img
-                        src={previewUrls.get(file.name)}
-                        alt={file.name}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            parent.innerHTML = '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100"><svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>';
-                          }
-                        }}
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-100">
-                        <Camera className="w-16 h-16 text-blue-600" />
-                      </div>
-                    )}
-                  </div>
-                  <div className="text-base font-medium text-gray-700 truncate mb-3">
-                    {file.name}
-                  </div>
-                  <div className="text-sm text-gray-500 mb-4">
-                    {(file.size / 1024 / 1024).toFixed(2)} MB • Sigma RAW
-                  </div>
-                  <div className="flex space-x-2">
-                    <button
-                      onClick={() => setViewerFile(file)}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                    >
-                      <Eye className="w-4 h-4" />
-                      <span>View</span>
-                    </button>
-                    <button className="p-3 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors">
-                      <Download className="w-4 h-4" />
-                    </button>
-                    <button className="p-3 text-gray-500 hover:text-purple-500 hover:bg-purple-50 rounded-lg transition-colors">
-                      <Share2 className="w-4 h-4" />
-                    </button>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Foveon X3 sensor</strong> - True RGB at every pixel</li>
+                    <li>• <strong>No interpolation</strong> - Superior color accuracy</li>
+                    <li>• <strong>14-bit depth</strong> - Greater tonal range</li>
+                    <li>• <strong>Non-destructive</strong> - Original data always preserved</li>
+                    <li>• <strong>White balance</strong> - Adjust after capture</li>
+                    <li>• <strong>Unique quality</strong> - Foveon's signature rendering</li>
+                  </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        )}
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Cameras</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Sigma fp Series</strong> - fp, fp L (mirrorless)</li>
+                    <li>• <strong>Sigma sd Quattro Series</strong> - sd Quattro, sd Quattro H</li>
+                    <li>• <strong>Sigma SD1 Series</strong> - SD1, SD1 Merrill</li>
+                    <li>• <strong>Sigma DP Series</strong> - DP1-DP3 Merrill, Quattro</li>
+                    <li>• <strong>Legacy Models</strong> - SD9, SD10, SD14, SD15</li>
+                    <li>• <strong>All Sigma Foveon</strong> - Full X3F support</li>
+                  </ul>
+                </div>
+              </div>
 
-        {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Camera className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Foveon Sensor
-            </h3>
-            <p className="text-gray-600">
-              Unique Foveon X3 sensor technology capturing full color at every pixel
-            </p>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
+                        <td className="py-2 text-sm text-gray-900">.x3f</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
+                        <td className="py-2 text-sm text-gray-900">image/x-sigma-x3f</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Bit Depth</td>
+                        <td className="py-2 text-sm text-gray-900">14-bit per layer (3 layers)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Sensor Type</td>
+                        <td className="py-2 text-sm text-gray-900">Foveon X3 (3-layer RGB)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
+                        <td className="py-2 text-sm text-gray-900">Lossless or uncompressed</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
+                        <td className="py-2 text-sm text-gray-900">Sigma Corporation</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Zap className="w-8 h-8 text-yellow-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              True Color
-            </h3>
-            <p className="text-gray-600">
-              No interpolation needed - true RGB values at every pixel location
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Palette className="w-8 h-8 text-purple-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Sharp Detail
-            </h3>
-            <p className="text-gray-600">
-              Exceptional detail and sharpness from the unique sensor architecture
-            </p>
-          </div>
-        </div>
 
-        {/* Back to Home Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Back to Home - All Supported Formats
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Standard Image Formats</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• JPEG (Joint Photographic Experts Group)</li>
-                <li>• JPEG 2000 Core Image File</li>
-                <li>• JPEG 2000 Image</li>
-                <li>• PNG (Portable Network Graphics)</li>
-                <li>• Web Picture Format</li>
-                <li>• AV1 Image File Format</li>
-                <li>• GIF (Graphics Interchange Format)</li>
-                <li>• TIFF (Tagged Image File Format)</li>
-                <li>• Pyramid encoded TIFF</li>
-                <li>• Bitmap Image</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Professional & Specialized</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• High Efficiency Image Container</li>
-                <li>• Scalable Vector Graphics</li>
-                <li>• Icon formats (ICO, CUR)</li>
-                <li>• RAW Camera formats</li>
-                <li>• Professional editing formats</li>
-                <li>• Document formats (PDF, DOCX, ODT)</li>
-                <li>• Spreadsheet formats (XLSX, CSV, ODS)</li>
-                <li>• Code formats (JS, Python, CSS, HTML)</li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center mt-6">
+          {/* Back to Viewers Button */}
+          <div className="text-center mt-8">
             <a
-              href="/"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/viewers"
+              className="inline-block bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Back to Home
+              ← Back to All Viewers
             </a>
           </div>
         </div>
-      </div>
-      
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="p-2 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl">
-                <Camera className="w-6 h-6 text-white" />
+        
+        {/* Footer */}
+        <footer className="bg-gray-800 text-white py-12 mt-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-2 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-xl">
+                  <Camera className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">MorphyIMG</h2>
               </div>
-              <h2 className="text-2xl font-bold">MorphyIMG</h2>
-            </div>
-            
-            <p className="text-gray-300 mb-6">
-              Professional X3F viewer and converter for all your Sigma RAW processing needs.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-              <span>© 2025 MorphyIMG. Built for Sigma professionals.</span>
+              
+              <p className="text-gray-300 mb-6">
+                Free professional X3F viewer for all your Sigma Foveon RAW files.
+              </p>
+              
+              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+                <span>© 2025 MorphyIMG. Built for Sigma photographers.</span>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
-
-      {/* File Viewer Modal */}
-      {viewerFile && (
-        <FileViewer
-          file={viewerFile}
-          onClose={() => setViewerFile(null)}
-        />
-      )}
-    </div>
+        </footer>
+      </div>
+    </>
   );
 };
