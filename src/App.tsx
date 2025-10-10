@@ -97,6 +97,8 @@ import { NEFViewer } from './components/FormatViewers/NEFViewer';
 import { CR2Viewer } from './components/FormatViewers/CR2Viewer';
 import { DCRViewer } from './components/FormatViewers/DCRViewer';
 import { X3FViewer } from './components/FormatViewers/X3FViewer';
+import { RAFViewer } from './components/FormatViewers/RAFViewer';
+import { ORFViewer } from './components/FormatViewers/ORFViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -921,6 +923,30 @@ function App() {
     return (
       <AuthProvider>
         <X3FViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/arw') {
+    return (
+      <AuthProvider>
+        <ARWViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/raf') {
+    return (
+      <AuthProvider>
+        <RAFViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/orf') {
+    return (
+      <AuthProvider>
+        <ORFViewer />
       </AuthProvider>
     );
   }

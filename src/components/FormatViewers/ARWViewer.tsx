@@ -1,351 +1,736 @@
-import React from 'react';
-import { Eye, ArrowLeft } from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
+import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
-
-interface FormatData {
-  name: string;
-  extensions: string;
-  path: string;
-}
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const ARWViewer: React.FC = () => {
-  const formatCategories = [
-    {
-      title: "STANDARD IMAGE FORMATS",
-      formats: [
-        { name: "JPEG (Joint Photographic Experts Group)", extensions: "jpg jpeg jpe", path: "#viewer/jpg" },
-        { name: "JPEG 2000 Core Image File", extensions: "jp2", path: "#viewer/jp2" },
-        { name: "JPEG 2000 Image", extensions: "jpf", path: "#viewer/jpf" },
-        { name: "PNG (Portable Network Graphics)", extensions: "png pn8 png24 png32", path: "#viewer/png" },
-        { name: "Web Picture Format", extensions: "webp", path: "#viewer/webp" },
-        { name: "AV1 Image File Format", extensions: "avif", path: "#viewer/avif" },
-        { name: "GIF (Graphics Interchange Format)", extensions: "gif", path: "#viewer/gif" },
-        { name: "TIFF (Tagged Image File Format)", extensions: "tif tiff tiff64", path: "#viewer/tiff" },
-        { name: "Pyramid encoded TIFF", extensions: "ptif", path: "#viewer/ptif" },
-        { name: "Bitmap Image", extensions: "bmp bmp2 bmp3 bitmap", path: "#viewer/bmp" }
-      ]
-    },
-    {
-      title: "ICON FORMATS",
-      formats: [
-        { name: "Icon", extensions: "ico icon", path: "#viewer/ico" },
-        { name: "CUR", extensions: "cur", path: "#viewer/cur" }
-      ]
-    },
-    {
-      title: "VECTOR GRAPHICS",
-      formats: [
-        { name: "Scalable Vector Graphics", extensions: "svg svgz msvgz", path: "#viewer/svg" },
-        { name: "Encapsulated PostScript", extensions: "eps eps2 eps3 epsf", path: "#viewer/eps" },
-        { name: "Adobe Illustrator Artwork", extensions: "ai", path: "#viewer/ai" },
-        { name: "PostScript File", extensions: "ps ps2 ps3", path: "#viewer/ps" }
-      ]
-    },
-    {
-      title: "RAW CAMERA FORMATS",
-      formats: [
-        { name: "Nikon Raw Image Format", extensions: "nef", path: "#viewer/nef" },
-        { name: "Canon Raw Image format", extensions: "cr2 crw", path: "#viewer/cr2" },
-        { name: "Kodak Raw Image format", extensions: "dcr kdc k25", path: "#viewer/dcr" },
-        { name: "Sigma Camera Raw Image format", extensions: "x3f", path: "#viewer/x3f" },
-        { name: "Sony Raw Image format", extensions: "arw sr2 srf", path: "#viewer/arw" },
-        { name: "Konica-Minolta Raw Image format", extensions: "mrw", path: "#viewer/mrw" },
-        { name: "Epson Raw Image format", extensions: "erf", path: "#viewer/erf" },
-        { name: "Fuji Raw Image format", extensions: "raf", path: "#viewer/raf" },
-        { name: "Hasselblad Digital Camera Raw Image Format", extensions: "3fr", path: "#viewer/3fr" },
-        { name: "Olympus Raw File Format", extensions: "orf", path: "#viewer/orf" },
-        { name: "Pentax Digital Camera Raw Image Format", extensions: "pef", path: "#viewer/pef" },
-        { name: "Digital Negative", extensions: "dng", path: "#viewer/dng" }
-      ]
-    },
-    {
-      title: "MOBILE & CAMERA FORMATS",
-      formats: [
-        { name: "High Efficiency Image Container", extensions: "heic heif", path: "#viewer/heic" }
-      ]
-    },
-    {
-      title: "PROFESSIONAL/EDITING FORMATS",
-      formats: [
-        { name: "GIMP (eXperimental Computing Facility)", extensions: "xcf", path: "#viewer/xcf" },
-        { name: "Photoshop Data File", extensions: "psd", path: "#viewer/psd" },
-        { name: "Photoshop Large Document Format", extensions: "psb", path: "#viewer/psb" }
-      ]
-    },
-    {
-      title: "SPECIALIZED IMAGE FORMATS",
-      formats: [
-        { name: "PCT", extensions: "pct pict", path: "#viewer/pct" },
-        { name: "DirectDraw Surface", extensions: "dds", path: "#viewer/dds" },
-        { name: "Ikon PodFlow", extensions: "pex", path: "#viewer/pex" },
-        { name: "Dune Device Image Format", extensions: "aai", path: "#viewer/aai" },
-        { name: "openEXR Image", extensions: "exr", path: "#viewer/exr" },
-        { name: "High Dynamic Range", extensions: "hdr", path: "#viewer/hdr" },
-        { name: "DICOM Image (Digital Imaging and Communications in Medicine)", extensions: "dcm dicom", path: "#viewer/dcm" },
-        { name: "Truevision TGA Raster graphics File", extensions: "tga", path: "#viewer/tga" },
-        { name: "Flexible Image Transport System", extensions: "fit fits fts", path: "#viewer/fit" },
-        { name: "Multiple-image Network Graphics", extensions: "mng", path: "#viewer/mng" },
-        { name: "Silicon Graphics Image", extensions: "sgi", path: "#viewer/sgi" },
-        { name: "Interchange File Format", extensions: "iff", path: "#viewer/iff" },
-        { name: "Scitex Continuous Tone File format", extensions: "sct", path: "#viewer/sct" }
-      ]
-    },
-    {
-      title: "PORTABLE FORMATS",
-      formats: [
-        { name: "Portable Pixmap Format", extensions: "ppm", path: "#viewer/ppm" },
-        { name: "Portable Graymap Format", extensions: "pgm", path: "#viewer/pgm" },
-        { name: "Portable Bitmap Format", extensions: "pbm", path: "#viewer/pbm" },
-        { name: "Portable Anymap Format", extensions: "pnm", path: "#viewer/pnm" },
-        { name: "Portable Arbitrary Map", extensions: "pam", path: "#viewer/pam" }
-      ]
-    },
-    {
-      title: "X WINDOW SYSTEM FORMATS",
-      formats: [
-        { name: "X Pixmap", extensions: "xpm", path: "#viewer/xpm" },
-        { name: "X BitMap", extensions: "xbm", path: "#viewer/xbm" },
-        { name: "X Windows Dump Image", extensions: "xwd", path: "#viewer/xwd" }
-      ]
-    },
-    {
-      title: "LEGACY FORMATS",
-      formats: [
-        { name: "Personal Computer Exchange", extensions: "pcx", path: "#viewer/pcx" },
-        { name: "PC Paintbrush File Format", extensions: "pcc", path: "#viewer/pcc" }
-      ]
-    },
-    {
-      title: "FONT FORMATS",
-      formats: [
-        { name: "TrueType Font", extensions: "ttf", path: "#viewer/ttf" },
-        { name: "OpenType Font", extensions: "otf", path: "#viewer/otf" },
-        { name: "Web Open Font Format File", extensions: "woff", path: "#viewer/woff" },
-        { name: "TrueType Font Collection", extensions: "ttc", path: "#viewer/ttc" },
-        { name: "Mac OS X Data Fork Font", extensions: "dfont", path: "#viewer/dfont" },
-        { name: "Spline Font Database File", extensions: "sfd", path: "#viewer/sfd" }
-      ]
-    },
-    {
-      title: "DOCUMENT FORMATS",
-      formats: [
-        { name: "Apple Pages Document", extensions: "pages", path: "#viewer/pages" },
-        { name: "Microsoft Word Open XML Document", extensions: "docx", path: "#viewer/docx" },
-        { name: "Microsoft Word Document", extensions: "doc", path: "#viewer/doc" },
-        { name: "Rich Text Format File", extensions: "rtf", path: "#viewer/rtf" },
-        { name: "OpenDocument Text Document", extensions: "odt", path: "#viewer/odt" },
-        { name: "WordPerfect Document", extensions: "wpd", path: "#viewer/wpd" },
-        { name: "Microsoft Works Word Processor", extensions: "wps", path: "#viewer/wps" },
-        { name: "JustSystems-Ichitaro File", extensions: "jtd jtt", path: "#viewer/jtd" },
-        { name: "Portable Document Format File", extensions: "pdf", path: "#viewer/pdf" },
-        { name: "Encapsulated Portable Document Format", extensions: "epdf", path: "#viewer/epdf" },
-        { name: "LaTeX Source Document", extensions: "tex", path: "#viewer/tex" },
-        { name: "FrameMaker Maker Markup", extensions: "mml", path: "#viewer/mml" },
-        { name: "Uniform Office Document", extensions: "uof uot", path: "#viewer/uof" },
-        { name: "StarOffice Writer Text Document", extensions: "sdw sxw", path: "#viewer/sdw" },
-        { name: "DjVu File", extensions: "djvu", path: "#viewer/djvu" }
-      ]
-    },
-    {
-      title: "PRESENTATION FORMATS",
-      formats: [
-        { name: "OpenDocument Presentation", extensions: "odp", path: "#viewer/odp" },
-        { name: "OpenDocument Presentation Template", extensions: "otp", path: "#viewer/otp" },
-        { name: "PowerPoint Template", extensions: "pot", path: "#viewer/pot" },
-        { name: "PowerPoint Slide Show", extensions: "pps ppsx", path: "#viewer/pps" },
-        { name: "PowerPoint Presentation", extensions: "ppt pptx", path: "#viewer/ppt" },
-        { name: "StarOffice Presentation", extensions: "sdd", path: "#viewer/sdd" },
-        { name: "StarOffice Presentation Template", extensions: "sti", path: "#viewer/sti" },
-        { name: "Stat Studio Program", extensions: "sx", path: "#viewer/sx" },
-        { name: "Uniform Office Presentation", extensions: "uop", path: "#viewer/uop" },
-        { name: "StarOffice Impress Presentation", extensions: "sxi", path: "#viewer/sxi" }
-      ]
-    },
-    {
-      title: "CODE FORMATS",
-      formats: [
-        { name: "ActionScript File", extensions: "as actionscript", path: "#viewer/as" },
-        { name: "Sendmail Configuration File", extensions: "cf", path: "#viewer/cf" },
-        { name: "ColdFusion Markup File", extensions: "cfm", path: "#viewer/cfm" },
-        { name: "Visual C# Source Code File", extensions: "cs", path: "#viewer/cs" },
-        { name: "C/C++ Source Code File", extensions: "c", path: "#viewer/c" },
-        { name: "C/C++ Header File", extensions: "h", path: "#viewer/h" },
-        { name: "C++ Source Code File", extensions: "cc", path: "#viewer/cc" },
-        { name: "Xcode C++ Source File", extensions: "cp", path: "#viewer/cp" },
-        { name: "C++ Source Code File", extensions: "cpp", path: "#viewer/cpp" },
-        { name: "Markdown", extensions: "md markdown", path: "#viewer/md" },
-        { name: "Objective-C Implementation File", extensions: "m", path: "#viewer/m" },
-        { name: "Cascading Style Sheet", extensions: "css", path: "#viewer/css" },
-        { name: "Pascal Source File", extensions: "pas", path: "#viewer/pas" },
-        { name: "Difference File", extensions: "diff", path: "#viewer/diff" },
-        { name: "Patch File", extensions: "patch", path: "#viewer/patch" },
-        { name: "Erlang Source Code File", extensions: "erl", path: "#viewer/erl" },
-        { name: "Script File", extensions: "groovy", path: "#viewer/groovy" },
-        { name: "JavaScript File", extensions: "js", path: "#viewer/js" },
-        { name: "Java Source Code File", extensions: "java", path: "#viewer/java" },
-        { name: "Perl Script", extensions: "pl", path: "#viewer/pl" },
-        { name: "Source File", extensions: "perl", path: "#viewer/perl" },
-        { name: "PHP Source Code File", extensions: "php", path: "#viewer/php" },
-        { name: "Plain Text File", extensions: "txt text", path: "#viewer/txt" },
-        { name: "Python Script", extensions: "py", path: "#viewer/py" },
-        { name: "Python Script", extensions: "python", path: "#viewer/python" },
-        { name: "Ruby Source Code", extensions: "rb ruby", path: "#viewer/rb" },
-        { name: "Scala (programming language)", extensions: "scala", path: "#viewer/scala" },
-        { name: "Structured Query Language Data", extensions: "sql", path: "#viewer/sql" },
-        { name: "VBScript File", extensions: "vb", path: "#viewer/vb" },
-        { name: "Extensible Hypertext Markup", extensions: "xhtml", path: "#viewer/xhtml" },
-        { name: "XML File", extensions: "xml", path: "#viewer/xml" },
-        { name: "XSL Transformations File", extensions: "xsl", path: "#viewer/xsl" },
-        { name: "YAML Document", extensions: "yaml", path: "#viewer/yaml" }
-      ]
-    },
-    {
-      title: "SPREADSHEET FORMATS",
-      formats: [
-        { name: "Microsoft Excel", extensions: "xls", path: "#viewer/xls" },
-        { name: "Excel Microsoft Office Open XML Format Spreadsheet", extensions: "xlsx", path: "#viewer/xlsx" },
-        { name: "Excel Binary Workbook", extensions: "xlsb", path: "#viewer/xlsb" },
-        { name: "Excel Macro-Enabled Workbook", extensions: "xlsm", path: "#viewer/xlsm" },
-        { name: "Open Document Spreadsheet", extensions: "ods", path: "#viewer/ods" },
-        { name: "Comma-Separated Value", extensions: "csv", path: "#viewer/csv" }
-      ]
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+
+  const handleFilesSelected = (files: File[]) => {
+    clearValidationError();
+    
+    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
+    
+    // Filter only ARW files
+    const arwFiles = files.filter(file => {
+      const extension = file.name.split('.').pop()?.toLowerCase();
+      return ['arw', 'sr2', 'srf'].includes(extension || '');
+    });
+    
+    console.log('ARW files after filter:', arwFiles.map(f => ({ name: f.name, size: f.size })));
+    
+    if (arwFiles.length === 0) {
+      console.warn('No valid ARW files found');
+      return;
     }
-  ];
+    
+    const validation = validateBatchFiles(arwFiles);
+    console.log('Validation result:', validation);
+    
+    if (validation.isValid) {
+      setSelectedFiles(arwFiles);
+      console.log('Files set successfully');
+    } else {
+      console.error('Validation failed:', validation.error);
+    }
+  };
+
+  const handleDownload = (file: File) => {
+    const url = URL.createObjectURL(file);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleViewARW = async (file: File) => {
+    // Check file size (max 100MB for preview)
+    const maxSize = 100 * 1024 * 1024; // 100MB
+    if (file.size > maxSize) {
+      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      return;
+    }
+    
+    try {
+      const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
+      if (!loadingWindow) {
+        alert('Please allow pop-ups to view the ARW file');
+        return;
+      }
+
+      loadingWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Loading ${file.name}...</title>
+          <style>
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              font-family: Arial, sans-serif;
+              background: #1a1a1a;
+              margin: 0;
+            }
+            .loader {
+              text-align: center;
+            }
+            .spinner {
+              border: 4px solid #333;
+              border-top: 4px solid #10b981;
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              animation: spin 1s linear infinite;
+              margin: 0 auto 20px;
+            }
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            h2, p { color: white; }
+          </style>
+        </head>
+        <body>
+          <div class="loader">
+            <div class="spinner"></div>
+            <h2>Processing ARW RAW Image...</h2>
+            <p>Rendering ${file.name}...</p>
+          </div>
+        </body>
+        </html>
+      `);
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/arw', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const imageUrl = data.imageUrl;
+        const metadata = data.metadata || {};
+        
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>${file.name} - ARW Preview</title>
+            <style>
+              body {
+                margin: 0;
+                padding: 0;
+                background: #1a1a1a;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+              }
+              .header-bar {
+                background: linear-gradient(to right, #10b981, #059669);
+                color: white;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+              }
+              .header-title {
+                font-size: 18px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+              .header-controls {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+              }
+              .btn {
+                padding: 8px 20px;
+                border: none;
+                border-radius: 6px;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.2s;
+              }
+              .btn-zoom {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+                padding: 8px 12px;
+                min-width: 40px;
+                font-size: 16px;
+              }
+              .btn-zoom:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
+              }
+              .zoom-level {
+                color: white;
+                font-size: 14px;
+                font-weight: 600;
+                min-width: 50px;
+                text-align: center;
+              }
+              .btn-rotate {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+                padding: 8px 16px;
+              }
+              .btn-rotate:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
+              }
+              .btn-print {
+                background: white;
+                color: #10b981;
+              }
+              .btn-print:hover {
+                background: #d1fae5;
+                transform: scale(1.05);
+              }
+              .btn-close {
+                background: rgba(255,255,255,0.2);
+                color: white;
+                border: 1px solid rgba(255,255,255,0.3);
+              }
+              .btn-close:hover {
+                background: rgba(255,255,255,0.3);
+                transform: scale(1.05);
+              }
+              .metadata-bar {
+                background: rgba(0,0,0,0.7);
+                color: white;
+                padding: 15px 30px;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+                font-size: 13px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                backdrop-filter: blur(10px);
+              }
+              .metadata-item {
+                display: flex;
+                flex-direction: column;
+              }
+              .metadata-label {
+                color: #10b981;
+                font-size: 11px;
+                font-weight: 600;
+                margin-bottom: 3px;
+                text-transform: uppercase;
+              }
+              .metadata-value {
+                color: white;
+                font-size: 13px;
+              }
+              .image-container {
+                position: fixed;
+                top: 145px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: auto;
+                padding: 20px;
+              }
+              img {
+                box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+                transition: transform 0.3s ease;
+                cursor: move;
+              }
+              @media print {
+                .header-bar { display: none; }
+                .metadata-bar { display: none; }
+                .image-container { top: 0; }
+              }
+            </style>
+          </head>
+          <body>
+            <div class="header-bar">
+              <div class="header-title">
+                <span>📷</span>
+                <span>${file.name}</span>
+              </div>
+              <div class="header-controls">
+                <button onclick="zoomOut()" class="btn btn-zoom">−</button>
+                <span class="zoom-level" id="zoom-level">100%</span>
+                <button onclick="zoomIn()" class="btn btn-zoom">+</button>
+                <button onclick="rotateLeft()" class="btn btn-rotate">
+                  ↶ Rotate Left
+                </button>
+                <button onclick="rotateRight()" class="btn btn-rotate">
+                  Rotate Right ↷
+                </button>
+                <button onclick="window.print()" class="btn btn-print">
+                  🖨️ Print
+                </button>
+                <button onclick="window.close()" class="btn btn-close">
+                  ✖️ Close
+                </button>
+              </div>
+            </div>
+            <div class="metadata-bar">
+              <div class="metadata-item">
+                <span class="metadata-label">Date Taken</span>
+                <span class="metadata-value">${metadata.dateTaken || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Dimensions</span>
+                <span class="metadata-value">${metadata.dimensions || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">File Size</span>
+                <span class="metadata-value">${metadata.fileSize || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">ISO</span>
+                <span class="metadata-value">${metadata.iso || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Camera Model</span>
+                <span class="metadata-value">${metadata.camera || 'N/A'}</span>
+              </div>
+              <div class="metadata-item">
+                <span class="metadata-label">Exposure</span>
+                <span class="metadata-value">${metadata.exposure || 'N/A'}</span>
+              </div>
+            </div>
+            <div class="image-container">
+              <img id="preview-image" src="${imageUrl}" alt="${file.name}">
+            </div>
+            <script>
+              let rotation = 0;
+              let scale = 1.0;
+              const img = document.getElementById('preview-image');
+              
+              function updateTransform() {
+                img.style.transform = 'rotate(' + rotation + 'deg) scale(' + scale + ')';
+              }
+              
+              function rotateLeft() {
+                rotation -= 90;
+                updateTransform();
+              }
+              
+              function rotateRight() {
+                rotation += 90;
+                updateTransform();
+              }
+              
+              function zoomIn() {
+                if (scale < 3.0) {
+                  scale += 0.25;
+                  document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+                  updateTransform();
+                }
+              }
+              
+              function zoomOut() {
+                if (scale > 0.25) {
+                  scale -= 0.25;
+                  document.getElementById('zoom-level').textContent = Math.round(scale * 100) + '%';
+                  updateTransform();
+                }
+              }
+            </script>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      } else {
+        loadingWindow.document.open();
+        loadingWindow.document.write(`
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Error</title>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #1a1a1a;
+              }
+              .error {
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.3);
+                max-width: 600px;
+                margin: 0 auto;
+              }
+              h1 { color: #10b981; }
+              button {
+                background: #10b981;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 20px;
+              }
+              button:hover { background: #059669; }
+            </style>
+          </head>
+          <body>
+            <div class="error">
+              <h1>⚠️ Preview Error</h1>
+              <p>Failed to generate ARW preview. Please try downloading the file instead.</p>
+              <button onclick="window.close()">Close</button>
+            </div>
+          </body>
+          </html>
+        `);
+        loadingWindow.document.close();
+      }
+    } catch (error) {
+      console.error('ARW view error:', error);
+      alert('Failed to open ARW preview. Please try again or download the file.');
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => window.location.href = '/'}
-              className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl">
-              <Eye className="w-8 h-8 text-white" />
+    <>
+      <Helmet>
+        <title>Free ARW Viewer - View Sony RAW Files Online | MorphyIMG</title>
+        <meta name="description" content="Free professional ARW (Sony RAW) viewer with high-quality rendering. Upload and preview ARW files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free ARW viewer tool." />
+        <meta name="keywords" content="ARW viewer, Sony RAW viewer, ARW file viewer online, RAW viewer, Sony Alpha viewer, camera RAW viewer, free ARW viewer, ARW preview" />
+        <meta property="og:title" content="Free ARW Viewer - View Sony RAW Files Online | MorphyIMG" />
+        <meta property="og:description" content="Free professional ARW (Sony RAW) viewer with high-quality rendering. Upload and preview Sony RAW files online with EXIF metadata." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://morphyimg.com/viewers/arw" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free ARW Viewer - View Sony RAW Files Online | MorphyIMG" />
+        <meta name="twitter:description" content="Free professional ARW (Sony RAW) viewer with high-quality rendering. Upload and preview Sony RAW files online." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Free ARW Viewer",
+            "description": "Free professional ARW (Sony RAW) viewer with high-quality rendering",
+            "url": "https://morphyimg.com/viewers/arw",
+            "applicationCategory": "ImageViewer",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        {/* Hero Section */}
+        <div className="relative overflow-hidden bg-gradient-to-r from-emerald-600 via-green-600 to-teal-700">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => window.location.href = '/viewers'}
+                  className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
+                >
+                  <ArrowLeft className="w-5 h-5" />
+                </button>
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                  <Camera className="w-12 h-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                    Free ARW Viewer
+                  </h1>
+                  <p className="text-xl text-emerald-100">
+                    View Sony Alpha RAW files with professional rendering - 100% free
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                File Format Viewers
-              </h1>
-              <p className="text-lg text-gray-600 mt-2">
-                Choose a specific format viewer for optimized viewing experience
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Upload Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Upload ARW Files
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Drag and drop your Sony ARW (RAW) files or click to browse. Supports ARW, SR2, SRF files up to 100MB each, with batch upload support for up to 20 files.
+            </p>
+            <FileUpload 
+              onFilesSelected={handleFilesSelected}
+              acceptedFormats={['arw', 'sr2', 'srf']}
+              maxFiles={20}
+              maxSize={100 * 1024 * 1024}
+              hideFormatList={true}
+              showTotalSize={true}
+            />
+            
+            {validationError && (
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div className="flex items-center">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-2" />
+                  <span className="text-red-700 text-sm">{validationError.message}</span>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your ARW Files ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+
+              <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-emerald-600 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-emerald-900 mb-1">How to View ARW Files</h4>
+                    <p className="text-sm text-emerald-700">
+                      Click the <strong>"View RAW"</strong> button to render and preview the ARW file with professional quality. 
+                      The viewer will process the RAW data with zoom, rotation, and EXIF metadata display. Files under 100 MB can be previewed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-emerald-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="flex items-center space-x-3 mb-4">
+                      <div className="p-2 bg-emerald-100 rounded-lg">
+                        <Camera className="w-6 h-6 text-emerald-600" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-gray-800 truncate">
+                          {file.name}
+                        </h3>
+                        <p className="text-xs text-gray-500">
+                          {(file.size / 1024 / 1024).toFixed(2)} MB
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <button
+                        onClick={() => handleViewARW(file)}
+                        className="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                      >
+                        <Eye className="w-4 h-4" />
+                        <span>View RAW</span>
+                      </button>
+                      <button
+                        onClick={() => handleDownload(file)}
+                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                      >
+                        <Download className="w-4 h-4" />
+                        <span>Download</span>
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl shadow-lg p-8 border border-emerald-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <ImageIcon className="w-8 h-8 text-emerald-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                RAW Processing
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Professional RAW processing with rawpy (LibRaw) for accurate Sony color science
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <Maximize2 className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Full Resolution
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                View ARW files at full resolution with proper demosaicing and color correction
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-teal-200 hover:shadow-xl transition-all transform hover:scale-105">
+              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                <Zap className="w-8 h-8 text-teal-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Fast Preview
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Quick preview generation with embedded JPEG extraction for instant viewing
               </p>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Supported File Types for Online Viewing
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            This page provides a comprehensive list of file formats that can be viewed directly in our advanced file viewer. 
-            With MorphyIMG, you can easily share files of any format. We continually expand our support to include additional 
-            file types for online viewing. If there is a format you would like us to support, please let us know.
-          </p>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">
-            <h3 className="text-lg font-semibold text-blue-800 mb-2">
-              Need Support for Another Format?
-            </h3>
-            <p className="text-blue-700">
-              We're constantly working to expand our file format support. If you have a specific format you'd like us to add, 
-              please reach out to us!
-            </p>
+          {/* About ARW Format Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl">
+                <Camera className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                About ARW Format
+              </h2>
+            </div>
+            
+            <div className="prose max-w-none text-gray-600">
+              <p className="mb-6">
+                ARW (Sony Alpha Raw) is Sony's proprietary RAW image format used by Sony Alpha digital cameras. 
+                Based on the TIFF format specification, ARW files contain unprocessed sensor data from Sony cameras, 
+                providing maximum flexibility for post-processing and the highest image quality. ARW files preserve 
+                all the information captured by the camera's sensor, including extended dynamic range and 14-bit color depth.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Maximum quality</strong> - Uncompressed sensor data</li>
+                    <li>• <strong>14-bit depth</strong> - Greater color and tonal range</li>
+                    <li>• <strong>Non-destructive</strong> - Original data always preserved</li>
+                    <li>• <strong>White balance</strong> - Adjust after capture</li>
+                    <li>• <strong>Extended dynamic range</strong> - More detail in highlights/shadows</li>
+                    <li>• <strong>Sony color science</strong> - Industry-leading color accuracy</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Cameras</h3>
+                  <ul className="space-y-2 text-sm">
+                    <li>• <strong>Sony α7 Series</strong> - α7R V, α7 IV, α7S III, α7C</li>
+                    <li>• <strong>Sony α9 Series</strong> - α9 III, α9 II, α9</li>
+                    <li>• <strong>Sony α1</strong> - Flagship 50.1 MP</li>
+                    <li>• <strong>Sony α6000 Series</strong> - α6700, α6600, α6400</li>
+                    <li>• <strong>Sony RX Series</strong> - RX1R II, RX10 IV</li>
+                    <li>• <strong>All Sony Alpha</strong> - Full ARW support</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full">
+                    <tbody className="divide-y divide-gray-200">
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
+                        <td className="py-2 text-sm text-gray-900">.arw, .sr2, .srf</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
+                        <td className="py-2 text-sm text-gray-900">image/x-sony-arw</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Bit Depth</td>
+                        <td className="py-2 text-sm text-gray-900">14-bit (compressed or uncompressed)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Color Space</td>
+                        <td className="py-2 text-sm text-gray-900">Linear RGB (sensor native)</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
+                        <td className="py-2 text-sm text-gray-900">Lossless or uncompressed</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
+                        <td className="py-2 text-sm text-gray-900">Sony Corporation</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Back to Viewers Button */}
+          <div className="text-center mt-8">
+            <a
+              href="/viewers"
+              className="inline-block bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              ← Back to All Viewers
+            </a>
           </div>
         </div>
-
-        {/* Format Tables */}
-        <div className="space-y-12">
-          {formatCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                <h3 className="text-xl font-bold text-gray-800">
-                  {category.title}
-                </h3>
+        
+        {/* Footer */}
+        <footer className="bg-gray-800 text-white py-12 mt-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-2 bg-gradient-to-br from-emerald-500 to-green-500 rounded-xl">
+                  <Camera className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">MorphyIMG</h2>
               </div>
               
-              <div className="overflow-x-auto">
-                <table className="min-w-full">
-                  <thead>
-                    <tr className="bg-gray-100">
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                        Format
-                      </th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                        Extensions
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    {category.formats.map((format, formatIndex) => (
-                      <tr key={formatIndex} className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4">
-                          <a
-                            href={format.path.replace('#', '')}
-                            className="text-sm font-medium text-blue-600 hover:text-blue-800 hover:underline"
-                          >
-                            {format.name}
-                          </a>
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600 font-mono">
-                          {format.extensions}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <p className="text-gray-300 mb-6">
+                Free professional ARW viewer for all your Sony Alpha RAW files.
+              </p>
+              
+              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+                <span>© 2025 MorphyIMG. Built for Sony photographers.</span>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8 text-center mt-12">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">
-            Can't Find Your Format?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            We support over 100+ file formats. If you don't see your format listed above, try our universal viewer.
-          </p>
-          <a
-            href="/"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-          >
-            Back to Home
-          </a>
-        </div>
-      </div>
-      
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="p-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl">
-                <Eye className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold">MorphyIMG</h2>
-            </div>
-            
-            <p className="text-gray-300 mb-6">
-              Professional file viewer supporting 100+ formats for all your viewing needs.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-              <span>© 2025 MorphyIMG. Built for file format professionals.</span>
             </div>
           </div>
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </>
   );
 };
