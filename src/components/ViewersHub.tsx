@@ -1,5 +1,5 @@
-import React from 'react';
-import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw, Search } from 'lucide-react';
 import { Header } from './Header';
 
 interface ViewerFormat {
@@ -11,6 +11,7 @@ interface ViewerFormat {
 }
 
 export const ViewersHub: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
   const viewerCategories = [
     {
       title: "STANDARD IMAGE FORMATS",
@@ -78,6 +79,32 @@ export const ViewersHub: React.FC = () => {
     }
   ];
 
+  // Filter categories based on search query
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return viewerCategories;
+    }
+
+    const query = searchQuery.toLowerCase();
+    return viewerCategories.map(category => ({
+      ...category,
+      formats: category.formats.filter(format => 
+        format.name.toLowerCase().includes(query) ||
+        format.description.toLowerCase().includes(query) ||
+        format.category.toLowerCase().includes(query)
+      )
+    })).filter(category => category.formats.length > 0);
+  }, [searchQuery, viewerCategories]);
+
+  // Count total viewers
+  const totalViewers = useMemo(() => {
+    return viewerCategories.reduce((sum, cat) => sum + cat.formats.length, 0);
+  }, [viewerCategories]);
+
+  const filteredCount = useMemo(() => {
+    return filteredCategories.reduce((sum, cat) => sum + cat.formats.length, 0);
+  }, [filteredCategories]);
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -110,15 +137,69 @@ export const ViewersHub: React.FC = () => {
             </div>
             <h1 className="text-4xl font-bold text-gray-900">File Viewers</h1>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             View and preview files in your browser without downloading. 
             Support for images, documents, spreadsheets, and more.
           </p>
+
+          {/* Search Bar */}
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <Search className="h-5 w-5 text-gray-400" />
+              </div>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search viewers... (e.g., PDF, JPEG, NEF)"
+                className="block w-full pl-12 pr-4 py-4 border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-gray-600"
+                >
+                  <span className="text-sm font-medium">Clear</span>
+                </button>
+              )}
+            </div>
+            {searchQuery && (
+              <p className="mt-2 text-sm text-gray-600">
+                Showing results for "{searchQuery}"
+              </p>
+            )}
+          </div>
         </div>
+
+        {/* Results Count */}
+        {searchQuery && (
+          <div className="mb-8 text-center">
+            <p className="text-lg text-gray-700">
+              Found <span className="font-bold text-blue-600">{filteredCount}</span> viewer{filteredCount !== 1 ? 's' : ''} 
+              {filteredCount < totalViewers && <span className="text-gray-500"> out of {totalViewers}</span>}
+            </p>
+          </div>
+        )}
+
+        {/* No Results */}
+        {searchQuery && filteredCategories.length === 0 && (
+          <div className="text-center py-12 bg-white rounded-xl border-2 border-dashed border-gray-300">
+            <Search className="w-16 h-16 mx-auto mb-4 text-gray-400" />
+            <h3 className="text-xl font-bold text-gray-900 mb-2">No viewers found</h3>
+            <p className="text-gray-600 mb-4">Try searching with different keywords like "PDF", "Image", or "RAW"</p>
+            <button
+              onClick={() => setSearchQuery('')}
+              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Clear Search
+            </button>
+          </div>
+        )}
 
         {/* Viewer Categories */}
         <div className="space-y-12">
-          {viewerCategories.map((category, categoryIndex) => (
+          {filteredCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               <div className="flex items-center space-x-3 mb-6">
                 {category.icon}
