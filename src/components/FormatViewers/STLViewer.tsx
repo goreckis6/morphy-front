@@ -1,244 +1,256 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Box, RotateCw, ZoomIn, ZoomOut, Maximize } from 'lucide-react';
+import { Box, Upload, Eye, Download, Share2, ArrowLeft } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
-import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const STLViewer: React.FC = () => {
-  const [file, setFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [previewData, setPreviewData] = useState<{ modelUrl: string; fileSize: number; triangles: number } | null>(null);
-  const canvasRef = useRef<HTMLDivElement>(null);
-  const { validateSingleFile, validationError, clearValidationError } = useFileValidation();
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [viewerFile, setViewerFile] = useState<File | null>(null);
 
-  const handleFileSelect = async (files: File[]) => {
-    setError(null);
-    setPreviewData(null);
-    clearValidationError();
+  const handleFilesSelected = (files: File[]) => {
+    // Filter only STL files
+    const stlFiles = files.filter(file => {
+      const extension = file.name.split('.').pop()?.toLowerCase();
+      return extension === 'stl';
+    });
+    setSelectedFiles(stlFiles);
+  };
 
-    if (files.length === 0) {
-      return;
-    }
-
-    const selectedFile = files[0];
+  const openViewer = (file: File) => {
+    setViewerFile(file);
     
-    // Validate file extension
-    if (!selectedFile.name.toLowerCase().endsWith('.stl')) {
-      setError('Please select a valid STL file');
-      return;
-    }
-
-    // Validate file size (max 100MB)
-    const validation = validateSingleFile(selectedFile);
-    if (!validation.isValid) {
-      setError(validation.error?.message || 'File validation failed');
-      return;
-    }
-
-    setFile(selectedFile);
-    setIsLoading(true);
-
-    try {
-      // Create object URL for the STL file
-      const modelUrl = URL.createObjectURL(selectedFile);
+    // Open in new window with 3D viewer
+    const newWindow = window.open('', '_blank', 'width=1200,height=800');
+    if (newWindow) {
+      const modelUrl = URL.createObjectURL(file);
       
-      // Load STL to count triangles (simplified)
-      const fileSize = selectedFile.size;
-      const estimatedTriangles = Math.floor(fileSize / 50); // Rough estimate
+      newWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <meta charset="UTF-8">
+          <title>STL 3D Viewer - ${file.name}</title>
+          <style>
+            body {
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              font-family: Arial, sans-serif;
+            }
+            #header-bar {
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+              color: white;
+              padding: 12px 20px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+              z-index: 1000;
+            }
+            #header-bar h1 {
+              margin: 0;
+              font-size: 18px;
+              font-weight: 600;
+            }
+            .header-actions {
+              display: flex;
+              gap: 10px;
+            }
+            .header-btn {
+              background: rgba(255,255,255,0.2);
+              border: 1px solid rgba(255,255,255,0.3);
+              color: white;
+              padding: 8px 16px;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 14px;
+              font-weight: 500;
+              transition: all 0.2s;
+              border: none;
+            }
+            .header-btn:hover {
+              background: rgba(255,255,255,0.3);
+            }
+            #canvas-container {
+              position: fixed;
+              top: 60px;
+              left: 0;
+              right: 0;
+              bottom: 40px;
+            }
+            #info-bar {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: #f3f4f6;
+              padding: 10px 20px;
+              border-top: 1px solid #e5e7eb;
+              font-size: 12px;
+              color: #6b7280;
+              text-align: center;
+            }
+            canvas {
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+        </head>
+        <body>
+          <div id="header-bar">
+            <h1>📦 3D Model Viewer - ${file.name}</h1>
+            <div class="header-actions">
+              <button class="header-btn" onclick="resetView()">🔄 Reset View</button>
+              <button class="header-btn" onclick="window.close()">✖️ Close</button>
+            </div>
+          </div>
+          <div id="canvas-container"></div>
+          <div id="info-bar">
+            🖱️ Left Click: Rotate • Right Click: Pan • Scroll: Zoom • File: ${file.name} (${(file.size / 1024 / 1024).toFixed(2)} MB)
+          </div>
+
+          <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+              }
+            }
+          </script>
+          
+          <script type="module">
+            import * as THREE from 'three';
+            import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+            import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+            let camera, scene, renderer, controls, mesh;
+
+            function init() {
+              const container = document.getElementById('canvas-container');
+              
+              // Scene
+              scene = new THREE.Scene();
+              scene.background = new THREE.Color(0xf5f5f5);
+
+              // Camera
+              camera = new THREE.PerspectiveCamera(
+                75,
+                container.clientWidth / container.clientHeight,
+                0.1,
+                1000
+              );
+              camera.position.set(0, 0, 100);
+
+              // Renderer
+              renderer = new THREE.WebGLRenderer({ antialias: true });
+              renderer.setSize(container.clientWidth, container.clientHeight);
+              renderer.setPixelRatio(window.devicePixelRatio);
+              container.appendChild(renderer.domElement);
+
+              // Lights
+              const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+              scene.add(ambientLight);
+
+              const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.8);
+              directionalLight1.position.set(1, 1, 1);
+              scene.add(directionalLight1);
+
+              const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
+              directionalLight2.position.set(-1, -1, -1);
+              scene.add(directionalLight2);
+
+              // Grid
+              const gridHelper = new THREE.GridHelper(200, 20, 0xcccccc, 0xeeeeee);
+              scene.add(gridHelper);
+
+              // Controls
+              controls = new OrbitControls(camera, renderer.domElement);
+              controls.enableDamping = true;
+              controls.dampingFactor = 0.05;
+              controls.screenSpacePanning = false;
+              controls.minDistance = 10;
+              controls.maxDistance = 500;
+
+              // Load STL
+              const loader = new STLLoader();
+              loader.load(
+                '${modelUrl}',
+                function (geometry) {
+                  geometry.center();
+                  geometry.computeBoundingBox();
+                  
+                  const boundingBox = geometry.boundingBox;
+                  const size = new THREE.Vector3();
+                  boundingBox.getSize(size);
+                  const maxDim = Math.max(size.x, size.y, size.z);
+                  const scale = maxDim > 0 ? 50 / maxDim : 1;
+                  
+                  const material = new THREE.MeshPhongMaterial({
+                    color: 0x3b82f6,
+                    specular: 0x111111,
+                    shininess: 200
+                  });
+
+                  mesh = new THREE.Mesh(geometry, material);
+                  mesh.scale.set(scale, scale, scale);
+                  mesh.rotation.x = -Math.PI / 2;
+                  scene.add(mesh);
+
+                  // Update info
+                  const triangles = geometry.attributes.position.count / 3;
+                  document.getElementById('info-bar').innerHTML += 
+                    \` • Triangles: \${triangles.toLocaleString()}\`;
+                },
+                function (xhr) {
+                  console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                },
+                function (error) {
+                  console.error('Error loading STL:', error);
+                  alert('Failed to load STL file');
+                }
+              );
+
+              // Handle resize
+              window.addEventListener('resize', onWindowResize);
+            }
+
+            function onWindowResize() {
+              const container = document.getElementById('canvas-container');
+              camera.aspect = container.clientWidth / container.clientHeight;
+              camera.updateProjectionMatrix();
+              renderer.setSize(container.clientWidth, container.clientHeight);
+            }
+
+            function resetView() {
+              camera.position.set(0, 0, 100);
+              controls.reset();
+            }
+
+            function animate() {
+              requestAnimationFrame(animate);
+              controls.update();
+              renderer.render(scene, camera);
+            }
+
+            // Make resetView global
+            window.resetView = resetView;
+
+            // Start
+            init();
+            animate();
+          </script>
+        </body>
+        </html>
+      `);
       
-      setPreviewData({
-        modelUrl,
-        fileSize,
-        triangles: estimatedTriangles
-      });
-
-      // Initialize Three.js viewer after state update
-      setTimeout(() => {
-        initThreeJS(modelUrl);
-      }, 100);
-
-    } catch (err) {
-      console.error('Error loading STL:', err);
-      setError('Failed to load STL file. Please try again.');
-    } finally {
-      setIsLoading(false);
+      newWindow.document.close();
     }
-  };
-
-  const initThreeJS = async (modelUrl: string) => {
-    if (!canvasRef.current) return;
-
-    try {
-      // Dynamically import Three.js to reduce initial bundle size
-      const THREE = await import('three');
-      const { STLLoader } = await import('three/examples/jsm/loaders/STLLoader.js');
-      const { OrbitControls } = await import('three/examples/jsm/controls/OrbitControls.js');
-
-      // Clear previous content
-      canvasRef.current.innerHTML = '';
-
-      // Setup scene
-      const scene = new THREE.Scene();
-      scene.background = new THREE.Color(0xf5f5f5);
-
-      // Setup camera
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        canvasRef.current.clientWidth / canvasRef.current.clientHeight,
-        0.1,
-        1000
-      );
-      camera.position.set(0, 0, 100);
-
-      // Setup renderer
-      const renderer = new THREE.WebGLRenderer({ antialias: true });
-      renderer.setSize(canvasRef.current.clientWidth, canvasRef.current.clientHeight);
-      renderer.setPixelRatio(window.devicePixelRatio);
-      canvasRef.current.appendChild(renderer.domElement);
-
-      // Add lights
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-      scene.add(ambientLight);
-
-      const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.8);
-      directionalLight1.position.set(1, 1, 1);
-      scene.add(directionalLight1);
-
-      const directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.4);
-      directionalLight2.position.set(-1, -1, -1);
-      scene.add(directionalLight2);
-
-      // Add grid helper
-      const gridHelper = new THREE.GridHelper(200, 20, 0xcccccc, 0xeeeeee);
-      scene.add(gridHelper);
-
-      // Setup controls
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-      controls.dampingFactor = 0.05;
-      controls.screenSpacePanning = false;
-      controls.minDistance = 10;
-      controls.maxDistance = 500;
-
-      // Load STL
-      const loader = new STLLoader();
-      loader.load(
-        modelUrl,
-        (geometry) => {
-          try {
-            // Center geometry
-            geometry.center();
-
-            // Calculate bounding box for auto-scaling
-            geometry.computeBoundingBox();
-            const boundingBox = geometry.boundingBox;
-            
-            if (!boundingBox) {
-              throw new Error('Failed to compute bounding box');
-            }
-            
-            const size = new THREE.Vector3();
-            boundingBox.getSize(size);
-            const maxDim = Math.max(size.x, size.y, size.z);
-            const scale = maxDim > 0 ? 50 / maxDim : 1;
-            
-            // Create material
-            const material = new THREE.MeshPhongMaterial({
-              color: 0x3b82f6,
-              specular: 0x111111,
-              shininess: 200,
-              flatShading: false
-            });
-
-            // Create mesh
-            const mesh = new THREE.Mesh(geometry, material);
-            mesh.scale.set(scale, scale, scale);
-            mesh.rotation.x = -Math.PI / 2; // Rotate to standard orientation
-            
-            scene.add(mesh);
-
-            // Add wireframe overlay (optional)
-            const wireframe = new THREE.WireframeGeometry(geometry);
-            const line = new THREE.LineSegments(wireframe);
-            (line.material as THREE.LineBasicMaterial).color.setHex(0x1e40af);
-            (line.material as THREE.LineBasicMaterial).opacity = 0.1;
-            (line.material as THREE.LineBasicMaterial).transparent = true;
-            line.scale.set(scale, scale, scale);
-            line.rotation.x = -Math.PI / 2;
-            scene.add(line);
-
-            // Update triangle count
-            if (geometry.attributes && geometry.attributes.position) {
-              const triangleCount = geometry.attributes.position.count / 3;
-              setPreviewData(prev => prev ? { ...prev, triangles: Math.floor(triangleCount) } : null);
-            }
-          } catch (err) {
-            console.error('Error processing geometry:', err);
-            setError('Failed to process 3D model geometry');
-          }
-        },
-        (xhr) => {
-          if (xhr.total > 0) {
-            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-          }
-        },
-        (error) => {
-          console.error('Error loading STL:', error);
-          setError('Failed to parse STL file');
-        }
-      );
-
-      // Animation loop
-      const animate = () => {
-        requestAnimationFrame(animate);
-        controls.update();
-        renderer.render(scene, camera);
-      };
-      animate();
-
-      // Handle window resize
-      const handleResize = () => {
-        if (!canvasRef.current) return;
-        const width = canvasRef.current.clientWidth;
-        const height = canvasRef.current.clientHeight;
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-        renderer.setSize(width, height);
-      };
-      window.addEventListener('resize', handleResize);
-
-      // Cleanup
-      return () => {
-        window.removeEventListener('resize', handleResize);
-        renderer.dispose();
-        controls.dispose();
-      };
-
-    } catch (err) {
-      console.error('Error initializing Three.js:', err);
-      setError('Failed to initialize 3D viewer. Please ensure your browser supports WebGL.');
-    }
-  };
-
-  const handleDownload = () => {
-    if (!file) return;
-    
-    const url = URL.createObjectURL(file);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = file.name;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  const formatFileSize = (bytes: number): string => {
-    if (bytes < 1024) return bytes + ' B';
-    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(2) + ' KB';
-    return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
   };
 
   return (
@@ -279,236 +291,145 @@ export const STLViewer: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="min-h-screen bg-gray-50">
         <Header />
         
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Back Button */}
-          <a
-            href="/viewers"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to All Viewers
-          </a>
-
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-block p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg mb-4">
-              <Box className="w-16 h-16 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              STL File Viewer
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              View and interact with 3D models in STL format. Rotate, zoom, and inspect your 3D printing models directly in your browser.
-            </p>
-          </div>
-
-          {/* About STL Format */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-            <div className="flex items-start space-x-4">
-              <Info className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">About STL Format</h2>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  <strong>STL (Stereolithography)</strong> is a file format native to 3D Systems' stereolithography CAD software. 
-                  It's the most widely used format for 3D printing and is supported by almost all 3D printers and slicing software.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4 mt-4">
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">✨ Common Uses</h3>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• 3D Printing & Rapid Prototyping</li>
-                      <li>• CAD/CAM Manufacturing</li>
-                      <li>• 3D Modeling & Design</li>
-                      <li>• Engineering & Architecture</li>
-                    </ul>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">🔧 Features</h3>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Universal 3D Format</li>
-                      <li>• ASCII & Binary Variants</li>
-                      <li>• Triangle Mesh Representation</li>
-                      <li>• Wide Software Support</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Eye className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Interactive 3D View
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Rotate, zoom, and pan your 3D models with smooth controls powered by Three.js and WebGL
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Instant Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                No server upload required - STL files are rendered locally in your browser for maximum privacy
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
+        {/* Header */}
+        <div className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => window.location.href = '/viewers'}
+                className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <div className="p-3 bg-blue-100 rounded-xl">
                 <Box className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Model Information
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View file size, triangle count, and other mesh statistics of your 3D models
-              </p>
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">
+                  STL 3D Model Viewer
+                </h1>
+                <p className="text-lg text-gray-600 mt-2">
+                  Upload and preview STL 3D model files online
+                </p>
+              </div>
             </div>
           </div>
+        </div>
 
-          {/* File Upload Area */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <FileUpload
-              onFilesSelected={handleFileSelect}
-              accept=".stl"
-              maxFiles={1}
-              maxSize={100 * 1024 * 1024}
-              title="Upload STL File"
-              description="Drag and drop your STL file here, or click to browse"
-              subtitle="✓ Max 20 files • Up to 100 MB Total"
+        {/* Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {/* Upload Section */}
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              Upload STL Files
+            </h2>
+            <FileUpload 
+              onFilesSelected={handleFilesSelected}
+              acceptedFormats={['stl']}
+              maxFiles={20}
             />
-
-            {validationError && (
-              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <div className="flex items-start">
-                  <AlertCircle className="w-5 h-5 text-red-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-red-800 font-medium">Validation Error</p>
-                    <p className="text-red-600 text-sm mt-1">{validationError.message}</p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {error && (
-              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <div className="flex items-start">
-                  <AlertCircle className="w-5 h-5 text-red-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-red-800 font-medium">Preview Error</p>
-                    <p className="text-red-600 text-sm mt-1">{error}</p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {isLoading && (
-              <div className="mt-8 text-center">
-                <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
-                <p className="text-gray-600">Loading 3D model...</p>
-              </div>
-            )}
-
-            {previewData && (
-              <div className="mt-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-gray-900">3D Model Preview</h3>
-                  <button
-                    onClick={handleDownload}
-                    className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    Download
-                  </button>
-                </div>
-
-                {/* Model Info */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600">File Size</p>
-                    <p className="text-lg font-bold text-gray-900">{formatFileSize(previewData.fileSize)}</p>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600">Triangles</p>
-                    <p className="text-lg font-bold text-gray-900">{previewData.triangles.toLocaleString()}</p>
-                  </div>
-                  <div className="bg-purple-50 rounded-lg p-4">
-                    <p className="text-sm text-gray-600">Format</p>
-                    <p className="text-lg font-bold text-gray-900">STL</p>
-                  </div>
-                </div>
-
-                {/* 3D Canvas */}
-                <div 
-                  ref={canvasRef}
-                  className="w-full bg-gray-50 rounded-lg border-2 border-gray-200"
-                  style={{ height: '600px' }}
-                />
-
-                {/* Controls Help */}
-                <div className="mt-4 bg-blue-50 rounded-lg p-4">
-                  <p className="text-sm text-gray-700 font-medium mb-2">🖱️ Controls:</p>
-                  <div className="grid md:grid-cols-3 gap-4 text-sm text-gray-600">
-                    <div><strong>Rotate:</strong> Left click + drag</div>
-                    <div><strong>Pan:</strong> Right click + drag</div>
-                    <div><strong>Zoom:</strong> Scroll wheel</div>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
 
-          {/* How It Works */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 mb-8 border border-blue-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How It Works</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-                <h3 className="font-bold text-gray-900 mb-2">Upload STL File</h3>
-                <p className="text-gray-600 text-sm">Select your 3D model file from your computer</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-                <h3 className="font-bold text-gray-900 mb-2">3D Rendering</h3>
-                <p className="text-gray-600 text-sm">Model is rendered using WebGL in your browser</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-                <h3 className="font-bold text-gray-900 mb-2">Interact & Download</h3>
-                <p className="text-gray-600 text-sm">Explore your model and download if needed</p>
+          {/* Preview Section */}
+          {selectedFiles.length > 0 && (
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                Preview STL Files ({selectedFiles.length})
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {selectedFiles.map((file, index) => (
+                  <div key={index} className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div className="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg mb-3 overflow-hidden flex items-center justify-center">
+                      <Box className="w-16 h-16 text-blue-600" />
+                    </div>
+                    <div className="text-sm font-medium text-gray-700 truncate mb-2">
+                      {file.name}
+                    </div>
+                    <div className="text-xs text-gray-500 mb-3">
+                      {(file.size / 1024 / 1024).toFixed(2)} MB
+                    </div>
+                    <div className="flex space-x-2">
+                      <button
+                        onClick={() => openViewer(file)}
+                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center space-x-1"
+                      >
+                        <Eye className="w-3 h-3" />
+                        <span>View 3D</span>
+                      </button>
+                      <button className="p-2 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors">
+                        <Download className="w-3 h-3" />
+                      </button>
+                      <button className="p-2 text-gray-500 hover:text-purple-500 hover:bg-purple-50 rounded-lg transition-colors">
+                        <Share2 className="w-3 h-3" />
+                      </button>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </main>
+          )}
 
+          {/* Format Information */}
+          {/* Back to Home Section */}
+          <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+              Back to All Viewers - Supported Formats
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">3D Model Formats</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• STL (Stereolithography) - ASCII & Binary</li>
+                  <li>• Used for 3D Printing</li>
+                  <li>• CAD/CAM Manufacturing</li>
+                  <li>• Triangle Mesh Representation</li>
+                  <li>• Universal 3D Format</li>
+                  <li>• Supports Complex Geometries</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Other Formats Available</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Image formats (JPG, PNG, WebP, GIF)</li>
+                  <li>• Document formats (PDF, DOCX, ODT)</li>
+                  <li>• Spreadsheet formats (XLSX, CSV, ODS)</li>
+                  <li>• Presentation formats (PPTX, ODP)</li>
+                  <li>• Code formats (JS, Python, CSS, HTML)</li>
+                  <li>• RAW Camera formats (NEF, CR2, DNG)</li>
+                </ul>
+              </div>
+            </div>
+            <div className="text-center mt-6">
+              <a
+                href="/viewers"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Back to All Viewers
+              </a>
+            </div>
+          </div>
+        </div>
+        
         {/* Footer */}
-        <footer className="bg-white border-t border-gray-200 py-8 mt-16">
+        <footer className="bg-gray-800 text-white py-12 mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-gray-600">
-              <p className="mb-2">
-                <strong>STL Viewer</strong> - View 3D models online with interactive rendering
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-2 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl">
+                  <Box className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">MorphyIMG</h2>
+              </div>
+              
+              <p className="text-gray-300 mb-6">
+                Professional STL 3D model viewer for all your 3D printing and CAD needs.
               </p>
-              <p className="text-sm">
-                Supports ASCII and binary STL files • Powered by Three.js & WebGL • 100% client-side processing
-              </p>
-              <div className="mt-4 flex items-center justify-center space-x-4 text-sm">
-                <a href="/viewers" className="text-blue-600 hover:text-blue-800">All Viewers</a>
-                <span className="text-gray-400">•</span>
-                <a href="/converters" className="text-blue-600 hover:text-blue-800">Converters</a>
-                <span className="text-gray-400">•</span>
-                <a href="/" className="text-blue-600 hover:text-blue-800">Home</a>
+              
+              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+                <span>© 2025 MorphyIMG. Built for 3D professionals.</span>
               </div>
             </div>
           </div>
@@ -517,4 +438,3 @@ export const STLViewer: React.FC = () => {
     </>
   );
 };
-
