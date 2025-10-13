@@ -114,12 +114,12 @@ export const ViewersHub: React.FC = () => {
         format.category.toLowerCase().includes(query)
       )
     })).filter(category => category.formats.length > 0);
-  }, [searchQuery, viewerCategories]);
+  }, [searchQuery]);
 
   // Count total viewers
   const totalViewers = useMemo(() => {
     return viewerCategories.reduce((sum, cat) => sum + cat.formats.length, 0);
-  }, [viewerCategories]);
+  }, []);
 
   const filteredCount = useMemo(() => {
     return filteredCategories.reduce((sum, cat) => sum + cat.formats.length, 0);
