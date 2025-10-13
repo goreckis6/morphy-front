@@ -189,8 +189,8 @@ export const STLViewer: React.FC = () => {
                   const scale = maxDim > 0 ? 50 / maxDim : 1;
                   
                   const material = new THREE.MeshPhongMaterial({
-                    color: 0x3b82f6,
-                    specular: 0x111111,
+                    color: 0xff9800,
+                    specular: 0x222222,
                     shininess: 200
                   });
 
