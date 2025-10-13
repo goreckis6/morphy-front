@@ -22,9 +22,9 @@ import { CSVToJSONConverter } from './components/ConversionPages/CSVToJSONConver
 import { CSVToMDConverter } from './components/ConversionPages/CSVToMDConverter';
 import { CSVToMOBIConverter } from './components/ConversionPages/CSVToMOBIConverter';
 import { CSVToNDJSONConverter } from './components/ConversionPages/CSVToNDJSONConverter';
+import { CSVToParquetConverter } from './components/ConversionPages/CSVToParquetConverter';
 import { CSVToODPConverter } from './components/ConversionPages/CSVToODPConverter';
 import { CSVToODTConverter } from './components/ConversionPages/CSVToODTConverter';
-import { CSVToParquetConverter } from './components/ConversionPages/CSVToParquetConverter';
 import { CSVToPDFConverter } from './components/ConversionPages/CSVToPDFConverter';
 import { CSVToPPTConverter } from './components/ConversionPages/CSVToPPTConverter';
 import { CSVToPPTXConverter } from './components/ConversionPages/CSVToPPTXConverter';
@@ -339,6 +339,14 @@ function App() {
     return (
       <AuthProvider>
         <CSVToNDJSONConverter />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/convert/csv-to-parquet') {
+    return (
+      <AuthProvider>
+        <CSVToParquetConverter />
       </AuthProvider>
     );
   }
