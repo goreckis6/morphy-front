@@ -102,6 +102,15 @@ import { RAFViewer } from './components/FormatViewers/RAFViewer';
 import { ORFViewer } from './components/FormatViewers/ORFViewer';
 import { DNGViewer } from './components/FormatViewers/DNGViewer';
 import { PEFViewer } from './components/FormatViewers/PEFViewer';
+import { ODPViewer } from './components/FormatViewers/ODPViewer';
+import { OTPViewer } from './components/FormatViewers/OTPViewer';
+import { POTViewer } from './components/FormatViewers/POTViewer';
+import { PPSViewer } from './components/FormatViewers/PPSViewer';
+import { PPTViewer } from './components/FormatViewers/PPTViewer';
+import { SDDViewer } from './components/FormatViewers/SDDViewer';
+import { STIViewer } from './components/FormatViewers/STIViewer';
+import { SXViewer } from './components/FormatViewers/SXViewer';
+import { UOPViewer } from './components/FormatViewers/UOPViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -970,6 +979,78 @@ function App() {
     );
   }
 
+  if (currentPath === '/viewers/odp') {
+    return (
+      <AuthProvider>
+        <ODPViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/otp') {
+    return (
+      <AuthProvider>
+        <OTPViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/pot') {
+    return (
+      <AuthProvider>
+        <POTViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/pps') {
+    return (
+      <AuthProvider>
+        <PPSViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/ppt') {
+    return (
+      <AuthProvider>
+        <PPTViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/sdd') {
+    return (
+      <AuthProvider>
+        <SDDViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/sti') {
+    return (
+      <AuthProvider>
+        <STIViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/sx') {
+    return (
+      <AuthProvider>
+        <SXViewer />
+      </AuthProvider>
+    );
+  }
+
+  if (currentPath === '/viewers/uop') {
+    return (
+      <AuthProvider>
+        <UOPViewer />
+      </AuthProvider>
+    );
+  }
+
   const features = [
     { icon: <Zap className="w-12 h-12 text-yellow-500" />, title: 'Lightning Fast', description: 'Process files in seconds with our optimized conversion engine powered by Python and Sharp' },
     { icon: <Shield className="w-12 h-12 text-green-500" />, title: 'Secure & Private', description: 'All conversions happen server-side with enterprise-grade security. Files are automatically deleted after processing' },
@@ -1014,7 +1095,7 @@ function App() {
                 <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
                   Instantly.
                 </span>
-              </h1>
+            </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-50 max-w-4xl mx-auto leading-relaxed">
                 Fast, secure, and easy file conversions between <span className="font-bold text-yellow-300">300+ formats</span> — directly in your browser. 
                 No registration required.
@@ -1036,21 +1117,21 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button 
-                  onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button 
+                onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-white text-blue-600 font-bold py-4 px-10 rounded-full hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-2"
-                >
+              >
                   <RefreshCw className="w-5 h-5" />
                   Try It Now - Free
-                </button>
-                <button 
+              </button>
+              <button 
                   onClick={() => document.getElementById('supported-formats')?.scrollIntoView({ behavior: 'smooth' })}
                   className="border-2 border-white/50 backdrop-blur-sm bg-white/10 text-white font-bold py-4 px-10 rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center gap-2"
-                >
+              >
                   <FileText className="w-5 h-5" />
                   See Supported Formats
-                </button>
+              </button>
               </div>
             </div>
           </div>
@@ -1093,12 +1174,12 @@ function App() {
               <div className="text-center">
                 <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <span className="text-3xl font-bold text-white">1</span>
-                </div>
+                  </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">Upload File</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
                   Drag & drop your file or click to browse. Supports up to 100MB per file.
-                </p>
-              </div>
+                  </p>
+                </div>
 
               <div className="text-center">
                 <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
@@ -1132,8 +1213,8 @@ function App() {
                   <RefreshCw className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                  Universal File Converter
-                </h2>
+                Universal File Converter
+              </h2>
               </div>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Upload your files and convert them instantly. Supports 300+ format combinations with professional-grade quality.
@@ -1143,10 +1224,10 @@ function App() {
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                 <div className="lg:col-span-3">
-                  <FileUpload onFilesSelected={setSelectedFiles} />
-                </div>
+                <FileUpload onFilesSelected={setSelectedFiles} />
+              </div>
                 <div className="lg:col-span-2">
-                  <ConversionPanel files={selectedFiles} />
+                <ConversionPanel files={selectedFiles} />
                 </div>
               </div>
             </div>
