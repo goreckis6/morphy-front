@@ -14,9 +14,10 @@ import {
   Shield,
   Clock,
   Star,
-  File,
+  Code,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CSVToXMLConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -26,17 +27,42 @@ export const CSVToXMLConverter: React.FC = () => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [rootElement, setRootElement] = useState('data');
   const [rowElement, setRowElement] = useState('row');
-  const [includeHeaders, setIncludeHeaders] = useState(true);
+  const [prettyPrint, setPrettyPrint] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getSingleInfoMessage,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.csv')) {
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (event.target) {
+            event.target.value = '';
+          }
+          return;
+        }
         setSelectedFile(file);
         setError(null);
+        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid CSV file');
@@ -46,29 +72,26 @@ export const CSVToXMLConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const csvFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.csv')
-    );
+    const csvFiles = files.filter(file => file.name.toLowerCase().endsWith('.csv'));
+    
+    if (csvFiles.length === 0) {
+      setError('No valid CSV files selected.');
+      return;
+    }
+
+    const validation = validateBatchFiles(csvFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (event.target) {
+        event.target.value = '';
+      }
+      return;
+    }
+
     setBatchFiles(csvFiles);
     setError(null);
-  };
-
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would parse CSV and generate XML
-    const xmlContent = `<?xml version="1.0" encoding="UTF-8"?>
-<${rootElement}>
-  <${rowElement}>
-    <name>John Doe</name>
-    <age>30</age>
-    <city>New York</city>
-  </${rowElement}>
-  <${rowElement}>
-    <name>Jane Smith</name>
-    <age>25</age>
-    <city>Los Angeles</city>
-  </${rowElement}>
-</${rootElement}>`;
-    return new Blob([xmlContent], { type: 'application/xml' });
+    clearValidationError();
   };
 
   const handleSingleConvert = async () => {
@@ -78,10 +101,33 @@ export const CSVToXMLConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      formData.append('rootElement', rootElement);
+      formData.append('rowElement', rowElement);
+      formData.append('prettyPrint', prettyPrint.toString());
+
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://morphy-2-n2tb.onrender.com' 
+        : 'http://localhost:3000';
+
+      const response = await fetch(`${API_BASE_URL}/convert/csv-to-xml/single`, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Conversion failed' }));
+        throw new Error(errorData.error || 'Conversion failed');
+      }
+
+      const blob = await response.blob();
+      const filename = selectedFile.name.replace(/\.csv$/i, '.xml');
+      
+      setConvertedFile(blob);
+      setConvertedFilename(filename);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -94,10 +140,30 @@ export const CSVToXMLConverter: React.FC = () => {
     setError(null);
     
     try {
-      // Mock batch conversion - process each file
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const formData = new FormData();
+      batchFiles.forEach(file => {
+        formData.append('files', file);
+      });
+      formData.append('rootElement', rootElement);
+      formData.append('rowElement', rowElement);
+      formData.append('prettyPrint', prettyPrint.toString());
+
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://morphy-2-n2tb.onrender.com' 
+        : 'http://localhost:3000';
+
+      const response = await fetch(`${API_BASE_URL}/convert/csv-to-xml/batch`, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error('Batch conversion failed');
       }
+
+      const data = await response.json();
+      setBatchResults(data.results || []);
+      setBatchConverted(true);
       setError(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
@@ -106,12 +172,35 @@ export const CSVToXMLConverter: React.FC = () => {
     }
   };
 
+  const handleBatchDownload = async (downloadUrl: string, filename: string) => {
+    try {
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://morphy-2-n2tb.onrender.com' 
+        : 'http://localhost:3000';
+      
+      const response = await fetch(`${API_BASE_URL}${downloadUrl}`);
+      if (!response.ok) throw new Error('Download failed');
+      
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      setError('Download failed. Please try again.');
+    }
+  };
+
   const handleDownload = () => {
     if (convertedFile) {
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.csv', '.xml') : 'converted.xml';
+      a.download = convertedFilename || (selectedFile ? selectedFile.name.replace('.csv', '.xml') : 'converted.xml');
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -129,31 +218,62 @@ export const CSVToXMLConverter: React.FC = () => {
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchConverted(false);
+    setBatchResults([]);
+    setConvertedFilename(null);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (
     <>
       <Helmet>
-        <title>CSV to XML Converter - Convert CSV to XML Format</title>
-        <meta name="description" content="Convert CSV files to XML format for data interchange and web services. Professional spreadsheet to XML conversion. Free online tool with batch support." />
-        <meta name="keywords" content="CSV to XML, data conversion, XML format, web services, SOAP, data interchange" />
+        <title>Free CSV to XML Converter - Convert CSV to XML Format Online</title>
+        <meta name="description" content="Convert CSV files to XML (Extensible Markup Language) format. Support for custom element names and pretty printing. Free online converter with batch processing for data exchange and API integration." />
+        <meta name="keywords" content="CSV to XML, XML converter, data exchange, XML generation, batch conversion, pretty print XML, CSV XML converter online free" />
+        <link rel="canonical" href="https://morphyimg.com/convert/csv-to-xml" />
+        
+        <meta property="og:title" content="Free CSV to XML Converter Online | MorphyIMG" />
+        <meta property="og:description" content="Convert CSV to XML format online for free. Fast data exchange conversion." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://morphyimg.com/convert/csv-to-xml" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free CSV to XML Converter Online" />
+        <meta name="twitter:description" content="Convert CSV to XML format with custom elements and pretty printing." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "CSV to XML Converter",
+            "description": "Free online CSV to XML converter with custom element support",
+            "url": "https://morphyimg.com/convert/csv-to-xml",
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       <Header />
       
-      {/* Hero Section - Narrowed */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-700">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-cyan-600 to-sky-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               CSV to XML Converter
             </h1>
-            <p className="text-lg sm:text-xl text-indigo-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to XML format for structured data exchange. Transform tabular data into hierarchical XML format for web services and data integration.
+            <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
+              Convert CSV files to XML format quickly and easily. Perfect for data exchange, API integration, and web services with customizable element structure.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-indigo-200">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
                 <span>Lightning Fast</span>
@@ -184,7 +304,7 @@ export const CSVToXMLConverter: React.FC = () => {
                   onClick={() => setBatchMode(false)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
-                      ? 'bg-indigo-600 text-white shadow-lg' 
+                      ? 'bg-blue-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -195,7 +315,7 @@ export const CSVToXMLConverter: React.FC = () => {
                   onClick={() => setBatchMode(true)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
-                      ? 'bg-indigo-600 text-white shadow-lg' 
+                      ? 'bg-blue-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -205,7 +325,7 @@ export const CSVToXMLConverter: React.FC = () => {
               </div>
 
               {/* File Upload Area */}
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-indigo-400 transition-colors">
+              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
@@ -216,6 +336,14 @@ export const CSVToXMLConverter: React.FC = () => {
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-blue-600 mb-4">
+                    {getBatchInfoMessage()}
+                  </p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -226,7 +354,7 @@ export const CSVToXMLConverter: React.FC = () => {
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Choose Files
                 </button>
@@ -238,10 +366,10 @@ export const CSVToXMLConverter: React.FC = () => {
                   <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <File className="w-12 h-12 text-gray-400" />
+                      <Code className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -250,23 +378,46 @@ export const CSVToXMLConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError?.message}</span>
                 </div>
               )}
 
@@ -275,7 +426,7 @@ export const CSVToXMLConverter: React.FC = () => {
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
                     <div className="flex items-center justify-center">
@@ -319,6 +470,62 @@ export const CSVToXMLConverter: React.FC = () => {
                   </div>
                 </div>
               )}
+
+              {/* Batch Conversion Success */}
+              {batchMode && batchConverted && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <p className="text-green-700 mb-4">
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                  </p>
+                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
+                    {batchResults.map((result, index) => {
+                      const displayName = result.filename || `${result.originalName || batchFiles[index].name.replace(/\.[^.]+$/, '')}.xml`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex flex-col">
+                            <div className="flex items-center">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                              )}
+                              <span className="text-sm font-medium">{displayName}</span>
+                            </div>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
+                            )}
+                            {!result.success && result.error && (
+                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadUrl && (
+                            <button
+                              onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                            >
+                              Download
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -328,7 +535,7 @@ export const CSVToXMLConverter: React.FC = () => {
             {/* Conversion Settings */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-indigo-600" />
+                <Settings className="w-5 h-5 mr-2 text-blue-600" />
                 XML Settings
               </h3>
               
@@ -341,8 +548,8 @@ export const CSVToXMLConverter: React.FC = () => {
                   type="text"
                   value={rootElement}
                   onChange={(e) => setRootElement(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   placeholder="data"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
 
@@ -355,21 +562,21 @@ export const CSVToXMLConverter: React.FC = () => {
                   type="text"
                   value={rowElement}
                   onChange={(e) => setRowElement(e.target.value)}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                   placeholder="row"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
 
-              {/* Include Headers */}
+              {/* Pretty Print */}
               <div className="mb-6">
                 <label className="flex items-center">
                   <input
                     type="checkbox"
-                    checked={includeHeaders}
-                    onChange={(e) => setIncludeHeaders(e.target.checked)}
-                    className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                    checked={prettyPrint}
+                    onChange={(e) => setPrettyPrint(e.target.checked)}
+                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                  <span className="ml-2 text-sm text-gray-700">Pretty print (formatted with indentation)</span>
                 </label>
               </div>
             </div>
@@ -382,12 +589,12 @@ export const CSVToXMLConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "Structured data format",
-                  "Web service compatibility",
-                  "Data integration support",
-                  "Hierarchical data representation",
-                  "Cross-platform compatibility",
-                  "Batch processing support"
+                  "Customizable XML structure",
+                  "Pretty print formatting",
+                  "Batch conversion support",
+                  "Automatic escaping",
+                  "100% free to use",
+                  "Fast XML generation"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -400,20 +607,20 @@ export const CSVToXMLConverter: React.FC = () => {
             {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-indigo-600" />
+                <BarChart3 className="w-5 h-5 mr-2 text-blue-600" />
                 Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  "Web service data exchange",
-                  "Data integration workflows",
-                  "API response formatting",
-                  "Database export/import",
+                  "API data exchange",
+                  "Web services integration",
+                  "Data import/export",
+                  "SOAP and REST APIs",
                   "Configuration files",
-                  "Structured data storage"
+                  "System integration"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
@@ -440,37 +647,37 @@ export const CSVToXMLConverter: React.FC = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to XML format is essential for structured data exchange, web service integration, and data interoperability. While CSV files are excellent for tabular data storage, XML format provides a hierarchical, structured approach that's perfect for web services, APIs, and complex data relationships.
+              Converting CSV files to XML (Extensible Markup Language) format is essential for data exchange, web services integration, and API development. While CSV is excellent for tabular data, XML provides hierarchical structure, self-describing data, and universal compatibility with SOAP/REST APIs, making it the standard format for data interchange and system integration workflows.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of XML Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">Universal Compatibility</h4>
+                <p className="text-gray-700">
+                  XML is supported by virtually all programming languages, databases, and web services, ensuring maximum interoperability.
+                </p>
+              </div>
+              
+              <div className="bg-cyan-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Self-Describing Data</h4>
+                <p className="text-gray-700">
+                  XML tags describe the data they contain, making files self-documenting and easy to understand without external documentation.
+                </p>
+              </div>
+              
+              <div className="bg-sky-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-sky-900 mb-3">Hierarchical Structure</h4>
+                <p className="text-gray-700">
+                  XML supports nested elements and attributes, allowing for complex data structures beyond simple tabular format.
+                </p>
+              </div>
+              
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Structured Data Format</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Industry Standard</h4>
                 <p className="text-gray-700">
-                  XML provides a hierarchical structure that can represent complex relationships and nested data, making it ideal for structured data exchange.
-                </p>
-              </div>
-              
-              <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Web Service Compatibility</h4>
-                <p className="text-gray-700">
-                  XML is widely used in web services, SOAP APIs, and REST APIs, making it the standard format for enterprise data exchange.
-                </p>
-              </div>
-              
-              <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">Data Integration Support</h4>
-                <p className="text-gray-700">
-                  XML format is supported by virtually all programming languages and databases, making it perfect for data integration workflows.
-                </p>
-              </div>
-              
-              <div className="bg-rose-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-rose-900 mb-3">Cross-Platform Compatibility</h4>
-                <p className="text-gray-700">
-                  XML is platform-independent and can be processed by any system, ensuring data can be exchanged between different technologies and platforms.
+                  XML is the standard for SOAP web services, configuration files, and data exchange in enterprise systems.
                 </p>
               </div>
             </div>
@@ -479,53 +686,53 @@ export const CSVToXMLConverter: React.FC = () => {
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">API Data Exchange and Integration</h4>
+                  <p className="text-gray-700">Convert CSV data to XML format for integration with SOAP and REST APIs, web services, and third-party systems.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Import and Export Operations</h4>
+                  <p className="text-gray-700">Generate XML files from CSV data for import into databases, CMS systems, and enterprise applications that require XML format.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-sky-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Configuration and Settings Management</h4>
+                  <p className="text-gray-700">Create XML configuration files from CSV data for application settings, deployment configurations, and system parameters.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Web Service Data Exchange</h4>
-                  <p className="text-gray-700">Convert CSV data to XML format for use in web services, SOAP APIs, and enterprise data exchange protocols.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Integration Workflows</h4>
-                  <p className="text-gray-700">Transform CSV data into XML format for integration with enterprise systems, databases, and third-party applications.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">API Response Formatting</h4>
-                  <p className="text-gray-700">Convert CSV data to XML format for API responses, ensuring structured data delivery to client applications.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Configuration Files</h4>
-                  <p className="text-gray-700">Transform CSV data into XML format for application configuration files, settings, and structured data storage.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Enterprise System Integration</h4>
+                  <p className="text-gray-700">Integrate CSV data with enterprise systems, ERP platforms, and legacy applications that use XML as their primary data format.</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-xl text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8 rounded-xl text-center">
               <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to XML converter to transform your tabular data into structured XML format.
+                Use our free online CSV to XML converter to transform your data into XML format for APIs and web services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   Back to Home
                 </button>
@@ -555,8 +762,6 @@ export const CSVToXMLConverter: React.FC = () => {
       </footer>
 
       </div>
-
       </>
-
-      );
+  );
 };
