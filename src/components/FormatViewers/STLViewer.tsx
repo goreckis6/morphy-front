@@ -11,16 +11,12 @@ export const STLViewer: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [previewData, setPreviewData] = useState<{ modelUrl: string; fileSize: number; triangles: number } | null>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
-  const { validateFiles, errors: validationErrors } = useFileValidation({
-    maxFileSize: 100 * 1024 * 1024, // 100MB
-    maxTotalSize: 100 * 1024 * 1024,
-    maxFiles: 1,
-    allowedFormats: ['stl']
-  });
+  const { validateSingleFile, validationError, clearValidationError } = useFileValidation();
 
   const handleFileSelect = async (files: File[]) => {
     setError(null);
     setPreviewData(null);
+    clearValidationError();
 
     if (files.length === 0) {
       return;
@@ -28,16 +24,16 @@ export const STLViewer: React.FC = () => {
 
     const selectedFile = files[0];
     
-    // Validate file
-    const validation = validateFiles([selectedFile]);
-    if (!validation.isValid) {
-      setError(validation.errors[0] || 'Invalid file');
+    // Validate file extension
+    if (!selectedFile.name.toLowerCase().endsWith('.stl')) {
+      setError('Please select a valid STL file');
       return;
     }
 
-    // Check file size (max 100MB)
-    if (selectedFile.size > 100 * 1024 * 1024) {
-      setError('File size exceeds 100MB limit for preview');
+    // Validate file size (max 100MB)
+    const validation = validateSingleFile(selectedFile);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'File validation failed');
       return;
     }
 
@@ -394,15 +390,13 @@ export const STLViewer: React.FC = () => {
               subtitle="✓ Max 20 files • Up to 100 MB Total"
             />
 
-            {validationErrors.length > 0 && (
+            {validationError && (
               <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
                 <div className="flex items-start">
                   <AlertCircle className="w-5 h-5 text-red-600 mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-red-800 font-medium">Validation Error</p>
-                    {validationErrors.map((error, index) => (
-                      <p key={index} className="text-red-600 text-sm mt-1">{error}</p>
-                    ))}
+                    <p className="text-red-600 text-sm mt-1">{validationError.message}</p>
                   </div>
                 </div>
               </div>
