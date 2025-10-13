@@ -1,12 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Box, Upload, Eye, Download, Share2, ArrowLeft } from 'lucide-react';
+import { Box, Upload, Eye, Download, Share2, ArrowLeft, Zap, Grid3x3, Cpu, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 
 export const STLViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  const [viewerFile, setViewerFile] = useState<File | null>(null);
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only STL files
@@ -18,8 +17,6 @@ export const STLViewer: React.FC = () => {
   };
 
   const openViewer = (file: File) => {
-    setViewerFile(file);
-    
     // Open in new window with 3D viewer
     const newWindow = window.open('', '_blank', 'width=1200,height=800');
     if (newWindow) {
@@ -256,9 +253,9 @@ export const STLViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free STL Viewer Online - View 3D Models | MorphyIMG</title>
-        <meta name="description" content="Free online STL file viewer. Preview 3D models, STL files, and stereolithography files directly in your browser with interactive 3D rendering. No software installation required." />
-        <meta name="keywords" content="stl viewer, 3d model viewer, stereolithography viewer, 3d file viewer, stl preview, 3d printing viewer, free stl viewer online" />
+        <title>STL Viewer - Free Online 3D Model Viewer for STL Files</title>
+        <meta name="description" content="View STL (Stereolithography) 3D model files online for free. Interactive 3D viewer with rotation, zoom, and pan controls. Perfect for 3D printing and CAD. Up to 20 files, 100MB total. No registration required." />
+        <meta name="keywords" content="STL viewer, 3D model viewer, stereolithography viewer, 3D printing viewer, CAD viewer, 3D file viewer, free STL viewer online, batch viewing" />
         <link rel="canonical" href="https://morphyimg.com/viewers/stl" />
         
         {/* Open Graph */}
@@ -294,26 +291,28 @@ export const STLViewer: React.FC = () => {
       <div className="min-h-screen bg-gray-50">
         <Header />
         
-        {/* Header */}
-        <div className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => window.location.href = '/viewers'}
-                className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
-              >
-                <ArrowLeft className="w-5 h-5" />
-              </button>
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <Box className="w-8 h-8 text-blue-600" />
-              </div>
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">
-                  STL 3D Model Viewer
-                </h1>
-                <p className="text-lg text-gray-600 mt-2">
-                  Upload and preview STL 3D model files online
-                </p>
+        {/* Hero Section */}
+        <div className="relative bg-gradient-to-br from-blue-600 via-indigo-500 to-purple-600 text-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-6">
+                <a
+                  href="/viewers"
+                  className="p-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-xl transition-all border border-white/20"
+                >
+                  <ArrowLeft className="w-6 h-6 text-white" />
+                </a>
+                <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+                  <Box className="w-12 h-12 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-5xl font-bold mb-3">
+                    STL Viewer
+                  </h1>
+                  <p className="text-xl text-blue-100">
+                    View 3D models with interactive rotation and zoom
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -322,48 +321,75 @@ export const STLViewer: React.FC = () => {
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Upload Section */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Upload STL Files
-            </h2>
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
+                <Upload className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900">
+                Upload STL Files
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Drag and drop your 3D model (STL) files or click to browse. Supports ASCII and binary STL formats up to 100MB total.
+            </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
               acceptedFormats={['stl']}
               maxFiles={20}
+              maxSize={100 * 1024 * 1024}
+              hideFormatList={true}
+              showTotalSize={true}
             />
           </div>
 
           {/* Preview Section */}
           {selectedFiles.length > 0 && (
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                Preview STL Files ({selectedFiles.length})
-              </h2>
+            <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Your 3D Models ({selectedFiles.length})
+                  </h2>
+                </div>
+              </div>
+              
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {selectedFiles.map((file, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-4 hover:shadow-md transition-shadow">
-                    <div className="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg mb-3 overflow-hidden flex items-center justify-center">
-                      <Box className="w-16 h-16 text-blue-600" />
+                  <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
+                    <div className="aspect-square bg-white rounded-xl mb-3 overflow-hidden shadow-md flex items-center justify-center">
+                      <Box className="w-20 h-20 text-blue-600" />
                     </div>
-                    <div className="text-sm font-medium text-gray-700 truncate mb-2">
+                    <div className="text-sm font-semibold text-gray-900 truncate mb-2" title={file.name}>
                       {file.name}
                     </div>
-                    <div className="text-xs text-gray-500 mb-3">
-                      {(file.size / 1024 / 1024).toFixed(2)} MB
+                    <div className="text-xs text-gray-600 mb-3 font-medium">
+                      {(file.size / 1024 / 1024).toFixed(2)} MB • STL
                     </div>
-                    <div className="flex space-x-2">
+                    <div className="flex gap-2">
                       <button
                         onClick={() => openViewer(file)}
-                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center space-x-1"
+                        className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
-                        <Eye className="w-3 h-3" />
+                        <Eye className="w-4 h-4" />
                         <span>View 3D</span>
                       </button>
-                      <button className="p-2 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors">
-                        <Download className="w-3 h-3" />
-                      </button>
-                      <button className="p-2 text-gray-500 hover:text-purple-500 hover:bg-purple-50 rounded-lg transition-colors">
-                        <Share2 className="w-3 h-3" />
+                      <button 
+                        onClick={() => {
+                          const url = URL.createObjectURL(file);
+                          const a = document.createElement('a');
+                          a.href = url;
+                          a.download = file.name;
+                          a.click();
+                          URL.revokeObjectURL(url);
+                        }}
+                        className="p-2 text-blue-600 hover:bg-blue-100 rounded-lg transition-colors"
+                        title="Download"
+                      >
+                        <Download className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
@@ -372,44 +398,140 @@ export const STLViewer: React.FC = () => {
             </div>
           )}
 
-          {/* Format Information */}
-          {/* Back to Home Section */}
-          <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Back to All Viewers - Supported Formats
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <Zap className="w-8 h-8 text-yellow-600 mb-4" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              Interactive 3D View
+            </h3>
+            <p className="text-gray-600">
+              Rotate, zoom, and pan your 3D models with smooth WebGL-powered controls
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <Grid3x3 className="w-8 h-8 text-blue-600 mb-4" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              3D Printing Ready
+            </h3>
+            <p className="text-gray-600">
+              STL is the industry standard format for 3D printing and rapid prototyping
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <Cpu className="w-8 h-8 text-green-600 mb-4" />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              No Upload Required
+            </h3>
+            <p className="text-gray-600">
+              Files are processed locally in your browser for maximum privacy and speed
+            </p>
+          </div>
+        </div>
+
+        {/* STL Information */}
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            About STL Format
+          </h2>
+          <div className="prose max-w-none text-gray-600">
+            <p className="mb-4">
+              STL (Stereolithography) is a file format native to 3D Systems' stereolithography CAD software. 
+              It is the most widely used format for 3D printing and additive manufacturing. STL files describe 
+              only the surface geometry of a 3D object as a triangular mesh, without any representation of color, 
+              texture, or other common CAD model attributes.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">3D Model Formats</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• STL (Stereolithography) - ASCII & Binary</li>
-                  <li>• Used for 3D Printing</li>
-                  <li>• CAD/CAM Manufacturing</li>
-                  <li>• Triangle Mesh Representation</li>
-                  <li>• Universal 3D Format</li>
-                  <li>• Supports Complex Geometries</li>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• <strong>Universal support</strong> - Supported by all 3D printers</li>
+                  <li>• <strong>Simple format</strong> - Easy to generate and parse</li>
+                  <li>• <strong>Industry standard</strong> - Default for 3D printing</li>
+                  <li>• <strong>Mesh accuracy</strong> - Precise triangle representation</li>
+                  <li>• <strong>Two variants</strong> - ASCII (text) and binary formats</li>
+                  <li>• <strong>CAD compatible</strong> - Exports from all CAD software</li>
                 </ul>
               </div>
+              
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Other Formats Available</h3>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Image formats (JPG, PNG, WebP, GIF)</li>
-                  <li>• Document formats (PDF, DOCX, ODT)</li>
-                  <li>• Spreadsheet formats (XLSX, CSV, ODS)</li>
-                  <li>• Presentation formats (PPTX, ODP)</li>
-                  <li>• Code formats (JS, Python, CSS, HTML)</li>
-                  <li>• RAW Camera formats (NEF, CR2, DNG)</li>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>• <strong>3D Printing</strong> - Slicing and printing preparation</li>
+                  <li>• <strong>Rapid Prototyping</strong> - Quick design iterations</li>
+                  <li>• <strong>CAD/CAM</strong> - Manufacturing and engineering</li>
+                  <li>• <strong>3D Modeling</strong> - Design verification and review</li>
+                  <li>• <strong>Architecture</strong> - Building and structure models</li>
+                  <li>• <strong>Medical</strong> - Anatomical models and prosthetics</li>
                 </ul>
               </div>
             </div>
-            <div className="text-center mt-6">
-              <a
-                href="/viewers"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Back to All Viewers
-              </a>
-            </div>
+          </div>
+        </div>
+
+        {/* Technical Specifications */}
+        <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            STL Technical Specifications
+          </h2>
+          
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="bg-gray-100">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Specification</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Details</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">File Extension</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">.stl</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">MIME Type</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">application/sla, model/stl, application/vnd.ms-pki.stl</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Format Types</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">ASCII (text-based) and Binary</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Geometry</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">Triangle mesh (facets with normals)</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Coordinate System</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">3D Cartesian coordinates (X, Y, Z)</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Color Support</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">Not officially supported (extensions exist)</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Texture/Materials</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">Not supported</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Resolution</td>
+                  <td className="px-6 py-4 text-sm text-gray-600">Limited by number of triangles</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+          {/* Back to Viewers Button */}
+          <div className="text-center">
+            <a
+              href="/viewers"
+              className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              ← Back to All Viewers
+            </a>
           </div>
         </div>
         
