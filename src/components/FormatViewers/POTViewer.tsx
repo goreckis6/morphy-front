@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Presentation, FileSlides } from 'lucide-react';
+import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Presentation, Layout } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -427,7 +427,7 @@ export const POTViewer: React.FC = () => {
             
             <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-rose-200 hover:shadow-xl transition-all transform hover:scale-105">
               <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileSlides className="w-8 h-8 text-rose-600" />
+                <Layout className="w-8 h-8 text-rose-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Full Rendering
