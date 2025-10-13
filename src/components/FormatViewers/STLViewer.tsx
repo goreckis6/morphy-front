@@ -131,48 +131,62 @@ export const STLViewer: React.FC = () => {
       loader.load(
         modelUrl,
         (geometry) => {
-          // Center geometry
-          geometry.center();
+          try {
+            // Center geometry
+            geometry.center();
 
-          // Calculate bounding box for auto-scaling
-          geometry.computeBoundingBox();
-          const boundingBox = geometry.boundingBox!;
-          const size = new THREE.Vector3();
-          boundingBox.getSize(size);
-          const maxDim = Math.max(size.x, size.y, size.z);
-          const scale = 50 / maxDim;
-          
-          // Create material
-          const material = new THREE.MeshPhongMaterial({
-            color: 0x3b82f6,
-            specular: 0x111111,
-            shininess: 200,
-            flatShading: false
-          });
+            // Calculate bounding box for auto-scaling
+            geometry.computeBoundingBox();
+            const boundingBox = geometry.boundingBox;
+            
+            if (!boundingBox) {
+              throw new Error('Failed to compute bounding box');
+            }
+            
+            const size = new THREE.Vector3();
+            boundingBox.getSize(size);
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const scale = maxDim > 0 ? 50 / maxDim : 1;
+            
+            // Create material
+            const material = new THREE.MeshPhongMaterial({
+              color: 0x3b82f6,
+              specular: 0x111111,
+              shininess: 200,
+              flatShading: false
+            });
 
-          // Create mesh
-          const mesh = new THREE.Mesh(geometry, material);
-          mesh.scale.set(scale, scale, scale);
-          mesh.rotation.x = -Math.PI / 2; // Rotate to standard orientation
-          
-          scene.add(mesh);
+            // Create mesh
+            const mesh = new THREE.Mesh(geometry, material);
+            mesh.scale.set(scale, scale, scale);
+            mesh.rotation.x = -Math.PI / 2; // Rotate to standard orientation
+            
+            scene.add(mesh);
 
-          // Add wireframe overlay (optional)
-          const wireframe = new THREE.WireframeGeometry(geometry);
-          const line = new THREE.LineSegments(wireframe);
-          (line.material as THREE.LineBasicMaterial).color.setHex(0x1e40af);
-          (line.material as THREE.LineBasicMaterial).opacity = 0.1;
-          (line.material as THREE.LineBasicMaterial).transparent = true;
-          line.scale.set(scale, scale, scale);
-          line.rotation.x = -Math.PI / 2;
-          scene.add(line);
+            // Add wireframe overlay (optional)
+            const wireframe = new THREE.WireframeGeometry(geometry);
+            const line = new THREE.LineSegments(wireframe);
+            (line.material as THREE.LineBasicMaterial).color.setHex(0x1e40af);
+            (line.material as THREE.LineBasicMaterial).opacity = 0.1;
+            (line.material as THREE.LineBasicMaterial).transparent = true;
+            line.scale.set(scale, scale, scale);
+            line.rotation.x = -Math.PI / 2;
+            scene.add(line);
 
-          // Update triangle count
-          const triangleCount = geometry.attributes.position.count / 3;
-          setPreviewData(prev => prev ? { ...prev, triangles: Math.floor(triangleCount) } : null);
+            // Update triangle count
+            if (geometry.attributes && geometry.attributes.position) {
+              const triangleCount = geometry.attributes.position.count / 3;
+              setPreviewData(prev => prev ? { ...prev, triangles: Math.floor(triangleCount) } : null);
+            }
+          } catch (err) {
+            console.error('Error processing geometry:', err);
+            setError('Failed to process 3D model geometry');
+          }
         },
         (xhr) => {
-          console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+          if (xhr.total > 0) {
+            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+          }
         },
         (error) => {
           console.error('Error loading STL:', error);
