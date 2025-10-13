@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw, Search } from 'lucide-react';
+import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw, Search, Box } from 'lucide-react';
 import { Header } from './Header';
 
 interface ViewerFormat {
@@ -50,9 +50,7 @@ export const ViewersHub: React.FC = () => {
         { name: "POT Viewer", description: "View PowerPoint Template files", path: "/viewers/pot", category: "Presentation", icon: <FileText className="w-5 h-5" /> },
         { name: "ODP Viewer", description: "View OpenDocument Presentation files", path: "/viewers/odp", category: "Presentation", icon: <FileText className="w-5 h-5" /> },
         { name: "OTP Viewer", description: "View OpenDocument Presentation Template files", path: "/viewers/otp", category: "Presentation", icon: <FileText className="w-5 h-5" /> },
-        { name: "UOP Viewer", description: "View Uniform Office Presentation files", path: "/viewers/uop", category: "Presentation", icon: <FileText className="w-5 h-5" /> },
-        { name: "SDD Viewer", description: "View StarOffice Presentation files (legacy)", path: "/viewers/sdd", category: "Presentation", icon: <FileText className="w-5 h-5" /> },
-        { name: "STI Viewer", description: "View StarOffice Presentation Template files (legacy)", path: "/viewers/sti", category: "Presentation", icon: <FileText className="w-5 h-5" /> }
+        { name: "SDD Viewer", description: "View StarOffice Presentation files (legacy)", path: "/viewers/sdd", category: "Presentation", icon: <FileText className="w-5 h-5" /> }
       ]
     },
     {
@@ -75,6 +73,13 @@ export const ViewersHub: React.FC = () => {
         { name: "JavaScript Viewer", description: "View JS files with syntax highlighting and code analysis", path: "/viewers/js", category: "Code", icon: <Code className="w-5 h-5" /> },
         { name: "Python Viewer", description: "View Python files with syntax highlighting and code analysis", path: "/viewers/py", category: "Code", icon: <Code className="w-5 h-5" /> },
         { name: "SX Viewer", description: "View Stat Studio Program files with syntax highlighting", path: "/viewers/sx", category: "Code", icon: <Code className="w-5 h-5" /> }
+      ]
+    },
+    {
+      title: "3D MODEL FORMATS",
+      icon: <Box className="w-6 h-6 text-indigo-600" />,
+      formats: [
+        { name: "STL Viewer", description: "View 3D models with interactive rotation and zoom", path: "/viewers/stl", category: "3D Model", icon: <Box className="w-5 h-5" /> }
       ]
     },
     {
@@ -245,7 +250,7 @@ export const ViewersHub: React.FC = () => {
                         </div>
                       </div>
                       <div className="ml-4">
-                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif' || viewer.path === '/viewers/pdf' || viewer.path === '/viewers/rtf' || viewer.path === '/viewers/txt' || viewer.path === '/viewers/md' || viewer.path === '/viewers/docx' || viewer.path === '/viewers/odt' || viewer.path === '/viewers/odp' || viewer.path === '/viewers/otp' || viewer.path === '/viewers/pot' || viewer.path === '/viewers/pps' || viewer.path === '/viewers/ppt' || viewer.path === '/viewers/uop' || viewer.path === '/viewers/sdd' || viewer.path === '/viewers/sti' || viewer.path === '/viewers/sx' || viewer.path === '/viewers/xlsx' || viewer.path === '/viewers/csv' || viewer.path === '/viewers/ods' || viewer.path === '/viewers/json' || viewer.path === '/viewers/xml' || viewer.path === '/viewers/html' || viewer.path === '/viewers/css' || viewer.path === '/viewers/js' || viewer.path === '/viewers/py' || viewer.path === '/viewers/nef' || viewer.path === '/viewers/cr2' || viewer.path === '/viewers/dcr' || viewer.path === '/viewers/x3f' || viewer.path === '/viewers/arw' || viewer.path === '/viewers/raf' || viewer.path === '/viewers/orf' || viewer.path === '/viewers/dng' || viewer.path === '/viewers/pef') ? (
+                        {(viewer.path === '/viewers/jpg' || viewer.path === '/viewers/png' || viewer.path === '/viewers/webp' || viewer.path === '/viewers/gif' || viewer.path === '/viewers/svg' || viewer.path === '/viewers/tiff' || viewer.path === '/viewers/bmp' || viewer.path === '/viewers/ico' || viewer.path === '/viewers/heic' || viewer.path === '/viewers/avif' || viewer.path === '/viewers/pdf' || viewer.path === '/viewers/rtf' || viewer.path === '/viewers/txt' || viewer.path === '/viewers/md' || viewer.path === '/viewers/docx' || viewer.path === '/viewers/odt' || viewer.path === '/viewers/odp' || viewer.path === '/viewers/otp' || viewer.path === '/viewers/pot' || viewer.path === '/viewers/pps' || viewer.path === '/viewers/ppt' || viewer.path === '/viewers/sdd' || viewer.path === '/viewers/sx' || viewer.path === '/viewers/stl' || viewer.path === '/viewers/xlsx' || viewer.path === '/viewers/csv' || viewer.path === '/viewers/ods' || viewer.path === '/viewers/json' || viewer.path === '/viewers/xml' || viewer.path === '/viewers/html' || viewer.path === '/viewers/css' || viewer.path === '/viewers/js' || viewer.path === '/viewers/py' || viewer.path === '/viewers/nef' || viewer.path === '/viewers/cr2' || viewer.path === '/viewers/dcr' || viewer.path === '/viewers/x3f' || viewer.path === '/viewers/arw' || viewer.path === '/viewers/raf' || viewer.path === '/viewers/orf' || viewer.path === '/viewers/dng' || viewer.path === '/viewers/pef') ? (
                           <a
                             href={viewer.path}
                             className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"

@@ -108,9 +108,8 @@ import { POTViewer } from './components/FormatViewers/POTViewer';
 import { PPSViewer } from './components/FormatViewers/PPSViewer';
 import { PPTViewer } from './components/FormatViewers/PPTViewer';
 import { SDDViewer } from './components/FormatViewers/SDDViewer';
-import { STIViewer } from './components/FormatViewers/STIViewer';
 import { SXViewer } from './components/FormatViewers/SXViewer';
-import { UOPViewer } from './components/FormatViewers/UOPViewer';
+import { STLViewer } from './components/FormatViewers/STLViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import { 
   RefreshCw, 
@@ -1027,14 +1026,6 @@ function App() {
     );
   }
 
-  if (currentPath === '/viewers/sti') {
-    return (
-      <AuthProvider>
-        <STIViewer />
-      </AuthProvider>
-    );
-  }
-
   if (currentPath === '/viewers/sx') {
     return (
       <AuthProvider>
@@ -1043,10 +1034,10 @@ function App() {
     );
   }
 
-  if (currentPath === '/viewers/uop') {
+  if (currentPath === '/viewers/stl') {
     return (
       <AuthProvider>
-        <UOPViewer />
+        <STLViewer />
       </AuthProvider>
     );
   }
