@@ -26,14 +26,14 @@ export const LanguageSwitcher: React.FC = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-400 hover:shadow-md transition-all duration-200 group"
+        className="flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all duration-200 group"
       >
-        <Globe className="w-4 h-4 text-blue-600 group-hover:rotate-12 transition-transform duration-300" />
-        <span className="text-2xl leading-none">{currentLanguage.flag}</span>
-        <span className="font-medium text-gray-700 text-sm hidden sm:inline">
+        <Globe className="w-3.5 h-3.5 text-blue-600 group-hover:rotate-12 transition-transform duration-300" />
+        <span className="text-lg leading-none">{currentLanguage.flag}</span>
+        <span className="font-medium text-gray-700 text-xs hidden sm:inline">
           {currentLanguage.nativeName}
         </span>
-        <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown Menu */}
@@ -46,8 +46,8 @@ export const LanguageSwitcher: React.FC = () => {
           />
           
           {/* Menu */}
-          <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-            <div className="p-2">
+          <div className="absolute right-0 mt-1.5 w-48 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="p-1.5">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
@@ -55,36 +55,36 @@ export const LanguageSwitcher: React.FC = () => {
                     changeLanguage(lang.code);
                     setIsOpen(false);
                   }}
-                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${
+                  className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 ${
                     lang.code === i18n.language
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg scale-[1.02]'
                       : 'hover:bg-gray-50 text-gray-700 hover:scale-[1.02]'
                   }`}
                 >
-                  <span className="text-2xl">{lang.flag}</span>
+                  <span className="text-lg">{lang.flag}</span>
                   <div className="flex-1 text-left">
-                    <div className={`font-semibold text-sm ${
+                    <div className={`font-semibold text-xs ${
                       lang.code === i18n.language ? 'text-white' : 'text-gray-800'
                     }`}>
                       {lang.nativeName}
                     </div>
-                    <div className={`text-xs ${
+                    <div className={`text-[10px] ${
                       lang.code === i18n.language ? 'text-blue-100' : 'text-gray-500'
                     }`}>
                       {lang.name}
                     </div>
                   </div>
                   {lang.code === i18n.language && (
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                    <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
                   )}
                 </button>
               ))}
             </div>
             
             {/* Footer */}
-            <div className="border-t border-gray-100 px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50">
-              <div className="flex items-center gap-2 text-xs text-gray-600">
-                <Globe className="w-3 h-3" />
+            <div className="border-t border-gray-100 px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50">
+              <div className="flex items-center gap-1.5 text-[10px] text-gray-600">
+                <Globe className="w-2.5 h-2.5" />
                 <span>Choose your language</span>
               </div>
             </div>
