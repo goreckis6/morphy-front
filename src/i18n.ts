@@ -95,7 +95,29 @@ const resources = {
       'doc_to_epub.use_case_4_title': 'Personal Library Digitization',
       'doc_to_epub.use_case_4_text': 'Convert your personal writings, journals, and documents to EPUB format to create a portable digital library accessible across all your devices.',
       'doc_to_epub.ready_title': 'Ready to Convert Your DOC Files?',
-      'doc_to_epub.ready_text': 'Use our free online DOC to EPUB converter to transform your Word documents into professional eBooks for any e-reader.'
+      'doc_to_epub.ready_text': 'Use our free online DOC to EPUB converter to transform your Word documents into professional eBooks for any e-reader.',
+      
+      // AVRO to CSV
+      'avro_to_csv.title': 'AVRO to CSV Converter',
+      'avro_to_csv.meta_title': 'AVRO to CSV Converter - Convert Apache AVRO to CSV Format',
+      'avro_to_csv.meta_description': 'Convert Apache AVRO binary files to CSV spreadsheet format. Extract big data into readable CSV files. Free online converter with batch processing.',
+      'avro_to_csv.subtitle': 'Convert Apache AVRO files to CSV format quickly and easily. Perfect for data analysis and spreadsheet applications with schema preservation.',
+      'avro_to_csv.why_convert_title': 'Why Convert AVRO to CSV?',
+      'avro_to_csv.seo_intro': 'Converting Apache AVRO files to CSV format is essential for data analysis, reporting, and integration with spreadsheet applications. While AVRO is excellent for big data processing and schema evolution, CSV format provides universal compatibility with Excel, Google Sheets, and most data analysis tools, making it the standard format for data exchange and analysis workflows.',
+      'avro_to_csv.sidebar_title': 'Why Choose Our Converter?',
+      'avro_to_csv.feature_1': 'Preserve data structure and schema',
+      'avro_to_csv.feature_2': 'Support for complex nested data',
+      'avro_to_csv.feature_3': 'Batch conversion support',
+      'avro_to_csv.feature_4': 'No file size limits',
+      'avro_to_csv.feature_5': '100% free to use',
+      'avro_to_csv.feature_6': 'High-performance processing',
+      'avro_to_csv.perfect_for_title': 'Perfect For',
+      'avro_to_csv.use_case_1': 'Data analysis and reporting',
+      'avro_to_csv.use_case_2': 'Import into Excel or Google Sheets',
+      'avro_to_csv.use_case_3': 'Database migration projects',
+      'avro_to_csv.use_case_4': 'Data science workflows',
+      'avro_to_csv.use_case_5': 'Business intelligence tools',
+      'avro_to_csv.use_case_6': 'ETL pipeline development'
     }
   },
   pl: {
@@ -189,7 +211,29 @@ const resources = {
       'doc_to_epub.use_case_4_title': 'Digitalizacja Biblioteki Osobistej',
       'doc_to_epub.use_case_4_text': 'Konwertuj swoje osobiste pisma, dzienniki i dokumenty do formatu EPUB, aby stworzyć przenośną cyfrową bibliotekę dostępną na wszystkich twoich urządzeniach.',
       'doc_to_epub.ready_title': 'Gotowy do Konwersji Plików DOC?',
-      'doc_to_epub.ready_text': 'Użyj naszego darmowego konwertera online DOC na EPUB, aby przekształcić dokumenty Word w profesjonalne e-booki dla każdego czytnika.'
+      'doc_to_epub.ready_text': 'Użyj naszego darmowego konwertera online DOC na EPUB, aby przekształcić dokumenty Word w profesjonalne e-booki dla każdego czytnika.',
+      
+      // AVRO to CSV
+      'avro_to_csv.title': 'Konwerter AVRO na CSV',
+      'avro_to_csv.meta_title': 'Konwerter AVRO na CSV - Konwertuj Apache AVRO na Format CSV',
+      'avro_to_csv.meta_description': 'Konwertuj binarne pliki Apache AVRO do formatu arkusza kalkulacyjnego CSV. Wyodrębnij big data do czytelnych plików CSV. Darmowy konwerter online z przetwarzaniem wsadowym.',
+      'avro_to_csv.subtitle': 'Konwertuj pliki Apache AVRO do formatu CSV szybko i łatwo. Idealny do analizy danych i aplikacji arkuszy kalkulacyjnych z zachowaniem schematu.',
+      'avro_to_csv.why_convert_title': 'Dlaczego Konwertować AVRO na CSV?',
+      'avro_to_csv.seo_intro': 'Konwersja plików Apache AVRO do formatu CSV jest niezbędna do analizy danych, raportowania i integracji z aplikacjami arkuszy kalkulacyjnych. Podczas gdy AVRO jest doskonały do przetwarzania big data i ewolucji schematu, format CSV zapewnia uniwersalną kompatybilność z Excel, Google Sheets i większością narzędzi do analizy danych, czyniąc go standardowym formatem wymiany i analizy danych.',
+      'avro_to_csv.sidebar_title': 'Dlaczego Wybrać Nasz Konwerter?',
+      'avro_to_csv.feature_1': 'Zachowuje strukturę danych i schemat',
+      'avro_to_csv.feature_2': 'Wsparcie dla złożonych zagnieżdżonych danych',
+      'avro_to_csv.feature_3': 'Wsparcie konwersji wsadowej',
+      'avro_to_csv.feature_4': 'Bez limitów rozmiaru pliku',
+      'avro_to_csv.feature_5': '100% darmowe użytkowanie',
+      'avro_to_csv.feature_6': 'Wysokowydajne przetwarzanie',
+      'avro_to_csv.perfect_for_title': 'Idealny Dla',
+      'avro_to_csv.use_case_1': 'Analiza danych i raportowanie',
+      'avro_to_csv.use_case_2': 'Import do Excel lub Google Sheets',
+      'avro_to_csv.use_case_3': 'Projekty migracji baz danych',
+      'avro_to_csv.use_case_4': 'Przepływy pracy data science',
+      'avro_to_csv.use_case_5': 'Narzędzia business intelligence',
+      'avro_to_csv.use_case_6': 'Rozwój pipeline ETL'
     }
   },
   de: {
@@ -283,7 +327,29 @@ const resources = {
       'doc_to_epub.use_case_4_title': 'Digitalisierung der persönlichen Bibliothek',
       'doc_to_epub.use_case_4_text': 'Konvertieren Sie Ihre persönlichen Schriften, Tagebücher und Dokumente in das EPUB-Format, um eine tragbare digitale Bibliothek zu erstellen, die auf allen Ihren Geräten zugänglich ist.',
       'doc_to_epub.ready_title': 'Bereit, Ihre DOC-Dateien zu konvertieren?',
-      'doc_to_epub.ready_text': 'Verwenden Sie unseren kostenlosen Online-DOC-zu-EPUB-Konverter, um Ihre Word-Dokumente in professionelle eBooks für jeden E-Reader zu verwandeln.'
+      'doc_to_epub.ready_text': 'Verwenden Sie unseren kostenlosen Online-DOC-zu-EPUB-Konverter, um Ihre Word-Dokumente in professionelle eBooks für jeden E-Reader zu verwandeln.',
+      
+      // AVRO to CSV
+      'avro_to_csv.title': 'AVRO zu CSV Konverter',
+      'avro_to_csv.meta_title': 'AVRO zu CSV Konverter - Apache AVRO in CSV-Format konvertieren',
+      'avro_to_csv.meta_description': 'Konvertieren Sie Apache AVRO-Binärdateien in CSV-Tabellenformat. Extrahieren Sie Big Data in lesbare CSV-Dateien. Kostenloser Online-Konverter mit Stapelverarbeitung.',
+      'avro_to_csv.subtitle': 'Konvertieren Sie Apache AVRO-Dateien schnell und einfach in das CSV-Format. Perfekt für Datenanalyse und Tabellenkalkulationsanwendungen mit Schemaerhaltung.',
+      'avro_to_csv.why_convert_title': 'Warum AVRO zu CSV konvertieren?',
+      'avro_to_csv.seo_intro': 'Die Konvertierung von Apache AVRO-Dateien in das CSV-Format ist für Datenanalyse, Berichterstattung und Integration mit Tabellenkalkulationsanwendungen unerlässlich. Während AVRO hervorragend für Big-Data-Verarbeitung und Schema-Evolution ist, bietet das CSV-Format universelle Kompatibilität mit Excel, Google Sheets und den meisten Datenanalyse-Tools, was es zum Standardformat für Datenaustausch und Analyse-Workflows macht.',
+      'avro_to_csv.sidebar_title': 'Warum unseren Konverter wählen?',
+      'avro_to_csv.feature_1': 'Datenstruktur und Schema bewahren',
+      'avro_to_csv.feature_2': 'Unterstützung für komplexe verschachtelte Daten',
+      'avro_to_csv.feature_3': 'Stapelkonvertierung unterstützt',
+      'avro_to_csv.feature_4': 'Keine Dateigrößenbeschränkungen',
+      'avro_to_csv.feature_5': '100% kostenlos zu verwenden',
+      'avro_to_csv.feature_6': 'Hochleistungsverarbeitung',
+      'avro_to_csv.perfect_for_title': 'Perfekt für',
+      'avro_to_csv.use_case_1': 'Datenanalyse und Berichterstattung',
+      'avro_to_csv.use_case_2': 'Import in Excel oder Google Sheets',
+      'avro_to_csv.use_case_3': 'Datenbankmigrationsprojekte',
+      'avro_to_csv.use_case_4': 'Data-Science-Workflows',
+      'avro_to_csv.use_case_5': 'Business-Intelligence-Tools',
+      'avro_to_csv.use_case_6': 'ETL-Pipeline-Entwicklung'
     }
   }
 };

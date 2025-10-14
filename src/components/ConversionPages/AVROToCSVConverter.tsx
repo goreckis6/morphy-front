@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -21,6 +22,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 
 export const AVROToCSVConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -36,6 +38,17 @@ export const AVROToCSVConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Ensure language is synced with URL on mount
+  React.useEffect(() => {
+    const path = window.location.pathname;
+    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' : 
+                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
+    
+    if (i18n.language !== urlLang) {
+      i18n.changeLanguage(urlLang);
+    }
+  }, [i18n]);
 
   // Use shared validation hook
   const {
@@ -207,9 +220,26 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
   return (
     <>
       <Helmet>
-        <title>AVRO to CSV Converter - Convert Apache AVRO to CSV Format</title>
-        <meta name="description" content="Convert Apache AVRO binary files to CSV spreadsheet format. Extract big data into readable CSV files. Free online converter with batch processing." />
+        <title>{t('avro_to_csv.meta_title')}</title>
+        <meta name="description" content={t('avro_to_csv.meta_description')} />
         <meta name="keywords" content="AVRO to CSV, Apache AVRO, big data, data extraction, CSV converter, batch conversion" />
+        
+        {/* Canonical and alternate language URLs */}
+        <link rel="canonical" href={`https://morphyimg.com${window.location.pathname}`} />
+        <link rel="alternate" hrefLang="en" href="https://morphyimg.com/convert/avro-to-csv" />
+        <link rel="alternate" hrefLang="pl" href="https://morphyimg.com/pl/convert/avro-to-csv" />
+        <link rel="alternate" hrefLang="de" href="https://morphyimg.com/de/convert/avro-to-csv" />
+        <link rel="alternate" hrefLang="x-default" href="https://morphyimg.com/convert/avro-to-csv" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={t('avro_to_csv.meta_title')} />
+        <meta property="og:description" content={t('avro_to_csv.meta_description')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://morphyimg.com${window.location.pathname}`} />
+        <meta property="og:locale" content={
+          window.location.pathname.startsWith('/pl/') ? 'pl_PL' : 
+          window.location.pathname.startsWith('/de/') ? 'de_DE' : 'en_US'
+        } />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <Header />
@@ -220,23 +250,23 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              AVRO to CSV Converter
+              {t('avro_to_csv.title')}
             </h1>
             <p className="text-lg sm:text-xl text-orange-100 mb-6 max-w-2xl mx-auto">
-              Convert Apache AVRO files to CSV format quickly and easily. Perfect for data analysis and spreadsheet applications with schema preservation.
+              {t('avro_to_csv.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-orange-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -556,20 +586,20 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('avro_to_csv.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Preserve data structure and schema",
-                  "Support for complex nested data",
-                  "Batch conversion support",
-                  "No file size limits",
-                  "100% free to use",
-                  "High-performance processing"
-                ].map((feature, index) => (
+                  'avro_to_csv.feature_1',
+                  'avro_to_csv.feature_2',
+                  'avro_to_csv.feature_3',
+                  'avro_to_csv.feature_4',
+                  'avro_to_csv.feature_5',
+                  'avro_to_csv.feature_6'
+                ].map((key, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{feature}</span>
+                    <span className="text-sm text-gray-700">{t(key)}</span>
                   </div>
                 ))}
               </div>
@@ -579,20 +609,20 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-orange-600" />
-                Perfect For
+                {t('avro_to_csv.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Data analysis and reporting",
-                  "Import into Excel or Google Sheets",
-                  "Database migration projects",
-                  "Data science workflows",
-                  "Business intelligence tools",
-                  "ETL pipeline development"
-                ].map((useCase, index) => (
+                  'avro_to_csv.use_case_1',
+                  'avro_to_csv.use_case_2',
+                  'avro_to_csv.use_case_3',
+                  'avro_to_csv.use_case_4',
+                  'avro_to_csv.use_case_5',
+                  'avro_to_csv.use_case_6'
+                ].map((key, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-700">{useCase}</span>
+                    <span className="text-sm text-gray-700">{t(key)}</span>
                   </div>
                 ))}
               </div>
@@ -613,12 +643,12 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert AVRO to CSV?
+            {t('avro_to_csv.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Apache AVRO files to CSV format is essential for data analysis, reporting, and integration with spreadsheet applications. While AVRO is excellent for big data processing and schema evolution, CSV format provides universal compatibility with Excel, Google Sheets, and most data analysis tools, making it the standard format for data exchange and analysis workflows.
+              {t('avro_to_csv.seo_intro')}
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of CSV Format</h3>
