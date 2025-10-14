@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -22,6 +23,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com';
 
 export const DOCToEPUBConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -32,6 +34,7 @@ export const DOCToEPUBConverter: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
+  const [conversionTime, setConversionTime] = useState<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -105,6 +108,7 @@ export const DOCToEPUBConverter: React.FC = () => {
     setIsConverting(true);
     setError(null);
     setConvertedFile(null);
+    const startTime = Date.now();
     
     try {
       const formData = new FormData();
@@ -124,6 +128,7 @@ export const DOCToEPUBConverter: React.FC = () => {
       setConvertedFile(blob);
       const filename = selectedFile.name.replace(/\.doc$/i, '.epub');
       setConvertedFilename(filename);
+      setConversionTime(Date.now() - startTime);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Conversion failed');
     } finally {
@@ -137,6 +142,7 @@ export const DOCToEPUBConverter: React.FC = () => {
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
+    const startTime = Date.now();
     
     try {
       const formData = new FormData();
@@ -167,6 +173,7 @@ export const DOCToEPUBConverter: React.FC = () => {
       
       setBatchResults(processedResults);
       setBatchConverted(true);
+      setConversionTime(Date.now() - startTime);
       setError(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Batch conversion failed');
@@ -217,10 +224,10 @@ export const DOCToEPUBConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free DOC to EPUB Converter Online - Convert Word Documents to eBook Format | MorphyIMG</title>
-        <meta name="description" content="Convert Microsoft Word DOC files to EPUB eBook format online for free. Fast, secure DOC to EPUB converter with batch processing. Perfect for Kindle, Kobo, and all e-readers." />
+        <title>{t('doc_to_epub.meta_title')}</title>
+        <meta name="description" content={t('doc_to_epub.meta_description')} />
         <meta name="keywords" content="free DOC to EPUB converter, DOC to EPUB online free, convert Word to EPUB, Word document to eBook, DOC to EPUB batch converter, Microsoft Word to EPUB, free eBook converter" />
-        <link rel="canonical" content="https://morphyimg.com/convert/doc-to-epub" />
+        <link rel="canonical" href="https://morphyimg.com/convert/doc-to-epub" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Free DOC to EPUB Converter Online - Convert Word Documents to eBook" />
@@ -256,23 +263,23 @@ export const DOCToEPUBConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Free DOC to EPUB Converter
+              {t('doc_to_epub.title')}
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
-              Convert Microsoft Word DOC files to EPUB eBook format online for free. Perfect for Kindle, Kobo, and all e-readers with no registration required.
+              {t('doc_to_epub.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Free</span>
+                <span>{t('features.100_free')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -285,6 +292,7 @@ export const DOCToEPUBConverter: React.FC = () => {
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('doc_to_epub.heading')}</h2>
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -297,7 +305,7 @@ export const DOCToEPUBConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -308,7 +316,7 @@ export const DOCToEPUBConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -316,12 +324,12 @@ export const DOCToEPUBConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple DOC Files' : 'Upload DOC File'}
+                  {batchMode ? t('doc_to_epub.upload_batch') : t('doc_to_epub.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple DOC files to convert them all at once' 
-                    : 'Drag and drop your DOC file here or click to browse'
+                    ? t('doc_to_epub.upload_text_batch')
+                    : t('doc_to_epub.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
@@ -344,14 +352,14 @@ export const DOCToEPUBConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('doc_to_epub.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <FileText className="w-12 h-12 text-gray-400" />
@@ -372,7 +380,7 @@ export const DOCToEPUBConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('doc_to_epub.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -419,12 +427,12 @@ export const DOCToEPUBConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files to EPUB` : 'Convert to EPUB'}
+                      {batchMode ? t('doc_to_epub.convert_files_to_epub', { count: batchFiles.length }) : t('doc_to_epub.convert_to_epub')}
                     </div>
                   )}
                 </button>
@@ -435,10 +443,15 @@ export const DOCToEPUBConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <div>
+                      <h4 className="text-lg font-semibold text-green-800">{t('doc_to_epub.conversion_complete')}</h4>
+                      {conversionTime && (
+                        <p className="text-sm text-green-700">{t('doc_to_epub.completed_in', { time: (conversionTime / 1000).toFixed(2) })}</p>
+                      )}
+                    </div>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your DOC file has been successfully converted to EPUB format.
+                    {t('doc_to_epub.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -446,14 +459,14 @@ export const DOCToEPUBConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download EPUB File
+                      {t('doc_to_epub.download_epub')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -464,10 +477,18 @@ export const DOCToEPUBConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <div>
+                      <h4 className="text-lg font-semibold text-green-800">{t('doc_to_epub.batch_conversion_complete')}</h4>
+                      {conversionTime && (
+                        <p className="text-sm text-green-700">{t('doc_to_epub.completed_in', { time: (conversionTime / 1000).toFixed(2) })}</p>
+                      )}
+                    </div>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('doc_to_epub.batch_success_message', { 
+                      count: batchResults.filter(r => r.success).length, 
+                      total: batchResults.length 
+                    })}
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
@@ -509,7 +530,7 @@ export const DOCToEPUBConverter: React.FC = () => {
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('common.convert_more')}
                     </button>
                   </div>
                 </div>
@@ -524,20 +545,20 @@ export const DOCToEPUBConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('doc_to_epub.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "100% Free - No hidden costs",
-                  "Batch conversion support",
-                  "Universal e-reader compatibility",
-                  "Preserves formatting & structure",
-                  "Fast, secure processing",
-                  "No registration required"
-                ].map((feature, index) => (
+                  'doc_to_epub.feature_free',
+                  'doc_to_epub.feature_batch',
+                  'doc_to_epub.feature_compatibility',
+                  'doc_to_epub.feature_formatting',
+                  'doc_to_epub.feature_secure',
+                  'doc_to_epub.feature_no_reg'
+                ].map((key, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{feature}</span>
+                    <span className="text-sm text-gray-700">{t(key)}</span>
                   </div>
                 ))}
               </div>
@@ -547,20 +568,20 @@ export const DOCToEPUBConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Smartphone className="w-5 h-5 mr-2 text-amber-600" />
-                Perfect For
+                {t('doc_to_epub.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Reading on Kindle devices",
-                  "Kobo and Nook e-readers",
-                  "Apple Books on iPhone/iPad",
-                  "Google Play Books",
-                  "Mobile reading apps",
-                  "Publishing eBooks online"
-                ].map((useCase, index) => (
+                  'doc_to_epub.use_kindle',
+                  'doc_to_epub.use_kobo',
+                  'doc_to_epub.use_apple',
+                  'doc_to_epub.use_google',
+                  'doc_to_epub.use_mobile',
+                  'doc_to_epub.use_publishing'
+                ].map((key, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-700">{useCase}</span>
+                    <span className="text-sm text-gray-700">{t(key)}</span>
                   </div>
                 ))}
               </div>
@@ -574,54 +595,54 @@ export const DOCToEPUBConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert DOC to EPUB Online Free?
+            {t('doc_to_epub.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Microsoft Word DOC files to EPUB eBook format is essential for modern reading experiences. While DOC files are excellent for document editing and collaboration, EPUB format provides the perfect reading experience across all devices - from smartphones to dedicated e-readers. Our free online converter makes it easy to transform your Word documents into professional eBooks that work seamlessly with Kindle, Kobo, Nook, and all other popular e-reading platforms.
+              {t('doc_to_epub.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of EPUB Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_epub.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-amber-900 mb-3">Universal E-reader Support</h4>
+                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('doc_to_epub.benefit_universal_title')}</h4>
                 <p className="text-gray-700">
-                  EPUB is the industry standard for eBooks, supported by all major e-reading devices and apps including Kindle, Kobo, Nook, Apple Books, and Google Play Books.
+                  {t('doc_to_epub.benefit_universal_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Reflowable Text</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('doc_to_epub.benefit_reflow_title')}</h4>
                 <p className="text-gray-700">
-                  EPUB text automatically adapts to any screen size, allowing readers to adjust font size, style, and margins for optimal reading comfort on any device.
+                  {t('doc_to_epub.benefit_reflow_text')}
                 </p>
               </div>
               
               <div className="bg-rose-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-rose-900 mb-3">Professional Publishing</h4>
+                <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('doc_to_epub.benefit_publishing_title')}</h4>
                 <p className="text-gray-700">
-                  EPUB is the preferred format for self-publishing and digital book distribution, accepted by all major eBook retailers and libraries worldwide.
+                  {t('doc_to_epub.benefit_publishing_text')}
                 </p>
               </div>
               
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">Rich Media Support</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('doc_to_epub.benefit_media_title')}</h4>
                 <p className="text-gray-700">
-                  EPUB format supports embedded images, fonts, styles, and even multimedia content while maintaining small file sizes for easy sharing and storage.
+                  {t('doc_to_epub.benefit_media_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_epub.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -658,22 +679,22 @@ export const DOCToEPUBConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your DOC Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('doc_to_epub.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online DOC to EPUB converter to transform your Word documents into professional eBooks for any e-reader.
+                {t('doc_to_epub.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>

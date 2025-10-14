@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { RefreshCw, User, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { AuthModal } from './AuthModal';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
   const { user, signOut } = useAuth();
@@ -43,6 +44,8 @@ export const Header: React.FC = () => {
                   Viewers
                 </a>
               </nav>
+
+              <LanguageSwitcher />
 
               <button
                 onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
@@ -105,6 +108,10 @@ export const Header: React.FC = () => {
                 <a href="/viewers" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   Viewers
                 </a>
+                
+                <div className="py-2">
+                  <LanguageSwitcher />
+                </div>
                 
                 <button
                   onClick={() => {
