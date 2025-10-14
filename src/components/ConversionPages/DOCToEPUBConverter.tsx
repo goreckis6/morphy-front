@@ -23,7 +23,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com';
 
 export const DOCToEPUBConverter: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -36,6 +36,18 @@ export const DOCToEPUBConverter: React.FC = () => {
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [conversionTime, setConversionTime] = useState<number | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Ensure language is synced with URL on mount
+  React.useEffect(() => {
+    const path = window.location.pathname;
+    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' : 
+                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
+    
+    if (i18n.language !== urlLang) {
+      console.log('Syncing language from URL:', urlLang);
+      i18n.changeLanguage(urlLang);
+    }
+  }, [i18n]);
 
   // Use shared validation hook
   const {

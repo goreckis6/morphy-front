@@ -135,7 +135,7 @@ const resources = {
       'doc_to_epub.completed_in': 'Ukończono w {{time}}s',
       
       // Info sections
-      'doc_to_epub.why_convert_title': 'Dlaczego Konwertować DOC na EPUB Online Za Darmo?',
+      'doc_to_epub.why_convert_title': 'Dlaczego Konwertować DOC na EPUB Online?',
       'doc_to_epub.about_doc_title': 'O Formacie DOC',
       'doc_to_epub.about_doc_text': 'DOC (.doc) to starszy format dokumentów Microsoft Word używany w wersjach Office przed 2007. Ten binarny format pliku przechowuje:',
       'doc_to_epub.about_epub_title': 'O Formacie EPUB',
@@ -281,25 +281,24 @@ const urlLanguageDetector = {
 };
 
 i18n
-  .use({
-    type: 'languageDetector',
-    ...urlLanguageDetector
-  } as any)
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
     fallbackLng: 'en',
     supportedLngs: ['en', 'pl', 'de'],
-    detection: {
-      order: ['urlPath', 'localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-      lookupLocalStorage: 'i18nextLng'
-    },
+    lng: urlLanguageDetector.lookup(), // Set initial language from URL
     interpolation: {
       escapeValue: false
     }
   });
+
+// Update language on URL change
+window.addEventListener('popstate', () => {
+  const newLang = urlLanguageDetector.lookup();
+  if (i18n.language !== newLang) {
+    i18n.changeLanguage(newLang);
+  }
+});
 
 export default i18n;
 
