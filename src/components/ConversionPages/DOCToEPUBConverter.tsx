@@ -531,53 +531,141 @@ export const DOCToEPUBConverter: React.FC = () => {
 
           {/* Additional Info Section */}
           <div className="mt-12 bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Use Our Free DOC to EPUB Converter?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Convert DOC to EPUB Online Free?</h2>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div>
-                <h3 className="font-semibold text-gray-900 mb-2">What is DOC Format?</h3>
-                <p className="text-gray-600 text-sm">
-                  DOC is the legacy Microsoft Word document format used before Office 2007. It's a binary format that stores text, formatting, images, tables, and other document elements. Our free converter supports all DOC files.
+                <h3 className="font-semibold text-gray-900 mb-3">About DOC Format</h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  DOC (.doc) is the legacy Microsoft Word document format used in Office versions before 2007. This binary file format stores:
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1 ml-4">
+                  <li>• Formatted text and paragraphs</li>
+                  <li>• Images and embedded objects</li>
+                  <li>• Tables and charts</li>
+                  <li>• Headers, footers, and page layouts</li>
+                  <li>• Fonts, styles, and formatting</li>
+                </ul>
+                <p className="text-gray-600 text-sm mt-3">
+                  While widely supported, DOC files aren't ideal for e-readers and mobile reading apps.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-2">What is EPUB Format?</h3>
-                <p className="text-gray-600 text-sm">
-                  EPUB (Electronic Publication) is the universal eBook standard format. It's reflowable, meaning text automatically adapts to different screen sizes, making it perfect for e-readers like Kindle, Kobo, Nook, and mobile devices.
+                <h3 className="font-semibold text-gray-900 mb-3">About EPUB Format</h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  EPUB (Electronic Publication) is the industry-standard eBook format that offers:
+                </p>
+                <ul className="text-sm text-gray-600 space-y-1 ml-4">
+                  <li>• <strong>Reflowable text</strong> that adapts to any screen size</li>
+                  <li>• <strong>Universal compatibility</strong> with all e-readers</li>
+                  <li>• <strong>Adjustable fonts</strong> and text sizes</li>
+                  <li>• <strong>Bookmarks and annotations</strong> support</li>
+                  <li>• <strong>Smaller file sizes</strong> for easy sharing</li>
+                </ul>
+                <p className="text-gray-600 text-sm mt-3">
+                  Works perfectly with Kindle, Kobo, Nook, Apple Books, Google Play Books, and more.
                 </p>
               </div>
             </div>
 
-            <h3 className="font-semibold text-gray-900 mb-3">Features:</h3>
-            <div className="grid md:grid-cols-2 gap-4">
+            <h3 className="font-semibold text-gray-900 mb-4">Why Choose Our Free Converter?</h3>
+            <div className="grid md:grid-cols-2 gap-4 mb-8">
               <div className="flex items-start">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                 <div>
-                  <strong>100% Free:</strong>
-                  <span className="text-gray-600"> No hidden fees, no subscriptions, unlimited conversions</span>
+                  <strong className="text-gray-900">100% Free Forever:</strong>
+                  <span className="text-gray-600"> No hidden fees, trials, or subscriptions. Unlimited conversions, completely free.</span>
                 </div>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                 <div>
-                  <strong>No Registration:</strong>
-                  <span className="text-gray-600"> Start converting immediately without creating an account</span>
+                  <strong className="text-gray-900">No Registration Required:</strong>
+                  <span className="text-gray-600"> Start converting immediately. No account creation, no email required.</span>
                 </div>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                 <div>
-                  <strong>Batch Processing:</strong>
-                  <span className="text-gray-600"> Convert up to 20 DOC files to EPUB simultaneously</span>
+                  <strong className="text-gray-900">Batch Processing Power:</strong>
+                  <span className="text-gray-600"> Convert up to 20 DOC files to EPUB simultaneously. Save time with bulk conversion.</span>
                 </div>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                 <div>
-                  <strong>Universal Compatibility:</strong>
-                  <span className="text-gray-600"> Works with all e-readers and reading apps</span>
+                  <strong className="text-gray-900">Universal E-reader Support:</strong>
+                  <span className="text-gray-600"> Works with Kindle, Kobo, Nook, Apple Books, and all EPUB-compatible readers.</span>
                 </div>
               </div>
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-gray-900">Preserves Formatting:</strong>
+                  <span className="text-gray-600"> Maintains your document structure, headings, and text styling in the eBook.</span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-gray-900">Secure & Private:</strong>
+                  <span className="text-gray-600"> Files are automatically deleted after conversion. Your privacy is guaranteed.</span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-gray-900">Fast Processing:</strong>
+                  <span className="text-gray-600"> High-speed conversion engine delivers results in seconds, not minutes.</span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-gray-900">No Software Installation:</strong>
+                  <span className="text-gray-600"> 100% online tool. Works directly in your browser on any device.</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="font-semibold text-gray-900 mb-3">How to Convert DOC to EPUB (Step by Step):</h3>
+            <div className="bg-amber-50 rounded-lg p-6 border border-amber-200">
+              <ol className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="font-bold text-amber-600 mr-3">1.</span>
+                  <span><strong>Upload your DOC file:</strong> Click "Choose Files" or drag and drop your Microsoft Word DOC document into the upload area.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-amber-600 mr-3">2.</span>
+                  <span><strong>Select mode:</strong> Choose "Single File" for one document or "Batch Convert" to process multiple DOC files at once.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-amber-600 mr-3">3.</span>
+                  <span><strong>Start conversion:</strong> Click the "Convert to EPUB" button and wait a few seconds while we process your file.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-amber-600 mr-3">4.</span>
+                  <span><strong>Download your eBook:</strong> Once complete, click "Download EPUB" to save your converted eBook file.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="font-bold text-amber-600 mr-3">5.</span>
+                  <span><strong>Enjoy reading:</strong> Transfer the EPUB file to your e-reader or open it in your favorite reading app!</span>
+                </li>
+              </ol>
+            </div>
+
+            <div className="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
+              <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                <Info className="w-5 h-5 text-blue-600 mr-2" />
+                Best Practices for DOC to EPUB Conversion
+              </h4>
+              <ul className="text-sm text-gray-600 space-y-2 ml-7">
+                <li>• Use headings and styles in your DOC file for better eBook navigation</li>
+                <li>• Ensure images are properly embedded in the Word document</li>
+                <li>• Keep file sizes under 100MB for optimal conversion speed</li>
+                <li>• Test your EPUB file on different e-readers to ensure compatibility</li>
+                <li>• For best results, use DOC files with simple, clean formatting</li>
+              </ul>
             </div>
           </div>
         </div>
