@@ -151,36 +151,47 @@ export const DOCToEPUBConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free DOC to EPUB Converter Online - Convert Word to eBook | MorphyIMG</title>
-        <meta name="description" content="Convert DOC files to EPUB eBook format online for free. Fast, secure DOC to EPUB converter with batch processing. No registration required." />
-        <meta name="keywords" content="DOC to EPUB, Word to eBook, DOC converter, EPUB converter, convert DOC to EPUB online, free DOC to EPUB" />
+        <title>Free DOC to EPUB Converter Online - Convert Word Documents to eBook Format | MorphyIMG</title>
+        <meta name="description" content="Free online DOC to EPUB converter. Transform Microsoft Word DOC files to EPUB eBook format instantly. Batch conversion, no registration, 100% secure. Perfect for Kindle, Kobo, and all e-readers." />
+        <meta name="keywords" content="free DOC to EPUB converter, DOC to EPUB online free, convert Word to EPUB, Word document to eBook, DOC to EPUB batch converter, Microsoft Word to EPUB, free eBook converter, DOC to digital book, online EPUB converter, convert DOC to ebook free, Word to Kindle format, DOC to e-reader format" />
         <link rel="canonical" href="https://morphyimg.com/convert/doc-to-epub" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Free DOC to EPUB Converter Online - Convert Word to eBook" />
-        <meta property="og:description" content="Convert DOC files to EPUB eBook format online for free. Fast, secure DOC to EPUB converter with batch processing." />
+        <meta property="og:title" content="Free DOC to EPUB Converter Online - Convert Word Documents to eBook" />
+        <meta property="og:description" content="Convert Microsoft Word DOC files to EPUB eBook format online for free. Batch processing, no registration required. Compatible with all e-readers." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyimg.com/convert/doc-to-epub" />
+        <meta property="og:image" content="https://morphyimg.com/og-doc-to-epub.png" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free DOC to EPUB Converter Online - Convert Word to eBook" />
-        <meta name="twitter:description" content="Convert DOC files to EPUB eBook format online for free. Fast, secure DOC to EPUB converter with batch processing." />
+        <meta name="twitter:description" content="Convert Microsoft Word DOC files to EPUB eBook format online for free. Batch processing, no registration required." />
+        <meta name="twitter:image" content="https://morphyimg.com/twitter-doc-to-epub.png" />
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "DOC to EPUB Converter",
-            "description": "Convert DOC files to EPUB eBook format online for free",
+            "name": "Free DOC to EPUB Converter",
+            "description": "Free online tool to convert Microsoft Word DOC files to EPUB eBook format. Fast, secure, and easy to use with batch processing support.",
+            "url": "https://morphyimg.com/convert/doc-to-epub",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "All",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "USD"
-            }
+            },
+            "featureList": [
+              "Free DOC to EPUB conversion",
+              "Batch processing up to 20 files",
+              "No registration required",
+              "Secure and private",
+              "Compatible with all e-readers"
+            ],
+            "browserRequirements": "Requires JavaScript. Works with all modern browsers."
           })}
         </script>
       </Helmet>
@@ -206,10 +217,10 @@ export const DOCToEPUBConverter: React.FC = () => {
               </div>
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-3">
-              DOC to EPUB Converter
+              Free DOC to EPUB Converter
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Convert Microsoft Word DOC files to EPUB eBook format. Perfect for reading on e-readers and mobile devices.
+              Convert Microsoft Word DOC files to EPUB eBook format online for free. Perfect for Kindle, Kobo, and all e-readers. No registration required.
             </p>
           </div>
 
@@ -423,46 +434,62 @@ export const DOCToEPUBConverter: React.FC = () => {
           {/* Info Section */}
           <div className="mt-12 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">About DOC to EPUB Conversion</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">About Free DOC to EPUB Conversion</h2>
               
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What is DOC?</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">What is DOC Format?</h3>
                   <p className="text-gray-600 text-sm">
-                    DOC is the legacy Microsoft Word document format used before Office 2007. It's a binary format that stores text, formatting, images, and other document elements.
+                    DOC is the legacy Microsoft Word document format used before Office 2007. It's a binary format that stores text, formatting, images, tables, and other document elements. Our free converter supports all DOC files.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What is EPUB?</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">What is EPUB Format?</h3>
                   <p className="text-gray-600 text-sm">
-                    EPUB (Electronic Publication) is an open eBook standard format. It's reflowable, meaning text adapts to different screen sizes, making it perfect for e-readers and mobile devices.
+                    EPUB (Electronic Publication) is the universal eBook standard format. It's reflowable, meaning text automatically adapts to different screen sizes, making it perfect for e-readers like Kindle, Kobo, Nook, and mobile devices.
                   </p>
                 </div>
               </div>
 
-              <h3 className="font-semibold text-gray-900 mb-3">Key Features:</h3>
-              <ul className="space-y-2 text-gray-600">
+              <h3 className="font-semibold text-gray-900 mb-3">Why Use Our Free DOC to EPUB Converter?</h3>
+              <ul className="space-y-2 text-gray-600 mb-8">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Preserves text formatting and structure</span>
+                  <span><strong>100% Free:</strong> No hidden fees, no subscriptions, unlimited conversions</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Maintains document hierarchy and metadata</span>
+                  <span><strong>No Registration:</strong> Start converting immediately without creating an account</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Compatible with all major e-readers (Kindle, Kobo, etc.)</span>
+                  <span><strong>Batch Processing:</strong> Convert up to 20 DOC files to EPUB simultaneously</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Fast batch processing for multiple files</span>
+                  <span><strong>Preserves Formatting:</strong> Maintains text styling, structure, and document hierarchy</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Secure conversion with automatic file cleanup</span>
+                  <span><strong>Universal Compatibility:</strong> Works with Kindle, Kobo, Nook, Apple Books, and all e-readers</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Secure & Private:</strong> Files are automatically deleted after conversion</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Fast Conversion:</strong> High-speed processing with instant download</span>
                 </li>
               </ul>
+
+              <h3 className="font-semibold text-gray-900 mb-3">How to Convert DOC to EPUB Online Free:</h3>
+              <ol className="space-y-2 text-gray-600 list-decimal list-inside">
+                <li>Upload your Microsoft Word DOC file(s) using the file picker or drag & drop</li>
+                <li>Click the "Convert to EPUB" button to start the free conversion</li>
+                <li>Download your converted EPUB eBook file instantly</li>
+                <li>Open the EPUB file on your favorite e-reader or reading app</li>
+              </ol>
             </div>
           </div>
         </main>
