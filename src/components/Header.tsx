@@ -45,13 +45,6 @@ export const Header: React.FC = () => {
                 </a>
               </nav>
 
-              <button
-                onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Convert Now
-              </button>
-
               {user ? (
                 <div className="flex items-center space-x-3">
                   <div className="flex items-center space-x-2">
@@ -113,16 +106,6 @@ export const Header: React.FC = () => {
                 <div className="py-2">
                   <LanguageSwitcher />
                 </div>
-                
-                <button
-                  onClick={() => {
-                    setShowMobileMenu(false);
-                    document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300 shadow-lg text-center"
-                >
-                  Convert Now
-                </button>
                 
                 <div className="pt-4 border-t border-gray-200">
                   {user ? (
