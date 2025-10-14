@@ -14,56 +14,69 @@ import {
   Shield,
   Clock,
   Star,
-  Image,
+  Image as ImageIcon,
   BarChart3
 } from 'lucide-react';
-import { apiService } from '../../services/api';
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const GIFToICOConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
-  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSizes, setIconSizes] = useState<number[]>([16]);
+  const [iconSize, setIconSize] = useState<number | 'default'>('default');
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
-  const [batchResults, setBatchResults] = useState<Array<{ originalName: string; outputFilename?: string; success: boolean; downloadPath?: string; storedFilename?: string }>>([]);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
+  const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Use shared validation hook
   const {
     validationError,
     validateSingleFile,
     validateBatchFiles,
-    getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
   } = useFileValidation();
 
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.type === 'image/gif' || file.name.toLowerCase().endsWith('.gif')) {
-        // Validate single file size using shared validation
+      if (file.name.toLowerCase().endsWith('.gif')) {
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
           setError(validation.error?.message || 'File validation failed');
           setSelectedFile(null);
           setPreviewUrl(null);
-          if (fileInputRef.current) fileInputRef.current.value = '';
+          setImagePreview(null);
+          if (event.target) {
+            event.target.value = '';
+          }
           return;
         }
+        
         setSelectedFile(file);
         setError(null);
         clearValidationError();
-        setPreviewUrl(URL.createObjectURL(file));
+        
+        const url = URL.createObjectURL(file);
+        setPreviewUrl(url);
+        
+        const img = new Image();
+        img.onload = () => {
+          setImagePreview({
+            url,
+            width: img.width,
+            height: img.height
+          });
+        };
+        img.src = url;
       } else {
         setError('Please select a valid GIF file');
       }
@@ -72,39 +85,26 @@ export const GIFToICOConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    
-    // Filter to only GIF files
-    const gifFiles = files.filter(file => 
-      file.type === 'image/gif' || file.name.toLowerCase().endsWith('.gif')
-    );
+    const gifFiles = files.filter(file => file.name.toLowerCase().endsWith('.gif'));
     
     if (gifFiles.length === 0) {
       setError('No valid GIF files selected.');
       return;
     }
 
-    // Validate batch files using shared validation
     const validation = validateBatchFiles(gifFiles);
     if (!validation.isValid) {
       setError(validation.error?.message || 'Batch validation failed');
       setBatchFiles([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
+      if (event.target) {
+        event.target.value = '';
+      }
       return;
     }
 
     setBatchFiles(gifFiles);
     setError(null);
     clearValidationError();
-  };
-
-  const getPrimaryIconSize = () => (iconSizes.length ? Math.min(...iconSizes) : 16);
-
-  const handleConvert = async (file: File) => {
-    return await apiService.convertFile(file, {
-      format: 'ico',
-      iconSize: getPrimaryIconSize(),
-      quality
-    });
   };
 
   const handleSingleConvert = async () => {
@@ -114,13 +114,36 @@ export const GIFToICOConverter: React.FC = () => {
     setError(null);
     
     try {
-      const result = await handleConvert(selectedFile);
-      setConvertedFile(result.blob);
-      setConvertedFilename(result.filename);
-      setBatchConverted(false);
-      setBatchResults([]);
+      const formData = new FormData();
+      formData.append('file', selectedFile);
+      formData.append('targetFormat', 'ico');
+      formData.append('quality', quality);
+      
+      if (iconSize !== 'default') {
+        formData.append('iconSize', iconSize.toString());
+      }
+
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://morphy-2-n2tb.onrender.com' 
+        : 'http://localhost:3000';
+
+      const response = await fetch(`${API_BASE_URL}/api/convert`, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Conversion failed' }));
+        throw new Error(errorData.error || 'Conversion failed');
+      }
+
+      const blob = await response.blob();
+      const filename = selectedFile.name.replace(/\.gif$/i, '.ico');
+      
+      setConvertedFile(blob);
+      setConvertedFilename(filename);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -133,50 +156,74 @@ export const GIFToICOConverter: React.FC = () => {
     setError(null);
     
     try {
-      const result = await apiService.convertBatch(batchFiles, {
-        format: 'ico',
-        iconSize: getPrimaryIconSize(),
-        quality
+      const formData = new FormData();
+      batchFiles.forEach(file => {
+        formData.append('files', file);
+      });
+      formData.append('targetFormat', 'ico');
+      formData.append('quality', quality);
+      
+      if (iconSize !== 'default') {
+        formData.append('iconSize', iconSize.toString());
+      }
+
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://morphy-2-n2tb.onrender.com' 
+        : 'http://localhost:3000';
+
+      const response = await fetch(`${API_BASE_URL}/api/convert/batch`, {
+        method: 'POST',
+        body: formData
       });
 
-      setBatchResults(result.results ?? []);
-      const successes = (result.results ?? []).filter(r => r.success);
-      if (successes.length > 0) {
-        setBatchConverted(true);
-        const failures = (result.results ?? []).filter(r => !r.success);
-        setError(failures.length > 0 ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed to convert.` : null);
-      } else {
-        setBatchConverted(false);
-        setError('Batch conversion failed. Please try again.');
+      if (!response.ok) {
+        throw new Error('Batch conversion failed');
       }
-      setConvertedFile(null);
-      setConvertedFilename(null);
+
+      const data = await response.json();
+      setBatchResults(data.results || []);
+      setBatchConverted(true);
+      setError(null);
     } catch (err) {
-      setBatchConverted(false);
-      setBatchResults([]);
       setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
-  const handleDownload = () => {
-    if (convertedFile) {
-      const filename = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.[^.]+$/, '.ico') : 'converted.ico');
-      apiService.downloadBlob(convertedFile, filename);
+  const handleBatchDownload = async (downloadUrl: string, filename: string) => {
+    try {
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://morphy-2-n2tb.onrender.com' 
+        : 'http://localhost:3000';
+      
+      const response = await fetch(`${API_BASE_URL}${downloadUrl}`);
+      if (!response.ok) throw new Error('Download failed');
+      
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      setError('Download failed. Please try again.');
     }
   };
 
-  const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-      setError('Download link is missing. Please reconvert the file.');
-      return;
-    }
-    try {
-      await apiService.downloadFile(filename, result.outputFilename);
-    } catch (e) {
-      setError('Failed to download file. Please try again.');
+  const handleDownload = () => {
+    if (convertedFile) {
+      const url = URL.createObjectURL(convertedFile);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = convertedFilename || (selectedFile ? selectedFile.name.replace('.gif', '.ico') : 'converted.ico');
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
   };
 
@@ -189,32 +236,68 @@ export const GIFToICOConverter: React.FC = () => {
     setConvertedFile(null);
     setError(null);
     setPreviewUrl(null);
+    setImagePreview(null);
     setBatchFiles([]);
+    setBatchConverted(false);
+    setBatchResults([]);
+    setConvertedFilename(null);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const getSingleInfoMessage = () => {
+    return '✓ Up to 100 MB per file';
   };
 
   return (
     <>
       <Helmet>
-        <title>GIF to ICO Converter - Convert Animated GIF to Windows Icons</title>
-        <meta name="description" content="Convert GIF images to ICO format for Windows icons. Transform animated or static GIFs into icon files. Free online converter with multiple sizes." />
-        <meta name="keywords" content="GIF to ICO, GIF to icon, Windows icons, icon converter, animated GIF, batch conversion" />
+        <title>Free GIF to ICO Converter - Convert GIF to Windows Icon Format</title>
+        <meta name="description" content="Convert GIF animated images to ICO icon format. Support for custom icon sizes (16x16, 32x32, 48x48, 256x256). Free online converter with batch processing for Windows icons." />
+        <meta name="keywords" content="GIF to ICO, icon converter, Windows icon, favicon generator, GIF icon converter, batch conversion, animated GIF to icon" />
+        <link rel="canonical" href="https://morphyimg.com/convert/gif-to-ico" />
+        
+        <meta property="og:title" content="Free GIF to ICO Converter Online | MorphyIMG" />
+        <meta property="og:description" content="Convert GIF to ICO icon format online for free. Fast and easy." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://morphyimg.com/convert/gif-to-ico" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Free GIF to ICO Converter Online" />
+        <meta name="twitter:description" content="Convert GIF to ICO format with custom icon sizes." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "GIF to ICO Converter",
+            "description": "Free online GIF to ICO converter with custom icon sizes",
+            "url": "https://morphyimg.com/convert/gif-to-ico",
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-teal-50">
       <Header />
       
-      {/* Hero Section - Narrowed */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-700">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-green-600 via-teal-600 to-emerald-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
               GIF to ICO Converter
             </h1>
-            <p className="text-lg sm:text-xl text-pink-100 mb-6 max-w-2xl mx-auto">
-              Convert animated GIF files to ICO format for Windows icons. Transform GIF animations into high-quality Windows icon files with multiple sizes and frame support.
+            <p className="text-lg sm:text-xl text-green-100 mb-6 max-w-2xl mx-auto">
+              Convert GIF animated images to ICO icon format quickly and easily. Perfect for Windows icons, favicons, and application icons with custom sizes.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-pink-200">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
                 <span>Lightning Fast</span>
@@ -245,7 +328,7 @@ export const GIFToICOConverter: React.FC = () => {
                   onClick={() => setBatchMode(false)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
-                      ? 'bg-pink-600 text-white shadow-lg' 
+                      ? 'bg-green-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -256,7 +339,7 @@ export const GIFToICOConverter: React.FC = () => {
                   onClick={() => setBatchMode(true)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
-                      ? 'bg-pink-600 text-white shadow-lg' 
+                      ? 'bg-green-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -266,7 +349,7 @@ export const GIFToICOConverter: React.FC = () => {
               </div>
 
               {/* File Upload Area */}
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-pink-400 transition-colors">
+              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple GIF Files' : 'Upload GIF File'}
@@ -278,65 +361,65 @@ export const GIFToICOConverter: React.FC = () => {
                   }
                 </p>
                 {!batchMode && (
-                  <p className="text-xs text-purple-600 mb-2">{getSingleInfoMessage()}</p>
+                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
                 )}
                 {batchMode && (
-                  <p className="text-sm text-purple-600 mb-4">
+                  <p className="text-sm text-blue-600 mb-4">
                     {getBatchInfoMessage()}
                   </p>
                 )}
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept=".gif,image/gif"
+                  accept=".gif"
                   multiple={batchMode}
                   onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
                   className="hidden"
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-pink-700 transition-colors"
+                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
                   Choose Files
                 </button>
               </div>
 
-              {/* File Preview */}
-              {previewUrl && !batchMode && (
+              {/* Image Preview */}
+              {imagePreview && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
-                    <img 
-                      src={previewUrl} 
-                      alt="Preview" 
-                      className="max-w-full h-32 object-contain mx-auto rounded"
-                    />
+                    <div className="flex items-center justify-center bg-gray-100 rounded" style={{minHeight: '200px'}}>
+                      <img src={imagePreview.url} alt="Preview" className="max-h-64 max-w-full rounded" />
+                    </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)}) - {imagePreview.width}×{imagePreview.height}px
                     </p>
                   </div>
                 </div>
               )}
 
-              {/* Batch Files List with total */}
+              {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   {(() => {
-                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-pink-700' : 'text-gray-600'}`}>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
                         </div>
                         {sizeDisplay.isWarning && (
-                          <div className="mb-4 p-3 bg-pink-50 border border-pink-200 rounded-lg">
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
                             <div className="flex items-center">
-                              <AlertCircle className="w-4 h-4 text-pink-600 mr-2" />
-                              <span className="text-sm text-pink-800">Batch size is getting close to the 100MB limit. Consider 5–10 files for best performance.</span>
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
                             </div>
                           </div>
                         )}
@@ -344,7 +427,7 @@ export const GIFToICOConverter: React.FC = () => {
                           {batchFiles.map((file, index) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
-                              <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                             </div>
                           ))}
                         </div>
@@ -358,7 +441,7 @@ export const GIFToICOConverter: React.FC = () => {
               {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error || validationError}</span>
+                  <span className="text-red-700">{error || validationError?.message}</span>
                 </div>
               )}
 
@@ -367,7 +450,7 @@ export const GIFToICOConverter: React.FC = () => {
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-pink-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-700 hover:to-teal-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
                     <div className="flex items-center justify-center">
@@ -419,17 +502,51 @@ export const GIFToICOConverter: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {batchResults.map((r, i) => (
-                      <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
-                        <span className="text-sm font-medium text-gray-900">{r.outputFilename || r.originalName}</span>
-                        {r.success && r.downloadPath ? (
-                          <button onClick={() => handleBatchDownload(r)} className="bg-pink-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-pink-700 transition-colors">Download</button>
-                        ) : r.error ? (
-                          <span className="text-xs text-red-600">{r.error}</span>
-                        ) : null}
-                      </div>
-                    ))}
+                  <p className="text-green-700 mb-4">
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                  </p>
+                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
+                    {batchResults.map((result, index) => {
+                      const displayName = result.filename || `${batchFiles[index].name.replace(/\.[^.]+$/, '')}.ico`;
+                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                      return (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex flex-col">
+                            <div className="flex items-center">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                              )}
+                              <span className="text-sm font-medium">{displayName}</span>
+                            </div>
+                            {displaySize && (
+                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
+                            )}
+                            {!result.success && result.error && (
+                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                            )}
+                          </div>
+                          {result.success && result.downloadUrl && (
+                            <button
+                              onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                            >
+                              Download
+                            </button>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert More Files
+                    </button>
                   </div>
                 </div>
               )}
@@ -442,34 +559,28 @@ export const GIFToICOConverter: React.FC = () => {
             {/* Conversion Settings */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-pink-600" />
+                <Settings className="w-5 h-5 mr-2 text-green-600" />
                 ICO Settings
               </h3>
               
-              {/* Icon Sizes */}
+              {/* Icon Size */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Icon Sizes
+                  Icon Size
                 </label>
-                <div className="grid grid-cols-3 gap-2">
-                  {[16, 32, 48, 64, 128, 256].map(size => (
-                    <label key={size} className="flex items-center">
-                      <input
-                        type="checkbox"
-                        checked={iconSizes.includes(size)}
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setIconSizes([...iconSizes, size]);
-                          } else {
-                            setIconSizes(iconSizes.filter(s => s !== size));
-                          }
-                        }}
-                        className="rounded border-gray-300 text-pink-600 focus:ring-pink-500"
-                      />
-                      <span className="ml-2 text-sm">{size}px</span>
-                    </label>
-                  ))}
-                </div>
+                <select
+                  value={iconSize}
+                  onChange={(e) => setIconSize(e.target.value === 'default' ? 'default' : parseInt(e.target.value))}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                >
+                  <option value="default">Default (Original Size)</option>
+                  <option value="16">16×16 (Small Icon)</option>
+                  <option value="32">32×32 (Standard Icon)</option>
+                  <option value="48">48×48 (Large Icon)</option>
+                  <option value="64">64×64 (Extra Large)</option>
+                  <option value="128">128×128 (macOS)</option>
+                  <option value="256">256×256 (High-Res)</option>
+                </select>
               </div>
 
               {/* Quality */}
@@ -480,11 +591,11 @@ export const GIFToICOConverter: React.FC = () => {
                 <select
                   value={quality}
                   onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
                 >
-                  <option value="high">High Quality</option>
-                  <option value="medium">Medium Quality</option>
-                  <option value="low">Low Quality</option>
+                  <option value="high">High (Best Quality)</option>
+                  <option value="medium">Medium (Balanced)</option>
+                  <option value="low">Low (Smaller Size)</option>
                 </select>
               </div>
             </div>
@@ -497,12 +608,12 @@ export const GIFToICOConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "Animated GIF support",
-                  "Multiple icon size generation",
-                  "Windows icon compatibility",
-                  "Frame preservation",
-                  "High-quality output",
-                  "Batch processing support"
+                  "Custom icon sizes",
+                  "High-quality conversion",
+                  "Batch processing",
+                  "Multiple formats",
+                  "100% free to use",
+                  "No registration needed"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -515,30 +626,23 @@ export const GIFToICOConverter: React.FC = () => {
             {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-pink-600" />
+                <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
                 Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  "Animated application icons",
-                  "Website favicon creation",
-                  "Windows desktop icons",
-                  "Software development",
-                  "Animated brand elements",
-                  "Interactive icon design"
+                  "Windows application icons",
+                  "Favicon generation",
+                  "Desktop shortcuts",
+                  "Folder customization",
+                  "System tray icons",
+                  "Web development"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-pink-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
-                  <button
-                    onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
               </div>
             </div>
           </div>
@@ -562,37 +666,37 @@ export const GIFToICOConverter: React.FC = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting GIF files to ICO format is essential for creating animated Windows icons, website favicons, and interactive application graphics. While GIF is excellent for web animations, ICO format provides native Windows compatibility and the ability to create multi-resolution icons with animation support.
+              Converting GIF images to ICO (Icon) format is essential for creating Windows application icons, favicons, and system tray icons. While GIF is great for animated web graphics, ICO provides the multi-resolution support and transparency needed for professional Windows icons, making it the standard format for application development and web development.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ICO Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">Animated Icon Support</h4>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-green-900 mb-3">Multi-Resolution Support</h4>
                 <p className="text-gray-700">
-                  ICO format supports animated icons, allowing you to create dynamic Windows icons that can display GIF-like animations in supported contexts.
+                  ICO files can contain multiple icon sizes in one file, ensuring perfect display at any resolution from 16×16 to 256×256.
                 </p>
               </div>
               
-              <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Multiple Icon Sizes</h4>
+              <div className="bg-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">Windows Standard</h4>
                 <p className="text-gray-700">
-                  ICO files can contain multiple icon sizes (16x16, 32x32, 48x48, 64x64, 128x128, 256x256 pixels) in a single file, ensuring perfect display across all contexts.
+                  ICO is the native icon format for Windows applications, desktop shortcuts, folder icons, and system tray icons.
                 </p>
               </div>
               
-              <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Windows Native Support</h4>
+              <div className="bg-emerald-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-emerald-900 mb-3">Favicon Support</h4>
                 <p className="text-gray-700">
-                  ICO is the native icon format for Windows operating systems, ensuring perfect compatibility with file explorers, taskbars, and application windows.
+                  ICO format is universally supported by web browsers as favicons, providing better compatibility than other formats.
                 </p>
               </div>
               
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Professional Quality</h4>
+              <div className="bg-lime-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-lime-900 mb-3">Transparency</h4>
                 <p className="text-gray-700">
-                  ICO format preserves image quality while providing efficient compression, making it ideal for professional applications and branding.
+                  ICO supports alpha channel transparency, allowing icons to blend seamlessly with any background color.
                 </p>
               </div>
             </div>
@@ -601,53 +705,53 @@ export const GIFToICOConverter: React.FC = () => {
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Animated Application Icons</h4>
-                  <p className="text-gray-700">Create dynamic application icons for Windows software that can display animations, making your app stand out and provide visual feedback.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Windows Application Icons</h4>
+                  <p className="text-gray-700">Convert GIF graphics to ICO format for desktop applications, executable files, and software installers.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Website Favicon Creation</h4>
-                  <p className="text-gray-700">Generate animated favicons for websites using GIF animations, creating engaging and memorable brand elements that enhance user experience.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Favicon Generation</h4>
+                  <p className="text-gray-700">Create website favicons from GIF logos for browser tabs and bookmarks with universal compatibility.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Windows Desktop Icons</h4>
-                  <p className="text-gray-700">Create animated desktop icons for Windows that can display GIF-like animations, adding personality and visual interest to your desktop.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">System Tray Icons</h4>
+                  <p className="text-gray-700">Generate ICO icons from GIF images for Windows system tray applications and notification area icons.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-lime-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Interactive Icon Design</h4>
-                  <p className="text-gray-700">Develop interactive icon designs for software applications that can respond to user actions with animated visual feedback.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Folder and Shortcut Customization</h4>
+                  <p className="text-gray-700">Create custom folder icons and desktop shortcut icons from GIF graphics for personalized Windows experience.</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-pink-600 to-purple-600 text-white p-8 rounded-xl text-center">
+            <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-8 rounded-xl text-center">
               <h3 className="text-2xl font-bold mb-4">Ready to Convert Your GIF Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online GIF to ICO converter to transform your animated GIFs into high-quality Windows icons.
+                Use our free online GIF to ICO converter to create professional Windows icons and favicons.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Back to Home
                 </button>
@@ -677,8 +781,6 @@ export const GIFToICOConverter: React.FC = () => {
       </footer>
 
       </div>
-
       </>
-
-      );
+  );
 };
