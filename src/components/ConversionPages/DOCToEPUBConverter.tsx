@@ -4,12 +4,10 @@ import { FileText, Upload, Download, CheckCircle, AlertCircle, BookOpen, ArrowLe
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
-import { useNavigate } from 'react-router-dom';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
 export const DOCToEPUBConverter: React.FC = () => {
-  const navigate = useNavigate();
   const [file, setFile] = useState<File | null>(null);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchMode, setBatchMode] = useState(false);
@@ -215,13 +213,13 @@ export const DOCToEPUBConverter: React.FC = () => {
         
         <main className="flex-grow container mx-auto px-4 py-8 mt-16">
           {/* Back Button */}
-          <button
-            onClick={() => navigate('/converters')}
+          <a
+            href="/converters"
             className="mb-6 flex items-center text-amber-600 hover:text-amber-700 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Converters
-          </button>
+          </a>
 
           {/* Header */}
           <div className="text-center mb-8">
