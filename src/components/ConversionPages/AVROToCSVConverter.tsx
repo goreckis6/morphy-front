@@ -683,38 +683,38 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('avro_to_csv.detailed_use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Analysis and Reporting</h4>
-                  <p className="text-gray-700">Convert AVRO data to CSV format for comprehensive data analysis, statistical analysis, and business reporting using Excel or specialized analytics tools.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_csv.detailed_use_case_1_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_csv.detailed_use_case_1_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Database Migration Projects</h4>
-                  <p className="text-gray-700">Migrate data from AVRO-based systems to traditional databases by converting to CSV format for easy import and data transformation.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_csv.detailed_use_case_2_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_csv.detailed_use_case_2_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Science Workflows</h4>
-                  <p className="text-gray-700">Integrate AVRO data into data science workflows by converting it to CSV format for use with Python pandas, R, and machine learning frameworks.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_csv.detailed_use_case_3_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_csv.detailed_use_case_3_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">ETL Pipeline Development</h4>
-                  <p className="text-gray-700">Develop ETL (Extract, Transform, Load) pipelines by converting AVRO data to CSV format for processing and loading into target systems.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_csv.detailed_use_case_4_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_csv.detailed_use_case_4_text')}</p>
                 </div>
               </div>
             </div>

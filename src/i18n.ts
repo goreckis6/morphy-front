@@ -117,7 +117,16 @@ const resources = {
       'avro_to_csv.use_case_3': 'Database migration projects',
       'avro_to_csv.use_case_4': 'Data science workflows',
       'avro_to_csv.use_case_5': 'Business intelligence tools',
-      'avro_to_csv.use_case_6': 'ETL pipeline development'
+      'avro_to_csv.use_case_6': 'ETL pipeline development',
+      'avro_to_csv.detailed_use_cases_title': 'Common Use Cases',
+      'avro_to_csv.detailed_use_case_1_title': 'Data Analysis and Reporting',
+      'avro_to_csv.detailed_use_case_1_text': 'Convert AVRO data to CSV format for comprehensive data analysis, statistical analysis, and business reporting using Excel or specialized analytics tools.',
+      'avro_to_csv.detailed_use_case_2_title': 'Database Migration Projects',
+      'avro_to_csv.detailed_use_case_2_text': 'Migrate data from AVRO-based systems to traditional databases by converting to CSV format for easy import and data transformation.',
+      'avro_to_csv.detailed_use_case_3_title': 'Data Science Workflows',
+      'avro_to_csv.detailed_use_case_3_text': 'Integrate AVRO data into data science workflows by converting it to CSV format for use with Python pandas, R, and machine learning frameworks.',
+      'avro_to_csv.detailed_use_case_4_title': 'ETL Pipeline Development',
+      'avro_to_csv.detailed_use_case_4_text': 'Develop ETL (Extract, Transform, Load) pipelines by converting AVRO data to CSV format for processing and loading into target systems.'
     }
   },
   pl: {
@@ -233,7 +242,16 @@ const resources = {
       'avro_to_csv.use_case_3': 'Projekty migracji baz danych',
       'avro_to_csv.use_case_4': 'Przepływy pracy data science',
       'avro_to_csv.use_case_5': 'Narzędzia business intelligence',
-      'avro_to_csv.use_case_6': 'Rozwój pipeline ETL'
+      'avro_to_csv.use_case_6': 'Rozwój pipeline ETL',
+      'avro_to_csv.detailed_use_cases_title': 'Typowe Przypadki Użycia',
+      'avro_to_csv.detailed_use_case_1_title': 'Analiza Danych i Raportowanie',
+      'avro_to_csv.detailed_use_case_1_text': 'Konwertuj dane AVRO do formatu CSV w celu kompleksowej analizy danych, analizy statystycznej i raportowania biznesowego przy użyciu Excel lub wyspecjalizowanych narzędzi analitycznych.',
+      'avro_to_csv.detailed_use_case_2_title': 'Projekty Migracji Baz Danych',
+      'avro_to_csv.detailed_use_case_2_text': 'Migruj dane z systemów opartych na AVRO do tradycyjnych baz danych, konwertując je do formatu CSV w celu łatwego importu i transformacji danych.',
+      'avro_to_csv.detailed_use_case_3_title': 'Przepływy Pracy Data Science',
+      'avro_to_csv.detailed_use_case_3_text': 'Integruj dane AVRO z przepływami pracy data science, konwertując je do formatu CSV do użytku z Python pandas, R i frameworkami uczenia maszynowego.',
+      'avro_to_csv.detailed_use_case_4_title': 'Rozwój Pipeline ETL',
+      'avro_to_csv.detailed_use_case_4_text': 'Rozwijaj pipeline ETL (Extract, Transform, Load), konwertując dane AVRO do formatu CSV w celu przetwarzania i ładowania do systemów docelowych.'
     }
   },
   de: {
@@ -349,7 +367,16 @@ const resources = {
       'avro_to_csv.use_case_3': 'Datenbankmigrationsprojekte',
       'avro_to_csv.use_case_4': 'Data-Science-Workflows',
       'avro_to_csv.use_case_5': 'Business-Intelligence-Tools',
-      'avro_to_csv.use_case_6': 'ETL-Pipeline-Entwicklung'
+      'avro_to_csv.use_case_6': 'ETL-Pipeline-Entwicklung',
+      'avro_to_csv.detailed_use_cases_title': 'Häufige Anwendungsfälle',
+      'avro_to_csv.detailed_use_case_1_title': 'Datenanalyse und Berichterstattung',
+      'avro_to_csv.detailed_use_case_1_text': 'Konvertieren Sie AVRO-Daten in das CSV-Format für umfassende Datenanalyse, statistische Analysen und Geschäftsberichte mit Excel oder spezialisierten Analysetools.',
+      'avro_to_csv.detailed_use_case_2_title': 'Datenbankmigrationsprojekte',
+      'avro_to_csv.detailed_use_case_2_text': 'Migrieren Sie Daten von AVRO-basierten Systemen zu traditionellen Datenbanken, indem Sie sie in das CSV-Format konvertieren, um einen einfachen Import und Datentransformation zu ermöglichen.',
+      'avro_to_csv.detailed_use_case_3_title': 'Data-Science-Workflows',
+      'avro_to_csv.detailed_use_case_3_text': 'Integrieren Sie AVRO-Daten in Data-Science-Workflows, indem Sie sie in das CSV-Format konvertieren, um sie mit Python pandas, R und Machine-Learning-Frameworks zu verwenden.',
+      'avro_to_csv.detailed_use_case_4_title': 'ETL-Pipeline-Entwicklung',
+      'avro_to_csv.detailed_use_case_4_text': 'Entwickeln Sie ETL-Pipelines (Extract, Transform, Load), indem Sie AVRO-Daten in das CSV-Format konvertieren, um sie zu verarbeiten und in Zielsysteme zu laden.'
     }
   }
 };
