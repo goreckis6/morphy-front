@@ -86,6 +86,14 @@ const resources = {
       'doc_to_epub.benefit_media_title': 'Rich Media Support',
       'doc_to_epub.benefit_media_text': 'EPUB format supports embedded images, fonts, styles, and even multimedia content while maintaining small file sizes for easy sharing and storage.',
       'doc_to_epub.use_cases_title': 'Common Use Cases',
+      'doc_to_epub.use_case_1_title': 'Self-Publishing Authors',
+      'doc_to_epub.use_case_1_text': 'Convert your Word manuscript to EPUB format for publishing on Amazon Kindle Direct Publishing, Apple Books, Kobo Writing Life, and other self-publishing platforms.',
+      'doc_to_epub.use_case_2_title': 'Educational Materials',
+      'doc_to_epub.use_case_2_text': 'Transform educational documents, course materials, and study guides into student-friendly eBooks that can be read on any device, anywhere.',
+      'doc_to_epub.use_case_3_title': 'Business Documentation',
+      'doc_to_epub.use_case_3_text': 'Convert reports, manuals, and business documents to EPUB format for easy distribution to employees and clients who prefer reading on mobile devices.',
+      'doc_to_epub.use_case_4_title': 'Personal Library Digitization',
+      'doc_to_epub.use_case_4_text': 'Convert your personal writings, journals, and documents to EPUB format to create a portable digital library accessible across all your devices.',
       'doc_to_epub.ready_title': 'Ready to Convert Your DOC Files?',
       'doc_to_epub.ready_text': 'Use our free online DOC to EPUB converter to transform your Word documents into professional eBooks for any e-reader.'
     }
@@ -172,6 +180,14 @@ const resources = {
       'doc_to_epub.benefit_media_title': 'Wsparcie Multimediów',
       'doc_to_epub.benefit_media_text': 'Format EPUB obsługuje osadzone obrazy, czcionki, style, a nawet treści multimedialne, zachowując jednocześnie małe rozmiary plików dla łatwego udostępniania i przechowywania.',
       'doc_to_epub.use_cases_title': 'Typowe Przypadki Użycia',
+      'doc_to_epub.use_case_1_title': 'Autorzy Samodzielnie Publikujący',
+      'doc_to_epub.use_case_1_text': 'Konwertuj swój rękopis Word do formatu EPUB w celu publikacji na Amazon Kindle Direct Publishing, Apple Books, Kobo Writing Life i innych platformach samoobsługowych.',
+      'doc_to_epub.use_case_2_title': 'Materiały Edukacyjne',
+      'doc_to_epub.use_case_2_text': 'Przekształć dokumenty edukacyjne, materiały kursowe i przewodniki do nauki w przyjazne dla uczniów e-booki, które można czytać na dowolnym urządzeniu, w dowolnym miejscu.',
+      'doc_to_epub.use_case_3_title': 'Dokumentacja Biznesowa',
+      'doc_to_epub.use_case_3_text': 'Konwertuj raporty, podręczniki i dokumenty biznesowe do formatu EPUB w celu łatwej dystrybucji do pracowników i klientów, którzy wolą czytać na urządzeniach mobilnych.',
+      'doc_to_epub.use_case_4_title': 'Digitalizacja Biblioteki Osobistej',
+      'doc_to_epub.use_case_4_text': 'Konwertuj swoje osobiste pisma, dzienniki i dokumenty do formatu EPUB, aby stworzyć przenośną cyfrową bibliotekę dostępną na wszystkich twoich urządzeniach.',
       'doc_to_epub.ready_title': 'Gotowy do Konwersji Plików DOC?',
       'doc_to_epub.ready_text': 'Użyj naszego darmowego konwertera online DOC na EPUB, aby przekształcić dokumenty Word w profesjonalne e-booki dla każdego czytnika.'
     }
@@ -258,6 +274,14 @@ const resources = {
       'doc_to_epub.benefit_media_title': 'Rich-Media-Unterstützung',
       'doc_to_epub.benefit_media_text': 'Das EPUB-Format unterstützt eingebettete Bilder, Schriftarten, Stile und sogar Multimedia-Inhalte bei gleichzeitiger Beibehaltung kleiner Dateigrößen für einfaches Teilen und Speichern.',
       'doc_to_epub.use_cases_title': 'Häufige Anwendungsfälle',
+      'doc_to_epub.use_case_1_title': 'Self-Publishing-Autoren',
+      'doc_to_epub.use_case_1_text': 'Konvertieren Sie Ihr Word-Manuskript in das EPUB-Format für die Veröffentlichung auf Amazon Kindle Direct Publishing, Apple Books, Kobo Writing Life und anderen Self-Publishing-Plattformen.',
+      'doc_to_epub.use_case_2_title': 'Bildungsmaterialien',
+      'doc_to_epub.use_case_2_text': 'Verwandeln Sie Bildungsdokumente, Kursmaterialien und Lernleitfäden in schülerfreundliche eBooks, die auf jedem Gerät und überall gelesen werden können.',
+      'doc_to_epub.use_case_3_title': 'Geschäftsdokumentation',
+      'doc_to_epub.use_case_3_text': 'Konvertieren Sie Berichte, Handbücher und Geschäftsdokumente in das EPUB-Format für eine einfache Verteilung an Mitarbeiter und Kunden, die das Lesen auf mobilen Geräten bevorzugen.',
+      'doc_to_epub.use_case_4_title': 'Digitalisierung der persönlichen Bibliothek',
+      'doc_to_epub.use_case_4_text': 'Konvertieren Sie Ihre persönlichen Schriften, Tagebücher und Dokumente in das EPUB-Format, um eine tragbare digitale Bibliothek zu erstellen, die auf allen Ihren Geräten zugänglich ist.',
       'doc_to_epub.ready_title': 'Bereit, Ihre DOC-Dateien zu konvertieren?',
       'doc_to_epub.ready_text': 'Verwenden Sie unseren kostenlosen Online-DOC-zu-EPUB-Konverter, um Ihre Word-Dokumente in professionelle eBooks für jeden E-Reader zu verwandeln.'
     }

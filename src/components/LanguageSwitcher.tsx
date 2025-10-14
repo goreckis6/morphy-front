@@ -17,15 +17,15 @@ export const LanguageSwitcher: React.FC = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Globe className="w-4 h-4 text-gray-600" />
+      <Globe className="w-5 h-5 text-blue-600" />
       <select
         value={i18n.language}
         onChange={(e) => changeLanguage(e.target.value)}
-        className="bg-transparent border border-gray-300 rounded-lg px-3 py-1 text-sm text-gray-700 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+        className="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-lg px-4 py-2 text-sm font-medium text-gray-800 hover:border-blue-500 hover:from-blue-100 hover:to-indigo-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer transition-all shadow-sm"
       >
-        <option value="en">English</option>
-        <option value="pl">Polski</option>
-        <option value="de">Deutsch</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="pl">🇵🇱 Polski</option>
+        <option value="de">🇩🇪 Deutsch</option>
       </select>
     </div>
   );

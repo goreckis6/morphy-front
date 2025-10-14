@@ -45,11 +45,9 @@ export const Header: React.FC = () => {
                 </a>
               </nav>
 
-              <LanguageSwitcher />
-
               <button
                 onClick={() => document.getElementById('converter')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg ml-4"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 Convert Now
               </button>
@@ -87,6 +85,9 @@ export const Header: React.FC = () => {
                   </button>
                 </div>
               )}
+
+              {/* Language Switcher - Right side */}
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile Menu Button */}

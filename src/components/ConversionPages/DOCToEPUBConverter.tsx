@@ -670,32 +670,32 @@ export const DOCToEPUBConverter: React.FC = () => {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Self-Publishing Authors</h4>
-                  <p className="text-gray-700">Convert your Word manuscript to EPUB format for publishing on Amazon Kindle Direct Publishing, Apple Books, Kobo Writing Life, and other self-publishing platforms.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_1_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.use_case_1_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Educational Materials</h4>
-                  <p className="text-gray-700">Transform educational documents, course materials, and study guides into student-friendly eBooks that can be read on any device, anywhere.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_2_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.use_case_2_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Documentation</h4>
-                  <p className="text-gray-700">Convert reports, manuals, and business documents to EPUB format for easy distribution to employees and clients who prefer reading on mobile devices.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_3_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.use_case_3_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Personal Library Digitization</h4>
-                  <p className="text-gray-700">Convert your personal writings, journals, and documents to EPUB format to create a portable digital library accessible across all your devices.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_4_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.use_case_4_text')}</p>
                 </div>
               </div>
             </div>
