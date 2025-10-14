@@ -30,7 +30,7 @@ export const LanguageSwitcher: React.FC = () => {
       >
         <Globe className="w-3.5 h-3.5 text-blue-600 group-hover:rotate-12 transition-transform duration-300" />
         <span className="text-lg leading-none">{currentLanguage.flag}</span>
-        <span className="font-medium text-gray-700 text-xs hidden sm:inline">
+        <span className="font-medium text-gray-700 text-xs">
           {currentLanguage.nativeName}
         </span>
         <ChevronDown className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
