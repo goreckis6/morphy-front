@@ -28,8 +28,7 @@ export const LanguageSwitcher: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all duration-200 group"
       >
-        <Globe className="w-3.5 h-3.5 text-blue-600 group-hover:rotate-12 transition-transform duration-300" />
-        <span className="text-lg leading-none">{currentLanguage.flag}</span>
+        <span className="text-xl leading-none">{currentLanguage.flag}</span>
         <span className="font-medium text-gray-700 text-xs">
           {currentLanguage.nativeName}
         </span>
