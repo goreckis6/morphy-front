@@ -99,7 +99,12 @@ export const DOCToEPUBConverter: React.FC = () => {
   };
 
   const handleBatchConvert = async () => {
-    if (batchFiles.length === 0) return;
+    console.log('Batch convert clicked', { filesCount: batchFiles.length });
+    
+    if (batchFiles.length === 0) {
+      console.log('No files selected');
+      return;
+    }
 
     setConverting(true);
     setError(null);
@@ -110,19 +115,27 @@ export const DOCToEPUBConverter: React.FC = () => {
       const formData = new FormData();
       batchFiles.forEach(file => {
         formData.append('files', file);
+        console.log('Adding file to FormData:', file.name, file.size);
       });
+
+      console.log('Sending batch request to:', `${API_BASE_URL}/convert/doc-to-epub/batch`);
 
       const response = await fetch(`${API_BASE_URL}/convert/doc-to-epub/batch`, {
         method: 'POST',
         body: formData,
       });
 
+      console.log('Response status:', response.status);
+
       if (!response.ok) {
         const errorData = await response.json();
+        console.error('Batch conversion error:', errorData);
         throw new Error(errorData.error || 'Batch conversion failed');
       }
 
       const results = await response.json();
+      console.log('Batch results:', results);
+      
       setBatchResults(results.map((result: any) => ({
         name: result.filename,
         downloadUrl: `${API_BASE_URL}${result.downloadUrl}`,
@@ -130,6 +143,7 @@ export const DOCToEPUBConverter: React.FC = () => {
       })));
       setConversionTime(Date.now() - startTime);
     } catch (err) {
+      console.error('Batch conversion error:', err);
       setError(err instanceof Error ? err.message : 'Batch conversion failed');
     } finally {
       setConverting(false);
