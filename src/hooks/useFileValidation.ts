@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface ValidationError {
   code: 'too-many-files' | 'file-too-large' | 'batch-too-large' | 'invalid-type';
@@ -16,6 +17,7 @@ const BATCH_TOTAL_LIMIT_BYTES = 100 * 1024 * 1024; // 100MB total per batch
 const BATCH_MAX_FILES = 20;
 
 export const useFileValidation = () => {
+  const { t } = useTranslation();
   const [validationError, setValidationError] = useState<ValidationError | null>(null);
 
   const clearValidationError = () => setValidationError(null);
@@ -34,7 +36,11 @@ export const useFileValidation = () => {
         isValid: false,
         error: {
           code: 'file-too-large',
-          message: `File "${file.name}" is too large (${getReadableSize(file.size)}). Maximum allowed size is ${getReadableSize(limitBytes)}.`
+          message: t('validation.file_too_large', {
+            filename: file.name,
+            fileSize: getReadableSize(file.size),
+            maxSize: getReadableSize(limitBytes)
+          })
         }
       };
     }
@@ -47,7 +53,10 @@ export const useFileValidation = () => {
         isValid: false,
         error: {
           code: 'too-many-files',
-          message: `Too many files selected (${files.length}). Maximum allowed is ${BATCH_MAX_FILES}.`
+          message: t('validation.too_many_files', {
+            count: files.length,
+            max: BATCH_MAX_FILES
+          })
         }
       };
     }
@@ -58,7 +67,10 @@ export const useFileValidation = () => {
         isValid: false,
         error: {
           code: 'batch-too-large',
-          message: `Total batch size ${getReadableSize(totalSize)} exceeds the limit of ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)}.`
+          message: t('validation.batch_too_large', {
+            totalSize: getReadableSize(totalSize),
+            maxSize: getReadableSize(BATCH_TOTAL_LIMIT_BYTES)
+          })
         }
       };
     }
@@ -92,16 +104,23 @@ export const useFileValidation = () => {
   const formatFileSize = (bytes: number) => getReadableSize(bytes);
 
   const getSingleInfoMessage = () =>
-    `Single file limit: ${getReadableSize(SINGLE_FILE_LIMIT_BYTES)} per file.`;
+    t('validation.single_file_limit', { size: getReadableSize(SINGLE_FILE_LIMIT_BYTES) });
 
   const getBatchInfoMessage = () =>
-    `Batch conversion supports up to ${BATCH_MAX_FILES} files, ${getReadableSize(BATCH_FILE_LIMIT_BYTES)} per file, ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} total.`;
+    t('validation.batch_info', {
+      count: BATCH_MAX_FILES,
+      perFileSize: getReadableSize(BATCH_FILE_LIMIT_BYTES),
+      totalSize: getReadableSize(BATCH_TOTAL_LIMIT_BYTES)
+    });
 
   const getBatchSizeDisplay = useMemo(() => (totalSize: number) => {
-    const text = `Total size: ${formatFileSize(totalSize)} of ${getReadableSize(BATCH_TOTAL_LIMIT_BYTES)} allowed.`;
+    const text = t('validation.total_size', {
+      current: formatFileSize(totalSize),
+      max: getReadableSize(BATCH_TOTAL_LIMIT_BYTES)
+    });
     const isWarning = totalSize > BATCH_TOTAL_LIMIT_BYTES * 0.8;
     return { text, isWarning };
-  }, []);
+  }, [t]);
 
   return {
     validationError,

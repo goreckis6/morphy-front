@@ -21,6 +21,14 @@ const resources = {
       'common.convert_more': 'Convert More Files',
       'common.convert_another': 'Convert Another',
       
+      // Validation messages
+      'validation.single_file_limit': 'Single file limit: {{size}} per file.',
+      'validation.batch_info': 'Batch conversion supports up to {{count}} files, {{perFileSize}} per file, {{totalSize}} total.',
+      'validation.total_size': 'Total size: {{current}} of {{max}} allowed.',
+      'validation.file_too_large': 'File "{{filename}}" is too large ({{fileSize}}). Maximum allowed size is {{maxSize}}.',
+      'validation.too_many_files': 'Too many files selected ({{count}}). Maximum allowed is {{max}}.',
+      'validation.batch_too_large': 'Total batch size {{totalSize}} exceeds the limit of {{maxSize}}.',
+      
       // Features
       'features.lightning_fast': 'Lightning Fast',
       'features.100_free': '100% Free',
@@ -188,6 +196,14 @@ const resources = {
       'common.convert_more': 'Konwertuj Więcej Plików',
       'common.convert_another': 'Konwertuj Kolejny',
       
+      // Validation messages
+      'validation.single_file_limit': 'Limit pojedynczego pliku: {{size}} na plik.',
+      'validation.batch_info': 'Konwersja wsadowa obsługuje do {{count}} plików, {{perFileSize}} na plik, {{totalSize}} łącznie.',
+      'validation.total_size': 'Całkowity rozmiar: {{current}} z {{max}} dozwolonych.',
+      'validation.file_too_large': 'Plik "{{filename}}" jest za duży ({{fileSize}}). Maksymalny dozwolony rozmiar to {{maxSize}}.',
+      'validation.too_many_files': 'Wybrano za dużo plików ({{count}}). Maksymalna dozwolona liczba to {{max}}.',
+      'validation.batch_too_large': 'Całkowity rozmiar wsadu {{totalSize}} przekracza limit {{maxSize}}.',
+      
       // Features
       'features.lightning_fast': 'Błyskawicznie Szybki',
       'features.100_free': '100% Darmowy',
@@ -354,6 +370,14 @@ const resources = {
       'common.start_converting': 'Jetzt konvertieren',
       'common.convert_more': 'Weitere Dateien konvertieren',
       'common.convert_another': 'Weitere konvertieren',
+      
+      // Validation messages
+      'validation.single_file_limit': 'Einzeldateibeschränkung: {{size}} pro Datei.',
+      'validation.batch_info': 'Stapelkonvertierung unterstützt bis zu {{count}} Dateien, {{perFileSize}} pro Datei, {{totalSize}} insgesamt.',
+      'validation.total_size': 'Gesamtgröße: {{current}} von {{max}} erlaubt.',
+      'validation.file_too_large': 'Datei "{{filename}}" ist zu groß ({{fileSize}}). Maximal erlaubte Größe ist {{maxSize}}.',
+      'validation.too_many_files': 'Zu viele Dateien ausgewählt ({{count}}). Maximal erlaubt sind {{max}}.',
+      'validation.batch_too_large': 'Gesamtgröße des Stapels {{totalSize}} überschreitet das Limit von {{maxSize}}.',
       
       // Features
       'features.lightning_fast': 'Blitzschnell',
