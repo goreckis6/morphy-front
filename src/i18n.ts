@@ -154,8 +154,8 @@ const resources = {
       
       // DOC to EPUB
       'doc_to_epub.title': 'Darmowy Konwerter DOC na EPUB',
-      'doc_to_epub.meta_title': 'Darmowy Konwerter DOC na EPUB Online - Konwertuj Dokumenty Word na eBook | MorphyIMG',
-      'doc_to_epub.meta_description': 'Konwertuj pliki Microsoft Word DOC na format eBook EPUB online za darmo. Szybki, bezpieczny konwerter DOC na EPUB z przetwarzaniem wsadowym. Idealny dla Kindle, Kobo i wszystkich czytników.',
+      'doc_to_epub.meta_title': 'Konwerter DOC na EPUB Za Darmo Online - Konwertuj Word na eBook Bez Rejestracji | MorphyIMG',
+      'doc_to_epub.meta_description': 'Darmowy konwerter DOC na EPUB online ⚡ Konwertuj Microsoft Word do formatu eBook EPUB za darmo. Wsadowe przetwarzanie, bez rejestracji, 100% bezpieczne. Idealny dla Kindle, Kobo, Nook i wszystkich czytników e-booków. Nieograniczone konwersje!',
       'doc_to_epub.subtitle': 'Konwertuj pliki Microsoft Word DOC na format eBook EPUB online za darmo. Idealny dla Kindle, Kobo i wszystkich czytników e-booków. Bez rejestracji.',
       'doc_to_epub.heading': 'Konwertuj DOC na EPUB',
       'doc_to_epub.upload_single': 'Prześlij Plik DOC',
@@ -224,8 +224,8 @@ const resources = {
       
       // AVRO to CSV
       'avro_to_csv.title': 'Konwerter AVRO na CSV',
-      'avro_to_csv.meta_title': 'Konwerter AVRO na CSV - Konwertuj Apache AVRO na Format CSV',
-      'avro_to_csv.meta_description': 'Konwertuj binarne pliki Apache AVRO do formatu arkusza kalkulacyjnego CSV. Wyodrębnij big data do czytelnych plików CSV. Darmowy konwerter online z przetwarzaniem wsadowym.',
+      'avro_to_csv.meta_title': 'Konwerter AVRO na CSV Za Darmo - Apache AVRO do CSV Online Bez Rejestracji | MorphyIMG',
+      'avro_to_csv.meta_description': 'Darmowy konwerter AVRO na CSV online ⚡ Konwertuj Apache AVRO do formatu CSV za darmo. Big Data do Excel, wsadowe przetwarzanie, zachowanie schematu. 100% bezpieczne, bez limitów. Idealne dla analizy danych i raportowania!',
       'avro_to_csv.subtitle': 'Konwertuj pliki Apache AVRO do formatu CSV szybko i łatwo. Idealny do analizy danych i aplikacji arkuszy kalkulacyjnych z zachowaniem schematu.',
       'avro_to_csv.why_convert_title': 'Dlaczego Konwertować AVRO na CSV?',
       'avro_to_csv.seo_intro': 'Konwersja plików Apache AVRO do formatu CSV jest niezbędna do analizy danych, raportowania i integracji z aplikacjami arkuszy kalkulacyjnych. Podczas gdy AVRO jest doskonały do przetwarzania big data i ewolucji schematu, format CSV zapewnia uniwersalną kompatybilność z Excel, Google Sheets i większością narzędzi do analizy danych, czyniąc go standardowym formatem wymiany i analizy danych.',
@@ -279,8 +279,8 @@ const resources = {
       
       // DOC to EPUB
       'doc_to_epub.title': 'Kostenloser DOC zu EPUB Konverter',
-      'doc_to_epub.meta_title': 'Kostenloser DOC zu EPUB Konverter Online - Word-Dokumente in eBook-Format konvertieren | MorphyIMG',
-      'doc_to_epub.meta_description': 'Konvertieren Sie Microsoft Word DOC-Dateien kostenlos online in das EPUB eBook-Format. Schneller, sicherer DOC zu EPUB Konverter mit Stapelverarbeitung. Perfekt für Kindle, Kobo und alle E-Reader.',
+      'doc_to_epub.meta_title': 'DOC zu EPUB Konverter Kostenlos Online - Word in eBook Umwandeln Ohne Anmeldung | MorphyIMG',
+      'doc_to_epub.meta_description': 'Kostenloser DOC zu EPUB Konverter online ⚡ Konvertieren Sie Microsoft Word in EPUB eBook-Format gratis. Stapelverarbeitung, keine Registrierung, 100% sicher. Perfekt für Kindle, Kobo, Nook und alle E-Reader. Unbegrenzte Konvertierungen!',
       'doc_to_epub.subtitle': 'Konvertieren Sie Microsoft Word DOC-Dateien kostenlos online in das EPUB eBook-Format. Perfekt für Kindle, Kobo und alle E-Reader. Keine Registrierung erforderlich.',
       'doc_to_epub.heading': 'DOC zu EPUB konvertieren',
       'doc_to_epub.upload_single': 'DOC-Datei hochladen',
@@ -349,8 +349,8 @@ const resources = {
       
       // AVRO to CSV
       'avro_to_csv.title': 'AVRO zu CSV Konverter',
-      'avro_to_csv.meta_title': 'AVRO zu CSV Konverter - Apache AVRO in CSV-Format konvertieren',
-      'avro_to_csv.meta_description': 'Konvertieren Sie Apache AVRO-Binärdateien in CSV-Tabellenformat. Extrahieren Sie Big Data in lesbare CSV-Dateien. Kostenloser Online-Konverter mit Stapelverarbeitung.',
+      'avro_to_csv.meta_title': 'AVRO zu CSV Konverter Kostenlos - Apache AVRO in CSV Online Ohne Anmeldung | MorphyIMG',
+      'avro_to_csv.meta_description': 'Kostenloser AVRO zu CSV Konverter online ⚡ Konvertieren Sie Apache AVRO in CSV-Format gratis. Big Data nach Excel, Stapelverarbeitung, Schema-Erhaltung. 100% sicher, keine Limits. Perfekt für Datenanalyse und Reporting!',
       'avro_to_csv.subtitle': 'Konvertieren Sie Apache AVRO-Dateien schnell und einfach in das CSV-Format. Perfekt für Datenanalyse und Tabellenkalkulationsanwendungen mit Schemaerhaltung.',
       'avro_to_csv.why_convert_title': 'Warum AVRO zu CSV konvertieren?',
       'avro_to_csv.seo_intro': 'Die Konvertierung von Apache AVRO-Dateien in das CSV-Format ist für Datenanalyse, Berichterstattung und Integration mit Tabellenkalkulationsanwendungen unerlässlich. Während AVRO hervorragend für Big-Data-Verarbeitung und Schema-Evolution ist, bietet das CSV-Format universelle Kompatibilität mit Excel, Google Sheets und den meisten Datenanalyse-Tools, was es zum Standardformat für Datenaustausch und Analyse-Workflows macht.',
