@@ -227,25 +227,41 @@ export const DOCToEPUBConverter: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
         <Header />
         
-        <div className="container mx-auto px-4 py-8 max-w-7xl mt-20">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <BookOpen className="w-12 h-12 text-amber-600" />
+        {/* Hero Section */}
+        <div className="relative overflow-hidden bg-gradient-to-r from-amber-600 via-orange-600 to-rose-700">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <div className="text-center">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Free DOC to EPUB Converter
+              </h1>
+              <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
+                Convert Microsoft Word DOC files to EPUB eBook format online for free. Perfect for Kindle, Kobo, and all e-readers with no registration required.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
+                <div className="flex items-center gap-2">
+                  <Zap className="w-4 h-4" />
+                  <span>Lightning Fast</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4" />
+                  <span>100% Free</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4" />
+                  <span>No Registration</span>
+                </div>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Free DOC to EPUB Converter
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Convert Microsoft Word DOC files to EPUB eBook format online for free. Perfect for Kindle, Kobo, and all e-readers. No registration required.
-            </p>
           </div>
+        </div>
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Main Content - 2 Column Layout */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Converter */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
