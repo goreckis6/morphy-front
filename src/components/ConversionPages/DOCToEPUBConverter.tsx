@@ -474,27 +474,27 @@ export const DOCToEPUBConverter: React.FC = () => {
                       const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.epub`;
                       const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
                       return (
-                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
-                          <div className="flex flex-col">
+                        <div key={index} className={`flex items-center justify-between rounded-lg p-3 ${result.success ? 'bg-white' : 'bg-red-50'}`}>
+                          <div className="flex flex-col flex-1 min-w-0 mr-3">
                             <div className="flex items-center">
                               {result.success ? (
-                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               ) : (
-                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
                               )}
-                              <span className="text-sm font-medium">{displayName}</span>
+                              <span className="text-sm font-medium truncate">{displayName}</span>
                             </div>
-                            {displaySize && (
+                            {result.success && displaySize && (
                               <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
                             )}
                             {!result.success && result.error && (
-                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
+                              <span className="text-xs text-red-600 ml-6 mt-1 font-medium">❌ {result.error}</span>
                             )}
                           </div>
                           {result.success && result.downloadPath && (
                             <button
                               onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0"
                             >
                               Download
                             </button>
