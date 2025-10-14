@@ -159,9 +159,10 @@ export const DOCToEPUBConverter: React.FC = () => {
       const processedResults = results.map((result: any) => ({
         originalName: result.filename,
         outputFilename: result.filename,
-        size: result.size,
-        success: true,
-        downloadPath: `${API_BASE_URL}${result.downloadUrl}`
+        size: result.size || 0,
+        success: !result.error && result.downloadUrl,
+        downloadPath: result.downloadUrl ? `${API_BASE_URL}${result.downloadUrl}` : '',
+        error: result.error
       }));
       
       setBatchResults(processedResults);
