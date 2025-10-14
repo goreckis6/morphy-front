@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,6 +21,7 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const AVROToNDJSONConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -46,6 +48,17 @@ export const AVROToNDJSONConverter: React.FC = () => {
     clearValidationError
   } = useFileValidation();
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Ensure language is synced with URL on mount
+  useEffect(() => {
+    const path = window.location.pathname;
+    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' :
+                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
+
+    if (i18n.language !== urlLang) {
+      i18n.changeLanguage(urlLang);
+    }
+  }, [i18n]);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -201,8 +214,8 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
   return (
     <>
       <Helmet>
-        <title>AVRO to NDJSON Converter - Convert AVRO to Newline Delimited JSON</title>
-        <meta name="description" content="Convert Apache AVRO files to NDJSON format for streaming data. Professional big data conversion tool. Free online converter." />
+        <title>{t('avro_to_ndjson.meta_title')}</title>
+        <meta name="description" content={t('avro_to_ndjson.meta_description')} />
         <meta name="keywords" content="AVRO to NDJSON, Apache AVRO, streaming data, newline delimited JSON, big data" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -214,23 +227,23 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              AVRO to NDJSON Converter
+              {t('avro_to_ndjson.title')}
             </h1>
             <p className="text-lg sm:text-xl text-indigo-100 mb-6 max-w-2xl mx-auto">
-              Convert Apache AVRO files to Newline Delimited JSON (NDJSON) format. Perfect for streaming data and big data processing with one JSON object per line.
+              {t('avro_to_ndjson.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-indigo-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -255,7 +268,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -266,7 +279,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -274,12 +287,12 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-indigo-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple AVRO Files' : 'Upload AVRO File'}
+                  {batchMode ? t('avro_to_ndjson.upload_batch') : t('avro_to_ndjson.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple AVRO files to convert them all at once' 
-                    : 'Drag and drop your AVRO file here or click to browse'
+                    ? t('avro_to_ndjson.upload_text_batch')
+                    : t('avro_to_ndjson.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
@@ -300,14 +313,14 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('avro_to_ndjson.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <Database className="w-12 h-12 text-gray-400" />
@@ -328,7 +341,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('avro_to_ndjson.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -338,7 +351,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('avro_to_ndjson.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -375,12 +388,12 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to NDJSON'}
+                      {batchMode ? t('avro_to_ndjson.convert_files', { count: batchFiles.length }) : t('avro_to_ndjson.convert_to_ndjson')}
                     </div>
                   )}
                 </button>
@@ -391,10 +404,10 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('avro_to_ndjson.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your AVRO file has been successfully converted to NDJSON format.
+                    {t('avro_to_ndjson.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -402,14 +415,14 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download NDJSON File
+                      {t('avro_to_ndjson.download_ndjson')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -420,10 +433,10 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('avro_to_ndjson.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('avro_to_ndjson.batch_success_message', { count: batchResults.filter(r => r.success).length, total: batchResults.length })}
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
@@ -452,7 +465,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                               onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                             >
-                              Download
+                              {t('common.download')}
                             </button>
                           )}
                         </div>
@@ -465,7 +478,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('common.convert_more_files')}
                     </button>
                   </div>
                 </div>
@@ -480,7 +493,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-indigo-600" />
-                NDJSON Settings
+                {t('avro_to_ndjson.ndjson_settings')}
               </h3>
               
               {/* Pretty Print */}
@@ -492,7 +505,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                     onChange={(e) => setPrettyPrint(e.target.checked)}
                     className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Pretty print JSON objects</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('avro_to_ndjson.pretty_print')}</span>
                 </label>
               </div>
 
@@ -505,7 +518,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                     onChange={(e) => setIncludeSchema(e.target.checked)}
                     className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include schema information</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('avro_to_ndjson.include_schema')}</span>
                 </label>
               </div>
 
@@ -518,7 +531,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                     onChange={(e) => setStreamingMode(e.target.checked)}
                     className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Optimize for streaming</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('avro_to_ndjson.optimize_streaming')}</span>
                 </label>
               </div>
             </div>
@@ -527,16 +540,16 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('avro_to_ndjson.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Streaming-friendly output",
-                  "One JSON object per line",
-                  "Big data processing ready",
-                  "No file size limits",
-                  "Fast conversion process",
-                  "Batch processing support"
+                  t('avro_to_ndjson.feature_1'),
+                  t('avro_to_ndjson.feature_2'),
+                  t('avro_to_ndjson.feature_3'),
+                  t('avro_to_ndjson.feature_4'),
+                  t('avro_to_ndjson.feature_5'),
+                  t('avro_to_ndjson.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -550,16 +563,16 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-indigo-600" />
-                Perfect For
+                {t('avro_to_ndjson.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Streaming data processing",
-                  "Big data analytics",
-                  "Log file processing",
-                  "Real-time data pipelines",
-                  "Machine learning workflows",
-                  "Data lake operations"
+                  t('avro_to_ndjson.use_case_1'),
+                  t('avro_to_ndjson.use_case_2'),
+                  t('avro_to_ndjson.use_case_3'),
+                  t('avro_to_ndjson.use_case_4'),
+                  t('avro_to_ndjson.use_case_5'),
+                  t('avro_to_ndjson.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -577,106 +590,106 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+{t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert AVRO to NDJSON?
+            {t('avro_to_ndjson.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Apache AVRO files to Newline Delimited JSON (NDJSON) format is essential for streaming data processing, big data analytics, and real-time data pipelines. While AVRO is excellent for schema evolution and compression, NDJSON provides streaming-friendly output with one JSON object per line, making it ideal for processing large datasets and real-time data streams.
+              {t('avro_to_ndjson.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of NDJSON Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('avro_to_ndjson.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Streaming-Friendly Output</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('avro_to_ndjson.benefit_streaming_title')}</h4>
                 <p className="text-gray-700">
-                  NDJSON format allows for streaming processing of large datasets, enabling real-time data processing and analysis without loading entire files into memory.
+                  {t('avro_to_ndjson.benefit_streaming_text')}
                 </p>
               </div>
               
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">One JSON Object Per Line</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('avro_to_ndjson.benefit_oneline_title')}</h4>
                 <p className="text-gray-700">
-                  Each line contains a complete JSON object, making it easy to process records individually and enabling parallel processing of large datasets.
+                  {t('avro_to_ndjson.benefit_oneline_text')}
                 </p>
               </div>
               
               <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">Big Data Processing Ready</h4>
+                <h4 className="text-xl font-semibold text-pink-900 mb-3">{t('avro_to_ndjson.benefit_bigdata_title')}</h4>
                 <p className="text-gray-700">
-                  NDJSON format is optimized for big data processing frameworks like Apache Spark, Hadoop, and cloud-based analytics platforms.
+                  {t('avro_to_ndjson.benefit_bigdata_text')}
                 </p>
               </div>
               
               <div className="bg-rose-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-rose-900 mb-3">Real-time Data Pipelines</h4>
+                <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('avro_to_ndjson.benefit_realtime_title')}</h4>
                 <p className="text-gray-700">
-                  NDJSON format is perfect for real-time data pipelines, enabling continuous processing of streaming data with minimal latency.
+                  {t('avro_to_ndjson.benefit_realtime_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('avro_to_ndjson.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Streaming Data Processing</h4>
-                  <p className="text-gray-700">Convert AVRO data to NDJSON format for streaming data processing applications that need to handle continuous data flows in real-time.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_ndjson.use_case_streaming_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_ndjson.use_case_streaming_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Big Data Analytics</h4>
-                  <p className="text-gray-700">Transform AVRO data into NDJSON format for use with big data analytics platforms like Apache Spark, Hadoop, and cloud analytics services.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_ndjson.use_case_analytics_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_ndjson.use_case_analytics_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Log File Processing</h4>
-                  <p className="text-gray-700">Convert AVRO log data to NDJSON format for efficient log processing, analysis, and monitoring applications.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_ndjson.use_case_logs_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_ndjson.use_case_logs_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Machine Learning Workflows</h4>
-                  <p className="text-gray-700">Transform AVRO data into NDJSON format for machine learning pipelines that require streaming data processing and real-time model training.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_ndjson.use_case_ml_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_ndjson.use_case_ml_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your AVRO Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('avro_to_ndjson.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online AVRO to NDJSON converter to transform your data for streaming and big data processing.
+                {t('avro_to_ndjson.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>

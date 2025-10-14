@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RefreshCw, User, LogOut, Menu, X } from 'lucide-react';
+import { User, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { AuthModal } from './AuthModal';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -23,9 +23,11 @@ export const Header: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <a href="/" className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity">
-              <div className="p-2 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
-                <RefreshCw className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="/logo.jpg" 
+                alt="MorphyIMG Logo" 
+                className="h-12 w-auto object-contain"
+              />
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
                   MorphyIMG
