@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, Upload, Download, CheckCircle, AlertCircle, BookOpen, ArrowLeft } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
-import { Footer } from '../Footer';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
@@ -505,8 +504,6 @@ export const DOCToEPUBConverter: React.FC = () => {
             </div>
           </div>
         </main>
-
-        <Footer />
       </div>
     </>
   );
