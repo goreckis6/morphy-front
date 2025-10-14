@@ -227,13 +227,20 @@ export const DOCToEPUBConverter: React.FC = () => {
         <title>{t('doc_to_epub.meta_title')}</title>
         <meta name="description" content={t('doc_to_epub.meta_description')} />
         <meta name="keywords" content="free DOC to EPUB converter, DOC to EPUB online free, convert Word to EPUB, Word document to eBook, DOC to EPUB batch converter, Microsoft Word to EPUB, free eBook converter" />
-        <link rel="canonical" href="https://morphyimg.com/convert/doc-to-epub" />
+        
+        {/* Canonical and alternate language URLs */}
+        <link rel="canonical" href={`https://morphyimg.com${window.location.pathname.startsWith('/pl/') ? window.location.pathname : '/convert/doc-to-epub'}`} />
+        <link rel="alternate" hrefLang="en" href="https://morphyimg.com/convert/doc-to-epub" />
+        <link rel="alternate" hrefLang="pl" href="https://morphyimg.com/pl/convert/doc-to-epub" />
+        <link rel="alternate" hrefLang="x-default" href="https://morphyimg.com/convert/doc-to-epub" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Free DOC to EPUB Converter Online - Convert Word Documents to eBook" />
-        <meta property="og:description" content="Convert Microsoft Word DOC files to EPUB eBook format online for free. Batch processing, no registration required. Compatible with all e-readers." />
+        <meta property="og:title" content={t('doc_to_epub.meta_title')} />
+        <meta property="og:description" content={t('doc_to_epub.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/convert/doc-to-epub" />
+        <meta property="og:url" content={`https://morphyimg.com${window.location.pathname}`} />
+        <meta property="og:locale" content={window.location.pathname.startsWith('/pl/') ? 'pl_PL' : 'en_US'} />
+        <meta property="og:locale:alternate" content={window.location.pathname.startsWith('/pl/') ? 'en_US' : 'pl_PL'} />
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">

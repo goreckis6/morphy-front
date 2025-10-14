@@ -1,12 +1,15 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
+import { getLocalizedUrl } from '../i18n';
 
 export const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+    const currentPath = window.location.pathname;
+    const newUrl = getLocalizedUrl(currentPath, lng);
+    window.location.href = newUrl;
   };
 
   return (

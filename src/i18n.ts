@@ -178,7 +178,25 @@ const resources = {
   }
 };
 
+// Custom language detector from URL
+const urlLanguageDetector = {
+  name: 'urlPath',
+  lookup() {
+    const path = window.location.pathname;
+    // If URL starts with /pl/, use Polish
+    // Otherwise use English (default, no prefix)
+    return path.startsWith('/pl/') || path === '/pl' ? 'pl' : 'en';
+  },
+  cacheUserLanguage(lng: string) {
+    localStorage.setItem('i18nextLng', lng);
+  }
+};
+
 i18n
+  .use({
+    type: 'languageDetector',
+    ...urlLanguageDetector
+  } as any)
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
@@ -186,7 +204,7 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'pl'],
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['urlPath', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng'
     },
@@ -196,4 +214,24 @@ i18n
   });
 
 export default i18n;
+
+// Helper function to get current language from URL
+export const getLanguageFromUrl = (): string => {
+  const path = window.location.pathname;
+  return path.startsWith('/pl/') || path === '/pl' ? 'pl' : 'en';
+};
+
+// Helper function to toggle language URL (English = no prefix, Polish = /pl/)
+export const getLocalizedUrl = (currentPath: string, targetLanguage: string): string => {
+  // Remove /pl/ prefix if it exists
+  const cleanPath = currentPath.replace(/^\/pl\//, '/').replace(/^\/pl$/, '/');
+  
+  // Add /pl/ prefix only for Polish
+  if (targetLanguage === 'pl') {
+    return `/pl${cleanPath}`;
+  }
+  
+  // English = no prefix
+  return cleanPath;
+};
 
