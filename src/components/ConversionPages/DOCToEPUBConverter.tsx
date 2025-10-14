@@ -1,78 +1,113 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, Upload, Download, CheckCircle, AlertCircle, BookOpen, ArrowLeft } from 'lucide-react';
-import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
+import { 
+  Upload, 
+  Download, 
+  Settings, 
+  FileText,
+  FileImage,
+  RefreshCw,
+  CheckCircle,
+  AlertCircle,
+  Zap,
+  BookOpen,
+  Info
+} from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
 
 export const DOCToEPUBConverter: React.FC = () => {
-  const [file, setFile] = useState<File | null>(null);
-  const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const [batchMode, setBatchMode] = useState(false);
-  const [converting, setConverting] = useState(false);
-  const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
-  const [batchResults, setBatchResults] = useState<Array<{
-    name: string;
-    downloadUrl: string;
-    size: number;
-  }>>([]);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [batchMode, setBatchMode] = useState(false);
+  const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [conversionTime, setConversionTime] = useState<number | null>(null);
 
-  // File size constants
-  const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB per file
-  const MAX_BATCH_SIZE = 100 * 1024 * 1024; // 100MB total
-  const MAX_BATCH_FILES = 20;
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getSingleInfoMessage,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileSelect = (selectedFiles: File[]) => {
-    setError(null);
-    setDownloadUrl(null);
-    setBatchResults([]);
-    setConversionTime(null);
-
-    if (batchMode) {
-      // Validate batch constraints
-      if (selectedFiles.length > MAX_BATCH_FILES) {
-        setError(`Maximum ${MAX_BATCH_FILES} files allowed in batch mode`);
-        return;
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      if (file.name.toLowerCase().endsWith('.doc')) {
+        const validation = validateSingleFile(file);
+        if (!validation.isValid) {
+          setError(validation.error?.message || 'File validation failed');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          if (event.target) {
+            event.target.value = '';
+          }
+          return;
+        }
+        setSelectedFile(file);
+        setError(null);
+        clearValidationError();
+        setConvertedFile(null);
+        setConvertedFilename(null);
+        setPreviewUrl(URL.createObjectURL(file));
+      } else {
+        setError('Please select a valid DOC file');
       }
-
-      // Check individual file sizes
-      const oversizedFiles = selectedFiles.filter(f => f.size > MAX_FILE_SIZE);
-      if (oversizedFiles.length > 0) {
-        setError(`Files exceed 100MB limit: ${oversizedFiles.map(f => f.name).join(', ')}`);
-        return;
-      }
-
-      // Check total batch size
-      const totalSize = selectedFiles.reduce((sum, f) => sum + f.size, 0);
-      if (totalSize > MAX_BATCH_SIZE) {
-        setError(`Total batch size (${(totalSize / 1024 / 1024).toFixed(2)} MB) exceeds 100MB limit`);
-        return;
-      }
-
-      setBatchFiles(selectedFiles);
-    } else {
-      if (selectedFiles[0].size > MAX_FILE_SIZE) {
-        setError(`File size exceeds 100MB limit`);
-        return;
-      }
-      setFile(selectedFiles[0]);
     }
   };
 
-  const handleSingleConvert = async () => {
-    if (!file) return;
+  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files || []);
+    
+    const docFiles = files.filter(file => file.name.toLowerCase().endsWith('.doc'));
+    
+    if (docFiles.length === 0) {
+      setError('No valid DOC files selected.');
+      return;
+    }
 
-    setConverting(true);
+    const validation = validateBatchFiles(docFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (event.target) {
+        event.target.value = '';
+      }
+      return;
+    }
+
+    setBatchFiles(docFiles);
     setError(null);
-    setDownloadUrl(null);
+    clearValidationError();
+    setBatchConverted(false);
+    setBatchResults([]);
+  };
+
+  const handleSingleConvert = async () => {
+    if (!selectedFile) return;
+
+    setIsConverting(true);
+    setError(null);
+    setConvertedFile(null);
     const startTime = Date.now();
 
     try {
       const formData = new FormData();
-      formData.append('file', file);
+      formData.append('file', selectedFile);
 
       const response = await fetch(`${API_BASE_URL}/convert/doc-to-epub/single`, {
         method: 'POST',
@@ -85,25 +120,21 @@ export const DOCToEPUBConverter: React.FC = () => {
       }
 
       const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      setDownloadUrl(url);
+      setConvertedFile(blob);
+      const filename = selectedFile.name.replace(/\.doc$/i, '.epub');
+      setConvertedFilename(filename);
       setConversionTime(Date.now() - startTime);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Conversion failed');
     } finally {
-      setConverting(false);
+      setIsConverting(false);
     }
   };
 
   const handleBatchConvert = async () => {
-    console.log('Batch convert clicked', { filesCount: batchFiles.length });
-    
-    if (batchFiles.length === 0) {
-      console.log('No files selected');
-      return;
-    }
+    if (batchFiles.length === 0) return;
 
-    setConverting(true);
+    setIsConverting(true);
     setError(null);
     setBatchResults([]);
     const startTime = Date.now();
@@ -112,52 +143,41 @@ export const DOCToEPUBConverter: React.FC = () => {
       const formData = new FormData();
       batchFiles.forEach(file => {
         formData.append('files', file);
-        console.log('Adding file to FormData:', file.name, file.size);
       });
-
-      console.log('Sending batch request to:', `${API_BASE_URL}/convert/doc-to-epub/batch`);
 
       const response = await fetch(`${API_BASE_URL}/convert/doc-to-epub/batch`, {
         method: 'POST',
         body: formData,
       });
 
-      console.log('Response status:', response.status);
-
       if (!response.ok) {
         const errorData = await response.json();
-        console.error('Batch conversion error:', errorData);
         throw new Error(errorData.error || 'Batch conversion failed');
       }
 
       const results = await response.json();
-      console.log('Batch results:', results);
-      
-      setBatchResults(results.map((result: any) => ({
-        name: result.filename,
-        downloadUrl: `${API_BASE_URL}${result.downloadUrl}`,
-        size: result.size
-      })));
+      setBatchResults(results);
+      setBatchConverted(true);
       setConversionTime(Date.now() - startTime);
     } catch (err) {
-      console.error('Batch conversion error:', err);
       setError(err instanceof Error ? err.message : 'Batch conversion failed');
     } finally {
-      setConverting(false);
+      setIsConverting(false);
     }
   };
 
-  const getBatchSizeDisplay = () => {
-    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
-    const totalMB = totalSize / 1024 / 1024;
-    const isWarning = totalSize > MAX_BATCH_SIZE * 0.8;
-    return {
-      text: `Total size: ${totalMB.toFixed(2)} MB of 100.00 MB allowed`,
-      isWarning
-    };
+  const handleDownload = () => {
+    if (convertedFile && convertedFilename) {
+      const url = URL.createObjectURL(convertedFile);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = convertedFilename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
   };
-
-  const sizeDisplay = getBatchSizeDisplay();
 
   return (
     <>
@@ -207,27 +227,16 @@ export const DOCToEPUBConverter: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 flex flex-col">
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
         <Header />
         
-        <main className="flex-grow container mx-auto px-4 py-8 mt-16">
-          {/* Back Button */}
-          <a
-            href="/converters"
-            className="mb-6 flex items-center text-amber-600 hover:text-amber-700 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Converters
-          </a>
-
+        <div className="container mx-auto px-4 py-8 max-w-7xl mt-20">
           {/* Header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
-              <div className="p-3 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl shadow-lg">
-                <BookOpen className="w-8 h-8 text-white" />
-              </div>
+              <BookOpen className="w-12 h-12 text-amber-600" />
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-3">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Free DOC to EPUB Converter
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -235,275 +244,327 @@ export const DOCToEPUBConverter: React.FC = () => {
             </p>
           </div>
 
-          {/* Mode Toggle */}
-          <div className="flex justify-center mb-8">
-            <div className="bg-white rounded-xl shadow-md p-1 inline-flex">
-              <button
-                onClick={() => {
-                  setBatchMode(false);
-                  setBatchFiles([]);
-                  setBatchResults([]);
-                  setError(null);
-                }}
-                className={`px-6 py-2 rounded-lg font-medium transition-all ${
-                  !batchMode
-                    ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-md'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Single File
-              </button>
-              <button
-                onClick={() => {
-                  setBatchMode(true);
-                  setFile(null);
-                  setDownloadUrl(null);
-                  setError(null);
-                }}
-                className={`px-6 py-2 rounded-lg font-medium transition-all ${
-                  batchMode
-                    ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-md'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Batch Convert
-              </button>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-1 gap-8 max-w-4xl mx-auto">
-            {/* Upload Section */}
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <div className="mb-6">
-                <FileUpload
-                  accept=".doc"
-                  onFilesSelected={handleFileSelect}
-                  maxFiles={batchMode ? MAX_BATCH_FILES : 1}
-                  icon={Upload}
-                  label={batchMode ? "Drop DOC files here or click to upload" : "Drop DOC file here or click to upload"}
-                />
-                {!batchMode && (
-                  <p className="text-sm text-amber-600 mt-4">
-                    ✓ Up to 100 MB per file
-                  </p>
-                )}
-                {batchMode && (
-                  <p className="text-sm text-amber-600 mt-4">
-                    ✓ Max 20 files • Up to 100 MB per file • 100 MB total batch size
-                  </p>
-                )}
-              </div>
-
-              {/* File Info */}
-              {!batchMode && file && (
-                <div className="mb-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <FileText className="w-5 h-5 text-amber-600 mr-3" />
-                      <div>
-                        <p className="font-medium text-gray-900">{file.name}</p>
-                        <p className="text-sm text-gray-600">
-                          {(file.size / 1024 / 1024).toFixed(2)} MB
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Batch Files List */}
-              {batchMode && batchFiles.length > 0 && (
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      Selected Files ({batchFiles.length})
-                    </h4>
-                    <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
-                      {sizeDisplay.text}
-                    </div>
-                  </div>
-                  {sizeDisplay.isWarning && (
-                    <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                      <p className="text-sm text-orange-800">
-                        ⚠️ Approaching batch size limit. Consider removing some files.
-                      </p>
-                    </div>
-                  )}
-                  <div className="max-h-64 overflow-y-auto space-y-2">
-                    {batchFiles.map((f, idx) => (
-                      <div key={idx} className="p-3 bg-amber-50 rounded-lg border border-amber-200">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center min-w-0 flex-1">
-                            <FileText className="w-4 h-4 text-amber-600 mr-2 flex-shrink-0" />
-                            <span className="text-sm text-gray-900 truncate">{f.name}</span>
-                          </div>
-                          <span className="text-sm text-gray-600 ml-2">
-                            {(f.size / 1024 / 1024).toFixed(2)} MB
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Convert Button */}
-              {((file && !batchMode) || (batchFiles.length > 0 && batchMode)) && (
-                <button
-                  onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={converting}
-                  className="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white py-4 rounded-xl font-semibold hover:from-amber-600 hover:to-orange-700 transform hover:scale-[1.02] transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-                >
-                  {converting ? (
-                    <span className="flex items-center justify-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Converting...
-                    </span>
-                  ) : (
-                    `Convert to EPUB`
-                  )}
-                </button>
-              )}
-
-              {/* Error Message */}
-              {error && (
-                <div className="mt-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start">
-                  <AlertCircle className="w-5 h-5 text-red-600 mr-3 flex-shrink-0 mt-0.5" />
-                  <p className="text-red-800">{error}</p>
-                </div>
-              )}
-
-              {/* Success Message - Single */}
-              {downloadUrl && !batchMode && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-lg">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-600 mr-3" />
-                    <div>
-                      <p className="font-semibold text-green-900">Conversion Successful!</p>
-                      {conversionTime && (
-                        <p className="text-sm text-green-700">
-                          Completed in {(conversionTime / 1000).toFixed(2)}s
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <a
-                    href={downloadUrl}
-                    download={file?.name.replace(/\.doc$/i, '.epub')}
-                    className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+          {/* Main Content - 2 Column Layout */}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Left Column - Converter */}
+            <div className="lg:col-span-2">
+              <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Convert DOC to EPUB</h2>
+                
+                {/* Mode Toggle */}
+                <div className="flex gap-4 mb-6">
+                  <button
+                    onClick={() => setBatchMode(false)}
+                    className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
+                      !batchMode 
+                        ? 'bg-amber-600 text-white shadow-lg' 
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
                   >
-                    <Download className="w-5 h-5 mr-2" />
-                    Download EPUB
-                  </a>
+                    <FileText className="w-5 h-5 inline mr-2" />
+                    Single File
+                  </button>
+                  <button
+                    onClick={() => setBatchMode(true)}
+                    className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
+                      batchMode 
+                        ? 'bg-amber-600 text-white shadow-lg' 
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    }`}
+                  >
+                    <FileImage className="w-5 h-5 inline mr-2" />
+                    Batch Convert
+                  </button>
                 </div>
-              )}
 
-              {/* Success Message - Batch */}
-              {batchResults.length > 0 && batchMode && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-lg">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-600 mr-3" />
-                    <div>
-                      <p className="font-semibold text-green-900">
-                        Batch Conversion Successful!
+                {/* File Upload Area */}
+                <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
+                  <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {batchMode ? 'Upload Multiple DOC Files' : 'Upload DOC File'}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {batchMode 
+                      ? 'Select multiple DOC files to convert them all at once' 
+                      : 'Drag and drop your DOC file here or click to browse'
+                    }
+                  </p>
+                  {!batchMode && (
+                    <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
+                  )}
+                  {batchMode && (
+                    <p className="text-sm text-blue-600 mb-4">{getBatchInfoMessage()}</p>
+                  )}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".doc"
+                    multiple={batchMode}
+                    onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
+                    className="hidden"
+                  />
+                  <button
+                    onClick={() => fileInputRef.current?.click()}
+                    className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
+                  >
+                    Choose Files
+                  </button>
+                </div>
+
+                {/* File Preview */}
+                {previewUrl && !batchMode && (
+                  <div className="mt-6">
+                    <h4 className="text-lg font-semibold mb-4">Selected File</h4>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
+                        <FileText className="w-12 h-12 text-gray-400" />
+                      </div>
+                      <p className="text-sm text-gray-600 mt-2 text-center">
+                        {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                       </p>
-                      {conversionTime && (
-                        <p className="text-sm text-green-700">
-                          Completed in {(conversionTime / 1000).toFixed(2)}s
-                        </p>
-                      )}
                     </div>
                   </div>
-                  <div className="space-y-2 max-h-96 overflow-y-auto">
-                    {batchResults.map((result, idx) => (
-                      <div key={idx} className="flex items-center justify-between p-3 bg-white rounded-lg">
-                        <div className="flex items-center min-w-0 flex-1">
-                          <FileText className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />
-                          <span className="text-sm text-gray-900 truncate">{result.name}</span>
-                          <span className="text-sm text-gray-600 ml-2">
-                            ({(result.size / 1024 / 1024).toFixed(2)} MB)
-                          </span>
-                        </div>
-                        <a
-                          href={result.downloadUrl}
-                          className="ml-4 inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition-colors flex-shrink-0"
-                        >
-                          <Download className="w-4 h-4 mr-1" />
-                          Download
-                        </a>
+                )}
+
+                {/* Batch Files List */}
+                {batchMode && batchFiles.length > 0 && (
+                  <div className="mt-6">
+                    {(() => {
+                      const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                      const sizeDisplay = getBatchSizeDisplay(totalSize);
+                      return (
+                        <>
+                          <div className="flex items-center justify-between mb-4">
+                            <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                            <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                              {sizeDisplay.text}
+                            </div>
+                          </div>
+                          {sizeDisplay.isWarning && (
+                            <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                              <div className="flex items-center">
+                                <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                                <span className="text-sm text-orange-700">
+                                  Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                </span>
+                              </div>
+                            </div>
+                          )}
+                          <div className="space-y-2 max-h-40 overflow-y-auto">
+                            {batchFiles.map((file, index) => (
+                              <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                                <span className="text-sm font-medium">{file.name}</span>
+                                <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </>
+                      );
+                    })()}
+                  </div>
+                )}
+
+                {/* Error Message */}
+                {(error || validationError) && (
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
+                    <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
+                    <span className="text-red-700">{error || validationError}</span>
+                  </div>
+                )}
+
+                {/* Convert Button */}
+                <div className="mt-8">
+                  <button
+                    onClick={batchMode ? handleBatchConvert : handleSingleConvert}
+                    disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                    className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-amber-700 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  >
+                    {isConverting ? (
+                      <div className="flex items-center justify-center">
+                        <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+                        Converting...
                       </div>
-                    ))}
+                    ) : (
+                      <div className="flex items-center justify-center">
+                        <Zap className="w-5 h-5 mr-2" />
+                        {batchMode ? `Convert ${batchFiles.length} Files to EPUB` : 'Convert to EPUB'}
+                      </div>
+                    )}
+                  </button>
+                </div>
+
+                {/* Success Message & Download - Single */}
+                {convertedFile && !batchMode && (
+                  <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                    <div className="flex items-center mb-4">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                        {conversionTime && (
+                          <p className="text-sm text-green-700">Completed in {(conversionTime / 1000).toFixed(2)}s</p>
+                        )}
+                      </div>
+                    </div>
+                    <p className="text-green-700 mb-4">
+                      Your DOC file has been successfully converted to EPUB format.
+                    </p>
+                    <button
+                      onClick={handleDownload}
+                      className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors inline-flex items-center"
+                    >
+                      <Download className="w-5 h-5 mr-2" />
+                      Download EPUB
+                    </button>
+                  </div>
+                )}
+
+                {/* Success Message & Download - Batch */}
+                {batchConverted && batchMode && batchResults.length > 0 && (
+                  <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                    <div className="flex items-center mb-4">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                      <div>
+                        <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                        {conversionTime && (
+                          <p className="text-sm text-green-700">Completed in {(conversionTime / 1000).toFixed(2)}s</p>
+                        )}
+                      </div>
+                    </div>
+                    <p className="text-green-700 mb-4">
+                      All {batchResults.length} files have been successfully converted to EPUB format.
+                    </p>
+                    <div className="space-y-2">
+                      {batchResults.map((result, index) => (
+                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
+                          <div className="flex items-center flex-1 min-w-0 mr-4">
+                            <BookOpen className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" />
+                            <span className="text-sm font-medium truncate">{result.filename}</span>
+                            <span className="text-xs text-gray-500 ml-2">
+                              ({formatFileSize(result.size)})
+                            </span>
+                          </div>
+                          <a
+                            href={`${API_BASE_URL}${result.downloadUrl}`}
+                            download={result.filename}
+                            className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors inline-flex items-center flex-shrink-0"
+                          >
+                            <Download className="w-4 h-4 mr-1" />
+                            Download
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Right Column - Info */}
+            <div className="lg:col-span-1">
+              <div className="bg-white rounded-2xl shadow-xl p-6 sticky top-24">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <Info className="w-5 h-5 mr-2 text-amber-600" />
+                  About EPUB Format
+                </h3>
+                <div className="space-y-4 text-sm text-gray-600">
+                  <p>
+                    <strong className="text-gray-900">EPUB (Electronic Publication)</strong> is the universal eBook standard format that works with all major e-readers and reading apps.
+                  </p>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Benefits:</h4>
+                    <ul className="space-y-1">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>100% Free conversion</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Reflowable text adapts to screen size</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Compatible with Kindle, Kobo, Nook</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Preserves formatting & structure</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Batch process up to 20 files</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>Secure & private processing</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="pt-4 border-t">
+                    <h4 className="font-semibold text-gray-900 mb-2">How to Use:</h4>
+                    <ol className="space-y-1 list-decimal list-inside">
+                      <li>Upload your DOC file(s)</li>
+                      <li>Click "Convert to EPUB"</li>
+                      <li>Download your eBook file</li>
+                      <li>Open in your e-reader app</li>
+                    </ol>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
           </div>
 
-          {/* Info Section */}
-          <div className="mt-12 max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">About Free DOC to EPUB Conversion</h2>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {/* Additional Info Section */}
+          <div className="mt-12 bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Use Our Free DOC to EPUB Converter?</h2>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">What is DOC Format?</h3>
+                <p className="text-gray-600 text-sm">
+                  DOC is the legacy Microsoft Word document format used before Office 2007. It's a binary format that stores text, formatting, images, tables, and other document elements. Our free converter supports all DOC files.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-2">What is EPUB Format?</h3>
+                <p className="text-gray-600 text-sm">
+                  EPUB (Electronic Publication) is the universal eBook standard format. It's reflowable, meaning text automatically adapts to different screen sizes, making it perfect for e-readers like Kindle, Kobo, Nook, and mobile devices.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="font-semibold text-gray-900 mb-3">Features:</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What is DOC Format?</h3>
-                  <p className="text-gray-600 text-sm">
-                    DOC is the legacy Microsoft Word document format used before Office 2007. It's a binary format that stores text, formatting, images, tables, and other document elements. Our free converter supports all DOC files.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What is EPUB Format?</h3>
-                  <p className="text-gray-600 text-sm">
-                    EPUB (Electronic Publication) is the universal eBook standard format. It's reflowable, meaning text automatically adapts to different screen sizes, making it perfect for e-readers like Kindle, Kobo, Nook, and mobile devices.
-                  </p>
+                  <strong>100% Free:</strong>
+                  <span className="text-gray-600"> No hidden fees, no subscriptions, unlimited conversions</span>
                 </div>
               </div>
-
-              <h3 className="font-semibold text-gray-900 mb-3">Why Use Our Free DOC to EPUB Converter?</h3>
-              <ul className="space-y-2 text-gray-600 mb-8">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span><strong>100% Free:</strong> No hidden fees, no subscriptions, unlimited conversions</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span><strong>No Registration:</strong> Start converting immediately without creating an account</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span><strong>Batch Processing:</strong> Convert up to 20 DOC files to EPUB simultaneously</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span><strong>Preserves Formatting:</strong> Maintains text styling, structure, and document hierarchy</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span><strong>Universal Compatibility:</strong> Works with Kindle, Kobo, Nook, Apple Books, and all e-readers</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span><strong>Secure & Private:</strong> Files are automatically deleted after conversion</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span><strong>Fast Conversion:</strong> High-speed processing with instant download</span>
-                </li>
-              </ul>
-
-              <h3 className="font-semibold text-gray-900 mb-3">How to Convert DOC to EPUB Online Free:</h3>
-              <ol className="space-y-2 text-gray-600 list-decimal list-inside">
-                <li>Upload your Microsoft Word DOC file(s) using the file picker or drag & drop</li>
-                <li>Click the "Convert to EPUB" button to start the free conversion</li>
-                <li>Download your converted EPUB eBook file instantly</li>
-                <li>Open the EPUB file on your favorite e-reader or reading app</li>
-              </ol>
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong>No Registration:</strong>
+                  <span className="text-gray-600"> Start converting immediately without creating an account</span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong>Batch Processing:</strong>
+                  <span className="text-gray-600"> Convert up to 20 DOC files to EPUB simultaneously</span>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong>Universal Compatibility:</strong>
+                  <span className="text-gray-600"> Works with all e-readers and reading apps</span>
+                </div>
+              </div>
             </div>
           </div>
-        </main>
+        </div>
       </div>
     </>
   );
