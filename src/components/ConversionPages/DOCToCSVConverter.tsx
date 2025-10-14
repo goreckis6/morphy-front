@@ -103,8 +103,6 @@ export const DOCToCSVConverter: React.FC = () => {
     try {
       const formData = new FormData();
       formData.append('file', selectedFile);
-      formData.append('sourceFormat', 'doc');
-      formData.append('targetFormat', 'csv');
       formData.append('includeHeaders', includeHeaders.toString());
       formData.append('delimiter', delimiter);
       formData.append('encoding', encoding);
@@ -113,7 +111,7 @@ export const DOCToCSVConverter: React.FC = () => {
         ? 'https://morphy-2-n2tb.onrender.com' 
         : 'http://localhost:3000';
 
-      const response = await fetch(`${API_BASE_URL}/api/convert`, {
+      const response = await fetch(`${API_BASE_URL}/convert/doc-to-csv/single`, {
         method: 'POST',
         body: formData
       });
@@ -146,8 +144,6 @@ export const DOCToCSVConverter: React.FC = () => {
       batchFiles.forEach(file => {
         formData.append('files', file);
       });
-      formData.append('sourceFormat', 'doc');
-      formData.append('targetFormat', 'csv');
       formData.append('includeHeaders', includeHeaders.toString());
       formData.append('delimiter', delimiter);
       formData.append('encoding', encoding);
@@ -156,7 +152,7 @@ export const DOCToCSVConverter: React.FC = () => {
         ? 'https://morphy-2-n2tb.onrender.com' 
         : 'http://localhost:3000';
 
-      const response = await fetch(`${API_BASE_URL}/api/convert/batch`, {
+      const response = await fetch(`${API_BASE_URL}/convert/doc-to-csv/batch`, {
         method: 'POST',
         body: formData
       });
@@ -341,11 +337,13 @@ export const DOCToCSVConverter: React.FC = () => {
                   }
                 </p>
                 {!batchMode && (
-                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
+                  <p className="text-sm text-blue-600 mb-4">
+                    ✓ Up to 100 MB per file
+                  </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-blue-600 mb-4">
-                    {getBatchInfoMessage()}
+                    ✓ Max 20 files • Up to 100 MB per file • 100 MB total batch size
                   </p>
                 )}
                 <input
