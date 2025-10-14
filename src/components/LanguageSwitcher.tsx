@@ -9,11 +9,8 @@ export const LanguageSwitcher: React.FC = () => {
   const changeLanguage = (lng: string) => {
     const currentPath = window.location.pathname;
     const newUrl = getLocalizedUrl(currentPath, lng);
-    console.log('Language change:', { from: i18n.language, to: lng, currentPath, newUrl });
     window.location.href = newUrl;
   };
-
-  console.log('Current language from i18n:', i18n.language);
 
   return (
     <div className="flex items-center gap-2">
