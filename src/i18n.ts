@@ -175,6 +175,92 @@ const resources = {
       'doc_to_epub.ready_title': 'Gotowy do Konwersji Plików DOC?',
       'doc_to_epub.ready_text': 'Użyj naszego darmowego konwertera online DOC na EPUB, aby przekształcić dokumenty Word w profesjonalne e-booki dla każdego czytnika.'
     }
+  },
+  de: {
+    translation: {
+      // Common
+      'common.free': 'Kostenlos',
+      'common.upload': 'Hochladen',
+      'common.download': 'Herunterladen',
+      'common.convert': 'Konvertieren',
+      'common.converting': 'Konvertierung läuft...',
+      'common.choose_files': 'Dateien auswählen',
+      'common.single_file': 'Einzelne Datei',
+      'common.batch_convert': 'Stapelkonvertierung',
+      'common.back_to_home': 'Zurück zur Startseite',
+      'common.back_to_converters': 'Zurück zu Konvertern',
+      'common.start_converting': 'Jetzt konvertieren',
+      'common.convert_more': 'Weitere Dateien konvertieren',
+      'common.convert_another': 'Weitere konvertieren',
+      
+      // Features
+      'features.lightning_fast': 'Blitzschnell',
+      'features.100_free': '100% Kostenlos',
+      'features.no_registration': 'Keine Registrierung',
+      'features.secure': '100% Sicher',
+      
+      // DOC to EPUB
+      'doc_to_epub.title': 'Kostenloser DOC zu EPUB Konverter',
+      'doc_to_epub.meta_title': 'Kostenloser DOC zu EPUB Konverter Online - Word-Dokumente in eBook-Format konvertieren | MorphyIMG',
+      'doc_to_epub.meta_description': 'Konvertieren Sie Microsoft Word DOC-Dateien kostenlos online in das EPUB eBook-Format. Schneller, sicherer DOC zu EPUB Konverter mit Stapelverarbeitung. Perfekt für Kindle, Kobo und alle E-Reader.',
+      'doc_to_epub.subtitle': 'Konvertieren Sie Microsoft Word DOC-Dateien kostenlos online in das EPUB eBook-Format. Perfekt für Kindle, Kobo und alle E-Reader. Keine Registrierung erforderlich.',
+      'doc_to_epub.heading': 'DOC zu EPUB konvertieren',
+      'doc_to_epub.upload_single': 'DOC-Datei hochladen',
+      'doc_to_epub.upload_batch': 'Mehrere DOC-Dateien hochladen',
+      'doc_to_epub.upload_text_single': 'Ziehen Sie Ihre DOC-Datei hierher oder klicken Sie zum Durchsuchen',
+      'doc_to_epub.upload_text_batch': 'Wählen Sie mehrere DOC-Dateien aus, um sie alle auf einmal zu konvertieren',
+      'doc_to_epub.preview': 'Vorschau',
+      'doc_to_epub.selected_files': 'Ausgewählte Dateien',
+      'doc_to_epub.convert_to_epub': 'In EPUB konvertieren',
+      'doc_to_epub.convert_files_to_epub': '{{count}} Dateien in EPUB konvertieren',
+      'doc_to_epub.conversion_complete': 'Konvertierung abgeschlossen!',
+      'doc_to_epub.batch_conversion_complete': 'Stapelkonvertierung abgeschlossen!',
+      'doc_to_epub.success_message': 'Ihre DOC-Datei wurde erfolgreich in das EPUB-Format konvertiert.',
+      'doc_to_epub.batch_success_message': '{{count}} von {{total}} Dateien erfolgreich konvertiert.',
+      'doc_to_epub.download_epub': 'EPUB-Datei herunterladen',
+      'doc_to_epub.completed_in': 'Abgeschlossen in {{time}}s',
+      
+      // Info sections
+      'doc_to_epub.why_convert_title': 'Warum DOC zu EPUB online kostenlos konvertieren?',
+      'doc_to_epub.about_doc_title': 'Über das DOC-Format',
+      'doc_to_epub.about_doc_text': 'DOC (.doc) ist das ältere Microsoft Word-Dokumentenformat, das in Office-Versionen vor 2007 verwendet wurde. Dieses binäre Dateiformat speichert:',
+      'doc_to_epub.about_epub_title': 'Über das EPUB-Format',
+      'doc_to_epub.about_epub_text': 'EPUB (Electronic Publication) ist das branchenübliche eBook-Format, das bietet:',
+      'doc_to_epub.why_choose_title': 'Warum unseren Konverter wählen?',
+      'doc_to_epub.sidebar_title': 'Warum unseren Konverter wählen?',
+      'doc_to_epub.perfect_for_title': 'Perfekt für',
+      
+      // Features list
+      'doc_to_epub.feature_free': '100% Kostenlos - Keine versteckten Kosten',
+      'doc_to_epub.feature_batch': 'Stapelkonvertierung unterstützt',
+      'doc_to_epub.feature_compatibility': 'Universelle E-Reader-Kompatibilität',
+      'doc_to_epub.feature_formatting': 'Behält Formatierung & Struktur bei',
+      'doc_to_epub.feature_secure': 'Schnelle, sichere Verarbeitung',
+      'doc_to_epub.feature_no_reg': 'Keine Registrierung erforderlich',
+      
+      // Use cases
+      'doc_to_epub.use_kindle': 'Lesen auf Kindle-Geräten',
+      'doc_to_epub.use_kobo': 'Kobo und Nook E-Reader',
+      'doc_to_epub.use_apple': 'Apple Books auf iPhone/iPad',
+      'doc_to_epub.use_google': 'Google Play Bücher',
+      'doc_to_epub.use_mobile': 'Mobile Lese-Apps',
+      'doc_to_epub.use_publishing': 'eBooks online veröffentlichen',
+      
+      // SEO content
+      'doc_to_epub.seo_intro': 'Das Konvertieren von Microsoft Word DOC-Dateien in das EPUB eBook-Format ist für moderne Leseerlebnisse unerlässlich. Während DOC-Dateien hervorragend für die Dokumentenbearbeitung und Zusammenarbeit sind, bietet das EPUB-Format das perfekte Leseerlebnis auf allen Geräten - von Smartphones bis hin zu dedizierten E-Readern. Unser kostenloser Online-Konverter macht es einfach, Ihre Word-Dokumente in professionelle eBooks zu verwandeln, die nahtlos mit Kindle, Kobo, Nook und allen anderen beliebten E-Reading-Plattformen funktionieren.',
+      'doc_to_epub.benefits_title': 'Hauptvorteile des EPUB-Formats',
+      'doc_to_epub.benefit_universal_title': 'Universelle E-Reader-Unterstützung',
+      'doc_to_epub.benefit_universal_text': 'EPUB ist der Industriestandard für eBooks, der von allen wichtigen E-Reading-Geräten und -Apps unterstützt wird, einschließlich Kindle, Kobo, Nook, Apple Books und Google Play Bücher.',
+      'doc_to_epub.benefit_reflow_title': 'Anpassbarer Text',
+      'doc_to_epub.benefit_reflow_text': 'EPUB-Text passt sich automatisch an jede Bildschirmgröße an und ermöglicht es Lesern, Schriftgröße, Stil und Ränder für optimalen Lesekomfort auf jedem Gerät anzupassen.',
+      'doc_to_epub.benefit_publishing_title': 'Professionelles Publizieren',
+      'doc_to_epub.benefit_publishing_text': 'EPUB ist das bevorzugte Format für Selbstveröffentlichung und digitale Buchverteilung, akzeptiert von allen großen eBook-Händlern und Bibliotheken weltweit.',
+      'doc_to_epub.benefit_media_title': 'Rich-Media-Unterstützung',
+      'doc_to_epub.benefit_media_text': 'Das EPUB-Format unterstützt eingebettete Bilder, Schriftarten, Stile und sogar Multimedia-Inhalte bei gleichzeitiger Beibehaltung kleiner Dateigrößen für einfaches Teilen und Speichern.',
+      'doc_to_epub.use_cases_title': 'Häufige Anwendungsfälle',
+      'doc_to_epub.ready_title': 'Bereit, Ihre DOC-Dateien zu konvertieren?',
+      'doc_to_epub.ready_text': 'Verwenden Sie unseren kostenlosen Online-DOC-zu-EPUB-Konverter, um Ihre Word-Dokumente in professionelle eBooks für jeden E-Reader zu verwandeln.'
+    }
   }
 };
 
@@ -183,9 +269,11 @@ const urlLanguageDetector = {
   name: 'urlPath',
   lookup() {
     const path = window.location.pathname;
-    // If URL starts with /pl/, use Polish
+    // Check for language prefix: /pl/, /de/
     // Otherwise use English (default, no prefix)
-    return path.startsWith('/pl/') || path === '/pl' ? 'pl' : 'en';
+    if (path.startsWith('/pl/') || path === '/pl') return 'pl';
+    if (path.startsWith('/de/') || path === '/de') return 'de';
+    return 'en';
   },
   cacheUserLanguage(lng: string) {
     localStorage.setItem('i18nextLng', lng);
@@ -202,7 +290,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    supportedLngs: ['en', 'pl'],
+    supportedLngs: ['en', 'pl', 'de'],
     detection: {
       order: ['urlPath', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
@@ -218,17 +306,26 @@ export default i18n;
 // Helper function to get current language from URL
 export const getLanguageFromUrl = (): string => {
   const path = window.location.pathname;
-  return path.startsWith('/pl/') || path === '/pl' ? 'pl' : 'en';
+  if (path.startsWith('/pl/') || path === '/pl') return 'pl';
+  if (path.startsWith('/de/') || path === '/de') return 'de';
+  return 'en';
 };
 
-// Helper function to toggle language URL (English = no prefix, Polish = /pl/)
+// Helper function to toggle language URL (English = no prefix, other languages = /lang/ prefix)
 export const getLocalizedUrl = (currentPath: string, targetLanguage: string): string => {
-  // Remove /pl/ prefix if it exists
-  const cleanPath = currentPath.replace(/^\/pl\//, '/').replace(/^\/pl$/, '/');
+  // Remove any language prefix if it exists
+  const cleanPath = currentPath
+    .replace(/^\/pl\//, '/')
+    .replace(/^\/de\//, '/')
+    .replace(/^\/pl$/, '/')
+    .replace(/^\/de$/, '/');
   
-  // Add /pl/ prefix only for Polish
+  // Add language prefix only for non-English languages
   if (targetLanguage === 'pl') {
     return `/pl${cleanPath}`;
+  }
+  if (targetLanguage === 'de') {
+    return `/de${cleanPath}`;
   }
   
   // English = no prefix

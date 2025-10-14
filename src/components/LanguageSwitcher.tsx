@@ -22,6 +22,7 @@ export const LanguageSwitcher: React.FC = () => {
       >
         <option value="en">English</option>
         <option value="pl">Polski</option>
+        <option value="de">Deutsch</option>
       </select>
     </div>
   );

@@ -229,9 +229,10 @@ export const DOCToEPUBConverter: React.FC = () => {
         <meta name="keywords" content="free DOC to EPUB converter, DOC to EPUB online free, convert Word to EPUB, Word document to eBook, DOC to EPUB batch converter, Microsoft Word to EPUB, free eBook converter" />
         
         {/* Canonical and alternate language URLs */}
-        <link rel="canonical" href={`https://morphyimg.com${window.location.pathname.startsWith('/pl/') ? window.location.pathname : '/convert/doc-to-epub'}`} />
+        <link rel="canonical" href={`https://morphyimg.com${window.location.pathname}`} />
         <link rel="alternate" hrefLang="en" href="https://morphyimg.com/convert/doc-to-epub" />
         <link rel="alternate" hrefLang="pl" href="https://morphyimg.com/pl/convert/doc-to-epub" />
+        <link rel="alternate" hrefLang="de" href="https://morphyimg.com/de/convert/doc-to-epub" />
         <link rel="alternate" hrefLang="x-default" href="https://morphyimg.com/convert/doc-to-epub" />
         
         {/* Open Graph */}
@@ -239,8 +240,10 @@ export const DOCToEPUBConverter: React.FC = () => {
         <meta property="og:description" content={t('doc_to_epub.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://morphyimg.com${window.location.pathname}`} />
-        <meta property="og:locale" content={window.location.pathname.startsWith('/pl/') ? 'pl_PL' : 'en_US'} />
-        <meta property="og:locale:alternate" content={window.location.pathname.startsWith('/pl/') ? 'en_US' : 'pl_PL'} />
+        <meta property="og:locale" content={
+          window.location.pathname.startsWith('/pl/') ? 'pl_PL' : 
+          window.location.pathname.startsWith('/de/') ? 'de_DE' : 'en_US'
+        } />
         
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">

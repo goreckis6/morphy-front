@@ -133,12 +133,16 @@ function App() {
   const [currentPath, setCurrentPath] = useState<string>('/');
   const [totalDataProcessed, setTotalDataProcessed] = useState(0);
 
-  // Simple routing based on pathname (strips /pl/ prefix for routing logic)
+  // Simple routing based on pathname (strips language prefixes for routing logic)
   React.useEffect(() => {
     const handlePathChange = () => {
       const path = window.location.pathname;
-      // Remove /pl/ prefix for routing (we'll use the same components for both languages)
-      const routePath = path.replace(/^\/pl\//, '/').replace(/^\/pl$/, '/');
+      // Remove language prefixes for routing (we'll use the same components for all languages)
+      const routePath = path
+        .replace(/^\/pl\//, '/')
+        .replace(/^\/de\//, '/')
+        .replace(/^\/pl$/, '/')
+        .replace(/^\/de$/, '/');
       setCurrentPath(routePath);
     };
 
