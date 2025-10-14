@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com';
 
 export const DOCToEPUBConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
