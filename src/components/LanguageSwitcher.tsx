@@ -4,10 +4,30 @@ import { Globe, ChevronDown } from 'lucide-react';
 import { getLocalizedUrl } from '../i18n';
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧', nativeName: 'English' },
-  { code: 'pl', name: 'Polish', flag: '🇵🇱', nativeName: 'Polski' },
-  { code: 'de', name: 'German', flag: '🇩🇪', nativeName: 'Deutsch' }
+  { code: 'en', name: 'English', flag: '🇬🇧', nativeName: 'English', fallback: 'GB', unicode: 'U+1F1EC U+1F1E7' },
+  { code: 'pl', name: 'Polish', flag: '🇵🇱', nativeName: 'Polski', fallback: 'PL', unicode: 'U+1F1F5 U+1F1F1' },
+  { code: 'de', name: 'German', flag: '🇩🇪', nativeName: 'Deutsch', fallback: 'DE', unicode: 'U+1F1E9 U+1F1EA' }
 ];
+
+// Flag component with fallback
+const FlagIcon = ({ flag, fallback, className = "" }: { flag: string, fallback: string, className?: string }) => {
+  return (
+    <div className={`relative flex items-center justify-center ${className}`}>
+      <span 
+        className="text-lg leading-none font-emoji" 
+        style={{ 
+          fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol, Android Emoji, EmojiSymbols',
+          fontSize: '1.1em'
+        }}
+      >
+        {flag}
+      </span>
+      <span className="absolute inset-0 text-[8px] font-bold text-gray-400 opacity-0 hover:opacity-100 transition-opacity leading-none flex items-center justify-center">
+        {fallback}
+      </span>
+    </div>
+  );
+};
 
 export const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
@@ -28,7 +48,7 @@ export const LanguageSwitcher: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all duration-200 group"
       >
-        <span className="text-xl leading-none">{currentLanguage.flag}</span>
+        <FlagIcon flag={currentLanguage.flag} fallback={currentLanguage.fallback} className="w-6 h-4" />
         <span className="font-medium text-gray-700 text-xs">
           {currentLanguage.nativeName}
         </span>
@@ -60,7 +80,7 @@ export const LanguageSwitcher: React.FC = () => {
                       : 'hover:bg-gray-50 text-gray-700 hover:scale-[1.02]'
                   }`}
                 >
-                  <span className="text-lg">{lang.flag}</span>
+                  <FlagIcon flag={lang.flag} fallback={lang.fallback} className="w-5 h-4" />
                   <div className="flex-1 text-left">
                     <div className={`font-semibold text-xs ${
                       lang.code === i18n.language ? 'text-white' : 'text-gray-800'

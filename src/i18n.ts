@@ -20,6 +20,8 @@ const resources = {
       'common.start_converting': 'Start Converting Now',
       'common.convert_more': 'Convert More Files',
       'common.convert_another': 'Convert Another',
+      'common.convert_more_files': 'Convert More Files',
+      'common.start_converting_now': 'Start Converting Now',
       
       // Validation messages
       'validation.single_file_limit': 'Single file limit: {{size}} per file.',
@@ -254,6 +256,8 @@ const resources = {
       'common.start_converting': 'Rozpocznij Konwersję',
       'common.convert_more': 'Konwertuj Więcej Plików',
       'common.convert_another': 'Konwertuj Kolejny',
+      'common.convert_more_files': 'Konwertuj Więcej Plików',
+      'common.start_converting_now': 'Rozpocznij Konwersję Teraz',
       
       // Validation messages
       'validation.single_file_limit': 'Limit pojedynczego pliku: {{size}} na plik.',
@@ -488,6 +492,8 @@ const resources = {
       'common.start_converting': 'Jetzt konvertieren',
       'common.convert_more': 'Weitere Dateien konvertieren',
       'common.convert_another': 'Weitere konvertieren',
+      'common.convert_more_files': 'Weitere Dateien konvertieren',
+      'common.start_converting_now': 'Jetzt konvertieren',
       
       // Validation messages
       'validation.single_file_limit': 'Einzeldateibeschränkung: {{size}} pro Datei.',

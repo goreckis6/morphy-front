@@ -288,12 +288,12 @@ export const AVROToJSONConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple AVRO Files' : 'Upload AVRO File'}
+                  {batchMode ? t('avro_to_json.upload_batch') : t('avro_to_json.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple AVRO files to convert them all at once' 
-                    : 'Drag and drop your AVRO file here or click to browse'
+                    ? t('avro_to_json.upload_text_batch')
+                    : t('avro_to_json.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
@@ -314,14 +314,14 @@ export const AVROToJSONConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('avro_to_json.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <Database className="w-12 h-12 text-gray-400" />
@@ -342,7 +342,7 @@ export const AVROToJSONConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('avro_to_json.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -352,7 +352,7 @@ export const AVROToJSONConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('avro_to_json.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -389,12 +389,12 @@ export const AVROToJSONConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to JSON'}
+                      {batchMode ? t('avro_to_json.convert_files', { count: batchFiles.length }) : t('avro_to_json.convert_to_json')}
                     </div>
                   )}
                 </button>
@@ -405,10 +405,10 @@ export const AVROToJSONConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('avro_to_json.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your AVRO file has been successfully converted to JSON format.
+                    {t('avro_to_json.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -416,14 +416,14 @@ export const AVROToJSONConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download JSON File
+                      {t('avro_to_json.download_json')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -434,10 +434,10 @@ export const AVROToJSONConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('avro_to_json.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('avro_to_json.batch_success_message', { count: batchResults.filter(r => r.success).length, total: batchResults.length })}
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
@@ -466,7 +466,7 @@ export const AVROToJSONConverter: React.FC = () => {
                               onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                             >
-                              Download
+                              {t('common.download')}
                             </button>
                           )}
                         </div>
@@ -479,7 +479,7 @@ export const AVROToJSONConverter: React.FC = () => {
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('common.convert_more_files')}
                     </button>
                   </div>
                 </div>
@@ -494,7 +494,7 @@ export const AVROToJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-purple-600" />
-                JSON Settings
+                {t('avro_to_json.json_settings')}
               </h3>
               
               {/* Pretty Print */}
@@ -506,7 +506,7 @@ export const AVROToJSONConverter: React.FC = () => {
                     onChange={(e) => setPrettyPrint(e.target.checked)}
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Pretty print (formatted)</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('avro_to_json.pretty_print')}</span>
                 </label>
               </div>
 
@@ -519,7 +519,7 @@ export const AVROToJSONConverter: React.FC = () => {
                     onChange={(e) => setIncludeSchema(e.target.checked)}
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include schema information</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('avro_to_json.include_schema')}</span>
                 </label>
               </div>
             </div>
@@ -528,16 +528,16 @@ export const AVROToJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('avro_to_json.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Preserve original schema structure",
-                  "Support for nested and complex data",
-                  "Maintain data types and relationships",
-                  "No file size restrictions",
-                  "Instant conversion process",
-                  "Batch processing support"
+                  t('avro_to_json.feature_1'),
+                  t('avro_to_json.feature_2'),
+                  t('avro_to_json.feature_3'),
+                  t('avro_to_json.feature_4'),
+                  t('avro_to_json.feature_5'),
+                  t('avro_to_json.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -551,16 +551,16 @@ export const AVROToJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
-                Perfect For
+                {t('avro_to_json.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Web application development",
-                  "API data exchange",
-                  "Microservices communication",
-                  "Data visualization projects",
-                  "Mobile app development",
-                  "Cloud data processing"
+                  t('avro_to_json.use_case_1'),
+                  t('avro_to_json.use_case_2'),
+                  t('avro_to_json.use_case_3'),
+                  t('avro_to_json.use_case_4'),
+                  t('avro_to_json.use_case_5'),
+                  t('avro_to_json.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -578,106 +578,106 @@ export const AVROToJSONConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+{t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert AVRO to JSON?
+            {t('avro_to_json.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting AVRO files to JSON format is essential for modern web development, API integration, and data exchange. While AVRO is excellent for big data processing and schema evolution, JSON provides universal compatibility and easy integration with web applications, mobile apps, and cloud services.
+              {t('avro_to_json.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of JSON Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('avro_to_json.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Universal Compatibility</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('avro_to_json.benefit_universal_title')}</h4>
                 <p className="text-gray-700">
-                  JSON is supported by virtually every programming language and platform, making it the ideal format for cross-platform data exchange and API communication.
+                  {t('avro_to_json.benefit_universal_text')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Web-Native Format</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('avro_to_json.benefit_web_title')}</h4>
                 <p className="text-gray-700">
-                  JSON is the native data format for web applications, providing seamless integration with JavaScript, REST APIs, and modern web frameworks.
+                  {t('avro_to_json.benefit_web_text')}
                 </p>
               </div>
               
               <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">Human Readable</h4>
+                <h4 className="text-xl font-semibold text-green-900 mb-3">{t('avro_to_json.benefit_readable_title')}</h4>
                 <p className="text-gray-700">
-                  JSON files are text-based and human-readable, making it easy to inspect, debug, and understand data without specialized tools.
+                  {t('avro_to_json.benefit_readable_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Lightweight and Fast</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('avro_to_json.benefit_lightweight_title')}</h4>
                 <p className="text-gray-700">
-                  JSON is compact and efficient, providing fast parsing and transmission over networks, making it ideal for real-time applications.
+                  {t('avro_to_json.benefit_lightweight_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('avro_to_json.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Web Application Development</h4>
-                  <p className="text-gray-700">Convert AVRO data to JSON for use in web applications, ensuring seamless integration with frontend frameworks and APIs.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_json.use_case_web_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_json.use_case_web_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">API Data Exchange</h4>
-                  <p className="text-gray-700">Transform AVRO data into JSON format for REST API responses, ensuring compatibility with client applications and third-party integrations.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_json.use_case_api_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_json.use_case_api_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Microservices Communication</h4>
-                  <p className="text-gray-700">Convert AVRO data to JSON for inter-service communication in microservices architectures, ensuring data compatibility across different services.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_json.use_case_microservices_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_json.use_case_microservices_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Visualization Projects</h4>
-                  <p className="text-gray-700">Transform AVRO data into JSON format for use with data visualization libraries and dashboard applications that require JSON input.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('avro_to_json.use_case_visualization_title')}</h4>
+                  <p className="text-gray-700">{t('avro_to_json.use_case_visualization_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your AVRO Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('avro_to_json.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online AVRO to JSON converter to transform your data for web development and API integration.
+                {t('avro_to_json.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
