@@ -14,15 +14,18 @@ const FlagIcon = ({ flag, fallback, className = "" }: { flag: string, fallback: 
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <span 
-        className="text-lg leading-none font-emoji" 
+        className="text-2xl leading-none" 
         style={{ 
-          fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol, Android Emoji, EmojiSymbols',
-          fontSize: '1.1em'
+          fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol, Android Emoji, EmojiSymbols, sans-serif',
+          fontSize: '1.5em',
+          display: 'inline-block',
+          minWidth: '1.2em',
+          textAlign: 'center'
         }}
       >
         {flag}
       </span>
-      <span className="absolute inset-0 text-[8px] font-bold text-gray-400 opacity-0 hover:opacity-100 transition-opacity leading-none flex items-center justify-center">
+      <span className="absolute inset-0 text-[10px] font-bold text-gray-500 opacity-0 hover:opacity-100 transition-opacity leading-none flex items-center justify-center pointer-events-none">
         {fallback}
       </span>
     </div>
@@ -46,13 +49,13 @@ export const LanguageSwitcher: React.FC = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all duration-200 group"
+        className="flex items-center gap-2 px-3 py-2 bg-white border-2 border-gray-200 rounded-lg hover:border-blue-400 hover:shadow-md transition-all duration-200 group"
       >
-        <FlagIcon flag={currentLanguage.flag} fallback={currentLanguage.fallback} className="w-6 h-4" />
-        <span className="font-medium text-gray-700 text-xs">
+        <FlagIcon flag={currentLanguage.flag} fallback={currentLanguage.fallback} className="w-8 h-6" />
+        <span className="font-medium text-gray-700 text-sm">
           {currentLanguage.nativeName}
         </span>
-        <ChevronDown className={`w-3.5 h-3.5 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown Menu */}
@@ -74,13 +77,13 @@ export const LanguageSwitcher: React.FC = () => {
                     changeLanguage(lang.code);
                     setIsOpen(false);
                   }}
-                  className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 ${
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 ${
                     lang.code === i18n.language
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg scale-[1.02]'
                       : 'hover:bg-gray-50 text-gray-700 hover:scale-[1.02]'
                   }`}
                 >
-                  <FlagIcon flag={lang.flag} fallback={lang.fallback} className="w-5 h-4" />
+                  <FlagIcon flag={lang.flag} fallback={lang.fallback} className="w-7 h-5" />
                   <div className="flex-1 text-left">
                     <div className={`font-semibold text-xs ${
                       lang.code === i18n.language ? 'text-white' : 'text-gray-800'
