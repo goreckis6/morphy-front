@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,6 +21,7 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const AVROToJSONConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -32,6 +34,17 @@ export const AVROToJSONConverter: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
+
+  // Ensure language is synced with URL on mount
+  React.useEffect(() => {
+    const path = window.location.pathname;
+    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' : 
+                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
+    
+    if (i18n.language !== urlLang) {
+      i18n.changeLanguage(urlLang);
+    }
+  }, [i18n]);
 
   // Use shared validation hook
   const {
@@ -202,8 +215,8 @@ export const AVROToJSONConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AVRO to JSON Converter - Convert Apache AVRO to JSON</title>
-        <meta name="description" content="Convert Apache AVRO files to JSON format for web applications. Transform binary data schemas into JSON. Free online converter with batch support." />
+        <title>{t('avro_to_json.meta_title')}</title>
+        <meta name="description" content={t('avro_to_json.meta_description')} />
         <meta name="keywords" content="AVRO to JSON, Apache AVRO, JSON converter, data transformation, web development" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -215,23 +228,23 @@ export const AVROToJSONConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              AVRO to JSON Converter
+              {t('avro_to_json.title')}
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-              Convert Apache AVRO files to JSON format with preserved schema and data structure. Ideal for web applications and APIs.
+              {t('avro_to_json.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -256,7 +269,7 @@ export const AVROToJSONConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -267,7 +280,7 @@ export const AVROToJSONConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
