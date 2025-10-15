@@ -195,7 +195,7 @@ export const CSVToODTConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('validation.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -287,7 +287,10 @@ export const CSVToODTConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">{t('csv_to_odt.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('csv_to_odt.batch_success_count', { 
+                      successCount: batchResults.filter(r => r.success).length, 
+                      totalCount: batchResults.length 
+                    })}
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
@@ -364,16 +367,16 @@ export const CSVToODTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-sky-600" />
-                Perfect For
+                {t('csv_to_odt.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "LibreOffice Writer",
-                  "Open source workflows",
-                  "Document collaboration",
-                  "Academic papers",
-                  "Government documents",
-                  "Standards compliance"
+                  t('csv_to_odt.use_case_1'),
+                  t('csv_to_odt.use_case_2'),
+                  t('csv_to_odt.use_case_3'),
+                  t('csv_to_odt.use_case_4'),
+                  t('csv_to_odt.use_case_5'),
+                  t('csv_to_odt.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-sky-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -391,14 +394,14 @@ export const CSVToODTConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to ODT?
+            {t('csv_to_odt.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
