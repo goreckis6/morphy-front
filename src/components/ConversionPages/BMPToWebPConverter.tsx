@@ -32,6 +32,7 @@ export const BMPToWebPConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -162,28 +163,18 @@ export const BMPToWebPConverter: React.FC = () => {
     
     setIsConverting(true);
     setError(null);
+    setBatchResults([]);
     
     try {
-      // Mock batch conversion - process each file
+      const results: Array<{ file: File; blob: Blob }> = [];
+      
       for (let i = 0; i < batchFiles.length; i++) {
         const file = batchFiles[i];
         const converted = await handleConvert(file);
-        
-        // Download each converted file
-        const url = URL.createObjectURL(converted);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = file.name.replace('.bmp', '.webp');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        
-        // Small delay between downloads
-        if (i < batchFiles.length - 1) {
-          await new Promise(resolve => setTimeout(resolve, 500));
-        }
+        results.push({ file, blob: converted });
       }
+      
+      setBatchResults(results);
       setBatchConverted(true);
       setError(null);
     } catch (err) {
@@ -220,6 +211,17 @@ export const BMPToWebPConverter: React.FC = () => {
     }
   };
 
+  const handleBatchFileDownload = (file: File, blob: Blob) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name.replace('.bmp', '.webp');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -231,6 +233,7 @@ export const BMPToWebPConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
+    setBatchResults([]);
     setImagePreview(null);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
@@ -465,31 +468,40 @@ export const BMPToWebPConverter: React.FC = () => {
               )}
 
               {/* Batch Conversion Success Message */}
-              {batchConverted && batchMode && (
+              {batchConverted && batchMode && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">{t('bmp_to_webp.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {t('bmp_to_webp.batch_success_message', { count: batchFiles.length })}
+                    {t('bmp_to_webp.batch_success_message', { count: batchResults.length })}
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button
-                      onClick={handleDownload}
-                      className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
-                    >
-                      <Download className="w-5 h-5 mr-2" />
-                      {t('common.download')}
-                    </button>
-                    <button
-                      onClick={resetForm}
-                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                    >
-                      <RefreshCw className="w-5 h-5 mr-2" />
-                      {t('common.convert_more_files')}
-                    </button>
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">
+                            {result.file.name.replace('.bmp', '.webp')} • {(result.blob.size / 1024).toFixed(1)} KB
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => handleBatchFileDownload(result.file, result.blob)}
+                          className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          {t('common.download')}
+                        </button>
+                      </div>
+                    ))}
                   </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    {t('common.convert_more_files')}
+                  </button>
                 </div>
               )}
             </div>
