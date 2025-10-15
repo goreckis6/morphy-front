@@ -123,10 +123,12 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     try {
       console.log('Starting batch conversion for', batchFiles.length, 'files to', targetFormat);
       
-      // Use specific endpoint for CSV to DOC conversion
+      // Use specific endpoint for CSV to DOC/DOCX conversion
       let result;
       if (targetFormat === 'doc') {
         result = await apiService.convertBatchCsvToDoc(batchFiles);
+      } else if (targetFormat === 'docx') {
+        result = await apiService.convertBatchCsvToDocx(batchFiles);
       } else {
         result = await apiService.convertBatch(batchFiles, { format: targetFormat });
       }

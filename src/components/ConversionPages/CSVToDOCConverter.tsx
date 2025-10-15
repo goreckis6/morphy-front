@@ -240,6 +240,32 @@ export const CSVToDOCConverter: React.FC = () => {
                     </div>
                   )}
                 </button>
+                
+                {/* Performance info for large files */}
+                {!isConverting && selectedFile && selectedFile.size > 2 * 1024 * 1024 && (
+                  <div className="mt-3 text-center text-sm text-gray-600">
+                    <div className="flex items-center justify-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      <span>Large file detected - conversion may take 30-60 seconds</span>
+                    </div>
+                  </div>
+                )}
+                
+                {!isConverting && batchMode && batchFiles.length > 0 && (() => {
+                  const totalSize = batchFiles.reduce((sum, file) => sum + file.size, 0);
+                  const sizeMB = totalSize / (1024 * 1024);
+                  if (sizeMB > 2) {
+                    return (
+                      <div className="mt-3 text-center text-sm text-gray-600">
+                        <div className="flex items-center justify-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          <span>Large batch detected - conversion may take 1-3 minutes</span>
+                        </div>
+                      </div>
+                    );
+                  }
+                  return null;
+                })()}
               </div>
 
               {/* Success Message & Download */}
