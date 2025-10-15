@@ -1,5 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,6 +22,7 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CR2ToWebPConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -34,6 +37,18 @@ export const CR2ToWebPConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Language detection from URL
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, []);
 
   // Use shared validation hook
   const {
@@ -407,8 +422,8 @@ WEBP_FILE_END`;
   return (
     <>
       <Helmet>
-        <title>CR2 to WebP Converter - Convert Canon RAW to WebP Format</title>
-        <meta name="description" content="Convert CR2 (Canon RAW) camera files to WebP format for modern web. High-quality RAW image conversion with compression. Free online converter." />
+        <title>{t('cr2_to_webp.meta_title')}</title>
+        <meta name="description" content={t('cr2_to_webp.meta_description')} />
         <meta name="keywords" content="CR2 to WebP, Canon RAW, WebP converter, image optimization, photography, batch processing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-blue-50">
@@ -420,23 +435,23 @@ WEBP_FILE_END`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CR2 to WebP Converter
+              {t('cr2_to_webp.title')}
             </h1>
             <p className="text-lg sm:text-xl text-cyan-100 mb-6 max-w-2xl mx-auto">
-              Convert Canon CR2 raw images to WebP format for web optimization. Transform professional camera files into web-ready images with superior compression.
+              {t('cr2_to_webp.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-cyan-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -461,7 +476,7 @@ WEBP_FILE_END`;
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -472,7 +487,7 @@ WEBP_FILE_END`;
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -480,18 +495,18 @@ WEBP_FILE_END`;
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-cyan-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple CR2 Files' : 'Upload CR2 File'}
+                  {batchMode ? t('cr2_to_webp.upload_batch') : t('cr2_to_webp.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple CR2 files to convert them all at once' 
-                    : 'Drag and drop your CR2 file here or click to browse'
+                    ? t('cr2_to_webp.upload_text_batch')
+                    : t('cr2_to_webp.upload_text_single')
                   }
                 </p>
                 <p className="text-sm text-gray-500 mb-4">
                   {batchMode 
-                    ? 'Max 100MB per file, 100MB total batch size, up to 20 files' 
-                    : 'Max file size: 100MB'
+                    ? t('cr2_to_webp.file_limits_batch')
+                    : t('cr2_to_webp.file_limits_single')
                   }
                 </p>
                 <input
@@ -506,7 +521,7 @@ WEBP_FILE_END`;
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-cyan-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-cyan-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
@@ -514,7 +529,7 @@ WEBP_FILE_END`;
               {previewUrl && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">
-                    {imagePreview && imagePreview.width > 0 ? 'CR2 Image Preview' : 'CR2 File Info'}
+                    {imagePreview && imagePreview.width > 0 ? t('cr2_to_webp.image_preview') : t('cr2_to_webp.file_info')}
                   </h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     {imagePreview && imagePreview.width > 0 ? (
@@ -530,12 +545,12 @@ WEBP_FILE_END`;
                             <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
+                            <p>{t('cr2_to_webp.extracted_preview')}: {imagePreview.width} × {imagePreview.height} pixels</p>
                             <p className="text-cyan-600 font-medium">
-                              Will convert to: WebP format ({quality} quality, {lossless ? 'lossless' : 'lossy'})
+                              {t('cr2_to_webp.will_convert_to')}: {t('cr2_to_webp.webp_format')} ({t(`cr2_to_webp.quality_${quality}`)}, {lossless ? t('cr2_to_webp.lossless') : t('cr2_to_webp.lossy')})
                             </p>
                             {preserveMetadata && (
-                              <p className="text-green-600 text-xs">✓ Metadata will be preserved</p>
+                              <p className="text-green-600 text-xs">✓ {t('cr2_to_webp.metadata_preserved')}</p>
                             )}
                           </div>
                         </div>
@@ -551,15 +566,15 @@ WEBP_FILE_END`;
                             <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>Canon RAW (CR2) camera file</p>
+                            <p>{t('cr2_to_webp.canon_raw_file')}</p>
                             <p className="text-cyan-600 font-medium">
-                              Will convert to: WebP format ({quality} quality, {lossless ? 'lossless' : 'lossy'})
+                              {t('cr2_to_webp.will_convert_to')}: {t('cr2_to_webp.webp_format')} ({t(`cr2_to_webp.quality_${quality}`)}, {lossless ? t('cr2_to_webp.lossless') : t('cr2_to_webp.lossy')})
                             </p>
                             {preserveMetadata && (
-                              <p className="text-green-600 text-xs">✓ Metadata will be preserved</p>
+                              <p className="text-green-600 text-xs">✓ {t('cr2_to_webp.metadata_preserved')}</p>
                             )}
                             <p className="text-gray-400 text-xs mt-1">
-                              No embedded preview found - will generate sample WebP
+                              {t('cr2_to_webp.no_preview_found')}
                             </p>
                           </div>
                         </div>
@@ -578,7 +593,7 @@ WEBP_FILE_END`;
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('cr2_to_webp.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -588,7 +603,7 @@ WEBP_FILE_END`;
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('cr2_to_webp.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -625,12 +640,12 @@ WEBP_FILE_END`;
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to WebP'}
+                      {batchMode ? t('cr2_to_webp.convert_files', { count: batchFiles.length }) : t('cr2_to_webp.convert_to_webp')}
                     </div>
                   )}
                 </button>
@@ -641,10 +656,10 @@ WEBP_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('cr2_to_webp.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CR2 file has been successfully converted to WebP format.
+                    {t('cr2_to_webp.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -652,14 +667,14 @@ WEBP_FILE_END`;
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download WebP File
+                      {t('cr2_to_webp.download_webp')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -670,10 +685,10 @@ WEBP_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('cr2_to_webp.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchResults.length} CR2 files have been successfully converted to WebP format.
+                    {t('cr2_to_webp.batch_success_message', { count: batchResults.length })}
                   </p>
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -688,7 +703,7 @@ WEBP_FILE_END`;
                           className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                         >
                           <Download className="w-4 h-4 mr-1" />
-                          Download
+                          {t('common.download')}
                         </button>
                       </div>
                     ))}
@@ -698,7 +713,7 @@ WEBP_FILE_END`;
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('common.convert_more_files')}
                   </button>
                 </div>
               )}
@@ -712,22 +727,22 @@ WEBP_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-cyan-600" />
-                WebP Settings
+                {t('cr2_to_webp.webp_settings')}
               </h3>
               
               {/* Quality */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Quality
+                  {t('cr2_to_webp.quality')}
                 </label>
                 <select
                   value={quality}
                   onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
                 >
-                  <option value="high">High Quality (90-100%)</option>
-                  <option value="medium">Medium Quality (70-89%)</option>
-                  <option value="low">Low Quality (50-69%)</option>
+                  <option value="high">{t('cr2_to_webp.quality_high_option')}</option>
+                  <option value="medium">{t('cr2_to_webp.quality_medium_option')}</option>
+                  <option value="low">{t('cr2_to_webp.quality_low_option')}</option>
                 </select>
               </div>
 
@@ -740,7 +755,7 @@ WEBP_FILE_END`;
                     onChange={(e) => setLossless(e.target.checked)}
                     className="rounded border-gray-300 text-cyan-600 focus:ring-cyan-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Lossless compression</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('cr2_to_webp.lossless_compression')}</span>
                 </label>
               </div>
 
@@ -753,7 +768,7 @@ WEBP_FILE_END`;
                     onChange={(e) => setPreserveMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-cyan-600 focus:ring-cyan-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve EXIF metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('cr2_to_webp.preserve_metadata')}</span>
                 </label>
               </div>
             </div>
@@ -762,16 +777,16 @@ WEBP_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('cr2_to_webp.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Professional camera file support",
-                  "Web-optimized compression",
-                  "High-quality output",
-                  "Raw image processing",
-                  "File size optimization",
-                  "Batch processing support"
+                  t('cr2_to_webp.feature_1'),
+                  t('cr2_to_webp.feature_2'),
+                  t('cr2_to_webp.feature_3'),
+                  t('cr2_to_webp.feature_4'),
+                  t('cr2_to_webp.feature_5'),
+                  t('cr2_to_webp.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -785,16 +800,16 @@ WEBP_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-cyan-600" />
-                Perfect For
+                {t('cr2_to_webp.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Professional photography websites",
-                  "Portfolio websites",
-                  "E-commerce product images",
-                  "Digital marketing",
-                  "Content management systems",
-                  "Web application development"
+                  t('cr2_to_webp.use_case_1'),
+                  t('cr2_to_webp.use_case_2'),
+                  t('cr2_to_webp.use_case_3'),
+                  t('cr2_to_webp.use_case_4'),
+                  t('cr2_to_webp.use_case_5'),
+                  t('cr2_to_webp.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -812,106 +827,106 @@ WEBP_FILE_END`;
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CR2 to WebP?
+            {t('cr2_to_webp.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Canon CR2 raw images to WebP format is essential for professional photography websites, portfolio platforms, and web optimization. While CR2 files contain high-quality raw image data, WebP format provides superior compression, faster loading times, and better web performance without sacrificing the professional quality of your photography work.
+              {t('cr2_to_webp.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of WebP Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('cr2_to_webp.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Superior Compression</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('cr2_to_webp.benefit_compression_title')}</h4>
                 <p className="text-gray-700">
-                  WebP provides 25-35% better compression than JPEG and PNG, significantly reducing file sizes while maintaining the high quality of professional photography.
+                  {t('cr2_to_webp.benefit_compression_text')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Faster Loading Times</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('cr2_to_webp.benefit_loading_title')}</h4>
                 <p className="text-gray-700">
-                  Smaller file sizes mean faster page load times, improved user experience, and better SEO rankings for photography websites and portfolios.
+                  {t('cr2_to_webp.benefit_loading_text')}
                 </p>
               </div>
               
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Professional Quality Preservation</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('cr2_to_webp.benefit_quality_title')}</h4>
                 <p className="text-gray-700">
-                  WebP format maintains the high quality and detail of professional CR2 images while providing efficient compression for web delivery.
+                  {t('cr2_to_webp.benefit_quality_text')}
                 </p>
               </div>
               
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Modern Web Standard</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('cr2_to_webp.benefit_standard_title')}</h4>
                 <p className="text-gray-700">
-                  WebP is supported by all modern browsers and is the recommended format for web images by Google and other major platforms.
+                  {t('cr2_to_webp.benefit_standard_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('cr2_to_webp.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Professional Photography Websites</h4>
-                  <p className="text-gray-700">Convert CR2 images to WebP for professional photography websites, ensuring fast loading times while maintaining the high quality of your work.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_webp.use_case_photography_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_webp.use_case_photography_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Portfolio Websites</h4>
-                  <p className="text-gray-700">Optimize portfolio images for faster loading and better user experience, allowing visitors to view your work without long wait times.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_webp.use_case_portfolio_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_webp.use_case_portfolio_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">E-commerce Product Images</h4>
-                  <p className="text-gray-700">Convert professional product photos from CR2 to WebP for e-commerce platforms, reducing bandwidth costs while maintaining image quality.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_webp.use_case_ecommerce_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_webp.use_case_ecommerce_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Digital Marketing</h4>
-                  <p className="text-gray-700">Create optimized images for social media, email campaigns, and digital advertising that load quickly and showcase your professional photography.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_webp.use_case_marketing_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_webp.use_case_marketing_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CR2 Images?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('cr2_to_webp.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CR2 to WebP converter to optimize your professional photography for web performance.
+                {t('cr2_to_webp.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
