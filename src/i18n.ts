@@ -923,6 +923,7 @@ const resources = {
       'csv_to_odp.use_case_training_text': 'Convert educational data to ODP format for creating training presentations, workshops, and educational materials with interactive elements.',
       'csv_to_odp.ready_title': 'Ready to Convert Your CSV Files?',
       'csv_to_odp.ready_text': 'Use our free online CSV to ODP converter to transform your data into professional presentations.',
+      'csv_to_odp.conversion_time_info': 'Conversion may take 2-5 minutes for large files',
       
       // CSV to ODT
       'csv_to_odt.title': 'CSV to ODT Converter',
@@ -1969,6 +1970,7 @@ const resources = {
       'csv_to_odp.use_case_training_text': 'Konwertuj dane edukacyjne na format ODP do tworzenia prezentacji szkoleniowych, warsztatów i materiałów edukacyjnych z elementami interaktywnymi.',
       'csv_to_odp.ready_title': 'Gotowy do konwersji plików CSV?',
       'csv_to_odp.ready_text': 'Użyj naszego darmowego konwertera CSV na ODP online, aby przekształcić swoje dane w profesjonalne prezentacje.',
+      'csv_to_odp.conversion_time_info': 'Konwersja może potrwać 2-5 minut dla dużych plików',
       
       // CSV to ODT
       'csv_to_odt.title': 'Konwerter CSV na ODT',
@@ -3013,6 +3015,7 @@ const resources = {
       'csv_to_odp.use_case_training_text': 'Konvertieren Sie Bildungsdaten in ODP-Format für die Erstellung von Schulungspräsentationen, Workshops und Bildungsmaterialien mit interaktiven Elementen.',
       'csv_to_odp.ready_title': 'Bereit, Ihre CSV-Dateien zu konvertieren?',
       'csv_to_odp.ready_text': 'Verwenden Sie unseren kostenlosen Online CSV-zu-ODP-Konverter, um Ihre Daten in professionelle Präsentationen zu transformieren.',
+      'csv_to_odp.conversion_time_info': 'Konvertierung kann 2-5 Minuten für große Dateien dauern',
       
       // CSV to ODT
       'csv_to_odt.title': 'CSV zu ODT Konverter',
