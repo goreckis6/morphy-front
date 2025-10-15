@@ -123,12 +123,14 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     try {
       console.log('Starting batch conversion for', batchFiles.length, 'files to', targetFormat);
       
-      // Use specific endpoint for CSV to DOC/DOCX conversion
+      // Use specific endpoint for CSV to DOC/DOCX/EPUB conversion
       let result;
       if (targetFormat === 'doc') {
         result = await apiService.convertBatchCsvToDoc(batchFiles);
       } else if (targetFormat === 'docx') {
         result = await apiService.convertBatchCsvToDocx(batchFiles);
+      } else if (targetFormat === 'epub') {
+        result = await apiService.convertBatchCsvToEpub(batchFiles);
       } else {
         result = await apiService.convertBatch(batchFiles, { format: targetFormat });
       }
