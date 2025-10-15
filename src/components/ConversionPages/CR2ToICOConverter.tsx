@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,6 +21,7 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CR2ToICOConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -33,6 +35,18 @@ export const CR2ToICOConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Language synchronization
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
 
   // Use shared validation hook
   const {
@@ -431,8 +445,8 @@ ICO_FILE_END`;
   return (
     <>
       <Helmet>
-        <title>CR2 to ICO Converter - Convert Canon RAW to Windows Icons</title>
-        <meta name="description" content="Convert CR2 (Canon RAW) camera files to ICO format for Windows icons. Professional RAW image to icon conversion with multiple sizes. Free online tool." />
+        <title>{t('cr2_to_ico.meta_title')}</title>
+        <meta name="description" content={t('cr2_to_ico.meta_description')} />
         <meta name="keywords" content="CR2 to ICO, Canon RAW converter, Windows icons, icon converter, camera RAW, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-purple-50">
@@ -444,23 +458,23 @@ ICO_FILE_END`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CR2 to ICO Converter
+              {t('cr2_to_ico.title')}
             </h1>
             <p className="text-lg sm:text-xl text-orange-100 mb-6 max-w-2xl mx-auto">
-              Convert Canon CR2 raw images to ICO format for Windows icons. Extract high-quality icons from professional camera files.
+              {t('cr2_to_ico.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-orange-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -485,7 +499,7 @@ ICO_FILE_END`;
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -496,7 +510,7 @@ ICO_FILE_END`;
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -504,18 +518,18 @@ ICO_FILE_END`;
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-orange-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple CR2 Files' : 'Upload CR2 File'}
+                  {batchMode ? t('cr2_to_ico.upload_batch') : t('cr2_to_ico.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple CR2 files to convert them all at once' 
-                    : 'Drag and drop your CR2 file here or click to browse'
+                    ? t('cr2_to_ico.upload_text_batch')
+                    : t('cr2_to_ico.upload_text_single')
                   }
                 </p>
                 <p className="text-sm text-gray-500 mb-4">
                   {batchMode 
-                    ? 'Max 100MB per file, 100MB total batch size, up to 20 files' 
-                    : 'Max file size: 100MB'
+                    ? t('cr2_to_ico.file_limits_batch')
+                    : t('cr2_to_ico.file_limits_single')
                   }
                 </p>
                 <input
@@ -530,7 +544,7 @@ ICO_FILE_END`;
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
@@ -538,7 +552,7 @@ ICO_FILE_END`;
               {previewUrl && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">
-                    {imagePreview && imagePreview.width > 0 ? 'CR2 Image Preview' : 'CR2 File Info'}
+                    {imagePreview && imagePreview.width > 0 ? t('cr2_to_ico.image_preview') : t('cr2_to_ico.file_info')}
                   </h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     {imagePreview && imagePreview.width > 0 ? (
@@ -554,9 +568,9 @@ ICO_FILE_END`;
                             <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
+                            <p>{t('cr2_to_ico.extracted_preview')}: {imagePreview.width} × {imagePreview.height} {t('cr2_to_ico.pixels')}</p>
                             <p className="text-orange-600 font-medium">
-                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
+                              {t('cr2_to_ico.will_convert_to')}: {iconSize === 'default' ? t('cr2_to_ico.original_size') : `${iconSize} × ${iconSize} ${t('cr2_to_ico.pixels')}`} ({t(`cr2_to_ico.quality_${quality}`)})
                             </p>
                           </div>
                         </div>
@@ -572,12 +586,12 @@ ICO_FILE_END`;
                             <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>Canon RAW (CR2) camera file</p>
+                            <p>{t('cr2_to_ico.canon_raw_file')}</p>
                             <p className="text-orange-600 font-medium">
-                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
+                              {t('cr2_to_ico.will_convert_to')}: {iconSize === 'default' ? t('cr2_to_ico.original_size') : `${iconSize} × ${iconSize} ${t('cr2_to_ico.pixels')}`} ({t(`cr2_to_ico.quality_${quality}`)})
                             </p>
                             <p className="text-gray-400 text-xs mt-1">
-                              No embedded preview found - will generate sample icon
+                              {t('cr2_to_ico.no_preview_found')}
                             </p>
                           </div>
                         </div>
@@ -596,7 +610,7 @@ ICO_FILE_END`;
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('cr2_to_ico.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -606,7 +620,7 @@ ICO_FILE_END`;
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('cr2_to_ico.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -643,12 +657,12 @@ ICO_FILE_END`;
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to ICO'}
+                      {batchMode ? t('cr2_to_ico.convert_files', { count: batchFiles.length }) : t('cr2_to_ico.convert_to_ico')}
                     </div>
                   )}
                 </button>
@@ -659,10 +673,10 @@ ICO_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('cr2_to_ico.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CR2 file has been successfully converted to ICO format.
+                    {t('cr2_to_ico.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -670,14 +684,14 @@ ICO_FILE_END`;
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download ICO File
+                      {t('cr2_to_ico.download_ico')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -688,10 +702,10 @@ ICO_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('cr2_to_ico.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchResults.length} CR2 files have been successfully converted to ICO format.
+                    {t('cr2_to_ico.batch_success_message', { count: batchResults.length })}
                   </p>
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -706,7 +720,7 @@ ICO_FILE_END`;
                           className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                         >
                           <Download className="w-4 h-4 mr-1" />
-                          Download
+                          {t('common.download')}
                         </button>
                       </div>
                     ))}
@@ -716,7 +730,7 @@ ICO_FILE_END`;
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('common.convert_more_files')}
                   </button>
                 </div>
               )}
@@ -730,48 +744,48 @@ ICO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-orange-600" />
-                ICO Settings
+                {t('cr2_to_ico.ico_settings')}
               </h3>
               
               {/* Icon Size */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Icon Size
+                  {t('cr2_to_ico.icon_size')}
                 </label>
                 <select
                   value={iconSize}
                   onChange={(e) => setIconSize(e.target.value === 'default' ? 'default' : Number(e.target.value))}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 >
-                  <option value="default">Default (Original Size)</option>
-                  <option value={16}>16x16 pixels</option>
-                  <option value={32}>32x32 pixels</option>
-                  <option value={48}>48x48 pixels</option>
-                  <option value={64}>64x64 pixels</option>
-                  <option value={128}>128x128 pixels</option>
-                  <option value={256}>256x256 pixels</option>
+                  <option value="default">{t('cr2_to_ico.icon_size_default')}</option>
+                  <option value={16}>{t('cr2_to_ico.icon_size_16')}</option>
+                  <option value={32}>{t('cr2_to_ico.icon_size_32')}</option>
+                  <option value={48}>{t('cr2_to_ico.icon_size_48')}</option>
+                  <option value={64}>{t('cr2_to_ico.icon_size_64')}</option>
+                  <option value={128}>{t('cr2_to_ico.icon_size_128')}</option>
+                  <option value={256}>{t('cr2_to_ico.icon_size_256')}</option>
                 </select>
                 <div className="mt-2 text-sm text-gray-600">
                   {iconSize === 'default' && (
-                    <span className="text-cyan-600">✓ Preserves original image dimensions</span>
+                    <span className="text-cyan-600">✓ {t('cr2_to_ico.icon_size_default_desc')}</span>
                   )}
                   {iconSize === 16 && (
-                    <span className="text-orange-600">✓ Standard Windows icon size (recommended)</span>
+                    <span className="text-orange-600">✓ {t('cr2_to_ico.icon_size_16_desc')}</span>
                   )}
                   {iconSize === 32 && (
-                    <span className="text-green-600">✓ High DPI display size</span>
+                    <span className="text-green-600">✓ {t('cr2_to_ico.icon_size_32_desc')}</span>
                   )}
                   {iconSize === 48 && (
-                    <span className="text-purple-600">✓ Large icon size for desktop</span>
+                    <span className="text-purple-600">✓ {t('cr2_to_ico.icon_size_48_desc')}</span>
                   )}
                   {iconSize === 64 && (
-                    <span className="text-blue-600">✓ Extra large icon size</span>
+                    <span className="text-blue-600">✓ {t('cr2_to_ico.icon_size_64_desc')}</span>
                   )}
                   {iconSize === 128 && (
-                    <span className="text-red-600">✓ Very large icon size</span>
+                    <span className="text-red-600">✓ {t('cr2_to_ico.icon_size_128_desc')}</span>
                   )}
                   {iconSize === 256 && (
-                    <span className="text-pink-600">✓ Maximum icon size</span>
+                    <span className="text-pink-600">✓ {t('cr2_to_ico.icon_size_256_desc')}</span>
                   )}
                 </div>
               </div>
@@ -779,16 +793,16 @@ ICO_FILE_END`;
               {/* Quality */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Quality
+                  {t('cr2_to_ico.quality')}
                 </label>
                 <select
                   value={quality}
                   onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 >
-                  <option value="high">High Quality</option>
-                  <option value="medium">Medium Quality</option>
-                  <option value="low">Low Quality</option>
+                  <option value="high">{t('cr2_to_ico.quality_high')}</option>
+                  <option value="medium">{t('cr2_to_ico.quality_medium')}</option>
+                  <option value="low">{t('cr2_to_ico.quality_low')}</option>
                 </select>
               </div>
             </div>
@@ -797,16 +811,16 @@ ICO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('cr2_to_ico.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Professional camera file support",
-                  "High-resolution icon creation",
-                  "Multiple icon size support",
-                  "Raw image processing",
-                  "Quality preservation",
-                  "Batch processing support"
+                  t('cr2_to_ico.feature_1'),
+                  t('cr2_to_ico.feature_2'),
+                  t('cr2_to_ico.feature_3'),
+                  t('cr2_to_ico.feature_4'),
+                  t('cr2_to_ico.feature_5'),
+                  t('cr2_to_ico.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -820,16 +834,16 @@ ICO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-orange-600" />
-                Perfect For
+                {t('cr2_to_ico.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Professional photography workflows",
-                  "Windows application icons",
-                  "High-resolution favicons",
-                  "Software development",
-                  "Digital asset management",
-                  "Brand identity creation"
+                  t('cr2_to_ico.use_case_1'),
+                  t('cr2_to_ico.use_case_2'),
+                  t('cr2_to_ico.use_case_3'),
+                  t('cr2_to_ico.use_case_4'),
+                  t('cr2_to_ico.use_case_5'),
+                  t('cr2_to_ico.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -847,106 +861,106 @@ ICO_FILE_END`;
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CR2 to ICO?
+            {t('cr2_to_ico.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Canon CR2 raw images to ICO format is essential for professional workflows, software development, and digital asset management. While CR2 files contain high-quality raw image data, ICO format provides the perfect solution for creating Windows icons, favicons, and application graphics with multiple resolutions.
+              {t('cr2_to_ico.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ICO Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('cr2_to_ico.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Multiple Icon Sizes</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('cr2_to_ico.benefit_multiple_sizes_title')}</h4>
                 <p className="text-gray-700">
-                  ICO files can contain multiple icon sizes (16x16, 32x32, 48x48, 64x64, 128x128, 256x256 pixels) in a single file, ensuring perfect display across all contexts.
+                  {t('cr2_to_ico.benefit_multiple_sizes_text')}
                 </p>
               </div>
               
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">Windows Native Support</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('cr2_to_ico.benefit_windows_native_title')}</h4>
                 <p className="text-gray-700">
-                  ICO is the native icon format for Windows operating systems, ensuring perfect compatibility with file explorers, taskbars, and application windows.
+                  {t('cr2_to_ico.benefit_windows_native_text')}
                 </p>
               </div>
               
               <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">High-Quality Output</h4>
+                <h4 className="text-xl font-semibold text-pink-900 mb-3">{t('cr2_to_ico.benefit_high_quality_title')}</h4>
                 <p className="text-gray-700">
-                  ICO format preserves image quality while providing efficient compression, making it ideal for professional applications and branding.
+                  {t('cr2_to_ico.benefit_high_quality_text')}
                 </p>
               </div>
               
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Professional Workflow</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('cr2_to_ico.benefit_professional_workflow_title')}</h4>
                 <p className="text-gray-700">
-                  ICO format integrates seamlessly into professional development workflows, design systems, and digital asset management processes.
+                  {t('cr2_to_ico.benefit_professional_workflow_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('cr2_to_ico.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Professional Photography Workflows</h4>
-                  <p className="text-gray-700">Convert high-quality CR2 images to ICO format for use in professional photography portfolios, client presentations, and digital galleries.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_ico.use_case_photography_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_ico.use_case_photography_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Windows Application Icons</h4>
-                  <p className="text-gray-700">Create professional application icons for Windows software, ensuring your app looks polished and native to the operating system.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_ico.use_case_app_icons_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_ico.use_case_app_icons_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">High-Resolution Favicons</h4>
-                  <p className="text-gray-700">Generate high-quality favicons for websites using professional CR2 images, ensuring crisp display across all devices and browsers.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_ico.use_case_favicons_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_ico.use_case_favicons_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Brand Identity Creation</h4>
-                  <p className="text-gray-700">Develop consistent brand assets by converting professional CR2 images to ICO format for use across digital platforms and applications.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('cr2_to_ico.use_case_brand_identity_title')}</h4>
+                  <p className="text-gray-700">{t('cr2_to_ico.use_case_brand_identity_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CR2 Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('cr2_to_ico.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CR2 to ICO converter to transform your professional camera files into high-quality Windows icons.
+                {t('cr2_to_ico.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
