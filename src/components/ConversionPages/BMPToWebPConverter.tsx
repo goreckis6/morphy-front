@@ -1,4 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -19,6 +21,7 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const BMPToWebPConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -42,6 +45,17 @@ export const BMPToWebPConverter: React.FC = () => {
     formatFileSize,
     clearValidationError
   } = useFileValidation();
+
+  // Ensure language is synced with URL on mount
+  useEffect(() => {
+    const path = window.location.pathname;
+    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' :
+                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
+
+    if (i18n.language !== urlLang) {
+      i18n.changeLanguage(urlLang);
+    }
+  }, [i18n]);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -222,37 +236,43 @@ export const BMPToWebPConverter: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <Header />
-      
-      {/* Hero Section - Narrowed */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              BMP to WebP Converter
-            </h1>
-            <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-              Convert BMP images to WebP format for better web performance. Reduce file size while maintaining high image quality.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
-              <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+    <>
+      <Helmet>
+        <title>{t('bmp_to_webp.meta_title')}</title>
+        <meta name="description" content={t('bmp_to_webp.meta_description')} />
+        <meta name="keywords" content="BMP to WebP, image converter, web optimization, file compression" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <Header />
+        
+        {/* Hero Section - Narrowed */}
+        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <div className="text-center">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                {t('bmp_to_webp.title')}
+              </h1>
+              <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
+                {t('bmp_to_webp.subtitle')}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
+                <div className="flex items-center gap-2">
+                  <Zap className="w-4 h-4" />
+                  <span>{t('features.lightning_fast')}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
+                  <span>{t('features.secure')}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  <span>{t('features.no_registration')}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -272,7 +292,7 @@ export const BMPToWebPConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -283,7 +303,7 @@ export const BMPToWebPConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -291,12 +311,12 @@ export const BMPToWebPConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple BMP Files' : 'Upload BMP File'}
+                  {batchMode ? t('bmp_to_webp.upload_batch') : t('bmp_to_webp.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple BMP files to convert them all at once' 
-                    : 'Drag and drop your BMP file here or click to browse'
+                    ? t('bmp_to_webp.upload_text_batch')
+                    : t('bmp_to_webp.upload_text_single')
                   }
                 </p>
                 <input
@@ -311,14 +331,14 @@ export const BMPToWebPConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Image Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('bmp_to_webp.image_preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <img 
                       src={previewUrl} 
@@ -331,9 +351,9 @@ export const BMPToWebPConverter: React.FC = () => {
                       </p>
                       {imagePreview && (
                         <div className="mt-2 text-sm text-gray-500">
-                          <p>Original: {imagePreview.width} × {imagePreview.height} pixels</p>
+                          <p>{t('bmp_to_webp.original_dimensions')}: {imagePreview.width} × {imagePreview.height} pixels</p>
                           <p className="text-blue-600 font-medium">
-                            Will convert to: WebP format ({quality} quality, {lossless ? 'lossless' : 'lossy'})
+                            {t('bmp_to_webp.will_convert_to')}: {t('bmp_to_webp.webp_format')} ({t(`bmp_to_webp.quality_${quality}`)}, {lossless ? t('bmp_to_webp.lossless') : t('bmp_to_webp.lossy')})
                           </p>
                         </div>
                       )}
@@ -345,7 +365,7 @@ export const BMPToWebPConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('bmp_to_webp.selected_files')} ({batchFiles.length})</h4>
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -375,12 +395,12 @@ export const BMPToWebPConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to WebP'}
+                      {batchMode ? t('bmp_to_webp.convert_files', { count: batchFiles.length }) : t('bmp_to_webp.convert_to_webp')}
                     </div>
                   )}
                 </button>
@@ -391,10 +411,10 @@ export const BMPToWebPConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('bmp_to_webp.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your BMP file has been successfully converted to WebP format.
+                    {t('bmp_to_webp.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -402,14 +422,14 @@ export const BMPToWebPConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download WebP File
+                      {t('bmp_to_webp.download_webp')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -420,10 +440,10 @@ export const BMPToWebPConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('bmp_to_webp.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchFiles.length} BMP files have been successfully converted to WebP format and downloaded.
+                    {t('bmp_to_webp.batch_success_message', { count: batchFiles.length })}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -431,7 +451,7 @@ export const BMPToWebPConverter: React.FC = () => {
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('common.convert_more_files')}
                     </button>
                   </div>
                 </div>
@@ -446,22 +466,22 @@ export const BMPToWebPConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-blue-600" />
-                WebP Settings
+                {t('bmp_to_webp.webp_settings')}
               </h3>
               
               {/* Quality */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Quality
+                  {t('bmp_to_webp.quality')}
                 </label>
                 <select
                   value={quality}
                   onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
-                  <option value="high">High Quality (90-100%)</option>
-                  <option value="medium">Medium Quality (70-89%)</option>
-                  <option value="low">Low Quality (50-69%)</option>
+                  <option value="high">{t('bmp_to_webp.quality_high_option')}</option>
+                  <option value="medium">{t('bmp_to_webp.quality_medium_option')}</option>
+                  <option value="low">{t('bmp_to_webp.quality_low_option')}</option>
                 </select>
               </div>
 
@@ -474,7 +494,7 @@ export const BMPToWebPConverter: React.FC = () => {
                     onChange={(e) => setLossless(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Lossless compression</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('bmp_to_webp.lossless_compression')}</span>
                 </label>
               </div>
             </div>
@@ -483,16 +503,16 @@ export const BMPToWebPConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('bmp_to_webp.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Significant file size reduction",
-                  "High-quality compression",
-                  "Web-optimized output",
-                  "Lossless and lossy options",
-                  "Fast conversion process",
-                  "Batch processing support"
+                  t('bmp_to_webp.feature_1'),
+                  t('bmp_to_webp.feature_2'),
+                  t('bmp_to_webp.feature_3'),
+                  t('bmp_to_webp.feature_4'),
+                  t('bmp_to_webp.feature_5'),
+                  t('bmp_to_webp.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -506,16 +526,16 @@ export const BMPToWebPConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Camera className="w-5 h-5 mr-2 text-blue-600" />
-                Perfect For
+                {t('bmp_to_webp.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Website optimization",
-                  "Web application development",
-                  "Mobile app development",
-                  "Content management systems",
-                  "E-commerce platforms",
-                  "Digital marketing assets"
+                  t('bmp_to_webp.use_case_1'),
+                  t('bmp_to_webp.use_case_2'),
+                  t('bmp_to_webp.use_case_3'),
+                  t('bmp_to_webp.use_case_4'),
+                  t('bmp_to_webp.use_case_5'),
+                  t('bmp_to_webp.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -533,106 +553,106 @@ export const BMPToWebPConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert BMP to WebP?
+            {t('bmp_to_webp.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting BMP images to WebP format is essential for modern web development, mobile applications, and digital content optimization. While BMP provides uncompressed quality, WebP offers superior compression, faster loading times, and better web performance without sacrificing image quality.
+              {t('bmp_to_webp.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of WebP Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('bmp_to_webp.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Superior Compression</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('bmp_to_webp.benefit_compression_title')}</h4>
                 <p className="text-gray-700">
-                  WebP provides 25-35% better compression than JPEG and PNG, significantly reducing file sizes while maintaining high image quality.
+                  {t('bmp_to_webp.benefit_compression_text')}
                 </p>
               </div>
               
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Faster Loading Times</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('bmp_to_webp.benefit_loading_title')}</h4>
                 <p className="text-gray-700">
-                  Smaller file sizes mean faster page load times, improved user experience, and better SEO rankings for your website.
+                  {t('bmp_to_webp.benefit_loading_text')}
                 </p>
               </div>
               
               <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">Modern Web Standard</h4>
+                <h4 className="text-xl font-semibold text-green-900 mb-3">{t('bmp_to_webp.benefit_standard_title')}</h4>
                 <p className="text-gray-700">
-                  WebP is supported by all modern browsers and is the recommended format for web images by Google and other major platforms.
+                  {t('bmp_to_webp.benefit_standard_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Lossless and Lossy Options</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('bmp_to_webp.benefit_options_title')}</h4>
                 <p className="text-gray-700">
-                  Choose between lossless compression for perfect quality or lossy compression for maximum file size reduction.
+                  {t('bmp_to_webp.benefit_options_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('bmp_to_webp.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Website Optimization</h4>
-                  <p className="text-gray-700">Convert BMP images to WebP for faster website loading, improved user experience, and better search engine rankings.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('bmp_to_webp.use_case_website_title')}</h4>
+                  <p className="text-gray-700">{t('bmp_to_webp.use_case_website_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Mobile App Development</h4>
-                  <p className="text-gray-700">Optimize images for mobile applications where bandwidth and storage are crucial for performance and user experience.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('bmp_to_webp.use_case_mobile_title')}</h4>
+                  <p className="text-gray-700">{t('bmp_to_webp.use_case_mobile_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">E-commerce Platforms</h4>
-                  <p className="text-gray-700">Optimize product images for online stores, reducing bandwidth costs while maintaining high-quality product photos.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('bmp_to_webp.use_case_ecommerce_title')}</h4>
+                  <p className="text-gray-700">{t('bmp_to_webp.use_case_ecommerce_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Digital Marketing Assets</h4>
-                  <p className="text-gray-700">Create optimized images for social media, email campaigns, and digital advertising that load quickly and look great.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('bmp_to_webp.use_case_marketing_title')}</h4>
+                  <p className="text-gray-700">{t('bmp_to_webp.use_case_marketing_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your BMP Images?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('bmp_to_webp.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online BMP to WebP converter to optimize your images for better web performance.
+                {t('bmp_to_webp.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
@@ -658,6 +678,7 @@ export const BMPToWebPConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 };

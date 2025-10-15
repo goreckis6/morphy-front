@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -20,6 +21,7 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CSVToAVROConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -46,6 +48,17 @@ export const CSVToAVROConverter: React.FC = () => {
   } = useFileValidation();
   const [csvPreview, setCsvPreview] = useState<{headers: string[], data: any[], totalRows: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Ensure language is synced with URL on mount
+  useEffect(() => {
+    const path = window.location.pathname;
+    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' :
+                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
+
+    if (i18n.language !== urlLang) {
+      i18n.changeLanguage(urlLang);
+    }
+  }, [i18n]);
 
   const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -309,8 +322,8 @@ AVRO_FILE_END`;
   return (
     <>
       <Helmet>
-        <title>CSV to AVRO Converter - Convert CSV to Apache AVRO Format</title>
-        <meta name="description" content="Convert CSV files to Apache AVRO binary format for big data processing. Professional data conversion with schema validation. Free online converter with batch support." />
+        <title>{t('csv_to_avro.meta_title')}</title>
+        <meta name="description" content={t('csv_to_avro.meta_description')} />
         <meta name="keywords" content="CSV to AVRO, Apache AVRO, big data, data conversion, batch processing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
@@ -321,23 +334,23 @@ AVRO_FILE_END`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CSV to AVRO Converter
+              {t('csv_to_avro.title')}
             </h1>
             <p className="text-lg sm:text-xl text-indigo-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to AVRO format for big data processing. Transform tabular data into Apache Avro binary format optimized for data serialization and streaming.
+              {t('csv_to_avro.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-indigo-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -360,7 +373,7 @@ AVRO_FILE_END`;
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -371,19 +384,19 @@ AVRO_FILE_END`;
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-indigo-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
+                  {batchMode ? t('csv_to_avro.upload_batch') : t('csv_to_avro.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple CSV files to convert them all at once' 
-                    : 'Drag and drop your CSV file here or click to browse'
+                    ? t('csv_to_avro.upload_text_batch')
+                    : t('csv_to_avro.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
@@ -404,13 +417,13 @@ AVRO_FILE_END`;
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">File Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('csv_to_avro.file_preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <File className="w-12 h-12 text-gray-400" />
@@ -424,12 +437,12 @@ AVRO_FILE_END`;
 
               {csvPreview && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">CSV Data Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('csv_to_avro.csv_data_preview')}</h4>
                   <div className="bg-white border border-gray-200 rounded-lg p-4">
                     <div className="mb-3">
                       <span className="text-sm text-gray-600">
-                        Total rows: <strong>{csvPreview.totalRows}</strong> | 
-                        Columns: <strong>{csvPreview.headers.length}</strong>
+                        {t('csv_to_avro.total_rows')}: <strong>{csvPreview.totalRows}</strong> | 
+                        {t('csv_to_avro.columns')}: <strong>{csvPreview.headers.length}</strong>
                       </span>
                     </div>
                     <div className="overflow-x-auto">
@@ -458,7 +471,7 @@ AVRO_FILE_END`;
                     </div>
                     {csvPreview.totalRows > 10 && (
                       <p className="text-xs text-gray-500 mt-2">
-                        Showing first 10 rows of {csvPreview.totalRows} total rows
+                        {t('csv_to_avro.showing_rows', { total: csvPreview.totalRows })}
                       </p>
                     )}
                   </div>
@@ -473,7 +486,7 @@ AVRO_FILE_END`;
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('csv_to_avro.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -483,7 +496,7 @@ AVRO_FILE_END`;
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('csv_to_avro.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -518,12 +531,12 @@ AVRO_FILE_END`;
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to AVRO'}
+                      {batchMode ? t('csv_to_avro.convert_files', { count: batchFiles.length }) : t('csv_to_avro.convert_to_avro')}
                     </div>
                   )}
                 </button>
@@ -533,10 +546,10 @@ AVRO_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_avro.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CSV file has been successfully converted to AVRO format.
+                    {t('csv_to_avro.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -544,14 +557,14 @@ AVRO_FILE_END`;
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download AVRO File
+                      {t('csv_to_avro.download_avro')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -562,10 +575,13 @@ AVRO_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_avro.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('csv_to_avro.batch_success_message', { 
+                      count: batchResults.filter(r => r.success).length, 
+                      total: batchResults.length 
+                    })}
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
@@ -594,7 +610,7 @@ AVRO_FILE_END`;
                               onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                             >
-                              Download
+                              {t('common.download')}
                             </button>
                           )}
                         </div>
@@ -607,7 +623,7 @@ AVRO_FILE_END`;
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('common.convert_more_files')}
                     </button>
                   </div>
                 </div>
@@ -620,31 +636,31 @@ AVRO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-indigo-600" />
-                AVRO Settings
+                {t('csv_to_avro.avro_settings')}
               </h3>
               
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Compression
+                  {t('csv_to_avro.compression')}
                 </label>
                 <select
                   value={compression}
                   onChange={(e) => setCompression(e.target.value as 'deflate' | 'snappy' | 'bzip2')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
                 >
-                  <option value="deflate">Deflate (Balanced)</option>
-                  <option value="snappy">Snappy (Fast)</option>
-                  <option value="bzip2">Bzip2 (Best)</option>
+                  <option value="deflate">{t('csv_to_avro.compression_deflate')}</option>
+                  <option value="snappy">{t('csv_to_avro.compression_snappy')}</option>
+                  <option value="bzip2">{t('csv_to_avro.compression_bzip2')}</option>
                 </select>
                 <div className="mt-2 text-sm text-gray-600">
                   {compression === 'deflate' && (
-                    <span className="text-blue-600">✓ Good balance of speed and compression (~60% size reduction)</span>
+                    <span className="text-blue-600">✓ {t('csv_to_avro.compression_deflate_desc')}</span>
                   )}
                   {compression === 'snappy' && (
-                    <span className="text-green-600">✓ Fast compression, moderate size reduction (~40% size reduction)</span>
+                    <span className="text-green-600">✓ {t('csv_to_avro.compression_snappy_desc')}</span>
                   )}
                   {compression === 'bzip2' && (
-                    <span className="text-purple-600">✓ High compression, slower processing (~80% size reduction)</span>
+                    <span className="text-purple-600">✓ {t('csv_to_avro.compression_bzip2_desc')}</span>
                   )}
                 </div>
               </div>
@@ -657,7 +673,7 @@ AVRO_FILE_END`;
                     onChange={(e) => setIncludeHeaders(e.target.checked)}
                     className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('csv_to_avro.include_headers')}</span>
                 </label>
               </div>
             </div>
@@ -665,16 +681,16 @@ AVRO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('csv_to_avro.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Apache Avro format",
-                  "Big data serialization",
-                  "Schema evolution support",
-                  "High compression ratio",
-                  "Data streaming ready",
-                  "Batch processing support"
+                  t('csv_to_avro.feature_1'),
+                  t('csv_to_avro.feature_2'),
+                  t('csv_to_avro.feature_3'),
+                  t('csv_to_avro.feature_4'),
+                  t('csv_to_avro.feature_5'),
+                  t('csv_to_avro.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -687,16 +703,16 @@ AVRO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-indigo-600" />
-                Perfect For
+                {t('csv_to_avro.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Big data processing",
-                  "Data serialization",
-                  "Apache Kafka",
-                  "Data streaming",
-                  "Schema evolution",
-                  "Data pipelines"
+                  t('csv_to_avro.use_case_1'),
+                  t('csv_to_avro.use_case_2'),
+                  t('csv_to_avro.use_case_3'),
+                  t('csv_to_avro.use_case_4'),
+                  t('csv_to_avro.use_case_5'),
+                  t('csv_to_avro.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -713,69 +729,69 @@ AVRO_FILE_END`;
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to AVRO?
+            {t('csv_to_avro.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to AVRO format is essential for big data processing, data serialization, and Apache ecosystem integration. While CSV files are excellent for data exchange, AVRO format provides the perfect solution for high-performance data serialization, schema evolution, and streaming data processing in big data environments.
+              {t('csv_to_avro.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of AVRO Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_avro.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Apache Avro Format</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('csv_to_avro.benefit_apache_title')}</h4>
                 <p className="text-gray-700">
-                  AVRO is the industry-standard format for big data serialization, providing excellent performance and compatibility with Apache ecosystem tools.
+                  {t('csv_to_avro.benefit_apache_text')}
                 </p>
               </div>
               
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Schema Evolution</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('csv_to_avro.benefit_schema_title')}</h4>
                 <p className="text-gray-700">
-                  AVRO format supports schema evolution, allowing you to add, remove, or modify fields without breaking existing data or applications.
+                  {t('csv_to_avro.benefit_schema_text')}
                 </p>
               </div>
               
               <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">High Compression</h4>
+                <h4 className="text-xl font-semibold text-pink-900 mb-3">{t('csv_to_avro.benefit_compression_title')}</h4>
                 <p className="text-gray-700">
-                  AVRO format provides excellent compression ratios with multiple compression algorithms, reducing storage costs and improving I/O performance.
+                  {t('csv_to_avro.benefit_compression_text')}
                 </p>
               </div>
               
               <div className="bg-rose-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-rose-900 mb-3">Data Streaming</h4>
+                <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('csv_to_avro.benefit_streaming_title')}</h4>
                 <p className="text-gray-700">
-                  AVRO format is optimized for data streaming and real-time processing, making it perfect for Apache Kafka and streaming data pipelines.
+                  {t('csv_to_avro.benefit_streaming_text')}
                 </p>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('csv_to_avro.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to AVRO converter to transform your tabular data into big data serialization format.
+                {t('csv_to_avro.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
