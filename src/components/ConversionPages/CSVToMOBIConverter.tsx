@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
+import { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
   Download, 
@@ -21,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const CSVToMOBIConverter: React.FC = () => {
+  const { t } = useTranslation();
   const {
     selectedFile,
     convertedFile,
@@ -51,6 +54,19 @@ export const CSVToMOBIConverter: React.FC = () => {
   const [includeHeaders, setIncludeHeaders] = useState(true);
   const [bookTitle, setBookTitle] = useState('CSV Data');
 
+  // Synchronize language with URL
+  useEffect(() => {
+    const urlLanguage = getLanguageFromUrl();
+    if (urlLanguage) {
+      // Change language if different from current
+      const currentLang = localStorage.getItem('i18nextLng') || 'en';
+      if (urlLanguage !== currentLang) {
+        localStorage.setItem('i18nextLng', urlLanguage);
+        window.location.reload();
+      }
+    }
+  }, []);
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -58,8 +74,8 @@ export const CSVToMOBIConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>CSV to MOBI Converter - Convert CSV to Kindle Format</title>
-        <meta name="description" content="Convert CSV data to MOBI format for Amazon Kindle. Transform spreadsheet data into Kindle-compatible ebooks. Free online converter with batch support." />
+        <title>{t('csv_to_mobi.meta_title')}</title>
+        <meta name="description" content={t('csv_to_mobi.meta_description')} />
         <meta name="keywords" content="CSV to MOBI, data to Kindle, Kindle format, ebook converter" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-yellow-50">
@@ -70,23 +86,23 @@ export const CSVToMOBIConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CSV to MOBI Converter
+              {t('csv_to_mobi.title')}
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to MOBI format. Transform tabular data into Kindle-compatible ebooks with formatted tables.
+              {t('csv_to_mobi.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -109,7 +125,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -120,19 +136,19 @@ export const CSVToMOBIConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
+                  {batchMode ? t('csv_to_mobi.upload_batch') : t('csv_to_mobi.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple CSV files to convert them all at once' 
-                    : 'Drag and drop your CSV file here or click to browse'
+                    ? t('csv_to_mobi.upload_text_batch')
+                    : t('csv_to_mobi.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
@@ -153,13 +169,13 @@ export const CSVToMOBIConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('csv_to_mobi.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <FileText className="w-12 h-12 text-gray-400" />
@@ -173,13 +189,13 @@ export const CSVToMOBIConverter: React.FC = () => {
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('csv_to_mobi.selected_files')} ({batchFiles.length})</h4>
                   {(() => {
                     const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <div className="flex items-center justify-between text-sm font-medium mb-2">
-                        <span className="text-gray-600">Total size</span>
+                        <span className="text-gray-600">{t('csv_to_mobi.total_size')}</span>
                         <span className={`ml-3 ${sizeDisplay.isWarning ? 'text-amber-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
                       </div>
                     );
@@ -221,12 +237,12 @@ export const CSVToMOBIConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to MOBI'}
+                      {batchMode ? t('csv_to_mobi.convert_files', { count: batchFiles.length }) : t('csv_to_mobi.convert_to_mobi')}
                     </div>
                   )}
                 </button>
@@ -236,10 +252,10 @@ export const CSVToMOBIConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_mobi.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CSV file has been successfully converted to MOBI format.
+                    {t('csv_to_mobi.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -247,14 +263,14 @@ export const CSVToMOBIConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download MOBI File
+                      {t('csv_to_mobi.download_mobi')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -264,7 +280,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_mobi.batch_conversion_complete')}</h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((r, idx) => (
@@ -281,7 +297,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                             onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
                           >
-                            Download
+                            {t('common.download')}
                           </button>
                         )}
                       </div>
@@ -292,7 +308,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('common.convert_more_files')}
                   </button>
                 </div>
               )}
@@ -304,12 +320,12 @@ export const CSVToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-amber-600" />
-                MOBI Settings
+                {t('csv_to_mobi.mobi_settings')}
               </h3>
               
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Book Title
+                  {t('csv_to_mobi.book_title')}
                 </label>
                 <input
                   type="text"
@@ -328,7 +344,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                     onChange={(e) => setIncludeHeaders(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('csv_to_mobi.include_headers')}</span>
                 </label>
               </div>
             </div>
@@ -336,16 +352,16 @@ export const CSVToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('csv_to_mobi.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Kindle compatibility",
-                  "E-reader support",
-                  "Mobile-friendly format",
-                  "Compact file size",
-                  "Table formatting",
-                  "Batch conversion support"
+                  t('csv_to_mobi.feature_1'),
+                  t('csv_to_mobi.feature_2'),
+                  t('csv_to_mobi.feature_3'),
+                  t('csv_to_mobi.feature_4'),
+                  t('csv_to_mobi.feature_5'),
+                  t('csv_to_mobi.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -358,16 +374,16 @@ export const CSVToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-amber-600" />
-                Perfect For
+                {t('csv_to_mobi.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Kindle devices",
-                  "Mobile reading",
-                  "Data reference books",
-                  "Report distribution",
-                  "Educational content",
-                  "Digital publishing"
+                  t('csv_to_mobi.use_case_1'),
+                  t('csv_to_mobi.use_case_2'),
+                  t('csv_to_mobi.use_case_3'),
+                  t('csv_to_mobi.use_case_4'),
+                  t('csv_to_mobi.use_case_5'),
+                  t('csv_to_mobi.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -384,106 +400,106 @@ export const CSVToMOBIConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to MOBI?
+            {t('csv_to_mobi.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to MOBI format is essential for e-book creation, data publication, and digital content distribution. While CSV files are excellent for data storage and analysis, MOBI format provides a standardized e-book format that can be read on any e-reader, tablet, or mobile device, making your data accessible to a wider audience in a professional, readable format.
+              {t('csv_to_mobi.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of MOBI Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_mobi.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-amber-900 mb-3">Kindle Compatibility</h4>
+                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('csv_to_mobi.benefit_kindle_title')}</h4>
                 <p className="text-gray-700">
-                  MOBI format is the native format for Amazon Kindle devices, ensuring perfect compatibility and optimal reading experience on the world's most popular e-reader.
+                  {t('csv_to_mobi.benefit_kindle_text')}
                 </p>
               </div>
               
               <div className="bg-yellow-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-yellow-900 mb-3">E-reader Support</h4>
+                <h4 className="text-xl font-semibold text-yellow-900 mb-3">{t('csv_to_mobi.benefit_ereader_title')}</h4>
                 <p className="text-gray-700">
-                  MOBI files can be read on virtually all e-readers, tablets, and mobile devices, ensuring your content reaches the widest possible audience.
+                  {t('csv_to_mobi.benefit_ereader_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Professional Layout</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('csv_to_mobi.benefit_layout_title')}</h4>
                 <p className="text-gray-700">
-                  MOBI format provides professional e-book layout capabilities including proper typography, table formatting, and responsive design for optimal reading experience.
+                  {t('csv_to_mobi.benefit_layout_text')}
                 </p>
               </div>
               
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">Data Publishing</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('csv_to_mobi.benefit_publishing_title')}</h4>
                 <p className="text-gray-700">
-                  Transform your data into professional e-books for distribution through major e-book retailers, libraries, and digital publishing platforms.
+                  {t('csv_to_mobi.benefit_publishing_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_mobi.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">E-book Creation</h4>
-                  <p className="text-gray-700">Convert CSV data to MOBI format for creating comprehensive e-books, data reports, and informational publications that can be distributed digitally.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_mobi.use_case_ebook_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_mobi.use_case_ebook_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Educational Materials</h4>
-                  <p className="text-gray-700">Transform educational data and research findings into MOBI format for creating digital textbooks, study guides, and educational resources.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_mobi.use_case_education_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_mobi.use_case_education_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Research Documentation</h4>
-                  <p className="text-gray-700">Convert research data and findings to MOBI format for creating comprehensive research reports and academic publications.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_mobi.use_case_research_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_mobi.use_case_research_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Digital Publishing</h4>
-                  <p className="text-gray-700">Create professional digital publications by converting CSV data to MOBI format for distribution through e-book platforms and digital libraries.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_mobi.use_case_publishing_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_mobi.use_case_publishing_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-amber-600 to-yellow-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('csv_to_mobi.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to MOBI converter to transform your tabular data into professional e-books.
+                {t('csv_to_mobi.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+{t('csv_to_mobi.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors"
                 >
-                  Back to Home
+{t('common.back_to_home')}
                 </button>
               </div>
             </div>

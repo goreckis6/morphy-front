@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
-import { i18n, getLanguageFromUrl } from '../../i18n';
+import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
   Download, 
