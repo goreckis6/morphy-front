@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
+import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
   Download, 
@@ -18,6 +20,7 @@ import {
 } from 'lucide-react';
 
 export const CSVToODTConverter: React.FC = () => {
+  const { t } = useTranslation();
   const {
     selectedFile,
     convertedFile,
@@ -43,6 +46,16 @@ export const CSVToODTConverter: React.FC = () => {
     handleBatchDownload,
     resetForm
   } = useCsvConversion({ targetFormat: 'odt' });
+  const [includeHeaders, setIncludeHeaders] = useState(true);
+  const [documentTitle, setDocumentTitle] = useState('');
+
+  // Language synchronization
+  useEffect(() => {
+    const language = getLanguageFromUrl();
+    if (language && i18n.language !== language) {
+      i18n.changeLanguage(language);
+    }
+  }, []);
 
   const handleBack = () => {
     window.location.href = '/';
@@ -51,8 +64,8 @@ export const CSVToODTConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>CSV to ODT Converter - Convert CSV to OpenDocument</title>
-        <meta name="description" content="Convert CSV files to ODT format for LibreOffice Writer. Professional spreadsheet to document conversion with table formatting. Free online converter." />
+        <title>{t('csv_to_odt.meta_title')}</title>
+        <meta name="description" content={t('csv_to_odt.meta_description')} />
         <meta name="keywords" content="CSV to ODT, data converter, OpenDocument, LibreOffice, table conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
@@ -63,23 +76,23 @@ export const CSVToODTConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CSV to ODT Converter
+              {t('csv_to_odt.title')}
             </h1>
             <p className="text-lg sm:text-xl text-sky-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to OpenDocument Text (ODT) format. Transform tabular data into LibreOffice Writer documents.
+              {t('csv_to_odt.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-sky-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -102,7 +115,7 @@ export const CSVToODTConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -113,19 +126,19 @@ export const CSVToODTConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-sky-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
+                  {batchMode ? t('csv_to_odt.upload_batch') : t('csv_to_odt.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple CSV files to convert them all at once' 
-                    : 'Drag and drop your CSV file here or click to browse'
+                    ? t('csv_to_odt.upload_text_batch') 
+                    : t('csv_to_odt.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
@@ -146,13 +159,13 @@ export const CSVToODTConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-sky-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('csv_to_odt.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <FileText className="w-12 h-12 text-gray-400" />
@@ -172,7 +185,7 @@ export const CSVToODTConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('csv_to_odt.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -213,8 +226,8 @@ export const CSVToODTConverter: React.FC = () => {
               <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 text-blue-500 mr-2" />
-                  <span className="text-sm text-blue-700 font-medium">
-                    Conversion may take 2-5 minutes for large files
+                  <span className='text-sm text-blue-700 font-medium'>
+                    {t('common.large_file_warning')}
                   </span>
                 </div>
               </div>
@@ -228,12 +241,12 @@ export const CSVToODTConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to ODT'}
+                      {batchMode ? t('csv_to_odt.convert_files', { count: batchFiles.length }) : t('csv_to_odt.convert_to_odt')}
                     </div>
                   )}
                 </button>
@@ -243,10 +256,10 @@ export const CSVToODTConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_odt.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CSV file has been successfully converted to ODT format.
+                    {t('csv_to_odt.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -254,14 +267,14 @@ export const CSVToODTConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download ODT File
+                      {t('csv_to_odt.download_odt')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -271,7 +284,7 @@ export const CSVToODTConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_odt.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
                     {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
@@ -303,7 +316,7 @@ export const CSVToODTConverter: React.FC = () => {
                               onClick={() => handleBatchDownload(result)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                             >
-                              Download
+                              {t('common.download')}
                             </button>
                           )}
                         </div>
@@ -316,7 +329,7 @@ export const CSVToODTConverter: React.FC = () => {
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('common.convert_more_files')}
                     </button>
                   </div>
                 </div>
@@ -329,16 +342,16 @@ export const CSVToODTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('csv_to_odt.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "LibreOffice compatibility",
-                  "Open document standard",
-                  "Cross-platform support",
-                  "Professional formatting",
-                  "Free software friendly",
-                  "Batch conversion support"
+                  t('csv_to_odt.feature_1'),
+                  t('csv_to_odt.feature_2'),
+                  t('csv_to_odt.feature_3'),
+                  t('csv_to_odt.feature_4'),
+                  t('csv_to_odt.feature_5'),
+                  t('csv_to_odt.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -390,94 +403,94 @@ export const CSVToODTConverter: React.FC = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to ODT format opens up powerful document editing capabilities that aren't available in simple spreadsheet formats. While CSV is excellent for data storage and analysis, ODT format provides professional document features, making it the ideal choice for reports, documentation, and collaborative editing.
+              {t('csv_to_odt.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ODT Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_odt.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-sky-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-sky-900 mb-3">Professional Documents</h4>
+                <h4 className="text-xl font-semibold text-sky-900 mb-3">{t('csv_to_odt.benefit_document_title')}</h4>
                 <p className="text-gray-700">
-                  Transform raw CSV data into polished, professional documents that can be easily edited and formatted in LibreOffice Writer.
+                  {t('csv_to_odt.benefit_document_text')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Open Standard Format</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('csv_to_odt.benefit_libreoffice_title')}</h4>
                 <p className="text-gray-700">
-                  ODT is an open document standard that works everywhere, ensuring your documents are accessible across all platforms and software.
+                  {t('csv_to_odt.benefit_libreoffice_text')}
                 </p>
               </div>
               
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Enhanced Formatting</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('csv_to_odt.benefit_formatting_title')}</h4>
                 <p className="text-gray-700">
-                  Break down complex CSV data into well-formatted documents with tables, headers, and professional styling that makes your data readable and presentable.
+                  {t('csv_to_odt.benefit_formatting_text')}
                 </p>
               </div>
               
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Universal Compatibility</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('csv_to_odt.benefit_collaboration_title')}</h4>
                 <p className="text-gray-700">
-                  ODT files work perfectly in LibreOffice, OpenOffice, Google Docs, and most word processors, ensuring maximum compatibility.
+                  {t('csv_to_odt.benefit_collaboration_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_odt.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-sky-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Reports</h4>
-                  <p className="text-gray-700">Convert sales data, financial reports, and analytics from CSV format into professional business documents for stakeholders and clients.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_odt.use_case_business_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_odt.use_case_business_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Academic Papers</h4>
-                  <p className="text-gray-700">Transform research data and survey results from CSV format into well-formatted academic documents for publications and presentations.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_odt.use_case_academic_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_odt.use_case_academic_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h4>
-                  <p className="text-gray-700">Create comprehensive documentation by converting CSV data into structured, easy-to-read documents with proper formatting and styling.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_odt.use_case_documentation_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_odt.use_case_documentation_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Collaborative Editing</h4>
-                  <p className="text-gray-700">Enable team collaboration by converting CSV data into ODT format that can be easily shared and edited by multiple team members.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_odt.use_case_forms_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_odt.use_case_forms_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-sky-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('csv_to_odt.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to ODT converter to transform your data into professional documents.
+                {t('csv_to_odt.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-sky-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
