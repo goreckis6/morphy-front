@@ -286,13 +286,13 @@ export const CSVToMOBIConverter: React.FC = () => {
                     {batchResults.map((r, idx) => (
                       <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
                         <div className="text-sm">
-                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.mobi')}</div>
+                          <div className="font-medium text-gray-900">{r.outputFilename || r.filename || (r.originalName ? r.originalName.replace(/\.[^.]+$/, '.mobi') : 'converted.mobi')}</div>
                           {r.success && r.size && (
                             <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
                           )}
                           {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
-                        {r.success && r.downloadPath && (
+                        {r.success && (r.downloadPath || r.downloadUrl) && (
                           <button
                             onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"

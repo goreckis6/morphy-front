@@ -137,6 +137,8 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         result = await apiService.convertBatchCsvToMd(batchFiles);
       } else if (targetFormat === 'mobi') {
         result = await apiService.convertBatchCsvToMobi(batchFiles);
+      } else if (targetFormat === 'odp') {
+        result = await apiService.convertBatchCsvToOdp(batchFiles);
       } else {
         result = await apiService.convertBatch(batchFiles, { format: targetFormat });
       }
