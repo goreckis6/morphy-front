@@ -179,6 +179,39 @@ class ApiService {
     return result;
   }
 
+  async convertBatchCsvToDoc(files: File[]): Promise<BatchConversionResult> {
+    const formData = new FormData();
+    
+    console.log('API: Starting CSV to DOC batch conversion with', files.length, 'files');
+    
+    // Add files with proper UTF-8 handling
+    files.forEach((file, index) => {
+      // Create a new File object to ensure proper UTF-8 encoding
+      const fileWithProperName = new File([file], file.name, {
+        type: file.type,
+        lastModified: file.lastModified
+      });
+      formData.append('files', fileWithProperName);
+      console.log(`API: Added file ${index + 1}:`, file.name, 'size:', file.size);
+    });
+
+    console.log('API: Making request to /convert/csv-to-doc/batch');
+    const response = await this.makeRequest('/convert/csv-to-doc/batch', 'POST', formData);
+    const result = await response.json();
+    
+    console.log('API: CSV to DOC batch conversion response:', result);
+    
+    // Track batch conversions
+    if (result.results) {
+      const totalSize = result.results.reduce((sum: number, r: any) => {
+        return sum + (r.size || 0);
+      }, 0);
+      ConversionTracker.addConversion(totalSize);
+    }
+    
+    return result;
+  }
+
   async healthCheck(): Promise<{ status: string; timestamp: string }> {
     const response = await this.makeRequest('/health');
     return await response.json();
