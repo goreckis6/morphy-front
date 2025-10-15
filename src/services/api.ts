@@ -142,14 +142,17 @@ class ApiService {
   async convertBatch(files: File[], options: ConversionOptions = {}): Promise<BatchConversionResult> {
     const formData = new FormData();
     
+    console.log('API: Starting batch conversion with', files.length, 'files, format:', options.format);
+    
     // Add files with proper UTF-8 handling
-    files.forEach(file => {
+    files.forEach((file, index) => {
       // Create a new File object to ensure proper UTF-8 encoding
       const fileWithProperName = new File([file], file.name, {
         type: file.type,
         lastModified: file.lastModified
       });
       formData.append('files', fileWithProperName);
+      console.log(`API: Added file ${index + 1}:`, file.name, 'size:', file.size);
     });
     
     // Add conversion options
@@ -159,8 +162,11 @@ class ApiService {
     if (options.width !== undefined) formData.append('width', options.width.toString());
     if (options.height !== undefined) formData.append('height', options.height.toString());
 
+    console.log('API: Making request to /api/convert/batch with options:', options);
     const response = await this.makeRequest('/api/convert/batch', 'POST', formData);
     const result = await response.json();
+    
+    console.log('API: Batch conversion response:', result);
     
     // Track batch conversions
     if (result.success && result.results) {

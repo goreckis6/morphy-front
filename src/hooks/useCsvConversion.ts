@@ -9,6 +9,7 @@ export interface BatchResultItem {
   downloadPath?: string;
   storedFilename?: string;
   error?: string;
+  size?: number;
 }
 
 interface UseCsvConversionOptions {
@@ -120,15 +121,27 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setIsConverting(true);
     setError(null);
     try {
+      console.log('Starting batch conversion for', batchFiles.length, 'files to', targetFormat);
       const result = await apiService.convertBatch(batchFiles, { format: targetFormat });
+      console.log('Batch conversion result:', result);
+      
       const results = (result.results as BatchResultItem[]) ?? [];
       setBatchResults(results);
+      
       const successCount = results.filter(item => item.success).length;
+      console.log('Successful conversions:', successCount, 'out of', results.length);
+      
       setBatchConverted(successCount > 0);
+      
       if (successCount === 0) {
-        setError('Batch conversion failed. Please try again.');
+        const errorMessages = results
+          .filter(item => !item.success && item.error)
+          .map(item => item.error)
+          .join(', ');
+        setError(`Batch conversion failed: ${errorMessages || 'No files were successfully converted.'}`);
       }
     } catch (err) {
+      console.error('Batch conversion error:', err);
       const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';
       setError(message);
       setBatchConverted(false);
@@ -152,13 +165,17 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
 
   const handleBatchDownload = async (result: BatchResultItem) => {
     try {
+      console.log('Downloading batch result:', result);
+      
       if (result.storedFilename) {
         // Use backend API to fetch the file from the correct origin
-        await apiService.downloadFile(result.storedFilename, result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`));
+        console.log('Using storedFilename for download:', result.storedFilename);
+        await apiService.downloadAndSaveFile(result.storedFilename, result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`));
         return;
       }
       if (result.downloadPath) {
         // Fallback: construct an absolute URL via the API service if needed
+        console.log('Using downloadPath for download:', result.downloadPath);
         const link = document.createElement('a');
         link.href = `${(import.meta as any).env.VITE_API_BASE_URL || (import.meta as any).env.PROD ? 'https://morphy-2-n2tb.onrender.com' : 'http://localhost:3000'}${result.downloadPath}`;
         link.download = result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
@@ -167,8 +184,12 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         document.body.removeChild(link);
         return;
       }
+      
+      console.error('No valid download path found for result:', result);
+      setError('Download failed: No valid download path found.');
     } catch (e) {
       console.error('Batch download failed:', e);
+      setError(`Download failed: ${e instanceof Error ? e.message : 'Unknown error'}`);
     }
   };
 
