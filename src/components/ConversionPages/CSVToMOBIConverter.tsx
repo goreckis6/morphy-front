@@ -223,7 +223,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 text-blue-500 mr-2" />
                   <span className="text-sm text-blue-700 font-medium">
-                    Conversion may take 2-5 minutes for large files
+                    {t('csv_to_mobi.large_file_warning')}
                   </span>
                 </div>
               </div>
@@ -283,10 +283,26 @@ export const CSVToMOBIConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">{t('csv_to_mobi.batch_conversion_complete')}</h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {batchResults.map((r, idx) => (
+                    {batchResults.map((r, idx) => {
+                      // Safe filename extraction with fallback
+                      const getSafeFilename = (result: any) => {
+                        try {
+                          if (result?.outputFilename) return result.outputFilename;
+                          if (result?.filename) return result.filename;
+                          if (result?.originalName && typeof result.originalName === 'string') {
+                            return result.originalName.replace(/\.[^.]+$/, '.mobi');
+                          }
+                          return 'converted.mobi';
+                        } catch (error) {
+                          console.warn('Error processing filename:', error);
+                          return 'converted.mobi';
+                        }
+                      };
+
+                      return (
                       <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
                         <div className="text-sm">
-                          <div className="font-medium text-gray-900">{r.outputFilename || r.filename || (r.originalName ? r.originalName.replace(/\.[^.]+$/, '.mobi') : 'converted.mobi')}</div>
+                          <div className="font-medium text-gray-900">{getSafeFilename(r)}</div>
                           {r.success && r.size && (
                             <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
                           )}
@@ -301,7 +317,8 @@ export const CSVToMOBIConverter: React.FC = () => {
                           </button>
                         )}
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                   <button
                     onClick={resetForm}

@@ -190,7 +190,20 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       if (result.storedFilename) {
         // Use backend API to fetch the file from the correct origin
         console.log('Using storedFilename for download:', result.storedFilename);
-        const filename = result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`) : `converted.${targetFormat}`);
+        const getSafeFilename = (result: any) => {
+          try {
+            if (result?.outputFilename) return result.outputFilename;
+            if (result?.filename) return result.filename;
+            if (result?.originalName && typeof result.originalName === 'string') {
+              return result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
+            }
+            return `converted.${targetFormat}`;
+          } catch (error) {
+            console.warn('Error processing filename:', error);
+            return `converted.${targetFormat}`;
+          }
+        };
+        const filename = getSafeFilename(result);
         await apiService.downloadAndSaveFile(result.storedFilename, filename);
         return;
       }
@@ -199,7 +212,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         console.log('Using downloadPath for download:', result.downloadPath);
         const link = document.createElement('a');
         link.href = `${(import.meta as any).env.VITE_API_BASE_URL || (import.meta as any).env.PROD ? 'https://morphy-2-n2tb.onrender.com' : 'http://localhost:3000'}${result.downloadPath}`;
-        link.download = result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`) : `converted.${targetFormat}`);
+        link.download = getSafeFilename(result);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
