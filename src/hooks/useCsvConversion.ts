@@ -178,7 +178,8 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       if (result.storedFilename) {
         // Use backend API to fetch the file from the correct origin
         console.log('Using storedFilename for download:', result.storedFilename);
-        await apiService.downloadAndSaveFile(result.storedFilename, result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`));
+        const filename = result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`) : `converted.${targetFormat}`);
+        await apiService.downloadAndSaveFile(result.storedFilename, filename);
         return;
       }
       if (result.downloadPath) {
@@ -186,7 +187,18 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         console.log('Using downloadPath for download:', result.downloadPath);
         const link = document.createElement('a');
         link.href = `${(import.meta as any).env.VITE_API_BASE_URL || (import.meta as any).env.PROD ? 'https://morphy-2-n2tb.onrender.com' : 'http://localhost:3000'}${result.downloadPath}`;
-        link.download = result.outputFilename || result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
+        link.download = result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`) : `converted.${targetFormat}`);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        return;
+      }
+      if (result.downloadUrl) {
+        // Handle downloadUrl from the new CSV to DOC batch endpoint
+        console.log('Using downloadUrl for download:', result.downloadUrl);
+        const link = document.createElement('a');
+        link.href = result.downloadUrl;
+        link.download = result.filename || result.outputFilename || `converted.${targetFormat}`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
