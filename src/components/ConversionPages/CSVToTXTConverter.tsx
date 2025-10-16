@@ -221,7 +221,7 @@ export const CSVToTXTConverter: React.FC = () => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('common.convert_files', { count: batchFiles.length }) : t('csv_to_txt.convert_to_txt')}
+                      {batchMode ? t('csv_to_txt.convert_files', { count: batchFiles.length }) : t('csv_to_txt.convert_to_txt')}
                     </div>
                   )}
                 </button>
