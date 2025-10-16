@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Upload, Download, RefreshCw, ArrowLeft, CheckCircle, AlertCircle, Star } from 'lucide-react';
 import { Header } from '../Header';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
+import { ConversionLimits } from '../../utils/conversionLimits';
+import { useAuth } from '../../contexts/AuthContext';
+import { AuthModal } from '../AuthModal';
 
 interface BaseConverterProps {
   title: string;
@@ -33,6 +37,8 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const { user } = useAuth();
 
   // Update page title and meta description
   React.useEffect(() => {
@@ -60,12 +66,23 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
   const handleConvert = async () => {
     if (!selectedFile) return;
 
+    // Check conversion limits for anonymous users
+    if (!user && !ConversionLimits.canConvert()) {
+      setShowAuthModal(true);
+      return;
+    }
+
     setIsConverting(true);
     setError(null);
 
     try {
       const result = await onConvert(selectedFile);
       setConvertedFile(result);
+      
+      // Record conversion for anonymous users
+      if (!user) {
+        ConversionLimits.recordConversion();
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Conversion failed');
     } finally {
@@ -111,6 +128,9 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Conversion Limit Banner */}
+        <ConversionLimitBanner onRegisterClick={() => setShowAuthModal(true)} />
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Converter */}
           <div className="lg:col-span-2">
@@ -298,6 +318,13 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
           </div>
         </div>
       </footer>
+
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        initialMode="signup"
+      />
     </div>
   );
 };

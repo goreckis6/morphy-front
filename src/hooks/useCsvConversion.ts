@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import { apiService } from '../services/api';
 import { useFileValidation } from './useFileValidation';
+import { ConversionLimits } from '../utils/conversionLimits';
+import { useAuth } from '../contexts/AuthContext';
 
 export interface BatchResultItem {
   originalName: string;
@@ -27,7 +29,9 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<BatchResultItem[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const { user } = useAuth();
 
   const {
     validationError,
@@ -101,12 +105,29 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
+    // Check conversion limits for anonymous users (server-side IP-based)
+    if (!user) {
+      const canConvert = await ConversionLimits.checkServerLimits();
+      if (!canConvert) {
+        setConversionLimitReached(true);
+        setError('You have reached the limit of 5 free conversions. Please register for unlimited conversions.');
+        return;
+      }
+    }
+
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
+    
     try {
       const result = await apiService.convertFile(selectedFile, { format: targetFormat });
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
+      
+      // Record conversion for anonymous users
+      if (!user) {
+        ConversionLimits.recordConversion();
+      }
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
       setError(message);
@@ -118,8 +139,20 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
 
+    // Check conversion limits for anonymous users (server-side IP-based)
+    if (!user) {
+      const canConvert = await ConversionLimits.checkServerLimits();
+      if (!canConvert) {
+        setConversionLimitReached(true);
+        setError('You have reached the limit of 5 free conversions. Please register for unlimited conversions.');
+        return;
+      }
+    }
+
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
+    
     try {
       console.log('Starting batch conversion for', batchFiles.length, 'files to', targetFormat);
       
@@ -152,6 +185,11 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       console.log('Successful conversions:', successCount, 'out of', results.length);
       
       setBatchConverted(successCount > 0);
+      
+      // Record conversion for anonymous users (count batch as 1 conversion)
+      if (!user && successCount > 0) {
+        ConversionLimits.recordConversion();
+      }
       
       if (successCount === 0) {
         const errorMessages = results
@@ -247,6 +285,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setBatchFiles([]);
     setBatchResults([]);
     setBatchConverted(false);
+    setConversionLimitReached(false);
     clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
@@ -265,6 +304,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     batchFiles,
     batchResults,
     batchConverted,
+    conversionLimitReached,
     fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,

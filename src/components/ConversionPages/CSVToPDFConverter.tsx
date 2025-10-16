@@ -3,6 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
+import { useAuth } from '../../contexts/AuthContext';
+import { AuthModal } from '../AuthModal';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
@@ -21,6 +24,8 @@ import {
 
 export const CSVToPDFConverter: React.FC = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const [showAuthModal, setShowAuthModal] = useState(false);
   const {
     selectedFile,
     convertedFile,
@@ -33,6 +38,7 @@ export const CSVToPDFConverter: React.FC = () => {
     batchFiles,
     batchResults,
     batchConverted,
+    conversionLimitReached,
     fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,
@@ -102,6 +108,9 @@ export const CSVToPDFConverter: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Conversion Limit Banner */}
+        <ConversionLimitBanner onRegisterClick={() => setShowAuthModal(true)} />
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           <div className="lg:col-span-2">
@@ -520,6 +529,13 @@ export const CSVToPDFConverter: React.FC = () => {
           </div>
         </div>
       </footer>
+
+      {/* Auth Modal */}
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        initialMode="signup"
+      />
 
       </div>
 

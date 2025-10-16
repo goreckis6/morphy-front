@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { authService, User, AuthResponse } from '../services/authService';
+import { ConversionLimits } from '../utils/conversionLimits';
 
 interface AuthContextType {
   user: User | null;
@@ -60,6 +61,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const result = await authService.register({ email, password, name });
       if (result.success && result.user) {
         setUser(result.user);
+        // Reset conversion limits for newly registered users
+        ConversionLimits.resetConversions();
       }
       return result;
     } finally {
@@ -73,6 +76,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const result = await authService.login({ email, password });
       if (result.success && result.user) {
         setUser(result.user);
+        // Reset conversion limits for logged-in users
+        ConversionLimits.resetConversions();
       }
       return result;
     } finally {
