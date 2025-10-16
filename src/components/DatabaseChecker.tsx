@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Database, AlertCircle, CheckCircle, Clock, Users, FileText, Activity, RefreshCw } from 'lucide-react';
+import { API_BASE_URL } from '../../services/api';
 
 interface DatabaseInfo {
   host: string;
@@ -50,7 +51,7 @@ const DatabaseChecker: React.FC = () => {
     setLoading(true);
     
     try {
-      const response = await fetch('/api/dbchecker');
+      const response = await fetch(`${API_BASE_URL}/api/dbchecker`);
       const data = await response.json();
       
       if (response.ok) {
