@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import i18n, { getLanguageFromUrl } from '../../i18n';
+import { apiService } from '../../services/api';
 import { 
   Upload, 
   Download, 
@@ -65,9 +66,12 @@ export const CSVToPPTConverter: React.FC = () => {
     setError(null);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    const pptContent = `Mock PPT content for ${file.name} - Headers: ${includeHeaders}, Charts: ${addCharts}`;
-    return new Blob([pptContent], { type: 'application/vnd.ms-powerpoint' });
+  const handleConvert = async (file: File) => {
+    return await apiService.convertFile(file, {
+      format: 'ppt',
+      includeHeaders: includeHeaders ? 'true' : 'false',
+      addCharts: addCharts ? 'true' : 'false'
+    } as any);
   };
 
   const handleSingleConvert = async () => {
@@ -78,9 +82,9 @@ export const CSVToPPTConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
+      const result = await handleConvert(selectedFile);
       console.log('Conversion completed successfully');
-      setConvertedFile(converted);
+      setConvertedFile(result.blob);
     } catch (err) {
       console.error('Conversion failed:', err);
       setError(t('common.conversion_failed'));
@@ -100,13 +104,13 @@ export const CSVToPPTConverter: React.FC = () => {
       const results = [];
       for (const file of batchFiles) {
         console.log('Converting file:', file.name);
-        const converted = await handleConvert(file);
+        const result = await handleConvert(file);
         results.push({
           originalName: file.name,
-          outputFilename: file.name.replace('.csv', '.ppt'),
-          blob: converted,
+          outputFilename: result.filename || file.name.replace('.csv', '.ppt'),
+          blob: result.blob,
           success: true,
-          size: converted.size
+          size: result.blob.size
         });
       }
       console.log('Batch conversion completed successfully');
@@ -398,7 +402,7 @@ export const CSVToPPTConverter: React.FC = () => {
                             className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                           >
                             <Download className="w-4 h-4 mr-1" />
-                            {t('common.download')}
+                            {t('csv_to_ppt.download_ppt')}
                           </button>
                         )}
                       </div>
