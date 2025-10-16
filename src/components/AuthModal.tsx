@@ -75,7 +75,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-2xl font-bold text-gray-800">
-            {mode === 'signin' && 'Sign In'}
+            {mode === 'signin' && 'Log In'}
             {mode === 'signup' && 'Create Account'}
             {mode === 'reset' && 'Reset Password'}
           </h2>
@@ -171,7 +171,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
             ) : (
               <>
-                {mode === 'signin' && 'Sign In'}
+                {mode === 'signin' && 'Log In'}
                 {mode === 'signup' && 'Create Account'}
                 {mode === 'reset' && 'Send Reset Email'}
               </>
@@ -207,7 +207,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
                 onClick={() => switchMode('signin')}
                 className="text-blue-600 hover:text-blue-700 font-medium"
               >
-                Sign in
+                Log in
               </button>
             </>
           )}
@@ -219,7 +219,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
                 onClick={() => switchMode('signin')}
                 className="text-blue-600 hover:text-blue-700 font-medium"
               >
-                Sign in
+                Log in
               </button>
             </>
           )}

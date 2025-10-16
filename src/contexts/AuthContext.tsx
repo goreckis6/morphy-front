@@ -111,7 +111,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const value = {
     user,
     loading,
-    isAuthenticated: authService.isAuthenticated(),
+    isAuthenticated: !!user,
     signUp,
     signIn,
     signOut,

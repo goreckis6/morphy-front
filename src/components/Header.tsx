@@ -73,7 +73,7 @@ export const Header: React.FC = () => {
                     onClick={() => handleAuthClick('signin')}
                     className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   >
-                    Sign In
+                    Log In
                   </button>
                   <button
                     onClick={() => handleAuthClick('signup')}
@@ -139,7 +139,7 @@ export const Header: React.FC = () => {
                         onClick={() => handleAuthClick('signin')}
                         className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
                       >
-                        Sign In
+                        Log In
                       </button>
                       <button
                         onClick={() => handleAuthClick('signup')}
