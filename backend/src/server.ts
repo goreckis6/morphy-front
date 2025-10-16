@@ -70,6 +70,7 @@ app.use(helmet());
 app.use(cors({
   origin: [
     process.env.FRONTEND_URL || 'http://localhost:5173',
+    process.env.FRONTEND_URL_ALT || 'https://morphy-1-ulvv.onrender.com',
     'https://morphyimg.com',
     'https://morphy-1-ulvv.onrender.com'
   ],
@@ -372,6 +373,81 @@ app.get('/api/analytics/recent', async (req, res) => {
   } catch (error) {
     console.error('Analytics error:', error);
     res.status(500).json({ error: 'Failed to fetch recent conversions' });
+  }
+});
+
+// Database checker endpoint
+app.get('/api/dbchecker', async (req, res) => {
+  try {
+    const startTime = Date.now();
+    
+    // Test database connection
+    await sequelize.authenticate();
+    const connectionTime = Date.now() - startTime;
+    
+    // Get database info
+    const dbInfo = {
+      host: process.env.DB_HOST || 'Not configured',
+      port: process.env.DB_PORT || 'Not configured',
+      database: process.env.DB_NAME || 'Not configured',
+      user: process.env.DB_USER || 'Not configured',
+      ssl: process.env.DB_SSL === 'true',
+      connectionTime: `${connectionTime}ms`
+    };
+    
+    // Get table counts
+    const tableStats = await sequelize.getQueryInterface().showAllTables();
+    const userCount = await User.count();
+    const conversionCount = await Conversion.count();
+    
+    // Get recent errors from logs (simplified version)
+    const recentErrors = await Conversion.findAll({
+      where: { status: 'failed' },
+      order: [['updatedAt', 'DESC']],
+      limit: 10,
+      attributes: ['id', 'originalFilename', 'errorMessage', 'updatedAt']
+    });
+    
+    res.json({
+      status: 'connected',
+      timestamp: new Date().toISOString(),
+      database: dbInfo,
+      tables: tableStats,
+      stats: {
+        users: userCount,
+        conversions: conversionCount,
+        totalTables: tableStats.length
+      },
+      recentErrors: recentErrors,
+      environment: {
+        nodeEnv: process.env.NODE_ENV,
+        port: process.env.PORT
+      }
+    });
+    
+  } catch (error) {
+    console.error('Database check error:', error);
+    
+    res.status(500).json({
+      status: 'disconnected',
+      timestamp: new Date().toISOString(),
+      error: {
+        message: error.message,
+        code: error.code,
+        detail: error.detail
+      },
+      database: {
+        host: process.env.DB_HOST || 'Not configured',
+        port: process.env.DB_PORT || 'Not configured',
+        database: process.env.DB_NAME || 'Not configured',
+        user: process.env.DB_USER || 'Not configured',
+        ssl: process.env.DB_SSL === 'true'
+      },
+      environment: {
+        nodeEnv: process.env.NODE_ENV,
+        port: process.env.PORT
+      }
+    });
   }
 });
 

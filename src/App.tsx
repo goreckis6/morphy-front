@@ -111,6 +111,7 @@ import { SDDViewer } from './components/FormatViewers/SDDViewer';
 import { SXViewer } from './components/FormatViewers/SXViewer';
 import { STLViewer } from './components/FormatViewers/STLViewer';
 import { AuthProvider } from './contexts/AuthContext';
+import DatabaseChecker from './components/DatabaseChecker';
 import { 
   RefreshCw, 
   Eye, 
@@ -190,6 +191,14 @@ function App() {
 
   // Route to specific viewer pages
 
+  // Database checker route
+  if (currentPath === '/dbchecker') {
+    return (
+      <AuthProvider>
+        <DatabaseChecker />
+      </AuthProvider>
+    );
+  }
 
   // Conversion routes
   if (currentPath === '/convert/jpg-to-text') {

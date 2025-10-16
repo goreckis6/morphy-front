@@ -13,6 +13,8 @@ services:
         value: production
       - key: FRONTEND_URL
         value: https://morphyimg.com
+      - key: FRONTEND_URL_ALT
+        value: https://morphy-1-ulvv.onrender.com
       - key: DATABASE_URL
         value: postgresql://admin:YOUR_PASSWORD@gs32813-001.eu.clouddb.ovh.net:35185/admin
       - key: DB_HOST
