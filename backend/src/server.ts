@@ -14,6 +14,9 @@ import papaparse from 'papaparse';
 import { Document, Packer, Paragraph, Table, TableRow, TableCell } from 'docx';
 import * as XLSX from 'xlsx';
 import pptxgen from 'pptxgenjs';
+import dotenv from 'dotenv';
+import { initializeDatabase, closeDatabase, Conversion } from './database/index.js';
+import { DatabaseService } from './services/databaseService.js';
 
 const execAsync = promisify(exec);
 
@@ -65,7 +68,11 @@ const PORT = process.env.PORT || 3000;
 // Security middleware
 app.use(helmet());
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: [
+    process.env.FRONTEND_URL || 'http://localhost:5173',
+    'https://morphyimg.com',
+    'https://morphy-1-ulvv.onrender.com'
+  ],
   credentials: true
 }));
 
@@ -337,6 +344,37 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+// Database analytics endpoints
+app.get('/api/analytics/conversions', async (req, res) => {
+  try {
+    const stats = await DatabaseService.getConversionStats();
+    res.json(stats);
+  } catch (error) {
+    console.error('Analytics error:', error);
+    res.status(500).json({ error: 'Failed to fetch conversion statistics' });
+  }
+});
+
+app.get('/api/analytics/formats', async (req, res) => {
+  try {
+    const popularFormats = await DatabaseService.getPopularFormats();
+    res.json(popularFormats);
+  } catch (error) {
+    console.error('Analytics error:', error);
+    res.status(500).json({ error: 'Failed to fetch format statistics' });
+  }
+});
+
+app.get('/api/analytics/recent', async (req, res) => {
+  try {
+    const recentConversions = await DatabaseService.getRecentConversions();
+    res.json(recentConversions);
+  } catch (error) {
+    console.error('Analytics error:', error);
+    res.status(500).json({ error: 'Failed to fetch recent conversions' });
+  }
+});
+
 // Main conversion endpoint - handle both images and CSV files
 app.post('/api/convert', (req, res, next) => {
   // Determine if this is a CSV request based on the format parameter
@@ -366,6 +404,9 @@ app.post('/api/convert', (req, res, next) => {
     }
 
     console.log(`Processing file: ${file.originalname}, size: ${file.size} bytes`);
+    
+    const startTime = Date.now();
+    const originalFormat = file.originalname.split('.').pop()?.toLowerCase() || 'unknown';
 
     // Handle CSV conversion early
     if (file.originalname.toLowerCase().endsWith('.csv') && ['doc', 'docx', 'pdf', 'html', 'md', 'txt', 'xlsx', 'xls', 'ppt', 'pptx', 'rtf', 'odt', 'odp', 'mobi'].includes(format.toLowerCase())) {
@@ -573,6 +614,24 @@ app.post('/api/convert', (req, res, next) => {
       'Cache-Control': 'no-cache'
     });
 
+    // Log conversion to database
+    try {
+      await DatabaseService.createConversion({
+        originalFilename: file.originalname,
+        convertedFilename: outputFilename,
+        originalFormat: originalFormat,
+        convertedFormat: format,
+        fileSize: file.size,
+        conversionTime: Date.now() - startTime,
+        status: 'completed',
+        ipAddress: req.ip || req.connection.remoteAddress,
+        userAgent: req.get('User-Agent')
+      });
+    } catch (dbError) {
+      console.error('Failed to log conversion to database:', dbError);
+      // Don't fail the conversion if database logging fails
+    }
+
     // Send the converted file
     res.send(outputBuffer);
 
@@ -727,11 +786,42 @@ app.use('*', (req, res) => {
   res.status(404).json({ error: 'Endpoint not found' });
 });
 
-// Start server
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📁 Health check: http://localhost:${PORT}/health`);
-  console.log(`🔄 Convert endpoint: http://localhost:${PORT}/api/convert`);
+// Load environment variables
+dotenv.config();
+
+// Start server with database initialization
+const startServer = async () => {
+  try {
+    // Initialize database
+    await initializeDatabase();
+    
+    // Start server
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+      console.log(`📁 Health check: http://localhost:${PORT}/health`);
+      console.log(`🔄 Convert endpoint: http://localhost:${PORT}/api/convert`);
+      console.log(`🗄️ Database connected successfully`);
+    });
+  } catch (error) {
+    console.error('❌ Failed to start server:', error);
+    process.exit(1);
+  }
+};
+
+// Graceful shutdown
+process.on('SIGINT', async () => {
+  console.log('\n🛑 Shutting down server...');
+  await closeDatabase();
+  process.exit(0);
 });
+
+process.on('SIGTERM', async () => {
+  console.log('\n🛑 Shutting down server...');
+  await closeDatabase();
+  process.exit(0);
+});
+
+// Start the server
+startServer();
 
 export default app;

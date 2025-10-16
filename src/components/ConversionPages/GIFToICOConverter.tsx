@@ -124,7 +124,7 @@ export const GIFToICOConverter: React.FC = () => {
       }
 
       const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://morphy-2-n2tb.onrender.com' 
+        ? 'https://morphyimg.ovh' 
         : 'http://localhost:3000';
 
       const response = await fetch(`${API_BASE_URL}/api/convert`, {
@@ -168,7 +168,7 @@ export const GIFToICOConverter: React.FC = () => {
       }
 
       const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://morphy-2-n2tb.onrender.com' 
+        ? 'https://morphyimg.ovh' 
         : 'http://localhost:3000';
 
       const response = await fetch(`${API_BASE_URL}/api/convert/batch`, {
@@ -194,7 +194,7 @@ export const GIFToICOConverter: React.FC = () => {
   const handleBatchDownload = async (downloadUrl: string, filename: string) => {
     try {
       const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://morphy-2-n2tb.onrender.com' 
+        ? 'https://morphyimg.ovh' 
         : 'http://localhost:3000';
       
       const response = await fetch(`${API_BASE_URL}${downloadUrl}`);

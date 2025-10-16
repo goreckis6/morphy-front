@@ -20,8 +20,9 @@ COPY tsconfig.json ./
 # Install dependencies
 RUN npm ci --only=production
 
-# Copy source code
+# Copy source code and database scripts
 COPY src/ ./src/
+COPY scripts/ ./scripts/
 
 # Build the application
 RUN npm run build
