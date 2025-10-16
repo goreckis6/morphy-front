@@ -71,13 +71,16 @@ export const CSVToPPTConverter: React.FC = () => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
     
+    console.log('Starting single conversion for:', selectedFile.name);
     setIsConverting(true);
     setError(null);
     
     try {
       const converted = await handleConvert(selectedFile);
+      console.log('Conversion completed successfully');
       setConvertedFile(converted);
     } catch (err) {
+      console.error('Conversion failed:', err);
       setError(t('common.conversion_failed'));
     } finally {
       setIsConverting(false);
@@ -87,15 +90,19 @@ export const CSVToPPTConverter: React.FC = () => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
     
+    console.log('Starting batch conversion for:', batchFiles.length, 'files');
     setIsConverting(true);
     setError(null);
     
     try {
       for (const file of batchFiles) {
+        console.log('Converting file:', file.name);
         await handleConvert(file);
       }
+      console.log('Batch conversion completed successfully');
       setError(null);
     } catch (err) {
+      console.error('Batch conversion failed:', err);
       setError(t('common.batch_conversion_failed'));
     } finally {
       setIsConverting(false);
@@ -212,6 +219,12 @@ export const CSVToPPTConverter: React.FC = () => {
                     : t('csv_to_ppt.upload_single_desc')
                   }
                 </p>
+                <p className="text-sm text-gray-500 mb-4">
+                  {batchMode 
+                    ? t('csv_to_ppt.batch_info') 
+                    : t('csv_to_ppt.single_info')
+                  }
+                </p>
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -236,7 +249,7 @@ export const CSVToPPTConverter: React.FC = () => {
                       <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({((selectedFile?.size || 0) / (1024 * 1024)).toFixed(2)} MB)
                     </p>
                   </div>
                 </div>
@@ -244,15 +257,39 @@ export const CSVToPPTConverter: React.FC = () => {
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">{t('common.selected_files', { count: batchFiles.length })}</h4>
-                  <div className="space-y-2 max-h-40 overflow-y-auto">
-                    {batchFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                        <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
-                      </div>
-                    ))}
-                  </div>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2);
+                    const isWarning = totalSize > 80 * 1024 * 1024; // 80MB warning threshold
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">{t('common.selected_files', { count: batchFiles.length })}</h4>
+                          <div className={`text-sm font-medium ${isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            Total size: {totalSizeMB} MB of 100.00 MB allowed
+                          </div>
+                        </div>
+                        {isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                {t('common.batch_size_warning')}
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{((file.size / (1024 * 1024)).toFixed(2))} MB</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 

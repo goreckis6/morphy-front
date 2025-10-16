@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { 
@@ -21,6 +22,15 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 
 export const DNGToICOConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  
+  useEffect(() => {
+    // Sync language with localStorage if needed
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [i18n]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -367,8 +377,8 @@ ICO_FILE_END`;
   return (
     <>
       <Helmet>
-        <title>DNG to ICO Converter - Free Online RAW to Windows Icon</title>
-        <meta name="description" content="Convert DNG (Digital Negative) raw camera files to ICO format for Windows icons. Free online converter with multiple icon sizes, batch processing, and high-quality output. No registration required." />
+        <title>{t('dng_to_ico.meta_title')}</title>
+        <meta name="description" content={t('dng_to_ico.meta_description')} />
         <meta name="keywords" content="DNG to ICO, Digital Negative converter, RAW to ICO, Adobe DNG, Windows icons, icon converter, batch conversion, photography tools, camera RAW" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
@@ -380,23 +390,23 @@ ICO_FILE_END`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              DNG to ICO Converter
+              {t('dng_to_ico.title')}
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
-              Convert Adobe DNG (Digital Negative) raw camera files to ICO format for Windows icons. Professional RAW image processing with multiple icon sizes and high-quality output.
+              {t('dng_to_ico.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('common.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('common.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('common.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -421,7 +431,7 @@ ICO_FILE_END`;
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -432,7 +442,7 @@ ICO_FILE_END`;
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -440,18 +450,18 @@ ICO_FILE_END`;
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple DNG Files' : 'Upload DNG File'}
+                  {batchMode ? t('dng_to_ico.upload_multiple') : t('dng_to_ico.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple DNG files to convert them all at once' 
-                    : 'Drag and drop your DNG file here or click to browse'
+                    ? t('dng_to_ico.upload_multiple_desc') 
+                    : t('dng_to_ico.upload_single_desc')
                   }
                 </p>
                 <p className="text-sm text-gray-500 mb-4">
                   {batchMode 
-                    ? 'Max 100MB per file, 100MB total batch size, up to 20 files' 
-                    : 'Max file size: 100MB'
+                    ? t('dng_to_ico.batch_info') 
+                    : t('dng_to_ico.single_info')
                   }
                 </p>
                 <input
