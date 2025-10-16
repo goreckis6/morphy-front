@@ -5064,7 +5064,6 @@ const urlLanguageDetector = {
     }
   }
 */
-};
 
 // Custom language detector from URL
 const urlLanguageDetector = {
