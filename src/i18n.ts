@@ -1942,14 +1942,7 @@ const resources = {
   }
 };
 
-// Custom language detector from URL
-const urlLanguageDetector = {
-  name: 'urlPath',
-  lookup() {
-    // Always return English, ignore any language prefixes in URL
-    return 'en';
-  }
-};
+// Custom language detector from URL (removed duplicate - see below)
 
 // Remove Polish and German translations - English only
 /*
