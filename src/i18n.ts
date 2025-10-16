@@ -1939,7 +1939,20 @@ const resources = {
       'csv_to_mobi.benefit_layout_text': 'MOBI format provides professional e-book layout features including proper typography, table formatting, and responsive design for optimal reading experience.',
       'csv_to_mobi.large_file_warning': 'Conversion may take 2-5 minutes for large files'
     }
-  },
+  }
+};
+
+// Custom language detector from URL
+const urlLanguageDetector = {
+  name: 'urlPath',
+  lookup() {
+    // Always return English, ignore any language prefixes in URL
+    return 'en';
+  }
+};
+
+// Remove Polish and German translations - English only
+/*
   pl: {
     translation: {
       // Common
@@ -5050,21 +5063,18 @@ const resources = {
       'csv_to_mobi.large_file_warning': 'Konvertierung kann 2-5 Minuten für große Dateien dauern'
     }
   }
+*/
 };
 
 // Custom language detector from URL
 const urlLanguageDetector = {
   name: 'urlPath',
   lookup() {
-    const path = window.location.pathname;
-    // Check for language prefix: /pl/, /de/
-    // Otherwise use English (default, no prefix)
-    if (path.startsWith('/pl/') || path === '/pl') return 'pl';
-    if (path.startsWith('/de/') || path === '/de') return 'de';
+    // Always return English, ignore any language prefixes in URL
     return 'en';
   },
   cacheUserLanguage(lng: string) {
-    localStorage.setItem('i18nextLng', lng);
+    localStorage.setItem('i18nextLng', 'en');
   }
 };
 
@@ -5073,7 +5083,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    supportedLngs: ['en', 'pl', 'de'],
+    supportedLngs: ['en'],
     lng: urlLanguageDetector.lookup(), // Set initial language from URL
     interpolation: {
       escapeValue: false
@@ -5090,32 +5100,22 @@ window.addEventListener('popstate', () => {
 
 export default i18n;
 
-// Helper function to get current language from URL
+// Helper function to get current language from URL (English only)
 export const getLanguageFromUrl = (): string => {
-  const path = window.location.pathname;
-  if (path.startsWith('/pl/') || path === '/pl') return 'pl';
-  if (path.startsWith('/de/') || path === '/de') return 'de';
+  // Always return English, ignore any language prefixes in URL
   return 'en';
 };
 
-// Helper function to toggle language URL (English = no prefix, other languages = /lang/ prefix)
+// Helper function to toggle language URL (English only)
 export const getLocalizedUrl = (currentPath: string, targetLanguage: string): string => {
-  // Remove any language prefix if it exists
+  // Remove any language prefix if it exists and always return English path
   const cleanPath = currentPath
     .replace(/^\/pl\//, '/')
     .replace(/^\/de\//, '/')
     .replace(/^\/pl$/, '/')
     .replace(/^\/de$/, '/');
   
-  // Add language prefix only for non-English languages
-  if (targetLanguage === 'pl') {
-    return `/pl${cleanPath}`;
-  }
-  if (targetLanguage === 'de') {
-    return `/de${cleanPath}`;
-  }
-  
-  // English = no prefix
+  // Always return English path (no prefix)
   return cleanPath;
 };
 

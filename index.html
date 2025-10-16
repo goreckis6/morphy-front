@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-default>MorphyIMG - Free File Converter & Viewer</title>
     <meta name="description" content="Convert and view files online for free. Support for 50+ formats including images, documents, spreadsheets, and more. No registration required." />
+    
+    <!-- Prevent indexing of Polish and German subpages -->
+    <script>
+      // Block indexing of PL/DE pages
+      if (window.location.pathname.startsWith('/pl/') || window.location.pathname === '/pl' || 
+          window.location.pathname.startsWith('/de/') || window.location.pathname === '/de') {
+        // Add noindex meta tag
+        const meta = document.createElement('meta');
+        meta.name = 'robots';
+        meta.content = 'noindex, nofollow';
+        document.head.appendChild(meta);
+        
+        // Redirect to English version
+        const cleanPath = window.location.pathname
+          .replace(/^\/pl\//, '/')
+          .replace(/^\/de\//, '/')
+          .replace(/^\/pl$/, '/')
+          .replace(/^\/de$/, '/');
+        
+        if (cleanPath !== window.location.pathname) {
+          window.location.replace(cleanPath + window.location.search + window.location.hash);
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

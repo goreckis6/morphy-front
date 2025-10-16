@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { User, LogOut, Menu, X } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { AuthModal } from './AuthModal';
-import { LanguageSwitcher } from './LanguageSwitcher';
+// import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
   const { user, signOut } = useAuth();
@@ -82,7 +82,7 @@ export const Header: React.FC = () => {
               )}
 
               {/* Language Switcher - Right side */}
-              <LanguageSwitcher />
+              {/* <LanguageSwitcher /> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -106,7 +106,7 @@ export const Header: React.FC = () => {
                 </a>
                 
                 <div className="py-2">
-                  <LanguageSwitcher />
+                  {/* <LanguageSwitcher /> */}
                 </div>
                 
                 <div className="pt-4 border-t border-gray-200">
