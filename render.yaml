@@ -16,7 +16,7 @@ services:
       - key: FRONTEND_URL_ALT
         value: https://morphy-1-ulvv.onrender.com
       - key: DATABASE_URL
-        value: postgresql://admin:YOUR_PASSWORD@gs32813-001.eu.clouddb.ovh.net:35185/admin
+        value: postgresql://admin:3fEsjBBcw4uUPtzca5@gs32813-001.eu.clouddb.ovh.net:35185/admin
       - key: DB_HOST
         value: gs32813-001.eu.clouddb.ovh.net
       - key: DB_PORT
@@ -26,7 +26,7 @@ services:
       - key: DB_USER
         value: admin
       - key: DB_PASSWORD
-        value: YOUR_PASSWORD
+        value: 3fEsjBBcw4uUPtzca5
       - key: DB_SSL
         value: "true"
     healthCheckPath: /health
