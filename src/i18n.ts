@@ -23,6 +23,10 @@ const resources = {
       'common.convert_more_files': 'Convert More Files',
       'common.start_converting_now': 'Start Converting Now',
       'common.large_file_warning': 'Conversion may take 2-5 minutes for large files',
+      'common.batch_conversion_complete': 'Batch Conversion Complete!',
+      'common.lightning_fast': 'Lightning Fast',
+      'common.secure': '100% Secure',
+      'common.no_registration': 'No Registration',
       
       // Validation messages
       'validation.single_file_limit': 'Single file limit: {{size}} per file.',
@@ -1890,6 +1894,10 @@ const resources = {
       'common.convert_more_files': 'Konwertuj Więcej Plików',
       'common.start_converting_now': 'Rozpocznij Konwersję Teraz',
       'common.large_file_warning': 'Konwersja może potrwać 2-5 minut dla dużych plików',
+      'common.batch_conversion_complete': 'Konwersja Wsadowa Zakończona!',
+      'common.lightning_fast': 'Błyskawicznie Szybki',
+      'common.secure': '100% Bezpieczny',
+      'common.no_registration': 'Bez Rejestracji',
       
       // Validation messages
       'validation.single_file_limit': 'Limit pojedynczego pliku: {{size}} na plik.',
@@ -3424,6 +3432,10 @@ const resources = {
       'common.convert_more_files': 'Weitere Dateien konvertieren',
       'common.start_converting_now': 'Jetzt konvertieren',
       'common.large_file_warning': 'Konvertierung kann 2-5 Minuten für große Dateien dauern',
+      'common.batch_conversion_complete': 'Stapelkonvertierung abgeschlossen!',
+      'common.lightning_fast': 'Blitzschnell',
+      'common.secure': '100% Sicher',
+      'common.no_registration': 'Keine Registrierung',
       
       // Validation messages
       'validation.single_file_limit': 'Einzeldateibeschränkung: {{size}} pro Datei.',
