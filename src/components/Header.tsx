@@ -5,16 +5,11 @@ import { AuthModal } from './AuthModal';
 // import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
-  const { user, signOut } = useAuth();
+  const { user, loading, signOut } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  const handleAuthClick = (mode: 'signin' | 'signup') => {
-    setAuthMode(mode);
-    setShowAuthModal(true);
-    setShowMobileMenu(false);
-  };
 
   return (
     <>
@@ -47,7 +42,14 @@ export const Header: React.FC = () => {
                 </a>
               </nav>
 
-              {user ? (
+              {loading ? (
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center animate-pulse">
+                    <User className="w-4 h-4 text-gray-400" />
+                  </div>
+                  <div className="w-16 h-4 bg-gray-200 rounded animate-pulse"></div>
+                </div>
+              ) : user ? (
                 <div className="flex items-center space-x-3">
                   <a 
                     href="/dashboard"
@@ -113,7 +115,16 @@ export const Header: React.FC = () => {
                 </div>
                 
                 <div className="pt-4 border-t border-gray-200">
-                  {user ? (
+                  {loading ? (
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center animate-pulse">
+                          <User className="w-4 h-4 text-gray-400" />
+                        </div>
+                        <div className="w-16 h-4 bg-gray-200 rounded animate-pulse"></div>
+                      </div>
+                    </div>
+                  ) : user ? (
                     <div className="flex items-center justify-between">
                       <a 
                         href="/dashboard"

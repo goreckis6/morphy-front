@@ -58,7 +58,10 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
       setLoading(true);
       try {
         const serverStatus = await ConversionLimits.getServerStatus();
-        setStatus(serverStatus);
+        setStatus({
+          ...serverStatus,
+          isUnlimited: false
+        });
       } catch (error) {
         console.warn('Failed to refresh server status');
       } finally {
@@ -66,6 +69,25 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
       }
     }
   };
+
+  // Show loading state while fetching server status
+  if (loading) {
+    return (
+      <div className={`bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 ${className}`}>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <Crown className="w-5 h-5 text-blue-600" />
+            <div>
+              <p className="text-sm font-medium text-blue-800">
+                Checking conversion limits...
+              </p>
+            </div>
+          </div>
+          <RefreshCw className="w-4 h-4 text-blue-600 animate-spin" />
+        </div>
+      </div>
+    );
+  }
 
   // Don't show banner if user can still convert
   if (status.canConvert && status.remaining > 0) {

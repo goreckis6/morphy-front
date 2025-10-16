@@ -24,7 +24,15 @@ export const useAuth = () => {
 };
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(() => {
+    // Initialize with cached user if available (prevents flash)
+    try {
+      const currentUser = authService.getCurrentUser();
+      return currentUser || null;
+    } catch {
+      return null;
+    }
+  });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,17 +50,27 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           } else {
             // Token is invalid, clear auth
             authService.logout();
+            setUser(null);
           }
+        } else {
+          setUser(null);
         }
       } catch (error) {
         console.error('Auth initialization error:', error);
         authService.logout();
+        setUser(null);
       } finally {
         setLoading(false);
       }
     };
 
-    initializeAuth();
+    // Only initialize if we don't have a cached user
+    if (!user) {
+      initializeAuth();
+    } else {
+      // We have a cached user, still verify it but don't show loading
+      initializeAuth();
+    }
   }, []);
 
   const signUp = async (email: string, password: string, name?: string) => {
