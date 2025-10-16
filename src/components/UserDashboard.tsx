@@ -137,7 +137,7 @@ const UserDashboard: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Include Header */}
       <Header />
 
@@ -160,7 +160,7 @@ const UserDashboard: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
         {/* Navigation Tabs */}
         <div className="mb-8">
           <nav className="flex space-x-8">
@@ -478,7 +478,7 @@ const UserDashboard: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 mt-16">
+      <footer className="bg-gray-800 text-white py-12 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-6">
