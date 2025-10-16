@@ -1,14 +1,15 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { User, Session } from '../lib/supabase';
+import { authService, User, AuthResponse } from '../services/authService';
 
 interface AuthContextType {
   user: User | null;
-  session: Session | null;
   loading: boolean;
-  signUp: (email: string, password: string, username: string) => Promise<{ error: any }>;
-  signIn: (email: string, password: string) => Promise<{ error: any }>;
-  signOut: () => Promise<void>;
-  resetPassword: (email: string) => Promise<{ error: any }>;
+  isAuthenticated: boolean;
+  signUp: (email: string, password: string, name?: string) => Promise<AuthResponse>;
+  signIn: (email: string, password: string) => Promise<AuthResponse>;
+  signOut: () => void;
+  updateProfile: (updates: { name?: string; email?: string }) => Promise<AuthResponse>;
+  changePassword: (currentPassword: string, newPassword: string) => Promise<AuthResponse>;
 }
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
@@ -23,80 +24,99 @@ export const useAuth = () => {
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check for existing session in localStorage
-    const savedUser = localStorage.getItem('morphy_user');
-    if (savedUser) {
-      const user = JSON.parse(savedUser);
-      setUser(user);
-      setSession({ user, access_token: 'local' });
-    }
-    setLoading(false);
-  }, []);
-
-  const signUp = async (email: string, password: string, username: string) => {
-    // Simple local validation
-    if (!email || !password || !username) {
-      return { error: { message: 'All fields are required' } };
-    }
-
-    // Create user object
-    const user: User = {
-      id: Date.now().toString(),
-      email,
-      username,
+    // Check for existing authentication
+    const initializeAuth = async () => {
+      try {
+        const currentUser = authService.getCurrentUser();
+        const token = authService.getToken();
+        
+        if (currentUser && token) {
+          // Verify token is still valid
+          const result = await authService.verifyToken();
+          if (result.success && result.user) {
+            setUser(result.user);
+          } else {
+            // Token is invalid, clear auth
+            authService.logout();
+          }
+        }
+      } catch (error) {
+        console.error('Auth initialization error:', error);
+        authService.logout();
+      } finally {
+        setLoading(false);
+      }
     };
 
-    // Save to localStorage
-    localStorage.setItem('morphy_user', JSON.stringify(user));
-    setUser(user);
-    setSession({ user, access_token: 'local' });
+    initializeAuth();
+  }, []);
 
-    return { error: null };
+  const signUp = async (email: string, password: string, name?: string) => {
+    setLoading(true);
+    try {
+      const result = await authService.register({ email, password, name });
+      if (result.success && result.user) {
+        setUser(result.user);
+      }
+      return result;
+    } finally {
+      setLoading(false);
+    }
   };
 
   const signIn = async (email: string, password: string) => {
-    // Simple local validation
-    if (!email || !password) {
-      return { error: { message: 'Email and password are required' } };
-    }
-
-    // Check if user exists in localStorage
-    const savedUser = localStorage.getItem('morphy_user');
-    if (savedUser) {
-      const user = JSON.parse(savedUser);
-      if (user.email === email) {
-        setUser(user);
-        setSession({ user, access_token: 'local' });
-        return { error: null };
+    setLoading(true);
+    try {
+      const result = await authService.login({ email, password });
+      if (result.success && result.user) {
+        setUser(result.user);
       }
+      return result;
+    } finally {
+      setLoading(false);
     }
-
-    return { error: { message: 'Invalid credentials' } };
   };
 
-  const signOut = async () => {
-    localStorage.removeItem('morphy_user');
+  const signOut = () => {
+    authService.logout();
     setUser(null);
-    setSession(null);
   };
 
-  const resetPassword = async (email: string) => {
-    // Mock password reset - just return success
-    return { error: null };
+  const updateProfile = async (updates: { name?: string; email?: string }) => {
+    setLoading(true);
+    try {
+      const result = await authService.updateProfile(updates);
+      if (result.success && result.user) {
+        setUser(result.user);
+      }
+      return result;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const changePassword = async (currentPassword: string, newPassword: string) => {
+    setLoading(true);
+    try {
+      const result = await authService.changePassword(currentPassword, newPassword);
+      return result;
+    } finally {
+      setLoading(false);
+    }
   };
 
   const value = {
     user,
-    session,
     loading,
+    isAuthenticated: authService.isAuthenticated(),
     signUp,
     signIn,
     signOut,
-    resetPassword,
+    updateProfile,
+    changePassword,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

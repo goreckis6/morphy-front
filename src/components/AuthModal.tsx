@@ -12,13 +12,13 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
   const [mode, setMode] = useState<'signin' | 'signup' | 'reset'>(initialMode);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
+  const [name, setName] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
 
-  const { signIn, signUp, resetPassword } = useAuth();
+  const { signIn, signUp } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,19 +34,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
           result = await signIn(email, password);
           break;
         case 'signup':
-          result = await signUp(email, password, username);
+          result = await signUp(email, password, name);
           break;
         case 'reset':
-          result = await resetPassword(email);
-          if (!result.error) {
-            setMessage('Password reset email sent! Check your inbox.');
-          }
+          setMessage('Password reset feature coming soon!');
           break;
       }
 
       if (result?.error) {
-        setError(result.error.message);
-      } else if (mode !== 'reset') {
+        setError(result.error);
+      } else if (result?.success && mode !== 'reset') {
         onClose();
       }
     } catch (_err) {
@@ -59,7 +56,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
   const resetForm = () => {
     setEmail('');
     setPassword('');
-    setUsername('');
+    setName('');
     setError('');
     setMessage('');
     setShowPassword(false);
@@ -95,17 +92,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, initialMo
           {mode === 'signup' && (
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Username
+                Full Name (optional)
               </label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  required
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg bg-white text-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your username"
+                  placeholder="Enter your full name"
                 />
               </div>
             </div>

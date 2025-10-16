@@ -112,6 +112,7 @@ import { SXViewer } from './components/FormatViewers/SXViewer';
 import { STLViewer } from './components/FormatViewers/STLViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import DatabaseChecker from './components/DatabaseChecker';
+import UserDashboard from './components/UserDashboard';
 import { 
   RefreshCw, 
   Eye, 
@@ -196,6 +197,15 @@ function App() {
     return (
       <AuthProvider>
         <DatabaseChecker />
+      </AuthProvider>
+    );
+  }
+
+  // User dashboard route
+  if (currentPath === '/dashboard') {
+    return (
+      <AuthProvider>
+        <UserDashboard />
       </AuthProvider>
     );
   }

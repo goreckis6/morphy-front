@@ -49,14 +49,17 @@ export const Header: React.FC = () => {
 
               {user ? (
                 <div className="flex items-center space-x-3">
-                  <div className="flex items-center space-x-2">
+                  <a 
+                    href="/dashboard"
+                    className="flex items-center space-x-2 hover:bg-gray-50 rounded-lg px-3 py-2 transition-colors"
+                  >
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                       <User className="w-4 h-4 text-blue-600" />
                     </div>
                     <span className="text-sm font-medium text-gray-700">
-                      {user.user_metadata?.username || user.email?.split('@')[0]}
+                      {user.name || user.email?.split('@')[0]}
                     </span>
-                  </div>
+                  </a>
                   <button
                     onClick={signOut}
                     className="p-2 text-gray-500 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
@@ -112,14 +115,17 @@ export const Header: React.FC = () => {
                 <div className="pt-4 border-t border-gray-200">
                   {user ? (
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
+                      <a 
+                        href="/dashboard"
+                        className="flex items-center space-x-2 hover:bg-gray-50 rounded-lg px-3 py-2 transition-colors"
+                      >
                         <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
                           <User className="w-4 h-4 text-blue-600" />
                         </div>
                         <span className="text-sm font-medium text-gray-700">
-                          {user.user_metadata?.username || user.email?.split('@')[0]}
+                          {user.name || user.email?.split('@')[0]}
                         </span>
-                      </div>
+                      </a>
                       <button
                         onClick={signOut}
                         className="p-2 text-gray-500 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"

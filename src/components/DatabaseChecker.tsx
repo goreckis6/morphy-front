@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Database, AlertCircle, CheckCircle, Clock, Users, FileText, Activity, RefreshCw, Eye, EyeOff } from 'lucide-react';
+import { Database, AlertCircle, CheckCircle, Clock, Users, FileText, Activity, RefreshCw } from 'lucide-react';
 
 interface DatabaseInfo {
   host: string;
@@ -44,13 +44,10 @@ interface DatabaseStatus {
 const DatabaseChecker: React.FC = () => {
   const [dbStatus, setDbStatus] = useState<DatabaseStatus | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [showSensitiveInfo, setShowSensitiveInfo] = useState(false);
   const [lastChecked, setLastChecked] = useState<Date | null>(null);
 
   const checkDatabase = async () => {
     setLoading(true);
-    setError(null);
     
     try {
       const response = await fetch('/api/dbchecker');
@@ -64,7 +61,7 @@ const DatabaseChecker: React.FC = () => {
       
       setLastChecked(new Date());
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to check database status');
+      console.error('Database check error:', err);
       setDbStatus(null);
     } finally {
       setLoading(false);
@@ -138,6 +135,11 @@ const DatabaseChecker: React.FC = () => {
                 <p className={`text-2xl font-bold ${getStatusColor()}`}>
                   {loading ? 'Checking...' : dbStatus?.status || 'Unknown'}
                 </p>
+                {dbStatus?.database.connectionTime && (
+                  <p className="text-xs text-gray-500 mt-1">
+                    {dbStatus.database.connectionTime} response
+                  </p>
+                )}
               </div>
               {getStatusIcon()}
             </div>
@@ -150,6 +152,9 @@ const DatabaseChecker: React.FC = () => {
                 <p className="text-sm font-medium text-gray-600">Total Users</p>
                 <p className="text-2xl font-bold text-gray-900">
                   {dbStatus?.stats?.users || 0}
+                </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Registered accounts
                 </p>
               </div>
               <Users className="w-8 h-8 text-blue-500" />
@@ -164,6 +169,9 @@ const DatabaseChecker: React.FC = () => {
                 <p className="text-2xl font-bold text-gray-900">
                   {dbStatus?.stats?.conversions || 0}
                 </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Files processed
+                </p>
               </div>
               <FileText className="w-8 h-8 text-green-500" />
             </div>
@@ -177,66 +185,15 @@ const DatabaseChecker: React.FC = () => {
                 <p className="text-2xl font-bold text-gray-900">
                   {dbStatus?.stats?.totalTables || 0}
                 </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Schema tables
+                </p>
               </div>
               <Activity className="w-8 h-8 text-purple-500" />
             </div>
           </div>
         </div>
 
-        {/* Database Configuration */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold text-gray-900">Database Configuration</h2>
-            <button
-              onClick={() => setShowSensitiveInfo(!showSensitiveInfo)}
-              className="flex items-center space-x-2 px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded-lg"
-            >
-              {showSensitiveInfo ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              <span>{showSensitiveInfo ? 'Hide' : 'Show'} Details</span>
-            </button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div>
-              <label className="text-sm font-medium text-gray-600">Host</label>
-              <p className="text-lg text-gray-900">
-                {showSensitiveInfo ? dbStatus?.database.host : '••••••••••••••••'}
-              </p>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-gray-600">Port</label>
-              <p className="text-lg text-gray-900">
-                {showSensitiveInfo ? dbStatus?.database.port : '••••'}
-              </p>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-gray-600">Database</label>
-              <p className="text-lg text-gray-900">
-                {showSensitiveInfo ? dbStatus?.database.database : '••••••'}
-              </p>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-gray-600">User</label>
-              <p className="text-lg text-gray-900">
-                {showSensitiveInfo ? dbStatus?.database.user : '••••••'}
-              </p>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-gray-600">SSL</label>
-              <p className="text-lg text-gray-900">
-                {dbStatus?.database.ssl ? (
-                  <span className="text-green-600 font-semibold">Enabled</span>
-                ) : (
-                  <span className="text-red-600 font-semibold">Disabled</span>
-                )}
-              </p>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-gray-600">Connection Time</label>
-              <p className="text-lg text-gray-900">{dbStatus?.database.connectionTime || 'N/A'}</p>
-            </div>
-          </div>
-        </div>
 
         {/* Error Information */}
         {dbStatus?.status === 'disconnected' && dbStatus?.error && (
@@ -267,33 +224,95 @@ const DatabaseChecker: React.FC = () => {
         )}
 
         {/* Recent Errors */}
-        {dbStatus?.recentErrors && dbStatus.recentErrors.length > 0 && (
+        {dbStatus && (
           <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Recent Conversion Errors</h2>
-            <div className="space-y-3">
-              {dbStatus.recentErrors.map((error) => (
-                <div key={error.id} className="border border-gray-200 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-medium text-gray-900">{error.originalFilename}</span>
-                    <span className="text-sm text-gray-500">{formatTimestamp(error.updatedAt)}</span>
-                  </div>
-                  <p className="text-red-600 text-sm">{error.errorMessage}</p>
-                </div>
-              ))}
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold text-gray-900">Recent Conversion Errors</h2>
+              <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${
+                dbStatus.recentErrors && dbStatus.recentErrors.length > 0 
+                  ? 'bg-red-100 text-red-800' 
+                  : 'bg-green-100 text-green-800'
+              }`}>
+                {dbStatus.recentErrors && dbStatus.recentErrors.length > 0 
+                  ? `${dbStatus.recentErrors.length} errors` 
+                  : 'No errors'
+                }
+              </span>
             </div>
+            
+            {dbStatus.recentErrors && dbStatus.recentErrors.length > 0 ? (
+              <div className="space-y-3">
+                {dbStatus.recentErrors.map((error) => (
+                  <div key={error.id} className="border border-red-200 bg-red-50 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium text-gray-900 truncate max-w-xs">
+                        {error.originalFilename}
+                      </span>
+                      <span className="text-sm text-gray-500 flex-shrink-0 ml-2">
+                        {formatTimestamp(error.updatedAt)}
+                      </span>
+                    </div>
+                    <p className="text-red-700 text-sm break-words">{error.errorMessage}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-8">
+                <CheckCircle className="w-12 h-12 text-green-500 mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-gray-900 mb-2">No Recent Errors</h3>
+                <p className="text-gray-600">All conversions are running smoothly!</p>
+              </div>
+            )}
           </div>
         )}
 
         {/* Database Tables */}
         {dbStatus?.tables && dbStatus.tables.length > 0 && (
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Database Tables</h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold text-gray-900">Database Tables</h2>
+              <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                {dbStatus.tables.length} tables
+              </span>
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {dbStatus.tables.map((table) => (
-                <div key={table} className="bg-gray-50 rounded-lg p-3 text-center">
+                <div key={table} className="bg-gray-50 rounded-lg p-3 text-center hover:bg-gray-100 transition-colors">
                   <span className="text-sm font-medium text-gray-700">{table}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* Connection Health */}
+        {dbStatus && (
+          <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Connection Health</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className={`w-4 h-4 rounded-full mx-auto mb-2 ${
+                  dbStatus.database.ssl ? 'bg-green-500' : 'bg-red-500'
+                }`}></div>
+                <p className="text-sm font-medium text-gray-700">SSL Connection</p>
+                <p className={`text-xs ${dbStatus.database.ssl ? 'text-green-600' : 'text-red-600'}`}>
+                  {dbStatus.database.ssl ? 'Secure' : 'Insecure'}
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-4 h-4 rounded-full bg-green-500 mx-auto mb-2"></div>
+                <p className="text-sm font-medium text-gray-700">Response Time</p>
+                <p className="text-xs text-gray-600">{dbStatus.database.connectionTime}</p>
+              </div>
+              <div className="text-center">
+                <div className={`w-4 h-4 rounded-full mx-auto mb-2 ${
+                  dbStatus.status === 'connected' ? 'bg-green-500' : 'bg-red-500'
+                }`}></div>
+                <p className="text-sm font-medium text-gray-700">Database Status</p>
+                <p className={`text-xs ${dbStatus.status === 'connected' ? 'text-green-600' : 'text-red-600'}`}>
+                  {dbStatus.status === 'connected' ? 'Healthy' : 'Issues Detected'}
+                </p>
+              </div>
             </div>
           </div>
         )}
@@ -302,18 +321,27 @@ const DatabaseChecker: React.FC = () => {
         {dbStatus && (
           <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Environment Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <span className="font-medium text-gray-700">Node Environment:</span>
-                <span className="ml-2 text-gray-900">{dbStatus.environment.nodeEnv}</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span className="text-sm font-medium text-gray-700">Environment</span>
+                </div>
+                <p className="text-lg font-semibold text-gray-900">{dbStatus.environment.nodeEnv}</p>
               </div>
-              <div>
-                <span className="font-medium text-gray-700">Port:</span>
-                <span className="ml-2 text-gray-900">{dbStatus.environment.port}</span>
+              <div className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-sm font-medium text-gray-700">Port</span>
+                </div>
+                <p className="text-lg font-semibold text-gray-900">{dbStatus.environment.port}</p>
               </div>
-              <div>
-                <span className="font-medium text-gray-700">Last Check:</span>
-                <span className="ml-2 text-gray-900">{formatTimestamp(dbStatus.timestamp)}</span>
+              <div className="bg-gray-50 rounded-lg p-4">
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <span className="text-sm font-medium text-gray-700">Last Check</span>
+                </div>
+                <p className="text-lg font-semibold text-gray-900">{formatTimestamp(dbStatus.timestamp)}</p>
               </div>
             </div>
           </div>
