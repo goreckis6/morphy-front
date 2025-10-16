@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Database, AlertCircle, CheckCircle, Clock, Users, FileText, Activity, RefreshCw } from 'lucide-react';
-import { API_BASE_URL } from '../../services/api';
+import { API_BASE_URL } from '../services/api';
 
 interface DatabaseInfo {
   host: string;
