@@ -79,13 +79,13 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
             >
               <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             </button>
-            <button
-              onClick={onRegisterClick}
+            <a
+              href="/register"
               className="flex items-center space-x-2 px-3 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
             >
               <UserPlus className="w-4 h-4" />
               <span>Register</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -116,13 +116,13 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
           >
             <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
           </button>
-          <button
-            onClick={onRegisterClick}
-            className="flex items-center space-x-2 px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-md hover:bg-orange-700 transition-colors"
-          >
-            <Crown className="w-4 h-4" />
-            <span>Register Now</span>
-          </button>
+            <a
+              href="/register"
+              className="flex items-center space-x-2 px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-md hover:bg-orange-700 transition-colors"
+            >
+              <Crown className="w-4 h-4" />
+              <span>Register Now</span>
+            </a>
         </div>
       </div>
     </div>

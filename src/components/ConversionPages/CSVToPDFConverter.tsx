@@ -5,7 +5,6 @@ import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { ConversionLimitBanner } from '../ConversionLimitBanner';
 import { useAuth } from '../../contexts/AuthContext';
-import { AuthModal } from '../AuthModal';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
@@ -109,7 +108,7 @@ export const CSVToPDFConverter: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Conversion Limit Banner */}
-        <ConversionLimitBanner onRegisterClick={() => setShowAuthModal(true)} />
+        <ConversionLimitBanner />
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
@@ -529,17 +528,7 @@ export const CSVToPDFConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-
-      {/* Auth Modal */}
-      <AuthModal
-        isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
-        initialMode="signup"
-      />
-
       </div>
-
       </>
-
       );
 };

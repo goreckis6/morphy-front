@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { authService } from '../services/authService';
+import { Header } from './Header';
 import { 
   User, 
   Settings, 
@@ -14,7 +15,8 @@ import {
   Download,
   LogOut,
   Edit,
-  Key
+  Key,
+  RefreshCw
 } from 'lucide-react';
 
 interface UserStats {
@@ -136,28 +138,24 @@ const UserDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
+      {/* Include Header */}
+      <Header />
+
+      {/* Dashboard Header */}
+      <div className="bg-gradient-to-br from-blue-600 to-teal-600 py-12 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                <User className="w-6 h-6 text-white" />
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                <User className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">
-                  Welcome, {user?.name || user?.email}
+                <h1 className="text-3xl font-bold">
+                  Welcome back, {user?.name || user?.email?.split('@')[0]}!
                 </h1>
-                <p className="text-gray-600">Manage your account and view conversion statistics</p>
+                <p className="text-blue-100 mt-1">Manage your account and view conversion statistics</p>
               </div>
             </div>
-            <button
-              onClick={signOut}
-              className="flex items-center space-x-2 px-4 py-2 text-red-600 hover:text-red-700 border border-red-300 hover:border-red-400 rounded-lg"
-            >
-              <LogOut className="w-4 h-4" />
-              <span>Sign Out</span>
-            </button>
           </div>
         </div>
       </div>
@@ -478,6 +476,31 @@ const UserDashboard: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-12 mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="p-2 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
+                <RefreshCw className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-2xl font-bold">MorphyIMG</h2>
+            </div>
+
+            <p className="text-gray-300 mb-6">
+              Convert and view files online for free. Support for 50+ formats.
+            </p>
+            <div className="flex justify-center space-x-6 text-sm text-gray-400">
+              <span>© 2024 MorphyIMG</span>
+              <span>•</span>
+              <span>Privacy Policy</span>
+              <span>•</span>
+              <span>Terms of Service</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

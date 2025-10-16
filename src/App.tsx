@@ -113,6 +113,8 @@ import { STLViewer } from './components/FormatViewers/STLViewer';
 import { AuthProvider } from './contexts/AuthContext';
 import DatabaseChecker from './components/DatabaseChecker';
 import UserDashboard from './components/UserDashboard';
+import LoginPage from './components/LoginPage';
+import RegisterPage from './components/RegisterPage';
 import { 
   RefreshCw, 
   Eye, 
@@ -197,6 +199,24 @@ function App() {
     return (
       <AuthProvider>
         <DatabaseChecker />
+      </AuthProvider>
+    );
+  }
+
+  // Login route
+  if (currentPath === '/login') {
+    return (
+      <AuthProvider>
+        <LoginPage />
+      </AuthProvider>
+    );
+  }
+
+  // Register route
+  if (currentPath === '/register') {
+    return (
+      <AuthProvider>
+        <RegisterPage />
       </AuthProvider>
     );
   }

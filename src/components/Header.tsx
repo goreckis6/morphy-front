@@ -69,18 +69,18 @@ export const Header: React.FC = () => {
                 </div>
               ) : (
                 <div className="flex items-center space-x-3">
-                  <button
-                    onClick={() => handleAuthClick('signin')}
+                  <a
+                    href="/login"
                     className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   >
                     Log In
-                  </button>
-                  <button
-                    onClick={() => handleAuthClick('signup')}
+                  </a>
+                  <a
+                    href="/register"
                     className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     Sign Up
-                  </button>
+                  </a>
                 </div>
               )}
 
@@ -135,18 +135,18 @@ export const Header: React.FC = () => {
                     </div>
                   ) : (
                     <div className="flex flex-col space-y-3">
-                      <button
-                        onClick={() => handleAuthClick('signin')}
+                      <a
+                        href="/login"
                         className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
                       >
                         Log In
-                      </button>
-                      <button
-                        onClick={() => handleAuthClick('signup')}
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                      </a>
+                      <a
+                        href="/register"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-center"
                       >
                         Sign Up
-                      </button>
+                      </a>
                     </div>
                   )}
                 </div>
