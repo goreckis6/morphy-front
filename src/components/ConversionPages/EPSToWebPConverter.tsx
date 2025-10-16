@@ -294,7 +294,7 @@ export const EPSToWebPConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
                 >
-                  Choose Files
+                  {t('eps_to_webp.choose_files')}
                 </button>
               </div>
 
@@ -394,7 +394,7 @@ export const EPSToWebPConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download WebP File
+                      {t('eps_to_webp.download_webp')}
                     </button>
                     <button
                       onClick={resetForm}
@@ -419,7 +419,7 @@ export const EPSToWebPConverter: React.FC = () => {
                       <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
                         <span className="text-sm font-medium text-gray-900">{r.outputFilename || r.originalName}</span>
                         {r.success && r.downloadPath ? (
-                          <button onClick={() => handleBatchDownload(r)} className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors">Download</button>
+                          <button onClick={() => handleBatchDownload(r)} className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors">{t('eps_to_webp.download')}</button>
                         ) : r.error ? (
                           <span className="text-xs text-red-600">{r.error}</span>
                         ) : null}
@@ -498,7 +498,7 @@ export const EPSToWebPConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-emerald-600" />
-                Perfect For
+                {t('eps_to_webp.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
@@ -519,7 +519,7 @@ export const EPSToWebPConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('eps_to_webp.convert_more_files')}
                   </button>
               </div>
             </div>
@@ -532,7 +532,7 @@ export const EPSToWebPConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('eps_to_webp.back_to_home')}
           </button>
         </div>
 
@@ -547,7 +547,7 @@ export const EPSToWebPConverter: React.FC = () => {
               Converting Encapsulated PostScript EPS files to WebP format is essential for modern web development, digital marketing, and online graphics optimization. While EPS files contain high-quality vector graphics, WebP provides superior compression, faster loading times, and better web performance without sacrificing image quality.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of WebP Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_webp.key_benefits')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-emerald-50 p-6 rounded-lg">
@@ -579,7 +579,7 @@ export const EPSToWebPConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_webp.common_use_cases')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -616,22 +616,22 @@ export const EPSToWebPConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPS Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('eps_to_webp.ready_to_convert')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPS to WebP converter to transform your vector graphics into web-optimized images.
+                {t('eps_to_webp.ready_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('eps_to_webp.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
                 >
-                  Back to Home
+                  {t('eps_to_webp.back_to_home')}
                 </button>
               </div>
             </div>

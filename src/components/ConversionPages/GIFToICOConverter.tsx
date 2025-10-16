@@ -380,7 +380,7 @@ export const GIFToICOConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
-                  Choose Files
+                  {t('gif_to_ico.choose_files')}
                 </button>
               </div>
 
@@ -482,7 +482,7 @@ export const GIFToICOConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download ICO File
+                      {t('gif_to_ico.download_ico')}
                     </button>
                     <button
                       onClick={resetForm}
@@ -532,7 +532,7 @@ export const GIFToICOConverter: React.FC = () => {
                               onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                             >
-                              Download
+                              {t('gif_to_ico.download')}
                             </button>
                           )}
                         </div>
@@ -545,7 +545,7 @@ export const GIFToICOConverter: React.FC = () => {
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('gif_to_ico.convert_more_files')}
                     </button>
                   </div>
                 </div>
@@ -627,7 +627,7 @@ export const GIFToICOConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
-                Perfect For
+                {t('gif_to_ico.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
@@ -654,7 +654,7 @@ export const GIFToICOConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('gif_to_ico.back_to_home')}
           </button>
         </div>
 
@@ -669,7 +669,7 @@ export const GIFToICOConverter: React.FC = () => {
               Converting GIF images to ICO (Icon) format is essential for creating Windows application icons, favicons, and system tray icons. While GIF is great for animated web graphics, ICO provides the multi-resolution support and transparency needed for professional Windows icons, making it the standard format for application development and web development.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ICO Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('gif_to_ico.key_benefits')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-lg">
@@ -701,7 +701,7 @@ export const GIFToICOConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('gif_to_ico.common_use_cases')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -738,22 +738,22 @@ export const GIFToICOConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your GIF Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('gif_to_ico.ready_to_convert')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online GIF to ICO converter to create professional Windows icons and favicons.
+                {t('gif_to_ico.ready_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('gif_to_ico.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Back to Home
+                  {t('gif_to_ico.back_to_home')}
                 </button>
               </div>
             </div>

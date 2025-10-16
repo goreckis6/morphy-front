@@ -476,7 +476,7 @@ ICO_FILE_END`;
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
                 >
-                  Choose Files
+                  {t('dng_to_ico.choose_files')}
                 </button>
               </div>
 
@@ -484,7 +484,7 @@ ICO_FILE_END`;
               {previewUrl && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">
-                    {imagePreview && imagePreview.width > 0 ? 'DNG Image Preview' : 'DNG File Info'}
+                    {imagePreview && imagePreview.width > 0 ? t('dng_to_ico.image_preview') : t('dng_to_ico.file_info')}
                   </h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     {imagePreview && imagePreview.width > 0 ? (
@@ -500,9 +500,9 @@ ICO_FILE_END`;
                             <strong>{selectedFile?.name}</strong> ({formatFileSize(selectedFile?.size || 0)})
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
+                            <p>{t('dng_to_ico.extracted_preview', { width: imagePreview.width, height: imagePreview.height })}</p>
                             <p className="text-amber-600 font-medium">
-                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
+                              {t('dng_to_ico.will_convert_to', { size: iconSize === 'default' ? t('dng_to_ico.original_size') : `${iconSize} × ${iconSize} pixels`, quality: quality })}
                             </p>
                           </div>
                         </div>
@@ -626,7 +626,7 @@ ICO_FILE_END`;
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download ICO File
+                      {t('dng_to_ico.download_ico')}
                     </button>
                     <button
                       onClick={resetForm}
@@ -663,7 +663,7 @@ ICO_FILE_END`;
                             className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                           >
                             <Download className="w-4 h-4 mr-1" />
-                            Download
+                            {t('dng_to_ico.download')}
                           </button>
                         )}
                       </div>
@@ -674,7 +674,7 @@ ICO_FILE_END`;
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('dng_to_ico.convert_more_files')}
                   </button>
                 </div>
               )}
@@ -755,7 +755,7 @@ ICO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('dng_to_ico.why_choose')}
               </h3>
               <div className="space-y-4">
                 {[
@@ -778,7 +778,7 @@ ICO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-amber-600" />
-                Perfect For
+                {t('dng_to_ico.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
@@ -805,7 +805,7 @@ ICO_FILE_END`;
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('dng_to_ico.back_to_home')}
           </button>
         </div>
 
@@ -820,7 +820,7 @@ ICO_FILE_END`;
               Converting Adobe DNG raw images to ICO format is essential for professional photography workflows, digital asset management, and creating high-quality Windows icons. While DNG files contain uncompressed raw image data from professional cameras, ICO format provides the perfect solution for creating Windows icons with multiple resolutions and professional quality.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ICO Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('dng_to_ico.key_benefits')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
@@ -852,7 +852,7 @@ ICO_FILE_END`;
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('dng_to_ico.common_use_cases')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -889,22 +889,22 @@ ICO_FILE_END`;
             </div>
 
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your DNG Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('dng_to_ico.ready_to_convert')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online DNG to ICO converter to transform your professional camera files into high-quality Windows icons.
+                {t('dng_to_ico.ready_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('dng_to_ico.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors"
                 >
-                  Back to Home
+                  {t('dng_to_ico.back_to_home')}
                 </button>
               </div>
             </div>

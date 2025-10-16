@@ -326,7 +326,7 @@ export const EPSToICOConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
                 >
-                  Choose Files
+                  {t('eps_to_ico.choose_files')}
                 </button>
               </div>
 
@@ -424,7 +424,7 @@ export const EPSToICOConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download ICO File
+                      {t('eps_to_ico.download_ico')}
                     </button>
                     <button
                       onClick={resetForm}
@@ -464,7 +464,7 @@ export const EPSToICOConverter: React.FC = () => {
                             className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors flex items-center"
                           >
                             <Download className="w-3 h-3 mr-1" />
-                            Download
+                            {t('eps_to_ico.download')}
                           </button>
                         ) : result.error ? (
                           <span className="text-xs text-red-600">{result.error}</span>
@@ -478,7 +478,7 @@ export const EPSToICOConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('eps_to_ico.convert_more_files')}
                     </button>
                   </div>
                 </div>
@@ -561,7 +561,7 @@ export const EPSToICOConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-emerald-600" />
-                Perfect For
+                {t('eps_to_ico.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
@@ -588,7 +588,7 @@ export const EPSToICOConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('eps_to_ico.back_to_home')}
           </button>
         </div>
 
@@ -603,7 +603,7 @@ export const EPSToICOConverter: React.FC = () => {
               Converting Encapsulated PostScript EPS files to ICO format is essential for professional icon design, software development, and brand identity creation. While EPS files contain high-quality vector graphics, ICO format provides the perfect solution for creating Windows icons with multiple resolutions and professional quality.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ICO Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_ico.key_benefits')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-emerald-50 p-6 rounded-lg">
@@ -635,7 +635,7 @@ export const EPSToICOConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_ico.common_use_cases')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -672,22 +672,22 @@ export const EPSToICOConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPS Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('eps_to_ico.ready_to_convert')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPS to ICO converter to transform your vector graphics into high-quality Windows icons.
+                {t('eps_to_ico.ready_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('eps_to_ico.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
                 >
-                  Back to Home
+                  {t('eps_to_ico.back_to_home')}
                 </button>
               </div>
             </div>

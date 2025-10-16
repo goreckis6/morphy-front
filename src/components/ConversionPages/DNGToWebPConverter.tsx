@@ -293,7 +293,7 @@ export const DNGToWebPConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
-                  Choose Files
+                  {t('dng_to_webp.choose_files')}
                 </button>
                 </div>
 
@@ -400,7 +400,7 @@ export const DNGToWebPConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download WebP File
+                      {t('dng_to_webp.download_webp')}
                     </button>
                     <button
                       onClick={resetForm}
@@ -436,7 +436,7 @@ export const DNGToWebPConverter: React.FC = () => {
                           className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                         >
                           <Download className="w-4 h-4 mr-1" />
-                          Download
+                          {t('dng_to_webp.download')}
                         </button>
                       </div>
                     ))}
@@ -446,7 +446,7 @@ export const DNGToWebPConverter: React.FC = () => {
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
+                      {t('dng_to_webp.convert_more_files')}
                     </button>
                   </div>
                 )}
@@ -558,7 +558,7 @@ export const DNGToWebPConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
-                Perfect For
+                {t('dng_to_webp.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
@@ -584,7 +584,7 @@ export const DNGToWebPConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('dng_to_webp.back_to_home')}
           </button>
         </div>
 
@@ -598,7 +598,7 @@ export const DNGToWebPConverter: React.FC = () => {
               Converting DNG RAW files to WebP format is essential for modern web development, mobile applications, and digital content creation. While DNG files preserve the highest quality from your camera's sensor, WebP format provides the perfect balance of quality and file size for web use.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of WebP Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('dng_to_webp.key_benefits')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-purple-50 p-6 rounded-lg">
@@ -631,22 +631,22 @@ export const DNGToWebPConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your DNG Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('dng_to_webp.ready_to_convert')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online DNG to WebP converter to transform your RAW photography into web-optimized images.
+                {t('dng_to_webp.ready_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('dng_to_webp.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Back to Home
+                  {t('dng_to_webp.back_to_home')}
                 </button>
               </div>
             </div>
