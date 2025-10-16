@@ -124,10 +124,8 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
       
-      // Record conversion for anonymous users
-      if (!user) {
-        ConversionLimits.recordConversion();
-      }
+      // Conversion is now recorded on the backend via IP-based tracking
+      // No need to record in localStorage
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
       setError(message);
@@ -186,10 +184,8 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       
       setBatchConverted(successCount > 0);
       
-      // Record conversion for anonymous users (count batch as 1 conversion)
-      if (!user && successCount > 0) {
-        ConversionLimits.recordConversion();
-      }
+      // Conversion is now recorded on the backend via IP-based tracking
+      // No need to record in localStorage
       
       if (successCount === 0) {
         const errorMessages = results

@@ -115,6 +115,7 @@ import DatabaseChecker from './components/DatabaseChecker';
 import UserDashboard from './components/UserDashboard';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
+import ProtectedRoute from './components/ProtectedRoute';
 import { 
   RefreshCw, 
   Eye, 
@@ -221,11 +222,13 @@ function App() {
     );
   }
 
-  // User dashboard route
+  // User dashboard route - Protected, requires authentication
   if (currentPath === '/dashboard') {
     return (
       <AuthProvider>
-        <UserDashboard />
+        <ProtectedRoute>
+          <UserDashboard />
+        </ProtectedRoute>
       </AuthProvider>
     );
   }

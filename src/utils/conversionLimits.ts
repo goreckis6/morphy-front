@@ -162,8 +162,14 @@ export class ConversionLimits {
       }
     } catch (error) {
       console.warn('Failed to get server conversion status:', error);
-      // Fallback to localStorage-based status
-      return ConversionLimits.getStatus();
+      // If server fails, allow conversion (fail open) instead of using localStorage
+      return {
+        canConvert: true,
+        remaining: this.FREE_CONVERSION_LIMIT,
+        used: 0,
+        limit: this.FREE_CONVERSION_LIMIT,
+        message: `${this.FREE_CONVERSION_LIMIT} free conversions available`
+      };
     }
   }
 
@@ -174,8 +180,8 @@ export class ConversionLimits {
       return status.canConvert;
     } catch (error) {
       console.warn('Failed to check server limits:', error);
-      // Fallback to localStorage check
-      return ConversionLimits.canConvert();
+      // If server fails, allow conversion (fail open) instead of using localStorage
+      return true;
     }
   }
 }

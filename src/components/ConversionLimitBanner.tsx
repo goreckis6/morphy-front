@@ -35,8 +35,16 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
             isUnlimited: false
           });
         } catch (error) {
-          console.warn('Failed to fetch server status, using fallback');
-          setStatus(ConversionLimits.getStatus());
+          console.warn('Failed to fetch server status');
+          // If server fails, show as if user can convert (fail open)
+          setStatus({
+            canConvert: true,
+            remaining: 5,
+            used: 0,
+            limit: 5,
+            isUnlimited: false,
+            message: '5 free conversions available'
+          });
         } finally {
           setLoading(false);
         }
