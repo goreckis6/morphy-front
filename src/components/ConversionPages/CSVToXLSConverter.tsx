@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
@@ -20,6 +21,15 @@ import {
 } from 'lucide-react';
 
 export const CSVToXLSConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  
+  useEffect(() => {
+    // Sync language with localStorage if needed
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [i18n]);
   const {
     selectedFile,
     convertedFile,
@@ -54,8 +64,8 @@ export const CSVToXLSConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>CSV to XLS Converter - Convert CSV to Excel 97-2003</title>
-        <meta name="description" content="Convert CSV files to XLS format for legacy Excel compatibility. Professional spreadsheet conversion for Excel 97-2003. Free online converter." />
+        <title>{t('csv_to_xls.meta_title')}</title>
+        <meta name="description" content={t('csv_to_xls.meta_description')} />
         <meta name="keywords" content="CSV to XLS, Excel converter, legacy Excel, spreadsheet conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
@@ -66,23 +76,23 @@ export const CSVToXLSConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CSV to XLS Converter
+              {t('csv_to_xls.title')}
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to Excel XLS format. Transform tabular data into professional spreadsheets with formatting and multiple sheets.
+              {t('csv_to_xls.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('common.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('common.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('common.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -105,7 +115,7 @@ export const CSVToXLSConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -116,19 +126,19 @@ export const CSVToXLSConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
+                  {batchMode ? t('csv_to_xls.upload_multiple') : t('csv_to_xls.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple CSV files to convert them all at once' 
-                    : 'Drag and drop your CSV file here or click to browse'
+                    ? t('csv_to_xls.upload_multiple_desc') 
+                    : t('csv_to_xls.upload_single_desc')
                   }
                 </p>
                 {!batchMode && (
@@ -149,13 +159,13 @@ export const CSVToXLSConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('common.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <FileText className="w-12 h-12 text-gray-400" />
@@ -174,7 +184,7 @@ export const CSVToXLSConverter: React.FC = () => {
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                        <h4 className="text-lg font-semibold">{t('common.selected_files', { count: batchFiles.length })}</h4>
                         <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-purple-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
                       </div>
                     );
@@ -206,12 +216,12 @@ export const CSVToXLSConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to XLS'}
+                      {batchMode ? t('common.convert_files', { count: batchFiles.length }) : t('csv_to_xls.convert_to_xls')}
                     </div>
                   )}
                 </button>
@@ -221,10 +231,10 @@ export const CSVToXLSConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('common.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CSV file has been successfully converted to XLS format with multiple sheets and professional formatting.
+                    {t('csv_to_xls.conversion_success')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -232,14 +242,14 @@ export const CSVToXLSConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download XLS File
+                      {t('csv_to_xls.download_xls')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -249,7 +259,7 @@ export const CSVToXLSConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((r, idx) => (
@@ -266,7 +276,7 @@ export const CSVToXLSConverter: React.FC = () => {
                             onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
                           >
-                            Download
+                            {t('common.download')}
                           </button>
                         )}
                       </div>
@@ -277,7 +287,7 @@ export const CSVToXLSConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('common.convert_more_files')}
                   </button>
                 </div>
               )}
@@ -289,21 +299,21 @@ export const CSVToXLSConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-purple-600" />
-                XLS Settings
+                {t('csv_to_xls.settings_title')}
               </h3>
               
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Sheet Format
+                  {t('csv_to_xls.sheet_format')}
                 </label>
                 <select
                   value={sheetFormat}
                   onChange={(e) => setSheetFormat(e.target.value as 'data' | 'formatted' | 'summary')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 >
-                  <option value="data">Data Only</option>
-                  <option value="formatted">Formatted (Default)</option>
-                  <option value="summary">With Summary Sheets</option>
+                  <option value="data">{t('csv_to_xls.data_only')}</option>
+                  <option value="formatted">{t('csv_to_xls.formatted_default')}</option>
+                  <option value="summary">{t('csv_to_xls.with_summary')}</option>
                 </select>
               </div>
 
@@ -315,7 +325,7 @@ export const CSVToXLSConverter: React.FC = () => {
                     onChange={(e) => setIncludeHeaders(e.target.checked)}
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('csv_to_xls.include_headers')}</span>
                 </label>
               </div>
             </div>
@@ -323,16 +333,16 @@ export const CSVToXLSConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('csv_to_xls.why_choose')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Multiple sheets included",
-                  "Professional formatting",
-                  "Auto-sized columns",
-                  "Summary statistics",
-                  "Excel compatibility",
-                  "Batch conversion support"
+                  t('csv_to_xls.feature_sheets'),
+                  t('csv_to_xls.feature_formatting'),
+                  t('csv_to_xls.feature_columns'),
+                  t('csv_to_xls.feature_statistics'),
+                  t('csv_to_xls.feature_compatibility'),
+                  t('csv_to_xls.feature_batch')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -345,16 +355,16 @@ export const CSVToXLSConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
-                Perfect For
+                {t('csv_to_xls.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Business reports",
-                  "Data analysis",
-                  "Financial spreadsheets",
-                  "Project management",
-                  "Data sharing",
-                  "Excel workflows"
+                  t('csv_to_xls.use_case_reports'),
+                  t('csv_to_xls.use_case_analysis'),
+                  t('csv_to_xls.use_case_financial'),
+                  t('csv_to_xls.use_case_project'),
+                  t('csv_to_xls.use_case_sharing'),
+                  t('csv_to_xls.use_case_workflows')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -371,80 +381,79 @@ export const CSVToXLSConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to XLS?
+            {t('csv_to_xls.seo_title')}
           </h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to Excel XLS format provides enhanced functionality, professional formatting, and better data organization.
-              XLS files support multiple sheets, formulas, formatting, and are perfect for business reports and data analysis.
+              {t('csv_to_xls.seo_description')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of XLS Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_xls.benefits_title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Multiple Sheets</h4>
-                <p className="text-gray-700">Organize data across multiple worksheets with summary sheets and column information.</p>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('csv_to_xls.benefit_sheets')}</h4>
+                <p className="text-gray-700">{t('csv_to_xls.benefit_sheets_desc')}</p>
               </div>
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Professional Formatting</h4>
-                <p className="text-gray-700">Auto-sized columns, alternating row colors, and header styling for professional appearance.</p>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('csv_to_xls.benefit_formatting')}</h4>
+                <p className="text-gray-700">{t('csv_to_xls.benefit_formatting_desc')}</p>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Excel Compatibility</h4>
-                <p className="text-gray-700">Perfect compatibility with Microsoft Excel and other spreadsheet applications.</p>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('csv_to_xls.benefit_compatibility')}</h4>
+                <p className="text-gray-700">{t('csv_to_xls.benefit_compatibility_desc')}</p>
               </div>
               <div className="bg-sky-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-sky-900 mb-3">Data Analysis Ready</h4>
-                <p className="text-gray-700">Includes summary statistics and column information for immediate analysis.</p>
+                <h4 className="text-xl font-semibold text-sky-900 mb-3">{t('csv_to_xls.benefit_analysis')}</h4>
+                <p className="text-gray-700">{t('csv_to_xls.benefit_analysis_desc')}</p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_xls.use_cases_title')}</h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Reports</h4>
-                  <p className="text-gray-700">Create professional business reports with formatted data and summary sheets.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_xls.use_case_reports_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_xls.use_case_reports_desc')}</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Financial Analysis</h4>
-                  <p className="text-gray-700">Transform financial data into Excel format for calculations and analysis.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_xls.use_case_financial_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_xls.use_case_financial_desc')}</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Sharing</h4>
-                  <p className="text-gray-700">Share structured data in a format that's universally recognized and easy to work with.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_xls.use_case_sharing_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_xls.use_case_sharing_desc')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
-              <p className="text-lg mb-6 opacity-90">Use our free CSV to XLS converter to generate professional Excel spreadsheets.</p>
+              <h3 className="text-2xl font-bold mb-4">{t('csv_to_xls.cta_title')}</h3>
+              <p className="text-lg mb-6 opacity-90">{t('csv_to_xls.cta_description')}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('csv_to_xls.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
@@ -455,16 +464,16 @@ export const CSVToXLSConverter: React.FC = () => {
       <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('common.footer_title')}</h3>
             <p className="text-gray-400 mb-6">
-              Convert and view files online for free. Support for 50+ formats.
+              {t('common.footer_description')}
             </p>
             <div className="flex justify-center space-x-6 text-sm text-gray-400">
-              <span>© 2024 MorphyIMG</span>
+              <span>{t('common.footer_copyright')}</span>
               <span>•</span>
-              <span>Privacy Policy</span>
+              <span>{t('common.privacy_policy')}</span>
               <span>•</span>
-              <span>Terms of Service</span>
+              <span>{t('common.terms_of_service')}</span>
             </div>
           </div>
         </div>
