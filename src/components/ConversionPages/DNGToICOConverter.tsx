@@ -604,7 +604,7 @@ ICO_FILE_END`;
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to ICO'}
+                      {batchMode ? t('dng_to_ico.convert_files', { count: batchFiles.length }) : t('dng_to_ico.convert_to_ico')}
                     </div>
                   )}
                 </button>
@@ -615,7 +615,7 @@ ICO_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
                     Your DNG file has been successfully converted to ICO format.
@@ -644,7 +644,7 @@ ICO_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('dng_to_ico.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
                     All {batchResults.length} DNG files have been successfully converted to ICO format.

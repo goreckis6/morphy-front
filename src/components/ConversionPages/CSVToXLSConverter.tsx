@@ -221,7 +221,7 @@ export const CSVToXLSConverter: React.FC = () => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('common.convert_files', { count: batchFiles.length }) : t('csv_to_xls.convert_to_xls')}
+                      {batchMode ? t('csv_to_xls.convert_files', { count: batchFiles.length }) : t('csv_to_xls.convert_to_xls')}
                     </div>
                   )}
                 </button>
@@ -259,7 +259,7 @@ export const CSVToXLSConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_xls.batch_conversion_complete')}</h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((r, idx) => (

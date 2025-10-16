@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { useImageConversion } from '../../hooks/useImageConversion';
 import { useFileValidation } from '../../hooks/useFileValidation';
@@ -23,6 +24,7 @@ import {
 } from 'lucide-react';
 
 export const DNGToWebPConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState('');
@@ -96,6 +98,19 @@ export const DNGToWebPConverter: React.FC = () => {
     setBatchFiles(files);
   };
 
+  const handleConvert = async (file: File) => {
+    const options: any = {
+      format: 'webp',
+      quality: quality,
+      lossless: lossless
+    };
+    
+    if (width) options.width = parseInt(width);
+    if (height) options.height = parseInt(height);
+
+    return await apiService.convertFile(file, options);
+  };
+
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
@@ -103,17 +118,7 @@ export const DNGToWebPConverter: React.FC = () => {
     setError(null);
 
     try {
-      const options: any = {
-        format: 'webp',
-        quality: quality,
-        lossless: lossless
-      };
-      
-      if (width) options.width = parseInt(width);
-      if (height) options.height = parseInt(height);
-
-      const result = await apiService.convertFile(selectedFile, options);
-      
+      const result = await handleConvert(selectedFile);
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
     } catch (err) {
@@ -127,27 +132,26 @@ export const DNGToWebPConverter: React.FC = () => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
 
+    console.log('Starting batch conversion for:', batchFiles.length, 'files');
     setIsConverting(true);
     setError(null);
 
     try {
-      const options: any = {
-        format: 'webp',
-        quality: quality,
-        lossless: lossless
-      };
-      
-      if (width) options.width = parseInt(width);
-      if (height) options.height = parseInt(height);
-
-      const response = await apiService.convertBatch(batchFiles, options);
-      
-      if (response.success) {
-        setBatchResults(response.results);
-        setBatchConverted(true);
-      } else {
-        setError('Batch conversion failed. Please try again.');
+      const results = [];
+      for (const file of batchFiles) {
+        console.log('Converting file:', file.name);
+        const result = await handleConvert(file);
+        results.push({
+          originalName: file.name,
+          outputFilename: result.filename || file.name.replace('.dng', '.webp'),
+          blob: result.blob,
+          success: true,
+          size: result.blob.size
+        });
       }
+      console.log('Batch conversion completed successfully');
+      setBatchResults(results);
+      setBatchConverted(true);
     } catch (err) {
       console.error('Batch conversion error:', err);
       setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
@@ -167,13 +171,9 @@ export const DNGToWebPConverter: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
-  const handleBatchDownload = async (downloadPath: string, filename: string) => {
-    try {
-      const response = await fetch(downloadPath);
-      const blob = await response.blob();
-      handleDownload(blob, filename);
-    } catch (error) {
-      console.error('Download failed:', error);
+  const handleBatchDownload = (result: any) => {
+    if (result.blob) {
+      handleDownload(result.blob, result.outputFilename);
     }
   };
 
@@ -379,7 +379,7 @@ export const DNGToWebPConverter: React.FC = () => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to WebP'}
+                      {batchMode ? t('dng_to_webp.convert_files', { count: batchFiles.length }) : t('dng_to_webp.convert_to_webp')}
                   </div>
                 )}
                 </button>
@@ -389,7 +389,7 @@ export const DNGToWebPConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
             </div>
                   <p className="text-green-700 mb-4">
                     Your DNG file has been successfully converted to WebP format.
@@ -418,7 +418,7 @@ export const DNGToWebPConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('dng_to_webp.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
                     All {batchResults.length} DNG files have been successfully converted to WebP format.
@@ -432,7 +432,7 @@ export const DNGToWebPConverter: React.FC = () => {
                           </p>
                         </div>
                         <button
-                          onClick={() => handleBatchDownload(result.downloadPath!, result.outputFilename)}
+                          onClick={() => handleBatchDownload(result)}
                           className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
                         >
                           <Download className="w-4 h-4 mr-1" />
