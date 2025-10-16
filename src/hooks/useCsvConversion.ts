@@ -110,7 +110,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       const canConvert = await ConversionLimits.checkServerLimits();
       if (!canConvert) {
         setConversionLimitReached(true);
-        setError('You have reached the limit of 5 free conversions. Please register for unlimited conversions.');
+        // Don't set error message here - let ConversionLimitBanner handle it
         return;
       }
     }
@@ -144,7 +144,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       const canConvert = await ConversionLimits.checkServerLimits();
       if (!canConvert) {
         setConversionLimitReached(true);
-        setError('You have reached the limit of 5 free conversions. Please register for unlimited conversions.');
+        // Don't set error message here - let ConversionLimitBanner handle it
         return;
       }
     }

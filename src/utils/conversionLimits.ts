@@ -148,7 +148,15 @@ export class ConversionLimits {
       
       const data = await response.json();
       if (data.success) {
-        return data.data;
+        // Map server response to expected format
+        const serverData = data.data;
+        return {
+          canConvert: serverData.canConvert,
+          remaining: serverData.remainingConversions || 0,
+          used: serverData.usedConversions || 0,
+          limit: serverData.limit || 5,
+          message: serverData.message || 'Conversion status unknown'
+        };
       } else {
         throw new Error(data.error || 'Failed to get conversion status');
       }
