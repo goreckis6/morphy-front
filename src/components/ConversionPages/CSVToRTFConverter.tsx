@@ -150,7 +150,7 @@ export const CSVToRTFConverter: React.FC = () => {
                 )}
                 {batchMode && (
                   <div className="text-sm text-orange-600 mb-4">
-                    <p>Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.</p>
+                    <p>{t('csv_to_rtf.batch_info')}</p>
                   </div>
                 )}
                 <input
@@ -276,7 +276,7 @@ export const CSVToRTFConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_rtf.batch_conversion_complete')}</h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((r, idx) => (
