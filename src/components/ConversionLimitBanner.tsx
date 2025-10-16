@@ -13,8 +13,15 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
   className = '' 
 }) => {
   const { user } = useAuth();
-  const [status, setStatus] = useState(ConversionLimits.getStatus());
-  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({
+    canConvert: true,
+    remaining: 5,
+    used: 0,
+    limit: 5,
+    isUnlimited: false,
+    message: 'Loading...'
+  });
+  const [loading, setLoading] = useState(true);
 
   // Fetch server-side status on component mount
   useEffect(() => {
@@ -23,12 +30,18 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
         setLoading(true);
         try {
           const serverStatus = await ConversionLimits.getServerStatus();
-          setStatus(serverStatus);
+          setStatus({
+            ...serverStatus,
+            isUnlimited: false
+          });
         } catch (error) {
-          console.warn('Failed to fetch server status, using local status');
+          console.warn('Failed to fetch server status, using fallback');
+          setStatus(ConversionLimits.getStatus());
         } finally {
           setLoading(false);
         }
+      } else {
+        setLoading(false);
       }
     };
 

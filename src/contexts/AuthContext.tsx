@@ -88,6 +88,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signOut = () => {
     authService.logout();
     setUser(null);
+    // Redirect to main site after logout
+    window.location.href = '/';
   };
 
   const updateProfile = async (updates: { name?: string; email?: string }) => {
