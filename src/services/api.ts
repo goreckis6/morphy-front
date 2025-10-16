@@ -1,22 +1,38 @@
 import { ConversionTracker } from '../utils/conversionTracker';
 
 // API service for backend communication
+const PRODUCTION_DEFAULTS = [
+  'https://morphy-2-n2tb.onrender.com', // Current testing backend
+  'https://morphyimg.ovh' // Future custom domain
+];
+
+const normalizeBaseUrl = (url: string | undefined) => {
+  if (!url) return undefined;
+  return url.endsWith('/') ? url.slice(0, -1) : url;
+};
+
 const getApiBaseUrl = () => {
-  // If environment variable is set, use it
-  if (import.meta.env.VITE_API_BASE_URL) {
-    return import.meta.env.VITE_API_BASE_URL;
+  const envPrimary = normalizeBaseUrl(import.meta.env.VITE_API_BASE_URL as string | undefined);
+  const envFallback = normalizeBaseUrl(import.meta.env.VITE_API_BASE_URL_FALLBACK as string | undefined);
+
+  if (envPrimary) {
+    return envPrimary;
   }
-  
-  // If we're in production (deployed), use the production backend
+
+  if (envFallback) {
+    return envFallback;
+  }
+
+  // If we're in production (deployed), use the default production backend
   if (import.meta.env.PROD) {
-    return 'https://morphy-2-n2tb.onrender.com';
+    return PRODUCTION_DEFAULTS[0];
   }
-  
+
   // Default to localhost for development
   return 'http://localhost:3000';
 };
 
-const API_BASE_URL = getApiBaseUrl();
+export const API_BASE_URL = getApiBaseUrl();
 
 export interface ConversionOptions {
   quality?: 'high' | 'medium' | 'low' | string | number; // Support both string quality levels and numeric quality values

@@ -1,4 +1,4 @@
-import { apiService } from './api';
+import { apiService, API_BASE_URL } from './api';
 
 export interface User {
   id: number;
@@ -94,17 +94,42 @@ class AuthService {
     return !!(this.token && this.user);
   }
 
+  private async jsonRequest(
+    endpoint: string,
+    method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE' = 'GET',
+    body?: any,
+    customHeaders: Record<string, string> = {}
+  ): Promise<Response> {
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json',
+      ...customHeaders,
+    };
+
+    const options: RequestInit = {
+      method,
+      headers,
+    };
+
+    if (body !== undefined) {
+      options.body = JSON.stringify(body);
+    }
+
+    const url = `${API_BASE_URL}${endpoint}`;
+    const response = await fetch(url, options);
+
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => 'Unknown error');
+      console.error(`Request to ${url} failed with status ${response.status}:`, errorText);
+      throw new Error(`Request failed: ${response.status}`);
+    }
+
+    return response;
+  }
+
   // Register new user
   async register(data: RegisterData): Promise<AuthResponse> {
     try {
-      const response = await fetch('/api/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
+      const response = await this.jsonRequest('/api/auth/register', 'POST', data);
       const result = await response.json();
 
       if (result.success && result.user && result.token) {
@@ -124,14 +149,7 @@ class AuthService {
   // Login user
   async login(credentials: LoginCredentials): Promise<AuthResponse> {
     try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(credentials),
-      });
-
+      const response = await this.jsonRequest('/api/auth/login', 'POST', credentials);
       const result = await response.json();
 
       if (result.success && result.user && result.token) {
@@ -163,14 +181,7 @@ class AuthService {
     }
 
     try {
-      const response = await fetch('/api/auth/verify-token', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ token: this.token }),
-      });
-
+      const response = await this.jsonRequest('/api/auth/verify-token', 'POST', { token: this.token });
       const result = await response.json();
 
       if (result.success && result.user) {
@@ -204,12 +215,9 @@ class AuthService {
     }
 
     try {
-      const response = await fetch('/api/auth/me', {
-        headers: {
-          'Authorization': `Bearer ${this.token}`,
-        },
+      const response = await this.jsonRequest('/api/auth/me', 'GET', undefined, {
+        Authorization: `Bearer ${this.token}`
       });
-
       const result = await response.json();
 
       if (result.success && result.user) {
@@ -237,15 +245,9 @@ class AuthService {
     }
 
     try {
-      const response = await fetch('/api/auth/profile', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.token}`,
-        },
-        body: JSON.stringify(updates),
+      const response = await this.jsonRequest('/api/auth/profile', 'PUT', updates, {
+        Authorization: `Bearer ${this.token}`
       });
-
       const result = await response.json();
 
       if (result.success && result.user) {
@@ -273,15 +275,9 @@ class AuthService {
     }
 
     try {
-      const response = await fetch('/api/auth/change-password', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.token}`,
-        },
-        body: JSON.stringify({ currentPassword, newPassword }),
+      const response = await this.jsonRequest('/api/auth/change-password', 'PUT', { currentPassword, newPassword }, {
+        Authorization: `Bearer ${this.token}`
       });
-
       const result = await response.json();
       return result;
     } catch (error) {
@@ -303,12 +299,9 @@ class AuthService {
     }
 
     try {
-      const response = await fetch('/api/auth/stats', {
-        headers: {
-          'Authorization': `Bearer ${this.token}`,
-        },
+      const response = await this.jsonRequest('/api/auth/stats', 'GET', undefined, {
+        Authorization: `Bearer ${this.token}`
       });
-
       const result = await response.json();
       return result;
     } catch (error) {
