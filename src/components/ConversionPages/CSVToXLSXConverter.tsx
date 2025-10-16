@@ -383,21 +383,123 @@ export const CSVToXLSXConverter: React.FC = () => {
             ← {t('common.back_to_home')}
           </button>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+            {t('csv_to_xlsx.seo_title')}
+          </h2>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              {t('csv_to_xlsx.seo_description')}
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_xlsx.benefits_title')}</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">{t('csv_to_xlsx.benefit_modern')}</h4>
+                <p className="text-gray-700">
+                  {t('csv_to_xlsx.benefit_modern_desc')}
+                </p>
+              </div>
+              
+              <div className="bg-cyan-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('csv_to_xlsx.benefit_features')}</h4>
+                <p className="text-gray-700">
+                  {t('csv_to_xlsx.benefit_features_desc')}
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('csv_to_xlsx.benefit_compatibility')}</h4>
+                <p className="text-gray-700">
+                  {t('csv_to_xlsx.benefit_compatibility_desc')}
+                </p>
+              </div>
+              
+              <div className="bg-sky-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-sky-900 mb-3">{t('csv_to_xlsx.benefit_analytics')}</h4>
+                <p className="text-gray-700">
+                  {t('csv_to_xlsx.benefit_analytics_desc')}
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_xlsx.use_cases_title')}</h3>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_xlsx.use_case_modern_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_xlsx.use_case_modern_desc')}</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_xlsx.use_case_analysis_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_xlsx.use_case_analysis_desc')}</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_xlsx.use_case_business_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_xlsx.use_case_business_desc')}</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-sky-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_xlsx.use_case_collaboration_title')}</h4>
+                  <p className="text-gray-700">{t('csv_to_xlsx.use_case_collaboration_desc')}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white p-8 rounded-xl text-center">
+              <h3 className="text-2xl font-bold mb-4">{t('csv_to_xlsx.cta_title')}</h3>
+              <p className="text-lg mb-6 opacity-90">
+                {t('csv_to_xlsx.cta_description')}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  {t('csv_to_xlsx.start_converting')}
+                </button>
+                <button
+                  onClick={handleBack}
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
+                >
+                  {t('common.back_to_home')}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">{t('common.footer_title')}</h3>
+            <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
             <p className="text-gray-400 mb-6">
-              {t('common.footer_description')}
+              Convert and view files online for free. Support for 50+ formats.
             </p>
             <div className="flex justify-center space-x-6 text-sm text-gray-400">
-              <span>{t('common.footer_copyright')}</span>
+              <span>© 2024 MorphyIMG</span>
               <span>•</span>
-              <span>{t('common.privacy_policy')}</span>
+              <span>Privacy Policy</span>
               <span>•</span>
-              <span>{t('common.terms_of_service')}</span>
+              <span>Terms of Service</span>
             </div>
           </div>
         </div>
