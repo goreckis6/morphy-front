@@ -5,6 +5,9 @@ import { Header } from '../Header';
 import { useImageConversion } from '../../hooks/useImageConversion';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionLimits';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
 import { 
   Download, 
   Upload, 
@@ -25,6 +28,7 @@ import {
 
 export const DNGToWebPConverter: React.FC = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState('');
@@ -35,6 +39,7 @@ export const DNGToWebPConverter: React.FC = () => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const { validationError, validateSingleFile, validateBatchFiles, getSingleInfoMessage, getBatchInfoMessage, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
@@ -114,8 +119,19 @@ export const DNGToWebPConverter: React.FC = () => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
 
     try {
       const result = await handleConvert(selectedFile);
@@ -132,9 +148,20 @@ export const DNGToWebPConverter: React.FC = () => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
 
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+
     console.log('Starting batch conversion for:', batchFiles.length, 'files');
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
 
     try {
       const results = [];
@@ -169,6 +196,11 @@ export const DNGToWebPConverter: React.FC = () => {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    
+    // Refresh the conversion limit banner for anonymous users after download
+    if (!user && (window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
   };
 
   const handleBatchDownload = (result: any) => {
@@ -244,6 +276,9 @@ export const DNGToWebPConverter: React.FC = () => {
           
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+              
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner />
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
@@ -368,7 +403,7 @@ export const DNGToWebPConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
