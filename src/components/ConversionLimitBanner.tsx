@@ -78,6 +78,14 @@ export const ConversionLimitBanner: React.FC<ConversionLimitBannerProps> = ({
     }
   };
 
+  // Expose refresh function globally so converters can call it
+  React.useEffect(() => {
+    (window as any).refreshConversionLimitBanner = refreshStatus;
+    return () => {
+      delete (window as any).refreshConversionLimitBanner;
+    };
+  }, [user]);
+
   // Show loading state while fetching server status
   if (loading) {
     return (
