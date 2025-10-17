@@ -144,7 +144,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
     setConversionLimitReached(false);
     
     try {
-      // Use real API conversion instead of mock
+      // Use real API conversion
       const result = await apiService.convertFile(selectedFile, { format: 'ndjson' });
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
@@ -176,7 +176,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
     setConversionLimitReached(false);
     
     try {
-      // Use real API batch conversion instead of mock
+      // Use real API batch conversion
       const result = await apiService.convertBatch(batchFiles, { format: 'ndjson' });
       
       if (result.success) {

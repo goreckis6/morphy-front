@@ -117,7 +117,27 @@ class ApiService {
     if (options.height !== undefined) formData.append('height', options.height.toString());
     if (options.iconSize !== undefined) formData.append('iconSize', options.iconSize.toString());
 
-    const response = await this.makeRequest('/api/convert', 'POST', formData);
+    // Route AVRO conversions to specific endpoints
+    let endpoint = '/api/convert';
+    const fileName = file.name.toLowerCase();
+    
+    if (fileName.endsWith('.avro') && options.format) {
+      switch (options.format.toLowerCase()) {
+        case 'csv':
+          endpoint = '/convert/avro-to-csv/single';
+          break;
+        case 'json':
+          endpoint = '/convert/avro-to-json/single';
+          break;
+        case 'ndjson':
+          endpoint = '/convert/avro-to-ndjson/single';
+          break;
+      }
+    } else if (fileName.endsWith('.csv') && options.format === 'avro') {
+      endpoint = '/convert/csv-to-avro/single';
+    }
+
+    const response = await this.makeRequest(endpoint, 'POST', formData);
     
     // Check if response is JSON (new file-based approach) or blob (legacy)
     const contentType = response.headers.get('Content-Type');
@@ -178,8 +198,28 @@ class ApiService {
     if (options.width !== undefined) formData.append('width', options.width.toString());
     if (options.height !== undefined) formData.append('height', options.height.toString());
 
-    console.log('API: Making request to /api/convert/batch with options:', options);
-    const response = await this.makeRequest('/api/convert/batch', 'POST', formData);
+    // Route AVRO conversions to specific endpoints
+    let endpoint = '/api/convert/batch';
+    const firstFileName = files[0]?.name.toLowerCase();
+    
+    if (firstFileName?.endsWith('.avro') && options.format) {
+      switch (options.format.toLowerCase()) {
+        case 'csv':
+          endpoint = '/convert/avro-to-csv/batch';
+          break;
+        case 'json':
+          endpoint = '/convert/avro-to-json/batch';
+          break;
+        case 'ndjson':
+          endpoint = '/convert/avro-to-ndjson/batch';
+          break;
+      }
+    } else if (firstFileName?.endsWith('.csv') && options.format === 'avro') {
+      endpoint = '/convert/csv-to-avro/batch';
+    }
+
+    console.log('API: Making request to', endpoint, 'with options:', options);
+    const response = await this.makeRequest(endpoint, 'POST', formData);
     const result = await response.json();
     
     console.log('API: Batch conversion response:', result);

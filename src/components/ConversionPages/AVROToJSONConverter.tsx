@@ -146,7 +146,7 @@ export const AVROToJSONConverter: React.FC = () => {
     setConversionLimitReached(false);
     
     try {
-      // Use real API conversion instead of mock
+      // Use real API conversion
       const result = await apiService.convertFile(selectedFile, { format: 'json' });
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
@@ -178,7 +178,7 @@ export const AVROToJSONConverter: React.FC = () => {
     setConversionLimitReached(false);
     
     try {
-      // Use real API batch conversion instead of mock
+      // Use real API batch conversion
       const result = await apiService.convertBatch(batchFiles, { format: 'json' });
       
       if (result.success) {

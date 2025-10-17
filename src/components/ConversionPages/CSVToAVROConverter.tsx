@@ -251,7 +251,7 @@ AVRO_FILE_END`;
     setConversionLimitReached(false);
     
     try {
-      // Use real API conversion instead of mock
+      // Use real API conversion
       const result = await apiService.convertFile(selectedFile, { format: 'avro' });
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
@@ -283,7 +283,7 @@ AVRO_FILE_END`;
     setConversionLimitReached(false);
     
     try {
-      // Use real API batch conversion instead of mock
+      // Use real API batch conversion
       const result = await apiService.convertBatch(batchFiles, { format: 'avro' });
       
       if (result.success) {
