@@ -175,25 +175,6 @@ export const CR2ToICOConverter: React.FC = () => {
     clearValidationError();
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const canConvert = await ConversionLimits.checkServerLimits();
-      if (!canConvert) {
-        setConversionLimitReached(true);
-        throw new Error('Conversion limit reached');
-      }
-    }
-
-    try {
-      const result = await apiService.convertFile(file, { format: 'ico' });
-      return result;
-    } catch (error) {
-      console.error('Conversion error:', error);
-      throw error;
-    }
-  };
-
   const findJPEGStart = (data: Uint8Array): number => {
     // Look for JPEG SOI marker (0xFF 0xD8)
     for (let i = 0; i < data.length - 1; i++) {
@@ -286,8 +267,18 @@ ICO_FILE_END`;
     setConversionLimitReached(false);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      // Check conversion limits for anonymous users
+      if (!user) {
+        const canConvert = await ConversionLimits.checkServerLimits();
+        if (!canConvert) {
+          setConversionLimitReached(true);
+          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+          return;
+        }
+      }
+
+      const result = await apiService.convertFile(selectedFile, { format: 'ico' });
+      setConvertedFile(result.blob);
     } catch (err) {
       if (err instanceof Error && err.message === 'Conversion limit reached') {
         setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');

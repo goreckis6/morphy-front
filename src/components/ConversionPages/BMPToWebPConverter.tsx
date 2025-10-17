@@ -97,25 +97,6 @@ export const BMPToWebPConverter: React.FC = () => {
     setError(null);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const canConvert = await ConversionLimits.checkServerLimits();
-      if (!canConvert) {
-        setConversionLimitReached(true);
-        throw new Error('Conversion limit reached');
-      }
-    }
-
-    try {
-      const result = await apiService.convertFile(file, { format: 'webp' });
-      return result;
-    } catch (error) {
-      console.error('Conversion error:', error);
-      throw error;
-    }
-  };
-
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
     
@@ -124,8 +105,18 @@ export const BMPToWebPConverter: React.FC = () => {
     setConversionLimitReached(false);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      // Check conversion limits for anonymous users
+      if (!user) {
+        const canConvert = await ConversionLimits.checkServerLimits();
+        if (!canConvert) {
+          setConversionLimitReached(true);
+          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+          return;
+        }
+      }
+
+      const result = await apiService.convertFile(selectedFile, { format: 'webp' });
+      setConvertedFile(result.blob);
     } catch (err) {
       if (err instanceof Error && err.message === 'Conversion limit reached') {
         setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
