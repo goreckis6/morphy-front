@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionLimits';
 import { 
   Upload, 
   Download, 
@@ -23,6 +26,8 @@ import {
 
 export const CSVToDOCXConverter: React.FC = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const {
     selectedFile,
     convertedFile,
@@ -135,6 +140,12 @@ export const CSVToDOCXConverter: React.FC = () => {
                 </button>
               </div>
 
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner 
+                conversionLimitReached={conversionLimitReached}
+                onRefresh={() => setConversionLimitReached(false)}
+              />
+
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -216,7 +227,7 @@ export const CSVToDOCXConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (

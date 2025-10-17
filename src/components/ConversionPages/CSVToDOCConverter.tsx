@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionLimits';
 import {
   Upload,
   Download,
@@ -23,6 +26,8 @@ import {
 
 export const CSVToDOCConverter: React.FC = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const {
     selectedFile,
     convertedFile,
@@ -139,6 +144,12 @@ export const CSVToDOCConverter: React.FC = () => {
                 </button>
               </div>
 
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner 
+                conversionLimitReached={conversionLimitReached}
+                onRefresh={() => setConversionLimitReached(false)}
+              />
+
               {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
@@ -225,7 +236,7 @@ export const CSVToDOCConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
