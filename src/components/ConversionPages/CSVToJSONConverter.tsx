@@ -270,6 +270,9 @@ export const CSVToJSONConverter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner />
+              
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
@@ -295,9 +298,6 @@ export const CSVToJSONConverter: React.FC = () => {
                   {t('common.batch_convert')}
                 </button>
               </div>
-
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner className="mb-6" />
 
               {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
