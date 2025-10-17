@@ -27,6 +27,7 @@ const resources = {
       'common.large_file_warning': 'Conversion may take 2-5 minutes for large files',
       'common.batch_conversion_complete': 'Batch Conversion Complete!',
       'common.conversion_complete': 'Conversion Complete!',
+      'common.convert_files': 'Convert Files',
       'common.lightning_fast': 'Lightning Fast',
       'common.secure': '100% Secure',
       'common.no_registration': 'No Registration',

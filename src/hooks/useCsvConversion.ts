@@ -125,10 +125,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       setConvertedFilename(result.filename);
       
       // Conversion is now recorded on the backend via IP-based tracking
-      // Refresh the conversion limit banner for anonymous users
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
+      // Banner will refresh when user clicks download
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
       setError(message);
@@ -188,10 +185,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       setBatchConverted(successCount > 0);
       
       // Conversion is now recorded on the backend via IP-based tracking
-      // Refresh the conversion limit banner for anonymous users
-      if (!user && successCount > 0 && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
+      // Banner will refresh when user downloads files
       
       if (successCount === 0) {
         const errorMessages = results
@@ -221,6 +215,11 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    
+    // Refresh the conversion limit banner for anonymous users after download
+    if (!user && (window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
   };
 
   const handleBatchDownload = async (result: BatchResultItem) => {
@@ -245,6 +244,11 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         };
         const filename = getSafeFilename(result);
         await apiService.downloadAndSaveFile(result.storedFilename, filename);
+        
+        // Refresh the conversion limit banner for anonymous users after first batch download
+        if (!user && (window as any).refreshConversionLimitBanner) {
+          (window as any).refreshConversionLimitBanner();
+        }
         return;
       }
       if (result.downloadPath) {
@@ -256,6 +260,11 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        
+        // Refresh the conversion limit banner for anonymous users after first batch download
+        if (!user && (window as any).refreshConversionLimitBanner) {
+          (window as any).refreshConversionLimitBanner();
+        }
         return;
       }
       if (result.downloadUrl) {
@@ -267,6 +276,11 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        
+        // Refresh the conversion limit banner for anonymous users after first batch download
+        if (!user && (window as any).refreshConversionLimitBanner) {
+          (window as any).refreshConversionLimitBanner();
+        }
         return;
       }
       
