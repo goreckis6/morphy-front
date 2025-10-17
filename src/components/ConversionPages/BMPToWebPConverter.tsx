@@ -147,7 +147,9 @@ export const BMPToWebPConverter: React.FC = () => {
         }
       }
 
+      console.log('Starting batch conversion for', batchFiles.length, 'files');
       const result = await apiService.convertBatch(batchFiles, { format: 'webp' });
+      console.log('Batch conversion result:', result);
       
       if (result.success && result.results) {
         const results: Array<{ file: File; blob: Blob }> = [];
@@ -156,18 +158,27 @@ export const BMPToWebPConverter: React.FC = () => {
           const conversionResult = result.results[i];
           const file = batchFiles[i];
           
+          console.log(`Processing result ${i + 1}:`, {
+            success: conversionResult.success,
+            hasDownloadPath: !!conversionResult.downloadPath,
+            downloadPath: conversionResult.downloadPath?.substring(0, 50)
+          });
+          
           if (conversionResult.success && conversionResult.downloadPath) {
             // Convert base64 to blob
             const response = await fetch(conversionResult.downloadPath);
             const blob = await response.blob();
+            console.log(`Blob created for ${file.name}:`, blob.size, 'bytes');
             results.push({ file, blob });
           }
         }
         
+        console.log('Final batch results:', results.length, 'files converted');
         setBatchResults(results);
         setBatchConverted(true);
         setError(null);
       } else {
+        console.error('Batch conversion failed:', result);
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {

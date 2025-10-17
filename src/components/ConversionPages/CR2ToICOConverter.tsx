@@ -309,7 +309,9 @@ ICO_FILE_END`;
         }
       }
 
+      console.log('Starting CR2 to ICO batch conversion for', batchFiles.length, 'files');
       const result = await apiService.convertBatch(batchFiles, { format: 'ico' });
+      console.log('CR2 to ICO batch conversion result:', result);
       
       if (result.success && result.results) {
         const results: Array<{ file: File; blob: Blob }> = [];
@@ -318,18 +320,27 @@ ICO_FILE_END`;
           const conversionResult = result.results[i];
           const file = batchFiles[i];
           
+          console.log(`Processing CR2 to ICO result ${i + 1}:`, {
+            success: conversionResult.success,
+            hasDownloadPath: !!conversionResult.downloadPath,
+            downloadPath: conversionResult.downloadPath?.substring(0, 50)
+          });
+          
           if (conversionResult.success && conversionResult.downloadPath) {
             // Convert base64 to blob
             const response = await fetch(conversionResult.downloadPath);
             const blob = await response.blob();
+            console.log(`Blob created for ${file.name}:`, blob.size, 'bytes');
             results.push({ file, blob });
           }
         }
         
+        console.log('Final CR2 to ICO batch results:', results.length, 'files converted');
         setBatchResults(results);
         setBatchConverted(true);
         setError(null);
       } else {
+        console.error('CR2 to ICO batch conversion failed:', result);
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
