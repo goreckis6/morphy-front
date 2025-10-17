@@ -21,7 +21,7 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionTracker';
+import { ConversionLimits } from '../../utils/conversionLimits';
 import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const CSVToJSONConverter: React.FC = () => {
@@ -297,7 +297,7 @@ export const CSVToJSONConverter: React.FC = () => {
               </div>
 
               {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
+              <ConversionLimitBanner className="mb-6" />
 
               {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
