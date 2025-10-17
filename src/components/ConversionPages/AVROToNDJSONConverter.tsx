@@ -147,6 +147,24 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
       setConvertedFilename(selectedFile.name.replace('.avro', '.ndjson'));
+      
+      // Record conversion for anonymous users (since this is mock conversion)
+      if (!user) {
+        try {
+          await fetch(`${process.env.REACT_APP_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com'}/api/convert`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              format: 'avro-to-ndjson',
+              filename: selectedFile.name
+            })
+          });
+        } catch (recordError) {
+          console.warn('Failed to record conversion:', recordError);
+        }
+      }
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -191,6 +209,24 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
       setBatchResults(results);
       setBatchConverted(true);
       setError(null);
+      
+      // Record conversions for anonymous users (since this is mock conversion)
+      if (!user && results.length > 0) {
+        try {
+          await fetch(`${process.env.REACT_APP_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com'}/api/convert`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              format: 'avro-to-ndjson',
+              filename: `batch_${results.length}_files`
+            })
+          });
+        } catch (recordError) {
+          console.warn('Failed to record batch conversion:', recordError);
+        }
+      }
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
     } finally {

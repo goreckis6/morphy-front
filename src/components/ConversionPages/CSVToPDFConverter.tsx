@@ -107,9 +107,6 @@ export const CSVToPDFConverter: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Conversion Limit Banner */}
-        <ConversionLimitBanner />
-        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           <div className="lg:col-span-2">
@@ -139,6 +136,9 @@ export const CSVToPDFConverter: React.FC = () => {
                   {t('common.batch_convert')}
                 </button>
               </div>
+
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner className="mb-6" />
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-red-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
