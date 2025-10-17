@@ -191,19 +191,70 @@ export const CSVToJSONConverter: React.FC = () => {
   };
 
   const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-        setError(t('common.download_link_missing'));
-      return;
-    }
     try {
-      await apiService.downloadFile(filename, result.outputFilename);
+      console.log('Downloading batch result:', result);
       
-      // Refresh the conversion limit banner for anonymous users after download
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
+      if (result.storedFilename) {
+        // Use backend API to fetch the file from the correct origin
+        console.log('Using storedFilename for download:', result.storedFilename);
+        const getSafeFilename = (result: any) => {
+          try {
+            if (result?.outputFilename) return result.outputFilename;
+            if (result?.filename) return result.filename;
+            if (result?.originalName && typeof result.originalName === 'string') {
+              return result.originalName.replace(/\.[^.]+$/, '.json');
+            }
+            return 'converted.json';
+          } catch (error) {
+            console.warn('Error processing filename:', error);
+            return 'converted.json';
+          }
+        };
+        const filename = getSafeFilename(result);
+        await apiService.downloadAndSaveFile(result.storedFilename, filename);
+        
+        // Refresh the conversion limit banner for anonymous users after first batch download
+        if (!user && (window as any).refreshConversionLimitBanner) {
+          (window as any).refreshConversionLimitBanner();
+        }
+        return;
       }
+      if (result.downloadPath) {
+        // Handle direct download path
+        const link = document.createElement('a');
+        link.href = result.downloadPath;
+        link.download = result.outputFilename || 'converted.json';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        // Refresh the conversion limit banner for anonymous users after first batch download
+        if (!user && (window as any).refreshConversionLimitBanner) {
+          (window as any).refreshConversionLimitBanner();
+        }
+        return;
+      }
+      if (result.blob) {
+        // Handle blob download
+        const url = URL.createObjectURL(result.blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = result.outputFilename || 'converted.json';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+        
+        // Refresh the conversion limit banner for anonymous users after first batch download
+        if (!user && (window as any).refreshConversionLimitBanner) {
+          (window as any).refreshConversionLimitBanner();
+        }
+        return;
+      }
+      
+      setError(t('common.download_link_missing'));
     } catch (error) {
+      console.error('Batch download error:', error);
       setError(t('common.download_failed'));
     }
   };

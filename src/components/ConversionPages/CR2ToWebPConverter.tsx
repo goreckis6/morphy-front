@@ -273,8 +273,11 @@ WEBP_FILE_END`;
       const result = await apiService.convertFile(selectedFile, { format: 'webp' });
       setConvertedFile(result.blob);
     } catch (err) {
+      console.error('CR2 to WebP conversion error:', err);
       if (err instanceof Error && err.message === 'Conversion limit reached') {
         setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+      } else if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
+        setError('Conversion is taking longer than expected. CR2 files are large and complex - please try with a smaller file or wait a bit longer. The conversion may still be processing in the background.');
       } else {
         setError('Conversion failed. Please try again.');
       }
@@ -512,6 +515,14 @@ WEBP_FILE_END`;
                     : t('cr2_to_webp.file_limits_single')
                   }
                 </p>
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 text-blue-500 mr-2" />
+                    <span className="text-sm text-blue-700">
+                      <strong>Note:</strong> CR2 files are large and complex. Conversion may take 1-3 minutes. Please be patient.
+                    </span>
+                  </div>
+                </div>
                 <input
                   ref={fileInputRef}
                   type="file"
