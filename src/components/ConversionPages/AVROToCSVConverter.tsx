@@ -119,19 +119,6 @@ export const AVROToCSVConverter: React.FC = () => {
     clearValidationError();
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would use a library like avro-js
-    const delimiterChar = delimiter === '\t' ? '\t' : delimiter;
-    const csvContent = includeHeaders 
-      ? `name${delimiterChar}age${delimiterChar}city
-John Doe${delimiterChar}30${delimiterChar}New York
-Jane Smith${delimiterChar}25${delimiterChar}Los Angeles
-Bob Johnson${delimiterChar}35${delimiterChar}Chicago`
-      : `John Doe${delimiterChar}30${delimiterChar}New York
-Jane Smith${delimiterChar}25${delimiterChar}Los Angeles
-Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
-    return new Blob([csvContent], { type: 'text/csv' });
-  };
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;

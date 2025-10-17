@@ -116,17 +116,6 @@ export const AVROToJSONConverter: React.FC = () => {
     clearValidationError();
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would use a library like avro-js
-    const jsonContent = JSON.stringify({
-      "users": [
-        { "name": "John Doe", "age": 30, "city": "New York" },
-        { "name": "Jane Smith", "age": 25, "city": "Los Angeles" },
-        { "name": "Bob Johnson", "age": 35, "city": "Chicago" }
-      ]
-    }, null, prettyPrint ? 2 : 0);
-    return new Blob([jsonContent], { type: 'application/json' });
-  };
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;

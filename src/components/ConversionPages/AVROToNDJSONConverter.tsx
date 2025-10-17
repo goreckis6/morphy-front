@@ -117,14 +117,6 @@ export const AVROToNDJSONConverter: React.FC = () => {
     clearValidationError();
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would use a library like avro-js
-    const ndjsonContent = `{"name":"John Doe","age":30,"city":"New York"}
-{"name":"Jane Smith","age":25,"city":"Los Angeles"}
-{"name":"Bob Johnson","age":35,"city":"Chicago"}
-Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
-    return new Blob([ndjsonContent], { type: 'application/x-ndjson' });
-  };
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
