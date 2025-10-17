@@ -117,24 +117,16 @@ class ApiService {
     if (options.height !== undefined) formData.append('height', options.height.toString());
     if (options.iconSize !== undefined) formData.append('iconSize', options.iconSize.toString());
 
-    // Route AVRO conversions to specific endpoints
+    // Route conversions to specific endpoints
     let endpoint = '/api/convert';
     const fileName = file.name.toLowerCase();
     
-    if (fileName.endsWith('.avro') && options.format) {
-      switch (options.format.toLowerCase()) {
-        case 'csv':
-          endpoint = '/convert/avro-to-csv/single';
-          break;
-        case 'json':
-          endpoint = '/convert/avro-to-json/single';
-          break;
-        case 'ndjson':
-          endpoint = '/convert/avro-to-ndjson/single';
-          break;
-      }
-    } else if (fileName.endsWith('.csv') && options.format === 'avro') {
-      endpoint = '/convert/csv-to-avro/single';
+    if (fileName.endsWith('.bmp') && options.format === 'webp') {
+      endpoint = '/convert/bmp-to-webp/single';
+    } else if (fileName.endsWith('.cr2') && options.format === 'ico') {
+      endpoint = '/convert/cr2-to-ico/single';
+    } else if (fileName.endsWith('.cr2') && options.format === 'webp') {
+      endpoint = '/convert/cr2-to-webp/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -198,24 +190,16 @@ class ApiService {
     if (options.width !== undefined) formData.append('width', options.width.toString());
     if (options.height !== undefined) formData.append('height', options.height.toString());
 
-    // Route AVRO conversions to specific endpoints
+    // Route conversions to specific endpoints
     let endpoint = '/api/convert/batch';
     const firstFileName = files[0]?.name.toLowerCase();
     
-    if (firstFileName?.endsWith('.avro') && options.format) {
-      switch (options.format.toLowerCase()) {
-        case 'csv':
-          endpoint = '/convert/avro-to-csv/batch';
-          break;
-        case 'json':
-          endpoint = '/convert/avro-to-json/batch';
-          break;
-        case 'ndjson':
-          endpoint = '/convert/avro-to-ndjson/batch';
-          break;
-      }
-    } else if (firstFileName?.endsWith('.csv') && options.format === 'avro') {
-      endpoint = '/convert/csv-to-avro/batch';
+    if (firstFileName?.endsWith('.bmp') && options.format === 'webp') {
+      endpoint = '/convert/bmp-to-webp/batch';
+    } else if (firstFileName?.endsWith('.cr2') && options.format === 'ico') {
+      endpoint = '/convert/cr2-to-ico/batch';
+    } else if (firstFileName?.endsWith('.cr2') && options.format === 'webp') {
+      endpoint = '/convert/cr2-to-webp/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);

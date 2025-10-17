@@ -20,9 +20,14 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionLimits';
 
 export const CR2ToWebPConverter: React.FC = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -36,6 +41,7 @@ export const CR2ToWebPConverter: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Language detection from URL
@@ -247,72 +253,22 @@ WEBP_FILE_END`;
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    return new Promise((resolve, reject) => {
-      try {
-        const reader = new FileReader();
-        reader.onload = async (e) => {
-          try {
-            const arrayBuffer = e.target?.result as ArrayBuffer;
-            const uint8Array = new Uint8Array(arrayBuffer);
-            
-            // Look for embedded JPEG preview to convert to WebP
-            const jpegStart = findJPEGStart(uint8Array);
-            const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
-            
-            if (jpegStart !== -1 && jpegEnd !== -1) {
-              // Extract the JPEG preview and convert to WebP
-              const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
-              const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
-              const jpegUrl = URL.createObjectURL(jpegBlob);
-              
-              const img = new Image();
-              img.onload = () => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                if (!ctx) {
-                  URL.revokeObjectURL(jpegUrl);
-                  generateSampleWebP(file, resolve);
-                  return;
-                }
-                
-                canvas.width = img.width;
-                canvas.height = img.height;
-                ctx.drawImage(img, 0, 0);
-                
-                const qualityValue = lossless ? 1.0 : (quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5);
-                
-                canvas.toBlob((blob) => {
-                  URL.revokeObjectURL(jpegUrl);
-                  if (blob) {
-                    resolve(blob);
-                  } else {
-                    generateSampleWebP(file, resolve);
-                  }
-                }, 'image/webp', qualityValue);
-              };
-              
-              img.onerror = () => {
-                URL.revokeObjectURL(jpegUrl);
-                generateSampleWebP(file, resolve);
-              };
-              
-              img.src = jpegUrl;
-            } else {
-              // No JPEG preview found, generate sample
-              generateSampleWebP(file, resolve);
-            }
-          } catch (error) {
-            generateSampleWebP(file, resolve);
-          }
-        };
-        reader.onerror = () => {
-          generateSampleWebP(file, resolve);
-        };
-        reader.readAsArrayBuffer(file);
-      } catch (error) {
-        generateSampleWebP(file, resolve);
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const canConvert = await ConversionLimits.checkServerLimits();
+      if (!canConvert) {
+        setConversionLimitReached(true);
+        throw new Error('Conversion limit reached');
       }
-    });
+    }
+
+    try {
+      const result = await apiService.convertFile(file, { format: 'webp' });
+      return result;
+    } catch (error) {
+      console.error('Conversion error:', error);
+      throw error;
+    }
   };
 
   const handleSingleConvert = async () => {
@@ -320,12 +276,17 @@ WEBP_FILE_END`;
     
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
     
     try {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      if (err instanceof Error && err.message === 'Conversion limit reached') {
+        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+      } else {
+        setError('Conversion failed. Please try again.');
+      }
     } finally {
       setIsConverting(false);
     }
@@ -337,21 +298,48 @@ WEBP_FILE_END`;
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
+    setConversionLimitReached(false);
     
     try {
-      const results: Array<{ file: File; blob: Blob }> = [];
-      
-      for (let i = 0; i < batchFiles.length; i++) {
-        const file = batchFiles[i];
-        const converted = await handleConvert(file);
-        results.push({ file, blob: converted });
+      // Check conversion limits for anonymous users
+      if (!user) {
+        const canConvert = await ConversionLimits.checkServerLimits();
+        if (!canConvert) {
+          setConversionLimitReached(true);
+          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+          return;
+        }
       }
+
+      const result = await apiService.convertBatch(batchFiles, { format: 'webp' });
       
-      setBatchResults(results);
-      setBatchConverted(true);
-      setError(null);
+      if (result.success && result.results) {
+        const results: Array<{ file: File; blob: Blob }> = [];
+        
+        for (let i = 0; i < result.results.length; i++) {
+          const conversionResult = result.results[i];
+          const file = batchFiles[i];
+          
+          if (conversionResult.success && conversionResult.downloadPath) {
+            // Convert base64 to blob
+            const response = await fetch(conversionResult.downloadPath);
+            const blob = await response.blob();
+            results.push({ file, blob });
+          }
+        }
+        
+        setBatchResults(results);
+        setBatchConverted(true);
+        setError(null);
+      } else {
+        setError('Batch conversion failed. Please try again.');
+      }
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      if (err instanceof Error && err.message === 'Conversion limit reached') {
+        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+      } else {
+        setError('Batch conversion failed. Please try again.');
+      }
     } finally {
       setIsConverting(false);
     }
@@ -381,6 +369,11 @@ WEBP_FILE_END`;
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
+      
+      // Refresh conversion limit banner for anonymous users
+      if (!user && (window as any).refreshConversionLimitBanner) {
+        (window as any).refreshConversionLimitBanner();
+      }
     }
   };
 
@@ -417,6 +410,11 @@ WEBP_FILE_END`;
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    
+    // Refresh conversion limit banner for anonymous users
+    if (!user && (window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
   };
 
   return (
@@ -464,6 +462,9 @@ WEBP_FILE_END`;
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+              
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner />
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -623,10 +624,10 @@ WEBP_FILE_END`;
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && !conversionLimitReached && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
@@ -634,7 +635,7 @@ WEBP_FILE_END`;
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-700 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (

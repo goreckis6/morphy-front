@@ -7,13 +7,9 @@ import { SupportedFormats } from './components/SupportedFormats';
 import { JPGToTEXTConverter } from './components/ConversionPages/JPGToTEXTConverter';
 import { JPGToPDFConverter } from './components/ConversionPages/JPGToPDFConverter';
 import { JPGToPNGConverter } from './components/ConversionPages/JPGToPNGConverter';
-import { AVROToCSVConverter } from './components/ConversionPages/AVROToCSVConverter';
-import { AVROToJSONConverter } from './components/ConversionPages/AVROToJSONConverter';
-import { AVROToNDJSONConverter } from './components/ConversionPages/AVROToNDJSONConverter';
 import { BMPToWebPConverter } from './components/ConversionPages/BMPToWebPConverter';
 import { CR2ToICOConverter } from './components/ConversionPages/CR2ToICOConverter';
 import { CR2ToWebPConverter } from './components/ConversionPages/CR2ToWebPConverter';
-import { CSVToAVROConverter } from './components/ConversionPages/CSVToAVROConverter';
 import { CSVToDOCConverter } from './components/ConversionPages/CSVToDOCConverter';
 import { CSVToDOCXConverter } from './components/ConversionPages/CSVToDOCXConverter';
 import { CSVToEPUBConverter } from './components/ConversionPages/CSVToEPUBConverter';
@@ -266,33 +262,7 @@ function App() {
     );
   }
 
-  // AVRO Conversion Routes
-  if (currentPath === '/convert/avro-to-csv') {
-    return (
-      <AuthProvider>
-        <AVROToCSVConverter />
-      </AuthProvider>
-    );
-  }
-
-  if (currentPath === '/convert/avro-to-json') {
-    return (
-      <AuthProvider>
-        <AVROToJSONConverter />
-      </AuthProvider>
-    );
-  }
-
-  if (currentPath === '/convert/avro-to-ndjson') {
-    return (
-      <AuthProvider>
-        <AVROToNDJSONConverter />
-      </AuthProvider>
-    );
-  }
-
   // BMP Conversion Routes
-
   if (currentPath === '/convert/bmp-to-webp') {
     return (
       <AuthProvider>
@@ -319,14 +289,6 @@ function App() {
   }
 
   // CSV Conversion Routes
-  if (currentPath === '/convert/csv-to-avro') {
-    return (
-      <AuthProvider>
-        <CSVToAVROConverter />
-      </AuthProvider>
-    );
-  }
-
   if (currentPath === '/convert/csv-to-doc') {
     return (
       <AuthProvider>
