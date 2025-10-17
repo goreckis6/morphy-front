@@ -151,26 +151,12 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
     setConversionLimitReached(false);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      // Use real API conversion instead of mock
+      const result = await apiService.convertFile(selectedFile, { format: 'csv' });
+      setConvertedFile(result.blob);
       
-      // Record conversion for anonymous users (since this is mock conversion)
-      if (!user) {
-        try {
-          await fetch(`${process.env.REACT_APP_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com'}/api/convert`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              format: 'avro-to-csv',
-              filename: selectedFile.name
-            })
-          });
-        } catch (recordError) {
-          console.warn('Failed to record conversion:', recordError);
-        }
-      }
+      // Conversion is now recorded on the backend via IP-based tracking
+      // Banner will refresh when user clicks download
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -196,42 +182,24 @@ Bob Johnson${delimiterChar}35${delimiterChar}Chicago`;
     setConversionLimitReached(false);
     
     try {
-      // Mock batch conversion - process each file
-      const results = [];
-      for (let i = 0; i < batchFiles.length; i++) {
-        const file = batchFiles[i];
-        const converted = await handleConvert(file);
+      // Use real API batch conversion instead of mock
+      const result = await apiService.convertBatch(batchFiles, { format: 'csv' });
+      
+      if (result.success) {
+        const processedResults = result.results.map((item, index) => ({
+          originalName: item.originalName,
+          outputFilename: item.outputFilename || batchFiles[index].name.replace('.avro', '.csv'),
+          size: item.size || 0,
+          success: item.success,
+          downloadPath: item.downloadPath,
+          error: item.error
+        }));
         
-        results.push({
-          originalName: file.name,
-          outputFilename: file.name.replace('.avro', '.csv'),
-          size: converted.size,
-          success: true,
-          downloadPath: URL.createObjectURL(converted),
-          blob: converted
-        });
-      }
-      
-      setBatchResults(results);
-      setBatchConverted(true);
-      setError(null);
-      
-      // Record conversions for anonymous users (since this is mock conversion)
-      if (!user && results.length > 0) {
-        try {
-          await fetch(`${process.env.REACT_APP_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com'}/api/convert`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              format: 'avro-to-csv',
-              filename: `batch_${results.length}_files`
-            })
-          });
-        } catch (recordError) {
-          console.warn('Failed to record batch conversion:', recordError);
-        }
+        setBatchResults(processedResults);
+        setBatchConverted(true);
+        setError(null);
+      } else {
+        setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
