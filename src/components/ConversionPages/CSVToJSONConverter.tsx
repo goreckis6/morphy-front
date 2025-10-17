@@ -20,9 +20,13 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionTracker';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const CSVToJSONConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { user } = useAuth();
   
   useEffect(() => {
     // Sync language with localStorage if needed
@@ -44,6 +48,7 @@ export const CSVToJSONConverter: React.FC = () => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<any[]>([]);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const { validationError, validateSingleFile, validateBatchFiles, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
@@ -93,8 +98,19 @@ export const CSVToJSONConverter: React.FC = () => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
     
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+    
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
     
     try {
       const options: any = {
@@ -118,8 +134,19 @@ export const CSVToJSONConverter: React.FC = () => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
     
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+    
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
     
     try {
       const options: any = {
@@ -155,6 +182,11 @@ export const CSVToJSONConverter: React.FC = () => {
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
+      
+      // Refresh the conversion limit banner for anonymous users after download
+      if (!user && (window as any).refreshConversionLimitBanner) {
+        (window as any).refreshConversionLimitBanner();
+      }
     }
   };
 
@@ -166,6 +198,11 @@ export const CSVToJSONConverter: React.FC = () => {
     }
     try {
       await apiService.downloadFile(filename, result.outputFilename);
+      
+      // Refresh the conversion limit banner for anonymous users after download
+      if (!user && (window as any).refreshConversionLimitBanner) {
+        (window as any).refreshConversionLimitBanner();
+      }
     } catch (error) {
       setError(t('common.download_failed'));
     }
@@ -258,6 +295,9 @@ export const CSVToJSONConverter: React.FC = () => {
                   {t('common.batch_convert')}
                 </button>
               </div>
+
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner />
 
               {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
@@ -368,7 +408,7 @@ export const CSVToJSONConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
