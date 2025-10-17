@@ -19,14 +19,19 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionLimits';
 
 export const AVROToNDJSONConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const [prettyPrint, setPrettyPrint] = useState(false);
   const [includeSchema, setIncludeSchema] = useState(false);
   const [streamingMode, setStreamingMode] = useState(true);
@@ -123,9 +128,20 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
+
+    // Check conversion limits for anonymous users (server-side IP-based)
+    if (!user) {
+      const canConvert = await ConversionLimits.checkServerLimits();
+      if (!canConvert) {
+        setConversionLimitReached(true);
+        // Don't set error message here - let ConversionLimitBanner handle it
+        return;
+      }
+    }
     
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
     
     try {
       const converted = await handleConvert(selectedFile);
@@ -140,9 +156,20 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
 
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
+
+    // Check conversion limits for anonymous users (server-side IP-based)
+    if (!user) {
+      const canConvert = await ConversionLimits.checkServerLimits();
+      if (!canConvert) {
+        setConversionLimitReached(true);
+        // Don't set error message here - let ConversionLimitBanner handle it
+        return;
+      }
+    }
     
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
     
     try {
       // Mock batch conversion - process each file
@@ -179,6 +206,11 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    
+    // Refresh the conversion limit banner for anonymous users after first batch download
+    if (!user && (window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
   };
 
   const handleDownload = () => {
@@ -191,6 +223,11 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
+      
+      // Refresh the conversion limit banner for anonymous users after download
+      if (!user && (window as any).refreshConversionLimitBanner) {
+        (window as any).refreshConversionLimitBanner();
+      }
     }
   };
 
@@ -283,6 +320,9 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
                 </button>
               </div>
 
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner className="mb-6" />
+
               {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-indigo-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
@@ -371,7 +411,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
               )}
 
               {/* Error Message */}
-              {(error || validationError) && (
+              {(error || validationError) && !conversionLimitReached && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
                   <span className="text-red-700">{error || validationError}</span>
@@ -382,7 +422,7 @@ Pretty: ${prettyPrint}, Schema: ${includeSchema}, Streaming: ${streamingMode}`;
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
