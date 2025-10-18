@@ -18,6 +18,7 @@ import {
   Image as ImageIcon,
   BarChart3
 } from 'lucide-react';
+import { apiService } from '../../services/api';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { useAuth } from '../../contexts/AuthContext';
 import { ConversionLimits } from '../../utils/conversionLimits';

@@ -134,8 +134,8 @@ export const EPSToWebPConverter: React.FC = () => {
       setConvertedFilename(result.filename);
       setBatchConverted(false);
       setBatchResults([]);
-    } catch (err) {
-      setError('Conversion failed. Please try again.');
+    } catch (err: any) {
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }

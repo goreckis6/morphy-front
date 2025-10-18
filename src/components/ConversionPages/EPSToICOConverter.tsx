@@ -156,7 +156,7 @@ export const EPSToICOConverter: React.FC = () => {
       setUsedIconSize(getPrimaryIconSize());
       setBatchConverted(false);
       setBatchResults([]);
-    } catch (err) {
+    } catch (err: any) {
       const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
       setError(message);
     } finally {
