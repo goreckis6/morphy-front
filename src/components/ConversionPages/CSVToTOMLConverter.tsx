@@ -18,12 +18,8 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
-import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionLimits';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const CSVToTOMLConverter: React.FC = () => {
-  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -36,7 +32,6 @@ export const CSVToTOMLConverter: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -217,9 +212,6 @@ export const CSVToTOMLConverter: React.FC = () => {
       URL.revokeObjectURL(url);
       
       // Refresh the conversion limit banner for anonymous users after download
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     } catch (err) {
       setError('Download failed. Please try again.');
     }
@@ -237,9 +229,6 @@ export const CSVToTOMLConverter: React.FC = () => {
       URL.revokeObjectURL(url);
       
       // Refresh the conversion limit banner for anonymous users after download
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     }
   };
 
@@ -332,9 +321,6 @@ export const CSVToTOMLConverter: React.FC = () => {
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -463,7 +449,7 @@ export const CSVToTOMLConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-amber-700 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (

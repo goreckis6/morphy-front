@@ -20,13 +20,9 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
-import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionLimits';
 
 export const CR2ToICOConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -39,7 +35,6 @@ export const CR2ToICOConverter: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Language synchronization
@@ -382,10 +377,6 @@ ICO_FILE_END`;
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
       
-      // Refresh conversion limit banner for anonymous users
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     }
   };
 
@@ -423,10 +414,6 @@ ICO_FILE_END`;
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     
-    // Refresh conversion limit banner for anonymous users
-    if (!user && (window as any).refreshConversionLimitBanner) {
-      (window as any).refreshConversionLimitBanner();
-    }
   };
 
   return (
@@ -474,9 +461,6 @@ ICO_FILE_END`;
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -638,7 +622,7 @@ ICO_FILE_END`;
               )}
 
               {/* Error Message */}
-              {(error || validationError) && !conversionLimitReached && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
                   <span className="text-red-700">{error || validationError}</span>
@@ -649,7 +633,7 @@ ICO_FILE_END`;
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-orange-700 hover:to-red-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (

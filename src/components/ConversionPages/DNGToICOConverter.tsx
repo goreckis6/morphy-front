@@ -20,13 +20,9 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
-import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionLimits';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const DNGToICOConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const { user } = useAuth();
   
   useEffect(() => {
     // Sync language with localStorage if needed
@@ -48,7 +44,6 @@ export const DNGToICOConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -275,19 +270,8 @@ ICO_FILE_END`;
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
     
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       const result = await handleConvert(selectedFile);
@@ -304,19 +288,8 @@ ICO_FILE_END`;
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
     
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       const options: any = {
@@ -359,11 +332,6 @@ ICO_FILE_END`;
     }
     try {
       await apiService.downloadFile(filename, result.outputFilename);
-      
-      // Refresh the conversion limit banner for anonymous users after download
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     } catch (error) {
       setError('Download failed. Please try again.');
     }
@@ -380,11 +348,6 @@ ICO_FILE_END`;
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      
-      // Refresh the conversion limit banner for anonymous users after download
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     }
   };
 
@@ -456,9 +419,6 @@ ICO_FILE_END`;
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -633,7 +593,7 @@ ICO_FILE_END`;
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-amber-700 hover:to-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (

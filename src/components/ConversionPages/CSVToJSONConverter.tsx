@@ -20,13 +20,9 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
-import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionLimits';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const CSVToJSONConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const { user } = useAuth();
   
   useEffect(() => {
     // Sync language with localStorage if needed
@@ -48,7 +44,6 @@ export const CSVToJSONConverter: React.FC = () => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<any[]>([]);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const { validationError, validateSingleFile, validateBatchFiles, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
@@ -184,9 +179,6 @@ export const CSVToJSONConverter: React.FC = () => {
       URL.revokeObjectURL(url);
       
       // Refresh the conversion limit banner for anonymous users after download
-      if (!user && (window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     }
   };
 
@@ -214,9 +206,6 @@ export const CSVToJSONConverter: React.FC = () => {
         await apiService.downloadAndSaveFile(result.storedFilename, filename);
         
         // Refresh the conversion limit banner for anonymous users after first batch download
-        if (!user && (window as any).refreshConversionLimitBanner) {
-          (window as any).refreshConversionLimitBanner();
-        }
         return;
       }
       if (result.downloadPath) {
@@ -229,9 +218,6 @@ export const CSVToJSONConverter: React.FC = () => {
         document.body.removeChild(link);
         
         // Refresh the conversion limit banner for anonymous users after first batch download
-        if (!user && (window as any).refreshConversionLimitBanner) {
-          (window as any).refreshConversionLimitBanner();
-        }
         return;
       }
       if (result.blob) {
@@ -246,9 +232,6 @@ export const CSVToJSONConverter: React.FC = () => {
         URL.revokeObjectURL(url);
         
         // Refresh the conversion limit banner for anonymous users after first batch download
-        if (!user && (window as any).refreshConversionLimitBanner) {
-          (window as any).refreshConversionLimitBanner();
-        }
         return;
       }
       
@@ -320,9 +303,6 @@ export const CSVToJSONConverter: React.FC = () => {
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -459,7 +439,7 @@ export const CSVToJSONConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (

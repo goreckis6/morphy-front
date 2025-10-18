@@ -126,10 +126,6 @@ export const CSVToEPUBConverter: React.FC = () => {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
       
-      // Refresh conversion limit banner after conversion
-      if ((window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -164,10 +160,6 @@ export const CSVToEPUBConverter: React.FC = () => {
         setError('Batch conversion failed. Please try again.');
       }
       
-      // Refresh conversion limit banner after conversion
-      if ((window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
       setBatchConverted(false);
@@ -188,10 +180,6 @@ export const CSVToEPUBConverter: React.FC = () => {
       const downloadName = result.outputFilename || result.originalName.replace(/\.[^.]+$/, '.epub');
       await apiService.downloadFile(filename, downloadName);
       
-      // Refresh conversion limit banner after download
-      if ((window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     } catch (error) {
       setError('Download failed. Please try again.');
     }
@@ -208,10 +196,6 @@ export const CSVToEPUBConverter: React.FC = () => {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
       
-      // Refresh conversion limit banner after download
-      if ((window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     }
   };
 

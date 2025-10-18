@@ -4,9 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
-import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionLimits';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
@@ -26,8 +23,6 @@ import {
 
 export const CSVToHTMLConverter: React.FC = () => {
   const { t } = useTranslation();
-  const { user } = useAuth();
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const {
     selectedFile,
     convertedFile,

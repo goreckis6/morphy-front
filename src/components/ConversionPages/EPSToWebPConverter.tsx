@@ -20,13 +20,9 @@ import {
 } from 'lucide-react';
 import { apiService } from '../../services/api';
 import { useFileValidation } from '../../hooks/useFileValidation';
-import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionLimits';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const EPSToWebPConverter: React.FC = () => {
   const { t } = useTranslation();
-  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -39,7 +35,6 @@ export const EPSToWebPConverter: React.FC = () => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<Array<{ originalName: string; outputFilename?: string; success: boolean; downloadPath?: string; storedFilename?: string }>>([]);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -190,10 +185,6 @@ export const EPSToWebPConverter: React.FC = () => {
     if (convertedFile) {
       const filename = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.[^.]+$/, '.webp') : 'converted.webp');
       apiService.downloadBlob(convertedFile, filename);
-      // Refresh conversion limit banner after download
-      if ((window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     }
   };
 
@@ -205,10 +196,6 @@ export const EPSToWebPConverter: React.FC = () => {
     }
     try {
       await apiService.downloadAndSaveFile(filename, result.outputFilename);
-      // Refresh conversion limit banner after download
-      if ((window as any).refreshConversionLimitBanner) {
-        (window as any).refreshConversionLimitBanner();
-      }
     } catch (e) {
       setError('Failed to download file. Please try again.');
     }
@@ -273,9 +260,6 @@ export const EPSToWebPConverter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
-
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
@@ -401,7 +385,7 @@ export const EPSToWebPConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-emerald-700 hover:to-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
