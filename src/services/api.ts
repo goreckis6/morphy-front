@@ -127,6 +127,12 @@ class ApiService {
       endpoint = '/convert/cr2-to-ico/single';
     } else if (fileName.endsWith('.cr2') && options.format === 'webp') {
       endpoint = '/convert/cr2-to-webp/single';
+    } else if (fileName.endsWith('.eps') && options.format === 'ico') {
+      endpoint = '/convert/eps-to-ico/single';
+    } else if (fileName.endsWith('.eps') && options.format === 'webp') {
+      endpoint = '/convert/eps-to-webp/single';
+    } else if (fileName.endsWith('.gif') && options.format === 'ico') {
+      endpoint = '/convert/gif-to-ico/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -200,6 +206,12 @@ class ApiService {
       endpoint = '/convert/cr2-to-ico/batch';
     } else if (firstFileName?.endsWith('.cr2') && options.format === 'webp') {
       endpoint = '/convert/cr2-to-webp/batch';
+    } else if (firstFileName?.endsWith('.eps') && options.format === 'ico') {
+      endpoint = '/convert/eps-to-ico/batch';
+    } else if (firstFileName?.endsWith('.eps') && options.format === 'webp') {
+      endpoint = '/convert/eps-to-webp/batch';
+    } else if (firstFileName?.endsWith('.gif') && options.format === 'ico') {
+      endpoint = '/convert/gif-to-ico/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);

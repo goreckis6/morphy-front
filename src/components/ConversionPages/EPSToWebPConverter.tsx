@@ -19,8 +19,12 @@ import {
 } from 'lucide-react';
 import { apiService } from '../../services/api';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionLimits';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const EPSToWebPConverter: React.FC = () => {
+  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -33,6 +37,7 @@ export const EPSToWebPConverter: React.FC = () => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<Array<{ originalName: string; outputFilename?: string; success: boolean; downloadPath?: string; storedFilename?: string }>>([]);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -107,8 +112,19 @@ export const EPSToWebPConverter: React.FC = () => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
     
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+    
     setIsConverting(true);
     setError(null);
+    setConversionLimitReached(false);
     
     try {
       const result = await handleConvert(selectedFile);
