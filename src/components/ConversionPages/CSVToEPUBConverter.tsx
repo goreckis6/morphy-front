@@ -6,8 +6,6 @@ import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { getLanguageFromUrl } from '../../i18n';
 import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionLimits';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 import { 
   Upload, 
   Download, 
@@ -38,7 +36,6 @@ export const CSVToEPUBConverter: React.FC = () => {
   const [author, setAuthor] = useState('');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Synchronize language with URL
@@ -107,20 +104,9 @@ export const CSVToEPUBConverter: React.FC = () => {
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
-    
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
+
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       const converted = await handleConvert(selectedFile);
@@ -135,20 +121,9 @@ export const CSVToEPUBConverter: React.FC = () => {
 
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
-    
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
+
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       const result = await apiService.convertBatch(batchFiles, { format: 'epub' });
@@ -263,8 +238,6 @@ export const CSVToEPUBConverter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
 
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -378,7 +351,7 @@ export const CSVToEPUBConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                    disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-green-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-700 hover:to-teal-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
