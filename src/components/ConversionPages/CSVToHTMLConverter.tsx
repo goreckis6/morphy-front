@@ -82,6 +82,11 @@ export const CSVToHTMLConverter: React.FC = () => {
     
     setConversionLimitReached(false);
     await handleSingleConvert();
+    
+    // Refresh conversion limit banner after conversion
+    if ((window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
   };
 
   const handleBatchConvertWithLimits = async () => {
@@ -99,6 +104,11 @@ export const CSVToHTMLConverter: React.FC = () => {
     
     setConversionLimitReached(false);
     await handleBatchConvert();
+    
+    // Refresh conversion limit banner after conversion
+    if ((window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
   };
 
   // Custom download handlers with auto-refresh
@@ -166,6 +176,9 @@ export const CSVToHTMLConverter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner />
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
                   onClick={() => setBatchMode(false)}
@@ -190,9 +203,6 @@ export const CSVToHTMLConverter: React.FC = () => {
                   {t('common.batch_convert')}
                 </button>
               </div>
-
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />

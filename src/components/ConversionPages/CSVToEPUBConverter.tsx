@@ -125,6 +125,11 @@ export const CSVToEPUBConverter: React.FC = () => {
     try {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
+      
+      // Refresh conversion limit banner after conversion
+      if ((window as any).refreshConversionLimitBanner) {
+        (window as any).refreshConversionLimitBanner();
+      }
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -157,6 +162,11 @@ export const CSVToEPUBConverter: React.FC = () => {
       setBatchConverted(successCount > 0);
       if (successCount === 0) {
         setError('Batch conversion failed. Please try again.');
+      }
+      
+      // Refresh conversion limit banner after conversion
+      if ((window as any).refreshConversionLimitBanner) {
+        (window as any).refreshConversionLimitBanner();
       }
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
