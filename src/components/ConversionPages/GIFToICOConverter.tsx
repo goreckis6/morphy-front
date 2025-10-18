@@ -132,34 +132,19 @@ export const GIFToICOConverter: React.FC = () => {
     setConversionLimitReached(false);
     
     try {
-      const formData = new FormData();
-      formData.append('file', selectedFile);
-      formData.append('targetFormat', 'ico');
-      formData.append('quality', quality);
-      
-      if (iconSize !== 'default') {
-        formData.append('iconSize', iconSize.toString());
-      }
-
-      const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://morphyimg.ovh' 
-        : 'http://localhost:3000';
-
-      const response = await fetch(`${API_BASE_URL}/api/convert`, {
-        method: 'POST',
-        body: formData
+      const result = await apiService.convertFile(selectedFile, {
+        format: 'ico',
+        quality,
+        iconSize: iconSize !== 'default' ? parseInt(iconSize) : undefined
       });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ error: 'Conversion failed' }));
-        throw new Error(errorData.error || 'Conversion failed');
-      }
-
-      const blob = await response.blob();
-      const filename = selectedFile.name.replace(/\.gif$/i, '.ico');
       
-      setConvertedFile(blob);
-      setConvertedFilename(filename);
+      if (result.blob) {
+        const filename = selectedFile.name.replace(/\.gif$/i, '.ico');
+        setConvertedFile(result.blob);
+        setConvertedFilename(filename);
+      } else {
+        throw new Error('No conversion result received');
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
@@ -185,51 +170,56 @@ export const GIFToICOConverter: React.FC = () => {
     setConversionLimitReached(false);
     
     try {
-      const formData = new FormData();
-      batchFiles.forEach(file => {
-        formData.append('files', file);
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'ico',
+        quality,
+        iconSize: iconSize !== 'default' ? parseInt(iconSize) : undefined
       });
-      formData.append('targetFormat', 'ico');
-      formData.append('quality', quality);
       
-      if (iconSize !== 'default') {
-        formData.append('iconSize', iconSize.toString());
+      if (result && result.results) {
+        setBatchResults(result.results);
+        setBatchConverted(true);
+        setError(null);
+      } else {
+        throw new Error('No batch results received');
       }
-
-      const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://morphyimg.ovh' 
-        : 'http://localhost:3000';
-
-      const response = await fetch(`${API_BASE_URL}/api/convert/batch`, {
-        method: 'POST',
-        body: formData
-      });
-
-      if (!response.ok) {
-        throw new Error('Batch conversion failed');
-      }
-
-      const data = await response.json();
-      setBatchResults(data.results || []);
-      setBatchConverted(true);
-      setError(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
-  const handleBatchDownload = async (downloadUrl: string, filename: string) => {
+  const handleBatchDownload = async (result: any) => {
     try {
-      const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://morphyimg.ovh' 
-        : 'http://localhost:3000';
-      
-      const response = await fetch(`${API_BASE_URL}${downloadUrl}`);
-      if (!response.ok) throw new Error('Download failed');
-      
-      const blob = await response.blob();
+      let blob: Blob;
+      let filename: string;
+
+      if (result.storedFilename) {
+        // File is stored on server, download it
+        const downloadedBlob = await apiService.downloadAndSaveFile(result.storedFilename, result.originalName || result.storedFilename);
+        if (!downloadedBlob) {
+          throw new Error('Failed to download file');
+        }
+        blob = downloadedBlob;
+        filename = result.originalName ? result.originalName.replace(/\.gif$/i, '.ico') : result.storedFilename;
+      } else if (result.downloadPath) {
+        // Legacy: download from path
+        const downloadedBlob = await apiService.downloadAndSaveFile(result.downloadPath, result.originalName || 'converted.ico');
+        if (!downloadedBlob) {
+          throw new Error('Failed to download file');
+        }
+        blob = downloadedBlob;
+        filename = result.originalName ? result.originalName.replace(/\.gif$/i, '.ico') : 'converted.ico';
+      } else if (result.blob) {
+        // Already have blob
+        blob = result.blob;
+        filename = result.originalName ? result.originalName.replace(/\.gif$/i, '.ico') : 'converted.ico';
+      } else {
+        throw new Error('No download information available');
+      }
+
+      // Create download link
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
@@ -237,13 +227,15 @@ export const GIFToICOConverter: React.FC = () => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+
       // Refresh conversion limit banner after download
       if ((window as any).refreshConversionLimitBanner) {
         (window as any).refreshConversionLimitBanner();
       }
-      URL.revokeObjectURL(url);
     } catch (err) {
-      setError('Download failed. Please try again.');
+      console.error('Download error:', err);
+      setError(err instanceof Error ? err.message : 'Download failed. Please try again.');
     }
   };
 
@@ -567,9 +559,9 @@ export const GIFToICOConverter: React.FC = () => {
                               <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
                             )}
                           </div>
-                          {result.success && result.downloadUrl && (
+                          {result.success && (
                             <button
-                              onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
+                              onClick={() => handleBatchDownload(result)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
                             >
                               {t('gif_to_ico.download')}
