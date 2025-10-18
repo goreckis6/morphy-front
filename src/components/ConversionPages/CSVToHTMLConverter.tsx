@@ -6,7 +6,7 @@ import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
 import { ConversionLimitBanner } from '../ConversionLimitBanner';
 import { useAuth } from '../../contexts/AuthContext';
-import { ConversionLimits } from '../../utils/conversionTracker';
+import { ConversionLimits } from '../../utils/conversionLimits';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
