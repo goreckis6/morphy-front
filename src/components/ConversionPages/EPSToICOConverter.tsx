@@ -232,7 +232,7 @@ export const EPSToICOConverter: React.FC = () => {
     }
 
     try {
-      await apiService.downloadFile(filename, result.outputFilename);
+      await apiService.downloadAndSaveFile(filename, result.outputFilename);
       // Refresh conversion limit banner after download
       if ((window as any).refreshConversionLimitBanner) {
         (window as any).refreshConversionLimitBanner();
@@ -379,7 +379,7 @@ export const EPSToICOConverter: React.FC = () => {
                       <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({((selectedFile?.size || 0) / (1024 * 1024)).toFixed(2)} MB)
                     </p>
                   </div>
                 </div>
@@ -411,7 +411,7 @@ export const EPSToICOConverter: React.FC = () => {
                           {batchFiles.map((file, index) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
-                              <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                              <span className="text-xs text-gray-500">{(file.size / (1024 * 1024)).toFixed(2)} MB</span>
                             </div>
                           ))}
                         </div>
