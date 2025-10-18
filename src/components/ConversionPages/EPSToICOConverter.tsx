@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -24,6 +25,7 @@ import { ConversionLimits } from '../../utils/conversionLimits';
 import { ConversionLimitBanner } from '../ConversionLimitBanner';
 
 export const EPSToICOConverter: React.FC = () => {
+  const { t } = useTranslation();
   const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
