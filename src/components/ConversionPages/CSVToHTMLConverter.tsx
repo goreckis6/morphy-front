@@ -4,6 +4,9 @@ import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
+import { ConversionLimitBanner } from '../ConversionLimitBanner';
+import { useAuth } from '../../contexts/AuthContext';
+import { ConversionLimits } from '../../utils/conversionTracker';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
@@ -23,6 +26,8 @@ import {
 
 export const CSVToHTMLConverter: React.FC = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const {
     selectedFile,
     convertedFile,
@@ -60,6 +65,58 @@ export const CSVToHTMLConverter: React.FC = () => {
       i18n.changeLanguage(currentLang);
     }
   }, []);
+
+  // Custom conversion handlers with limit checks
+  const handleSingleConvertWithLimits = async () => {
+    if (!selectedFile) return;
+    
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+    
+    setConversionLimitReached(false);
+    await handleSingleConvert();
+  };
+
+  const handleBatchConvertWithLimits = async () => {
+    if (batchFiles.length === 0) return;
+    
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+    
+    setConversionLimitReached(false);
+    await handleBatchConvert();
+  };
+
+  // Custom download handlers with auto-refresh
+  const handleDownloadWithRefresh = async () => {
+    await handleDownload();
+    // Refresh conversion limit banner after download
+    if ((window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
+  };
+
+  const handleBatchDownloadWithRefresh = async (result: any) => {
+    await handleBatchDownload(result);
+    // Refresh conversion limit banner after download
+    if ((window as any).refreshConversionLimitBanner) {
+      (window as any).refreshConversionLimitBanner();
+    }
+  };
 
   const handleBack = () => {
     window.location.href = '/';
@@ -133,6 +190,9 @@ export const CSVToHTMLConverter: React.FC = () => {
                   {t('common.batch_convert')}
                 </button>
               </div>
+
+              {/* Conversion Limit Banner */}
+              <ConversionLimitBanner />
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
@@ -214,8 +274,8 @@ export const CSVToHTMLConverter: React.FC = () => {
 
               <div className="mt-8">
                 <button
-                  onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  onClick={batchMode ? handleBatchConvertWithLimits : handleSingleConvertWithLimits}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-700 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
@@ -243,7 +303,7 @@ export const CSVToHTMLConverter: React.FC = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
-                      onClick={handleDownload}
+                      onClick={handleDownloadWithRefresh}
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
@@ -278,7 +338,7 @@ export const CSVToHTMLConverter: React.FC = () => {
                         </div>
                         {r.success && (r.downloadPath || r.downloadUrl) && (
                           <button
-                            onClick={() => handleBatchDownload(r)}
+                            onClick={() => handleBatchDownloadWithRefresh(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
                           >
                             {t('common.download')}
