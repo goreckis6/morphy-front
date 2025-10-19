@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
-import { User, LogOut, Menu, X } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
-import { AuthModal } from './AuthModal';
+import { Menu, X } from 'lucide-react';
 // import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
-  const { user, loading, signOut } = useAuth();
-  const [showAuthModal, setShowAuthModal] = useState(false);
-  const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
 
@@ -42,49 +37,6 @@ export const Header: React.FC = () => {
                 </a>
               </nav>
 
-              {loading ? (
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center animate-pulse">
-                    <User className="w-4 h-4 text-gray-400" />
-                  </div>
-                  <div className="w-16 h-4 bg-gray-200 rounded animate-pulse"></div>
-                </div>
-              ) : user ? (
-                <div className="flex items-center space-x-3">
-                  <a 
-                    href="/dashboard"
-                    className="flex items-center space-x-2 hover:bg-gray-50 rounded-lg px-3 py-2 transition-colors"
-                  >
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <User className="w-4 h-4 text-blue-600" />
-                    </div>
-                    <span className="text-sm font-medium text-gray-700">
-                      {user.name || user.email?.split('@')[0]}
-                    </span>
-                  </a>
-                  <button
-                    onClick={signOut}
-                    className="p-2 text-gray-500 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-                  >
-                    <LogOut className="w-4 h-4" />
-                  </button>
-                </div>
-              ) : (
-                <div className="flex items-center space-x-3">
-                  <a
-                    href="/login"
-                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  >
-                    Log In
-                  </a>
-                  <a
-                    href="/register"
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-                  >
-                    Sign Up
-                  </a>
-                </div>
-              )}
 
               {/* Language Switcher - Right side */}
               {/* <LanguageSwitcher /> */}
@@ -114,64 +66,12 @@ export const Header: React.FC = () => {
                   {/* <LanguageSwitcher /> */}
                 </div>
                 
-                <div className="pt-4 border-t border-gray-200">
-                  {loading ? (
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center animate-pulse">
-                          <User className="w-4 h-4 text-gray-400" />
-                        </div>
-                        <div className="w-16 h-4 bg-gray-200 rounded animate-pulse"></div>
-                      </div>
-                    </div>
-                  ) : user ? (
-                    <div className="flex items-center justify-between">
-                      <a 
-                        href="/dashboard"
-                        className="flex items-center space-x-2 hover:bg-gray-50 rounded-lg px-3 py-2 transition-colors"
-                      >
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                          <User className="w-4 h-4 text-blue-600" />
-                        </div>
-                        <span className="text-sm font-medium text-gray-700">
-                          {user.name || user.email?.split('@')[0]}
-                        </span>
-                      </a>
-                      <button
-                        onClick={signOut}
-                        className="p-2 text-gray-500 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-                      >
-                        <LogOut className="w-4 h-4" />
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="flex flex-col space-y-3">
-                      <a
-                        href="/login"
-                        className="text-left text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                      >
-                        Log In
-                      </a>
-                      <a
-                        href="/register"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors text-center"
-                      >
-                        Sign Up
-                      </a>
-                    </div>
-                  )}
-                </div>
               </nav>
             </div>
           )}
         </div>
       </header>
 
-      <AuthModal
-        isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
-        initialMode={authMode}
-      />
     </>
   );
 };

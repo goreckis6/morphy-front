@@ -106,12 +106,6 @@ import { PPTViewer } from './components/FormatViewers/PPTViewer';
 import { SDDViewer } from './components/FormatViewers/SDDViewer';
 import { SXViewer } from './components/FormatViewers/SXViewer';
 import { STLViewer } from './components/FormatViewers/STLViewer';
-import { AuthProvider } from './contexts/AuthContext';
-import DatabaseChecker from './components/DatabaseChecker';
-import UserDashboard from './components/UserDashboard';
-import LoginPage from './components/LoginPage';
-import RegisterPage from './components/RegisterPage';
-import ProtectedRoute from './components/ProtectedRoute';
 import { 
   RefreshCw, 
   Eye, 
@@ -191,873 +185,426 @@ function App() {
 
   // Route to specific viewer pages
 
-  // Database checker route
-  if (currentPath === '/dbchecker') {
-    return (
-      <AuthProvider>
-        <DatabaseChecker />
-      </AuthProvider>
-    );
-  }
-
-  // Login route
-  if (currentPath === '/login') {
-    return (
-      <AuthProvider>
-        <LoginPage />
-      </AuthProvider>
-    );
-  }
-
-  // Register route
-  if (currentPath === '/register') {
-    return (
-      <AuthProvider>
-        <RegisterPage />
-      </AuthProvider>
-    );
-  }
-
-  // User dashboard route - Protected, requires authentication
-  if (currentPath === '/dashboard') {
-    return (
-      <AuthProvider>
-        <ProtectedRoute>
-          <UserDashboard />
-        </ProtectedRoute>
-      </AuthProvider>
-    );
-  }
 
   // Conversion routes
   if (currentPath === '/convert/jpg-to-text') {
-    return (
-      <AuthProvider>
-        <JPGToTEXTConverter />
-      </AuthProvider>
-    );
+    return <JPGToTEXTConverter />;
   }
 
   if (currentPath === '/convert/jpg-to-txt') {
     return (
-      <AuthProvider>
-        <JPGToTEXTConverter />
-      </AuthProvider>
+      <JPGToTEXTConverter />
     );
   }
 
   if (currentPath === '/convert/jpg-to-pdf') {
-    return (
-      <AuthProvider>
-        <JPGToPDFConverter />
-      </AuthProvider>
-    );
+    return <JPGToPDFConverter />;
   }
 
   if (currentPath === '/convert/jpg-to-png') {
-    return (
-      <AuthProvider>
-        <JPGToPNGConverter />
-      </AuthProvider>
-    );
+    return <JPGToPNGConverter     />;
   }
 
   // BMP Conversion Routes
   if (currentPath === '/convert/bmp-to-webp') {
-    return (
-      <AuthProvider>
-        <BMPToWebPConverter />
-      </AuthProvider>
-    );
+    return <BMPToWebPConverter     />;
   }
 
   // CR2 Conversion Routes
   if (currentPath === '/convert/cr2-to-ico') {
-    return (
-      <AuthProvider>
-        <CR2ToICOConverter />
-      </AuthProvider>
-    );
+    return <CR2ToICOConverter     />;
   }
 
   if (currentPath === '/convert/cr2-to-webp') {
-    return (
-      <AuthProvider>
-        <CR2ToWebPConverter />
-      </AuthProvider>
-    );
+    return <CR2ToWebPConverter     />;
   }
 
   // CSV Conversion Routes
   if (currentPath === '/convert/csv-to-doc') {
-    return (
-      <AuthProvider>
-        <CSVToDOCConverter />
-      </AuthProvider>
-    );
+    return <CSVToDOCConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-docx') {
-    return (
-      <AuthProvider>
-        <CSVToDOCXConverter />
-      </AuthProvider>
-    );
+    return <CSVToDOCXConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-epub') {
-    return (
-      <AuthProvider>
-        <CSVToEPUBConverter />
-      </AuthProvider>
-    );
+    return <CSVToEPUBConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-html') {
-    return (
-      <AuthProvider>
-        <CSVToHTMLConverter />
-      </AuthProvider>
-    );
+    return <CSVToHTMLConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-json') {
-    return (
-      <AuthProvider>
-        <CSVToJSONConverter />
-      </AuthProvider>
-    );
+    return <CSVToJSONConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-md') {
-    return (
-      <AuthProvider>
-        <CSVToMDConverter />
-      </AuthProvider>
-    );
+    return <CSVToMDConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-mobi') {
-    return (
-      <AuthProvider>
-        <CSVToMOBIConverter />
-      </AuthProvider>
-    );
+    return <CSVToMOBIConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-ndjson') {
-    return (
-      <AuthProvider>
-        <CSVToNDJSONConverter />
-      </AuthProvider>
-    );
+    return <CSVToNDJSONConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-parquet') {
-    return (
-      <AuthProvider>
-        <CSVToParquetConverter />
-      </AuthProvider>
-    );
+    return <CSVToParquetConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-odp') {
-    return (
-      <AuthProvider>
-        <CSVToODPConverter />
-      </AuthProvider>
-    );
+    return <CSVToODPConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-odt') {
-    return (
-      <AuthProvider>
-        <CSVToODTConverter />
-      </AuthProvider>
-    );
+    return <CSVToODTConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-parquet') {
-    return (
-      <AuthProvider>
-        <CSVToParquetConverter />
-      </AuthProvider>
-    );
+    return <CSVToParquetConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-pdf') {
-    return (
-      <AuthProvider>
-        <CSVToPDFConverter />
-      </AuthProvider>
-    );
+    return <CSVToPDFConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-ppt') {
-    return (
-      <AuthProvider>
-        <CSVToPPTConverter />
-      </AuthProvider>
-    );
+    return <CSVToPPTConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-pptx') {
-    return (
-      <AuthProvider>
-        <CSVToPPTXConverter />
-      </AuthProvider>
-    );
+    return <CSVToPPTXConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-rtf') {
-    return (
-      <AuthProvider>
-        <CSVToRTFConverter />
-      </AuthProvider>
-    );
+    return <CSVToRTFConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-sql') {
-    return (
-      <AuthProvider>
-        <CSVToSQLConverter />
-      </AuthProvider>
-    );
+    return <CSVToSQLConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-toml') {
-    return (
-      <AuthProvider>
-        <CSVToTOMLConverter />
-      </AuthProvider>
-    );
+    return <CSVToTOMLConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-txt') {
-    return (
-      <AuthProvider>
-        <CSVToTXTConverter />
-      </AuthProvider>
-    );
+    return <CSVToTXTConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-xls') {
-    return (
-      <AuthProvider>
-        <CSVToXLSConverter />
-      </AuthProvider>
-    );
+    return <CSVToXLSConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-xlsx') {
-    return (
-      <AuthProvider>
-        <CSVToXLSXConverter />
-      </AuthProvider>
-    );
+    return <CSVToXLSXConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-xml') {
-    return (
-      <AuthProvider>
-        <CSVToXMLConverter />
-      </AuthProvider>
-    );
+    return <CSVToXMLConverter     />;
   }
 
   if (currentPath === '/convert/csv-to-yaml') {
-    return (
-      <AuthProvider>
-        <CSVToYAMLConverter />
-      </AuthProvider>
-    );
+    return <CSVToYAMLConverter     />;
   }
 
   if (currentPath === '/convert/dng-to-ico') {
-    return (
-      <AuthProvider>
-        <DNGToICOConverter />
-      </AuthProvider>
-    );
+    return <DNGToICOConverter     />;
   }
 
   if (currentPath === '/convert/dng-to-webp') {
-    return (
-      <AuthProvider>
-        <DNGToWebPConverter />
-      </AuthProvider>
-    );
+    return <DNGToWebPConverter     />;
   }
 
   if (currentPath === '/convert/doc-to-csv') {
-    return (
-      <AuthProvider>
-        <DOCToCSVConverter />
-      </AuthProvider>
-    );
+    return <DOCToCSVConverter     />;
   }
 
   if (currentPath === '/convert/doc-to-epub') {
-    return (
-      <AuthProvider>
-        <DOCToEPUBConverter />
-      </AuthProvider>
-    );
+    return <DOCToEPUBConverter     />;
   }
 
   if (currentPath === '/convert/doc-to-mobi') {
-    return (
-      <AuthProvider>
-        <DOCToMOBIConverter />
-      </AuthProvider>
-    );
+    return <DOCToMOBIConverter     />;
   }
 
   if (currentPath === '/convert/doc-to-odt') {
-    return (
-      <AuthProvider>
-        <DOCToODTConverter />
-      </AuthProvider>
-    );
+    return <DOCToODTConverter     />;
   }
 
   if (currentPath === '/convert/doc-to-txt') {
-    return (
-      <AuthProvider>
-        <DOCToTXTConverter />
-      </AuthProvider>
-    );
+    return <DOCToTXTConverter     />;
   }
 
   if (currentPath === '/convert/docx-to-csv') {
-    return (
-      <AuthProvider>
-        <DOCXToCSVConverter />
-      </AuthProvider>
-    );
+    return <DOCXToCSVConverter     />;
   }
 
   if (currentPath === '/convert/docx-to-epub') {
-    return (
-      <AuthProvider>
-        <DOCXToEPUBConverter />
-      </AuthProvider>
-    );
+    return <DOCXToEPUBConverter     />;
   }
 
   if (currentPath === '/convert/docx-to-mobi') {
-    return (
-      <AuthProvider>
-        <DOCXToMOBIConverter />
-      </AuthProvider>
-    );
+    return <DOCXToMOBIConverter     />;
   }
 
   if (currentPath === '/convert/docx-to-odt') {
-    return (
-      <AuthProvider>
-        <DOCXToODTConverter />
-      </AuthProvider>
-    );
+    return <DOCXToODTConverter     />;
   }
 
   if (currentPath === '/convert/docx-to-txt') {
-    return (
-      <AuthProvider>
-        <DOCXToTXTConverter />
-      </AuthProvider>
-    );
+    return <DOCXToTXTConverter     />;
   }
 
   if (currentPath === '/convert/eps-to-ico') {
-    return (
-      <AuthProvider>
-        <EPSToICOConverter />
-      </AuthProvider>
-    );
+    return <EPSToICOConverter     />;
   }
 
   if (currentPath === '/convert/eps-to-webp') {
-    return (
-      <AuthProvider>
-        <EPSToWebPConverter />
-      </AuthProvider>
-    );
+    return <EPSToWebPConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-csv') {
-    return (
-      <AuthProvider>
-        <EPUBToCSVConverter />
-      </AuthProvider>
-    );
+    return <EPUBToCSVConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-doc') {
-    return (
-      <AuthProvider>
-        <EPUBToDOCConverter />
-      </AuthProvider>
-    );
+    return <EPUBToDOCConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-docx') {
-    return (
-      <AuthProvider>
-        <EPUBToDOCXConverter />
-      </AuthProvider>
-    );
+    return <EPUBToDOCXConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-html') {
-    return (
-      <AuthProvider>
-        <EPUBToHTMLConverter />
-      </AuthProvider>
-    );
+    return <EPUBToHTMLConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-md') {
-    return (
-      <AuthProvider>
-        <EPUBToMDConverter />
-      </AuthProvider>
-    );
+    return <EPUBToMDConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-mobi') {
-    return (
-      <AuthProvider>
-        <EPUBToMOBIConverter />
-      </AuthProvider>
-    );
+    return <EPUBToMOBIConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-odp') {
-    return (
-      <AuthProvider>
-        <EPUBToODPConverter />
-      </AuthProvider>
-    );
+    return <EPUBToODPConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-odt') {
-    return (
-      <AuthProvider>
-        <EPUBToODTConverter />
-      </AuthProvider>
-    );
+    return <EPUBToODTConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-pdf') {
-    return (
-      <AuthProvider>
-        <EPUBToPDFConverter />
-      </AuthProvider>
-    );
+    return <EPUBToPDFConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-ppt') {
-    return (
-      <AuthProvider>
-        <EPUBToPPTConverter />
-      </AuthProvider>
-    );
+    return <EPUBToPPTConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-pptx') {
-    return (
-      <AuthProvider>
-        <EPUBToPPTXConverter />
-      </AuthProvider>
-    );
+    return <EPUBToPPTXConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-rtf') {
-    return (
-      <AuthProvider>
-        <EPUBToRTFConverter />
-      </AuthProvider>
-    );
+    return <EPUBToRTFConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-txt') {
-    return (
-      <AuthProvider>
-        <EPUBToTXTConverter />
-      </AuthProvider>
-    );
+    return <EPUBToTXTConverter     />;
   }
 
   if (currentPath === '/convert/epub-to-xlsx') {
-    return (
-      <AuthProvider>
-        <EPUBToXLSXConverter />
-      </AuthProvider>
-    );
+    return <EPUBToXLSXConverter     />;
   }
 
   if (currentPath === '/convert/gif-to-ico') {
-    return (
-      <AuthProvider>
-        <GIFToICOConverter />
-      </AuthProvider>
-    );
+    return <GIFToICOConverter     />;
   }
 
   // Converter Hub Route
   if (currentPath === '/converters') {
-    return (
-      <AuthProvider>
-        <ConverterHub />
-      </AuthProvider>
-    );
+    return <ConverterHub     />;
   }
 
   // Viewers Hub Route
   if (currentPath === '/viewers') {
-    return (
-      <AuthProvider>
-        <ViewersHub />
-      </AuthProvider>
-    );
+    return <ViewersHub     />;
   }
 
   // Viewer Routes
   if (currentPath === '/viewers/jpg' || currentPath === '/viewers/jpeg') {
-    return (
-      <AuthProvider>
-        <JPEGViewer />
-      </AuthProvider>
-    );
+    return <JPEGViewer     />;
   }
 
   if (currentPath === '/viewers/png') {
-    return (
-      <AuthProvider>
-        <PNGViewer />
-      </AuthProvider>
-    );
+    return <PNGViewer     />;
   }
 
   if (currentPath === '/viewers/webp') {
-    return (
-      <AuthProvider>
-        <WebPViewer />
-      </AuthProvider>
-    );
+    return <WebPViewer     />;
   }
 
   if (currentPath === '/viewers/gif') {
-    return (
-      <AuthProvider>
-        <GIFViewer />
-      </AuthProvider>
-    );
+    return <GIFViewer     />;
   }
 
   if (currentPath === '/viewers/svg') {
-    return (
-      <AuthProvider>
-        <SVGViewer />
-      </AuthProvider>
-    );
+    return <SVGViewer     />;
   }
 
   if (currentPath === '/viewers/tiff' || currentPath === '/viewers/tif') {
-    return (
-      <AuthProvider>
-        <TIFFViewer />
-      </AuthProvider>
-    );
+    return <TIFFViewer     />;
   }
 
   if (currentPath === '/viewers/bmp') {
-    return (
-      <AuthProvider>
-        <BMPViewer />
-      </AuthProvider>
-    );
+    return <BMPViewer     />;
   }
 
   if (currentPath === '/viewers/ico') {
-    return (
-      <AuthProvider>
-        <ICOViewer />
-      </AuthProvider>
-    );
+    return <ICOViewer     />;
   }
 
   if (currentPath === '/viewers/heic' || currentPath === '/viewers/heif') {
-    return (
-      <AuthProvider>
-        <HEICViewer />
-      </AuthProvider>
-    );
+    return <HEICViewer     />;
   }
 
   if (currentPath === '/viewers/avif') {
-    return (
-      <AuthProvider>
-        <AVIFViewer />
-      </AuthProvider>
-    );
+    return <AVIFViewer     />;
   }
 
   if (currentPath === '/viewers/pdf') {
-    return (
-      <AuthProvider>
-        <PDFViewer />
-      </AuthProvider>
-    );
+    return <PDFViewer     />;
   }
 
   if (currentPath === '/viewers/rtf') {
-    return (
-      <AuthProvider>
-        <RTFViewer />
-      </AuthProvider>
-    );
+    return <RTFViewer     />;
   }
 
   if (currentPath === '/viewers/txt') {
-    return (
-      <AuthProvider>
-        <TXTViewer />
-      </AuthProvider>
-    );
+    return <TXTViewer     />;
   }
 
   if (currentPath === '/viewers/md' || currentPath === '/viewers/markdown') {
-    return (
-      <AuthProvider>
-        <MarkdownViewer />
-      </AuthProvider>
-    );
+    return <MarkdownViewer     />;
   }
 
   if (currentPath === '/viewers/docx' || currentPath === '/viewers/doc') {
-    return (
-      <AuthProvider>
-        <DOCXViewer />
-      </AuthProvider>
-    );
+    return <DOCXViewer     />;
   }
 
   if (currentPath === '/viewers/odt') {
-    return (
-      <AuthProvider>
-        <ODTViewer />
-      </AuthProvider>
-    );
+    return <ODTViewer     />;
   }
 
   if (currentPath === '/viewers/xlsx' || currentPath === '/viewers/excel') {
-    return (
-      <AuthProvider>
-        <XLSXViewer />
-      </AuthProvider>
-    );
+    return <XLSXViewer     />;
   }
 
   if (currentPath === '/viewers/csv') {
-    return (
-      <AuthProvider>
-        <CSVViewer />
-      </AuthProvider>
-    );
+    return <CSVViewer     />;
   }
 
   if (currentPath === '/viewers/ods') {
-    return (
-      <AuthProvider>
-        <ODSViewer />
-      </AuthProvider>
-    );
+    return <ODSViewer     />;
   }
 
   if (currentPath === '/viewers/json') {
-    return (
-      <AuthProvider>
-        <JSONViewer />
-      </AuthProvider>
-    );
+    return <JSONViewer     />;
   }
 
   if (currentPath === '/viewers/xml') {
-    return (
-      <AuthProvider>
-        <XMLViewer />
-      </AuthProvider>
-    );
+    return <XMLViewer     />;
   }
 
   if (currentPath === '/viewers/html' || currentPath === '/viewers/htm') {
-    return (
-      <AuthProvider>
-        <HTMLViewer />
-      </AuthProvider>
-    );
+    return <HTMLViewer     />;
   }
 
   if (currentPath === '/viewers/css') {
-    return (
-      <AuthProvider>
-        <CSSViewer />
-      </AuthProvider>
-    );
+    return <CSSViewer     />;
   }
 
   if (currentPath === '/viewers/js' || currentPath === '/viewers/javascript') {
-    return (
-      <AuthProvider>
-        <JSViewer />
-      </AuthProvider>
-    );
+    return <JSViewer     />;
   }
 
   if (currentPath === '/viewers/py' || currentPath === '/viewers/python') {
-    return (
-      <AuthProvider>
-        <PythonViewer />
-      </AuthProvider>
-    );
+    return <PythonViewer     />;
   }
 
   if (currentPath === '/viewers/nef') {
-    return (
-      <AuthProvider>
-        <NEFViewer />
-      </AuthProvider>
-    );
+    return <NEFViewer     />;
   }
 
   if (currentPath === '/viewers/cr2') {
-    return (
-      <AuthProvider>
-        <CR2Viewer />
-      </AuthProvider>
-    );
+    return <CR2Viewer     />;
   }
 
   if (currentPath === '/viewers/dcr') {
-    return (
-      <AuthProvider>
-        <DCRViewer />
-      </AuthProvider>
-    );
+    return <DCRViewer     />;
   }
 
   if (currentPath === '/viewers/x3f') {
-    return (
-      <AuthProvider>
-        <X3FViewer />
-      </AuthProvider>
-    );
+    return <X3FViewer     />;
   }
 
   if (currentPath === '/viewers/arw') {
-    return (
-      <AuthProvider>
-        <ARWViewer />
-      </AuthProvider>
-    );
+    return <ARWViewer     />;
   }
 
   if (currentPath === '/viewers/raf') {
-    return (
-      <AuthProvider>
-        <RAFViewer />
-      </AuthProvider>
-    );
+    return <RAFViewer     />;
   }
 
   if (currentPath === '/viewers/orf') {
-    return (
-      <AuthProvider>
-        <ORFViewer />
-      </AuthProvider>
-    );
+    return <ORFViewer     />;
   }
 
   if (currentPath === '/viewers/dng') {
-    return (
-      <AuthProvider>
-        <DNGViewer />
-      </AuthProvider>
-    );
+    return <DNGViewer     />;
   }
 
   if (currentPath === '/viewers/pef') {
-    return (
-      <AuthProvider>
-        <PEFViewer />
-      </AuthProvider>
-    );
+    return <PEFViewer     />;
   }
 
   if (currentPath === '/viewers/odp') {
-    return (
-      <AuthProvider>
-        <ODPViewer />
-      </AuthProvider>
-    );
+    return <ODPViewer     />;
   }
 
   if (currentPath === '/viewers/otp') {
-    return (
-      <AuthProvider>
-        <OTPViewer />
-      </AuthProvider>
-    );
+    return <OTPViewer     />;
   }
 
   if (currentPath === '/viewers/pot') {
-    return (
-      <AuthProvider>
-        <POTViewer />
-      </AuthProvider>
-    );
+    return <POTViewer     />;
   }
 
   if (currentPath === '/viewers/pps') {
-    return (
-      <AuthProvider>
-        <PPSViewer />
-      </AuthProvider>
-    );
+    return <PPSViewer     />;
   }
 
   if (currentPath === '/viewers/ppt') {
-    return (
-      <AuthProvider>
-        <PPTViewer />
-      </AuthProvider>
-    );
+    return <PPTViewer     />;
   }
 
   if (currentPath === '/viewers/sdd') {
-    return (
-      <AuthProvider>
-        <SDDViewer />
-      </AuthProvider>
-    );
+    return <SDDViewer     />;
   }
 
   if (currentPath === '/viewers/sx') {
-    return (
-      <AuthProvider>
-        <SXViewer />
-      </AuthProvider>
-    );
+    return <SXViewer     />;
   }
 
   if (currentPath === '/viewers/stl') {
-    return (
-      <AuthProvider>
-        <STLViewer />
-      </AuthProvider>
-    );
+    return <STLViewer     />;
   }
 
   const features = [
@@ -1084,8 +631,7 @@ function App() {
   ];
 
   return (
-    <AuthProvider>
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         <Header />
         
         {/* Hero Section */}
@@ -1457,7 +1003,6 @@ function App() {
           />
         )}
       </div>
-    </AuthProvider>
   );
 }
 
