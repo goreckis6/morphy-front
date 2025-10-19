@@ -347,7 +347,8 @@ WEBP_FILE_END`;
 
   
   const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    // Use downloadPath if available, otherwise fall back to storedFilename
+    const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!filename) {
       setError('Download link is missing. Please reconvert.');
       return;
