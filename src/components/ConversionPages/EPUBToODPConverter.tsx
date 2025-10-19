@@ -172,12 +172,12 @@ export const EPUBToODPConverter: React.FC = () => {
   const handleBatchDownload = async (result: any) => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!filename) {
+    if (!downloadPath) {
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      await apiService.downloadFile(filename, result.outputFilename);
+      await apiService.downloadFile(downloadPath, result.outputFilename);
     } catch (e) {
       setError('Failed to download file. Please try again.');
     }
