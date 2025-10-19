@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 import { 
   Upload, 
   Download, 
@@ -111,8 +110,6 @@ export const CSVToDOCXConverter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button

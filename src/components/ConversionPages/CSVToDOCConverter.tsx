@@ -5,7 +5,6 @@ import i18n from '../../i18n';
 import { apiService } from '../../services/api';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 import {
   Upload,
   Download,
@@ -114,8 +113,6 @@ export const CSVToDOCConverter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">

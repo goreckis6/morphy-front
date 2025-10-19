@@ -79,9 +79,6 @@ export const CSVToHTMLConverter: React.FC = () => {
     await handleSingleConvert();
     
     // Refresh conversion limit banner after conversion
-    if ((window as any).refreshConversionLimitBanner) {
-      (window as any).refreshConversionLimitBanner();
-    }
   };
 
   const handleBatchConvertWithLimits = async () => {
@@ -101,26 +98,17 @@ export const CSVToHTMLConverter: React.FC = () => {
     await handleBatchConvert();
     
     // Refresh conversion limit banner after conversion
-    if ((window as any).refreshConversionLimitBanner) {
-      (window as any).refreshConversionLimitBanner();
-    }
   };
 
   // Custom download handlers with auto-refresh
   const handleDownloadWithRefresh = async () => {
     await handleDownload();
     // Refresh conversion limit banner after download
-    if ((window as any).refreshConversionLimitBanner) {
-      (window as any).refreshConversionLimitBanner();
-    }
   };
 
   const handleBatchDownloadWithRefresh = async (result: any) => {
     await handleBatchDownload(result);
     // Refresh conversion limit banner after download
-    if ((window as any).refreshConversionLimitBanner) {
-      (window as any).refreshConversionLimitBanner();
-    }
   };
 
   const handleBack = () => {
@@ -171,8 +159,6 @@ export const CSVToHTMLConverter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
               
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner />
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button

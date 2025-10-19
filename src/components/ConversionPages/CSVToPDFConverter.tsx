@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
-import { ConversionLimitBanner } from '../ConversionLimitBanner';
 import { useAuth } from '../../contexts/AuthContext';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
@@ -137,8 +136,6 @@ export const CSVToPDFConverter: React.FC = () => {
                 </button>
               </div>
 
-              {/* Conversion Limit Banner */}
-              <ConversionLimitBanner className="mb-6" />
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-red-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
