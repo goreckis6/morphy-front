@@ -428,35 +428,67 @@ export const EPUBToTXTConverter: React.FC = () => {
               {/* Batch Conversion Results */}
               {batchMode && batchConverted && batchResults.length > 0 && (
                 <div className={`mt-6 p-6 rounded-xl border ${
-                  batchResults.filter(r => r.success).length > 0 
-                    ? 'bg-green-50 border-green-200' 
+                  batchResults.filter(r => r.success).length > 0
+                    ? 'bg-green-50 border-green-200'
                     : 'bg-red-50 border-red-200'
                 }`}>
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Results</h4>
+                    {batchResults.filter(r => r.success).length > 0 ? (
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    ) : (
+                      <AlertCircle className="w-6 h-6 text-red-500 mr-3" />
+                    )}
+                    <h4 className={`text-lg font-semibold ${
+                      batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
+                    }`}>
+                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                    </h4>
                   </div>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                  <p className={`mb-4 ${
+                    batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
+                  }`}>
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                  </p>
+                  <div className="space-y-3 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
-                        <div>
-                          <div className="text-sm font-medium text-gray-900">{result.outputFilename || result.originalName}</div>
-                          {!result.success && (
-                            <div className="text-xs text-red-600">{result.error || 'Conversion failed'}</div>
+                      <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
+                        result.success ? 'bg-white border border-green-200' : 'bg-red-50 border border-red-200'
+                      }`}>
+                        <div className="flex-1">
+                          <div className="flex items-center">
+                            {result.success ? (
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                            ) : (
+                              <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                            )}
+                            <span className="text-sm font-medium truncate">{result.originalName}</span>
+                            {result.success && result.size && (
+                              <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
+                            )}
+                          </div>
+                          {!result.success && result.error && (
+                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (
                           <button
                             onClick={() => handleBatchDownload(result)}
-                            className="flex items-center bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                            className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
                           >
-                            <Download className="w-4 h-4 mr-1" />
+                            <Download className="w-3 h-3 mr-1 inline" />
                             Download
                           </button>
                         )}
                       </div>
                     ))}
                   </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
                 </div>
               )}
             </div>
