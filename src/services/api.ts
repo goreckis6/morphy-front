@@ -1,4 +1,3 @@
-import { ConversionTracker } from '../utils/conversionTracker';
 
 // API service for backend communication
 const PRODUCTION_DEFAULTS = [
@@ -148,7 +147,6 @@ class ApiService {
       const blob = await downloadResponse.blob();
       
       // Track conversion in global counter
-      ConversionTracker.addConversion(blob.size);
       
       return {
         blob,
@@ -163,7 +161,6 @@ class ApiService {
                      `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'bin'}`;
 
       // Track conversion in global counter
-      ConversionTracker.addConversion(blob.size);
 
       return {
         blob,
@@ -225,7 +222,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
@@ -258,7 +254,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
@@ -291,7 +286,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
@@ -324,7 +318,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
@@ -357,7 +350,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
@@ -390,7 +382,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
@@ -423,7 +414,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
@@ -456,7 +446,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionTracker.addConversion(totalSize);
     }
     
     return result;
