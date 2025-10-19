@@ -166,7 +166,7 @@ export const CSVToNDJSONConverter: React.FC = () => {
           const downloadPath = apiResult.downloadPath || (apiResult.storedFilename ? `/download/${encodeURIComponent(apiResult.storedFilename)}` : null);
           if (downloadPath) {
             // Fetch the blob from the server using the full download path
-            const blob = await apiService.downloadFile(downloadPath);
+            const blob = await apiService.downloadAndSaveFile(downloadPath);
             results.push({ file: batchFiles[i], blob });
           }
         }

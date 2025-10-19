@@ -180,7 +180,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
       return;
     }
     try {
-      await apiService.downloadFile(downloadPath, result.outputFilename);
+      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (e) {
       setError('Failed to download file. Please try again.');
     }

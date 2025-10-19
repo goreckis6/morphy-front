@@ -354,7 +354,7 @@ WEBP_FILE_END`;
       return;
     }
     try {
-      await apiService.downloadFile(filename, result.outputFilename);
+      await apiService.downloadAndSaveFile(filename, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }

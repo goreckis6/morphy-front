@@ -138,12 +138,9 @@ export const EPUBToRTFConverter: React.FC = () => {
         extractMetadata: extractMetadata ? 'true' : 'false',
         universalCompatible: universalCompatible ? 'true' : 'false'
       } as any);
-      console.log('Batch conversion result:', result);
-      console.log('Batch results array:', result.results);
       setBatchResults(result.results ?? []);
       setBatchConverted(true);
       const successes = (result.results ?? []).filter(r => r.success);
-      console.log('Successful conversions:', successes);
       if (successes.length > 0) {
         const failures = (result.results ?? []).filter(r => !r.success);
         setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
@@ -175,21 +172,15 @@ export const EPUBToRTFConverter: React.FC = () => {
   };
 
   const handleBatchDownload = async (result: any) => {
-    console.log('handleBatchDownload called with result:', result);
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    console.log('downloadPath:', downloadPath);
     if (!downloadPath) {
-      console.error('No download path available');
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      console.log('Attempting download with path:', downloadPath);
-      await apiService.downloadFile(downloadPath, result.outputFilename);
-      console.log('Download completed successfully');
+      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (e) {
-      console.error('Download failed:', e);
       setError('Failed to download file. Please try again.');
     }
   };
@@ -480,18 +471,12 @@ export const EPUBToRTFConverter: React.FC = () => {
                         </div>
                         {result.success && result.downloadPath && (
                           <button
-                            onClick={() => {
-                              console.log('Download button clicked for result:', result);
-                              handleBatchDownload(result);
-                            }}
+                            onClick={() => handleBatchDownload(result)}
                             className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
                           >
                             <Download className="w-3 h-3 mr-1 inline" />
                             Download
                           </button>
-                        )}
-                        {result.success && !result.downloadPath && (
-                          <span className="text-xs text-red-500 ml-2">No download path</span>
                         )}
                       </div>
                     ))}

@@ -164,7 +164,7 @@ export const EPUBToDOCXConverter: React.FC = () => {
       return;
     }
     try {
-      await apiService.downloadFile(downloadPath, result.outputFilename);
+      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
