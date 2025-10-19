@@ -394,7 +394,11 @@ export const EPUBToTXTConverter: React.FC = () => {
 
               {/* Success Message & Download */}
               {convertedFile && !batchMode && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                <div className={`mt-6 p-6 rounded-xl border ${
+                  batchResults.filter(r => r.success).length > 0 
+                    ? 'bg-green-50 border-green-200' 
+                    : 'bg-red-50 border-red-200'
+                }`}>
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
@@ -423,7 +427,11 @@ export const EPUBToTXTConverter: React.FC = () => {
 
               {/* Batch Conversion Results */}
               {batchMode && batchConverted && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                <div className={`mt-6 p-6 rounded-xl border ${
+                  batchResults.filter(r => r.success).length > 0 
+                    ? 'bg-green-50 border-green-200' 
+                    : 'bg-red-50 border-red-200'
+                }`}>
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Results</h4>

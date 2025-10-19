@@ -393,7 +393,11 @@ export const EPUBToPDFConverter: React.FC = () => {
 
               {/* Success Message & Download */}
               {convertedFile && !batchMode && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                <div className={`mt-6 p-6 rounded-xl border ${
+                  batchResults.filter(r => r.success).length > 0 
+                    ? 'bg-green-50 border-green-200' 
+                    : 'bg-red-50 border-red-200'
+                }`}>
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
@@ -421,14 +425,28 @@ export const EPUBToPDFConverter: React.FC = () => {
               )}
             
 
-              {/* Batch Conversion Success */}
+              {/* Batch Conversion Results */}
               {batchMode && batchConverted && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                <div className={`mt-6 p-6 rounded-xl border ${
+                  batchResults.filter(r => r.success).length > 0 
+                    ? 'bg-green-50 border-green-200' 
+                    : 'bg-red-50 border-red-200'
+                }`}>
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    {batchResults.filter(r => r.success).length > 0 ? (
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    ) : (
+                      <AlertCircle className="w-6 h-6 text-red-500 mr-3" />
+                    )}
+                    <h4 className={`text-lg font-semibold ${
+                      batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
+                    }`}>
+                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                    </h4>
                   </div>
-                  <p className="text-green-700 mb-4">
+                  <p className={`mb-4 ${
+                    batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
+                  }`}>
                     {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
                   <div className="space-y-3 max-h-60 overflow-y-auto">
