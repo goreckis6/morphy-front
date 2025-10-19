@@ -1,8 +1,6 @@
 import { useState, useRef } from 'react';
 import { apiService } from '../services/api';
 import { useFileValidation } from './useFileValidation';
-import { ConversionLimits } from '../utils/conversionLimits';
-import { useAuth } from '../contexts/AuthContext';
 
 export interface BatchResultItem {
   originalName: string;
@@ -29,9 +27,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<BatchResultItem[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { user } = useAuth();
 
   const {
     validationError,
