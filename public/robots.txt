@@ -9,3 +9,4 @@ Disallow: /de
 
 # Sitemap
 Sitemap: https://morphyimg.com/sitemap.xml
+
