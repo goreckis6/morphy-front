@@ -101,19 +101,9 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
-    // Check conversion limits for anonymous users (server-side IP-based)
-    if (!user) {
-      const canConvert = await ConversionLimits.checkServerLimits();
-      if (!canConvert) {
-        setConversionLimitReached(true);
-        // Don't set error message here - let ConversionLimitBanner handle it
-        return;
-      }
-    }
 
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       const result = await apiService.convertFile(selectedFile, { format: targetFormat });
@@ -133,19 +123,9 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
 
-    // Check conversion limits for anonymous users (server-side IP-based)
-    if (!user) {
-      const canConvert = await ConversionLimits.checkServerLimits();
-      if (!canConvert) {
-        setConversionLimitReached(true);
-        // Don't set error message here - let ConversionLimitBanner handle it
-        return;
-      }
-    }
 
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       console.log('Starting batch conversion for', batchFiles.length, 'files to', targetFormat);
@@ -212,10 +192,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     
-    // Refresh the conversion limit banner for anonymous users after download
-    if (!user && (window as any).refreshConversionLimitBanner) {
-      (window as any).refreshConversionLimitBanner();
-    }
   };
 
   const handleBatchDownload = async (result: BatchResultItem) => {
@@ -241,10 +217,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         const filename = getSafeFilename(result);
         await apiService.downloadAndSaveFile(result.storedFilename, filename);
         
-        // Refresh the conversion limit banner for anonymous users after first batch download
-        if (!user && (window as any).refreshConversionLimitBanner) {
-          (window as any).refreshConversionLimitBanner();
-        }
         return;
       }
       if (result.downloadPath) {
@@ -257,10 +229,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         link.click();
         document.body.removeChild(link);
         
-        // Refresh the conversion limit banner for anonymous users after first batch download
-        if (!user && (window as any).refreshConversionLimitBanner) {
-          (window as any).refreshConversionLimitBanner();
-        }
         return;
       }
       if (result.downloadUrl) {
@@ -273,10 +241,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         link.click();
         document.body.removeChild(link);
         
-        // Refresh the conversion limit banner for anonymous users after first batch download
-        if (!user && (window as any).refreshConversionLimitBanner) {
-          (window as any).refreshConversionLimitBanner();
-        }
         return;
       }
       
@@ -297,7 +261,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     setBatchFiles([]);
     setBatchResults([]);
     setBatchConverted(false);
-    setConversionLimitReached(false);
     clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
