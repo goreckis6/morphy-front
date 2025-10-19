@@ -5,7 +5,6 @@ import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { getLanguageFromUrl } from '../../i18n';
-import { useAuth } from '../../contexts/AuthContext';
 import { 
   Upload, 
   Download, 

@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useCsvConversion } from '../../hooks/useCsvConversion';
 import { Header } from '../Header';
-import { useAuth } from '../../contexts/AuthContext';
 import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
@@ -22,8 +21,6 @@ import {
 
 export const CSVToPDFConverter: React.FC = () => {
   const { t } = useTranslation();
-  const { user } = useAuth();
-  const [showAuthModal, setShowAuthModal] = useState(false);
   const {
     selectedFile,
     convertedFile,

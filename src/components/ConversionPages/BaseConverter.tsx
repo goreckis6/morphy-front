@@ -60,11 +60,6 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
   const handleConvert = async () => {
     if (!selectedFile) return;
 
-    // Check conversion limits for anonymous users
-    if (!user && !ConversionLimits.canConvert()) {
-      setShowAuthModal(true);
-      return;
-    }
 
     setIsConverting(true);
     setError(null);
@@ -311,12 +306,6 @@ export const BaseConverter: React.FC<BaseConverterProps> = ({
         </div>
       </footer>
 
-      {/* Auth Modal */}
-      <AuthModal
-        isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
-        initialMode="signup"
-      />
     </div>
   );
 };
