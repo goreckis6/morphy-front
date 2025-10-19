@@ -493,8 +493,10 @@ class ApiService {
   // Method to download file from the new file-based endpoint
   async downloadFile(filename: string, originalFilename?: string): Promise<Blob> {
     try {
-      // If filename already starts with /download/, don't add it again
-      const endpoint = filename.startsWith('/download/') ? filename : `/download/${filename}`;
+      // If filename already starts with /download/ or /batch-download/, use it as-is
+      const endpoint = (filename.startsWith('/download/') || filename.startsWith('/batch-download/')) 
+        ? filename 
+        : `/download/${filename}`;
       const response = await this.makeRequest(endpoint);
       const blob = await response.blob();
       
@@ -508,15 +510,20 @@ class ApiService {
   // Method to download file and trigger browser download
   async downloadAndSaveFile(filename: string, originalFilename?: string): Promise<void> {
     try {
-      const blob = await this.downloadFile(filename);
+      // If filename already starts with /download/ or /batch-download/, use it as-is
+      const endpoint = (filename.startsWith('/download/') || filename.startsWith('/batch-download/'))
+        ? filename
+        : `/download/${filename}`;
+      
+      const response = await this.makeRequest(endpoint);
+      const blob = await response.blob();
       
       // Try to extract filename from Content-Disposition header first
-      const response = await this.makeRequest(filename.startsWith('/download/') ? filename : `/download/${filename}`);
       const contentDisposition = response.headers.get('Content-Disposition');
       const extractedFilename = this.extractFilename(contentDisposition);
       
       // Use extracted filename, then originalFilename, then fallback to cleaned filename
-      const downloadFilename = extractedFilename || originalFilename || filename.replace(/^\d+_/, '').replace('/download/', '');
+      const downloadFilename = extractedFilename || originalFilename || filename.replace(/^\d+_/, '').replace('/download/', '').replace('/batch-download/', '');
       
       this.downloadBlob(blob, downloadFilename);
     } catch (error) {
