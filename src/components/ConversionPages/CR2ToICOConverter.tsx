@@ -259,26 +259,13 @@ ICO_FILE_END`;
     
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
-      // Check conversion limits for anonymous users
-      if (!user) {
-        const canConvert = await ConversionLimits.checkServerLimits();
-        if (!canConvert) {
-          setConversionLimitReached(true);
-          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-          return;
-        }
-      }
-
       const result = await apiService.convertFile(selectedFile, { format: 'ico' });
       setConvertedFile(result.blob);
     } catch (err) {
       console.error('CR2 to ICO conversion error:', err);
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
+      if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
         setError('Conversion is taking longer than expected. CR2 files are large and complex - please try with a smaller file or wait a bit longer. The conversion may still be processing in the background.');
       } else {
         setError('Conversion failed. Please try again.');
@@ -294,19 +281,8 @@ ICO_FILE_END`;
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-    setConversionLimitReached(false);
     
     try {
-      // Check conversion limits for anonymous users
-      if (!user) {
-        const canConvert = await ConversionLimits.checkServerLimits();
-        if (!canConvert) {
-          setConversionLimitReached(true);
-          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-          return;
-        }
-      }
-
       console.log('Starting CR2 to ICO batch conversion for', batchFiles.length, 'files');
       const result = await apiService.convertBatch(batchFiles, { format: 'ico' });
       console.log('CR2 to ICO batch conversion result:', result);
@@ -342,11 +318,7 @@ ICO_FILE_END`;
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else {
-        setError('Batch conversion failed. Please try again.');
-      }
+      setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -356,12 +328,12 @@ ICO_FILE_END`;
   const handleBatchDownload = async (result: any) => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!filename) {
+    if (!downloadPath) {
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      await apiService.downloadAndSaveFile(filename, result.outputFilename);
+      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
