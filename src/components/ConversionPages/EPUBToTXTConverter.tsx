@@ -211,7 +211,7 @@ export const EPUBToTXTConverter: React.FC = () => {
       <Header />
       
       {/* Hero Section - Narrowed */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-gray-600 via-slate-600 to-zinc-700">
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
@@ -252,8 +252,8 @@ export const EPUBToTXTConverter: React.FC = () => {
                   onClick={() => setBatchMode(false)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
-                      ? 'bg-gray-600 text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      ? 'bg-blue-600 text-white shadow-lg' 
+                      : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
@@ -263,8 +263,8 @@ export const EPUBToTXTConverter: React.FC = () => {
                   onClick={() => setBatchMode(true)}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
-                      ? 'bg-gray-600 text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      ? 'bg-purple-600 text-white shadow-lg' 
+                      : 'bg-purple-100 text-purple-600 hover:bg-purple-200'
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
@@ -273,8 +273,8 @@ export const EPUBToTXTConverter: React.FC = () => {
               </div>
 
               {/* File Upload Area */}
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-gray-400 transition-colors">
-                <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+              <div className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
+                <Upload className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
                 </h3>
@@ -304,7 +304,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors"
                 >
                   Choose Files
                 </button>
@@ -314,9 +314,9 @@ export const EPUBToTXTConverter: React.FC = () => {
               {previewUrl && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">Preview</h4>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <BookOpen className="w-12 h-12 text-gray-400" />
+                  <div className="bg-blue-50 rounded-lg p-4">
+                    <div className="flex items-center justify-center h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded">
+                      <BookOpen className="w-12 h-12 text-blue-500" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
                       {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
@@ -351,7 +351,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                         )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
                           {batchFiles.map((file, index) => (
-                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                            <div key={index} className="flex items-center justify-between bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
                               <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                             </div>
@@ -376,7 +376,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                 <button
                   onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-gray-600 to-slate-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-gray-700 hover:to-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:via-purple-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
                     <div className="flex items-center justify-center">
@@ -416,7 +416,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                     </button>
                     <button
                       onClick={resetForm}
-                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
                       Convert Another
@@ -484,7 +484,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                   </div>
                   <button
                     onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
                     Convert More Files
@@ -500,7 +500,7 @@ export const EPUBToTXTConverter: React.FC = () => {
             {/* Conversion Settings */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-gray-600" />
+                <Settings className="w-5 h-5 mr-2 text-blue-600" />
                 TXT Settings
               </h3>
               
@@ -512,7 +512,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                 <select
                   value={encoding}
                   onChange={(e) => setEncoding(e.target.value as 'utf-8' | 'ascii' | 'utf-16')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full p-3 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="utf-8">UTF-8 (Recommended)</option>
                   <option value="ascii">ASCII</option>
@@ -528,7 +528,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                 <select
                   value={lineEndings}
                   onChange={(e) => setLineEndings(e.target.value as 'unix' | 'windows' | 'mac')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  className="w-full p-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 >
                   <option value="unix">Unix/Linux (LF)</option>
                   <option value="windows">Windows (CRLF)</option>
@@ -543,7 +543,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                     type="checkbox"
                     checked={preserveStructure}
                     onChange={(e) => setPreserveStructure(e.target.checked)}
-                    className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                    className="rounded border-blue-300 text-blue-600 focus:ring-blue-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Preserve document structure</span>
                 </label>
@@ -556,7 +556,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                     type="checkbox"
                     checked={includeMetadata}
                     onChange={(e) => setIncludeMetadata(e.target.checked)}
-                    className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
+                    className="rounded border-purple-300 text-purple-600 focus:ring-purple-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Include book metadata</span>
                 </label>
@@ -589,7 +589,7 @@ export const EPUBToTXTConverter: React.FC = () => {
             {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
+                <BarChart3 className="w-5 h-5 mr-2 text-indigo-600" />
                 Perfect For
               </h3>
               <div className="space-y-3">
@@ -602,7 +602,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                   "Legacy system integration"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
@@ -615,7 +615,7 @@ export const EPUBToTXTConverter: React.FC = () => {
         <div className="mt-12 text-center">
           <button
             onClick={handleBack}
-            className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors"
           >
             ← Back to Home
           </button>
@@ -700,7 +700,7 @@ export const EPUBToTXTConverter: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-gray-600 to-slate-600 text-white p-8 rounded-xl text-center">
+            <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
               <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
               <p className="text-lg mb-6 opacity-90">
                 Use our free online EPUB to TXT converter to extract pure text content from your e-books.
@@ -708,13 +708,13 @@ export const EPUBToTXTConverter: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-gray-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
                   Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-600 transition-colors"
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   Back to Home
                 </button>
@@ -725,7 +725,7 @@ export const EPUBToTXTConverter: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-16">
+      <footer className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
