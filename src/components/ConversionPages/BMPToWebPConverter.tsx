@@ -97,27 +97,12 @@ export const BMPToWebPConverter: React.FC = () => {
     
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
-      // Check conversion limits for anonymous users
-      if (!user) {
-        const canConvert = await ConversionLimits.checkServerLimits();
-        if (!canConvert) {
-          setConversionLimitReached(true);
-          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-          return;
-        }
-      }
-
       const result = await apiService.convertFile(selectedFile, { format: 'webp' });
       setConvertedFile(result.blob);
     } catch (err) {
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else {
-        setError('Conversion failed. Please try again.');
-      }
+      setError('Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -129,19 +114,8 @@ export const BMPToWebPConverter: React.FC = () => {
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-    setConversionLimitReached(false);
     
     try {
-      // Check conversion limits for anonymous users
-      if (!user) {
-        const canConvert = await ConversionLimits.checkServerLimits();
-        if (!canConvert) {
-          setConversionLimitReached(true);
-          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-          return;
-        }
-      }
-
       console.log('Starting batch conversion for', batchFiles.length, 'files');
       const result = await apiService.convertBatch(batchFiles, { format: 'webp' });
       console.log('Batch conversion result:', result);
@@ -177,11 +151,7 @@ export const BMPToWebPConverter: React.FC = () => {
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else {
-        setError('Batch conversion failed. Please try again.');
-      }
+      setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -191,12 +161,12 @@ export const BMPToWebPConverter: React.FC = () => {
   const handleBatchDownload = async (result: any) => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!filename) {
+    if (!downloadPath) {
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      await apiService.downloadAndSaveFile(filename, result.outputFilename);
+      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
