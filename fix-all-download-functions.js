@@ -61,3 +61,4 @@ componentFiles.forEach(componentPath => {
 });
 
 console.log('\n✅ All download function fixes completed!');
+
