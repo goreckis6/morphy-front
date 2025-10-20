@@ -13,15 +13,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['lucide-react'],
-          utils: ['tesseract.js', 'pdf-lib', 'xlsx']
-        },
+        manualChunks: undefined,
       },
     },
-    chunkSizeWarningLimit: 1000,
-    sourcemap: false,
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
