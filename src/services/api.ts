@@ -1,8 +1,7 @@
 
 // API service for backend communication
 const PRODUCTION_DEFAULTS = [
-  'https://morphy-2-n2tb.onrender.com', // Current testing backend
-  'https://morphyimg.ovh' // Future custom domain
+  'https://api.morphyimg.com'
 ];
 
 const normalizeBaseUrl = (url: string | undefined) => {
