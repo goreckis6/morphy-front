@@ -6,14 +6,17 @@ WORKDIR /app
 # Copy package files first for better caching
 COPY package*.json ./
 
-# Install dependencies with optimizations
-RUN npm ci --only=production --no-audit --no-fund
+# Install dependencies (include dev for build)
+RUN npm ci --no-audit --no-fund
 
 # Copy source code
 COPY . .
 
 # Build the application
 RUN npm run build
+
+# Remove dev dependencies before copying to runtime image
+RUN npm prune --production
 
 # Use nginx to serve static files (much faster)
 FROM nginx:alpine
