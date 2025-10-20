@@ -1,8 +1,8 @@
 
 // API service for backend communication
 const PRODUCTION_DEFAULTS = [
-  'https://morphy-2-n2tb.onrender.com', // Current testing backend
-  'https://morphyimg.ovh' // Future custom domain
+  'https://morphyimg.ovh', // Primary custom domain (backend)
+  'https://morphy-2-n2tb.onrender.com' // Fallback Render backend
 ];
 
 const normalizeBaseUrl = (url: string | undefined) => {
@@ -66,13 +66,15 @@ class ApiService {
   private async makeRequest(
     endpoint: string, 
     method: 'GET' | 'POST' = 'GET', 
-    body?: FormData | any
+    body?: FormData | any,
+    retryCount = 0
   ): Promise<Response> {
     const url = `${API_BASE_URL}${endpoint}`;
     
     const options: RequestInit = {
       method,
       headers: {},
+      mode: 'cors', // Explicitly set CORS mode
     };
 
     if (body instanceof FormData) {
@@ -85,17 +87,41 @@ class ApiService {
       options.body = JSON.stringify(body);
     }
 
-    const response = await fetch(url, options);
-    
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-      const message = errorData.details
-        ? `${errorData.error || 'Error'}: ${errorData.details}`
-        : (errorData.error || `HTTP ${response.status}: ${response.statusText}`);
-      throw new Error(message);
-    }
+    try {
+      const response = await fetch(url, options);
+      
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+        const message = errorData.details
+          ? `${errorData.error || 'Error'}: ${errorData.details}`
+          : (errorData.error || `HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(message);
+      }
 
-    return response;
+      return response;
+    } catch (error) {
+      // If it's a CORS error or network error, try fallback URL
+      if ((error instanceof TypeError && error.message.includes('Failed to fetch')) || 
+          (error instanceof Error && error.message.includes('CORS'))) {
+        
+        if (retryCount === 0 && API_BASE_URL !== PRODUCTION_DEFAULTS[1]) {
+          console.warn('Primary API failed, trying fallback...', error);
+          // Temporarily switch to fallback URL
+          const originalUrl = API_BASE_URL;
+          (API_BASE_URL as any) = PRODUCTION_DEFAULTS[1];
+          
+          try {
+            const fallbackResponse = await this.makeRequest(endpoint, method, body, 1);
+            return fallbackResponse;
+          } finally {
+            // Restore original URL
+            (API_BASE_URL as any) = originalUrl;
+          }
+        }
+      }
+      
+      throw error;
+    }
   }
 
   async convertFile(file: File, options: ConversionOptions = {}): Promise<ConversionResult> {

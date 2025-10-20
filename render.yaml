@@ -1,7 +1,7 @@
 services:
   # Backend service
   - type: web
-    name: morphy-backend
+    name: morphy-2-n2tb
     env: docker
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
@@ -43,7 +43,7 @@ services:
 
   # Frontend service
   - type: web
-    name: morphy-frontend
+    name: morphy-1-ulvv
     env: docker
     dockerfilePath: ./Dockerfile
     dockerContext: .
