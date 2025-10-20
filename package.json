@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "start": "vite preview --host 0.0.0.0 --port ${PORT:-5173}",
     "docker:dev": "docker-compose up --build",
-    "docker:backend": "cd backend && npm run dev"
+    "docker:backend": "cd backend && npm run dev",
+    "render-postbuild": "npm run build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
