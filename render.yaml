@@ -55,7 +55,3 @@ services:
         value: https://morphyimg.ovh
       - key: VITE_API_BASE_URL_FALLBACK
         value: https://morphy-2-n2tb.onrender.com
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
