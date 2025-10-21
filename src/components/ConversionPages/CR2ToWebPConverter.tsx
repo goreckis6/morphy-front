@@ -22,6 +22,15 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 
+// Type declarations for better TypeScript support
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
 export const CR2ToWebPConverter: React.FC = () => {
   const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
