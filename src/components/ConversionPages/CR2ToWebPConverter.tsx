@@ -866,7 +866,6 @@ export const CR2ToWebPConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-
       </div>
       </>
     );
