@@ -20,7 +20,6 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
-import { ConversionLimits } from '../../services/conversionLimits';
 import { useAuth } from '../../hooks/useAuth';
 
 export const CR2ToICOConverter: React.FC = () => {
@@ -38,9 +37,6 @@ export const CR2ToICOConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
-  const { user } = useAuth();
-  const shouldShowConversionLimitBanner = !user && conversionLimitReached;
 
   // Language synchronization
   useEffect(() => {
@@ -264,25 +260,13 @@ ICO_FILE_END`;
     
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
-      if (!user) {
-        const limitCheck = await ConversionLimits.checkServerLimits();
-        if (limitCheck.reached) {
-          setConversionLimitReached(true);
-          setError(limitCheck.message);
-          return;
-        }
-      }
-
       const result = await apiService.convertFile(selectedFile, { format: 'ico' });
       setConvertedFile(result.blob);
     } catch (err) {
       console.error('CR2 to ICO conversion error:', err);
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
+      if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
         setError('Conversion is taking longer than expected. CR2 files are large and complex - please try with a smaller file or wait a bit longer. The conversion may still be processing in the background.');
       } else {
         setError('Conversion failed. Please try again.');
@@ -298,18 +282,8 @@ ICO_FILE_END`;
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-    setConversionLimitReached(false);
     
     try {
-      if (!user) {
-        const limitCheck = await ConversionLimits.checkServerLimits();
-        if (limitCheck.reached) {
-          setConversionLimitReached(true);
-          setError(limitCheck.message);
-          return;
-        }
-      }
-
       console.log('Starting CR2 to ICO batch conversion for', batchFiles.length, 'files');
       const result = await apiService.convertBatch(batchFiles, { format: 'ico' });
       console.log('CR2 to ICO batch conversion result:', result);
@@ -629,15 +603,6 @@ ICO_FILE_END`;
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
                   <span className="text-red-700">{error || validationError}</span>
-                </div>
-              )}
-
-              {shouldShowConversionLimitBanner && (
-                <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg flex items-center">
-                  <AlertCircle className="w-5 h-5 text-yellow-500 mr-3" />
-                  <span className="text-yellow-700">
-                    {t('conversion_limits.free_limit_reached', 'Free conversion limit reached. Create a free account to continue unlimited conversions!')}
-                  </span>
                 </div>
               )}
 

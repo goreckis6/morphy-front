@@ -21,8 +21,6 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
-import { ConversionLimits } from '../../services/conversionLimits';
-import { useAuth } from '../../hooks/useAuth';
 
 export const CR2ToWebPConverter: React.FC = () => {
   const { t } = useTranslation();
@@ -40,9 +38,6 @@ export const CR2ToWebPConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [conversionLimitReached, setConversionLimitReached] = useState(false);
-  const { user } = useAuth();
-  const shouldShowConversionLimitBanner = !user && conversionLimitReached;
 
   // Language detection from URL
   useEffect(() => {
@@ -59,9 +54,7 @@ export const CR2ToWebPConverter: React.FC = () => {
   // Use shared validation hook
   const {
     validationError,
-    validateSingleFile,
     validateBatchFiles,
-    getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
@@ -147,7 +140,7 @@ export const CR2ToWebPConverter: React.FC = () => {
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
+    const files = Array.from(event.target.files || []) as File[];
     const cr2Files = files.filter(file => 
       file.name.toLowerCase().endsWith('.cr2')
     );
@@ -197,86 +190,19 @@ export const CR2ToWebPConverter: React.FC = () => {
     return -1;
   };
 
-  const generateSampleWebP = (file: File, resolve: (blob: Blob) => void) => {
-    // Create a simple colored canvas as fallback
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    if (!ctx) {
-      const fallbackContent = `SAMPLE_WEBP_FILE_START
-ORIGINAL_FILE: ${file.name}
-CR2_TO_WEBP_CONVERSION: Sample conversion
-QUALITY: ${quality}
-LOSSLESS: ${lossless}
-METADATA_PRESERVED: ${preserveMetadata}
-NOTE: This is a sample WebP file generated because the CR2 could not be processed in browser
-WEBP_FILE_END`;
-      resolve(new Blob([fallbackContent], { type: 'image/webp' }));
-      return;
-    }
-
-    canvas.width = 200;
-    canvas.height = 200;
-    
-    // Create a gradient background
-    const gradient = ctx.createLinearGradient(0, 0, 200, 200);
-    gradient.addColorStop(0, '#4f46e5');
-    gradient.addColorStop(1, '#7c3aed');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 200, 200);
-    
-    // Add camera icon effect
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-    ctx.fillRect(70, 80, 60, 40);
-    ctx.fillRect(85, 70, 30, 20);
-    
-    // Add text
-    ctx.fillStyle = 'white';
-    ctx.font = '14px Arial';
-    ctx.textAlign = 'center';
-    ctx.fillText('CR2', 100, 150);
-    ctx.fillText('SAMPLE', 100, 170);
-
-    canvas.toBlob((blob) => {
-      if (blob) {
-        resolve(blob);
-      } else {
-        const fallbackContent = `SAMPLE_WEBP_FILE_START
-ORIGINAL_FILE: ${file.name}
-CR2_TO_WEBP_CONVERSION: Sample conversion
-QUALITY: ${quality}
-LOSSLESS: ${lossless}
-METADATA_PRESERVED: ${preserveMetadata}
-WEBP_FILE_END`;
-        resolve(new Blob([fallbackContent], { type: 'image/webp' }));
-      }
-    }, 'image/webp', lossless ? 1.0 : (quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5));
-  };
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
     
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
-      // Check conversion limits for anonymous users
-      if (!user) {
-        const limitCheck = await ConversionLimits.checkServerLimits();
-        if (limitCheck.reached) {
-          setConversionLimitReached(true);
-          setError(limitCheck.message);
-          return;
-        }
-      }
-
       const result = await apiService.convertFile(selectedFile, { format: 'webp' });
       setConvertedFile(result.blob);
     } catch (err) {
       console.error('CR2 to WebP conversion error:', err);
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
+      if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
         setError('Conversion is taking longer than expected. CR2 files are large and complex - please try with a smaller file or wait a bit longer. The conversion may still be processing in the background.');
       } else {
         setError('Conversion failed. Please try again.');
@@ -292,19 +218,8 @@ WEBP_FILE_END`;
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-    setConversionLimitReached(false);
     
     try {
-      // Check conversion limits for anonymous users
-      if (!user) {
-        const limitCheck = await ConversionLimits.checkServerLimits();
-        if (limitCheck.reached) {
-          setConversionLimitReached(true);
-          setError(limitCheck.message);
-          return;
-        }
-      }
-
       console.log('Starting CR2 to WebP batch conversion for', batchFiles.length, 'files');
       const result = await apiService.convertBatch(batchFiles, { format: 'webp' });
       console.log('CR2 to WebP batch conversion result:', result);
@@ -340,30 +255,12 @@ WEBP_FILE_END`;
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else {
-        setError('Batch conversion failed. Please try again.');
-      }
+      setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
-  
-  const handleBatchDownload = async (result: any) => {
-    // Use downloadPath if available, otherwise fall back to storedFilename
-    const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!downloadPath) {
-      setError('Download link is missing. Please reconvert.');
-      return;
-    }
-    try {
-      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
-    }
-  };
 
   const handleDownload = () => {
     if (convertedFile) {
@@ -593,7 +490,7 @@ WEBP_FILE_END`;
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const totalSize = batchFiles.reduce((sum: number, f: File) => sum + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <>
@@ -614,7 +511,7 @@ WEBP_FILE_END`;
                           </div>
                         )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
+                          {batchFiles.map((file: File, index: number) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
                               <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
@@ -632,15 +529,6 @@ WEBP_FILE_END`;
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
                   <span className="text-red-700">{error || validationError}</span>
-                </div>
-              )}
-
-              {shouldShowConversionLimitBanner && (
-                <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg flex items-center">
-                  <AlertCircle className="w-5 h-5 text-yellow-500 mr-3" />
-                  <span className="text-yellow-700">
-                    {t('conversion_limits.free_limit_reached', 'Free conversion limit reached. Create a free account to continue unlimited conversions!')}
-                  </span>
                 </div>
               )}
 
@@ -705,7 +593,7 @@ WEBP_FILE_END`;
                     {t('cr2_to_webp.batch_success_message', { count: batchResults.length })}
                   </p>
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
+                    {batchResults.map((result: any, index: number) => (
                       <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
                         <div className="flex-1">
                           <p className="text-sm font-medium text-gray-900">
@@ -751,7 +639,7 @@ WEBP_FILE_END`;
                 </label>
                 <select
                   value={quality}
-                  onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
                 >
                   <option value="high">{t('cr2_to_webp.quality_high_option')}</option>
@@ -766,7 +654,7 @@ WEBP_FILE_END`;
                   <input
                     type="checkbox"
                     checked={lossless}
-                    onChange={(e) => setLossless(e.target.checked)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLossless(e.target.checked)}
                     className="rounded border-gray-300 text-cyan-600 focus:ring-cyan-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">{t('cr2_to_webp.lossless_compression')}</span>
@@ -779,7 +667,7 @@ WEBP_FILE_END`;
                   <input
                     type="checkbox"
                     checked={preserveMetadata}
-                    onChange={(e) => setPreserveMetadata(e.target.checked)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPreserveMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-cyan-600 focus:ring-cyan-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">{t('cr2_to_webp.preserve_metadata')}</span>

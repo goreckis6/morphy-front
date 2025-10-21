@@ -61,8 +61,6 @@ export interface BatchConversionResult {
   }>;
 }
 
-import { ConversionLimits } from './conversionLimits';
-
 class ApiService {
   private async makeRequest(
     endpoint: string, 
@@ -147,9 +145,6 @@ class ApiService {
       const downloadResponse = await this.makeRequest(jsonResult.downloadPath);
       const blob = await downloadResponse.blob();
       
-      // Track conversion in global counter
-      ConversionLimits.recordConversion();
-      
       return {
         blob,
         filename: jsonResult.filename,
@@ -161,9 +156,6 @@ class ApiService {
       const contentDisposition = response.headers.get('Content-Disposition');
       const filename = this.extractFilename(contentDisposition) || 
                      `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'bin'}`;
-
-      // Track conversion in global counter
-      ConversionLimits.recordConversion();
 
       return {
         blob,
@@ -225,7 +217,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;
@@ -258,7 +249,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;
@@ -291,7 +281,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;
@@ -324,7 +313,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;
@@ -357,7 +345,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;
@@ -390,7 +377,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;
@@ -423,7 +409,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;
@@ -456,7 +441,6 @@ class ApiService {
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
-      ConversionLimits.recordConversion(result.results.length);
     }
     
     return result;

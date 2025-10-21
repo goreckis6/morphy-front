@@ -93,19 +93,8 @@ export const CSVToJSONConverter: React.FC = () => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
     
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       const options: any = {
@@ -129,19 +118,8 @@ export const CSVToJSONConverter: React.FC = () => {
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
     
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
     setIsConverting(true);
     setError(null);
-    setConversionLimitReached(false);
     
     try {
       const options: any = {
