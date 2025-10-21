@@ -196,7 +196,7 @@ export const CR2ToICOConverter: React.FC = () => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     
-    // Determine the actual size to use
+    // Determine the actual size to use - use 256 for sample generation
     const actualSize = iconSize === 'default' ? 256 : iconSize;
     
     if (!ctx) {
