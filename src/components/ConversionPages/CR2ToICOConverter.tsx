@@ -262,7 +262,10 @@ ICO_FILE_END`;
     setError(null);
     
     try {
-      const result = await apiService.convertFile(selectedFile, { format: 'ico' });
+      const result = await apiService.convertFile(selectedFile, { 
+        format: 'ico',
+        iconSize: iconSize === 'default' ? 'original' : iconSize
+      });
       setConvertedFile(result.blob);
     } catch (err) {
       console.error('CR2 to ICO conversion error:', err);
@@ -285,7 +288,10 @@ ICO_FILE_END`;
     
     try {
       console.log('Starting CR2 to ICO batch conversion for', batchFiles.length, 'files');
-      const result = await apiService.convertBatch(batchFiles, { format: 'ico' });
+      const result = await apiService.convertBatch(batchFiles, { 
+        format: 'ico',
+        iconSize: iconSize === 'default' ? 'original' : iconSize
+      });
       console.log('CR2 to ICO batch conversion result:', result);
       
       if (result.success && result.results) {
