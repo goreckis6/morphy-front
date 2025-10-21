@@ -412,14 +412,6 @@ export const CR2ToWebPConverter: React.FC = () => {
                     : t('cr2_to_webp.file_limits_single')
                   }
                 </p>
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 text-blue-500 mr-2" />
-                    <span className="text-sm text-blue-700">
-                      <strong>Note:</strong> CR2 files are large and complex. Conversion may take 1-3 minutes. Please be patient.
-                    </span>
-                  </div>
-                </div>
                 <input
                   ref={fileInputRef}
                   type="file"
