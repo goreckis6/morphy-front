@@ -846,7 +846,6 @@ export const CR2ToWebPConverter: React.FC = () => {
           </div>
         </div>
       </div>
-      </div>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 mt-16">
