@@ -542,7 +542,5 @@ export const CSVToHTMLConverter: React.FC = () => {
 
       </div>
 
-      </>
-
       );
 };

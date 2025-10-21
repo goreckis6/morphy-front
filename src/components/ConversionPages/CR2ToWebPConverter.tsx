@@ -21,6 +21,8 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
+import { ConversionLimits } from '../../services/conversionLimits';
+import { useAuth } from '../../hooks/useAuth';
 
 export const CR2ToWebPConverter: React.FC = () => {
   const { t } = useTranslation();
@@ -38,6 +40,9 @@ export const CR2ToWebPConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
+  const { user } = useAuth();
+  const shouldShowConversionLimitBanner = !user && conversionLimitReached;
 
   // Language detection from URL
   useEffect(() => {
@@ -257,10 +262,10 @@ WEBP_FILE_END`;
     try {
       // Check conversion limits for anonymous users
       if (!user) {
-        const canConvert = await ConversionLimits.checkServerLimits();
-        if (!canConvert) {
+        const limitCheck = await ConversionLimits.checkServerLimits();
+        if (limitCheck.reached) {
           setConversionLimitReached(true);
-          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+          setError(limitCheck.message);
           return;
         }
       }
@@ -292,10 +297,10 @@ WEBP_FILE_END`;
     try {
       // Check conversion limits for anonymous users
       if (!user) {
-        const canConvert = await ConversionLimits.checkServerLimits();
-        if (!canConvert) {
+        const limitCheck = await ConversionLimits.checkServerLimits();
+        if (limitCheck.reached) {
           setConversionLimitReached(true);
-          setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
+          setError(limitCheck.message);
           return;
         }
       }
@@ -349,12 +354,12 @@ WEBP_FILE_END`;
   const handleBatchDownload = async (result: any) => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!filename) {
+    if (!downloadPath) {
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      await apiService.downloadAndSaveFile(filename, result.outputFilename);
+      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
@@ -365,7 +370,8 @@ WEBP_FILE_END`;
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.cr2', '.webp') : 'converted.webp';
+      const downloadName = selectedFile ? selectedFile.name.replace(/\.cr2$/i, '.webp') : 'converted.webp';
+      a.download = downloadName;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -402,7 +408,7 @@ WEBP_FILE_END`;
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = file.name.replace('.cr2', '.webp');
+    a.download = file.name.replace(/\.cr2$/i, '.webp');
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -511,7 +517,7 @@ WEBP_FILE_END`;
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept=".cr2"
+                  accept=".cr2,.CR2"
                   multiple={batchMode}
                   onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
                   className="hidden"
@@ -629,6 +635,15 @@ WEBP_FILE_END`;
                 </div>
               )}
 
+              {shouldShowConversionLimitBanner && (
+                <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg flex items-center">
+                  <AlertCircle className="w-5 h-5 text-yellow-500 mr-3" />
+                  <span className="text-yellow-700">
+                    {t('conversion_limits.free_limit_reached', 'Free conversion limit reached. Create a free account to continue unlimited conversions!')}
+                  </span>
+                </div>
+              )}
+
               {/* Convert Button */}
               <div className="mt-8">
                 <button
@@ -694,7 +709,7 @@ WEBP_FILE_END`;
                       <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
                         <div className="flex-1">
                           <p className="text-sm font-medium text-gray-900">
-                            {result.file.name.replace('.cr2', '.webp')} • {(result.blob.size / 1024).toFixed(1)} KB
+                            {result.file.name.replace(/\.cr2$/i, '.webp')} • {(result.blob.size / 1024).toFixed(1)} KB
                           </p>
                         </div>
                         <button
