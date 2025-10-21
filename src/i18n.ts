@@ -1934,13 +1934,9 @@ const resources = {
       'csv_to_mobi.use_case_research_text': 'Convert research data and findings to MOBI format for creating comprehensive research reports and academic publications.',
       'csv_to_mobi.use_case_digital_title': 'Digital Publishing',
       'csv_to_mobi.use_case_digital_text': 'Create professional digital publications by converting CSV data to MOBI format for distribution through e-book platforms and digital libraries.',
-      'csv_to_mobi.use_case_publishing_title': 'Digital Publishing',
-      'csv_to_mobi.use_case_publishing_text': 'Create professional digital publications by converting CSV data to MOBI format for distribution through e-book platforms and digital libraries.',
       'csv_to_mobi.start_converting': 'Start Converting Now',
       'csv_to_mobi.ready_title': 'Ready to Convert Your CSV Files?',
       'csv_to_mobi.ready_text': 'Use our free online CSV to MOBI converter to transform your tabular data into professional e-books.',
-      'csv_to_mobi.benefit_layout_title': 'Professional Layout',
-      'csv_to_mobi.benefit_layout_text': 'MOBI format provides professional e-book layout features including proper typography, table formatting, and responsive design for optimal reading experience.',
       'csv_to_mobi.large_file_warning': 'Conversion may take 2-5 minutes for large files'
     }
   }
