@@ -16,6 +16,9 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
+    sourcemap: false,
+    minify: 'terser',
+    target: 'es2020'
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
@@ -24,5 +27,8 @@ export default defineConfig({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
     'process.env': JSON.stringify({}),
     'process': JSON.stringify({ env: {} })
+  },
+  esbuild: {
+    target: 'es2020'
   }
 });
