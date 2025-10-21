@@ -11,9 +11,9 @@ interface ValidationResult {
   error?: ValidationError;
 }
 
-const SINGLE_FILE_LIMIT_BYTES = 100 * 1024 * 1024; // 100MB
-const BATCH_FILE_LIMIT_BYTES = 100 * 1024 * 1024; // 100MB per file
-const BATCH_TOTAL_LIMIT_BYTES = 100 * 1024 * 1024; // 100MB total per batch
+const SINGLE_FILE_LIMIT_BYTES = 25 * 1024 * 1024; // 25MB
+const BATCH_FILE_LIMIT_BYTES = 25 * 1024 * 1024; // 25MB per file
+const BATCH_TOTAL_LIMIT_BYTES = 25 * 1024 * 1024; // 25MB total per batch
 const BATCH_MAX_FILES = 20;
 
 export const useFileValidation = () => {
