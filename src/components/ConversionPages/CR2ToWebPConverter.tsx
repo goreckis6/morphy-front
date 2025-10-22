@@ -55,7 +55,10 @@ export const CR2ToWebPConverter: React.FC = () => {
     validationError,
     validateSingleFile,
     validateBatchFiles,
+<<<<<<< HEAD
     getBatchInfoMessage,
+=======
+>>>>>>> parent of f1f1187 (jj)
     getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
