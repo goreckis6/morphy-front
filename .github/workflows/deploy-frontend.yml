@@ -49,8 +49,9 @@ jobs:
             set -euo pipefail
             cd /opt/frontend
             
-            # Create letsencrypt directory if it doesn't exist
-            mkdir -p letsencrypt
+            # Create letsencrypt directory with proper permissions
+            sudo mkdir -p letsencrypt
+            sudo chown -R $USER:$USER letsencrypt
             
             # Set environment variable
             export VITE_API_BASE_URL=${{ secrets.FRONTEND_API_URL }}
