@@ -497,7 +497,7 @@ export const CSVToHTMLConverter: React.FC = () => {
               </div>
             </div>
           </div>
-            {/* CTA inside content like AVRO page */}
+            {/* CTA inside content */}
             <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center mt-8">
               <h3 className="text-2xl font-bold mb-4">{t('csv_to_html.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">

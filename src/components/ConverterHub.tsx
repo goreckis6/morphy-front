@@ -15,34 +15,6 @@ export const ConverterHub: React.FC = () => {
     {
       title: "DEVELOPER TOOLS",
       formats: [
-        { 
-          name: "AVRO to CSV Converter", 
-          description: "Convert Apache AVRO files to CSV format for data analysis and spreadsheet applications",
-          path: "/convert/avro-to-csv",
-          inputFormat: "AVRO",
-          outputFormat: "CSV"
-        },
-        { 
-          name: "AVRO to JSON Converter", 
-          description: "Convert AVRO files to JSON format for web applications and APIs",
-          path: "/convert/avro-to-json",
-          inputFormat: "AVRO",
-          outputFormat: "JSON"
-        },
-        { 
-          name: "AVRO to NDJSON Converter", 
-          description: "Convert AVRO to Newline Delimited JSON for streaming data processing",
-          path: "/convert/avro-to-ndjson",
-          inputFormat: "AVRO",
-          outputFormat: "NDJSON"
-        },
-        { 
-          name: "CSV to AVRO Converter", 
-          description: "Convert CSV files to AVRO format for big data processing and storage",
-          path: "/convert/csv-to-avro",
-          inputFormat: "CSV",
-          outputFormat: "AVRO"
-        }
       ]
     },
     {

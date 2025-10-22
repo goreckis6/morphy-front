@@ -23,8 +23,7 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
 
   // Define implemented conversions based on what we actually have
   const implementedConversions: Record<string, string[]> = {
-    'csv': ['doc', 'docx', 'epub', 'html', 'md', 'mobi', 'odp', 'odt', 'pdf', 'ppt', 'pptx', 'rtf', 'txt', 'xls', 'xlsx', 'json', 'ndjson', 'parquet', 'sql', 'toml', 'xml', 'yaml', 'avro'],
-    'avro': ['csv', 'json', 'ndjson'],
+    'csv': ['doc', 'docx', 'epub', 'html', 'md', 'mobi', 'odp', 'odt', 'pdf', 'ppt', 'pptx', 'rtf', 'txt', 'xls', 'xlsx', 'json', 'ndjson', 'parquet', 'sql', 'toml', 'xml', 'yaml'],
     'epub': ['csv', 'doc', 'docx', 'html', 'md', 'mobi', 'odp', 'odt', 'pdf', 'ppt', 'pptx', 'rtf', 'txt', 'xlsx'],
     'doc': ['csv', 'epub', 'mobi', 'odt', 'txt'],
     'docx': ['csv', 'epub', 'mobi', 'odt', 'txt'],
@@ -47,7 +46,7 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
       'Presentations': availableOutputFormats.filter(f => ['ppt', 'pptx', 'odp'].includes(f)),
       'Spreadsheets': availableOutputFormats.filter(f => ['xlsx', 'xls', 'csv', 'ods'].includes(f)),
       'Web': availableOutputFormats.filter(f => ['html', 'md', 'xml'].includes(f)),
-      'Data': availableOutputFormats.filter(f => ['json', 'ndjson', 'avro', 'parquet', 'sql', 'toml', 'yaml'].includes(f))
+      'Data': availableOutputFormats.filter(f => ['json', 'ndjson', 'parquet', 'sql', 'toml', 'yaml'].includes(f))
     };
     
     // Remove empty categories

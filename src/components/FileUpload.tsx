@@ -140,7 +140,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
           <div className="text-sm text-gray-500 mt-4 space-y-1">
             <p className="font-medium">✓ Max {maxFiles} files • Up to {FileProcessor.formatFileSize(maxSize)} {showTotalSize ? 'Total' : 'each'}</p>
             {!hideFormatList && (
-              <p>✓ CSV, AVRO, EPUB, DOC, DOCX, DNG, CR2, EPS, GIF, BMP & more</p>
+              <p>✓ CSV, EPUB, DOC, DOCX, DNG, CR2, EPS, GIF, BMP & more</p>
             )}
           </div>
         </div>
