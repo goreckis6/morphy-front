@@ -50,10 +50,7 @@ export const CR2ToICOConverter: React.FC = () => {
 
   // Use shared validation hook
   const {
-    validationError,
-    validateSingleFile,
     validateBatchFiles,
-    getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
@@ -67,71 +64,12 @@ export const CR2ToICOConverter: React.FC = () => {
         setError(null);
         setPreviewUrl(URL.createObjectURL(file));
         
-        // Try to extract JPEG preview for actual preview
-        try {
-          const reader = new FileReader();
-          reader.onload = async (e) => {
-            try {
-              const arrayBuffer = e.target?.result as ArrayBuffer;
-              const uint8Array = new Uint8Array(arrayBuffer);
-              
-              // Look for embedded JPEG thumbnail
-              const jpegStart = findJPEGStart(uint8Array);
-              const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
-              
-              if (jpegStart !== -1 && jpegEnd !== -1) {
-                // Extract the JPEG preview
-                const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
-                const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
-                const jpegUrl = URL.createObjectURL(jpegBlob);
-                
-                // Create image to get dimensions
-                const img = new Image();
-                img.onload = () => {
-                  setImagePreview({
-                    url: jpegUrl,
-                    width: img.width,
-                    height: img.height
-                  });
-                  // Update preview URL to show actual extracted image
-                  setPreviewUrl(jpegUrl);
-                };
-                img.onerror = () => {
-                  // Fallback to file info only
-                  setImagePreview({
-                    url: URL.createObjectURL(file),
-                    width: 0,
-                    height: 0
-                  });
-                  URL.revokeObjectURL(jpegUrl);
-                };
-                img.src = jpegUrl;
-              } else {
-                // No JPEG preview found, show file info only
-                setImagePreview({
-                  url: URL.createObjectURL(file),
-                  width: 0,
-                  height: 0
-                });
-              }
-            } catch (error) {
-              // Error reading file, show basic info
-              setImagePreview({
-                url: URL.createObjectURL(file),
-                width: 0,
-                height: 0
-              });
-            }
-          };
-          reader.readAsArrayBuffer(file);
-        } catch (error) {
-          // Error processing file, show basic info
-          setImagePreview({
-            url: URL.createObjectURL(file),
-            width: 0,
-            height: 0
-          });
-        }
+        // Set basic file preview
+        setImagePreview({
+          url: URL.createObjectURL(file),
+          width: 0,
+          height: 0
+        });
       } else {
         setError('Please select a valid CR2 file');
       }
@@ -155,10 +93,9 @@ export const CR2ToICOConverter: React.FC = () => {
       return;
     }
     
-    // Use existing validation
-    const validation = validateBatchFiles(cr2Files);
-    if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+    // Basic validation for CR2 files
+    if (cr2Files.length === 0) {
+      setError('Please select at least one CR2 file');
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -180,20 +117,35 @@ export const CR2ToICOConverter: React.FC = () => {
     formData.append('quality', quality);
 
     try {
+      console.log('CR2 to ICO: Sending request to', `${API_BASE_URL}/convert/cr2-to-ico/single`);
+      console.log('CR2 to ICO: File size:', file.size, 'bytes');
+      console.log('CR2 to ICO: Icon size:', iconSize, 'Quality:', quality);
+
       const response = await fetch(`${API_BASE_URL}/convert/cr2-to-ico/single`, {
         method: 'POST',
         body: formData,
       });
 
+      console.log('CR2 to ICO: Response status:', response.status);
+      console.log('CR2 to ICO: Response headers:', Object.fromEntries(response.headers.entries()));
+
       if (!response.ok) {
-        throw new Error(`Conversion failed: ${response.statusText}`);
+        const errorText = await response.text();
+        console.error('CR2 to ICO: Error response:', errorText);
+        throw new Error(`Conversion failed: ${response.status} ${response.statusText}. ${errorText}`);
       }
 
       const blob = await response.blob();
+      console.log('CR2 to ICO: Received blob size:', blob.size, 'bytes');
       return blob;
     } catch (error) {
       console.error('CR2 to ICO conversion error:', error);
-      throw new Error('Failed to convert CR2 to ICO. Please try again.');
+      
+      if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
+        throw new Error('Unable to connect to the conversion service. Please check your internet connection and try again.');
+      }
+      
+      throw new Error(error instanceof Error ? error.message : 'Failed to convert CR2 to ICO. Please try again.');
     }
   };
 
@@ -227,23 +179,32 @@ export const CR2ToICOConverter: React.FC = () => {
       : 'http://localhost:3000';
 
     const formData = new FormData();
-    batchFiles.forEach(file => {
+    batchFiles.forEach((file: File) => {
       formData.append('files', file);
     });
     formData.append('iconSize', iconSize.toString());
     formData.append('quality', quality);
 
     try {
+      console.log('CR2 to ICO Batch: Sending request to', `${API_BASE_URL}/convert/cr2-to-ico/batch`);
+      console.log('CR2 to ICO Batch: Files count:', batchFiles.length);
+      console.log('CR2 to ICO Batch: Icon size:', iconSize, 'Quality:', quality);
+
       const response = await fetch(`${API_BASE_URL}/convert/cr2-to-ico/batch`, {
         method: 'POST',
         body: formData,
       });
 
+      console.log('CR2 to ICO Batch: Response status:', response.status);
+
       if (!response.ok) {
-        throw new Error(`Batch conversion failed: ${response.statusText}`);
+        const errorText = await response.text();
+        console.error('CR2 to ICO Batch: Error response:', errorText);
+        throw new Error(`Batch conversion failed: ${response.status} ${response.statusText}. ${errorText}`);
       }
 
       const result = await response.json();
+      console.log('CR2 to ICO Batch: Received result:', result);
       
       // Process batch results
       const results: Array<{ file: File; blob: Blob }> = [];
@@ -252,11 +213,22 @@ export const CR2ToICOConverter: React.FC = () => {
         const fileResult = result.files[i];
         const originalFile = batchFiles[i];
         
-        // Download the converted file
-        const downloadResponse = await fetch(`${API_BASE_URL}${fileResult.downloadUrl}`);
-        const blob = await downloadResponse.blob();
-        
-        results.push({ file: originalFile, blob });
+        try {
+          // Download the converted file
+          const downloadResponse = await fetch(`${API_BASE_URL}${fileResult.downloadUrl}`);
+          if (!downloadResponse.ok) {
+            console.error(`Failed to download file ${i}:`, downloadResponse.statusText);
+            continue;
+          }
+          const blob = await downloadResponse.blob();
+          results.push({ file: originalFile, blob });
+        } catch (downloadError) {
+          console.error(`Error downloading file ${i}:`, downloadError);
+        }
+      }
+      
+      if (results.length === 0) {
+        throw new Error('No files were successfully converted.');
       }
       
       setBatchResults(results);
@@ -264,7 +236,12 @@ export const CR2ToICOConverter: React.FC = () => {
       setError(null);
     } catch (err) {
       console.error('CR2 to ICO batch conversion error:', err);
-      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
+      
+      if (err instanceof TypeError && err.message.includes('Failed to fetch')) {
+        setError('Unable to connect to the conversion service. Please check your internet connection and try again.');
+      } else {
+        setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
+      }
     } finally {
       setIsConverting(false);
     }
@@ -482,7 +459,7 @@ export const CR2ToICOConverter: React.FC = () => {
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const totalSize = batchFiles.reduce((sum: number, f: File) => sum + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <>
@@ -503,7 +480,7 @@ export const CR2ToICOConverter: React.FC = () => {
                           </div>
                         )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
+                          {batchFiles.map((file: File, index: number) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
                               <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
@@ -585,7 +562,7 @@ export const CR2ToICOConverter: React.FC = () => {
                     {t('cr2_to_ico.batch_success_message', { count: batchResults.length })}
                   </p>
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
+                    {batchResults.map((result: { file: File; blob: Blob }, index: number) => (
                       <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
                         <div className="flex-1">
                           <p className="text-sm font-medium text-gray-900">
@@ -631,7 +608,7 @@ export const CR2ToICOConverter: React.FC = () => {
                 </label>
                 <select
                   value={iconSize}
-                  onChange={(e) => setIconSize(e.target.value === 'default' ? 'default' : Number(e.target.value))}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setIconSize(e.target.value === 'default' ? 'default' : Number(e.target.value))}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 >
                   <option value="default">{t('cr2_to_ico.icon_size_default')}</option>
@@ -674,7 +651,7 @@ export const CR2ToICOConverter: React.FC = () => {
                 </label>
                 <select
                   value={quality}
-                  onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 >
                   <option value="high">{t('cr2_to_ico.quality_high')}</option>
@@ -828,7 +805,7 @@ export const CR2ToICOConverter: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' as ScrollBehavior })}
                   className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   {t('common.start_converting_now')}
