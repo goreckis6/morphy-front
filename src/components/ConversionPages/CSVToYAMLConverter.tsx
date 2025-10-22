@@ -765,3 +765,5 @@ export const CSVToXMLConverter: React.FC = () => {
       </>
   );
 };
+
+export { CSVToYAMLConverter };
