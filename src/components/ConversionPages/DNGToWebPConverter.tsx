@@ -355,15 +355,6 @@ export const DNGToWebPConverter: React.FC = () => {
                   </div>
                 )}
 
-                {/* Conversion Time Info */}
-              <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 text-blue-600 mr-2" />
-                    <p className="text-blue-800 text-sm">
-                      Conversion may take 2-5 minutes for large DNG files
-                    </p>
-                  </div>
-                </div>
 
               <div className="mt-8">
                 <button

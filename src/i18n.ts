@@ -930,7 +930,6 @@ const resources = {
       'csv_to_odp.use_case_training_text': 'Convert educational data to ODP format for creating training presentations, workshops, and educational materials with interactive elements.',
       'csv_to_odp.ready_title': 'Ready to Convert Your CSV Files?',
       'csv_to_odp.ready_text': 'Use our free online CSV to ODP converter to transform your data into professional presentations.',
-      'csv_to_odp.conversion_time_info': 'Conversion may take 2-5 minutes for large files',
       
       // CSV to PDF translations
       'csv_to_pdf.meta_title': 'CSV to PDF Converter - Convert CSV to PDF Documents',
@@ -941,7 +940,6 @@ const resources = {
       'csv_to_pdf.upload_multiple': 'Upload Multiple CSV Files',
       'csv_to_pdf.upload_single_desc': 'Drag and drop your CSV file here or click to browse',
       'csv_to_pdf.upload_multiple_desc': 'Select multiple CSV files to convert them all at once',
-      'csv_to_pdf.conversion_time_info': 'Conversion may take 2-5 minutes for large files',
       'csv_to_pdf.convert_to_pdf': 'Convert to PDF',
       'csv_to_pdf.conversion_success': 'Your CSV file has been successfully converted to PDF format.',
       'csv_to_pdf.download_pdf': 'Download PDF File',
@@ -1040,7 +1038,6 @@ const resources = {
       'csv_to_pptx.upload_multiple': 'Upload Multiple CSV Files',
       'csv_to_pptx.upload_single_desc': 'Drag and drop your CSV file here or click to browse',
       'csv_to_pptx.upload_multiple_desc': 'Select multiple CSV files to convert them all at once',
-      'csv_to_pptx.conversion_time_info': 'Conversion may take 2-5 minutes for large files',
       'csv_to_pptx.convert_to_pptx': 'Convert to PPTX',
       'csv_to_pptx.convert_files': 'Convert {{count}} Files',
       'csv_to_pptx.conversion_success': 'Your CSV file has been successfully converted to PPTX format.',
@@ -1099,7 +1096,6 @@ const resources = {
       'csv_to_rtf.upload_single_desc': 'Drag and drop your CSV file here or click to browse',
       'csv_to_rtf.upload_multiple_desc': 'Select multiple CSV files to convert them all at once',
       'csv_to_rtf.batch_info': 'Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.',
-      'csv_to_rtf.conversion_time_info': 'Conversion may take 2-5 minutes for large files',
       'csv_to_rtf.convert_to_rtf': 'Convert to RTF',
       'csv_to_rtf.convert_files': 'Convert {{count}} Files',
       'csv_to_rtf.conversion_success': 'Your CSV file has been successfully converted to RTF format.',
@@ -1326,7 +1322,6 @@ const resources = {
       'csv_to_json.upload_multiple_desc': 'Select multiple CSV files to convert them all at once',
       'csv_to_json.single_info': 'Max file size: 100MB',
       'csv_to_json.batch_info': 'Max 100MB per file, 100MB total batch size, up to 20 files',
-      'csv_to_json.conversion_time_info': 'Conversion may take 2-5 minutes for large files',
       'csv_to_json.convert_to_json': 'Convert to JSON',
       'csv_to_json.conversion_success': 'Your CSV file has been successfully converted to JSON format.',
       'csv_to_json.batch_success': 'All {{count}} CSV files have been successfully converted to JSON format.',
@@ -1936,7 +1931,6 @@ const resources = {
       'csv_to_mobi.start_converting': 'Start Converting Now',
       'csv_to_mobi.ready_title': 'Ready to Convert Your CSV Files?',
       'csv_to_mobi.ready_text': 'Use our free online CSV to MOBI converter to transform your tabular data into professional e-books.',
-      'csv_to_mobi.large_file_warning': 'Conversion may take 2-5 minutes for large files'
     }
   }
 };
