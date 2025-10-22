@@ -1,6 +1,31 @@
 version: '3.8'
 
 services:
+  traefik:
+    image: traefik:3.1
+    container_name: traefik
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    command:
+      - --api.dashboard=true
+      - --api.insecure=true
+      - --providers.docker=true
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+      - --certificatesresolvers.letsencrypt.acme.email=your-email@example.com
+      - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./letsencrypt:/letsencrypt
+    networks:
+      - traefik
+    restart: unless-stopped
+
   morphy-frontend:
     image: ghcr.io/goreckis6/morphy-frontend:latest
     container_name: morphy-frontend
@@ -13,12 +38,14 @@ services:
       - traefik.http.routers.morphy-www.tls=true
       - traefik.http.routers.morphy-www.tls.certresolver=letsencrypt
       - traefik.http.services.morphy.loadbalancer.server.port=5173
-    restart: unless-stopped
+    environment:
+      - VITE_API_BASE_URL=${VITE_API_BASE_URL}
     networks:
       - traefik
-    environment:
-      - VITE_API_BASE_URL=${{ secrets.FRONTEND_API_URL }}
+    restart: unless-stopped
+    depends_on:
+      - traefik
 
 networks:
   traefik:
-    external: true
+    driver: bridge
