@@ -21,20 +21,6 @@ export const ConverterHub: React.FC = () => {
       title: "IMAGE CONVERTERS",
       formats: [
         { 
-          name: "BMP to ICO Converter", 
-          description: "Convert BMP images to ICO format for Windows icons and applications",
-          path: "/convert/bmp-to-ico",
-          inputFormat: "BMP",
-          outputFormat: "ICO"
-        },
-        { 
-          name: "BMP to WebP Converter", 
-          description: "Convert BMP images to WebP format for better web performance and smaller file sizes",
-          path: "/convert/bmp-to-webp",
-          inputFormat: "BMP",
-          outputFormat: "WebP"
-        },
-        { 
           name: "CR2 to ICO Converter", 
           description: "Convert Canon CR2 raw images to ICO format for high-quality Windows icons",
           path: "/convert/cr2-to-ico",

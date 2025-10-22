@@ -7,7 +7,6 @@ import { SupportedFormats } from './components/SupportedFormats';
 import { JPGToTEXTConverter } from './components/ConversionPages/JPGToTEXTConverter';
 import { JPGToPDFConverter } from './components/ConversionPages/JPGToPDFConverter';
 import { JPGToPNGConverter } from './components/ConversionPages/JPGToPNGConverter';
-import { BMPToWebPConverter } from './components/ConversionPages/BMPToWebPConverter';
 import { CR2ToICOConverter } from './components/ConversionPages/CR2ToICOConverter';
 import { CR2ToWebPConverter } from './components/ConversionPages/CR2ToWebPConverter';
 import { CSVToDOCConverter } from './components/ConversionPages/CSVToDOCConverter';
@@ -205,10 +204,6 @@ function App() {
     return <JPGToPNGConverter     />;
   }
 
-  // BMP Conversion Routes
-  if (currentPath === '/convert/bmp-to-webp') {
-    return <BMPToWebPConverter     />;
-  }
 
   // CR2 Conversion Routes
   if (currentPath === '/convert/cr2-to-ico') {
