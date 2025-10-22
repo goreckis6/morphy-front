@@ -4,9 +4,11 @@ MorphyIMG - Changelog
 Version 2.1.1 - 2024-12-19
 ==========================
 
-CRITICAL BUG FIX:
+CRITICAL BUG FIXES:
 - Fixed CSV to EPUB single conversion API call - was passing format as second parameter instead of in options object
 - This was causing the routing to fail and fall back to generic /api/convert endpoint
+- Fixed CSV to EPUB response handling - was expecting {success, downloadPath} but API returns {blob, filename, size}
+- Fixed CSV to EPUB batch conversion to use specific convertBatchCsvToEpub method for proper filenames
 
 Frontend Updates:
 - Fixed CSV to EPUB single conversion routing

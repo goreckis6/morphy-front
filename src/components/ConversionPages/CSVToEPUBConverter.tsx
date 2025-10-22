@@ -108,13 +108,11 @@ export const CSVToEPUBConverter: React.FC = () => {
         includeTableOfContents: includeTableOfContents
       });
       
-      if (result.success && result.downloadPath) {
-        // Download the converted file
-        const response = await fetch(result.downloadPath);
-        const blob = await response.blob();
-        setConvertedFile(blob);
+      if (result.blob) {
+        // File was converted successfully
+        setConvertedFile(result.blob);
       } else {
-        setError(result.error || 'Conversion failed. Please try again.');
+        setError('Conversion failed. Please try again.');
       }
       
     } catch (err) {
@@ -131,7 +129,7 @@ export const CSVToEPUBConverter: React.FC = () => {
     setError(null);
     
     try {
-      const result = await apiService.convertBatch(batchFiles, { format: 'epub' });
+      const result = await apiService.convertBatchCsvToEpub(batchFiles);
       const results = (result.results as any[]) ?? [];
       setBatchResults(results);
       const successCount = results.filter(r => r.success).length;
