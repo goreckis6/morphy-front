@@ -238,15 +238,6 @@ export const CSVToMOBIConverter: React.FC = () => {
                 </div>
               )}
 
-              {/* Conversion Time Info */}
-              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 text-blue-500 mr-2" />
-                  <span className="text-sm text-blue-700 font-medium">
-                    {t('csv_to_mobi.large_file_warning')}
-                  </span>
-                </div>
-              </div>
 
               <div className="mt-8">
                 <button

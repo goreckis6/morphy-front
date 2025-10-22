@@ -3491,7 +3491,6 @@ const resources = {
       'csv_to_mobi.use_case_publishing_title': 'Publikacje cyfrowe',
       'csv_to_mobi.use_case_publishing_text': 'Twórz profesjonalne publikacje cyfrowe, konwertując dane CSV na format MOBI do dystrybucji przez platformy e-booków i biblioteki cyfrowe.',
       'csv_to_mobi.start_converting': 'Rozpocznij konwersję',
-      'csv_to_mobi.large_file_warning': 'Konwersja może potrwać 2-5 minut dla dużych plików'
     }
   },
   de: {
@@ -5046,7 +5045,6 @@ const resources = {
       'csv_to_mobi.use_case_publishing_title': 'Digitale Veröffentlichung',
       'csv_to_mobi.use_case_publishing_text': 'Erstellen Sie professionelle digitale Publikationen, indem Sie CSV-Daten in MOBI-Format für die Verteilung über E-Book-Plattformen und digitale Bibliotheken konvertieren.',
       'csv_to_mobi.start_converting': 'Konvertierung starten',
-      'csv_to_mobi.large_file_warning': 'Konvertierung kann 2-5 Minuten für große Dateien dauern'
     }
   }
 */
