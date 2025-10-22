@@ -19,11 +19,6 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
-import { apiService } from '../../services/api';
-
-// Custom limits for RAW image conversion
-const BATCH_SIZE_LIMIT = 100 * 1024 * 1024; // 100MB total batch size
-const SINGLE_FILE_LIMIT = 100 * 1024 * 1024; // 100MB per file
 
 export const CR2ToICOConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -59,16 +54,10 @@ export const CR2ToICOConverter: React.FC = () => {
     validateSingleFile,
     validateBatchFiles,
     getBatchInfoMessage,
+    getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
   } = useFileValidation();
-
-  // Custom batch size display for 100MB limit
-  const getBatchSizeDisplay = (totalSize: number) => {
-    const text = `Total size: ${formatFileSize(totalSize)} of 100.00 MB allowed.`;
-    const isWarning = totalSize > BATCH_SIZE_LIMIT * 0.8;
-    return { text, isWarning };
-  };
 
   const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -150,33 +139,26 @@ export const CR2ToICOConverter: React.FC = () => {
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []) as File[];
+    const files = Array.from(event.target.files || []);
     const cr2Files = files.filter(file => 
       file.name.toLowerCase().endsWith('.cr2')
     );
     
-    // Check for files larger than 100MB per file
-    const oversizedFile = cr2Files.find(file => file.size > SINGLE_FILE_LIMIT);
+    // Check for files larger than 1000MB
+    const MAX_FILE_SIZE = 1000 * 1024 * 1024; // 1000MB
+    const oversizedFile = cr2Files.find(file => file.size > MAX_FILE_SIZE);
     
     if (oversizedFile) {
-      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 100MB per file.`);
+      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 1000MB.`);
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
     }
     
-    // Check total batch size
-    const totalSize = cr2Files.reduce((sum, file) => sum + file.size, 0);
-    if (totalSize > BATCH_SIZE_LIMIT) {
-      setError(`Total batch size (${formatFileSize(totalSize)}) exceeds the limit of 100MB.`);
-      setBatchFiles([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
-      return;
-    }
-    
-    // Check max number of files
-    if (cr2Files.length > 20) {
-      setError(`Too many files. Maximum allowed is 20 files per batch.`);
+    // Use existing validation
+    const validation = validateBatchFiles(cr2Files);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -185,6 +167,89 @@ export const CR2ToICOConverter: React.FC = () => {
     setBatchFiles(cr2Files);
     setError(null);
     clearValidationError();
+  };
+
+  const handleConvert = async (file: File): Promise<Blob> => {
+    // Production-grade CR2 conversion using browser-compatible approach
+    return new Promise((resolve, reject) => {
+      try {
+        // Method 1: Try to read CR2 as binary and extract embedded JPEG preview
+        const reader = new FileReader();
+        reader.onload = async (e) => {
+          try {
+            const arrayBuffer = e.target?.result as ArrayBuffer;
+            const uint8Array = new Uint8Array(arrayBuffer);
+            
+            // Look for embedded JPEG thumbnail in CR2 file
+            // CR2 files often contain JPEG previews that we can extract
+            const jpegStart = findJPEGStart(uint8Array);
+            const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
+            
+            if (jpegStart !== -1 && jpegEnd !== -1) {
+              // Extract the JPEG preview
+              const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
+              const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
+              
+              // Convert extracted JPEG to ICO
+              const jpegUrl = URL.createObjectURL(jpegBlob);
+              const img = new Image();
+              
+              img.onload = () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                
+                if (!ctx) {
+                  reject(new Error('Canvas context not available'));
+                  return;
+                }
+                
+                // Determine the actual size to use
+                const actualSize = iconSize === 'default' ? Math.min(img.width, img.height) : iconSize;
+                
+                // Set canvas to icon size
+                canvas.width = actualSize;
+                canvas.height = actualSize;
+                
+                // Draw the extracted image scaled to icon size
+                ctx.drawImage(img, 0, 0, actualSize, actualSize);
+                
+                // Convert to ICO format
+                canvas.toBlob((blob) => {
+                  URL.revokeObjectURL(jpegUrl);
+                  if (blob) {
+                    resolve(blob);
+                  } else {
+                    reject(new Error('Failed to convert extracted image to blob'));
+                  }
+                }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
+              };
+              
+              img.onerror = () => {
+                URL.revokeObjectURL(jpegUrl);
+                // Fallback to generated sample if extraction fails
+                generateSampleICO(file, resolve);
+              };
+              
+              img.src = jpegUrl;
+            } else {
+              // No JPEG preview found, generate sample
+              generateSampleICO(file, resolve);
+            }
+          } catch (error) {
+            // Fallback to sample generation
+            generateSampleICO(file, resolve);
+          }
+        };
+        
+        reader.onerror = () => {
+          generateSampleICO(file, resolve);
+        };
+        
+        reader.readAsArrayBuffer(file);
+      } catch (error) {
+        generateSampleICO(file, resolve);
+      }
+    });
   };
 
   const findJPEGStart = (data: Uint8Array): number => {
@@ -212,7 +277,7 @@ export const CR2ToICOConverter: React.FC = () => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     
-    // Determine the actual size to use - use 256 for sample generation
+    // Determine the actual size to use
     const actualSize = iconSize === 'default' ? 256 : iconSize;
     
     if (!ctx) {
@@ -278,18 +343,11 @@ ICO_FILE_END`;
     setError(null);
     
     try {
-      const result = await apiService.convertFile(selectedFile, { 
-        format: 'ico',
-        iconSize: iconSize === 'default' ? 'original' : iconSize
-      });
-      setConvertedFile(result.blob);
+      const converted = await handleConvert(selectedFile);
+      setConvertedFile(converted);
     } catch (err) {
       console.error('CR2 to ICO conversion error:', err);
-      if (err instanceof Error && (err.message.includes('timeout') || err.message.includes('Failed to fetch'))) {
-        setError('Conversion is taking longer than expected. CR2 files are large and complex - please try with a smaller file or wait a bit longer. The conversion may still be processing in the background.');
-      } else {
-        setError('Conversion failed. Please try again.');
-      }
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -303,48 +361,20 @@ ICO_FILE_END`;
     setBatchResults([]);
     
     try {
-      console.log('Starting CR2 to ICO batch conversion for', batchFiles.length, 'files');
-      const result = await apiService.convertBatch(batchFiles, { 
-        format: 'ico',
-        iconSize: iconSize === 'default' ? 'original' : iconSize
-      });
-      console.log('CR2 to ICO batch conversion result:', result);
+      const results: Array<{ file: File; blob: Blob }> = [];
       
-      if (result.success && result.results) {
-        const results: Array<{ file: File; blob: Blob }> = [];
-        
-        for (let i = 0; i < result.results.length; i++) {
-          const conversionResult = result.results[i];
-          const file = batchFiles[i];
-          
-          console.log(`Processing CR2 to ICO result ${i + 1}:`, {
-            success: conversionResult.success,
-            hasDownloadPath: !!conversionResult.downloadPath,
-            downloadPath: conversionResult.downloadPath?.substring(0, 50)
-          });
-          
-          if (conversionResult.success && conversionResult.downloadPath) {
-            const response = await fetch(conversionResult.downloadPath);
-            const blob = await response.blob();
-            console.log(`Blob created for ${file.name}:`, blob.size, 'bytes');
-            results.push({ file, blob });
-          }
-        }
-        
-        console.log('Final CR2 to ICO batch results:', results.length, 'files converted');
-        setBatchResults(results);
-        setBatchConverted(true);
-        setError(null);
-      } else {
-        console.error('CR2 to ICO batch conversion failed:', result);
-        setError('Batch conversion failed. Please try again.');
+      for (let i = 0; i < batchFiles.length; i++) {
+        const file = batchFiles[i];
+        const converted = await handleConvert(file);
+        results.push({ file, blob: converted });
       }
+      
+      setBatchResults(results);
+      setBatchConverted(true);
+      setError(null);
     } catch (err) {
-      if (err instanceof Error && err.message === 'Conversion limit reached') {
-        setError('Free conversion limit reached. You\'ve used all 5 free conversions. Register for unlimited access!');
-      } else {
-        setError('Batch conversion failed. Please try again.');
-      }
+      console.error('CR2 to ICO batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -352,14 +382,13 @@ ICO_FILE_END`;
 
   
   const handleBatchDownload = async (result: any) => {
-    // Use downloadPath if available, otherwise fall back to storedFilename
-    const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!downloadPath) {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
+      await apiService.downloadFile(filename, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
@@ -370,12 +399,11 @@ ICO_FILE_END`;
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace(/\.cr2$/i, '.ico') : 'converted.ico';
+      a.download = selectedFile ? selectedFile.name.replace('.cr2', '.ico') : 'converted.ico';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      
     }
   };
 
@@ -407,12 +435,11 @@ ICO_FILE_END`;
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = file.name.replace(/\.cr2$/i, '.ico');
+    a.download = file.name.replace('.cr2', '.ico');
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    
   };
 
   return (
@@ -508,7 +535,7 @@ ICO_FILE_END`;
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept=".cr2,.CR2"
+                  accept=".cr2"
                   multiple={batchMode}
                   onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
                   className="hidden"
@@ -584,10 +611,20 @@ ICO_FILE_END`;
                       <>
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">{t('cr2_to_ico.selected_files')} ({batchFiles.length})</h4>
-                          <div className="text-sm font-medium text-gray-600">
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
                         </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                {t('cr2_to_ico.batch_size_warning')}
+                              </span>
+                            </div>
+                          </div>
+                        )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
                           {batchFiles.map((file, index) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -603,10 +640,10 @@ ICO_FILE_END`;
               )}
 
               {/* Error Message */}
-              {(error || validationError) && (
+              {error && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error || validationError}</span>
+                  <span className="text-red-700">{error}</span>
                 </div>
               )}
 

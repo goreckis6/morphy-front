@@ -1,6 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useRef } from 'react';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -19,29 +17,17 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
-import { apiService } from '../../services/api';
 
 export const DNGToICOConverter: React.FC = () => {
-  const { t, i18n } = useTranslation();
-  
-  useEffect(() => {
-    // Sync language with localStorage if needed
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && savedLanguage !== i18n.language) {
-      i18n.changeLanguage(savedLanguage);
-    }
-  }, [i18n]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
-  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSize, setIconSize] = useState<number | 'default'>('default');
+  const [iconSize, setIconSize] = useState<number>(16);
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const [batchResults, setBatchResults] = useState<any[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -141,30 +127,8 @@ export const DNGToICOConverter: React.FC = () => {
     const dngFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.dng')
     );
-    
-    // Check for files larger than 1000MB
-    const MAX_FILE_SIZE = 1000 * 1024 * 1024; // 1000MB
-    const oversizedFile = dngFiles.find(file => file.size > MAX_FILE_SIZE);
-    
-    if (oversizedFile) {
-      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 1000MB.`);
-      setBatchFiles([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
-      return;
-    }
-    
-    // Use existing validation
-    const validation = validateBatchFiles(dngFiles);
-    if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
-      setBatchFiles([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
-      return;
-    }
-    
     setBatchFiles(dngFiles);
     setError(null);
-    clearValidationError();
   };
 
   const findJPEGStart = (data: Uint8Array): number => {
@@ -191,15 +155,11 @@ export const DNGToICOConverter: React.FC = () => {
     // Create a simple colored canvas as fallback
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-    
-    // Determine the actual size to use
-    const actualSize = iconSize === 'default' ? 256 : iconSize;
-    
     if (!ctx) {
       const fallbackContent = `SAMPLE_ICO_FILE_START
 ORIGINAL_FILE: ${file.name}
 DNG_TO_ICO_CONVERSION: Sample conversion
-ICON_SIZE: ${actualSize}x${actualSize} pixels
+ICON_SIZE: ${iconSize}x${iconSize} pixels
 QUALITY: ${quality}
 NOTE: This is a sample ICO file generated because the DNG could not be processed in browser
 ICO_FILE_END`;
@@ -207,29 +167,29 @@ ICO_FILE_END`;
       return;
     }
 
-    canvas.width = actualSize;
-    canvas.height = actualSize;
+    canvas.width = iconSize;
+    canvas.height = iconSize;
     
     // Create a gradient background
-    const gradient = ctx.createLinearGradient(0, 0, actualSize, actualSize);
+    const gradient = ctx.createLinearGradient(0, 0, iconSize, iconSize);
     gradient.addColorStop(0, '#6366f1');
     gradient.addColorStop(1, '#8b5cf6');
     ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, actualSize, actualSize);
+    ctx.fillRect(0, 0, iconSize, iconSize);
     
     // Add camera icon effect
-    const centerX = actualSize / 2;
-    const centerY = actualSize / 2;
-    const cameraSize = actualSize * 0.6;
+    const centerX = iconSize / 2;
+    const centerY = iconSize / 2;
+    const cameraSize = iconSize * 0.6;
     
     ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
     ctx.fillRect(centerX - cameraSize/2, centerY - cameraSize/4, cameraSize, cameraSize/2);
     ctx.fillRect(centerX - cameraSize/4, centerY - cameraSize/2, cameraSize/2, cameraSize/4);
     
     // Add text if icon size is large enough
-    if (actualSize >= 48) {
+    if (iconSize >= 48) {
       ctx.fillStyle = 'white';
-      ctx.font = `${Math.max(8, actualSize / 8)}px Arial`;
+      ctx.font = `${Math.max(8, iconSize / 8)}px Arial`;
       ctx.textAlign = 'center';
       ctx.fillText('DNG', centerX, centerY + cameraSize/4 + 10);
     }
@@ -241,7 +201,7 @@ ICO_FILE_END`;
         const fallbackContent = `SAMPLE_ICO_FILE_START
 ORIGINAL_FILE: ${file.name}
 DNG_TO_ICO_CONVERSION: Sample conversion
-ICON_SIZE: ${actualSize}x${actualSize} pixels
+ICON_SIZE: ${iconSize}x${iconSize} pixels
 QUALITY: ${quality}
 ICO_FILE_END`;
         resolve(new Blob([fallbackContent], { type: 'image/x-icon' }));
@@ -249,22 +209,71 @@ ICO_FILE_END`;
     }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
   };
 
-  const handleConvert = async (file: File) => {
-    const options: any = {
-      format: 'ico',
-      quality: quality
-    };
-    
-    // For DNG to ICO, send sizes parameter for Python backend
-    if (iconSize === 'default') {
-      // Send multiple sizes for maximum compatibility
-      options.sizes = '16,32,48,64,128,256';
-    } else {
-      // Send the specific size
-      options.sizes = iconSize.toString();
-    }
-    
-    return await apiService.convertFile(file, options);
+  const handleConvert = async (file: File): Promise<Blob> => {
+    return new Promise((resolve, reject) => {
+      try {
+        const reader = new FileReader();
+        reader.onload = async (e) => {
+          try {
+            const arrayBuffer = e.target?.result as ArrayBuffer;
+            const uint8Array = new Uint8Array(arrayBuffer);
+            
+            // Look for embedded JPEG preview to convert to ICO
+            const jpegStart = findJPEGStart(uint8Array);
+            const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
+            
+            if (jpegStart !== -1 && jpegEnd !== -1) {
+              // Extract the JPEG preview and convert to ICO
+              const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
+              const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
+              const jpegUrl = URL.createObjectURL(jpegBlob);
+              
+              const img = new Image();
+              img.onload = () => {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                if (!ctx) {
+                  URL.revokeObjectURL(jpegUrl);
+                  generateSampleICO(file, resolve);
+                  return;
+                }
+                
+                canvas.width = iconSize;
+                canvas.height = iconSize;
+                ctx.drawImage(img, 0, 0, iconSize, iconSize);
+                
+                canvas.toBlob((blob) => {
+                  URL.revokeObjectURL(jpegUrl);
+                  if (blob) {
+                    resolve(blob);
+                  } else {
+                    generateSampleICO(file, resolve);
+                  }
+                }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
+              };
+              
+              img.onerror = () => {
+                URL.revokeObjectURL(jpegUrl);
+                generateSampleICO(file, resolve);
+              };
+              
+              img.src = jpegUrl;
+            } else {
+              // No JPEG preview found, generate sample
+              generateSampleICO(file, resolve);
+            }
+          } catch (error) {
+            generateSampleICO(file, resolve);
+          }
+        };
+        reader.onerror = () => {
+          generateSampleICO(file, resolve);
+        };
+        reader.readAsArrayBuffer(file);
+      } catch (error) {
+        generateSampleICO(file, resolve);
+      }
+    });
   };
 
   const handleSingleConvert = async () => {
@@ -274,12 +283,10 @@ ICO_FILE_END`;
     setError(null);
     
     try {
-      const result = await handleConvert(selectedFile);
-      setConvertedFile(result.blob);
-      setConvertedFilename(result.filename);
+      const converted = await handleConvert(selectedFile);
+      setConvertedFile(converted);
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
-      setError(message);
+      setError('Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -292,32 +299,30 @@ ICO_FILE_END`;
     setError(null);
     
     try {
-      const options: any = {
-        format: 'ico',
-        quality: quality
-      };
-      
-      // Only add iconSize if it's not 'default'
-      if (iconSize !== 'default') {
-        options.iconSize = iconSize;
+      for (let i = 0; i < batchFiles.length; i++) {
+        const file = batchFiles[i];
+        const converted = await handleConvert(file);
+        
+        // Create download link
+        const url = URL.createObjectURL(converted);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = file.name.replace('.dng', '.ico');
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        // Small delay between downloads
+        if (i < batchFiles.length - 1) {
+          await new Promise(resolve => setTimeout(resolve, 500));
+        }
       }
       
-      const result = await apiService.convertBatch(batchFiles, options);
-
-      setBatchResults(result.results ?? []);
       setBatchConverted(true);
-      const successes = (result.results ?? []).filter(r => r.success);
-      if (successes.length > 0) {
-        const failures = (result.results ?? []).filter(r => !r.success);
-        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
-      } else {
-        setError('Batch conversion failed. Please try again.');
-      }
+      setError(null);
     } catch (err) {
-      const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';
-      setError(message);
-      setBatchResults([]);
-      setBatchConverted(false);
+      setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -325,14 +330,13 @@ ICO_FILE_END`;
 
   
   const handleBatchDownload = async (result: any) => {
-    // Use downloadPath if available, otherwise fall back to storedFilename
-    const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
     if (!filename) {
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      await apiService.downloadAndSaveFile(filename, result.outputFilename);
+      await apiService.downloadFile(filename, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
@@ -343,8 +347,7 @@ ICO_FILE_END`;
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      // Use the filename from the API response, or fallback to replacing extension
-      a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.dng$/i, '.ico') : 'converted.ico');
+      a.download = selectedFile ? selectedFile.name.replace('.dng', '.ico') : 'converted.ico';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -376,14 +379,8 @@ ICO_FILE_END`;
   };
 
   return (
-    <>
-      <Helmet>
-        <title>{t('dng_to_ico.meta_title')}</title>
-        <meta name="description" content={t('dng_to_ico.meta_description')} />
-        <meta name="keywords" content="DNG to ICO, Digital Negative converter, RAW to ICO, Adobe DNG, Windows icons, icon converter, batch conversion, photography tools, camera RAW" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
-        <Header />
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
+      <Header />
       
       {/* Hero Section - Narrowed */}
       <div className="relative overflow-hidden bg-gradient-to-r from-amber-600 via-orange-600 to-red-700">
@@ -391,23 +388,23 @@ ICO_FILE_END`;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t('dng_to_ico.title')}
+              DNG to ICO Converter
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
-              {t('dng_to_ico.subtitle')}
+              Convert Adobe DNG raw images to ICO format for Windows icons. Transform professional camera files into high-quality Windows icons with multiple sizes.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>{t('common.lightning_fast')}</span>
+                <span>Lightning Fast</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>{t('common.secure')}</span>
+                <span>100% Secure</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>{t('common.no_registration')}</span>
+                <span>No Registration</span>
               </div>
             </div>
           </div>
@@ -432,7 +429,7 @@ ICO_FILE_END`;
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  {t('common.single_file')}
+                  Single File
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -443,7 +440,7 @@ ICO_FILE_END`;
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  {t('common.batch_convert')}
+                  Batch Convert
                 </button>
               </div>
 
@@ -451,18 +448,12 @@ ICO_FILE_END`;
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? t('dng_to_ico.upload_multiple') : t('dng_to_ico.upload_single')}
+                  {batchMode ? 'Upload Multiple DNG Files' : 'Upload DNG File'}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? t('dng_to_ico.upload_multiple_desc') 
-                    : t('dng_to_ico.upload_single_desc')
-                  }
-                </p>
-                <p className="text-sm text-gray-500 mb-4">
-                  {batchMode 
-                    ? t('dng_to_ico.batch_info') 
-                    : t('dng_to_ico.single_info')
+                    ? 'Select multiple DNG files to convert them all at once' 
+                    : 'Drag and drop your DNG file here or click to browse'
                   }
                 </p>
                 <input
@@ -477,7 +468,7 @@ ICO_FILE_END`;
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
                 >
-                  {t('dng_to_ico.choose_files')}
+                  Choose Files
                 </button>
               </div>
 
@@ -485,7 +476,7 @@ ICO_FILE_END`;
               {previewUrl && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">
-                    {imagePreview && imagePreview.width > 0 ? t('dng_to_ico.image_preview') : t('dng_to_ico.file_info')}
+                    {imagePreview && imagePreview.width > 0 ? 'DNG Image Preview' : 'DNG File Info'}
                   </h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     {imagePreview && imagePreview.width > 0 ? (
@@ -498,12 +489,12 @@ ICO_FILE_END`;
                         />
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({formatFileSize(selectedFile?.size || 0)})
+                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>{t('dng_to_ico.extracted_preview', { width: imagePreview.width, height: imagePreview.height })}</p>
+                            <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
                             <p className="text-amber-600 font-medium">
-                              {t('dng_to_ico.will_convert_to', { size: iconSize === 'default' ? t('dng_to_ico.original_size') : `${iconSize} × ${iconSize} pixels`, quality: quality })}
+                              Will convert to: {iconSize} × {iconSize} pixels ({quality} quality)
                             </p>
                           </div>
                         </div>
@@ -516,12 +507,12 @@ ICO_FILE_END`;
                         </div>
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({formatFileSize(selectedFile?.size || 0)})
+                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
                             <p>Adobe Digital Negative (DNG) camera file</p>
                             <p className="text-amber-600 font-medium">
-                              Will convert to: {iconSize === 'default' ? 'Original size' : `${iconSize} × ${iconSize} pixels`} ({quality} quality)
+                              Will convert to: {iconSize} × {iconSize} pixels ({quality} quality)
                             </p>
                             <p className="text-gray-400 text-xs mt-1">
                               No embedded preview found - will generate sample icon
@@ -537,38 +528,15 @@ ICO_FILE_END`;
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
-                    const sizeDisplay = getBatchSizeDisplay(totalSize);
-                    return (
-                      <>
-                        <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
-                            {sizeDisplay.text}
-                          </div>
-                        </div>
-                        {sizeDisplay.isWarning && (
-                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                            <div className="flex items-center">
-                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
-                              <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
-                              </span>
-                            </div>
-                          </div>
-                        )}
-                        <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
-                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                              <span className="text-sm font-medium">{file.name}</span>
-                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </>
-                    );
-                  })()}
+                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  <div className="space-y-2 max-h-40 overflow-y-auto">
+                    {batchFiles.map((file, index) => (
+                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                        <span className="text-sm font-medium">{file.name}</span>
+                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -579,7 +547,6 @@ ICO_FILE_END`;
                   <span className="text-red-700">{error}</span>
                 </div>
               )}
-
 
               {/* Convert Button */}
               <div className="mt-8">
@@ -596,7 +563,7 @@ ICO_FILE_END`;
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('dng_to_ico.convert_files', { count: batchFiles.length }) : t('dng_to_ico.convert_to_ico')}
+                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to ICO'}
                     </div>
                   )}
                 </button>
@@ -607,7 +574,7 @@ ICO_FILE_END`;
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
                     Your DNG file has been successfully converted to ICO format.
@@ -618,7 +585,7 @@ ICO_FILE_END`;
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      {t('dng_to_ico.download_ico')}
+                      Download ICO File
                     </button>
                     <button
                       onClick={resetForm}
@@ -631,42 +598,22 @@ ICO_FILE_END`;
                 </div>
               )}
 
-              {/* Batch Conversion Results */}
-              {batchConverted && batchMode && batchResults.length > 0 && (
+              {/* Batch Conversion Success */}
+              {batchConverted && batchMode && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('dng_to_ico.batch_conversion_complete')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchResults.length} DNG files have been successfully converted to ICO format.
+                    All {batchFiles.length} DNG files have been successfully converted to ICO format and downloaded.
                   </p>
-                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
-                    {batchResults.map((r, idx) => (
-                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
-                        <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">
-                            {r.outputFilename} {r.size ? `• ${formatFileSize(r.size)}` : ''}
-                          </p>
-                        </div>
-                        {r.success && (
-                          <button
-                            onClick={() => handleBatchDownload(r)}
-                            className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
-                          >
-                            <Download className="w-4 h-4 mr-1" />
-                            {t('dng_to_ico.download')}
-                          </button>
-                        )}
-                      </div>
-                    ))}
-                  </div>
                   <button
                     onClick={resetForm}
-                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    {t('dng_to_ico.convert_more_files')}
+                    Convert More Files
                   </button>
                 </div>
               )}
@@ -690,11 +637,10 @@ ICO_FILE_END`;
                 </label>
                 <select
                   value={iconSize}
-                  onChange={(e) => setIconSize(e.target.value === 'default' ? 'default' : Number(e.target.value))}
+                  onChange={(e) => setIconSize(Number(e.target.value))}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                 >
-                  <option value="default">Default (Original Size)</option>
-                  <option value={16}>16x16 pixels</option>
+                  <option value={16}>16x16 pixels (Default)</option>
                   <option value={32}>32x32 pixels</option>
                   <option value={48}>48x48 pixels</option>
                   <option value={64}>64x64 pixels</option>
@@ -702,9 +648,6 @@ ICO_FILE_END`;
                   <option value={256}>256x256 pixels</option>
                 </select>
                 <div className="mt-2 text-sm text-gray-600">
-                  {iconSize === 'default' && (
-                    <span className="text-cyan-600">✓ Preserves original image dimensions</span>
-                  )}
                   {iconSize === 16 && (
                     <span className="text-amber-600">✓ Standard Windows icon size (recommended)</span>
                   )}
@@ -747,16 +690,16 @@ ICO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                {t('dng_to_ico.why_choose')}
+                Why Choose Our Converter?
               </h3>
               <div className="space-y-4">
                 {[
-                  "Professional RAW image processing",
-                  "Multiple icon sizes (16px to 256px)",
-                  "Original size preservation option",
-                  "High-quality DNG decoding",
-                  "Windows icon format support",
-                  "Fast batch conversion"
+                  "Adobe Digital Negative support",
+                  "High-resolution icon creation",
+                  "Multiple icon size support",
+                  "Professional camera file processing",
+                  "Windows icon compatibility",
+                  "Batch processing support"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -770,16 +713,16 @@ ICO_FILE_END`;
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-amber-600" />
-                {t('dng_to_ico.perfect_for')}
+                Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  "Photography studio workflows",
-                  "Desktop application icons",
-                  "Professional software development",
-                  "Digital camera file processing",
-                  "Windows icon creation",
-                  "RAW image conversion"
+                  "Professional photography workflows",
+                  "High-quality Windows icons",
+                  "Adobe Lightroom integration",
+                  "Digital asset management",
+                  "Brand identity creation",
+                  "Professional icon design"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -797,7 +740,7 @@ ICO_FILE_END`;
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← {t('dng_to_ico.back_to_home')}
+            ← Back to Home
           </button>
         </div>
 
@@ -812,7 +755,7 @@ ICO_FILE_END`;
               Converting Adobe DNG raw images to ICO format is essential for professional photography workflows, digital asset management, and creating high-quality Windows icons. While DNG files contain uncompressed raw image data from professional cameras, ICO format provides the perfect solution for creating Windows icons with multiple resolutions and professional quality.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('dng_to_ico.key_benefits')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ICO Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
@@ -844,7 +787,7 @@ ICO_FILE_END`;
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('dng_to_ico.common_use_cases')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -881,22 +824,22 @@ ICO_FILE_END`;
             </div>
 
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">{t('dng_to_ico.ready_to_convert')}</h3>
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your DNG Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                {t('dng_to_ico.ready_description')}
+                Use our free online DNG to ICO converter to transform your professional camera files into high-quality Windows icons.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  {t('dng_to_ico.start_converting')}
+                  Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors"
                 >
-                  {t('dng_to_ico.back_to_home')}
+                  Back to Home
                 </button>
               </div>
             </div>
@@ -922,7 +865,6 @@ ICO_FILE_END`;
           </div>
         </div>
       </footer>
-      </div>
-    </>
+    </div>
   );
 };

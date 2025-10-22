@@ -65,6 +65,17 @@ export const CSVToHTMLConverter: React.FC = () => {
   const handleSingleConvertWithLimits = async () => {
     if (!selectedFile) return;
     
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+    
+    setConversionLimitReached(false);
     await handleSingleConvert();
     
     // Refresh conversion limit banner after conversion
@@ -73,6 +84,17 @@ export const CSVToHTMLConverter: React.FC = () => {
   const handleBatchConvertWithLimits = async () => {
     if (batchFiles.length === 0) return;
     
+    // Check conversion limits for anonymous users
+    if (!user) {
+      const limitCheck = await ConversionLimits.checkServerLimits();
+      if (limitCheck.reached) {
+        setConversionLimitReached(true);
+        setError(limitCheck.message);
+        return;
+      }
+    }
+    
+    setConversionLimitReached(false);
     await handleBatchConvert();
     
     // Refresh conversion limit banner after conversion
@@ -244,7 +266,7 @@ export const CSVToHTMLConverter: React.FC = () => {
               <div className="mt-8">
                 <button
                   onClick={batchMode ? handleBatchConvertWithLimits : handleSingleConvertWithLimits}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  disabled={isConverting || conversionLimitReached || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-700 hover:to-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
                   {isConverting ? (
@@ -517,7 +539,10 @@ export const CSVToHTMLConverter: React.FC = () => {
           </div>
         </div>
       </footer>
+
       </div>
+
       </>
-    );
+
+      );
 };

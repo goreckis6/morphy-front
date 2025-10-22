@@ -19,11 +19,6 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
-import { apiService } from '../../services/api';
-
-// Custom limits for BMP image conversion
-const BATCH_SIZE_LIMIT = 100 * 1024 * 1024; // 100MB total batch size
-const SINGLE_FILE_LIMIT = 100 * 1024 * 1024; // 100MB per file
 
 export const BMPToWebPConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -47,16 +42,10 @@ export const BMPToWebPConverter: React.FC = () => {
     validateSingleFile,
     validateBatchFiles,
     getBatchInfoMessage,
+    getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
   } = useFileValidation();
-
-  // Custom batch size display for 100MB limit
-  const getBatchSizeDisplay = (totalSize: number) => {
-    const text = `Total size: ${formatFileSize(totalSize)} of 100.00 MB allowed.`;
-    const isWarning = totalSize > BATCH_SIZE_LIMIT * 0.8;
-    return { text, isWarning };
-  };
 
   // Ensure language is synced with URL on mount
   useEffect(() => {
@@ -94,37 +83,63 @@ export const BMPToWebPConverter: React.FC = () => {
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []) as File[];
+    const files = Array.from(event.target.files || []);
     const bmpFiles = files.filter(file => 
       file.type === 'image/bmp' || file.name.toLowerCase().endsWith('.bmp')
     );
-    
-    // Check for files larger than 100MB per file
-    const oversizedFile = bmpFiles.find(file => file.size > SINGLE_FILE_LIMIT);
-    
-    if (oversizedFile) {
-      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 100MB per file.`);
-      setBatchFiles([]);
-      return;
-    }
-    
-    // Check total batch size
-    const totalSize = bmpFiles.reduce((sum, file) => sum + file.size, 0);
-    if (totalSize > BATCH_SIZE_LIMIT) {
-      setError(`Total batch size (${formatFileSize(totalSize)}) exceeds the limit of 100MB.`);
-      setBatchFiles([]);
-      return;
-    }
-    
-    // Check max number of files
-    if (bmpFiles.length > 20) {
-      setError(`Too many files. Maximum allowed is 20 files per batch.`);
-      setBatchFiles([]);
-      return;
-    }
-    
     setBatchFiles(bmpFiles);
     setError(null);
+  };
+
+  const handleConvert = async (file: File): Promise<Blob> => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      
+      if (!ctx) {
+        reject(new Error('Canvas context not available'));
+        return;
+      }
+      
+      img.onload = () => {
+        try {
+          // Set canvas size to match the original image
+          canvas.width = img.width;
+          canvas.height = img.height;
+          
+          // Draw the image on canvas
+          ctx.drawImage(img, 0, 0);
+          
+          // Convert to WebP format
+          const qualityValue = quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5;
+          canvas.toBlob((blob) => {
+            if (blob) {
+              // Return the actual WebP blob (real image file)
+              resolve(blob);
+            } else {
+              reject(new Error('Failed to convert image'));
+            }
+          }, 'image/webp', lossless ? 1.0 : qualityValue);
+        } catch (error) {
+          reject(error);
+        }
+      };
+      
+      img.onerror = () => {
+        reject(new Error('Failed to load image'));
+      };
+      
+      // Load the image from the file
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        img.src = e.target?.result as string;
+      };
+      reader.onerror = () => {
+        reject(new Error('Failed to read file'));
+      };
+      reader.readAsDataURL(file);
+    });
   };
 
   const handleSingleConvert = async () => {
@@ -134,8 +149,8 @@ export const BMPToWebPConverter: React.FC = () => {
     setError(null);
     
     try {
-      const result = await apiService.convertFile(selectedFile, { format: 'webp' });
-      setConvertedFile(result.blob);
+      const converted = await handleConvert(selectedFile);
+      setConvertedFile(converted);
     } catch (err) {
       setError('Conversion failed. Please try again.');
     } finally {
@@ -151,40 +166,17 @@ export const BMPToWebPConverter: React.FC = () => {
     setBatchResults([]);
     
     try {
-      console.log('Starting batch conversion for', batchFiles.length, 'files');
-      const result = await apiService.convertBatch(batchFiles, { format: 'webp' });
-      console.log('Batch conversion result:', result);
+      const results: Array<{ file: File; blob: Blob }> = [];
       
-      if (result.success && result.results) {
-        const results: Array<{ file: File; blob: Blob }> = [];
-        
-        for (let i = 0; i < result.results.length; i++) {
-          const conversionResult = result.results[i];
-          const file = batchFiles[i];
-          
-          console.log(`Processing result ${i + 1}:`, {
-            success: conversionResult.success,
-            hasDownloadPath: !!conversionResult.downloadPath,
-            downloadPath: conversionResult.downloadPath?.substring(0, 50)
-          });
-          
-          if (conversionResult.success && conversionResult.downloadPath) {
-            // Convert base64 to blob
-            const response = await fetch(conversionResult.downloadPath);
-            const blob = await response.blob();
-            console.log(`Blob created for ${file.name}:`, blob.size, 'bytes');
-            results.push({ file, blob });
-          }
-        }
-        
-        console.log('Final batch results:', results.length, 'files converted');
-        setBatchResults(results);
-        setBatchConverted(true);
-        setError(null);
-      } else {
-        console.error('Batch conversion failed:', result);
-        setError('Batch conversion failed. Please try again.');
+      for (let i = 0; i < batchFiles.length; i++) {
+        const file = batchFiles[i];
+        const converted = await handleConvert(file);
+        results.push({ file, blob: converted });
       }
+      
+      setBatchResults(results);
+      setBatchConverted(true);
+      setError(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
     } finally {
@@ -194,14 +186,13 @@ export const BMPToWebPConverter: React.FC = () => {
 
   
   const handleBatchDownload = async (result: any) => {
-    // Use downloadPath if available, otherwise fall back to storedFilename
-    const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!downloadPath) {
+    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
+    if (!filename) {
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
+      await apiService.downloadFile(filename, result.outputFilename);
     } catch (error) {
       setError('Download failed. Please try again.');
     }
@@ -217,7 +208,6 @@ export const BMPToWebPConverter: React.FC = () => {
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      
     }
   };
 
@@ -230,7 +220,6 @@ export const BMPToWebPConverter: React.FC = () => {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    
   };
 
   const handleBack = () => {
@@ -288,7 +277,7 @@ export const BMPToWebPConverter: React.FC = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           {/* Main Conversion Panel */}
@@ -392,10 +381,20 @@ export const BMPToWebPConverter: React.FC = () => {
                       <>
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">{t('bmp_to_webp.selected_files')} ({batchFiles.length})</h4>
-                          <div className="text-sm font-medium text-gray-600">
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
                         </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                {t('bmp_to_webp.batch_size_warning')}
+                              </span>
+                            </div>
+                          </div>
+                        )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
                           {batchFiles.map((file, index) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
@@ -411,10 +410,10 @@ export const BMPToWebPConverter: React.FC = () => {
               )}
 
               {/* Error Message */}
-              {(error || validationError) && (
+              {error && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error || validationError}</span>
+                  <span className="text-red-700">{error}</span>
                 </div>
               )}
 

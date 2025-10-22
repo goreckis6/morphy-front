@@ -1,7 +1,8 @@
 
 // API service for backend communication
 const PRODUCTION_DEFAULTS = [
-  'https://api.morphyimg.com'
+  'https://morphy-2-n2tb.onrender.com', // Current testing backend
+  'https://morphyimg.ovh' // Future custom domain
 ];
 
 const normalizeBaseUrl = (url: string | undefined) => {
@@ -131,8 +132,6 @@ class ApiService {
       endpoint = '/convert/eps-to-webp/single';
     } else if (fileName.endsWith('.gif') && options.format === 'ico') {
       endpoint = '/convert/gif-to-ico/single';
-    } else if (fileName.endsWith('.csv') && options.format === 'epub') {
-      endpoint = '/convert/csv-to-epub/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -147,6 +146,8 @@ class ApiService {
       const downloadResponse = await this.makeRequest(jsonResult.downloadPath);
       const blob = await downloadResponse.blob();
       
+      // Track conversion in global counter
+      
       return {
         blob,
         filename: jsonResult.filename,
@@ -158,6 +159,8 @@ class ApiService {
       const contentDisposition = response.headers.get('Content-Disposition');
       const filename = this.extractFilename(contentDisposition) || 
                      `${file.name.replace(/\.[^.]+$/, '')}.${options.format || 'bin'}`;
+
+      // Track conversion in global counter
 
       return {
         blob,
@@ -206,10 +209,7 @@ class ApiService {
       endpoint = '/convert/eps-to-webp/batch';
     } else if (firstFileName?.endsWith('.gif') && options.format === 'ico') {
       endpoint = '/convert/gif-to-ico/batch';
-    } else if (firstFileName?.endsWith('.csv') && options.format === 'epub') {
-      endpoint = '/convert/csv-to-epub/batch';
     }
-    
 
     console.log('API: Making request to', endpoint, 'with options:', options);
     const response = await this.makeRequest(endpoint, 'POST', formData);

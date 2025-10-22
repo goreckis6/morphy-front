@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { RefreshCw, ArrowLeft, FileText, Image, Database, Code, Download, Search } from 'lucide-react';
+import React from 'react';
+import { RefreshCw, ArrowLeft, FileText, Image, Database, Code, Download } from 'lucide-react';
 import { Header } from './Header';
 
 interface ConversionFormat {
@@ -11,12 +11,50 @@ interface ConversionFormat {
 }
 
 export const ConverterHub: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
   const conversionCategories = [
+    {
+      title: "DEVELOPER TOOLS",
+      formats: [
+        { 
+          name: "AVRO to CSV Converter", 
+          description: "Convert Apache AVRO files to CSV format for data analysis and spreadsheet applications",
+          path: "/convert/avro-to-csv",
+          inputFormat: "AVRO",
+          outputFormat: "CSV"
+        },
+        { 
+          name: "AVRO to JSON Converter", 
+          description: "Convert AVRO files to JSON format for web applications and APIs",
+          path: "/convert/avro-to-json",
+          inputFormat: "AVRO",
+          outputFormat: "JSON"
+        },
+        { 
+          name: "AVRO to NDJSON Converter", 
+          description: "Convert AVRO to Newline Delimited JSON for streaming data processing",
+          path: "/convert/avro-to-ndjson",
+          inputFormat: "AVRO",
+          outputFormat: "NDJSON"
+        },
+        { 
+          name: "CSV to AVRO Converter", 
+          description: "Convert CSV files to AVRO format for big data processing and storage",
+          path: "/convert/csv-to-avro",
+          inputFormat: "CSV",
+          outputFormat: "AVRO"
+        }
+      ]
+    },
     {
       title: "IMAGE CONVERTERS",
       formats: [
+        { 
+          name: "BMP to ICO Converter", 
+          description: "Convert BMP images to ICO format for Windows icons and applications",
+          path: "/convert/bmp-to-ico",
+          inputFormat: "BMP",
+          outputFormat: "ICO"
+        },
         { 
           name: "BMP to WebP Converter", 
           description: "Convert BMP images to WebP format for better web performance and smaller file sizes",
@@ -434,34 +472,6 @@ export const ConverterHub: React.FC = () => {
     }
   ];
 
-  // Filter categories based on search query
-  const filteredCategories = useMemo(() => {
-    if (!searchQuery.trim()) {
-      return conversionCategories;
-    }
-
-    const query = searchQuery.toLowerCase();
-    return conversionCategories.map(category => ({
-      ...category,
-      formats: category.formats.filter(format => 
-        format.name.toLowerCase().includes(query) ||
-        format.description.toLowerCase().includes(query) ||
-        format.inputFormat.toLowerCase().includes(query) ||
-        format.outputFormat.toLowerCase().includes(query) ||
-        `${format.inputFormat} to ${format.outputFormat}`.toLowerCase().includes(query)
-      )
-    })).filter(category => category.formats.length > 0);
-  }, [searchQuery, conversionCategories]);
-
-  // Count total converters
-  const totalConverters = useMemo(() => {
-    return conversionCategories.reduce((sum, cat) => sum + cat.formats.length, 0);
-  }, [conversionCategories]);
-
-  const filteredCount = useMemo(() => {
-    return filteredCategories.reduce((sum, cat) => sum + cat.formats.length, 0);
-  }, [filteredCategories]);
-
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -473,120 +483,92 @@ export const ConverterHub: React.FC = () => {
       {/* Back Button */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-3 sm:py-4">
+          <div className="py-4">
             <button
               onClick={handleBack}
-              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors text-sm sm:text-base min-h-[44px] touch-manipulation"
+              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
             </button>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div className="text-center mb-8 sm:mb-12">
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4">
-            <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
-              <RefreshCw className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center space-x-3 mb-4">
+            <div className="p-3 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
+              <RefreshCw className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">File Converters</h1>
+            <h1 className="text-4xl font-bold text-gray-900">File Converters</h1>
           </div>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Convert files between different formats with our specialized converters. 
             Each converter is optimized for specific use cases and file types.
           </p>
+        </div>
 
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto px-4">
-            <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
-                <Search className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
+        {/* Universal Converter */}
+        <div className="mb-12">
+          <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-200">
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
+                <Database className="w-8 h-8 text-white" />
               </div>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search converters... (e.g., CSV to XML)"
-                className="block w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 border-2 border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base sm:text-lg"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute inset-y-0 right-0 pr-3 sm:pr-4 flex items-center text-gray-400 hover:text-gray-600"
-                >
-                  <span className="text-xs sm:text-sm font-medium">Clear</span>
-                </button>
-              )}
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900">Universal Converter</h2>
+                <p className="text-gray-600">Convert between any supported formats</p>
+              </div>
             </div>
-            {searchQuery && (
-              <p className="mt-2 text-xs sm:text-sm text-gray-600">
-                Showing results for "{searchQuery}"
-              </p>
-            )}
+            <p className="text-gray-700 mb-6">
+              Our universal converter supports 50+ file formats and can convert between any compatible types. 
+              Perfect for general file conversion needs.
+            </p>
+            <a
+              href="/#converter"
+              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              <RefreshCw className="w-5 h-5" />
+              <span>Open Universal Converter</span>
+            </a>
           </div>
         </div>
 
-        {/* Results Count */}
-        {searchQuery && (
-          <div className="mb-6 sm:mb-8 text-center px-4">
-            <p className="text-sm sm:text-lg text-gray-700">
-              Found <span className="font-bold text-blue-600">{filteredCount}</span> converter{filteredCount !== 1 ? 's' : ''} 
-              {filteredCount < totalConverters && <span className="text-gray-500"> out of {totalConverters}</span>}
-            </p>
-          </div>
-        )}
-
-        {/* No Results */}
-        {searchQuery && filteredCategories.length === 0 && (
-          <div className="text-center py-8 sm:py-12 bg-white rounded-xl border-2 border-dashed border-gray-300 mx-4 sm:mx-0">
-            <Search className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 text-gray-400" />
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">No converters found</h3>
-            <p className="text-sm sm:text-base text-gray-600 mb-4 px-4">Try searching with different keywords like "CSV", "PDF", or "Image"</p>
-            <button
-              onClick={() => setSearchQuery('')}
-              className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base"
-            >
-              Clear Search
-            </button>
-          </div>
-        )}
-
         {/* Conversion Categories */}
-        <div className="space-y-8 sm:space-y-12">
-          {filteredCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="px-4 sm:px-0">
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">{category.title}</h2>
+        <div className="space-y-12">
+          {conversionCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex}>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">{category.title}</h2>
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 {category.formats.map((format, formatIndex) => (
                   <div
                     key={formatIndex}
-                    className={`px-4 sm:px-6 py-4 sm:py-5 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 transition-colors ${
+                    className={`px-6 py-4 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 transition-colors ${
                       formatIndex === 0 ? 'rounded-t-lg' : ''
                     } ${formatIndex === category.formats.length - 1 ? 'rounded-b-lg' : ''}`}
                   >
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-3 sm:space-y-0">
-                      <div className="flex-1 min-w-0">
-                        <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 mb-2">
-                          <h3 className="text-base sm:text-lg font-semibold text-gray-900 truncate">{format.name}</h3>
-                          <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500">
-                            <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium whitespace-nowrap">
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-3 mb-2">
+                          <h3 className="text-lg font-semibold text-gray-900">{format.name}</h3>
+                          <div className="flex items-center space-x-1 text-sm text-gray-500">
+                            <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
                               {format.inputFormat}
                             </span>
-                            <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-180 text-gray-400 flex-shrink-0" />
-                            <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium whitespace-nowrap">
+                            <ArrowLeft className="w-4 h-4 rotate-180 text-gray-400" />
+                            <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium">
                               {format.outputFormat}
                             </span>
                           </div>
                         </div>
-                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{format.description}</p>
+                        <p className="text-gray-600 text-sm">{format.description}</p>
                       </div>
-                      <div className="flex-shrink-0 sm:ml-4">
+                      <div className="ml-4">
                         <a
                           href={format.path}
-                          className="inline-flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors w-full sm:w-auto min-h-[44px] touch-manipulation"
+                          className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
                         >
                           <RefreshCw className="w-4 h-4" />
                           <span>Convert</span>
@@ -601,46 +583,46 @@ export const ConverterHub: React.FC = () => {
         </div>
 
         {/* Features Section */}
-        <div className="mt-12 sm:mt-16 bg-white rounded-2xl shadow-lg p-6 sm:p-8 mx-4 sm:mx-0">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 text-center mb-6 sm:mb-8">Why Choose Our Converters?</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="mt-16 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Why Choose Our Converters?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <RefreshCw className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Fast & Reliable</h3>
-              <p className="text-sm sm:text-base text-gray-600">Convert files quickly with our optimized conversion engines</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Fast & Reliable</h3>
+              <p className="text-gray-600">Convert files quickly with our optimized conversion engines</p>
             </div>
             <div className="text-center">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <Database className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Database className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">Secure & Private</h3>
-              <p className="text-sm sm:text-base text-gray-600">Your files are processed locally and never stored on our servers</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Secure & Private</h3>
+              <p className="text-gray-600">Your files are processed locally and never stored on our servers</p>
             </div>
-            <div className="text-center sm:col-span-2 lg:col-span-1">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
+            <div className="text-center">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">High Quality</h3>
-              <p className="text-sm sm:text-base text-gray-600">Maintain file quality and integrity during conversion</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">High Quality</h3>
+              <p className="text-gray-600">Maintain file quality and integrity during conversion</p>
             </div>
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8 sm:py-12 mt-12 sm:mt-16">
+      <footer className="bg-gray-800 text-white py-12 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
+            <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="p-2 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
-                <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                <RefreshCw className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-xl sm:text-2xl font-bold">MorphyIMG</h2>
+              <h2 className="text-2xl font-bold">MorphyIMG</h2>
             </div>
             
-            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 px-4">
+            <p className="text-gray-300 mb-6">
               The ultimate file conversion and viewing platform for professionals and everyday users.
             </p>
           </div>

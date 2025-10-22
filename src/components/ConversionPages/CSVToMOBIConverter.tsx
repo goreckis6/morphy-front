@@ -67,26 +67,6 @@ export const CSVToMOBIConverter: React.FC = () => {
     }
   }, []);
 
-  // Custom conversion handlers
-  const handleSingleConvertWithLimits = async () => {
-    if (!selectedFile) return;
-    await handleSingleConvert();
-  };
-
-  const handleBatchConvertWithLimits = async () => {
-    if (batchFiles.length === 0) return;
-    await handleBatchConvert();
-  };
-
-  // Custom download handlers
-  const handleDownloadWithRefresh = async () => {
-    await handleDownload();
-  };
-
-  const handleBatchDownloadWithRefresh = async (result: any) => {
-    await handleBatchDownload(result);
-  };
-
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -238,10 +218,19 @@ export const CSVToMOBIConverter: React.FC = () => {
                 </div>
               )}
 
+              {/* Conversion Time Info */}
+              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 text-blue-500 mr-2" />
+                  <span className="text-sm text-blue-700 font-medium">
+                    {t('csv_to_mobi.large_file_warning')}
+                  </span>
+                </div>
+              </div>
 
               <div className="mt-8">
                 <button
-                  onClick={batchMode ? handleBatchConvertWithLimits : handleSingleConvertWithLimits}
+                  onClick={batchMode ? handleBatchConvert : handleSingleConvert}
                   disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
                   className="w-full bg-gradient-to-r from-amber-600 to-yellow-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-amber-700 hover:to-yellow-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
                 >
@@ -257,19 +246,6 @@ export const CSVToMOBIConverter: React.FC = () => {
                     </div>
                   )}
                 </button>
-                
-                {/* Show conversion time info for large files (above 5 MB) */}
-                {((!batchMode && selectedFile && selectedFile.size > 5 * 1024 * 1024) ||
-                  (batchMode && batchFiles.length > 0 && batchFiles.some(f => f.size > 5 * 1024 * 1024))) && (
-                  <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                    <div className="flex items-center">
-                      <Clock className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm text-blue-700 font-medium">
-                        {t('csv_to_mobi.large_file_info')}
-                      </span>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {convertedFile && !batchMode && (
@@ -283,7 +259,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
-                      onClick={handleDownloadWithRefresh}
+                      onClick={handleDownload}
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
@@ -334,7 +310,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                         </div>
                         {r.success && (r.downloadPath || r.downloadUrl) && (
                           <button
-                            onClick={() => handleBatchDownloadWithRefresh(r)}
+                            onClick={() => handleBatchDownload(r)}
                             className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
                           >
                             {t('common.download')}

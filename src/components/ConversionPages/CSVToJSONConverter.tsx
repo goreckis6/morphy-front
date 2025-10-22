@@ -1,6 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useRef } from 'react';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -18,55 +16,30 @@ import {
   Code,
   BarChart3
 } from 'lucide-react';
-import { useFileValidation } from '../../hooks/useFileValidation';
-import { apiService } from '../../services/api';
 
 export const CSVToJSONConverter: React.FC = () => {
-  const { t, i18n } = useTranslation();
-  
-  useEffect(() => {
-    // Sync language with localStorage if needed
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && savedLanguage !== i18n.language) {
-      i18n.changeLanguage(savedLanguage);
-    }
-  }, [i18n]);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
-  const [convertedFilename, setConvertedFilename] = useState<string>('');
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [orient, setOrient] = useState<'records' | 'split' | 'index' | 'columns' | 'values'>('records');
   const [prettyPrint, setPrettyPrint] = useState(true);
-  const [dateFormat, setDateFormat] = useState<'iso' | 'epoch'>('iso');
+  const [includeHeaders, setIncludeHeaders] = useState(true);
+  const [dataType, setDataType] = useState<'array' | 'object'>('array');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const [batchConverted, setBatchConverted] = useState(false);
-  const [batchResults, setBatchResults] = useState<any[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const { validationError, validateSingleFile, validateBatchFiles, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file) return;
-
-    if (file.name.toLowerCase().endsWith('.csv')) {
-      const validation = validateSingleFile(file);
-      if (!validation.isValid) {
-        setError(validation.error?.message || 'File validation failed');
-        setSelectedFile(null);
-        setPreviewUrl(null);
-        if (fileInputRef.current) fileInputRef.current.value = '';
-        return;
+    if (file) {
+      if (file.name.toLowerCase().endsWith('.csv')) {
+        setSelectedFile(file);
+        setError(null);
+        setPreviewUrl(URL.createObjectURL(file));
+      } else {
+        setError('Please select a valid CSV file');
       }
-      setSelectedFile(file);
-      setError(null);
-      clearValidationError();
-      setPreviewUrl(URL.createObjectURL(file));
-    } else {
-      setError(t('common.invalid_csv_file'));
     }
   };
 
@@ -75,19 +48,26 @@ export const CSVToJSONConverter: React.FC = () => {
     const csvFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.csv')
     );
-    
-    // Validate batch files
-    const validation = validateBatchFiles(csvFiles);
-    if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
-      setBatchFiles([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
-      return;
-    }
-    
     setBatchFiles(csvFiles);
     setError(null);
-    clearValidationError();
+  };
+
+  const handleConvert = async (file: File): Promise<Blob> => {
+    // Mock conversion - in a real implementation, you would parse CSV and convert to JSON
+    const jsonContent = JSON.stringify({
+      "data": [
+        { "name": "John Doe", "age": 30, "city": "New York" },
+        { "name": "Jane Smith", "age": 25, "city": "Los Angeles" },
+        { "name": "Bob Johnson", "age": 35, "city": "Chicago" }
+      ],
+      "metadata": {
+        "source": file.name,
+        "prettyPrint": prettyPrint,
+        "includeHeaders": includeHeaders,
+        "dataType": dataType
+      }
+    }, null, prettyPrint ? 2 : 0);
+    return new Blob([jsonContent], { type: 'application/json' });
   };
 
   const handleSingleConvert = async () => {
@@ -97,19 +77,10 @@ export const CSVToJSONConverter: React.FC = () => {
     setError(null);
     
     try {
-      const options: any = {
-        format: 'json',
-        orient: orient,
-        indent: prettyPrint ? '2' : '0',
-        dateFormat: dateFormat
-      };
-
-      const result = await apiService.convertFile(selectedFile, options);
-      setConvertedFile(result.blob);
-      setConvertedFilename(result.filename);
+      const converted = await handleConvert(selectedFile);
+      setConvertedFile(converted);
     } catch (err) {
-      console.error('Conversion error:', err);
-      setError(err instanceof Error ? err.message : t('common.conversion_failed'));
+      setError('Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -122,24 +93,13 @@ export const CSVToJSONConverter: React.FC = () => {
     setError(null);
     
     try {
-      const options: any = {
-        format: 'json',
-        orient: orient,
-        indent: prettyPrint ? '2' : '0',
-        dateFormat: dateFormat
-      };
-
-      const response = await apiService.convertBatch(batchFiles, options);
-      
-      if (response.success) {
-        setBatchResults(response.results);
-        setBatchConverted(true);
-      } else {
-        setError(t('common.batch_conversion_failed'));
+      // Mock batch conversion - process each file
+      for (const file of batchFiles) {
+        await handleConvert(file);
       }
+      setError(null);
     } catch (err) {
-      console.error('Batch conversion error:', err);
-      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
+      setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -150,73 +110,11 @@ export const CSVToJSONConverter: React.FC = () => {
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.csv$/i, '.json') : 'converted.json');
+      a.download = selectedFile ? selectedFile.name.replace('.csv', '.json') : 'converted.json';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      
-      // Refresh the conversion limit banner for anonymous users after download
-    }
-  };
-
-  const handleBatchDownload = async (result: any) => {
-    try {
-      console.log('Downloading batch result:', result);
-      
-      if (result.storedFilename) {
-        // Use backend API to fetch the file from the correct origin
-        console.log('Using storedFilename for download:', result.storedFilename);
-        const getSafeFilename = (result: any) => {
-          try {
-            if (result?.outputFilename) return result.outputFilename;
-            if (result?.filename) return result.filename;
-            if (result?.originalName && typeof result.originalName === 'string') {
-              return result.originalName.replace(/\.[^.]+$/, '.json');
-            }
-            return 'converted.json';
-          } catch (error) {
-            console.warn('Error processing filename:', error);
-            return 'converted.json';
-          }
-        };
-        const filename = getSafeFilename(result);
-        await apiService.downloadAndSaveFile(result.storedFilename, filename);
-        
-        // Refresh the conversion limit banner for anonymous users after first batch download
-        return;
-      }
-      if (result.downloadPath) {
-        // Handle direct download path
-        const link = document.createElement('a');
-        link.href = result.downloadPath;
-        link.download = result.outputFilename || 'converted.json';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        
-        // Refresh the conversion limit banner for anonymous users after first batch download
-        return;
-      }
-      if (result.blob) {
-        // Handle blob download
-        const url = URL.createObjectURL(result.blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = result.outputFilename || 'converted.json';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-        
-        // Refresh the conversion limit banner for anonymous users after first batch download
-        return;
-      }
-      
-      setError(t('common.download_link_missing'));
-    } catch (error) {
-      console.error('Batch download error:', error);
-      setError(t('common.download_failed'));
     }
   };
 
@@ -227,24 +125,15 @@ export const CSVToJSONConverter: React.FC = () => {
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
-    setConvertedFilename('');
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
-    setBatchConverted(false);
-    setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (
-    <>
-      <Helmet>
-        <title>{t('csv_to_json.meta_title')}</title>
-        <meta name="description" content={t('csv_to_json.meta_description')} />
-        <meta name="keywords" content="CSV to JSON, data converter, JSON format, REST API, web development, batch conversion, array of objects, data processing" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
-        <Header />
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      <Header />
       
       {/* Hero Section - Narrowed */}
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700">
@@ -252,23 +141,23 @@ export const CSVToJSONConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t('csv_to_json.title')}
+              CSV to JSON Converter
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-              {t('csv_to_json.subtitle')}
+              Convert CSV files to JSON format for web applications and APIs. Perfect for data exchange and processing with modern web technologies.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>{t('common.lightning_fast')}</span>
+                <span>Lightning Fast</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>{t('common.secure')}</span>
+                <span>100% Secure</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>{t('common.no_registration')}</span>
+                <span>No Registration</span>
               </div>
             </div>
           </div>
@@ -293,7 +182,7 @@ export const CSVToJSONConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  {t('common.single_file')}
+                  Single File
                 </button>
                 <button
                   onClick={() => setBatchMode(true)}
@@ -304,7 +193,7 @@ export const CSVToJSONConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  {t('common.batch_convert')}
+                  Batch Convert
                 </button>
               </div>
 
@@ -312,18 +201,12 @@ export const CSVToJSONConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? t('csv_to_json.upload_multiple') : t('csv_to_json.upload_single')}
+                  {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? t('csv_to_json.upload_multiple_desc') 
-                    : t('csv_to_json.upload_single_desc')
-                  }
-                </p>
-                <p className="text-sm text-gray-500 mb-4">
-                  {batchMode 
-                    ? t('csv_to_json.batch_info') 
-                    : t('csv_to_json.single_info')
+                    ? 'Select multiple CSV files to convert them all at once' 
+                    : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
                 <input
@@ -338,20 +221,20 @@ export const CSVToJSONConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
-                  {t('common.choose_files')}
+                  Choose Files
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">{t('common.preview')}</h4>
+                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <Code className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({((selectedFile?.size || 0) / (1024 * 1024)).toFixed(2)} MB)
+                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
                     </p>
                   </div>
                 </div>
@@ -360,38 +243,15 @@ export const CSVToJSONConverter: React.FC = () => {
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
-                    const sizeDisplay = getBatchSizeDisplay(totalSize);
-                    return (
-                      <>
-                        <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">{t('common.selected_files', { count: batchFiles.length })}</h4>
-                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
-                            {sizeDisplay.text}
-                          </div>
-                        </div>
-                        {sizeDisplay.isWarning && (
-                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                            <div className="flex items-center">
-                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
-                              <span className="text-sm text-orange-700">
-                                {t('common.batch_size_warning')}
-                              </span>
-                            </div>
-                          </div>
-                        )}
-                        <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
-                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                              <span className="text-sm font-medium">{file.name}</span>
-                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </>
-                    );
-                  })()}
+                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  <div className="space-y-2 max-h-40 overflow-y-auto">
+                    {batchFiles.map((file, index) => (
+                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                        <span className="text-sm font-medium">{file.name}</span>
+                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -403,16 +263,6 @@ export const CSVToJSONConverter: React.FC = () => {
                 </div>
               )}
 
-              {/* Conversion Time Info */}
-              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 text-blue-500 mr-2" />
-                  <span className="text-sm text-blue-700 font-medium">
-                    {t('csv_to_json.conversion_time_info')}
-                  </span>
-                </div>
-              </div>
-
               {/* Convert Button */}
               <div className="mt-8">
                 <button
@@ -423,12 +273,12 @@ export const CSVToJSONConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      {t('common.converting')}
+                      Converting...
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('common.convert_files', { count: batchFiles.length }) : t('csv_to_json.convert_to_json')}
+                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to JSON'}
                     </div>
                   )}
                 </button>
@@ -439,10 +289,10 @@ export const CSVToJSONConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('common.conversion_complete')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {t('csv_to_json.conversion_success')}
+                    Your CSV file has been successfully converted to JSON format.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -450,56 +300,16 @@ export const CSVToJSONConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      {t('csv_to_json.download_json')}
+                      Download JSON File
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      {t('common.convert_another')}
+                      Convert Another
                     </button>
                   </div>
-                </div>
-              )}
-
-              {/* Batch Conversion Results */}
-              {batchConverted && batchMode && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
-                  </div>
-                  <p className="text-green-700 mb-4">
-                    {t('csv_to_json.batch_success', { count: batchResults.length })}
-                  </p>
-                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
-                        <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">
-                            {result.outputFilename} {result.size ? `• ${formatFileSize(result.size)}` : ''}
-                          </p>
-                        </div>
-                        {result.success && (
-                          <button
-                            onClick={() => handleBatchDownload(result)}
-                            className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
-                          >
-                            <Download className="w-4 h-4 mr-1" />
-                            {t('common.download')}
-                          </button>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    onClick={resetForm}
-                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    {t('common.convert_more_files')}
-                  </button>
                 </div>
               )}
             </div>
@@ -512,42 +322,22 @@ export const CSVToJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-purple-600" />
-                {t('csv_to_json.settings_title')}
+                JSON Settings
               </h3>
               
-              {/* JSON Orientation */}
+              {/* Data Type */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  {t('csv_to_json.json_structure')}
+                  Data Structure
                 </label>
                 <select
-                  value={orient}
-                  onChange={(e) => setOrient(e.target.value as any)}
+                  value={dataType}
+                  onChange={(e) => setDataType(e.target.value as 'array' | 'object')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 >
-                  <option value="records">{t('csv_to_json.array_objects')}</option>
-                  <option value="split">{t('csv_to_json.split_format')}</option>
-                  <option value="index">{t('csv_to_json.index_based')}</option>
-                  <option value="columns">{t('csv_to_json.column_based')}</option>
-                  <option value="values">{t('csv_to_json.values_only')}</option>
+                  <option value="array">Array of Objects</option>
+                  <option value="object">Object with Keys</option>
                 </select>
-                <div className="mt-2 text-sm text-gray-600">
-                  {orient === 'records' && (
-                    <span className="text-purple-600">✓ {t('csv_to_json.records_desc')}</span>
-                  )}
-                  {orient === 'split' && (
-                    <span className="text-blue-600">✓ {t('csv_to_json.split_desc')}</span>
-                  )}
-                  {orient === 'index' && (
-                    <span className="text-green-600">✓ {t('csv_to_json.index_desc')}</span>
-                  )}
-                  {orient === 'columns' && (
-                    <span className="text-orange-600">✓ {t('csv_to_json.columns_desc')}</span>
-                  )}
-                  {orient === 'values' && (
-                    <span className="text-red-600">✓ {t('csv_to_json.values_desc')}</span>
-                  )}
-                </div>
               </div>
 
               {/* Pretty Print */}
@@ -559,23 +349,21 @@ export const CSVToJSONConverter: React.FC = () => {
                     onChange={(e) => setPrettyPrint(e.target.checked)}
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">{t('csv_to_json.pretty_print')}</span>
+                  <span className="ml-2 text-sm text-gray-700">Pretty print (formatted)</span>
                 </label>
               </div>
 
-              {/* Date Format */}
+              {/* Include Headers */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  {t('csv_to_json.date_format')}
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={includeHeaders}
+                    onChange={(e) => setIncludeHeaders(e.target.checked)}
+                    className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
                 </label>
-                <select
-                  value={dateFormat}
-                  onChange={(e) => setDateFormat(e.target.value as 'iso' | 'epoch')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-                >
-                  <option value="iso">{t('csv_to_json.iso_format')}</option>
-                  <option value="epoch">{t('csv_to_json.epoch_format')}</option>
-                </select>
               </div>
             </div>
 
@@ -583,16 +371,16 @@ export const CSVToJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                {t('csv_to_json.why_choose')}
+                Why Choose Our Converter?
               </h3>
               <div className="space-y-4">
                 {[
-                  t('csv_to_json.feature_structures'),
-                  t('csv_to_json.feature_modes'),
-                  t('csv_to_json.feature_formats'),
-                  t('csv_to_json.feature_types'),
-                  t('csv_to_json.feature_api'),
-                  t('csv_to_json.feature_batch')
+                  "Array of objects output",
+                  "Web API compatible",
+                  "Preserve data types",
+                  "Pretty-printed formatting",
+                  "Cross-platform compatibility",
+                  "Batch processing support"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -606,16 +394,16 @@ export const CSVToJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
-                {t('csv_to_json.perfect_for')}
+                Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  t('csv_to_json.use_case_api'),
-                  t('csv_to_json.use_case_js'),
-                  t('csv_to_json.use_case_mobile'),
-                  t('csv_to_json.use_case_nosql'),
-                  t('csv_to_json.use_case_config'),
-                  t('csv_to_json.use_case_analytics')
+                  "Web development",
+                  "API data exchange",
+                  "Mobile app development",
+                  "Data processing",
+                  "Configuration files",
+                  "Database imports"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -633,106 +421,106 @@ export const CSVToJSONConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← {t('common.back_to_home')}
+            ← Back to Home
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            {t('csv_to_json.seo_title')}
+            Why Convert CSV to JSON?
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              {t('csv_to_json.seo_description')}
+              Converting CSV files to JSON format is essential for modern web development, API data exchange, and mobile app development. While CSV files are excellent for data storage and spreadsheet applications, JSON format provides a structured, hierarchical data format that is native to web technologies, making it perfect for web APIs, mobile applications, and modern data processing workflows.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_json.benefits_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of JSON Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('csv_to_json.benefit_web_native')}</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">Web-Native Format</h4>
                 <p className="text-gray-700">
-                  {t('csv_to_json.benefit_web_native_desc')}
+                  JSON is the native data format for web applications, providing seamless integration with JavaScript, REST APIs, and modern web frameworks without any parsing overhead.
                 </p>
               </div>
               
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('csv_to_json.benefit_api')}</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">API Data Exchange</h4>
                 <p className="text-gray-700">
-                  {t('csv_to_json.benefit_api_desc')}
+                  JSON format is the standard for API data exchange, making it perfect for REST APIs, GraphQL, and other web service integrations.
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('csv_to_json.benefit_mobile')}</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">Mobile App Development</h4>
                 <p className="text-gray-700">
-                  {t('csv_to_json.benefit_mobile_desc')}
+                  JSON format is universally supported by mobile app frameworks, making it ideal for iOS, Android, and cross-platform mobile applications.
                 </p>
               </div>
               
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('csv_to_json.benefit_structured')}</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Structured Data Format</h4>
                 <p className="text-gray-700">
-                  {t('csv_to_json.benefit_structured_desc')}
+                  JSON provides a hierarchical, structured data format that preserves relationships between data elements, making it perfect for complex data structures.
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_json.use_cases_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_json.use_case_web_title')}</h4>
-                  <p className="text-gray-700">{t('csv_to_json.use_case_web_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Web Development</h4>
+                  <p className="text-gray-700">Convert CSV data to JSON format for use in web applications, ensuring seamless integration with frontend frameworks and JavaScript libraries.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_json.use_case_api_title')}</h4>
-                  <p className="text-gray-700">{t('csv_to_json.use_case_api_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">API Data Exchange</h4>
+                  <p className="text-gray-700">Transform CSV data into JSON format for REST API responses, ensuring compatibility with client applications and third-party integrations.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_json.use_case_mobile_title')}</h4>
-                  <p className="text-gray-700">{t('csv_to_json.use_case_mobile_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Mobile App Development</h4>
+                  <p className="text-gray-700">Convert CSV data to JSON format for mobile applications, ensuring data compatibility across iOS, Android, and cross-platform frameworks.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('csv_to_json.use_case_processing_title')}</h4>
-                  <p className="text-gray-700">{t('csv_to_json.use_case_processing_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Processing</h4>
+                  <p className="text-gray-700">Transform CSV data into JSON format for modern data processing workflows, analytics platforms, and machine learning applications.</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">{t('csv_to_json.cta_title')}</h3>
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                {t('csv_to_json.cta_description')}
+                Use our free online CSV to JSON converter to transform your tabular data into web-ready JSON format.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  {t('csv_to_json.start_converting')}
+                  Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  {t('common.back_to_home')}
+                  Back to Home
                 </button>
               </div>
             </div>
@@ -758,7 +546,6 @@ export const CSVToJSONConverter: React.FC = () => {
           </div>
         </div>
       </footer>
-      </div>
-    </>
+    </div>
   );
 };

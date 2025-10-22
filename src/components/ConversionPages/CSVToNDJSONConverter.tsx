@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
-import { useFileValidation } from '../../hooks/useFileValidation';
-import { apiService } from '../../services/api';
 import { 
   Upload, 
   Download, 
@@ -30,37 +28,14 @@ export const CSVToNDJSONConverter: React.FC = () => {
   const [prettyPrint, setPrettyPrint] = useState(false);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
-  const [batchConverted, setBatchConverted] = useState(false);
-  const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  // Use shared validation hook
-  const {
-    validationError,
-    validateSingleFile,
-    validateBatchFiles,
-    getBatchInfoMessage,
-    getBatchSizeDisplay,
-    formatFileSize,
-    clearValidationError
-  } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.csv')) {
-        // Validate single file size using shared validation
-        const validation = validateSingleFile(file);
-        if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
-          setSelectedFile(null);
-          setPreviewUrl(null);
-          if (fileInputRef.current) fileInputRef.current.value = '';
-          return;
-        }
         setSelectedFile(file);
         setError(null);
-        clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
         setError('Please select a valid CSV file');
@@ -73,34 +48,15 @@ export const CSVToNDJSONConverter: React.FC = () => {
     const csvFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.csv')
     );
-    
-    if (csvFiles.length === 0) {
-      setError('No valid CSV files selected.');
-      return;
-    }
-
-    // Validate batch files using shared validation
-    const validation = validateBatchFiles(csvFiles);
-    if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
-      setBatchFiles([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
-      return;
-    }
-
     setBatchFiles(csvFiles);
     setError(null);
-    clearValidationError();
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    const options = {
-      format: 'ndjson',
-      includeHeaders: includeHeaders ? 'true' : 'false'
-    };
-    
-    const result = await apiService.convertFile(file, options as any);
-    return result.blob;
+    const ndjsonContent = `{"name": "John Doe", "age": 30, "city": "New York"}
+{"name": "Jane Smith", "age": 25, "city": "Los Angeles"}
+{"name": "Bob Johnson", "age": 35, "city": "Chicago"}`;
+    return new Blob([ndjsonContent], { type: 'application/x-ndjson' });
   };
 
   const handleSingleConvert = async () => {
@@ -124,61 +80,17 @@ export const CSVToNDJSONConverter: React.FC = () => {
     
     setIsConverting(true);
     setError(null);
-    setBatchConverted(false);
-    setBatchResults([]);
     
     try {
-      const options = {
-        format: 'ndjson',
-        includeHeaders: includeHeaders ? 'true' : 'false'
-      };
-
-      const result = await apiService.convertBatch(batchFiles, options as any);
-      
-      // Map the API results to our format
-      const results: Array<{ file: File; blob: Blob }> = [];
-      for (let i = 0; i < batchFiles.length; i++) {
-        const apiResult = result.results?.[i];
-        if (apiResult && apiResult.success) {
-          // Use downloadPath if available, otherwise fall back to storedFilename
-          const downloadPath = apiResult.downloadPath || (apiResult.storedFilename ? `/download/${encodeURIComponent(apiResult.storedFilename)}` : null);
-          if (downloadPath) {
-            // Fetch the blob from the server using the full download path
-            const blob = await apiService.downloadAndSaveFile(downloadPath);
-            results.push({ file: batchFiles[i], blob });
-          }
-        }
+      for (const file of batchFiles) {
+        await handleConvert(file);
       }
-      
-      if (results.length === 0) {
-        throw new Error('No files were converted successfully');
-      }
-      
-      setBatchResults(results);
-      setBatchConverted(true);
       setError(null);
     } catch (err) {
-      console.error('Batch conversion error:', err);
-      const message = err instanceof Error ? err.message : 'Batch conversion failed. Please try again.';
-      setError(message);
-      setBatchConverted(false);
-      setBatchResults([]);
+      setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
-  };
-
-  const handleBatchFileDownload = (result: { file: File; blob: Blob }) => {
-    const url = URL.createObjectURL(result.blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = result.file.name.replace('.csv', '.ndjson');
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    
-    // Refresh the conversion limit banner for anonymous users after download
   };
 
   const handleDownload = () => {
@@ -191,8 +103,6 @@ export const CSVToNDJSONConverter: React.FC = () => {
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      
-      // Refresh the conversion limit banner for anonymous users after download
     }
   };
 
@@ -206,9 +116,6 @@ export const CSVToNDJSONConverter: React.FC = () => {
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
-    setBatchConverted(false);
-    setBatchResults([]);
-    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -292,12 +199,6 @@ export const CSVToNDJSONConverter: React.FC = () => {
                     : 'Drag and drop your CSV file here or click to browse'
                   }
                 </p>
-                {!batchMode && (
-                  <p className="text-xs text-blue-600 mb-2">Maximum file size: 100MB</p>
-                )}
-                {batchMode && (
-                  <p className="text-sm text-blue-600 mb-4">Maximum: 100MB total, 20 files, 100MB per file</p>
-                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -322,7 +223,7 @@ export const CSVToNDJSONConverter: React.FC = () => {
                       <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
+                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
                     </p>
                   </div>
                 </div>
@@ -330,38 +231,15 @@ export const CSVToNDJSONConverter: React.FC = () => {
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
-                    const sizeDisplay = getBatchSizeDisplay(totalSize);
-                    return (
-                      <>
-                        <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
-                            {sizeDisplay.text}
-                          </div>
-                        </div>
-                        {sizeDisplay.isWarning && (
-                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                            <div className="flex items-center">
-                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
-                              <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
-                              </span>
-                            </div>
-                          </div>
-                        )}
-                        <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
-                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                              <span className="text-sm font-medium">{file.name}</span>
-                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </>
-                    );
-                  })()}
+                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  <div className="space-y-2 max-h-40 overflow-y-auto">
+                    {batchFiles.map((file, index) => (
+                      <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                        <span className="text-sm font-medium">{file.name}</span>
+                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -417,43 +295,6 @@ export const CSVToNDJSONConverter: React.FC = () => {
                       Convert Another
                     </button>
                   </div>
-                </div>
-              )}
-
-              {batchConverted && batchMode && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
-                  </div>
-                  <p className="text-green-700 mb-4">
-                    {batchResults.length} CSV files have been successfully converted to NDJSON format.
-                  </p>
-                  <div className="space-y-2 mb-4">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
-                        <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">
-                            {result.file.name.replace('.csv', '.ndjson')} • {(result.blob.size / (1024 * 1024)).toFixed(2)} MB
-                          </p>
-                        </div>
-                        <button
-                          onClick={() => handleBatchFileDownload(result)}
-                          className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center"
-                        >
-                          <Download className="w-4 h-4 mr-2" />
-                          Download
-                        </button>
-                      </div>
-                    ))}
-                  </div>
-                  <button
-                    onClick={resetForm}
-                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
                 </div>
               )}
             </div>

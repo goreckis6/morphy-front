@@ -1,13 +1,13 @@
 # Frontend Dockerfile
-FROM node:22-alpine
+FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy package files first for better caching
+# Copy package files
 COPY package*.json ./
 
-# Install dependencies (include dev for build)
-RUN npm install --no-audit --no-fund --legacy-peer-deps --verbose --no-cache
+# Install dependencies
+RUN npm ci
 
 # Copy source code
 COPY . .
@@ -15,16 +15,8 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Remove dev dependencies before copying to runtime image
-RUN npm prune --production
-
-# Use nginx to serve static files (much faster)
-FROM nginx:alpine
-COPY --from=0 /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/nginx.conf
-
 # Expose port
-EXPOSE 80
+EXPOSE 5173
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start the application
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "5173"]

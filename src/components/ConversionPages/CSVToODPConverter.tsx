@@ -241,7 +241,7 @@ export const CSVToODPConverter: React.FC = () => {
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 text-blue-500 mr-2" />
                   <span className="text-sm text-blue-700 font-medium">
-                    {t('csv_to_odp.conversion_time_info')}
+                    Conversion may take 2-5 minutes for large files
                   </span>
                 </div>
               </div>
@@ -306,7 +306,7 @@ export const CSVToODPConverter: React.FC = () => {
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
-                      const displayName = result.outputFilename || `${(result.originalName || 'file').replace(/\.[^.]+$/, '')}.odp`;
+                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.odp`;
                       const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
                       return (
                         <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
@@ -533,13 +533,13 @@ export const CSVToODPConverter: React.FC = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  {t('common.start_converting_now')}
+                  Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-lime-600 transition-colors"
                 >
-                  {t('common.back_to_home')}
+                  Back to Home
                 </button>
               </div>
             </div>
