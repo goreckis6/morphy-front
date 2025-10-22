@@ -47,10 +47,16 @@ export const BMPToWebPConverter: React.FC = () => {
     validateSingleFile,
     validateBatchFiles,
     getBatchInfoMessage,
-    getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
   } = useFileValidation();
+
+  // Custom batch size display for 100MB limit
+  const getBatchSizeDisplay = (totalSize: number) => {
+    const text = `Total size: ${formatFileSize(totalSize)} of 100.00 MB allowed.`;
+    const isWarning = totalSize > BATCH_SIZE_LIMIT * 0.8;
+    return { text, isWarning };
+  };
 
   // Ensure language is synced with URL on mount
   useEffect(() => {
@@ -386,20 +392,10 @@ export const BMPToWebPConverter: React.FC = () => {
                       <>
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">{t('bmp_to_webp.selected_files')} ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                          <div className="text-sm font-medium text-gray-600">
                             {sizeDisplay.text}
                           </div>
                         </div>
-                        {sizeDisplay.isWarning && (
-                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                            <div className="flex items-center">
-                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
-                              <span className="text-sm text-orange-700">
-                                {t('bmp_to_webp.batch_size_warning')}
-                              </span>
-                            </div>
-                          </div>
-                        )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
                           {batchFiles.map((file, index) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
