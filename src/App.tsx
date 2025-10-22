@@ -823,25 +823,6 @@ function App() {
                 </div>
               </a>
 
-              <a href="/convert/avro-to-csv" className="group bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-green-300">
-                <div className="text-center">
-                  <div className="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <BarChart3 className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">AVRO to CSV</h3>
-                  <p className="text-sm text-gray-600">Big data to spreadsheet</p>
-                </div>
-              </a>
-
-              <a href="/convert/avro-to-json" className="group bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-orange-300">
-                <div className="text-center">
-                  <div className="bg-orange-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <FileText className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">AVRO to JSON</h3>
-                  <p className="text-sm text-gray-600">Apache AVRO to JSON</p>
-                </div>
-              </a>
 
               {/* Image Converters */}
               <a href="/convert/dng-to-webp" className="group bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-pink-300">
