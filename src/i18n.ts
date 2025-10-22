@@ -24,7 +24,6 @@ const resources = {
       'common.convert_another': 'Convert Another',
       'common.convert_more_files': 'Convert More Files',
       'common.start_converting_now': 'Start Converting Now',
-      'common.large_file_warning': 'Conversion may take 2-5 minutes for large files',
       'common.batch_conversion_complete': 'Batch Conversion Complete!',
       'common.conversion_complete': 'Conversion Complete!',
       'common.convert_files': 'Convert Files',
