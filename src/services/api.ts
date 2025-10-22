@@ -209,6 +209,7 @@ class ApiService {
     } else if (firstFileName?.endsWith('.csv') && options.format === 'epub') {
       endpoint = '/convert/csv-to-epub/batch';
     }
+    
 
     console.log('API: Making request to', endpoint, 'with options:', options);
     const response = await this.makeRequest(endpoint, 'POST', formData);
