@@ -447,43 +447,58 @@ export const EPSToICOConverter: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">{t('eps_to_ico.batch_conversion_complete')}</h4>
                   </div>
-                  <p className="text-green-700 mb-4">{batchResults.filter(item => item.success).length} file(s) converted successfully at {getPrimaryIconSize()}×{getPrimaryIconSize()}.</p>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white border border-green-100 rounded-lg p-3">
-                        <div className="flex items-center gap-3">
-                          {result.success ? (
-                            <CheckCircle className="w-4 h-4 text-green-500" />
-                          ) : (
-                            <AlertCircle className="w-4 h-4 text-red-500" />
-                          )}
-                          <span className="text-sm font-medium text-gray-900">
-                            {result.outputFilename || result.originalName}
-                          </span>
+                  <p className="text-green-700 mb-4">
+                    Successfully converted {batchResults.filter(item => item.success).length} EPS file{batchResults.filter(item => item.success).length > 1 ? 's' : ''} to ICO format at {getPrimaryIconSize()}×{getPrimaryIconSize()}.
+                  </p>
+                  
+                  {/* Batch Results Grid - Mobile Responsive */}
+                  <div className="space-y-3 mb-6 max-h-80 overflow-y-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
+                      {batchResults.map((result, index) => (
+                        <div key={index} className="bg-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center space-x-2 mb-2">
+                                {result.success ? (
+                                  <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                                ) : (
+                                  <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0" />
+                                )}
+                                <p className="text-sm font-medium text-gray-900 truncate">
+                                  {result.outputFilename || result.originalName}
+                                </p>
+                              </div>
+                              <div className="flex items-center space-x-4 text-xs text-gray-500">
+                                {result.success && (
+                                  <span>Size: {getPrimaryIconSize()}×{getPrimaryIconSize()}</span>
+                                )}
+                                {!result.success && result.error && (
+                                  <span className="text-red-600">{result.error}</span>
+                                )}
+                              </div>
+                            </div>
+                            {result.success && result.downloadPath && (
+                              <button
+                                onClick={() => handleBatchDownload(result)}
+                                className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 min-w-[120px]"
+                              >
+                                <Download className="w-4 h-4" />
+                                <span>Download</span>
+                              </button>
+                            )}
+                          </div>
                         </div>
-                        {result.success && result.downloadPath ? (
-                          <button
-                            onClick={() => handleBatchDownload(result)}
-                            className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors flex items-center"
-                          >
-                            <Download className="w-3 h-3 mr-1" />
-                            {t('eps_to_ico.download')}
-                          </button>
-                        ) : result.error ? (
-                          <span className="text-xs text-red-600">{result.error}</span>
-                        ) : null}
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3 mt-4">
-                    <button
-                      onClick={resetForm}
-                      className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
-                    >
-                      <RefreshCw className="w-5 h-5 mr-2" />
-                      {t('eps_to_ico.convert_more_files')}
-                    </button>
-                  </div>
+                  
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    {t('eps_to_ico.convert_more_files')}
+                  </button>
                 </div>
               )}
             </div>

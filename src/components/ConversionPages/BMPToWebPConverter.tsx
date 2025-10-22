@@ -475,26 +475,41 @@ export const BMPToWebPConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">{t('bmp_to_webp.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {t('bmp_to_webp.batch_success_message', { count: batchResults.length })}
+                    Successfully converted {batchResults.length} BMP file{batchResults.length > 1 ? 's' : ''} to WebP format.
                   </p>
-                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
-                        <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">
-                            {result.file.name.replace('.bmp', '.webp')} • {(result.blob.size / 1024).toFixed(1)} KB
-                          </p>
+                  
+                  {/* Batch Results Grid - Mobile Responsive */}
+                  <div className="space-y-3 mb-6 max-h-80 overflow-y-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
+                      {batchResults.map((result, index) => (
+                        <div key={index} className="bg-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center space-x-2 mb-2">
+                                <FileImage className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                                <p className="text-sm font-medium text-gray-900 truncate">
+                                  {result.file.name.replace('.bmp', '.webp')}
+                                </p>
+                              </div>
+                              <div className="flex items-center space-x-4 text-xs text-gray-500">
+                                <span>Original: {(result.file.size / 1024 / 1024).toFixed(1)} MB</span>
+                                <span>•</span>
+                                <span>WebP: {(result.blob.size / 1024).toFixed(1)} KB</span>
+                              </div>
+                            </div>
+                            <button
+                              onClick={() => handleBatchFileDownload(result.file, result.blob)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 min-w-[120px]"
+                            >
+                              <Download className="w-4 h-4" />
+                              <span>Download</span>
+                            </button>
+                          </div>
                         </div>
-                        <button
-                          onClick={() => handleBatchFileDownload(result.file, result.blob)}
-                          className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
-                        >
-                          <Download className="w-4 h-4 mr-1" />
-                          {t('common.download')}
-                        </button>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
+                  
                   <button
                     onClick={resetForm}
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"

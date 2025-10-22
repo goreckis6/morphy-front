@@ -28,6 +28,8 @@ export const CSVToJSONConverter: React.FC = () => {
   const [dataType, setDataType] = useState<'array' | 'object'>('array');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -94,9 +96,13 @@ export const CSVToJSONConverter: React.FC = () => {
     
     try {
       // Mock batch conversion - process each file
+      const results: Array<{ file: File; blob: Blob }> = [];
       for (const file of batchFiles) {
-        await handleConvert(file);
+        const converted = await handleConvert(file);
+        results.push({ file, blob: converted });
       }
+      setBatchResults(results);
+      setBatchConverted(true);
       setError(null);
     } catch (err) {
       setError('Batch conversion failed. Please try again.');
@@ -118,6 +124,17 @@ export const CSVToJSONConverter: React.FC = () => {
     }
   };
 
+  const handleBatchFileDownload = (file: File, blob: Blob) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name.replace('.csv', '.json');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -128,6 +145,8 @@ export const CSVToJSONConverter: React.FC = () => {
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchConverted(false);
+    setBatchResults([]);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
@@ -310,6 +329,59 @@ export const CSVToJSONConverter: React.FC = () => {
                       Convert Another
                     </button>
                   </div>
+                </div>
+              )}
+
+              {/* Batch Conversion Success Message */}
+              {batchConverted && batchMode && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                  </div>
+                  <p className="text-green-700 mb-4">
+                    Successfully converted {batchResults.length} CSV file{batchResults.length > 1 ? 's' : ''} to JSON format.
+                  </p>
+                  
+                  {/* Batch Results Grid - Mobile Responsive */}
+                  <div className="space-y-3 mb-6 max-h-80 overflow-y-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
+                      {batchResults.map((result, index) => (
+                        <div key={index} className="bg-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center space-x-2 mb-2">
+                                <FileText className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                                <p className="text-sm font-medium text-gray-900 truncate">
+                                  {result.file.name.replace('.csv', '.json')}
+                                </p>
+                              </div>
+                              <div className="flex items-center space-x-4 text-xs text-gray-500">
+                                <span>Original: {(result.file.size / 1024).toFixed(1)} KB</span>
+                                <span>•</span>
+                                <span>JSON: {(result.blob.size / 1024).toFixed(1)} KB</span>
+                              </div>
+                            </div>
+                            <button
+                              onClick={() => handleBatchFileDownload(result.file, result.blob)}
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 min-w-[120px]"
+                            >
+                              <Download className="w-4 h-4" />
+                              <span>Download</span>
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
                 </div>
               )}
             </div>
