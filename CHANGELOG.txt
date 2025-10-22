@@ -9,6 +9,7 @@ CRITICAL BUG FIXES:
 - This was causing the routing to fail and fall back to generic /api/convert endpoint
 - Fixed CSV to EPUB response handling - was expecting {success, downloadPath} but API returns {blob, filename, size}
 - Fixed CSV to EPUB batch conversion to use specific convertBatchCsvToEpub method for proper filenames
+- Fixed CSV to EPUB batch download to use correct field names (downloadUrl instead of downloadPath, filename instead of outputFilename)
 
 Frontend Updates:
 - Fixed CSV to EPUB single conversion routing

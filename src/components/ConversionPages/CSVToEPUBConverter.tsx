@@ -130,13 +130,7 @@ export const CSVToEPUBConverter: React.FC = () => {
     
     try {
       const result = await apiService.convertBatchCsvToEpub(batchFiles);
-      console.log('Batch conversion API result:', result);
       const results = (result.results as any[]) ?? [];
-      console.log('Batch results array:', results);
-      if (results.length > 0) {
-        console.log('First result structure:', results[0]);
-        console.log('First result keys:', Object.keys(results[0]));
-      }
       setBatchResults(results);
       const successCount = results.filter(r => r.success).length;
       setBatchConverted(successCount > 0);
@@ -155,18 +149,14 @@ export const CSVToEPUBConverter: React.FC = () => {
 
   
   const handleBatchDownload = async (result: any) => {
-    console.log('Batch download result:', result);
-    console.log('Available fields:', Object.keys(result));
-    
-    // Use downloadPath if available, otherwise fall back to storedFilename
-    const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
+    // Use downloadUrl if available, otherwise fall back to downloadPath or storedFilename
+    const downloadPath = result.downloadUrl || result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      console.log('No download path found. Result:', result);
       setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
-      const downloadName = result.outputFilename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : 'converted.epub');
+      const downloadName = result.filename || result.outputFilename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : 'converted.epub');
       await apiService.downloadAndSaveFile(downloadPath, downloadName);
       
     } catch (error) {
@@ -433,7 +423,7 @@ export const CSVToEPUBConverter: React.FC = () => {
                           ) : (
                             <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
                           )}
-                          <span className="text-sm font-medium truncate">{result.outputFilename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : 'converted.epub')}</span>
+                          <span className="text-sm font-medium truncate">{result.filename || result.outputFilename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : 'converted.epub')}</span>
                           {result.success && result.size && (
                             <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
                           )}
