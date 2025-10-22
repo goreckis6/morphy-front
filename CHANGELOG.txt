@@ -1,0 +1,38 @@
+MorphyIMG - Changelog
+====================
+
+Version 2.1.0 - 2024-12-19
+==========================
+
+Frontend Updates:
+- Fixed CSV to EPUB single conversion routing
+- Added proper null safety checks for batch conversion
+- Updated API service to use correct endpoints
+- Improved error handling in CSV to EPUB converter
+
+Backend Updates:
+- Enhanced CSV to EPUB conversion with hybrid approach
+- Added Calibre support for better EPUB generation
+- Improved Python script error handling
+- Fixed file path issues in conversion scripts
+
+Bug Fixes:
+- Fixed "Cannot read properties of undefined" error in batch mode
+- Resolved routing issues for CSV to EPUB conversions
+- Fixed null pointer exceptions in file processing
+
+Performance Improvements:
+- Optimized CSV processing for large files
+- Improved memory usage in batch conversions
+- Enhanced error logging and debugging
+
+Technical Details:
+- Updated api.ts with proper CSV to EPUB routing
+- Enhanced CSVToEPUBConverter.tsx with null safety
+- Improved backend server.ts conversion logic
+- Added comprehensive error handling
+
+Deployment Notes:
+- All changes are ready for production deployment
+- No breaking changes to existing functionality
+- Backward compatible with current API structure
