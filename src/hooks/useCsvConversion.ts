@@ -27,7 +27,11 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchResults, setBatchResults] = useState<BatchResultItem[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [conversionLimitReached, setConversionLimitReached] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  
+  // Mock user state - replace with actual user authentication
+  const user = null;
 
   const {
     validationError,
@@ -101,16 +105,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
-    // Check conversion limits for anonymous users (server-side IP-based)
-    if (!user) {
-      const canConvert = await ConversionLimits.checkServerLimits();
-      if (!canConvert) {
-        setConversionLimitReached(true);
-        // Don't set error message here - let ConversionLimitBanner handle it
-        return;
-      }
-    }
-
     setIsConverting(true);
     setError(null);
     setConversionLimitReached(false);
@@ -132,16 +126,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
 
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
-
-    // Check conversion limits for anonymous users (server-side IP-based)
-    if (!user) {
-      const canConvert = await ConversionLimits.checkServerLimits();
-      if (!canConvert) {
-        setConversionLimitReached(true);
-        // Don't set error message here - let ConversionLimitBanner handle it
-        return;
-      }
-    }
 
     setIsConverting(true);
     setError(null);
