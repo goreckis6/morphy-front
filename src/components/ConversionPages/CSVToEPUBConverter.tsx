@@ -101,7 +101,8 @@ export const CSVToEPUBConverter: React.FC = () => {
     setError(null);
     
     try {
-      const result = await apiService.convertFile(selectedFile, 'epub', {
+      const result = await apiService.convertFile(selectedFile, {
+        format: 'epub',
         title: bookTitle || selectedFile.name.replace('.csv', ''),
         author: author || 'Unknown',
         includeTableOfContents: includeTableOfContents
