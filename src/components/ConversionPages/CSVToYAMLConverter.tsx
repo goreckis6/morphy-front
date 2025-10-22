@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 
-export const CSVToXMLConverter: React.FC = () => {
+export const CSVToYAMLConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -765,5 +765,3 @@ export const CSVToXMLConverter: React.FC = () => {
       </>
   );
 };
-
-export { CSVToYAMLConverter };
