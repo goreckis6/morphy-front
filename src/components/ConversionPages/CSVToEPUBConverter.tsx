@@ -94,12 +94,6 @@ export const CSVToEPUBConverter: React.FC = () => {
     setBatchConverted(false);
   };
 
-  const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would use a library like epub-gen
-    const epubContent = `Mock EPUB content for ${file.name} - Title: ${bookTitle}, Author: ${author}, TOC: ${includeTableOfContents}`;
-    return new Blob([epubContent], { type: 'application/epub+zip' });
-  };
-
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
 
@@ -107,8 +101,20 @@ export const CSVToEPUBConverter: React.FC = () => {
     setError(null);
     
     try {
-      const converted = await handleConvert(selectedFile);
-      setConvertedFile(converted);
+      const result = await apiService.convertFile(selectedFile, 'epub', {
+        title: bookTitle || selectedFile.name.replace('.csv', ''),
+        author: author || 'Unknown',
+        includeTableOfContents: includeTableOfContents
+      });
+      
+      if (result.success && result.downloadPath) {
+        // Download the converted file
+        const response = await fetch(result.downloadPath);
+        const blob = await response.blob();
+        setConvertedFile(blob);
+      } else {
+        setError(result.error || 'Conversion failed. Please try again.');
+      }
       
     } catch (err) {
       setError('Conversion failed. Please try again.');
