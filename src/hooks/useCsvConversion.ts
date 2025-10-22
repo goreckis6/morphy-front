@@ -235,7 +235,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         // Fallback: construct an absolute URL via the API service if needed
         console.log('Using downloadPath for download:', result.downloadPath);
         const link = document.createElement('a');
-        link.href = `${(import.meta as any).env.VITE_API_BASE_URL || (import.meta as any).env.PROD ? 'https://morphy-2-n2tb.onrender.com' : 'http://localhost:3000'}${result.downloadPath}`;
+        link.href = `${(import.meta as any).env.VITE_API_BASE_URL || (import.meta as any).env.PROD ? 'https://api.morphyimg.com' : 'http://localhost:3000'}${result.downloadPath}`;
         link.download = getSafeFilename(result);
         document.body.appendChild(link);
         link.click();

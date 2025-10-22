@@ -111,7 +111,7 @@ export const PEFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/pef', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/pef', {
         method: 'POST',
         body: formData,
       });

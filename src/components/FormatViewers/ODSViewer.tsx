@@ -97,7 +97,7 @@ export const ODSViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/ods', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/ods', {
         method: 'POST',
         body: formData,
       });

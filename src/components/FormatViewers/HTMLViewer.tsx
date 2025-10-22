@@ -98,7 +98,7 @@ export const HTMLViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/html', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/html', {
         method: 'POST',
         body: formData,
       });

@@ -110,7 +110,7 @@ export const PDFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/pdf', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/pdf', {
         method: 'POST',
         body: formData,
       });

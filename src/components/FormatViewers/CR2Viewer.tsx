@@ -111,7 +111,7 @@ export const CR2Viewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/cr2', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/cr2', {
         method: 'POST',
         body: formData,
       });

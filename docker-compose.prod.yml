@@ -39,7 +39,7 @@ services:
       - traefik.http.routers.morphy-www.tls.certresolver=letsencrypt
       - traefik.http.services.morphy.loadbalancer.server.port=5173
     environment:
-      - VITE_API_BASE_URL=${VITE_API_BASE_URL}
+      - VITE_API_BASE_URL=https://api.morphyimg.com
     networks:
       - traefik
     restart: unless-stopped

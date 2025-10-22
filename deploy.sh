@@ -8,8 +8,8 @@ echo "🚀 Starting deployment..."
 # Create letsencrypt directory if it doesn't exist
 mkdir -p letsencrypt
 
-# Set environment variable (replace with your actual API URL)
-export VITE_API_BASE_URL=${VITE_API_BASE_URL:-"https://your-backend-api.com"}
+# Set environment variable
+export VITE_API_BASE_URL=https://api.morphyimg.com
 
 # Stop old containers
 echo "🛑 Stopping old containers..."

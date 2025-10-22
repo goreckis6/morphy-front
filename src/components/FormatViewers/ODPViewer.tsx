@@ -98,7 +98,7 @@ export const ODPViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/odp', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/odp', {
         method: 'POST',
         body: formData,
       });

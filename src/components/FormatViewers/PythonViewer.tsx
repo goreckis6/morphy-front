@@ -111,7 +111,7 @@ export const PythonViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/python', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/python', {
         method: 'POST',
         body: formData,
       });

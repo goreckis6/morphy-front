@@ -111,7 +111,7 @@ export const DNGViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/dng', {
+      const response = await fetch('https://api.morphyimg.com/api/preview/dng', {
         method: 'POST',
         body: formData,
       });

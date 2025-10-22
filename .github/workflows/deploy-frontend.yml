@@ -54,7 +54,7 @@ jobs:
             sudo chown -R $USER:$USER letsencrypt
             
             # Set environment variable
-            export VITE_API_BASE_URL=${{ secrets.FRONTEND_API_URL }}
+            export VITE_API_BASE_URL=https://api.morphyimg.com
             
             # Stop and remove old containers
             docker stop morphy-frontend 2>/dev/null || true
@@ -76,7 +76,7 @@ jobs:
               --label "traefik.http.services.morphy.loadbalancer.server.port=5173" \
               --network traefik \
               --restart unless-stopped \
-              -e VITE_API_BASE_URL=${{ secrets.FRONTEND_API_URL }} \
+              -e VITE_API_BASE_URL=https://api.morphyimg.com \
               ghcr.io/${{ github.repository_owner }}/morphy-frontend:latest
             
             # Verify deployment

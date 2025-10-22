@@ -170,171 +170,33 @@ export const CR2ToICOConverter: React.FC = () => {
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    // Production-grade CR2 conversion using browser-compatible approach
-    return new Promise((resolve, reject) => {
-      try {
-        // Method 1: Try to read CR2 as binary and extract embedded JPEG preview
-        const reader = new FileReader();
-        reader.onload = async (e) => {
-          try {
-            const arrayBuffer = e.target?.result as ArrayBuffer;
-            const uint8Array = new Uint8Array(arrayBuffer);
-            
-            // Look for embedded JPEG thumbnail in CR2 file
-            // CR2 files often contain JPEG previews that we can extract
-            const jpegStart = findJPEGStart(uint8Array);
-            const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
-            
-            if (jpegStart !== -1 && jpegEnd !== -1) {
-              // Extract the JPEG preview
-              const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
-              const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
-              
-              // Convert extracted JPEG to ICO
-              const jpegUrl = URL.createObjectURL(jpegBlob);
-              const img = new Image();
-              
-              img.onload = () => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                
-                if (!ctx) {
-                  reject(new Error('Canvas context not available'));
-                  return;
-                }
-                
-                // Determine the actual size to use
-                const actualSize = iconSize === 'default' ? Math.min(img.width, img.height) : iconSize;
-                
-                // Set canvas to icon size
-                canvas.width = actualSize;
-                canvas.height = actualSize;
-                
-                // Draw the extracted image scaled to icon size
-                ctx.drawImage(img, 0, 0, actualSize, actualSize);
-                
-                // Convert to ICO format
-                canvas.toBlob((blob) => {
-                  URL.revokeObjectURL(jpegUrl);
-                  if (blob) {
-                    resolve(blob);
-                  } else {
-                    reject(new Error('Failed to convert extracted image to blob'));
-                  }
-                }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
-              };
-              
-              img.onerror = () => {
-                URL.revokeObjectURL(jpegUrl);
-                // Fallback to generated sample if extraction fails
-                generateSampleICO(file, resolve);
-              };
-              
-              img.src = jpegUrl;
-            } else {
-              // No JPEG preview found, generate sample
-              generateSampleICO(file, resolve);
-            }
-          } catch (error) {
-            // Fallback to sample generation
-            generateSampleICO(file, resolve);
-          }
-        };
-        
-        reader.onerror = () => {
-          generateSampleICO(file, resolve);
-        };
-        
-        reader.readAsArrayBuffer(file);
-      } catch (error) {
-        generateSampleICO(file, resolve);
+    const API_BASE_URL = import.meta.env.PROD 
+      ? 'https://api.morphyimg.com' 
+      : 'http://localhost:3000';
+
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('iconSize', iconSize.toString());
+    formData.append('quality', quality);
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/convert/cr2-to-ico/single`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Conversion failed: ${response.statusText}`);
       }
-    });
+
+      const blob = await response.blob();
+      return blob;
+    } catch (error) {
+      console.error('CR2 to ICO conversion error:', error);
+      throw new Error('Failed to convert CR2 to ICO. Please try again.');
+    }
   };
 
-  const findJPEGStart = (data: Uint8Array): number => {
-    // Look for JPEG SOI marker (0xFF 0xD8)
-    for (let i = 0; i < data.length - 1; i++) {
-      if (data[i] === 0xFF && data[i + 1] === 0xD8) {
-        return i;
-      }
-    }
-    return -1;
-  };
-
-  const findJPEGEnd = (data: Uint8Array, start: number): number => {
-    // Look for JPEG EOI marker (0xFF 0xD9)
-    for (let i = start + 2; i < data.length - 1; i++) {
-      if (data[i] === 0xFF && data[i + 1] === 0xD9) {
-        return i;
-      }
-    }
-    return -1;
-  };
-
-  const generateSampleICO = (file: File, resolve: (blob: Blob) => void): void => {
-    // Fallback: Generate a high-quality sample ICO
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    
-    // Determine the actual size to use
-    const actualSize = iconSize === 'default' ? 256 : iconSize;
-    
-    if (!ctx) {
-      const fallbackContent = `ICO_FILE_START
-ORIGINAL_FILE: ${file.name}
-FILE_TYPE: Canon RAW (CR2)
-ICON_SIZE: ${actualSize}x${actualSize} pixels
-QUALITY: ${quality}
-CONVERSION_DETAILS: CR2 to ICO conversion (sample generated)
-ICO_FILE_END`;
-      resolve(new Blob([fallbackContent], { type: 'image/x-icon' }));
-      return;
-    }
-    
-    canvas.width = actualSize;
-    canvas.height = actualSize;
-    
-    // Create a professional camera-themed icon
-    const gradient = ctx.createRadialGradient(actualSize/2, actualSize/2, 0, actualSize/2, actualSize/2, actualSize/2);
-    gradient.addColorStop(0, '#1f2937');
-    gradient.addColorStop(0.7, '#374151');
-    gradient.addColorStop(1, '#111827');
-    
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, actualSize, actualSize);
-    
-    // Add camera lens effect
-    ctx.beginPath();
-    ctx.arc(actualSize/2, actualSize/2, actualSize * 0.3, 0, 2 * Math.PI);
-    ctx.fillStyle = '#6b7280';
-    ctx.fill();
-    
-    ctx.beginPath();
-    ctx.arc(actualSize/2, actualSize/2, actualSize * 0.2, 0, 2 * Math.PI);
-    ctx.fillStyle = '#1f2937';
-    ctx.fill();
-    
-    // Add "CR2" text
-    ctx.fillStyle = '#e5e7eb';
-    ctx.font = `bold ${Math.max(6, actualSize / 6)}px Arial`;
-    ctx.textAlign = 'center';
-    ctx.fillText('CR2', actualSize / 2, actualSize * 0.8);
-    
-    canvas.toBlob((blob) => {
-      if (blob) {
-        resolve(blob);
-      } else {
-        const fallbackContent = `ICO_FILE_START
-ORIGINAL_FILE: ${file.name}
-FILE_TYPE: Canon RAW (CR2) - Professional Camera File
-ICON_SIZE: ${actualSize}x${actualSize} pixels
-QUALITY: ${quality}
-ICO_FILE_END`;
-        resolve(new Blob([fallbackContent], { type: 'image/x-icon' }));
-      }
-    }, 'image/png', quality === 'high' ? 1.0 : quality === 'medium' ? 0.8 : 0.6);
-  };
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
@@ -360,13 +222,41 @@ ICO_FILE_END`;
     setError(null);
     setBatchResults([]);
     
+    const API_BASE_URL = import.meta.env.PROD 
+      ? 'https://api.morphyimg.com' 
+      : 'http://localhost:3000';
+
+    const formData = new FormData();
+    batchFiles.forEach(file => {
+      formData.append('files', file);
+    });
+    formData.append('iconSize', iconSize.toString());
+    formData.append('quality', quality);
+
     try {
+      const response = await fetch(`${API_BASE_URL}/convert/cr2-to-ico/batch`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Batch conversion failed: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      
+      // Process batch results
       const results: Array<{ file: File; blob: Blob }> = [];
       
-      for (let i = 0; i < batchFiles.length; i++) {
-        const file = batchFiles[i];
-        const converted = await handleConvert(file);
-        results.push({ file, blob: converted });
+      for (let i = 0; i < result.files.length; i++) {
+        const fileResult = result.files[i];
+        const originalFile = batchFiles[i];
+        
+        // Download the converted file
+        const downloadResponse = await fetch(`${API_BASE_URL}${fileResult.downloadUrl}`);
+        const blob = await downloadResponse.blob();
+        
+        results.push({ file: originalFile, blob });
       }
       
       setBatchResults(results);
@@ -380,19 +270,6 @@ ICO_FILE_END`;
     }
   };
 
-  
-  const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-      setError('Download link is missing. Please reconvert.');
-      return;
-    }
-    try {
-      await apiService.downloadFile(filename, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
-    }
-  };
 
   const handleDownload = () => {
     if (convertedFile) {

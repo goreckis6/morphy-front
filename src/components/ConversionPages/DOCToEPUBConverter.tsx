@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://morphy-2-n2tb.onrender.com';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.morphyimg.com';
 
 export const DOCToEPUBConverter: React.FC = () => {
   const { t, i18n } = useTranslation();

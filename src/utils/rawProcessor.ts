@@ -226,7 +226,7 @@ export class RAWProcessor {
           const formData = new FormData();
           formData.append('file', file);
 
-          const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/tiff', {
+          const response = await fetch('https://api.morphyimg.com/api/preview/tiff', {
             method: 'POST',
             body: formData,
           });
@@ -251,7 +251,7 @@ export class RAWProcessor {
           const formData = new FormData();
           formData.append('file', file);
 
-          const response = await fetch('https://morphy-2-n2tb.onrender.com/api/preview/heic', {
+          const response = await fetch('https://api.morphyimg.com/api/preview/heic', {
             method: 'POST',
             body: formData,
           });
