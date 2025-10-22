@@ -131,6 +131,8 @@ class ApiService {
       endpoint = '/convert/eps-to-webp/single';
     } else if (fileName.endsWith('.gif') && options.format === 'ico') {
       endpoint = '/convert/gif-to-ico/single';
+    } else if (fileName.endsWith('.csv') && options.format === 'epub') {
+      endpoint = '/convert/csv-to-epub/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -204,6 +206,8 @@ class ApiService {
       endpoint = '/convert/eps-to-webp/batch';
     } else if (firstFileName?.endsWith('.gif') && options.format === 'ico') {
       endpoint = '/convert/gif-to-ico/batch';
+    } else if (firstFileName?.endsWith('.csv') && options.format === 'epub') {
+      endpoint = '/convert/csv-to-epub/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);
