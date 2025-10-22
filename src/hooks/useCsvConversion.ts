@@ -198,27 +198,16 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     try {
       console.log('Downloading batch result:', result);
       
-      if (result.storedFilename) {
-        // Use backend API to fetch the file from the correct origin
-        console.log('Using storedFilename for download:', result.storedFilename);
-        const getSafeFilename = (result: any) => {
-          try {
-            if (result?.outputFilename) return result.outputFilename;
-            if (result?.filename) return result.filename;
-            if (result?.originalName && typeof result.originalName === 'string') {
-              return result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
-            }
-            return `converted.${targetFormat}`;
-          } catch (error) {
-            console.warn('Error processing filename:', error);
-            return `converted.${targetFormat}`;
-          }
-        };
-        const filename = getSafeFilename(result);
-        await apiService.downloadAndSaveFile(result.storedFilename, filename);
-        
+      // Use downloadUrl if available (new format), otherwise fall back to storedFilename or downloadPath
+      const downloadPath = (result as any).downloadUrl || result.storedFilename || result.downloadPath;
+      const filename = (result as any).filename || result.outputFilename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`) : `converted.${targetFormat}`);
+      
+      if (downloadPath) {
+        console.log('Using download path:', downloadPath, 'with filename:', filename);
+        await apiService.downloadAndSaveFile(downloadPath, filename);
         return;
       }
+      
       if (result.downloadPath) {
         // Fallback: construct an absolute URL via the API service if needed
         console.log('Using downloadPath for download:', result.downloadPath);

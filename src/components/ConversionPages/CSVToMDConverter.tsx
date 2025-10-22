@@ -291,7 +291,7 @@ export const CSVToMDConverter: React.FC = () => {
                     {batchResults.map((r, idx) => (
                       <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
                         <div className="text-sm">
-                            <div className="font-medium text-gray-900">{r.outputFilename || (r.originalName ? r.originalName.replace(/\.[^.]+$/, '.md') : 'converted.md')}</div>
+                            <div className="font-medium text-gray-900">{(r as any).filename || r.outputFilename || (r.originalName ? r.originalName.replace(/\.[^.]+$/, '.md') : 'converted.md')}</div>
                           {r.success && r.size && (
                             <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
                           )}

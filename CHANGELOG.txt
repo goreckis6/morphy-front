@@ -10,6 +10,7 @@ CRITICAL BUG FIXES:
 - Fixed CSV to EPUB response handling - was expecting {success, downloadPath} but API returns {blob, filename, size}
 - Fixed CSV to EPUB batch conversion to use specific convertBatchCsvToEpub method for proper filenames
 - Fixed CSV to EPUB batch download to use correct field names (downloadUrl instead of downloadPath, filename instead of outputFilename)
+- Fixed CSV to Markdown batch conversion to use correct field names for proper filenames and downloads
 
 Frontend Updates:
 - Fixed CSV to EPUB single conversion routing
