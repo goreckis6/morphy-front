@@ -56,6 +56,12 @@ jobs:
             # Pull latest image
             docker pull ghcr.io/${{ github.repository_owner }}/morphy-frontend:latest
             
+            # Check if traefik network exists, create if not
+            if ! docker network ls | grep -q traefik; then
+              echo "Creating traefik network..."
+              docker network create traefik
+            fi
+            
             # Deploy with corrected Traefik labels
             docker run -d \
               --name morphy-frontend \
