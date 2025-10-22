@@ -505,51 +505,61 @@ export const CSVToXMLConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    Successfully converted {batchResults.filter(r => r.success).length} of {batchResults.length} CSV file{batchResults.length > 1 ? 's' : ''} to XML format.
                   </p>
-                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
-                    {batchResults.map((result, index) => {
-                      const displayName = result.filename || `${result.originalName || batchFiles[index].name.replace(/\.[^.]+$/, '')}.xml`;
-                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
-                      return (
-                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
-                          <div className="flex flex-col">
-                            <div className="flex items-center">
-                              {result.success ? (
-                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                              ) : (
-                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                  
+                  {/* Batch Results Grid - Mobile Responsive */}
+                  <div className="space-y-3 mb-6 max-h-80 overflow-y-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
+                      {batchResults.map((result, index) => {
+                        const displayName = result.filename || `${result.originalName || batchFiles[index].name.replace(/\.[^.]+$/, '')}.xml`;
+                        const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                        return (
+                          <div key={index} className="bg-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center space-x-2 mb-2">
+                                  {result.success ? (
+                                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                                  ) : (
+                                    <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0" />
+                                  )}
+                                  <p className="text-sm font-medium text-gray-900 truncate">
+                                    {displayName}
+                                  </p>
+                                </div>
+                                <div className="flex items-center space-x-4 text-xs text-gray-500">
+                                  {displaySize && (
+                                    <span>Size: {displaySize}</span>
+                                  )}
+                                  {!result.success && result.error && (
+                                    <span className="text-red-600">{result.error}</span>
+                                  )}
+                                </div>
+                              </div>
+                              {result.success && result.downloadUrl && (
+                                <button
+                                  onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
+                                  className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 min-w-[120px]"
+                                >
+                                  <Download className="w-4 h-4" />
+                                  <span>Download</span>
+                                </button>
                               )}
-                              <span className="text-sm font-medium">{displayName}</span>
                             </div>
-                            {displaySize && (
-                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
-                            )}
-                            {!result.success && result.error && (
-                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
-                            )}
                           </div>
-                          {result.success && result.downloadUrl && (
-                            <button
-                              onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
-                            >
-                              Download
-                            </button>
-                          )}
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button
-                      onClick={resetForm}
-                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                    >
-                      <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
-                    </button>
-                  </div>
+                  
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
                 </div>
               )}
             </div>

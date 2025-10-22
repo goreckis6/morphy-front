@@ -19,14 +19,14 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 
-export const CSVToXMLConverter: React.FC = () => {
+export const CSVToYAMLConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [rootElement, setRootElement] = useState('data');
-  const [rowElement, setRowElement] = useState('row');
+  const [indentSize, setIndentSize] = useState(2);
+  const [includeMetadata, setIncludeMetadata] = useState(true);
   const [prettyPrint, setPrettyPrint] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
@@ -228,27 +228,27 @@ export const CSVToXMLConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free CSV to XML Converter - Convert CSV to XML Format Online</title>
-        <meta name="description" content="Convert CSV files to XML (Extensible Markup Language) format. Support for custom element names and pretty printing. Free online converter with batch processing for data exchange and API integration." />
-        <meta name="keywords" content="CSV to XML, XML converter, data exchange, XML generation, batch conversion, pretty print XML, CSV XML converter online free" />
-        <link rel="canonical" href="https://morphyimg.com/convert/csv-to-xml" />
+        <title>Free CSV to YAML Converter - Convert CSV to YAML Format Online</title>
+        <meta name="description" content="Convert CSV files to YAML (YAML Ain't Markup Language) format. Support for custom indentation and metadata. Free online converter with batch processing for configuration files and data exchange." />
+        <meta name="keywords" content="CSV to YAML, YAML converter, data exchange, YAML generation, batch conversion, configuration files, CSV YAML converter online free" />
+        <link rel="canonical" href="https://morphyimg.com/convert/csv-to-yaml" />
         
-        <meta property="og:title" content="Free CSV to XML Converter Online | MorphyIMG" />
-        <meta property="og:description" content="Convert CSV to XML format online for free. Fast data exchange conversion." />
+        <meta property="og:title" content="Free CSV to YAML Converter Online | MorphyIMG" />
+        <meta property="og:description" content="Convert CSV to YAML format online for free. Fast configuration file conversion." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/convert/csv-to-xml" />
+        <meta property="og:url" content="https://morphyimg.com/convert/csv-to-yaml" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free CSV to XML Converter Online" />
-        <meta name="twitter:description" content="Convert CSV to XML format with custom elements and pretty printing." />
+        <meta name="twitter:title" content="Free CSV to YAML Converter Online" />
+        <meta name="twitter:description" content="Convert CSV to YAML format with custom indentation and metadata." />
 
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "CSV to XML Converter",
-            "description": "Free online CSV to XML converter with custom element support",
-            "url": "https://morphyimg.com/convert/csv-to-xml",
+            "name": "CSV to YAML Converter",
+            "description": "Free online CSV to YAML converter with custom indentation support",
+            "url": "https://morphyimg.com/convert/csv-to-yaml",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Any",
             "offers": {
@@ -268,10 +268,10 @@ export const CSVToXMLConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CSV to XML Converter
+              CSV to YAML Converter
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to XML format quickly and easily. Perfect for data exchange, API integration, and web services with customizable element structure.
+              Convert CSV files to YAML format quickly and easily. Perfect for configuration files, data exchange, and structured data with customizable indentation.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
               <div className="flex items-center gap-2">
@@ -479,41 +479,52 @@ export const CSVToXMLConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    Successfully converted {batchResults.filter(r => r.success).length} of {batchResults.length} CSV file{batchResults.length > 1 ? 's' : ''} to YAML format.
                   </p>
-                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
-                    {batchResults.map((result, index) => {
-                      const displayName = result.filename || `${result.originalName || batchFiles[index].name.replace(/\.[^.]+$/, '')}.xml`;
-                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
-                      return (
-                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
-                          <div className="flex flex-col">
-                            <div className="flex items-center">
-                              {result.success ? (
-                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                              ) : (
-                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
+                  
+                  {/* Batch Results Grid - Mobile Responsive */}
+                  <div className="space-y-3 mb-6 max-h-80 overflow-y-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
+                      {batchResults.map((result, index) => {
+                        const displayName = result.filename || `${result.originalName || batchFiles[index].name.replace(/\.[^.]+$/, '')}.yaml`;
+                        const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
+                        return (
+                          <div key={index} className="bg-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center space-x-2 mb-2">
+                                  {result.success ? (
+                                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                                  ) : (
+                                    <AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0" />
+                                  )}
+                                  <p className="text-sm font-medium text-gray-900 truncate">
+                                    {displayName}
+                                  </p>
+                                </div>
+                                <div className="flex items-center space-x-4 text-xs text-gray-500">
+                                  {displaySize && (
+                                    <span>Size: {displaySize}</span>
+                                  )}
+                                  {!result.success && result.error && (
+                                    <span className="text-red-600">{result.error}</span>
+                                  )}
+                                </div>
+                              </div>
+                              {result.success && result.downloadUrl && (
+                                <button
+                                  onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
+                                  className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 min-w-[120px]"
+                                >
+                                  <Download className="w-4 h-4" />
+                                  <span>Download</span>
+                                </button>
                               )}
-                              <span className="text-sm font-medium">{displayName}</span>
                             </div>
-                            {displaySize && (
-                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
-                            )}
-                            {!result.success && result.error && (
-                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
-                            )}
                           </div>
-                          {result.success && result.downloadUrl && (
-                            <button
-                              onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
-                            >
-                              Download
-                            </button>
-                          )}
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -536,35 +547,35 @@ export const CSVToXMLConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-blue-600" />
-                XML Settings
+                YAML Settings
               </h3>
               
-              {/* Root Element */}
+              {/* Indent Size */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Root Element Name
+                  Indent Size
                 </label>
-                <input
-                  type="text"
-                  value={rootElement}
-                  onChange={(e) => setRootElement(e.target.value)}
-                  placeholder="data"
+                <select
+                  value={indentSize}
+                  onChange={(e) => setIndentSize(Number(e.target.value))}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
+                >
+                  <option value={2}>2 spaces</option>
+                  <option value={4}>4 spaces</option>
+                </select>
               </div>
 
-              {/* Row Element */}
+              {/* Include Metadata */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Row Element Name
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={includeMetadata}
+                    onChange={(e) => setIncludeMetadata(e.target.checked)}
+                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include metadata</span>
                 </label>
-                <input
-                  type="text"
-                  value={rowElement}
-                  onChange={(e) => setRowElement(e.target.value)}
-                  placeholder="row"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
               </div>
 
               {/* Pretty Print */}
@@ -642,15 +653,15 @@ export const CSVToXMLConverter: React.FC = () => {
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to XML?
+            Why Convert CSV to YAML?
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to XML (Extensible Markup Language) format is essential for data exchange, web services integration, and API development. While CSV is excellent for tabular data, XML provides hierarchical structure, self-describing data, and universal compatibility with SOAP/REST APIs, making it the standard format for data interchange and system integration workflows.
+              Converting CSV files to YAML (YAML Ain't Markup Language) format is essential for configuration files, data serialization, and structured data exchange. While CSV is excellent for tabular data, YAML provides human-readable hierarchical structure, clean syntax, and universal compatibility with modern applications, making it the preferred format for configuration files and data interchange workflows.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of XML Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of YAML Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-blue-50 p-6 rounded-lg">
@@ -721,7 +732,7 @@ export const CSVToXMLConverter: React.FC = () => {
             <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8 rounded-xl text-center">
               <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to XML converter to transform your data into XML format for APIs and web services.
+                Use our free online CSV to YAML converter to transform your data into YAML format for configuration files and structured data.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
