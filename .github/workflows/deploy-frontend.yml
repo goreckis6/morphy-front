@@ -48,6 +48,31 @@ jobs:
           script: |
             set -euo pipefail
             cd /opt/frontend
-            docker compose pull
-            docker compose up -d --remove-orphans
+            
+            # Stop and remove old container
+            docker stop morphy-frontend 2>/dev/null || true
+            docker rm morphy-frontend 2>/dev/null || true
+            
+            # Pull latest image
+            docker pull ghcr.io/${{ github.repository_owner }}/morphy-frontend:latest
+            
+            # Deploy with corrected Traefik labels
+            docker run -d \
+              --name morphy-frontend \
+              --label "traefik.enable=true" \
+              --label "traefik.http.routers.morphy.rule=Host(\`morphyimg.com\`)" \
+              --label "traefik.http.routers.morphy.tls=true" \
+              --label "traefik.http.routers.morphy.tls.certresolver=letsencrypt" \
+              --label "traefik.http.routers.morphy-www.rule=Host(\`www.morphyimg.com\`)" \
+              --label "traefik.http.routers.morphy-www.tls=true" \
+              --label "traefik.http.routers.morphy-www.tls.certresolver=letsencrypt" \
+              --label "traefik.http.services.morphy.loadbalancer.server.port=5173" \
+              --network traefik \
+              --restart unless-stopped \
+              -e VITE_API_BASE_URL=${{ secrets.FRONTEND_API_URL }} \
+              ghcr.io/${{ github.repository_owner }}/morphy-frontend:latest
+            
+            # Verify deployment
+            sleep 10
+            docker ps | grep morphy-frontend
 

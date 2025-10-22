@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  morphy-frontend:
+    image: ghcr.io/goreckis6/morphy-frontend:latest
+    container_name: morphy-frontend
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.morphy.rule=Host(`morphyimg.com`)
+      - traefik.http.routers.morphy.tls=true
+      - traefik.http.routers.morphy.tls.certresolver=letsencrypt
+      - traefik.http.routers.morphy-www.rule=Host(`www.morphyimg.com`)
+      - traefik.http.routers.morphy-www.tls=true
+      - traefik.http.routers.morphy-www.tls.certresolver=letsencrypt
+      - traefik.http.services.morphy.loadbalancer.server.port=5173
+    restart: unless-stopped
+    networks:
+      - traefik
+    environment:
+      - VITE_API_BASE_URL=${{ secrets.FRONTEND_API_URL }}
+
+networks:
+  traefik:
+    external: true
