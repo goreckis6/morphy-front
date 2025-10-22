@@ -386,44 +386,28 @@ export const CSVToPPTConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Successfully converted {batchResults.length} CSV file{batchResults.length > 1 ? 's' : ''} to PPT format.
+                    {t('csv_to_ppt.batch_success', { count: batchResults.length })}
                   </p>
-                  
-                  {/* Batch Results Grid - Mobile Responsive */}
-                  <div className="space-y-3 mb-6 max-h-80 overflow-y-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
-                      {batchResults.map((result, index) => (
-                        <div key={index} className="bg-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
-                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center space-x-2 mb-2">
-                                <FileText className="w-4 h-4 text-purple-600 flex-shrink-0" />
-                                <p className="text-sm font-medium text-gray-900 truncate">
-                                  {result.outputFilename}
-                                </p>
-                              </div>
-                              <div className="flex items-center space-x-4 text-xs text-gray-500">
-                                {result.size && (
-                                  <span>Size: {((result.size / (1024 * 1024)).toFixed(2))} MB</span>
-                                )}
-                                {!result.success && <span className="text-red-600">Conversion failed</span>}
-                              </div>
-                            </div>
-                            {result.success && (
-                              <button
-                                onClick={() => handleBatchDownload(result)}
-                                className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 min-w-[120px]"
-                              >
-                                <Download className="w-4 h-4" />
-                                <span>Download</span>
-                              </button>
-                            )}
-                          </div>
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">
+                            {result.outputFilename} {result.size ? `• ${((result.size / (1024 * 1024)).toFixed(2))} MB` : ''}
+                          </p>
                         </div>
-                      ))}
-                    </div>
+                        {result.success && (
+                          <button
+                            onClick={() => handleBatchDownload(result)}
+                            className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
+                          >
+                            <Download className="w-4 h-4 mr-1" />
+                            {t('csv_to_ppt.download_ppt')}
+                          </button>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                  
                   <button
                     onClick={resetForm}
                     className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"

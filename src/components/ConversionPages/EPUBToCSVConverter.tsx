@@ -418,54 +418,18 @@ export const EPUBToCSVConverter: React.FC = () => {
                       {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
                     </h4>
                   </div>
-                  <p className="text-green-700 mb-4">
-                    Successfully converted {batchResults.filter(r => r.success).length} of {batchResults.length} EPUB file{batchResults.length > 1 ? 's' : ''} to CSV format.
-                  </p>
-                  
-                  {/* Batch Results Grid - Mobile Responsive */}
-                  <div className="space-y-3 mb-6 max-h-80 overflow-y-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-3">
-                      {batchResults.map((r, i) => (
-                        <div key={i} className="bg-white rounded-lg p-4 border border-green-200 hover:shadow-md transition-shadow">
-                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                            <div className="flex-1 min-w-0">
-                              <div className="flex items-center space-x-2 mb-2">
-                                <FileText className="w-4 h-4 text-violet-600 flex-shrink-0" />
-                                <p className="text-sm font-medium text-gray-900 truncate">
-                                  {r.outputFilename || r.originalName}
-                                </p>
-                              </div>
-                              <div className="flex items-center space-x-4 text-xs text-gray-500">
-                                {r.success && r.size && (
-                                  <span>Size: {formatFileSize(r.size)}</span>
-                                )}
-                                {!r.success && r.error && (
-                                  <span className="text-red-600">{r.error}</span>
-                                )}
-                              </div>
-                            </div>
-                            {r.success && r.downloadPath && (
-                              <button
-                                onClick={() => handleBatchDownload(r)}
-                                className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center space-x-2 min-w-[120px]"
-                              >
-                                <Download className="w-4 h-4" />
-                                <span>Download</span>
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, i) => (
+                      <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
+                        <span className="text-sm font-medium text-gray-900">{r.outputFilename || r.originalName}</span>
+                        {r.success && r.downloadPath ? (
+                          <button onClick={() => handleBatchDownload(r)} className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">Download</button>
+                        ) : r.error ? (
+                          <span className="text-xs text-red-600">{r.error}</span>
+                        ) : null}
+                      </div>
+                    ))}
                   </div>
-                  
-                  <button
-                    onClick={resetForm}
-                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                  >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
-                  </button>
                 </div>
               )}
             </div>
