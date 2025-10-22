@@ -130,7 +130,13 @@ export const CSVToEPUBConverter: React.FC = () => {
     
     try {
       const result = await apiService.convertBatchCsvToEpub(batchFiles);
+      console.log('Batch conversion API result:', result);
       const results = (result.results as any[]) ?? [];
+      console.log('Batch results array:', results);
+      if (results.length > 0) {
+        console.log('First result structure:', results[0]);
+        console.log('First result keys:', Object.keys(results[0]));
+      }
       setBatchResults(results);
       const successCount = results.filter(r => r.success).length;
       setBatchConverted(successCount > 0);
@@ -149,9 +155,13 @@ export const CSVToEPUBConverter: React.FC = () => {
 
   
   const handleBatchDownload = async (result: any) => {
+    console.log('Batch download result:', result);
+    console.log('Available fields:', Object.keys(result));
+    
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
+      console.log('No download path found. Result:', result);
       setError('Download link is missing. Please reconvert.');
       return;
     }
