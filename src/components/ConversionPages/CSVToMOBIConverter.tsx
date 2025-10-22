@@ -257,6 +257,19 @@ export const CSVToMOBIConverter: React.FC = () => {
                     </div>
                   )}
                 </button>
+                
+                {/* Show conversion time info for large files (above 5 MB) */}
+                {((!batchMode && selectedFile && selectedFile.size > 5 * 1024 * 1024) ||
+                  (batchMode && batchFiles.length > 0 && batchFiles.some(f => f.size > 5 * 1024 * 1024))) && (
+                  <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="flex items-center">
+                      <Clock className="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-sm text-blue-700 font-medium">
+                        {t('csv_to_mobi.large_file_info')}
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {convertedFile && !batchMode && (

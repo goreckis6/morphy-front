@@ -21,6 +21,10 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 
+// Custom limits for RAW image conversion
+const BATCH_SIZE_LIMIT = 100 * 1024 * 1024; // 100MB total batch size
+const SINGLE_FILE_LIMIT = 100 * 1024 * 1024; // 100MB per file
+
 export const CR2ToICOConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -140,26 +144,33 @@ export const CR2ToICOConverter: React.FC = () => {
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
+    const files = Array.from(event.target.files || []) as File[];
     const cr2Files = files.filter(file => 
       file.name.toLowerCase().endsWith('.cr2')
     );
     
-    // Check for files larger than 1000MB
-    const MAX_FILE_SIZE = 1000 * 1024 * 1024; // 1000MB
-    const oversizedFile = cr2Files.find(file => file.size > MAX_FILE_SIZE);
+    // Check for files larger than 100MB per file
+    const oversizedFile = cr2Files.find(file => file.size > SINGLE_FILE_LIMIT);
     
     if (oversizedFile) {
-      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 1000MB.`);
+      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 100MB per file.`);
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
     }
     
-    // Use existing validation
-    const validation = validateBatchFiles(cr2Files);
-    if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+    // Check total batch size
+    const totalSize = cr2Files.reduce((sum, file) => sum + file.size, 0);
+    if (totalSize > BATCH_SIZE_LIMIT) {
+      setError(`Total batch size (${formatFileSize(totalSize)}) exceeds the limit of 100MB.`);
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    // Check max number of files
+    if (cr2Files.length > 20) {
+      setError(`Too many files. Maximum allowed is 20 files per batch.`);
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;

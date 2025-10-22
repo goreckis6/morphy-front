@@ -21,6 +21,10 @@ import {
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 
+// Custom limits for BMP image conversion
+const BATCH_SIZE_LIMIT = 100 * 1024 * 1024; // 100MB total batch size
+const SINGLE_FILE_LIMIT = 100 * 1024 * 1024; // 100MB per file
+
 export const BMPToWebPConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -84,10 +88,35 @@ export const BMPToWebPConverter: React.FC = () => {
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
+    const files = Array.from(event.target.files || []) as File[];
     const bmpFiles = files.filter(file => 
       file.type === 'image/bmp' || file.name.toLowerCase().endsWith('.bmp')
     );
+    
+    // Check for files larger than 100MB per file
+    const oversizedFile = bmpFiles.find(file => file.size > SINGLE_FILE_LIMIT);
+    
+    if (oversizedFile) {
+      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 100MB per file.`);
+      setBatchFiles([]);
+      return;
+    }
+    
+    // Check total batch size
+    const totalSize = bmpFiles.reduce((sum, file) => sum + file.size, 0);
+    if (totalSize > BATCH_SIZE_LIMIT) {
+      setError(`Total batch size (${formatFileSize(totalSize)}) exceeds the limit of 100MB.`);
+      setBatchFiles([]);
+      return;
+    }
+    
+    // Check max number of files
+    if (bmpFiles.length > 20) {
+      setError(`Too many files. Maximum allowed is 20 files per batch.`);
+      setBatchFiles([]);
+      return;
+    }
+    
     setBatchFiles(bmpFiles);
     setError(null);
   };
