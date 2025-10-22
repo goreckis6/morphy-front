@@ -24,7 +24,6 @@ import {
 
 export const CSVToEPUBConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const { user } = useAuth();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);

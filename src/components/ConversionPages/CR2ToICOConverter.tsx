@@ -20,7 +20,6 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
-import { useAuth } from '../../hooks/useAuth';
 
 export const CR2ToICOConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
