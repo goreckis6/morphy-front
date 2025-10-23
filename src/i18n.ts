@@ -369,7 +369,7 @@ const resources = {
 
       // CSV to EPUB
       'csv_to_epub.title': 'CSV to EPUB Converter',
-      'csv_to_epub.meta_title': 'CSV to EPUB Converter - Convert CSV to eBook Format',
+      'csv_to_epub.meta_title': 'Free CSV to EPUB Converter - Convert CSV to eBook Format',
       'csv_to_epub.meta_description': 'Convert CSV data to EPUB ebook format. Transform spreadsheet data into digital books with chapters and metadata. Free online converter.',
       'csv_to_epub.subtitle': 'Convert CSV files to EPUB format for e-books. Transform tabular data into readable electronic publications with professional formatting and metadata.',
       'csv_to_epub.upload_single': 'Upload CSV File',
@@ -1089,7 +1089,7 @@ const resources = {
 
       // CSV to EPUB
       'csv_to_epub.title': 'Konwerter CSV na EPUB',
-      'csv_to_epub.meta_title': 'Konwerter CSV na EPUB - Konwertuj CSV na format e-booka',
+      'csv_to_epub.meta_title': 'Darmowy konwerter CSV na EPUB - Konwertuj CSV na format e-booka',
       'csv_to_epub.meta_description': 'Konwertuj dane CSV na format EPUB e-booka. Przekształć dane tabelaryczne w cyfrowe książki z rozdziałami i metadanymi. Darmowy konwerter online.',
       'csv_to_epub.subtitle': 'Konwertuj pliki CSV na format EPUB dla e-booków. Przekształć dane tabelaryczne w czytelne publikacje elektroniczne z profesjonalnym formatowaniem i metadanymi.',
       'csv_to_epub.upload_single': 'Prześlij plik CSV',
@@ -1809,7 +1809,7 @@ const resources = {
 
       // CSV to EPUB
       'csv_to_epub.title': 'CSV zu EPUB Konverter',
-      'csv_to_epub.meta_title': 'CSV zu EPUB Konverter - Konvertieren Sie CSV zu eBook-Format',
+      'csv_to_epub.meta_title': 'Kostenloser CSV zu EPUB Konverter - Konvertieren Sie CSV zu eBook-Format',
       'csv_to_epub.meta_description': 'Konvertieren Sie CSV-Daten zu EPUB eBook-Format. Transformieren Sie Tabellendaten in digitale Bücher mit Kapiteln und Metadaten. Kostenloser Online-Konverter.',
       'csv_to_epub.subtitle': 'Konvertieren Sie CSV-Dateien zu EPUB-Format für E-Books. Transformieren Sie Tabellendaten in lesbare elektronische Publikationen mit professioneller Formatierung und Metadaten.',
       'csv_to_epub.upload_single': 'CSV Datei hochladen',
