@@ -264,12 +264,30 @@ class ApiService {
     const result = await response.json();
     
     console.log('API: CSV to DOC batch conversion response:', result);
+    console.log('API: Response success:', result.success);
+    console.log('API: Response processed:', result.processed);
+    console.log('API: Number of results:', result.results?.length);
     
-    // Track batch conversions
+    // Log each result in detail
     if (result.results) {
+      result.results.forEach((r: any, index: number) => {
+        console.log(`API: Result ${index + 1}:`, {
+          success: r.success,
+          originalName: r.originalName,
+          outputFilename: r.outputFilename,
+          filename: r.filename,
+          size: r.size,
+          downloadPath: r.downloadPath,
+          storedFilename: r.storedFilename,
+          downloadUrl: r.downloadUrl,
+          error: r.error
+        });
+      });
+      
       const totalSize = result.results.reduce((sum: number, r: any) => {
         return sum + (r.size || 0);
       }, 0);
+      console.log('API: Total size of all files:', totalSize, 'bytes');
     }
     
     return result;

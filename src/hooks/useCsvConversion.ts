@@ -235,24 +235,38 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
 
   const handleBatchDownload = async (result: BatchResultItem) => {
     try {
-      console.log('Downloading batch result:', result);
+      console.log('=== BATCH DOWNLOAD START ===');
+      console.log('Full result object:', JSON.stringify(result, null, 2));
+      console.log('Result properties:', {
+        hasStoredFilename: !!result.storedFilename,
+        hasDownloadPath: !!result.downloadPath,
+        hasDownloadUrl: !!result.downloadUrl,
+        success: result.success,
+        size: result.size,
+        originalName: result.originalName,
+        outputFilename: result.outputFilename,
+        filename: result.filename
+      });
       
       if (result.storedFilename) {
         // Use backend API to fetch the file from the correct origin
         console.log('Using storedFilename for download:', result.storedFilename);
         const filename = getSafeFilename(result);
+        console.log('Safe filename:', filename);
         await apiService.downloadAndSaveFile(result.storedFilename, filename);
         
         // Refresh the conversion limit banner for anonymous users after first batch download
         if (!user && (window as any).refreshConversionLimitBanner) {
           (window as any).refreshConversionLimitBanner();
         }
+        console.log('=== BATCH DOWNLOAD END (storedFilename) ===');
         return;
       }
       if (result.downloadPath) {
         console.log('Using downloadPath for download:', result.downloadPath);
         console.log('DownloadPath type:', typeof result.downloadPath);
         console.log('DownloadPath length:', result.downloadPath.length);
+        console.log('DownloadPath first 100 chars:', result.downloadPath.substring(0, 100));
         
         // Check if downloadPath is a base64 data URL
         if (result.downloadPath.startsWith('data:')) {
@@ -265,6 +279,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
           const link = document.createElement('a');
           link.href = url;
           link.download = getSafeFilename(result);
+          console.log('Downloading as:', link.download);
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
@@ -278,6 +293,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
           const link = document.createElement('a');
           link.href = url;
           link.download = getSafeFilename(result);
+          console.log('Downloading as:', link.download);
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
@@ -288,11 +304,13 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         if (!user && (window as any).refreshConversionLimitBanner) {
           (window as any).refreshConversionLimitBanner();
         }
+        console.log('=== BATCH DOWNLOAD END (downloadPath) ===');
         return;
       }
       if (result.downloadUrl) {
         // Handle downloadUrl from the new CSV to DOC batch endpoint
         console.log('Using downloadUrl for download:', result.downloadUrl);
+        console.log('Download filename:', result.filename || result.outputFilename || `converted.${targetFormat}`);
         const link = document.createElement('a');
         link.href = result.downloadUrl;
         link.download = result.filename || result.outputFilename || `converted.${targetFormat}`;
@@ -304,13 +322,18 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         if (!user && (window as any).refreshConversionLimitBanner) {
           (window as any).refreshConversionLimitBanner();
         }
+        console.log('=== BATCH DOWNLOAD END (downloadUrl) ===');
         return;
       }
       
+      console.error('=== BATCH DOWNLOAD FAILED ===');
       console.error('No valid download path found for result:', result);
+      console.error('All properties:', Object.keys(result));
       setError('Download failed: No valid download path found.');
     } catch (e) {
+      console.error('=== BATCH DOWNLOAD ERROR ===');
       console.error('Batch download failed:', e);
+      console.error('Error details:', e instanceof Error ? e.stack : String(e));
       setError(`Download failed: ${e instanceof Error ? e.message : 'Unknown error'}`);
     }
   };
