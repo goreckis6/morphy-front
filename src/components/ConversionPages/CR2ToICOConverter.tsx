@@ -28,7 +28,7 @@ export const CR2ToICOConverter: React.FC = () => {
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSize, setIconSize] = useState<number | 'default'>(64);
+  const [iconSize, setIconSize] = useState<number | 'default'>('default');
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
@@ -114,7 +114,7 @@ export const CR2ToICOConverter: React.FC = () => {
 
       const result = await apiService.convertFile(file, {
         format: 'ico',
-        iconSize: iconSize === 'default' ? 64 : iconSize,
+        iconSize: iconSize === 'default' ? undefined : iconSize,
         quality: quality
       });
 
@@ -157,7 +157,7 @@ export const CR2ToICOConverter: React.FC = () => {
 
       const result = await apiService.convertBatch(batchFiles, {
         format: 'ico',
-        iconSize: iconSize === 'default' ? 64 : iconSize,
+        iconSize: iconSize === 'default' ? undefined : iconSize,
         quality: quality
       });
 
@@ -245,7 +245,7 @@ export const CR2ToICOConverter: React.FC = () => {
     setBatchConverted(false);
     setBatchResults([]);
     setImagePreview(null);
-    setIconSize(64);
+    setIconSize('default');
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
