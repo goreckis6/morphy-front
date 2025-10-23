@@ -129,8 +129,10 @@ class ApiService {
       endpoint = '/convert/eps-to-ico/single';
     } else if (fileName.endsWith('.eps') && options.format === 'webp') {
       endpoint = '/convert/eps-to-webp/single';
-    } else if (fileName.endsWith('.gif') && options.format === 'ico') {
+    } else     if (fileName.endsWith('.gif') && options.format === 'ico') {
       endpoint = '/convert/gif-to-ico/single';
+    } else if (fileName.endsWith('.csv') && options.format === 'doc') {
+      endpoint = '/convert/csv-to-doc/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
