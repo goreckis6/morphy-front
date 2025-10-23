@@ -273,7 +273,7 @@ const resources = {
       
       // CSV to DOC
       'csv_to_doc.title': 'CSV to DOC Converter',
-      'csv_to_doc.meta_title': 'CSV to DOC Converter - Convert CSV to Word Documents',
+      'csv_to_doc.meta_title': 'Free CSV to DOC Converter - Convert CSV to Word Documents',
       'csv_to_doc.meta_description': 'Convert CSV spreadsheet files to DOC format for Microsoft Word. Transform tabular data into formatted Word documents. Free online converter.',
       'csv_to_doc.subtitle': 'Convert CSV files to Microsoft Word DOC format. Transform tabular data into formatted documents for reports and presentations with professional styling.',
       'csv_to_doc.upload_single': 'Upload CSV File',
@@ -321,7 +321,7 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'CSV to DOCX Converter',
-      'csv_to_docx.meta_title': 'CSV to DOCX Converter - Convert CSV to Word Documents',
+      'csv_to_docx.meta_title': 'Free CSV to DOCX Converter - Convert CSV to Word Documents',
       'csv_to_docx.meta_description': 'Convert CSV spreadsheet files to DOCX format for Microsoft Word. Transform tabular data into formatted Word documents. Free online converter.',
       'csv_to_docx.subtitle': 'Convert CSV files to Microsoft Word DOCX format. Transform tabular data into formatted documents for reports and presentations with professional styling.',
       'csv_to_docx.upload_single': 'Upload CSV File',
@@ -993,7 +993,7 @@ const resources = {
       
       // CSV to DOC
       'csv_to_doc.title': 'Konwerter CSV na DOC',
-      'csv_to_doc.meta_title': 'Konwerter CSV na DOC - Konwertuj CSV na dokumenty Word',
+      'csv_to_doc.meta_title': 'Darmowy konwerter CSV na DOC - Konwertuj CSV na dokumenty Word',
       'csv_to_doc.meta_description': 'Konwertuj pliki arkuszy CSV na format DOC dla Microsoft Word. Przekształć dane tabelaryczne w sformatowane dokumenty Word. Darmowy konwerter online.',
       'csv_to_doc.subtitle': 'Konwertuj pliki CSV na format Microsoft Word DOC. Przekształć dane tabelaryczne w sformatowane dokumenty do raportów i prezentacji z profesjonalnym stylowaniem.',
       'csv_to_doc.upload_single': 'Prześlij plik CSV',
@@ -1041,7 +1041,7 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'Konwerter CSV na DOCX',
-      'csv_to_docx.meta_title': 'Konwerter CSV na DOCX - Konwertuj CSV na dokumenty Word',
+      'csv_to_docx.meta_title': 'Darmowy konwerter CSV na DOCX - Konwertuj CSV na dokumenty Word',
       'csv_to_docx.meta_description': 'Konwertuj pliki arkuszy CSV na format DOCX dla Microsoft Word. Przekształć dane tabelaryczne w sformatowane dokumenty Word. Darmowy konwerter online.',
       'csv_to_docx.subtitle': 'Konwertuj pliki CSV na format Microsoft Word DOCX. Przekształć dane tabelaryczne w sformatowane dokumenty do raportów i prezentacji z profesjonalnym stylowaniem.',
       'csv_to_docx.upload_single': 'Prześlij plik CSV',
@@ -1713,7 +1713,7 @@ const resources = {
       
       // CSV to DOC
       'csv_to_doc.title': 'CSV zu DOC Konverter',
-      'csv_to_doc.meta_title': 'CSV zu DOC Konverter - Konvertieren Sie CSV zu Word-Dokumenten',
+      'csv_to_doc.meta_title': 'Kostenloser CSV zu DOC Konverter - Konvertieren Sie CSV zu Word-Dokumenten',
       'csv_to_doc.meta_description': 'Konvertieren Sie CSV-Tabellenkalkulationsdateien zu DOC-Format für Microsoft Word. Transformieren Sie Tabellendaten in formatierte Word-Dokumente. Kostenloser Online-Konverter.',
       'csv_to_doc.subtitle': 'Konvertieren Sie CSV-Dateien zu Microsoft Word DOC-Format. Transformieren Sie Tabellendaten in formatierte Dokumente für Berichte und Präsentationen mit professionellem Styling.',
       'csv_to_doc.upload_single': 'CSV Datei hochladen',
@@ -1761,7 +1761,7 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'CSV zu DOCX Konverter',
-      'csv_to_docx.meta_title': 'CSV zu DOCX Konverter - Konvertieren Sie CSV zu Word-Dokumenten',
+      'csv_to_docx.meta_title': 'Kostenloser CSV zu DOCX Konverter - Konvertieren Sie CSV zu Word-Dokumenten',
       'csv_to_docx.meta_description': 'Konvertieren Sie CSV-Tabellenkalkulationsdateien zu DOCX-Format für Microsoft Word. Transformieren Sie Tabellendaten in formatierte Word-Dokumente. Kostenloser Online-Konverter.',
       'csv_to_docx.subtitle': 'Konvertieren Sie CSV-Dateien zu Microsoft Word DOCX-Format. Transformieren Sie Tabellendaten in formatierte Dokumente für Berichte und Präsentationen mit professionellem Styling.',
       'csv_to_docx.upload_single': 'CSV Datei hochladen',
