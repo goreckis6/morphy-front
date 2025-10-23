@@ -202,6 +202,20 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     }
   };
 
+  const getSafeFilename = (result: any) => {
+    try {
+      if (result?.outputFilename) return result.outputFilename;
+      if (result?.filename) return result.filename;
+      if (result?.originalName && typeof result.originalName === 'string') {
+        return result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
+      }
+      return `converted.${targetFormat}`;
+    } catch (error) {
+      console.warn('Error processing filename:', error);
+      return `converted.${targetFormat}`;
+    }
+  };
+
   const handleBatchDownload = async (result: BatchResultItem) => {
     try {
       console.log('Downloading batch result:', result);
@@ -209,19 +223,6 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       if (result.storedFilename) {
         // Use backend API to fetch the file from the correct origin
         console.log('Using storedFilename for download:', result.storedFilename);
-        const getSafeFilename = (result: any) => {
-          try {
-            if (result?.outputFilename) return result.outputFilename;
-            if (result?.filename) return result.filename;
-            if (result?.originalName && typeof result.originalName === 'string') {
-              return result.originalName.replace(/\.[^.]+$/, `.${targetFormat}`);
-            }
-            return `converted.${targetFormat}`;
-          } catch (error) {
-            console.warn('Error processing filename:', error);
-            return `converted.${targetFormat}`;
-          }
-        };
         const filename = getSafeFilename(result);
         await apiService.downloadAndSaveFile(result.storedFilename, filename);
         
@@ -232,14 +233,33 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         return;
       }
       if (result.downloadPath) {
-        // Fallback: construct an absolute URL via the API service if needed
         console.log('Using downloadPath for download:', result.downloadPath);
-        const link = document.createElement('a');
-        link.href = `${(import.meta as any).env.VITE_API_BASE_URL || (import.meta as any).env.PROD ? 'https://api.morphyimg.com' : 'http://localhost:3000'}${result.downloadPath}`;
-        link.download = getSafeFilename(result);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        
+        // Check if downloadPath is a base64 data URL
+        if (result.downloadPath.startsWith('data:')) {
+          // Convert base64 data URL to blob and download
+          const response = await fetch(result.downloadPath);
+          const blob = await response.blob();
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = getSafeFilename(result);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+        } else {
+          // Regular download path - use API service
+          const blob = await apiService.downloadFile(result.downloadPath);
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = getSafeFilename(result);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+        }
         
         // Refresh the conversion limit banner for anonymous users after first batch download
         if (!user && (window as any).refreshConversionLimitBanner) {
