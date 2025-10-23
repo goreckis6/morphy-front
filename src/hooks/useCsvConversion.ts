@@ -311,12 +311,22 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         // Handle downloadUrl from the new CSV to DOC batch endpoint
         console.log('Using downloadUrl for download:', result.downloadUrl);
         console.log('Download filename:', result.filename || result.outputFilename || `converted.${targetFormat}`);
+        
+        // Fetch the file from the backend first
+        console.log('Fetching file from backend...');
+        const blob = await apiService.downloadFile(result.downloadUrl);
+        console.log('Downloaded blob size:', blob.size, 'type:', blob.type);
+        
+        // Create download link
+        const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
-        link.href = result.downloadUrl;
+        link.href = url;
         link.download = result.filename || result.outputFilename || `converted.${targetFormat}`;
+        console.log('Downloading as:', link.download);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        URL.revokeObjectURL(url);
         
         // Refresh the conversion limit banner for anonymous users after first batch download
         if (!user && (window as any).refreshConversionLimitBanner) {
