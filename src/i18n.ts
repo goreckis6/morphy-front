@@ -196,8 +196,8 @@ const resources = {
       
       // CR2 to WebP
       'cr2_to_webp.title': 'CR2 to WebP Converter',
-      'cr2_to_webp.meta_title': 'CR2 to WebP Converter - Convert Canon RAW to WebP Format',
-      'cr2_to_webp.meta_description': 'Convert CR2 (Canon RAW) camera files to WebP format for modern web. High-quality RAW image conversion with compression. Free online converter.',
+      'cr2_to_webp.meta_title': 'Free CR2 to WebP Converter - Convert Canon RAW to WebP Format',
+      'cr2_to_webp.meta_description': 'Free online CR2 to WebP converter. Convert Canon RAW camera files to WebP format with quality settings (high, medium, low) and lossless mode. Professional RAW image conversion, no registration required.',
       'cr2_to_webp.subtitle': 'Convert Canon CR2 raw images to WebP format for web optimization. Transform professional camera files into web-ready images with superior compression.',
       'cr2_to_webp.upload_single': 'Upload CR2 File',
       'cr2_to_webp.upload_batch': 'Upload Multiple CR2 Files',
@@ -916,8 +916,8 @@ const resources = {
       
       // CR2 to WebP
       'cr2_to_webp.title': 'Konwerter CR2 na WebP',
-      'cr2_to_webp.meta_title': 'Konwerter CR2 na WebP - Konwertuj Canon RAW na format WebP',
-      'cr2_to_webp.meta_description': 'Konwertuj pliki aparatu CR2 (Canon RAW) na format WebP dla nowoczesnej sieci. Wysokiej jakości konwersja obrazów RAW z kompresją. Darmowy konwerter online.',
+      'cr2_to_webp.meta_title': 'Darmowy Konwerter CR2 na WebP - Konwertuj Canon RAW na format WebP',
+      'cr2_to_webp.meta_description': 'Darmowy online konwerter CR2 na WebP. Konwertuj pliki Canon RAW na format WebP z ustawieniami jakości (wysoka, średnia, niska) i trybem bezstratnym. Profesjonalna konwersja obrazów RAW, bez rejestracji.',
       'cr2_to_webp.subtitle': 'Konwertuj obrazy Canon CR2 RAW na format WebP do optymalizacji sieci. Przekształć profesjonalne pliki aparatu w obrazy gotowe do sieci z lepszą kompresją.',
       'cr2_to_webp.upload_single': 'Prześlij plik CR2',
       'cr2_to_webp.upload_batch': 'Prześlij wiele plików CR2',
@@ -1636,8 +1636,8 @@ const resources = {
       
       // CR2 to WebP
       'cr2_to_webp.title': 'CR2 zu WebP Konverter',
-      'cr2_to_webp.meta_title': 'CR2 zu WebP Konverter - Canon RAW zu WebP Format konvertieren',
-      'cr2_to_webp.meta_description': 'Konvertieren Sie CR2 (Canon RAW) Kamera-Dateien zu WebP Format für modernes Web. Hochwertige RAW-Bildkonvertierung mit Komprimierung. Kostenloser Online-Konverter.',
+      'cr2_to_webp.meta_title': 'Kostenloser CR2 zu WebP Konverter - Canon RAW zu WebP Format konvertieren',
+      'cr2_to_webp.meta_description': 'Kostenloser Online CR2 zu WebP Konverter. Konvertieren Sie Canon RAW Kamera-Dateien zu WebP Format mit Qualitätseinstellungen (hoch, mittel, niedrig) und verlustfreiem Modus. Professionelle RAW-Bildkonvertierung, keine Registrierung erforderlich.',
       'cr2_to_webp.subtitle': 'Konvertieren Sie Canon CR2 RAW-Bilder zu WebP Format für Web-Optimierung. Transformieren Sie professionelle Kamera-Dateien in web-bereite Bilder mit überlegener Komprimierung.',
       'cr2_to_webp.upload_single': 'CR2 Datei hochladen',
       'cr2_to_webp.upload_batch': 'Mehrere CR2 Dateien hochladen',
