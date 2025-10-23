@@ -114,7 +114,7 @@ export const CR2ToICOConverter: React.FC = () => {
 
       const result = await apiService.convertFile(file, {
         format: 'ico',
-        iconSize: iconSize === 'default' ? undefined : iconSize,
+        iconSize: iconSize,
         quality: quality
       });
 
@@ -157,7 +157,7 @@ export const CR2ToICOConverter: React.FC = () => {
 
       const result = await apiService.convertBatch(batchFiles, {
         format: 'ico',
-        iconSize: iconSize === 'default' ? undefined : iconSize,
+        iconSize: iconSize,
         quality: quality
       });
 
