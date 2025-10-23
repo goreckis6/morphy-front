@@ -67,39 +67,15 @@ export const CSVToHTMLConverter: React.FC = () => {
   const handleSingleConvertWithLimits = async () => {
     if (!selectedFile) return;
     
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
     setConversionLimitReached(false);
     await handleSingleConvert();
-    
-    // Refresh conversion limit banner after conversion
   };
 
   const handleBatchConvertWithLimits = async () => {
     if (batchFiles.length === 0) return;
     
-    // Check conversion limits for anonymous users
-    if (!user) {
-      const limitCheck = await ConversionLimits.checkServerLimits();
-      if (limitCheck.reached) {
-        setConversionLimitReached(true);
-        setError(limitCheck.message);
-        return;
-      }
-    }
-    
     setConversionLimitReached(false);
     await handleBatchConvert();
-    
-    // Refresh conversion limit banner after conversion
   };
 
   // Custom download handlers with auto-refresh
