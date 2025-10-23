@@ -606,6 +606,20 @@ export const CR2ToICOConverter: React.FC = () => {
                     <span className="text-pink-600">✓ {t('cr2_to_ico.icon_size_256_desc')}</span>
                   )}
                 </div>
+                
+                {/* ICO Format Limitation Warning */}
+                {iconSize === 'default' && (
+                  <div className="mt-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="flex items-start">
+                      <span className="text-blue-600 mr-2 flex-shrink-0">ℹ️</span>
+                      <div className="text-sm text-blue-800">
+                        <p className="font-medium mb-1">Note: ICO format has a maximum size of 256×256 pixels.</p>
+                        <p>For larger images, the output will be capped at 256×256.</p>
+                        <p className="mt-1">For full original size, use PNG or WebP format instead.</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Quality */}
