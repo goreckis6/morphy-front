@@ -157,6 +157,21 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       console.log('Batch conversion result:', result);
       
       const results = (result.results as BatchResultItem[]) ?? [];
+      console.log('Processing batch results:', results.length, 'items');
+      
+      // Log each result for debugging
+      results.forEach((item, index) => {
+        console.log(`Result ${index + 1}:`, {
+          success: item.success,
+          originalName: item.originalName,
+          downloadPath: item.downloadPath,
+          storedFilename: item.storedFilename,
+          downloadUrl: item.downloadUrl,
+          error: item.error,
+          size: item.size
+        });
+      });
+      
       setBatchResults(results);
       
       const successCount = results.filter(item => item.success).length;
@@ -234,12 +249,16 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
       }
       if (result.downloadPath) {
         console.log('Using downloadPath for download:', result.downloadPath);
+        console.log('DownloadPath type:', typeof result.downloadPath);
+        console.log('DownloadPath length:', result.downloadPath.length);
         
         // Check if downloadPath is a base64 data URL
         if (result.downloadPath.startsWith('data:')) {
+          console.log('Processing base64 data URL');
           // Convert base64 data URL to blob and download
           const response = await fetch(result.downloadPath);
           const blob = await response.blob();
+          console.log('Base64 blob size:', blob.size, 'type:', blob.type);
           const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url;
@@ -249,8 +268,10 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
           document.body.removeChild(link);
           URL.revokeObjectURL(url);
         } else {
+          console.log('Processing regular download path');
           // Regular download path - use API service
           const blob = await apiService.downloadFile(result.downloadPath);
+          console.log('Downloaded blob size:', blob.size, 'type:', blob.type);
           const url = URL.createObjectURL(blob);
           const link = document.createElement('a');
           link.href = url;

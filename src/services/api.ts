@@ -133,6 +133,8 @@ class ApiService {
       endpoint = '/convert/gif-to-ico/single';
     } else if (fileName.endsWith('.csv') && options.format === 'doc') {
       endpoint = '/convert/csv-to-doc/single';
+    } else if (fileName.endsWith('.csv') && options.format === 'docx') {
+      endpoint = '/convert/csv-to-docx/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
