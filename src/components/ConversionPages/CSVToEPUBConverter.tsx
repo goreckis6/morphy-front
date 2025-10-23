@@ -27,6 +27,7 @@ export const CSVToEPUBConverter: React.FC = () => {
   const user = null;
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -210,6 +211,7 @@ export const CSVToEPUBConverter: React.FC = () => {
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
