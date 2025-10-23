@@ -1,5 +1,5 @@
-import React from 'react';
-import { RefreshCw, ArrowLeft, FileText, Image, Database, Code, Download } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { RefreshCw, ArrowLeft, FileText, Image, Database, Code, Download, Search } from 'lucide-react';
 import { Header } from './Header';
 
 interface ConversionFormat {
@@ -11,6 +11,8 @@ interface ConversionFormat {
 }
 
 export const ConverterHub: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const conversionCategories = [
     {
       title: "IMAGE CONVERTERS",
@@ -425,6 +427,25 @@ export const ConverterHub: React.FC = () => {
     }
   ];
 
+  // Filter categories based on search query
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return conversionCategories;
+    }
+
+    const query = searchQuery.toLowerCase();
+    
+    return conversionCategories
+      .map(category => ({
+        ...category,
+        formats: category.formats.filter(format => {
+          const searchableText = `${format.name} ${format.description} ${format.inputFormat} ${format.outputFormat}`.toLowerCase();
+          return searchableText.includes(query);
+        })
+      }))
+      .filter(category => category.formats.length > 0);
+  }, [searchQuery, conversionCategories]);
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -463,35 +484,41 @@ export const ConverterHub: React.FC = () => {
           </p>
         </div>
 
-        {/* Universal Converter */}
+        {/* Search Bar */}
         <div className="mb-12">
-          <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-200">
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
-                <Database className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">Universal Converter</h2>
-                <p className="text-gray-600">Convert between any supported formats</p>
-              </div>
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search converters... (e.g., CSV to MOBI, CR2 to ICO)"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 text-lg border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
             </div>
-            <p className="text-gray-700 mb-6">
-              Our universal converter supports 50+ file formats and can convert between any compatible types. 
-              Perfect for general file conversion needs.
-            </p>
-            <a
-              href="/#converter"
-              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-            >
-              <RefreshCw className="w-5 h-5" />
-              <span>Open Universal Converter</span>
-            </a>
+            {searchQuery && (
+              <p className="mt-2 text-sm text-gray-600 text-center">
+                Found {filteredCategories.reduce((sum, cat) => sum + cat.formats.length, 0)} converter(s)
+              </p>
+            )}
           </div>
         </div>
 
         {/* Conversion Categories */}
         <div className="space-y-12">
-          {conversionCategories.map((category, categoryIndex) => (
+          {filteredCategories.length > 0 ? (
+            filteredCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">{category.title}</h2>
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
@@ -532,7 +559,24 @@ export const ConverterHub: React.FC = () => {
                 ))}
               </div>
             </div>
-          ))}
+          ))
+          ) : (
+            <div className="text-center py-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
+                <Search className="w-8 h-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No converters found</h3>
+              <p className="text-gray-600 mb-4">
+                Try searching for something like "CSV to MOBI" or "CR2 to ICO"
+              </p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="text-blue-600 hover:text-blue-700 font-medium"
+              >
+                Clear search
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Features Section */}

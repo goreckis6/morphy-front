@@ -382,7 +382,7 @@ export const CR2ToICOConverter: React.FC = () => {
                         />
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
+                            <strong>{selectedFile?.name}</strong> ({(selectedFile?.size || 0) / (1024 * 1024) < 1 ? `${Math.round((selectedFile?.size || 0) / 1024)} KB` : `${((selectedFile?.size || 0) / (1024 * 1024)).toFixed(1)} MB`})
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
                             <p>{t('cr2_to_ico.extracted_preview')}: {imagePreview.width} × {imagePreview.height} {t('cr2_to_ico.pixels')}</p>
@@ -400,7 +400,7 @@ export const CR2ToICOConverter: React.FC = () => {
                         </div>
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
+                            <strong>{selectedFile?.name}</strong> ({(selectedFile?.size || 0) / (1024 * 1024) < 1 ? `${Math.round((selectedFile?.size || 0) / 1024)} KB` : `${((selectedFile?.size || 0) / (1024 * 1024)).toFixed(1)} MB`})
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
                             <p>{t('cr2_to_ico.canon_raw_file')}</p>
@@ -529,7 +529,7 @@ export const CR2ToICOConverter: React.FC = () => {
                       <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
                         <div className="flex-1">
                           <p className="text-sm font-medium text-gray-900">
-                            {result.file.name.replace('.cr2', '.ico')} • {(result.blob.size / 1024).toFixed(1)} KB
+                            {result.file.name.replace('.cr2', '.ico')} • {result.blob.size / (1024 * 1024) < 1 ? `${(result.blob.size / 1024).toFixed(1)} KB` : `${(result.blob.size / (1024 * 1024)).toFixed(1)} MB`}
                           </p>
                         </div>
                         <button

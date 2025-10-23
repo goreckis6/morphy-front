@@ -111,8 +111,8 @@ const resources = {
 
       // CR2 to ICO
       'cr2_to_ico.title': 'CR2 to ICO Converter',
-      'cr2_to_ico.meta_title': 'CR2 to ICO Converter - Convert Canon RAW to Windows Icons',
-      'cr2_to_ico.meta_description': 'Convert CR2 (Canon RAW) camera files to ICO format for Windows icons. Professional RAW image to icon conversion with multiple sizes. Free online tool.',
+      'cr2_to_ico.meta_title': 'Free CR2 to ICO Converter - Convert Canon RAW to Windows Icons',
+      'cr2_to_ico.meta_description': 'Free online CR2 to ICO converter. Convert Canon RAW camera files to Windows ICO icons with multiple sizes (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professional quality conversion, no registration required.',
       'cr2_to_ico.subtitle': 'Convert Canon CR2 raw images to ICO format for Windows icons. Extract high-quality icons from professional camera files.',
       'cr2_to_ico.upload_single': 'Upload CR2 File',
       'cr2_to_ico.upload_batch': 'Upload Multiple CR2 Files',
@@ -831,8 +831,8 @@ const resources = {
       
       // CR2 to ICO
       'cr2_to_ico.title': 'Konwerter CR2 na ICO',
-      'cr2_to_ico.meta_title': 'Konwerter CR2 na ICO - Konwersja Canon RAW na ikony Windows',
-      'cr2_to_ico.meta_description': 'Konwertuj pliki CR2 (Canon RAW) na format ICO dla ikon Windows. Profesjonalna konwersja obrazów RAW na ikony z wieloma rozmiarami. Darmowe narzędzie online.',
+      'cr2_to_ico.meta_title': 'Darmowy Konwerter CR2 na ICO - Konwersja Canon RAW na ikony Windows',
+      'cr2_to_ico.meta_description': 'Darmowy online konwerter CR2 na ICO. Konwertuj pliki Canon RAW na ikony Windows ICO z wieloma rozmiarami (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Profesjonalna jakość konwersji, bez rejestracji.',
       'cr2_to_ico.subtitle': 'Konwertuj surowe obrazy Canon CR2 na format ICO dla ikon Windows. Wyodrębnij wysokiej jakości ikony z profesjonalnych plików aparatu.',
       'cr2_to_ico.upload_single': 'Prześlij plik CR2',
       'cr2_to_ico.upload_batch': 'Prześlij wiele plików CR2',
@@ -1551,8 +1551,8 @@ const resources = {
       
       // CR2 to ICO
       'cr2_to_ico.title': 'CR2 zu ICO Konverter',
-      'cr2_to_ico.meta_title': 'CR2 zu ICO Konverter - Canon RAW zu Windows Icons konvertieren',
-      'cr2_to_ico.meta_description': 'Konvertieren Sie CR2 (Canon RAW) Kamera-Dateien in das ICO-Format für Windows-Icons. Professionelle RAW-Bild-zu-Icon-Konvertierung mit mehreren Größen. Kostenloses Online-Tool.',
+      'cr2_to_ico.meta_title': 'Kostenloser CR2 zu ICO Konverter - Canon RAW zu Windows Icons konvertieren',
+      'cr2_to_ico.meta_description': 'Kostenloser Online CR2 zu ICO Konverter. Konvertieren Sie Canon RAW Kamera-Dateien zu Windows ICO Icons mit mehreren Größen (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professionelle Qualitätskonvertierung, keine Registrierung erforderlich.',
       'cr2_to_ico.subtitle': 'Konvertieren Sie Canon CR2 RAW-Bilder in das ICO-Format für Windows-Icons. Extrahieren Sie hochwertige Icons aus professionellen Kamera-Dateien.',
       'cr2_to_ico.upload_single': 'CR2-Datei hochladen',
       'cr2_to_ico.upload_batch': 'Mehrere CR2-Dateien hochladen',
