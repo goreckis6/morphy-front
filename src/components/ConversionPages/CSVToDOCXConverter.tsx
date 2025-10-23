@@ -264,16 +264,16 @@ export const CSVToDOCXConverter: React.FC = () => {
 
               {/* Batch Results */}
               {batchMode && batchConverted && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                <div className="mt-6 p-4 sm:p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('csv_to_docx.batch_conversion_complete')}</h4>
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                    <h4 className="text-base sm:text-lg font-semibold text-green-800">{t('csv_to_docx.batch_conversion_complete')}</h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((r, idx) => (
-                      <div key={idx} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-100">
-                        <div className="text-sm">
-                          <div className="font-medium text-gray-900">
+                      <div key={idx} className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white rounded-lg p-3 border border-green-100 gap-3">
+                        <div className="text-sm flex-1 min-w-0">
+                          <div className="font-medium text-gray-900 truncate">
                             {r.outputFilename || r.filename || (r.originalName ? r.originalName.replace(/\.[^.]+$/, '.docx') : `file_${idx + 1}.docx`)}
                           </div>
                           {r.success && r.size && (
@@ -284,9 +284,10 @@ export const CSVToDOCXConverter: React.FC = () => {
                         {r.success && (r.downloadPath || r.downloadUrl) && (
                           <button
                             onClick={() => handleBatchDownload(r)}
-                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700"
+                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
                           >
-                            {t('common.download')}
+                            <Download className="w-4 h-4 mr-1 sm:mr-0 sm:hidden" />
+                            <span className="sm:inline">{t('common.download')}</span>
                           </button>
                         )}
                       </div>
@@ -294,9 +295,9 @@ export const CSVToDOCXConverter: React.FC = () => {
                   </div>
                   <button
                     onClick={resetForm}
-                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    className="w-full mt-4 bg-gray-600 text-white px-4 sm:px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center text-sm sm:text-base"
                   >
-                    <RefreshCw className="w-5 h-5 mr-2" />
+                    <RefreshCw className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     {t('common.convert_more_files')}
                   </button>
                 </div>
