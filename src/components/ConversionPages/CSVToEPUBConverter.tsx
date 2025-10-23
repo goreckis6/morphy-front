@@ -160,14 +160,14 @@ export const CSVToEPUBConverter: React.FC = () => {
   const handleBatchDownload = async (result: any) => {
     try {
       if (result.storedFilename) {
-        const downloadName = result.outputFilename || result.originalName?.replace(/\.[^.]+$/, '.epub') || 'converted.epub';
+        const downloadName = result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : 'converted.epub');
         await apiService.downloadAndSaveFile(result.storedFilename, downloadName);
       } else if (result.downloadPath) {
         const blob = await apiService.downloadFile(result.downloadPath);
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = result.outputFilename || result.originalName?.replace(/\.[^.]+$/, '.epub') || 'converted.epub';
+        link.download = result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : 'converted.epub');
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -450,7 +450,7 @@ export const CSVToEPUBConverter: React.FC = () => {
                           ) : (
                             <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
                           )}
-                          <span className="text-sm font-medium truncate">{result.outputFilename || result.originalName.replace(/\.[^.]+$/, '.epub')}</span>
+                          <span className="text-sm font-medium truncate">{result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : `file_${idx + 1}.epub`)}</span>
                           {result.success && result.size && (
                             <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
                           )}
