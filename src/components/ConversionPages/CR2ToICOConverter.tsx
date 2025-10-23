@@ -28,7 +28,7 @@ export const CR2ToICOConverter: React.FC = () => {
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [iconSize, setIconSize] = useState<number | 'default'>('default');
+  const [iconSize, setIconSize] = useState<number | 'default'>(64);
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
@@ -66,11 +66,11 @@ export const CR2ToICOConverter: React.FC = () => {
         setPreviewUrl(URL.createObjectURL(file));
         
         // Set basic file preview
-        setImagePreview({
-          url: URL.createObjectURL(file),
-          width: 0,
-          height: 0
-        });
+                  setImagePreview({
+                    url: URL.createObjectURL(file),
+                    width: 0,
+                    height: 0
+                  });
       } else {
         setError('Please select a valid CR2 file');
       }
@@ -114,13 +114,13 @@ export const CR2ToICOConverter: React.FC = () => {
 
       const result = await apiService.convertFile(file, {
         format: 'ico',
-        iconSize: iconSize === 'default' ? undefined : iconSize,
+        iconSize: iconSize === 'default' ? 64 : iconSize,
         quality: quality
       });
 
       console.log('CR2 to ICO: Conversion successful, blob size:', result.blob.size, 'bytes');
       return result.blob;
-    } catch (error) {
+          } catch (error) {
       console.error('CR2 to ICO conversion error:', error);
       throw new Error(error instanceof Error ? error.message : 'Failed to convert CR2 to ICO. Please try again.');
     }
@@ -150,14 +150,14 @@ export const CR2ToICOConverter: React.FC = () => {
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-
+    
     try {
       console.log('CR2 to ICO Batch: Converting', batchFiles.length, 'files');
       console.log('CR2 to ICO Batch: Icon size:', iconSize, 'Quality:', quality);
 
       const result = await apiService.convertBatch(batchFiles, {
         format: 'ico',
-        iconSize: iconSize === 'default' ? undefined : iconSize,
+        iconSize: iconSize === 'default' ? 64 : iconSize,
         quality: quality
       });
 
@@ -245,6 +245,7 @@ export const CR2ToICOConverter: React.FC = () => {
     setBatchConverted(false);
     setBatchResults([]);
     setImagePreview(null);
+    setIconSize(64);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
