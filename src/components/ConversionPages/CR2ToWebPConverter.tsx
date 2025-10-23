@@ -20,6 +20,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
 
 export const CR2ToWebPConverter: React.FC = () => {
   const { t } = useTranslation();
@@ -247,72 +248,22 @@ WEBP_FILE_END`;
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    return new Promise((resolve, reject) => {
-      try {
-        const reader = new FileReader();
-        reader.onload = async (e) => {
-          try {
-            const arrayBuffer = e.target?.result as ArrayBuffer;
-            const uint8Array = new Uint8Array(arrayBuffer);
-            
-            // Look for embedded JPEG preview to convert to WebP
-            const jpegStart = findJPEGStart(uint8Array);
-            const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
-            
-            if (jpegStart !== -1 && jpegEnd !== -1) {
-              // Extract the JPEG preview and convert to WebP
-              const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
-              const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
-              const jpegUrl = URL.createObjectURL(jpegBlob);
-              
-              const img = new Image();
-              img.onload = () => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                if (!ctx) {
-                  URL.revokeObjectURL(jpegUrl);
-                  generateSampleWebP(file, resolve);
-                  return;
-                }
-                
-                canvas.width = img.width;
-                canvas.height = img.height;
-                ctx.drawImage(img, 0, 0);
-                
-                const qualityValue = lossless ? 1.0 : (quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5);
-                
-                canvas.toBlob((blob) => {
-                  URL.revokeObjectURL(jpegUrl);
-                  if (blob) {
-                    resolve(blob);
-                  } else {
-                    generateSampleWebP(file, resolve);
-                  }
-                }, 'image/webp', qualityValue);
-              };
-              
-              img.onerror = () => {
-                URL.revokeObjectURL(jpegUrl);
-                generateSampleWebP(file, resolve);
-              };
-              
-              img.src = jpegUrl;
-            } else {
-              // No JPEG preview found, generate sample
-              generateSampleWebP(file, resolve);
-            }
-          } catch (error) {
-            generateSampleWebP(file, resolve);
-          }
-        };
-        reader.onerror = () => {
-          generateSampleWebP(file, resolve);
-        };
-        reader.readAsArrayBuffer(file);
-      } catch (error) {
-        generateSampleWebP(file, resolve);
-      }
-    });
+    try {
+      console.log('CR2 to WebP: Converting file:', file.name, 'size:', file.size, 'bytes');
+      console.log('CR2 to WebP: Quality:', quality, 'Lossless:', lossless);
+
+      const result = await apiService.convertFile(file, {
+        format: 'webp',
+        quality: lossless ? 1.0 : (quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5),
+        lossless: lossless
+      });
+
+      console.log('CR2 to WebP: Conversion successful, blob size:', result.blob.size, 'bytes');
+      return result.blob;
+    } catch (error) {
+      console.error('CR2 to WebP conversion error:', error);
+      throw new Error(error instanceof Error ? error.message : 'Failed to convert CR2 to WebP. Please try again.');
+    }
   };
 
   const handleSingleConvert = async () => {
@@ -337,39 +288,66 @@ WEBP_FILE_END`;
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-    
+
     try {
+      console.log('CR2 to WebP Batch: Converting', batchFiles.length, 'files');
+      console.log('CR2 to WebP Batch: Quality:', quality, 'Lossless:', lossless);
+
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'webp',
+        quality: lossless ? 1.0 : (quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5),
+        lossless: lossless
+      });
+
+      console.log('CR2 to WebP Batch: Conversion result:', result);
+      
+      if (!result.success) {
+        throw new Error('Batch conversion failed');
+      }
+      
+      // Process batch results
       const results: Array<{ file: File; blob: Blob }> = [];
       
-      for (let i = 0; i < batchFiles.length; i++) {
-        const file = batchFiles[i];
-        const converted = await handleConvert(file);
-        results.push({ file, blob: converted });
+      for (let i = 0; i < result.results.length; i++) {
+        const fileResult = result.results[i];
+        const originalFile = batchFiles[i];
+        
+        if (fileResult.success && fileResult.downloadPath) {
+          try {
+            let blob: Blob;
+            
+            // Check if downloadPath is a base64 data URL
+            if (fileResult.downloadPath.startsWith('data:')) {
+              // Convert base64 data URL to blob
+              const response = await fetch(fileResult.downloadPath);
+              blob = await response.blob();
+            } else {
+              // Download the converted file using API service
+              blob = await apiService.downloadFile(fileResult.downloadPath);
+            }
+            
+            results.push({ file: originalFile, blob });
+          } catch (downloadError) {
+            console.error(`Error processing file ${i}:`, downloadError);
+          }
+        }
+      }
+      
+      if (results.length === 0) {
+        throw new Error('No files were successfully converted.');
       }
       
       setBatchResults(results);
       setBatchConverted(true);
       setError(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('CR2 to WebP batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
-  
-  const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-      setError('Download link is missing. Please reconvert.');
-      return;
-    }
-    try {
-      await apiService.downloadFile(filename, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
-    }
-  };
 
   const handleDownload = () => {
     if (convertedFile) {
