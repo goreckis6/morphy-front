@@ -22,7 +22,6 @@ const resources = {
       'common.convert_another': 'Convert Another',
       'common.convert_more_files': 'Convert More Files',
       'common.start_converting_now': 'Start Converting Now',
-      'common.large_file_warning': 'Conversion may take 2-5 minutes for large files',
       
       // Validation messages
       'validation.single_file_limit': 'Single file limit: {{size}} per file.',
@@ -721,7 +720,6 @@ const resources = {
       'csv_to_mobi.start_converting': 'Start Converting Now',
       'csv_to_mobi.ready_title': 'Ready to Convert Your CSV Files?',
       'csv_to_mobi.ready_text': 'Use our free online CSV to MOBI converter to transform your tabular data into professional e-books.',
-      'csv_to_mobi.large_file_warning': 'Conversion may take 2-5 minutes for large files'
     }
   },
   pl: {
@@ -742,7 +740,6 @@ const resources = {
       'common.convert_another': 'Konwertuj Kolejny',
       'common.convert_more_files': 'Konwertuj Więcej Plików',
       'common.start_converting_now': 'Rozpocznij Konwersję Teraz',
-      'common.large_file_warning': 'Konwersja może potrwać 2-5 minut dla dużych plików',
       
       // Validation messages
       'validation.single_file_limit': 'Limit pojedynczego pliku: {{size}} na plik.',
@@ -1441,7 +1438,6 @@ const resources = {
       'csv_to_mobi.use_case_publishing_title': 'Publikacje cyfrowe',
       'csv_to_mobi.use_case_publishing_text': 'Twórz profesjonalne publikacje cyfrowe, konwertując dane CSV na format MOBI do dystrybucji przez platformy e-booków i biblioteki cyfrowe.',
       'csv_to_mobi.start_converting': 'Rozpocznij konwersję',
-      'csv_to_mobi.large_file_warning': 'Konwersja może potrwać 2-5 minut dla dużych plików'
     }
   },
   de: {
@@ -1462,7 +1458,6 @@ const resources = {
       'common.convert_another': 'Weitere konvertieren',
       'common.convert_more_files': 'Weitere Dateien konvertieren',
       'common.start_converting_now': 'Jetzt konvertieren',
-      'common.large_file_warning': 'Konvertierung kann 2-5 Minuten für große Dateien dauern',
       
       // Validation messages
       'validation.single_file_limit': 'Einzeldateibeschränkung: {{size}} pro Datei.',
@@ -2161,7 +2156,6 @@ const resources = {
       'csv_to_mobi.use_case_publishing_title': 'Digitale Veröffentlichung',
       'csv_to_mobi.use_case_publishing_text': 'Erstellen Sie professionelle digitale Publikationen, indem Sie CSV-Daten in MOBI-Format für die Verteilung über E-Book-Plattformen und digitale Bibliotheken konvertieren.',
       'csv_to_mobi.start_converting': 'Konvertierung starten',
-      'csv_to_mobi.large_file_warning': 'Konvertierung kann 2-5 Minuten für große Dateien dauern'
     }
   }
 };
