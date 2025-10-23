@@ -236,9 +236,6 @@ export const CSVToODPConverter: React.FC = () => {
                 </div>
               )}
 
-              {/* Conversion Time Info */}
-              <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-              </div>
 
               <div className="mt-8">
                 <button
