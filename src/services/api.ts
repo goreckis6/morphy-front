@@ -141,9 +141,18 @@ class ApiService {
       // New file-based approach - get download link
       const jsonResult = await response.json();
       
-      // Download the file from the provided link
-      const downloadResponse = await this.makeRequest(jsonResult.downloadPath);
-      const blob = await downloadResponse.blob();
+      let blob: Blob;
+      
+      // Check if downloadPath is a base64 data URL
+      if (jsonResult.downloadPath && jsonResult.downloadPath.startsWith('data:')) {
+        // Convert base64 data URL to blob
+        const dataResponse = await fetch(jsonResult.downloadPath);
+        blob = await dataResponse.blob();
+      } else {
+        // Download the file from the provided link
+        const downloadResponse = await this.makeRequest(jsonResult.downloadPath);
+        blob = await downloadResponse.blob();
+      }
       
       // Track conversion in global counter
       

@@ -21,3 +21,4 @@ jobs:
           VPS_USER: ${{ secrets.FRONTEND_VPS_USERNAME }}
         run: ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST "hostname && whoami && uptime"
 
+

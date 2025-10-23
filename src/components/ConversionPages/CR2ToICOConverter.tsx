@@ -176,11 +176,21 @@ export const CR2ToICOConverter: React.FC = () => {
         
         if (fileResult.success && fileResult.downloadPath) {
           try {
-            // Download the converted file using API service
-            const blob = await apiService.downloadFile(fileResult.downloadPath);
+            let blob: Blob;
+            
+            // Check if downloadPath is a base64 data URL
+            if (fileResult.downloadPath.startsWith('data:')) {
+              // Convert base64 data URL to blob
+              const response = await fetch(fileResult.downloadPath);
+              blob = await response.blob();
+            } else {
+              // Download the converted file using API service
+              blob = await apiService.downloadFile(fileResult.downloadPath);
+            }
+            
             results.push({ file: originalFile, blob });
           } catch (downloadError) {
-            console.error(`Error downloading file ${i}:`, downloadError);
+            console.error(`Error processing file ${i}:`, downloadError);
           }
         }
       }
