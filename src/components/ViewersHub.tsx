@@ -1,5 +1,5 @@
-import React from 'react';
-import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw, Search } from 'lucide-react';
 import { Header } from './Header';
 
 interface ViewerFormat {
@@ -11,6 +11,8 @@ interface ViewerFormat {
 }
 
 export const ViewersHub: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const viewerCategories = [
     {
       title: "STANDARD IMAGE FORMATS",
@@ -78,6 +80,25 @@ export const ViewersHub: React.FC = () => {
     }
   ];
 
+  // Filter categories based on search query
+  const filteredCategories = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return viewerCategories;
+    }
+
+    const query = searchQuery.toLowerCase();
+    
+    return viewerCategories
+      .map(category => ({
+        ...category,
+        formats: category.formats.filter(viewer => {
+          const searchableText = `${viewer.name} ${viewer.description} ${viewer.category}`.toLowerCase();
+          return searchableText.includes(query);
+        })
+      }))
+      .filter(category => category.formats.length > 0);
+  }, [searchQuery, viewerCategories]);
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -116,9 +137,41 @@ export const ViewersHub: React.FC = () => {
           </p>
         </div>
 
+        {/* Search Bar */}
+        <div className="mb-12">
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search viewers... (e.g., PDF, JPEG, Excel, JSON)"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 text-lg border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
+            </div>
+            {searchQuery && (
+              <p className="mt-2 text-sm text-gray-600 text-center">
+                Found {filteredCategories.reduce((sum, cat) => sum + cat.formats.length, 0)} viewer(s)
+              </p>
+            )}
+          </div>
+        </div>
+
         {/* Viewer Categories */}
         <div className="space-y-12">
-          {viewerCategories.map((category, categoryIndex) => (
+          {filteredCategories.length > 0 ? (
+            filteredCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               <div className="flex items-center space-x-3 mb-6">
                 {category.icon}
@@ -159,7 +212,24 @@ export const ViewersHub: React.FC = () => {
                 ))}
               </div>
             </div>
-          ))}
+          ))
+          ) : (
+            <div className="text-center py-12">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
+                <Search className="w-8 h-8 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No viewers found</h3>
+              <p className="text-gray-600 mb-4">
+                Try searching for something like "PDF", "JPEG", "Excel", or "JSON"
+              </p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="text-blue-600 hover:text-blue-700 font-medium"
+              >
+                Clear search
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Features Section */}
