@@ -96,9 +96,18 @@ export const CSVToEPUBConverter: React.FC = () => {
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    // Mock conversion - in a real implementation, you would use a library like epub-gen
-    const epubContent = `Mock EPUB content for ${file.name} - Title: ${bookTitle}, Author: ${author}, TOC: ${includeTableOfContents}`;
-    return new Blob([epubContent], { type: 'application/epub+zip' });
+    try {
+      const result = await apiService.convertFile(file, { 
+        format: 'epub',
+        bookTitle: bookTitle || undefined,
+        author: author || undefined,
+        includeTableOfContents: includeTableOfContents
+      });
+      return result.blob;
+    } catch (error) {
+      console.error('CSV to EPUB conversion failed:', error);
+      throw new Error(`Conversion failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
   };
 
   const handleSingleConvert = async () => {
@@ -110,9 +119,11 @@ export const CSVToEPUBConverter: React.FC = () => {
     try {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
+      setConvertedFilename(selectedFile.name.replace('.csv', '.epub'));
       
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      console.error('CSV to EPUB single conversion failed:', err);
+      setError(`Conversion failed: ${err instanceof Error ? err.message : 'Unknown error'}`);
     } finally {
       setIsConverting(false);
     }
@@ -125,7 +136,7 @@ export const CSVToEPUBConverter: React.FC = () => {
     setError(null);
     
     try {
-      const result = await apiService.convertBatch(batchFiles, { format: 'epub' });
+      const result = await apiService.convertBatchCsvToEpub(batchFiles);
       const results = (result.results as any[]) ?? [];
       setBatchResults(results);
       const successCount = results.filter(r => r.success).length;
@@ -135,7 +146,8 @@ export const CSVToEPUBConverter: React.FC = () => {
       }
       
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('CSV to EPUB batch conversion failed:', err);
+      setError(`Batch conversion failed: ${err instanceof Error ? err.message : 'Unknown error'}`);
       setBatchConverted(false);
       setBatchResults([]);
     } finally {
@@ -145,17 +157,36 @@ export const CSVToEPUBConverter: React.FC = () => {
 
   
   const handleBatchDownload = async (result: any) => {
-    const filename = result.storedFilename || result.downloadPath?.split('/').pop();
-    if (!filename) {
-      setError('Download link is missing. Please reconvert.');
-      return;
-    }
     try {
-      const downloadName = result.outputFilename || result.originalName.replace(/\.[^.]+$/, '.epub');
-      await apiService.downloadFile(filename, downloadName);
-      
+      if (result.storedFilename) {
+        const downloadName = result.outputFilename || result.originalName?.replace(/\.[^.]+$/, '.epub') || 'converted.epub';
+        await apiService.downloadAndSaveFile(result.storedFilename, downloadName);
+      } else if (result.downloadPath) {
+        const blob = await apiService.downloadFile(result.downloadPath);
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = result.outputFilename || result.originalName?.replace(/\.[^.]+$/, '.epub') || 'converted.epub';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      } else if (result.downloadUrl) {
+        const blob = await apiService.downloadFile(result.downloadUrl);
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = result.filename || result.outputFilename || 'converted.epub';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      } else {
+        setError('Download link is missing. Please reconvert.');
+      }
     } catch (error) {
-      setError('Download failed. Please try again.');
+      console.error('Batch download failed:', error);
+      setError(`Download failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
 
@@ -164,12 +195,11 @@ export const CSVToEPUBConverter: React.FC = () => {
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.csv', '.epub') : 'converted.epub';
+      a.download = convertedFilename || (selectedFile ? selectedFile.name.replace('.csv', '.epub') : 'converted.epub');
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      
     }
   };
 

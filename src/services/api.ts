@@ -135,6 +135,8 @@ class ApiService {
       endpoint = '/convert/csv-to-doc/single';
     } else if (fileName.endsWith('.csv') && options.format === 'docx') {
       endpoint = '/convert/csv-to-docx/single';
+    } else if (fileName.endsWith('.csv') && options.format === 'epub') {
+      endpoint = '/convert/csv-to-epub/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
