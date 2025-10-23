@@ -255,6 +255,10 @@ class ApiService {
       console.log(`API: Added file ${index + 1}:`, file.name, 'size:', file.size);
     });
 
+    // Add format parameter for batch conversion
+    formData.append('format', 'doc');
+    console.log('API: Added format parameter: doc');
+
     console.log('API: Making request to /convert/csv-to-doc/batch');
     const response = await this.makeRequest('/convert/csv-to-doc/batch', 'POST', formData);
     const result = await response.json();
@@ -286,6 +290,10 @@ class ApiService {
       formData.append('files', fileWithProperName);
       console.log(`API: Added file ${index + 1}:`, file.name, 'size:', file.size);
     });
+
+    // Add format parameter for batch conversion
+    formData.append('format', 'docx');
+    console.log('API: Added format parameter: docx');
 
     console.log('API: Making request to /convert/csv-to-docx/batch');
     const response = await this.makeRequest('/convert/csv-to-docx/batch', 'POST', formData);
