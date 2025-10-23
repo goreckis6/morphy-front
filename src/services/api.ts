@@ -206,6 +206,7 @@ class ApiService {
     if (options.format) formData.append('format', options.format);
     if (options.width !== undefined) formData.append('width', options.width.toString());
     if (options.height !== undefined) formData.append('height', options.height.toString());
+    if (options.iconSize !== undefined) formData.append('iconSize', options.iconSize.toString());
 
     // Route conversions to specific endpoints
     let endpoint = '/api/convert/batch';
