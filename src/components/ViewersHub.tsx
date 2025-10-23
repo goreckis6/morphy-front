@@ -18,64 +18,64 @@ export const ViewersHub: React.FC = () => {
       title: "STANDARD IMAGE FORMATS",
       icon: <Image className="w-6 h-6 text-blue-600" />,
       formats: [
-        { name: "JPEG Viewer", description: "View JPEG images with zoom and pan controls", path: "/viewer/jpg", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "PNG Viewer", description: "View PNG images with transparency support", path: "/viewer/png", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewer/webp", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewer/gif", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewer/svg", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "TIFF Viewer", description: "View TIFF images with multi-page support", path: "/viewer/tiff", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "BMP Viewer", description: "View bitmap images with color depth support", path: "/viewer/bmp", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "ICO Viewer", description: "View Windows icon files with multiple sizes", path: "/viewer/ico", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "HEIC Viewer", description: "View HEIC images from modern cameras", path: "/viewer/heic", category: "Image", icon: <Image className="w-5 h-5" /> },
-        { name: "AVIF Viewer", description: "View AVIF images with next-gen compression", path: "/viewer/avif", category: "Image", icon: <Image className="w-5 h-5" /> }
+        { name: "JPEG Viewer", description: "View JPEG images with zoom and pan controls", path: "/viewers/jpg", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "PNG Viewer", description: "View PNG images with transparency support", path: "/viewers/png", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewers/webp", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewers/gif", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewers/svg", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "TIFF Viewer", description: "View TIFF images with multi-page support", path: "/viewers/tiff", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "BMP Viewer", description: "View bitmap images with color depth support", path: "/viewers/bmp", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "ICO Viewer", description: "View Windows icon files with multiple sizes", path: "/viewers/ico", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "HEIC Viewer", description: "View HEIC images from modern cameras", path: "/viewers/heic", category: "Image", icon: <Image className="w-5 h-5" /> },
+        { name: "AVIF Viewer", description: "View AVIF images with next-gen compression", path: "/viewers/avif", category: "Image", icon: <Image className="w-5 h-5" /> }
       ]
     },
     {
       title: "DOCUMENT FORMATS",
       icon: <FileText className="w-6 h-6 text-green-600" />,
       formats: [
-        { name: "PDF Viewer", description: "View PDF documents with page navigation", path: "/viewer/pdf", category: "Document", icon: <FileText className="w-5 h-5" /> },
-        { name: "DOCX Viewer", description: "View Microsoft Word documents", path: "/viewer/docx", category: "Document", icon: <FileText className="w-5 h-5" /> },
-        { name: "RTF Viewer", description: "View Rich Text Format documents", path: "/viewer/rtf", category: "Document", icon: <FileText className="w-5 h-5" /> },
-        { name: "ODT Viewer", description: "View OpenDocument Text files", path: "/viewer/odt", category: "Document", icon: <FileText className="w-5 h-5" /> },
-        { name: "TXT Viewer", description: "View plain text files with syntax highlighting", path: "/viewer/txt", category: "Document", icon: <FileText className="w-5 h-5" /> },
-        { name: "Markdown Viewer", description: "View Markdown files with rendered formatting", path: "/viewer/md", category: "Document", icon: <FileText className="w-5 h-5" /> }
+        { name: "PDF Viewer", description: "View PDF documents with page navigation", path: "/viewers/pdf", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "DOCX Viewer", description: "View Microsoft Word documents", path: "/viewers/docx", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "RTF Viewer", description: "View Rich Text Format documents", path: "/viewers/rtf", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "ODT Viewer", description: "View OpenDocument Text files", path: "/viewers/odt", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "TXT Viewer", description: "View plain text files with syntax highlighting", path: "/viewers/txt", category: "Document", icon: <FileText className="w-5 h-5" /> },
+        { name: "Markdown Viewer", description: "View Markdown files with rendered formatting", path: "/viewers/md", category: "Document", icon: <FileText className="w-5 h-5" /> }
       ]
     },
     {
       title: "SPREADSHEET FORMATS",
       icon: <BarChart3 className="w-6 h-6 text-purple-600" />,
       formats: [
-        { name: "Excel Viewer", description: "View Excel spreadsheets with formula support", path: "/viewer/xlsx", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> },
-        { name: "CSV Viewer", description: "View CSV files with table formatting", path: "/viewer/csv", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> },
-        { name: "ODS Viewer", description: "View OpenDocument Spreadsheet files", path: "/viewer/ods", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> }
+        { name: "Excel Viewer", description: "View Excel spreadsheets with formula support", path: "/viewers/xlsx", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> },
+        { name: "CSV Viewer", description: "View CSV files with table formatting", path: "/viewers/csv", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> },
+        { name: "ODS Viewer", description: "View OpenDocument Spreadsheet files", path: "/viewers/ods", category: "Spreadsheet", icon: <BarChart3 className="w-5 h-5" /> }
       ]
     },
     {
       title: "CODE & DATA FORMATS",
       icon: <Code className="w-6 h-6 text-orange-600" />,
       formats: [
-        { name: "JSON Viewer", description: "View JSON files with syntax highlighting and formatting", path: "/viewer/json", category: "Code", icon: <Code className="w-5 h-5" /> },
-        { name: "XML Viewer", description: "View XML files with tree structure", path: "/viewer/xml", category: "Code", icon: <Code className="w-5 h-5" /> },
-        { name: "HTML Viewer", description: "View HTML files with rendered content", path: "/viewer/html", category: "Code", icon: <Code className="w-5 h-5" /> },
-        { name: "CSS Viewer", description: "View CSS files with syntax highlighting", path: "/viewer/css", category: "Code", icon: <Code className="w-5 h-5" /> },
-        { name: "JavaScript Viewer", description: "View JS files with syntax highlighting", path: "/viewer/js", category: "Code", icon: <Code className="w-5 h-5" /> },
-        { name: "Python Viewer", description: "View Python files with syntax highlighting", path: "/viewer/py", category: "Code", icon: <Code className="w-5 h-5" /> }
+        { name: "JSON Viewer", description: "View JSON files with syntax highlighting and formatting", path: "/viewers/json", category: "Code", icon: <Code className="w-5 h-5" /> },
+        { name: "XML Viewer", description: "View XML files with tree structure", path: "/viewers/xml", category: "Code", icon: <Code className="w-5 h-5" /> },
+        { name: "HTML Viewer", description: "View HTML files with rendered content", path: "/viewers/html", category: "Code", icon: <Code className="w-5 h-5" /> },
+        { name: "CSS Viewer", description: "View CSS files with syntax highlighting", path: "/viewers/css", category: "Code", icon: <Code className="w-5 h-5" /> },
+        { name: "JavaScript Viewer", description: "View JS files with syntax highlighting", path: "/viewers/js", category: "Code", icon: <Code className="w-5 h-5" /> },
+        { name: "Python Viewer", description: "View Python files with syntax highlighting", path: "/viewers/py", category: "Code", icon: <Code className="w-5 h-5" /> }
       ]
     },
     {
       title: "RAW CAMERA FORMATS",
       icon: <Image className="w-6 h-6 text-red-600" />,
       formats: [
-        { name: "NEF Viewer", description: "View Nikon raw camera files", path: "/viewer/nef", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "CR2 Viewer", description: "View Canon raw camera files", path: "/viewer/cr2", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "DCR Viewer", description: "View Kodak raw camera files", path: "/viewer/dcr", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "X3F Viewer", description: "View Sigma raw camera files", path: "/viewer/x3f", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "ARW Viewer", description: "View Sony raw camera files", path: "/viewer/arw", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "RAF Viewer", description: "View Fuji raw camera files", path: "/viewer/raf", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "ORF Viewer", description: "View Olympus raw camera files", path: "/viewer/orf", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "DNG Viewer", description: "View Adobe Digital Negative files", path: "/viewer/dng", category: "Raw", icon: <Image className="w-5 h-5" /> },
-        { name: "PEF Viewer", description: "View Pentax raw camera files", path: "/viewer/pef", category: "Raw", icon: <Image className="w-5 h-5" /> }
+        { name: "NEF Viewer", description: "View Nikon raw camera files", path: "/viewers/nef", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "CR2 Viewer", description: "View Canon raw camera files", path: "/viewers/cr2", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "DCR Viewer", description: "View Kodak raw camera files", path: "/viewers/dcr", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "X3F Viewer", description: "View Sigma raw camera files", path: "/viewers/x3f", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "ARW Viewer", description: "View Sony raw camera files", path: "/viewers/arw", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "RAF Viewer", description: "View Fuji raw camera files", path: "/viewers/raf", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "ORF Viewer", description: "View Olympus raw camera files", path: "/viewers/orf", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "DNG Viewer", description: "View Adobe Digital Negative files", path: "/viewers/dng", category: "Raw", icon: <Image className="w-5 h-5" /> },
+        { name: "PEF Viewer", description: "View Pentax raw camera files", path: "/viewers/pef", category: "Raw", icon: <Image className="w-5 h-5" /> }
       ]
     }
   ];
