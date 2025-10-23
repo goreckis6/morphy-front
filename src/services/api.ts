@@ -264,31 +264,6 @@ class ApiService {
     const result = await response.json();
     
     console.log('API: CSV to DOC batch conversion response:', result);
-    console.log('API: Response success:', result.success);
-    console.log('API: Response processed:', result.processed);
-    console.log('API: Number of results:', result.results?.length);
-    
-    // Log each result in detail
-    if (result.results) {
-      result.results.forEach((r: any, index: number) => {
-        console.log(`API: Result ${index + 1}:`, {
-          success: r.success,
-          originalName: r.originalName,
-          outputFilename: r.outputFilename,
-          filename: r.filename,
-          size: r.size,
-          downloadPath: r.downloadPath,
-          storedFilename: r.storedFilename,
-          downloadUrl: r.downloadUrl,
-          error: r.error
-        });
-      });
-      
-      const totalSize = result.results.reduce((sum: number, r: any) => {
-        return sum + (r.size || 0);
-      }, 0);
-      console.log('API: Total size of all files:', totalSize, 'bytes');
-    }
     
     return result;
   }
@@ -319,13 +294,6 @@ class ApiService {
     
     console.log('API: CSV to DOCX batch conversion response:', result);
     
-    // Track batch conversions
-    if (result.results) {
-      const totalSize = result.results.reduce((sum: number, r: any) => {
-        return sum + (r.size || 0);
-      }, 0);
-    }
-    
     return result;
   }
 
@@ -345,18 +313,15 @@ class ApiService {
       console.log(`API: Added file ${index + 1}:`, file.name, 'size:', file.size);
     });
 
+    // Add format parameter for batch conversion
+    formData.append('format', 'epub');
+    console.log('API: Added format parameter: epub');
+
     console.log('API: Making request to /convert/csv-to-epub/batch');
     const response = await this.makeRequest('/convert/csv-to-epub/batch', 'POST', formData);
     const result = await response.json();
     
     console.log('API: CSV to EPUB batch conversion response:', result);
-    
-    // Track batch conversions
-    if (result.results) {
-      const totalSize = result.results.reduce((sum: number, r: any) => {
-        return sum + (r.size || 0);
-      }, 0);
-    }
     
     return result;
   }
