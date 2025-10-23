@@ -661,7 +661,7 @@ const resources = {
       
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV to MOBI Converter',
-      'csv_to_mobi.meta_title': 'CSV to MOBI Converter - Convert CSV to Kindle Format',
+      'csv_to_mobi.meta_title': 'Free CSV to MOBI Converter - Convert CSV to Kindle Format',
       'csv_to_mobi.meta_description': 'Convert CSV data to MOBI format for Amazon Kindle. Transform spreadsheet data into Kindle-compatible ebooks. Free online converter with batch support.',
       'csv_to_mobi.subtitle': 'Convert CSV files to MOBI format. Transform tabular data into Kindle-compatible ebooks with formatted tables.',
       'csv_to_mobi.upload_single': 'Upload CSV File',
@@ -1381,7 +1381,7 @@ const resources = {
       
       // CSV to MOBI
       'csv_to_mobi.title': 'Konwerter CSV na MOBI',
-      'csv_to_mobi.meta_title': 'Konwerter CSV na MOBI - Konwertuj CSV na format Kindle',
+      'csv_to_mobi.meta_title': 'Darmowy konwerter CSV na MOBI - Konwertuj CSV na format Kindle',
       'csv_to_mobi.meta_description': 'Konwertuj dane CSV na format MOBI dla Amazon Kindle. Przekształć dane arkusza kalkulacyjnego w kompatybilne z Kindle e-booki. Darmowy konwerter online z obsługą wsadową.',
       'csv_to_mobi.subtitle': 'Konwertuj pliki CSV na format MOBI. Przekształć dane tabelaryczne w kompatybilne z Kindle e-booki z sformatowanymi tabelami.',
       'csv_to_mobi.upload_single': 'Prześlij plik CSV',
@@ -2101,7 +2101,7 @@ const resources = {
       
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV zu MOBI Konverter',
-      'csv_to_mobi.meta_title': 'CSV zu MOBI Konverter - CSV in Kindle-Format umwandeln',
+      'csv_to_mobi.meta_title': 'Kostenloser CSV zu MOBI Konverter - CSV in Kindle-Format umwandeln',
       'csv_to_mobi.meta_description': 'Konvertieren Sie CSV-Daten in MOBI-Format für Amazon Kindle. Verwandeln Sie Tabellenkalkulationsdaten in Kindle-kompatible E-Books. Kostenloser Online-Konverter mit Stapelverarbeitung.',
       'csv_to_mobi.subtitle': 'Konvertieren Sie CSV-Dateien in MOBI-Format. Verwandeln Sie Tabellendaten in Kindle-kompatible E-Books mit formatierten Tabellen.',
       'csv_to_mobi.upload_single': 'CSV-Datei hochladen',
