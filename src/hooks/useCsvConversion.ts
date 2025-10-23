@@ -5,8 +5,10 @@ import { useFileValidation } from './useFileValidation';
 export interface BatchResultItem {
   originalName: string;
   outputFilename?: string;
+  filename?: string;
   success: boolean;
   downloadPath?: string;
+  downloadUrl?: string;
   storedFilename?: string;
   error?: string;
   size?: number;
