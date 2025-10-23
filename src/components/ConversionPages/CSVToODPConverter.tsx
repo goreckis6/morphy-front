@@ -297,7 +297,7 @@ export const CSVToODPConverter: React.FC = () => {
                   </p>
                   <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
-                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.odp`;
+                      const displayName = result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.odp') : `file_${index + 1}.odp`);
                       const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
                       return (
                         <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
