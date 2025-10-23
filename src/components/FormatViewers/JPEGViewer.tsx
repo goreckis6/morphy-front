@@ -21,8 +21,8 @@ export const JPEGViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>JPEG Viewer & Converter - View and Convert JPG Images Online</title>
-        <meta name="description" content="Professional JPEG viewer and converter. View JPG images online, extract EXIF metadata, convert to PNG, WebP, PDF and more. Free online tool with batch processing support." />
+        <title>Free JPG Viewer - View JPG Images Online</title>
+        <meta name="description" content="Free JPG viewer. View JPG images online, extract EXIF metadata. Free online tool with batch processing support." />
         <meta name="keywords" content="JPEG viewer, JPG viewer, image viewer, JPEG converter, JPG to PNG, view JPEG online, EXIF viewer, photo viewer" />
       </Helmet>
       <div className="min-h-screen bg-gray-50">
@@ -46,10 +46,10 @@ export const JPEGViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">
-                    JPEG Viewer & Converter
+                    Free JPG Viewer
                   </h1>
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100">
-                    View, analyze, and convert JPEG images with professional tools
+                    View and analyze JPEG images with professional tools
                   </p>
                 </div>
               </div>
