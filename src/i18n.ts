@@ -423,7 +423,7 @@ const resources = {
 
       // CSV to HTML
       'csv_to_html.title': 'CSV to HTML Converter',
-      'csv_to_html.meta_title': 'CSV to HTML Converter - Convert CSV to Web Tables',
+      'csv_to_html.meta_title': 'Free CSV to HTML Converter - Convert CSV to Web Tables',
       'csv_to_html.meta_description': 'Convert CSV files to HTML format for web publishing. Transform spreadsheet data into formatted HTML tables. Free online converter with styling options.',
       'csv_to_html.subtitle': 'Convert CSV files to HTML format. Transform tabular data into web-ready HTML tables with customizable styling.',
       'csv_to_html.upload_single': 'Upload CSV File',
@@ -1143,7 +1143,7 @@ const resources = {
 
       // CSV to HTML
       'csv_to_html.title': 'Konwerter CSV na HTML',
-      'csv_to_html.meta_title': 'Konwerter CSV na HTML - Konwertuj CSV na tabele internetowe',
+      'csv_to_html.meta_title': 'Darmowy konwerter CSV na HTML - Konwertuj CSV na tabele internetowe',
       'csv_to_html.meta_description': 'Konwertuj pliki CSV na format HTML do publikacji internetowych. Przekształć dane tabelaryczne w sformatowane tabele HTML. Darmowy konwerter online z opcjami stylowania.',
       'csv_to_html.subtitle': 'Konwertuj pliki CSV na format HTML. Przekształć dane tabelaryczne w gotowe do sieci tabele HTML z niestandardowym stylowaniem.',
       'csv_to_html.upload_single': 'Prześlij plik CSV',
@@ -1863,7 +1863,7 @@ const resources = {
 
       // CSV to HTML
       'csv_to_html.title': 'CSV zu HTML Konverter',
-      'csv_to_html.meta_title': 'CSV zu HTML Konverter - Konvertieren Sie CSV zu Web-Tabellen',
+      'csv_to_html.meta_title': 'Kostenloser CSV zu HTML Konverter - Konvertieren Sie CSV zu Web-Tabellen',
       'csv_to_html.meta_description': 'Konvertieren Sie CSV-Dateien in HTML-Format für Web-Publishing. Wandeln Sie Tabellendaten in formatierte HTML-Tabellen um. Kostenloser Online-Konverter mit Styling-Optionen.',
       'csv_to_html.subtitle': 'Konvertieren Sie CSV-Dateien in HTML-Format. Wandeln Sie Tabellendaten in web-fertige HTML-Tabellen mit benutzerdefiniertem Styling um.',
       'csv_to_html.upload_single': 'CSV-Datei hochladen',

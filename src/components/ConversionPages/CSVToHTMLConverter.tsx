@@ -38,6 +38,7 @@ export const CSVToHTMLConverter: React.FC = () => {
     batchResults,
     batchConverted,
     conversionLimitReached,
+    user,
     fileInputRef,
     getSingleInfoMessage,
     getBatchInfoMessage,
