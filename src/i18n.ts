@@ -108,7 +108,7 @@ const resources = {
       'doc_to_epub.use_case_4_text': 'Convert your personal writings, journals, and documents to EPUB format to create a portable digital library accessible across all your devices.',
       'doc_to_epub.ready_title': 'Ready to Convert Your DOC Files?',
       'doc_to_epub.ready_text': 'Use our free online DOC to EPUB converter to transform your Word documents into professional eBooks for any e-reader.',
-
+      
       // CR2 to ICO
       'cr2_to_ico.title': 'CR2 to ICO Converter',
       'cr2_to_ico.meta_title': 'Free CR2 to ICO Converter - Convert Canon RAW to Windows Icons',
@@ -482,7 +482,7 @@ const resources = {
 
       // CSV to Markdown
       'csv_to_md.title': 'CSV to Markdown Converter',
-      'csv_to_md.meta_title': 'CSV to Markdown Converter - Convert CSV to MD Tables',
+      'csv_to_md.meta_title': 'Free CSV to Markdown Converter - Convert CSV to MD Tables',
       'csv_to_md.meta_description': 'Convert CSV files to Markdown format for documentation. Professional data to Markdown conversion with formatting. Free online tool.',
       'csv_to_md.subtitle': 'Convert CSV files to Markdown format. Transform tabular data into Markdown tables for documentation and GitHub projects.',
       'csv_to_md.upload_single': 'Upload CSV File',
@@ -1202,7 +1202,7 @@ const resources = {
 
       // CSV to Markdown
       'csv_to_md.title': 'Konwerter CSV na Markdown',
-      'csv_to_md.meta_title': 'Konwerter CSV na Markdown - Konwertuj CSV na tabele MD',
+      'csv_to_md.meta_title': 'Darmowy konwerter CSV na Markdown - Konwertuj CSV na tabele MD',
       'csv_to_md.meta_description': 'Konwertuj pliki CSV na format Markdown do dokumentacji. Profesjonalna konwersja danych na Markdown z formatowaniem. Darmowe narzędzie online.',
       'csv_to_md.subtitle': 'Konwertuj pliki CSV na format Markdown. Przekształć dane tabelaryczne w tabele Markdown do dokumentacji i projektów GitHub.',
       'csv_to_md.upload_single': 'Prześlij plik CSV',
@@ -1922,7 +1922,7 @@ const resources = {
 
       // CSV to Markdown
       'csv_to_md.title': 'CSV zu Markdown Konverter',
-      'csv_to_md.meta_title': 'CSV zu Markdown Konverter - Konvertieren Sie CSV zu MD-Tabellen',
+      'csv_to_md.meta_title': 'Kostenloser CSV zu Markdown Konverter - Konvertieren Sie CSV zu MD-Tabellen',
       'csv_to_md.meta_description': 'Konvertieren Sie CSV-Dateien in Markdown-Format für Dokumentation. Professionelle Daten-zu-Markdown-Konvertierung mit Formatierung. Kostenloses Online-Tool.',
       'csv_to_md.subtitle': 'Konvertieren Sie CSV-Dateien in Markdown-Format. Transformieren Sie Tabellendaten in Markdown-Tabellen für Dokumentation und GitHub-Projekte.',
       'csv_to_md.upload_single': 'CSV-Datei hochladen',
