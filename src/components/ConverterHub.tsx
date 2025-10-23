@@ -13,11 +13,6 @@ interface ConversionFormat {
 export const ConverterHub: React.FC = () => {
   const conversionCategories = [
     {
-      title: "DEVELOPER TOOLS",
-      formats: [
-      ]
-    },
-    {
       title: "IMAGE CONVERTERS",
       formats: [
         { 

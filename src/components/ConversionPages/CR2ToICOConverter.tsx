@@ -19,6 +19,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
 
 export const CR2ToICOConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -107,44 +108,20 @@ export const CR2ToICOConverter: React.FC = () => {
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    const API_BASE_URL = import.meta.env.PROD 
-      ? 'https://api.morphyimg.com' 
-      : 'http://localhost:3000';
-
-    const formData = new FormData();
-    formData.append('file', file);
-    formData.append('iconSize', iconSize.toString());
-    formData.append('quality', quality);
-
     try {
-      console.log('CR2 to ICO: Sending request to', `${API_BASE_URL}/convert/cr2-to-ico/single`);
-      console.log('CR2 to ICO: File size:', file.size, 'bytes');
+      console.log('CR2 to ICO: Converting file:', file.name, 'size:', file.size, 'bytes');
       console.log('CR2 to ICO: Icon size:', iconSize, 'Quality:', quality);
 
-      const response = await fetch(`${API_BASE_URL}/convert/cr2-to-ico/single`, {
-        method: 'POST',
-        body: formData,
+      const result = await apiService.convertFile(file, {
+        format: 'ico',
+        iconSize: iconSize === 'default' ? undefined : iconSize,
+        quality: quality
       });
 
-      console.log('CR2 to ICO: Response status:', response.status);
-      console.log('CR2 to ICO: Response headers:', Object.fromEntries(response.headers.entries()));
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('CR2 to ICO: Error response:', errorText);
-        throw new Error(`Conversion failed: ${response.status} ${response.statusText}. ${errorText}`);
-      }
-
-      const blob = await response.blob();
-      console.log('CR2 to ICO: Received blob size:', blob.size, 'bytes');
-      return blob;
+      console.log('CR2 to ICO: Conversion successful, blob size:', result.blob.size, 'bytes');
+      return result.blob;
     } catch (error) {
       console.error('CR2 to ICO conversion error:', error);
-      
-      if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
-        throw new Error('Unable to connect to the conversion service. Please check your internet connection and try again.');
-      }
-      
       throw new Error(error instanceof Error ? error.message : 'Failed to convert CR2 to ICO. Please try again.');
     }
   };
@@ -173,57 +150,38 @@ export const CR2ToICOConverter: React.FC = () => {
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-    
-    const API_BASE_URL = import.meta.env.PROD 
-      ? 'https://api.morphyimg.com' 
-      : 'http://localhost:3000';
-
-    const formData = new FormData();
-    batchFiles.forEach((file: File) => {
-      formData.append('files', file);
-    });
-    formData.append('iconSize', iconSize.toString());
-    formData.append('quality', quality);
 
     try {
-      console.log('CR2 to ICO Batch: Sending request to', `${API_BASE_URL}/convert/cr2-to-ico/batch`);
-      console.log('CR2 to ICO Batch: Files count:', batchFiles.length);
+      console.log('CR2 to ICO Batch: Converting', batchFiles.length, 'files');
       console.log('CR2 to ICO Batch: Icon size:', iconSize, 'Quality:', quality);
 
-      const response = await fetch(`${API_BASE_URL}/convert/cr2-to-ico/batch`, {
-        method: 'POST',
-        body: formData,
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'ico',
+        iconSize: iconSize === 'default' ? undefined : iconSize,
+        quality: quality
       });
 
-      console.log('CR2 to ICO Batch: Response status:', response.status);
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('CR2 to ICO Batch: Error response:', errorText);
-        throw new Error(`Batch conversion failed: ${response.status} ${response.statusText}. ${errorText}`);
+      console.log('CR2 to ICO Batch: Conversion result:', result);
+      
+      if (!result.success) {
+        throw new Error('Batch conversion failed');
       }
-
-      const result = await response.json();
-      console.log('CR2 to ICO Batch: Received result:', result);
       
       // Process batch results
       const results: Array<{ file: File; blob: Blob }> = [];
       
-      for (let i = 0; i < result.files.length; i++) {
-        const fileResult = result.files[i];
+      for (let i = 0; i < result.results.length; i++) {
+        const fileResult = result.results[i];
         const originalFile = batchFiles[i];
         
-        try {
-          // Download the converted file
-          const downloadResponse = await fetch(`${API_BASE_URL}${fileResult.downloadUrl}`);
-          if (!downloadResponse.ok) {
-            console.error(`Failed to download file ${i}:`, downloadResponse.statusText);
-            continue;
+        if (fileResult.success && fileResult.downloadPath) {
+          try {
+            // Download the converted file using API service
+            const blob = await apiService.downloadFile(fileResult.downloadPath);
+            results.push({ file: originalFile, blob });
+          } catch (downloadError) {
+            console.error(`Error downloading file ${i}:`, downloadError);
           }
-          const blob = await downloadResponse.blob();
-          results.push({ file: originalFile, blob });
-        } catch (downloadError) {
-          console.error(`Error downloading file ${i}:`, downloadError);
         }
       }
       
@@ -236,12 +194,7 @@ export const CR2ToICOConverter: React.FC = () => {
       setError(null);
     } catch (err) {
       console.error('CR2 to ICO batch conversion error:', err);
-      
-      if (err instanceof TypeError && err.message.includes('Failed to fetch')) {
-        setError('Unable to connect to the conversion service. Please check your internet connection and try again.');
-      } else {
-        setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
-      }
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
