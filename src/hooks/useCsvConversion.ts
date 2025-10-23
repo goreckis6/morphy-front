@@ -338,6 +338,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     batchResults,
     batchConverted,
     conversionLimitReached,
+    setConversionLimitReached,
     user,
     fileInputRef,
     getSingleInfoMessage,

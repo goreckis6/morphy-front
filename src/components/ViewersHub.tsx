@@ -110,58 +110,58 @@ export const ViewersHub: React.FC = () => {
       {/* Back Button */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-4">
+          <div className="py-3 sm:py-4">
             <button
               onClick={handleBack}
-              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors text-sm sm:text-base"
             >
-              <ArrowLeft className="w-5 h-5" />
+              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>Back to Home</span>
             </button>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
-              <Eye className="w-8 h-8 text-white" />
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
+            <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
+              <Eye className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
             </div>
-            <h1 className="text-4xl font-bold text-gray-900">File Viewers</h1>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">File Viewers</h1>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-xl text-gray-600 max-w-3xl mx-auto">
             View and preview files in your browser without downloading. 
             Support for images, documents, spreadsheets, and more.
           </p>
         </div>
 
         {/* Search Bar */}
-        <div className="mb-12">
+        <div className="mb-8 sm:mb-12">
           <div className="max-w-2xl mx-auto">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Search className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search viewers... (e.g., PDF, JPEG, Excel, JSON)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 text-lg border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                className="w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               )}
             </div>
             {searchQuery && (
-              <p className="mt-2 text-sm text-gray-600 text-center">
+              <p className="mt-2 text-xs sm:text-sm text-gray-600 text-center">
                 Found {filteredCategories.reduce((sum, cat) => sum + cat.formats.length, 0)} viewer(s)
               </p>
             )}
@@ -169,44 +169,44 @@ export const ViewersHub: React.FC = () => {
         </div>
 
         {/* Viewer Categories */}
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
                 {category.icon}
-                <h2 className="text-2xl font-bold text-gray-900">{category.title}</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{category.title}</h2>
               </div>
               
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 {category.formats.map((viewer, formatIndex) => (
                   <div
                     key={formatIndex}
-                    className={`px-6 py-4 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 transition-colors ${
+                    className={`px-3 sm:px-6 py-3 sm:py-4 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 transition-colors ${
                       formatIndex === 0 ? 'rounded-t-lg' : ''
                     } ${formatIndex === category.formats.length - 1 ? 'rounded-b-lg' : ''}`}
                   >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
+                      <div className="flex items-start sm:items-center space-x-3 sm:space-x-4 w-full sm:w-auto">
                         <div className="flex-shrink-0">
                           {viewer.icon}
                         </div>
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-3 mb-1">
-                            <h3 className="text-lg font-semibold text-gray-900">{viewer.name}</h3>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-1">
+                            <h3 className="text-base sm:text-lg font-semibold text-gray-900">{viewer.name}</h3>
                             <span className="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs font-medium">
                               {viewer.category}
                             </span>
                           </div>
-                          <p className="text-gray-600 text-sm">{viewer.description}</p>
+                          <p className="text-gray-600 text-xs sm:text-sm">{viewer.description}</p>
                         </div>
                       </div>
-                      <div className="ml-4">
+                      <div className="w-full sm:w-auto sm:ml-4">
                         <a
                           href={viewer.path}
-                          className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                          className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors w-full sm:w-auto"
                         >
-                          <Eye className="w-4 h-4" />
+                          <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
                           <span>View Now</span>
                         </a>
                       </div>

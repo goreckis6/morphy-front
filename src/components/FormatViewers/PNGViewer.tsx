@@ -21,8 +21,8 @@ export const PNGViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free PNG Viewer & Converter - View PNG Images with Transparency Online</title>
-        <meta name="description" content="Free PNG viewer and converter. View PNG images online with alpha transparency support, convert to JPG, WebP, PDF and more. Free online tool with batch processing." />
+        <title>Free PNG Viewer - View PNG Images with Transparency Online</title>
+        <meta name="description" content="Free PNG viewer. View PNG images online with alpha transparency support. Free online tool with batch processing." />
         <meta name="keywords" content="PNG viewer, PNG converter, view PNG online, PNG transparency, PNG to JPG, image viewer, alpha channel viewer" />
       </Helmet>
     <div className="min-h-screen bg-gray-50">
@@ -46,10 +46,10 @@ export const PNGViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">
-                    Free PNG Viewer & Converter
+                    Free PNG Viewer
                   </h1>
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-green-100">
-                    View and convert PNG images with transparency support
+                    View PNG images with transparency support
                   </p>
                 </div>
               </div>
@@ -292,13 +292,13 @@ export const PNGViewer: React.FC = () => {
               <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              PNG Viewer and Converter Features
+              PNG Viewer Features
             </h2>
           </div>
           
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4 text-sm sm:text-base">
-              Our professional PNG viewer and converter provides comprehensive support for all PNG variants including 
+              Our professional PNG viewer provides comprehensive support for all PNG variants including 
               PNG-8, PNG-24, PNG-32, and APNG (Animated PNG). Whether you're a web designer, graphic artist, or developer, 
               our platform offers the tools you need for professional PNG processing with full transparency support.
             </p>
@@ -310,11 +310,10 @@ export const PNGViewer: React.FC = () => {
               alpha channel information, color depth, and embedded text chunks.
             </p>
             
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Professional Conversion Tools</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Professional Viewing Tools</h3>
             <p className="mb-4 text-sm sm:text-base">
-              Convert PNG files to JPEG, WebP, PDF, TIFF, and other formats. Our converter offers transparency handling 
-              options, background color selection for formats that don't support alpha channels, and batch processing 
-              for converting multiple PNG files simultaneously while preserving quality.
+              View PNG files with transparency handling options, background color selection for formats that don't support alpha channels, and batch processing 
+              for viewing multiple PNG files simultaneously while preserving quality.
             </p>
             
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Transparency Optimization</h3>
@@ -349,7 +348,7 @@ export const PNGViewer: React.FC = () => {
             </div>
             
             <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
-              Professional PNG viewer and converter for all your image processing needs.
+              Professional PNG viewer for all your image processing needs.
             </p>
             
             <div className="flex items-center justify-center space-x-2 text-xs sm:text-sm text-gray-300">
