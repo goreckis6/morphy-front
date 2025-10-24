@@ -553,7 +553,7 @@ const resources = {
       
       // CSV to ODT
       'csv_to_odt.title': 'CSV to ODT Converter',
-      'csv_to_odt.meta_title': 'CSV to ODT Converter - Convert CSV to OpenDocument',
+      'csv_to_odt.meta_title': 'Free CSV to ODP Converter - Convert CSV Files to Presentations Online',
       'csv_to_odt.meta_description': 'Convert CSV files to ODT format for LibreOffice Writer. Professional table-to-document conversion with formatting. Free online converter.',
       'csv_to_odt.subtitle': 'Convert CSV files to OpenDocument Text (ODT) format. Transform tabular data into LibreOffice Writer documents.',
       'csv_to_odt.upload_single': 'Upload CSV File',
@@ -1223,7 +1223,7 @@ const resources = {
       
       // CSV to ODT
       'csv_to_odt.title': 'Konwerter CSV na ODT',
-      'csv_to_odt.meta_title': 'Konwerter CSV na ODT - Konwertuj CSV na OpenDocument',
+      'csv_to_odt.meta_title': 'Darmowy konwerter CSV na ODP - Konwertuj pliki CSV na prezentacje online',
       'csv_to_odt.meta_description': 'Konwertuj pliki CSV na format ODT dla LibreOffice Writer. Profesjonalna konwersja tabeli do dokumentu z formatowaniem. Darmowy konwerter online.',
       'csv_to_odt.subtitle': 'Konwertuj pliki CSV na format OpenDocument Text (ODT). Przekształć dane tabelaryczne w dokumenty LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Prześlij plik CSV',
@@ -1893,7 +1893,7 @@ const resources = {
       
       // CSV to ODT
       'csv_to_odt.title': 'CSV zu ODT Konverter',
-      'csv_to_odt.meta_title': 'CSV zu ODT Konverter - Konvertieren Sie CSV zu OpenDocument',
+      'csv_to_odt.meta_title': 'Kostenloser CSV zu ODP Konverter - Konvertieren Sie CSV-Dateien zu Präsentationen online',
       'csv_to_odt.meta_description': 'Konvertieren Sie CSV-Dateien in ODT-Format für LibreOffice Writer. Professionelle Tabellen-zu-Dokument-Konvertierung mit Formatierung. Kostenloser Online-Konverter.',
       'csv_to_odt.subtitle': 'Konvertieren Sie CSV-Dateien in OpenDocument Text (ODT) Format. Verwandeln Sie Tabellendaten in LibreOffice Writer Dokumente.',
       'csv_to_odt.upload_single': 'CSV-Datei hochladen',
