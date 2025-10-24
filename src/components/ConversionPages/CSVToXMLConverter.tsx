@@ -327,7 +327,10 @@ export const CSVToXMLConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={() => {
+                    setBatchMode(false);
+                    resetForm();
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
@@ -338,7 +341,10 @@ export const CSVToXMLConverter: React.FC = () => {
                   Single File
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={() => {
+                    setBatchMode(true);
+                    resetForm();
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
