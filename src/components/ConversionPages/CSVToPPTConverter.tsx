@@ -394,23 +394,30 @@ export const CSVToPPTConverter: React.FC = () => {
                   <p className="text-green-700 mb-4">
                     {t('csv_to_ppt.batch_success', { count: batchResults.length })}
                   </p>
-                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                  <div className="space-y-3 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
-                      <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
-                        <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">
-                            {result.outputFilename} {result.size ? `• ${((result.size / (1024 * 1024)).toFixed(2))} MB` : ''}
-                          </p>
+                      <div key={index} className="bg-white rounded-lg p-4 border border-green-200">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-medium text-gray-900 truncate">
+                              {result.outputFilename}
+                            </p>
+                            {result.size && (
+                              <p className="text-xs text-gray-500 mt-1">
+                                {((result.size / (1024 * 1024)).toFixed(2))} MB
+                              </p>
+                            )}
+                          </div>
+                          {result.success && (
+                            <button
+                              onClick={() => handleBatchDownload(result)}
+                              className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center sm:justify-start"
+                            >
+                              <Download className="w-4 h-4 mr-2" />
+                              {t('csv_to_ppt.download_ppt')}
+                            </button>
+                          )}
                         </div>
-                        {result.success && (
-                          <button
-                            onClick={() => handleBatchDownload(result)}
-                            className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
-                          >
-                            <Download className="w-4 h-4 mr-1" />
-                            {t('csv_to_ppt.download_ppt')}
-                          </button>
-                        )}
                       </div>
                     ))}
                   </div>

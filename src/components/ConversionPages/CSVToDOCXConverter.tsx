@@ -269,27 +269,40 @@ export const CSVToDOCXConverter: React.FC = () => {
                     <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
                     <h4 className="text-base sm:text-lg font-semibold text-green-800">{t('csv_to_docx.batch_conversion_complete')}</h4>
                   </div>
-                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                  <div className="space-y-3 max-h-60 overflow-y-auto">
                     {batchResults.map((r, idx) => (
-                      <div key={idx} className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white rounded-lg p-3 border border-green-100 gap-3">
-                        <div className="text-sm flex-1 min-w-0">
-                          <div className="font-medium text-gray-900 truncate">
-                            {r.outputFilename || r.filename || (r.originalName ? r.originalName.replace(/\.[^.]+$/, '.docx') : `file_${idx + 1}.docx`)}
+                      <div key={idx} className="bg-white rounded-lg p-4 border border-green-200">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-start">
+                              {r.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              )}
+                              <div className="min-w-0 flex-1">
+                                <p className="text-sm font-medium text-gray-900 truncate">
+                                  {r.outputFilename || r.filename || (r.originalName ? r.originalName.replace(/\.[^.]+$/, '.docx') : `file_${idx + 1}.docx`)}
+                                </p>
+                                {r.success && r.size && (
+                                  <p className="text-xs text-gray-500 mt-1">{formatFileSize(r.size)}</p>
+                                )}
+                                {!r.success && r.error && (
+                                  <p className="text-xs text-red-600 mt-1 break-words">{r.error}</p>
+                                )}
+                              </div>
+                            </div>
                           </div>
-                          {r.success && r.size && (
-                            <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
+                          {r.success && (r.downloadPath || r.downloadUrl) && (
+                            <button
+                              onClick={() => handleBatchDownload(r)}
+                              className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center sm:justify-start"
+                            >
+                              <Download className="w-4 h-4 mr-2" />
+                              {t('common.download')}
+                            </button>
                           )}
-                          {!r.success && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
-                        {r.success && (r.downloadPath || r.downloadUrl) && (
-                          <button
-                            onClick={() => handleBatchDownload(r)}
-                            className="bg-green-600 text-white px-3 py-2 rounded-md text-sm hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
-                          >
-                            <Download className="w-4 h-4 mr-1 sm:mr-0 sm:hidden" />
-                            <span className="sm:inline">{t('common.download')}</span>
-                          </button>
-                        )}
                       </div>
                     ))}
                   </div>

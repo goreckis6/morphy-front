@@ -461,29 +461,40 @@ export const CSVToEPUBConverter: React.FC = () => {
                   </div>
                   <div className="space-y-3 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
-                      <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
-                        result.success ? 'bg-white border border-green-200' : 'bg-red-50 border border-red-200'
+                      <div key={index} className={`rounded-lg p-4 border ${
+                        result.success ? 'bg-white border-green-200' : 'bg-red-50 border-red-200'
                       }`}>
-                        <div className="flex items-center flex-1">
-                          {result.success ? (
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          ) : (
-                            <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
-                          )}
-                          <span className="text-sm font-medium truncate">{result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : `file_${idx + 1}.epub`)}</span>
-                          {result.success && result.size && (
-                            <span className="text-xs text-gray-500 ml-2">({formatFileSize(result.size)})</span>
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-start">
+                              {result.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              )}
+                              <div className="min-w-0 flex-1">
+                                <p className="text-sm font-medium text-gray-900 truncate">
+                                  {result.outputFilename || result.filename || (result.originalName ? result.originalName.replace(/\.[^.]+$/, '.epub') : `file_${index + 1}.epub`)}
+                                </p>
+                                {result.success && result.size && (
+                                  <p className="text-xs text-gray-500 mt-1">{formatFileSize(result.size)}</p>
+                                )}
+                                {!result.success && result.error && (
+                                  <p className="text-xs text-red-600 mt-1 break-words">{result.error}</p>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                          {result.success && (
+                            <button
+                              onClick={() => handleBatchDownload(result)}
+                              className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center sm:justify-start"
+                            >
+                              <Download className="w-4 h-4 mr-2" />
+                              {t('common.download')}
+                            </button>
                           )}
                         </div>
-                        {result.success && (
-                          <button
-                            onClick={() => handleBatchDownload(result)}
-                            className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
-                          >
-                            <Download className="w-3 h-3 mr-1 inline" />
-                            {t('common.download')}
-                          </button>
-                        )}
                       </div>
                     ))}
                   </div>
