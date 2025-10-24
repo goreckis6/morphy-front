@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FileViewerData } from '../types';
 import { FileProcessor } from '../utils/fileProcessing';
 import { RAWProcessor } from '../utils/rawProcessor';
-import { Eye, Download, Share2, X } from 'lucide-react';
+import { Eye, Download, X } from 'lucide-react';
 
 interface FileViewerProps {
   file: File;
@@ -221,9 +221,6 @@ export const FileViewer: React.FC<FileViewerProps> = ({ file, onClose }) => {
           <div className="flex items-center space-x-2">
             <button className="p-2 text-gray-500 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors">
               <Download className="w-5 h-5" />
-            </button>
-            <button className="p-2 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors">
-              <Share2 className="w-5 h-5" />
             </button>
             <button
               onClick={onClose}
