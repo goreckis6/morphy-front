@@ -154,7 +154,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
                 <span className="text-white font-bold">{selectedFiles.length}</span>
               </div>
               <p className="text-green-800 font-semibold text-lg">
-                {selectedFiles.length} file{selectedFiles.length > 1 ? 's' : ''} ready for conversion
+                {selectedFiles.length} file{selectedFiles.length !== 1 ? 's' : ''} ready for preview
               </p>
             </div>
           </div>

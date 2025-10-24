@@ -21,8 +21,8 @@ export const WebPViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free WebP Viewer - Free Online WebP Image Viewer and Converter</title>
-        <meta name="description" content="Free WebP viewer. View and convert WebP images online for free. Modern image format with superior compression, transparency support, and animation. No registration required." />
+        <title>Free WebP Viewer - Online WebP Image Viewer</title>
+        <meta name="description" content="Free WebP viewer. View Online and convert WebP images online for free. Modern image format with superior compression, transparency support, and animation. No registration required." />
         <meta name="keywords" content="WebP viewer, WebP to JPG, WebP to PNG, image viewer, web optimization, lossless compression, transparency, batch processing" />
       </Helmet>
 
