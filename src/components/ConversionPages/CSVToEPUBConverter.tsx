@@ -409,6 +409,16 @@ export const CSVToEPUBConverter: React.FC = () => {
                   <p className="text-green-700 mb-4">
                     {t('csv_to_epub.success_message')}
                   </p>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                    <div className="flex items-start">
+                      <span className="text-blue-600 mr-2 flex-shrink-0">ℹ️</span>
+                      <div className="text-sm text-blue-800">
+                        <p className="font-medium mb-1">EPUB File Ready!</p>
+                        <p>Your EPUB file has been generated successfully. You can download it and open it with any EPUB reader (like Adobe Digital Editions, Calibre, or your e-reader).</p>
+                        <p className="mt-1 text-xs">Note: Some browsers may show an error when trying to preview EPUB files - this is normal. Just download the file to open it properly.</p>
+                      </div>
+                    </div>
+                  </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={handleDownload}
@@ -439,6 +449,16 @@ export const CSVToEPUBConverter: React.FC = () => {
                   <p className="text-green-700 mb-4">
                     {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                    <div className="flex items-start">
+                      <span className="text-blue-600 mr-2 flex-shrink-0">ℹ️</span>
+                      <div className="text-sm text-blue-800">
+                        <p className="font-medium mb-1">EPUB Files Ready!</p>
+                        <p>Your EPUB files have been generated successfully. You can download them and open them with any EPUB reader (like Adobe Digital Editions, Calibre, or your e-reader).</p>
+                        <p className="mt-1 text-xs">Note: Some browsers may show an error when trying to preview EPUB files - this is normal. Just download the files to open them properly.</p>
+                      </div>
+                    </div>
+                  </div>
                   <div className="space-y-3 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
                       <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
