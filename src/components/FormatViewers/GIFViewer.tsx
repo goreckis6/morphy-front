@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, Upload, Eye, Download, Share2, ArrowLeft, Play, Palette, Zap, CheckCircle } from 'lucide-react';
+import { Image, Upload, Eye, Download, ArrowLeft, Play, Palette, Zap, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';

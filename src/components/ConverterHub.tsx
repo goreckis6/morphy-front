@@ -37,13 +37,6 @@ export const ConverterHub: React.FC = () => {
       title: "DOCUMENT CONVERTERS",
       formats: [
         { 
-          name: "CSV to DOC Converter", 
-          description: "Convert CSV files to Microsoft Word DOC format for reports and documents",
-          path: "/convert/csv-to-doc",
-          inputFormat: "CSV",
-          outputFormat: "DOC"
-        },
-        { 
           name: "CSV to DOCX Converter", 
           description: "Convert CSV files to Microsoft Word DOCX format with modern formatting",
           path: "/convert/csv-to-docx",

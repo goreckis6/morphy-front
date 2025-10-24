@@ -9,7 +9,6 @@ import { JPGToPDFConverter } from './components/ConversionPages/JPGToPDFConverte
 import { JPGToPNGConverter } from './components/ConversionPages/JPGToPNGConverter';
 import { CR2ToICOConverter } from './components/ConversionPages/CR2ToICOConverter';
 import { CR2ToWebPConverter } from './components/ConversionPages/CR2ToWebPConverter';
-import { CSVToDOCConverter } from './components/ConversionPages/CSVToDOCConverter';
 import { CSVToDOCXConverter } from './components/ConversionPages/CSVToDOCXConverter';
 import { CSVToEPUBConverter } from './components/ConversionPages/CSVToEPUBConverter';
 import { CSVToHTMLConverter } from './components/ConversionPages/CSVToHTMLConverter';
@@ -215,10 +214,6 @@ function App() {
   }
 
   // CSV Conversion Routes
-  if (currentPath === '/convert/csv-to-doc') {
-    return <CSVToDOCConverter     />;
-  }
-
   if (currentPath === '/convert/csv-to-docx') {
     return <CSVToDOCXConverter     />;
   }
