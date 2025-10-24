@@ -67,7 +67,6 @@ import { PNGViewer } from './components/FormatViewers/PNGViewer';
 import { WebPViewer } from './components/FormatViewers/WebPViewer';
 import { GIFViewer } from './components/FormatViewers/GIFViewer';
 import { SVGViewer } from './components/FormatViewers/SVGViewer';
-import { TIFFViewer } from './components/FormatViewers/TIFFViewer';
 import { BMPViewer } from './components/FormatViewers/BMPViewer';
 import { ICOViewer } from './components/FormatViewers/ICOViewer';
 import { HEICViewer } from './components/FormatViewers/HEICViewer';
@@ -449,9 +448,6 @@ function App() {
     return <SVGViewer     />;
   }
 
-  if (currentPath === '/viewers/tiff' || currentPath === '/viewers/tif') {
-    return <TIFFViewer     />;
-  }
 
   if (currentPath === '/viewers/bmp') {
     return <BMPViewer     />;

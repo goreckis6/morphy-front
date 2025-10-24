@@ -22,7 +22,6 @@ export const ViewersHub: React.FC = () => {
         { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewers/webp", icon: <Image className="w-5 h-5" /> },
         { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewers/gif", icon: <Image className="w-5 h-5" /> },
         { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewers/svg", icon: <Image className="w-5 h-5" /> },
-        { name: "TIFF Viewer", description: "View TIFF images with multi-page support", path: "/viewers/tiff", icon: <Image className="w-5 h-5" /> },
         { name: "BMP Viewer", description: "View bitmap images with color depth support", path: "/viewers/bmp", icon: <Image className="w-5 h-5" /> },
         { name: "ICO Viewer", description: "View Windows icon files with multiple sizes", path: "/viewers/ico", icon: <Image className="w-5 h-5" /> },
         { name: "HEIC Viewer", description: "View HEIC images from modern cameras", path: "/viewers/heic", icon: <Image className="w-5 h-5" /> },
