@@ -21,7 +21,7 @@ export const SVGViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>SVG Viewer - Free Online Scalable Vector Graphics Viewer</title>
+        <title>Free SVG Viewer - Online Scalable Vector Graphic Viewer</title>
         <meta name="description" content="View and convert SVG (Scalable Vector Graphics) files online for free. Infinite scalability, code-based editing, and interactive elements. Up to 20 files, 100MB total. No registration required." />
         <meta name="keywords" content="SVG viewer, vector graphics, SVG to PNG, SVG to JPEG, scalable graphics, XML graphics, logo viewer, icon viewer, batch processing" />
       </Helmet>

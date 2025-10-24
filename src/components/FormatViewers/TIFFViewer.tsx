@@ -82,7 +82,7 @@ export const TIFFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>TIFF Viewer - Free Online TIFF Image Viewer</title>
+        <title>Free TIFF Viewer - Online TIFF Image Viewer</title>
         <meta name="description" content="View TIFF (Tagged Image File Format) images online for free. Professional quality viewer with multi-page support, high bit-depth, and metadata display. Up to 20 files, 100MB total. No registration required." />
         <meta name="keywords" content="TIFF viewer, TIF viewer, multi-page TIFF, professional photography viewer, lossless image viewer, EXIF viewer, batch viewing" />
       </Helmet>
