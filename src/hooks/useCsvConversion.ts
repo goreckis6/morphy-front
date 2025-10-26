@@ -136,7 +136,7 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
     try {
       console.log('Starting batch conversion for', batchFiles.length, 'files to', targetFormat);
       
-      // Use specific endpoint for CSV to DOC/DOCX/EPUB/HTML/MD/MOBI conversion
+      // Use specific endpoint for CSV to DOC/DOCX/EPUB/HTML/MD/MOBI/XLSX conversion
       let result;
       if (targetFormat === 'doc') {
         result = await apiService.convertBatchCsvToDoc(batchFiles);
@@ -152,6 +152,8 @@ export const useCsvConversion = ({ targetFormat }: UseCsvConversionOptions) => {
         result = await apiService.convertBatchCsvToMobi(batchFiles);
       } else if (targetFormat === 'odp') {
         result = await apiService.convertBatchCsvToOdp(batchFiles);
+      } else if (targetFormat === 'xlsx') {
+        result = await apiService.convertBatchCsvToXlsx(batchFiles);
       } else {
         result = await apiService.convertBatch(batchFiles, { format: targetFormat });
       }
