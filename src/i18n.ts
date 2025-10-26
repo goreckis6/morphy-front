@@ -500,7 +500,7 @@ const resources = {
       
       // CSV to ODP
       'csv_to_odp.title': 'CSV to ODP Converter',
-      'csv_to_odp.meta_title': 'CSV to ODP Converter - Convert CSV to Presentations',
+      'csv_to_odp.meta_title': 'Free CSV to ODP Converter - Convert CSV to Presentations Online',
       'csv_to_odp.meta_description': 'Convert CSV files to ODP presentation format for LibreOffice Impress. Transform data into professional presentations with charts. Free online tool.',
       'csv_to_odp.subtitle': 'Convert CSV files to OpenDocument Presentation (ODP) format. Transform tabular data into LibreOffice Impress presentations.',
       'csv_to_odp.upload_single': 'Upload CSV File',
@@ -1751,7 +1751,7 @@ const resources = {
       
       // CSV to ODP
       'csv_to_odp.title': 'Konwerter CSV na ODP',
-      'csv_to_odp.meta_title': 'Konwerter CSV na ODP - Konwertuj CSV na prezentacje',
+      'csv_to_odp.meta_title': 'Darmowy konwerter CSV na ODP - Konwertuj CSV na prezentacje online',
       'csv_to_odp.meta_description': 'Konwertuj pliki CSV na format prezentacji ODP dla LibreOffice Impress. Przekształć dane w profesjonalne prezentacje z wykresami. Darmowe narzędzie online.',
       'csv_to_odp.subtitle': 'Konwertuj pliki CSV na format OpenDocument Presentation (ODP). Przekształć dane tabelaryczne w prezentacje LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Prześlij plik CSV',
@@ -2713,7 +2713,7 @@ const resources = {
       
       // CSV to ODP
       'csv_to_odp.title': 'CSV zu ODP Konverter',
-      'csv_to_odp.meta_title': 'CSV zu ODP Konverter - Konvertieren Sie CSV zu Präsentationen',
+      'csv_to_odp.meta_title': 'Kostenloser CSV zu ODP Konverter - Konvertieren Sie CSV zu Präsentationen online',
       'csv_to_odp.meta_description': 'Konvertieren Sie CSV-Dateien in ODP-Präsentationsformat für LibreOffice Impress. Transformieren Sie Daten in professionelle Präsentationen mit Diagrammen. Kostenloses Online-Tool.',
       'csv_to_odp.subtitle': 'Konvertieren Sie CSV-Dateien in OpenDocument Presentation (ODP) Format. Transformieren Sie Tabellendaten in LibreOffice Impress Präsentationen.',
       'csv_to_odp.upload_single': 'CSV-Datei hochladen',
