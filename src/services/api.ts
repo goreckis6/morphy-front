@@ -473,18 +473,15 @@ class ApiService {
       console.log(`API: Added file ${index + 1}:`, file.name, 'size:', file.size);
     });
 
+    // Add format parameter for batch conversion
+    formData.append('format', 'xlsx');
+    console.log('API: Added format parameter: xlsx');
+
     console.log('API: Making request to /convert/csv-to-xlsx/batch');
     const response = await this.makeRequest('/convert/csv-to-xlsx/batch', 'POST', formData);
     const result = await response.json();
     
     console.log('API: CSV to XLSX batch conversion response:', result);
-    
-    // Track batch conversions
-    if (result.results) {
-      const totalSize = result.results.reduce((sum: number, r: any) => {
-        return sum + (r.size || 0);
-      }, 0);
-    }
     
     return result;
   }
