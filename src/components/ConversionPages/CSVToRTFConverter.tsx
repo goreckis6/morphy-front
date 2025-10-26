@@ -156,7 +156,7 @@ export const CSVToRTFConverter: React.FC = () => {
                 )}
                 {batchMode && (
                   <div className="text-sm text-orange-600 mb-4">
-                    <p>{t('csv_to_rtf.batch_info')}</p>
+                    <p>{getBatchInfoMessage()}</p>
                   </div>
                 )}
                 <input
@@ -197,8 +197,7 @@ export const CSVToRTFConverter: React.FC = () => {
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <div className="flex items-center justify-between text-sm font-medium mb-2">
-                        <span className="text-gray-600">{t('common.total_size')}</span>
-                        <span className={`ml-3 ${sizeDisplay.isWarning ? 'text-orange-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
+                        <span className={`${sizeDisplay.isWarning ? 'text-orange-700' : 'text-gray-600'}`}>{sizeDisplay.text}</span>
                       </div>
                     );
                   })()}

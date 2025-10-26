@@ -258,8 +258,8 @@ export const CSVToPPTConverter: React.FC = () => {
                 </p>
                 <p className="text-sm text-gray-500 mb-4">
                   {batchMode 
-                    ? t('csv_to_ppt.batch_info') 
-                    : t('csv_to_ppt.single_info')
+                    ? t('validation.batch_info') 
+                    : t('validation.single_file_limit')
                   }
                 </p>
                 <input
@@ -303,7 +303,7 @@ export const CSVToPPTConverter: React.FC = () => {
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-lg font-semibold">{t('common.selected_files', { count: batchFiles.length })}</h4>
                           <div className={`text-sm font-medium ${isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
-                            Total size: {totalSizeMB} MB of 100.00 MB allowed
+                            {t('validation.total_size', { current: `${totalSizeMB} MB`, max: '100.00 MB' })}
                           </div>
                         </div>
                         {isWarning && (
