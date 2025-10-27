@@ -99,13 +99,28 @@ export const CSVToParquetConverter: React.FC = () => {
       console.log('CSV to Parquet: Converting file:', file.name, 'size:', file.size, 'bytes');
       console.log('CSV to Parquet: Compression:', compression);
 
-      const result = await apiService.convertFile(file, {
-        format: 'parquet',
-        compression: compression
-      } as any);
+      // Use the dedicated endpoint for CSV to Parquet
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('compression', compression);
 
-      console.log('CSV to Parquet: Conversion successful, blob size:', result.blob.size, 'bytes');
-      return result.blob;
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://api.morphyimg.com' 
+        : 'http://localhost:3000';
+
+      const response = await fetch(`${API_BASE_URL}/convert/csv-to-parquet/single`, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Conversion failed' }));
+        throw new Error(errorData.error || 'Conversion failed');
+      }
+
+      const blob = await response.blob();
+      console.log('CSV to Parquet: Conversion successful, blob size:', blob.size, 'bytes');
+      return blob;
     } catch (error) {
       console.error('CSV to Parquet conversion error:', error);
       throw new Error(error instanceof Error ? error.message : 'Failed to convert CSV to Parquet. Please try again.');
@@ -138,16 +153,34 @@ export const CSVToParquetConverter: React.FC = () => {
     setBatchResults([]);
     
     try {
-      const results = await apiService.convertBatch(batchFiles, { 
-        format: 'parquet',
-        compression: compression
-      } as any);
+      // Use the dedicated batch endpoint for CSV to Parquet
+      const formData = new FormData();
+      batchFiles.forEach(file => {
+        formData.append('files', file);
+      });
+      formData.append('compression', compression);
+
+      const API_BASE_URL = import.meta.env.PROD 
+        ? 'https://api.morphyimg.com' 
+        : 'http://localhost:3000';
+
+      const response = await fetch(`${API_BASE_URL}/convert/csv-to-parquet/batch`, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Batch conversion failed' }));
+        throw new Error(errorData.error || 'Batch conversion failed');
+      }
+
+      const result = await response.json();
       
-      if (!results.success) {
+      if (!result.success) {
         throw new Error('Batch conversion failed');
       }
       
-      setBatchResults(results.results);
+      setBatchResults(result.results);
       setBatchConverted(true);
     } catch (err) {
       console.error('CSV to Parquet batch conversion error:', err);
