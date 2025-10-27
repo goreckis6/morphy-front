@@ -1,4 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -16,29 +19,11 @@ import {
   Camera,
   BarChart3
 } from 'lucide-react';
-import { apiService, ConversionOptions } from '../../services/api';
-
-const RAW_MIME_TYPES = [
-  'image/x-dng',
-  'image/x-canon-cr2',
-  'image/x-nikon-nef',
-  'image/x-sony-arw',
-  'image/x-panasonic-rw2',
-  'image/x-pentax-pef',
-  'image/x-olympus-orf',
-  'image/x-sigma-x3f',
-  'image/x-fujifilm-raf',
-  'image/x-adobe-dng'
-];
-
-const RAW_EXTENSIONS = ['dng','cr2','cr3','nef','arw','rw2','pef','orf','raf','x3f'];
-
-const isRAWFile = (file: File) => {
-  const ext = file.name.split('.').pop()?.toLowerCase();
-  return RAW_EXTENSIONS.includes(ext || '') || RAW_MIME_TYPES.includes(file.type);
-};
+import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
 
 export const DNGToWebPConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -49,66 +34,192 @@ export const DNGToWebPConverter: React.FC = () => {
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
+  const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  
+
+  // Language detection from URL
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, []);
+
+  // Use shared validation hook
+  const {
+    validationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize,
+    clearValidationError
+  } = useFileValidation();
+
   const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      setSelectedFile(file);
-    setError(null);
-      
-      // Create preview URL
-      const previewUrl = URL.createObjectURL(file);
-      setPreviewUrl(previewUrl);
-      
-      // Try to get image dimensions for preview
-      const img = new Image();
-      img.onload = () => {
-        setImagePreview({
-          url: previewUrl,
-          width: img.width,
-          height: img.height
-        });
-      };
-      img.onerror = () => {
-        // For RAW files, we might not be able to preview directly
-        setImagePreview({
-          url: previewUrl,
-          width: 0,
-          height: 0
-        });
-      };
-      img.src = previewUrl;
+      if (file.name.toLowerCase().endsWith('.dng')) {
+        setSelectedFile(file);
+        setError(null);
+        setPreviewUrl(URL.createObjectURL(file));
+        
+        // Try to extract JPEG preview for actual preview
+        try {
+          const reader = new FileReader();
+          reader.onload = async (e) => {
+            try {
+              const arrayBuffer = e.target?.result as ArrayBuffer;
+              const uint8Array = new Uint8Array(arrayBuffer);
+              
+              // Look for embedded JPEG thumbnail
+              const jpegStart = findJPEGStart(uint8Array);
+              const jpegEnd = findJPEGEnd(uint8Array, jpegStart);
+              
+              if (jpegStart !== -1 && jpegEnd !== -1) {
+                // Extract the JPEG preview
+                const jpegData = uint8Array.slice(jpegStart, jpegEnd + 2);
+                const jpegBlob = new Blob([jpegData], { type: 'image/jpeg' });
+                const jpegUrl = URL.createObjectURL(jpegBlob);
+                
+                // Create image to get dimensions
+                const img = new Image();
+                img.onload = () => {
+                  setImagePreview({
+                    url: jpegUrl,
+                    width: img.width,
+                    height: img.height
+                  });
+                  // Update preview URL to show actual extracted image
+                  setPreviewUrl(jpegUrl);
+                };
+                img.onerror = () => {
+                  // Fallback to file info only
+                  setImagePreview({
+                    url: URL.createObjectURL(file),
+                    width: 0,
+                    height: 0
+                  });
+                  URL.revokeObjectURL(jpegUrl);
+                };
+                img.src = jpegUrl;
+              } else {
+                // No JPEG preview found, show file info only
+                setImagePreview({
+                  url: URL.createObjectURL(file),
+                  width: 0,
+                  height: 0
+                });
+              }
+            } catch (error) {
+              // Error reading file, show basic info
+              setImagePreview({
+                url: URL.createObjectURL(file),
+                width: 0,
+                height: 0
+              });
+            }
+          };
+          reader.readAsArrayBuffer(file);
+        } catch (error) {
+          // Error processing file, show basic info
+          setImagePreview({
+            url: URL.createObjectURL(file),
+            width: 0,
+            height: 0
+          });
+        }
+      } else {
+        setError('Please select a valid DNG file');
+      }
     }
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    setBatchFiles(files);
+    const dngFiles = files.filter(file => 
+      file.name.toLowerCase().endsWith('.dng')
+    );
+    
+    // Check for files larger than 100MB
+    const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB
+    const oversizedFile = dngFiles.find(file => file.size > MAX_FILE_SIZE);
+    
+    if (oversizedFile) {
+      setError(`File "${oversizedFile.name}" is too large (${formatFileSize(oversizedFile.size)}). Maximum allowed size is 100MB.`);
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    // Use existing validation
+    const validation = validateBatchFiles(dngFiles);
+    if (!validation.isValid) {
+      setError(validation.error?.message || 'Batch validation failed');
+      setBatchFiles([]);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+      return;
+    }
+    
+    setBatchFiles(dngFiles);
     setError(null);
+    clearValidationError();
+  };
+
+  const findJPEGStart = (data: Uint8Array): number => {
+    // Look for JPEG SOI marker (0xFF 0xD8)
+    for (let i = 0; i < data.length - 1; i++) {
+      if (data[i] === 0xFF && data[i + 1] === 0xD8) {
+        return i;
+      }
+    }
+    return -1;
+  };
+
+  const findJPEGEnd = (data: Uint8Array, start: number): number => {
+    // Look for JPEG EOI marker (0xFF 0xD9) after the start position
+    for (let i = start + 2; i < data.length - 1; i++) {
+      if (data[i] === 0xFF && data[i + 1] === 0xD9) {
+        return i + 1;
+      }
+    }
+    return -1;
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    const options: ConversionOptions = {
-      quality,
-      lossless,
-      format: 'webp'
-    };
+    try {
+      console.log('DNG to WebP: Converting file:', file.name, 'size:', file.size, 'bytes');
+      console.log('DNG to WebP: Quality:', quality, 'Lossless:', lossless);
 
-    const result = await apiService.convertFile(file, options);
-    return result.blob;
+      const result = await apiService.convertFile(file, {
+        format: 'webp',
+        quality: lossless ? 1.0 : (quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5),
+        lossless: lossless
+      });
+
+      console.log('DNG to WebP: Conversion successful, blob size:', result.blob.size, 'bytes');
+      return result.blob;
+    } catch (error) {
+      console.error('DNG to WebP conversion error:', error);
+      throw new Error(error instanceof Error ? error.message : 'Failed to convert DNG to WebP. Please try again.');
+    }
   };
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
+    
     setIsConverting(true);
     setError(null);
+    
     try {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
     } catch (err) {
-      console.error('Conversion error:', err);
       setError('Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
@@ -117,45 +228,80 @@ export const DNGToWebPConverter: React.FC = () => {
 
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
+    
     setIsConverting(true);
     setError(null);
-    try {
-      const options: ConversionOptions = {
-        quality,
-        lossless,
-        format: 'webp'
-      };
+    setBatchResults([]);
 
-      const result = await apiService.convertBatch(batchFiles, options);
+    try {
+      console.log('DNG to WebP Batch: Converting', batchFiles.length, 'files');
+      console.log('DNG to WebP Batch: Quality:', quality, 'Lossless:', lossless);
+
+      const result = await apiService.convertBatch(batchFiles, {
+        format: 'webp',
+        quality: lossless ? 1.0 : (quality === 'high' ? 0.9 : quality === 'medium' ? 0.7 : 0.5),
+        lossless: lossless
+      });
+
+      console.log('DNG to WebP Batch: Conversion result:', result);
       
-      if (result.success) {
-        // Download each successfully converted file
-        for (const fileResult of result.results) {
-          if (fileResult.success && fileResult.outputFilename) {
-            // For batch API, we need to download each file individually
-            const file = batchFiles.find(f => f.name === fileResult.originalName);
-            if (file) {
-              const converted = await handleConvert(file);
-              apiService.downloadBlob(converted, fileResult.outputFilename);
-              await new Promise(resolve => setTimeout(resolve, 500));
+      if (!result.success) {
+        throw new Error('Batch conversion failed');
+      }
+      
+      // Process batch results
+      const results: Array<{ file: File; blob: Blob }> = [];
+      
+      for (let i = 0; i < result.results.length; i++) {
+        const fileResult = result.results[i];
+        const originalFile = batchFiles[i];
+        
+        if (fileResult.success && fileResult.downloadPath) {
+          try {
+            let blob: Blob;
+            
+            // Check if downloadPath is a base64 data URL
+            if (fileResult.downloadPath.startsWith('data:')) {
+              // Convert base64 data URL to blob
+              const response = await fetch(fileResult.downloadPath);
+              blob = await response.blob();
+            } else {
+              // Download the converted file using API service
+              blob = await apiService.downloadFile(fileResult.downloadPath);
             }
+            
+            results.push({ file: originalFile, blob });
+          } catch (downloadError) {
+            console.error(`Error processing file ${i}:`, downloadError);
           }
         }
-        setBatchConverted(true);
-      } else {
-        setError('Batch conversion failed. Please try again.');
       }
+      
+      if (results.length === 0) {
+        throw new Error('No files were successfully converted.');
+      }
+      
+      setBatchResults(results);
+      setBatchConverted(true);
+      setError(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('DNG to WebP batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
   const handleDownload = () => {
-    if (convertedFile && selectedFile) {
-      const filename = selectedFile.name.replace(/\.[^.]+$/, '.webp');
-      apiService.downloadBlob(convertedFile, filename);
+    if (convertedFile) {
+      const url = URL.createObjectURL(convertedFile);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = selectedFile ? selectedFile.name.replace('.dng', '.webp') : 'converted.webp';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
     }
   };
 
@@ -178,12 +324,30 @@ export const DNGToWebPConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
+    setBatchResults([]);
     setImagePreview(null);
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
+  const handleBatchFileDownload = (file: File, blob: Blob) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name.replace('.dng', '.webp');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-blue-50">
+    <>
+      <Helmet>
+        <title>{t('dng_to_webp.meta_title')}</title>
+        <meta name="description" content={t('dng_to_webp.meta_description')} />
+        <meta name="keywords" content={t('dng_to_webp.meta_keywords')} />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-blue-50">
       <Header />
       
       {/* Hero Section - Narrowed */}
@@ -192,23 +356,23 @@ export const DNGToWebPConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              DNG to WebP Converter
+              {t('dng_to_webp.title')}
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
-              Convert Adobe DNG raw images to WebP format for web optimization. Transform professional camera files into modern web-friendly images with superior compression.
+              {t('dng_to_webp.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -225,7 +389,10 @@ export const DNGToWebPConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={() => {
+                    setBatchMode(false);
+                    resetForm();
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-amber-600 text-white shadow-lg' 
@@ -233,10 +400,13 @@ export const DNGToWebPConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={() => {
+                    setBatchMode(true);
+                    resetForm();
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-amber-600 text-white shadow-lg' 
@@ -244,7 +414,7 @@ export const DNGToWebPConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -252,35 +422,41 @@ export const DNGToWebPConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple DNG Files' : 'Upload DNG File'}
+                  {batchMode ? t('dng_to_webp.upload_batch') : t('dng_to_webp.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple RAW (DNG, CR2, NEF...) or image files to convert them all at once' 
-                    : 'Drag and drop your RAW (DNG, CR2, NEF...) or image file here or click to browse'
+                    ? t('dng_to_webp.upload_text_batch')
+                    : t('dng_to_webp.upload_text_single')
                   }
                 </p>
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                  accept=".dng,.cr2,.nef,.arw,.raw,.orf,.pef,.raf,.x3f,image/*"
+                <p className="text-sm text-gray-500 mb-4">
+                  {batchMode 
+                    ? t('dng_to_webp.file_limits_batch')
+                    : t('dng_to_webp.file_limits_single')
+                  }
+                </p>
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".dng"
                   multiple={batchMode}
                   onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
-                    className="hidden"
-                  />
+                  className="hidden"
+                />
                 <button
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
-                </div>
+              </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">
-                    {imagePreview && imagePreview.width > 0 ? 'DNG Image Preview' : 'DNG File Info'}
+                    {imagePreview && imagePreview.width > 0 ? t('dng_to_webp.image_preview') : t('dng_to_webp.file_info')}
                   </h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     {imagePreview && imagePreview.width > 0 ? (
@@ -293,15 +469,12 @@ export const DNGToWebPConverter: React.FC = () => {
                         />
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
+                            <strong>{selectedFile?.name}</strong> ({(selectedFile?.size || 0) / (1024 * 1024) < 1 ? `${Math.round((selectedFile?.size || 0) / 1024)} KB` : `${((selectedFile?.size || 0) / (1024 * 1024)).toFixed(1)} MB`})
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>Extracted preview: {imagePreview.width} × {imagePreview.height} pixels</p>
+                            <p>{t('dng_to_webp.extracted_preview')}: {imagePreview.width} × {imagePreview.height} pixels</p>
                             <p className="text-amber-600 font-medium">
-                              Will convert to: WebP format ({quality} quality, {lossless ? 'lossless' : 'lossy'})
-                            </p>
-                            <p className="text-green-600 text-xs mt-1">
-                              ✓ Real image extracted from DNG - full conversion possible
+                              {t('dng_to_webp.will_convert_to')}: {t('dng_to_webp.webp_format')} ({t(`dng_to_webp.quality_${quality}`)}, {lossless ? t('dng_to_webp.lossless') : t('dng_to_webp.lossy')})
                             </p>
                           </div>
                         </div>
@@ -311,39 +484,62 @@ export const DNGToWebPConverter: React.FC = () => {
                       <div>
                         <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                           <Camera className="w-12 h-12 text-gray-400" />
-                    </div>
+                        </div>
                         <div className="mt-3 text-center">
                           <p className="text-sm text-gray-600">
-                            <strong>{selectedFile?.name}</strong> ({Math.round((selectedFile?.size || 0) / 1024)} KB)
+                            <strong>{selectedFile?.name}</strong> ({(selectedFile?.size || 0) / (1024 * 1024) < 1 ? `${Math.round((selectedFile?.size || 0) / 1024)} KB` : `${((selectedFile?.size || 0) / (1024 * 1024)).toFixed(1)} MB`})
                           </p>
                           <div className="mt-2 text-sm text-gray-500">
-                            <p>RAW or unsupported preview format</p>
+                            <p>{t('dng_to_webp.adobe_dng_file')}</p>
                             <p className="text-amber-600 font-medium">
-                              Will convert to: WebP format ({quality} quality, {lossless ? 'lossless' : 'lossy'})
+                              {t('dng_to_webp.will_convert_to')}: {t('dng_to_webp.webp_format')} ({t(`dng_to_webp.quality_${quality}`)}, {lossless ? t('dng_to_webp.lossless') : t('dng_to_webp.lossy')})
                             </p>
-                            <p className="text-orange-600 text-xs mt-1">
-                              ⚠ Preview unavailable - conversion will use RAW decoding engine
-                    </p>
+                            <p className="text-gray-400 text-xs mt-1">
+                              {t('dng_to_webp.no_preview_found')}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                    </div>
-                  </div>
-                )}
-                    </div>
-                  </div>
-                )}
+                </div>
+              )}
 
               {/* Batch Files List */}
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">{t('dng_to_webp.selected_files')} ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                {t('dng_to_webp.batch_size_warning')}
+                              </span>
+                            </div>
+                          </div>
+                        )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
                           {batchFiles.map((file, index) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                             </div>
                           ))}
                         </div>
+                      </>
+                    );
+                  })()}
                 </div>
               )}
 
@@ -352,8 +548,8 @@ export const DNGToWebPConverter: React.FC = () => {
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
                   <span className="text-red-700">{error}</span>
-                  </div>
-                )}
+                </div>
+              )}
 
               {/* Convert Button */}
               <div className="mt-8">
@@ -365,14 +561,14 @@ export const DNGToWebPConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to WebP'}
-                  </div>
-                )}
+                      {batchMode ? t('dng_to_webp.convert_files', { count: batchFiles.length }) : t('dng_to_webp.convert_to_webp')}
+                    </div>
+                  )}
                 </button>
               </div>
 
@@ -381,10 +577,10 @@ export const DNGToWebPConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
-            </div>
+                    <h4 className="text-lg font-semibold text-green-800">{t('dng_to_webp.conversion_complete')}</h4>
+                  </div>
                   <p className="text-green-700 mb-4">
-                    Your DNG file has been successfully converted to WebP format.
+                    {t('dng_to_webp.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -392,95 +588,116 @@ export const DNGToWebPConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download WebP File
+                      {t('dng_to_webp.download_webp')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
-                    </div>
                   </div>
-                )}
+                </div>
+              )}
 
               {/* Batch Conversion Success */}
-              {batchConverted && batchMode && (
+              {batchConverted && batchMode && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('dng_to_webp.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    All {batchFiles.length} DNG files have been successfully converted to WebP format and downloaded.
+                    {t('dng_to_webp.batch_success_message', { count: batchResults.length })}
                   </p>
-                    <button
-                      onClick={resetForm}
-                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
-                    >
-                    <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
-                    </button>
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                    {batchResults.map((result, index) => (
+                      <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 bg-white rounded-lg p-3 border border-green-200">
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-gray-900 truncate">
+                            {result.file.name.replace('.dng', '.webp')}
+                          </p>
+                          <p className="text-xs text-gray-500">
+                            {result.blob.size / (1024 * 1024) < 1 ? `${(result.blob.size / 1024).toFixed(1)} KB` : `${(result.blob.size / (1024 * 1024)).toFixed(1)} MB`}
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => handleBatchFileDownload(result.file, result.blob)}
+                          className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          {t('common.download')}
+                        </button>
+                      </div>
+                    ))}
                   </div>
-                )}
-              </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    {t('common.convert_more_files')}
+                  </button>
+                </div>
+              )}
             </div>
+          </div>
 
           {/* Settings & Info Panel */}
           <div className="space-y-6">
-
+            
             {/* Conversion Settings */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-amber-600" />
-                WebP Settings
+                {t('dng_to_webp.webp_settings')}
               </h3>
               
               {/* Quality */}
               <div className="mb-6">
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Quality
-                  </label>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  {t('dng_to_webp.quality')}
+                </label>
                 <select
-                    value={quality}
+                  value={quality}
                   onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
                 >
-                  <option value="high">High Quality (90-100%)</option>
-                  <option value="medium">Medium Quality (70-89%)</option>
-                  <option value="low">Low Quality (50-69%)</option>
+                  <option value="high">{t('dng_to_webp.quality_high_option')}</option>
+                  <option value="medium">{t('dng_to_webp.quality_medium_option')}</option>
+                  <option value="low">{t('dng_to_webp.quality_low_option')}</option>
                 </select>
-                </div>
+              </div>
 
               {/* Lossless */}
               <div className="mb-6">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      checked={lossless}
-                      onChange={(e) => setLossless(e.target.checked)}
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={lossless}
+                    onChange={(e) => setLossless(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-700">Lossless compression</span>
-                  </label>
-                  </div>
-                </div>
+                  />
+                  <span className="ml-2 text-sm text-gray-700">{t('dng_to_webp.lossless_compression')}</span>
+                </label>
+              </div>
+            </div>
 
             {/* Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('dng_to_webp.sidebar_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Adobe Digital Negative support",
-                  "Web-optimized compression",
-                  "High-quality image output",
-                  "Professional camera file processing",
-                  "Modern web format compatibility",
-                  "Batch processing support"
+                  t('dng_to_webp.feature_1'),
+                  t('dng_to_webp.feature_2'),
+                  t('dng_to_webp.feature_3'),
+                  t('dng_to_webp.feature_4'),
+                  t('dng_to_webp.feature_5'),
+                  t('dng_to_webp.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -489,21 +706,21 @@ export const DNGToWebPConverter: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-amber-600" />
-                Perfect For
+                {t('dng_to_webp.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Professional photography workflows",
-                  "Web image optimization",
-                  "Adobe Lightroom integration",
-                  "Digital asset management",
-                  "Website performance optimization",
-                  "Modern web development"
+                  t('dng_to_webp.use_case_1'),
+                  t('dng_to_webp.use_case_2'),
+                  t('dng_to_webp.use_case_3'),
+                  t('dng_to_webp.use_case_4'),
+                  t('dng_to_webp.use_case_5'),
+                  t('dng_to_webp.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -521,106 +738,106 @@ export const DNGToWebPConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert DNG to WebP?
+            {t('dng_to_webp.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Adobe DNG raw images to WebP format is essential for modern web development, digital asset management, and website performance optimization. While DNG files contain high-quality raw image data from professional cameras, WebP provides superior compression, faster loading times, and better web performance without sacrificing image quality.
+              {t('dng_to_webp.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of WebP Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('dng_to_webp.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-amber-900 mb-3">Superior Compression</h4>
+                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('dng_to_webp.benefit_compression_title')}</h4>
                 <p className="text-gray-700">
-                  WebP provides 25-35% better compression than JPEG and PNG, significantly reducing file sizes while maintaining high image quality from your DNG raw files.
+                  {t('dng_to_webp.benefit_compression_text')}
                 </p>
-          </div>
-
+              </div>
+              
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Faster Loading Times</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('dng_to_webp.benefit_loading_title')}</h4>
                 <p className="text-gray-700">
-                  Smaller file sizes mean faster page load times, improved user experience, and better SEO rankings for your website.
+                  {t('dng_to_webp.benefit_loading_text')}
                 </p>
-          </div>
-
+              </div>
+              
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Modern Web Standard</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('dng_to_webp.benefit_quality_title')}</h4>
                 <p className="text-gray-700">
-                  WebP is supported by all modern browsers and is the recommended format for web images by Google and other major platforms.
+                  {t('dng_to_webp.benefit_quality_text')}
                 </p>
-          </div>
-
+              </div>
+              
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Professional Quality</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('dng_to_webp.benefit_standard_title')}</h4>
                 <p className="text-gray-700">
-                  WebP preserves the high quality of your DNG raw images while providing efficient compression, making it ideal for professional web galleries.
+                  {t('dng_to_webp.benefit_standard_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('dng_to_webp.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Professional Photography Workflows</h4>
-                  <p className="text-gray-700">Convert high-quality DNG images to WebP for use in professional photography portfolios, client galleries, and digital presentations.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('dng_to_webp.use_case_photography_title')}</h4>
+                  <p className="text-gray-700">{t('dng_to_webp.use_case_photography_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Web Image Optimization</h4>
-                  <p className="text-gray-700">Optimize your DNG images for web use by converting them to WebP, ensuring fast loading times and excellent visual quality.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('dng_to_webp.use_case_portfolio_title')}</h4>
+                  <p className="text-gray-700">{t('dng_to_webp.use_case_portfolio_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-            <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Adobe Lightroom Integration</h4>
-                  <p className="text-gray-700">Seamlessly integrate with Adobe Lightroom workflows by converting DNG files to WebP for use in digital asset management systems.</p>
-            </div>
-          </div>
-
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('dng_to_webp.use_case_ecommerce_title')}</h4>
+                  <p className="text-gray-700">{t('dng_to_webp.use_case_ecommerce_text')}</p>
+                </div>
+              </div>
+              
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Website Performance Optimization</h4>
-                  <p className="text-gray-700">Improve your website's performance by converting DNG images to WebP, reducing bandwidth usage and improving user experience.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('dng_to_webp.use_case_marketing_title')}</h4>
+                  <p className="text-gray-700">{t('dng_to_webp.use_case_marketing_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-amber-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your DNG Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('dng_to_webp.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online DNG to WebP converter to transform your professional camera files into web-optimized images.
+                {t('dng_to_webp.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
@@ -646,6 +863,9 @@ export const DNGToWebPConverter: React.FC = () => {
           </div>
         </div>
       </footer>
+
       </div>
+      </>
+
       );
 };
