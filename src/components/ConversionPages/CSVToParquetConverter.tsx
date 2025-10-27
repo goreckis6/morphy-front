@@ -176,11 +176,17 @@ export const CSVToParquetConverter: React.FC = () => {
 
       const result = await response.json();
       
-      if (!result.success) {
-        throw new Error('Batch conversion failed');
-      }
+      // Backend returns { results: [...] } - no top-level success field
+      // Map backend response to expected structure
+      const mappedResults = (result.results || []).map((r: any, idx: number) => ({
+        originalName: r.filename?.replace(/\.parquet$/i, '.csv') || batchFiles[idx]?.name || 'unknown.csv',
+        outputFilename: r.filename || 'converted.parquet',
+        success: r.success !== undefined ? r.success : true,
+        downloadPath: r.downloadUrl,
+        size: r.size
+      }));
       
-      setBatchResults(result.results);
+      setBatchResults(mappedResults);
       setBatchConverted(true);
     } catch (err) {
       console.error('CSV to Parquet batch conversion error:', err);
@@ -204,18 +210,24 @@ export const CSVToParquetConverter: React.FC = () => {
   };
 
   const handleBatchDownload = async (result: typeof batchResults[0]) => {
-    if (!result.success || !result.downloadPath) return;
+    if (!result.success) return;
     
     try {
-      const blob = await apiService.downloadFile(result.downloadPath);
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = result.outputFilename || 'converted.parquet';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      if (result.downloadPath) {
+        // Download from stored path
+        const blob = await apiService.downloadFile(result.downloadPath);
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = result.outputFilename || 'converted.parquet';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      } else {
+        console.warn('No download path available for file:', result.outputFilename);
+        setError('Download path not available. Please try converting again.');
+      }
     } catch (err) {
       console.error('Download error:', err);
       setError('Failed to download file. Please try again.');
