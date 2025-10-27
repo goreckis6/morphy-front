@@ -1588,7 +1588,7 @@ const resources = {
       'csv_to_sql.start_converting': 'Start Converting Now',
 
       // DNG to ICO
-      'dng_to_ico.title': 'Free DNG to ICO Converter - Convert Adobe Digital Negative to Windows Icons',
+      'dng_to_ico.title': 'Free DNG to ICO Converter',
       'dng_to_ico.meta_title': 'Free DNG to ICO Converter - Convert Adobe Digital Negative to Windows Icons',
       'dng_to_ico.meta_description': 'Free online DNG to ICO converter. Convert Adobe Digital Negative DNG raw images to Windows ICO icons with multiple sizes (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professional quality conversion, no registration required.',
       'dng_to_ico.meta_keywords': 'DNG to ICO, Adobe Digital Negative, Windows icons, icon converter, camera RAW, batch conversion, free converter',
@@ -1638,7 +1638,7 @@ const resources = {
       'dng_to_ico.feature_6': 'Batch processing support',
 
       // DNG to WebP
-      'dng_to_webp.title': 'Free DNG to WebP Converter - Convert Adobe Digital Negative to WebP Format',
+      'dng_to_webp.title': 'DNG to WebP Converter',
       'dng_to_webp.meta_title': 'Free DNG to WebP Converter - Convert Adobe Digital Negative to WebP Format',
       'dng_to_webp.meta_description': 'Free online DNG to WebP converter. Convert Adobe Digital Negative DNG raw images to WebP format with quality settings (high, medium, low) and lossless mode. Professional raw image conversion, no registration required.',
       'dng_to_webp.meta_keywords': 'DNG to WebP, Adobe Digital Negative, WebP converter, camera RAW, web optimization, image converter, batch conversion, free converter',
