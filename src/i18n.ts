@@ -1588,7 +1588,7 @@ const resources = {
       'csv_to_sql.start_converting': 'Start Converting Now',
 
       // DNG to ICO
-      'dng_to_ico.title': 'Free DNG to ICO Converter',
+      'dng_to_ico.title': 'DNG to ICO Converter',
       'dng_to_ico.meta_title': 'Free DNG to ICO Converter - Convert Adobe Digital Negative to Windows Icons',
       'dng_to_ico.meta_description': 'Free online DNG to ICO converter. Convert Adobe Digital Negative DNG raw images to Windows ICO icons with multiple sizes (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professional quality conversion, no registration required.',
       'dng_to_ico.meta_keywords': 'DNG to ICO, Adobe Digital Negative, Windows icons, icon converter, camera RAW, batch conversion, free converter',
