@@ -3081,7 +3081,7 @@ const resources = {
       'csv_to_sql.start_converting': 'Rozpocznij Konwersję Teraz',
 
       // DNG to ICO (Polish)
-      'dng_to_ico.title': 'Darmowy Konwerter DNG do ICO - Konwertuj Adobe Digital Negative do Ikon Windows',
+      'dng_to_ico.title': 'Konwerter DNG do ICO - Konwertuj Adobe Digital Negative do Ikon Windows',
       'dng_to_ico.meta_title': 'Darmowy Konwerter DNG do ICO - Konwertuj Adobe Digital Negative do Ikon Windows',
       'dng_to_ico.meta_keywords': 'DNG do ICO, Adobe Digital Negative, ikony Windows, konwerter ikon, obrazy RAW, konwersja partii, darmowy konwerter',
       'dng_to_ico.meta_description': 'Darmowy online konwerter DNG do ICO. Konwertuj Adobe Digital Negative DNG obrazy RAW do ikon Windows ICO w wielu rozmiarach (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Profesjonalna konwersja jakości, bez rejestracji.',
@@ -4426,7 +4426,7 @@ const resources = {
       'csv_to_sql.start_converting': 'Jetzt konvertieren',
 
       // DNG to ICO (German)
-      'dng_to_ico.title': 'Kostenloser DNG zu ICO Konverter - Adobe Digital Negative zu Windows Icons',
+      'dng_to_ico.title': 'DNG zu ICO Konverter - Adobe Digital Negative zu Windows Icons',
       'dng_to_ico.meta_title': 'Kostenloser DNG zu ICO Konverter - Adobe Digital Negative zu Windows Icons',
       'dng_to_ico.meta_keywords': 'DNG zu ICO, Adobe Digital Negative, Windows Icons, Icon-Konverter, Kamera RAW, Batch-Konvertierung, kostenloser Konverter',
       'dng_to_ico.meta_description': 'Kostenloser Online DNG zu ICO Konverter. Konvertieren Sie Adobe Digital Negative DNG Raw-Bilder zu Windows ICO Icons mit mehreren Größen (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professionelle Qualitätskonvertierung, keine Registrierung erforderlich.',
