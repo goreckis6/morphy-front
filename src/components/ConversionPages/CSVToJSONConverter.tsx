@@ -32,31 +32,35 @@ export const CSVToJSONConverter: React.FC = () => {
     }
   }, [i18n]);
 
+  // File management state
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
+  const [isConverting, setIsConverting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [batchMode, setBatchMode] = useState(false);
+  const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<Array<{
+    originalName: string;
+    outputFilename?: string;
+    success: boolean;
+    downloadPath?: string;
+    size?: number;
+    storedFilename?: string;
+  }>>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Validation hook
   const {
-    selectedFile,
-    convertedFile,
-    convertedFilename,
-    isConverting,
-    error,
-    setError,
     validationError,
-    batchMode,
-    setBatchMode,
-    batchFiles,
-    batchResults,
-    batchConverted,
-    fileInputRef,
+    clearValidationError,
+    validateSingleFile,
+    validateBatchFiles,
     getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
-    formatFileSize,
-    handleFileSelect,
-    handleBatchFileSelect,
-    handleSingleConvert,
-    handleBatchConvert,
-    handleDownload,
-    handleBatchDownload,
-    resetForm
+    formatFileSize
   } = useFileValidation();
 
   const [prettyPrint, setPrettyPrint] = useState(true);
@@ -65,6 +69,31 @@ export const CSVToJSONConverter: React.FC = () => {
 
   const handleBack = () => {
     window.location.href = '/';
+  };
+
+  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      clearValidationError();
+      const validation = validateSingleFile(file);
+      if (validation.isValid) {
+        setSelectedFile(file);
+        setError(null);
+        setConvertedFile(null);
+      }
+    }
+  };
+
+  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(event.target.files || []);
+    clearValidationError();
+    const validation = validateBatchFiles(files);
+    if (validation.isValid) {
+      setBatchFiles(files);
+      setError(null);
+    } else {
+      setBatchFiles([]);
+    }
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
@@ -85,6 +114,92 @@ export const CSVToJSONConverter: React.FC = () => {
       console.error('CSV to JSON conversion error:', error);
       throw new Error(error instanceof Error ? error.message : 'Failed to convert CSV to JSON. Please try again.');
     }
+  };
+
+  const handleSingleConvert = async () => {
+    if (!selectedFile) return;
+    
+    setIsConverting(true);
+    setError(null);
+    
+    try {
+      const converted = await handleConvert(selectedFile);
+      setConvertedFile(converted);
+      setConvertedFilename(selectedFile.name.replace('.csv', '.json'));
+    } catch (err) {
+      console.error('CSV to JSON conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
+    } finally {
+      setIsConverting(false);
+    }
+  };
+
+  const handleBatchConvert = async () => {
+    if (batchFiles.length === 0) return;
+    
+    setIsConverting(true);
+    setError(null);
+    setBatchResults([]);
+    
+    try {
+      const results = await apiService.convertBatch(batchFiles, { format: 'json' } as any);
+      
+      if (!results.success) {
+        throw new Error('Batch conversion failed');
+      }
+      
+      setBatchResults(results.results);
+      setBatchConverted(true);
+    } catch (err) {
+      console.error('CSV to JSON batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
+    } finally {
+      setIsConverting(false);
+    }
+  };
+
+  const handleDownload = () => {
+    if (convertedFile && convertedFilename) {
+      const url = URL.createObjectURL(convertedFile);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = convertedFilename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  };
+
+  const handleBatchDownload = async (result: typeof batchResults[0]) => {
+    if (!result.success || !result.downloadPath) return;
+    
+    try {
+      const blob = await apiService.downloadFile(result.downloadPath);
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = result.outputFilename || 'converted.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Download error:', err);
+      setError('Failed to download file. Please try again.');
+    }
+  };
+
+  const resetForm = () => {
+    setSelectedFile(null);
+    setConvertedFile(null);
+    setConvertedFilename(null);
+    setError(null);
+    setBatchFiles([]);
+    setBatchConverted(false);
+    setBatchResults([]);
+    clearValidationError();
+    if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (

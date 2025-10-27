@@ -1,5 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { 
   Upload, 
@@ -17,46 +19,95 @@ import {
   File,
   BarChart3
 } from 'lucide-react';
+import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CSVToNDJSONConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [i18n]);
+
+  // File management state
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [prettyPrint, setPrettyPrint] = useState(false);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<Array<{
+    originalName: string;
+    outputFilename?: string;
+    success: boolean;
+    downloadPath?: string;
+    size?: number;
+    storedFilename?: string;
+  }>>([]);
+  const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Validation hook
+  const {
+    validationError,
+    clearValidationError,
+    validateSingleFile,
+    validateBatchFiles,
+    getSingleInfoMessage,
+    getBatchInfoMessage,
+    getBatchSizeDisplay,
+    formatFileSize
+  } = useFileValidation();
+
+  const [includeHeaders, setIncludeHeaders] = useState(true);
+
+  const handleBack = () => {
+    window.location.href = '/';
+  };
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.name.toLowerCase().endsWith('.csv')) {
+      clearValidationError();
+      const validation = validateSingleFile(file);
+      if (validation.isValid) {
         setSelectedFile(file);
         setError(null);
-        setPreviewUrl(URL.createObjectURL(file));
-      } else {
-        setError('Please select a valid CSV file');
+        setConvertedFile(null);
       }
     }
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const csvFiles = files.filter(file => 
-      file.name.toLowerCase().endsWith('.csv')
-    );
-    setBatchFiles(csvFiles);
-    setError(null);
+    clearValidationError();
+    const validation = validateBatchFiles(files);
+    if (validation.isValid) {
+      setBatchFiles(files);
+      setError(null);
+    } else {
+      setBatchFiles([]);
+    }
   };
 
   const handleConvert = async (file: File): Promise<Blob> => {
-    const ndjsonContent = `{"name": "John Doe", "age": 30, "city": "New York"}
-{"name": "Jane Smith", "age": 25, "city": "Los Angeles"}
-{"name": "Bob Johnson", "age": 35, "city": "Chicago"}`;
-    return new Blob([ndjsonContent], { type: 'application/x-ndjson' });
+    try {
+      console.log('CSV to NDJSON: Converting file:', file.name, 'size:', file.size, 'bytes');
+
+      const result = await apiService.convertFile(file, {
+        format: 'ndjson',
+        includeHeaders: includeHeaders ? 'true' : 'false'
+      } as any);
+
+      console.log('CSV to NDJSON: Conversion successful, blob size:', result.blob.size, 'bytes');
+      return result.blob;
+    } catch (error) {
+      console.error('CSV to NDJSON conversion error:', error);
+      throw new Error(error instanceof Error ? error.message : 'Failed to convert CSV to NDJSON. Please try again.');
+    }
   };
 
   const handleSingleConvert = async () => {
@@ -68,8 +119,10 @@ export const CSVToNDJSONConverter: React.FC = () => {
     try {
       const converted = await handleConvert(selectedFile);
       setConvertedFile(converted);
+      setConvertedFilename(selectedFile.name.replace('.csv', '.ndjson'));
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      console.error('CSV to NDJSON conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -80,25 +133,31 @@ export const CSVToNDJSONConverter: React.FC = () => {
     
     setIsConverting(true);
     setError(null);
+    setBatchResults([]);
     
     try {
-      for (const file of batchFiles) {
-        await handleConvert(file);
+      const results = await apiService.convertBatch(batchFiles, { format: 'ndjson' } as any);
+      
+      if (!results.success) {
+        throw new Error('Batch conversion failed');
       }
-      setError(null);
+      
+      setBatchResults(results.results);
+      setBatchConverted(true);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('CSV to NDJSON batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
   const handleDownload = () => {
-    if (convertedFile) {
+    if (convertedFile && convertedFilename) {
       const url = URL.createObjectURL(convertedFile);
       const a = document.createElement('a');
       a.href = url;
-      a.download = selectedFile ? selectedFile.name.replace('.csv', '.ndjson') : 'converted.ndjson';
+      a.download = convertedFilename;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -106,24 +165,42 @@ export const CSVToNDJSONConverter: React.FC = () => {
     }
   };
 
-  const handleBack = () => {
-    window.location.href = '/';
+  const handleBatchDownload = async (result: typeof batchResults[0]) => {
+    if (!result.success || !result.downloadPath) return;
+    
+    try {
+      const blob = await apiService.downloadFile(result.downloadPath);
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = result.outputFilename || 'converted.ndjson';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Download error:', err);
+      setError('Failed to download file. Please try again.');
+    }
   };
 
   const resetForm = () => {
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
-    setPreviewUrl(null);
     setBatchFiles([]);
+    setBatchConverted(false);
+    setBatchResults([]);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   return (
     <>
       <Helmet>
-        <title>CSV to NDJSON Converter - Convert CSV to Newline Delimited JSON</title>
-        <meta name="description" content="Convert CSV files to NDJSON (Newline Delimited JSON) format for streaming data processing. Professional converter with batch support. Free online tool." />
+        <title>{t('csv_to_ndjson.meta_title')}</title>
+        <meta name="description" content={t('csv_to_ndjson.meta_description')} />
         <meta name="keywords" content="CSV to NDJSON, newline delimited JSON, streaming data, data processing, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
@@ -134,23 +211,23 @@ export const CSVToNDJSONConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              CSV to NDJSON Converter
+              {t('csv_to_ndjson.title')}
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-              Convert CSV files to NDJSON format for streaming data. Transform tabular data into newline-delimited JSON format for big data processing and streaming applications.
+              {t('csv_to_ndjson.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('common.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('common.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('common.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -165,7 +242,10 @@ export const CSVToNDJSONConverter: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={() => {
+                    setBatchMode(false);
+                    resetForm();
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
@@ -173,10 +253,13 @@ export const CSVToNDJSONConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('common.single_file')}
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={() => {
+                    setBatchMode(true);
+                    resetForm();
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
@@ -184,21 +267,27 @@ export const CSVToNDJSONConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple CSV Files' : 'Upload CSV File'}
+                  {batchMode ? t('csv_to_ndjson.upload_multiple') : t('csv_to_ndjson.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple CSV files to convert them all at once' 
-                    : 'Drag and drop your CSV file here or click to browse'
+                    ? t('csv_to_ndjson.upload_multiple_desc') 
+                    : t('csv_to_ndjson.upload_single_desc')
                   }
                 </p>
+                {!batchMode && (
+                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-blue-600 mb-4">{getBatchInfoMessage()}</p>
+                )}
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -211,19 +300,19 @@ export const CSVToNDJSONConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
-                  Choose Files
+                  {t('common.choose_files')}
                 </button>
               </div>
 
-              {previewUrl && !batchMode && (
+              {selectedFile && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('common.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <File className="w-12 h-12 text-gray-400" />
                     </div>
                     <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({(selectedFile?.size || 0) / 1024} KB)
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
                     </p>
                   </div>
                 </div>
@@ -231,22 +320,31 @@ export const CSVToNDJSONConverter: React.FC = () => {
 
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Selected Files ({batchFiles.length})</h4>
+                  {(() => {
+                    const totalSize = batchFiles.reduce((s, f) => s + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <div className="flex items-center justify-between mb-4">
+                        <h4 className="text-lg font-semibold">{t('common.selected_files', { count: batchFiles.length })}</h4>
+                        <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-blue-700' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
+                      </div>
+                    );
+                  })()}
                   <div className="space-y-2 max-h-40 overflow-y-auto">
                     {batchFiles.map((file, index) => (
                       <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                         <span className="text-sm font-medium">{file.name}</span>
-                        <span className="text-xs text-gray-500">{(file.size / 1024).toFixed(1)} KB</span>
+                        <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               )}
 
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError}</span>
                 </div>
               )}
 
@@ -259,12 +357,12 @@ export const CSVToNDJSONConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('common.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to NDJSON'}
+                      {batchMode ? t('csv_to_ndjson.convert_files', { count: batchFiles.length }) : t('csv_to_ndjson.convert_to_ndjson')}
                     </div>
                   )}
                 </button>
@@ -274,10 +372,10 @@ export const CSVToNDJSONConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('common.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your CSV file has been successfully converted to NDJSON format.
+                    {t('csv_to_ndjson.conversion_success')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -285,16 +383,69 @@ export const CSVToNDJSONConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download NDJSON File
+                      {t('csv_to_ndjson.download_ndjson')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('common.convert_another')}
                     </button>
                   </div>
+                </div>
+              )}
+
+              {batchMode && batchConverted && batchResults.length > 0 && (
+                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
+                  </div>
+                  <div className="space-y-3 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, idx) => (
+                      <div key={idx} className="bg-white rounded-lg p-4 border border-green-200">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-start">
+                              {r.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2 mt-0.5 flex-shrink-0" />
+                              )}
+                              <div className="min-w-0 flex-1">
+                                <p className="text-sm font-medium text-gray-900 truncate">
+                                  {r.outputFilename || r.originalName.replace(/\.[^.]+$/, '.ndjson')}
+                                </p>
+                                {r.success && r.size && (
+                                  <p className="text-xs text-gray-500 mt-1">{formatFileSize(r.size)}</p>
+                                )}
+                                {!r.success && r.error && (
+                                  <p className="text-xs text-red-600 mt-1 break-words">{r.error}</p>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                          {r.success && (
+                            <button
+                              onClick={() => handleBatchDownload(r)}
+                              className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center sm:justify-start"
+                            >
+                              <Download className="w-4 h-4 mr-2" />
+                              {t('common.download')}
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    {t('common.convert_more_files')}
+                  </button>
                 </div>
               )}
             </div>
@@ -305,7 +456,7 @@ export const CSVToNDJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-blue-600" />
-                NDJSON Settings
+                {t('csv_to_ndjson.settings_title')}
               </h3>
               
               <div className="mb-6">
@@ -316,19 +467,7 @@ export const CSVToNDJSONConverter: React.FC = () => {
                     onChange={(e) => setIncludeHeaders(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
-                </label>
-              </div>
-
-              <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={prettyPrint}
-                    onChange={(e) => setPrettyPrint(e.target.checked)}
-                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Pretty print JSON</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('csv_to_ndjson.include_headers')}</span>
                 </label>
               </div>
             </div>
@@ -336,16 +475,16 @@ export const CSVToNDJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('csv_to_ndjson.why_choose')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Streaming data format",
-                  "Big data processing",
-                  "Line-by-line processing",
-                  "JSON compatibility",
-                  "Memory efficient",
-                  "Batch processing support"
+                  t('csv_to_ndjson.feature_streaming'),
+                  t('csv_to_ndjson.feature_big_data'),
+                  t('csv_to_ndjson.feature_line_processing'),
+                  t('csv_to_ndjson.feature_json_compat'),
+                  t('csv_to_ndjson.feature_memory'),
+                  t('csv_to_ndjson.feature_batch')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -358,16 +497,16 @@ export const CSVToNDJSONConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-blue-600" />
-                Perfect For
+                {t('csv_to_ndjson.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Streaming data processing",
-                  "Big data analytics",
-                  "Log file processing",
-                  "Data pipelines",
-                  "Real-time processing",
-                  "Data streaming"
+                  t('csv_to_ndjson.use_case_streaming'),
+                  t('csv_to_ndjson.use_case_analytics'),
+                  t('csv_to_ndjson.use_case_logs'),
+                  t('csv_to_ndjson.use_case_pipelines'),
+                  t('csv_to_ndjson.use_case_realtime'),
+                  t('csv_to_ndjson.use_case_data_streaming')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -384,69 +523,54 @@ export const CSVToNDJSONConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert CSV to NDJSON?
+            {t('csv_to_ndjson.seo_title')}
           </h2>
-          
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting CSV files to NDJSON format is essential for streaming data processing, big data analytics, and real-time data pipelines. While CSV files are excellent for tabular data storage, NDJSON format provides the perfect solution for processing large datasets line-by-line, making it ideal for streaming applications and big data processing systems.
+              {t('csv_to_ndjson.seo_description')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of NDJSON Format</h3>
-            
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('csv_to_ndjson.benefits_title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Streaming Data Format</h4>
-                <p className="text-gray-700">
-                  NDJSON format enables line-by-line processing of large datasets, making it perfect for streaming data applications and real-time processing systems.
-                </p>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('csv_to_ndjson.benefit_streaming')}</h4>
+                <p className="text-gray-700">{t('csv_to_ndjson.benefit_streaming_desc')}</p>
               </div>
-              
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Big Data Processing</h4>
-                <p className="text-gray-700">
-                  NDJSON format is widely used in big data processing frameworks like Apache Spark, Hadoop, and cloud data processing services for efficient data handling.
-                </p>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('csv_to_ndjson.benefit_big_data')}</h4>
+                <p className="text-gray-700">{t('csv_to_ndjson.benefit_big_data_desc')}</p>
               </div>
-              
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Memory Efficient</h4>
-                <p className="text-gray-700">
-                  NDJSON format allows processing of large files without loading the entire dataset into memory, making it ideal for handling massive datasets efficiently.
-                </p>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('csv_to_ndjson.benefit_memory')}</h4>
+                <p className="text-gray-700">{t('csv_to_ndjson.benefit_memory_desc')}</p>
               </div>
-              
               <div className="bg-violet-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-violet-900 mb-3">JSON Compatibility</h4>
-                <p className="text-gray-700">
-                  NDJSON format maintains JSON compatibility while enabling streaming processing, making it perfect for modern data processing and API integrations.
-                </p>
+                <h4 className="text-xl font-semibold text-violet-900 mb-3">{t('csv_to_ndjson.benefit_json')}</h4>
+                <p className="text-gray-700">{t('csv_to_ndjson.benefit_json_desc')}</p>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your CSV Files?</h3>
-              <p className="text-lg mb-6 opacity-90">
-                Use our free online CSV to NDJSON converter to transform your tabular data into streaming-ready format.
-              </p>
+              <h3 className="text-2xl font-bold mb-4">{t('csv_to_ndjson.cta_title')}</h3>
+              <p className="text-lg mb-6 opacity-90">{t('csv_to_ndjson.cta_description')}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('csv_to_ndjson.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
@@ -473,8 +597,6 @@ export const CSVToNDJSONConverter: React.FC = () => {
       </footer>
 
       </div>
-
-      </>
-
-      );
+    </>
+  );
 };
