@@ -109,7 +109,20 @@ export const EPUBToCSVConverter: React.FC = () => {
       setConvertedFile(blob);
       setConvertedFilename(selectedFile.name.replace('.epub', '.csv'));
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      console.error('EPUB to CSV conversion error:', err);
+      let errorMessage = 'Conversion failed. Please try again.';
+      
+      if (err instanceof Error) {
+        if (err.message.includes('Bad Zip file') || err.message.includes('not a valid ZIP archive')) {
+          errorMessage = 'Invalid EPUB file: The file is corrupted or not a valid EPUB format. Please check your file and try again.';
+        } else if (err.message.includes('No content extracted')) {
+          errorMessage = 'No content found: The EPUB file appears to be empty or contains no readable text content.';
+        } else {
+          errorMessage = err.message;
+        }
+      }
+      
+      setError(errorMessage);
     } finally {
       setIsConverting(false);
     }
@@ -151,8 +164,22 @@ export const EPUBToCSVConverter: React.FC = () => {
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
+      console.error('EPUB to CSV batch conversion error:', err);
       setBatchConverted(false);
-      setError('Batch conversion failed. Please try again.');
+      
+      let errorMessage = 'Batch conversion failed. Please try again.';
+      
+      if (err instanceof Error) {
+        if (err.message.includes('Bad Zip file') || err.message.includes('not a valid ZIP archive')) {
+          errorMessage = 'Invalid EPUB files: One or more files are corrupted or not valid EPUB format. Please check your files and try again.';
+        } else if (err.message.includes('No content extracted')) {
+          errorMessage = 'No content found: One or more EPUB files appear to be empty or contain no readable text content.';
+        } else {
+          errorMessage = err.message;
+        }
+      }
+      
+      setError(errorMessage);
     } finally {
       setIsConverting(false);
     }
