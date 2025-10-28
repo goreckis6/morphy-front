@@ -527,14 +527,23 @@ export const EPUBToCSVConverter: React.FC = () => {
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((r, i) => (
-                      <div key={i} className="bg-white border rounded-lg p-3">
+                      <div key={i} className={`border rounded-lg p-3 ${
+                        r.success ? 'bg-white border-green-200' : 'bg-red-50 border-red-200'
+                      }`}>
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                           <div className="text-sm flex-1 min-w-0">
-                            <div className="font-medium text-gray-900 truncate">{r.outputFilename || r.originalName}</div>
+                            <div className="flex items-center">
+                              {r.success ? (
+                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                              ) : (
+                                <AlertCircle className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
+                              )}
+                              <span className="font-medium text-gray-900 truncate">{r.outputFilename || r.originalName}</span>
+                            </div>
                             {r.success && r.size && (
-                              <div className="text-xs text-gray-500 mt-1">{formatFileSize(r.size)}</div>
+                              <div className="text-xs text-gray-500 mt-1 ml-6">{formatFileSize(r.size)}</div>
                             )}
-                            {r.error && <div className="text-xs text-red-600 mt-1 break-words">{r.error}</div>}
+                            {r.error && <div className="text-xs text-red-600 mt-1 ml-6 break-words">Failed to convert {r.originalName}</div>}
                           </div>
                           {r.success && r.downloadPath && (
                             <button 

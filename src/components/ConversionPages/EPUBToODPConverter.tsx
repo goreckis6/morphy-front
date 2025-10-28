@@ -456,34 +456,42 @@ export const EPUBToODPConverter: React.FC = () => {
                   }`}>
                     {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
-                  <div className="space-y-3 max-h-60 overflow-y-auto">
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => {
                       const displayName = result.outputFilename || `${result.originalName.replace(/\.epub$/i, '.odp')}`;
                       const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
                       return (
-                        <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${
-                          result.success ? 'bg-white border border-green-200' : 'bg-red-50 border border-red-200'
+                        <div key={index} className={`border rounded-lg p-3 ${
+                          result.success ? 'bg-white border-green-200' : 'bg-red-50 border-red-200'
                         }`}>
-                          <div className="flex items-center flex-1">
-                            {result.success ? (
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                            ) : (
-                              <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
-                            )}
-                            <span className="text-sm font-medium truncate">{displayName}</span>
-                            {displaySize && (
-                              <span className="text-xs text-gray-500 ml-2">({displaySize})</span>
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                            <div className="text-sm flex-1 min-w-0">
+                              <div className="flex items-center">
+                                {result.success ? (
+                                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                                ) : (
+                                  <AlertCircle className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
+                                )}
+                                <span className="font-medium text-gray-900 truncate">{displayName}</span>
+                              </div>
+                              {displaySize && (
+                                <div className="text-xs text-gray-500 mt-1 ml-6">{displaySize}</div>
+                              )}
+                              {!result.success && result.error && (
+                                <div className="text-xs text-red-600 mt-1 ml-6 break-words">
+                                  Failed to convert {result.originalName}
+                                </div>
+                              )}
+                            </div>
+                            {result.success && result.downloadPath && (
+                              <button
+                                onClick={() => handleBatchDownload(result)}
+                                className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
+                              >
+                                Download
+                              </button>
                             )}
                           </div>
-                          {result.success && result.downloadPath && (
-                            <button
-                              onClick={() => handleBatchDownload(result)}
-                              className="bg-green-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-green-700 transition-colors ml-2"
-                            >
-                              <Download className="w-3 h-3 mr-1 inline" />
-                              Download
-                            </button>
-                          )}
                         </div>
                       );
                     })}
