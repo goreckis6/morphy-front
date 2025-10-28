@@ -1,13 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
+import { API_BASE_URL } from '../../services/api';
 import { Header } from '../Header';
+import { useFileValidation } from '../../hooks/useFileValidation';
 import { 
   Upload, 
   Download, 
   Settings, 
   FileText,
-  BookOpen,
+  FileImage,
   RefreshCw,
   CheckCircle,
   AlertCircle,
@@ -15,25 +16,23 @@ import {
   Shield,
   Clock,
   Star,
-  Table,
-  BarChart3
+  BookOpen,
+  Table
 } from 'lucide-react';
-import { API_BASE_URL } from '../../services/api';
-import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const EPUBToCSVConverter: React.FC = () => {
-  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [includeMetadata, setIncludeMetadata] = useState<boolean>(true);
-  const [delimiter, setDelimiter] = useState<string>(',');
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [includeMetadata, setIncludeMetadata] = useState(true);
+  const [delimiter, setDelimiter] = useState(',');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
+  const [batchResults, setBatchResults] = useState<any[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
-  const [batchResults, setBatchResults] = useState<Array<{ originalName: string; outputFilename?: string; success: boolean; downloadPath?: string }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Use shared validation hook
@@ -41,7 +40,6 @@ export const EPUBToCSVConverter: React.FC = () => {
     validationError,
     validateSingleFile,
     validateBatchFiles,
-    getSingleInfoMessage,
     getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
@@ -52,16 +50,15 @@ export const EPUBToCSVConverter: React.FC = () => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.epub')) {
-        // Validate single file size
+        // Validate single file size using shared validation
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
-          setSelectedFile(null);
-          if (fileInputRef.current) fileInputRef.current.value = '';
+          setError(validation.error || 'File validation failed');
           return;
         }
         setSelectedFile(file);
         setError(null);
+        setPreviewUrl(URL.createObjectURL(file));
         clearValidationError();
       } else {
         setError('Please select a valid EPUB file');
@@ -71,22 +68,17 @@ export const EPUBToCSVConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const epubFiles = files.filter(file => file.name.toLowerCase().endsWith('.epub'));
+    const epubFiles = files.filter(file => 
+      file.name.toLowerCase().endsWith('.epub')
+    );
     
-    if (epubFiles.length === 0) {
-      setError('No valid EPUB files selected.');
-      return;
-    }
-
-    // Validate batch files
+    // Validate batch files using shared validation
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
-      setBatchFiles([]);
-      if (fileInputRef.current) fileInputRef.current.value = '';
+      setError(validation.error || 'Batch validation failed');
       return;
     }
-
+    
     setBatchFiles(epubFiles);
     setError(null);
     clearValidationError();
@@ -94,7 +86,7 @@ export const EPUBToCSVConverter: React.FC = () => {
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
-
+    
     setIsConverting(true);
     setError(null);
     
@@ -116,10 +108,8 @@ export const EPUBToCSVConverter: React.FC = () => {
       const blob = await response.blob();
       setConvertedFile(blob);
       setConvertedFilename(selectedFile.name.replace('.epub', '.csv'));
-      setBatchConverted(false);
-      setBatchResults([]);
-    } catch (err: any) {
-      setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
+    } catch (err) {
+      setError('Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
@@ -127,9 +117,10 @@ export const EPUBToCSVConverter: React.FC = () => {
 
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
-
+    
     setIsConverting(true);
     setError(null);
+    setBatchConverted(false);
     
     try {
       const formData = new FormData();
@@ -154,35 +145,34 @@ export const EPUBToCSVConverter: React.FC = () => {
       if (successes.length > 0) {
         setBatchConverted(true);
         const failures = (result.results ?? []).filter((r: any) => !r.success);
-        setError(failures.length > 0 ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed to convert.` : null);
+        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
       } else {
         setBatchConverted(false);
         setError('Batch conversion failed. Please try again.');
       }
-    } catch (err: any) {
-      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
+    } catch (err) {
+      setBatchConverted(false);
+      setError('Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
   const handleDownload = () => {
-    if (convertedFile && convertedFilename) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = convertedFilename;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
+    if (!convertedFile) return;
+    const url = URL.createObjectURL(convertedFile);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = convertedFilename || (selectedFile ? selectedFile.name.replace(/\.epub$/i, '.csv') : 'converted.csv');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
-  const handleBatchFileDownload = async (result: any) => {
+  const handleBatchDownload = async (result: any) => {
     try {
       if (result.downloadPath && result.downloadPath.startsWith('data:')) {
-        // Handle base64 data URL
         const response = await fetch(result.downloadPath);
         const blob = await response.blob();
         const url = URL.createObjectURL(blob);
@@ -194,10 +184,13 @@ export const EPUBToCSVConverter: React.FC = () => {
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
       }
-    } catch (error) {
-      console.error('Download error:', error);
-      setError('Failed to download file');
+    } catch (e) {
+      setError('Failed to download file. Please try again.');
     }
+  };
+
+  const handleBack = () => {
+    window.location.href = '/';
   };
 
   const resetForm = () => {
@@ -205,9 +198,10 @@ export const EPUBToCSVConverter: React.FC = () => {
     setConvertedFile(null);
     setConvertedFilename(null);
     setError(null);
+    setPreviewUrl(null);
     setBatchFiles([]);
-    setBatchConverted(false);
     setBatchResults([]);
+    setBatchConverted(false);
     clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
@@ -215,465 +209,367 @@ export const EPUBToCSVConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{t('epub_to_csv.meta_title')}</title>
-        <meta name="description" content={t('epub_to_csv.meta_description')} />
+        <title>Free EPUB to CSV Converter Online - Extract eBook Content to CSV Format | MorphyIMG</title>
+        <meta name="description" content="Convert EPUB ebook files to CSV format online for free. Extract text content, chapters, and metadata from EPUB files for data analysis, content management, and text processing." />
         <meta name="keywords" content="EPUB to CSV, ebook converter, EPUB extractor, CSV converter, batch conversion" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        <Header />
-        
-        {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-            <div className="text-center">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                {t('epub_to_csv.title')}
-              </h1>
-              <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-                {t('epub_to_csv.subtitle')}
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
-                  <span>{t('features.lightning_fast')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4" />
-                  <span>{t('features.secure')}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>{t('features.no_registration')}</span>
-                </div>
+      <Header />
+      
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="text-center">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Free EPUB to CSV Converter
+            </h1>
+            <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
+              Convert EPUB ebook files to CSV format for easy data analysis and content extraction. Extract chapters, paragraphs, and metadata from your ebooks.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4" />
+                <span>Lightning Fast</span>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 pb-16">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-200">
-            
-            {/* Mode Toggle */}
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-4 sm:px-6 py-4 border-b border-blue-200">
-              <div className="flex justify-center">
-                <div className="inline-flex rounded-lg bg-white p-1 shadow-md">
-                  <button
-                    onClick={() => { setBatchMode(false); resetForm(); }}
-                    className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${
-                      !batchMode
-                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    <FileText className="w-5 h-5 inline mr-2" />
-                    {t('common.single_file')}
-                  </button>
-                  <button
-                    onClick={() => { setBatchMode(true); resetForm(); }}
-                    className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-300 ${
-                      batchMode
-                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg'
-                        : 'text-gray-600 hover:text-gray-900'
-                    }`}
-                  >
-                    <BarChart3 className="w-5 h-5 inline mr-2" />
-                    {t('common.batch_convert')}
-                  </button>
-                </div>
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4" />
+                <span>100% Secure</span>
               </div>
-            </div>
-
-            <div className="p-6 sm:p-8">
-              {/* Single File Mode */}
-              {!batchMode && (
-                <>
-                  {!convertedFile && (
-                    <div className="space-y-6">
-                      <div 
-                        onClick={() => fileInputRef.current?.click()}
-                        className="border-3 border-dashed border-blue-300 rounded-xl p-8 sm:p-12 text-center hover:border-blue-500 hover:bg-blue-50/50 transition-all cursor-pointer group"
-                      >
-                        <input
-                          ref={fileInputRef}
-                          type="file"
-                          accept=".epub"
-                          onChange={handleFileSelect}
-                          className="hidden"
-                        />
-                        <div className="flex flex-col items-center space-y-4">
-                          <div className="p-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full group-hover:scale-110 transition-transform">
-                            <Upload className="w-12 h-12 text-blue-600" />
-                          </div>
-                          <div>
-                            <p className="text-lg font-semibold text-gray-700 mb-2">
-                              {t('eps_to_webp.upload_text_single')}
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              {getSingleInfoMessage()}
-                            </p>
-                          </div>
-                          {selectedFile && (
-                            <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200 w-full max-w-md">
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center space-x-3 flex-1 min-w-0">
-                                  <BookOpen className="w-8 h-8 text-blue-600 flex-shrink-0" />
-                                  <div className="flex-1 min-w-0">
-                                    <p className="text-sm font-medium text-gray-900 truncate">
-                                      {selectedFile.name}
-                                    </p>
-                                    <p className="text-xs text-gray-500">
-                                      {formatFileSize(selectedFile.size)}
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* Settings Section */}
-                      {selectedFile && (
-                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
-                          <div className="flex items-center gap-2 mb-4">
-                            <Settings className="w-5 h-5 text-blue-600" />
-                            <h3 className="text-lg font-semibold text-gray-800">
-                              {t('conversion_settings')}
-                            </h3>
-                          </div>
-                          
-                          <div className="space-y-4">
-                            <div>
-                              <label className="flex items-center space-x-3 cursor-pointer">
-                                <input
-                                  type="checkbox"
-                                  checked={includeMetadata}
-                                  onChange={(e) => setIncludeMetadata(e.target.checked)}
-                                  className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
-                                />
-                                <span className="text-sm font-medium text-gray-700">
-                                  {t('epub_to_csv.include_metadata')}
-                                </span>
-                              </label>
-                              <p className="text-xs text-gray-500 mt-1 ml-8">
-                                {t('epub_to_csv.include_metadata_desc')}
-                              </p>
-                            </div>
-
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-2">
-                                {t('epub_to_csv.delimiter')}
-                              </label>
-                              <select
-                                value={delimiter}
-                                onChange={(e) => setDelimiter(e.target.value)}
-                                className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                              >
-                                <option value=",">{t('epub_to_csv.delimiter_comma')}</option>
-                                <option value=";">{t('epub_to_csv.delimiter_semicolon')}</option>
-                                <option value="\t">{t('epub_to_csv.delimiter_tab')}</option>
-                                <option value="|">{t('epub_to_csv.delimiter_pipe')}</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Error Message */}
-                      {(error || validationError) && (
-                        <div className="flex items-center gap-3 p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
-                          <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                          <p className="text-sm text-red-700">{error || validationError}</p>
-                        </div>
-                      )}
-
-                      {/* Convert Button */}
-                      {selectedFile && (
-                        <button
-                          onClick={handleSingleConvert}
-                          disabled={isConverting}
-                          className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                        >
-                          {isConverting ? (
-                            <>
-                              <RefreshCw className="w-5 h-5 animate-spin" />
-                              <span>{t('common.converting')}</span>
-                            </>
-                          ) : (
-                            <>
-                              <Table className="w-5 h-5" />
-                              <span>{t('convert_to_csv')}</span>
-                            </>
-                          )}
-                        </button>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Success State */}
-                  {convertedFile && (
-                    <div className="text-center space-y-6">
-                      <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-4">
-                        <CheckCircle className="w-12 h-12 text-green-600" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                        {t('common.conversion_complete')}
-                      </h3>
-                      <p className="text-gray-600 mb-6">
-                        {t('epub_to_csv.success_message')}
-                      </p>
-                      
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button
-                          onClick={handleDownload}
-                          className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                        >
-                          <Download className="w-5 h-5" />
-                          <span>{t('download_csv')}</span>
-                        </button>
-                        <button
-                          onClick={resetForm}
-                          className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                        >
-                          <RefreshCw className="w-5 h-5" />
-                          <span>{t('common.convert_another')}</span>
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </>
-              )}
-
-              {/* Batch Mode */}
-              {batchMode && (
-                <>
-                  {!batchConverted && (
-                    <div className="space-y-6">
-                      <div 
-                        onClick={() => fileInputRef.current?.click()}
-                        className="border-3 border-dashed border-blue-300 rounded-xl p-8 sm:p-12 text-center hover:border-blue-500 hover:bg-blue-50/50 transition-all cursor-pointer group"
-                      >
-                        <input
-                          ref={fileInputRef}
-                          type="file"
-                          accept=".epub"
-                          multiple
-                          onChange={handleBatchFileSelect}
-                          className="hidden"
-                        />
-                        <div className="flex flex-col items-center space-y-4">
-                          <div className="p-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full group-hover:scale-110 transition-transform">
-                            <Upload className="w-12 h-12 text-blue-600" />
-                          </div>
-                          <div>
-                            <p className="text-lg font-semibold text-gray-700 mb-2">
-                              {t('eps_to_webp.upload_text_batch')}
-                            </p>
-                            <p className="text-sm text-gray-500">
-                              {getBatchInfoMessage()}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Batch File List */}
-                      {batchFiles.length > 0 && (
-                        <div className="space-y-4">
-                          <div className="flex justify-between items-center">
-                            <h3 className="text-lg font-semibold text-gray-800">
-                              {t('common.selected_files', { count: batchFiles.length })}
-                            </h3>
-                            <span className="text-sm text-gray-600">
-                              {getBatchSizeDisplay(batchFiles)}
-                            </span>
-                          </div>
-                          <div className="max-h-64 overflow-y-auto space-y-2 bg-gray-50 rounded-lg p-4">
-                            {batchFiles.map((file, index) => (
-                              <div key={index} className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200">
-                                <div className="flex items-center space-x-3 flex-1 min-w-0">
-                                  <BookOpen className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                                  <div className="flex-1 min-w-0">
-                                    <p className="text-sm font-medium text-gray-900 truncate">
-                                      {file.name}
-                                    </p>
-                                    <p className="text-xs text-gray-500">
-                                      {formatFileSize(file.size)}
-                                    </p>
-                                  </div>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-
-                          {/* Settings Section */}
-                          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200">
-                            <div className="flex items-center gap-2 mb-4">
-                              <Settings className="w-5 h-5 text-blue-600" />
-                              <h3 className="text-lg font-semibold text-gray-800">
-                                {t('conversion_settings')}
-                              </h3>
-                            </div>
-                            
-                            <div className="space-y-4">
-                              <div>
-                                <label className="flex items-center space-x-3 cursor-pointer">
-                                  <input
-                                    type="checkbox"
-                                    checked={includeMetadata}
-                                    onChange={(e) => setIncludeMetadata(e.target.checked)}
-                                    className="w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
-                                  />
-                                  <span className="text-sm font-medium text-gray-700">
-                                    {t('epub_to_csv.include_metadata')}
-                                  </span>
-                                </label>
-                                <p className="text-xs text-gray-500 mt-1 ml-8">
-                                  {t('epub_to_csv.include_metadata_desc')}
-                                </p>
-                              </div>
-
-                              <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                  {t('epub_to_csv.delimiter')}
-                                </label>
-                                <select
-                                  value={delimiter}
-                                  onChange={(e) => setDelimiter(e.target.value)}
-                                  className="w-full px-4 py-2 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                >
-                                  <option value=",">{t('epub_to_csv.delimiter_comma')}</option>
-                                  <option value=";">{t('epub_to_csv.delimiter_semicolon')}</option>
-                                  <option value="\t">{t('epub_to_csv.delimiter_tab')}</option>
-                                  <option value="|">{t('epub_to_csv.delimiter_pipe')}</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Error Message */}
-                          {(error || validationError) && (
-                            <div className="flex items-center gap-3 p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
-                              <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                              <p className="text-sm text-red-700">{error || validationError}</p>
-                            </div>
-                          )}
-
-                          {/* Convert Button */}
-                          <button
-                            onClick={handleBatchConvert}
-                            disabled={isConverting}
-                            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                          >
-                            {isConverting ? (
-                              <>
-                                <RefreshCw className="w-5 h-5 animate-spin" />
-                                <span>{t('common.converting')}</span>
-                              </>
-                            ) : (
-                              <>
-                                <Table className="w-5 h-5" />
-                                <span>{t('convert_all_to_csv')}</span>
-                              </>
-                            )}
-                          </button>
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Batch Conversion Results */}
-                  {batchConverted && batchResults.length > 0 && (
-                    <div className="space-y-6">
-                      <div className="text-center">
-                        <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-4">
-                          <CheckCircle className="w-12 h-12 text-green-600" />
-                        </div>
-                        <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                          {t('common.batch_conversion_complete')}
-                        </h3>
-                        <p className="text-gray-600">
-                          {t('successfully_converted')} {batchResults.filter(r => r.success).length} {t('files')}
-                        </p>
-                      </div>
-
-                      {/* Results Grid - Mobile Optimized */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {batchResults.filter(r => r.success).map((result, index) => (
-                          <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200 hover:shadow-lg transition-shadow">
-                            <div className="flex items-start justify-between mb-3">
-                              <div className="flex items-start space-x-3 flex-1 min-w-0">
-                                <Table className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
-                                <div className="flex-1 min-w-0">
-                                  <p className="text-sm font-medium text-gray-900 truncate">
-                                    {result.outputFilename}
-                                  </p>
-                                  <p className="text-xs text-gray-500 mt-1">
-                                    {result.size ? formatFileSize(result.size) : 'Ready'}
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <button
-                              onClick={() => handleBatchFileDownload(result)}
-                              className="w-full bg-white hover:bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 border border-blue-200"
-                            >
-                              <Download className="w-4 h-4" />
-                              <span className="text-sm">{t('download')}</span>
-                            </button>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Reset Button */}
-                      <div className="text-center pt-4">
-                        <button
-                          onClick={resetForm}
-                          className="bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 px-8 rounded-xl transition-all duration-300 inline-flex items-center gap-2"
-                        >
-                          <RefreshCw className="w-5 h-5" />
-                          <span>{t('common.convert_more_files')}</span>
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </>
-              )}
-            </div>
-          </div>
-
-          {/* SEO Content Section */}
-          <div className="mt-12 bg-white rounded-xl shadow-lg p-8 border border-blue-100">
-            <div className="prose max-w-none">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Star className="w-6 h-6 text-blue-600" />
-                {t('epub_to_csv.seo.title')}
-              </h2>
-              <div className="text-gray-600 space-y-4">
-                <p>{t('epub_to_csv.seo.description')}</p>
-                
-                <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
-                  {t('epub_to_csv.seo.features_title')}
-                </h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>{t('epub_to_csv.seo.feature_1')}</li>
-                  <li>{t('epub_to_csv.seo.feature_2')}</li>
-                  <li>{t('epub_to_csv.seo.feature_3')}</li>
-                  <li>{t('epub_to_csv.seo.feature_4')}</li>
-                  <li>{t('epub_to_csv.seo.feature_5')}</li>
-                </ul>
-                
-                <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-3">
-                  {t('epub_to_csv.seo.use_cases_title')}
-                </h3>
-                <p>{t('epub_to_csv.seo.use_cases')}</p>
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                <span>No Registration</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          {/* Main Conversion Panel */}
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+              
+              {/* Mode Toggle */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <button
+                  onClick={() => setBatchMode(false)}
+                  className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
+                    !batchMode 
+                      ? 'bg-blue-600 text-white shadow-lg' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  <FileText className="w-5 h-5 inline mr-2" />
+                  Single File
+                </button>
+                <button
+                  onClick={() => setBatchMode(true)}
+                  className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
+                    batchMode 
+                      ? 'bg-blue-600 text-white shadow-lg' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  <FileImage className="w-5 h-5 inline mr-2" />
+                  Batch Convert
+                </button>
+              </div>
+
+              {/* File Upload Area */}
+              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
+                <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {batchMode 
+                    ? 'Select multiple EPUB files to convert them all at once' 
+                    : 'Drag and drop your EPUB file here or click to browse'
+                  }
+                </p>
+                {!batchMode && (
+                  <p className="text-sm text-blue-600 mb-4">
+                    Single file limit: 100.00 MB per file.
+                  </p>
+                )}
+                {batchMode && (
+                  <p className="text-sm text-blue-600 mb-4">
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                  </p>
+                )}
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".epub"
+                  multiple={batchMode}
+                  onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
+                  className="hidden"
+                />
+                <button
+                  onClick={() => fileInputRef.current?.click()}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                >
+                  Choose Files
+                </button>
+              </div>
+
+              {/* File Preview */}
+              {previewUrl && !batchMode && (
+                <div className="mt-6">
+                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
+                      <BookOpen className="w-12 h-12 text-gray-400" />
+                    </div>
+                    <p className="text-sm text-gray-600 mt-2 text-center">
+                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch Files List */}
+              {batchMode && batchFiles.length > 0 && (
+                <div className="mt-6">
+                  {(() => {
+                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const sizeDisplay = getBatchSizeDisplay(totalSize);
+                    return (
+                      <>
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                            {sizeDisplay.text}
+                          </div>
+                        </div>
+                        {sizeDisplay.isWarning && (
+                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                            <div className="flex items-center">
+                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
+                              <span className="text-sm text-orange-700">
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                              </span>
+                            </div>
+                          </div>
+                        )}
+                        <div className="space-y-2 max-h-40 overflow-y-auto">
+                          {batchFiles.map((file, index) => (
+                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                              <span className="text-sm font-medium">{file.name}</span>
+                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
+              )}
+
+              {/* Error Message */}
+              {error && (
+                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
+                  <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
+                  <span className="text-red-700">{error}</span>
+                </div>
+              )}
+
+              {/* Convert Button */}
+              <div className="mt-8">
+                <button
+                  onClick={batchMode ? handleBatchConvert : handleSingleConvert}
+                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
+                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                >
+                  {isConverting ? (
+                    <div className="flex items-center justify-center">
+                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+                      Converting...
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center">
+                      <Table className="w-5 h-5 mr-2" />
+                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to CSV'}
+                    </div>
+                  )}
+                </button>
+              </div>
+
+              {/* Success Message & Download */}
+              {convertedFile && !batchMode && (
+                <div className={`mt-6 p-6 rounded-xl border ${
+                  batchResults.filter(r => r.success).length > 0 
+                    ? 'bg-green-50 border-green-200' 
+                    : 'bg-red-50 border-red-200'
+                }`}>
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                  </div>
+                  <p className="text-green-700 mb-4">
+                    Your EPUB file has been successfully converted to CSV format.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button
+                      onClick={handleDownload}
+                      className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                    >
+                      <Download className="w-5 h-5 mr-2" />
+                      Download CSV File
+                    </button>
+                    <button
+                      onClick={resetForm}
+                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    >
+                      <RefreshCw className="w-5 h-5 mr-2" />
+                      Convert Another
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Batch Conversion Results */}
+              {batchMode && batchConverted && batchResults.length > 0 && (
+                <div className={`mt-6 p-6 rounded-xl border ${
+                  batchResults.filter(r => r.success).length > 0 
+                    ? 'bg-green-50 border-green-200' 
+                    : 'bg-red-50 border-red-200'
+                }`}>
+                  <div className="flex items-center mb-4">
+                    {batchResults.filter(r => r.success).length > 0 ? (
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    ) : (
+                      <AlertCircle className="w-6 h-6 text-red-500 mr-3" />
+                    )}
+                    <h4 className={`text-lg font-semibold ${
+                      batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
+                    }`}>
+                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                    </h4>
+                  </div>
+                  <div className="space-y-2 max-h-60 overflow-y-auto">
+                    {batchResults.map((r, i) => (
+                      <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
+                        <div className="text-sm">
+                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName}</div>
+                          {r.success && r.size && (
+                            <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
+                          )}
+                          {r.error && <div className="text-xs text-red-600">{r.error}</div>}
+                        </div>
+                        {r.success && r.downloadPath && (
+                          <button onClick={() => handleBatchDownload(r)} className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">Download</button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Convert More Files
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Settings & Info Panel */}
+          <div className="space-y-6">
+            
+            {/* Conversion Settings */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-6 flex items-center">
+                <Settings className="w-5 h-5 mr-2 text-blue-600" />
+                CSV Settings
+              </h3>
+              
+              {/* Include Metadata */}
+              <div className="mb-6">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={includeMetadata}
+                    onChange={(e) => setIncludeMetadata(e.target.checked)}
+                    className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">Include book metadata</span>
+                </label>
+                <p className="text-xs text-gray-500 mt-1 ml-6">Add book title, author, and chapter info</p>
+              </div>
+
+              {/* CSV Delimiter */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  CSV Delimiter
+                </label>
+                <select
+                  value={delimiter}
+                  onChange={(e) => setDelimiter(e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value=",">Comma (,)</option>
+                  <option value=";">Semicolon (;)</option>
+                  <option value="\t">Tab (\t)</option>
+                  <option value="|">Pipe (|)</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Features List */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="text-lg font-semibold mb-4 flex items-center">
+                <Star className="w-5 h-5 mr-2 text-blue-600" />
+                Why Choose Our Converter?
+              </h3>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Extract all chapters and paragraphs</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Preserve book metadata</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Batch conversion support</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>Custom CSV delimiters</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>100% free and secure</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                  <span>No registration required</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Use Cases */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="text-lg font-semibold mb-4">Perfect For</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>• Content analysis</li>
+                <li>• Text mining</li>
+                <li>• Data science projects</li>
+                <li>• Research analysis</li>
+                <li>• Content management</li>
+                <li>• Database imports</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </>
   );
 };
