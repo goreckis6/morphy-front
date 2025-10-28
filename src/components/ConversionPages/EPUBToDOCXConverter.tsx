@@ -119,7 +119,26 @@ export const EPUBToDOCXConverter: React.FC = () => {
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      console.error('EPUB to DOCX conversion error:', err);
+      
+      // Check for specific error types
+      if (err instanceof Error) {
+        if (err.message.includes('File is not a zip file') || 
+            err.message.includes('Not a ZIP file') || 
+            err.message.includes('BadZipfile') ||
+            err.message.includes('invalid ZIP file')) {
+          setError('Invalid EPUB file: The file is corrupted or not a valid EPUB format. Please try a different EPUB file.');
+        } else if (err.message.includes('No content extracted') || 
+                   err.message.includes('empty')) {
+          setError('No content found: The EPUB file appears to be empty or contains no readable text content.');
+        } else if (err.message.includes('LibreOffice')) {
+          setError('Conversion failed: Unable to process the document. Please try a different EPUB file.');
+        } else {
+          setError(`Conversion failed: ${err.message}`);
+        }
+      } else {
+        setError('Conversion failed. Please try again.');
+      }
     } finally {
       setIsConverting(false);
     }
@@ -149,7 +168,26 @@ export const EPUBToDOCXConverter: React.FC = () => {
         setError('Batch conversion failed. Please try again.');
       }
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('EPUB to DOCX batch conversion error:', err);
+      
+      // Check for specific error types
+      if (err instanceof Error) {
+        if (err.message.includes('File is not a zip file') || 
+            err.message.includes('Not a ZIP file') || 
+            err.message.includes('BadZipfile') ||
+            err.message.includes('invalid ZIP file')) {
+          setError('Invalid EPUB file: One or more files are corrupted or not valid EPUB format. Please try different EPUB files.');
+        } else if (err.message.includes('No content extracted') || 
+                   err.message.includes('empty')) {
+          setError('No content found: One or more EPUB files appear to be empty or contain no readable text content.');
+        } else if (err.message.includes('LibreOffice')) {
+          setError('Batch conversion failed: Unable to process some documents. Please try different EPUB files.');
+        } else {
+          setError(`Batch conversion failed: ${err.message}`);
+        }
+      } else {
+        setError('Batch conversion failed. Please try again.');
+      }
     } finally {
       setIsConverting(false);
     }
