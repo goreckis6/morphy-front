@@ -50,6 +50,13 @@ export const EPUBToDOCConverter: React.FC = () => {
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
+      // Reset previous conversion results and errors
+      setConvertedFile(null);
+      setConvertedFilename(null);
+      setBatchResults([]);
+      setBatchConverted(false);
+      setError(null);
+      
       if (file.name.toLowerCase().endsWith('.epub')) {
         // Validate single file size using shared validation
         const validation = validateSingleFile(file);
@@ -72,6 +79,15 @@ export const EPUBToDOCConverter: React.FC = () => {
     const epubFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.epub')
     );
+    
+    // Reset previous conversion results and errors
+    setConvertedFile(null);
+    setConvertedFilename(null);
+    setSelectedFile(null);
+    setPreviewUrl(null);
+    setBatchResults([]);
+    setBatchConverted(false);
+    setError(null);
     
     // Validate batch files using shared validation
     const validation = validateBatchFiles(epubFiles);
@@ -186,6 +202,16 @@ export const EPUBToDOCConverter: React.FC = () => {
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
+  const handleSwitchToSingle = () => {
+    resetForm();
+    setBatchMode(false);
+  };
+
+  const handleSwitchToBatch = () => {
+    resetForm();
+    setBatchMode(true);
+  };
+
   return (
     <>
       <Helmet>
@@ -235,7 +261,7 @@ export const EPUBToDOCConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-slate-600 text-white shadow-lg' 
@@ -246,7 +272,7 @@ export const EPUBToDOCConverter: React.FC = () => {
                   Single File
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-slate-600 text-white shadow-lg' 
