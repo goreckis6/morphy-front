@@ -206,13 +206,6 @@ export const ConverterHub: React.FC = () => {
       title: "IMAGE CONVERTERS (VECTOR)",
       formats: [
         { 
-          name: "EPS to ICO Converter", 
-          description: "Convert Encapsulated PostScript EPS files to ICO format for Windows icons",
-          path: "/convert/eps-to-ico",
-          inputFormat: "EPS",
-          outputFormat: "ICO"
-        },
-        { 
           name: "EPS to WebP Converter", 
           description: "Convert EPS files to WebP format for web optimization",
           path: "/convert/eps-to-webp",

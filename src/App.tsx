@@ -41,7 +41,6 @@ import { DOCXToEPUBConverter } from './components/ConversionPages/DOCXToEPUBConv
 import { DOCXToMOBIConverter } from './components/ConversionPages/DOCXToMOBIConverter';
 import { DOCXToODTConverter } from './components/ConversionPages/DOCXToODTConverter';
 import { DOCXToTXTConverter } from './components/ConversionPages/DOCXToTXTConverter';
-import { EPSToICOConverter } from './components/ConversionPages/EPSToICOConverter';
 import { EPSToWebPConverter } from './components/ConversionPages/EPSToWebPConverter';
 import { EPUBToCSVConverter } from './components/ConversionPages/EPUBToCSVConverter';
 import { EPUBToDOCConverter } from './components/ConversionPages/EPUBToDOCConverter';
@@ -345,9 +344,6 @@ function App() {
     return <DOCXToTXTConverter     />;
   }
 
-  if (currentPath === '/convert/eps-to-ico') {
-    return <EPSToICOConverter     />;
-  }
 
   if (currentPath === '/convert/eps-to-webp') {
     return <EPSToWebPConverter     />;

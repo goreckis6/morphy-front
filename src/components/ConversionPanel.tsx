@@ -29,7 +29,7 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
     'docx': ['csv', 'epub', 'mobi', 'odt', 'txt'],
     'dng': ['webp'],
     'cr2': ['webp', 'ico'],
-    'eps': ['webp', 'ico'],
+    'eps': ['webp'],
     'gif': ['ico'],
     'bmp': ['webp']
   };

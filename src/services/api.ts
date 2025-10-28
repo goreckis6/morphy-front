@@ -127,8 +127,6 @@ class ApiService {
       endpoint = '/convert/cr2-to-webp/single';
     } else if (fileName.endsWith('.dng') && options.format === 'webp') {
       endpoint = '/convert/dng-to-webp/single';
-    } else if (fileName.endsWith('.eps') && options.format === 'ico') {
-      endpoint = '/convert/eps-to-ico/single';
     } else if (fileName.endsWith('.eps') && options.format === 'webp') {
       endpoint = '/convert/eps-to-webp/single';
     } else     if (fileName.endsWith('.gif') && options.format === 'ico') {
@@ -222,8 +220,6 @@ class ApiService {
       endpoint = '/convert/cr2-to-webp/batch';
     } else if (firstFileName?.endsWith('.dng') && options.format === 'webp') {
       endpoint = '/convert/dng-to-webp/batch';
-    } else if (firstFileName?.endsWith('.eps') && options.format === 'ico') {
-      endpoint = '/convert/eps-to-ico/batch';
     } else if (firstFileName?.endsWith('.eps') && options.format === 'webp') {
       endpoint = '/convert/eps-to-webp/batch';
     } else if (firstFileName?.endsWith('.gif') && options.format === 'ico') {
