@@ -1666,7 +1666,7 @@ const resources = {
       'dng_to_webp.why_convert_title': 'Why Convert DNG to WebP?',
 
       // EPS to WebP
-      'eps_to_webp.title': 'Free EPS to WebP Converter - Convert Encapsulated PostScript to WebP Format',
+      'eps_to_webp.title': 'Free EPS to WebP Converter',
       'eps_to_webp.meta_title': 'Free EPS to WebP Converter Online - Convert PostScript to WebP For Free',
       'eps_to_webp.meta_description': 'Free online EPS to WebP converter. Convert Encapsulated PostScript EPS files to WebP format with quality settings (high, medium, low) and lossless mode. Professional vector graphics conversion, no registration required.',
       'eps_to_webp.subtitle': 'Convert EPS (Encapsulated PostScript) files to WebP format for web optimization. Transform vector graphics into modern web-friendly images with superior compression.',
@@ -3099,7 +3099,7 @@ const resources = {
       'dng_to_webp.feature_6': 'Obsługa przetwarzania partii',
 
       // EPS to WebP (Polish)
-      'eps_to_webp.title': 'Darmowy Konwerter EPS do WebP - Konwertuj Vector PostScript do formatu WebP',
+      'eps_to_webp.title': 'Konwerter EPS do WebP',
       'eps_to_webp.meta_title': 'Darmowy Konwerter EPS do WebP Online - Konwertuj PostScript do WebP Za Darmo',
       'eps_to_webp.meta_description': 'Darmowy online konwerter EPS do WebP. Konwertuj pliki Encapsulated PostScript EPS do formatu WebP z ustawieniami jakości (wysoka, średnia, niska) i trybem bezstratnym. Profesjonalna konwersja grafiki wektorowej, bez rejestracji.',
       'eps_to_webp.subtitle': 'Konwertuj pliki EPS (Encapsulated PostScript) do formatu WebP dla optymalizacji internetowej. Przekształć grafikę wektorową w nowoczesne, przyjazne dla sieci obrazy z doskonałą kompresją.',
@@ -4422,7 +4422,7 @@ const resources = {
       'dng_to_webp.feature_6': 'Batch-Verarbeitungsunterstützung',
 
       // EPS to WebP (German)
-      'eps_to_webp.title': 'Kostenloser EPS zu WebP Konverter - Konvertiere Encapsulated PostScript zu WebP',
+      'eps_to_webp.title': 'EPS zu WebP Konverter - Konvertiere Encapsulated PostScript zu WebP',
       'eps_to_webp.meta_title': 'Kostenloser EPS zu WebP Konverter Online - PostScript zu WebP Kostenlos',
       'eps_to_webp.meta_description': 'Kostenloser Online-Konverter EPS zu WebP. Konvertieren Sie Encapsulated PostScript EPS-Dateien zu WebP-Format mit Qualitätseinstellungen (hoch, mittel, niedrig) und verlustfreiem Modus. Professionelle Vektorgrafik-Konvertierung, keine Registrierung erforderlich.',
       'eps_to_webp.subtitle': 'Konvertieren Sie EPS-Dateien (Encapsulated PostScript) zu WebP-Format für Web-Optimierung. Transformieren Sie Vektorgrafiken in moderne, webfreundliche Bilder mit überlegener Kompression.',
