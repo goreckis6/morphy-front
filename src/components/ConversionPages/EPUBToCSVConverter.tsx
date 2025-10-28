@@ -768,10 +768,49 @@ export const EPUBToCSVConverter: React.FC = () => {
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">How It Works</h3>
             <div className="bg-blue-50 p-6 rounded-lg">
-              <p className="text-gray-700">
-                Our EPUB to CSV converter extracts structured content from your e-books, including chapter titles, paragraph text, and metadata. The output CSV file contains columns for chapter number, title, paragraph number, and content, making it easy to analyze and process the data using your preferred tools.
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700">Upload your EPUB file using our drag-and-drop interface or file browser</p>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700">Our converter extracts structured content including chapter titles, paragraph text, and metadata</p>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700">The output CSV file contains columns for chapter number, title, paragraph number, and content</p>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700">Download your converted CSV file and analyze the data using your preferred tools</p>
+                </div>
+              </div>
             </div>
+           </div>
+         </div>
+       </div>
+
+       {/* Call to Action Banner */}
+       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 py-16">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+           <h2 className="text-3xl font-bold text-white mb-4">Ready to Convert Your EPUB Files?</h2>
+           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+             Use our free online EPUB to CSV converter to transform your e-books into structured data.
+           </p>
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+             <button
+               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+             >
+               Start Converting Now
+             </button>
+             <button
+               onClick={() => window.location.href = '/'}
+               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+             >
+               Back to Home
+             </button>
            </div>
          </div>
        </div>

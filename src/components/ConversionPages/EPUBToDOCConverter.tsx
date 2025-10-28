@@ -215,8 +215,8 @@ export const EPUBToDOCConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to DOC Converter - Convert eBooks to Word Documents</title>
-        <meta name="description" content="Convert EPUB ebook files to DOC format for Microsoft Word. Transform digital books into editable Word documents. Free online converter with batch support." />
+        <title>Free EPUB to DOC Converter - Convert eBooks to Word Documents</title>
+        <meta name="description" content="Free EPUB to DOC converter. Convert EPUB ebook files to DOC format for Microsoft Word. Transform digital books into editable Word documents. Free online converter with batch support." />
         <meta name="keywords" content="EPUB to DOC, ebook to Word, ebook converter, Word document, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50">
