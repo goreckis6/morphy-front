@@ -394,11 +394,7 @@ export const EPUBToTXTConverter: React.FC = () => {
 
               {/* Success Message & Download */}
               {convertedFile && !batchMode && (
-                <div className={`mt-6 p-6 rounded-xl border ${
-                  batchResults.filter(r => r.success).length > 0 
-                    ? 'bg-green-50 border-green-200' 
-                    : 'bg-red-50 border-red-200'
-                }`}>
+                <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
