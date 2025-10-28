@@ -47,6 +47,12 @@ export const EPUBToCSVConverter: React.FC = () => {
   } = useFileValidation();
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // Reset previous state
+    setError(null);
+    setConvertedFile(null);
+    setConvertedFilename(null);
+    setPreviewUrl(null);
+    
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.epub')) {
@@ -67,6 +73,11 @@ export const EPUBToCSVConverter: React.FC = () => {
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // Reset previous state
+    setError(null);
+    setBatchResults([]);
+    setBatchConverted(false);
+    
     const files = Array.from(event.target.files || []);
     const epubFiles = files.filter(file => 
       file.name.toLowerCase().endsWith('.epub')
@@ -197,6 +208,16 @@ export const EPUBToCSVConverter: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
+  const handleSwitchToSingle = () => {
+    resetForm();
+    setBatchMode(false);
+  };
+
+  const handleSwitchToBatch = () => {
+    resetForm();
+    setBatchMode(true);
+  };
+
   const handleBatchDownload = async (result: any) => {
     try {
       if (result.downloadPath && result.downloadPath.startsWith('data:')) {
@@ -282,7 +303,7 @@ export const EPUBToCSVConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
@@ -293,14 +314,14 @@ export const EPUBToCSVConverter: React.FC = () => {
                   Single File
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
-                  <FileImage className="w-5 h-5 inline mr-2" />
+                  <Zap className="w-5 h-5 inline mr-2" />
                   Batch Convert
                 </button>
               </div>
@@ -592,6 +613,94 @@ export const EPUBToCSVConverter: React.FC = () => {
                 <li>• Content management</li>
                 <li>• Database imports</li>
               </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* SEO Content Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+            Why Convert EPUB to CSV?
+          </h2>
+          
+          <div className="prose prose-lg max-w-none">
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Converting EPUB e-book files to CSV format is essential for data analysis, content extraction, and text processing. While EPUB files are excellent for reading and digital publishing, CSV format provides structured data that can be easily analyzed, imported into databases, and processed with data science tools.
+            </p>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of CSV Format</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-emerald-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-emerald-900 mb-3">Data Analysis Ready</h4>
+                <p className="text-gray-700">
+                  CSV format makes it easy to import e-book content into data analysis tools like Excel, Python pandas, and R for text mining and statistical analysis.
+                </p>
+              </div>
+              
+              <div className="bg-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">Structured Content Extraction</h4>
+                <p className="text-gray-700">
+                  CSV format allows you to extract structured data from e-books including chapters, paragraphs, and metadata in a tabular format for easy processing.
+                </p>
+              </div>
+              
+              <div className="bg-cyan-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Universal Compatibility</h4>
+                <p className="text-gray-700">
+                  CSV files are supported by virtually all data processing tools, making your e-book content accessible across different platforms and systems.
+                </p>
+              </div>
+              
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-green-900 mb-3">Database Integration</h4>
+                <p className="text-gray-700">
+                  CSV format enables seamless integration with databases, content management systems, and data pipelines for automated processing.
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Analysis and Research</h4>
+                  <p className="text-gray-700">Extract text content from e-books for academic research, sentiment analysis, and content trend analysis.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Text Mining and NLP</h4>
+                  <p className="text-gray-700">Convert e-books to CSV for natural language processing tasks, including entity extraction, topic modeling, and language analysis.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Management Systems</h4>
+                  <p className="text-gray-700">Import e-book content into CMS platforms, wikis, and knowledge bases for structured content management.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Science Projects</h4>
+                  <p className="text-gray-700">Transform e-book content into structured data for machine learning, predictive modeling, and statistical analysis.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">How It Works</h3>
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <p className="text-gray-700">
+                Our EPUB to CSV converter extracts structured content from your e-books, including chapter titles, paragraph text, and metadata. The output CSV file contains columns for chapter number, title, paragraph number, and content, making it easy to analyze and process the data using your preferred tools.
+              </p>
             </div>
           </div>
         </div>
