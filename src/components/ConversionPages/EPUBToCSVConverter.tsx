@@ -208,6 +208,10 @@ export const EPUBToCSVConverter: React.FC = () => {
     setBatchMode(true);
   };
 
+  const handleBack = () => {
+    window.location.href = '/';
+  };
+
   const handleBatchDownload = async (result: any) => {
     try {
       if (result.downloadPath && result.downloadPath.startsWith('data:')) {
@@ -648,17 +652,40 @@ export const EPUBToCSVConverter: React.FC = () => {
 
             {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-lg font-semibold mb-4">Perfect For</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Content analysis</li>
-                <li>• Text mining</li>
-                <li>• Data science projects</li>
-                <li>• Research analysis</li>
-                <li>• Content management</li>
-                <li>• Database imports</li>
-              </ul>
+              <h3 className="text-xl font-semibold mb-6 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-slate-600">
+                  <path d="M3 3v18h18"></path>
+                  <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                </svg>
+                Perfect For
+              </h3>
+              <div className="space-y-3">
+                {[
+                  "Content analysis and research",
+                  "Text mining and NLP",
+                  "Data science projects",
+                  "Research analysis",
+                  "Content management systems",
+                  "Database imports"
+                ].map((useCase, index) => (
+                  <div key={index} className="flex items-center">
+                    <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">{useCase}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Back Button */}
+        <div className="mt-12 text-center">
+          <button
+            onClick={handleBack}
+            className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+          >
+            ← Back to Home
+          </button>
         </div>
 
         {/* SEO Content Section */}
@@ -749,6 +776,25 @@ export const EPUBToCSVConverter: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-8 mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
+            <p className="text-gray-400 mb-6">
+              Convert and view files online for free. Support for 50+ formats.
+            </p>
+            <div className="flex justify-center space-x-6 text-sm text-gray-400">
+              <span>© 2024 MorphyIMG</span>
+              <span>•</span>
+              <span>Privacy Policy</span>
+              <span>•</span>
+              <span>Terms of Service</span>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     </>
   );
