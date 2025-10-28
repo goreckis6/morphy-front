@@ -205,8 +205,8 @@ export const EPUBToRTFConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to RTF Converter - Convert eBooks to Rich Text</title>
-        <meta name="description" content="Convert EPUB ebook files to RTF format for universal word processing. Transform digital books into Rich Text Format. Free online tool with batch support." />
+        <title>Free EPUB to RTF Converter - Convert eBooks to Rich Text</title>
+        <meta name="description" content="Free EPUB to RTF converter. Convert EPUB ebook files to RTF format for universal word processing. Transform digital books into Rich Text Format. Free online tool with batch support." />
         <meta name="keywords" content="EPUB to RTF, ebook converter, Rich Text Format, word processing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
@@ -466,7 +466,9 @@ export const EPUBToRTFConverter: React.FC = () => {
                             )}
                           </div>
                           {!result.success && result.error && (
-                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
+                            <div className="text-xs text-red-600 mt-1 ml-6">
+                              Failed to convert {result.originalName}
+                            </div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (

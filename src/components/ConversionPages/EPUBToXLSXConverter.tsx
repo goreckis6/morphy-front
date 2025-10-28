@@ -205,8 +205,8 @@ export const EPUBToXLSXConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to XLSX Converter - Convert eBooks to Excel Format</title>
-        <meta name="description" content="Convert EPUB ebook files to XLSX spreadsheet format. Extract ebook metadata and content into Excel-compatible format. Free online tool." />
+        <title>Free EPUB to XLSX Converter - Convert eBooks to Excel Format</title>
+        <meta name="description" content="Free EPUB to XLSX converter. Convert EPUB ebook files to XLSX spreadsheet format. Extract ebook metadata and content into Excel-compatible format. Free online tool." />
         <meta name="keywords" content="EPUB to XLSX, ebook to Excel, spreadsheet converter, Excel format" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
@@ -470,7 +470,9 @@ export const EPUBToXLSXConverter: React.FC = () => {
                             )}
                           </div>
                           {!result.success && result.error && (
-                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
+                            <div className="text-xs text-red-600 mt-1 ml-6">
+                              Failed to convert {result.originalName}
+                            </div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (

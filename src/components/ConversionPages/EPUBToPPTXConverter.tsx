@@ -204,8 +204,8 @@ export const EPUBToPPTXConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to PPTX Converter - Convert eBooks to PowerPoint</title>
-        <meta name="description" content="Convert EPUB ebook files to PPTX format for Microsoft PowerPoint. Transform digital books into modern presentation format. Free online converter." />
+        <title>Free EPUB to PPTX Converter - Convert eBooks to PowerPoint</title>
+        <meta name="description" content="Free EPUB to PPTX converter. Convert EPUB ebook files to PPTX format for Microsoft PowerPoint. Transform digital books into modern presentation format. Free online converter." />
         <meta name="keywords" content="EPUB to PPTX, ebook to PowerPoint, presentation converter, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -468,7 +468,9 @@ export const EPUBToPPTXConverter: React.FC = () => {
                             )}
                           </div>
                           {!result.success && result.error && (
-                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
+                            <div className="text-xs text-red-600 mt-1 ml-6">
+                              Failed to convert {result.originalName}
+                            </div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (

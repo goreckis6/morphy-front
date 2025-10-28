@@ -204,8 +204,8 @@ export const EPUBToPPTConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to PPT Converter - Convert eBooks to PowerPoint</title>
-        <meta name="description" content="Convert EPUB ebook files to PPT presentation format. Transform ebook content into classic PowerPoint presentations. Free online tool." />
+        <title>Free EPUB to PPT Converter - Convert eBooks to PowerPoint</title>
+        <meta name="description" content="Free EPUB to PPT converter. Convert EPUB ebook files to PPT presentation format. Transform ebook content into classic PowerPoint presentations. Free online tool." />
         <meta name="keywords" content="EPUB to PPT, ebook to PowerPoint, presentation converter, PowerPoint format" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50">
@@ -468,7 +468,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                                 <div className="text-xs text-gray-500">({displaySize})</div>
                               )}
                               {!result.success && (
-                                <div className="text-xs text-red-600">{result.error || 'Conversion failed'}</div>
+                                <div className="text-xs text-red-600">Failed to convert {result.originalName}</div>
                               )}
                             </div>
                           </div>

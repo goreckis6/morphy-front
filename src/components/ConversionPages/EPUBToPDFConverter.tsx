@@ -202,8 +202,8 @@ export const EPUBToPDFConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to PDF Converter - Convert eBooks to PDF Format</title>
-        <meta name="description" content="Convert EPUB ebook files to PDF format for universal compatibility. Professional ebook conversion with layout preservation. Free online converter." />
+        <title>Free EPUB to PDF Converter - Convert eBooks to PDF Format</title>
+        <meta name="description" content="Free EPUB to PDF converter. Convert EPUB ebook files to PDF format for universal compatibility. Professional ebook conversion with layout preservation. Free online converter." />
         <meta name="keywords" content="EPUB to PDF, ebook converter, PDF format, document conversion, batch processing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">

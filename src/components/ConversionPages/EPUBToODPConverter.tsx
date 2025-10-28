@@ -203,8 +203,8 @@ export const EPUBToODPConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to ODP Converter - Convert eBooks to Presentations</title>
-        <meta name="description" content="Convert EPUB ebook files to ODP presentation format. Transform ebook content into LibreOffice presentations. Free online converter with batch support." />
+        <title>Free EPUB to ODP Converter - Convert eBooks to Presentations</title>
+        <meta name="description" content="Free EPUB to ODP converter. Convert EPUB ebook files to ODP presentation format. Transform ebook content into LibreOffice presentations. Free online converter with batch support." />
         <meta name="keywords" content="EPUB to ODP, ebook to presentation, LibreOffice, presentation format" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-teal-50">

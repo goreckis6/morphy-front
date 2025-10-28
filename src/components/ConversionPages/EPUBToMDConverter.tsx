@@ -200,8 +200,8 @@ export const EPUBToMDConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to Markdown Converter - Convert eBooks to MD Format</title>
-        <meta name="description" content="Convert EPUB ebook files to Markdown format for documentation and publishing. Transform digital books into clean Markdown text. Free online tool." />
+        <title>Free EPUB to Markdown Converter - Convert eBooks to MD Format</title>
+        <meta name="description" content="Free EPUB to Markdown converter. Convert EPUB ebook files to Markdown format for documentation and publishing. Transform digital books into clean Markdown text. Free online tool." />
         <meta name="keywords" content="EPUB to Markdown, ebook converter, MD format, documentation, text conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
@@ -465,7 +465,9 @@ export const EPUBToMDConverter: React.FC = () => {
                             )}
                           </div>
                           {!result.success && result.error && (
-                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
+                            <div className="text-xs text-red-600 mt-1 ml-6">
+                              Failed to convert {result.originalName}
+                            </div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (

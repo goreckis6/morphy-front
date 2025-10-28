@@ -191,24 +191,21 @@ export const EPUBToHTMLConverter: React.FC = () => {
     window.location.href = '/';
   };
 
-  const resetForm = () => {
-    setSelectedFile(null);
-    setConvertedFile(null);
-    setConvertedFilename(null);
-    setError(null);
-    setPreviewUrl(null);
-    setBatchFiles([]);
-    setBatchResults([]);
-    setBatchConverted(false);
-    clearValidationError();
-    if (fileInputRef.current) fileInputRef.current.value = '';
+  const handleSwitchToSingle = () => {
+    resetForm();
+    setBatchMode(false);
+  };
+
+  const handleSwitchToBatch = () => {
+    resetForm();
+    setBatchMode(true);
   };
 
   return (
     <>
       <Helmet>
-        <title>EPUB to HTML Converter - Convert eBooks to Web Format</title>
-        <meta name="description" content="Convert EPUB ebook files to HTML for web publishing. Extract ebook content as HTML with CSS styling and images. Free online converter with batch processing." />
+        <title>Free EPUB to HTML Converter - Convert eBooks to Web Format</title>
+        <meta name="description" content="Free EPUB to HTML converter. Convert EPUB ebook files to HTML for web publishing. Extract ebook content as HTML with CSS styling and images. Free online converter with batch processing." />
         <meta name="keywords" content="EPUB to HTML, ebook to web, ebook converter, HTML format, web publishing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
@@ -249,7 +246,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-orange-600 text-white shadow-lg' 
@@ -260,7 +257,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                   Single File
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-orange-600 text-white shadow-lg' 
@@ -466,7 +463,9 @@ export const EPUBToHTMLConverter: React.FC = () => {
                             )}
                           </div>
                           {!result.success && result.error && (
-                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
+                            <div className="text-xs text-red-600 mt-1 ml-6">
+                              Failed to convert {result.originalName}
+                            </div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (

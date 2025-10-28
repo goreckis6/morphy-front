@@ -202,8 +202,8 @@ export const EPUBToMOBIConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to MOBI Converter - Convert eBooks for Kindle</title>
-        <meta name="description" content="Convert EPUB ebook files to MOBI format for Amazon Kindle devices. Professional ebook conversion with metadata preservation. Free online converter." />
+        <title>Free EPUB to MOBI Converter - Convert eBooks for Kindle</title>
+        <meta name="description" content="Free EPUB to MOBI converter. Convert EPUB ebook files to MOBI format for Amazon Kindle devices. Professional ebook conversion with metadata preservation. Free online converter." />
         <meta name="keywords" content="EPUB to MOBI, Kindle converter, ebook format, Amazon Kindle, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-yellow-50">
@@ -467,7 +467,9 @@ export const EPUBToMOBIConverter: React.FC = () => {
                             )}
                           </div>
                           {!result.success && result.error && (
-                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
+                            <div className="text-xs text-red-600 mt-1 ml-6">
+                              Failed to convert {result.originalName}
+                            </div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (

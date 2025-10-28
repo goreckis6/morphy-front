@@ -203,8 +203,8 @@ export const EPUBToTXTConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPUB to TXT Converter - Convert eBooks to Plain Text</title>
-        <meta name="description" content="Convert EPUB ebook files to plain text format. Extract clean text from digital books for reading and analysis. Free online converter with batch processing." />
+        <title>Free EPUB to TXT Converter - Convert eBooks to Plain Text</title>
+        <meta name="description" content="Free EPUB to TXT converter. Convert EPUB ebook files to plain text format. Extract clean text from digital books for reading and analysis. Free online converter with batch processing." />
         <meta name="keywords" content="EPUB to TXT, ebook to text, plain text, text extraction, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-slate-50">
@@ -467,7 +467,9 @@ export const EPUBToTXTConverter: React.FC = () => {
                             )}
                           </div>
                           {!result.success && result.error && (
-                            <div className="text-xs text-red-600 mt-1 ml-6">{result.error}</div>
+                            <div className="text-xs text-red-600 mt-1 ml-6">
+                              Failed to convert {result.originalName}
+                            </div>
                           )}
                         </div>
                         {result.success && result.downloadPath && (
