@@ -129,8 +129,6 @@ class ApiService {
       endpoint = '/convert/dng-to-webp/single';
     } else if (fileName.endsWith('.eps') && options.format === 'webp') {
       endpoint = '/convert/eps-to-webp/single';
-    } else     if (fileName.endsWith('.gif') && options.format === 'ico') {
-      endpoint = '/convert/gif-to-ico/single';
     } else if (fileName.endsWith('.csv') && options.format === 'doc') {
       endpoint = '/convert/csv-to-doc/single';
     } else if (fileName.endsWith('.csv') && options.format === 'docx') {
@@ -222,8 +220,6 @@ class ApiService {
       endpoint = '/convert/dng-to-webp/batch';
     } else if (firstFileName?.endsWith('.eps') && options.format === 'webp') {
       endpoint = '/convert/eps-to-webp/batch';
-    } else if (firstFileName?.endsWith('.gif') && options.format === 'ico') {
-      endpoint = '/convert/gif-to-ico/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);

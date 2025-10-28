@@ -56,7 +56,6 @@ import { EPUBToPPTXConverter } from './components/ConversionPages/EPUBToPPTXConv
 import { EPUBToRTFConverter } from './components/ConversionPages/EPUBToRTFConverter';
 import { EPUBToTXTConverter } from './components/ConversionPages/EPUBToTXTConverter';
 import { EPUBToXLSXConverter } from './components/ConversionPages/EPUBToXLSXConverter';
-import { GIFToICOConverter } from './components/ConversionPages/GIFToICOConverter';
 import { ConversionHub } from './components/ConversionHub';
 import { ConverterHub } from './components/ConverterHub';
 import { ViewersHub } from './components/ViewersHub';
@@ -403,10 +402,6 @@ function App() {
 
   if (currentPath === '/convert/epub-to-xlsx') {
     return <EPUBToXLSXConverter     />;
-  }
-
-  if (currentPath === '/convert/gif-to-ico') {
-    return <GIFToICOConverter     />;
   }
 
   // Converter Hub Route

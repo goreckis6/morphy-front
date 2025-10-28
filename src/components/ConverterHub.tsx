@@ -211,13 +211,6 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/eps-to-webp",
           inputFormat: "EPS",
           outputFormat: "WebP"
-        },
-        { 
-          name: "GIF to ICO Converter", 
-          description: "Convert animated GIF files to ICO format for Windows icons",
-          path: "/convert/gif-to-ico",
-          inputFormat: "GIF",
-          outputFormat: "ICO"
         }
       ]
     },
