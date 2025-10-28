@@ -601,7 +601,6 @@ const converters = [
   { input: 'CSV', output: 'YAML', color: 'blue' },
   
   // DNG converters
-  { input: 'DNG', output: 'ICO', color: 'orange' },
   { input: 'DNG', output: 'WebP', color: 'orange' },
   
   // DOC converters

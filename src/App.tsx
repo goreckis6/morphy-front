@@ -30,7 +30,6 @@ import { CSVToXLSConverter } from './components/ConversionPages/CSVToXLSConverte
 import { CSVToXLSXConverter } from './components/ConversionPages/CSVToXLSXConverter';
 import { CSVToXMLConverter } from './components/ConversionPages/CSVToXMLConverter';
 import { CSVToYAMLConverter } from './components/ConversionPages/CSVToYAMLConverter';
-import { DNGToICOConverter } from './components/ConversionPages/DNGToICOConverter';
 import { DNGToWebPConverter } from './components/ConversionPages/DNGToWebPConverter';
 import { DOCToCSVConverter } from './components/ConversionPages/DOCToCSVConverter';
 import { DOCToEPUBConverter } from './components/ConversionPages/DOCToEPUBConverter';
@@ -301,9 +300,6 @@ function App() {
     return <CSVToYAMLConverter     />;
   }
 
-  if (currentPath === '/convert/dng-to-ico') {
-    return <DNGToICOConverter     />;
-  }
 
   if (currentPath === '/convert/dng-to-webp') {
     return <DNGToWebPConverter     />;
@@ -821,15 +817,6 @@ function App() {
                 </div>
               </a>
 
-              <a href="/convert/dng-to-ico" className="group bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-cyan-300">
-                <div className="text-center">
-                  <div className="bg-cyan-500 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <Image className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2">DNG to ICO</h3>
-                  <p className="text-sm text-gray-600">RAW to Windows icons</p>
-                </div>
-              </a>
 
               <a href="/convert/cr2-to-webp" className="group bg-gradient-to-br from-violet-50 to-purple-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-transparent hover:border-violet-300">
                 <div className="text-center">

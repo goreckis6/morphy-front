@@ -27,7 +27,7 @@ export const ConversionPanel: React.FC<ConversionPanelProps> = ({ files }) => {
     'epub': ['csv', 'doc', 'docx', 'html', 'md', 'mobi', 'odp', 'odt', 'pdf', 'ppt', 'pptx', 'rtf', 'txt', 'xlsx'],
     'doc': ['csv', 'epub', 'mobi', 'odt', 'txt'],
     'docx': ['csv', 'epub', 'mobi', 'odt', 'txt'],
-    'dng': ['webp', 'ico'],
+    'dng': ['webp'],
     'cr2': ['webp', 'ico'],
     'eps': ['webp', 'ico'],
     'gif': ['ico'],

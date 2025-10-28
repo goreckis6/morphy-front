@@ -194,13 +194,6 @@ export const ConverterHub: React.FC = () => {
       title: "IMAGE CONVERTERS (RAW)",
       formats: [
         { 
-          name: "DNG to ICO Converter", 
-          description: "Convert Adobe DNG raw images to ICO format for Windows icons",
-          path: "/convert/dng-to-ico",
-          inputFormat: "DNG",
-          outputFormat: "ICO"
-        },
-        { 
           name: "DNG to WebP Converter", 
           description: "Convert Adobe DNG raw images to WebP format for web optimization",
           path: "/convert/dng-to-webp",
