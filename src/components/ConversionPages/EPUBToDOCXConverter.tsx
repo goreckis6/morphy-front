@@ -194,16 +194,26 @@ export const EPUBToDOCXConverter: React.FC = () => {
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchResults([]);
-      setBatchConverted(false);
-      setBatchConverted(true);
+    setBatchConverted(false);
+    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const handleSwitchToSingle = () => {
+    resetForm();
+    setBatchMode(false);
+  };
+
+  const handleSwitchToBatch = () => {
+    resetForm();
+    setBatchMode(true);
   };
 
   return (
     <>
       <Helmet>
-        <title>EPUB to DOCX Converter - Convert eBooks to Word Format</title>
-        <meta name="description" content="Convert EPUB ebook files to DOCX format for Microsoft Word. Professional ebook to document conversion with formatting preservation. Free online tool." />
+        <title>Free EPUB to DOCX Converter - Convert eBooks to Word Format</title>
+        <meta name="description" content="Free EPUB to DOCX converter. Convert EPUB ebook files to DOCX format for Microsoft Word. Professional ebook to document conversion with formatting preservation. Free online tool." />
         <meta name="keywords" content="EPUB to DOCX, ebook to Word, ebook converter, Word format, batch processing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
@@ -248,7 +258,7 @@ export const EPUBToDOCXConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
@@ -259,7 +269,7 @@ export const EPUBToDOCXConverter: React.FC = () => {
                   Single File
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
