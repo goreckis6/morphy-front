@@ -201,6 +201,16 @@ export const EPUBToPPTXConverter: React.FC = () => {
     if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
+  const handleSwitchToSingle = () => {
+    resetForm();
+    setBatchMode(false);
+  };
+
+  const handleSwitchToBatch = () => {
+    resetForm();
+    setBatchMode(true);
+  };
+
   return (
     <>
       <Helmet>
@@ -250,7 +260,7 @@ export const EPUBToPPTXConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-purple-600 text-white shadow-lg' 
@@ -261,7 +271,7 @@ export const EPUBToPPTXConverter: React.FC = () => {
                   Single File
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-purple-600 text-white shadow-lg' 
