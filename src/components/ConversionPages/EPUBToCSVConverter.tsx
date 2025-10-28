@@ -470,22 +470,18 @@ export const EPUBToCSVConverter: React.FC = () => {
 
               {/* Success Message & Download */}
               {convertedFile && !batchMode && (
-                <div className={`mt-6 p-6 rounded-xl border ${
-                  batchResults.filter(r => r.success).length > 0 
-                    ? 'bg-green-50 border-green-200' 
-                    : 'bg-red-50 border-red-200'
-                }`}>
+                <div className={`mt-6 p-6 rounded-xl border bg-blue-50 border-blue-200`}>
                   <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <CheckCircle className="w-6 h-6 text-blue-500 mr-3" />
+                    <h4 className="text-lg font-semibold text-blue-800">Conversion Complete!</h4>
                   </div>
-                  <p className="text-green-700 mb-4">
+                  <p className="text-blue-700 mb-4">
                     Your EPUB file has been successfully converted to CSV format.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       onClick={handleDownload}
-                      className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                      className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
