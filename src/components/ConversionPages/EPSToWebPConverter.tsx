@@ -167,14 +167,22 @@ export const EPSToWebPConverter: React.FC = () => {
   };
 
   const handleBatchDownload = async (result: any) => {
-    // Use downloadPath if available, otherwise fall back to storedFilename
-    const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
-    if (!filename) {
-      setError('Download link is missing. Please reconvert the file.');
-      return;
-    }
     try {
-      await apiService.downloadAndSaveFile(filename, result.outputFilename);
+      // Handle data URL downloads (base64 encoded)
+      if (result.downloadPath && result.downloadPath.startsWith('data:image/webp;base64,')) {
+        // Convert base64 data URL to blob
+        const base64Data = result.downloadPath.split(',')[1];
+        const blob = await fetch(result.downloadPath).then(r => r.blob());
+        apiService.downloadBlob(blob, result.outputFilename || result.originalName);
+      } else if (result.downloadPath) {
+        // Handle file path downloads
+        await apiService.downloadAndSaveFile(result.downloadPath, result.outputFilename);
+      } else if (result.storedFilename) {
+        // Fall back to stored filename
+        await apiService.downloadAndSaveFile(result.storedFilename, result.outputFilename);
+      } else {
+        setError('Download link is missing. Please reconvert the file.');
+      }
     } catch (e) {
       setError('Failed to download file. Please try again.');
     }
@@ -196,9 +204,9 @@ export const EPSToWebPConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>EPS to WebP Converter - Convert Vector to WebP Format</title>
-        <meta name="description" content="Convert EPS vector graphics to WebP format for modern web. High-quality PostScript to WebP conversion. Free online tool with batch support." />
-        <meta name="keywords" content="EPS to WebP, vector converter, PostScript to WebP, web graphics, image conversion" />
+        <title>{t('eps_to_webp.meta_title')}</title>
+        <meta name="description" content={t('eps_to_webp.meta_description')} />
+        <meta name="keywords" content="EPS to WebP, vector converter, PostScript to WebP, web graphics, image conversion, free converter, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-cyan-50">
       <Header />
@@ -209,10 +217,10 @@ export const EPSToWebPConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPS to WebP Converter
+              {t('eps_to_webp.title')}
             </h1>
             <p className="text-lg sm:text-xl text-emerald-100 mb-6 max-w-2xl mx-auto">
-              Convert Encapsulated PostScript EPS files to WebP format for web optimization. Transform vector graphics into modern web-friendly images with superior compression.
+              {t('eps_to_webp.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-emerald-200">
               <div className="flex items-center gap-2">
@@ -242,7 +250,10 @@ export const EPSToWebPConverter: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={() => {
+                    setBatchMode(false);
+                    resetForm(); // Reset files when switching modes
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-emerald-600 text-white shadow-lg' 
@@ -253,7 +264,10 @@ export const EPSToWebPConverter: React.FC = () => {
                   Single File
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={() => {
+                    setBatchMode(true);
+                    resetForm(); // Reset files when switching modes
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-emerald-600 text-white shadow-lg' 
@@ -269,20 +283,20 @@ export const EPSToWebPConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-emerald-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPS Files' : 'Upload EPS File'}
+                  {batchMode ? t('eps_to_webp.upload_batch') : t('eps_to_webp.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-2">
                   {batchMode 
-                    ? 'Select multiple EPS files to convert them all at once' 
-                    : 'Drag and drop your EPS file here or click to browse'
+                    ? t('eps_to_webp.upload_text_batch')
+                    : t('eps_to_webp.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
-                  <p className="text-xs text-emerald-600 mb-2">{getSingleInfoMessage()}</p>
+                  <p className="text-xs text-emerald-600 mb-2">{t('eps_to_webp.file_limits_single')}</p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-emerald-600 mb-4">
-                    {getBatchInfoMessage()}
+                    {t('eps_to_webp.batch_info')}
                   </p>
                 )}
                 <input
