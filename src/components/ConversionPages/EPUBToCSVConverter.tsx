@@ -527,17 +527,24 @@ export const EPUBToCSVConverter: React.FC = () => {
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((r, i) => (
-                      <div key={i} className="flex items-center justify-between bg-white border rounded-lg p-3">
-                        <div className="text-sm">
-                          <div className="font-medium text-gray-900">{r.outputFilename || r.originalName}</div>
-                          {r.success && r.size && (
-                            <div className="text-xs text-gray-500">{formatFileSize(r.size)}</div>
+                      <div key={i} className="bg-white border rounded-lg p-3">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                          <div className="text-sm flex-1 min-w-0">
+                            <div className="font-medium text-gray-900 truncate">{r.outputFilename || r.originalName}</div>
+                            {r.success && r.size && (
+                              <div className="text-xs text-gray-500 mt-1">{formatFileSize(r.size)}</div>
+                            )}
+                            {r.error && <div className="text-xs text-red-600 mt-1 break-words">{r.error}</div>}
+                          </div>
+                          {r.success && r.downloadPath && (
+                            <button 
+                              onClick={() => handleBatchDownload(r)} 
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
+                            >
+                              Download
+                            </button>
                           )}
-                          {r.error && <div className="text-xs text-red-600">{r.error}</div>}
                         </div>
-                        {r.success && r.downloadPath && (
-                          <button onClick={() => handleBatchDownload(r)} className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">Download</button>
-                        )}
                       </div>
                     ))}
                   </div>
@@ -788,7 +795,7 @@ export const EPUBToCSVConverter: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-slate-600 to-gray-600 text-white p-8 rounded-xl text-center">
+            <div className="bg-gradient-to-r from-slate-600 to-gray-600 text-white p-8 rounded-xl text-center mt-8">
               <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
               <p className="text-lg mb-6 opacity-90">
                 Use our free online EPUB to CSV converter to transform your e-books into structured data.
