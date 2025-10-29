@@ -37,6 +37,13 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/heic-to-svg",
           inputFormat: "HEIC",
           outputFormat: "SVG"
+        },
+        { 
+          name: "HEIC to PDF Converter", 
+          description: "Convert Apple HEIC images to PDF format for documents and printing",
+          path: "/convert/heic-to-pdf",
+          inputFormat: "HEIC",
+          outputFormat: "PDF"
         }
       ]
     },
