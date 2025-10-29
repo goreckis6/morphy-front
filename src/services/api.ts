@@ -143,6 +143,8 @@ class ApiService {
       endpoint = '/convert/docx-to-mobi/single';
     } else if (fileName.endsWith('.docx') && options.format === 'odt') {
       endpoint = '/convert/docx-to-odt/single';
+    } else if (fileName.endsWith('.docx') && options.format === 'txt') {
+      endpoint = '/convert/docx-to-txt/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -236,6 +238,8 @@ class ApiService {
       endpoint = '/convert/docx-to-mobi/batch';
     } else if (firstFileName?.endsWith('.docx') && options.format === 'odt') {
       endpoint = '/convert/docx-to-odt/batch';
+    } else if (firstFileName?.endsWith('.docx') && options.format === 'txt') {
+      endpoint = '/convert/docx-to-txt/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);
