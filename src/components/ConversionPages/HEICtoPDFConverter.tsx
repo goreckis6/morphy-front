@@ -656,7 +656,6 @@ export const HEICtoPDFConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  t('heic_to_pdf.feature_1'),
                   t('heic_to_pdf.feature_2'),
                   t('heic_to_pdf.feature_3'),
                   t('heic_to_pdf.feature_4'),
