@@ -614,7 +614,7 @@ export const HEICtoPDFConverter: React.FC = () => {
             {/* Conversion Settings */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-purple-600" />
+                <Settings className="w-5 h-5 mr-2 text-gray-600" />
                 {t('heic_to_pdf.pdf_settings')}
               </h3>
               
@@ -626,7 +626,7 @@ export const HEICtoPDFConverter: React.FC = () => {
                 <select
                   value={quality}
                   onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
-                  className="w-full rounded-lg border-gray-300 text-purple-600 focus:ring-purple-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                 >
                   <option value="high">{t('heic_to_pdf.quality_high')}</option>
                   <option value="medium">{t('heic_to_pdf.quality_medium')}</option>
@@ -642,7 +642,7 @@ export const HEICtoPDFConverter: React.FC = () => {
                 <select
                   value={pageSize}
                   onChange={(e) => setPageSize(e.target.value as 'auto' | 'letter' | 'a4')}
-                  className="w-full rounded-lg border-gray-300 text-purple-600 focus:ring-purple-500"
+                  className="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
                 >
                   <option value="auto">{t('heic_to_pdf.page_size_auto')}</option>
                   <option value="letter">{t('heic_to_pdf.page_size_letter')}</option>
@@ -657,7 +657,7 @@ export const HEICtoPDFConverter: React.FC = () => {
                     type="checkbox"
                     checked={fitToPage}
                     onChange={(e) => setFitToPage(e.target.checked)}
-                    className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+                    className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">{t('heic_to_pdf.fit_to_page')}</span>
                 </label>
