@@ -28,7 +28,6 @@ export const HEICtoPDFConverter: React.FC = () => {
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [quality, setQuality] = useState<'high' | 'medium' | 'low'>('high');
   const [pageSize, setPageSize] = useState<'auto' | 'letter' | 'a4'>('auto');
   const [fitToPage, setFitToPage] = useState(true);
@@ -68,7 +67,6 @@ export const HEICtoPDFConverter: React.FC = () => {
         if (!validation.isValid) {
           setError(validation.error?.message || 'File validation failed');
           setSelectedFile(null);
-          setPreviewUrl(null);
           if (event.target) {
             event.target.value = '';
           }
@@ -76,23 +74,6 @@ export const HEICtoPDFConverter: React.FC = () => {
         }
         setSelectedFile(file);
         setError(null);
-        // Try to create preview using backend
-        try {
-          const formData = new FormData();
-          formData.append('file', file);
-          const response = await fetch(`${API_BASE_URL}/api/preview/heic`, {
-            method: 'POST',
-            body: formData,
-          });
-          if (response.ok) {
-            const blob = await response.blob();
-            setPreviewUrl(URL.createObjectURL(blob));
-          } else {
-            setPreviewUrl(URL.createObjectURL(file));
-          }
-        } catch {
-          setPreviewUrl(URL.createObjectURL(file));
-        }
         setConvertedFile(null);
         setBatchResults([]);
         setBatchConverted(false);
@@ -300,15 +281,10 @@ export const HEICtoPDFConverter: React.FC = () => {
   };
 
   const resetForm = () => {
-    if (previewUrl) {
-      URL.revokeObjectURL(previewUrl);
-    }
-    
     setSelectedFile(null);
     setConvertedFile(null);
     setConvertedFilename(null);
     setError(null);
-    setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
     setBatchResults([]);
@@ -442,20 +418,13 @@ export const HEICtoPDFConverter: React.FC = () => {
                 </button>
               </div>
 
-              {/* File Preview */}
-              {previewUrl && !batchMode && selectedFile && (
+              {/* File Info */}
+              {!batchMode && selectedFile && (
                 <div className="mt-6">
                   <h4 className="text-lg font-semibold mb-4">{t('heic_to_pdf.file_info')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-center justify-center h-48 bg-gray-100 rounded">
-                      <img 
-                        src={previewUrl} 
-                        alt="Preview" 
-                        className="max-h-full max-w-full object-contain"
-                        onError={() => {
-                          setPreviewUrl(null);
-                        }}
-                      />
+                    <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
+                      <FileImage className="w-12 h-12 text-gray-400" />
                     </div>
                     <div className="mt-3 text-center">
                       <p className="text-sm text-gray-600">
@@ -625,8 +594,12 @@ export const HEICtoPDFConverter: React.FC = () => {
                 </label>
                 <select
                   value={quality}
-                  onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
-                  className="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                    const newQuality = e.target.value as 'high' | 'medium' | 'low';
+                    console.log('Quality changed to:', newQuality);
+                    setQuality(newQuality);
+                  }}
+                  className="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring-2 focus:ring-gray-500 focus:border-gray-500 transition-all"
                 >
                   <option value="high">{t('heic_to_pdf.quality_high')}</option>
                   <option value="medium">{t('heic_to_pdf.quality_medium')}</option>
@@ -641,8 +614,12 @@ export const HEICtoPDFConverter: React.FC = () => {
                 </label>
                 <select
                   value={pageSize}
-                  onChange={(e) => setPageSize(e.target.value as 'auto' | 'letter' | 'a4')}
-                  className="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring-2 focus:ring-gray-500 focus:border-gray-500"
+                  onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
+                    const newPageSize = e.target.value as 'auto' | 'letter' | 'a4';
+                    console.log('Page size changed to:', newPageSize);
+                    setPageSize(newPageSize);
+                  }}
+                  className="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:ring-2 focus:ring-gray-500 focus:border-gray-500 transition-all"
                 >
                   <option value="auto">{t('heic_to_pdf.page_size_auto')}</option>
                   <option value="letter">{t('heic_to_pdf.page_size_letter')}</option>
