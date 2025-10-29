@@ -139,6 +139,8 @@ class ApiService {
       endpoint = '/convert/docx-to-csv/single';
     } else if (fileName.endsWith('.docx') && options.format === 'epub') {
       endpoint = '/convert/docx-to-epub/single';
+    } else if (fileName.endsWith('.docx') && options.format === 'mobi') {
+      endpoint = '/convert/docx-to-mobi/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -228,6 +230,8 @@ class ApiService {
       endpoint = '/convert/docx-to-csv/batch';
     } else if (firstFileName?.endsWith('.docx') && options.format === 'epub') {
       endpoint = '/convert/docx-to-epub/batch';
+    } else if (firstFileName?.endsWith('.docx') && options.format === 'mobi') {
+      endpoint = '/convert/docx-to-mobi/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);
