@@ -13,12 +13,9 @@ import {
   Zap
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
-import { apiService } from '../../services/api';
-import { useNavigate } from 'react-router-dom';
 
 export const DOCToCSVConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -101,7 +98,7 @@ export const DOCToCSVConverter: React.FC = () => {
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
     }
-    
+
     // Basic validation for DOC files
     if (docFiles.length === 0) {
       setError('Please select at least one DOC file');
@@ -109,7 +106,7 @@ export const DOCToCSVConverter: React.FC = () => {
       if (batchFileInputRef.current) batchFileInputRef.current.value = '';
       return;
     }
-    
+
     setBatchFiles(docFiles);
     setError(null);
     clearValidationError();
@@ -130,12 +127,12 @@ export const DOCToCSVConverter: React.FC = () => {
         method: 'POST',
         body: formData
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Conversion failed');
       }
-      
+
       const blob = await response.blob();
       setConvertedFile(blob);
     } catch (err) {
@@ -163,12 +160,12 @@ export const DOCToCSVConverter: React.FC = () => {
         method: 'POST',
         body: formData
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Batch conversion failed');
       }
-      
+
       const data = await response.json();
       setBatchResults(data.results);
       setBatchConverted(true);
@@ -181,14 +178,14 @@ export const DOCToCSVConverter: React.FC = () => {
   };
 
   const downloadFile = (blob: Blob, filename: string) => {
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
     a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
   };
 
   const downloadBatchFile = (downloadPath: string, filename: string) => {
@@ -211,15 +208,15 @@ export const DOCToCSVConverter: React.FC = () => {
       <Header />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
+      {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             {t('doc_to_csv.title')}
-          </h1>
+            </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('doc_to_csv.subtitle')}
-          </p>
-        </div>
+            </p>
+              </div>
 
         {/* Mode Toggle */}
         <div className="flex justify-center mb-8">
@@ -250,8 +247,8 @@ export const DOCToCSVConverter: React.FC = () => {
                 {t('common.batch_convert')}
               </div>
             </button>
-          </div>
         </div>
+      </div>
 
         {/* Single Mode */}
         {!batchMode && (
@@ -279,7 +276,7 @@ export const DOCToCSVConverter: React.FC = () => {
                   className="hidden"
                 />
               </label>
-            </div>
+              </div>
 
             {/* File Info */}
             {selectedFile && (
@@ -292,9 +289,9 @@ export const DOCToCSVConverter: React.FC = () => {
                       <p className="text-sm text-gray-500">{formatFileSize(selectedFile.size)}</p>
                     </div>
                   </div>
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
             {/* Settings */}
             {selectedFile && (
@@ -319,10 +316,10 @@ export const DOCToCSVConverter: React.FC = () => {
                     </div>
                   </label>
                 </div>
-              </div>
-            )}
+                </div>
+              )}
 
-            {/* Convert Button */}
+              {/* Convert Button */}
             {selectedFile && (
               <div className="mb-6">
                 <button
@@ -350,8 +347,8 @@ export const DOCToCSVConverter: React.FC = () => {
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 flex items-start gap-3">
                 <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                 <p className="text-red-700">{error}</p>
-              </div>
-            )}
+                </div>
+              )}
 
             {/* Success Result */}
             {convertedFile && (
@@ -361,27 +358,27 @@ export const DOCToCSVConverter: React.FC = () => {
                   <h4 className="text-lg font-semibold text-green-800">
                     {t('doc_to_csv.conversion_complete')}
                   </h4>
-                </div>
+                  </div>
                 <p className="text-green-700 mb-4">{t('doc_to_csv.success_message')}</p>
                 <div className="flex gap-3">
-                  <button
+                            <button
                     onClick={() => downloadFile(convertedFile, selectedFile?.name.replace(/\.docx?$/i, '.csv') || 'converted.csv')}
                     className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center gap-2"
-                  >
+                            >
                     <Download className="w-5 h-5" />
                     {t('doc_to_csv.download_csv')}
-                  </button>
-                  <button
-                    onClick={resetForm}
+                            </button>
+                    <button
+                      onClick={resetForm}
                     className="bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center gap-2"
-                  >
+                    >
                     <RefreshCw className="w-5 h-5" />
                     {t('doc_to_csv.convert_another')}
-                  </button>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
         )}
 
         {/* Batch Mode */}
@@ -401,8 +398,8 @@ export const DOCToCSVConverter: React.FC = () => {
                   <p className="text-sm text-gray-400">
                     {t('doc_to_csv.file_limits_batch')}
                   </p>
-                </div>
-                <input
+              </div>
+                  <input
                   ref={batchFileInputRef}
                   type="file"
                   accept=".doc,.docx"
@@ -410,7 +407,7 @@ export const DOCToCSVConverter: React.FC = () => {
                   onChange={handleBatchFileSelect}
                   className="hidden"
                 />
-              </label>
+                </label>
             </div>
 
             {/* File List */}
@@ -418,18 +415,18 @@ export const DOCToCSVConverter: React.FC = () => {
               <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   {t('common.selected_files')} ({batchFiles.length})
-                </h3>
+              </h3>
                 <div className="space-y-2">
                   {batchFiles.map((file, index) => (
                     <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                       <div className="flex items-center gap-3">
                         <FileText className="w-5 h-5 text-blue-600" />
                         <span className="text-gray-900">{file.name}</span>
-                      </div>
+                  </div>
                       <span className="text-sm text-gray-500">{formatFileSize(file.size)}</span>
-                    </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
+              </div>
                 <div className="mt-4 pt-4 border-t border-gray-200">
                   <p className="text-sm text-gray-600">
                     {getBatchSizeDisplay(batchFiles)}
@@ -455,10 +452,10 @@ export const DOCToCSVConverter: React.FC = () => {
                       onChange={(e) => setIncludeMetadata(e.target.checked)}
                       className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
                     />
-                    <div>
+                <div>
                       <p className="font-medium text-gray-900">{t('doc_to_csv.include_metadata')}</p>
                       <p className="text-sm text-gray-500">{t('doc_to_csv.include_metadata_desc')}</p>
-                    </div>
+                </div>
                   </label>
                 </div>
               </div>
@@ -532,9 +529,9 @@ export const DOCToCSVConverter: React.FC = () => {
                       ) : (
                         <span className="text-red-600 text-sm">{result.error}</span>
                       )}
-                    </div>
+            </div>
                   ))}
-                </div>
+          </div>
                 <div className="mt-6">
                   <button
                     onClick={resetForm}
@@ -543,8 +540,8 @@ export const DOCToCSVConverter: React.FC = () => {
                     <RefreshCw className="w-5 h-5" />
                     {t('doc_to_csv.convert_more_files')}
                   </button>
-                </div>
-              </div>
+        </div>
+      </div>
             )}
           </div>
         )}
