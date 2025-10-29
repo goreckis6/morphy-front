@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
@@ -7,7 +7,6 @@ import {
   Download, 
   Settings, 
   FileText,
-  FileImage,
   RefreshCw,
   CheckCircle,
   AlertCircle,
@@ -15,53 +14,54 @@ import {
   Shield,
   Clock,
   Star,
-  BookOpen,
-  Smartphone
+  File,
+  BarChart3,
+  BookOpen
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
-
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://api.morphyimg.com';
+import { apiService, API_BASE_URL } from '../../services/api';
 
 export const DOCToEPUBConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
+  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [includeImages, setIncludeImages] = useState(true);
+  const [preserveFormatting, setPreserveFormatting] = useState(true);
+  const [generateTOC, setGenerateTOC] = useState(true);
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
-  const [batchResults, setBatchResults] = useState<any[]>([]);
-  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
-  const [conversionTime, setConversionTime] = useState<number | null>(null);
+  const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Ensure language is synced with URL on mount
-  React.useEffect(() => {
+  // Language synchronization
+  useEffect(() => {
     const path = window.location.pathname;
-    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' : 
-                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
-    
-    if (i18n.language !== urlLang) {
-      console.log('Syncing language from URL:', urlLang);
-      i18n.changeLanguage(urlLang);
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
     }
   }, [i18n]);
 
   // Use shared validation hook
   const {
-    validationError,
     validateSingleFile,
     validateBatchFiles,
+    getBatchSizeDisplay,
     getSingleInfoMessage,
     getBatchInfoMessage,
-    getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
   } = useFileValidation();
 
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.name.toLowerCase().endsWith('.doc')) {
@@ -77,10 +77,11 @@ export const DOCToEPUBConverter: React.FC = () => {
         }
         setSelectedFile(file);
         setError(null);
-        clearValidationError();
-        setConvertedFile(null);
-        setConvertedFilename(null);
         setPreviewUrl(URL.createObjectURL(file));
+        setConvertedFile(null);
+        setBatchResults([]);
+        setBatchConverted(false);
+        clearValidationError();
       } else {
         setError('Please select a valid DOC file');
       }
@@ -89,42 +90,36 @@ export const DOCToEPUBConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
+    const docFiles = files.filter(file => 
+      file.name.toLowerCase().endsWith('.doc')
+    );
     
-    const docFiles = files.filter(file => file.name.toLowerCase().endsWith('.doc'));
-    
-    if (docFiles.length === 0) {
-      setError('No valid DOC files selected.');
-      return;
-    }
-
     const validation = validateBatchFiles(docFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+      setError(validation.error?.message || 'Batch validation failed.');
       setBatchFiles([]);
-      if (event.target) {
-        event.target.value = '';
-      }
+      if (fileInputRef.current) fileInputRef.current.value = '';
       return;
     }
-
+    
     setBatchFiles(docFiles);
     setError(null);
-    clearValidationError();
-    setBatchConverted(false);
     setBatchResults([]);
+    setBatchConverted(false);
+    setConvertedFile(null);
+    clearValidationError();
   };
 
-  const handleSingleConvert = async () => {
-    if (!selectedFile) return;
-    
-    setIsConverting(true);
-    setError(null);
-    setConvertedFile(null);
-    const startTime = Date.now();
-    
+  const handleConvert = async (file: File): Promise<Blob> => {
     try {
+      console.log('DOC to EPUB: Converting file:', file.name, 'size:', file.size, 'bytes');
+
+      // Use direct fetch since we need to pass custom FormData fields
       const formData = new FormData();
-      formData.append('file', selectedFile);
+      formData.append('file', file);
+      formData.append('includeImages', includeImages.toString());
+      formData.append('preserveFormatting', preserveFormatting.toString());
+      formData.append('generateToc', generateTOC.toString());
 
       const response = await fetch(`${API_BASE_URL}/convert/doc-to-epub/single`, {
         method: 'POST',
@@ -132,17 +127,38 @@ export const DOCToEPUBConverter: React.FC = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = await response.json().catch(() => ({ error: 'Conversion failed' }));
         throw new Error(errorData.error || 'Conversion failed');
       }
 
       const blob = await response.blob();
-      setConvertedFile(blob);
-      const filename = selectedFile.name.replace(/\.doc$/i, '.epub');
-      setConvertedFilename(filename);
-      setConversionTime(Date.now() - startTime);
+      console.log('DOC to EPUB: Conversion successful, blob size:', blob.size, 'bytes');
+      return blob;
+    } catch (error) {
+      console.error('DOC to EPUB conversion error:', error);
+      throw new Error(error instanceof Error ? error.message : 'Failed to convert DOC to EPUB. Please try again.');
+    }
+  };
+
+  const handleSingleConvert = async () => {
+    if (!selectedFile) return;
+    
+    setIsConverting(true);
+    setError(null);
+    
+    try {
+      const converted = await handleConvert(selectedFile);
+      setConvertedFile(converted);
+      setConvertedFilename(selectedFile.name.replace(/\.doc$/i, '.epub'));
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Conversion failed');
+      console.error('DOC to EPUB conversion error:', err);
+      const errorMessage = err instanceof Error ? err.message : 'Conversion failed. Please try again.';
+      // Simplify error message for users
+      if (errorMessage.includes('Invalid EPUB file') || errorMessage.includes('cannot read')) {
+        setError('Invalid DOC file. Please ensure the file is a valid Microsoft Word document.');
+      } else {
+        setError(errorMessage);
+      }
     } finally {
       setIsConverting(false);
     }
@@ -154,13 +170,16 @@ export const DOCToEPUBConverter: React.FC = () => {
     setIsConverting(true);
     setError(null);
     setBatchResults([]);
-    const startTime = Date.now();
     
     try {
+      console.log('DOC to EPUB Batch: Converting', batchFiles.length, 'files');
+
+      // Use direct fetch for batch conversion with custom options
       const formData = new FormData();
-      batchFiles.forEach(file => {
-        formData.append('files', file);
-      });
+      batchFiles.forEach(file => formData.append('files', file));
+      formData.append('includeImages', includeImages.toString());
+      formData.append('preserveFormatting', preserveFormatting.toString());
+      formData.append('generateToc', generateTOC.toString());
 
       const response = await fetch(`${API_BASE_URL}/convert/doc-to-epub/batch`, {
         method: 'POST',
@@ -168,39 +187,67 @@ export const DOCToEPUBConverter: React.FC = () => {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = await response.json().catch(() => ({ error: 'Batch conversion failed' }));
         throw new Error(errorData.error || 'Batch conversion failed');
       }
 
-      const results = await response.json();
+      const result = await response.json();
+
+      console.log('DOC to EPUB Batch: Conversion result:', result);
       
-      const processedResults = results.map((result: any) => ({
-        originalName: result.filename,
-        outputFilename: result.filename,
-        size: result.size || 0,
-        success: !result.error && result.downloadUrl,
-        downloadPath: result.downloadUrl ? `${API_BASE_URL}${result.downloadUrl}` : '',
-        error: result.error
-      }));
+      if (!result.success) {
+        throw new Error('Batch conversion failed');
+      }
       
-      setBatchResults(processedResults);
+      // Process batch results
+      const results: Array<{ file: File; blob: Blob }> = [];
+      const failedFiles: string[] = [];
+      
+      for (let i = 0; i < result.results.length; i++) {
+        const fileResult = result.results[i];
+        const originalFile = batchFiles[i];
+        
+        if (fileResult.success && fileResult.downloadPath) {
+          try {
+            let blob: Blob;
+            
+            // Check if downloadPath is a base64 data URL
+            if (fileResult.downloadPath.startsWith('data:')) {
+              // Convert base64 data URL to blob
+              const response = await fetch(fileResult.downloadPath);
+              blob = await response.blob();
+            } else {
+              // Download the converted file using API service
+              blob = await apiService.downloadFile(fileResult.downloadPath);
+            }
+            
+            results.push({ file: originalFile, blob });
+          } catch (downloadError) {
+            console.error(`Error processing file ${i}:`, downloadError);
+            failedFiles.push(originalFile.name);
+          }
+        } else {
+          // Simplified error message
+          failedFiles.push(originalFile.name);
+        }
+      }
+      
+      if (results.length === 0) {
+        throw new Error('Batch conversion failed: No files were successfully converted.');
+      }
+      
+      if (failedFiles.length > 0) {
+        setError(`Batch conversion completed with errors. Failed to convert: ${failedFiles.join(', ')}`);
+      }
+      
+      setBatchResults(results);
       setBatchConverted(true);
-      setConversionTime(Date.now() - startTime);
-      setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Batch conversion failed');
+      console.error('DOC to EPUB batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
-  };
-
-  const handleBatchDownload = (downloadPath: string, filename: string) => {
-    const link = document.createElement('a');
-    link.href = downloadPath;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   const handleDownload = () => {
@@ -221,16 +268,41 @@ export const DOCToEPUBConverter: React.FC = () => {
   };
 
   const resetForm = () => {
+    // Clean up any blob URLs to prevent memory leaks
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
+    
     setSelectedFile(null);
     setConvertedFile(null);
+    setConvertedFilename(null);
     setError(null);
     setPreviewUrl(null);
     setBatchFiles([]);
     setBatchConverted(false);
     setBatchResults([]);
-    setConvertedFilename(null);
-    clearValidationError();
     if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const handleSwitchToSingle = () => {
+    resetForm();
+    setBatchMode(false);
+  };
+
+  const handleSwitchToBatch = () => {
+    resetForm();
+    setBatchMode(true);
+  };
+
+  const handleBatchFileDownload = (file: File, blob: Blob) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = file.name.replace(/\.doc$/i, '.epub');
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -238,44 +310,8 @@ export const DOCToEPUBConverter: React.FC = () => {
       <Helmet>
         <title>{t('doc_to_epub.meta_title')}</title>
         <meta name="description" content={t('doc_to_epub.meta_description')} />
-        <meta name="keywords" content="free DOC to EPUB converter, DOC to EPUB online free, convert Word to EPUB, Word document to eBook, DOC to EPUB batch converter, Microsoft Word to EPUB, free eBook converter" />
-        
-        {/* Canonical and alternate language URLs */}
-        <link rel="canonical" href={`https://morphyimg.com${window.location.pathname}`} />
-        <link rel="alternate" hrefLang="en" href="https://morphyimg.com/convert/doc-to-epub" />
-        <link rel="alternate" hrefLang="pl" href="https://morphyimg.com/pl/convert/doc-to-epub" />
-        <link rel="alternate" hrefLang="de" href="https://morphyimg.com/de/convert/doc-to-epub" />
-        <link rel="alternate" hrefLang="x-default" href="https://morphyimg.com/convert/doc-to-epub" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content={t('doc_to_epub.meta_title')} />
-        <meta property="og:description" content={t('doc_to_epub.meta_description')} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://morphyimg.com${window.location.pathname}`} />
-        <meta property="og:locale" content={
-          window.location.pathname.startsWith('/pl/') ? 'pl_PL' : 
-          window.location.pathname.startsWith('/de/') ? 'de_DE' : 'en_US'
-        } />
-        
-        {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Free DOC to EPUB Converter",
-            "description": "Free online tool to convert Microsoft Word DOC files to EPUB eBook format. Fast, secure, and easy to use with batch processing support.",
-            "url": "https://morphyimg.com/convert/doc-to-epub",
-            "applicationCategory": "UtilityApplication",
-            "operatingSystem": "All",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            }
-          })}
-        </script>
+        <meta name="keywords" content="DOC to EPUB, Word to ebook, document converter, EPUB format, e-reader, batch conversion" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
       <Header />
       
@@ -297,7 +333,7 @@ export const DOCToEPUBConverter: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>{t('features.100_free')}</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -314,12 +350,11 @@ export const DOCToEPUBConverter: React.FC = () => {
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('doc_to_epub.heading')}</h2>
               
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-amber-600 text-white shadow-lg' 
@@ -330,14 +365,14 @@ export const DOCToEPUBConverter: React.FC = () => {
                   {t('common.single_file')}
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-amber-600 text-white shadow-lg' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
-                  <FileImage className="w-5 h-5 inline mr-2" />
+                  <Zap className="w-5 h-5 inline mr-2" />
                   {t('common.batch_convert')}
                 </button>
               </div>
@@ -354,14 +389,12 @@ export const DOCToEPUBConverter: React.FC = () => {
                     : t('doc_to_epub.upload_text_single')
                   }
                 </p>
-                {!batchMode && (
-                  <p className="text-xs text-blue-600 mb-2">{getSingleInfoMessage()}</p>
-                )}
-                {batchMode && (
-                  <p className="text-sm text-blue-600 mb-4">
-                    {getBatchInfoMessage()}
-                  </p>
-                )}
+                <p className="text-sm text-gray-500 mb-4">
+                  {batchMode 
+                    ? t('doc_to_epub.file_limits_batch')
+                    : t('doc_to_epub.file_limits_single')
+                  }
+                </p>
                 <input
                   ref={fileInputRef}
                   type="file"
@@ -379,16 +412,18 @@ export const DOCToEPUBConverter: React.FC = () => {
               </div>
 
               {/* File Preview */}
-              {previewUrl && !batchMode && (
+              {previewUrl && !batchMode && selectedFile && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">{t('doc_to_epub.preview')}</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('doc_to_epub.file_info')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <FileText className="w-12 h-12 text-gray-400" />
+                      <File className="w-12 h-12 text-gray-400" />
                     </div>
-                    <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
-                    </p>
+                    <div className="mt-3 text-center">
+                      <p className="text-sm text-gray-600">
+                        <strong>{selectedFile.name}</strong> ({formatFileSize(selectedFile.size)})
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}
@@ -397,7 +432,7 @@ export const DOCToEPUBConverter: React.FC = () => {
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const totalSize = batchFiles.reduce((sum: number, f: File) => sum + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <>
@@ -412,13 +447,13 @@ export const DOCToEPUBConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('doc_to_epub.batch_size_warning')}
                               </span>
                             </div>
                           </div>
                         )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
+                          {batchFiles.map((file: File, index: number) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
                               <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
@@ -432,10 +467,10 @@ export const DOCToEPUBConverter: React.FC = () => {
               )}
 
               {/* Error Message */}
-              {(error || validationError) && (
+              {error && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error || validationError}</span>
+                  <span className="text-red-700">{error}</span>
                 </div>
               )}
 
@@ -454,7 +489,7 @@ export const DOCToEPUBConverter: React.FC = () => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('doc_to_epub.convert_files_to_epub', { count: batchFiles.length }) : t('doc_to_epub.convert_to_epub')}
+                      {batchMode ? t('doc_to_epub.convert_files', { count: batchFiles.length }) : t('doc_to_epub.convert_to_epub')}
                     </div>
                   )}
                 </button>
@@ -465,12 +500,7 @@ export const DOCToEPUBConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <div>
-                      <h4 className="text-lg font-semibold text-green-800">{t('doc_to_epub.conversion_complete')}</h4>
-                      {conversionTime && (
-                        <p className="text-sm text-green-700">{t('doc_to_epub.completed_in', { time: (conversionTime / 1000).toFixed(2) })}</p>
-                      )}
-                    </div>
+                    <h4 className="text-lg font-semibold text-green-800">{t('doc_to_epub.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
                     {t('doc_to_epub.success_message')}
@@ -495,66 +525,46 @@ export const DOCToEPUBConverter: React.FC = () => {
               )}
 
               {/* Batch Conversion Success Message */}
-              {batchMode && batchConverted && batchResults.length > 0 && (
+              {batchConverted && batchMode && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <div>
-                      <h4 className="text-lg font-semibold text-green-800">{t('doc_to_epub.batch_conversion_complete')}</h4>
-                      {conversionTime && (
-                        <p className="text-sm text-green-700">{t('doc_to_epub.completed_in', { time: (conversionTime / 1000).toFixed(2) })}</p>
-                      )}
-                    </div>
+                    <h4 className="text-lg font-semibold text-green-800">{t('doc_to_epub.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {t('doc_to_epub.batch_success_message', { 
-                      count: batchResults.filter(r => r.success).length, 
-                      total: batchResults.length 
-                    })}
+                    {t('doc_to_epub.batch_success_message', { count: batchResults.length })}
                   </p>
-                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
-                    {batchResults.map((result, index) => {
-                      const displayName = result.outputFilename || `${result.originalName.replace(/\.[^.]+$/, '')}.epub`;
-                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
-                      return (
-                        <div key={index} className={`flex items-center justify-between rounded-lg p-3 ${result.success ? 'bg-white' : 'bg-red-50'}`}>
-                          <div className="flex flex-col flex-1 min-w-0 mr-3">
-                            <div className="flex items-center">
-                              {result.success ? (
-                                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              ) : (
-                                <AlertCircle className="w-4 h-4 text-red-500 mr-2 flex-shrink-0" />
-                              )}
-                              <span className="text-sm font-medium truncate">{displayName}</span>
-                            </div>
-                            {result.success && displaySize && (
-                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
-                            )}
-                            {!result.success && result.error && (
-                              <span className="text-xs text-red-600 ml-6 mt-1 font-medium">❌ {result.error}</span>
-                            )}
+                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                    {batchResults.map((result: { file: File; blob: Blob }, index: number) => (
+                      <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white rounded-lg p-3 border border-green-200 gap-2">
+                        <div className="flex items-center gap-3 flex-1 min-w-0">
+                          <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                          <div className="min-w-0 flex-1">
+                            <p className="text-sm font-medium text-gray-900 break-words">
+                              {result.file.name.replace(/\.doc$/i, '.epub')}
+                            </p>
+                            <p className="text-xs text-gray-500">
+                              {formatFileSize(result.blob.size)}
+                            </p>
                           </div>
-                          {result.success && result.downloadPath && (
-                            <button
-                              onClick={() => handleBatchDownload(result.downloadPath!, displayName)}
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0"
-                            >
-                              Download
-                            </button>
-                          )}
                         </div>
-                      );
-                    })}
+                        <button
+                          onClick={() => handleBatchFileDownload(result.file, result.blob)}
+                          className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          {t('common.download')}
+                        </button>
+                      </div>
+                    ))}
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button
-                      onClick={resetForm}
-                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                    >
-                      <RefreshCw className="w-5 h-5 mr-2" />
-                      {t('common.convert_more')}
-                    </button>
-                  </div>
+                  <button
+                    onClick={resetForm}
+                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    {t('common.convert_more_files')}
+                  </button>
                 </div>
               )}
             </div>
@@ -562,6 +572,56 @@ export const DOCToEPUBConverter: React.FC = () => {
 
           {/* Settings & Info Panel */}
           <div className="space-y-6">
+            
+            {/* Conversion Settings */}
+            <div className="bg-white rounded-2xl shadow-xl p-6">
+              <h3 className="text-xl font-semibold mb-6 flex items-center">
+                <Settings className="w-5 h-5 mr-2 text-amber-600" />
+                {t('doc_to_epub.epub_settings')}
+              </h3>
+              
+              {/* Include Images */}
+              <div className="mb-6">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={includeImages}
+                    onChange={(e) => setIncludeImages(e.target.checked)}
+                    className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">{t('doc_to_epub.include_images')}</span>
+                </label>
+                <p className="text-xs text-gray-500 mt-1 ml-6">{t('doc_to_epub.include_images_desc')}</p>
+              </div>
+
+              {/* Preserve Formatting */}
+              <div className="mb-6">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={preserveFormatting}
+                    onChange={(e) => setPreserveFormatting(e.target.checked)}
+                    className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">{t('doc_to_epub.preserve_formatting')}</span>
+                </label>
+                <p className="text-xs text-gray-500 mt-1 ml-6">{t('doc_to_epub.preserve_formatting_desc')}</p>
+              </div>
+
+              {/* Generate TOC */}
+              <div className="mb-6">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={generateTOC}
+                    onChange={(e) => setGenerateTOC(e.target.checked)}
+                    className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
+                  />
+                  <span className="ml-2 text-sm text-gray-700">{t('doc_to_epub.generate_toc')}</span>
+                </label>
+                <p className="text-xs text-gray-500 mt-1 ml-6">{t('doc_to_epub.generate_toc_desc')}</p>
+              </div>
+            </div>
 
             {/* Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
@@ -571,16 +631,16 @@ export const DOCToEPUBConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  'doc_to_epub.feature_free',
-                  'doc_to_epub.feature_batch',
-                  'doc_to_epub.feature_compatibility',
-                  'doc_to_epub.feature_formatting',
-                  'doc_to_epub.feature_secure',
-                  'doc_to_epub.feature_no_reg'
-                ].map((key, index) => (
+                  t('doc_to_epub.feature_1'),
+                  t('doc_to_epub.feature_2'),
+                  t('doc_to_epub.feature_3'),
+                  t('doc_to_epub.feature_4'),
+                  t('doc_to_epub.feature_5'),
+                  t('doc_to_epub.feature_6')
+                ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{t(key)}</span>
+                    <span className="text-sm text-gray-700">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -589,21 +649,21 @@ export const DOCToEPUBConverter: React.FC = () => {
             {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Smartphone className="w-5 h-5 mr-2 text-amber-600" />
+                <BarChart3 className="w-5 h-5 mr-2 text-amber-600" />
                 {t('doc_to_epub.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  'doc_to_epub.use_kindle',
-                  'doc_to_epub.use_kobo',
-                  'doc_to_epub.use_apple',
-                  'doc_to_epub.use_google',
-                  'doc_to_epub.use_mobile',
-                  'doc_to_epub.use_publishing'
-                ].map((key, index) => (
+                  t('doc_to_epub.use_case_1'),
+                  t('doc_to_epub.use_case_2'),
+                  t('doc_to_epub.use_case_3'),
+                  t('doc_to_epub.use_case_4'),
+                  t('doc_to_epub.use_case_5'),
+                  t('doc_to_epub.use_case_6')
+                ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-700">{t(key)}</span>
+                    <span className="text-sm text-gray-700">{useCase}</span>
                   </div>
                 ))}
               </div>
@@ -624,93 +684,93 @@ export const DOCToEPUBConverter: React.FC = () => {
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            {t('doc_to_epub.why_convert_title')}
+            {t('doc_to_epub.seo.title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              {t('doc_to_epub.seo_intro')}
+              {t('doc_to_epub.seo.description')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_epub.benefits_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_epub.seo.features_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('doc_to_epub.benefit_universal_title')}</h4>
+                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('doc_to_epub.seo.feature_1_title')}</h4>
                 <p className="text-gray-700">
-                  {t('doc_to_epub.benefit_universal_text')}
+                  {t('doc_to_epub.seo.feature_1_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('doc_to_epub.benefit_reflow_title')}</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('doc_to_epub.seo.feature_2_title')}</h4>
                 <p className="text-gray-700">
-                  {t('doc_to_epub.benefit_reflow_text')}
+                  {t('doc_to_epub.seo.feature_2_text')}
                 </p>
               </div>
               
               <div className="bg-rose-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('doc_to_epub.benefit_publishing_title')}</h4>
+                <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('doc_to_epub.seo.feature_3_title')}</h4>
                 <p className="text-gray-700">
-                  {t('doc_to_epub.benefit_publishing_text')}
+                  {t('doc_to_epub.seo.feature_3_text')}
                 </p>
               </div>
               
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('doc_to_epub.benefit_media_title')}</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('doc_to_epub.seo.feature_4_title')}</h4>
                 <p className="text-gray-700">
-                  {t('doc_to_epub.benefit_media_text')}
+                  {t('doc_to_epub.seo.feature_4_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_epub.use_cases_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('doc_to_epub.seo.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_1_title')}</h4>
-                  <p className="text-gray-700">{t('doc_to_epub.use_case_1_text')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.seo.use_case_1_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.seo.use_case_1_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_2_title')}</h4>
-                  <p className="text-gray-700">{t('doc_to_epub.use_case_2_text')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.seo.use_case_2_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.seo.use_case_2_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_3_title')}</h4>
-                  <p className="text-gray-700">{t('doc_to_epub.use_case_3_text')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.seo.use_case_3_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.seo.use_case_3_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.use_case_4_title')}</h4>
-                  <p className="text-gray-700">{t('doc_to_epub.use_case_4_text')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('doc_to_epub.seo.use_case_4_title')}</h4>
+                  <p className="text-gray-700">{t('doc_to_epub.seo.use_case_4_text')}</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-8 rounded-xl text-center">
+            <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-8 rounded-xl text-center mt-8">
               <h3 className="text-2xl font-bold mb-4">{t('doc_to_epub.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
                 {t('doc_to_epub.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' as ScrollBehavior })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  {t('common.start_converting')}
+                  {t('common.start_converting_now')}
                 </button>
                 <button
                   onClick={handleBack}
@@ -749,4 +809,3 @@ export const DOCToEPUBConverter: React.FC = () => {
 
       );
 };
-
