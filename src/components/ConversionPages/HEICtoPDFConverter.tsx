@@ -109,11 +109,13 @@ export const HEICtoPDFConverter: React.FC = () => {
 
   const handleConvert = async (file: File): Promise<Blob> => {
     try {
+      const qualityValue = quality === 'high' ? '95' : quality === 'medium' ? '85' : '75';
       console.log('HEIC to PDF: Converting file:', file.name, 'size:', file.size, 'bytes');
+      console.log('HEIC to PDF: Settings - Quality:', quality, '(', qualityValue, '), PageSize:', pageSize, ', FitToPage:', fitToPage);
 
       const formData = new FormData();
       formData.append('file', file);
-      formData.append('quality', quality === 'high' ? '95' : quality === 'medium' ? '85' : '75');
+      formData.append('quality', qualityValue);
       formData.append('pageSize', pageSize);
       formData.append('fitToPage', fitToPage.toString());
 
@@ -633,7 +635,11 @@ export const HEICtoPDFConverter: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={fitToPage}
-                    onChange={(e) => setFitToPage(e.target.checked)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                      const newFitToPage = e.target.checked;
+                      console.log('Fit to page changed to:', newFitToPage);
+                      setFitToPage(newFitToPage);
+                    }}
                     className="rounded border-gray-300 text-gray-600 focus:ring-gray-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">{t('heic_to_pdf.fit_to_page')}</span>
