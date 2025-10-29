@@ -151,6 +151,8 @@ class ApiService {
       endpoint = '/convert/doc-to-epub/single';
     } else if (fileName.endsWith('.doc') && options.format === 'mobi') {
       endpoint = '/convert/doc-to-mobi/single';
+    } else if (fileName.endsWith('.doc') && options.format === 'txt') {
+      endpoint = '/convert/doc-to-txt/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -252,6 +254,8 @@ class ApiService {
       endpoint = '/convert/doc-to-epub/batch';
     } else if (firstFileName?.endsWith('.doc') && options.format === 'mobi') {
       endpoint = '/convert/doc-to-mobi/batch';
+    } else if (firstFileName?.endsWith('.doc') && options.format === 'txt') {
+      endpoint = '/convert/doc-to-txt/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);
