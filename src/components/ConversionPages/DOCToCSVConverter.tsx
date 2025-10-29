@@ -1,94 +1,115 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../Header';
 import { 
   Upload, 
   Download, 
   Settings, 
   FileText,
-  FileImage,
   RefreshCw,
   CheckCircle,
   AlertCircle,
-  Zap,
-  Shield,
-  Clock,
-  Star,
-  FileSpreadsheet,
-  BarChart3
+  Zap
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { apiService } from '../../services/api';
+import { useNavigate } from 'react-router-dom';
 
 export const DOCToCSVConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const [includeHeaders, setIncludeHeaders] = useState(true);
-  const [delimiter, setDelimiter] = useState<',' | ';' | '\t' | '|'>(',');
-  const [encoding, setEncoding] = useState<'utf-8' | 'ascii' | 'utf-16'>('utf-8');
   const [batchMode, setBatchMode] = useState(false);
   const [batchFiles, setBatchFiles] = useState<File[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
-  const [batchResults, setBatchResults] = useState<any[]>([]);
-  const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
+  const [batchResults, setBatchResults] = useState<Array<{file: File, success: boolean, downloadPath?: string, error?: string}>>([]);
+  const [includeMetadata, setIncludeMetadata] = useState(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const batchFileInputRef = useRef<HTMLInputElement>(null);
 
+  // Language synchronization
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  // Use shared validation hook
   const {
-    validationError,
-    validateSingleFile,
     validateBatchFiles,
-    getSingleInfoMessage,
-    getBatchInfoMessage,
     getBatchSizeDisplay,
     formatFileSize,
     clearValidationError
   } = useFileValidation();
 
+  const resetForm = () => {
+    setSelectedFile(null);
+    setConvertedFile(null);
+    setError(null);
+    setBatchFiles([]);
+    setBatchResults([]);
+    setBatchConverted(false);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+    if (batchFileInputRef.current) batchFileInputRef.current.value = '';
+    clearValidationError();
+  };
+
+  const handleSwitchToSingle = () => {
+    resetForm();
+    setBatchMode(false);
+  };
+
+  const handleSwitchToBatch = () => {
+    resetForm();
+    setBatchMode(true);
+  };
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.name.toLowerCase().endsWith('.doc')) {
-        const validation = validateSingleFile(file);
-        if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
-          setSelectedFile(null);
-          setPreviewUrl(null);
-          if (event.target) {
-            event.target.value = '';
-          }
-          return;
-        }
+      if (file.name.toLowerCase().endsWith('.doc') || file.name.toLowerCase().endsWith('.docx')) {
         setSelectedFile(file);
         setError(null);
-        clearValidationError();
-        setPreviewUrl(URL.createObjectURL(file));
+        setConvertedFile(null); // Reset previous conversion
       } else {
-        setError('Please select a valid DOC file');
+        setError('Please select a valid DOC or DOCX file');
       }
     }
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const docFiles = files.filter(file => file.name.toLowerCase().endsWith('.doc'));
+    const docFiles = files.filter(file => 
+      file.name.toLowerCase().endsWith('.doc') || file.name.toLowerCase().endsWith('.docx')
+    );
     
-    if (docFiles.length === 0) {
-      setError('No valid DOC files selected.');
-      return;
-    }
-
+    // Validate files using the shared hook
     const validation = validateBatchFiles(docFiles);
-    if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+    
+    if (validation.error) {
+      setError(validation.error);
       setBatchFiles([]);
-      if (event.target) {
-        event.target.value = '';
-      }
+      if (fileInputRef.current) fileInputRef.current.value = '';
       return;
     }
-
+    
+    // Basic validation for DOC files
+    if (docFiles.length === 0) {
+      setError('Please select at least one DOC file');
+      setBatchFiles([]);
+      if (batchFileInputRef.current) batchFileInputRef.current.value = '';
+      return;
+    }
+    
     setBatchFiles(docFiles);
     setError(null);
     clearValidationError();
@@ -103,30 +124,22 @@ export const DOCToCSVConverter: React.FC = () => {
     try {
       const formData = new FormData();
       formData.append('file', selectedFile);
-      formData.append('includeHeaders', includeHeaders.toString());
-      formData.append('delimiter', delimiter);
-      formData.append('encoding', encoding);
-
-      const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://api.morphyimg.com' 
-        : 'http://localhost:3000';
-
-      const response = await fetch(`${API_BASE_URL}/convert/doc-to-csv/single`, {
+      formData.append('includeMetadata', includeMetadata.toString());
+      
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/convert/doc-to-csv/single`, {
         method: 'POST',
         body: formData
       });
-
+      
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ error: 'Conversion failed' }));
+        const errorData = await response.json();
         throw new Error(errorData.error || 'Conversion failed');
       }
-
-      const blob = await response.blob();
-      const filename = selectedFile.name.replace(/\.doc$/i, '.csv');
       
+      const blob = await response.blob();
       setConvertedFile(blob);
-      setConvertedFilename(filename);
     } catch (err) {
+      console.error('DOC to CSV conversion error:', err);
       setError(err instanceof Error ? err.message : 'Conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
@@ -144,631 +157,398 @@ export const DOCToCSVConverter: React.FC = () => {
       batchFiles.forEach(file => {
         formData.append('files', file);
       });
-      formData.append('includeHeaders', includeHeaders.toString());
-      formData.append('delimiter', delimiter);
-      formData.append('encoding', encoding);
-
-      const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://api.morphyimg.com' 
-        : 'http://localhost:3000';
-
-      const response = await fetch(`${API_BASE_URL}/convert/doc-to-csv/batch`, {
+      formData.append('includeMetadata', includeMetadata.toString());
+      
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/convert/doc-to-csv/batch`, {
         method: 'POST',
         body: formData
       });
-
+      
       if (!response.ok) {
-        throw new Error('Batch conversion failed');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Batch conversion failed');
       }
-
+      
       const data = await response.json();
-      setBatchResults(data.results || []);
+      setBatchResults(data.results);
       setBatchConverted(true);
-      setError(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      console.error('DOC to CSV batch conversion error:', err);
+      setError(err instanceof Error ? err.message : 'Batch conversion failed. Please try again.');
     } finally {
       setIsConverting(false);
     }
   };
 
-  const handleBatchDownload = async (downloadUrl: string, filename: string) => {
-    try {
-      const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://api.morphyimg.com' 
-        : 'http://localhost:3000';
-      
-      const response = await fetch(`${API_BASE_URL}${downloadUrl}`);
-      if (!response.ok) throw new Error('Download failed');
-      
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-    } catch (err) {
-      setError('Download failed. Please try again.');
-    }
+  const downloadFile = (blob: Blob, filename: string) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
-  const handleDownload = () => {
-    if (convertedFile) {
-      const url = URL.createObjectURL(convertedFile);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = convertedFilename || (selectedFile ? selectedFile.name.replace('.doc', '.csv') : 'converted.csv');
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
-  };
-
-  const resetForm = () => {
-    setSelectedFile(null);
-    setConvertedFile(null);
-    setError(null);
-    setPreviewUrl(null);
-    setBatchFiles([]);
-    setBatchConverted(false);
-    setBatchResults([]);
-    setConvertedFilename(null);
-    clearValidationError();
-    if (fileInputRef.current) fileInputRef.current.value = '';
+  const downloadBatchFile = (downloadPath: string, filename: string) => {
+    const a = document.createElement('a');
+    a.href = downloadPath;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Free DOC to CSV Converter - Convert Word 97-2003 Documents to CSV</title>
-        <meta name="description" content="Convert Microsoft Word DOC files to CSV spreadsheet format. Extract tables from Word documents. Free online converter with batch processing for data extraction and analysis." />
-        <meta name="keywords" content="DOC to CSV, Word to CSV, extract tables from Word, document converter, batch conversion, DOC CSV converter online free" />
-        <link rel="canonical" href="https://morphyimg.com/convert/doc-to-csv" />
-        
-        <meta property="og:title" content="Free DOC to CSV Converter Online | MorphyIMG" />
-        <meta property="og:description" content="Convert DOC to CSV format online for free. Extract tables from Word documents." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/convert/doc-to-csv" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free DOC to CSV Converter Online" />
-        <meta name="twitter:description" content="Convert Microsoft Word DOC to CSV format." />
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "DOC to CSV Converter",
-            "description": "Free online DOC to CSV converter for extracting tables from Word documents",
-            "url": "https://morphyimg.com/convert/doc-to-csv",
-            "applicationCategory": "UtilityApplication",
-            "operatingSystem": "Any",
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "USD"
-            }
-          })}
-        </script>
+        <title>{t('doc_to_csv.meta_title')}</title>
+        <meta name="description" content={t('doc_to_csv.meta_description')} />
+        <meta name="keywords" content="DOC to CSV, convert DOC to CSV, Word to CSV converter, document to spreadsheet" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      
       <Header />
       
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-700">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              DOC to CSV Converter
-            </h1>
-            <p className="text-lg sm:text-xl text-indigo-100 mb-6 max-w-2xl mx-auto">
-              Convert Microsoft Word DOC files to CSV spreadsheet format quickly and easily. Perfect for extracting tables and data from legacy Word documents.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-indigo-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {t('doc_to_csv.title')}
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {t('doc_to_csv.subtitle')}
+          </p>
+        </div>
+
+        {/* Mode Toggle */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex rounded-lg bg-white p-1 shadow-lg">
+            <button
+              onClick={handleSwitchToSingle}
+              className={`px-6 py-3 rounded-md font-medium transition-all ${
+                !batchMode
+                  ? 'bg-blue-600 text-white shadow-md'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
               <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <FileText className="w-5 h-5" />
+                {t('common.single_file')}
               </div>
+            </button>
+            <button
+              onClick={handleSwitchToBatch}
+              className={`px-6 py-3 rounded-md font-medium transition-all ${
+                batchMode
+                  ? 'bg-blue-600 text-white shadow-md'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <Zap className="w-5 h-5" />
+                {t('common.batch_convert')}
               </div>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                <span>No Registration</span>
-              </div>
-            </div>
+            </button>
           </div>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
-          {/* Main Conversion Panel */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              
-              {/* Mode Toggle */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button
-                  onClick={() => setBatchMode(false)}
-                  className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
-                    !batchMode 
-                      ? 'bg-indigo-600 text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
-                </button>
-                <button
-                  onClick={() => setBatchMode(true)}
-                  className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
-                    batchMode 
-                      ? 'bg-indigo-600 text-white shadow-lg' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                  }`}
-                >
-                  <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
-                </button>
-              </div>
-
-              {/* File Upload Area */}
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-indigo-400 transition-colors">
-                <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple DOC Files' : 'Upload DOC File'}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {batchMode 
-                    ? 'Select multiple DOC files to convert them all at once' 
-                    : 'Drag and drop your DOC file here or click to browse'
-                  }
-                </p>
-                {!batchMode && (
-                  <p className="text-sm text-blue-600 mb-4">
-                    ✓ Up to 100 MB per file
+        {/* Single Mode */}
+        {!batchMode && (
+          <div className="max-w-4xl mx-auto">
+            {/* Upload Area */}
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-6">
+              <label className="block mb-4">
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer">
+                  <Upload className="w-12 h-12 mx-auto text-gray-400 mb-4" />
+                  <p className="text-lg font-medium text-gray-700 mb-2">
+                    {t('doc_to_csv.upload_single')}
                   </p>
-                )}
-                {batchMode && (
-                  <p className="text-sm text-blue-600 mb-4">
-                    ✓ Max 20 files • Up to 100 MB per file • 100 MB total batch size
+                  <p className="text-sm text-gray-500 mb-4">
+                    Drag and drop your DOC file here or click to browse
                   </p>
-                )}
+                  <p className="text-sm text-gray-400">
+                    {t('doc_to_csv.file_limits_single')}
+                  </p>
+                </div>
                 <input
                   ref={fileInputRef}
                   type="file"
-                  accept=".doc"
-                  multiple={batchMode}
-                  onChange={batchMode ? handleBatchFileSelect : handleFileSelect}
+                  accept=".doc,.docx"
+                  onChange={handleFileSelect}
                   className="hidden"
                 />
-                <button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
-                >
-                  Choose Files
-                </button>
-              </div>
+              </label>
+            </div>
 
-              {/* File Preview */}
-              {previewUrl && !batchMode && (
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
-                      <FileText className="w-12 h-12 text-gray-400" />
+            {/* File Info */}
+            {selectedFile && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <FileText className="w-8 h-8 text-blue-600" />
+                    <div>
+                      <p className="font-medium text-gray-900">{selectedFile.name}</p>
+                      <p className="text-sm text-gray-500">{formatFileSize(selectedFile.size)}</p>
                     </div>
-                    <p className="text-sm text-gray-600 mt-2 text-center">
-                      {selectedFile?.name} ({formatFileSize(selectedFile?.size || 0)})
-                    </p>
                   </div>
                 </div>
-              )}
+              </div>
+            )}
 
-              {/* Batch Files List */}
-              {batchMode && batchFiles.length > 0 && (
-                <div className="mt-6">
-                  {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
-                    const sizeDisplay = getBatchSizeDisplay(totalSize);
-                    return (
-                      <>
-                        <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
-                            {sizeDisplay.text}
-                          </div>
-                        </div>
-                        {sizeDisplay.isWarning && (
-                          <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-                            <div className="flex items-center">
-                              <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
-                              <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
-                              </span>
-                            </div>
-                          </div>
-                        )}
-                        <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
-                            <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
-                              <span className="text-sm font-medium">{file.name}</span>
-                              <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </>
-                    );
-                  })()}
+            {/* Settings */}
+            {selectedFile && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Settings className="w-5 h-5 text-gray-600" />
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {t('doc_to_csv.settings')}
+                  </h3>
                 </div>
-              )}
-
-              {/* Error Message */}
-              {(error || validationError) && (
-                <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
-                  <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error || validationError?.message}</span>
+                <div className="space-y-4">
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={includeMetadata}
+                      onChange={(e) => setIncludeMetadata(e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
+                    />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('doc_to_csv.include_metadata')}</p>
+                      <p className="text-sm text-gray-500">{t('doc_to_csv.include_metadata_desc')}</p>
+                    </div>
+                  </label>
                 </div>
-              )}
+              </div>
+            )}
 
-              {/* Convert Button */}
-              <div className="mt-8">
+            {/* Convert Button */}
+            {selectedFile && (
+              <div className="mb-6">
                 <button
-                  onClick={batchMode ? handleBatchConvert : handleSingleConvert}
-                  disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)}
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  onClick={handleSingleConvert}
+                  disabled={isConverting}
+                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-3"
                 >
                   {isConverting ? (
-                    <div className="flex items-center justify-center">
-                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
-                    </div>
+                    <>
+                      <RefreshCw className="w-5 h-5 animate-spin" />
+                      {t('doc_to_csv.converting')}
+                    </>
                   ) : (
-                    <div className="flex items-center justify-center">
-                      <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to CSV'}
-                    </div>
+                    <>
+                      <Upload className="w-5 h-5" />
+                      {t('doc_to_csv.convert_to_csv')}
+                    </>
                   )}
                 </button>
               </div>
+            )}
 
-              {/* Success Message & Download */}
-              {convertedFile && !batchMode && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
-                  </div>
-                  <p className="text-green-700 mb-4">
-                    Your DOC file has been successfully converted to CSV format.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button
-                      onClick={handleDownload}
-                      className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
-                    >
-                      <Download className="w-5 h-5 mr-2" />
-                      Download CSV File
-                    </button>
-                    <button
-                      onClick={resetForm}
-                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                    >
-                      <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
-                    </button>
-                  </div>
-                </div>
-              )}
+            {/* Error Message */}
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <p className="text-red-700">{error}</p>
+              </div>
+            )}
 
-              {/* Batch Conversion Success */}
-              {batchMode && batchConverted && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Batch Conversion Complete!</h4>
-                  </div>
-                  <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
-                  </p>
-                  <div className="space-y-2 max-h-40 overflow-y-auto mb-4">
-                    {batchResults.map((result, index) => {
-                      const displayName = result.filename || `${batchFiles[index].name.replace(/\.[^.]+$/, '')}.csv`;
-                      const displaySize = result.size !== undefined ? formatFileSize(result.size) : undefined;
-                      return (
-                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3">
-                          <div className="flex flex-col">
-                            <div className="flex items-center">
-                              {result.success ? (
-                                <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                              ) : (
-                                <AlertCircle className="w-4 h-4 text-red-500 mr-2" />
-                              )}
-                              <span className="text-sm font-medium">{displayName}</span>
-                            </div>
-                            {displaySize && (
-                              <span className="text-xs text-gray-500 ml-6 mt-1">({displaySize})</span>
-                            )}
-                            {!result.success && result.error && (
-                              <span className="text-xs text-red-600 ml-6 mt-1">{result.error}</span>
-                            )}
-                          </div>
-                          {result.success && result.downloadUrl && (
-                            <button
-                              onClick={() => handleBatchDownload(result.downloadUrl!, displayName)}
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors"
-                            >
-                              Download
-                            </button>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button
-                      onClick={resetForm}
-                      className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
-                    >
-                      <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert More Files
-                    </button>
-                  </div>
+            {/* Success Result */}
+            {convertedFile && (
+              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle className="w-6 h-6 text-green-600" />
+                  <h4 className="text-lg font-semibold text-green-800">
+                    {t('doc_to_csv.conversion_complete')}
+                  </h4>
                 </div>
-              )}
-            </div>
+                <p className="text-green-700 mb-4">{t('doc_to_csv.success_message')}</p>
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => downloadFile(convertedFile, selectedFile?.name.replace(/\.docx?$/i, '.csv') || 'converted.csv')}
+                    className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center gap-2"
+                  >
+                    <Download className="w-5 h-5" />
+                    {t('doc_to_csv.download_csv')}
+                  </button>
+                  <button
+                    onClick={resetForm}
+                    className="bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center gap-2"
+                  >
+                    <RefreshCw className="w-5 h-5" />
+                    {t('doc_to_csv.convert_another')}
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
+        )}
 
-          {/* Settings & Info Panel */}
-          <div className="space-y-6">
-            
-            {/* Conversion Settings */}
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Settings className="w-5 h-5 mr-2 text-indigo-600" />
-                CSV Settings
-              </h3>
-              
-              {/* Delimiter */}
+        {/* Batch Mode */}
+        {batchMode && (
+          <div className="max-w-6xl mx-auto">
+            {/* Upload Area */}
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-6">
+              <label className="block mb-4">
+                <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors cursor-pointer">
+                  <Upload className="w-12 h-12 mx-auto text-gray-400 mb-4" />
+                  <p className="text-lg font-medium text-gray-700 mb-2">
+                    {t('doc_to_csv.upload_batch')}
+                  </p>
+                  <p className="text-sm text-gray-500 mb-4">
+                    Select multiple DOC files to convert them all at once
+                  </p>
+                  <p className="text-sm text-gray-400">
+                    {t('doc_to_csv.file_limits_batch')}
+                  </p>
+                </div>
+                <input
+                  ref={batchFileInputRef}
+                  type="file"
+                  accept=".doc,.docx"
+                  multiple
+                  onChange={handleBatchFileSelect}
+                  className="hidden"
+                />
+              </label>
+            </div>
+
+            {/* File List */}
+            {batchFiles.length > 0 && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  {t('common.selected_files')} ({batchFiles.length})
+                </h3>
+                <div className="space-y-2">
+                  {batchFiles.map((file, index) => (
+                    <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <FileText className="w-5 h-5 text-blue-600" />
+                        <span className="text-gray-900">{file.name}</span>
+                      </div>
+                      <span className="text-sm text-gray-500">{formatFileSize(file.size)}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-sm text-gray-600">
+                    {getBatchSizeDisplay(batchFiles)}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Settings */}
+            {batchFiles.length > 0 && (
+              <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Settings className="w-5 h-5 text-gray-600" />
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {t('doc_to_csv.settings')}
+                  </h3>
+                </div>
+                <div className="space-y-4">
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={includeMetadata}
+                      onChange={(e) => setIncludeMetadata(e.target.checked)}
+                      className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
+                    />
+                    <div>
+                      <p className="font-medium text-gray-900">{t('doc_to_csv.include_metadata')}</p>
+                      <p className="text-sm text-gray-500">{t('doc_to_csv.include_metadata_desc')}</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            )}
+
+            {/* Convert Button */}
+            {batchFiles.length > 0 && (
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Delimiter
-                </label>
-                <select
-                  value={delimiter}
-                  onChange={(e) => setDelimiter(e.target.value as ',' | ';' | '\t' | '|')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                >
-                  <option value=",">Comma (,)</option>
-                  <option value=";">Semicolon (;)</option>
-                  <option value="\t">Tab (\t)</option>
-                  <option value="|">Pipe (|)</option>
-                </select>
-              </div>
-
-              {/* Encoding */}
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Encoding
-                </label>
-                <select
-                  value={encoding}
-                  onChange={(e) => setEncoding(e.target.value as 'utf-8' | 'ascii' | 'utf-16')}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                >
-                  <option value="utf-8">UTF-8 (Recommended)</option>
-                  <option value="ascii">ASCII</option>
-                  <option value="utf-16">UTF-16</option>
-                </select>
-              </div>
-
-              {/* Include Headers */}
-              <div className="mb-6">
-                <label className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={includeHeaders}
-                    onChange={(e) => setIncludeHeaders(e.target.checked)}
-                    className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
-                </label>
-              </div>
-            </div>
-
-            {/* Features */}
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
-              </h3>
-              <div className="space-y-4">
-                {[
-                  "Extract tables from Word",
-                  "Customizable delimiters",
-                  "Multiple encoding options",
-                  "Batch processing support",
-                  "100% free to use",
-                  "Fast conversion"
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-sm text-gray-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Use Cases */}
-            <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
-                <BarChart3 className="w-5 h-5 mr-2 text-indigo-600" />
-                Perfect For
-              </h3>
-              <div className="space-y-3">
-                {[
-                  "Table data extraction",
-                  "Legacy document migration",
-                  "Data analysis workflows",
-                  "Spreadsheet import",
-                  "Database imports",
-                  "Reporting automation"
-                ].map((useCase, index) => (
-                  <div key={index} className="flex items-center">
-                    <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm text-gray-700">{useCase}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Back Button */}
-        <div className="mt-12 text-center">
-          <button
-            onClick={handleBack}
-            className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
-          >
-            ← Back to Home
-          </button>
-        </div>
-
-        {/* SEO Content Section */}
-        <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert DOC to CSV?
-          </h2>
-          
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Microsoft Word DOC files to CSV format is essential for data extraction, analysis, and migration from legacy documents. While DOC is designed for formatted text, CSV provides a universal, structured format perfect for spreadsheets, databases, and data analysis tools, making it ideal for extracting tables and structured data from Word documents.
-            </p>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of DOC to CSV Conversion</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Table Data Extraction</h4>
-                <p className="text-gray-700">
-                  Extract tables from Word documents into structured CSV format for analysis, reporting, and database import.
-                </p>
-              </div>
-              
-              <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Universal Compatibility</h4>
-                <p className="text-gray-700">
-                  CSV format is supported by Excel, Google Sheets, databases, and virtually all data analysis tools.
-                </p>
-              </div>
-              
-              <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">Legacy Document Migration</h4>
-                <p className="text-gray-700">
-                  Migrate data from old Word 97-2003 documents to modern spreadsheet and database systems.
-                </p>
-              </div>
-              
-              <div className="bg-violet-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-violet-900 mb-3">Data Analysis Ready</h4>
-                <p className="text-gray-700">
-                  CSV format enables immediate data analysis, filtering, and processing in data science tools.
-                </p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
-            
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Table Data Extraction and Analysis</h4>
-                  <p className="text-gray-700">Extract tabular data from Word documents for spreadsheet analysis, reporting, and data visualization.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Database Import and Migration</h4>
-                  <p className="text-gray-700">Convert Word tables to CSV for importing into MySQL, PostgreSQL, SQL Server, and other databases.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Legacy Document Processing</h4>
-                  <p className="text-gray-700">Process and extract data from old Word 97-2003 documents for modern data workflows and automation.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="w-2 h-2 bg-violet-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Reporting and Business Intelligence</h4>
-                  <p className="text-gray-700">Extract report data from Word documents into CSV for integration with BI tools and dashboards.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your DOC Files?</h3>
-              <p className="text-lg mb-6 opacity-90">
-                Use our free online DOC to CSV converter to extract tables and data from Word documents.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  onClick={handleBatchConvert}
+                  disabled={isConverting}
+                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex items-center justify-center gap-3"
                 >
-                  Start Converting Now
-                </button>
-                <button
-                  onClick={handleBack}
-                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
-                >
-                  Back to Home
+                  {isConverting ? (
+                    <>
+                      <RefreshCw className="w-5 h-5 animate-spin" />
+                      {t('doc_to_csv.converting')}
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="w-5 h-5" />
+                      {t('doc_to_csv.convert_all_to_csv')}
+                    </>
+                  )}
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            )}
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
-            <p className="text-gray-400 mb-6">
-              Convert and view files online for free. Support for 50+ formats.
-            </p>
-            <div className="flex justify-center space-x-6 text-sm text-gray-400">
-              <span>© 2024 MorphyIMG</span>
-              <span>•</span>
-              <span>Privacy Policy</span>
-              <span>•</span>
-              <span>Terms of Service</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+            {/* Error Message */}
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <p className="text-red-700">{error}</p>
+              </div>
+            )}
 
+            {/* Batch Results */}
+            {batchConverted && batchResults.length > 0 && (
+              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle className="w-6 h-6 text-green-600" />
+                  <h4 className="text-lg font-semibold text-green-800">
+                    {t('doc_to_csv.batch_conversion_complete')}
+                  </h4>
+                </div>
+                <p className="text-green-700 mb-6">
+                  {t('doc_to_csv.batch_success_message', { 
+                    count: batchResults.filter(r => r.success).length,
+                    total: batchFiles.length 
+                  })}
+                </p>
+                <div className="space-y-3">
+                  {batchResults.map((result, index) => (
+                    <div key={index} className="bg-white rounded-lg p-4 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        {result.success ? (
+                          <CheckCircle className="w-5 h-5 text-green-600" />
+                        ) : (
+                          <AlertCircle className="w-5 h-5 text-red-600" />
+                        )}
+                        <span className="text-gray-900">{result.file.name}</span>
+                      </div>
+                      {result.success && result.downloadPath ? (
+                        <button
+                          onClick={() => downloadBatchFile(result.downloadPath!, result.file.name.replace(/\.docx?$/i, '.csv'))}
+                          className="bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center gap-2"
+                        >
+                          <Download className="w-4 h-4" />
+                          {t('common.download')}
+                        </button>
+                      ) : (
+                        <span className="text-red-600 text-sm">{result.error}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6">
+                  <button
+                    onClick={resetForm}
+                    className="bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center gap-2"
+                  >
+                    <RefreshCw className="w-5 h-5" />
+                    {t('doc_to_csv.convert_more_files')}
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
-      </>
+    </div>
   );
 };
