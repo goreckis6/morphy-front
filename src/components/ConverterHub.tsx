@@ -30,6 +30,13 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/cr2-to-webp",
           inputFormat: "CR2",
           outputFormat: "WebP"
+        },
+        { 
+          name: "HEIC to SVG Converter", 
+          description: "Convert Apple HEIC images to SVG format for scalable vector graphics",
+          path: "/convert/heic-to-svg",
+          inputFormat: "HEIC",
+          outputFormat: "SVG"
         }
       ]
     },

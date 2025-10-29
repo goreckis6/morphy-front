@@ -36,6 +36,7 @@ import { DOCToEPUBConverter } from './components/ConversionPages/DOCToEPUBConver
 import { DOCToMOBIConverter } from './components/ConversionPages/DOCToMOBIConverter';
 import { DOCToODTConverter } from './components/ConversionPages/DOCToODTConverter';
 import { DOCToTXTConverter } from './components/ConversionPages/DOCToTXTConverter';
+import { HEICtoSVGConverter } from './components/ConversionPages/HEICtoSVGConverter';
 import { DOCXToCSVConverter } from './components/ConversionPages/DOCXToCSVConverter';
 import { DOCXToEPUBConverter } from './components/ConversionPages/DOCXToEPUBConverter';
 import { DOCXToMOBIConverter } from './components/ConversionPages/DOCXToMOBIConverter';
@@ -321,6 +322,10 @@ function App() {
 
   if (currentPath === '/convert/doc-to-txt') {
     return <DOCToTXTConverter     />;
+  }
+
+  if (currentPath === '/convert/heic-to-svg') {
+    return <HEICtoSVGConverter     />;
   }
 
   if (currentPath === '/convert/docx-to-csv') {

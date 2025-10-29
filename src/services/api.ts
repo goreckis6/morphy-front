@@ -153,6 +153,8 @@ class ApiService {
       endpoint = '/convert/doc-to-mobi/single';
     } else if (fileName.endsWith('.doc') && options.format === 'txt') {
       endpoint = '/convert/doc-to-txt/single';
+    } else if ((fileName.toLowerCase().endsWith('.heic') || fileName.toLowerCase().endsWith('.heif')) && options.format === 'svg') {
+      endpoint = '/convert/heic-to-svg/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -256,6 +258,8 @@ class ApiService {
       endpoint = '/convert/doc-to-mobi/batch';
     } else if (firstFileName?.endsWith('.doc') && options.format === 'txt') {
       endpoint = '/convert/doc-to-txt/batch';
+    } else if ((firstFileName?.toLowerCase().endsWith('.heic') || firstFileName?.toLowerCase().endsWith('.heif')) && options.format === 'svg') {
+      endpoint = '/convert/heic-to-svg/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);
