@@ -590,7 +590,7 @@ const resources = {
       'docx_to_mobi.ready_text': 'Use our free online DOCX to MOBI converter powered by Calibre ebook-convert to transform your Word documents into Kindle-compatible e-books. Start converting now!',
       
       // DOCX to ODT
-      'docx_to_odt.title': 'Free DOCX to ODT Converter',
+      'docx_to_odt.title': 'DOCX to ODT Converter',
       'docx_to_odt.meta_title': 'Free DOCX to ODT Converter Online - Convert Word Documents to OpenDocument Text Format | MorphyIMG',
       'docx_to_odt.meta_description': 'Convert DOCX Word documents to ODT OpenDocument Text format online for free. Transform Microsoft Word documents into LibreOffice-compatible ODT files. Free online converter with batch support powered by LibreOffice.',
       'docx_to_odt.subtitle': 'Convert Microsoft Word DOCX files to ODT OpenDocument Text format. Transform Word documents into LibreOffice-compatible format using LibreOffice for best conversion quality.',
@@ -653,7 +653,7 @@ const resources = {
       'docx_to_odt.ready_text': 'Use our free online DOCX to ODT converter powered by LibreOffice to transform your Word documents into open-standard ODT files. Start converting now!',
       
       // DOCX to TXT
-      'docx_to_txt.title': 'Free DOCX to TXT Converter',
+      'docx_to_txt.title': 'DOCX to TXT Converter',
       'docx_to_txt.meta_title': 'Free DOCX to TXT Converter Online - Convert Word Documents to Plain Text Format | MorphyIMG',
       'docx_to_txt.meta_description': 'Convert DOCX Word documents to TXT plain text format online for free. Transform Microsoft Word documents into clean, unformatted text files. Free online converter with batch support powered by Pandoc for clean text output.',
       'docx_to_txt.subtitle': 'Convert Microsoft Word DOCX files to TXT plain text format. Transform Word documents into clean, unformatted text files using Pandoc for best text extraction quality.',
