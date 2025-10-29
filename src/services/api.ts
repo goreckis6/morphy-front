@@ -135,10 +135,6 @@ class ApiService {
       endpoint = '/convert/csv-to-docx/single';
     } else if (fileName.endsWith('.csv') && options.format === 'epub') {
       endpoint = '/convert/csv-to-epub/single';
-    } else if (fileName.endsWith('.doc') && options.format === 'csv') {
-      endpoint = '/convert/doc-to-csv/single';
-    } else if (fileName.endsWith('.docx') && options.format === 'csv') {
-      endpoint = '/convert/docx-to-csv/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -224,10 +220,6 @@ class ApiService {
       endpoint = '/convert/dng-to-webp/batch';
     } else if (firstFileName?.endsWith('.eps') && options.format === 'webp') {
       endpoint = '/convert/eps-to-webp/batch';
-    } else if (firstFileName?.endsWith('.doc') && options.format === 'csv') {
-      endpoint = '/convert/doc-to-csv/batch';
-    } else if (firstFileName?.endsWith('.docx') && options.format === 'csv') {
-      endpoint = '/convert/docx-to-csv/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);
