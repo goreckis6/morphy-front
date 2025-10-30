@@ -62,7 +62,7 @@ jobs:
             # Pull latest image from Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/morphy-frontend:latest
             
-            # Deploy with corrected Traefik labels
+            # Deploy with corrected Traefik labels (serve via nginx on port 80)
             docker run -d \
               --name morphy-frontend \
               --label "traefik.enable=true" \
@@ -72,7 +72,7 @@ jobs:
               --label "traefik.http.routers.morphy-www.rule=Host(\`www.morphyimg.com\`)" \
               --label "traefik.http.routers.morphy-www.tls=true" \
               --label "traefik.http.routers.morphy-www.tls.certresolver=letsencrypt" \
-              --label "traefik.http.services.morphy.loadbalancer.server.port=5173" \
+              --label "traefik.http.services.morphy.loadbalancer.server.port=80" \
               --network traefik \
               --restart unless-stopped \
               -e VITE_API_BASE_URL=https://api.morphyimg.com \
