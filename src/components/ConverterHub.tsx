@@ -237,6 +237,18 @@ export const ConverterHub: React.FC = () => {
       ]
     },
     {
+      title: "IMAGE CONVERTERS",
+      formats: [
+        { 
+          name: "HEIC to EPS Converter", 
+          description: "Convert Apple HEIC images to EPS for vector-friendly workflows",
+          path: "/convert/heic-to-eps",
+          inputFormat: "HEIC",
+          outputFormat: "EPS"
+        }
+      ]
+    },
+    {
       title: "E-BOOK CONVERTERS (EPUB)",
       formats: [
         { 

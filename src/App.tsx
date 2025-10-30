@@ -39,6 +39,7 @@ import { DOCToTXTConverter } from './components/ConversionPages/DOCToTXTConverte
 import { HEICtoSVGConverter } from './components/ConversionPages/HEICtoSVGConverter';
 import { HEICtoPDFConverter } from './components/ConversionPages/HEICtoPDFConverter';
 import { HEICtoPNGConventer } from './components/ConversionPages/HEICtoPNGConventer';
+import { HEICtoEPSConventer } from './components/ConversionPages/HEICtoEPSConventer';
 import { DOCXToCSVConverter } from './components/ConversionPages/DOCXToCSVConverter';
 import { DOCXToEPUBConverter } from './components/ConversionPages/DOCXToEPUBConverter';
 import { DOCXToMOBIConverter } from './components/ConversionPages/DOCXToMOBIConverter';
@@ -336,6 +337,10 @@ function App() {
 
   if (currentPath === '/convert/heic-to-png') {
     return <HEICtoPNGConventer     />;
+  }
+
+  if (currentPath === '/convert/heic-to-eps') {
+    return <HEICtoEPSConventer     />;
   }
 
   if (currentPath === '/convert/docx-to-csv') {
