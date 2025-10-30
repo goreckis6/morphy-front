@@ -52,6 +52,13 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/heic-to-png",
           inputFormat: "HEIC",
           outputFormat: "PNG"
+        },
+        { 
+          name: "HEIC to EPS Converter", 
+          description: "Convert Apple HEIC images to EPS for vector-friendly workflows",
+          path: "/convert/heic-to-eps",
+          inputFormat: "HEIC",
+          outputFormat: "EPS"
         }
       ]
     },
@@ -233,18 +240,6 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/eps-to-webp",
           inputFormat: "EPS",
           outputFormat: "WebP"
-        }
-      ]
-    },
-    {
-      title: "IMAGE CONVERTERS",
-      formats: [
-        { 
-          name: "HEIC to EPS Converter", 
-          description: "Convert Apple HEIC images to EPS for vector-friendly workflows",
-          path: "/convert/heic-to-eps",
-          inputFormat: "HEIC",
-          outputFormat: "EPS"
         }
       ]
     },

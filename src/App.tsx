@@ -752,7 +752,7 @@ function App() {
           </div>
         </section>
 
-        {/* Universal File Converter Section */}
+        {/* Universal File Converter Section (hidden as requested)
         <section id="converter" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -761,26 +761,26 @@ function App() {
                   <RefreshCw className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-                Universal File Converter
-              </h2>
+                  Universal File Converter
+                </h2>
               </div>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 Upload your files and convert them instantly. Supports 300+ format combinations with professional-grade quality.
               </p>
             </div>
-
             <div className="bg-white rounded-3xl shadow-2xl p-6 md:p-10 border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                 <div className="lg:col-span-3">
-                <FileUpload onFilesSelected={setSelectedFiles} />
-              </div>
+                  <FileUpload onFilesSelected={setSelectedFiles} />
+                </div>
                 <div className="lg:col-span-2">
-                <ConversionPanel files={selectedFiles} />
+                  <ConversionPanel files={selectedFiles} />
                 </div>
               </div>
             </div>
           </div>
         </section>
+        */}
 
         {/* Popular Converters Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
