@@ -45,6 +45,14 @@ export const ConverterHub: React.FC = () => {
           inputFormat: "HEIC",
           outputFormat: "PDF"
         }
+        ,
+        { 
+          name: "HEIC to PNG Converter", 
+          description: "Convert Apple HEIC images to PNG format with transparency support",
+          path: "/convert/heic-to-png",
+          inputFormat: "HEIC",
+          outputFormat: "PNG"
+        }
       ]
     },
     {

@@ -157,6 +157,8 @@ class ApiService {
       endpoint = '/convert/heic-to-svg/single';
     } else if ((fileName.toLowerCase().endsWith('.heic') || fileName.toLowerCase().endsWith('.heif')) && options.format === 'pdf') {
       endpoint = '/convert/heic-to-pdf/single';
+    } else if ((fileName.toLowerCase().endsWith('.heic') || fileName.toLowerCase().endsWith('.heif')) && options.format === 'png') {
+      endpoint = '/convert/heic-to-png/single';
     }
 
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -264,6 +266,8 @@ class ApiService {
       endpoint = '/convert/heic-to-svg/batch';
     } else if ((firstFileName?.toLowerCase().endsWith('.heic') || firstFileName?.toLowerCase().endsWith('.heif')) && options.format === 'pdf') {
       endpoint = '/convert/heic-to-pdf/batch';
+    } else if ((firstFileName?.toLowerCase().endsWith('.heic') || firstFileName?.toLowerCase().endsWith('.heif')) && options.format === 'png') {
+      endpoint = '/convert/heic-to-png/batch';
     }
 
     console.log('API: Making request to', endpoint, 'with options:', options);
