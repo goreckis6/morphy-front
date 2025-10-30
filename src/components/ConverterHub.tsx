@@ -54,6 +54,13 @@ export const ConverterHub: React.FC = () => {
           outputFormat: "PNG"
         },
         { 
+          name: "HEIC to WebP Converter", 
+          description: "Convert Apple HEIC/HEIF images to modern WebP format for the web",
+          path: "/convert/heic-to-webp",
+          inputFormat: "HEIC",
+          outputFormat: "WebP"
+        },
+        { 
           name: "HEIC to EPS Converter", 
           description: "Convert Apple HEIC images to EPS for vector-friendly workflows",
           path: "/convert/heic-to-eps",
