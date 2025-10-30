@@ -116,6 +116,15 @@ export const X3FViewer: React.FC = () => {
         body: formData,
       });
 
+      const ct = response.headers.get('Content-Type') || '';
+      if (ct.includes('text/html')) {
+        const html = await response.text();
+        loadingWindow.document.open();
+        loadingWindow.document.write(html);
+        loadingWindow.document.close();
+        return;
+      }
+
       if (response.ok) {
         const data = await response.json();
         const imageUrl = data.imageUrl;
