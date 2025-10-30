@@ -350,6 +350,67 @@ export const HEICtoEPSConventer: React.FC = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">{t('heic_to_eps.seo.title')}</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">{t('heic_to_eps.seo.description')}</p>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('heic_to_eps.seo.features_title')}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('heic_to_eps.seo.feature_1_title')}</h4>
+                  <p className="text-gray-700">{t('heic_to_eps.seo.feature_1_text')}</p>
+                </div>
+                <div className="bg-pink-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold text-pink-900 mb-3">{t('heic_to_eps.seo.feature_2_title')}</h4>
+                  <p className="text-gray-700">{t('heic_to_eps.seo.feature_2_text')}</p>
+                </div>
+                <div className="bg-rose-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('heic_to_eps.seo.feature_3_title')}</h4>
+                  <p className="text-gray-700">{t('heic_to_eps.seo.feature_3_text')}</p>
+                </div>
+                <div className="bg-purple-50 p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('heic_to_eps.seo.feature_4_title')}</h4>
+                  <p className="text-gray-700">{t('heic_to_eps.seo.feature_4_text')}</p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('heic_to_eps.seo.use_cases_title')}</h3>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('heic_to_eps.seo.use_case_1_title')}</h4>
+                    <p className="text-gray-700">{t('heic_to_eps.seo.use_case_1_text')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('heic_to_eps.seo.use_case_2_title')}</h4>
+                    <p className="text-gray-700">{t('heic_to_eps.seo.use_case_2_text')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('heic_to_eps.seo.use_case_3_title')}</h4>
+                    <p className="text-gray-700">{t('heic_to_eps.seo.use_case_3_text')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('heic_to_eps.seo.use_case_4_title')}</h4>
+                    <p className="text-gray-700">{t('heic_to_eps.seo.use_case_4_text')}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-8 rounded-xl text-center mt-8">
+                <h3 className="text-2xl font-bold mb-4">{t('heic_to_eps.ready_title')}</h3>
+                <p className="text-lg mb-6 opacity-90">{t('heic_to_eps.ready_text')}</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' as ScrollBehavior })} className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">{t('common.start_converting_now')}</button>
+                  <button onClick={handleBack} className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">{t('common.back_to_home')}</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
