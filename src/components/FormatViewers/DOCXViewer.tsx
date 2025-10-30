@@ -120,23 +120,29 @@ export const DOCXViewer: React.FC = () => {
 					<title>${file.name} - DOCX Preview</title>
 					<style>
 						* { box-sizing: border-box; }
-						html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; background: linear-gradient(180deg, #93c5fd 0%, #dbeafe 100%); }
-						.toolbar { position: fixed; top: 0; left: 0; right: 0; height: 56px; background: rgba(96, 165, 250, 0.95); color: #0f172a; display: flex; align-items: center; padding: 0 12px; gap: 8px; border-bottom: 1px solid rgba(191, 219, 254, 0.8); z-index: 10; backdrop-filter: saturate(1.1) blur(2px); }
-						.toolbar .title { font-weight: 600; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-						.toolbar .actions { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
-						.btn { appearance: none; border: 1px solid rgba(191, 219, 254, 0.9); background: rgba(147, 197, 253, 0.95); color: #0f172a; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
-						.btn:hover { background: rgba(96, 165, 250, 0.95); }
-						.sep { width: 1px; height: 28px; background: rgba(191, 219, 254, 0.9); margin: 0 6px; }
-						.viewer { position: absolute; top: 56px; bottom: 0; left: 0; right: 0; background: rgba(219, 234, 254, 0.6); }
-						iframe { width: 100%; height: 100%; border: 0; background: white; transform-origin: 0 0; }
+						html, body { height: 100%; margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: linear-gradient(180deg, #93c5fd 0%, #e0f2fe 100%); }
+						.toolbar { position: fixed; top: 0; left: 0; right: 0; height: 60px; background: linear-gradient(90deg, rgba(37, 99, 235, 0.95) 0%, rgba(59, 130, 246, 0.95) 100%); color: #ffffff; display: flex; align-items: center; padding: 0 14px; gap: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); z-index: 10; backdrop-filter: saturate(1.2) blur(4px); box-shadow: 0 4px 16px rgba(30, 64, 175, 0.25); }
+						.toolbar .title { font-weight: 700; color: #ffffff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+						.toolbar .actions { margin-left: auto; display: inline-flex; align-items: center; gap: 10px; }
+						.btn { appearance: none; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(255, 255, 255, 0.15); color: #ffffff; padding: 8px 12px; border-radius: 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .2px; }
+						.btn:hover { background: rgba(255, 255, 255, 0.25); }
+						.btn:active { transform: translateY(1px); }
+						.btn.danger { background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.35); }
+						.btn.danger:hover { background: rgba(239, 68, 68, 0.3); }
+						.badge { font-size: 11px; padding: 6px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.12); }
+						.sep { width: 1px; height: 30px; background: rgba(255, 255, 255, 0.25); margin: 0 4px; }
+						.viewer { position: absolute; top: 60px; bottom: 0; left: 0; right: 0; background: rgba(219, 234, 254, 0.6); }
+						iframe { width: 100%; height: 100%; border: 0; background: white; transform-origin: 0 0; box-shadow: 0 0 0 1px rgba(2, 6, 23, 0.06) inset; }
 					</style>
 				</head>
 				<body>
 					<div class="toolbar">
 						<div class="title">${file.name}</div>
 						<div class="actions">
-							<button class="btn" id="btnPrev" title="Previous viewport">↑ Prev</button>
-							<button class="btn" id="btnNext" title="Next viewport">↓ Next</button>
+							<span class="badge" title="Document Type">DOCX</span>
+							<div class="sep"></div>
+							<button class="btn" id="btnPrev" title="Previous viewport">⇧ Prev</button>
+							<button class="btn" id="btnNext" title="Next viewport">⇩ Next</button>
 							<div class="sep"></div>
 							<button class="btn" id="btnZoomOut" title="Zoom out">−</button>
 							<button class="btn" id="btnZoomReset" title="Reset zoom">100%</button>
@@ -144,7 +150,7 @@ export const DOCXViewer: React.FC = () => {
 							<div class="sep"></div>
 							<button class="btn" id="btnPrint" title="Print">🖨 Print</button>
 							<div class="sep"></div>
-							<button class="btn" id="btnClose" title="Close">✖ Close</button>
+							<button class="btn danger" id="btnClose" title="Close">✕ Close</button>
 						</div>
 					</div>
 					<div class="viewer">
