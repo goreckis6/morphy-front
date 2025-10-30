@@ -106,13 +106,18 @@ export const DOCXViewer: React.FC = () => {
         body: formData,
       });
 
-      if (response.ok) {
-        const html = await response.text();
+      const contentType = response.headers.get('Content-Type') || '';
+      const payload = await response.text();
+
+      // If server returned HTML, render it regardless of status (some backends may send 200/500 with HTML)
+      if (contentType.includes('text/html') && payload.trim().length > 0) {
         loadingWindow.document.open();
-        loadingWindow.document.write(html);
+        loadingWindow.document.write(payload);
         loadingWindow.document.close();
-      } else {
-        const error = await response.text();
+        return;
+      }
+
+      if (!response.ok) {
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
@@ -120,29 +125,11 @@ export const DOCXViewer: React.FC = () => {
           <head>
             <title>Error</title>
             <style>
-              body {
-                font-family: Arial, sans-serif;
-                padding: 40px;
-                background: #f5f5f5;
-              }
-              .error {
-                background: white;
-                padding: 30px;
-                border-radius: 8px;
-                box-shadow: 0 0 20px rgba(0,0,0,0.1);
-                max-width: 600px;
-                margin: 0 auto;
-              }
+              body { font-family: Arial, sans-serif; padding: 40px; background: #f5f5f5; }
+              .error { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.1); max-width: 700px; margin: 0 auto; }
               h1 { color: #e74c3c; }
-              button {
-                background: #3498db;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 4px;
-                cursor: pointer;
-                margin-top: 20px;
-              }
+              pre { white-space: pre-wrap; word-break: break-word; background: #fafafa; padding: 12px; border-radius: 6px; border: 1px solid #eee; }
+              button { background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; margin-top: 20px; }
               button:hover { background: #2980b9; }
             </style>
           </head>
@@ -150,13 +137,23 @@ export const DOCXViewer: React.FC = () => {
             <div class="error">
               <h1>⚠️ Preview Error</h1>
               <p>Failed to generate DOCX preview. Please try downloading the file instead.</p>
+              ${payload ? `<h3>Details</h3><pre>${payload.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</pre>` : ''}
               <button onclick="window.close()">Close</button>
             </div>
           </body>
           </html>
         `);
         loadingWindow.document.close();
+        return;
       }
+
+      // Fallback: if OK but not HTML, show generic error
+      loadingWindow.document.open();
+      loadingWindow.document.write(`
+        <!DOCTYPE html>
+        <html><body style="font-family:Arial;padding:40px;">Preview response was not HTML. Please download the file.</body></html>
+      `);
+      loadingWindow.document.close();
     } catch (error) {
       console.error('DOCX view error:', error);
       alert('Failed to open DOCX preview. Please try again or download the file.');
