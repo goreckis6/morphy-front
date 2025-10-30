@@ -54,6 +54,13 @@ export const ConverterHub: React.FC = () => {
           outputFormat: "PNG"
         },
         { 
+          name: "HEIC to EPS Converter", 
+          description: "Convert Apple HEIC images to EPS for vector-friendly workflows",
+          path: "/convert/heic-to-eps",
+          inputFormat: "HEIC",
+          outputFormat: "EPS"
+        },
+        { 
           name: "HEIC to WebP Converter", 
           description: "Convert Apple HEIC/HEIF images to modern WebP format for the web",
           path: "/convert/heic-to-webp",
@@ -61,18 +68,18 @@ export const ConverterHub: React.FC = () => {
           outputFormat: "WebP"
         },
         { 
+          name: "HEIF to PNG Converter", 
+          description: "Convert HEIF/HEIC images to PNG with transparency support",
+          path: "/convert/heif-to-png",
+          inputFormat: "HEIF",
+          outputFormat: "PNG"
+        },
+        { 
           name: "HEIF to JPG Converter", 
           description: "Convert HEIF/HEIC images to standard JPG for universal compatibility",
           path: "/convert/heif-to-jpg",
           inputFormat: "HEIF",
           outputFormat: "JPG"
-        },
-        { 
-          name: "HEIC to EPS Converter", 
-          description: "Convert Apple HEIC images to EPS for vector-friendly workflows",
-          path: "/convert/heic-to-eps",
-          inputFormat: "HEIC",
-          outputFormat: "EPS"
         }
       ]
     },

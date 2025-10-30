@@ -49,7 +49,7 @@ const resources = {
       'features.secure': '100% Secure',
       
       // HEIF to JPG
-      'heif_to_jpg.title': 'Free HEIF to JPG Converter',
+      'heif_to_jpg.title': 'HEIF to JPG Converter',
       'heif_to_jpg.meta_title': 'Free HEIF/HEIC to JPG Converter Online - Convert iPhone Photos to JPEG | MorphyIMG',
       'heif_to_jpg.meta_description': 'Convert HEIF/HEIC (iPhone) photos to standard JPG online for free. Fast, secure HEIF to JPEG converter with batch support, quality control, and smart downscaling.',
       'heif_to_jpg.subtitle': 'Convert HEIF/HEIC images to universally compatible JPG for websites, apps, and sharing. Fast, secure, free — with batch processing.',

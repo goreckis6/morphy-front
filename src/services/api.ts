@@ -157,14 +157,14 @@ class ApiService {
       endpoint = '/convert/heic-to-svg/single';
     } else if ((fileName.toLowerCase().endsWith('.heic') || fileName.toLowerCase().endsWith('.heif')) && options.format === 'pdf') {
       endpoint = '/convert/heic-to-pdf/single';
-    } else if ((fileName.toLowerCase().endsWith('.heic') || fileName.toLowerCase().endsWith('.heif')) && options.format === 'png') {
-      endpoint = '/convert/heic-to-png/single';
     } else if ((fileName.toLowerCase().endsWith('.heic') || fileName.toLowerCase().endsWith('.heif')) && options.format === 'eps') {
       endpoint = '/convert/heic-to-eps/single';
     } else if ((fileName.endsWith('.heic') || fileName.endsWith('.heif')) && options.format === 'webp') {
       endpoint = '/convert/heic-to-webp/single';
     } else if ((fileName.endsWith('.heic') || fileName.endsWith('.heif')) && (options.format === 'jpg' || options.format === 'jpeg')) {
       endpoint = '/convert/heif-to-jpg/single';
+    } else if ((fileName.endsWith('.heic') || fileName.endsWith('.heif')) && options.format === 'png') {
+      endpoint = '/convert/heif-to-png/single';
     }
     
     const response = await this.makeRequest(endpoint, 'POST', formData);
@@ -278,6 +278,8 @@ class ApiService {
       endpoint = '/convert/heic-to-eps/batch';
     } else if ((firstFileName?.endsWith('.heic') || firstFileName?.endsWith('.heif')) && (options.format === 'jpg' || options.format === 'jpeg')) {
       endpoint = '/convert/heif-to-jpg/batch';
+    } else if ((firstFileName?.endsWith('.heic') || firstFileName?.endsWith('.heif')) && options.format === 'png') {
+      endpoint = '/convert/heif-to-png/batch';
     }
     
     console.log('API: Making request to', endpoint, 'with options:', options);
