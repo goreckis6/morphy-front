@@ -667,11 +667,11 @@ function App() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button 
-                onClick={() => { window.location.href = '/conventers'; }}
+                onClick={() => { window.location.href = '/converters'; }}
                 className="bg-white text-blue-600 font-bold py-4 px-10 rounded-full hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl flex items-center gap-2"
               >
                 <RefreshCw className="w-5 h-5" />
-                Conventers
+                Converters
               </button>
               <button 
                 onClick={() => { window.location.href = '/viewers'; }}
