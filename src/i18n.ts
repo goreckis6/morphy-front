@@ -365,7 +365,7 @@ const resources = {
       
       // HEIC to PDF
       'heic_to_pdf.title': 'HEIC to PDF Converter',
-      'heic_to_pdf.meta_title': 'Free HEIC to PDF Converter Online - Convert iPhone Photos to PDF Documents | MorphyIMG',
+      'heic_to_pdf.meta_title': 'HEIC to PDF Converter Online - Convert iPhone Photos to PDF Documents | MorphyIMG',
       'heic_to_pdf.meta_description': 'Convert HEIC (High Efficiency Image Container) files to PDF format online for free. Transform Apple iPhone photos and HEIF images into PDF documents for printing, sharing, and archiving. Free online converter with batch support powered by pillow-heif, ImageMagick, and reportlab.',
       'heic_to_pdf.subtitle': 'Convert HEIC/HEIF images to PDF format for documents. Transform Apple iPhone photos into PDF files suitable for printing, sharing, archiving, and universal document compatibility.',
       'heic_to_pdf.upload_single': 'Upload HEIC File',
