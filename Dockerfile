@@ -8,8 +8,8 @@ WORKDIR /app
 # Copy package files first for better layer caching
 COPY package*.json ./
 
-# Install only production dependencies
-RUN npm ci --omit=dev
+# Install all dependencies (includes dev deps for Vite build)
+RUN npm ci
 
 # Copy the rest of the source
 COPY . .
