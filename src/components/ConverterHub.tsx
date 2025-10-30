@@ -74,8 +74,15 @@ export const ConverterHub: React.FC = () => {
           inputFormat: "HEIF",
           outputFormat: "PNG"
         },
-        { 
-          name: "HEIF to JPG Converter", 
+        {
+          name: "HEIF to WebP Converter",
+          description: "Convert HEIF/HEIC images to WebP for the modern web",
+          path: "/convert/heif-to-webp",
+          inputFormat: "HEIF",
+          outputFormat: "WebP"
+        },
+        {
+          name: "HEIF to JPG Converter",
           description: "Convert HEIF/HEIC images to standard JPG for universal compatibility",
           path: "/convert/heif-to-jpg",
           inputFormat: "HEIF",

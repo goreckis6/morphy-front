@@ -1,3 +1,62 @@
+name: Build and Push Frontend Image
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push (multi-stage Dockerfile)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/morphy-front:latest
+            ghcr.io/${{ github.repository_owner }}/morphy-front:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          # Uncomment to force a clean build if you hit disk cache issues
+          # no-cache: true
+
+      # Optional: also publish static bundle as an artifact (non-Docker deploys)
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies (prod)
+        run: npm ci --omit=dev
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Upload dist artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
 name: Deploy Frontend
 
 on:
