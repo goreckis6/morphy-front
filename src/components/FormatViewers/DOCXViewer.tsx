@@ -122,7 +122,8 @@ export const DOCXViewer: React.FC = () => {
 						* { box-sizing: border-box; }
 						html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; background: #0f172a; }
 						.toolbar { position: fixed; top: 0; left: 0; right: 0; height: 56px; background: #111827; color: #e5e7eb; display: flex; align-items: center; padding: 0 12px; gap: 8px; border-bottom: 1px solid #1f2937; z-index: 10; }
-						.toolbar .title { margin-left: 8px; font-weight: 600; color: #f9fafb; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+						.toolbar .title { font-weight: 600; color: #f9fafb; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+						.toolbar .actions { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
 						.btn { appearance: none; border: 1px solid #374151; background: #1f2937; color: #e5e7eb; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
 						.btn:hover { background: #111827; }
 						.sep { width: 1px; height: 28px; background: #374151; margin: 0 6px; }
@@ -132,17 +133,19 @@ export const DOCXViewer: React.FC = () => {
 				</head>
 				<body>
 					<div class="toolbar">
-						<button class="btn" id="btnClose" title="Close">✖ Close</button>
-						<div class="sep"></div>
-						<button class="btn" id="btnPrint" title="Print">🖨 Print</button>
-						<div class="sep"></div>
-						<button class="btn" id="btnZoomOut" title="Zoom out">−</button>
-						<button class="btn" id="btnZoomReset" title="Reset zoom">100%</button>
-						<button class="btn" id="btnZoomIn" title="Zoom in">＋</button>
-						<div class="sep"></div>
-						<button class="btn" id="btnPrev" title="Previous viewport">↑ Prev</button>
-						<button class="btn" id="btnNext" title="Next viewport">↓ Next</button>
 						<div class="title">${file.name}</div>
+						<div class="actions">
+							<button class="btn" id="btnPrev" title="Previous viewport">↑ Prev</button>
+							<button class="btn" id="btnNext" title="Next viewport">↓ Next</button>
+							<div class="sep"></div>
+							<button class="btn" id="btnZoomOut" title="Zoom out">−</button>
+							<button class="btn" id="btnZoomReset" title="Reset zoom">100%</button>
+							<button class="btn" id="btnZoomIn" title="Zoom in">＋</button>
+							<div class="sep"></div>
+							<button class="btn" id="btnPrint" title="Print">🖨 Print</button>
+							<div class="sep"></div>
+							<button class="btn" id="btnClose" title="Close">✖ Close</button>
+						</div>
 					</div>
 					<div class="viewer">
 						<iframe id="docFrame"></iframe>
