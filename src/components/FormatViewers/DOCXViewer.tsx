@@ -109,13 +109,72 @@ export const DOCXViewer: React.FC = () => {
       const contentType = response.headers.get('Content-Type') || '';
       const payload = await response.text();
 
-      // If server returned HTML, render it regardless of status (some backends may send 200/500 with HTML)
-      if (contentType.includes('text/html') && payload.trim().length > 0) {
-        loadingWindow.document.open();
-        loadingWindow.document.write(payload);
-        loadingWindow.document.close();
-        return;
-      }
+		// If server returned HTML, render it in a viewer shell with controls
+		if (contentType.includes('text/html') && payload.trim().length > 0) {
+			loadingWindow.document.open();
+			loadingWindow.document.write(`
+				<!DOCTYPE html>
+				<html>
+				<head>
+					<meta charset="utf-8" />
+					<title>${file.name} - DOCX Preview</title>
+					<style>
+						* { box-sizing: border-box; }
+						html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; background: #0f172a; }
+						.toolbar { position: fixed; top: 0; left: 0; right: 0; height: 56px; background: #111827; color: #e5e7eb; display: flex; align-items: center; padding: 0 12px; gap: 8px; border-bottom: 1px solid #1f2937; z-index: 10; }
+						.toolbar .title { margin-left: 8px; font-weight: 600; color: #f9fafb; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+						.btn { appearance: none; border: 1px solid #374151; background: #1f2937; color: #e5e7eb; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
+						.btn:hover { background: #111827; }
+						.sep { width: 1px; height: 28px; background: #374151; margin: 0 6px; }
+						.viewer { position: absolute; top: 56px; bottom: 0; left: 0; right: 0; background: #0b1220; }
+						iframe { width: 100%; height: 100%; border: 0; background: white; transform-origin: 0 0; }
+					</style>
+				</head>
+				<body>
+					<div class="toolbar">
+						<button class="btn" id="btnClose" title="Close">✖ Close</button>
+						<div class="sep"></div>
+						<button class="btn" id="btnPrint" title="Print">🖨 Print</button>
+						<div class="sep"></div>
+						<button class="btn" id="btnZoomOut" title="Zoom out">−</button>
+						<button class="btn" id="btnZoomReset" title="Reset zoom">100%</button>
+						<button class="btn" id="btnZoomIn" title="Zoom in">＋</button>
+						<div class="sep"></div>
+						<button class="btn" id="btnPrev" title="Previous viewport">↑ Prev</button>
+						<button class="btn" id="btnNext" title="Next viewport">↓ Next</button>
+						<div class="title">${file.name}</div>
+					</div>
+					<div class="viewer">
+						<iframe id="docFrame"></iframe>
+					</div>
+					<script>
+					(function(){
+						var frame = document.getElementById('docFrame');
+						var scale = 1;
+						// Inject HTML into iframe via srcdoc for isolation
+						frame.srcdoc = \`${payload.replace(/`/g, '\\`')}\`;
+						function setScale(newScale){
+							scale = Math.max(0.5, Math.min(3, newScale));
+							frame.style.transform = 'scale(' + scale + ')';
+							frame.style.width = (100/scale) + '%';
+							document.getElementById('btnZoomReset').textContent = Math.round(scale*100) + '%';
+						}
+						setScale(1);
+						document.getElementById('btnClose').addEventListener('click', function(){ window.close(); });
+						document.getElementById('btnPrint').addEventListener('click', function(){ try { frame.contentWindow.focus(); frame.contentWindow.print(); } catch(e) { alert('Print not available.'); } });
+						document.getElementById('btnZoomIn').addEventListener('click', function(){ setScale(scale + 0.1); });
+						document.getElementById('btnZoomOut').addEventListener('click', function(){ setScale(scale - 0.1); });
+						document.getElementById('btnZoomReset').addEventListener('click', function(){ setScale(1); });
+						document.getElementById('btnNext').addEventListener('click', function(){ var el = frame.contentWindow; el.scrollBy({ top: el.innerHeight * 0.9, behavior: 'smooth' }); });
+						document.getElementById('btnPrev').addEventListener('click', function(){ var el = frame.contentWindow; el.scrollBy({ top: -el.innerHeight * 0.9, behavior: 'smooth' }); });
+					})();
+					</script>
+				</body>
+				</html>
+			`);
+			loadingWindow.document.close();
+			return;
+		}
 
       if (!response.ok) {
         loadingWindow.document.open();
