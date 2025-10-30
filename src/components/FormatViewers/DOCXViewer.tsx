@@ -120,14 +120,14 @@ export const DOCXViewer: React.FC = () => {
 					<title>${file.name} - DOCX Preview</title>
 					<style>
 						* { box-sizing: border-box; }
-						html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; background: linear-gradient(180deg, #0ea5e9 0%, #1e3a8a 100%); }
-						.toolbar { position: fixed; top: 0; left: 0; right: 0; height: 56px; background: rgba(30, 64, 175, 0.95); color: #e5e7eb; display: flex; align-items: center; padding: 0 12px; gap: 8px; border-bottom: 1px solid rgba(59, 130, 246, 0.4); z-index: 10; backdrop-filter: saturate(1.2) blur(2px); }
-						.toolbar .title { font-weight: 600; color: #f0f9ff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+						html, body { height: 100%; margin: 0; font-family: Arial, sans-serif; background: linear-gradient(180deg, #93c5fd 0%, #dbeafe 100%); }
+						.toolbar { position: fixed; top: 0; left: 0; right: 0; height: 56px; background: rgba(96, 165, 250, 0.95); color: #0f172a; display: flex; align-items: center; padding: 0 12px; gap: 8px; border-bottom: 1px solid rgba(191, 219, 254, 0.8); z-index: 10; backdrop-filter: saturate(1.1) blur(2px); }
+						.toolbar .title { font-weight: 600; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 						.toolbar .actions { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; }
-						.btn { appearance: none; border: 1px solid rgba(147, 197, 253, 0.35); background: rgba(29, 78, 216, 0.9); color: #e0f2fe; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
-						.btn:hover { background: rgba(37, 99, 235, 0.95); }
-						.sep { width: 1px; height: 28px; background: rgba(147, 197, 253, 0.4); margin: 0 6px; }
-						.viewer { position: absolute; top: 56px; bottom: 0; left: 0; right: 0; background: rgba(2, 6, 23, 0.6); }
+						.btn { appearance: none; border: 1px solid rgba(191, 219, 254, 0.9); background: rgba(147, 197, 253, 0.95); color: #0f172a; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; }
+						.btn:hover { background: rgba(96, 165, 250, 0.95); }
+						.sep { width: 1px; height: 28px; background: rgba(191, 219, 254, 0.9); margin: 0 6px; }
+						.viewer { position: absolute; top: 56px; bottom: 0; left: 0; right: 0; background: rgba(219, 234, 254, 0.6); }
 						iframe { width: 100%; height: 100%; border: 0; background: white; transform-origin: 0 0; }
 					</style>
 				</head>
