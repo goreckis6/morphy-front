@@ -25,6 +25,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install react-router-dom
+        run: |
+          cd ${{ github.workspace }}
+          npm install react-router-dom
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
