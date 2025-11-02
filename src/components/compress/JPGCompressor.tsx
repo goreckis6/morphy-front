@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { API_BASE_URL } from '../../services/api';
+import JSZip from 'jszip';
 
 export const JPGCompressor: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -58,34 +59,81 @@ export const JPGCompressor: React.FC = () => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.type === 'image/jpeg' || file.name.toLowerCase().match(/\.(jpg|jpeg)$/)) {
-        setSelectedFile(file);
         setError(null);
-        setPreviewUrl(URL.createObjectURL(file));
         setCompressionStats(null);
         
-        // Create image preview to get dimensions
+        // Validate that the file is a valid image by trying to load it
         const img = new Image();
+        const previewUrl = URL.createObjectURL(file);
+        
         img.onload = () => {
+          // File is valid, set it
+          setSelectedFile(file);
+          setPreviewUrl(previewUrl);
           setImagePreview({
-            url: URL.createObjectURL(file),
+            url: previewUrl,
             width: img.width,
             height: img.height
           });
         };
-        img.src = URL.createObjectURL(file);
+        
+        img.onerror = () => {
+          // File is corrupted or invalid
+          URL.revokeObjectURL(previewUrl);
+          setError('This file appears to be corrupted or is not a valid image. Please select a different file.');
+          setSelectedFile(null);
+          setPreviewUrl(null);
+          setImagePreview(null);
+        };
+        
+        img.src = previewUrl;
       } else {
         setError('Please select a valid JPG/JPEG file');
       }
     }
   };
 
-  const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleBatchFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []) as File[];
     const jpgFiles = files.filter((file: File) => 
       file.type === 'image/jpeg' || file.name.toLowerCase().match(/\.(jpg|jpeg)$/)
     );
-    setBatchFiles(jpgFiles);
+    
     setError(null);
+    
+    // Validate each file to ensure it's not corrupted
+    const validFiles: File[] = [];
+    const corruptedFiles: string[] = [];
+    
+    const validatePromises = jpgFiles.map((file: File) => {
+      return new Promise<void>((resolve) => {
+        const img = new Image();
+        const previewUrl = URL.createObjectURL(file);
+        
+        img.onload = () => {
+          URL.revokeObjectURL(previewUrl);
+          validFiles.push(file);
+          resolve();
+        };
+        
+        img.onerror = () => {
+          URL.revokeObjectURL(previewUrl);
+          corruptedFiles.push(file.name);
+          resolve();
+        };
+        
+        img.src = previewUrl;
+      });
+    });
+    
+    await Promise.all(validatePromises);
+    
+    setBatchFiles(validFiles);
+    
+    if (corruptedFiles.length > 0) {
+      const fileList = corruptedFiles.join(', ');
+      setError(`The following file(s) appear to be corrupted or invalid: ${fileList}. Only valid files will be processed.`);
+    }
   };
 
   const handleCompress = async (file: File): Promise<Blob> => {
@@ -102,7 +150,17 @@ export const JPGCompressor: React.FC = () => {
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({ error: 'Compression failed' }));
-        throw new Error(errorData.error || `Server error: ${response.status}`);
+        const errorMessage = errorData.error || `Server error: ${response.status}`;
+        
+        // Check for specific error messages about file corruption
+        if (errorMessage.toLowerCase().includes('cannot identify') || 
+            errorMessage.toLowerCase().includes('corrupted') ||
+            errorMessage.toLowerCase().includes('not a valid') ||
+            errorMessage.toLowerCase().includes('unidentifiedimageerror')) {
+          throw new Error('The file appears to be corrupted or is not a valid JPEG image. Please select a different file.');
+        }
+        
+        throw new Error(errorMessage);
       }
 
       // Get compression stats from headers
@@ -217,6 +275,37 @@ export const JPGCompressor: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
+  const handleBatchDownloadZip = async () => {
+    if (batchResults.length === 0) return;
+    
+    try {
+      const zip = new JSZip();
+      
+      // Add each compressed file to the ZIP
+      for (const result of batchResults) {
+        const nameWithoutExt = result.file.name.replace(/\.(jpg|jpeg)$/i, '');
+        const filename = `${nameWithoutExt}_compressed.jpg`;
+        zip.file(filename, result.blob);
+      }
+      
+      // Generate ZIP file
+      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      
+      // Download the ZIP
+      const url = URL.createObjectURL(zipBlob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `compressed_images_${new Date().getTime()}.zip`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error creating ZIP file:', error);
+      setError('Failed to create ZIP file. Please try downloading files individually.');
+    }
+  };
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -284,7 +373,10 @@ export const JPGCompressor: React.FC = () => {
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
-                  onClick={() => setBatchMode(false)}
+                  onClick={() => {
+                    resetForm();
+                    setBatchMode(false);
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
@@ -295,7 +387,10 @@ export const JPGCompressor: React.FC = () => {
                   {t('common.single_file')}
                 </button>
                 <button
-                  onClick={() => setBatchMode(true)}
+                  onClick={() => {
+                    resetForm();
+                    setBatchMode(true);
+                  }}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-blue-600 text-white shadow-lg' 
@@ -490,6 +585,18 @@ export const JPGCompressor: React.FC = () => {
                   <p className="text-green-700 mb-4">
                     {t('compress_jpg.batch_success_message', { count: batchResults.length })}
                   </p>
+                  
+                  {/* Download All as ZIP Button */}
+                  <div className="mb-4">
+                    <button
+                      onClick={handleBatchDownloadZip}
+                      className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center mb-2"
+                    >
+                      <Download className="w-5 h-5 mr-2" />
+                      {t('compress_jpg.download_all_zip')}
+                    </button>
+                  </div>
+                  
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result: { file: File; blob: Blob; originalSize: number; newSize: number }, index: number) => {
                       const savingsPercent = ((result.originalSize - result.newSize) / result.originalSize * 100).toFixed(1);
