@@ -15,7 +15,7 @@ import {
   Clock,
   Star,
   Camera,
-  Compress
+  Minimize2
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { API_BASE_URL } from '../../services/api';
@@ -309,7 +309,7 @@ export const JPGCompressor: React.FC = () => {
 
               {/* File Upload Area */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
-                <Compress className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                <Minimize2 className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {batchMode ? t('compress_jpg.upload_batch') : t('compress_jpg.upload_single')}
                 </h3>
@@ -444,7 +444,7 @@ export const JPGCompressor: React.FC = () => {
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
-                      <Compress className="w-5 h-5 mr-2" />
+                      <Minimize2 className="w-5 h-5 mr-2" />
                       {batchMode ? t('compress_jpg.compress_files', { count: batchFiles.length }) : t('compress_jpg.compress_image')}
                     </div>
                   )}
