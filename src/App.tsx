@@ -110,6 +110,9 @@ import { SDDViewer } from './components/FormatViewers/SDDViewer';
 import { SXViewer } from './components/FormatViewers/SXViewer';
 import { STLViewer } from './components/FormatViewers/STLViewer';
 
+// Compression Components
+import { JPGCompressor } from './components/compress/JPGCompressor';
+
 function App() {
   // Make addToConversionCounter available globally
   React.useEffect(() => {
@@ -251,6 +254,10 @@ function App() {
         <Route path="/viewers/sdd" element={<SDDViewer />} />
         <Route path="/viewers/sx" element={<SXViewer />} />
         <Route path="/viewers/stl" element={<STLViewer />} />
+
+        {/* Compression Routes */}
+        <Route path="/compress/jpg" element={<JPGCompressor />} />
+        <Route path="/compress/jpeg" element={<JPGCompressor />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />
