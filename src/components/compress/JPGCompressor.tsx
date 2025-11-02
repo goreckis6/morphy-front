@@ -16,10 +16,10 @@ import {
   Clock,
   Star,
   Camera,
-  BarChart3,
   Compress
 } from 'lucide-react';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { API_BASE_URL } from '../../services/api';
 
 export const JPGCompressor: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -95,53 +95,42 @@ export const JPGCompressor: React.FC = () => {
   };
 
   const handleCompress = async (file: File): Promise<Blob> => {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      const canvas = document.createElement('canvas');
-      const ctx = canvas.getContext('2d');
-      
-      if (!ctx) {
-        reject(new Error('Canvas context not available'));
-        return;
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('quality', quality.toString());
+    formData.append('optimize', optimize.toString());
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/compress/jpg`, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: 'Compression failed' }));
+        throw new Error(errorData.error || `Server error: ${response.status}`);
       }
-      
-      img.onload = () => {
-        try {
-          // Set canvas size to match the original image
-          canvas.width = img.width;
-          canvas.height = img.height;
-          
-          // Draw the image on canvas
-          ctx.drawImage(img, 0, 0);
-          
-          // Compress to JPEG format with quality setting
-          const qualityValue = quality / 100;
-          canvas.toBlob((blob) => {
-            if (blob) {
-              resolve(blob);
-            } else {
-              reject(new Error('Failed to compress image'));
-            }
-          }, 'image/jpeg', qualityValue);
-        } catch (error) {
-          reject(error);
-        }
-      };
-      
-      img.onerror = () => {
-        reject(new Error('Failed to load image'));
-      };
-      
-      // Load the image from the file
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        img.src = e.target?.result as string;
-      };
-      reader.onerror = () => {
-        reject(new Error('Failed to read file'));
-      };
-      reader.readAsDataURL(file);
-    });
+
+      // Get compression stats from headers
+      const originalSize = parseInt(response.headers.get('X-Original-Size') || '0', 10);
+      const compressedSize = parseInt(response.headers.get('X-Compressed-Size') || '0', 10);
+      const savingsPercent = parseFloat(response.headers.get('X-Savings-Percent') || '0');
+
+      // Update compression stats
+      if (originalSize > 0 && compressedSize > 0) {
+        setCompressionStats({
+          originalSize,
+          newSize: compressedSize,
+          savings: savingsPercent
+        });
+      }
+
+      const blob = await response.blob();
+      return blob;
+    } catch (error) {
+      console.error('Compression error:', error);
+      throw error;
+    }
   };
 
   const handleSingleCompress = async () => {
