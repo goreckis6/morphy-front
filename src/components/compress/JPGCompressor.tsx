@@ -39,13 +39,8 @@ export const JPGCompressor: React.FC = () => {
 
   // Use shared validation hook
   const {
-    validationError,
-    validateSingleFile,
-    validateBatchFiles,
-    getBatchInfoMessage,
     getBatchSizeDisplay,
-    formatFileSize,
-    clearValidationError
+    formatFileSize
   } = useFileValidation();
 
   // Ensure language is synced with URL on mount
@@ -115,16 +110,28 @@ export const JPGCompressor: React.FC = () => {
       const compressedSize = parseInt(response.headers.get('X-Compressed-Size') || '0', 10);
       const savingsPercent = parseFloat(response.headers.get('X-Savings-Percent') || '0');
 
-      // Update compression stats
+      const blob = await response.blob();
+      
+      // Update compression stats if headers provided valid data, otherwise calculate from blob
       if (originalSize > 0 && compressedSize > 0) {
         setCompressionStats({
           originalSize,
           newSize: compressedSize,
           savings: savingsPercent
         });
+      } else if (file && blob) {
+        // Fallback: calculate from file and blob sizes
+        const originalSizeFallback = file.size;
+        const compressedSizeFallback = blob.size;
+        const savingsPercentFallback = ((originalSizeFallback - compressedSizeFallback) / originalSizeFallback * 100);
+        
+        setCompressionStats({
+          originalSize: originalSizeFallback,
+          newSize: compressedSizeFallback,
+          savings: parseFloat(savingsPercentFallback.toFixed(1))
+        });
       }
-
-      const blob = await response.blob();
+      
       return blob;
     } catch (error) {
       console.error('Compression error:', error);
@@ -140,28 +147,9 @@ export const JPGCompressor: React.FC = () => {
     setCompressionStats(null);
     
     try {
-      const fileToCompress = selectedFile; // Store in local variable
-      const compressed = await handleCompress(fileToCompress);
+      const compressed = await handleCompress(selectedFile);
       setCompressedFile(compressed);
-      
-      // Compression stats are already set in handleCompress from backend headers
-      // If stats weren't set by backend (fallback), calculate from blob sizes
-      const originalSizeForFallback = fileToCompress.size;
-      const compressedSizeForFallback = compressed.size;
-      
-      // Set fallback stats if not already set
-      setCompressionStats((prev: {originalSize: number; newSize: number; savings: number} | null) => {
-        if (prev) return prev; // Already set by handleCompress
-        
-        // Calculate fallback stats
-        const savingsPercent = ((originalSizeForFallback - compressedSizeForFallback) / originalSizeForFallback * 100).toFixed(1);
-        
-        return {
-          originalSize: originalSizeForFallback,
-          newSize: compressedSizeForFallback,
-          savings: parseFloat(savingsPercent)
-        };
-      });
+      // Compression stats are already set in handleCompress from backend headers or calculated as fallback
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Compression failed. Please try again.';
       setError(errorMessage);
@@ -384,7 +372,7 @@ export const JPGCompressor: React.FC = () => {
               {batchMode && batchFiles.length > 0 && (
                 <div className="mt-6">
                   {(() => {
-                    const totalSize = batchFiles.reduce((sum, f) => sum + f.size, 0);
+                    const totalSize = batchFiles.reduce((sum: number, f: File) => sum + f.size, 0);
                     const sizeDisplay = getBatchSizeDisplay(totalSize);
                     return (
                       <>
@@ -405,7 +393,7 @@ export const JPGCompressor: React.FC = () => {
                           </div>
                         )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
-                          {batchFiles.map((file, index) => (
+                          {batchFiles.map((file: File, index: number) => (
                             <div key={index} className="flex items-center justify-between bg-gray-50 rounded-lg p-3">
                               <span className="text-sm font-medium">{file.name}</span>
                               <span className="text-xs text-gray-500">{formatFileSize(file.size)}</span>
@@ -503,7 +491,7 @@ export const JPGCompressor: React.FC = () => {
                     {t('compress_jpg.batch_success_message', { count: batchResults.length })}
                   </p>
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
-                    {batchResults.map((result, index) => {
+                    {batchResults.map((result: { file: File; blob: Blob; originalSize: number; newSize: number }, index: number) => {
                       const savingsPercent = ((result.originalSize - result.newSize) / result.originalSize * 100).toFixed(1);
                       return (
                         <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
@@ -559,7 +547,7 @@ export const JPGCompressor: React.FC = () => {
                   max="100"
                   step="5"
                   value={quality}
-                  onChange={(e) => setQuality(parseInt(e.target.value))}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQuality(parseInt(e.target.value))}
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                   style={{
                     background: `linear-gradient(to right, #3b82f6 0%, #3b82f6 ${quality}%, #e5e7eb ${quality}%, #e5e7eb 100%)`
@@ -580,7 +568,7 @@ export const JPGCompressor: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={optimize}
-                    onChange={(e) => setOptimize(e.target.checked)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setOptimize(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">{t('compress_jpg.optimize_jpeg')}</span>
