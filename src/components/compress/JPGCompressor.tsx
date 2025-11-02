@@ -138,24 +138,37 @@ export const JPGCompressor: React.FC = () => {
     
     setIsCompressing(true);
     setError(null);
+    setCompressionStats(null);
     
     try {
       const compressed = await handleCompress(selectedFile);
       setCompressedFile(compressed);
       
-      // Calculate compression stats
-      const originalSize = selectedFile.size;
-      const newSize = compressed.size;
-      const savings = originalSize - newSize;
-      const savingsPercent = ((savings / originalSize) * 100).toFixed(1);
-      
-      setCompressionStats({
-        originalSize,
-        newSize,
-        savings: parseFloat(savingsPercent)
-      });
+      // Compression stats are already set in handleCompress from backend headers
+      // If stats weren't set by backend (fallback), calculate from blob sizes
+      if (selectedFile && compressed) {
+        // Give a small delay to allow state to update if set by handleCompress
+        setTimeout(() => {
+          setCompressionStats(prev => {
+            if (prev) return prev; // Already set by handleCompress
+            
+            // Calculate fallback stats
+            const originalSize = selectedFile.size;
+            const newSize = compressed.size;
+            const savingsPercent = ((originalSize - newSize) / originalSize * 100).toFixed(1);
+            
+            return {
+              originalSize,
+              newSize,
+              savings: parseFloat(savingsPercent)
+            };
+          });
+        }, 0);
+      }
     } catch (err) {
-      setError('Compression failed. Please try again.');
+      const errorMessage = err instanceof Error ? err.message : 'Compression failed. Please try again.';
+      setError(errorMessage);
+      setCompressionStats(null);
     } finally {
       setIsCompressing(false);
     }
