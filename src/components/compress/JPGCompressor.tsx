@@ -86,8 +86,8 @@ export const JPGCompressor: React.FC = () => {
   };
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    const jpgFiles = files.filter(file => 
+    const files = Array.from(event.target.files || []) as File[];
+    const jpgFiles = files.filter((file: File) => 
       file.type === 'image/jpeg' || file.name.toLowerCase().match(/\.(jpg|jpeg)$/)
     );
     setBatchFiles(jpgFiles);
@@ -141,30 +141,30 @@ export const JPGCompressor: React.FC = () => {
     setCompressionStats(null);
     
     try {
-      const compressed = await handleCompress(selectedFile);
+      const fileToCompress = selectedFile; // Store in local variable
+      const compressed = await handleCompress(fileToCompress);
       setCompressedFile(compressed);
       
       // Compression stats are already set in handleCompress from backend headers
       // If stats weren't set by backend (fallback), calculate from blob sizes
-      if (selectedFile && compressed) {
-        // Give a small delay to allow state to update if set by handleCompress
-        setTimeout(() => {
-          setCompressionStats(prev => {
-            if (prev) return prev; // Already set by handleCompress
-            
-            // Calculate fallback stats
-            const originalSize = selectedFile.size;
-            const newSize = compressed.size;
-            const savingsPercent = ((originalSize - newSize) / originalSize * 100).toFixed(1);
-            
-            return {
-              originalSize,
-              newSize,
-              savings: parseFloat(savingsPercent)
-            };
-          });
-        }, 0);
-      }
+      // Use setTimeout to check after state update from handleCompress
+      const originalSizeForFallback = fileToCompress.size;
+      const compressedSizeForFallback = compressed.size;
+      
+      setTimeout(() => {
+        setCompressionStats((prev: {originalSize: number; newSize: number; savings: number} | null) => {
+          if (prev) return prev; // Already set by handleCompress
+          
+          // Calculate fallback stats
+          const savingsPercent = ((originalSizeForFallback - compressedSizeForFallback) / originalSizeForFallback * 100).toFixed(1);
+          
+          return {
+            originalSize: originalSizeForFallback,
+            newSize: compressedSizeForFallback,
+            savings: parseFloat(savingsPercent)
+          };
+        });
+      }, 100);
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Compression failed. Please try again.';
       setError(errorMessage);
