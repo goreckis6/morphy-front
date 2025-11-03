@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
@@ -95,6 +95,42 @@ export const SamplesHub: React.FC = () => {
           format: "ODS",
           icon: <FileSpreadsheet className="w-5 h-5 text-emerald-600" />,
           iconColor: "text-emerald-600"
+        }
+      ]
+    },
+    {
+      title: "3D & DESIGN SAMPLES",
+      icon: <Box className="w-6 h-6 text-amber-600" />,
+      formats: [
+        { 
+          name: "3DS Sample Files", 
+          description: "Download free 3DS sample 3D model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model conversion and viewing tools.",
+          path: "/samples/sample-3ds",
+          format: "3DS",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "3MF Sample Files", 
+          description: "Download free 3MF sample 3D printing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printing conversion and viewing tools.",
+          path: "/samples/sample-3mf",
+          format: "3MF",
+          icon: <Box className="w-5 h-5 text-violet-600" />,
+          iconColor: "text-violet-600"
+        }
+      ]
+    },
+    {
+      title: "VIDEO SAMPLES",
+      icon: <Video className="w-6 h-6 text-red-600" />,
+      formats: [
+        { 
+          name: "3GP Sample Files", 
+          description: "Download free 3GP sample mobile video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools.",
+          path: "/samples/sample-3gp",
+          format: "3GP",
+          icon: <Video className="w-5 h-5 text-red-600" />,
+          iconColor: "text-red-600"
         }
       ]
     },
