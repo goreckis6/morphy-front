@@ -17,6 +17,22 @@ export const SamplesHub: React.FC = () => {
           format: "DOCX",
           icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
+        },
+        { 
+          name: "DOC Sample Files", 
+          description: "Download free DOC sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing document conversion tools.",
+          path: "/samples/sample-doc",
+          format: "DOC",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
+        },
+        { 
+          name: "PDF Sample Files", 
+          description: "Download free PDF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing document conversion tools.",
+          path: "/samples/sample-pdf",
+          format: "PDF",
+          icon: <FileText className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         }
       ]
     }

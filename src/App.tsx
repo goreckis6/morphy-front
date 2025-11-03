@@ -7,6 +7,8 @@ import Compress from './pages/Compress';
 import Samples from './pages/Samples';
 import NotFound from './pages/NotFound';
 import SampleDocx from './components/Samples/SampleDocx';
+import SampleDoc from './components/Samples/SampleDoc';
+import SamplePdf from './components/Samples/SamplePdf';
 
 // Converter Components
 import { JPGToTEXTConverter } from './components/ConversionPages/JPGToTEXTConverter';
@@ -270,6 +272,8 @@ function App() {
 
         {/* Sample Files Routes */}
         <Route path="/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/samples/sample-pdf" element={<SamplePdf />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />
