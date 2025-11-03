@@ -2878,11 +2878,11 @@ const resources = {
       'csv_to_yaml.start_converting': 'Start Converting Now',
       
       // JPG Compression
-      'compress_jpg.title': 'JPG Compressor - Compress JPEG Images Online',
-      'compress_jpg.meta_title': 'Free JPG/JPEG Compressor Online - Reduce JPEG File Size | MorphyIMG',
-      'compress_jpg.meta_description': 'Compress JPG/JPEG images online for free. Reduce JPEG file size while maintaining quality. Fast, secure JPEG compression with adjustable quality settings and batch processing support.',
-      'compress_jpg.meta_keywords': 'jpg compressor, jpeg compressor, compress jpg, compress jpeg, reduce jpg size, image compression, jpeg optimization',
-      'compress_jpg.subtitle': 'Reduce JPEG file size without losing quality. Compress JPG images for faster uploads, smaller storage, and better web performance. Free, secure, and no registration required.',
+      'compress_jpg.title': 'Free JPG/JPEG Compressor - Compress JPEG Images Online',
+      'compress_jpg.meta_title': 'Free JPG/JPEG Compressor Online - Reduce Image File Size Fast | MorphyIMG',
+      'compress_jpg.meta_description': 'Free online JPG/JPEG compressor. Quickly reduce JPEG file size while keeping high image quality. Fast, secure, and easy-to-use JPG compression with adjustable quality levels, bulk upload, and instant preview.',
+      'compress_jpg.meta_keywords': 'free jpg compressor, free jpeg compressor, compress jpg online, compress jpeg online, reduce jpg file size, image size reducer, jpeg optimization, photo compressor, picture compressor, bulk jpg compressor, online image compressor, optimize jpg for web, jpg size reducer, jpeg file shrinker, jpg optimizer, jpeg resizer, compress photos for website, free jpeg file compressor, reduce jpeg kb size, shrink jpg images online',
+      'compress_jpg.subtitle': 'Free online tool to reduce JPEG file size without losing visible quality',
       'compress_jpg.upload_single': 'Upload JPG/JPEG File',
       'compress_jpg.upload_batch': 'Upload Multiple JPG/JPEG Files',
       'compress_jpg.upload_text_single': 'Drag and drop your JPG/JPEG file here or click to browse',

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Home from './pages/Home';
 import Converters from './pages/Converters';
 import Viewers from './pages/Viewers';
+import Compress from './pages/Compress';
 import NotFound from './pages/NotFound';
 
 // Converter Components
@@ -140,6 +141,9 @@ function App() {
 
         {/* Podglądy / viewery */}
         <Route path="/viewers" element={<Viewers />} />
+
+        {/* Compression Hub */}
+        <Route path="/compress" element={<Compress />} />
 
         {/* Converter Routes */}
         <Route path="/convert/jpg-to-text" element={<JPGToTEXTConverter />} />

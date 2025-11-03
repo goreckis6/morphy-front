@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowLeftRight, Eye, Minimize2 } from 'lucide-react';
 // import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
@@ -29,11 +29,17 @@ export const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <nav className="flex items-center space-x-6">
-                <a href="/converters" className="text-gray-700 hover:text-blue-600 transition-colors">
-                  Converters
+                <a href="/converters" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+                  <ArrowLeftRight className="w-5 h-5" />
+                  <span>Converters</span>
                 </a>
-                <a href="/viewers" className="text-gray-700 hover:text-blue-600 transition-colors">
-                  Viewers
+                <a href="/viewers" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+                  <Eye className="w-5 h-5" />
+                  <span>Viewers</span>
+                </a>
+                <a href="/compress" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+                  <Minimize2 className="w-5 h-5" />
+                  <span>Compress</span>
                 </a>
               </nav>
 
@@ -55,11 +61,17 @@ export const Header: React.FC = () => {
           {showMobileMenu && (
             <div className="md:hidden border-t border-gray-200 py-4">
               <nav className="flex flex-col space-y-4">
-                <a href="/converters" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                  Converters
+                <a href="/converters" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">
+                  <ArrowLeftRight className="w-5 h-5" />
+                  <span>Converters</span>
                 </a>
-                <a href="/viewers" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-                  Viewers
+                <a href="/viewers" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">
+                  <Eye className="w-5 h-5" />
+                  <span>Viewers</span>
+                </a>
+                <a href="/compress" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors font-medium py-2">
+                  <Minimize2 className="w-5 h-5" />
+                  <span>Compress</span>
                 </a>
                 
                 <div className="py-2">
