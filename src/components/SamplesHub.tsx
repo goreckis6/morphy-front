@@ -55,6 +55,14 @@ export const SamplesHub: React.FC = () => {
           format: "XLS",
           icon: <FileSpreadsheet className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
+        },
+        { 
+          name: "XLSX Sample Files", 
+          description: "Download free XLSX sample Excel spreadsheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Excel conversion and data processing tools.",
+          path: "/samples/sample-xlsx",
+          format: "XLSX",
+          icon: <FileSpreadsheet className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         }
       ]
     },
