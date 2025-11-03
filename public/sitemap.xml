@@ -3,31 +3,31 @@
   <!-- Main Pages -->
   <url>
     <loc>https://morphyimg.com/</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/converters</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/compress</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/samples</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -35,13 +35,13 @@
   <!-- Compression Pages -->
   <url>
     <loc>https://morphyimg.com/compress/jpg</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/compress/jpeg</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -49,43 +49,67 @@
   <!-- Sample Files Pages -->
   <url>
     <loc>https://morphyimg.com/samples/sample-docx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/samples/sample-doc</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/samples/sample-pdf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/samples/sample-csv</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/samples/sample-xls</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/samples/sample-xlsx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-zip</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-ods</loc>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/samples/sample-7z</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -93,361 +117,361 @@
   <!-- Converter Pages -->
   <url>
     <loc>https://morphyimg.com/convert/jpg-to-text</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/jpg-to-pdf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/jpg-to-png</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/cr2-to-ico</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/cr2-to-webp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-docx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-epub</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-json</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-md</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-mobi</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-ndjson</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-parquet</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-odp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-odt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-pdf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-ppt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-pptx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-rtf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-sql</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-toml</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-txt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-xls</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-xlsx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-xml</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/csv-to-yaml</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/dng-to-webp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/doc-to-csv</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/doc-to-epub</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/doc-to-mobi</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/doc-to-odt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/doc-to-txt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heic-to-svg</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heic-to-pdf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heic-to-png</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heic-to-webp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heic-to-eps</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heif-to-jpg</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heif-to-png</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/heif-to-webp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/docx-to-csv</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/docx-to-epub</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/docx-to-mobi</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/docx-to-odt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/docx-to-txt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/eps-to-webp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-csv</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-doc</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-docx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-md</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-mobi</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-odp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-odt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-pdf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-ppt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-pptx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-rtf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-txt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/convert/epub-to-xlsx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -455,217 +479,217 @@
   <!-- Viewer Pages -->
   <url>
     <loc>https://morphyimg.com/viewers/jpg</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/png</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/webp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/gif</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/svg</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/bmp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/ico</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/heic</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/avif</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/pdf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/rtf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/txt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/md</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/docx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/odt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/xlsx</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/csv</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/ods</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/json</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/xml</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/html</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/css</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/js</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/python</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/nef</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/cr2</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/dcr</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/x3f</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/arw</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/raf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/orf</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/dng</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/pef</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/odp</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/ppt</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://morphyimg.com/viewers/stl</loc>
-    <lastmod>2025-01-27</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

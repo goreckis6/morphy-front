@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
@@ -33,6 +33,14 @@ export const SamplesHub: React.FC = () => {
           format: "PDF",
           icon: <FileText className="w-5 h-5 text-blue-600" />,
           iconColor: "text-blue-600"
+        },
+        { 
+          name: "ODP Sample Files", 
+          description: "Download free ODP sample OpenDocument presentation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing presentation conversion and viewing tools.",
+          path: "/samples/sample-odp",
+          format: "ODP",
+          icon: <FileText className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
         }
       ]
     },
@@ -63,6 +71,22 @@ export const SamplesHub: React.FC = () => {
           format: "XLSX",
           icon: <FileSpreadsheet className="w-5 h-5 text-blue-600" />,
           iconColor: "text-blue-600"
+        },
+        { 
+          name: "XML Sample Files", 
+          description: "Download free XML sample markup files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing XML parsing and data conversion tools.",
+          path: "/samples/sample-xml",
+          format: "XML",
+          icon: <Code className="w-5 h-5 text-indigo-600" />,
+          iconColor: "text-indigo-600"
+        },
+        { 
+          name: "ODS Sample Files", 
+          description: "Download free ODS sample OpenDocument spreadsheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing spreadsheet conversion and data processing tools.",
+          path: "/samples/sample-ods",
+          format: "ODS",
+          icon: <FileSpreadsheet className="w-5 h-5 text-emerald-600" />,
+          iconColor: "text-emerald-600"
         }
       ]
     },
@@ -70,6 +94,14 @@ export const SamplesHub: React.FC = () => {
       title: "ARCHIVE SAMPLES",
       icon: <Archive className="w-6 h-6 text-orange-600" />,
       formats: [
+        { 
+          name: "ZIP Sample Files", 
+          description: "Download free ZIP sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction and compression tools.",
+          path: "/samples/sample-zip",
+          format: "ZIP",
+          icon: <Archive className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
+        },
         { 
           name: "7Z Sample Files", 
           description: "Download free 7Z sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive conversion and extraction tools.",

@@ -6,7 +6,7 @@ export default function Viewers() {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "File Viewers",
+    "name": "Free Online File Viewers - View Files Online in Browser",
     "url": "https://morphyimg.com/viewers",
     "description": "View and preview files directly in your browser. Support for images, documents, spreadsheets, and more. No download required.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },

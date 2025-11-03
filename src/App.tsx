@@ -12,6 +12,10 @@ import SamplePdf from './components/Samples/SamplePdf';
 import SampleCsv from './components/Samples/SampleCsv';
 import SampleXls from './components/Samples/SampleXls';
 import SampleXlsx from './components/Samples/SampleXlsx';
+import SampleXml from './components/Samples/SampleXml';
+import SampleZip from './components/Samples/SampleZip';
+import SampleOdp from './components/Samples/SampleOdp';
+import SampleOds from './components/Samples/SampleOds';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -281,6 +285,10 @@ function App() {
         <Route path="/samples/sample-csv" element={<SampleCsv />} />
         <Route path="/samples/sample-xls" element={<SampleXls />} />
         <Route path="/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/samples/sample-zip" element={<SampleZip />} />
+        <Route path="/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/samples/sample-ods" element={<SampleOds />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}
