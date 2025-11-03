@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { RefreshCw, ArrowLeft, FileText, Image, Database, Code, Download, Search } from 'lucide-react';
+import { RefreshCw, ArrowLeft, FileText, Image, Database, Code, Download, Search, Camera, FileImage, BarChart3, BookOpen } from 'lucide-react';
 import { Header } from './Header';
 
 interface ConversionFormat {
@@ -8,6 +8,8 @@ interface ConversionFormat {
   path: string;
   inputFormat: string;
   outputFormat: string;
+  icon: React.ReactNode;
+  iconColor: string;
 }
 
 export const ConverterHub: React.FC = () => {
@@ -22,71 +24,90 @@ export const ConverterHub: React.FC = () => {
           description: "Convert Canon CR2 raw images to ICO format for high-quality Windows icons",
           path: "/convert/cr2-to-ico",
           inputFormat: "CR2",
-          outputFormat: "ICO"
+          outputFormat: "ICO",
+          icon: <Camera className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         { 
           name: "CR2 to WebP Converter", 
           description: "Convert Canon CR2 raw images to WebP format for web optimization",
           path: "/convert/cr2-to-webp",
           inputFormat: "CR2",
-          outputFormat: "WebP"
+          outputFormat: "WebP",
+          icon: <Camera className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         { 
           name: "HEIC to SVG Converter", 
           description: "Convert Apple HEIC images to SVG format for scalable vector graphics",
           path: "/convert/heic-to-svg",
           inputFormat: "HEIC",
-          outputFormat: "SVG"
+          outputFormat: "SVG",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         { 
           name: "HEIC to PDF Converter", 
           description: "Convert Apple HEIC images to PDF format for documents and printing",
           path: "/convert/heic-to-pdf",
           inputFormat: "HEIC",
-          outputFormat: "PDF"
-        }
-        ,
+          outputFormat: "PDF",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
+        },
         { 
           name: "HEIC to PNG Converter", 
           description: "Convert Apple HEIC images to PNG format with transparency support",
           path: "/convert/heic-to-png",
           inputFormat: "HEIC",
-          outputFormat: "PNG"
+          outputFormat: "PNG",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         { 
           name: "HEIC to EPS Converter", 
           description: "Convert Apple HEIC images to EPS for vector-friendly workflows",
           path: "/convert/heic-to-eps",
           inputFormat: "HEIC",
-          outputFormat: "EPS"
+          outputFormat: "EPS",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         { 
           name: "HEIC to WebP Converter", 
           description: "Convert Apple HEIC/HEIF images to modern WebP format for the web",
           path: "/convert/heic-to-webp",
           inputFormat: "HEIC",
-          outputFormat: "WebP"
+          outputFormat: "WebP",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         { 
           name: "HEIF to PNG Converter", 
           description: "Convert HEIF/HEIC images to PNG with transparency support",
           path: "/convert/heif-to-png",
           inputFormat: "HEIF",
-          outputFormat: "PNG"
+          outputFormat: "PNG",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         {
           name: "HEIF to WebP Converter",
           description: "Convert HEIF/HEIC images to WebP for the modern web",
           path: "/convert/heif-to-webp",
           inputFormat: "HEIF",
-          outputFormat: "WebP"
+          outputFormat: "WebP",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         {
           name: "HEIF to JPG Converter",
           description: "Convert HEIF/HEIC images to standard JPG for universal compatibility",
           path: "/convert/heif-to-jpg",
           inputFormat: "HEIF",
-          outputFormat: "JPG"
+          outputFormat: "JPG",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         }
       ]
     },
@@ -98,98 +119,126 @@ export const ConverterHub: React.FC = () => {
           description: "Convert CSV files to Microsoft Word DOCX format with modern formatting",
           path: "/convert/csv-to-docx",
           inputFormat: "CSV",
-          outputFormat: "DOCX"
+          outputFormat: "DOCX",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to EPUB Converter", 
           description: "Convert CSV files to EPUB format for e-books and digital publishing",
           path: "/convert/csv-to-epub",
           inputFormat: "CSV",
-          outputFormat: "EPUB"
+          outputFormat: "EPUB",
+          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to HTML Converter", 
           description: "Convert CSV files to HTML format with styled tables for web display",
           path: "/convert/csv-to-html",
           inputFormat: "CSV",
-          outputFormat: "HTML"
+          outputFormat: "HTML",
+          icon: <Code className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to MD Converter", 
           description: "Convert CSV files to Markdown format for documentation and GitHub",
           path: "/convert/csv-to-md",
           inputFormat: "CSV",
-          outputFormat: "MD"
+          outputFormat: "MD",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to MOBI Converter", 
           description: "Convert CSV files to MOBI format for Kindle e-readers",
           path: "/convert/csv-to-mobi",
           inputFormat: "CSV",
-          outputFormat: "MOBI"
+          outputFormat: "MOBI",
+          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to ODP Converter", 
           description: "Convert CSV files to OpenDocument Presentation format for slides",
           path: "/convert/csv-to-odp",
           inputFormat: "CSV",
-          outputFormat: "ODP"
+          outputFormat: "ODP",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to ODT Converter", 
           description: "Convert CSV files to OpenDocument Text format for documents",
           path: "/convert/csv-to-odt",
           inputFormat: "CSV",
-          outputFormat: "ODT"
+          outputFormat: "ODT",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to PDF Converter", 
           description: "Convert CSV files to PDF format for reports and sharing",
           path: "/convert/csv-to-pdf",
           inputFormat: "CSV",
-          outputFormat: "PDF"
+          outputFormat: "PDF",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to PPT Converter", 
           description: "Convert CSV files to PowerPoint PPT format for presentations",
           path: "/convert/csv-to-ppt",
           inputFormat: "CSV",
-          outputFormat: "PPT"
+          outputFormat: "PPT",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to PPTX Converter", 
           description: "Convert CSV files to PowerPoint PPTX format for modern presentations",
           path: "/convert/csv-to-pptx",
           inputFormat: "CSV",
-          outputFormat: "PPTX"
+          outputFormat: "PPTX",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to RTF Converter", 
           description: "Convert CSV files to Rich Text Format for cross-platform documents",
           path: "/convert/csv-to-rtf",
           inputFormat: "CSV",
-          outputFormat: "RTF"
+          outputFormat: "RTF",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to TXT Converter", 
           description: "Convert CSV files to plain text format for universal compatibility",
           path: "/convert/csv-to-txt",
           inputFormat: "CSV",
-          outputFormat: "TXT"
+          outputFormat: "TXT",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to XLS Converter", 
           description: "Convert CSV files to Excel XLS format for spreadsheet applications",
           path: "/convert/csv-to-xls",
           inputFormat: "CSV",
-          outputFormat: "XLS"
+          outputFormat: "XLS",
+          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "CSV to XLSX Converter", 
           description: "Convert CSV files to Excel XLSX format for modern spreadsheets",
           path: "/convert/csv-to-xlsx",
           inputFormat: "CSV",
-          outputFormat: "XLSX"
+          outputFormat: "XLSX",
+          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     },
@@ -201,49 +250,63 @@ export const ConverterHub: React.FC = () => {
           description: "Convert CSV files to JSON format for web applications and APIs",
           path: "/convert/csv-to-json",
           inputFormat: "CSV",
-          outputFormat: "JSON"
+          outputFormat: "JSON",
+          icon: <Code className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "CSV to NDJSON Converter", 
           description: "Convert CSV files to Newline Delimited JSON for streaming data",
           path: "/convert/csv-to-ndjson",
           inputFormat: "CSV",
-          outputFormat: "NDJSON"
+          outputFormat: "NDJSON",
+          icon: <Code className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "CSV to Parquet Converter", 
           description: "Convert CSV files to Apache Parquet format for big data analytics",
           path: "/convert/csv-to-parquet",
           inputFormat: "CSV",
-          outputFormat: "Parquet"
+          outputFormat: "Parquet",
+          icon: <Database className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "CSV to SQL Converter", 
           description: "Convert CSV files to SQL format for database operations",
           path: "/convert/csv-to-sql",
           inputFormat: "CSV",
-          outputFormat: "SQL"
+          outputFormat: "SQL",
+          icon: <Database className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "CSV to TOML Converter", 
           description: "Convert CSV files to TOML format for configuration files",
           path: "/convert/csv-to-toml",
           inputFormat: "CSV",
-          outputFormat: "TOML"
+          outputFormat: "TOML",
+          icon: <Code className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "CSV to XML Converter", 
           description: "Convert CSV files to XML format for data exchange",
           path: "/convert/csv-to-xml",
           inputFormat: "CSV",
-          outputFormat: "XML"
+          outputFormat: "XML",
+          icon: <Code className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "CSV to YAML Converter", 
           description: "Convert CSV files to YAML format for configuration and data serialization",
           path: "/convert/csv-to-yaml",
           inputFormat: "CSV",
-          outputFormat: "YAML"
+          outputFormat: "YAML",
+          icon: <Code className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         }
       ]
     },
@@ -255,7 +318,9 @@ export const ConverterHub: React.FC = () => {
           description: "Convert Adobe DNG raw images to WebP format for web optimization",
           path: "/convert/dng-to-webp",
           inputFormat: "DNG",
-          outputFormat: "WebP"
+          outputFormat: "WebP",
+          icon: <Camera className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         }
       ]
     },
@@ -267,7 +332,9 @@ export const ConverterHub: React.FC = () => {
           description: "Convert EPS files to WebP format for web optimization",
           path: "/convert/eps-to-webp",
           inputFormat: "EPS",
-          outputFormat: "WebP"
+          outputFormat: "WebP",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         }
       ]
     },
@@ -279,98 +346,126 @@ export const ConverterHub: React.FC = () => {
           description: "Convert EPUB e-book files to CSV format for data analysis",
           path: "/convert/epub-to-csv",
           inputFormat: "EPUB",
-          outputFormat: "CSV"
+          outputFormat: "CSV",
+          icon: <BarChart3 className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to DOC Converter", 
           description: "Convert EPUB e-books to Microsoft Word DOC format for editing",
           path: "/convert/epub-to-doc",
           inputFormat: "EPUB",
-          outputFormat: "DOC"
+          outputFormat: "DOC",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to DOCX Converter", 
           description: "Convert EPUB e-books to Microsoft Word DOCX format for modern editing",
           path: "/convert/epub-to-docx",
           inputFormat: "EPUB",
-          outputFormat: "DOCX"
+          outputFormat: "DOCX",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to HTML Converter", 
           description: "Convert EPUB e-books to HTML format for web display",
           path: "/convert/epub-to-html",
           inputFormat: "EPUB",
-          outputFormat: "HTML"
+          outputFormat: "HTML",
+          icon: <Code className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to MD Converter", 
           description: "Convert EPUB e-books to Markdown format for documentation",
           path: "/convert/epub-to-md",
           inputFormat: "EPUB",
-          outputFormat: "MD"
+          outputFormat: "MD",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to MOBI Converter", 
           description: "Convert EPUB e-books to MOBI format for Kindle e-readers",
           path: "/convert/epub-to-mobi",
           inputFormat: "EPUB",
-          outputFormat: "MOBI"
+          outputFormat: "MOBI",
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to ODP Converter", 
           description: "Convert EPUB e-books to OpenDocument Presentation format",
           path: "/convert/epub-to-odp",
           inputFormat: "EPUB",
-          outputFormat: "ODP"
+          outputFormat: "ODP",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to ODT Converter", 
           description: "Convert EPUB e-books to OpenDocument Text format",
           path: "/convert/epub-to-odt",
           inputFormat: "EPUB",
-          outputFormat: "ODT"
+          outputFormat: "ODT",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to PDF Converter", 
           description: "Convert EPUB e-books to PDF format for universal sharing",
           path: "/convert/epub-to-pdf",
           inputFormat: "EPUB",
-          outputFormat: "PDF"
+          outputFormat: "PDF",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to PPT Converter", 
           description: "Convert EPUB e-books to PowerPoint PPT format for presentations",
           path: "/convert/epub-to-ppt",
           inputFormat: "EPUB",
-          outputFormat: "PPT"
+          outputFormat: "PPT",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to PPTX Converter", 
           description: "Convert EPUB e-books to PowerPoint PPTX format for modern presentations",
           path: "/convert/epub-to-pptx",
           inputFormat: "EPUB",
-          outputFormat: "PPTX"
+          outputFormat: "PPTX",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to RTF Converter", 
           description: "Convert EPUB e-books to Rich Text Format for cross-platform compatibility",
           path: "/convert/epub-to-rtf",
           inputFormat: "EPUB",
-          outputFormat: "RTF"
+          outputFormat: "RTF",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to TXT Converter", 
           description: "Convert EPUB e-books to plain text format for universal compatibility",
           path: "/convert/epub-to-txt",
           inputFormat: "EPUB",
-          outputFormat: "TXT"
+          outputFormat: "TXT",
+          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "EPUB to XLSX Converter", 
           description: "Convert EPUB e-books to Excel XLSX format for data analysis",
           path: "/convert/epub-to-xlsx",
           inputFormat: "EPUB",
-          outputFormat: "XLSX"
+          outputFormat: "XLSX",
+          icon: <BarChart3 className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         }
       ]
     },
@@ -382,35 +477,45 @@ export const ConverterHub: React.FC = () => {
           description: "Convert Microsoft Word DOC files to CSV format for data analysis",
           path: "/convert/doc-to-csv",
           inputFormat: "DOC",
-          outputFormat: "CSV"
+          outputFormat: "CSV",
+          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOC to EPUB Converter", 
           description: "Convert DOC files to EPUB format for e-books and digital publishing",
           path: "/convert/doc-to-epub",
           inputFormat: "DOC",
-          outputFormat: "EPUB"
+          outputFormat: "EPUB",
+          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOC to MOBI Converter", 
           description: "Convert DOC files to MOBI format for Kindle e-readers",
           path: "/convert/doc-to-mobi",
           inputFormat: "DOC",
-          outputFormat: "MOBI"
+          outputFormat: "MOBI",
+          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOC to ODT Converter", 
           description: "Convert DOC files to OpenDocument Text format for cross-platform compatibility",
           path: "/convert/doc-to-odt",
           inputFormat: "DOC",
-          outputFormat: "ODT"
+          outputFormat: "ODT",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOC to TXT Converter", 
           description: "Convert DOC files to plain text format for universal compatibility",
           path: "/convert/doc-to-txt",
           inputFormat: "DOC",
-          outputFormat: "TXT"
+          outputFormat: "TXT",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     },
@@ -422,35 +527,45 @@ export const ConverterHub: React.FC = () => {
           description: "Convert Microsoft Word DOCX files to CSV format for data analysis",
           path: "/convert/docx-to-csv",
           inputFormat: "DOCX",
-          outputFormat: "CSV"
+          outputFormat: "CSV",
+          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOCX to EPUB Converter", 
           description: "Convert DOCX files to EPUB format for e-books and digital publishing",
           path: "/convert/docx-to-epub",
           inputFormat: "DOCX",
-          outputFormat: "EPUB"
+          outputFormat: "EPUB",
+          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOCX to MOBI Converter", 
           description: "Convert DOCX files to MOBI format for Kindle e-readers",
           path: "/convert/docx-to-mobi",
           inputFormat: "DOCX",
-          outputFormat: "MOBI"
+          outputFormat: "MOBI",
+          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOCX to ODT Converter", 
           description: "Convert DOCX files to OpenDocument Text format for cross-platform compatibility",
           path: "/convert/docx-to-odt",
           inputFormat: "DOCX",
-          outputFormat: "ODT"
+          outputFormat: "ODT",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         },
         { 
           name: "DOCX to TXT Converter", 
           description: "Convert DOCX files to plain text format for universal compatibility",
           path: "/convert/docx-to-txt",
           inputFormat: "DOCX",
-          outputFormat: "TXT"
+          outputFormat: "TXT",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     }
@@ -559,20 +674,34 @@ export const ConverterHub: React.FC = () => {
                     } ${formatIndex === category.formats.length - 1 ? 'rounded-b-lg' : ''}`}
                   >
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
-                      <div className="flex-1 w-full sm:w-auto">
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 mb-2">
-                          <h3 className="text-base sm:text-lg font-semibold text-gray-900">{format.name}</h3>
-                          <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500">
-                            <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
-                              {format.inputFormat}
-                            </span>
-                            <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-180 text-gray-400" />
-                            <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium">
-                              {format.outputFormat}
-                            </span>
+                      <div className="flex items-start sm:items-center space-x-3 sm:space-x-4 w-full sm:w-auto flex-1">
+                        {format.icon && (
+                          <div className={`flex-shrink-0 p-2 rounded-lg ${
+                            format.iconColor === 'text-blue-600' ? 'bg-blue-100' :
+                            format.iconColor === 'text-green-600' ? 'bg-green-100' :
+                            format.iconColor === 'text-purple-600' ? 'bg-purple-100' :
+                            format.iconColor === 'text-orange-600' ? 'bg-orange-100' :
+                            format.iconColor === 'text-red-600' ? 'bg-red-100' :
+                            format.iconColor === 'text-teal-600' ? 'bg-teal-100' : 'bg-gray-100'
+                          }`}>
+                            {format.icon}
                           </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 mb-2">
+                            <h3 className="text-base sm:text-lg font-semibold text-gray-900">{format.name}</h3>
+                            <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500">
+                              <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
+                                {format.inputFormat}
+                              </span>
+                              <ArrowLeft className="w-3 h-3 sm:w-4 sm:h-4 rotate-180 text-gray-400" />
+                              <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium">
+                                {format.outputFormat}
+                              </span>
+                            </div>
+                          </div>
+                          <p className="text-gray-600 text-xs sm:text-sm">{format.description}</p>
                         </div>
-                        <p className="text-gray-600 text-xs sm:text-sm">{format.description}</p>
                       </div>
                       <div className="w-full sm:w-auto sm:ml-4">
                         <a
