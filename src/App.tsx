@@ -16,6 +16,7 @@ import SampleXml from './components/Samples/SampleXml';
 import SampleZip from './components/Samples/SampleZip';
 import SampleOdp from './components/Samples/SampleOdp';
 import SampleOds from './components/Samples/SampleOds';
+import SampleRtf from './components/Samples/SampleRtf';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -289,6 +290,7 @@ function App() {
         <Route path="/samples/sample-zip" element={<SampleZip />} />
         <Route path="/samples/sample-odp" element={<SampleOdp />} />
         <Route path="/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/samples/sample-rtf" element={<SampleRtf />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}

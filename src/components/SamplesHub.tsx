@@ -41,6 +41,14 @@ export const SamplesHub: React.FC = () => {
           format: "ODP",
           icon: <FileText className="w-5 h-5 text-purple-600" />,
           iconColor: "text-purple-600"
+        },
+        { 
+          name: "RTF Sample Files", 
+          description: "Download free RTF sample Rich Text Format document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing document conversion and viewing tools.",
+          path: "/samples/sample-rtf",
+          format: "RTF",
+          icon: <FileText className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
         }
       ]
     },
