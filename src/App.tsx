@@ -20,6 +20,9 @@ import SampleRtf from './components/Samples/SampleRtf';
 import Sample3ds from './components/Samples/Sample3ds';
 import Sample3gp from './components/Samples/Sample3gp';
 import Sample3mf from './components/Samples/Sample3mf';
+import SampleAac from './components/Samples/SampleAac';
+import SampleAc3 from './components/Samples/SampleAc3';
+import SampleAce from './components/Samples/SampleAce';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -297,6 +300,9 @@ function App() {
         <Route path="/samples/sample-3ds" element={<Sample3ds />} />
         <Route path="/samples/sample-3gp" element={<Sample3gp />} />
         <Route path="/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/samples/sample-aac" element={<SampleAac />} />
+        <Route path="/samples/sample-ac3" element={<SampleAc3 />} />
+        <Route path="/samples/sample-ace" element={<SampleAce />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}

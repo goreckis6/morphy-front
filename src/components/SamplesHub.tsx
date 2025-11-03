@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
@@ -135,9 +135,39 @@ export const SamplesHub: React.FC = () => {
       ]
     },
     {
+      title: "AUDIO SAMPLES",
+      icon: <Music className="w-6 h-6 text-rose-600" />,
+      formats: [
+        { 
+          name: "AAC Sample Files", 
+          description: "Download free AAC sample Advanced Audio Coding files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion and playback tools.",
+          path: "/samples/sample-aac",
+          format: "AAC",
+          icon: <Music className="w-5 h-5 text-rose-600" />,
+          iconColor: "text-rose-600"
+        },
+        { 
+          name: "AC3 Sample Files", 
+          description: "Download free AC3 sample Dolby Digital audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion and playback tools.",
+          path: "/samples/sample-ac3",
+          format: "AC3",
+          icon: <Music className="w-5 h-5 text-yellow-600" />,
+          iconColor: "text-yellow-600"
+        }
+      ]
+    },
+    {
       title: "ARCHIVE SAMPLES",
       icon: <Archive className="w-6 h-6 text-orange-600" />,
       formats: [
+        { 
+          name: "ACE Sample Files", 
+          description: "Download free ACE sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction and compression tools.",
+          path: "/samples/sample-ace",
+          format: "ACE",
+          icon: <Archive className="w-5 h-5 text-slate-600" />,
+          iconColor: "text-slate-600"
+        },
         { 
           name: "ZIP Sample Files", 
           description: "Download free ZIP sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction and compression tools.",
