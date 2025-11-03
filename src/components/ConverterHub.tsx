@@ -18,6 +18,7 @@ export const ConverterHub: React.FC = () => {
   const conversionCategories = [
     {
       title: "IMAGE CONVERTERS",
+      icon: <Image className="w-6 h-6 text-blue-600" />,
       formats: [
         { 
           name: "CR2 to ICO Converter", 
@@ -113,6 +114,7 @@ export const ConverterHub: React.FC = () => {
     },
     {
       title: "DOCUMENT CONVERTERS",
+      icon: <FileText className="w-6 h-6 text-green-600" />,
       formats: [
         { 
           name: "CSV to DOCX Converter", 
@@ -244,6 +246,7 @@ export const ConverterHub: React.FC = () => {
     },
     {
       title: "DEVELOPER TOOLS (CSV)",
+      icon: <Code className="w-6 h-6 text-orange-600" />,
       formats: [
         { 
           name: "CSV to JSON Converter", 
@@ -312,6 +315,7 @@ export const ConverterHub: React.FC = () => {
     },
     {
       title: "IMAGE CONVERTERS (RAW)",
+      icon: <Camera className="w-6 h-6 text-blue-600" />,
       formats: [
         { 
           name: "DNG to WebP Converter", 
@@ -326,6 +330,7 @@ export const ConverterHub: React.FC = () => {
     },
     {
       title: "IMAGE CONVERTERS (VECTOR)",
+      icon: <Image className="w-6 h-6 text-blue-600" />,
       formats: [
         { 
           name: "EPS to WebP Converter", 
@@ -340,6 +345,7 @@ export const ConverterHub: React.FC = () => {
     },
     {
       title: "E-BOOK CONVERTERS (EPUB)",
+      icon: <BookOpen className="w-6 h-6 text-orange-600" />,
       formats: [
         { 
           name: "EPUB to CSV Converter", 
@@ -471,6 +477,7 @@ export const ConverterHub: React.FC = () => {
     },
     {
       title: "DOCUMENT CONVERTERS (DOC)",
+      icon: <FileText className="w-6 h-6 text-green-600" />,
       formats: [
         { 
           name: "DOC to CSV Converter", 
@@ -521,6 +528,7 @@ export const ConverterHub: React.FC = () => {
     },
     {
       title: "DOCUMENT CONVERTERS (DOCX)",
+      icon: <FileText className="w-6 h-6 text-green-600" />,
       formats: [
         { 
           name: "DOCX to CSV Converter", 
@@ -664,7 +672,10 @@ export const ConverterHub: React.FC = () => {
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">{category.title}</h2>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
+                {category.icon}
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{category.title}</h2>
+              </div>
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 {category.formats.map((format, formatIndex) => (
                   <div
