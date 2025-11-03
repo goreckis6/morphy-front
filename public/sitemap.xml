@@ -150,6 +150,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://morphyimg.com/samples/sample-ai</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-aif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-aiff</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-amr</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-animated-gif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://morphyimg.com/samples/sample-7z</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>

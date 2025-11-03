@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music, Image } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
@@ -117,13 +117,29 @@ export const SamplesHub: React.FC = () => {
           format: "3MF",
           icon: <Box className="w-5 h-5 text-violet-600" />,
           iconColor: "text-violet-600"
+        },
+        { 
+          name: "AI Sample Files", 
+          description: "Download free AI sample Adobe Illustrator vector graphics files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics conversion and viewing tools.",
+          path: "/samples/sample-ai",
+          format: "AI",
+          icon: <Image className="w-5 h-5 text-pink-600" />,
+          iconColor: "text-pink-600"
         }
       ]
     },
     {
-      title: "VIDEO SAMPLES",
-      icon: <Video className="w-6 h-6 text-red-600" />,
+      title: "IMAGE & VIDEO SAMPLES",
+      icon: <Image className="w-6 h-6 text-cyan-600" />,
       formats: [
+        { 
+          name: "Animated GIF Sample Files", 
+          description: "Download free animated GIF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIF animation conversion and viewing tools.",
+          path: "/samples/sample-animated-gif",
+          format: "Animated GIF",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
         { 
           name: "3GP Sample Files", 
           description: "Download free 3GP sample mobile video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools.",
@@ -153,6 +169,30 @@ export const SamplesHub: React.FC = () => {
           format: "AC3",
           icon: <Music className="w-5 h-5 text-yellow-600" />,
           iconColor: "text-yellow-600"
+        },
+        { 
+          name: "AIF Sample Files", 
+          description: "Download free AIF sample Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion and playback tools.",
+          path: "/samples/sample-aif",
+          format: "AIF",
+          icon: <Music className="w-5 h-5 text-lime-600" />,
+          iconColor: "text-lime-600"
+        },
+        { 
+          name: "AIFF Sample Files", 
+          description: "Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion and playback tools.",
+          path: "/samples/sample-aiff",
+          format: "AIFF",
+          icon: <Music className="w-5 h-5 text-emerald-600" />,
+          iconColor: "text-emerald-600"
+        },
+        { 
+          name: "AMR Sample Files", 
+          description: "Download free AMR sample Adaptive Multi-Rate audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion and playback tools.",
+          path: "/samples/sample-amr",
+          format: "AMR",
+          icon: <Music className="w-5 h-5 text-fuchsia-600" />,
+          iconColor: "text-fuchsia-600"
         }
       ]
     },

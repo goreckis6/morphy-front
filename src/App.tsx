@@ -23,6 +23,11 @@ import Sample3mf from './components/Samples/Sample3mf';
 import SampleAac from './components/Samples/SampleAac';
 import SampleAc3 from './components/Samples/SampleAc3';
 import SampleAce from './components/Samples/SampleAce';
+import SampleAi from './components/Samples/SampleAi';
+import SampleAif from './components/Samples/SampleAif';
+import SampleAiff from './components/Samples/SampleAiff';
+import SampleAmr from './components/Samples/SampleAmr';
+import SampleAnimatedGif from './components/Samples/SampleAnimatedGif';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -303,6 +308,11 @@ function App() {
         <Route path="/samples/sample-aac" element={<SampleAac />} />
         <Route path="/samples/sample-ac3" element={<SampleAc3 />} />
         <Route path="/samples/sample-ace" element={<SampleAce />} />
+        <Route path="/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/samples/sample-aif" element={<SampleAif />} />
+        <Route path="/samples/sample-aiff" element={<SampleAiff />} />
+        <Route path="/samples/sample-amr" element={<SampleAmr />} />
+        <Route path="/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}
