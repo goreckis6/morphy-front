@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block Polish and German subpages
+Disallow: /pl/
+Disallow: /de/
+Disallow: /pl
+Disallow: /de
+
+# Sitemap
+Sitemap: https://morphyimg.com/sitemap.xml
+
