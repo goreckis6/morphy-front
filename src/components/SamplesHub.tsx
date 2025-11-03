@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, ArrowLeft, Search, Download } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
@@ -33,6 +33,34 @@ export const SamplesHub: React.FC = () => {
           format: "PDF",
           icon: <FileText className="w-5 h-5 text-blue-600" />,
           iconColor: "text-blue-600"
+        }
+      ]
+    },
+    {
+      title: "DATA SAMPLES",
+      icon: <FileSpreadsheet className="w-6 h-6 text-purple-600" />,
+      formats: [
+        { 
+          name: "CSV Sample Files", 
+          description: "Download free CSV sample data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSV conversion and data processing tools.",
+          path: "/samples/sample-csv",
+          format: "CSV",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        }
+      ]
+    },
+    {
+      title: "ARCHIVE SAMPLES",
+      icon: <Archive className="w-6 h-6 text-orange-600" />,
+      formats: [
+        { 
+          name: "7Z Sample Files", 
+          description: "Download free 7Z sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive conversion and extraction tools.",
+          path: "/samples/sample-7z",
+          format: "7Z",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         }
       ]
     }

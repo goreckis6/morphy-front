@@ -9,6 +9,8 @@ import NotFound from './pages/NotFound';
 import SampleDocx from './components/Samples/SampleDocx';
 import SampleDoc from './components/Samples/SampleDoc';
 import SamplePdf from './components/Samples/SamplePdf';
+import SampleCsv from './components/Samples/SampleCsv';
+import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
 import { JPGToTEXTConverter } from './components/ConversionPages/JPGToTEXTConverter';
@@ -274,6 +276,8 @@ function App() {
         <Route path="/samples/sample-docx" element={<SampleDocx />} />
         <Route path="/samples/sample-doc" element={<SampleDoc />} />
         <Route path="/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />
