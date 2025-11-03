@@ -2878,7 +2878,7 @@ const resources = {
       'csv_to_yaml.start_converting': 'Start Converting Now',
       
       // JPG Compression
-      'compress_jpg.title': 'Free JPG/JPEG Compressor - Compress JPEG Images Online',
+      'compress_jpg.title': 'Free JPG/JPEG Compressor',
       'compress_jpg.meta_title': 'Free JPG/JPEG Compressor Online - Reduce Image File Size Fast | MorphyIMG',
       'compress_jpg.meta_description': 'Free online JPG/JPEG compressor. Quickly reduce JPEG file size while keeping high image quality. Fast, secure, and easy-to-use JPG compression with adjustable quality levels, bulk upload, and instant preview.',
       'compress_jpg.meta_keywords': 'free jpg compressor, free jpeg compressor, compress jpg online, compress jpeg online, reduce jpg file size, image size reducer, jpeg optimization, photo compressor, picture compressor, bulk jpg compressor, online image compressor, optimize jpg for web, jpg size reducer, jpeg file shrinker, jpg optimizer, jpeg resizer, compress photos for website, free jpeg file compressor, reduce jpeg kb size, shrink jpg images online',

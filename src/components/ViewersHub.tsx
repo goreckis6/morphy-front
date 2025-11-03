@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw, Search } from 'lucide-react';
+import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw, Search, Camera, FileImage } from 'lucide-react';
 import { Header } from './Header';
 
 interface ViewerFormat {
@@ -7,6 +7,7 @@ interface ViewerFormat {
   description: string;
   path: string;
   icon: React.ReactNode;
+  iconColor: string;
 }
 
 export const ViewersHub: React.FC = () => {
@@ -17,36 +18,36 @@ export const ViewersHub: React.FC = () => {
       title: "STANDARD IMAGE FORMATS",
       icon: <Image className="w-6 h-6 text-blue-600" />,
       formats: [
-        { name: "JPEG Viewer", description: "View JPEG images with zoom and pan controls", path: "/viewers/jpg", icon: <Image className="w-5 h-5" /> },
-        { name: "PNG Viewer", description: "View PNG images with transparency support", path: "/viewers/png", icon: <Image className="w-5 h-5" /> },
-        { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewers/webp", icon: <Image className="w-5 h-5" /> },
-        { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewers/gif", icon: <Image className="w-5 h-5" /> },
-        { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewers/svg", icon: <Image className="w-5 h-5" /> },
-        { name: "BMP Viewer", description: "View bitmap images with color depth support", path: "/viewers/bmp", icon: <Image className="w-5 h-5" /> },
-        { name: "ICO Viewer", description: "View Windows icon files with multiple sizes", path: "/viewers/ico", icon: <Image className="w-5 h-5" /> },
-        { name: "HEIC Viewer", description: "View HEIC images from modern cameras", path: "/viewers/heic", icon: <Image className="w-5 h-5" /> },
-        { name: "AVIF Viewer", description: "View AVIF images with next-gen compression", path: "/viewers/avif", icon: <Image className="w-5 h-5" /> }
+        { name: "JPEG Viewer", description: "View JPEG images with zoom and pan controls", path: "/viewers/jpg", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "PNG Viewer", description: "View PNG images with transparency support", path: "/viewers/png", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "WebP Viewer", description: "View WebP images with modern compression", path: "/viewers/webp", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "GIF Viewer", description: "View animated GIF images with playback controls", path: "/viewers/gif", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "SVG Viewer", description: "View scalable vector graphics with zoom", path: "/viewers/svg", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "BMP Viewer", description: "View bitmap images with color depth support", path: "/viewers/bmp", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "ICO Viewer", description: "View Windows icon files with multiple sizes", path: "/viewers/ico", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "HEIC Viewer", description: "View HEIC images from modern cameras", path: "/viewers/heic", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" },
+        { name: "AVIF Viewer", description: "View AVIF images with next-gen compression", path: "/viewers/avif", icon: <Image className="w-5 h-5" />, iconColor: "text-blue-600" }
       ]
     },
     {
       title: "DOCUMENT FORMATS",
       icon: <FileText className="w-6 h-6 text-green-600" />,
       formats: [
-        { name: "PDF Viewer", description: "View PDF documents with page navigation", path: "/viewers/pdf", icon: <FileText className="w-5 h-5" /> },
-        { name: "DOCX Viewer", description: "View Microsoft Word documents", path: "/viewers/docx", icon: <FileText className="w-5 h-5" /> },
-        { name: "RTF Viewer", description: "View Rich Text Format documents", path: "/viewers/rtf", icon: <FileText className="w-5 h-5" /> },
-        { name: "ODT Viewer", description: "View OpenDocument Text files", path: "/viewers/odt", icon: <FileText className="w-5 h-5" /> },
-        { name: "TXT Viewer", description: "View plain text files with syntax highlighting", path: "/viewers/txt", icon: <FileText className="w-5 h-5" /> },
-        { name: "Markdown Viewer", description: "View Markdown files with rendered formatting", path: "/viewers/md", icon: <FileText className="w-5 h-5" /> }
+        { name: "PDF Viewer", description: "View PDF documents with page navigation", path: "/viewers/pdf", icon: <FileText className="w-5 h-5" />, iconColor: "text-green-600" },
+        { name: "DOCX Viewer", description: "View Microsoft Word documents", path: "/viewers/docx", icon: <FileText className="w-5 h-5" />, iconColor: "text-green-600" },
+        { name: "RTF Viewer", description: "View Rich Text Format documents", path: "/viewers/rtf", icon: <FileText className="w-5 h-5" />, iconColor: "text-green-600" },
+        { name: "ODT Viewer", description: "View OpenDocument Text files", path: "/viewers/odt", icon: <FileText className="w-5 h-5" />, iconColor: "text-green-600" },
+        { name: "TXT Viewer", description: "View plain text files with syntax highlighting", path: "/viewers/txt", icon: <FileText className="w-5 h-5" />, iconColor: "text-green-600" },
+        { name: "Markdown Viewer", description: "View Markdown files with rendered formatting", path: "/viewers/md", icon: <FileText className="w-5 h-5" />, iconColor: "text-green-600" }
       ]
     },
     {
       title: "SPREADSHEET FORMATS",
       icon: <BarChart3 className="w-6 h-6 text-purple-600" />,
       formats: [
-        { name: "Excel Viewer", description: "View Excel spreadsheets with formula support", path: "/viewers/xlsx", icon: <BarChart3 className="w-5 h-5" /> },
-        { name: "CSV Viewer", description: "View CSV files with table formatting", path: "/viewers/csv", icon: <BarChart3 className="w-5 h-5" /> },
-        { name: "ODS Viewer", description: "View OpenDocument Spreadsheet files", path: "/viewers/ods", icon: <BarChart3 className="w-5 h-5" /> }
+        { name: "Excel Viewer", description: "View Excel spreadsheets with formula support", path: "/viewers/xlsx", icon: <BarChart3 className="w-5 h-5" />, iconColor: "text-purple-600" },
+        { name: "CSV Viewer", description: "View CSV files with table formatting", path: "/viewers/csv", icon: <BarChart3 className="w-5 h-5" />, iconColor: "text-purple-600" },
+        { name: "ODS Viewer", description: "View OpenDocument Spreadsheet files", path: "/viewers/ods", icon: <BarChart3 className="w-5 h-5" />, iconColor: "text-purple-600" }
       ]
     },
     {
