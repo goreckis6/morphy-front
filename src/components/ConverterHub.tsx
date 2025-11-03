@@ -131,7 +131,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/csv-to-epub",
           inputFormat: "CSV",
           outputFormat: "EPUB",
-          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -140,7 +140,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/csv-to-html",
           inputFormat: "CSV",
           outputFormat: "HTML",
-          icon: <Code className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -158,7 +158,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/csv-to-mobi",
           inputFormat: "CSV",
           outputFormat: "MOBI",
-          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -230,7 +230,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/csv-to-xls",
           inputFormat: "CSV",
           outputFormat: "XLS",
-          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -239,7 +239,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/csv-to-xlsx",
           inputFormat: "CSV",
           outputFormat: "XLSX",
-          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         }
       ]
@@ -272,7 +272,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/csv-to-parquet",
           inputFormat: "CSV",
           outputFormat: "Parquet",
-          icon: <Database className="w-5 h-5 text-orange-600" />,
+          icon: <Code className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -281,7 +281,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/csv-to-sql",
           inputFormat: "CSV",
           outputFormat: "SQL",
-          icon: <Database className="w-5 h-5 text-orange-600" />,
+          icon: <Code className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -353,7 +353,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-csv",
           inputFormat: "EPUB",
           outputFormat: "CSV",
-          icon: <BarChart3 className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -362,7 +362,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-doc",
           inputFormat: "EPUB",
           outputFormat: "DOC",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -371,7 +371,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-docx",
           inputFormat: "EPUB",
           outputFormat: "DOCX",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -380,7 +380,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-html",
           inputFormat: "EPUB",
           outputFormat: "HTML",
-          icon: <Code className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -389,7 +389,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-md",
           inputFormat: "EPUB",
           outputFormat: "MD",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -407,7 +407,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-odp",
           inputFormat: "EPUB",
           outputFormat: "ODP",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -416,7 +416,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-odt",
           inputFormat: "EPUB",
           outputFormat: "ODT",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -425,7 +425,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-pdf",
           inputFormat: "EPUB",
           outputFormat: "PDF",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -434,7 +434,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-ppt",
           inputFormat: "EPUB",
           outputFormat: "PPT",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -443,7 +443,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-pptx",
           inputFormat: "EPUB",
           outputFormat: "PPTX",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -452,7 +452,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-rtf",
           inputFormat: "EPUB",
           outputFormat: "RTF",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -461,7 +461,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-txt",
           inputFormat: "EPUB",
           outputFormat: "TXT",
-          icon: <FileText className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
         { 
@@ -470,7 +470,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/epub-to-xlsx",
           inputFormat: "EPUB",
           outputFormat: "XLSX",
-          icon: <BarChart3 className="w-5 h-5 text-orange-600" />,
+          icon: <BookOpen className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         }
       ]
@@ -485,7 +485,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/doc-to-csv",
           inputFormat: "DOC",
           outputFormat: "CSV",
-          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -494,7 +494,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/doc-to-epub",
           inputFormat: "DOC",
           outputFormat: "EPUB",
-          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -503,7 +503,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/doc-to-mobi",
           inputFormat: "DOC",
           outputFormat: "MOBI",
-          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -536,7 +536,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/docx-to-csv",
           inputFormat: "DOCX",
           outputFormat: "CSV",
-          icon: <BarChart3 className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -545,7 +545,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/docx-to-epub",
           inputFormat: "DOCX",
           outputFormat: "EPUB",
-          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
@@ -554,7 +554,7 @@ export const ConverterHub: React.FC = () => {
           path: "/convert/docx-to-mobi",
           inputFormat: "DOCX",
           outputFormat: "MOBI",
-          icon: <BookOpen className="w-5 h-5 text-green-600" />,
+          icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         },
         { 
