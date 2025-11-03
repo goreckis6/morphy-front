@@ -29,16 +29,16 @@ export const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <nav className="flex items-center space-x-6">
-                <a href="/converters" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
-                  <ArrowLeftRight className="w-5 h-5" />
+                <a href="/converters" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors group">
+                  <ArrowLeftRight className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
                   <span>Converters</span>
                 </a>
-                <a href="/viewers" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
-                  <Eye className="w-5 h-5" />
+                <a href="/viewers" className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors group">
+                  <Eye className="w-5 h-5 text-purple-600 group-hover:text-purple-700" />
                   <span>Viewers</span>
                 </a>
-                <a href="/compress" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
-                  <Minimize2 className="w-5 h-5" />
+                <a href="/compress" className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors group">
+                  <Minimize2 className="w-5 h-5 text-orange-600 group-hover:text-orange-700" />
                   <span>Compress</span>
                 </a>
               </nav>
