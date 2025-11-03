@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowLeftRight, Eye, Minimize2 } from 'lucide-react';
+import { Menu, X, ArrowLeftRight, Eye, Minimize2, Download } from 'lucide-react';
 // import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
@@ -41,6 +41,10 @@ export const Header: React.FC = () => {
                   <Minimize2 className="w-5 h-5 text-orange-600 group-hover:text-orange-700" />
                   <span>Compress</span>
                 </a>
+                <a href="/samples" className="flex items-center space-x-2 text-gray-700 hover:text-teal-600 transition-colors group">
+                  <Download className="w-5 h-5 text-teal-600 group-hover:text-teal-700" />
+                  <span>Samples</span>
+                </a>
               </nav>
 
 
@@ -72,6 +76,10 @@ export const Header: React.FC = () => {
                 <a href="/compress" className="flex items-center space-x-3 text-gray-700 hover:text-orange-600 transition-colors font-medium py-2 group">
                   <Minimize2 className="w-5 h-5 text-orange-600 group-hover:text-orange-700" />
                   <span>Compress</span>
+                </a>
+                <a href="/samples" className="flex items-center space-x-3 text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 group">
+                  <Download className="w-5 h-5 text-teal-600 group-hover:text-teal-700" />
+                  <span>Samples</span>
                 </a>
                 
                 <div className="py-2">

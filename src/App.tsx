@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import Converters from './pages/Converters';
 import Viewers from './pages/Viewers';
 import Compress from './pages/Compress';
+import Samples from './pages/Samples';
 import NotFound from './pages/NotFound';
+import SampleDocx from './components/Samples/SampleDocx';
 
 // Converter Components
 import { JPGToTEXTConverter } from './components/ConversionPages/JPGToTEXTConverter';
@@ -145,6 +147,9 @@ function App() {
         {/* Compression Hub */}
         <Route path="/compress" element={<Compress />} />
 
+        {/* Samples Hub */}
+        <Route path="/samples" element={<Samples />} />
+
         {/* Converter Routes */}
         <Route path="/convert/jpg-to-text" element={<JPGToTEXTConverter />} />
         <Route path="/convert/jpg-to-txt" element={<JPGToTEXTConverter />} />
@@ -262,6 +267,9 @@ function App() {
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />
         <Route path="/compress/jpeg" element={<JPGCompressor />} />
+
+        {/* Sample Files Routes */}
+        <Route path="/samples/sample-docx" element={<SampleDocx />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />
