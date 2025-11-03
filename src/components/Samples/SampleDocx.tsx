@@ -13,6 +13,7 @@ interface SampleFile {
 export default function SampleDocx() {
   const [downloadingIndex, setDownloadingIndex] = useState<number | null>(null);
   const [countdown, setCountdown] = useState<number | null>(null);
+  const [readyToDownload, setReadyToDownload] = useState<number | null>(null);
   const [downloadComplete, setDownloadComplete] = useState<number | null>(null);
 
   const sampleFiles: SampleFile[] = [
@@ -26,6 +27,7 @@ export default function SampleDocx() {
   const handleDownload = async (index: number, filename: string) => {
     setDownloadingIndex(index);
     setDownloadComplete(null);
+    setReadyToDownload(null);
 
     // Countdown from 10 to 0
     let remaining = 10;
@@ -37,27 +39,31 @@ export default function SampleDocx() {
 
       if (remaining === 0) {
         clearInterval(countdownInterval);
-        
-        // Create download link
-        const downloadUrl = getStorageUrl(filename);
-        const link = document.createElement('a');
-        link.href = downloadUrl;
-        link.download = filename;
-        link.target = '_blank';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        setDownloadComplete(index);
-        setDownloadingIndex(null);
         setCountdown(null);
-
-        // Reset download complete after 2 seconds
-        setTimeout(() => {
-          setDownloadComplete(null);
-        }, 2000);
+        setReadyToDownload(index);
+        setDownloadingIndex(null);
       }
     }, 1000);
+  };
+
+  const handleDownloadNow = (index: number, filename: string) => {
+    // Create download link
+    const downloadUrl = getStorageUrl(filename);
+    const link = document.createElement('a');
+    link.href = downloadUrl;
+    link.download = filename;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    setDownloadComplete(index);
+    setReadyToDownload(null);
+
+    // Reset download complete after 2 seconds
+    setTimeout(() => {
+      setDownloadComplete(null);
+    }, 2000);
   };
 
   const pageJsonLd = {
@@ -160,7 +166,7 @@ export default function SampleDocx() {
                               <div className="flex items-center space-x-2 text-orange-600">
                                 <Clock className="w-4 h-4 animate-spin" />
                                 <span className="text-sm font-medium">
-                                  Download starts in {countdown}s...
+                                  Download ready in {countdown}s...
                                 </span>
                               </div>
                               <div className="w-full sm:w-48 bg-gray-200 rounded-full h-2">
@@ -172,6 +178,14 @@ export default function SampleDocx() {
                             </>
                           ) : null}
                         </div>
+                      ) : readyToDownload === index ? (
+                        <button
+                          onClick={() => handleDownloadNow(index, file.filename)}
+                          className="inline-flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto shadow-lg"
+                        >
+                          <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                          <span>Download Now</span>
+                        </button>
                       ) : downloadComplete === index ? (
                         <div className="flex items-center space-x-2 text-green-600">
                           <CheckCircle className="w-5 h-5" />
@@ -180,7 +194,7 @@ export default function SampleDocx() {
                       ) : (
                         <button
                           onClick={() => handleDownload(index, file.filename)}
-                          disabled={downloadingIndex !== null}
+                          disabled={downloadingIndex !== null || readyToDownload !== null}
                           className="inline-flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -244,6 +258,28 @@ export default function SampleDocx() {
             </div>
           </div>
         </div>
+
+        {/* Footer */}
+        <footer className="bg-gray-800 text-white py-12 mt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-2 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-2xl font-bold">MorphyIMG</h2>
+              </div>
+              
+              <p className="text-gray-300 mb-6">
+                Download free sample files for testing conversions, compression, and viewing tools.
+              </p>
+              
+              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
+                <span>© 2025 MorphyIMG. Built for file format professionals.</span>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
