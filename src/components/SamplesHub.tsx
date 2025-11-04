@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music, Image, Smartphone, Package, Palette, Database, Camera } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Box, Music, Image, Smartphone } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
