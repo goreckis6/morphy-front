@@ -57,6 +57,7 @@ import SampleConf from './components/Samples/SampleConf';
 import SampleConfigIni from './components/Samples/SampleConfigIni';
 import SampleCpio from './components/Samples/SampleCpio';
 import SampleCpp from './components/Samples/SampleCpp';
+import SampleCrx from './components/Samples/SampleCrx';
 import SampleCs from './components/Samples/SampleCs';
 import SampleCsr from './components/Samples/SampleCsr';
 import SampleCss from './components/Samples/SampleCss';
