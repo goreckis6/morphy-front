@@ -62,6 +62,16 @@ import SampleCsr from './components/Samples/SampleCsr';
 import SampleCss from './components/Samples/SampleCss';
 import SampleCue from './components/Samples/SampleCue';
 import SampleCustomerDatabaseSql from './components/Samples/SampleCustomerDatabaseSql';
+import SampleDav from './components/Samples/SampleDav';
+import SampleDbf from './components/Samples/SampleDbf';
+import SampleDds from './components/Samples/SampleDds';
+import SampleDem from './components/Samples/SampleDem';
+import SampleDer from './components/Samples/SampleDer';
+import SampleDmg from './components/Samples/SampleDmg';
+import SampleDmp from './components/Samples/SampleDmp';
+import SampleDng from './components/Samples/SampleDng';
+import SampleDockerComposeYml from './components/Samples/SampleDockerComposeYml';
+import SampleDockerfile from './components/Samples/SampleDockerfile';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -382,6 +392,16 @@ function App() {
         <Route path="/samples/sample-css" element={<SampleCss />} />
         <Route path="/samples/sample-cue" element={<SampleCue />} />
         <Route path="/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/samples/sample-dav" element={<SampleDav />} />
+        <Route path="/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/samples/sample-dds" element={<SampleDds />} />
+        <Route path="/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/samples/sample-der" element={<SampleDer />} />
+        <Route path="/samples/sample-dmg" element={<SampleDmg />} />
+        <Route path="/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/samples/sample-dng" element={<SampleDng />} />
+        <Route path="/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/samples/sample-dockerfile" element={<SampleDockerfile />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}
