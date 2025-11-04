@@ -81,6 +81,22 @@ import SampleEps from './components/Samples/SampleEps';
 import SampleEpub from './components/Samples/SampleEpub';
 import SampleExe from './components/Samples/SampleExe';
 import SampleExr from './components/Samples/SampleExr';
+import SampleGz from './components/Samples/SampleGz';
+import SampleH from './components/Samples/SampleH';
+import SampleHdr from './components/Samples/SampleHdr';
+import SampleHeic from './components/Samples/SampleHeic';
+import SampleHeif from './components/Samples/SampleHeif';
+import SampleHex from './components/Samples/SampleHex';
+import SampleHpp from './components/Samples/SampleHpp';
+import SampleHtml from './components/Samples/SampleHtml';
+import SampleIcns from './components/Samples/SampleIcns';
+import SampleIco from './components/Samples/SampleIco';
+import SampleIfc from './components/Samples/SampleIfc';
+import SampleIges from './components/Samples/SampleIges';
+import SampleIgs from './components/Samples/SampleIgs';
+import SampleImg from './components/Samples/SampleImg';
+import SampleIndd from './components/Samples/SampleIndd';
+import SampleIni from './components/Samples/SampleIni';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -419,6 +435,22 @@ function App() {
         <Route path="/samples/sample-epub" element={<SampleEpub />} />
         <Route path="/samples/sample-exe" element={<SampleExe />} />
         <Route path="/samples/sample-exr" element={<SampleExr />} />
+        <Route path="/samples/sample-gz" element={<SampleGz />} />
+        <Route path="/samples/sample-h" element={<SampleH />} />
+        <Route path="/samples/sample-hdr" element={<SampleHdr />} />
+        <Route path="/samples/sample-heic" element={<SampleHeic />} />
+        <Route path="/samples/sample-heif" element={<SampleHeif />} />
+        <Route path="/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/samples/sample-icns" element={<SampleIcns />} />
+        <Route path="/samples/sample-ico" element={<SampleIco />} />
+        <Route path="/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/samples/sample-img" element={<SampleImg />} />
+        <Route path="/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/samples/sample-ini" element={<SampleIni />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}

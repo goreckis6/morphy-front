@@ -288,6 +288,14 @@ export const SamplesHub: React.FC = () => {
           format: "EditorConfig",
           icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
           iconColor: "text-purple-600"
+        },
+        { 
+          name: "INI Sample Files", 
+          description: "Download free INI sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and settings file processing tools.",
+          path: "/samples/sample-ini",
+          format: "INI",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
         }
       ]
     },
@@ -412,6 +420,38 @@ export const SamplesHub: React.FC = () => {
           format: "DXF",
           icon: <Box className="w-5 h-5 text-amber-600" />,
           iconColor: "text-amber-600"
+        },
+        { 
+          name: "IFC Sample Files", 
+          description: "Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BIM software, IFC conversion, and building information modeling tools.",
+          path: "/samples/sample-ifc",
+          format: "IFC",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "IGES Sample Files", 
+          description: "Download free IGES sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGES conversion, and 3D model exchange tools.",
+          path: "/samples/sample-iges",
+          format: "IGES",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "IGS Sample Files", 
+          description: "Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGS conversion, and 3D model exchange tools.",
+          path: "/samples/sample-igs",
+          format: "IGS",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "INDD Sample Files", 
+          description: "Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing InDesign document conversion, INDD viewing, and desktop publishing tools.",
+          path: "/samples/sample-indd",
+          format: "INDD",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
         }
       ]
     },
@@ -512,6 +552,22 @@ export const SamplesHub: React.FC = () => {
           description: "Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, EXR conversion, and high dynamic range viewing tools.",
           path: "/samples/sample-exr",
           format: "EXR",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "ICNS Sample Files", 
+          description: "Download free ICNS sample macOS icon files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing macOS icon conversion, ICNS viewing, and icon design tools.",
+          path: "/samples/sample-icns",
+          format: "ICNS",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "ICO Sample Files", 
+          description: "Download free ICO sample Windows icon files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows icon conversion, ICO viewing, and icon design tools.",
+          path: "/samples/sample-ico",
+          format: "ICO",
           icon: <Image className="w-5 h-5 text-cyan-600" />,
           iconColor: "text-cyan-600"
         }
@@ -636,6 +692,14 @@ export const SamplesHub: React.FC = () => {
           description: "Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting and DMG extraction tools.",
           path: "/samples/sample-dmg",
           format: "DMG",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "IMG Sample Files", 
+          description: "Download free IMG sample disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting, IMG extraction, and disk image processing tools.",
+          path: "/samples/sample-img",
+          format: "IMG",
           icon: <Archive className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
