@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music, Image, Smartphone } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music, Image, Smartphone, Package, Palette } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
@@ -111,6 +111,22 @@ export const SamplesHub: React.FC = () => {
           format: "JSON",
           icon: <Code className="w-5 h-5 text-blue-600" />,
           iconColor: "text-blue-600"
+        },
+        { 
+          name: "Arduino INO Sample Files", 
+          description: "Download free Arduino INO sample code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Arduino code compilation and syntax checking tools.",
+          path: "/samples/sample-arduino-ino",
+          format: "INO",
+          icon: <Code className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
+        },
+        { 
+          name: "ASC Sample Files", 
+          description: "Download free ASC sample ASCII text files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing text file processing and ASCII encoding tools.",
+          path: "/samples/sample-asc",
+          format: "ASC",
+          icon: <FileText className="w-5 h-5 text-gray-600" />,
+          iconColor: "text-gray-600"
         }
       ]
     },
@@ -125,6 +141,14 @@ export const SamplesHub: React.FC = () => {
           format: "APK",
           icon: <Smartphone className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
+        },
+        { 
+          name: "AppImage Sample Files", 
+          description: "Download free AppImage sample Linux application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Linux app installation and AppImage analysis tools.",
+          path: "/samples/sample-appimage",
+          format: "AppImage",
+          icon: <Package className="w-5 h-5 text-slate-600" />,
+          iconColor: "text-slate-600"
         }
       ]
     },
@@ -155,6 +179,14 @@ export const SamplesHub: React.FC = () => {
           format: "AI",
           icon: <Image className="w-5 h-5 text-pink-600" />,
           iconColor: "text-pink-600"
+        },
+        { 
+          name: "ASE Sample Files", 
+          description: "Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing color palette conversion and viewing tools.",
+          path: "/samples/sample-ase",
+          format: "ASE",
+          icon: <Palette className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
         },
         { 
           name: "Animation FBX Sample Files", 
@@ -253,6 +285,14 @@ export const SamplesHub: React.FC = () => {
           format: "ACE",
           icon: <Archive className="w-5 h-5 text-slate-600" />,
           iconColor: "text-slate-600"
+        },
+        { 
+          name: "ARJ Sample Files", 
+          description: "Download free ARJ sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction and compression tools.",
+          path: "/samples/sample-arj",
+          format: "ARJ",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
         },
         { 
           name: "ZIP Sample Files", 

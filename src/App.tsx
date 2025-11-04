@@ -33,6 +33,11 @@ import SampleAnsibleYml from './components/Samples/SampleAnsibleYml';
 import SampleApiResponseJson from './components/Samples/SampleApiResponseJson';
 import SampleApk from './components/Samples/SampleApk';
 import SampleApng from './components/Samples/SampleApng';
+import SampleAppimage from './components/Samples/SampleAppimage';
+import SampleArduinoIno from './components/Samples/SampleArduinoIno';
+import SampleArj from './components/Samples/SampleArj';
+import SampleAsc from './components/Samples/SampleAsc';
+import SampleAse from './components/Samples/SampleAse';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -323,6 +328,11 @@ function App() {
         <Route path="/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
         <Route path="/samples/sample-apk" element={<SampleApk />} />
         <Route path="/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/samples/sample-arj" element={<SampleArj />} />
+        <Route path="/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/samples/sample-ase" element={<SampleAse />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}
