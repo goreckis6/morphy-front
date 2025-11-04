@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 import { 
   Upload, 
   FileText, 

@@ -73,6 +73,14 @@ import SampleDmp from './components/Samples/SampleDmp';
 import SampleDng from './components/Samples/SampleDng';
 import SampleDockerComposeYml from './components/Samples/SampleDockerComposeYml';
 import SampleDockerfile from './components/Samples/SampleDockerfile';
+import SampleDwg from './components/Samples/SampleDwg';
+import SampleDxf from './components/Samples/SampleDxf';
+import SampleEditorconfig from './components/Samples/SampleEditorconfig';
+import SampleElf from './components/Samples/SampleElf';
+import SampleEps from './components/Samples/SampleEps';
+import SampleEpub from './components/Samples/SampleEpub';
+import SampleExe from './components/Samples/SampleExe';
+import SampleExr from './components/Samples/SampleExr';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -403,6 +411,14 @@ function App() {
         <Route path="/samples/sample-dng" element={<SampleDng />} />
         <Route path="/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
         <Route path="/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/samples/sample-eps" element={<SampleEps />} />
+        <Route path="/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/samples/sample-exr" element={<SampleExr />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}

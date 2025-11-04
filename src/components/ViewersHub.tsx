@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Eye, ArrowLeft, FileText, Image, BarChart3, Code, RefreshCw, Search, Camera, FileImage } from 'lucide-react';
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 interface ViewerFormat {
   name: string;
@@ -266,23 +267,7 @@ export const ViewersHub: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="p-2 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
-                <RefreshCw className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold">MorphyIMG</h2>
-            </div>
-            
-            <p className="text-gray-300 mb-6">
-              The ultimate file conversion and viewing platform for professionals and everyday users.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

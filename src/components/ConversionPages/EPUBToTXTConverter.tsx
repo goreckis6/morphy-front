@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { 
   Upload, 

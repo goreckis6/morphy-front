@@ -1,6 +1,7 @@
 import React from 'react';
 import { BarChart3, FileSpreadsheet, Download, Share2 } from 'lucide-react';
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 
 export const SpreadsheetViewer: React.FC = () => {
   return (
@@ -26,27 +27,7 @@ export const SpreadsheetViewer: React.FC = () => {
         </div>
       </div>
       
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="p-2 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl">
-                <BarChart3 className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold">MorphyIMG</h2>
-            </div>
-            
-            <p className="text-gray-300 mb-6">
-              Professional spreadsheet viewer and converter for all your data processing needs.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-              <span>© 2025 MorphyIMG. Built for spreadsheet professionals.</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* Features Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

@@ -49,6 +49,14 @@ export const SamplesHub: React.FC = () => {
           format: "RTF",
           icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
+        },
+        { 
+          name: "EPUB Sample Files", 
+          description: "Download free EPUB sample eBook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing eBook readers, EPUB conversion, and digital publishing tools.",
+          path: "/samples/sample-epub",
+          format: "EPUB",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     },
@@ -271,6 +279,14 @@ export const SamplesHub: React.FC = () => {
           format: "Dockerfile",
           icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
           iconColor: "text-purple-600"
+        },
+        { 
+          name: "EditorConfig Sample Files", 
+          description: "Download free EditorConfig sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EditorConfig parsing and code formatting configuration tools.",
+          path: "/samples/sample-editorconfig",
+          format: "EditorConfig",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
         }
       ]
     },
@@ -291,6 +307,22 @@ export const SamplesHub: React.FC = () => {
           description: "Download free AppImage sample Linux application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Linux app installation and AppImage analysis tools.",
           path: "/samples/sample-appimage",
           format: "AppImage",
+          icon: <Smartphone className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
+        },
+        { 
+          name: "ELF Sample Files", 
+          description: "Download free ELF sample Executable and Linkable Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ELF file analysis, binary parsing, and executable file processing tools.",
+          path: "/samples/sample-elf",
+          format: "ELF",
+          icon: <Smartphone className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
+        },
+        { 
+          name: "EXE Sample Files", 
+          description: "Download free EXE sample Windows executable files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows executable analysis, binary parsing, and application installation tools.",
+          path: "/samples/sample-exe",
+          format: "EXE",
           icon: <Smartphone className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         }
@@ -361,6 +393,22 @@ export const SamplesHub: React.FC = () => {
           description: "Download free BVH sample motion capture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture processing and animation conversion tools.",
           path: "/samples/sample-bvh",
           format: "BVH",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "DWG Sample Files", 
+          description: "Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, AutoCAD conversion, and drawing file processing tools.",
+          path: "/samples/sample-dwg",
+          format: "DWG",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "DXF Sample Files", 
+          description: "Download free DXF sample Drawing Exchange Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, DXF conversion, and drawing file exchange tools.",
+          path: "/samples/sample-dxf",
+          format: "DXF",
           icon: <Box className="w-5 h-5 text-amber-600" />,
           iconColor: "text-amber-600"
         }
@@ -447,6 +495,22 @@ export const SamplesHub: React.FC = () => {
           description: "Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing raw image processing and DNG conversion tools.",
           path: "/samples/sample-dng",
           format: "DNG",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "EPS Sample Files", 
+          description: "Download free EPS sample Encapsulated PostScript files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics conversion, EPS viewing, and PostScript processing tools.",
+          path: "/samples/sample-eps",
+          format: "EPS",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "EXR Sample Files", 
+          description: "Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, EXR conversion, and high dynamic range viewing tools.",
+          path: "/samples/sample-exr",
+          format: "EXR",
           icon: <Image className="w-5 h-5 text-cyan-600" />,
           iconColor: "text-cyan-600"
         }
