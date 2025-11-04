@@ -127,6 +127,46 @@ export const SamplesHub: React.FC = () => {
           format: "ASC",
           icon: <FileText className="w-5 h-5 text-gray-600" />,
           iconColor: "text-gray-600"
+        },
+        { 
+          name: "BAT Sample Files", 
+          description: "Download free BAT sample batch script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution and Windows automation tools.",
+          path: "/samples/sample-bat",
+          format: "BAT",
+          icon: <Code className="w-5 h-5 text-gray-600" />,
+          iconColor: "text-gray-600"
+        },
+        { 
+          name: "BIB Sample Files", 
+          description: "Download free BIB sample BibTeX bibliography files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing bibliography management and citation processing tools.",
+          path: "/samples/sample-bib",
+          format: "BIB",
+          icon: <FileText className="w-5 h-5 text-indigo-600" />,
+          iconColor: "text-indigo-600"
+        },
+        { 
+          name: "C Sample Files", 
+          description: "Download free C sample source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C code compilation and syntax checking tools.",
+          path: "/samples/sample-c",
+          format: "C",
+          icon: <Code className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
+        },
+        { 
+          name: "CAN Log Sample Files", 
+          description: "Download free CAN log sample CAN bus log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAN bus analysis and log parsing tools.",
+          path: "/samples/sample-can-log",
+          format: "CAN Log",
+          icon: <FileText className="w-5 h-5 text-red-600" />,
+          iconColor: "text-red-600"
+        },
+        { 
+          name: "CMD Sample Files", 
+          description: "Download free CMD sample command script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing command script execution and Windows automation tools.",
+          path: "/samples/sample-cmd",
+          format: "CMD",
+          icon: <Code className="w-5 h-5 text-slate-600" />,
+          iconColor: "text-slate-600"
         }
       ]
     },
@@ -195,6 +235,30 @@ export const SamplesHub: React.FC = () => {
           format: "FBX",
           icon: <Box className="w-5 h-5 text-indigo-600" />,
           iconColor: "text-indigo-600"
+        },
+        { 
+          name: "AssetBundle Sample Files", 
+          description: "Download free AssetBundle sample Unity game asset files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Unity asset loading and game development tools.",
+          path: "/samples/sample-assetbundle",
+          format: "AssetBundle",
+          icon: <Box className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
+        },
+        { 
+          name: "BLEND Sample Files", 
+          description: "Download free BLEND sample Blender 3D model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model conversion and viewing tools.",
+          path: "/samples/sample-blend",
+          format: "BLEND",
+          icon: <Box className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "BVH Sample Files", 
+          description: "Download free BVH sample motion capture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture processing and animation conversion tools.",
+          path: "/samples/sample-bvh",
+          format: "BVH",
+          icon: <Box className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
         }
       ]
     },
@@ -217,6 +281,38 @@ export const SamplesHub: React.FC = () => {
           format: "APNG",
           icon: <Image className="w-5 h-5 text-teal-600" />,
           iconColor: "text-teal-600"
+        },
+        { 
+          name: "AVIF Sample Files", 
+          description: "Download free AVIF sample image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AVIF conversion and viewing tools.",
+          path: "/samples/sample-avif",
+          format: "AVIF",
+          icon: <Image className="w-5 h-5 text-emerald-600" />,
+          iconColor: "text-emerald-600"
+        },
+        { 
+          name: "BMP Sample Files", 
+          description: "Download free BMP sample bitmap image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing bitmap image conversion and viewing tools.",
+          path: "/samples/sample-bmp",
+          format: "BMP",
+          icon: <Image className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
+        },
+        { 
+          name: "Barcode SVG Sample Files", 
+          description: "Download free barcode SVG sample vector graphics files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing barcode scanning and SVG conversion tools.",
+          path: "/samples/sample-barcode-svg",
+          format: "Barcode SVG",
+          icon: <Image className="w-5 h-5 text-violet-600" />,
+          iconColor: "text-violet-600"
+        },
+        { 
+          name: "AVI Sample Files", 
+          description: "Download free AVI sample video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools.",
+          path: "/samples/sample-avi",
+          format: "AVI",
+          icon: <Video className="w-5 h-5 text-red-600" />,
+          iconColor: "text-red-600"
         },
         { 
           name: "3GP Sample Files", 
@@ -271,6 +367,14 @@ export const SamplesHub: React.FC = () => {
           format: "AMR",
           icon: <Music className="w-5 h-5 text-fuchsia-600" />,
           iconColor: "text-fuchsia-600"
+        },
+        { 
+          name: "CAF Sample Files", 
+          description: "Download free CAF sample Core Audio Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion and playback tools.",
+          path: "/samples/sample-caf",
+          format: "CAF",
+          icon: <Music className="w-5 h-5 text-pink-600" />,
+          iconColor: "text-pink-600"
         }
       ]
     },
@@ -293,6 +397,22 @@ export const SamplesHub: React.FC = () => {
           format: "ARJ",
           icon: <Archive className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
+        },
+        { 
+          name: "BZ2 Sample Files", 
+          description: "Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive decompression and compression tools.",
+          path: "/samples/sample-bz2",
+          format: "BZ2",
+          icon: <Archive className="w-5 h-5 text-slate-600" />,
+          iconColor: "text-slate-600"
+        },
+        { 
+          name: "CAB Sample Files", 
+          description: "Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction and compression tools.",
+          path: "/samples/sample-cab",
+          format: "CAB",
+          icon: <Archive className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
         },
         { 
           name: "ZIP Sample Files", 

@@ -38,6 +38,21 @@ import SampleArduinoIno from './components/Samples/SampleArduinoIno';
 import SampleArj from './components/Samples/SampleArj';
 import SampleAsc from './components/Samples/SampleAsc';
 import SampleAse from './components/Samples/SampleAse';
+import SampleAssetbundle from './components/Samples/SampleAssetbundle';
+import SampleAvi from './components/Samples/SampleAvi';
+import SampleAvif from './components/Samples/SampleAvif';
+import SampleBarcodeSvg from './components/Samples/SampleBarcodeSvg';
+import SampleBat from './components/Samples/SampleBat';
+import SampleBib from './components/Samples/SampleBib';
+import SampleBlend from './components/Samples/SampleBlend';
+import SampleBmp from './components/Samples/SampleBmp';
+import SampleBvh from './components/Samples/SampleBvh';
+import SampleBz2 from './components/Samples/SampleBz2';
+import SampleC from './components/Samples/SampleC';
+import SampleCab from './components/Samples/SampleCab';
+import SampleCaf from './components/Samples/SampleCaf';
+import SampleCanLog from './components/Samples/SampleCanLog';
+import SampleCmd from './components/Samples/SampleCmd';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -333,6 +348,21 @@ function App() {
         <Route path="/samples/sample-arj" element={<SampleArj />} />
         <Route path="/samples/sample-asc" element={<SampleAsc />} />
         <Route path="/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/samples/sample-bz2" element={<SampleBz2 />} />
+        <Route path="/samples/sample-c" element={<SampleC />} />
+        <Route path="/samples/sample-cab" element={<SampleCab />} />
+        <Route path="/samples/sample-caf" element={<SampleCaf />} />
+        <Route path="/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/samples/sample-cmd" element={<SampleCmd />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}
