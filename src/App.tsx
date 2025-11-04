@@ -28,6 +28,11 @@ import SampleAif from './components/Samples/SampleAif';
 import SampleAiff from './components/Samples/SampleAiff';
 import SampleAmr from './components/Samples/SampleAmr';
 import SampleAnimatedGif from './components/Samples/SampleAnimatedGif';
+import SampleAnimationFbx from './components/Samples/SampleAnimationFbx';
+import SampleAnsibleYml from './components/Samples/SampleAnsibleYml';
+import SampleApiResponseJson from './components/Samples/SampleApiResponseJson';
+import SampleApk from './components/Samples/SampleApk';
+import SampleApng from './components/Samples/SampleApng';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -313,6 +318,11 @@ function App() {
         <Route path="/samples/sample-aiff" element={<SampleAiff />} />
         <Route path="/samples/sample-amr" element={<SampleAmr />} />
         <Route path="/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/samples/sample-apng" element={<SampleApng />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}

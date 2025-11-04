@@ -180,6 +180,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://morphyimg.com/samples/sample-animation-fbx</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-ansible-yml</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-api-response-json</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-apk</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyimg.com/samples/sample-apng</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://morphyimg.com/samples/sample-7z</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>

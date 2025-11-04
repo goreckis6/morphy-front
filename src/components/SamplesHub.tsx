@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music, Image } from 'lucide-react';
+import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Code, Box, Video, Music, Image, Smartphone } from 'lucide-react';
 import { Header } from './Header';
 
 export const SamplesHub: React.FC = () => {
@@ -95,6 +95,36 @@ export const SamplesHub: React.FC = () => {
           format: "ODS",
           icon: <FileSpreadsheet className="w-5 h-5 text-emerald-600" />,
           iconColor: "text-emerald-600"
+        },
+        { 
+          name: "Ansible YML Sample Files", 
+          description: "Download free Ansible YML sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing YAML parsing and configuration management tools.",
+          path: "/samples/sample-ansible-yml",
+          format: "YML",
+          icon: <Code className="w-5 h-5 text-red-600" />,
+          iconColor: "text-red-600"
+        },
+        { 
+          name: "API Response JSON Sample Files", 
+          description: "Download free API response JSON sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsing and API response handling tools.",
+          path: "/samples/sample-api-response-json",
+          format: "JSON",
+          icon: <Code className="w-5 h-5 text-blue-600" />,
+          iconColor: "text-blue-600"
+        }
+      ]
+    },
+    {
+      title: "APPLICATION SAMPLES",
+      icon: <Smartphone className="w-6 h-6 text-green-600" />,
+      formats: [
+        { 
+          name: "APK Sample Files", 
+          description: "Download free APK sample Android application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Android app installation and APK analysis tools.",
+          path: "/samples/sample-apk",
+          format: "APK",
+          icon: <Smartphone className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     },
@@ -125,6 +155,14 @@ export const SamplesHub: React.FC = () => {
           format: "AI",
           icon: <Image className="w-5 h-5 text-pink-600" />,
           iconColor: "text-pink-600"
+        },
+        { 
+          name: "Animation FBX Sample Files", 
+          description: "Download free animation FBX sample 3D animation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation conversion and viewing tools.",
+          path: "/samples/sample-animation-fbx",
+          format: "FBX",
+          icon: <Box className="w-5 h-5 text-indigo-600" />,
+          iconColor: "text-indigo-600"
         }
       ]
     },
@@ -139,6 +177,14 @@ export const SamplesHub: React.FC = () => {
           format: "Animated GIF",
           icon: <Image className="w-5 h-5 text-cyan-600" />,
           iconColor: "text-cyan-600"
+        },
+        { 
+          name: "APNG Sample Files", 
+          description: "Download free APNG sample animated PNG files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing animated PNG conversion and viewing tools.",
+          path: "/samples/sample-apng",
+          format: "APNG",
+          icon: <Image className="w-5 h-5 text-teal-600" />,
+          iconColor: "text-teal-600"
         },
         { 
           name: "3GP Sample Files", 
