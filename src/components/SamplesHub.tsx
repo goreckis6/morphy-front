@@ -58,6 +58,14 @@ export const SamplesHub: React.FC = () => {
           format: "EPUB",
           icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
+        },
+        { 
+          name: "Invoice PDF Sample Files", 
+          description: "Download free Invoice PDF sample invoice document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing PDF invoice processing, invoice parsing, and document management tools.",
+          path: "/samples/sample-invoice-pdf",
+          format: "Invoice PDF",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     },
@@ -296,6 +304,38 @@ export const SamplesHub: React.FC = () => {
           format: "INI",
           icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
           iconColor: "text-purple-600"
+        },
+        { 
+          name: "IntelHex Sample Files", 
+          description: "Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing firmware programming, IntelHex parsing, and embedded systems development tools.",
+          path: "/samples/sample-intelhex",
+          format: "IntelHex",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "IPYNB Sample Files", 
+          description: "Download free IPYNB sample Jupyter notebook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Jupyter notebook processing, IPYNB parsing, and data science development tools.",
+          path: "/samples/sample-ipynb",
+          format: "IPYNB",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "Java Sample Files", 
+          description: "Download free Java sample Java source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java code compilation, Java syntax checking, and Java development tools.",
+          path: "/samples/sample-java",
+          format: "Java",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "JKS Sample Files", 
+          description: "Download free JKS sample Java KeyStore files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java KeyStore management, JKS parsing, and SSL certificate storage tools.",
+          path: "/samples/sample-jks",
+          format: "JKS",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
         }
       ]
     },
@@ -332,6 +372,22 @@ export const SamplesHub: React.FC = () => {
           description: "Download free EXE sample Windows executable files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows executable analysis, binary parsing, and application installation tools.",
           path: "/samples/sample-exe",
           format: "EXE",
+          icon: <Smartphone className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
+        },
+        { 
+          name: "IPA Sample Files", 
+          description: "Download free IPA sample iOS application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing iOS app installation, IPA analysis, and mobile application development tools.",
+          path: "/samples/sample-ipa",
+          format: "IPA",
+          icon: <Smartphone className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
+        },
+        { 
+          name: "JAR Sample Files", 
+          description: "Download free JAR sample Java archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java application execution, JAR extraction, and Java development tools.",
+          path: "/samples/sample-jar",
+          format: "JAR",
           icon: <Smartphone className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
         }
@@ -700,6 +756,14 @@ export const SamplesHub: React.FC = () => {
           description: "Download free IMG sample disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting, IMG extraction, and disk image processing tools.",
           path: "/samples/sample-img",
           format: "IMG",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "ISO Sample Files", 
+          description: "Download free ISO sample ISO disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ISO disk image mounting, ISO extraction, and disk image processing tools.",
+          path: "/samples/sample-iso",
+          format: "ISO",
           icon: <Archive className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },

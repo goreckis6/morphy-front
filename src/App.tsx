@@ -97,6 +97,14 @@ import SampleIgs from './components/Samples/SampleIgs';
 import SampleImg from './components/Samples/SampleImg';
 import SampleIndd from './components/Samples/SampleIndd';
 import SampleIni from './components/Samples/SampleIni';
+import SampleIntelhex from './components/Samples/SampleIntelhex';
+import SampleInvoicePdf from './components/Samples/SampleInvoicePdf';
+import SampleIpa from './components/Samples/SampleIpa';
+import SampleIpynb from './components/Samples/SampleIpynb';
+import SampleIso from './components/Samples/SampleIso';
+import SampleJar from './components/Samples/SampleJar';
+import SampleJava from './components/Samples/SampleJava';
+import SampleJks from './components/Samples/SampleJks';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -451,6 +459,14 @@ function App() {
         <Route path="/samples/sample-img" element={<SampleImg />} />
         <Route path="/samples/sample-indd" element={<SampleIndd />} />
         <Route path="/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/samples/sample-iso" element={<SampleIso />} />
+        <Route path="/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/samples/sample-java" element={<SampleJava />} />
+        <Route path="/samples/sample-jks" element={<SampleJks />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}
