@@ -3,6 +3,7 @@ import { Image, Upload, Eye, Download, Share2, ArrowLeft, Code, Palette, Zap, Ch
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
 
 export const SVGViewer: React.FC = () => {
@@ -278,27 +279,7 @@ export const SVGViewer: React.FC = () => {
           </div>
         </div>
         
-        {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold">MorphyIMG</h2>
-              </div>
-              
-              <p className="text-gray-300 mb-6">
-                Professional SVG viewer and converter for all your image processing needs.
-              </p>
-              
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-                <span>© 2025 MorphyIMG. Built for SVG professionals.</span>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
 
         {/* File Viewer Modal */}
         {viewerFile && (

@@ -4,6 +4,7 @@ import { Image, Upload, Eye, Download, ArrowLeft, Camera, Palette, Zap, Info, Ch
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 
 export const PNGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -336,27 +337,7 @@ export const PNGViewer: React.FC = () => {
         </div>
       </div>
       
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8 sm:py-12 mt-12 sm:mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-4 sm:mb-6">
-              <div className="p-2 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl">
-                <Image className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-              <h2 className="text-xl sm:text-2xl font-bold">MorphyIMG</h2>
-            </div>
-            
-            <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
-              Professional PNG viewer for all your image processing needs.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-2 text-xs sm:text-sm text-gray-300">
-              <span>© 2025 MorphyIMG. Built for PNG professionals.</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {/* File Viewer Modal */}
       {viewerFile && (

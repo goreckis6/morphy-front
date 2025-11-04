@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Code, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Globe, Layout, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const HTMLViewer: React.FC = () => {
@@ -452,26 +453,7 @@ export const HTMLViewer: React.FC = () => {
         </div>
         
         {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold">MorphyIMG</h2>
-              </div>
-              
-              <p className="text-gray-300 mb-6">
-                Free professional HTML viewer for all your web development needs.
-              </p>
-              
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-                <span>© 2025 MorphyIMG. Built for web developers.</span>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

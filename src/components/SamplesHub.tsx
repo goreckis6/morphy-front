@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Box, Music, Image, Smartphone } from 'lucide-react';
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 export const SamplesHub: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -671,7 +672,7 @@ export const SamplesHub: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
       
       {/* Back Button */}
@@ -689,7 +690,7 @@ export const SamplesHub: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 flex-grow">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
@@ -817,27 +818,7 @@ export const SamplesHub: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="p-2 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl">
-                <Download className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl font-bold">MorphyIMG</h2>
-            </div>
-            
-            <p className="text-gray-300 mb-6">
-              Download free sample files for testing conversions, compression, and viewing tools.
-            </p>
-            
-            <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-              <span>© 2025 MorphyIMG. Built for file format professionals.</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

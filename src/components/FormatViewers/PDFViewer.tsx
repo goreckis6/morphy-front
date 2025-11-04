@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Book, Search, ZoomIn } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
+import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const PDFViewer: React.FC = () => {
@@ -464,26 +465,7 @@ export const PDFViewer: React.FC = () => {
         </div>
         
         {/* Footer */}
-        <footer className="bg-gray-800 text-white py-12 mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold">MorphyIMG</h2>
-              </div>
-              
-              <p className="text-gray-300 mb-6">
-                Free professional PDF viewer for all your document needs.
-              </p>
-              
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-                <span>© 2025 MorphyIMG. Built for PDF professionals.</span>
-              </div>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );
