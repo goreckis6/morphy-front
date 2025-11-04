@@ -68,7 +68,7 @@ export default function SampleDmp() {
     "@type": "WebPage",
     "name": "Free DMP Sample Files - Download Test Memory Dump Files",
     "url": "https://morphyimg.com/samples/sample-dmp",
-    "description": "Download free DMP sample memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing crash dump analysis, memory dump parsing, and debugging tools.",
+    "description": "Download free DMP sample memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing crash dump analysis and memory dump parsing tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -81,8 +81,8 @@ export default function SampleDmp() {
     <>
       <Helmet>
         <title>Free DMP Sample Files Download - Test Memory Dump Files | MorphyIMG</title>
-        <meta name="description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing crash dump analysis, memory dump parsing, and debugging tools." />
-        <meta name="keywords" content="DMP sample files, test DMP files, download DMP samples, free DMP test files, memory dump samples, crash dump samples, debugging file samples, DMP conversion test files, .dmp test files, crash analysis samples, debugging tool samples" />
+        <meta name="description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing crash dump analysis and memory dump parsing tools." />
+        <meta name="keywords" content="DMP sample files, test DMP files, download DMP samples, free DMP test files, memory dump samples, crash dump samples, DMP dump files, DMP conversion test files, .dmp test files, crash analysis samples, debug dump samples" />
         <meta property="og:title" content="Free DMP Sample Files Download - Test Memory Dump Files | MorphyIMG" />
         <meta property="og:description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available for testing crash dump analysis and memory dump parsing tools." />
         <meta property="og:type" content="website" />
@@ -125,7 +125,7 @@ export default function SampleDmp() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DMP sample memory dump files for testing. Multiple file sizes available to test your crash dump analysis, memory dump parsing, and debugging tools.
+              Download free DMP sample memory dump files for testing. Multiple file sizes available to test your crash dump analysis and memory dump parsing tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDmp() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test DMP (memory dump) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing crash dump analysis, memory dump parsing, and debugging tools</li>
+              <li>• Perfect for testing crash dump analysis and memory dump parsing tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>

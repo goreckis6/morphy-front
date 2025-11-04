@@ -68,7 +68,7 @@ export default function SampleDer() {
     "@type": "WebPage",
     "name": "Free DER Sample Files - Download Test DER Certificate Files",
     "url": "https://morphyimg.com/samples/sample-der",
-    "description": "Download free DER sample DER certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate processing, DER parsing, and security certificate tools.",
+    "description": "Download free DER sample DER certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate processing and DER parsing tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -81,7 +81,7 @@ export default function SampleDer() {
     <>
       <Helmet>
         <title>Free DER Sample Files Download - Test DER Certificate Files | MorphyIMG</title>
-        <meta name="description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate processing, DER parsing, and security certificate tools." />
+        <meta name="description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate processing and DER parsing tools." />
         <meta name="keywords" content="DER sample files, test DER files, download DER samples, free DER test files, DER certificate samples, SSL certificate samples, security certificate samples, DER conversion test files, .der test files, certificate format samples, PKI samples" />
         <meta property="og:title" content="Free DER Sample Files Download - Test DER Certificate Files | MorphyIMG" />
         <meta property="og:description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available for testing SSL certificate processing and DER parsing tools." />
@@ -125,7 +125,7 @@ export default function SampleDer() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DER sample DER certificate files for testing. Multiple file sizes available to test your SSL certificate processing, DER parsing, and security certificate tools.
+              Download free DER sample DER certificate files for testing. Multiple file sizes available to test your SSL certificate processing and DER parsing tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDer() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test DER (DER certificate) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing SSL certificate processing, DER parsing, and security certificate tools</li>
+              <li>• Perfect for testing SSL certificate processing and DER parsing tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>

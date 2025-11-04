@@ -66,9 +66,9 @@ export default function SampleDockerComposeYml() {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Free Docker Compose YML Sample Files - Download Test Docker Compose Files",
+    "name": "Free Docker Compose YML Sample Files - Download Test Docker Compose Configuration Files",
     "url": "https://morphyimg.com/samples/sample-docker-compose-yml",
-    "description": "Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose parsing, container orchestration, and DevOps tools.",
+    "description": "Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose parsing and container orchestration tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -80,15 +80,15 @@ export default function SampleDockerComposeYml() {
   return (
     <>
       <Helmet>
-        <title>Free Docker Compose YML Sample Files Download - Test Docker Compose Files | MorphyIMG</title>
-        <meta name="description" content="Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose parsing, container orchestration, and DevOps tools." />
-        <meta name="keywords" content="Docker Compose YML sample files, test Docker Compose files, download Docker Compose samples, free Docker Compose test files, Docker Compose configuration samples, container orchestration samples, DevOps configuration samples, Docker Compose conversion test files, docker-compose.yml test files, container management samples" />
-        <meta property="og:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Files | MorphyIMG" />
+        <title>Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyIMG</title>
+        <meta name="description" content="Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose parsing and container orchestration tools." />
+        <meta name="keywords" content="Docker Compose YML sample files, test docker-compose.yml files, download Docker Compose samples, free Docker Compose test files, Docker Compose configuration samples, container orchestration samples, Docker Compose YML files, Docker Compose conversion test files, docker-compose.yml test files, container configuration samples, Docker orchestration samples" />
+        <meta property="og:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyIMG" />
         <meta property="og:description" content="Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available for testing Docker Compose parsing and container orchestration tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyimg.com/samples/sample-docker-compose-yml" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyimg.com/samples/sample-docker-compose-yml" />
         <script
@@ -117,7 +117,7 @@ export default function SampleDockerComposeYml() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
-              <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl">
                 <Code className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -125,7 +125,7 @@ export default function SampleDockerComposeYml() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available to test your Docker Compose parsing, container orchestration, and DevOps tools.
+              Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available to test your Docker Compose parsing and container orchestration tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDockerComposeYml() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test Docker Compose YML (Docker Compose configuration) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing Docker Compose parsing, container orchestration, and DevOps tools</li>
+              <li>• Perfect for testing Docker Compose parsing and container orchestration tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>
@@ -227,8 +227,8 @@ export default function SampleDockerComposeYml() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-cyan-600" />
+              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-indigo-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
@@ -255,7 +255,7 @@ export default function SampleDockerComposeYml() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
+                <div className="p-2 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl">
                   <Code className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold">MorphyIMG</h2>

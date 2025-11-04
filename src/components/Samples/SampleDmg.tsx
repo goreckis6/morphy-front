@@ -68,7 +68,7 @@ export default function SampleDmg() {
     "@type": "WebPage",
     "name": "Free DMG Sample Files - Download Test macOS Disk Image Files",
     "url": "https://morphyimg.com/samples/sample-dmg",
-    "description": "Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting, DMG extraction, and macOS application installation tools.",
+    "description": "Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting and DMG extraction tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -81,8 +81,8 @@ export default function SampleDmg() {
     <>
       <Helmet>
         <title>Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyIMG</title>
-        <meta name="description" content="Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting, DMG extraction, and macOS application installation tools." />
-        <meta name="keywords" content="DMG sample files, test DMG files, download DMG samples, free DMG test files, macOS disk image samples, Apple disk image samples, DMG conversion test files, .dmg test files, macOS application samples, disk image samples" />
+        <meta name="description" content="Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting and DMG extraction tools." />
+        <meta name="keywords" content="DMG sample files, test DMG files, download DMG samples, free DMG test files, macOS disk image samples, disk image samples, DMG archive samples, DMG conversion test files, .dmg test files, macOS installer samples, Apple disk image samples" />
         <meta property="og:title" content="Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyIMG" />
         <meta property="og:description" content="Download free DMG sample macOS disk image files for testing. Multiple file sizes available for testing disk image mounting and DMG extraction tools." />
         <meta property="og:type" content="website" />
@@ -125,7 +125,7 @@ export default function SampleDmg() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DMG sample macOS disk image files for testing. Multiple file sizes available to test your disk image mounting, DMG extraction, and macOS application installation tools.
+              Download free DMG sample macOS disk image files for testing. Multiple file sizes available to test your disk image mounting and DMG extraction tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDmg() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test DMG (macOS disk image) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing disk image mounting, DMG extraction, and macOS application installation tools</li>
+              <li>• Perfect for testing disk image mounting and DMG extraction tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>

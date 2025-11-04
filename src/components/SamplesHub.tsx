@@ -226,7 +226,7 @@ export const SamplesHub: React.FC = () => {
         },
         { 
           name: "DBF Sample Files", 
-          description: "Download free DBF sample dBASE database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion and DBF parsing tools.",
+          description: "Download free DBF sample database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion and data processing tools.",
           path: "/samples/sample-dbf",
           format: "DBF",
           icon: <Database className="w-5 h-5 text-blue-600" />,
@@ -411,22 +411,6 @@ export const SamplesHub: React.FC = () => {
           iconColor: "text-violet-600"
         },
         { 
-          name: "DDS Sample Files", 
-          description: "Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing texture conversion and DDS processing tools.",
-          path: "/samples/sample-dds",
-          format: "DDS",
-          icon: <Image className="w-5 h-5 text-purple-600" />,
-          iconColor: "text-purple-600"
-        },
-        { 
-          name: "DNG Sample Files", 
-          description: "Download free DNG sample Digital Negative RAW image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing RAW image conversion and DNG processing tools.",
-          path: "/samples/sample-dng",
-          format: "DNG",
-          icon: <Camera className="w-5 h-5 text-amber-600" />,
-          iconColor: "text-amber-600"
-        },
-        { 
           name: "AVI Sample Files", 
           description: "Download free AVI sample video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools.",
           path: "/samples/sample-avi",
@@ -444,10 +428,26 @@ export const SamplesHub: React.FC = () => {
         },
         { 
           name: "DAV Sample Files", 
-          description: "Download free DAV sample DAV video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools.",
+          description: "Download free DAV sample video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools.",
           path: "/samples/sample-dav",
           format: "DAV",
-          icon: <Video className="w-5 h-5 text-red-600" />,
+          icon: <Video className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "DDS Sample Files", 
+          description: "Download free DDS sample DirectDraw Surface image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing texture image conversion and viewing tools.",
+          path: "/samples/sample-dds",
+          format: "DDS",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "DNG Sample Files", 
+          description: "Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing raw image processing and DNG conversion tools.",
+          path: "/samples/sample-dng",
+          format: "DNG",
+          icon: <Camera className="w-5 h-5 text-red-600" />,
           iconColor: "text-red-600"
         }
       ]
@@ -559,20 +559,20 @@ export const SamplesHub: React.FC = () => {
           iconColor: "text-teal-600"
         },
         { 
-          name: "DMG Sample Files", 
-          description: "Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting and DMG extraction tools.",
-          path: "/samples/sample-dmg",
-          format: "DMG",
-          icon: <Package className="w-5 h-5 text-slate-600" />,
-          iconColor: "text-slate-600"
-        },
-        { 
           name: "ZIP Sample Files", 
           description: "Download free ZIP sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction and compression tools.",
           path: "/samples/sample-zip",
           format: "ZIP",
           icon: <Archive className="w-5 h-5 text-blue-600" />,
           iconColor: "text-blue-600"
+        },
+        { 
+          name: "DMG Sample Files", 
+          description: "Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting and DMG extraction tools.",
+          path: "/samples/sample-dmg",
+          format: "DMG",
+          icon: <Package className="w-5 h-5 text-slate-600" />,
+          iconColor: "text-slate-600"
         },
         { 
           name: "7Z Sample Files", 

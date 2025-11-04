@@ -66,9 +66,9 @@ export default function SampleDng() {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Free DNG Sample Files - Download Test Digital Negative Files",
+    "name": "Free DNG Sample Files - Download Test Digital Negative Raw Image Files",
     "url": "https://morphyimg.com/samples/sample-dng",
-    "description": "Download free DNG sample Digital Negative RAW image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing RAW image conversion, DNG processing, and photography tools.",
+    "description": "Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing raw image processing and DNG conversion tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -80,16 +80,16 @@ export default function SampleDng() {
   return (
     <>
       <Helmet>
-        <title>Free DNG Sample Files Download - Test Digital Negative Files | MorphyIMG</title>
-        <meta name="description" content="Download free DNG sample Digital Negative RAW image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing RAW image conversion, DNG processing, and photography tools." />
-        <meta name="keywords" content="DNG sample files, test DNG files, download DNG samples, free DNG test files, Digital Negative samples, RAW image samples, DNG conversion test files, .dng test files, camera RAW samples, photography samples" />
-        <meta property="og:title" content="Free DNG Sample Files Download - Test Digital Negative Files | MorphyIMG" />
-        <meta property="og:description" content="Download free DNG sample Digital Negative RAW image files for testing. Multiple file sizes available for testing RAW image conversion and DNG processing tools." />
+        <title>Free DNG Sample Files Download - Test Digital Negative Raw Image Files | MorphyIMG</title>
+        <meta name="description" content="Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing raw image processing and DNG conversion tools." />
+        <meta name="keywords" content="DNG sample files, test DNG files, download DNG samples, free DNG test files, Digital Negative samples, raw image samples, DNG raw files, DNG conversion test files, .dng test files, camera raw samples, Adobe DNG samples" />
+        <meta property="og:title" content="Free DNG Sample Files Download - Test Digital Negative Raw Image Files | MorphyIMG" />
+        <meta property="og:description" content="Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available for testing raw image processing and DNG conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyimg.com/samples/sample-dng" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DNG Sample Files Download - Test Digital Negative Files | MorphyIMG" />
-        <meta name="twitter:description" content="Download free DNG sample Digital Negative RAW image files for testing. Multiple file sizes available." />
+        <meta name="twitter:title" content="Free DNG Sample Files Download - Test Digital Negative Raw Image Files | MorphyIMG" />
+        <meta name="twitter:description" content="Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyimg.com/samples/sample-dng" />
         <script
           type="application/ld+json"
@@ -117,7 +117,7 @@ export default function SampleDng() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
-              <div className="p-2 sm:p-3 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl">
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl">
                 <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -125,7 +125,7 @@ export default function SampleDng() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DNG sample Digital Negative RAW image files for testing. Multiple file sizes available to test your RAW image conversion, DNG processing, and photography tools.
+              Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available to test your raw image processing and DNG conversion tools.
             </p>
           </div>
 
@@ -140,8 +140,8 @@ export default function SampleDng() {
                 >
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
                     <div className="flex items-center space-x-4 flex-1">
-                      <div className="p-2 rounded-lg bg-amber-100">
-                        <Camera className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
+                      <div className="p-2 rounded-lg bg-red-100">
+                        <Camera className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
                       </div>
                       <div>
                         <h3 className="text-base sm:text-lg font-semibold text-gray-900">
@@ -189,7 +189,7 @@ export default function SampleDng() {
                         <button
                           onClick={() => handleDownload(index, file.filename)}
                           disabled={downloadingIndex !== null || readyToDownload !== null}
-                          className="inline-flex items-center justify-center space-x-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
+                          className="inline-flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                           <span>Download</span>
@@ -202,22 +202,22 @@ export default function SampleDng() {
             </div>
           </div>
 
-          <div className="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-4 sm:p-6">
+          <div className="mt-8 bg-red-50 border border-red-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               About These Sample Files
             </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
-              <li>• These are test DNG (Digital Negative) RAW image files in various sizes for testing purposes</li>
+              <li>• These are test DNG (Digital Negative) raw image files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing RAW image conversion, DNG processing, and photography tools</li>
+              <li>• Perfect for testing raw image processing and DNG conversion tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Camera className="w-6 h-6 text-amber-600" />
+              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Camera className="w-6 h-6 text-red-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Multiple Sizes
@@ -227,8 +227,8 @@ export default function SampleDng() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-orange-600" />
+              <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-pink-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
@@ -255,7 +255,7 @@ export default function SampleDng() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl">
+                <div className="p-2 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl">
                   <Camera className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold">MorphyIMG</h2>

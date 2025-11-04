@@ -68,7 +68,7 @@ export default function SampleDem() {
     "@type": "WebPage",
     "name": "Free DEM Sample Files - Download Test Digital Elevation Model Files",
     "url": "https://morphyimg.com/samples/sample-dem",
-    "description": "Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS mapping, terrain analysis, and elevation data processing tools.",
+    "description": "Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS mapping and terrain analysis tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -81,8 +81,8 @@ export default function SampleDem() {
     <>
       <Helmet>
         <title>Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyIMG</title>
-        <meta name="description" content="Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS mapping, terrain analysis, and elevation data processing tools." />
-        <meta name="keywords" content="DEM sample files, test DEM files, download DEM samples, free DEM test files, Digital Elevation Model samples, GIS terrain samples, elevation data samples, DEM conversion test files, .dem test files, terrain mapping samples, geographic data samples" />
+        <meta name="description" content="Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS mapping and terrain analysis tools." />
+        <meta name="keywords" content="DEM sample files, test DEM files, download DEM samples, free DEM test files, Digital Elevation Model samples, GIS mapping samples, terrain data samples, DEM conversion test files, .dem test files, elevation data samples, geographic data samples" />
         <meta property="og:title" content="Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyIMG" />
         <meta property="og:description" content="Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available for testing GIS mapping and terrain analysis tools." />
         <meta property="og:type" content="website" />
@@ -125,7 +125,7 @@ export default function SampleDem() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available to test your GIS mapping, terrain analysis, and elevation data processing tools.
+              Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available to test your GIS mapping and terrain analysis tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDem() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test DEM (Digital Elevation Model) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing GIS mapping, terrain analysis, and elevation data processing tools</li>
+              <li>• Perfect for testing GIS mapping and terrain analysis tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>

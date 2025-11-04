@@ -68,7 +68,7 @@ export default function SampleDbf() {
     "@type": "WebPage",
     "name": "Free DBF Sample Files - Download Test dBASE Database Files",
     "url": "https://morphyimg.com/samples/sample-dbf",
-    "description": "Download free DBF sample dBASE database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion, DBF parsing, and database management tools.",
+    "description": "Download free DBF sample dBASE database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion and DBF parsing tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -81,8 +81,8 @@ export default function SampleDbf() {
     <>
       <Helmet>
         <title>Free DBF Sample Files Download - Test dBASE Database Files | MorphyIMG</title>
-        <meta name="description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion, DBF parsing, and database management tools." />
-        <meta name="keywords" content="DBF sample files, test DBF files, download DBF samples, free DBF test files, dBASE database samples, database file samples, DBF conversion test files, .dbf test files, database format samples, dBase samples" />
+        <meta name="description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion and DBF parsing tools." />
+        <meta name="keywords" content="DBF sample files, test DBF files, download DBF samples, free DBF test files, dBASE database samples, database file samples, DBF database files, DBF conversion test files, .dbf test files, database format samples, dBASE format samples" />
         <meta property="og:title" content="Free DBF Sample Files Download - Test dBASE Database Files | MorphyIMG" />
         <meta property="og:description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available for testing database conversion and DBF parsing tools." />
         <meta property="og:type" content="website" />
@@ -125,7 +125,7 @@ export default function SampleDbf() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DBF sample dBASE database files for testing. Multiple file sizes available to test your database conversion, DBF parsing, and database management tools.
+              Download free DBF sample dBASE database files for testing. Multiple file sizes available to test your database conversion and DBF parsing tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDbf() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test DBF (dBASE database) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing database conversion, DBF parsing, and database management tools</li>
+              <li>• Perfect for testing database conversion and DBF parsing tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>

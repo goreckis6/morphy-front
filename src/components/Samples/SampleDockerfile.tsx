@@ -66,9 +66,9 @@ export default function SampleDockerfile() {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Free Dockerfile Sample Files - Download Test Dockerfile Files",
+    "name": "Free Dockerfile Sample Files - Download Test Dockerfile Configuration Files",
     "url": "https://morphyimg.com/samples/sample-dockerfile",
-    "description": "Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker image building, Dockerfile parsing, and containerization tools.",
+    "description": "Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker image building and Dockerfile parsing tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -80,15 +80,15 @@ export default function SampleDockerfile() {
   return (
     <>
       <Helmet>
-        <title>Free Dockerfile Sample Files Download - Test Dockerfile Files | MorphyIMG</title>
-        <meta name="description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker image building, Dockerfile parsing, and containerization tools." />
-        <meta name="keywords" content="Dockerfile sample files, test Dockerfile files, download Dockerfile samples, free Dockerfile test files, Docker configuration samples, container build samples, DevOps configuration samples, Dockerfile conversion test files, .dockerfile test files, containerization samples, Docker build samples" />
-        <meta property="og:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Files | MorphyIMG" />
+        <title>Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG</title>
+        <meta name="description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker image building and Dockerfile parsing tools." />
+        <meta name="keywords" content="Dockerfile sample files, test Dockerfile files, download Dockerfile samples, free Dockerfile test files, Dockerfile configuration samples, Docker image building samples, Dockerfile files, Dockerfile conversion test files, .dockerfile test files, container configuration samples, Docker build samples" />
+        <meta property="og:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG" />
         <meta property="og:description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available for testing Docker image building and Dockerfile parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyimg.com/samples/sample-dockerfile" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyimg.com/samples/sample-dockerfile" />
         <script
@@ -117,7 +117,7 @@ export default function SampleDockerfile() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
-              <div className="p-2 sm:p-3 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl">
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-xl">
                 <Code className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -125,7 +125,7 @@ export default function SampleDockerfile() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available to test your Docker image building, Dockerfile parsing, and containerization tools.
+              Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available to test your Docker image building and Dockerfile parsing tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDockerfile() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test Dockerfile (Dockerfile configuration) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing Docker image building, Dockerfile parsing, and containerization tools</li>
+              <li>• Perfect for testing Docker image building and Dockerfile parsing tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>
@@ -227,8 +227,8 @@ export default function SampleDockerfile() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
@@ -255,7 +255,7 @@ export default function SampleDockerfile() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl">
+                <div className="p-2 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-xl">
                   <Code className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold">MorphyIMG</h2>

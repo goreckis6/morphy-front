@@ -68,7 +68,7 @@ export default function SampleDav() {
     "@type": "WebPage",
     "name": "Free DAV Sample Files - Download Test DAV Video Files",
     "url": "https://morphyimg.com/samples/sample-dav",
-    "description": "Download free DAV sample DAV video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion, playback, and DAV format processing tools.",
+    "description": "Download free DAV sample DAV video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools.",
     "isPartOf": { "@id": "https://morphyimg.com#website" },
     "publisher": { "@id": "https://morphyimg.com#organization" }
   };
@@ -81,8 +81,8 @@ export default function SampleDav() {
     <>
       <Helmet>
         <title>Free DAV Sample Files Download - Test DAV Video Files | MorphyIMG</title>
-        <meta name="description" content="Download free DAV sample DAV video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion, playback, and DAV format processing tools." />
-        <meta name="keywords" content="DAV sample files, test DAV files, download DAV samples, free DAV test files, DAV video samples, security camera video samples, DAV conversion test files, .dav test files, video format samples, surveillance video samples" />
+        <meta name="description" content="Download free DAV sample DAV video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools." />
+        <meta name="keywords" content="DAV sample files, test DAV files, download DAV samples, free DAV test files, DAV video samples, security camera video samples, DAV video files, DAV conversion test files, .dav test files, video format samples, surveillance video samples" />
         <meta property="og:title" content="Free DAV Sample Files Download - Test DAV Video Files | MorphyIMG" />
         <meta property="og:description" content="Download free DAV sample DAV video files for testing. Multiple file sizes available for testing video conversion and playback tools." />
         <meta property="og:type" content="website" />
@@ -117,7 +117,7 @@ export default function SampleDav() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
-              <div className="p-2 sm:p-3 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl">
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-red-600 to-orange-600 rounded-xl">
                 <Video className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -125,7 +125,7 @@ export default function SampleDav() {
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DAV sample DAV video files for testing. Multiple file sizes available to test your video conversion, playback, and DAV format processing tools.
+              Download free DAV sample DAV video files for testing. Multiple file sizes available to test your video conversion and playback tools.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SampleDav() {
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• These are test DAV (DAV video) files in various sizes for testing purposes</li>
               <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing video conversion, playback, and DAV format processing tools</li>
+              <li>• Perfect for testing video conversion and playback tools</li>
               <li>• No registration or account required</li>
             </ul>
           </div>
@@ -227,8 +227,8 @@ export default function SampleDav() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-pink-600" />
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
@@ -255,7 +255,7 @@ export default function SampleDav() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-2 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl">
+                <div className="p-2 bg-gradient-to-br from-red-600 to-orange-600 rounded-xl">
                   <Video className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold">MorphyIMG</h2>
