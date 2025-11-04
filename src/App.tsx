@@ -105,6 +105,38 @@ import SampleIso from './components/Samples/SampleIso';
 import SampleJar from './components/Samples/SampleJar';
 import SampleJava from './components/Samples/SampleJava';
 import SampleJks from './components/Samples/SampleJks';
+import SampleJson from './components/Samples/SampleJson';
+import SampleJsonl from './components/Samples/SampleJsonl';
+import SampleJpeg from './components/Samples/SampleJpeg';
+import SampleJpg from './components/Samples/SampleJpg';
+import SampleJs from './components/Samples/SampleJs';
+import SampleJsx from './components/Samples/SampleJsx';
+import SampleJwt from './components/Samples/SampleJwt';
+import SampleKey from './components/Samples/SampleKey';
+import SampleKml from './components/Samples/SampleKml';
+import SampleKmz from './components/Samples/SampleKmz';
+import SampleKt from './components/Samples/SampleKt';
+import SampleLas from './components/Samples/SampleLas';
+import SampleLaz from './components/Samples/SampleLaz';
+import SampleLha from './components/Samples/SampleLha';
+import SampleLog from './components/Samples/SampleLog';
+import SampleLua from './components/Samples/SampleLua';
+import SampleLzh from './components/Samples/SampleLzh';
+import SampleLzma from './components/Samples/SampleLzma';
+import SampleM3u from './components/Samples/SampleM3u';
+import SampleM3u8 from './components/Samples/SampleM3u8';
+import SampleM4a from './components/Samples/SampleM4a';
+import SampleM4v from './components/Samples/SampleM4v';
+import SampleMa from './components/Samples/SampleMa';
+import SampleMakefile from './components/Samples/SampleMakefile';
+import SampleMax from './components/Samples/SampleMax';
+import SampleMb from './components/Samples/SampleMb';
+import SampleMbtiles from './components/Samples/SampleMbtiles';
+import SampleMd from './components/Samples/SampleMd';
+import SampleMdx from './components/Samples/SampleMdx';
+import SampleMidi from './components/Samples/SampleMidi';
+import SampleMkv from './components/Samples/SampleMkv';
+import SampleMobi from './components/Samples/SampleMobi';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -467,6 +499,38 @@ function App() {
         <Route path="/samples/sample-jar" element={<SampleJar />} />
         <Route path="/samples/sample-java" element={<SampleJava />} />
         <Route path="/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/samples/sample-json" element={<SampleJson />} />
+        <Route path="/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/samples/sample-jpeg" element={<SampleJpeg />} />
+        <Route path="/samples/sample-jpg" element={<SampleJpg />} />
+        <Route path="/samples/sample-js" element={<SampleJs />} />
+        <Route path="/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/samples/sample-key" element={<SampleKey />} />
+        <Route path="/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/samples/sample-kmz" element={<SampleKmz />} />
+        <Route path="/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/samples/sample-las" element={<SampleLas />} />
+        <Route path="/samples/sample-laz" element={<SampleLaz />} />
+        <Route path="/samples/sample-lha" element={<SampleLha />} />
+        <Route path="/samples/sample-log" element={<SampleLog />} />
+        <Route path="/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/samples/sample-lzh" element={<SampleLzh />} />
+        <Route path="/samples/sample-lzma" element={<SampleLzma />} />
+        <Route path="/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/samples/sample-m4a" element={<SampleM4a />} />
+        <Route path="/samples/sample-m4v" element={<SampleM4v />} />
+        <Route path="/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/samples/sample-max" element={<SampleMax />} />
+        <Route path="/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/samples/sample-md" element={<SampleMd />} />
+        <Route path="/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/samples/sample-midi" element={<SampleMidi />} />
+        <Route path="/samples/sample-mkv" element={<SampleMkv />} />
+        <Route path="/samples/sample-mobi" element={<SampleMobi />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}

@@ -66,6 +66,14 @@ export const SamplesHub: React.FC = () => {
           format: "Invoice PDF",
           icon: <FileText className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
+        },
+        { 
+          name: "MOBI Sample Files", 
+          description: "Download free MOBI sample MOBI eBook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MOBI eBook conversion, MOBI reading, and eBook processing tools.",
+          path: "/samples/sample-mobi",
+          format: "MOBI",
+          icon: <FileText className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     },
@@ -336,6 +344,134 @@ export const SamplesHub: React.FC = () => {
           format: "JKS",
           icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
           iconColor: "text-purple-600"
+        },
+        { 
+          name: "JSON Sample Files", 
+          description: "Download free JSON sample JSON data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsing, data processing, and API response handling tools.",
+          path: "/samples/sample-json",
+          format: "JSON",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "JSONL Sample Files", 
+          description: "Download free JSONL sample JSON Lines files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSONL parsing, data streaming, and big data processing tools.",
+          path: "/samples/sample-jsonl",
+          format: "JSONL",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "JS Sample Files", 
+          description: "Download free JS sample JavaScript files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JavaScript code execution, JS syntax checking, and web development tools.",
+          path: "/samples/sample-js",
+          format: "JS",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "JSX Sample Files", 
+          description: "Download free JSX sample React JSX component files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing React component compilation, JSX syntax checking, and frontend development tools.",
+          path: "/samples/sample-jsx",
+          format: "JSX",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "JWT Sample Files", 
+          description: "Download free JWT sample JSON Web Token files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JWT token parsing, authentication, and API security tools.",
+          path: "/samples/sample-jwt",
+          format: "JWT",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "KEY Sample Files", 
+          description: "Download free KEY sample private key files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate management, key parsing, and cryptographic key storage tools.",
+          path: "/samples/sample-key",
+          format: "KEY",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "KML Sample Files", 
+          description: "Download free KML sample Keyhole Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KML parsing, geographic data processing, and Google Earth integration tools.",
+          path: "/samples/sample-kml",
+          format: "KML",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "KT Sample Files", 
+          description: "Download free KT sample Kotlin code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Kotlin compilation, KT syntax checking, and Android development tools.",
+          path: "/samples/sample-kt",
+          format: "KT",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "LOG Sample Files", 
+          description: "Download free LOG sample log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing log parsing, log analysis, and system monitoring tools.",
+          path: "/samples/sample-log",
+          format: "LOG",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "LUA Sample Files", 
+          description: "Download free LUA sample Lua script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Lua script execution, LUA syntax checking, and embedded scripting tools.",
+          path: "/samples/sample-lua",
+          format: "LUA",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "M3U Sample Files", 
+          description: "Download free M3U sample M3U playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U playlist parsing, media player compatibility, and audio streaming tools.",
+          path: "/samples/sample-m3u",
+          format: "M3U",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "M3U8 Sample Files", 
+          description: "Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U8 playlist parsing, HLS streaming, and video player compatibility tools.",
+          path: "/samples/sample-m3u8",
+          format: "M3U8",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "Makefile Sample Files", 
+          description: "Download free Makefile sample build configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Makefile parsing, build system automation, and software compilation tools.",
+          path: "/samples/sample-makefile",
+          format: "Makefile",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "MBTiles Sample Files", 
+          description: "Download free MBTiles sample map database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MBTiles parsing, map tile extraction, and geographic data processing tools.",
+          path: "/samples/sample-mbtiles",
+          format: "MBTiles",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "MD Sample Files", 
+          description: "Download free MD sample Markdown documentation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Markdown parsing, MD conversion, and documentation processing tools.",
+          path: "/samples/sample-md",
+          format: "MD",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "MDX Sample Files", 
+          description: "Download free MDX sample MDX component documentation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MDX parsing, React component documentation, and documentation generation tools.",
+          path: "/samples/sample-mdx",
+          format: "MDX",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
         }
       ]
     },
@@ -502,6 +638,38 @@ export const SamplesHub: React.FC = () => {
           iconColor: "text-amber-600"
         },
         { 
+          name: "LAS Sample Files", 
+          description: "Download free LAS sample LiDAR point cloud data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LAS parsing, point cloud processing, and 3D mapping tools.",
+          path: "/samples/sample-las",
+          format: "LAS",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "MA Sample Files", 
+          description: "Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MA file parsing, and 3D animation tools.",
+          path: "/samples/sample-ma",
+          format: "MA",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "MAX Sample Files", 
+          description: "Download free MAX sample 3ds Max scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3ds Max scene conversion, MAX file parsing, and 3D modeling tools.",
+          path: "/samples/sample-max",
+          format: "MAX",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
+          name: "MB Sample Files", 
+          description: "Download free MB sample Maya Binary scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MB file parsing, and 3D animation tools.",
+          path: "/samples/sample-mb",
+          format: "MB",
+          icon: <Box className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
+        },
+        { 
           name: "INDD Sample Files", 
           description: "Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing InDesign document conversion, INDD viewing, and desktop publishing tools.",
           path: "/samples/sample-indd",
@@ -626,6 +794,38 @@ export const SamplesHub: React.FC = () => {
           format: "ICO",
           icon: <Image className="w-5 h-5 text-cyan-600" />,
           iconColor: "text-cyan-600"
+        },
+        { 
+          name: "JPEG Sample Files", 
+          description: "Download free JPEG sample JPEG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPEG image conversion, JPEG compression, and image processing tools.",
+          path: "/samples/sample-jpeg",
+          format: "JPEG",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "JPG Sample Files", 
+          description: "Download free JPG sample JPG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPG image conversion, JPG compression, and image processing tools.",
+          path: "/samples/sample-jpg",
+          format: "JPG",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "M4V Sample Files", 
+          description: "Download free M4V sample M4V video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4V video conversion, M4V playback, and video processing tools.",
+          path: "/samples/sample-m4v",
+          format: "M4V",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "MKV Sample Files", 
+          description: "Download free MKV sample Matroska video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MKV video conversion, MKV playback, and video processing tools.",
+          path: "/samples/sample-mkv",
+          format: "MKV",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
         }
       ]
     },
@@ -686,6 +886,22 @@ export const SamplesHub: React.FC = () => {
           description: "Download free CUE sample CUE sheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio CD burning and CUE sheet parsing tools.",
           path: "/samples/sample-cue",
           format: "CUE",
+          icon: <Music className="w-5 h-5 text-rose-600" />,
+          iconColor: "text-rose-600"
+        },
+        { 
+          name: "M4A Sample Files", 
+          description: "Download free M4A sample M4A audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4A audio conversion, M4A playback, and audio processing tools.",
+          path: "/samples/sample-m4a",
+          format: "M4A",
+          icon: <Music className="w-5 h-5 text-rose-600" />,
+          iconColor: "text-rose-600"
+        },
+        { 
+          name: "MIDI Sample Files", 
+          description: "Download free MIDI sample MIDI music files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MIDI playback, MIDI conversion, and music sequencing tools.",
+          path: "/samples/sample-midi",
+          format: "MIDI",
           icon: <Music className="w-5 h-5 text-rose-600" />,
           iconColor: "text-rose-600"
         }
@@ -764,6 +980,46 @@ export const SamplesHub: React.FC = () => {
           description: "Download free ISO sample ISO disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ISO disk image mounting, ISO extraction, and disk image processing tools.",
           path: "/samples/sample-iso",
           format: "ISO",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "KMZ Sample Files", 
+          description: "Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KMZ extraction, geographic data processing, and Google Earth integration tools.",
+          path: "/samples/sample-kmz",
+          format: "KMZ",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "LAZ Sample Files", 
+          description: "Download free LAZ sample compressed LiDAR point cloud data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LAZ extraction, point cloud processing, and 3D mapping tools.",
+          path: "/samples/sample-laz",
+          format: "LAZ",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "LHA Sample Files", 
+          description: "Download free LHA sample LHA archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LHA extraction, archive decompression, and file archiving tools.",
+          path: "/samples/sample-lha",
+          format: "LHA",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "LZH Sample Files", 
+          description: "Download free LZH sample LZH archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH extraction, archive decompression, and file archiving tools.",
+          path: "/samples/sample-lzh",
+          format: "LZH",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "LZMA Sample Files", 
+          description: "Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZMA decompression, archive extraction, and file compression tools.",
+          path: "/samples/sample-lzma",
+          format: "LZMA",
           icon: <Archive className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
