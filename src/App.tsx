@@ -53,6 +53,15 @@ import SampleCab from './components/Samples/SampleCab';
 import SampleCaf from './components/Samples/SampleCaf';
 import SampleCanLog from './components/Samples/SampleCanLog';
 import SampleCmd from './components/Samples/SampleCmd';
+import SampleConf from './components/Samples/SampleConf';
+import SampleConfigIni from './components/Samples/SampleConfigIni';
+import SampleCpio from './components/Samples/SampleCpio';
+import SampleCpp from './components/Samples/SampleCpp';
+import SampleCs from './components/Samples/SampleCs';
+import SampleCsr from './components/Samples/SampleCsr';
+import SampleCss from './components/Samples/SampleCss';
+import SampleCue from './components/Samples/SampleCue';
+import SampleCustomerDatabaseSql from './components/Samples/SampleCustomerDatabaseSql';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
@@ -363,6 +372,16 @@ function App() {
         <Route path="/samples/sample-caf" element={<SampleCaf />} />
         <Route path="/samples/sample-can-log" element={<SampleCanLog />} />
         <Route path="/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/samples/sample-cpio" element={<SampleCpio />} />
+        <Route path="/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/samples/sample-css" element={<SampleCss />} />
+        <Route path="/samples/sample-cue" element={<SampleCue />} />
+        <Route path="/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
         <Route path="/samples/sample-7z" element={<Sample7z />} />
 
         {/* 404 - catch all */}

@@ -167,6 +167,62 @@ export const SamplesHub: React.FC = () => {
           format: "CMD",
           icon: <Code className="w-5 h-5 text-slate-600" />,
           iconColor: "text-slate-600"
+        },
+        { 
+          name: "CONF Sample Files", 
+          description: "Download free CONF sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing configuration file parsing and system setup tools.",
+          path: "/samples/sample-conf",
+          format: "CONF",
+          icon: <FileText className="w-5 h-5 text-gray-600" />,
+          iconColor: "text-gray-600"
+        },
+        { 
+          name: "Config INI Sample Files", 
+          description: "Download free Config INI sample INI configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing and configuration management tools.",
+          path: "/samples/sample-config-ini",
+          format: "Config INI",
+          icon: <FileText className="w-5 h-5 text-indigo-600" />,
+          iconColor: "text-indigo-600"
+        },
+        { 
+          name: "C++ Sample Files", 
+          description: "Download free C++ sample source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation and syntax checking tools.",
+          path: "/samples/sample-cpp",
+          format: "C++",
+          icon: <Code className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "C# Sample Files", 
+          description: "Download free C# sample source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C# code compilation and syntax checking tools.",
+          path: "/samples/sample-cs",
+          format: "C#",
+          icon: <Code className="w-5 h-5 text-indigo-600" />,
+          iconColor: "text-indigo-600"
+        },
+        { 
+          name: "CSS Sample Files", 
+          description: "Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSS parsing and styling tools.",
+          path: "/samples/sample-css",
+          format: "CSS",
+          icon: <Code className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "CSR Sample Files", 
+          description: "Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate generation and CSR parsing tools.",
+          path: "/samples/sample-csr",
+          format: "CSR",
+          icon: <FileText className="w-5 h-5 text-emerald-600" />,
+          iconColor: "text-emerald-600"
+        },
+        { 
+          name: "Customer Database SQL Sample Files", 
+          description: "Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL database imports and SQL parsing tools.",
+          path: "/samples/sample-customer-database-sql",
+          format: "Customer Database SQL",
+          icon: <Database className="w-5 h-5 text-amber-600" />,
+          iconColor: "text-amber-600"
         }
       ]
     },
@@ -375,6 +431,14 @@ export const SamplesHub: React.FC = () => {
           format: "CAF",
           icon: <Music className="w-5 h-5 text-pink-600" />,
           iconColor: "text-pink-600"
+        },
+        { 
+          name: "CUE Sample Files", 
+          description: "Download free CUE sample CUE sheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio CD burning and CUE sheet parsing tools.",
+          path: "/samples/sample-cue",
+          format: "CUE",
+          icon: <Music className="w-5 h-5 text-violet-600" />,
+          iconColor: "text-violet-600"
         }
       ]
     },
@@ -413,6 +477,14 @@ export const SamplesHub: React.FC = () => {
           format: "CAB",
           icon: <Archive className="w-5 h-5 text-blue-600" />,
           iconColor: "text-blue-600"
+        },
+        { 
+          name: "CPIO Sample Files", 
+          description: "Download free CPIO sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction and compression tools.",
+          path: "/samples/sample-cpio",
+          format: "CPIO",
+          icon: <Archive className="w-5 h-5 text-teal-600" />,
+          iconColor: "text-teal-600"
         },
         { 
           name: "ZIP Sample Files", 
