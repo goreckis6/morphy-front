@@ -250,7 +250,9 @@ export default function SampleJpg() {
             </div>
           </div>
         </div>
-      <Footer />
+
+        <Footer />
+      </div>
     </>
   );
 }

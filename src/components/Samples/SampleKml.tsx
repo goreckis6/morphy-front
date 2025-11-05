@@ -250,7 +250,9 @@ export default function SampleKml() {
             </div>
           </div>
         </div>
-      <Footer />
+
+        <Footer />
+      </div>
     </>
   );
 }
