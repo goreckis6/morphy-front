@@ -97,73 +97,103 @@ export default function SampleLzh() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
         />
       </Helmet>
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-cyan-50">
-        <div className="max-w-4xl mx-auto px-4 py-12">
-          <button
-            onClick={handleBack}
-            className="flex items-center text-purple-600 hover:text-purple-800 mb-6 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Back to Home
-          </button>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
-            <div className="flex items-center mb-6">
-              <Archive className="w-12 h-12 text-orange-600 mr-4" />
-              <div>
-                <h1 className="text-4xl font-bold text-gray-900">LZH Sample Files</h1>
-                <p className="text-gray-600 mt-2">Download free LZH sample LZH archive files for testing</p>
-              </div>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        <div className="bg-white border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="py-3 sm:py-4">
+              <button
+                onClick={handleBack}
+                className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors text-sm sm:text-base"
+              >
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>Back to Home</span>
+              </button>
             </div>
+          </div>
+        </div>
 
-            <p className="text-gray-700 mb-8">
-              Download free LZH sample LZH archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH extraction, archive decompression, and file archiving tools.
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-slate-500 to-gray-500 rounded-xl">
+                <Archive className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              </div>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                LZH Sample Files
+              </h1>
+            </div>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+              Download free LZH sample LZH archive files for testing. Multiple file sizes available to test your LZH extraction and archive decompression tools.
             </p>
+          </div>
 
-            <div className="space-y-4">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+            <div className="divide-y divide-gray-200">
               {sampleFiles.map((file, index) => (
                 <div
                   key={index}
-                  className="border-2 border-gray-200 rounded-lg p-6 hover:border-purple-300 transition-all"
+                  className={`px-4 sm:px-6 py-4 sm:py-5 hover:bg-gray-50 transition-colors ${
+                    index === 0 ? 'rounded-t-lg' : ''
+                  } ${index === sampleFiles.length - 1 ? 'rounded-b-lg' : ''}`}
                 >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <Archive className="w-8 h-8 text-orange-600" />
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
+                    <div className="flex items-center space-x-4 flex-1">
+                      <div className="p-2 rounded-lg bg-slate-100">
+                        <Archive className="w-5 h-5 sm:w-6 sm:h-6 text-slate-600" />
+                      </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-900">{file.filename}</h3>
-                        <p className="text-sm text-gray-500">Size: {file.displaySize}</p>
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900">
+                          {file.filename}
+                        </h3>
+                        <p className="text-sm text-gray-500 mt-1">
+                          File size: <span className="font-medium text-gray-700">{file.displaySize}</span>
+                        </p>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-4">
-                      {downloadingIndex === index && countdown !== null && (
-                        <div className="flex items-center text-purple-600">
-                          <Clock className="w-5 h-5 mr-2 animate-spin" />
-                          <span className="font-medium">Starting in {countdown}s...</span>
+                    <div className="w-full sm:w-auto sm:ml-4">
+                      {downloadingIndex === index ? (
+                        <div className="flex flex-col items-center sm:items-end space-y-2">
+                          {countdown !== null && countdown > 0 ? (
+                            <>
+                              <div className="flex items-center space-x-2 text-orange-600">
+                                <Clock className="w-4 h-4 animate-spin" />
+                                <span className="text-sm font-medium">
+                                  Download ready in {countdown}s...
+                                </span>
+                              </div>
+                              <div className="w-full sm:w-48 bg-gray-200 rounded-full h-2">
+                                <div
+                                  className="bg-orange-600 h-2 rounded-full transition-all duration-1000"
+                                  style={{ width: `${((10 - countdown) / 10) * 100}%` }}
+                                />
+                              </div>
+                            </>
+                          ) : null}
                         </div>
-                      )}
-                      {readyToDownload === index && (
+                      ) : readyToDownload === index ? (
                         <button
                           onClick={() => handleDownloadNow(index, file.filename)}
-                          className="flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-colors"
+                          className="inline-flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto shadow-lg"
                         >
-                          <Download className="w-5 h-5 mr-2" />
-                          Download Now
+                          <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                          <span>Download Now</span>
                         </button>
-                      )}
-                      {downloadComplete === index && (
-                        <div className="flex items-center text-green-600">
-                          <CheckCircle className="w-5 h-5 mr-2" />
-                          <span className="font-medium">Downloaded!</span>
+                      ) : downloadComplete === index ? (
+                        <div className="flex items-center space-x-2 text-green-600">
+                          <CheckCircle className="w-5 h-5" />
+                          <span className="text-sm font-medium">Download started</span>
                         </div>
-                      )}
-                      {downloadingIndex !== index && readyToDownload !== index && downloadComplete !== index && (
+                      ) : (
                         <button
                           onClick={() => handleDownload(index, file.filename)}
-                          className="flex items-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
+                          disabled={downloadingIndex !== null || readyToDownload !== null}
+                          className="inline-flex items-center justify-center space-x-2 bg-slate-600 hover:bg-slate-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
-                          <Download className="w-5 h-5 mr-2" />
-                          Download
+                          <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                          <span>Download</span>
                         </button>
                       )}
                     </div>
@@ -173,21 +203,57 @@ export default function SampleLzh() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">About LZH Files</h2>
-            <div className="prose max-w-none">
-              <p className="text-gray-700 mb-4">
-                LZH (Lempel-Ziv-Huffman) is a compressed archive file format that was popular in Japan. LZH files use the LZH compression algorithm and can contain multiple files and directories, similar to ZIP archives.
+          <div className="mt-8 bg-slate-50 border border-slate-200 rounded-lg p-4 sm:p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              About These Sample Files
+            </h3>
+            <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+              <li>• These are test LZH (archive) files in various sizes for testing purposes</li>
+              <li>• Files are hosted securely and available for free download</li>
+              <li>• Perfect for testing LZH extraction and archive decompression tools</li>
+              <li>• No registration or account required</li>
+            </ul>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
+              <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Archive className="w-6 h-6 text-slate-600" />
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                Multiple Sizes
+              </h3>
+              <p className="text-sm text-gray-600">
+                Test files ranging from 100 KB to 100 MB
               </p>
-              <p className="text-gray-700 mb-4">
-                These sample LZH files are provided for testing purposes. They can be used to test LZH extraction, archive decompression tools, and file archiving applications.
+            </div>
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
+              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-gray-600" />
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                Free Download
+              </h3>
+              <p className="text-sm text-gray-600">
+                No registration or payment required
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                Safe & Tested
+              </h3>
+              <p className="text-sm text-gray-600">
+                All files are safe and tested for compatibility
               </p>
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }
-
