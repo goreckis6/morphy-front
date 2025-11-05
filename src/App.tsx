@@ -282,9 +282,6 @@ function App() {
         <Route path="/samples" element={<Samples />} />
 
         {/* Converter Routes */}
-        <Route path="/convert/jpg-to-text" element={<JPGToTEXTConverter />} />
-        <Route path="/convert/jpg-to-txt" element={<JPGToTEXTConverter />} />
-        <Route path="/convert/jpg-to-pdf" element={<JPGToPDFConverter />} />
         <Route path="/convert/jpg-to-png" element={<JPGToPNGConverter />} />
         <Route path="/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
         <Route path="/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />

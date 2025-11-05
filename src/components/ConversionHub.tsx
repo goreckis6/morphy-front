@@ -14,25 +14,6 @@ interface ConversionOption {
 export const ConversionHub: React.FC = () => {
   const conversions: ConversionOption[] = [
     // Text Conversions
-    {
-      from: 'JPG',
-      to: 'TEXT',
-      title: 'JPG to TEXT',
-      description: 'Extract text from images using OCR',
-      path: '/convert/jpg-to-text',
-      category: 'text',
-      icon: <FileText className="w-6 h-6 text-blue-600" />
-    },
-    {
-      from: 'JPG',
-      to: 'TXT',
-      title: 'JPG to TXT',
-      description: 'Convert images to plain text files',
-      path: '/convert/jpg-to-txt',
-      category: 'text',
-      icon: <FileText className="w-6 h-6 text-blue-600" />
-    },
-    
     // Image Conversions
     {
       from: 'JPG',
@@ -126,15 +107,6 @@ export const ConversionHub: React.FC = () => {
     },
     
     // Document Conversions
-    {
-      from: 'JPG',
-      to: 'PDF',
-      title: 'JPG to PDF',
-      description: 'Create PDF documents from images',
-      path: '/convert/jpg-to-pdf',
-      category: 'document',
-      icon: <File className="w-6 h-6 text-red-600" />
-    },
     {
       from: 'JPG',
       to: 'DOCX',
