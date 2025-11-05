@@ -33,7 +33,7 @@ export const CompressHub: React.FC = () => {
           path: "/compress/png",
           format: "PNG",
           icon: <FileImage className="w-6 h-6" />,
-          iconColor: "text-blue-600"
+          iconColor: "text-orange-600"
         }
       ]
     }
