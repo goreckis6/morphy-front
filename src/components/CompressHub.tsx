@@ -149,7 +149,7 @@ export const CompressHub: React.FC = () => {
                           {format.icon}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3 mb-2">
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-1">
                             <h3 className="text-base sm:text-lg font-semibold text-gray-900">{format.name}</h3>
                             <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded text-xs font-medium">
                               {format.format}
