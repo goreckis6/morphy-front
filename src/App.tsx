@@ -140,8 +140,6 @@ import SampleMobi from './components/Samples/SampleMobi';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
-import { JPGToTEXTConverter } from './components/ConversionPages/JPGToTEXTConverter';
-import { JPGToPDFConverter } from './components/ConversionPages/JPGToPDFConverter';
 import { JPGToPNGConverter } from './components/ConversionPages/JPGToPNGConverter';
 import { CR2ToICOConverter } from './components/ConversionPages/CR2ToICOConverter';
 import { CR2ToWebPConverter } from './components/ConversionPages/CR2ToWebPConverter';
