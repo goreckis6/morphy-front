@@ -250,7 +250,9 @@ export default function SampleKmz() {
             </div>
           </div>
         </div>
-      <Footer />
+
+        <Footer />
+      </div>
     </>
   );
 }
