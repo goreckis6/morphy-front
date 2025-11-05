@@ -118,7 +118,7 @@ export default function SampleAiff() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
-              <div className="p-2 sm:p-3 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl">
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl">
                 <Music className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -141,8 +141,8 @@ export default function SampleAiff() {
                 >
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
                     <div className="flex items-center space-x-4 flex-1">
-                      <div className="p-2 rounded-lg bg-emerald-100">
-                        <Music className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />
+                      <div className="p-2 rounded-lg bg-rose-100">
+                        <Music className="w-5 h-5 sm:w-6 sm:h-6 text-rose-600" />
                       </div>
                       <div>
                         <h3 className="text-base sm:text-lg font-semibold text-gray-900">
@@ -158,7 +158,7 @@ export default function SampleAiff() {
                         <div className="flex flex-col items-center sm:items-end space-y-2">
                           {countdown !== null && countdown > 0 ? (
                             <>
-                              <div className="flex items-center space-x-2 text-orange-600">
+                              <div className="flex items-center space-x-2 text-rose-600">
                                 <Clock className="w-4 h-4 animate-spin" />
                                 <span className="text-sm font-medium">
                                   Download ready in {countdown}s...
@@ -190,7 +190,7 @@ export default function SampleAiff() {
                         <button
                           onClick={() => handleDownload(index, file.filename)}
                           disabled={downloadingIndex !== null || readyToDownload !== null}
-                          className="inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
+                          className="inline-flex items-center justify-center space-x-2 bg-rose-600 hover:bg-rose-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                           <span>Download</span>
@@ -203,7 +203,7 @@ export default function SampleAiff() {
             </div>
           </div>
 
-          <div className="mt-8 bg-emerald-50 border border-emerald-200 rounded-lg p-4 sm:p-6">
+          <div className="mt-8 bg-rose-50 border border-rose-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               About These Sample Files
             </h3>
@@ -217,8 +217,8 @@ export default function SampleAiff() {
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Music className="w-6 h-6 text-emerald-600" />
+              <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Music className="w-6 h-6 text-rose-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Multiple Sizes
@@ -228,8 +228,8 @@ export default function SampleAiff() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-rose-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
