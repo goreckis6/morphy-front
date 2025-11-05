@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Minimize2, ArrowLeft, FileImage, Search, RefreshCw } from 'lucide-react';
+import { Minimize2, ArrowLeft, FileImage, Search, RefreshCw, FileText } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
@@ -37,6 +37,20 @@ export const CompressHub: React.FC = () => {
           iconColor: "text-orange-600"
         }
       ]
+    },
+    {
+      title: "DOCUMENT COMPRESSION",
+      icon: <FileText className="w-6 h-6 text-red-600" />,
+      formats: [
+        { 
+          name: "PDF Compressor", 
+          description: "Compress PDF files to reduce file size while maintaining document quality. Perfect for email attachments and web sharing.",
+          path: "/compress/pdf",
+          format: "PDF",
+          icon: <FileText className="w-6 h-6" />,
+          iconColor: "text-red-600"
+        }
+      ]
     }
   ];
 
@@ -61,7 +75,7 @@ export const CompressHub: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-50">
       <Header />
       
       {/* Back Button */}
@@ -79,7 +93,7 @@ export const CompressHub: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12 flex-grow">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
@@ -148,7 +162,8 @@ export const CompressHub: React.FC = () => {
                           format.iconColor === 'text-green-600' ? 'bg-green-100' :
                           format.iconColor === 'text-purple-600' ? 'bg-purple-100' :
                           format.iconColor === 'text-orange-600' ? 'bg-orange-100' :
-                          format.iconColor === 'text-red-600' ? 'bg-red-100' : 'bg-gray-100'
+                          format.iconColor === 'text-red-600' ? 'bg-red-100' :
+                          format.iconColor === 'text-teal-600' ? 'bg-teal-100' : 'bg-gray-100'
                         }`}>
                           {format.icon}
                         </div>
