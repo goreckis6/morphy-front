@@ -141,8 +141,8 @@ export default function SampleAvif() {
                 >
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
                     <div className="flex items-center space-x-4 flex-1">
-                      <div className="p-2 rounded-lg bg-emerald-100">
-                        <Image className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />
+                      <div className="p-2 rounded-lg bg-cyan-100">
+                        <Image className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-600" />
                       </div>
                       <div>
                         <h3 className="text-base sm:text-lg font-semibold text-gray-900">
