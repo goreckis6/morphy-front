@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Minimize2, ArrowLeft, FileImage, Search, Camera, RefreshCw } from 'lucide-react';
+import { Minimize2, ArrowLeft, FileImage, Search, RefreshCw } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
@@ -24,7 +24,7 @@ export const CompressHub: React.FC = () => {
           description: "Compress JPEG images to reduce file size while maintaining quality. Perfect for web optimization and faster uploads.",
           path: "/compress/jpg",
           format: "JPG/JPEG",
-          icon: <Camera className="w-6 h-6" />,
+          icon: <FileImage className="w-6 h-6" />,
           iconColor: "text-orange-600"
         },
         { 
