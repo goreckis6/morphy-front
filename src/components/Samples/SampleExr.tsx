@@ -157,7 +157,7 @@ export default function SampleExr() {
                         <div className="flex flex-col items-center sm:items-end space-y-2">
                           {countdown !== null && countdown > 0 ? (
                             <>
-                              <div className="flex items-center space-x-2 text-orange-600">
+                              <div className="flex items-center space-x-2 text-cyan-600">
                                 <Clock className="w-4 h-4 animate-spin" />
                                 <span className="text-sm font-medium">
                                   Download ready in {countdown}s...
@@ -165,7 +165,7 @@ export default function SampleExr() {
                               </div>
                               <div className="w-full sm:w-48 bg-gray-200 rounded-full h-2">
                                 <div
-                                  className="bg-orange-600 h-2 rounded-full transition-all duration-1000"
+                                  className="bg-cyan-600 h-2 rounded-full transition-all duration-1000"
                                   style={{ width: `${((10 - countdown) / 10) * 100}%` }}
                                 />
                               </div>
