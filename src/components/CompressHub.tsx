@@ -18,6 +18,7 @@ export const CompressHub: React.FC = () => {
   const compressionCategories = [
     {
       title: "IMAGE COMPRESSION",
+      icon: <FileImage className="w-6 h-6 text-orange-600" />,
       formats: [
         { 
           name: "JPG/JPEG Compressor", 
@@ -128,7 +129,10 @@ export const CompressHub: React.FC = () => {
           {filteredCategories.length > 0 ? (
             filteredCategories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">{category.title}</h2>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
+                {category.icon}
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{category.title}</h2>
+              </div>
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
                 {category.formats.map((format, formatIndex) => (
                   <div
@@ -151,9 +155,11 @@ export const CompressHub: React.FC = () => {
                         <div className="flex-1 min-w-0">
                           <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-3 mb-1">
                             <h3 className="text-base sm:text-lg font-semibold text-gray-900">{format.name}</h3>
-                            <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded text-xs font-medium">
-                              {format.format}
-                            </span>
+                            <div className="flex items-center space-x-1 text-xs sm:text-sm text-gray-500">
+                              <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded text-xs font-medium">
+                                {format.format}
+                              </span>
+                            </div>
                           </div>
                           <p className="text-gray-600 text-xs sm:text-sm">{format.description}</p>
                         </div>
