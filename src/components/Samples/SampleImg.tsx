@@ -227,8 +227,8 @@ export default function SampleImg() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-gray-600" />
+              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
