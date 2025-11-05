@@ -246,6 +246,7 @@ import { STLViewer } from './components/FormatViewers/STLViewer';
 
 // Compression Components
 import { JPGCompressor } from './components/compress/JPGCompressor';
+import { PNGCompressor } from './components/compress/PNGCompressor';
 
 function App() {
   // Make addToConversionCounter available globally
@@ -398,6 +399,7 @@ function App() {
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />
         <Route path="/compress/jpeg" element={<JPGCompressor />} />
+        <Route path="/compress/png" element={<PNGCompressor />} />
 
         {/* Sample Files Routes */}
         <Route path="/samples/sample-docx" element={<SampleDocx />} />

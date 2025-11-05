@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
-import { Download, FileText, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Download, FileSpreadsheet, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import { getStorageUrl } from '../../config/storage';
 
 interface SampleFile {
@@ -118,8 +118,8 @@ export default function SampleBib() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center mb-8 sm:mb-12">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 mb-4 sm:mb-6">
-              <div className="p-2 sm:p-3 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-xl">
-                <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              <div className="p-2 sm:p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl">
+                <FileSpreadsheet className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
                 BIB Sample Files
@@ -141,8 +141,8 @@ export default function SampleBib() {
                 >
                   <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
                     <div className="flex items-center space-x-4 flex-1">
-                      <div className="p-2 rounded-lg bg-indigo-100">
-                        <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600" />
+                      <div className="p-2 rounded-lg bg-purple-100">
+                        <FileSpreadsheet className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600" />
                       </div>
                       <div>
                         <h3 className="text-base sm:text-lg font-semibold text-gray-900">
@@ -190,7 +190,7 @@ export default function SampleBib() {
                         <button
                           onClick={() => handleDownload(index, file.filename)}
                           disabled={downloadingIndex !== null || readyToDownload !== null}
-                          className="inline-flex items-center justify-center space-x-2 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
+                          className="inline-flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                           <span>Download</span>
@@ -203,7 +203,7 @@ export default function SampleBib() {
             </div>
           </div>
 
-          <div className="mt-8 bg-indigo-50 border border-indigo-200 rounded-lg p-4 sm:p-6">
+          <div className="mt-8 bg-purple-50 border border-purple-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               About These Sample Files
             </h3>
@@ -217,8 +217,8 @@ export default function SampleBib() {
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-6 h-6 text-indigo-600" />
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileSpreadsheet className="w-6 h-6 text-purple-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Multiple Sizes
@@ -228,8 +228,8 @@ export default function SampleBib() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-purple-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
