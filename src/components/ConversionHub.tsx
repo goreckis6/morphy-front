@@ -17,15 +17,6 @@ export const ConversionHub: React.FC = () => {
     // Image Conversions
     {
       from: 'JPG',
-      to: 'PNG',
-      title: 'JPG to PNG',
-      description: 'Convert to PNG with transparency support',
-      path: '/convert/jpg-to-png',
-      category: 'image',
-      icon: <Image className="w-6 h-6 text-green-600" />
-    },
-    {
-      from: 'JPG',
       to: 'WebP',
       title: 'JPG to WebP',
       description: 'Modern web format with better compression',

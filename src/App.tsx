@@ -140,7 +140,6 @@ import SampleMobi from './components/Samples/SampleMobi';
 import Sample7z from './components/Samples/Sample7z';
 
 // Converter Components
-import { JPGToPNGConverter } from './components/ConversionPages/JPGToPNGConverter';
 import { CR2ToICOConverter } from './components/ConversionPages/CR2ToICOConverter';
 import { CR2ToWebPConverter } from './components/ConversionPages/CR2ToWebPConverter';
 import { CSVToDOCXConverter } from './components/ConversionPages/CSVToDOCXConverter';
@@ -282,7 +281,6 @@ function App() {
         <Route path="/samples" element={<Samples />} />
 
         {/* Converter Routes */}
-        <Route path="/convert/jpg-to-png" element={<JPGToPNGConverter />} />
         <Route path="/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
         <Route path="/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
         <Route path="/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
