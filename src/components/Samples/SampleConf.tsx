@@ -217,8 +217,8 @@ export default function SampleConf() {
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-6 h-6 text-gray-600" />
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileSpreadsheet className="w-6 h-6 text-purple-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Multiple Sizes
@@ -228,8 +228,8 @@ export default function SampleConf() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-slate-600" />
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-purple-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download

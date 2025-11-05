@@ -190,7 +190,7 @@ export default function SampleCsr() {
                         <button
                           onClick={() => handleDownload(index, file.filename)}
                           disabled={downloadingIndex !== null || readyToDownload !== null}
-                          className="inline-flex items-center justify-center space-x-2 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
+                          className="inline-flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                           <span>Download</span>
@@ -203,7 +203,7 @@ export default function SampleCsr() {
             </div>
           </div>
 
-          <div className="mt-8 bg-emerald-50 border border-emerald-200 rounded-lg p-4 sm:p-6">
+          <div className="mt-8 bg-purple-50 border border-purple-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
               About These Sample Files
             </h3>
@@ -217,8 +217,8 @@ export default function SampleCsr() {
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-6 h-6 text-emerald-600" />
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileSpreadsheet className="w-6 h-6 text-purple-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Multiple Sizes
@@ -228,8 +228,8 @@ export default function SampleCsr() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
-              <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Download className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Download className="w-6 h-6 text-purple-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Free Download
