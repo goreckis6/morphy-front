@@ -52,6 +52,13 @@ export const YTTranscriptExtractor: React.FC = () => {
   const [wordCount, setWordCount] = useState(0);
   const [charCount, setCharCount] = useState(0);
 
+  // Update URL when video ID changes
+  const updateUrl = (id: string) => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('video_id', id);
+    window.history.pushState({}, '', url.toString());
+  };
+
   const extractVideoId = (url: string): string | null => {
     const patterns = [
       /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/v\/)([^&\n?#]+)/,
@@ -201,29 +208,16 @@ export const YTTranscriptExtractor: React.FC = () => {
     return [];
   };
 
-  const handleExtract = async () => {
+  const handleExtractWithId = async (id: string, transcriptFormat: TranscriptFormat, transcriptLanguage: string) => {
     setError(null);
     setTranscript(null);
     setTranscriptData([]);
     setCopied(false);
     setEntriesCount(null);
-    setVideoMetadata(null);
     setWordCount(0);
     setCharCount(0);
 
-    if (!videoUrl.trim()) {
-      setError('Please enter a YouTube URL or Video ID');
-      return;
-    }
-
-    const id = extractVideoId(videoUrl.trim());
-    
-    if (!id) {
-      setError('Invalid YouTube URL or Video ID. Please check and try again.');
-      return;
-    }
-
-    if (id.length !== 11) {
+    if (!id || id.length !== 11) {
       setError('Invalid Video ID. YouTube Video IDs must be 11 characters long.');
       return;
     }
@@ -231,7 +225,13 @@ export const YTTranscriptExtractor: React.FC = () => {
     setVideoId(id);
     setIsExtracting(true);
 
-    await fetchVideoMetadata(id);
+    // Update URL with video ID
+    updateUrl(id);
+
+    // Fetch metadata if not already loaded
+    if (!videoMetadata || videoMetadata.title === `Video ${id}`) {
+      await fetchVideoMetadata(id);
+    }
 
     try {
       const response = await fetch(`${API_BASE_URL}/api/youtube/transcript`, {
@@ -241,7 +241,8 @@ export const YTTranscriptExtractor: React.FC = () => {
         },
         body: JSON.stringify({
           videoId: id,
-          format: format
+          format: transcriptFormat,
+          language: transcriptLanguage
         })
       });
 
@@ -254,8 +255,8 @@ export const YTTranscriptExtractor: React.FC = () => {
       setTranscript(data.content);
       setEntriesCount(data.entries_count || null);
       
-      if (format === 'json' || format === 'txt-timestamps' || format === 'srt' || format === 'vtt') {
-        const parsed = parseTranscript(data.content, format);
+      if (transcriptFormat === 'json' || transcriptFormat === 'txt-timestamps' || transcriptFormat === 'srt' || transcriptFormat === 'vtt') {
+        const parsed = parseTranscript(data.content, transcriptFormat);
         setTranscriptData(parsed);
         
         if (parsed.length > 0) {
@@ -280,6 +281,55 @@ export const YTTranscriptExtractor: React.FC = () => {
       setIsExtracting(false);
     }
   };
+
+  const handleExtract = async () => {
+    if (!videoUrl.trim()) {
+      setError('Please enter a YouTube URL or Video ID');
+      return;
+    }
+
+    const id = extractVideoId(videoUrl.trim());
+    
+    if (!id) {
+      setError('Invalid YouTube URL or Video ID. Please check and try again.');
+      return;
+    }
+
+    if (id.length !== 11) {
+      setError('Invalid Video ID. YouTube Video IDs must be 11 characters long.');
+      return;
+    }
+
+    setVideoMetadata(null);
+    await handleExtractWithId(id, format, language);
+  };
+
+  const handleFormatChange = async (newFormat: TranscriptFormat) => {
+    if (videoId) {
+      setFormat(newFormat);
+      await handleExtractWithId(videoId, newFormat, language);
+    }
+  };
+
+  const handleLanguageChange = async (newLanguage: string) => {
+    if (videoId) {
+      setLanguage(newLanguage);
+      await handleExtractWithId(videoId, format, newLanguage);
+    }
+  };
+
+  // Read video_id from URL on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const urlVideoId = params.get('video_id');
+    if (urlVideoId && urlVideoId.length === 11 && !videoId) {
+      setVideoId(urlVideoId);
+      setVideoUrl(`https://www.youtube.com/watch?v=${urlVideoId}`);
+      // Auto-extract if video ID is in URL
+      handleExtractWithId(urlVideoId, format, language);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDownload = () => {
     if (!transcript) return;
@@ -629,6 +679,10 @@ export const YTTranscriptExtractor: React.FC = () => {
                         setVideoMetadata(null);
                         setVideoUrl('');
                         setVideoId('');
+                        // Clear URL parameter
+                        const url = new URL(window.location.href);
+                        url.searchParams.delete('video_id');
+                        window.history.pushState({}, '', url.toString());
                       }}
                       className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
@@ -708,19 +762,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="border-t pt-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-gray-700">Free Credits</span>
-                      <a href="#" className="text-sm text-pink-600 hover:text-pink-700 font-medium">
-                        Upgrade →
-                      </a>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-                      <div className="bg-pink-500 h-2 rounded-full" style={{ width: '4%' }}></div>
-                    </div>
-                    <p className="text-xs text-gray-500">1 of 25 used</p>
-                    <p className="text-xs text-gray-500 mt-1">Resets in 25 days</p>
-                  </div>
                 </div>
               </div>
 
@@ -765,20 +806,36 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </div>
 
                     <select
-                      value={language}
-                      onChange={(e) => setLanguage(e.target.value)}
-                      className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white"
+                      value={format}
+                      onChange={(e) => handleFormatChange(e.target.value as TranscriptFormat)}
+                      disabled={isExtracting}
+                      className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <option value="en">en</option>
-                      <option value="es">es</option>
-                      <option value="fr">fr</option>
-                      <option value="de">de</option>
-                      <option value="pl">pl</option>
+                      <option value="txt-timestamps">Plain Text (with Timestamps)</option>
+                      <option value="txt">Plain Text</option>
+                      <option value="json">JSON</option>
+                      <option value="srt">SRT</option>
+                      <option value="vtt">VTT</option>
                     </select>
 
-                    <button className="p-2 text-gray-500 hover:text-gray-700 transition-colors">
-                      <MoreVertical className="w-5 h-5" />
-                    </button>
+                    <select
+                      value={language}
+                      onChange={(e) => handleLanguageChange(e.target.value)}
+                      disabled={isExtracting}
+                      className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <option value="en">English (en)</option>
+                      <option value="es">Spanish (es)</option>
+                      <option value="fr">French (fr)</option>
+                      <option value="de">German (de)</option>
+                      <option value="pl">Polish (pl)</option>
+                      <option value="it">Italian (it)</option>
+                      <option value="pt">Portuguese (pt)</option>
+                      <option value="ru">Russian (ru)</option>
+                      <option value="ja">Japanese (ja)</option>
+                      <option value="ko">Korean (ko)</option>
+                      <option value="zh">Chinese (zh)</option>
+                    </select>
                   </div>
 
                   <div
