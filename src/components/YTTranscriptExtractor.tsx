@@ -7,14 +7,21 @@ import { API_BASE_URL } from '../services/api';
 
 type TranscriptFormat = 'txt' | 'txt-timestamps' | 'json' | 'srt' | 'vtt';
 
+interface AvailableLanguage {
+  code: string;
+  name: string;
+  is_generated: boolean;
+}
+
 interface TranscriptResult {
   success: boolean;
-  format: string;
-  content: string;
-  content_type: string;
-  video_id: string;
+  format?: string;
+  content?: string;
+  content_type?: string;
+  video_id?: string;
   entries_count?: number;
   error?: string;
+  available_languages?: AvailableLanguage[];
 }
 
 interface VideoMetadata {
@@ -57,7 +64,7 @@ export const YTTranscriptExtractor: React.FC = () => {
   const [copiedFragment, setCopiedFragment] = useState<number | null>(null);
   const [downloadDialog, setDownloadDialog] = useState(false);
   const [downloadFormat, setDownloadFormat] = useState<TranscriptFormat>('txt-timestamps');
-  const playerRef = useRef<any>(null);
+  const [availableLanguages, setAvailableLanguages] = useState<AvailableLanguage[]>([]);
 
   const extractVideoId = (url: string): string | null => {
     const patterns = [
@@ -209,13 +216,19 @@ export const YTTranscriptExtractor: React.FC = () => {
   };
 
   const handleExtractWithId = async (id: string, transcriptFormat: TranscriptFormat, transcriptLanguage: string) => {
-    setError(null);
-    setTranscript(null);
-    setTranscriptData([]);
-    setCopied(false);
-    setEntriesCount(null);
-    setWordCount(0);
-    setCharCount(0);
+    // Only clear error and transcript if this is a new video, not just a language/format change
+    if (id !== videoId) {
+      setError(null);
+      setTranscript(null);
+      setTranscriptData([]);
+      setCopied(false);
+      setEntriesCount(null);
+      setWordCount(0);
+      setCharCount(0);
+    } else {
+      // For language/format changes, just clear the error
+      setError(null);
+    }
 
     if (!id || id.length !== 11) {
       setError('Invalid Video ID. YouTube Video IDs must be 11 characters long.');
@@ -247,11 +260,27 @@ export const YTTranscriptExtractor: React.FC = () => {
 
       if (!response.ok || !data.success) {
         const errorMsg = data.error || 'Failed to extract transcript';
+        
+        // Store available languages if provided
+        if (data.available_languages && data.available_languages.length > 0) {
+          setAvailableLanguages(data.available_languages);
+          // Create error message with available languages
+          const langList = data.available_languages.map(lang => `${lang.name} (${lang.code})`).join(', ');
+          throw new Error(`${errorMsg}\n\nAvailable languages: ${langList}`);
+        } else {
+          setAvailableLanguages([]);
+        }
+        
         // Check if it's a "no transcript available" error
         if (errorMsg.includes('No transcript available') || errorMsg.includes('No transcript found')) {
-          throw new Error('No transcript available for this video. The video may not have captions enabled, or transcripts may not be available in the selected language.');
+          throw new Error('No transcript available for this video. The video may not have captions enabled.');
         }
         throw new Error(errorMsg);
+      }
+
+      // Store available languages from successful response
+      if (data.available_languages && data.available_languages.length > 0) {
+        setAvailableLanguages(data.available_languages);
       }
 
       setTranscript(data.content);
@@ -316,75 +345,14 @@ export const YTTranscriptExtractor: React.FC = () => {
   };
 
   const handleLanguageChange = async (newLanguage: string) => {
-    if (videoId) {
+    if (videoId && !isExtracting) {
       setLanguage(newLanguage);
+      setError(null); // Clear previous errors
+      // Don't clear transcript data immediately - let the new request handle it
       await handleExtractWithId(videoId, format, newLanguage);
     }
   };
 
-  // Load YouTube IFrame API for "Jump to" functionality
-  useEffect(() => {
-    // Declare global type for YouTube API
-    declare global {
-      interface Window {
-        YT: any;
-        onYouTubeIframeAPIReady: () => void;
-      }
-    }
-
-    // Only initialize API when we have both videoId and transcript
-    if (!videoId || !transcript) {
-      return;
-    }
-
-    const initializePlayer = () => {
-      const iframe = document.getElementById('youtube-player') as HTMLIFrameElement;
-      if (iframe && window.YT && window.YT.Player) {
-        try {
-          // Initialize player on the iframe for API control
-          playerRef.current = new window.YT.Player('youtube-player', {
-            events: {
-              onReady: (event: any) => {
-                console.log('YouTube player ready');
-              },
-              onError: (event: any) => {
-                console.error('YouTube player error:', event.data);
-              },
-            },
-          });
-        } catch (e) {
-          console.error('Error initializing YouTube player API:', e);
-        }
-      }
-    };
-
-    if (!window.YT) {
-      // Load YouTube IFrame API
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
-
-      // Set up callback for when API is ready
-      window.onYouTubeIframeAPIReady = () => {
-        setTimeout(initializePlayer, 500);
-      };
-    } else if (window.YT.Player) {
-      // API already loaded
-      setTimeout(initializePlayer, 500);
-    }
-
-    return () => {
-      if (playerRef.current) {
-        try {
-          playerRef.current.destroy();
-        } catch (e) {
-          // Ignore destroy errors
-        }
-        playerRef.current = null;
-      }
-    };
-  }, [videoId, transcript]);
 
   const convertToFormat = (targetFormat: TranscriptFormat): string => {
     // If target format matches current format, return transcript as-is
@@ -556,22 +524,9 @@ export const YTTranscriptExtractor: React.FC = () => {
   };
 
   const handleJumpTo = (timestamp: number) => {
-    // Try YouTube API first
-    if (playerRef.current && playerRef.current.seekTo) {
-      try {
-        playerRef.current.seekTo(timestamp, true);
-        playerRef.current.playVideo();
-        return;
-      } catch (e) {
-        console.error('Error using YouTube API:', e);
-      }
-    }
-    
-    // Fallback: Update iframe src with timestamp
-    const iframe = document.getElementById('youtube-player') as HTMLIFrameElement;
-    if (iframe && videoId) {
-      iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&start=${Math.floor(timestamp)}&autoplay=1&origin=${window.location.origin}`;
-    }
+    // Open YouTube video at specific timestamp in new tab
+    const url = `https://www.youtube.com/watch?v=${videoId}&t=${Math.floor(timestamp)}s`;
+    window.open(url, '_blank');
   };
 
   const filteredTranscript = transcriptData.filter(entry => 
@@ -817,9 +772,38 @@ export const YTTranscriptExtractor: React.FC = () => {
                 </div>
 
                 {error && (
-                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start space-x-3">
-                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-red-700">{error}</p>
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+                    <div className="flex items-start gap-2">
+                      <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                      <div className="flex-1">
+                        <p className="text-sm text-red-700 whitespace-pre-line">{error}</p>
+                        {availableLanguages.length > 0 && (
+                          <div className="mt-3">
+                            <p className="text-red-700 text-xs font-semibold mb-2">Available languages for this video:</p>
+                            <div className="flex flex-wrap gap-2">
+                              {availableLanguages.map(lang => (
+                                <button
+                                  key={lang.code}
+                                  onClick={() => {
+                                    if (lang.code !== language && videoId) {
+                                      handleLanguageChange(lang.code);
+                                    }
+                                  }}
+                                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                                    lang.code === language
+                                      ? 'bg-red-600 text-white'
+                                      : 'bg-red-100 text-red-800 hover:bg-red-200'
+                                  }`}
+                                >
+                                  {lang.name} ({lang.code})
+                                  {lang.is_generated && ' [Auto]'}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 )}
 
@@ -858,14 +842,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                          setVideoUrl('');
                          setVideoId('');
                          setNotes({});
-                         if (playerRef.current) {
-                           try {
-                             playerRef.current.destroy();
-                           } catch (e) {
-                             // Ignore destroy errors
-                           }
-                           playerRef.current = null;
-                         }
                        }}
                        className="text-gray-600 hover:text-gray-900 transition-colors"
                      >
@@ -879,15 +855,27 @@ export const YTTranscriptExtractor: React.FC = () => {
 
                    <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
                      {videoId ? (
-                       <iframe
-                         id="youtube-player"
-                         className="w-full aspect-video"
-                         src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=${window.location.origin}`}
-                         frameBorder="0"
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                         allowFullScreen
-                         title={videoMetadata.title}
-                       ></iframe>
+                       <div 
+                         className="relative w-full aspect-video bg-black rounded-lg overflow-hidden cursor-pointer group"
+                         onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank')}
+                       >
+                         <img
+                           src={videoMetadata.thumbnail || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                           alt={videoMetadata.title}
+                           className="w-full h-full object-cover"
+                           onError={(e) => {
+                             (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                           }}
+                         />
+                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                           <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
+                             <Play className="w-10 h-10 text-white ml-1" fill="white" />
+                           </div>
+                         </div>
+                         <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                           Click to watch on YouTube
+                         </div>
+                       </div>
                      ) : (
                        <div className="w-full aspect-video bg-gray-200 flex items-center justify-center">
                          <p className="text-gray-500">Video player will appear here</p>
@@ -1004,8 +992,11 @@ export const YTTranscriptExtractor: React.FC = () => {
 
                      <select
                        value={language}
-                       onChange={(e) => handleLanguageChange(e.target.value)}
-                       disabled={isExtracting}
+                       onChange={(e) => {
+                         e.preventDefault();
+                         handleLanguageChange(e.target.value);
+                       }}
+                       disabled={isExtracting || !videoId}
                        className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
                      >
                       <option value="en">English (en)</option>
@@ -1019,6 +1010,47 @@ export const YTTranscriptExtractor: React.FC = () => {
                       <option value="ja">Japanese (ja)</option>
                       <option value="ko">Korean (ko)</option>
                       <option value="zh">Chinese (zh)</option>
+                      <option value="ar">Arabic (ar)</option>
+                      <option value="nl">Dutch (nl)</option>
+                      <option value="sv">Swedish (sv)</option>
+                      <option value="no">Norwegian (no)</option>
+                      <option value="da">Danish (da)</option>
+                      <option value="fi">Finnish (fi)</option>
+                      <option value="tr">Turkish (tr)</option>
+                      <option value="cs">Czech (cs)</option>
+                      <option value="hu">Hungarian (hu)</option>
+                      <option value="ro">Romanian (ro)</option>
+                      <option value="bg">Bulgarian (bg)</option>
+                      <option value="hr">Croatian (hr)</option>
+                      <option value="sr">Serbian (sr)</option>
+                      <option value="sk">Slovak (sk)</option>
+                      <option value="sl">Slovenian (sl)</option>
+                      <option value="uk">Ukrainian (uk)</option>
+                      <option value="vi">Vietnamese (vi)</option>
+                      <option value="th">Thai (th)</option>
+                      <option value="id">Indonesian (id)</option>
+                      <option value="ms">Malay (ms)</option>
+                      <option value="hi">Hindi (hi)</option>
+                      <option value="he">Hebrew (he)</option>
+                      <option value="el">Greek (el)</option>
+                      <option value="ca">Catalan (ca)</option>
+                      <option value="eu">Basque (eu)</option>
+                      <option value="gl">Galician (gl)</option>
+                      <option value="ga">Irish (ga)</option>
+                      <option value="mt">Maltese (mt)</option>
+                      {availableLanguages.length > 0 && (
+                        <>
+                          <option disabled>--- Available for this video ---</option>
+                          {availableLanguages
+                            .filter(lang => !['en', 'es', 'fr', 'de', 'pl', 'it', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar', 'nl', 'sv', 'no', 'da', 'fi', 'tr', 'cs', 'hu', 'ro', 'bg', 'hr', 'sr', 'sk', 'sl', 'uk', 'vi', 'th', 'id', 'ms', 'hi', 'he', 'el', 'ca', 'eu', 'gl', 'ga', 'mt'].includes(lang.code))
+                            .map(lang => (
+                              <option key={lang.code} value={lang.code}>
+                                {lang.name} ({lang.code}){lang.is_generated ? ' [Auto]' : ''}
+                              </option>
+                            ))
+                          }
+                        </>
+                      )}
                     </select>
                   </div>
 
@@ -1028,6 +1060,42 @@ export const YTTranscriptExtractor: React.FC = () => {
                         <div className="bg-pink-600 h-2 rounded-full animate-pulse" style={{ width: '100%' }}></div>
                       </div>
                       <p className="text-xs text-gray-500 mt-1 text-center">Extracting transcript...</p>
+                    </div>
+                  )}
+
+                  {error && transcript === null && (
+                    <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                      <div className="flex items-start gap-2">
+                        <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <div className="flex-1">
+                          <p className="text-sm text-red-700 whitespace-pre-line">{error}</p>
+                          {availableLanguages.length > 0 && (
+                            <div className="mt-3">
+                              <p className="text-red-700 text-xs font-semibold mb-2">Available languages for this video:</p>
+                              <div className="flex flex-wrap gap-2">
+                                {availableLanguages.map(lang => (
+                                  <button
+                                    key={lang.code}
+                                    onClick={() => {
+                                      if (lang.code !== language && videoId) {
+                                        handleLanguageChange(lang.code);
+                                      }
+                                    }}
+                                    className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
+                                      lang.code === language
+                                        ? 'bg-red-600 text-white'
+                                        : 'bg-red-100 text-red-800 hover:bg-red-200'
+                                    }`}
+                                  >
+                                    {lang.name} ({lang.code})
+                                    {lang.is_generated && ' [Auto]'}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   )}
 
