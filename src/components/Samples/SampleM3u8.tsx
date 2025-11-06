@@ -81,15 +81,15 @@ export default function SampleM3u8() {
   return (
     <>
       <Helmet>
-        <title>Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyIMG</title>
+        <title>Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyHub</title>
         <meta name="description" content="Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U8 playlist parsing, HLS streaming, and video player compatibility tools." />
         <meta name="keywords" content="M3U8 sample files, test M3U8 files, download M3U8 samples, free M3U8 test files, M3U8 HLS playlist samples, M3U8 streaming files, .m3u8 test files, video playlist files, M3U8 parsing test files" />
-        <meta property="og:title" content="Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyIMG" />
+        <meta property="og:title" content="Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyHub" />
         <meta property="og:description" content="Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available for testing M3U8 playlist parsing and HLS streaming tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-m3u8" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyHub" />
         <meta name="twitter:description" content="Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-m3u8" />
         <script

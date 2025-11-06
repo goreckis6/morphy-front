@@ -163,15 +163,15 @@ export const XMLViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free XML Viewer - View & Validate XML Files Online | MorphyIMG</title>
+        <title>Free XML Viewer - View & Validate XML Files Online | MorphyHub</title>
         <meta name="description" content="Free professional XML viewer with syntax highlighting and validation. Upload and preview XML, XSD, XSLT, RSS files online with formatted display and error detection. Supports batch viewing up to 20 files. 100% free XML viewer tool." />
         <meta name="keywords" content="XML viewer, XML validator, XML file viewer online, XML formatter, XML preview, XSD viewer, XSLT viewer, RSS viewer, XML online, free XML viewer" />
-        <meta property="og:title" content="Free XML Viewer - View & Validate XML Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free XML Viewer - View & Validate XML Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional XML viewer with syntax highlighting and validation. Upload and preview XML files online with formatted display and error detection." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/xml" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free XML Viewer - View & Validate XML Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free XML Viewer - View & Validate XML Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional XML viewer with syntax highlighting and validation. Upload and preview XML files online with formatted display." />
         <script type="application/ld+json">
           {JSON.stringify({

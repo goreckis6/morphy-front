@@ -162,15 +162,15 @@ export const ODSViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyIMG</title>
+        <title>Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyHub</title>
         <meta name="description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis. Supports batch viewing up to 20 files. 100% free ODS viewer tool." />
         <meta name="keywords" content="ODS viewer, OpenDocument viewer, ODS file viewer online, LibreOffice Calc viewer, ODS preview, spreadsheet viewer, ODS online, free ODS viewer" />
-        <meta property="og:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyIMG" />
+        <meta property="og:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyHub" />
         <meta property="og:description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/ods" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis." />
         <script type="application/ld+json">
           {JSON.stringify({

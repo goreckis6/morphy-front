@@ -1,6 +1,6 @@
 # Deployment Guide
 
-This guide covers deploying MorphyIMG to various cloud platforms from GitLab.
+This guide covers deploying MorphyHub to various cloud platforms from GitLab.
 
 ## Quick Start
 
@@ -97,8 +97,8 @@ vercel --prod
 
 **Build and Run Locally**
 ```bash
-docker build -f docker/Dockerfile -t morphyimg .
-docker run -p 3000:80 morphyimg
+docker build -f docker/Dockerfile -t MorphyHub .
+docker run -p 3000:80 MorphyHub
 ```
 
 **Docker Compose**
@@ -109,8 +109,8 @@ docker-compose up -d
 **Deploy to Container Platform**
 1. Build and push to registry:
    ```bash
-   docker build -f docker/Dockerfile -t your-registry/morphyimg .
-   docker push your-registry/morphyimg
+   docker build -f docker/Dockerfile -t your-registry/MorphyHub .
+   docker push your-registry/MorphyHub
    ```
 
 2. Deploy to your container platform (AWS ECS, Google Cloud Run, etc.)

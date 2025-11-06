@@ -163,15 +163,15 @@ export const HTMLViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free HTML Viewer - View & Validate HTML Files Online | MorphyIMG</title>
+        <title>Free HTML Viewer - View & Validate HTML Files Online | MorphyHub</title>
         <meta name="description" content="Free professional HTML viewer with syntax highlighting and validation. Upload and preview HTML, HTM, XHTML files online with formatted display and error detection. Supports batch viewing up to 20 files. 100% free HTML viewer tool." />
         <meta name="keywords" content="HTML viewer, HTML validator, HTML file viewer online, HTML formatter, HTML preview, web page viewer, HTML online, free HTML viewer" />
-        <meta property="og:title" content="Free HTML Viewer - View & Validate HTML Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free HTML Viewer - View & Validate HTML Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional HTML viewer with syntax highlighting and validation. Upload and preview HTML files online with formatted display and error detection." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/html" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free HTML Viewer - View & Validate HTML Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free HTML Viewer - View & Validate HTML Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional HTML viewer with syntax highlighting and validation. Upload and preview HTML files online with formatted display." />
         <script type="application/ld+json">
           {JSON.stringify({

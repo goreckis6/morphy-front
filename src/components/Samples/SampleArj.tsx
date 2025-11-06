@@ -81,15 +81,15 @@ export default function SampleArj() {
   return (
     <>
       <Helmet>
-        <title>Free ARJ Sample Files Download - Test Archive Files | MorphyIMG</title>
+        <title>Free ARJ Sample Files Download - Test Archive Files | MorphyHub</title>
         <meta name="description" content="Download free ARJ sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and ARJ format processing tools." />
         <meta name="keywords" content="ARJ sample files, test ARJ files, download ARJ samples, free ARJ test files, archive samples, ARJ compressed files, archive format samples, ARJ conversion test files, .arj test files, file compression samples, legacy archive samples" />
-        <meta property="og:title" content="Free ARJ Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free ARJ Sample Files Download - Test Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free ARJ sample archive files for testing. Multiple file sizes available for testing archive extraction and compression tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-arj" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ARJ Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ARJ Sample Files Download - Test Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ARJ sample archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-arj" />
         <script

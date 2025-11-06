@@ -81,15 +81,15 @@ export default function SampleAsc() {
   return (
     <>
       <Helmet>
-        <title>Free ASC Sample Files Download - Test ASCII Text Files | MorphyIMG</title>
+        <title>Free ASC Sample Files Download - Test ASCII Text Files | MorphyHub</title>
         <meta name="description" content="Download free ASC sample ASCII text files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing text file processing, ASCII encoding, and plain text format tools." />
         <meta name="keywords" content="ASC sample files, test ASC files, download ASC samples, free ASC test files, ASCII text samples, plain text samples, text file samples, ASC conversion test files, .asc test files, text encoding samples, data file samples" />
-        <meta property="og:title" content="Free ASC Sample Files Download - Test ASCII Text Files | MorphyIMG" />
+        <meta property="og:title" content="Free ASC Sample Files Download - Test ASCII Text Files | MorphyHub" />
         <meta property="og:description" content="Download free ASC sample ASCII text files for testing. Multiple file sizes available for testing text file processing and ASCII encoding tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-asc" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ASC Sample Files Download - Test ASCII Text Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ASC Sample Files Download - Test ASCII Text Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ASC sample ASCII text files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-asc" />
         <script

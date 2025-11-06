@@ -1,4 +1,4 @@
-# AWS Infrastructure for MorphyIMG
+# AWS Infrastructure for MorphyHub
 terraform {
   required_version = ">= 1.0"
   required_providers {
@@ -23,7 +23,7 @@ variable "aws_region" {
 variable "project_name" {
   description = "Project name"
   type        = string
-  default     = "morphyimg"
+  default     = "MorphyHub"
 }
 
 variable "environment" {

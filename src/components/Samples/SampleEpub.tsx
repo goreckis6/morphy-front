@@ -81,15 +81,15 @@ export default function SampleEpub() {
   return (
     <>
       <Helmet>
-        <title>Free EPUB Sample Files Download - Test eBook Files | MorphyIMG</title>
+        <title>Free EPUB Sample Files Download - Test eBook Files | MorphyHub</title>
         <meta name="description" content="Download free EPUB sample eBook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing eBook readers, EPUB conversion, and digital publishing tools." />
         <meta name="keywords" content="EPUB sample files, test EPUB files, download EPUB samples, free EPUB test files, eBook sample files, EPUB ebook files, .epub test files, digital book files, EPUB reader test files, EPUB conversion test files" />
-        <meta property="og:title" content="Free EPUB Sample Files Download - Test eBook Files | MorphyIMG" />
+        <meta property="og:title" content="Free EPUB Sample Files Download - Test eBook Files | MorphyHub" />
         <meta property="og:description" content="Download free EPUB sample eBook files for testing. Multiple file sizes available for testing eBook readers and EPUB conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-epub" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free EPUB Sample Files Download - Test eBook Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free EPUB Sample Files Download - Test eBook Files | MorphyHub" />
         <meta name="twitter:description" content="Download free EPUB sample eBook files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-epub" />
         <script

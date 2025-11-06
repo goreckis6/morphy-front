@@ -33,7 +33,7 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>404 - Page Not Found - MorphyIMG</title>
+        <title>404 - Page Not Found - MorphyHub</title>
         <meta name="description" content="Oops! The page you're looking for got lost in the digital void. Let's get you back on track!" />
         <link rel="canonical" href="https://morphyhub.com/404" />
       </Helmet>

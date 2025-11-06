@@ -81,15 +81,15 @@ export default function SampleJks() {
   return (
     <>
       <Helmet>
-        <title>Free JKS Sample Files Download - Test Java KeyStore Files | MorphyIMG</title>
+        <title>Free JKS Sample Files Download - Test Java KeyStore Files | MorphyHub</title>
         <meta name="description" content="Download free JKS sample Java KeyStore files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java KeyStore management, JKS parsing, and SSL certificate storage tools." />
         <meta name="keywords" content="JKS sample files, test JKS files, download JKS samples, free JKS test files, Java KeyStore samples, SSL certificate files, JKS keystore files, .jks test files, Java security files, JKS parsing test files" />
-        <meta property="og:title" content="Free JKS Sample Files Download - Test Java KeyStore Files | MorphyIMG" />
+        <meta property="og:title" content="Free JKS Sample Files Download - Test Java KeyStore Files | MorphyHub" />
         <meta property="og:description" content="Download free JKS sample Java KeyStore files for testing. Multiple file sizes available for testing Java KeyStore management and JKS parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-jks" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free JKS Sample Files Download - Test Java KeyStore Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free JKS Sample Files Download - Test Java KeyStore Files | MorphyHub" />
         <meta name="twitter:description" content="Download free JKS sample Java KeyStore files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-jks" />
         <script

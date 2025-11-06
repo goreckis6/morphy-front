@@ -81,15 +81,15 @@ export default function SampleCanLog() {
   return (
     <>
       <Helmet>
-        <title>Free CAN Log Sample Files Download - Test CAN Bus Log Files | MorphyIMG</title>
+        <title>Free CAN Log Sample Files Download - Test CAN Bus Log Files | MorphyHub</title>
         <meta name="description" content="Download free CAN log sample CAN bus log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAN bus analysis, log parsing, and automotive diagnostic tools." />
         <meta name="keywords" content="CAN log sample files, test CAN log files, download CAN log samples, free CAN log test files, CAN bus log samples, automotive log samples, CAN bus data samples, CAN log conversion test files, .log test files, vehicle diagnostics samples, CAN analysis samples" />
-        <meta property="og:title" content="Free CAN Log Sample Files Download - Test CAN Bus Log Files | MorphyIMG" />
+        <meta property="og:title" content="Free CAN Log Sample Files Download - Test CAN Bus Log Files | MorphyHub" />
         <meta property="og:description" content="Download free CAN log sample CAN bus log files for testing. Multiple file sizes available for testing CAN bus analysis and log parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-can-log" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CAN Log Sample Files Download - Test CAN Bus Log Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CAN Log Sample Files Download - Test CAN Bus Log Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CAN log sample CAN bus log files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-can-log" />
         <script

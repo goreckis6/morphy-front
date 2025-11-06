@@ -81,15 +81,15 @@ export default function SampleCpp() {
   return (
     <>
       <Helmet>
-        <title>Free C++ Sample Files Download - Test C++ Source Code Files | MorphyIMG</title>
+        <title>Free C++ Sample Files Download - Test C++ Source Code Files | MorphyHub</title>
         <meta name="description" content="Download free C++ sample source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, syntax checking, and programming tools." />
         <meta name="keywords" content="C++ sample files, test CPP files, download C++ samples, free C++ test files, C++ source code samples, C++ programming samples, C++ code samples, C++ conversion test files, .cpp test files, C++ language samples, programming code samples" />
-        <meta property="og:title" content="Free C++ Sample Files Download - Test C++ Source Code Files | MorphyIMG" />
+        <meta property="og:title" content="Free C++ Sample Files Download - Test C++ Source Code Files | MorphyHub" />
         <meta property="og:description" content="Download free C++ sample source code files for testing. Multiple file sizes available for testing C++ code compilation and syntax checking tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-cpp" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free C++ Sample Files Download - Test C++ Source Code Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free C++ Sample Files Download - Test C++ Source Code Files | MorphyHub" />
         <meta name="twitter:description" content="Download free C++ sample source code files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-cpp" />
         <script

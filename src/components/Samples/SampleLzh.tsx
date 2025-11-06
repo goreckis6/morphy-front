@@ -81,15 +81,15 @@ export default function SampleLzh() {
   return (
     <>
       <Helmet>
-        <title>Free LZH Sample Files Download - Test LZH Archive Files | MorphyIMG</title>
+        <title>Free LZH Sample Files Download - Test LZH Archive Files | MorphyHub</title>
         <meta name="description" content="Download free LZH sample LZH archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH extraction, archive decompression, and file archiving tools." />
         <meta name="keywords" content="LZH sample files, test LZH files, download LZH samples, free LZH test files, LZH archive samples, LZH compressed files, .lzh test files, archive extraction files, LZH decompression test files" />
-        <meta property="og:title" content="Free LZH Sample Files Download - Test LZH Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free LZH Sample Files Download - Test LZH Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free LZH sample LZH archive files for testing. Multiple file sizes available for testing LZH extraction and archive decompression tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-lzh" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free LZH Sample Files Download - Test LZH Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free LZH Sample Files Download - Test LZH Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free LZH sample LZH archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-lzh" />
         <script

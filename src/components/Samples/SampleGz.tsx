@@ -81,15 +81,15 @@ export default function SampleGz() {
   return (
     <>
       <Helmet>
-        <title>Free GZ Sample Files Download - Test gzip Compressed Archive Files | MorphyIMG</title>
+        <title>Free GZ Sample Files Download - Test gzip Compressed Archive Files | MorphyHub</title>
         <meta name="description" content="Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing compression tools, archive extraction, and gzip file processing." />
         <meta name="keywords" content="GZ sample files, test GZ files, download GZ samples, free GZ test files, gzip compressed samples, archive samples, GZ compression test files, .gz test files, gzip archive samples, compressed file samples, GZ file samples" />
-        <meta property="og:title" content="Free GZ Sample Files Download - Test gzip Compressed Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free GZ Sample Files Download - Test gzip Compressed Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available for testing compression tools and archive extraction." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-gz" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free GZ Sample Files Download - Test gzip Compressed Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free GZ Sample Files Download - Test gzip Compressed Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-gz" />
         <script

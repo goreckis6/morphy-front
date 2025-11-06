@@ -81,15 +81,15 @@ export default function SampleCue() {
   return (
     <>
       <Helmet>
-        <title>Free CUE Sample Files Download - Test CUE Sheet Files | MorphyIMG</title>
+        <title>Free CUE Sample Files Download - Test CUE Sheet Files | MorphyHub</title>
         <meta name="description" content="Download free CUE sample CUE sheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio CD burning, CUE sheet parsing, and audio track management tools." />
         <meta name="keywords" content="CUE sample files, test CUE files, download CUE samples, free CUE test files, CUE sheet samples, audio CD samples, track list samples, CUE conversion test files, .cue test files, CD burning samples, audio track samples" />
-        <meta property="og:title" content="Free CUE Sample Files Download - Test CUE Sheet Files | MorphyIMG" />
+        <meta property="og:title" content="Free CUE Sample Files Download - Test CUE Sheet Files | MorphyHub" />
         <meta property="og:description" content="Download free CUE sample CUE sheet files for testing. Multiple file sizes available for testing audio CD burning and CUE sheet parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-cue" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CUE Sample Files Download - Test CUE Sheet Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CUE Sample Files Download - Test CUE Sheet Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CUE sample CUE sheet files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-cue" />
         <script

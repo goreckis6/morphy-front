@@ -81,15 +81,15 @@ export default function SampleBvh() {
   return (
     <>
       <Helmet>
-        <title>Free BVH Sample Files Download - Test Motion Capture Files | MorphyIMG</title>
+        <title>Free BVH Sample Files Download - Test Motion Capture Files | MorphyHub</title>
         <meta name="description" content="Download free BVH sample motion capture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture processing, animation conversion, and BVH format tools." />
         <meta name="keywords" content="BVH sample files, test BVH files, download BVH samples, free BVH test files, motion capture samples, animation data samples, BVH format samples, BVH conversion test files, .bvh test files, mocap data samples, skeletal animation samples" />
-        <meta property="og:title" content="Free BVH Sample Files Download - Test Motion Capture Files | MorphyIMG" />
+        <meta property="og:title" content="Free BVH Sample Files Download - Test Motion Capture Files | MorphyHub" />
         <meta property="og:description" content="Download free BVH sample motion capture files for testing. Multiple file sizes available for testing motion capture processing and animation conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-bvh" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free BVH Sample Files Download - Test Motion Capture Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free BVH Sample Files Download - Test Motion Capture Files | MorphyHub" />
         <meta name="twitter:description" content="Download free BVH sample motion capture files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-bvh" />
         <script

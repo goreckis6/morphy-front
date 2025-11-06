@@ -81,15 +81,15 @@ export default function SampleIfc() {
   return (
     <>
       <Helmet>
-        <title>Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyIMG</title>
+        <title>Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyHub</title>
         <meta name="description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BIM software, IFC conversion, and building information modeling tools." />
         <meta name="keywords" content="IFC sample files, test IFC files, download IFC samples, free IFC test files, Industry Foundation Classes samples, BIM files, IFC building model files, .ifc test files, building information modeling files, IFC conversion test files" />
-        <meta property="og:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyIMG" />
+        <meta property="og:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyHub" />
         <meta property="og:description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available for testing BIM software and IFC conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ifc" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyHub" />
         <meta name="twitter:description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ifc" />
         <script

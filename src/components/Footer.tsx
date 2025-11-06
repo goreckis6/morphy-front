@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
             <div className="p-2 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl">
               <RefreshCw className="w-6 h-6 text-white" />
             </div>
-            <h2 className="text-2xl font-bold">MorphyIMG</h2>
+            <h2 className="text-2xl font-bold">MorphyHub</h2>
           </div>
           
           <p className="text-gray-300 mb-6">

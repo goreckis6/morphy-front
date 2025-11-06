@@ -81,15 +81,15 @@ export default function SampleLzma() {
   return (
     <>
       <Helmet>
-        <title>Free LZMA Sample Files Download - Test LZMA Compressed Files | MorphyIMG</title>
+        <title>Free LZMA Sample Files Download - Test LZMA Compressed Files | MorphyHub</title>
         <meta name="description" content="Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZMA decompression, archive extraction, and file compression tools." />
         <meta name="keywords" content="LZMA sample files, test LZMA files, download LZMA samples, free LZMA test files, LZMA compressed samples, LZMA archive files, .lzma test files, compression files, LZMA decompression test files" />
-        <meta property="og:title" content="Free LZMA Sample Files Download - Test LZMA Compressed Files | MorphyIMG" />
+        <meta property="og:title" content="Free LZMA Sample Files Download - Test LZMA Compressed Files | MorphyHub" />
         <meta property="og:description" content="Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available for testing LZMA decompression and archive extraction tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-lzma" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free LZMA Sample Files Download - Test LZMA Compressed Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free LZMA Sample Files Download - Test LZMA Compressed Files | MorphyHub" />
         <meta name="twitter:description" content="Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-lzma" />
         <script

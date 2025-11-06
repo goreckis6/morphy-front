@@ -544,12 +544,12 @@ export const ${inputFormat}To${outputFormat}Converter: React.FC = () => {
       <footer className="bg-gray-900 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">MorphyIMG</h3>
+            <h3 className="text-2xl font-bold mb-4">MorphyHub</h3>
             <p className="text-gray-400 mb-6">
               Convert and view files online for free. Support for 50+ formats.
             </p>
             <div className="flex justify-center space-x-6 text-sm text-gray-400">
-              <span>© 2024 MorphyIMG</span>
+              <span>© 2024 MorphyHub</span>
               <span>•</span>
               <span>Privacy Policy</span>
               <span>•</span>

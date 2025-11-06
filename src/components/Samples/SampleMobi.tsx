@@ -81,15 +81,15 @@ export default function SampleMobi() {
   return (
     <>
       <Helmet>
-        <title>Free MOBI Sample Files Download - Test MOBI eBook Files | MorphyIMG</title>
+        <title>Free MOBI Sample Files Download - Test MOBI eBook Files | MorphyHub</title>
         <meta name="description" content="Download free MOBI sample MOBI eBook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MOBI eBook conversion, MOBI reading, and eBook processing tools." />
         <meta name="keywords" content="MOBI sample files, test MOBI files, download MOBI samples, free MOBI test files, MOBI eBook samples, MOBI book files, .mobi test files, eBook files, MOBI conversion test files" />
-        <meta property="og:title" content="Free MOBI Sample Files Download - Test MOBI eBook Files | MorphyIMG" />
+        <meta property="og:title" content="Free MOBI Sample Files Download - Test MOBI eBook Files | MorphyHub" />
         <meta property="og:description" content="Download free MOBI sample MOBI eBook files for testing. Multiple file sizes available for testing MOBI eBook conversion and MOBI reading tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-mobi" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free MOBI Sample Files Download - Test MOBI eBook Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free MOBI Sample Files Download - Test MOBI eBook Files | MorphyHub" />
         <meta name="twitter:description" content="Download free MOBI sample MOBI eBook files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-mobi" />
         <script

@@ -177,15 +177,15 @@ export const NEFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free NEF Viewer - View Nikon RAW Files Online | MorphyIMG</title>
+        <title>Free NEF Viewer - View Nikon RAW Files Online | MorphyHub</title>
         <meta name="description" content="Free professional NEF (Nikon RAW) viewer with high-quality rendering. Upload and preview NEF files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free NEF viewer tool." />
         <meta name="keywords" content="NEF viewer, Nikon RAW viewer, NEF file viewer online, RAW viewer, Nikon D850 viewer, camera RAW viewer, free NEF viewer, NEF preview" />
-        <meta property="og:title" content="Free NEF Viewer - View Nikon RAW Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free NEF Viewer - View Nikon RAW Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional NEF (Nikon RAW) viewer with high-quality rendering. Upload and preview Nikon RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/nef" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free NEF Viewer - View Nikon RAW Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free NEF Viewer - View Nikon RAW Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional NEF (Nikon RAW) viewer with high-quality rendering. Upload and preview Nikon RAW files online." />
         <script type="application/ld+json">
           {JSON.stringify({

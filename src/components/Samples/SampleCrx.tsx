@@ -81,15 +81,15 @@ export default function SampleCrx() {
   return (
     <>
       <Helmet>
-        <title>Free CRX Sample Files Download - Test Chrome Extension Files | MorphyIMG</title>
+        <title>Free CRX Sample Files Download - Test Chrome Extension Files | MorphyHub</title>
         <meta name="description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension processing tools." />
         <meta name="keywords" content="CRX sample files, test CRX files, download CRX samples, free CRX test files, Chrome extension samples, browser extension samples, CRX package samples, CRX conversion test files, .crx test files, Chrome extension installation samples, web extension samples" />
-        <meta property="og:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyIMG" />
+        <meta property="og:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyHub" />
         <meta property="og:description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available for testing Chrome extension installation and CRX analysis tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-crx" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-crx" />
         <script

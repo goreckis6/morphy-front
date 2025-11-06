@@ -167,15 +167,15 @@ export const ODTViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free ODT Viewer - View OpenDocument Text Files Online | MorphyIMG</title>
+        <title>Free ODT Viewer - View OpenDocument Text Files Online | MorphyHub</title>
         <meta name="description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools. Supports batch viewing up to 20 files. 100% free ODT viewer tool." />
         <meta name="keywords" content="ODT viewer, OpenDocument Text viewer, view ODT online, ODT preview, document viewer, ODT viewer tool, online ODT viewer, ODT viewer free" />
-        <meta property="og:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/odt" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools." />
         <script type="application/ld+json">
           {JSON.stringify({

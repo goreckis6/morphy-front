@@ -176,15 +176,15 @@ export const JSONViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free JSON Viewer - View & Validate JSON Files Online | MorphyIMG</title>
+        <title>Free JSON Viewer - View & Validate JSON Files Online | MorphyHub</title>
         <meta name="description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display and error detection. Supports batch viewing up to 20 files. 100% free JSON viewer tool." />
         <meta name="keywords" content="JSON viewer, JSON validator, JSON file viewer online, JSON formatter, JSON preview, API data viewer, JSON online, free JSON viewer" />
-        <meta property="og:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display and error detection." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/json" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display." />
         <script type="application/ld+json">
           {JSON.stringify({

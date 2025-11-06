@@ -81,15 +81,15 @@ export default function SampleHdr() {
   return (
     <>
       <Helmet>
-        <title>Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyIMG</title>
+        <title>Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyHub</title>
         <meta name="description" content="Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, tone mapping, and high dynamic range viewing tools." />
         <meta name="keywords" content="HDR sample files, test HDR files, download HDR samples, free HDR test files, High Dynamic Range samples, HDR image samples, HDR tone mapping test files, .hdr test files, HDR image processing samples, high dynamic range images, HDR viewer samples" />
-        <meta property="og:title" content="Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyHub" />
         <meta property="og:description" content="Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available for testing HDR image processing and tone mapping tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-hdr" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-hdr" />
         <script

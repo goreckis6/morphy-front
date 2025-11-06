@@ -253,15 +253,15 @@ export const PPSViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyIMG</title>
+        <title>Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyHub</title>
         <meta name="description" content="Free professional PPS/PPSX (PowerPoint Slide Show) viewer. Upload and preview PowerPoint slide show files online with full rendering. Supports batch viewing up to 20 files. 100% free PPS/PPSX viewer tool." />
         <meta name="keywords" content="PPS viewer, PPSX viewer, PowerPoint Slide Show viewer, PPS file viewer online, slide show viewer, Microsoft viewer, free PPS viewer, PPSX preview" />
-        <meta property="og:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional PPS/PPSX (PowerPoint Slide Show) viewer. Upload and preview Microsoft PowerPoint slide show files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/pps" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional PPS/PPSX viewer. Upload and preview PowerPoint Slide Show files online." />
         <script type="application/ld+json">
           {JSON.stringify({

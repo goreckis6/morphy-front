@@ -81,15 +81,15 @@ export default function SampleDockerComposeYml() {
   return (
     <>
       <Helmet>
-        <title>Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyIMG</title>
+        <title>Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyHub</title>
         <meta name="description" content="Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose parsing and container orchestration tools." />
         <meta name="keywords" content="Docker Compose YML sample files, test docker-compose.yml files, download Docker Compose samples, free Docker Compose test files, Docker Compose configuration samples, container orchestration samples, Docker Compose YML files, Docker Compose conversion test files, docker-compose.yml test files, container configuration samples, Docker orchestration samples" />
-        <meta property="og:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyIMG" />
+        <meta property="og:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyHub" />
         <meta property="og:description" content="Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available for testing Docker Compose parsing and container orchestration tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-docker-compose-yml" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyHub" />
         <meta name="twitter:description" content="Download free Docker Compose YML sample Docker Compose configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-docker-compose-yml" />
         <script

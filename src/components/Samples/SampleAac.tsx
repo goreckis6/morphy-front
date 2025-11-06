@@ -81,15 +81,15 @@ export default function SampleAac() {
   return (
     <>
       <Helmet>
-        <title>Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyIMG</title>
+        <title>Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyHub</title>
         <meta name="description" content="Download free AAC sample Advanced Audio Coding files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and AAC format processing tools." />
         <meta name="keywords" content="AAC sample files, test AAC files, download AAC samples, free AAC test files, audio samples, Advanced Audio Coding samples, audio conversion test files, .aac test files, compressed audio samples, MPEG-4 audio samples" />
-        <meta property="og:title" content="Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyIMG" />
+        <meta property="og:title" content="Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyHub" />
         <meta property="og:description" content="Download free AAC sample Advanced Audio Coding files for testing. Multiple file sizes available for testing audio conversion and playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-aac" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyHub" />
         <meta name="twitter:description" content="Download free AAC sample Advanced Audio Coding files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-aac" />
         <script

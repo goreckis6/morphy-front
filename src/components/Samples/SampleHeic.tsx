@@ -81,15 +81,15 @@ export default function SampleHeic() {
   return (
     <>
       <Helmet>
-        <title>Free HEIC Sample Files Download - Test High Efficiency Image Container Files | MorphyIMG</title>
+        <title>Free HEIC Sample Files Download - Test High Efficiency Image Container Files | MorphyHub</title>
         <meta name="description" content="Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIC image conversion, viewing, and processing tools." />
         <meta name="keywords" content="HEIC sample files, test HEIC files, download HEIC samples, free HEIC test files, High Efficiency Image Container samples, HEIC image samples, HEIC conversion test files, .heic test files, iPhone image samples, Apple HEIC files, HEIC viewer samples" />
-        <meta property="og:title" content="Free HEIC Sample Files Download - Test High Efficiency Image Container Files | MorphyIMG" />
+        <meta property="og:title" content="Free HEIC Sample Files Download - Test High Efficiency Image Container Files | MorphyHub" />
         <meta property="og:description" content="Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available for testing HEIC image conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-heic" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free HEIC Sample Files Download - Test High Efficiency Image Container Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free HEIC Sample Files Download - Test High Efficiency Image Container Files | MorphyHub" />
         <meta name="twitter:description" content="Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-heic" />
         <script

@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "project_name" {
   description = "Name of the project"
   type        = string
-  default     = "morphyimg"
+  default     = "MorphyHub"
   
   validation {
     condition     = can(regex("^[a-z0-9-]+$", var.project_name))

@@ -420,15 +420,15 @@ export const CR2Viewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free CR2 Viewer - View Canon RAW Files Online | MorphyIMG</title>
+        <title>Free CR2 Viewer - View Canon RAW Files Online | MorphyHub</title>
         <meta name="description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview CR2 files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free CR2 viewer tool." />
         <meta name="keywords" content="CR2 viewer, Canon RAW viewer, CR2 file viewer online, RAW viewer, Canon EOS viewer, camera RAW viewer, free CR2 viewer, CR2 preview" />
-        <meta property="og:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview Canon RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/cr2" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview Canon RAW files online." />
         <script type="application/ld+json">
           {JSON.stringify({

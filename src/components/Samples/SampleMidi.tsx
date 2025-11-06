@@ -81,15 +81,15 @@ export default function SampleMidi() {
   return (
     <>
       <Helmet>
-        <title>Free MIDI Sample Files Download - Test MIDI Music Files | MorphyIMG</title>
+        <title>Free MIDI Sample Files Download - Test MIDI Music Files | MorphyHub</title>
         <meta name="description" content="Download free MIDI sample MIDI music files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MIDI playback, MIDI conversion, and music sequencing tools." />
         <meta name="keywords" content="MIDI sample files, test MIDI files, download MIDI samples, free MIDI test files, MIDI music samples, MIDI sequence files, .midi test files, music sequencing files, MIDI playback test files" />
-        <meta property="og:title" content="Free MIDI Sample Files Download - Test MIDI Music Files | MorphyIMG" />
+        <meta property="og:title" content="Free MIDI Sample Files Download - Test MIDI Music Files | MorphyHub" />
         <meta property="og:description" content="Download free MIDI sample MIDI music files for testing. Multiple file sizes available for testing MIDI playback and MIDI conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-midi" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free MIDI Sample Files Download - Test MIDI Music Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free MIDI Sample Files Download - Test MIDI Music Files | MorphyHub" />
         <meta name="twitter:description" content="Download free MIDI sample MIDI music files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-midi" />
         <script

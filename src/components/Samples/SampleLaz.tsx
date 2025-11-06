@@ -81,15 +81,15 @@ export default function SampleLaz() {
   return (
     <>
       <Helmet>
-        <title>Free LAZ Sample Files Download - Test Compressed LiDAR Point Cloud Data Files | MorphyIMG</title>
+        <title>Free LAZ Sample Files Download - Test Compressed LiDAR Point Cloud Data Files | MorphyHub</title>
         <meta name="description" content="Download free LAZ sample compressed LiDAR point cloud data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LAZ extraction, point cloud processing, and 3D mapping tools." />
         <meta name="keywords" content="LAZ sample files, test LAZ files, download LAZ samples, free LAZ test files, compressed LAS samples, LAZ point cloud files, .laz test files, 3D mapping archive files, LAZ extraction test files" />
-        <meta property="og:title" content="Free LAZ Sample Files Download - Test Compressed LiDAR Point Cloud Data Files | MorphyIMG" />
+        <meta property="og:title" content="Free LAZ Sample Files Download - Test Compressed LiDAR Point Cloud Data Files | MorphyHub" />
         <meta property="og:description" content="Download free LAZ sample compressed LiDAR point cloud data files for testing. Multiple file sizes available for testing LAZ extraction and point cloud processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-laz" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free LAZ Sample Files Download - Test Compressed LiDAR Point Cloud Data Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free LAZ Sample Files Download - Test Compressed LiDAR Point Cloud Data Files | MorphyHub" />
         <meta name="twitter:description" content="Download free LAZ sample compressed LiDAR point cloud data files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-laz" />
         <script

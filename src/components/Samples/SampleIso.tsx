@@ -81,15 +81,15 @@ export default function SampleIso() {
   return (
     <>
       <Helmet>
-        <title>Free ISO Sample Files Download - Test ISO Disk Image Files | MorphyIMG</title>
+        <title>Free ISO Sample Files Download - Test ISO Disk Image Files | MorphyHub</title>
         <meta name="description" content="Download free ISO sample ISO disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ISO disk image mounting, ISO extraction, and disk image processing tools." />
         <meta name="keywords" content="ISO sample files, test ISO files, download ISO samples, free ISO test files, ISO disk image samples, disk image files, ISO image files, .iso test files, CD/DVD image files, ISO mounting test files" />
-        <meta property="og:title" content="Free ISO Sample Files Download - Test ISO Disk Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free ISO Sample Files Download - Test ISO Disk Image Files | MorphyHub" />
         <meta property="og:description" content="Download free ISO sample ISO disk image files for testing. Multiple file sizes available for testing ISO disk image mounting and ISO extraction tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-iso" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ISO Sample Files Download - Test ISO Disk Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ISO Sample Files Download - Test ISO Disk Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ISO sample ISO disk image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-iso" />
         <script

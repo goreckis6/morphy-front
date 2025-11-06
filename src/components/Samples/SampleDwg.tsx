@@ -81,15 +81,15 @@ export default function SampleDwg() {
   return (
     <>
       <Helmet>
-        <title>Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyIMG</title>
+        <title>Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyHub</title>
         <meta name="description" content="Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, AutoCAD conversion, and drawing file processing tools." />
         <meta name="keywords" content="DWG sample files, test DWG files, download DWG samples, free DWG test files, AutoCAD sample files, CAD drawing samples, DWG drawing files, .dwg test files, AutoCAD file samples, CAD conversion test files" />
-        <meta property="og:title" content="Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyIMG" />
+        <meta property="og:title" content="Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyHub" />
         <meta property="og:description" content="Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available for testing CAD software and AutoCAD conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dwg" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dwg" />
         <script

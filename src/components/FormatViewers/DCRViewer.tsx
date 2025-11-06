@@ -420,15 +420,15 @@ export const DCRViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free DCR Viewer - View Kodak RAW Files Online | MorphyIMG</title>
+        <title>Free DCR Viewer - View Kodak RAW Files Online | MorphyHub</title>
         <meta name="description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview DCR files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free DCR viewer tool." />
         <meta name="keywords" content="DCR viewer, Kodak RAW viewer, DCR file viewer online, RAW viewer, Kodak DCS viewer, camera RAW viewer, free DCR viewer, DCR preview" />
-        <meta property="og:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview Kodak RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/dcr" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview Kodak RAW files online." />
         <script type="application/ld+json">
           {JSON.stringify({

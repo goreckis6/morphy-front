@@ -81,15 +81,15 @@ export default function Sample3mf() {
   return (
     <>
       <Helmet>
-        <title>Free 3MF Sample Files Download - Test 3D Printing Files | MorphyIMG</title>
+        <title>Free 3MF Sample Files Download - Test 3D Printing Files | MorphyHub</title>
         <meta name="description" content="Download free 3MF sample 3D printing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printing conversion, viewing, and 3MF format processing tools." />
         <meta name="keywords" content="3MF sample files, test 3MF files, download 3MF samples, free 3MF test files, 3D printing samples, 3MF format samples, 3D printing conversion test files, .3mf test files, additive manufacturing samples, 3D printer samples" />
-        <meta property="og:title" content="Free 3MF Sample Files Download - Test 3D Printing Files | MorphyIMG" />
+        <meta property="og:title" content="Free 3MF Sample Files Download - Test 3D Printing Files | MorphyHub" />
         <meta property="og:description" content="Download free 3MF sample 3D printing files for testing. Multiple file sizes available for testing 3D printing conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-3mf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free 3MF Sample Files Download - Test 3D Printing Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free 3MF Sample Files Download - Test 3D Printing Files | MorphyHub" />
         <meta name="twitter:description" content="Download free 3MF sample 3D printing files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-3mf" />
         <script

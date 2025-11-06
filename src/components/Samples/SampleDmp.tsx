@@ -81,15 +81,15 @@ export default function SampleDmp() {
   return (
     <>
       <Helmet>
-        <title>Free DMP Sample Files Download - Test Memory Dump Files | MorphyIMG</title>
+        <title>Free DMP Sample Files Download - Test Memory Dump Files | MorphyHub</title>
         <meta name="description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing crash dump analysis and memory dump parsing tools." />
         <meta name="keywords" content="DMP sample files, test DMP files, download DMP samples, free DMP test files, memory dump samples, crash dump samples, DMP dump files, DMP conversion test files, .dmp test files, crash analysis samples, debug dump samples" />
-        <meta property="og:title" content="Free DMP Sample Files Download - Test Memory Dump Files | MorphyIMG" />
+        <meta property="og:title" content="Free DMP Sample Files Download - Test Memory Dump Files | MorphyHub" />
         <meta property="og:description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available for testing crash dump analysis and memory dump parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dmp" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DMP Sample Files Download - Test Memory Dump Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DMP Sample Files Download - Test Memory Dump Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dmp" />
         <script

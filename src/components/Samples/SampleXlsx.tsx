@@ -84,15 +84,15 @@ export default function SampleXlsx() {
   return (
     <>
       <Helmet>
-        <title>Free XLSX Sample Files Download - Test Excel Spreadsheet Files | MorphyIMG</title>
+        <title>Free XLSX Sample Files Download - Test Excel Spreadsheet Files | MorphyHub</title>
         <meta name="description" content="Download free XLSX sample Excel spreadsheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Excel conversion, data processing, and spreadsheet import tools." />
         <meta name="keywords" content="XLSX sample files, test XLSX files, download XLSX samples, free XLSX test files, Excel sample files, spreadsheet data samples, Microsoft Excel samples, XLSX conversion test files, .xlsx test files, Excel 2007+ samples, Office Open XML samples" />
-        <meta property="og:title" content="Free XLSX Sample Files Download - Test Excel Spreadsheet Files | MorphyIMG" />
+        <meta property="og:title" content="Free XLSX Sample Files Download - Test Excel Spreadsheet Files | MorphyHub" />
         <meta property="og:description" content="Download free XLSX sample Excel spreadsheet files for testing. Multiple file sizes available for testing Excel conversion and data processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-xlsx" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free XLSX Sample Files Download - Test Excel Spreadsheet Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free XLSX Sample Files Download - Test Excel Spreadsheet Files | MorphyHub" />
         <meta name="twitter:description" content="Download free XLSX sample Excel spreadsheet files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-xlsx" />
         <script

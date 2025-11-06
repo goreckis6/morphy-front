@@ -81,15 +81,15 @@ export default function SampleJava() {
   return (
     <>
       <Helmet>
-        <title>Free Java Sample Files Download - Test Java Source Code Files | MorphyIMG</title>
+        <title>Free Java Sample Files Download - Test Java Source Code Files | MorphyHub</title>
         <meta name="description" content="Download free Java sample Java source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java code compilation, Java syntax checking, and Java development tools." />
         <meta name="keywords" content="Java sample files, test Java files, download Java samples, free Java test files, Java source code samples, Java code files, .java test files, Java programming files, Java compilation test files" />
-        <meta property="og:title" content="Free Java Sample Files Download - Test Java Source Code Files | MorphyIMG" />
+        <meta property="og:title" content="Free Java Sample Files Download - Test Java Source Code Files | MorphyHub" />
         <meta property="og:description" content="Download free Java sample Java source code files for testing. Multiple file sizes available for testing Java code compilation and Java syntax checking tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-java" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Java Sample Files Download - Test Java Source Code Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Java Sample Files Download - Test Java Source Code Files | MorphyHub" />
         <meta name="twitter:description" content="Download free Java sample Java source code files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-java" />
         <script

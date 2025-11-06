@@ -420,15 +420,15 @@ export const ORFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free ORF Viewer - View Olympus RAW Files Online | MorphyIMG</title>
+        <title>Free ORF Viewer - View Olympus RAW Files Online | MorphyHub</title>
         <meta name="description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview ORF files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free ORF viewer tool." />
         <meta name="keywords" content="ORF viewer, Olympus RAW viewer, ORF file viewer online, RAW viewer, Olympus OM viewer, camera RAW viewer, free ORF viewer, ORF preview" />
-        <meta property="og:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview Olympus RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/orf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview Olympus RAW files online." />
         <script type="application/ld+json">
           {JSON.stringify({

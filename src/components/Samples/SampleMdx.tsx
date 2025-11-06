@@ -81,15 +81,15 @@ export default function SampleMdx() {
   return (
     <>
       <Helmet>
-        <title>Free MDX Sample Files Download - Test MDX Component Documentation Files | MorphyIMG</title>
+        <title>Free MDX Sample Files Download - Test MDX Component Documentation Files | MorphyHub</title>
         <meta name="description" content="Download free MDX sample MDX component documentation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MDX parsing, React component documentation, and documentation generation tools." />
         <meta name="keywords" content="MDX sample files, test MDX files, download MDX samples, free MDX test files, MDX component documentation samples, MDX React files, .mdx test files, documentation generation files, MDX parsing test files" />
-        <meta property="og:title" content="Free MDX Sample Files Download - Test MDX Component Documentation Files | MorphyIMG" />
+        <meta property="og:title" content="Free MDX Sample Files Download - Test MDX Component Documentation Files | MorphyHub" />
         <meta property="og:description" content="Download free MDX sample MDX component documentation files for testing. Multiple file sizes available for testing MDX parsing and React component documentation tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-mdx" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free MDX Sample Files Download - Test MDX Component Documentation Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free MDX Sample Files Download - Test MDX Component Documentation Files | MorphyHub" />
         <meta name="twitter:description" content="Download free MDX sample MDX component documentation files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-mdx" />
         <script

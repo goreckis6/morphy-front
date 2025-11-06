@@ -81,15 +81,15 @@ export default function SampleAvi() {
   return (
     <>
       <Helmet>
-        <title>Free AVI Sample Files Download - Test Video Files | MorphyIMG</title>
+        <title>Free AVI Sample Files Download - Test Video Files | MorphyHub</title>
         <meta name="description" content="Download free AVI sample video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion, playback, and AVI format processing tools." />
         <meta name="keywords" content="AVI sample files, test AVI files, download AVI samples, free AVI test files, video samples, Audio Video Interleave samples, AVI conversion test files, .avi test files, video playback samples, multimedia file samples" />
-        <meta property="og:title" content="Free AVI Sample Files Download - Test Video Files | MorphyIMG" />
+        <meta property="og:title" content="Free AVI Sample Files Download - Test Video Files | MorphyHub" />
         <meta property="og:description" content="Download free AVI sample video files for testing. Multiple file sizes available for testing video conversion and playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-avi" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free AVI Sample Files Download - Test Video Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free AVI Sample Files Download - Test Video Files | MorphyHub" />
         <meta name="twitter:description" content="Download free AVI sample video files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-avi" />
         <script

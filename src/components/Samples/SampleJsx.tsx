@@ -81,15 +81,15 @@ export default function SampleJsx() {
   return (
     <>
       <Helmet>
-        <title>Free JSX Sample Files Download - Test React JSX Component Files | MorphyIMG</title>
+        <title>Free JSX Sample Files Download - Test React JSX Component Files | MorphyHub</title>
         <meta name="description" content="Download free JSX sample React JSX component files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing React component compilation, JSX syntax checking, and frontend development tools." />
         <meta name="keywords" content="JSX sample files, test JSX files, download JSX samples, free JSX test files, React JSX component samples, JSX code files, .jsx test files, React component files, JSX compilation test files" />
-        <meta property="og:title" content="Free JSX Sample Files Download - Test React JSX Component Files | MorphyIMG" />
+        <meta property="og:title" content="Free JSX Sample Files Download - Test React JSX Component Files | MorphyHub" />
         <meta property="og:description" content="Download free JSX sample React JSX component files for testing. Multiple file sizes available for testing React component compilation and JSX syntax checking tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-jsx" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free JSX Sample Files Download - Test React JSX Component Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free JSX Sample Files Download - Test React JSX Component Files | MorphyHub" />
         <meta name="twitter:description" content="Download free JSX sample React JSX component files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-jsx" />
         <script

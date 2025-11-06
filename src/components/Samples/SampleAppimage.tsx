@@ -81,15 +81,15 @@ export default function SampleAppimage() {
   return (
     <>
       <Helmet>
-        <title>Free AppImage Sample Files Download - Test Linux Application Files | MorphyIMG</title>
+        <title>Free AppImage Sample Files Download - Test Linux Application Files | MorphyHub</title>
         <meta name="description" content="Download free AppImage sample Linux application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Linux app installation, AppImage analysis, and portable application processing tools." />
         <meta name="keywords" content="AppImage sample files, test AppImage files, download AppImage samples, free AppImage test files, Linux app samples, AppImage package samples, portable application samples, AppImage conversion test files, .appimage test files, Linux installation samples, application analysis samples" />
-        <meta property="og:title" content="Free AppImage Sample Files Download - Test Linux Application Files | MorphyIMG" />
+        <meta property="og:title" content="Free AppImage Sample Files Download - Test Linux Application Files | MorphyHub" />
         <meta property="og:description" content="Download free AppImage sample Linux application package files for testing. Multiple file sizes available for testing Linux app installation and AppImage analysis tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-appimage" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free AppImage Sample Files Download - Test Linux Application Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free AppImage Sample Files Download - Test Linux Application Files | MorphyHub" />
         <meta name="twitter:description" content="Download free AppImage sample Linux application package files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-appimage" />
         <script

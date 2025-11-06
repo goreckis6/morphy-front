@@ -81,15 +81,15 @@ export default function SampleAi() {
   return (
     <>
       <Helmet>
-        <title>Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyIMG</title>
+        <title>Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyHub</title>
         <meta name="description" content="Download free AI sample Adobe Illustrator vector graphics files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics conversion, viewing, and Adobe Illustrator format processing tools." />
         <meta name="keywords" content="AI sample files, test AI files, download AI samples, free AI test files, Adobe Illustrator samples, vector graphics samples, AI conversion test files, .ai test files, Illustrator format samples, design file samples" />
-        <meta property="og:title" content="Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyIMG" />
+        <meta property="og:title" content="Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyHub" />
         <meta property="og:description" content="Download free AI sample Adobe Illustrator files for testing. Multiple file sizes available for testing vector graphics conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ai" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyHub" />
         <meta name="twitter:description" content="Download free AI sample Adobe Illustrator files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ai" />
         <script

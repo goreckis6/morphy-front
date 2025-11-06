@@ -170,15 +170,15 @@ export const TXTViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free TXT Viewer - View Text Files Online | MorphyIMG</title>
+        <title>Free TXT Viewer - View Text Files Online | MorphyHub</title>
         <meta name="description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files with syntax highlighting and line numbers. Supports batch viewing up to 20 files. 100% free text viewer tool." />
         <meta name="keywords" content="TXT viewer, text viewer, view TXT online, text file viewer, log viewer, plain text viewer, TXT viewer free, online text viewer" />
-        <meta property="og:title" content="Free TXT Viewer - View Text Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free TXT Viewer - View Text Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files with syntax highlighting and line numbers." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/txt" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free TXT Viewer - View Text Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free TXT Viewer - View Text Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files." />
         <script type="application/ld+json">
           {JSON.stringify({

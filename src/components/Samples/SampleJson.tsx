@@ -81,15 +81,15 @@ export default function SampleJson() {
   return (
     <>
       <Helmet>
-        <title>Free JSON Sample Files Download - Test JSON Data Files | MorphyIMG</title>
+        <title>Free JSON Sample Files Download - Test JSON Data Files | MorphyHub</title>
         <meta name="description" content="Download free JSON sample JSON data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsing, data processing, and API response handling tools." />
         <meta name="keywords" content="JSON sample files, test JSON files, download JSON samples, free JSON test files, JSON data samples, JSON format files, .json test files, data exchange files, JSON parsing test files" />
-        <meta property="og:title" content="Free JSON Sample Files Download - Test JSON Data Files | MorphyIMG" />
+        <meta property="og:title" content="Free JSON Sample Files Download - Test JSON Data Files | MorphyHub" />
         <meta property="og:description" content="Download free JSON sample JSON data files for testing. Multiple file sizes available for testing JSON parsing and data processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-json" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free JSON Sample Files Download - Test JSON Data Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free JSON Sample Files Download - Test JSON Data Files | MorphyHub" />
         <meta name="twitter:description" content="Download free JSON sample JSON data files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-json" />
         <script

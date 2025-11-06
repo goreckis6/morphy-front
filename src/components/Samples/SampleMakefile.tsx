@@ -81,15 +81,15 @@ export default function SampleMakefile() {
   return (
     <>
       <Helmet>
-        <title>Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyIMG</title>
+        <title>Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyHub</title>
         <meta name="description" content="Download free Makefile sample build configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Makefile parsing, build system automation, and software compilation tools." />
         <meta name="keywords" content="Makefile sample files, test Makefile files, download Makefile samples, free Makefile test files, Makefile build configuration samples, Makefile automation files, .makefile test files, build system files, Makefile parsing test files" />
-        <meta property="og:title" content="Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyIMG" />
+        <meta property="og:title" content="Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyHub" />
         <meta property="og:description" content="Download free Makefile sample build configuration files for testing. Multiple file sizes available for testing Makefile parsing and build system automation tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-makefile" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyHub" />
         <meta name="twitter:description" content="Download free Makefile sample build configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-makefile" />
         <script

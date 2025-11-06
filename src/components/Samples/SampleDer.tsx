@@ -81,15 +81,15 @@ export default function SampleDer() {
   return (
     <>
       <Helmet>
-        <title>Free DER Sample Files Download - Test DER Certificate Files | MorphyIMG</title>
+        <title>Free DER Sample Files Download - Test DER Certificate Files | MorphyHub</title>
         <meta name="description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate processing and DER parsing tools." />
         <meta name="keywords" content="DER sample files, test DER files, download DER samples, free DER test files, DER certificate samples, SSL certificate samples, security certificate samples, DER conversion test files, .der test files, certificate format samples, PKI samples" />
-        <meta property="og:title" content="Free DER Sample Files Download - Test DER Certificate Files | MorphyIMG" />
+        <meta property="og:title" content="Free DER Sample Files Download - Test DER Certificate Files | MorphyHub" />
         <meta property="og:description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available for testing SSL certificate processing and DER parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-der" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DER Sample Files Download - Test DER Certificate Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DER Sample Files Download - Test DER Certificate Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-der" />
         <script

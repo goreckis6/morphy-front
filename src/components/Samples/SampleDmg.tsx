@@ -81,15 +81,15 @@ export default function SampleDmg() {
   return (
     <>
       <Helmet>
-        <title>Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyIMG</title>
+        <title>Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyHub</title>
         <meta name="description" content="Download free DMG sample macOS disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting and DMG extraction tools." />
         <meta name="keywords" content="DMG sample files, test DMG files, download DMG samples, free DMG test files, macOS disk image samples, disk image samples, DMG archive samples, DMG conversion test files, .dmg test files, macOS installer samples, Apple disk image samples" />
-        <meta property="og:title" content="Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyHub" />
         <meta property="og:description" content="Download free DMG sample macOS disk image files for testing. Multiple file sizes available for testing disk image mounting and DMG extraction tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dmg" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DMG sample macOS disk image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dmg" />
         <script

@@ -81,15 +81,15 @@ export default function SampleAnimatedGif() {
   return (
     <>
       <Helmet>
-        <title>Free Animated GIF Sample Files Download - Test Animation Files | MorphyIMG</title>
+        <title>Free Animated GIF Sample Files Download - Test Animation Files | MorphyHub</title>
         <meta name="description" content="Download free animated GIF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIF animation conversion, viewing, and animation format processing tools." />
         <meta name="keywords" content="animated GIF sample files, test animated GIF files, download animated GIF samples, free animated GIF test files, GIF animation samples, animation file samples, animated GIF conversion test files, .gif test files, web animation samples, animated image samples" />
-        <meta property="og:title" content="Free Animated GIF Sample Files Download - Test Animation Files | MorphyIMG" />
+        <meta property="og:title" content="Free Animated GIF Sample Files Download - Test Animation Files | MorphyHub" />
         <meta property="og:description" content="Download free animated GIF sample files for testing. Multiple file sizes available for testing GIF animation conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-animated-gif" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Animated GIF Sample Files Download - Test Animation Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Animated GIF Sample Files Download - Test Animation Files | MorphyHub" />
         <meta name="twitter:description" content="Download free animated GIF sample files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-animated-gif" />
         <script

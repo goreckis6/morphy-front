@@ -84,15 +84,15 @@ export default function SampleOds() {
   return (
     <>
       <Helmet>
-        <title>Free ODS Sample Files Download - Test OpenDocument Spreadsheet Files | MorphyIMG</title>
+        <title>Free ODS Sample Files Download - Test OpenDocument Spreadsheet Files | MorphyHub</title>
         <meta name="description" content="Download free ODS sample OpenDocument spreadsheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing spreadsheet conversion, data processing, and OpenDocument format tools." />
         <meta name="keywords" content="ODS sample files, test ODS files, download ODS samples, free ODS test files, OpenDocument spreadsheet samples, spreadsheet file samples, ODS conversion test files, .ods test files, LibreOffice Calc samples, spreadsheet format samples" />
-        <meta property="og:title" content="Free ODS Sample Files Download - Test OpenDocument Spreadsheet Files | MorphyIMG" />
+        <meta property="og:title" content="Free ODS Sample Files Download - Test OpenDocument Spreadsheet Files | MorphyHub" />
         <meta property="og:description" content="Download free ODS sample OpenDocument spreadsheet files for testing. Multiple file sizes available for testing spreadsheet conversion and data processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ods" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ODS Sample Files Download - Test OpenDocument Spreadsheet Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ODS Sample Files Download - Test OpenDocument Spreadsheet Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ODS sample OpenDocument spreadsheet files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ods" />
         <script

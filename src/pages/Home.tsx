@@ -27,7 +27,7 @@ export default function Home() {
   // Load and track total data processed
   useEffect(() => {
     // Get stored value from localStorage
-    const storedData = localStorage.getItem('morphyimg_total_processed');
+    const storedData = localStorage.getItem('MorphyHub_total_processed');
     const baseGB = storedData ? parseFloat(storedData) : 500; // Start from 500 GB if no stored value
     
     setTotalDataProcessed(baseGB);
@@ -36,7 +36,7 @@ export default function Home() {
     const liveIncrement = setInterval(() => {
       setTotalDataProcessed(prev => {
         const newValue = prev + Math.random() * 0.05; // Smaller increments
-        localStorage.setItem('morphyimg_total_processed', newValue.toString());
+        localStorage.setItem('MorphyHub_total_processed', newValue.toString());
         return newValue;
       });
     }, 10000); // Add small amounts every 10 seconds
@@ -61,7 +61,7 @@ export default function Home() {
       {
         "@type": "Organization",
         "@id": "https://morphyhub.com#organization",
-        "name": "MorphyIMG",
+        "name": "MorphyHub",
         "url": "https://morphyhub.com",
         "logo": "https://morphyhub.com/logo.png",
         "sameAs": []
@@ -70,7 +70,7 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://morphyhub.com#website",
         "url": "https://morphyhub.com",
-        "name": "MorphyIMG - Free Online File Converter",
+        "name": "MorphyHub - Free Online File Converter",
         "description": "Convert files between 300+ formats instantly. Fast, secure, and free file conversion service.",
         "publisher": { "@id": "https://morphyhub.com#organization" }
       },
@@ -78,7 +78,7 @@ export default function Home() {
         "@type": "WebPage",
         "@id": "https://morphyhub.com#webpage",
         "url": "https://morphyhub.com",
-        "name": "Free Online File Converter - MorphyIMG",
+        "name": "Free Online File Converter - MorphyHub",
         "description": "Convert any file format instantly. Support for 300+ formats including images, documents, ebooks, and data files.",
         "isPartOf": { "@id": "https://morphyhub.com#website" },
         "publisher": { "@id": "https://morphyhub.com#organization" }
@@ -104,7 +104,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Free Online File Converter - MorphyIMG | Convert 300+ Formats Instantly</title>
+        <title>Free Online File Converter - MorphyHub | Convert 300+ Formats Instantly</title>
         <meta name="description" content="Convert files between 300+ formats instantly. Fast, secure, and free file conversion service. Support for images, documents, ebooks, and data files." />
         <meta name="keywords" content="file converter, online converter, image converter, document converter, ebook converter, batch conversion, free converter" />
         <link rel="canonical" href="https://morphyhub.com" />
@@ -367,7 +367,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Why Choose MorphyIMG?
+                Why Choose MorphyHub?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Built for professionals and everyday users alike. Experience the difference with our cutting-edge technology.

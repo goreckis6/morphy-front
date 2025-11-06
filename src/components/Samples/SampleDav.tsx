@@ -81,15 +81,15 @@ export default function SampleDav() {
   return (
     <>
       <Helmet>
-        <title>Free DAV Sample Files Download - Test DAV Video Files | MorphyIMG</title>
+        <title>Free DAV Sample Files Download - Test DAV Video Files | MorphyHub</title>
         <meta name="description" content="Download free DAV sample DAV video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion and playback tools." />
         <meta name="keywords" content="DAV sample files, test DAV files, download DAV samples, free DAV test files, DAV video samples, security camera video samples, DAV video files, DAV conversion test files, .dav test files, video format samples, surveillance video samples" />
-        <meta property="og:title" content="Free DAV Sample Files Download - Test DAV Video Files | MorphyIMG" />
+        <meta property="og:title" content="Free DAV Sample Files Download - Test DAV Video Files | MorphyHub" />
         <meta property="og:description" content="Download free DAV sample DAV video files for testing. Multiple file sizes available for testing video conversion and playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dav" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DAV Sample Files Download - Test DAV Video Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DAV Sample Files Download - Test DAV Video Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DAV sample DAV video files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dav" />
         <script

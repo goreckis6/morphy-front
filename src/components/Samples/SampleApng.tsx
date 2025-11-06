@@ -81,15 +81,15 @@ export default function SampleApng() {
   return (
     <>
       <Helmet>
-        <title>Free APNG Sample Files Download - Test Animated PNG Files | MorphyIMG</title>
+        <title>Free APNG Sample Files Download - Test Animated PNG Files | MorphyHub</title>
         <meta name="description" content="Download free APNG sample animated PNG files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing animated PNG conversion, viewing, and APNG format processing tools." />
         <meta name="keywords" content="APNG sample files, test APNG files, download APNG samples, free APNG test files, animated PNG samples, APNG animation samples, image animation samples, APNG conversion test files, .apng test files, web animation samples, PNG animation samples" />
-        <meta property="og:title" content="Free APNG Sample Files Download - Test Animated PNG Files | MorphyIMG" />
+        <meta property="og:title" content="Free APNG Sample Files Download - Test Animated PNG Files | MorphyHub" />
         <meta property="og:description" content="Download free APNG sample animated PNG files for testing. Multiple file sizes available for testing animated PNG conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-apng" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free APNG Sample Files Download - Test Animated PNG Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free APNG Sample Files Download - Test Animated PNG Files | MorphyHub" />
         <meta name="twitter:description" content="Download free APNG sample animated PNG files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-apng" />
         <script

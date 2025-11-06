@@ -253,15 +253,15 @@ export const PPTViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyIMG</title>
+        <title>Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyHub</title>
         <meta name="description" content="Free professional PPT/PPTX (PowerPoint) viewer. Upload and preview PowerPoint presentation files online with slide rendering. Supports batch viewing up to 20 files. 100% free PPT/PPTX viewer tool." />
         <meta name="keywords" content="PPT viewer, PPTX viewer, PowerPoint viewer, PPT file viewer online, presentation viewer, Microsoft PowerPoint viewer, free PPT viewer, PPTX preview" />
-        <meta property="og:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional PPT/PPTX (PowerPoint) viewer. Upload and preview Microsoft PowerPoint presentation files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/ppt" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free PPT/PPTX Viewer - View PowerPoint Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional PPT/PPTX viewer. Upload and preview PowerPoint presentation files online." />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -84,15 +84,15 @@ export default function SampleRtf() {
   return (
     <>
       <Helmet>
-        <title>Free RTF Sample Files Download - Test Rich Text Format Files | MorphyIMG</title>
+        <title>Free RTF Sample Files Download - Test Rich Text Format Files | MorphyHub</title>
         <meta name="description" content="Download free RTF sample Rich Text Format document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing document conversion, viewing, and Rich Text Format processing tools." />
         <meta name="keywords" content="RTF sample files, test RTF files, download RTF samples, free RTF test files, Rich Text Format samples, document file samples, RTF conversion test files, .rtf test files, formatted text samples, word processor samples" />
-        <meta property="og:title" content="Free RTF Sample Files Download - Test Rich Text Format Files | MorphyIMG" />
+        <meta property="og:title" content="Free RTF Sample Files Download - Test Rich Text Format Files | MorphyHub" />
         <meta property="og:description" content="Download free RTF sample Rich Text Format document files for testing. Multiple file sizes available for testing document conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-rtf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free RTF Sample Files Download - Test Rich Text Format Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free RTF Sample Files Download - Test Rich Text Format Files | MorphyHub" />
         <meta name="twitter:description" content="Download free RTF sample Rich Text Format document files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-rtf" />
         <script

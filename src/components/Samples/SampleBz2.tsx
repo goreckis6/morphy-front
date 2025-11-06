@@ -81,15 +81,15 @@ export default function SampleBz2() {
   return (
     <>
       <Helmet>
-        <title>Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyIMG</title>
+        <title>Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyHub</title>
         <meta name="description" content="Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive decompression, compression, and BZ2 format processing tools." />
         <meta name="keywords" content="BZ2 sample files, test BZ2 files, download BZ2 samples, free BZ2 test files, bzip2 compressed files, archive samples, BZ2 compression samples, BZ2 conversion test files, .bz2 test files, file compression samples, Linux archive samples" />
-        <meta property="og:title" content="Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available for testing archive decompression and compression tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-bz2" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-bz2" />
         <script

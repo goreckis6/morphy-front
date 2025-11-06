@@ -81,15 +81,15 @@ export default function SampleIni() {
   return (
     <>
       <Helmet>
-        <title>Free INI Sample Files Download - Test Configuration Files | MorphyIMG</title>
+        <title>Free INI Sample Files Download - Test Configuration Files | MorphyHub</title>
         <meta name="description" content="Download free INI sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and settings file processing tools." />
         <meta name="keywords" content="INI sample files, test INI files, download INI samples, free INI test files, configuration file samples, INI config files, .ini test files, settings file samples, INI parsing test files" />
-        <meta property="og:title" content="Free INI Sample Files Download - Test Configuration Files | MorphyIMG" />
+        <meta property="og:title" content="Free INI Sample Files Download - Test Configuration Files | MorphyHub" />
         <meta property="og:description" content="Download free INI sample configuration files for testing. Multiple file sizes available for testing INI file parsing and configuration management tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ini" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free INI Sample Files Download - Test Configuration Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free INI Sample Files Download - Test Configuration Files | MorphyHub" />
         <meta name="twitter:description" content="Download free INI sample configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ini" />
         <script

@@ -84,15 +84,15 @@ export default function SampleZip() {
   return (
     <>
       <Helmet>
-        <title>Free ZIP Sample Files Download - Test Archive Files | MorphyIMG</title>
+        <title>Free ZIP Sample Files Download - Test Archive Files | MorphyHub</title>
         <meta name="description" content="Download free ZIP sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and file archiving tools." />
         <meta name="keywords" content="ZIP sample files, test ZIP files, download ZIP samples, free ZIP test files, archive sample files, compressed file samples, ZIP archive samples, .zip test files, file compression samples, ZIP extraction test files" />
-        <meta property="og:title" content="Free ZIP Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free ZIP Sample Files Download - Test Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free ZIP sample archive files for testing. Multiple file sizes available for testing archive extraction and compression tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-zip" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ZIP Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ZIP Sample Files Download - Test Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ZIP sample archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-zip" />
         <script

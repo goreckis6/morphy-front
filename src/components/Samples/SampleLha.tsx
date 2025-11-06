@@ -81,15 +81,15 @@ export default function SampleLha() {
   return (
     <>
       <Helmet>
-        <title>Free LHA Sample Files Download - Test LHA Archive Files | MorphyIMG</title>
+        <title>Free LHA Sample Files Download - Test LHA Archive Files | MorphyHub</title>
         <meta name="description" content="Download free LHA sample LHA archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LHA extraction, archive decompression, and file archiving tools." />
         <meta name="keywords" content="LHA sample files, test LHA files, download LHA samples, free LHA test files, LHA archive samples, LHA compressed files, .lha test files, archive extraction files, LHA decompression test files" />
-        <meta property="og:title" content="Free LHA Sample Files Download - Test LHA Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free LHA Sample Files Download - Test LHA Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free LHA sample LHA archive files for testing. Multiple file sizes available for testing LHA extraction and archive decompression tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-lha" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free LHA Sample Files Download - Test LHA Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free LHA Sample Files Download - Test LHA Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free LHA sample LHA archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-lha" />
         <script

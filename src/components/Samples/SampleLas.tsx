@@ -81,15 +81,15 @@ export default function SampleLas() {
   return (
     <>
       <Helmet>
-        <title>Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyIMG</title>
+        <title>Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyHub</title>
         <meta name="description" content="Download free LAS sample LiDAR point cloud data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LAS parsing, point cloud processing, and 3D mapping tools." />
         <meta name="keywords" content="LAS sample files, test LAS files, download LAS samples, free LAS test files, LiDAR point cloud samples, LAS data files, .las test files, 3D mapping files, LAS parsing test files" />
-        <meta property="og:title" content="Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyIMG" />
+        <meta property="og:title" content="Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyHub" />
         <meta property="og:description" content="Download free LAS sample LiDAR point cloud data files for testing. Multiple file sizes available for testing LAS parsing and point cloud processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-las" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyHub" />
         <meta name="twitter:description" content="Download free LAS sample LiDAR point cloud data files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-las" />
         <script

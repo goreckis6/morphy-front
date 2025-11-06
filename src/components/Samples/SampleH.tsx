@@ -81,15 +81,15 @@ export default function SampleH() {
   return (
     <>
       <Helmet>
-        <title>Free H Sample Files Download - Test C/C++ Header Files | MorphyIMG</title>
+        <title>Free H Sample Files Download - Test C/C++ Header Files | MorphyHub</title>
         <meta name="description" content="Download free H sample C/C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C/C++ code compilation, header file processing, and development tools." />
         <meta name="keywords" content="H sample files, test H files, download H samples, free H test files, C header samples, C++ header samples, header file samples, .h test files, C/C++ header files, programming header samples, code header files" />
-        <meta property="og:title" content="Free H Sample Files Download - Test C/C++ Header Files | MorphyIMG" />
+        <meta property="og:title" content="Free H Sample Files Download - Test C/C++ Header Files | MorphyHub" />
         <meta property="og:description" content="Download free H sample C/C++ header files for testing. Multiple file sizes available for testing C/C++ code compilation and header file processing." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-h" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free H Sample Files Download - Test C/C++ Header Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free H Sample Files Download - Test C/C++ Header Files | MorphyHub" />
         <meta name="twitter:description" content="Download free H sample C/C++ header files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-h" />
         <script

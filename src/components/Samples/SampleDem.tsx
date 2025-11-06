@@ -81,15 +81,15 @@ export default function SampleDem() {
   return (
     <>
       <Helmet>
-        <title>Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyIMG</title>
+        <title>Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyHub</title>
         <meta name="description" content="Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS mapping and terrain analysis tools." />
         <meta name="keywords" content="DEM sample files, test DEM files, download DEM samples, free DEM test files, Digital Elevation Model samples, GIS mapping samples, terrain data samples, DEM conversion test files, .dem test files, elevation data samples, geographic data samples" />
-        <meta property="og:title" content="Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyIMG" />
+        <meta property="og:title" content="Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyHub" />
         <meta property="og:description" content="Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available for testing GIS mapping and terrain analysis tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dem" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dem" />
         <script

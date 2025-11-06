@@ -81,15 +81,15 @@ export default function SampleM4a() {
   return (
     <>
       <Helmet>
-        <title>Free M4A Sample Files Download - Test M4A Audio Files | MorphyIMG</title>
+        <title>Free M4A Sample Files Download - Test M4A Audio Files | MorphyHub</title>
         <meta name="description" content="Download free M4A sample M4A audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4A audio conversion, M4A playback, and audio processing tools." />
         <meta name="keywords" content="M4A sample files, test M4A files, download M4A samples, free M4A test files, M4A audio samples, M4A music files, .m4a test files, audio compression files, M4A conversion test files" />
-        <meta property="og:title" content="Free M4A Sample Files Download - Test M4A Audio Files | MorphyIMG" />
+        <meta property="og:title" content="Free M4A Sample Files Download - Test M4A Audio Files | MorphyHub" />
         <meta property="og:description" content="Download free M4A sample M4A audio files for testing. Multiple file sizes available for testing M4A audio conversion and M4A playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-m4a" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free M4A Sample Files Download - Test M4A Audio Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free M4A Sample Files Download - Test M4A Audio Files | MorphyHub" />
         <meta name="twitter:description" content="Download free M4A sample M4A audio files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-m4a" />
         <script

@@ -429,15 +429,15 @@ export const X3FViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG</title>
+        <title>Free X3F Viewer - View Sigma RAW Files Online | MorphyHub</title>
         <meta name="description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview X3F Foveon sensor files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free X3F viewer tool." />
         <meta name="keywords" content="X3F viewer, Sigma RAW viewer, X3F file viewer online, RAW viewer, Sigma SD viewer, Foveon viewer, camera RAW viewer, free X3F viewer, X3F preview" />
-        <meta property="og:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma Foveon sensor files online with EXIF metadata." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/x3f" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma RAW files online." />
         <script type="application/ld+json">
           {JSON.stringify({

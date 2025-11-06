@@ -10,7 +10,7 @@ DISTRIBUTION_ID=$2
 
 if [ -z "$BUCKET_NAME" ] || [ -z "$DISTRIBUTION_ID" ]; then
     echo "Usage: $0 <bucket-name> <cloudfront-distribution-id>"
-    echo "Example: $0 my-morphyimg-bucket E1234567890ABC"
+    echo "Example: $0 my-MorphyHub-bucket E1234567890ABC"
     exit 1
 fi
 

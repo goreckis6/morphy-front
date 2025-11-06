@@ -253,15 +253,15 @@ export const POTViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free POT Viewer - View PowerPoint Template Files Online | MorphyIMG</title>
+        <title>Free POT Viewer - View PowerPoint Template Files Online | MorphyHub</title>
         <meta name="description" content="Free professional POT (PowerPoint Template) viewer. Upload and preview POT template files online with slide rendering. Supports batch viewing up to 20 files. 100% free POT viewer tool." />
         <meta name="keywords" content="POT viewer, PowerPoint Template viewer, POT file viewer online, presentation template viewer, Microsoft template viewer, free POT viewer, POT preview" />
-        <meta property="og:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional POT (PowerPoint Template) viewer. Upload and preview Microsoft PowerPoint template files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/pot" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional POT viewer. Upload and preview PowerPoint Template files online." />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -81,15 +81,15 @@ export default function SampleCsr() {
   return (
     <>
       <Helmet>
-        <title>Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyIMG</title>
+        <title>Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyHub</title>
         <meta name="description" content="Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate generation, CSR parsing, and security certificate processing tools." />
         <meta name="keywords" content="CSR sample files, test CSR files, download CSR samples, free CSR test files, certificate signing request samples, SSL certificate samples, security certificate samples, CSR conversion test files, .csr test files, certificate request samples, PKI samples" />
-        <meta property="og:title" content="Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyIMG" />
+        <meta property="og:title" content="Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyHub" />
         <meta property="og:description" content="Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available for testing SSL certificate generation and CSR parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-csr" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-csr" />
         <script

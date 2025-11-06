@@ -81,15 +81,15 @@ export default function SampleKt() {
   return (
     <>
       <Helmet>
-        <title>Free KT Sample Files Download - Test Kotlin Code Files | MorphyIMG</title>
+        <title>Free KT Sample Files Download - Test Kotlin Code Files | MorphyHub</title>
         <meta name="description" content="Download free KT sample Kotlin code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Kotlin compilation, KT syntax checking, and Android development tools." />
         <meta name="keywords" content="KT sample files, test KT files, download KT samples, free KT test files, Kotlin code samples, KT script files, .kt test files, Android development files, Kotlin compilation test files" />
-        <meta property="og:title" content="Free KT Sample Files Download - Test Kotlin Code Files | MorphyIMG" />
+        <meta property="og:title" content="Free KT Sample Files Download - Test Kotlin Code Files | MorphyHub" />
         <meta property="og:description" content="Download free KT sample Kotlin code files for testing. Multiple file sizes available for testing Kotlin compilation and KT syntax checking tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-kt" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free KT Sample Files Download - Test Kotlin Code Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free KT Sample Files Download - Test Kotlin Code Files | MorphyHub" />
         <meta name="twitter:description" content="Download free KT sample Kotlin code files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-kt" />
         <script

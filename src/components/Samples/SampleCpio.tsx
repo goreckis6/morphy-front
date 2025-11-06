@@ -81,15 +81,15 @@ export default function SampleCpio() {
   return (
     <>
       <Helmet>
-        <title>Free CPIO Sample Files Download - Test Archive Files | MorphyIMG</title>
+        <title>Free CPIO Sample Files Download - Test Archive Files | MorphyHub</title>
         <meta name="description" content="Download free CPIO sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and CPIO format processing tools." />
         <meta name="keywords" content="CPIO sample files, test CPIO files, download CPIO samples, free CPIO test files, archive samples, CPIO compressed files, Unix archive samples, CPIO conversion test files, .cpio test files, file compression samples, Linux archive samples" />
-        <meta property="og:title" content="Free CPIO Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free CPIO Sample Files Download - Test Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free CPIO sample archive files for testing. Multiple file sizes available for testing archive extraction and compression tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-cpio" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CPIO Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CPIO Sample Files Download - Test Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CPIO sample archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-cpio" />
         <script

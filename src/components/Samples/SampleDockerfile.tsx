@@ -81,15 +81,15 @@ export default function SampleDockerfile() {
   return (
     <>
       <Helmet>
-        <title>Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG</title>
+        <title>Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyHub</title>
         <meta name="description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker image building and Dockerfile parsing tools." />
         <meta name="keywords" content="Dockerfile sample files, test Dockerfile files, download Dockerfile samples, free Dockerfile test files, Dockerfile configuration samples, Docker image building samples, Dockerfile files, Dockerfile conversion test files, .dockerfile test files, container configuration samples, Docker build samples" />
-        <meta property="og:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG" />
+        <meta property="og:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyHub" />
         <meta property="og:description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available for testing Docker image building and Dockerfile parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dockerfile" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyHub" />
         <meta name="twitter:description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dockerfile" />
         <script

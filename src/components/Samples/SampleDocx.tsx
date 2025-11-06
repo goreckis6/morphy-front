@@ -84,15 +84,15 @@ export default function SampleDocx() {
   return (
     <>
       <Helmet>
-        <title>Free DOCX Sample Files Download - Test Files | MorphyIMG</title>
+        <title>Free DOCX Sample Files Download - Test Files | MorphyHub</title>
         <meta name="description" content="Download free DOCX sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing document conversion and processing tools." />
         <meta name="keywords" content="DOCX sample files, test DOCX files, download DOCX samples, free DOCX test files, document samples, Microsoft Word samples" />
-        <meta property="og:title" content="Free DOCX Sample Files Download - Test Files | MorphyIMG" />
+        <meta property="og:title" content="Free DOCX Sample Files Download - Test Files | MorphyHub" />
         <meta property="og:description" content="Download free DOCX sample files for testing. Multiple file sizes available for testing document conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-docx" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DOCX Sample Files Download - Test Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DOCX Sample Files Download - Test Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DOCX sample files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-docx" />
         <script

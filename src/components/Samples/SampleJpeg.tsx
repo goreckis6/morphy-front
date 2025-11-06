@@ -81,15 +81,15 @@ export default function SampleJpeg() {
   return (
     <>
       <Helmet>
-        <title>Free JPEG Sample Files Download - Test JPEG Image Files | MorphyIMG</title>
+        <title>Free JPEG Sample Files Download - Test JPEG Image Files | MorphyHub</title>
         <meta name="description" content="Download free JPEG sample JPEG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPEG image conversion, JPEG compression, and image processing tools." />
         <meta name="keywords" content="JPEG sample files, test JPEG files, download JPEG samples, free JPEG test files, JPEG image samples, JPEG photo files, .jpeg test files, image compression files, JPEG conversion test files" />
-        <meta property="og:title" content="Free JPEG Sample Files Download - Test JPEG Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free JPEG Sample Files Download - Test JPEG Image Files | MorphyHub" />
         <meta property="og:description" content="Download free JPEG sample JPEG image files for testing. Multiple file sizes available for testing JPEG image conversion and JPEG compression tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-jpeg" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free JPEG Sample Files Download - Test JPEG Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free JPEG Sample Files Download - Test JPEG Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free JPEG sample JPEG image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-jpeg" />
         <script

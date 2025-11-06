@@ -81,15 +81,15 @@ export default function SampleImg() {
   return (
     <>
       <Helmet>
-        <title>Free IMG Sample Files Download - Test Disk Image Files | MorphyIMG</title>
+        <title>Free IMG Sample Files Download - Test Disk Image Files | MorphyHub</title>
         <meta name="description" content="Download free IMG sample disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting, IMG extraction, and disk image processing tools." />
         <meta name="keywords" content="IMG sample files, test IMG files, download IMG samples, free IMG test files, disk image samples, IMG disk image files, .img test files, disk image mounting files, IMG extraction test files" />
-        <meta property="og:title" content="Free IMG Sample Files Download - Test Disk Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free IMG Sample Files Download - Test Disk Image Files | MorphyHub" />
         <meta property="og:description" content="Download free IMG sample disk image files for testing. Multiple file sizes available for testing disk image mounting and IMG extraction tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-img" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IMG Sample Files Download - Test Disk Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free IMG Sample Files Download - Test Disk Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free IMG sample disk image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-img" />
         <script

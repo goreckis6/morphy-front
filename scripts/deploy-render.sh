@@ -5,7 +5,7 @@
 
 set -e
 
-echo "🚀 Setting up Render.com deployment for MorphyIMG"
+echo "🚀 Setting up Render.com deployment for MorphyHub"
 
 # Check if render.yaml exists
 if [ ! -f "render.yaml" ]; then

@@ -81,15 +81,15 @@ export default function SampleIntelhex() {
   return (
     <>
       <Helmet>
-        <title>Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyIMG</title>
+        <title>Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyHub</title>
         <meta name="description" content="Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing firmware programming, IntelHex parsing, and embedded systems development tools." />
         <meta name="keywords" content="IntelHex sample files, test IntelHex files, download IntelHex samples, free IntelHex test files, Intel hexadecimal samples, firmware files, IntelHex hex files, .intelhex test files, embedded systems files, IntelHex parsing test files" />
-        <meta property="og:title" content="Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyIMG" />
+        <meta property="og:title" content="Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyHub" />
         <meta property="og:description" content="Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available for testing firmware programming and IntelHex parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-intelhex" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyHub" />
         <meta name="twitter:description" content="Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-intelhex" />
         <script

@@ -84,15 +84,15 @@ export default function SampleOdp() {
   return (
     <>
       <Helmet>
-        <title>Free ODP Sample Files Download - Test OpenDocument Presentation Files | MorphyIMG</title>
+        <title>Free ODP Sample Files Download - Test OpenDocument Presentation Files | MorphyHub</title>
         <meta name="description" content="Download free ODP sample OpenDocument presentation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing presentation conversion, viewing, and OpenDocument format processing tools." />
         <meta name="keywords" content="ODP sample files, test ODP files, download ODP samples, free ODP test files, OpenDocument presentation samples, presentation file samples, ODP conversion test files, .odp test files, LibreOffice Impress samples, presentation format samples" />
-        <meta property="og:title" content="Free ODP Sample Files Download - Test OpenDocument Presentation Files | MorphyIMG" />
+        <meta property="og:title" content="Free ODP Sample Files Download - Test OpenDocument Presentation Files | MorphyHub" />
         <meta property="og:description" content="Download free ODP sample OpenDocument presentation files for testing. Multiple file sizes available for testing presentation conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-odp" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ODP Sample Files Download - Test OpenDocument Presentation Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ODP Sample Files Download - Test OpenDocument Presentation Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ODP sample OpenDocument presentation files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-odp" />
         <script

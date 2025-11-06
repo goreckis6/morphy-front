@@ -81,15 +81,15 @@ export default function SampleIco() {
   return (
     <>
       <Helmet>
-        <title>Free ICO Sample Files Download - Test Windows Icon Files | MorphyIMG</title>
+        <title>Free ICO Sample Files Download - Test Windows Icon Files | MorphyHub</title>
         <meta name="description" content="Download free ICO sample Windows icon files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows icon conversion, ICO viewing, and icon design tools." />
         <meta name="keywords" content="ICO sample files, test ICO files, download ICO samples, free ICO test files, Windows icon samples, ICO icon files, .ico test files, Windows icon files, ICO conversion test files" />
-        <meta property="og:title" content="Free ICO Sample Files Download - Test Windows Icon Files | MorphyIMG" />
+        <meta property="og:title" content="Free ICO Sample Files Download - Test Windows Icon Files | MorphyHub" />
         <meta property="og:description" content="Download free ICO sample Windows icon files for testing. Multiple file sizes available for testing Windows icon conversion and ICO viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ico" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ICO Sample Files Download - Test Windows Icon Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ICO Sample Files Download - Test Windows Icon Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ICO sample Windows icon files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ico" />
         <script

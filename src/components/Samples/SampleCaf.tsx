@@ -81,15 +81,15 @@ export default function SampleCaf() {
   return (
     <>
       <Helmet>
-        <title>Free CAF Sample Files Download - Test Core Audio Format Files | MorphyIMG</title>
+        <title>Free CAF Sample Files Download - Test Core Audio Format Files | MorphyHub</title>
         <meta name="description" content="Download free CAF sample Core Audio Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and CAF format processing tools." />
         <meta name="keywords" content="CAF sample files, test CAF files, download CAF samples, free CAF test files, Core Audio Format samples, Apple audio samples, CAF audio files, CAF conversion test files, .caf test files, macOS audio samples, audio format samples" />
-        <meta property="og:title" content="Free CAF Sample Files Download - Test Core Audio Format Files | MorphyIMG" />
+        <meta property="og:title" content="Free CAF Sample Files Download - Test Core Audio Format Files | MorphyHub" />
         <meta property="og:description" content="Download free CAF sample Core Audio Format files for testing. Multiple file sizes available for testing audio conversion and playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-caf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CAF Sample Files Download - Test Core Audio Format Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CAF Sample Files Download - Test Core Audio Format Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CAF sample Core Audio Format files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-caf" />
         <script

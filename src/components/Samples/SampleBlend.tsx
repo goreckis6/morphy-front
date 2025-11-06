@@ -81,15 +81,15 @@ export default function SampleBlend() {
   return (
     <>
       <Helmet>
-        <title>Free BLEND Sample Files Download - Test Blender 3D Files | MorphyIMG</title>
+        <title>Free BLEND Sample Files Download - Test Blender 3D Files | MorphyHub</title>
         <meta name="description" content="Download free BLEND sample Blender 3D model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model conversion, viewing, and Blender format processing tools." />
         <meta name="keywords" content="BLEND sample files, test BLEND files, download BLEND samples, free BLEND test files, Blender 3D samples, 3D model samples, Blender project samples, BLEND conversion test files, .blend test files, 3D design samples, animation project samples" />
-        <meta property="og:title" content="Free BLEND Sample Files Download - Test Blender 3D Files | MorphyIMG" />
+        <meta property="og:title" content="Free BLEND Sample Files Download - Test Blender 3D Files | MorphyHub" />
         <meta property="og:description" content="Download free BLEND sample Blender 3D model files for testing. Multiple file sizes available for testing 3D model conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-blend" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free BLEND Sample Files Download - Test Blender 3D Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free BLEND Sample Files Download - Test Blender 3D Files | MorphyHub" />
         <meta name="twitter:description" content="Download free BLEND sample Blender 3D model files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-blend" />
         <script

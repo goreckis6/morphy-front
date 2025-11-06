@@ -84,15 +84,15 @@ export default function SampleCsv() {
   return (
     <>
       <Helmet>
-        <title>Free CSV Sample Files Download - Test Data Files | MorphyIMG</title>
+        <title>Free CSV Sample Files Download - Test Data Files | MorphyHub</title>
         <meta name="description" content="Download free CSV sample data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSV conversion, data processing, and spreadsheet import tools." />
         <meta name="keywords" content="CSV sample files, test CSV files, download CSV samples, free CSV test files, data file samples, comma separated values samples, spreadsheet data samples, CSV conversion test files" />
-        <meta property="og:title" content="Free CSV Sample Files Download - Test Data Files | MorphyIMG" />
+        <meta property="og:title" content="Free CSV Sample Files Download - Test Data Files | MorphyHub" />
         <meta property="og:description" content="Download free CSV sample data files for testing. Multiple file sizes available for testing CSV conversion and data processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-csv" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CSV Sample Files Download - Test Data Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CSV Sample Files Download - Test Data Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CSV sample data files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-csv" />
         <script

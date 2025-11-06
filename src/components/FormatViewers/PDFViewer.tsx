@@ -175,15 +175,15 @@ export const PDFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free PDF Viewer - View PDF Documents Online | MorphyIMG</title>
+        <title>Free PDF Viewer - View PDF Documents Online | MorphyHub</title>
         <meta name="description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDFs with page navigation and zoom controls. Supports batch viewing up to 20 files. 100% free PDF viewer tool." />
         <meta name="keywords" content="PDF viewer, view PDF online, PDF preview, PDF reader, document viewer, PDF viewer tool, online PDF viewer, PDF viewer free, PDF page viewer" />
-        <meta property="og:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
+        <meta property="og:title" content="Free PDF Viewer - View PDF Documents Online | MorphyHub" />
         <meta property="og:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/pdf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free PDF Viewer - View PDF Documents Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -5,7 +5,7 @@
 
 set -e
 
-echo "☁️ Setting up AWS deployment for MorphyIMG"
+echo "☁️ Setting up AWS deployment for MorphyHub"
 
 # Check if Terraform is installed
 if ! command -v terraform &> /dev/null; then

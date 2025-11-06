@@ -253,15 +253,15 @@ export const SXViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free SX Viewer - View Stat Studio Program Files Online | MorphyIMG</title>
+        <title>Free SX Viewer - View Stat Studio Program Files Online | MorphyHub</title>
         <meta name="description" content="Free professional SX (Stat Studio Program) viewer. Upload and preview SX statistical program files online with syntax highlighting. Supports batch viewing up to 20 files. 100% free SX viewer tool." />
         <meta name="keywords" content="SX viewer, Stat Studio viewer, SX file viewer online, statistical program viewer, stats viewer, free SX viewer, SX preview" />
-        <meta property="og:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional SX (Stat Studio Program) viewer. Upload and preview statistical program files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/sx" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional SX viewer. Upload and preview Stat Studio Program files online." />
         <script type="application/ld+json">
           {JSON.stringify({

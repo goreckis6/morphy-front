@@ -81,15 +81,15 @@ export default function SampleDds() {
   return (
     <>
       <Helmet>
-        <title>Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyIMG</title>
+        <title>Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyHub</title>
         <meta name="description" content="Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing texture conversion and DDS processing tools." />
         <meta name="keywords" content="DDS sample files, test DDS files, download DDS samples, free DDS test files, DirectDraw Surface samples, texture file samples, DDS texture files, DDS conversion test files, .dds test files, texture format samples, game texture samples" />
-        <meta property="og:title" content="Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyIMG" />
+        <meta property="og:title" content="Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyHub" />
         <meta property="og:description" content="Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available for testing texture conversion and DDS processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dds" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dds" />
         <script

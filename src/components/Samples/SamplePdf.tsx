@@ -84,15 +84,15 @@ export default function SamplePdf() {
   return (
     <>
       <Helmet>
-        <title>Free PDF Sample Files Download - Test Files | MorphyIMG</title>
+        <title>Free PDF Sample Files Download - Test Files | MorphyHub</title>
         <meta name="description" content="Download free PDF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing document conversion and processing tools." />
         <meta name="keywords" content="PDF sample files, test PDF files, download PDF samples, free PDF test files, document samples, PDF samples" />
-        <meta property="og:title" content="Free PDF Sample Files Download - Test Files | MorphyIMG" />
+        <meta property="og:title" content="Free PDF Sample Files Download - Test Files | MorphyHub" />
         <meta property="og:description" content="Download free PDF sample files for testing. Multiple file sizes available for testing document conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-pdf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free PDF Sample Files Download - Test Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free PDF Sample Files Download - Test Files | MorphyHub" />
         <meta name="twitter:description" content="Download free PDF sample files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-pdf" />
         <script

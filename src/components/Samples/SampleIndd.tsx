@@ -81,15 +81,15 @@ export default function SampleIndd() {
   return (
     <>
       <Helmet>
-        <title>Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyIMG</title>
+        <title>Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyHub</title>
         <meta name="description" content="Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing InDesign document conversion, INDD viewing, and desktop publishing tools." />
         <meta name="keywords" content="INDD sample files, test INDD files, download INDD samples, free INDD test files, Adobe InDesign samples, desktop publishing files, INDD document files, .indd test files, InDesign files, INDD conversion test files" />
-        <meta property="og:title" content="Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyIMG" />
+        <meta property="og:title" content="Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyHub" />
         <meta property="og:description" content="Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available for testing InDesign document conversion and INDD viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-indd" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyHub" />
         <meta name="twitter:description" content="Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-indd" />
         <script

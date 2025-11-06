@@ -258,7 +258,7 @@ export const EPUBToCSVConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to CSV Converter Online - Extract eBook Content to CSV Format | MorphyIMG</title>
+        <title>Free EPUB to CSV Converter Online - Extract eBook Content to CSV Format | MorphyHub</title>
         <meta name="description" content="Convert EPUB ebook files to CSV format online for free. Extract text content, chapters, and metadata from EPUB files for data analysis, content management, and text processing." />
         <meta name="keywords" content="EPUB to CSV, ebook converter, EPUB extractor, CSV converter, batch conversion" />
       </Helmet>

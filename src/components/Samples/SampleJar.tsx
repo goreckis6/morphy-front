@@ -81,15 +81,15 @@ export default function SampleJar() {
   return (
     <>
       <Helmet>
-        <title>Free JAR Sample Files Download - Test Java Archive Files | MorphyIMG</title>
+        <title>Free JAR Sample Files Download - Test Java Archive Files | MorphyHub</title>
         <meta name="description" content="Download free JAR sample Java archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java application execution, JAR extraction, and Java development tools." />
         <meta name="keywords" content="JAR sample files, test JAR files, download JAR samples, free JAR test files, Java archive samples, JAR application files, .jar test files, Java package files, JAR extraction test files" />
-        <meta property="og:title" content="Free JAR Sample Files Download - Test Java Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free JAR Sample Files Download - Test Java Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free JAR sample Java archive files for testing. Multiple file sizes available for testing Java application execution and JAR extraction tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-jar" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free JAR Sample Files Download - Test Java Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free JAR Sample Files Download - Test Java Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free JAR sample Java archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-jar" />
         <script

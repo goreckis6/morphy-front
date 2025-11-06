@@ -168,15 +168,15 @@ export const MarkdownViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free Markdown Viewer - View MD Files Online | MorphyIMG</title>
+        <title>Free Markdown Viewer - View MD Files Online | MorphyHub</title>
         <meta name="description" content="Free professional Markdown viewer for viewing MD files online. Upload and preview Markdown documents with live rendering, syntax highlighting, and GitHub-style formatting. Supports batch viewing up to 20 files. 100% free Markdown viewer tool." />
         <meta name="keywords" content="Markdown viewer, MD viewer, view Markdown online, Markdown preview, README viewer, documentation viewer, Markdown viewer free" />
-        <meta property="og:title" content="Free Markdown Viewer - View MD Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free Markdown Viewer - View MD Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional Markdown viewer for viewing MD files online. Upload and preview Markdown documents with live rendering and syntax highlighting." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/md" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free Markdown Viewer - View MD Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free Markdown Viewer - View MD Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional Markdown viewer for viewing MD files online. Upload and preview Markdown documents with live rendering." />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -81,15 +81,15 @@ export default function SampleAc3() {
   return (
     <>
       <Helmet>
-        <title>Free AC3 Sample Files Download - Test Dolby Digital Audio Files | MorphyIMG</title>
+        <title>Free AC3 Sample Files Download - Test Dolby Digital Audio Files | MorphyHub</title>
         <meta name="description" content="Download free AC3 sample Dolby Digital audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and Dolby Digital AC3 format processing tools." />
         <meta name="keywords" content="AC3 sample files, test AC3 files, download AC3 samples, free AC3 test files, audio samples, Dolby Digital samples, AC3 conversion test files, .ac3 test files, surround sound samples, audio codec samples" />
-        <meta property="og:title" content="Free AC3 Sample Files Download - Test Dolby Digital Audio Files | MorphyIMG" />
+        <meta property="og:title" content="Free AC3 Sample Files Download - Test Dolby Digital Audio Files | MorphyHub" />
         <meta property="og:description" content="Download free AC3 sample Dolby Digital audio files for testing. Multiple file sizes available for testing audio conversion and playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ac3" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free AC3 Sample Files Download - Test Dolby Digital Audio Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free AC3 Sample Files Download - Test Dolby Digital Audio Files | MorphyHub" />
         <meta name="twitter:description" content="Download free AC3 sample Dolby Digital audio files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ac3" />
         <script

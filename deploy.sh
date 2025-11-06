@@ -29,4 +29,4 @@ sleep 10
 docker compose -f docker-compose.prod.yml ps
 
 echo "🎉 Deployment complete!"
-echo "Your site should be available at: https://morphyimg.com"
+echo "Your site should be available at: https://morphyhub.com"

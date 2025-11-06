@@ -213,7 +213,7 @@ export const SupportedFormats: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
             This page provides a comprehensive list of file formats that can be viewed directly in our advanced file viewer. 
-            With MorphyIMG, you can easily share files of any format. We continually expand our support to include additional 
+            With MorphyHub, you can easily share files of any format. We continually expand our support to include additional 
             file types for online viewing.
           </p>
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-2xl mx-auto">

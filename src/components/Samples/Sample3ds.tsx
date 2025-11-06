@@ -81,15 +81,15 @@ export default function Sample3ds() {
   return (
     <>
       <Helmet>
-        <title>Free 3DS Sample Files Download - Test 3D Model Files | MorphyIMG</title>
+        <title>Free 3DS Sample Files Download - Test 3D Model Files | MorphyHub</title>
         <meta name="description" content="Download free 3DS sample 3D model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model conversion, viewing, and 3DS format processing tools." />
         <meta name="keywords" content="3DS sample files, test 3DS files, download 3DS samples, free 3DS test files, 3D model samples, 3DS format samples, 3DS conversion test files, .3ds test files, Autodesk 3DS samples, 3D graphics samples" />
-        <meta property="og:title" content="Free 3DS Sample Files Download - Test 3D Model Files | MorphyIMG" />
+        <meta property="og:title" content="Free 3DS Sample Files Download - Test 3D Model Files | MorphyHub" />
         <meta property="og:description" content="Download free 3DS sample 3D model files for testing. Multiple file sizes available for testing 3D model conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-3ds" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free 3DS Sample Files Download - Test 3D Model Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free 3DS Sample Files Download - Test 3D Model Files | MorphyHub" />
         <meta name="twitter:description" content="Download free 3DS sample 3D model files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-3ds" />
         <script

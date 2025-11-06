@@ -81,15 +81,15 @@ export default function SampleMbtiles() {
   return (
     <>
       <Helmet>
-        <title>Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyIMG</title>
+        <title>Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyHub</title>
         <meta name="description" content="Download free MBTiles sample map database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MBTiles parsing, map tile extraction, and geographic data processing tools." />
         <meta name="keywords" content="MBTiles sample files, test MBTiles files, download MBTiles samples, free MBTiles test files, MBTiles map database samples, MBTiles geographic files, .mbtiles test files, map tile files, MBTiles parsing test files" />
-        <meta property="og:title" content="Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyIMG" />
+        <meta property="og:title" content="Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyHub" />
         <meta property="og:description" content="Download free MBTiles sample map database files for testing. Multiple file sizes available for testing MBTiles parsing and map tile extraction tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-mbtiles" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyHub" />
         <meta name="twitter:description" content="Download free MBTiles sample map database files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-mbtiles" />
         <script

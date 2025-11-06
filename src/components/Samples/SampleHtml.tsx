@@ -81,15 +81,15 @@ export default function SampleHtml() {
   return (
     <>
       <Helmet>
-        <title>Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyIMG</title>
+        <title>Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyHub</title>
         <meta name="description" content="Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HTML parsing, web development, and HTML validation tools." />
         <meta name="keywords" content="HTML sample files, test HTML files, download HTML samples, free HTML test files, HyperText Markup Language samples, HTML web page samples, HTML parsing test files, .html test files, web development samples, HTML validation files, HTML editor samples" />
-        <meta property="og:title" content="Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyIMG" />
+        <meta property="og:title" content="Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyHub" />
         <meta property="og:description" content="Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available for testing HTML parsing and web development tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-html" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyHub" />
         <meta name="twitter:description" content="Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-html" />
         <script

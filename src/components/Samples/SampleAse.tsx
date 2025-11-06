@@ -81,15 +81,15 @@ export default function SampleAse() {
   return (
     <>
       <Helmet>
-        <title>Free ASE Sample Files Download - Test Adobe Swatch Exchange Files | MorphyIMG</title>
+        <title>Free ASE Sample Files Download - Test Adobe Swatch Exchange Files | MorphyHub</title>
         <meta name="description" content="Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing color palette conversion, viewing, and Adobe Swatch Exchange format processing tools." />
         <meta name="keywords" content="ASE sample files, test ASE files, download ASE samples, free ASE test files, Adobe Swatch Exchange samples, color palette samples, design file samples, ASE conversion test files, .ase test files, swatch file samples, color management samples" />
-        <meta property="og:title" content="Free ASE Sample Files Download - Test Adobe Swatch Exchange Files | MorphyIMG" />
+        <meta property="og:title" content="Free ASE Sample Files Download - Test Adobe Swatch Exchange Files | MorphyHub" />
         <meta property="og:description" content="Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available for testing color palette conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ase" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free ASE Sample Files Download - Test Adobe Swatch Exchange Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free ASE Sample Files Download - Test Adobe Swatch Exchange Files | MorphyHub" />
         <meta name="twitter:description" content="Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ase" />
         <script

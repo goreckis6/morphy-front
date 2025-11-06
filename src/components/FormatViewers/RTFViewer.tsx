@@ -167,15 +167,15 @@ export const RTFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free RTF Viewer - View Rich Text Format Documents Online | MorphyIMG</title>
+        <title>Free RTF Viewer - View Rich Text Format Documents Online | MorphyHub</title>
         <meta name="description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility. Supports batch viewing up to 20 files. 100% free RTF viewer tool." />
         <meta name="keywords" content="RTF viewer, view RTF online, RTF preview, Rich Text Format viewer, document viewer, RTF viewer tool, online RTF viewer, RTF viewer free" />
-        <meta property="og:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyIMG" />
+        <meta property="og:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyHub" />
         <meta property="og:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/rtf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
         <script type="application/ld+json">
           {JSON.stringify({

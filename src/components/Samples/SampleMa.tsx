@@ -81,15 +81,15 @@ export default function SampleMa() {
   return (
     <>
       <Helmet>
-        <title>Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyIMG</title>
+        <title>Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyHub</title>
         <meta name="description" content="Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MA file parsing, and 3D animation tools." />
         <meta name="keywords" content="MA sample files, test MA files, download MA samples, free MA test files, Maya ASCII scene samples, MA 3D files, .ma test files, 3D animation files, MA parsing test files" />
-        <meta property="og:title" content="Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyIMG" />
+        <meta property="og:title" content="Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyHub" />
         <meta property="og:description" content="Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available for testing Maya scene conversion and MA file parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ma" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyHub" />
         <meta name="twitter:description" content="Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ma" />
         <script

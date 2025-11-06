@@ -81,15 +81,15 @@ export default function SampleBib() {
   return (
     <>
       <Helmet>
-        <title>Free BIB Sample Files Download - Test Bibliography Files | MorphyIMG</title>
+        <title>Free BIB Sample Files Download - Test Bibliography Files | MorphyHub</title>
         <meta name="description" content="Download free BIB sample BibTeX bibliography files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing bibliography management, citation processing, and BibTeX format tools." />
         <meta name="keywords" content="BIB sample files, test BIB files, download BIB samples, free BIB test files, BibTeX bibliography samples, citation file samples, bibliography management samples, BIB conversion test files, .bib test files, LaTeX bibliography samples, research citation samples" />
-        <meta property="og:title" content="Free BIB Sample Files Download - Test Bibliography Files | MorphyIMG" />
+        <meta property="og:title" content="Free BIB Sample Files Download - Test Bibliography Files | MorphyHub" />
         <meta property="og:description" content="Download free BIB sample BibTeX bibliography files for testing. Multiple file sizes available for testing bibliography management and citation processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-bib" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free BIB Sample Files Download - Test Bibliography Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free BIB Sample Files Download - Test Bibliography Files | MorphyHub" />
         <meta name="twitter:description" content="Download free BIB sample BibTeX bibliography files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-bib" />
         <script

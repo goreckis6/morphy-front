@@ -81,15 +81,15 @@ export default function SampleIpa() {
   return (
     <>
       <Helmet>
-        <title>Free IPA Sample Files Download - Test iOS Application Package Files | MorphyIMG</title>
+        <title>Free IPA Sample Files Download - Test iOS Application Package Files | MorphyHub</title>
         <meta name="description" content="Download free IPA sample iOS application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing iOS app installation, IPA analysis, and mobile application development tools." />
         <meta name="keywords" content="IPA sample files, test IPA files, download IPA samples, free IPA test files, iOS application package samples, iPhone app files, IPA app files, .ipa test files, iOS app installation files, IPA analysis test files" />
-        <meta property="og:title" content="Free IPA Sample Files Download - Test iOS Application Package Files | MorphyIMG" />
+        <meta property="og:title" content="Free IPA Sample Files Download - Test iOS Application Package Files | MorphyHub" />
         <meta property="og:description" content="Download free IPA sample iOS application package files for testing. Multiple file sizes available for testing iOS app installation and IPA analysis tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ipa" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IPA Sample Files Download - Test iOS Application Package Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free IPA Sample Files Download - Test iOS Application Package Files | MorphyHub" />
         <meta name="twitter:description" content="Download free IPA sample iOS application package files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ipa" />
         <script

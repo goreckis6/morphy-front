@@ -81,15 +81,15 @@ export default function SampleApk() {
   return (
     <>
       <Helmet>
-        <title>Free APK Sample Files Download - Test Android Application Files | MorphyIMG</title>
+        <title>Free APK Sample Files Download - Test Android Application Files | MorphyHub</title>
         <meta name="description" content="Download free APK sample Android application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Android app installation, APK analysis, and mobile application processing tools." />
         <meta name="keywords" content="APK sample files, test APK files, download APK samples, free APK test files, Android app samples, APK package samples, mobile application samples, APK conversion test files, .apk test files, Android installation samples, app analysis samples" />
-        <meta property="og:title" content="Free APK Sample Files Download - Test Android Application Files | MorphyIMG" />
+        <meta property="og:title" content="Free APK Sample Files Download - Test Android Application Files | MorphyHub" />
         <meta property="og:description" content="Download free APK sample Android application package files for testing. Multiple file sizes available for testing Android app installation and APK analysis tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-apk" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free APK Sample Files Download - Test Android Application Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free APK Sample Files Download - Test Android Application Files | MorphyHub" />
         <meta name="twitter:description" content="Download free APK sample Android application package files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-apk" />
         <script

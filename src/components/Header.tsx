@@ -15,12 +15,12 @@ export const Header: React.FC = () => {
             <a href="/" className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity">
               <img 
                 src="/logo.jpg" 
-                alt="MorphyIMG Logo" 
+                alt="MorphyHub Logo" 
                 className="h-12 w-auto object-contain"
               />
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
-                  MorphyIMG
+                  MorphyHub
                 </h1>
                 <p className="text-xs text-gray-500">File Conversion & Viewer</p>
               </div>

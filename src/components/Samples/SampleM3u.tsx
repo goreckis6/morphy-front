@@ -81,15 +81,15 @@ export default function SampleM3u() {
   return (
     <>
       <Helmet>
-        <title>Free M3U Sample Files Download - Test M3U Playlist Files | MorphyIMG</title>
+        <title>Free M3U Sample Files Download - Test M3U Playlist Files | MorphyHub</title>
         <meta name="description" content="Download free M3U sample M3U playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U playlist parsing, media player compatibility, and audio streaming tools." />
         <meta name="keywords" content="M3U sample files, test M3U files, download M3U samples, free M3U test files, M3U playlist samples, M3U media files, .m3u test files, audio playlist files, M3U parsing test files" />
-        <meta property="og:title" content="Free M3U Sample Files Download - Test M3U Playlist Files | MorphyIMG" />
+        <meta property="og:title" content="Free M3U Sample Files Download - Test M3U Playlist Files | MorphyHub" />
         <meta property="og:description" content="Download free M3U sample M3U playlist files for testing. Multiple file sizes available for testing M3U playlist parsing and media player compatibility tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-m3u" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free M3U Sample Files Download - Test M3U Playlist Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free M3U Sample Files Download - Test M3U Playlist Files | MorphyHub" />
         <meta name="twitter:description" content="Download free M3U sample M3U playlist files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-m3u" />
         <script

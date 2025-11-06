@@ -81,15 +81,15 @@ export default function SampleHex() {
   return (
     <>
       <Helmet>
-        <title>Free HEX Sample Files Download - Test Hexadecimal Format Files | MorphyIMG</title>
+        <title>Free HEX Sample Files Download - Test Hexadecimal Format Files | MorphyHub</title>
         <meta name="description" content="Download free HEX sample hexadecimal format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing hexadecimal parsing, binary data analysis, and hex file processing tools." />
         <meta name="keywords" content="HEX sample files, test HEX files, download HEX samples, free HEX test files, hexadecimal format samples, hex dump samples, HEX parsing test files, .hex test files, binary hex samples, hex editor files, hexadecimal data samples" />
-        <meta property="og:title" content="Free HEX Sample Files Download - Test Hexadecimal Format Files | MorphyIMG" />
+        <meta property="og:title" content="Free HEX Sample Files Download - Test Hexadecimal Format Files | MorphyHub" />
         <meta property="og:description" content="Download free HEX sample hexadecimal format files for testing. Multiple file sizes available for testing hexadecimal parsing and binary data analysis tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-hex" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free HEX Sample Files Download - Test Hexadecimal Format Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free HEX Sample Files Download - Test Hexadecimal Format Files | MorphyHub" />
         <meta name="twitter:description" content="Download free HEX sample hexadecimal format files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-hex" />
         <script

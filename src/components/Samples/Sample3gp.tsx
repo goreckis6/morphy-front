@@ -81,15 +81,15 @@ export default function Sample3gp() {
   return (
     <>
       <Helmet>
-        <title>Free 3GP Sample Files Download - Test Mobile Video Files | MorphyIMG</title>
+        <title>Free 3GP Sample Files Download - Test Mobile Video Files | MorphyHub</title>
         <meta name="description" content="Download free 3GP sample mobile video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion, playback, and mobile video format processing tools." />
         <meta name="keywords" content="3GP sample files, test 3GP files, download 3GP samples, free 3GP test files, mobile video samples, 3GP format samples, video conversion test files, .3gp test files, mobile video format samples, smartphone video samples" />
-        <meta property="og:title" content="Free 3GP Sample Files Download - Test Mobile Video Files | MorphyIMG" />
+        <meta property="og:title" content="Free 3GP Sample Files Download - Test Mobile Video Files | MorphyHub" />
         <meta property="og:description" content="Download free 3GP sample mobile video files for testing. Multiple file sizes available for testing video conversion and playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-3gp" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free 3GP Sample Files Download - Test Mobile Video Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free 3GP Sample Files Download - Test Mobile Video Files | MorphyHub" />
         <meta name="twitter:description" content="Download free 3GP sample mobile video files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-3gp" />
         <script

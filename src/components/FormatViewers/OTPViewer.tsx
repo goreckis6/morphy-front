@@ -253,15 +253,15 @@ export const OTPViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyIMG</title>
+        <title>Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyHub</title>
         <meta name="description" content="Free professional OTP (OpenDocument Presentation Template) viewer. Upload and preview OTP template files online with slide rendering. Supports batch viewing up to 20 files. 100% free OTP viewer tool." />
         <meta name="keywords" content="OTP viewer, OpenDocument Presentation Template viewer, OTP file viewer online, presentation template viewer, LibreOffice Impress template viewer, free OTP viewer, OTP preview" />
-        <meta property="og:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional OTP (OpenDocument Presentation Template) viewer. Upload and preview LibreOffice Impress template files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/otp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional OTP viewer. Upload and preview OpenDocument Presentation Template files online." />
         <script type="application/ld+json">
           {JSON.stringify({

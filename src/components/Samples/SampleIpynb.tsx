@@ -81,15 +81,15 @@ export default function SampleIpynb() {
   return (
     <>
       <Helmet>
-        <title>Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyIMG</title>
+        <title>Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyHub</title>
         <meta name="description" content="Download free IPYNB sample Jupyter notebook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Jupyter notebook processing, IPYNB parsing, and data science development tools." />
         <meta name="keywords" content="IPYNB sample files, test IPYNB files, download IPYNB samples, free IPYNB test files, Jupyter notebook samples, notebook files, IPYNB notebook files, .ipynb test files, data science notebook files, IPYNB parsing test files" />
-        <meta property="og:title" content="Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyIMG" />
+        <meta property="og:title" content="Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyHub" />
         <meta property="og:description" content="Download free IPYNB sample Jupyter notebook files for testing. Multiple file sizes available for testing Jupyter notebook processing and IPYNB parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ipynb" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyHub" />
         <meta name="twitter:description" content="Download free IPYNB sample Jupyter notebook files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-ipynb" />
         <script

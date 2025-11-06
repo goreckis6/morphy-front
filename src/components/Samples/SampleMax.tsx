@@ -81,15 +81,15 @@ export default function SampleMax() {
   return (
     <>
       <Helmet>
-        <title>Free MAX Sample Files Download - Test 3ds Max Scene Files | MorphyIMG</title>
+        <title>Free MAX Sample Files Download - Test 3ds Max Scene Files | MorphyHub</title>
         <meta name="description" content="Download free MAX sample 3ds Max scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3ds Max scene conversion, MAX file parsing, and 3D modeling tools." />
         <meta name="keywords" content="MAX sample files, test MAX files, download MAX samples, free MAX test files, 3ds Max scene samples, MAX 3D files, .max test files, 3D modeling files, MAX parsing test files" />
-        <meta property="og:title" content="Free MAX Sample Files Download - Test 3ds Max Scene Files | MorphyIMG" />
+        <meta property="og:title" content="Free MAX Sample Files Download - Test 3ds Max Scene Files | MorphyHub" />
         <meta property="og:description" content="Download free MAX sample 3ds Max scene files for testing. Multiple file sizes available for testing 3ds Max scene conversion and MAX file parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-max" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free MAX Sample Files Download - Test 3ds Max Scene Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free MAX Sample Files Download - Test 3ds Max Scene Files | MorphyHub" />
         <meta name="twitter:description" content="Download free MAX sample 3ds Max scene files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-max" />
         <script

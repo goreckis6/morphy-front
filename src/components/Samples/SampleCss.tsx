@@ -81,15 +81,15 @@ export default function SampleCss() {
   return (
     <>
       <Helmet>
-        <title>Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyIMG</title>
+        <title>Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyHub</title>
         <meta name="description" content="Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSS parsing, styling, and web design tools." />
         <meta name="keywords" content="CSS sample files, test CSS files, download CSS samples, free CSS test files, Cascading Style Sheets samples, web styling samples, CSS code samples, CSS conversion test files, .css test files, web design samples, stylesheet samples" />
-        <meta property="og:title" content="Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyIMG" />
+        <meta property="og:title" content="Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyHub" />
         <meta property="og:description" content="Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available for testing CSS parsing and styling tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-css" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-css" />
         <script

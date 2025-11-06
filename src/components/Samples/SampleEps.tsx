@@ -81,15 +81,15 @@ export default function SampleEps() {
   return (
     <>
       <Helmet>
-        <title>Free EPS Sample Files Download - Test Encapsulated PostScript Files | MorphyIMG</title>
+        <title>Free EPS Sample Files Download - Test Encapsulated PostScript Files | MorphyHub</title>
         <meta name="description" content="Download free EPS sample Encapsulated PostScript files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics conversion, EPS viewing, and PostScript processing tools." />
         <meta name="keywords" content="EPS sample files, test EPS files, download EPS samples, free EPS test files, Encapsulated PostScript samples, vector graphics files, EPS image files, .eps test files, PostScript file samples, EPS conversion test files" />
-        <meta property="og:title" content="Free EPS Sample Files Download - Test Encapsulated PostScript Files | MorphyIMG" />
+        <meta property="og:title" content="Free EPS Sample Files Download - Test Encapsulated PostScript Files | MorphyHub" />
         <meta property="og:description" content="Download free EPS sample Encapsulated PostScript files for testing. Multiple file sizes available for testing vector graphics conversion and EPS viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-eps" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free EPS Sample Files Download - Test Encapsulated PostScript Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free EPS Sample Files Download - Test Encapsulated PostScript Files | MorphyHub" />
         <meta name="twitter:description" content="Download free EPS sample Encapsulated PostScript files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-eps" />
         <script

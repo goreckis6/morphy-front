@@ -81,15 +81,15 @@ export default function SampleAvif() {
   return (
     <>
       <Helmet>
-        <title>Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyIMG</title>
+        <title>Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyHub</title>
         <meta name="description" content="Download free AVIF sample image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AVIF conversion, viewing, and next-generation image format processing tools." />
         <meta name="keywords" content="AVIF sample files, test AVIF files, download AVIF samples, free AVIF test files, image samples, AV1 image format samples, next-gen image samples, AVIF conversion test files, .avif test files, modern image format samples, web image samples" />
-        <meta property="og:title" content="Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyHub" />
         <meta property="og:description" content="Download free AVIF sample image files for testing. Multiple file sizes available for testing AVIF conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-avif" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free AVIF sample image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-avif" />
         <script

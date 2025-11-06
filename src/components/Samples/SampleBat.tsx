@@ -81,15 +81,15 @@ export default function SampleBat() {
   return (
     <>
       <Helmet>
-        <title>Free BAT Sample Files Download - Test Batch Script Files | MorphyIMG</title>
+        <title>Free BAT Sample Files Download - Test Batch Script Files | MorphyHub</title>
         <meta name="description" content="Download free BAT sample batch script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution, Windows automation, and command-line processing tools." />
         <meta name="keywords" content="BAT sample files, test BAT files, download BAT samples, free BAT test files, batch script samples, Windows batch files, automation script samples, BAT conversion test files, .bat test files, command-line script samples, Windows automation samples" />
-        <meta property="og:title" content="Free BAT Sample Files Download - Test Batch Script Files | MorphyIMG" />
+        <meta property="og:title" content="Free BAT Sample Files Download - Test Batch Script Files | MorphyHub" />
         <meta property="og:description" content="Download free BAT sample batch script files for testing. Multiple file sizes available for testing batch script execution and Windows automation tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-bat" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free BAT Sample Files Download - Test Batch Script Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free BAT Sample Files Download - Test Batch Script Files | MorphyHub" />
         <meta name="twitter:description" content="Download free BAT sample batch script files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-bat" />
         <script

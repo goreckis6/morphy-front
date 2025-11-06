@@ -81,15 +81,15 @@ export default function SampleAnimationFbx() {
   return (
     <>
       <Helmet>
-        <title>Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyIMG</title>
+        <title>Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyHub</title>
         <meta name="description" content="Download free animation FBX sample 3D animation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation conversion, viewing, and FBX format processing tools." />
         <meta name="keywords" content="FBX sample files, test FBX files, download FBX samples, free FBX test files, 3D animation samples, Autodesk FBX samples, animation file samples, FBX conversion test files, .fbx test files, 3D model animation samples, game development samples" />
-        <meta property="og:title" content="Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyIMG" />
+        <meta property="og:title" content="Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyHub" />
         <meta property="og:description" content="Download free animation FBX sample 3D animation files for testing. Multiple file sizes available for testing 3D animation conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-animation-fbx" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyHub" />
         <meta name="twitter:description" content="Download free animation FBX sample 3D animation files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-animation-fbx" />
         <script

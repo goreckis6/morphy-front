@@ -81,15 +81,15 @@ export default function SampleAiff() {
   return (
     <>
       <Helmet>
-        <title>Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyIMG</title>
+        <title>Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyHub</title>
         <meta name="description" content="Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and AIFF format processing tools." />
         <meta name="keywords" content="AIFF sample files, test AIFF files, download AIFF samples, free AIFF test files, audio samples, Audio Interchange File Format samples, AIFF conversion test files, .aiff test files, uncompressed audio samples, Apple audio samples" />
-        <meta property="og:title" content="Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyIMG" />
+        <meta property="og:title" content="Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyHub" />
         <meta property="og:description" content="Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available for testing audio conversion and playback tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-aiff" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyHub" />
         <meta name="twitter:description" content="Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-aiff" />
         <script

@@ -84,15 +84,15 @@ export default function Sample7z() {
   return (
     <>
       <Helmet>
-        <title>Free 7Z Sample Files Download - Test Archive Files | MorphyIMG</title>
+        <title>Free 7Z Sample Files Download - Test Archive Files | MorphyHub</title>
         <meta name="description" content="Download free 7Z sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive conversion, compression, and extraction tools." />
         <meta name="keywords" content="7Z sample files, test 7Z files, download 7Z samples, free 7Z test files, archive samples, 7-Zip samples, compressed file samples" />
-        <meta property="og:title" content="Free 7Z Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta property="og:title" content="Free 7Z Sample Files Download - Test Archive Files | MorphyHub" />
         <meta property="og:description" content="Download free 7Z sample archive files for testing. Multiple file sizes available for testing archive conversion and extraction tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-7z" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free 7Z Sample Files Download - Test Archive Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free 7Z Sample Files Download - Test Archive Files | MorphyHub" />
         <meta name="twitter:description" content="Download free 7Z sample archive files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-7z" />
         <script

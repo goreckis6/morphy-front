@@ -81,15 +81,15 @@ export default function SampleKey() {
   return (
     <>
       <Helmet>
-        <title>Free KEY Sample Files Download - Test Private Key Files | MorphyIMG</title>
+        <title>Free KEY Sample Files Download - Test Private Key Files | MorphyHub</title>
         <meta name="description" content="Download free KEY sample private key files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate management, key parsing, and cryptographic key storage tools." />
         <meta name="keywords" content="KEY sample files, test KEY files, download KEY samples, free KEY test files, private key samples, SSL key files, KEY certificate files, .key test files, cryptographic key files, KEY parsing test files" />
-        <meta property="og:title" content="Free KEY Sample Files Download - Test Private Key Files | MorphyIMG" />
+        <meta property="og:title" content="Free KEY Sample Files Download - Test Private Key Files | MorphyHub" />
         <meta property="og:description" content="Download free KEY sample private key files for testing. Multiple file sizes available for testing SSL certificate management and key parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-key" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free KEY Sample Files Download - Test Private Key Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free KEY Sample Files Download - Test Private Key Files | MorphyHub" />
         <meta name="twitter:description" content="Download free KEY sample private key files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-key" />
         <script

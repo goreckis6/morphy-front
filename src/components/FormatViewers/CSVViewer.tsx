@@ -162,15 +162,15 @@ export const CSVViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free CSV Viewer - View CSV & TSV Files Online | MorphyIMG</title>
+        <title>Free CSV Viewer - View CSV & TSV Files Online | MorphyHub</title>
         <meta name="description" content="Free professional CSV viewer for data files. Upload and preview CSV, TSV files online with table formatting and data analysis. Supports batch viewing up to 20 files. 100% free CSV viewer tool." />
         <meta name="keywords" content="CSV viewer, TSV viewer, CSV file viewer online, comma separated values viewer, CSV preview, data viewer, CSV online, free CSV viewer" />
-        <meta property="og:title" content="Free CSV Viewer - View CSV & TSV Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free CSV Viewer - View CSV & TSV Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional CSV viewer for data files. Upload and preview CSV, TSV files online with table formatting and data analysis." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/csv" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free CSV Viewer - View CSV & TSV Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free CSV Viewer - View CSV & TSV Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional CSV viewer for data files. Upload and preview CSV, TSV files online with table formatting and data analysis." />
         <script type="application/ld+json">
           {JSON.stringify({

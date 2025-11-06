@@ -81,15 +81,15 @@ export default function SampleBarcodeSvg() {
   return (
     <>
       <Helmet>
-        <title>Free Barcode SVG Sample Files Download - Test Barcode Image Files | MorphyIMG</title>
+        <title>Free Barcode SVG Sample Files Download - Test Barcode Image Files | MorphyHub</title>
         <meta name="description" content="Download free barcode SVG sample vector graphics files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing barcode scanning, SVG conversion, and vector graphics processing tools." />
         <meta name="keywords" content="barcode SVG sample files, test barcode SVG files, download barcode SVG samples, free barcode SVG test files, barcode image samples, SVG vector graphics samples, barcode scanning samples, SVG conversion test files, .svg test files, vector barcode samples, QR code samples" />
-        <meta property="og:title" content="Free Barcode SVG Sample Files Download - Test Barcode Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free Barcode SVG Sample Files Download - Test Barcode Image Files | MorphyHub" />
         <meta property="og:description" content="Download free barcode SVG sample vector graphics files for testing. Multiple file sizes available for testing barcode scanning and SVG conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-barcode-svg" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Barcode SVG Sample Files Download - Test Barcode Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Barcode SVG Sample Files Download - Test Barcode Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free barcode SVG sample vector graphics files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-barcode-svg" />
         <script

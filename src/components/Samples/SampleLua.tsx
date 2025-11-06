@@ -81,15 +81,15 @@ export default function SampleLua() {
   return (
     <>
       <Helmet>
-        <title>Free LUA Sample Files Download - Test Lua Script Files | MorphyIMG</title>
+        <title>Free LUA Sample Files Download - Test Lua Script Files | MorphyHub</title>
         <meta name="description" content="Download free LUA sample Lua script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Lua script execution, LUA syntax checking, and embedded scripting tools." />
         <meta name="keywords" content="LUA sample files, test LUA files, download LUA samples, free LUA test files, Lua script samples, LUA code files, .lua test files, scripting language files, LUA syntax checking test files" />
-        <meta property="og:title" content="Free LUA Sample Files Download - Test Lua Script Files | MorphyIMG" />
+        <meta property="og:title" content="Free LUA Sample Files Download - Test Lua Script Files | MorphyHub" />
         <meta property="og:description" content="Download free LUA sample Lua script files for testing. Multiple file sizes available for testing Lua script execution and LUA syntax checking tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-lua" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free LUA Sample Files Download - Test Lua Script Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free LUA Sample Files Download - Test Lua Script Files | MorphyHub" />
         <meta name="twitter:description" content="Download free LUA sample Lua script files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-lua" />
         <script

@@ -232,15 +232,15 @@ export const DOCXViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG</title>
+        <title>Free DOCX Viewer - View Microsoft Word Documents Online | MorphyHub</title>
         <meta name="description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools. Supports batch viewing up to 20 files. 100% free DOCX viewer tool." />
         <meta name="keywords" content="DOCX viewer, Word document viewer, Microsoft Word viewer, DOC viewer, document preview, online DOCX reader, DOCX viewer online, DOCX viewer free" />
-        <meta property="og:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG" />
+        <meta property="og:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyHub" />
         <meta property="og:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/docx" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
         <script type="application/ld+json">
           {JSON.stringify({

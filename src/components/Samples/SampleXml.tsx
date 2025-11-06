@@ -84,15 +84,15 @@ export default function SampleXml() {
   return (
     <>
       <Helmet>
-        <title>Free XML Sample Files Download - Test Markup Data Files | MorphyIMG</title>
+        <title>Free XML Sample Files Download - Test Markup Data Files | MorphyHub</title>
         <meta name="description" content="Download free XML sample markup files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing XML parsing, data conversion, and markup processing tools." />
         <meta name="keywords" content="XML sample files, test XML files, download XML samples, free XML test files, markup sample files, structured data samples, XML parsing test files, .xml test files, Extensible Markup Language samples, XML conversion test files" />
-        <meta property="og:title" content="Free XML Sample Files Download - Test Markup Data Files | MorphyIMG" />
+        <meta property="og:title" content="Free XML Sample Files Download - Test Markup Data Files | MorphyHub" />
         <meta property="og:description" content="Download free XML sample markup files for testing. Multiple file sizes available for testing XML parsing and data conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-xml" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free XML Sample Files Download - Test Markup Data Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free XML Sample Files Download - Test Markup Data Files | MorphyHub" />
         <meta name="twitter:description" content="Download free XML sample markup files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-xml" />
         <script

@@ -49,7 +49,7 @@ echo "✅ Build successful"
 
 # Deploy to Render.com
 echo "🚀 Deploying to Render.com..."
-echo "   Frontend: morphyimg.com + morphy-1-ulvv.onrender.com"
+echo "   Frontend: morphyhub.com + morphy-1-ulvv.onrender.com"
 echo "   Backend: api.morphyhub.com"
 echo "   Database: OVH PostgreSQL (gs32813-001.eu.clouddb.ovh.net)"
 
@@ -63,8 +63,8 @@ echo "   git commit -m 'Add PostgreSQL database integration'"
 echo "   git push origin main"
 echo ""
 echo "3. Monitor deployment at: https://dashboard.render.com"
-echo "4. Test database connection: https://morphyimg.ovh/health"
-echo "5. Check analytics: https://morphyimg.ovh/api/analytics/conversions"
+echo "4. Test database connection: https://MorphyHub.ovh/health"
+echo "5. Check analytics: https://MorphyHub.ovh/api/analytics/conversions"
 
 echo ""
 echo "🎯 Deployment configuration:"

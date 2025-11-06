@@ -81,15 +81,15 @@ export default function SampleDxf() {
   return (
     <>
       <Helmet>
-        <title>Free DXF Sample Files Download - Test Drawing Exchange Format Files | MorphyIMG</title>
+        <title>Free DXF Sample Files Download - Test Drawing Exchange Format Files | MorphyHub</title>
         <meta name="description" content="Download free DXF sample Drawing Exchange Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, DXF conversion, and drawing file exchange tools." />
         <meta name="keywords" content="DXF sample files, test DXF files, download DXF samples, free DXF test files, Drawing Exchange Format samples, CAD drawing samples, DXF drawing files, .dxf test files, CAD file samples, DXF conversion test files" />
-        <meta property="og:title" content="Free DXF Sample Files Download - Test Drawing Exchange Format Files | MorphyIMG" />
+        <meta property="og:title" content="Free DXF Sample Files Download - Test Drawing Exchange Format Files | MorphyHub" />
         <meta property="og:description" content="Download free DXF sample Drawing Exchange Format files for testing. Multiple file sizes available for testing CAD software and DXF conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dxf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DXF Sample Files Download - Test Drawing Exchange Format Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DXF Sample Files Download - Test Drawing Exchange Format Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DXF sample Drawing Exchange Format files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dxf" />
         <script

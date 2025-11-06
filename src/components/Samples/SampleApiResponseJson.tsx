@@ -81,15 +81,15 @@ export default function SampleApiResponseJson() {
   return (
     <>
       <Helmet>
-        <title>Free API Response JSON Sample Files Download - Test JSON Files | MorphyIMG</title>
+        <title>Free API Response JSON Sample Files Download - Test JSON Files | MorphyHub</title>
         <meta name="description" content="Download free API response JSON sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsing, API response handling, and data processing tools." />
         <meta name="keywords" content="API response JSON sample files, test JSON files, download JSON samples, free JSON test files, API response samples, JSON parsing samples, data format samples, JSON conversion test files, .json test files, web API samples, data processing samples" />
-        <meta property="og:title" content="Free API Response JSON Sample Files Download - Test JSON Files | MorphyIMG" />
+        <meta property="og:title" content="Free API Response JSON Sample Files Download - Test JSON Files | MorphyHub" />
         <meta property="og:description" content="Download free API response JSON sample files for testing. Multiple file sizes available for testing JSON parsing and API response handling tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-api-response-json" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free API Response JSON Sample Files Download - Test JSON Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free API Response JSON Sample Files Download - Test JSON Files | MorphyHub" />
         <meta name="twitter:description" content="Download free API response JSON sample files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-api-response-json" />
         <script

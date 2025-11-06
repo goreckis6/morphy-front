@@ -84,15 +84,15 @@ export default function SampleXls() {
   return (
     <>
       <Helmet>
-        <title>Free XLS Sample Files Download - Test Excel Spreadsheet Files | MorphyIMG</title>
+        <title>Free XLS Sample Files Download - Test Excel Spreadsheet Files | MorphyHub</title>
         <meta name="description" content="Download free XLS sample Excel spreadsheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Excel conversion, data processing, and spreadsheet import tools." />
         <meta name="keywords" content="XLS sample files, test XLS files, download XLS samples, free XLS test files, Excel sample files, spreadsheet data samples, Microsoft Excel samples, XLS conversion test files, .xls test files" />
-        <meta property="og:title" content="Free XLS Sample Files Download - Test Excel Spreadsheet Files | MorphyIMG" />
+        <meta property="og:title" content="Free XLS Sample Files Download - Test Excel Spreadsheet Files | MorphyHub" />
         <meta property="og:description" content="Download free XLS sample Excel spreadsheet files for testing. Multiple file sizes available for testing Excel conversion and data processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-xls" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free XLS Sample Files Download - Test Excel Spreadsheet Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free XLS Sample Files Download - Test Excel Spreadsheet Files | MorphyHub" />
         <meta name="twitter:description" content="Download free XLS sample Excel spreadsheet files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-xls" />
         <script

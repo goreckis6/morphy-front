@@ -81,15 +81,15 @@ export default function SampleHpp() {
   return (
     <>
       <Helmet>
-        <title>Free HPP Sample Files Download - Test C++ Header Files | MorphyIMG</title>
+        <title>Free HPP Sample Files Download - Test C++ Header Files | MorphyHub</title>
         <meta name="description" content="Download free HPP sample C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, header file processing, and development tools." />
         <meta name="keywords" content="HPP sample files, test HPP files, download HPP samples, free HPP test files, C++ header samples, header file samples, .hpp test files, C++ header files, programming header samples, code header files, C++ development files" />
-        <meta property="og:title" content="Free HPP Sample Files Download - Test C++ Header Files | MorphyIMG" />
+        <meta property="og:title" content="Free HPP Sample Files Download - Test C++ Header Files | MorphyHub" />
         <meta property="og:description" content="Download free HPP sample C++ header files for testing. Multiple file sizes available for testing C++ code compilation and header file processing." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-hpp" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free HPP Sample Files Download - Test C++ Header Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free HPP Sample Files Download - Test C++ Header Files | MorphyHub" />
         <meta name="twitter:description" content="Download free HPP sample C++ header files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-hpp" />
         <script

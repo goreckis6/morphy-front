@@ -81,15 +81,15 @@ export default function SampleIges() {
   return (
     <>
       <Helmet>
-        <title>Free IGES Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG</title>
+        <title>Free IGES Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub</title>
         <meta name="description" content="Download free IGES sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGES conversion, and 3D model exchange tools." />
         <meta name="keywords" content="IGES sample files, test IGES files, download IGES samples, free IGES test files, Initial Graphics Exchange Specification samples, CAD model files, IGES 3D files, .iges test files, CAD exchange files, IGES conversion test files" />
-        <meta property="og:title" content="Free IGES Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG" />
+        <meta property="og:title" content="Free IGES Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub" />
         <meta property="og:description" content="Download free IGES sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available for testing CAD software and IGES conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-iges" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IGES Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free IGES Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub" />
         <meta name="twitter:description" content="Download free IGES sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-iges" />
         <script

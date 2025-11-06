@@ -20,10 +20,10 @@ export default function Samples() {
   return (
     <>
       <Helmet>
-      <title>Free Sample Files – Download Test Files | MorphyIMG</title>
+      <title>Free Sample Files – Download Test Files | MorphyHub</title>
         <meta
           name="description"
-          content="Get free sample images, documents, and archives to test MorphyIMG converters, compressors, and viewers."
+          content="Get free sample images, documents, and archives to test MorphyHub converters, compressors, and viewers."
         />
         <meta name="keywords" content="sample files, test files, download samples, free test files, DOCX samples, file samples, test files for conversion" />
         <link rel="canonical" href="https://morphyhub.com/samples" />

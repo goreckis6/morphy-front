@@ -81,15 +81,15 @@ export default function SampleDbf() {
   return (
     <>
       <Helmet>
-        <title>Free DBF Sample Files Download - Test dBASE Database Files | MorphyIMG</title>
+        <title>Free DBF Sample Files Download - Test dBASE Database Files | MorphyHub</title>
         <meta name="description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion and DBF parsing tools." />
         <meta name="keywords" content="DBF sample files, test DBF files, download DBF samples, free DBF test files, dBASE database samples, database file samples, DBF database files, DBF conversion test files, .dbf test files, database format samples, dBASE format samples" />
-        <meta property="og:title" content="Free DBF Sample Files Download - Test dBASE Database Files | MorphyIMG" />
+        <meta property="og:title" content="Free DBF Sample Files Download - Test dBASE Database Files | MorphyHub" />
         <meta property="og:description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available for testing database conversion and DBF parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-dbf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DBF Sample Files Download - Test dBASE Database Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free DBF Sample Files Download - Test dBASE Database Files | MorphyHub" />
         <meta name="twitter:description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-dbf" />
         <script

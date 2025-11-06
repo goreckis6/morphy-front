@@ -5,7 +5,7 @@
 
 set -e
 
-echo "🔧 Setting up environment variables for MorphyIMG"
+echo "🔧 Setting up environment variables for MorphyHub"
 
 # Create .env.example if it doesn't exist
 if [ ! -f ".env.example" ]; then

@@ -81,15 +81,15 @@ export default function SampleKmz() {
   return (
     <>
       <Helmet>
-        <title>Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyIMG</title>
+        <title>Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyHub</title>
         <meta name="description" content="Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KMZ extraction, geographic data processing, and Google Earth integration tools." />
         <meta name="keywords" content="KMZ sample files, test KMZ files, download KMZ samples, free KMZ test files, compressed KML samples, KMZ geographic data files, .kmz test files, Google Earth archive files, KMZ extraction test files" />
-        <meta property="og:title" content="Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyIMG" />
+        <meta property="og:title" content="Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyHub" />
         <meta property="og:description" content="Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available for testing KMZ extraction and geographic data processing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-kmz" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyHub" />
         <meta name="twitter:description" content="Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-kmz" />
         <script

@@ -253,15 +253,15 @@ export const SDDViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free SDD Viewer - View StarOffice Presentation Files Online | MorphyIMG</title>
+        <title>Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub</title>
         <meta name="description" content="Free professional SDD (StarOffice Presentation) viewer. Upload and preview legacy StarOffice/StarDraw presentation files online with slide rendering. Supports batch viewing up to 20 files. 100% free SDD viewer tool." />
         <meta name="keywords" content="SDD viewer, StarOffice viewer, StarDraw viewer, SDD file viewer online, legacy presentation viewer, StarOffice Impress viewer, free SDD viewer, SDD preview" />
-        <meta property="og:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional SDD (StarOffice Presentation) viewer. Upload and preview legacy StarOffice presentation files online." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/sdd" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional SDD viewer. Upload and preview StarOffice Presentation files online." />
         <script type="application/ld+json">
           {JSON.stringify({

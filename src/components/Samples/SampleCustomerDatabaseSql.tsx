@@ -81,15 +81,15 @@ export default function SampleCustomerDatabaseSql() {
   return (
     <>
       <Helmet>
-        <title>Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyIMG</title>
+        <title>Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyHub</title>
         <meta name="description" content="Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL database imports, SQL parsing, and database management tools." />
         <meta name="keywords" content="Customer Database SQL sample files, test SQL database files, download SQL samples, free SQL test files, SQL database samples, database dump samples, SQL script samples, SQL conversion test files, .sql test files, database import samples, SQL query samples" />
-        <meta property="og:title" content="Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyIMG" />
+        <meta property="og:title" content="Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyHub" />
         <meta property="og:description" content="Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available for testing SQL database imports and SQL parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-customer-database-sql" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyHub" />
         <meta name="twitter:description" content="Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-customer-database-sql" />
         <script

@@ -81,15 +81,15 @@ export default function SampleConfigIni() {
   return (
     <>
       <Helmet>
-        <title>Free Config INI Sample Files Download - Test INI Configuration Files | MorphyIMG</title>
+        <title>Free Config INI Sample Files Download - Test INI Configuration Files | MorphyHub</title>
         <meta name="description" content="Download free Config INI sample INI configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and Windows INI format processing tools." />
         <meta name="keywords" content="Config INI sample files, test INI files, download INI samples, free INI test files, INI configuration samples, Windows INI samples, config file samples, INI conversion test files, .ini test files, configuration parsing samples, Windows config samples" />
-        <meta property="og:title" content="Free Config INI Sample Files Download - Test INI Configuration Files | MorphyIMG" />
+        <meta property="og:title" content="Free Config INI Sample Files Download - Test INI Configuration Files | MorphyHub" />
         <meta property="og:description" content="Download free Config INI sample INI configuration files for testing. Multiple file sizes available for testing INI file parsing and configuration management tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-config-ini" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Config INI Sample Files Download - Test INI Configuration Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Config INI Sample Files Download - Test INI Configuration Files | MorphyHub" />
         <meta name="twitter:description" content="Download free Config INI sample INI configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-config-ini" />
         <script

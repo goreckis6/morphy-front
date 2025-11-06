@@ -81,15 +81,15 @@ export default function SampleConf() {
   return (
     <>
       <Helmet>
-        <title>Free CONF Sample Files Download - Test Configuration Files | MorphyIMG</title>
+        <title>Free CONF Sample Files Download - Test Configuration Files | MorphyHub</title>
         <meta name="description" content="Download free CONF sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing configuration file parsing, system setup, and config format processing tools." />
         <meta name="keywords" content="CONF sample files, test CONF files, download CONF samples, free CONF test files, configuration file samples, config samples, system configuration samples, CONF conversion test files, .conf test files, config parsing samples, Linux config samples" />
-        <meta property="og:title" content="Free CONF Sample Files Download - Test Configuration Files | MorphyIMG" />
+        <meta property="og:title" content="Free CONF Sample Files Download - Test Configuration Files | MorphyHub" />
         <meta property="og:description" content="Download free CONF sample configuration files for testing. Multiple file sizes available for testing configuration file parsing and system setup tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-conf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CONF Sample Files Download - Test Configuration Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free CONF Sample Files Download - Test Configuration Files | MorphyHub" />
         <meta name="twitter:description" content="Download free CONF sample configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-conf" />
         <script

@@ -81,15 +81,15 @@ export default function SampleInvoicePdf() {
   return (
     <>
       <Helmet>
-        <title>Free Invoice PDF Sample Files Download - Test Invoice Document Files | MorphyIMG</title>
+        <title>Free Invoice PDF Sample Files Download - Test Invoice Document Files | MorphyHub</title>
         <meta name="description" content="Download free Invoice PDF sample invoice document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing PDF invoice processing, invoice parsing, and document management tools." />
         <meta name="keywords" content="Invoice PDF sample files, test Invoice PDF files, download Invoice PDF samples, free Invoice PDF test files, invoice document samples, PDF invoice files, invoice PDF files, .pdf test files, invoice processing files, Invoice PDF parsing test files" />
-        <meta property="og:title" content="Free Invoice PDF Sample Files Download - Test Invoice Document Files | MorphyIMG" />
+        <meta property="og:title" content="Free Invoice PDF Sample Files Download - Test Invoice Document Files | MorphyHub" />
         <meta property="og:description" content="Download free Invoice PDF sample invoice document files for testing. Multiple file sizes available for testing PDF invoice processing and invoice parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-invoice-pdf" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free Invoice PDF Sample Files Download - Test Invoice Document Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free Invoice PDF Sample Files Download - Test Invoice Document Files | MorphyHub" />
         <meta name="twitter:description" content="Download free Invoice PDF sample invoice document files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-invoice-pdf" />
         <script

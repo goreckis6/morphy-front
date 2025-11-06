@@ -420,15 +420,15 @@ export const DNGViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyIMG</title>
+        <title>Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyHub</title>
         <meta name="description" content="Free professional DNG (Digital Negative) viewer with high-quality rendering. Upload and preview Adobe DNG RAW files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free DNG viewer tool." />
         <meta name="keywords" content="DNG viewer, Digital Negative viewer, DNG file viewer online, RAW viewer, Adobe DNG viewer, universal RAW viewer, free DNG viewer, DNG preview" />
-        <meta property="og:title" content="Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional DNG (Digital Negative) viewer with high-quality rendering. Upload and preview Adobe universal RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/dng" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional DNG (Digital Negative) viewer with high-quality rendering. Upload and preview Adobe DNG RAW files online." />
         <script type="application/ld+json">
           {JSON.stringify({

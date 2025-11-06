@@ -81,15 +81,15 @@ export default function SampleIgs() {
   return (
     <>
       <Helmet>
-        <title>Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG</title>
+        <title>Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub</title>
         <meta name="description" content="Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGS conversion, and 3D model exchange tools." />
         <meta name="keywords" content="IGS sample files, test IGS files, download IGS samples, free IGS test files, Initial Graphics Exchange Specification samples, CAD model files, IGS 3D files, .igs test files, CAD exchange files, IGS conversion test files" />
-        <meta property="og:title" content="Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG" />
+        <meta property="og:title" content="Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub" />
         <meta property="og:description" content="Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available for testing CAD software and IGS conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-igs" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub" />
         <meta name="twitter:description" content="Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-igs" />
         <script

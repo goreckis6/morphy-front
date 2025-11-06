@@ -81,15 +81,15 @@ export default function SampleJwt() {
   return (
     <>
       <Helmet>
-        <title>Free JWT Sample Files Download - Test JSON Web Token Files | MorphyIMG</title>
+        <title>Free JWT Sample Files Download - Test JSON Web Token Files | MorphyHub</title>
         <meta name="description" content="Download free JWT sample JSON Web Token files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JWT token parsing, authentication, and API security tools." />
         <meta name="keywords" content="JWT sample files, test JWT files, download JWT samples, free JWT test files, JSON Web Token samples, JWT token files, .jwt test files, authentication token files, JWT parsing test files" />
-        <meta property="og:title" content="Free JWT Sample Files Download - Test JSON Web Token Files | MorphyIMG" />
+        <meta property="og:title" content="Free JWT Sample Files Download - Test JSON Web Token Files | MorphyHub" />
         <meta property="og:description" content="Download free JWT sample JSON Web Token files for testing. Multiple file sizes available for testing JWT token parsing and authentication tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-jwt" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free JWT Sample Files Download - Test JSON Web Token Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free JWT Sample Files Download - Test JSON Web Token Files | MorphyHub" />
         <meta name="twitter:description" content="Download free JWT sample JSON Web Token files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-jwt" />
         <script

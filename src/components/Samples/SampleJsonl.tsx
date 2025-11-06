@@ -81,15 +81,15 @@ export default function SampleJsonl() {
   return (
     <>
       <Helmet>
-        <title>Free JSONL Sample Files Download - Test JSON Lines Files | MorphyIMG</title>
+        <title>Free JSONL Sample Files Download - Test JSON Lines Files | MorphyHub</title>
         <meta name="description" content="Download free JSONL sample JSON Lines files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSONL parsing, data streaming, and big data processing tools." />
         <meta name="keywords" content="JSONL sample files, test JSONL files, download JSONL samples, free JSONL test files, JSON Lines samples, NDJSON files, JSONL data files, .jsonl test files, streaming JSON files, JSONL parsing test files" />
-        <meta property="og:title" content="Free JSONL Sample Files Download - Test JSON Lines Files | MorphyIMG" />
+        <meta property="og:title" content="Free JSONL Sample Files Download - Test JSON Lines Files | MorphyHub" />
         <meta property="og:description" content="Download free JSONL sample JSON Lines files for testing. Multiple file sizes available for testing JSONL parsing and data streaming tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-jsonl" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free JSONL Sample Files Download - Test JSON Lines Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free JSONL Sample Files Download - Test JSON Lines Files | MorphyHub" />
         <meta name="twitter:description" content="Download free JSONL sample JSON Lines files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-jsonl" />
         <script

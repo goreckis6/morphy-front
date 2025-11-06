@@ -163,15 +163,15 @@ export const JSViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free JavaScript Viewer - View JS Files Online | MorphyIMG</title>
+        <title>Free JavaScript Viewer - View JS Files Online | MorphyHub</title>
         <meta name="description" content="Free professional JavaScript viewer with syntax highlighting. Upload and preview JS, JSX files online with formatted display and code analysis. Supports batch viewing up to 20 files. 100% free JavaScript viewer tool." />
         <meta name="keywords" content="JavaScript viewer, JS viewer, JavaScript file viewer online, JS formatter, JSX viewer, JavaScript preview, code viewer, JS online, free JavaScript viewer" />
-        <meta property="og:title" content="Free JavaScript Viewer - View JS Files Online | MorphyIMG" />
+        <meta property="og:title" content="Free JavaScript Viewer - View JS Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional JavaScript viewer with syntax highlighting. Upload and preview JS files online with formatted display and code analysis." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/js" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free JavaScript Viewer - View JS Files Online | MorphyIMG" />
+        <meta name="twitter:title" content="Free JavaScript Viewer - View JS Files Online | MorphyHub" />
         <meta name="twitter:description" content="Free professional JavaScript viewer with syntax highlighting. Upload and preview JS files online with formatted display." />
         <script type="application/ld+json">
           {JSON.stringify({

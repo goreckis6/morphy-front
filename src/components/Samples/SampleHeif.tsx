@@ -81,15 +81,15 @@ export default function SampleHeif() {
   return (
     <>
       <Helmet>
-        <title>Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyIMG</title>
+        <title>Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyHub</title>
         <meta name="description" content="Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIF image conversion, viewing, and processing tools." />
         <meta name="keywords" content="HEIF sample files, test HEIF files, download HEIF samples, free HEIF test files, High Efficiency Image Format samples, HEIF image samples, HEIF conversion test files, .heif test files, Apple HEIF files, iOS image samples, HEIF viewer samples" />
-        <meta property="og:title" content="Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyIMG" />
+        <meta property="og:title" content="Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyHub" />
         <meta property="og:description" content="Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available for testing HEIF image conversion and viewing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-heif" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyHub" />
         <meta name="twitter:description" content="Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-heif" />
         <script

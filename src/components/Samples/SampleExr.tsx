@@ -81,15 +81,15 @@ export default function SampleExr() {
   return (
     <>
       <Helmet>
-        <title>Free EXR Sample Files Download - Test OpenEXR Image Files | MorphyIMG</title>
+        <title>Free EXR Sample Files Download - Test OpenEXR Image Files | MorphyHub</title>
         <meta name="description" content="Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, EXR conversion, and high dynamic range viewing tools." />
         <meta name="keywords" content="EXR sample files, test EXR files, download EXR samples, free EXR test files, OpenEXR image samples, HDR image files, EXR image files, .exr test files, high dynamic range images, EXR conversion test files" />
-        <meta property="og:title" content="Free EXR Sample Files Download - Test OpenEXR Image Files | MorphyIMG" />
+        <meta property="og:title" content="Free EXR Sample Files Download - Test OpenEXR Image Files | MorphyHub" />
         <meta property="og:description" content="Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available for testing HDR image processing and EXR conversion tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-exr" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free EXR Sample Files Download - Test OpenEXR Image Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free EXR Sample Files Download - Test OpenEXR Image Files | MorphyHub" />
         <meta name="twitter:description" content="Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-exr" />
         <script

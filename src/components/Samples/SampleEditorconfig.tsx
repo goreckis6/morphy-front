@@ -81,15 +81,15 @@ export default function SampleEditorconfig() {
   return (
     <>
       <Helmet>
-        <title>Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyIMG</title>
+        <title>Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyHub</title>
         <meta name="description" content="Download free EditorConfig sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EditorConfig parsing and code formatting configuration tools." />
         <meta name="keywords" content="EditorConfig sample files, test EditorConfig files, download EditorConfig samples, free EditorConfig test files, editor configuration samples, .editorconfig test files, code formatting config files, EditorConfig parsing test files" />
-        <meta property="og:title" content="Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyIMG" />
+        <meta property="og:title" content="Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyHub" />
         <meta property="og:description" content="Download free EditorConfig sample configuration files for testing. Multiple file sizes available for testing EditorConfig parsing tools." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-editorconfig" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyIMG" />
+        <meta name="twitter:title" content="Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyHub" />
         <meta name="twitter:description" content="Download free EditorConfig sample configuration files for testing. Multiple file sizes available." />
         <link rel="canonical" href="https://morphyhub.com/samples/sample-editorconfig" />
         <script
