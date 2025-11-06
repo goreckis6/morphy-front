@@ -5,7 +5,7 @@ import { Footer } from './Footer';
 import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical, Globe, Users, BookOpen, Code, FileCode, Sparkles, Pin, X, Lightbulb } from 'lucide-react';
 import { API_BASE_URL } from '../services/api';
 
-type TranscriptFormat = 'txt' | 'txt-timestamps' | 'json' | 'srt' | 'vtt';
+type TranscriptFormat = 'txt' | 'txt-timestamps' | 'json' | 'json-timestamps' | 'srt' | 'vtt';
 
 interface AvailableLanguage {
   code: string;
@@ -114,10 +114,24 @@ export const YTTranscriptExtractor: React.FC = () => {
   };
 
   const parseTranscript = (content: string, format: TranscriptFormat): TranscriptEntry[] => {
-    if (format === 'json') {
+    if (format === 'json' || format === 'json-timestamps') {
       try {
         const parsed = JSON.parse(content);
-        return Array.isArray(parsed) ? parsed : [];
+        if (Array.isArray(parsed)) {
+          // Check if it's an array of strings (no timestamps) or objects (with timestamps)
+          if (parsed.length > 0 && typeof parsed[0] === 'string') {
+            // Array of strings - no timestamps, create entries with dummy timestamps
+            return parsed.map((text, i) => ({ text, start: i * 3, duration: 3 }));
+          } else {
+            // Array of objects with timestamps
+            return parsed.map((item: any) => ({
+              text: item.text || '',
+              start: item.start || 0,
+              duration: item.duration || 3
+            }));
+          }
+        }
+        return [];
       } catch {
         return [];
       }
@@ -359,20 +373,22 @@ export const YTTranscriptExtractor: React.FC = () => {
 
 
   const convertToFormat = (targetFormat: TranscriptFormat): string => {
-    // If target format matches current format, return transcript as-is
-    if (targetFormat === format && transcript) {
-      return transcript;
-    }
-
     // If we have transcriptData, use it to convert
     if (transcriptData.length > 0) {
       if (targetFormat === 'txt') {
+        // Plain text without timestamps
         return transcriptData.map(e => e.text).join(' ');
       } else if (targetFormat === 'txt-timestamps') {
+        // Plain text with timestamps
         return transcriptData.map(e => `[${formatTime(e.start)}] ${e.text}`).join('\n');
       } else if (targetFormat === 'json') {
+        // JSON without timestamps - just array of text strings
+        return JSON.stringify(transcriptData.map(e => e.text), null, 2);
+      } else if (targetFormat === 'json-timestamps') {
+        // JSON with timestamps - full transcript data
         return JSON.stringify(transcriptData, null, 2);
       } else if (targetFormat === 'srt') {
+        // SRT format always includes timestamps (standard requirement)
         const formatSRTTime = (seconds: number): string => {
           const hours = Math.floor(seconds / 3600);
           const minutes = Math.floor((seconds % 3600) / 60);
@@ -386,6 +402,7 @@ export const YTTranscriptExtractor: React.FC = () => {
           return `${i + 1}\n${start} --> ${end}\n${e.text}\n`;
         }).join('\n');
       } else if (targetFormat === 'vtt') {
+        // VTT format always includes timestamps (standard requirement)
         const formatVTTTime = (seconds: number): string => {
           const hours = Math.floor(seconds / 3600);
           const minutes = Math.floor((seconds % 3600) / 60);
@@ -406,8 +423,11 @@ export const YTTranscriptExtractor: React.FC = () => {
       if (targetFormat === 'txt') {
         // Remove timestamps if present
         return transcript.replace(/\[\d{2}:\d{2}:\d{2}\]\s*/g, '').trim();
+      } else if (targetFormat === 'txt-timestamps') {
+        // Return as-is (already has timestamps)
+        return transcript;
       }
-      // For other formats, we need transcriptData, so return current transcript
+      // For other formats, we need transcriptData
       return transcript;
     }
 
@@ -428,6 +448,7 @@ export const YTTranscriptExtractor: React.FC = () => {
       'txt': 'txt',
       'txt-timestamps': 'txt',
       'json': 'json',
+      'json-timestamps': 'json',
       'srt': 'srt',
       'vtt': 'vtt'
     };
@@ -436,6 +457,7 @@ export const YTTranscriptExtractor: React.FC = () => {
       'txt': 'text/plain',
       'txt-timestamps': 'text/plain',
       'json': 'application/json',
+      'json-timestamps': 'application/json',
       'srt': 'text/srt',
       'vtt': 'text/vtt'
     };
@@ -600,7 +622,7 @@ export const YTTranscriptExtractor: React.FC = () => {
         "name": "What formats can I download transcripts in?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can download transcripts in 5 different formats: Plain Text (with or without timestamps), JSON (with timestamps), SRT (SubRip subtitle format), and VTT (WebVTT format)."
+          "text": "You can download transcripts in multiple formats with flexible options: Plain Text (.txt) with or without timestamps, JSON (.json) with or without timestamps, SRT (SubRip subtitle format), and VTT (WebVTT format). All subtitle formats (SRT, VTT) include timestamps by default."
         }
       },
       {
@@ -626,7 +648,7 @@ export const YTTranscriptExtractor: React.FC = () => {
     <>
       <Helmet>
         <title>YouTube Transcript Extractor - Free Online Tool | Extract & Download Transcripts</title>
-        <meta name="description" content="Extract and download YouTube video transcripts in 5 formats: Plain Text, JSON, SRT, VTT. Get transcripts with or without timestamps. Free, fast, and easy to use. No registration required." />
+        <meta name="description" content="Extract and download YouTube video transcripts in multiple formats: Plain Text (.txt), JSON (.json), SRT, VTT. Choose with or without timestamps for each format. Free, fast, and easy to use. No registration required." />
         <meta name="keywords" content="youtube transcript extractor, download youtube transcript, youtube transcript downloader, extract youtube subtitles, youtube transcript json, youtube transcript srt, youtube transcript vtt, free youtube transcript, youtube captions download, youtube subtitles extractor" />
         <meta property="og:title" content="YouTube Transcript Extractor - Free Online Tool | MorphyHub" />
         <meta property="og:description" content="Extract and download YouTube video transcripts in multiple formats. Get transcripts as plain text, JSON, SRT, or VTT. Free and easy to use." />
@@ -966,68 +988,31 @@ export const YTTranscriptExtractor: React.FC = () => {
                       />
                      </div>
 
-                     <select
-                       value={language}
-                       onChange={(e) => {
-                         e.preventDefault();
-                         handleLanguageChange(e.target.value);
-                       }}
-                       disabled={isExtracting || !videoId}
-                       className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
-                     >
-                      <option value="en">English (en)</option>
-                      <option value="es">Spanish (es)</option>
-                      <option value="fr">French (fr)</option>
-                      <option value="de">German (de)</option>
-                      <option value="pl">Polish (pl)</option>
-                      <option value="it">Italian (it)</option>
-                      <option value="pt">Portuguese (pt)</option>
-                      <option value="ru">Russian (ru)</option>
-                      <option value="ja">Japanese (ja)</option>
-                      <option value="ko">Korean (ko)</option>
-                      <option value="zh">Chinese (zh)</option>
-                      <option value="ar">Arabic (ar)</option>
-                      <option value="nl">Dutch (nl)</option>
-                      <option value="sv">Swedish (sv)</option>
-                      <option value="no">Norwegian (no)</option>
-                      <option value="da">Danish (da)</option>
-                      <option value="fi">Finnish (fi)</option>
-                      <option value="tr">Turkish (tr)</option>
-                      <option value="cs">Czech (cs)</option>
-                      <option value="hu">Hungarian (hu)</option>
-                      <option value="ro">Romanian (ro)</option>
-                      <option value="bg">Bulgarian (bg)</option>
-                      <option value="hr">Croatian (hr)</option>
-                      <option value="sr">Serbian (sr)</option>
-                      <option value="sk">Slovak (sk)</option>
-                      <option value="sl">Slovenian (sl)</option>
-                      <option value="uk">Ukrainian (uk)</option>
-                      <option value="vi">Vietnamese (vi)</option>
-                      <option value="th">Thai (th)</option>
-                      <option value="id">Indonesian (id)</option>
-                      <option value="ms">Malay (ms)</option>
-                      <option value="hi">Hindi (hi)</option>
-                      <option value="he">Hebrew (he)</option>
-                      <option value="el">Greek (el)</option>
-                      <option value="ca">Catalan (ca)</option>
-                      <option value="eu">Basque (eu)</option>
-                      <option value="gl">Galician (gl)</option>
-                      <option value="ga">Irish (ga)</option>
-                      <option value="mt">Maltese (mt)</option>
-                      {availableLanguages.length > 0 && (
-                        <>
-                          <option disabled>--- Available for this video ---</option>
-                          {availableLanguages
-                            .filter(lang => !['en', 'es', 'fr', 'de', 'pl', 'it', 'pt', 'ru', 'ja', 'ko', 'zh', 'ar', 'nl', 'sv', 'no', 'da', 'fi', 'tr', 'cs', 'hu', 'ro', 'bg', 'hr', 'sr', 'sk', 'sl', 'uk', 'vi', 'th', 'id', 'ms', 'hi', 'he', 'el', 'ca', 'eu', 'gl', 'ga', 'mt'].includes(lang.code))
-                            .map(lang => (
-                              <option key={lang.code} value={lang.code}>
-                                {lang.name} ({lang.code}){lang.is_generated ? ' [Auto]' : ''}
-                              </option>
-                            ))
-                          }
-                        </>
-                      )}
-                    </select>
+                    {availableLanguages.length > 0 ? (
+                      <select
+                        value={language}
+                        onChange={(e) => {
+                          e.preventDefault();
+                          handleLanguageChange(e.target.value);
+                        }}
+                        disabled={isExtracting || !videoId}
+                        className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {availableLanguages.map(lang => (
+                          <option key={lang.code} value={lang.code}>
+                            {lang.name} ({lang.code}){lang.is_generated ? ' [Auto]' : ''}
+                          </option>
+                        ))}
+                      </select>
+                    ) : (
+                      <select
+                        value={language}
+                        disabled
+                        className="px-3 py-2 border border-gray-300 rounded-lg bg-gray-100 text-sm text-gray-500 cursor-not-allowed"
+                      >
+                        <option value="en">Loading available languages...</option>
+                      </select>
+                    )}
                   </div>
 
                   {isExtracting && (
@@ -1092,7 +1077,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                            const hasNote = notes[entry.start];
                            return (
                              <div key={index} className="group relative">
-                               <div className="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-pink-400 hover:shadow-lg transition-all duration-200 cursor-pointer">
+                               <div className="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-pink-400 hover:shadow-lg transition-all duration-200">
                                  <div className="flex gap-4 items-start">
                                    <span className="text-pink-600 font-mono text-sm flex-shrink-0 font-bold bg-pink-50 px-2 py-1 rounded">
                                      {formatTime(entry.start)}
@@ -1103,13 +1088,13 @@ export const YTTranscriptExtractor: React.FC = () => {
                                      </p>
                                      
                                      {/* Interactive buttons - show on hover */}
-                                     <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-y-0 translate-y-1">
+                                     <div className="flex items-center gap-2 invisible group-hover:visible transition-all duration-200">
                                        <button
                                          onClick={(e) => {
                                            e.stopPropagation();
                                            handleCopyTimestampLink(entry.start);
                                          }}
-                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition-all duration-150 border border-blue-200 hover:border-blue-300 hover:shadow-sm font-medium"
+                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition-all duration-150 border border-blue-200 hover:border-blue-300 hover:shadow-sm font-medium z-10"
                                          title="Copy YouTube link with timestamp"
                                        >
                                          <LinkIcon className="w-4 h-4" />
@@ -1124,7 +1109,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            e.stopPropagation();
                                            handleCopyFragment(entry.text, entryIndex);
                                          }}
-                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-all duration-150 border border-gray-200 hover:border-gray-300 hover:shadow-sm font-medium"
+                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-all duration-150 border border-gray-200 hover:border-gray-300 hover:shadow-sm font-medium z-10"
                                          title="Copy transcript text"
                                        >
                                          <Copy className="w-4 h-4" />
@@ -1139,7 +1124,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            e.stopPropagation();
                                            handleAddNote(entry.start);
                                          }}
-                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-amber-50 hover:bg-amber-100 text-amber-700 rounded-lg transition-all duration-150 border border-amber-200 hover:border-amber-300 hover:shadow-sm font-medium"
+                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-amber-50 hover:bg-amber-100 text-amber-700 rounded-lg transition-all duration-150 border border-amber-200 hover:border-amber-300 hover:shadow-sm font-medium z-10"
                                          title="Add a note to this segment"
                                        >
                                          <Pin className="w-4 h-4" />
@@ -1151,7 +1136,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            e.stopPropagation();
                                            handleJumpTo(entry.start);
                                          }}
-                                         className="flex items-center gap-2 px-4 py-2 text-sm bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-all duration-150 shadow-md hover:shadow-lg font-medium"
+                                         className="flex items-center gap-2 px-4 py-2 text-sm bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-all duration-150 shadow-md hover:shadow-lg font-medium z-10"
                                          title="Jump to this timestamp in YouTube video"
                                        >
                                          <Play className="w-4 h-4 fill-white" />
@@ -1288,12 +1273,26 @@ export const YTTranscriptExtractor: React.FC = () => {
                      onChange={(e) => setDownloadFormat(e.target.value as TranscriptFormat)}
                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white"
                    >
-                     <option value="txt">.txt</option>
-                     <option value="txt-timestamps">.txt (with timestamps)</option>
-                     <option value="json">.json</option>
-                     <option value="srt">.srt</option>
-                     <option value="vtt">.vtt</option>
+                     <optgroup label="Plain Text (.txt)">
+                       <option value="txt">.txt (No Timestamps)</option>
+                       <option value="txt-timestamps">.txt (With Timestamps)</option>
+                     </optgroup>
+                     <optgroup label="JSON (.json)">
+                       <option value="json">.json (No Timestamps)</option>
+                       <option value="json-timestamps">.json (With Timestamps)</option>
+                     </optgroup>
+                     <optgroup label="Subtitles">
+                       <option value="srt">.srt (SRT Format)</option>
+                       <option value="vtt">.vtt (VTT Format)</option>
+                     </optgroup>
                    </select>
+                   <p className="mt-2 text-xs text-gray-500">
+                     {downloadFormat === 'srt' || downloadFormat === 'vtt' 
+                       ? 'Note: SRT and VTT formats always include timestamps (standard requirement).'
+                       : downloadFormat.includes('timestamps')
+                       ? 'This format includes timestamps for each transcript segment.'
+                       : 'This format contains only the text content without timestamps.'}
+                   </p>
                  </div>
 
                  <div className="flex items-center justify-end gap-3">
@@ -1341,7 +1340,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                         <Code className="w-6 h-6 text-pink-600" />
                         Step 2: Choose Format
                       </h3>
-                      <p className="text-gray-700">Select your preferred output format: Plain Text, JSON, SRT, or VTT. Choose with or without timestamps.</p>
+                      <p className="text-gray-700">Select your preferred output format: Plain Text (.txt), JSON (.json), SRT, or VTT. Choose with or without timestamps for text-based formats. Subtitle formats (SRT, VTT) always include timestamps.</p>
                     </div>
                     <div className="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-100">
                       <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
@@ -1427,7 +1426,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </div>
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
                       <h4 className="font-semibold text-gray-900 mb-2 text-lg">What formats can I download transcripts in?</h4>
-                      <p className="text-gray-700">You can download transcripts in 5 different formats: Plain Text (with or without timestamps), JSON (with timestamps), SRT (SubRip subtitle format), and VTT (WebVTT format).</p>
+                      <p className="text-gray-700">You can download transcripts in multiple formats with flexible options: Plain Text (.txt) with or without timestamps, JSON (.json) with or without timestamps, SRT (SubRip subtitle format), and VTT (WebVTT format). All subtitle formats (SRT, VTT) include timestamps by default.</p>
                     </div>
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
                       <h4 className="font-semibold text-gray-900 mb-2 text-lg">Do all YouTube videos have transcripts?</h4>
