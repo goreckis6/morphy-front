@@ -68,10 +68,10 @@ export default function SampleLzh() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free LZH Sample Files - Download Test LZH Archive Files",
-    "url": "https://morphyimg.com/samples/sample-lzh",
+    "url": "https://morphyhub.com/samples/sample-lzh",
     "description": "Download free LZH sample LZH archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH extraction, archive decompression, and file archiving tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleLzh() {
         <meta property="og:title" content="Free LZH Sample Files Download - Test LZH Archive Files | MorphyIMG" />
         <meta property="og:description" content="Download free LZH sample LZH archive files for testing. Multiple file sizes available for testing LZH extraction and archive decompression tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-lzh" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-lzh" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free LZH Sample Files Download - Test LZH Archive Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free LZH sample LZH archive files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-lzh" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-lzh" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

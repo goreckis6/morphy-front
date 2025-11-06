@@ -68,10 +68,10 @@ export default function SampleCss() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free CSS Sample Files - Download Test Cascading Style Sheets Files",
-    "url": "https://morphyimg.com/samples/sample-css",
+    "url": "https://morphyhub.com/samples/sample-css",
     "description": "Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSS parsing, styling, and web design tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleCss() {
         <meta property="og:title" content="Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyIMG" />
         <meta property="og:description" content="Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available for testing CSS parsing and styling tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-css" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-css" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-css" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-css" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

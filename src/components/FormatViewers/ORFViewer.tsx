@@ -112,7 +112,7 @@ export const ORFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/orf', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/orf', {
         method: 'POST',
         body: formData,
       });

@@ -68,10 +68,10 @@ export default function SampleApng() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free APNG Sample Files - Download Test Animated PNG Files",
-    "url": "https://morphyimg.com/samples/sample-apng",
+    "url": "https://morphyhub.com/samples/sample-apng",
     "description": "Download free APNG sample animated PNG files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing animated PNG conversion, viewing, and APNG format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleApng() {
         <meta property="og:title" content="Free APNG Sample Files Download - Test Animated PNG Files | MorphyIMG" />
         <meta property="og:description" content="Download free APNG sample animated PNG files for testing. Multiple file sizes available for testing animated PNG conversion and viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-apng" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-apng" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free APNG Sample Files Download - Test Animated PNG Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free APNG sample animated PNG files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-apng" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-apng" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

@@ -102,7 +102,7 @@ export const DOCXViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/docx', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/docx', {
         method: 'POST',
         body: formData,
       });

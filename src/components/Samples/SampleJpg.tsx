@@ -68,10 +68,10 @@ export default function SampleJpg() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free JPG Sample Files - Download Test JPG Image Files",
-    "url": "https://morphyimg.com/samples/sample-jpg",
+    "url": "https://morphyhub.com/samples/sample-jpg",
     "description": "Download free JPG sample JPG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPG image conversion, JPG compression, and image processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleJpg() {
         <meta property="og:title" content="Free JPG Sample Files Download - Test JPG Image Files | MorphyIMG" />
         <meta property="og:description" content="Download free JPG sample JPG image files for testing. Multiple file sizes available for testing JPG image conversion and JPG compression tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-jpg" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-jpg" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free JPG Sample Files Download - Test JPG Image Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free JPG sample JPG image files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-jpg" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-jpg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

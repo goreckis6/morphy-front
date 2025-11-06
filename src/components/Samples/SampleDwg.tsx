@@ -68,10 +68,10 @@ export default function SampleDwg() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free DWG Sample Files - Download Test AutoCAD Drawing Files",
-    "url": "https://morphyimg.com/samples/sample-dwg",
+    "url": "https://morphyhub.com/samples/sample-dwg",
     "description": "Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, AutoCAD conversion, and drawing file processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleDwg() {
         <meta property="og:title" content="Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyIMG" />
         <meta property="og:description" content="Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available for testing CAD software and AutoCAD conversion tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-dwg" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-dwg" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-dwg" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-dwg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

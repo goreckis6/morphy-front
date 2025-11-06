@@ -68,10 +68,10 @@ export default function SampleCab() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free CAB Sample Files - Download Test Windows Cabinet Files",
-    "url": "https://morphyimg.com/samples/sample-cab",
+    "url": "https://morphyhub.com/samples/sample-cab",
     "description": "Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and CAB format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleCab() {
         <meta property="og:title" content="Free CAB Sample Files Download - Test Windows Cabinet Files | MorphyIMG" />
         <meta property="og:description" content="Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available for testing archive extraction and compression tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-cab" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-cab" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free CAB Sample Files Download - Test Windows Cabinet Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-cab" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-cab" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

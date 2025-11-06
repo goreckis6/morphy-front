@@ -68,10 +68,10 @@ export default function SampleIfc() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free IFC Sample Files - Download Test Industry Foundation Classes Files",
-    "url": "https://morphyimg.com/samples/sample-ifc",
+    "url": "https://morphyhub.com/samples/sample-ifc",
     "description": "Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BIM software, IFC conversion, and building information modeling tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleIfc() {
         <meta property="og:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyIMG" />
         <meta property="og:description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available for testing BIM software and IFC conversion tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-ifc" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-ifc" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-ifc" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-ifc" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

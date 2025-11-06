@@ -68,10 +68,10 @@ export default function SampleAac() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free AAC Sample Files - Download Test Audio Files",
-    "url": "https://morphyimg.com/samples/sample-aac",
+    "url": "https://morphyhub.com/samples/sample-aac",
     "description": "Download free AAC sample audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and AAC format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAac() {
         <meta property="og:title" content="Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyIMG" />
         <meta property="og:description" content="Download free AAC sample Advanced Audio Coding files for testing. Multiple file sizes available for testing audio conversion and playback tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-aac" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-aac" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free AAC sample Advanced Audio Coding files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-aac" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-aac" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

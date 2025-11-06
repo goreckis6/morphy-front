@@ -68,10 +68,10 @@ export default function SampleMidi() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free MIDI Sample Files - Download Test MIDI Music Files",
-    "url": "https://morphyimg.com/samples/sample-midi",
+    "url": "https://morphyhub.com/samples/sample-midi",
     "description": "Download free MIDI sample MIDI music files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MIDI playback, MIDI conversion, and music sequencing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleMidi() {
         <meta property="og:title" content="Free MIDI Sample Files Download - Test MIDI Music Files | MorphyIMG" />
         <meta property="og:description" content="Download free MIDI sample MIDI music files for testing. Multiple file sizes available for testing MIDI playback and MIDI conversion tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-midi" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-midi" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free MIDI Sample Files Download - Test MIDI Music Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free MIDI sample MIDI music files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-midi" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-midi" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

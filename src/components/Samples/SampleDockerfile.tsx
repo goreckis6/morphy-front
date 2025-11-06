@@ -68,10 +68,10 @@ export default function SampleDockerfile() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Dockerfile Sample Files - Download Test Dockerfile Configuration Files",
-    "url": "https://morphyimg.com/samples/sample-dockerfile",
+    "url": "https://morphyhub.com/samples/sample-dockerfile",
     "description": "Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker image building and Dockerfile parsing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleDockerfile() {
         <meta property="og:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG" />
         <meta property="og:description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available for testing Docker image building and Dockerfile parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-dockerfile" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-dockerfile" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free Dockerfile Sample Files Download - Test Dockerfile Configuration Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free Dockerfile sample Dockerfile configuration files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-dockerfile" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-dockerfile" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

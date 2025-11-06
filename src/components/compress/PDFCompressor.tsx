@@ -264,7 +264,7 @@ export const PDFCompressor: React.FC = () => {
         <title>{t('compress_pdf.meta_title')}</title>
         <meta name="description" content={t('compress_pdf.meta_description')} />
         <meta name="keywords" content={t('compress_pdf.meta_keywords')} />
-        <link rel="canonical" href="https://morphyimg.com/compress/pdf" />
+        <link rel="canonical" href="https://morphyhub.com/compress/pdf" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <Header />

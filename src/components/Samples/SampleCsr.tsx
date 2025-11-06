@@ -68,10 +68,10 @@ export default function SampleCsr() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free CSR Sample Files - Download Test Certificate Signing Request Files",
-    "url": "https://morphyimg.com/samples/sample-csr",
+    "url": "https://morphyhub.com/samples/sample-csr",
     "description": "Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate generation, CSR parsing, and security certificate processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleCsr() {
         <meta property="og:title" content="Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyIMG" />
         <meta property="og:description" content="Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available for testing SSL certificate generation and CSR parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-csr" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-csr" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-csr" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-csr" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

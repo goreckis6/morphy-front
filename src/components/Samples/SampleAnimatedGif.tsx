@@ -68,10 +68,10 @@ export default function SampleAnimatedGif() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Animated GIF Sample Files - Download Test Animation Files",
-    "url": "https://morphyimg.com/samples/sample-animated-gif",
+    "url": "https://morphyhub.com/samples/sample-animated-gif",
     "description": "Download free animated GIF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIF animation conversion, viewing, and animation format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAnimatedGif() {
         <meta property="og:title" content="Free Animated GIF Sample Files Download - Test Animation Files | MorphyIMG" />
         <meta property="og:description" content="Download free animated GIF sample files for testing. Multiple file sizes available for testing GIF animation conversion and viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-animated-gif" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-animated-gif" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free Animated GIF Sample Files Download - Test Animation Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free animated GIF sample files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-animated-gif" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-animated-gif" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

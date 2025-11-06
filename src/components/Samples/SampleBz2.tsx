@@ -68,10 +68,10 @@ export default function SampleBz2() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free BZ2 Sample Files - Download Test Compressed Archive Files",
-    "url": "https://morphyimg.com/samples/sample-bz2",
+    "url": "https://morphyhub.com/samples/sample-bz2",
     "description": "Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive decompression, compression, and BZ2 format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleBz2() {
         <meta property="og:title" content="Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyIMG" />
         <meta property="og:description" content="Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available for testing archive decompression and compression tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-bz2" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-bz2" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-bz2" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-bz2" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

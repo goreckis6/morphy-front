@@ -99,7 +99,7 @@ export const PPTViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/ppt', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/ppt', {
         method: 'POST',
         body: formData,
       });

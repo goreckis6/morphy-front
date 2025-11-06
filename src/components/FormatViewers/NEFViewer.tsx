@@ -112,7 +112,7 @@ export const NEFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/nef', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/nef', {
         method: 'POST',
         body: formData,
       });

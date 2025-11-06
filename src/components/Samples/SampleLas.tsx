@@ -68,10 +68,10 @@ export default function SampleLas() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free LAS Sample Files - Download Test LiDAR Point Cloud Data Files",
-    "url": "https://morphyimg.com/samples/sample-las",
+    "url": "https://morphyhub.com/samples/sample-las",
     "description": "Download free LAS sample LiDAR point cloud data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LAS parsing, point cloud processing, and 3D mapping tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleLas() {
         <meta property="og:title" content="Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyIMG" />
         <meta property="og:description" content="Download free LAS sample LiDAR point cloud data files for testing. Multiple file sizes available for testing LAS parsing and point cloud processing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-las" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-las" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free LAS Sample Files Download - Test LiDAR Point Cloud Data Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free LAS sample LiDAR point cloud data files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-las" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-las" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

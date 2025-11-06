@@ -112,7 +112,7 @@ export const CSVToSQLConverter: React.FC = () => {
       formData.append('includeCreateTable', includeCreateTable.toString());
 
       const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://api.morphyimg.com' 
+        ? 'https://api.morphyhub.com' 
         : 'http://localhost:3000';
 
       const response = await fetch(`${API_BASE_URL}/convert/csv-to-sql/single`, {
@@ -155,7 +155,7 @@ export const CSVToSQLConverter: React.FC = () => {
       formData.append('includeCreateTable', includeCreateTable.toString());
 
       const API_BASE_URL = import.meta.env.PROD 
-        ? 'https://api.morphyimg.com' 
+        ? 'https://api.morphyhub.com' 
         : 'http://localhost:3000';
 
       const response = await fetch(`${API_BASE_URL}/convert/csv-to-sql/batch`, {

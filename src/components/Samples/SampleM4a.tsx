@@ -68,10 +68,10 @@ export default function SampleM4a() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free M4A Sample Files - Download Test M4A Audio Files",
-    "url": "https://morphyimg.com/samples/sample-m4a",
+    "url": "https://morphyhub.com/samples/sample-m4a",
     "description": "Download free M4A sample M4A audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4A audio conversion, M4A playback, and audio processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleM4a() {
         <meta property="og:title" content="Free M4A Sample Files Download - Test M4A Audio Files | MorphyIMG" />
         <meta property="og:description" content="Download free M4A sample M4A audio files for testing. Multiple file sizes available for testing M4A audio conversion and M4A playback tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-m4a" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-m4a" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free M4A Sample Files Download - Test M4A Audio Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free M4A sample M4A audio files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-m4a" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-m4a" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

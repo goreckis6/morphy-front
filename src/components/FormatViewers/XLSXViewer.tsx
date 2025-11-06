@@ -98,7 +98,7 @@ export const XLSXViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/xlsx', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/xlsx', {
         method: 'POST',
         body: formData,
       });

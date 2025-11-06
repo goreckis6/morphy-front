@@ -99,7 +99,7 @@ export const PPSViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/pps', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/pps', {
         method: 'POST',
         body: formData,
       });

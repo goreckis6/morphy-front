@@ -68,10 +68,10 @@ export default function SampleAsc() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free ASC Sample Files - Download Test ASCII Text Files",
-    "url": "https://morphyimg.com/samples/sample-asc",
+    "url": "https://morphyhub.com/samples/sample-asc",
     "description": "Download free ASC sample ASCII text files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing text file processing, ASCII encoding, and plain text format tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAsc() {
         <meta property="og:title" content="Free ASC Sample Files Download - Test ASCII Text Files | MorphyIMG" />
         <meta property="og:description" content="Download free ASC sample ASCII text files for testing. Multiple file sizes available for testing text file processing and ASCII encoding tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-asc" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-asc" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free ASC Sample Files Download - Test ASCII Text Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free ASC sample ASCII text files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-asc" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-asc" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

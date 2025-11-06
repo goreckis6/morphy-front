@@ -68,10 +68,10 @@ export default function SampleBlend() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free BLEND Sample Files - Download Test Blender 3D Files",
-    "url": "https://morphyimg.com/samples/sample-blend",
+    "url": "https://morphyhub.com/samples/sample-blend",
     "description": "Download free BLEND sample Blender 3D model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model conversion, viewing, and Blender format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleBlend() {
         <meta property="og:title" content="Free BLEND Sample Files Download - Test Blender 3D Files | MorphyIMG" />
         <meta property="og:description" content="Download free BLEND sample Blender 3D model files for testing. Multiple file sizes available for testing 3D model conversion and viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-blend" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-blend" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free BLEND Sample Files Download - Test Blender 3D Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free BLEND sample Blender 3D model files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-blend" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-blend" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

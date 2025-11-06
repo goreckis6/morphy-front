@@ -71,10 +71,10 @@ export default function SampleZip() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free ZIP Sample Files - Download Test Archive Files",
-    "url": "https://morphyimg.com/samples/sample-zip",
+    "url": "https://morphyhub.com/samples/sample-zip",
     "description": "Download free ZIP sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and file archiving tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -90,11 +90,11 @@ export default function SampleZip() {
         <meta property="og:title" content="Free ZIP Sample Files Download - Test Archive Files | MorphyIMG" />
         <meta property="og:description" content="Download free ZIP sample archive files for testing. Multiple file sizes available for testing archive extraction and compression tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-zip" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-zip" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free ZIP Sample Files Download - Test Archive Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free ZIP sample archive files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-zip" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-zip" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

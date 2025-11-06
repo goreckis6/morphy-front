@@ -68,10 +68,10 @@ export default function SampleIndd() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free INDD Sample Files - Download Test Adobe InDesign Document Files",
-    "url": "https://morphyimg.com/samples/sample-indd",
+    "url": "https://morphyhub.com/samples/sample-indd",
     "description": "Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing InDesign document conversion, INDD viewing, and desktop publishing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleIndd() {
         <meta property="og:title" content="Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyIMG" />
         <meta property="og:description" content="Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available for testing InDesign document conversion and INDD viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-indd" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-indd" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-indd" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-indd" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

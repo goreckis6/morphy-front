@@ -68,10 +68,10 @@ export default function SampleIcns() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free ICNS Sample Files - Download Test macOS Icon Files",
-    "url": "https://morphyimg.com/samples/sample-icns",
+    "url": "https://morphyhub.com/samples/sample-icns",
     "description": "Download free ICNS sample macOS icon files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing macOS icon conversion, ICNS viewing, and icon design tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleIcns() {
         <meta property="og:title" content="Free ICNS Sample Files Download - Test macOS Icon Files | MorphyIMG" />
         <meta property="og:description" content="Download free ICNS sample macOS icon files for testing. Multiple file sizes available for testing macOS icon conversion and ICNS viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-icns" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-icns" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free ICNS Sample Files Download - Test macOS Icon Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free ICNS sample macOS icon files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-icns" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-icns" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

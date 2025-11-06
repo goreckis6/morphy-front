@@ -1,7 +1,7 @@
 
 // API service for backend communication
 const PRODUCTION_DEFAULTS = [
-  'https://api.morphyimg.com' // Production backend
+  'https://api.morphyhub.com' // Production backend
 ];
 
 const normalizeBaseUrl = (url: string | undefined) => {

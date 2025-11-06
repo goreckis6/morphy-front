@@ -102,7 +102,7 @@ export const MarkdownViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/md', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/md', {
         method: 'POST',
         body: formData,
       });

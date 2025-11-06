@@ -99,7 +99,7 @@ export const OTPViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/otp', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/otp', {
         method: 'POST',
         body: formData,
       });

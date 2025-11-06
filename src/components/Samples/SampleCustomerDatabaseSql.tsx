@@ -68,10 +68,10 @@ export default function SampleCustomerDatabaseSql() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Customer Database SQL Sample Files - Download Test SQL Database Files",
-    "url": "https://morphyimg.com/samples/sample-customer-database-sql",
+    "url": "https://morphyhub.com/samples/sample-customer-database-sql",
     "description": "Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL database imports, SQL parsing, and database management tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleCustomerDatabaseSql() {
         <meta property="og:title" content="Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyIMG" />
         <meta property="og:description" content="Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available for testing SQL database imports and SQL parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-customer-database-sql" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-customer-database-sql" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-customer-database-sql" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-customer-database-sql" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

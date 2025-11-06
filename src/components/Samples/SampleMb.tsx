@@ -68,10 +68,10 @@ export default function SampleMb() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free MB Sample Files - Download Test Maya Binary Scene Files",
-    "url": "https://morphyimg.com/samples/sample-mb",
+    "url": "https://morphyhub.com/samples/sample-mb",
     "description": "Download free MB sample Maya Binary scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MB file parsing, and 3D animation tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleMb() {
         <meta property="og:title" content="Free MB Sample Files Download - Test Maya Binary Scene Files | MorphyIMG" />
         <meta property="og:description" content="Download free MB sample Maya Binary scene files for testing. Multiple file sizes available for testing Maya scene conversion and MB file parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-mb" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-mb" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free MB Sample Files Download - Test Maya Binary Scene Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free MB sample Maya Binary scene files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-mb" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-mb" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

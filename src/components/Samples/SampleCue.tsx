@@ -68,10 +68,10 @@ export default function SampleCue() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free CUE Sample Files - Download Test CUE Sheet Files",
-    "url": "https://morphyimg.com/samples/sample-cue",
+    "url": "https://morphyhub.com/samples/sample-cue",
     "description": "Download free CUE sample CUE sheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio CD burning, CUE sheet parsing, and audio track management tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleCue() {
         <meta property="og:title" content="Free CUE Sample Files Download - Test CUE Sheet Files | MorphyIMG" />
         <meta property="og:description" content="Download free CUE sample CUE sheet files for testing. Multiple file sizes available for testing audio CD burning and CUE sheet parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-cue" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-cue" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free CUE Sample Files Download - Test CUE Sheet Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free CUE sample CUE sheet files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-cue" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-cue" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

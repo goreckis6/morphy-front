@@ -99,7 +99,7 @@ export const POTViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/pot', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/pot', {
         method: 'POST',
         body: formData,
       });

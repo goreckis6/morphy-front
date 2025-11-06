@@ -68,10 +68,10 @@ export default function SampleAvif() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free AVIF Sample Files - Download Test Image Files",
-    "url": "https://morphyimg.com/samples/sample-avif",
+    "url": "https://morphyhub.com/samples/sample-avif",
     "description": "Download free AVIF sample image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AVIF conversion, viewing, and next-generation image format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAvif() {
         <meta property="og:title" content="Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyIMG" />
         <meta property="og:description" content="Download free AVIF sample image files for testing. Multiple file sizes available for testing AVIF conversion and viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-avif" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-avif" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free AVIF sample image files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-avif" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-avif" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

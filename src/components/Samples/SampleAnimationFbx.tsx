@@ -68,10 +68,10 @@ export default function SampleAnimationFbx() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Animation FBX Sample Files - Download Test 3D Animation Files",
-    "url": "https://morphyimg.com/samples/sample-animation-fbx",
+    "url": "https://morphyhub.com/samples/sample-animation-fbx",
     "description": "Download free animation FBX sample 3D animation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation conversion, viewing, and FBX format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAnimationFbx() {
         <meta property="og:title" content="Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyIMG" />
         <meta property="og:description" content="Download free animation FBX sample 3D animation files for testing. Multiple file sizes available for testing 3D animation conversion and viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-animation-fbx" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-animation-fbx" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free Animation FBX Sample Files Download - Test 3D Animation Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free animation FBX sample 3D animation files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-animation-fbx" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-animation-fbx" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

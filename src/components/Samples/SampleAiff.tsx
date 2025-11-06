@@ -68,10 +68,10 @@ export default function SampleAiff() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free AIFF Sample Files - Download Test Audio Files",
-    "url": "https://morphyimg.com/samples/sample-aiff",
+    "url": "https://morphyhub.com/samples/sample-aiff",
     "description": "Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and AIFF format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAiff() {
         <meta property="og:title" content="Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyIMG" />
         <meta property="og:description" content="Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available for testing audio conversion and playback tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-aiff" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-aiff" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free AIFF Sample Files Download - Test Audio Interchange Format Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-aiff" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-aiff" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

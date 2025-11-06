@@ -68,10 +68,10 @@ export default function SampleIgs() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free IGS Sample Files - Download Test Initial Graphics Exchange Specification Files",
-    "url": "https://morphyimg.com/samples/sample-igs",
+    "url": "https://morphyhub.com/samples/sample-igs",
     "description": "Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGS conversion, and 3D model exchange tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleIgs() {
         <meta property="og:title" content="Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG" />
         <meta property="og:description" content="Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available for testing CAD software and IGS conversion tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-igs" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-igs" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-igs" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-igs" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

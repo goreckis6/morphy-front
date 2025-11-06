@@ -68,10 +68,10 @@ export default function SampleKmz() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free KMZ Sample Files - Download Test Compressed Keyhole Markup Language Files",
-    "url": "https://morphyimg.com/samples/sample-kmz",
+    "url": "https://morphyhub.com/samples/sample-kmz",
     "description": "Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KMZ extraction, geographic data processing, and Google Earth integration tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleKmz() {
         <meta property="og:title" content="Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyIMG" />
         <meta property="og:description" content="Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available for testing KMZ extraction and geographic data processing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-kmz" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-kmz" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free KMZ Sample Files Download - Test Compressed Keyhole Markup Language Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-kmz" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-kmz" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

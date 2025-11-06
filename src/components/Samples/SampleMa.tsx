@@ -68,10 +68,10 @@ export default function SampleMa() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free MA Sample Files - Download Test Maya ASCII Scene Files",
-    "url": "https://morphyimg.com/samples/sample-ma",
+    "url": "https://morphyhub.com/samples/sample-ma",
     "description": "Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MA file parsing, and 3D animation tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleMa() {
         <meta property="og:title" content="Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyIMG" />
         <meta property="og:description" content="Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available for testing Maya scene conversion and MA file parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-ma" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-ma" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-ma" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-ma" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

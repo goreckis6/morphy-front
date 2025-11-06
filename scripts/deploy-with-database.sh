@@ -50,7 +50,7 @@ echo "✅ Build successful"
 # Deploy to Render.com
 echo "🚀 Deploying to Render.com..."
 echo "   Frontend: morphyimg.com + morphy-1-ulvv.onrender.com"
-echo "   Backend: api.morphyimg.com"
+echo "   Backend: api.morphyhub.com"
 echo "   Database: OVH PostgreSQL (gs32813-001.eu.clouddb.ovh.net)"
 
 # Note: Actual deployment happens via Git push to Render

@@ -102,7 +102,7 @@ export const RTFViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/rtf', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/rtf', {
         method: 'POST',
         body: formData,
       });

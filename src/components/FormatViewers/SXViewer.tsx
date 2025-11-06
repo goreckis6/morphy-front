@@ -99,7 +99,7 @@ export const SXViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/sx', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/sx', {
         method: 'POST',
         body: formData,
       });

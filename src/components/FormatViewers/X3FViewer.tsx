@@ -112,7 +112,7 @@ export const X3FViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/x3f', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/x3f', {
         method: 'POST',
         body: formData,
       });

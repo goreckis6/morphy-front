@@ -68,10 +68,10 @@ export default function SampleAi() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free AI Sample Files - Download Test Adobe Illustrator Files",
-    "url": "https://morphyimg.com/samples/sample-ai",
+    "url": "https://morphyhub.com/samples/sample-ai",
     "description": "Download free AI sample Adobe Illustrator files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics conversion, viewing, and Adobe Illustrator format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAi() {
         <meta property="og:title" content="Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyIMG" />
         <meta property="og:description" content="Download free AI sample Adobe Illustrator files for testing. Multiple file sizes available for testing vector graphics conversion and viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-ai" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-ai" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free AI sample Adobe Illustrator files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-ai" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-ai" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

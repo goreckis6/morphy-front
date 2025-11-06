@@ -68,10 +68,10 @@ export default function SampleBvh() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free BVH Sample Files - Download Test Motion Capture Files",
-    "url": "https://morphyimg.com/samples/sample-bvh",
+    "url": "https://morphyhub.com/samples/sample-bvh",
     "description": "Download free BVH sample motion capture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture processing, animation conversion, and BVH format tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleBvh() {
         <meta property="og:title" content="Free BVH Sample Files Download - Test Motion Capture Files | MorphyIMG" />
         <meta property="og:description" content="Download free BVH sample motion capture files for testing. Multiple file sizes available for testing motion capture processing and animation conversion tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-bvh" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-bvh" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free BVH Sample Files Download - Test Motion Capture Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free BVH sample motion capture files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-bvh" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-bvh" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

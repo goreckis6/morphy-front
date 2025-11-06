@@ -68,10 +68,10 @@ export default function SampleConfigIni() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Config INI Sample Files - Download Test INI Configuration Files",
-    "url": "https://morphyimg.com/samples/sample-config-ini",
+    "url": "https://morphyhub.com/samples/sample-config-ini",
     "description": "Download free Config INI sample INI configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and Windows INI format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleConfigIni() {
         <meta property="og:title" content="Free Config INI Sample Files Download - Test INI Configuration Files | MorphyIMG" />
         <meta property="og:description" content="Download free Config INI sample INI configuration files for testing. Multiple file sizes available for testing INI file parsing and configuration management tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-config-ini" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-config-ini" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free Config INI Sample Files Download - Test INI Configuration Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free Config INI sample INI configuration files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-config-ini" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-config-ini" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

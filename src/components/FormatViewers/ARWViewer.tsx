@@ -112,7 +112,7 @@ export const ARWViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/arw', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/arw', {
         method: 'POST',
         body: formData,
       });

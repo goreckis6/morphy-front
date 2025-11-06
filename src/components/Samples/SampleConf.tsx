@@ -68,10 +68,10 @@ export default function SampleConf() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free CONF Sample Files - Download Test Configuration Files",
-    "url": "https://morphyimg.com/samples/sample-conf",
+    "url": "https://morphyhub.com/samples/sample-conf",
     "description": "Download free CONF sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing configuration file parsing, system setup, and config format processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleConf() {
         <meta property="og:title" content="Free CONF Sample Files Download - Test Configuration Files | MorphyIMG" />
         <meta property="og:description" content="Download free CONF sample configuration files for testing. Multiple file sizes available for testing configuration file parsing and system setup tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-conf" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-conf" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free CONF Sample Files Download - Test Configuration Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free CONF sample configuration files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-conf" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-conf" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

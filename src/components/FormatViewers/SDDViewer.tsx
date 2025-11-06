@@ -99,7 +99,7 @@ export const SDDViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/sdd', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/sdd', {
         method: 'POST',
         body: formData,
       });

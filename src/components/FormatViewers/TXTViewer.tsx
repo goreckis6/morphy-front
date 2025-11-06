@@ -103,7 +103,7 @@ export const TXTViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/txt', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/txt', {
         method: 'POST',
         body: formData,
       });

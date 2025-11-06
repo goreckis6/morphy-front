@@ -99,7 +99,7 @@ export const JSViewer: React.FC = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('https://api.morphyimg.com/api/preview/js', {
+      const response = await fetch('https://api.morphyhub.com/api/preview/js', {
         method: 'POST',
         body: formData,
       });

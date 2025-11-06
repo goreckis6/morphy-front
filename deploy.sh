@@ -9,7 +9,7 @@ echo "🚀 Starting deployment..."
 mkdir -p letsencrypt
 
 # Set environment variable
-export VITE_API_BASE_URL=https://api.morphyimg.com
+export VITE_API_BASE_URL=https://api.morphyhub.com
 
 # Stop old containers
 echo "🛑 Stopping old containers..."
