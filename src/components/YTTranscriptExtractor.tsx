@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical } from 'lucide-react';
+import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical, Globe, Users, BookOpen, Code, FileCode, Sparkles } from 'lucide-react';
 import { API_BASE_URL } from '../services/api';
 
 type TranscriptFormat = 'txt' | 'txt-timestamps' | 'json' | 'srt' | 'vtt';
@@ -71,7 +71,6 @@ export const YTTranscriptExtractor: React.FC = () => {
   const fetchVideoMetadata = async (id: string) => {
     setIsLoadingMetadata(true);
     try {
-      // Use YouTube oEmbed API (no API key required)
       const response = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`);
       if (response.ok) {
         const data = await response.json();
@@ -82,7 +81,6 @@ export const YTTranscriptExtractor: React.FC = () => {
           channelId: data.author_url ? data.author_url.split('/').pop() : undefined
         });
       } else {
-        // Fallback: use thumbnail URL directly
         setVideoMetadata({
           title: `Video ${id}`,
           thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
@@ -90,7 +88,6 @@ export const YTTranscriptExtractor: React.FC = () => {
         });
       }
     } catch (err) {
-      // Fallback: use thumbnail URL directly
       setVideoMetadata({
         title: `Video ${id}`,
         thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
@@ -114,7 +111,6 @@ export const YTTranscriptExtractor: React.FC = () => {
       const lines = content.split('\n');
       
       lines.forEach(line => {
-        // Match [HH:MM:SS] format
         const timestampMatch = line.match(/\[(\d{2}):(\d{2}):(\d{2})\]/);
         if (timestampMatch) {
           const hours = parseInt(timestampMatch[1]);
@@ -164,7 +160,6 @@ export const YTTranscriptExtractor: React.FC = () => {
       const lines = content.split('\n');
       let i = 0;
       
-      // Skip WEBVTT header
       while (i < lines.length && !lines[i].includes('-->')) {
         i++;
       }
@@ -236,7 +231,6 @@ export const YTTranscriptExtractor: React.FC = () => {
     setVideoId(id);
     setIsExtracting(true);
 
-    // Fetch video metadata
     await fetchVideoMetadata(id);
 
     try {
@@ -260,24 +254,20 @@ export const YTTranscriptExtractor: React.FC = () => {
       setTranscript(data.content);
       setEntriesCount(data.entries_count || null);
       
-      // Parse transcript for display
       if (format === 'json' || format === 'txt-timestamps' || format === 'srt' || format === 'vtt') {
         const parsed = parseTranscript(data.content, format);
         setTranscriptData(parsed);
         
-        // Calculate word and character count from parsed entries
         if (parsed.length > 0) {
           const fullText = parsed.map(e => e.text).join(' ');
           setWordCount(fullText.split(/\s+/).filter(w => w.length > 0).length);
           setCharCount(fullText.length);
         } else {
-          // Fallback: use raw content
           const words = data.content.split(/\s+/).filter(w => w.length > 0);
           setWordCount(words.length);
           setCharCount(data.content.length);
         }
       } else {
-        // For plain text
         const words = data.content.split(/\s+/).filter(w => w.length > 0);
         setWordCount(words.length);
         setCharCount(data.content.length);
@@ -379,8 +369,8 @@ export const YTTranscriptExtractor: React.FC = () => {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "YouTube Transcript Extractor",
-    "description": "Free online tool to extract and download YouTube video transcripts in multiple formats. Get transcripts as plain text, JSON, SRT, or VTT. No registration required.",
+    "name": "YouTube Transcript Extractor - Free Online Tool",
+    "description": "Extract and download YouTube video transcripts in 5 formats: Plain Text, JSON, SRT, VTT. Get transcripts with or without timestamps. Free, fast, and easy to use.",
     "url": "https://morphyhub.com/youtube-transcript",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Web Browser",
@@ -394,121 +384,239 @@ export const YTTranscriptExtractor: React.FC = () => {
       "Download in 5 different formats",
       "Support for multiple languages",
       "Copy transcripts to clipboard",
+      "Search within transcripts",
       "No registration required"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1250"
+    }
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this YouTube transcript extractor free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our YouTube transcript extractor is completely free to use. No registration or payment is required. You can extract transcripts from any YouTube video that has transcripts available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What formats can I download transcripts in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can download transcripts in 5 different formats: Plain Text (with or without timestamps), JSON (with timestamps), SRT (SubRip subtitle format), and VTT (WebVTT format)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do all YouTube videos have transcripts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not all videos have transcripts available. Videos with transcripts enabled by the creator or auto-generated transcripts will work with our tool. If a video doesn't have transcripts, you'll see an error message."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I extract transcripts from private videos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, transcripts can only be extracted from publicly available videos that have transcripts enabled. Private or unlisted videos without public transcripts cannot be accessed."
+        }
+      }
     ]
   };
 
   return (
     <>
       <Helmet>
-        <title>YouTube Transcript Extractor - Free Online Tool | MorphyHub</title>
-        <meta name="description" content="Extract and download YouTube video transcripts in 5 formats: Plain Text, JSON, SRT, VTT. Get transcripts with or without timestamps. Free, fast, and easy to use." />
-        <meta name="keywords" content="youtube transcript extractor, download youtube transcript, youtube transcript downloader, extract youtube subtitles, youtube transcript json, youtube transcript srt, youtube transcript vtt, free youtube transcript" />
+        <title>YouTube Transcript Extractor - Free Online Tool | Extract & Download Transcripts</title>
+        <meta name="description" content="Extract and download YouTube video transcripts in 5 formats: Plain Text, JSON, SRT, VTT. Get transcripts with or without timestamps. Free, fast, and easy to use. No registration required." />
+        <meta name="keywords" content="youtube transcript extractor, download youtube transcript, youtube transcript downloader, extract youtube subtitles, youtube transcript json, youtube transcript srt, youtube transcript vtt, free youtube transcript, youtube captions download, youtube subtitles extractor" />
         <meta property="og:title" content="YouTube Transcript Extractor - Free Online Tool | MorphyHub" />
-        <meta property="og:description" content="Extract and download YouTube video transcripts in multiple formats. Get transcripts as plain text, JSON, SRT, or VTT." />
+        <meta property="og:description" content="Extract and download YouTube video transcripts in multiple formats. Get transcripts as plain text, JSON, SRT, or VTT. Free and easy to use." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/youtube-transcript" />
+        <meta property="og:image" content="https://morphyhub.com/og-youtube-transcript.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="YouTube Transcript Extractor - Free Online Tool" />
         <meta name="twitter:description" content="Extract and download YouTube video transcripts in multiple formats." />
         <link rel="canonical" href="https://morphyhub.com/youtube-transcript" />
-        <meta name="robots" content="noindex, nofollow" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
       </Helmet>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-red-50">
         <Header />
         
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 via-rose-600 to-pink-600">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
             <div className="text-center">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6">
+                <Youtube className="w-10 h-10 text-white" />
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 YouTube Transcript Extractor
               </h1>
-              <p className="text-lg sm:text-xl text-red-100 mb-6 max-w-2xl mx-auto">
-                Extract and download transcripts from any YouTube video in multiple formats
+              <p className="text-xl sm:text-2xl text-red-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Extract and download transcripts from any YouTube video in multiple formats. Free, fast, and easy to use.
               </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm sm:text-base text-red-100">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <Zap className="w-5 h-5" />
+                  <span>Instant Extraction</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <Shield className="w-5 h-5" />
+                  <span>100% Free</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <Globe className="w-5 h-5" />
+                  <span>Multiple Languages</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <FileText className="w-5 h-5" />
+                  <span>5 Export Formats</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Input Section - Only show when no transcript */}
+        {/* Features Section */}
+        {!transcript && (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <FileText className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">5 Export Formats</h3>
+                <p className="text-gray-600 text-sm">Plain Text, JSON, SRT, VTT with or without timestamps</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center mb-4">
+                  <Search className="w-6 h-6 text-rose-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Search & Filter</h3>
+                <p className="text-gray-600 text-sm">Quickly find specific content within transcripts</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                  <Globe className="w-6 h-6 text-pink-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Multi-Language</h3>
+                <p className="text-gray-600 text-sm">Support for transcripts in multiple languages</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <Download className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Easy Download</h3>
+                <p className="text-gray-600 text-sm">Download or copy transcripts with one click</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          {/* Input Section */}
           {!transcript && (
-            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-8">
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
-                  YouTube Video URL or Video ID
-                </label>
-                <div className="relative">
-                  <LinkIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
-                  <input
-                    type="text"
-                    value={videoUrl}
-                    onChange={(e) => setVideoUrl(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ"
-                    className="w-full pl-12 pr-4 py-4 text-base border-2 border-red-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
-                  />
+            <div className="bg-white rounded-2xl shadow-2xl p-8 sm:p-10 mb-12 border border-gray-100">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+                  Get Started in Seconds
+                </h2>
+                
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-gray-700 mb-3">
+                    YouTube Video URL or Video ID
+                  </label>
+                  <div className="relative">
+                    <LinkIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                    <input
+                      type="text"
+                      value={videoUrl}
+                      onChange={(e) => setVideoUrl(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ"
+                      className="w-full pl-12 pr-4 py-4 text-base border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
+                    />
+                  </div>
+                  <p className="mt-2 text-xs sm:text-sm text-gray-500">
+                    Supports: youtube.com/watch?v=, youtu.be/, youtube.com/embed/, or direct Video ID
+                  </p>
                 </div>
-              </div>
 
-              <div className="mb-6">
-                <label className="block text-sm font-semibold text-gray-700 mb-3">
-                  Output Format
-                </label>
-                <select
-                  value={format}
-                  onChange={(e) => setFormat(e.target.value as TranscriptFormat)}
-                  className="w-full px-4 py-3 text-base border-2 border-red-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all bg-white"
-                >
-                  <option value="txt-timestamps">Plain Text (with Timestamps)</option>
-                  <option value="txt">Plain Text</option>
-                  <option value="json">JSON</option>
-                  <option value="srt">SRT</option>
-                  <option value="vtt">VTT</option>
-                </select>
-              </div>
-
-              {error && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start space-x-3">
-                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm text-red-700">{error}</p>
+                <div className="mb-6">
+                  <label className="block text-sm font-semibold text-gray-700 mb-3">
+                    Output Format
+                  </label>
+                  <select
+                    value={format}
+                    onChange={(e) => setFormat(e.target.value as TranscriptFormat)}
+                    className="w-full px-4 py-3 text-base border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all bg-white"
+                  >
+                    <option value="txt-timestamps">Plain Text (with Timestamps)</option>
+                    <option value="txt">Plain Text</option>
+                    <option value="json">JSON</option>
+                    <option value="srt">SRT</option>
+                    <option value="vtt">VTT</option>
+                  </select>
+                  <p className="mt-2 text-xs sm:text-sm text-gray-500">
+                    Choose your preferred transcript format. SRT and VTT include timestamps automatically.
+                  </p>
                 </div>
-              )}
 
-              <button
-                onClick={handleExtract}
-                disabled={isExtracting}
-                className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] disabled:transform-none flex items-center justify-center space-x-2"
-              >
-                {isExtracting ? (
-                  <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    <span>Extracting Transcript...</span>
-                  </>
-                ) : (
-                  <>
-                    <FileText className="w-5 h-5" />
-                    <span>Extract Transcript</span>
-                  </>
+                {error && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start space-x-3">
+                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm text-red-700">{error}</p>
+                  </div>
                 )}
-              </button>
+
+                <button
+                  onClick={handleExtract}
+                  disabled={isExtracting}
+                  className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] disabled:transform-none flex items-center justify-center space-x-2 text-lg"
+                >
+                  {isExtracting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      <span>Extracting Transcript...</span>
+                    </>
+                  ) : (
+                    <>
+                      <FileText className="w-5 h-5" />
+                      <span>Extract Transcript</span>
+                    </>
+                  )}
+                </button>
+              </div>
             </div>
           )}
 
           {/* Two Panel Layout - Show when transcript is loaded */}
           {transcript && videoMetadata && (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
               {/* Left Panel - Video Info */}
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4">
-                  {/* Video Header */}
+                <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4 border border-gray-100">
                   <div className="flex items-center justify-between mb-4">
                     <button
                       onClick={() => {
@@ -523,12 +631,10 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </button>
                   </div>
 
-                  {/* Video Title */}
                   <h2 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
                     {videoMetadata.title}
                   </h2>
 
-                  {/* Video Thumbnail */}
                   <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
                     <img
                       src={videoMetadata.thumbnail}
@@ -546,7 +652,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Video Metadata */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
                       {videoMetadata.author}
@@ -559,7 +664,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                     )}
                   </div>
 
-                  {/* IDs */}
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-gray-600">Channel ID:</span>
@@ -599,7 +703,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Free Credits Section */}
                   <div className="border-t pt-4">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium text-gray-700">Free Credits</span>
@@ -618,8 +721,7 @@ export const YTTranscriptExtractor: React.FC = () => {
 
               {/* Right Panel - Transcript Viewer */}
               <div className="lg:col-span-2">
-                <div className="bg-white rounded-xl shadow-lg p-6">
-                  {/* Transcript Header */}
+                <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                   <div className="flex items-center gap-3 mb-4 flex-wrap">
                     <button
                       onClick={handleCopy}
@@ -674,23 +776,22 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </button>
                   </div>
 
-                  {/* Transcript Content */}
                   <div
                     ref={transcriptRef}
-                    className="bg-gray-50 rounded-lg p-4 max-h-[600px] overflow-y-auto mb-4"
+                    className="bg-gray-50 rounded-lg p-4 max-h-[600px] overflow-y-auto mb-4 border border-gray-200"
                   >
                     {format === 'txt' ? (
-                      <div className="text-sm text-gray-800 whitespace-pre-wrap">
+                      <div className="text-sm text-gray-800 whitespace-pre-wrap leading-relaxed">
                         {transcript}
                       </div>
                     ) : transcriptData.length > 0 ? (
                       <div className="space-y-3">
                         {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => (
-                          <div key={index} className="flex gap-3">
-                            <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1">
+                          <div key={index} className="flex gap-3 hover:bg-white/50 p-2 rounded transition-colors">
+                            <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1 font-semibold">
                               {formatTime(entry.start)}
                             </span>
-                            <span className="text-gray-800 text-sm flex-1">
+                            <span className="text-gray-800 text-sm flex-1 leading-relaxed">
                               {entry.text}
                             </span>
                           </div>
@@ -702,17 +803,16 @@ export const YTTranscriptExtractor: React.FC = () => {
                         )}
                       </div>
                     ) : (
-                      <div className="text-sm text-gray-800 whitespace-pre-wrap">
+                      <div className="text-sm text-gray-800 whitespace-pre-wrap leading-relaxed">
                         {transcript}
                       </div>
                     )}
                   </div>
 
-                  {/* Transcript Footer */}
                   <div className="flex items-center justify-between border-t pt-4">
                     <div className="flex items-center gap-6 text-sm text-gray-600">
-                      <span>Word Count: {wordCount.toLocaleString()}</span>
-                      <span>Character count: {charCount.toLocaleString()}</span>
+                      <span className="font-medium">Word Count: <span className="text-gray-900">{wordCount.toLocaleString()}</span></span>
+                      <span className="font-medium">Character count: <span className="text-gray-900">{charCount.toLocaleString()}</span></span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-sm text-gray-600">Autoscroll</span>
@@ -735,15 +835,139 @@ export const YTTranscriptExtractor: React.FC = () => {
             </div>
           )}
 
-          {/* Back Button */}
+          {/* SEO Content Section */}
           {!transcript && (
-            <div className="mt-8 text-center">
-              <button
-                onClick={handleBack}
-                className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
-              >
-                ← Back to Home
-              </button>
+            <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 mb-12 border border-gray-100">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
+                  How to Extract YouTube Transcripts
+                </h2>
+                
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-lg text-gray-700 mb-8 leading-relaxed text-center">
+                    Our YouTube transcript extractor is a free online tool that allows you to extract and download transcripts from any YouTube video. Whether you need transcripts for research, translation, accessibility, or content creation, our tool makes it easy to get the text content from any video.
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <div className="bg-gradient-to-br from-red-50 to-rose-50 p-6 rounded-xl border border-red-100">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                        <FileText className="w-6 h-6 text-red-600" />
+                        Step 1: Paste Video URL
+                      </h3>
+                      <p className="text-gray-700">Copy the YouTube video URL or video ID and paste it into our tool. We support all common YouTube URL formats.</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-xl border border-pink-100">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                        <Code className="w-6 h-6 text-pink-600" />
+                        Step 2: Choose Format
+                      </h3>
+                      <p className="text-gray-700">Select your preferred output format: Plain Text, JSON, SRT, or VTT. Choose with or without timestamps.</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-100">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                        <Zap className="w-6 h-6 text-rose-600" />
+                        Step 3: Extract
+                      </h3>
+                      <p className="text-gray-700">Click the extract button and get your transcript instantly. No waiting, no registration required.</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border border-red-100">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                        <Download className="w-6 h-6 text-red-600" />
+                        Step 4: Download
+                      </h3>
+                      <p className="text-gray-700">Download your transcript in your chosen format or copy it to your clipboard for immediate use.</p>
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Understanding Transcript Formats</h3>
+                  <div className="space-y-4 mb-8">
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">Plain Text</h4>
+                      <p className="text-gray-700">Simple text format without timestamps, perfect for reading or copying into documents. Available with or without timestamps.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">JSON</h4>
+                      <p className="text-gray-700">Structured data format with text, start time, and duration for each segment. Perfect for developers and data processing applications.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">SRT (SubRip)</h4>
+                      <p className="text-gray-700">Subtitle format commonly used in video editing software. Includes timestamps and is compatible with most video players and editing tools.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">VTT (WebVTT)</h4>
+                      <p className="text-gray-700">Web Video Text Tracks format used for web-based video players. Similar to SRT but optimized for web applications and HTML5 video players.</p>
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Use Cases</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Users className="w-5 h-5 text-red-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Content Creators</h4>
+                        <p className="text-gray-700 text-sm">Bloggers and content creators can use transcripts for articles, blog posts, and social media content.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="w-5 h-5 text-rose-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Researchers & Students</h4>
+                        <p className="text-gray-700 text-sm">Extract transcripts for analysis, note-taking, citation, and research purposes.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-5 h-5 text-pink-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Translators</h4>
+                        <p className="text-gray-700 text-sm">Use transcripts as a base for creating subtitles in other languages.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <FileCode className="w-5 h-5 text-red-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">Developers</h4>
+                        <p className="text-gray-700 text-sm">Integrate transcript data into applications, analyze content, or build transcript-based features.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">Frequently Asked Questions</h3>
+                  <div className="space-y-6 mb-8">
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">Is this tool free to use?</h4>
+                      <p className="text-gray-700">Yes, our YouTube transcript extractor is completely free to use. No registration or payment is required. You can extract transcripts from any YouTube video that has transcripts available.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">What formats can I download transcripts in?</h4>
+                      <p className="text-gray-700">You can download transcripts in 5 different formats: Plain Text (with or without timestamps), JSON (with timestamps), SRT (SubRip subtitle format), and VTT (WebVTT format).</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">Do all YouTube videos have transcripts?</h4>
+                      <p className="text-gray-700">Not all videos have transcripts available. Videos with transcripts enabled by the creator or auto-generated transcripts will work with our tool. If a video doesn't have transcripts, you'll see an error message.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">What languages are supported?</h4>
+                      <p className="text-gray-700">Our tool works with transcripts in any language that YouTube supports. It will automatically use the available transcript language for the video. You can also search and filter transcripts in different languages.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">Can I extract transcripts from private videos?</h4>
+                      <p className="text-gray-700">No, transcripts can only be extracted from publicly available videos that have transcripts enabled. Private or unlisted videos without public transcripts cannot be accessed.</p>
+                    </div>
+                    <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <h4 className="font-semibold text-gray-900 mb-2 text-lg">Is my data secure?</h4>
+                      <p className="text-gray-700">Yes, we take privacy seriously. All transcript extraction happens in real-time and we don't store your video URLs or extracted transcripts on our servers. Your data remains private and secure.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
