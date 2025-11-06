@@ -38,6 +38,7 @@ interface TranscriptEntry {
   duration: number;
 }
 
+
 export const YTTranscriptExtractor: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [videoId, setVideoId] = useState('');
@@ -441,6 +442,7 @@ export const YTTranscriptExtractor: React.FC = () => {
     }
 
     return () => {
+      clearTimeout(checkIframeLoad);
       // Cleanup: destroy player on unmount or video change
       if (playerRef.current) {
         try {
@@ -627,6 +629,8 @@ export const YTTranscriptExtractor: React.FC = () => {
   const handleJumpTo = (timestamp: number) => {
     if (!videoId) return;
     
+    const timestampSeconds = Math.floor(timestamp);
+    
     // Use YouTube IFrame API to seek to timestamp and play
     if (playerRef.current) {
       try {
@@ -648,9 +652,8 @@ export const YTTranscriptExtractor: React.FC = () => {
     // Fallback: update iframe src directly with timestamp
     const iframe = document.getElementById('youtube-player') as HTMLIFrameElement;
     if (iframe && videoId) {
-      const timestampSeconds = Math.floor(timestamp);
-      // Update iframe src with timestamp - this will reload the player at that time
-      iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&start=${timestampSeconds}&autoplay=1&origin=${window.location.origin}`;
+      // Try youtube-nocookie.com first (less likely to be blocked)
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&start=${timestampSeconds}&autoplay=1&modestbranding=1&rel=0`;
       
       // Re-initialize the player after src change
       setTimeout(() => {
@@ -679,6 +682,9 @@ export const YTTranscriptExtractor: React.FC = () => {
           }
         }
       }, 1000);
+    } else {
+      // If iframe doesn't exist, open YouTube in new tab with timestamp
+      window.open(`https://www.youtube.com/watch?v=${videoId}&t=${timestampSeconds}s`, '_blank');
     }
   };
 
@@ -1005,7 +1011,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                          <iframe
                            id="youtube-player"
                            className="w-full h-full"
-                           src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=${window.location.origin}`}
+                           src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&modestbranding=1&rel=0`}
                            frameBorder="0"
                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                            allowFullScreen
