@@ -55,6 +55,8 @@ export const YTTranscriptExtractor: React.FC = () => {
   const [noteDialog, setNoteDialog] = useState<{ open: boolean; timestamp: number; text: string }>({ open: false, timestamp: 0, text: '' });
   const [copiedTimestamp, setCopiedTimestamp] = useState<number | null>(null);
   const [copiedFragment, setCopiedFragment] = useState<number | null>(null);
+  const [downloadDialog, setDownloadDialog] = useState(false);
+  const [downloadFormat, setDownloadFormat] = useState<TranscriptFormat>('txt-timestamps');
   const playerRef = useRef<any>(null);
 
   const extractVideoId = (url: string): string | null => {
@@ -254,6 +256,7 @@ export const YTTranscriptExtractor: React.FC = () => {
 
       setTranscript(data.content);
       setEntriesCount(data.entries_count || null);
+      setDownloadFormat(transcriptFormat);
       
       if (transcriptFormat === 'json' || transcriptFormat === 'txt-timestamps' || transcriptFormat === 'srt' || transcriptFormat === 'vtt') {
         const parsed = parseTranscript(data.content, transcriptFormat);
@@ -307,6 +310,7 @@ export const YTTranscriptExtractor: React.FC = () => {
   const handleFormatChange = async (newFormat: TranscriptFormat) => {
     if (videoId) {
       setFormat(newFormat);
+      setDownloadFormat(newFormat);
       await handleExtractWithId(videoId, newFormat, language);
     }
   };
@@ -318,7 +322,7 @@ export const YTTranscriptExtractor: React.FC = () => {
     }
   };
 
-  // Load YouTube IFrame API and initialize player
+  // Load YouTube IFrame API for "Jump to" functionality
   useEffect(() => {
     // Declare global type for YouTube API
     declare global {
@@ -328,42 +332,29 @@ export const YTTranscriptExtractor: React.FC = () => {
       }
     }
 
+    // Only initialize API when we have both videoId and transcript
+    if (!videoId || !transcript) {
+      return;
+    }
+
     const initializePlayer = () => {
-      if (videoId && window.YT && window.YT.Player) {
-        // Destroy existing player if any
-        if (playerRef.current) {
-          try {
-            playerRef.current.destroy();
-          } catch (e) {
-            // Ignore destroy errors
-          }
-          playerRef.current = null;
+      const iframe = document.getElementById('youtube-player') as HTMLIFrameElement;
+      if (iframe && window.YT && window.YT.Player) {
+        try {
+          // Initialize player on the iframe for API control
+          playerRef.current = new window.YT.Player('youtube-player', {
+            events: {
+              onReady: (event: any) => {
+                console.log('YouTube player ready');
+              },
+              onError: (event: any) => {
+                console.error('YouTube player error:', event.data);
+              },
+            },
+          });
+        } catch (e) {
+          console.error('Error initializing YouTube player API:', e);
         }
-        
-        // Small delay to ensure DOM element exists
-        setTimeout(() => {
-          const playerElement = document.getElementById('youtube-player');
-          if (playerElement && window.YT && window.YT.Player) {
-            try {
-              playerRef.current = new window.YT.Player('youtube-player', {
-                videoId: videoId,
-                playerVars: {
-                  autoplay: 0,
-                  controls: 1,
-                  rel: 0,
-                  modestbranding: 1,
-                },
-                events: {
-                  onReady: (event: any) => {
-                    // Player is ready
-                  },
-                },
-              });
-            } catch (e) {
-              console.error('Error creating YouTube player:', e);
-            }
-          }
-        }, 100);
       }
     };
 
@@ -376,11 +367,11 @@ export const YTTranscriptExtractor: React.FC = () => {
 
       // Set up callback for when API is ready
       window.onYouTubeIframeAPIReady = () => {
-        initializePlayer();
+        setTimeout(initializePlayer, 500);
       };
     } else if (window.YT.Player) {
       // API already loaded
-      initializePlayer();
+      setTimeout(initializePlayer, 500);
     }
 
     return () => {
@@ -393,10 +384,73 @@ export const YTTranscriptExtractor: React.FC = () => {
         playerRef.current = null;
       }
     };
-  }, [videoId]);
+  }, [videoId, transcript]);
+
+  const convertToFormat = (targetFormat: TranscriptFormat): string => {
+    // If target format matches current format, return transcript as-is
+    if (targetFormat === format && transcript) {
+      return transcript;
+    }
+
+    // If we have transcriptData, use it to convert
+    if (transcriptData.length > 0) {
+      if (targetFormat === 'txt') {
+        return transcriptData.map(e => e.text).join(' ');
+      } else if (targetFormat === 'txt-timestamps') {
+        return transcriptData.map(e => `[${formatTime(e.start)}] ${e.text}`).join('\n');
+      } else if (targetFormat === 'json') {
+        return JSON.stringify(transcriptData, null, 2);
+      } else if (targetFormat === 'srt') {
+        const formatSRTTime = (seconds: number): string => {
+          const hours = Math.floor(seconds / 3600);
+          const minutes = Math.floor((seconds % 3600) / 60);
+          const secs = Math.floor(seconds % 60);
+          const millis = Math.floor((seconds % 1) * 1000);
+          return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')},${millis.toString().padStart(3, '0')}`;
+        };
+        return transcriptData.map((e, i) => {
+          const start = formatSRTTime(e.start);
+          const end = formatSRTTime(e.start + e.duration);
+          return `${i + 1}\n${start} --> ${end}\n${e.text}\n`;
+        }).join('\n');
+      } else if (targetFormat === 'vtt') {
+        const formatVTTTime = (seconds: number): string => {
+          const hours = Math.floor(seconds / 3600);
+          const minutes = Math.floor((seconds % 3600) / 60);
+          const secs = Math.floor(seconds % 60);
+          const millis = Math.floor((seconds % 1) * 1000);
+          return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}.${millis.toString().padStart(3, '0')}`;
+        };
+        return `WEBVTT\n\n${transcriptData.map(e => {
+          const start = formatVTTTime(e.start);
+          const end = formatVTTTime(e.start + e.duration);
+          return `${start} --> ${end}\n${e.text}`;
+        }).join('\n\n')}`;
+      }
+    }
+
+    // If we don't have transcriptData but have transcript, handle plain text formats
+    if (transcript) {
+      if (targetFormat === 'txt') {
+        // Remove timestamps if present
+        return transcript.replace(/\[\d{2}:\d{2}:\d{2}\]\s*/g, '').trim();
+      }
+      // For other formats, we need transcriptData, so return current transcript
+      return transcript;
+    }
+
+    return '';
+  };
+
+  const handleDownloadClick = () => {
+    setDownloadFormat(format);
+    setDownloadDialog(true);
+  };
 
   const handleDownload = () => {
     if (!transcript) return;
+
+    const content = convertToFormat(downloadFormat);
 
     const extensions: Record<TranscriptFormat, string> = {
       'txt': 'txt',
@@ -414,8 +468,8 @@ export const YTTranscriptExtractor: React.FC = () => {
       'vtt': 'text/vtt'
     };
 
-    const filename = `youtube-transcript-${videoId}.${extensions[format]}`;
-    const blob = new Blob([transcript], { type: mimeTypes[format] });
+    const filename = `youtube-transcript-${videoId}.${extensions[downloadFormat]}`;
+    const blob = new Blob([content], { type: mimeTypes[downloadFormat] });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
@@ -424,6 +478,7 @@ export const YTTranscriptExtractor: React.FC = () => {
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
+    setDownloadDialog(false);
   };
 
   const handleCopy = () => {
@@ -501,9 +556,21 @@ export const YTTranscriptExtractor: React.FC = () => {
   };
 
   const handleJumpTo = (timestamp: number) => {
+    // Try YouTube API first
     if (playerRef.current && playerRef.current.seekTo) {
-      playerRef.current.seekTo(timestamp, true);
-      playerRef.current.playVideo();
+      try {
+        playerRef.current.seekTo(timestamp, true);
+        playerRef.current.playVideo();
+        return;
+      } catch (e) {
+        console.error('Error using YouTube API:', e);
+      }
+    }
+    
+    // Fallback: Update iframe src with timestamp
+    const iframe = document.getElementById('youtube-player') as HTMLIFrameElement;
+    if (iframe && videoId) {
+      iframe.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&start=${Math.floor(timestamp)}&autoplay=1&origin=${window.location.origin}`;
     }
   };
 
@@ -811,7 +878,21 @@ export const YTTranscriptExtractor: React.FC = () => {
                    </h2>
 
                    <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
-                     <div id="youtube-player" className="w-full aspect-video"></div>
+                     {videoId ? (
+                       <iframe
+                         id="youtube-player"
+                         className="w-full aspect-video"
+                         src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1&origin=${window.location.origin}`}
+                         frameBorder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                         allowFullScreen
+                         title={videoMetadata.title}
+                       ></iframe>
+                     ) : (
+                       <div className="w-full aspect-video bg-gray-200 flex items-center justify-center">
+                         <p className="text-gray-500">Video player will appear here</p>
+                       </div>
+                     )}
                    </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -890,7 +971,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </button>
                     
                     <button
-                      onClick={handleDownload}
+                      onClick={handleDownloadClick}
                       className="px-4 py-2 bg-white border-2 border-pink-600 text-pink-600 hover:bg-pink-50 rounded-lg font-medium flex items-center gap-2 transition-colors"
                     >
                       <Download className="w-4 h-4" />
@@ -1113,6 +1194,59 @@ export const YTTranscriptExtractor: React.FC = () => {
                      className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors text-sm font-medium"
                    >
                      Save Note
+                   </button>
+                 </div>
+               </div>
+             </div>
+           )}
+
+           {/* Download Dialog Modal */}
+           {downloadDialog && (
+             <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+               <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
+                 <div className="flex items-center justify-between mb-4">
+                   <h3 className="text-lg font-semibold text-gray-900">Download Transcript</h3>
+                   <button
+                     onClick={() => setDownloadDialog(false)}
+                     className="text-gray-400 hover:text-gray-600 transition-colors"
+                   >
+                     <X className="w-5 h-5" />
+                   </button>
+                 </div>
+                 <p className="text-sm text-gray-600 mb-6">
+                   Choose how you want to download the transcript.
+                 </p>
+                 
+                 <div className="mb-6">
+                   <label className="block text-sm font-medium text-gray-700 mb-3">
+                     Download as
+                   </label>
+                   <select
+                     value={downloadFormat}
+                     onChange={(e) => setDownloadFormat(e.target.value as TranscriptFormat)}
+                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white"
+                   >
+                     <option value="txt">.txt</option>
+                     <option value="txt-timestamps">.txt (with timestamps)</option>
+                     <option value="json">.json</option>
+                     <option value="srt">.srt</option>
+                     <option value="vtt">.vtt</option>
+                   </select>
+                 </div>
+
+                 <div className="flex items-center justify-end gap-3">
+                   <button
+                     onClick={() => setDownloadDialog(false)}
+                     className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors text-sm font-medium"
+                   >
+                     Cancel
+                   </button>
+                   <button
+                     onClick={handleDownload}
+                     className="px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors text-sm font-medium flex items-center gap-2"
+                   >
+                     <Download className="w-4 h-4" />
+                     Download Transcript
                    </button>
                  </div>
                </div>
