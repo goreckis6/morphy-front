@@ -245,6 +245,7 @@ import { STLViewer } from './components/FormatViewers/STLViewer';
 import { JPGCompressor } from './components/compress/JPGCompressor';
 import { PNGCompressor } from './components/compress/PNGCompressor';
 import { PDFCompressor } from './components/compress/PDFCompressor';
+import { YTThumbnailDownloader } from './components/YTThumbnailDownloader';
 
 function App() {
   // Make addToConversionCounter available globally
@@ -276,6 +277,9 @@ function App() {
 
         {/* Compression Hub */}
         <Route path="/compress" element={<Compress />} />
+
+        {/* YouTube Thumbnail Downloader */}
+        <Route path="/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
 
         {/* Samples Hub */}
         <Route path="/samples" element={<Samples />} />
