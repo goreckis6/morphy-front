@@ -66,6 +66,24 @@ export const YTThumbnailDownloader: React.FC = () => {
         resolution: '1280×720+',
         url: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
         quality: 'maxresdefault'
+      },
+      {
+        name: 'Auto-Generated 1',
+        resolution: '1280×720',
+        url: `https://img.youtube.com/vi/${id}/1.jpg`,
+        quality: '1'
+      },
+      {
+        name: 'Auto-Generated 2',
+        resolution: '1280×720',
+        url: `https://img.youtube.com/vi/${id}/2.jpg`,
+        quality: '2'
+      },
+      {
+        name: 'Auto-Generated 3',
+        resolution: '1280×720',
+        url: `https://img.youtube.com/vi/${id}/3.jpg`,
+        quality: '3'
       }
     ];
   };
@@ -150,7 +168,7 @@ export const YTThumbnailDownloader: React.FC = () => {
     <>
       <Helmet>
         <title>YouTube Thumbnail Downloader - Free Online Tool | MorphyHub</title>
-        <meta name="description" content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails (120×90 to 1280×720+) from any YouTube video instantly. Free, fast, and easy to use. No registration required." />
+        <meta name="description" content="Download YouTube video thumbnails in 8 different resolutions. Extract high-quality thumbnails (120×90 to 1280×720+) including auto-generated options from any YouTube video instantly. Free, fast, and easy to use. No registration required." />
         <meta name="keywords" content="youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail extractor, youtube thumbnail grabber, free youtube thumbnail, youtube thumbnail download, extract youtube thumbnail, youtube thumbnail url, youtube video thumbnail" />
         <meta property="og:title" content="YouTube Thumbnail Downloader - Free Online Tool | MorphyHub" />
         <meta property="og:description" content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly." />
@@ -341,7 +359,8 @@ export const YTThumbnailDownloader: React.FC = () => {
                 <div className="space-y-4">
                   {[
                     'Extract thumbnails from any YouTube video',
-                    '5 different resolution options available',
+                    '8 different resolution options available',
+                    'Includes auto-generated YouTube thumbnails',
                     'Instant extraction - no waiting time',
                     'Copy URLs or download directly',
                     '100% free - no registration required',
@@ -405,6 +424,20 @@ export const YTThumbnailDownloader: React.FC = () => {
                     <span className="text-gray-700 font-medium">Max Resolution</span>
                     <span className="text-gray-500">1280×720+</span>
                   </div>
+                  <div className="pt-2 border-t border-gray-200">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-700 font-medium">Auto-Generated 1</span>
+                      <span className="text-gray-500">1280×720</span>
+                    </div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-gray-700 font-medium">Auto-Generated 2</span>
+                      <span className="text-gray-500">1280×720</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-700 font-medium">Auto-Generated 3</span>
+                      <span className="text-gray-500">1280×720</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -449,6 +482,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                   <li><strong>High (480×360):</strong> Higher quality thumbnail suitable for larger displays and presentations.</li>
                   <li><strong>Standard (640×480):</strong> High-quality thumbnail perfect for most professional uses.</li>
                   <li><strong>Max Resolution (1280×720+):</strong> The highest quality available, perfect for print or high-resolution displays. Note that not all videos have max resolution thumbnails available.</li>
+                  <li><strong>Auto-Generated Thumbnails (1, 2, 3):</strong> YouTube automatically generates three high-resolution thumbnails (1280×720) from different moments in the video. These are the same thumbnails you see when uploading a video to YouTube. They provide alternative options if the main thumbnail doesn't suit your needs.</li>
                 </ul>
 
                 <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Why Use Our YouTube Thumbnail Downloader?</h3>
@@ -491,7 +525,11 @@ export const YTThumbnailDownloader: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Are all thumbnail resolutions available for every video?</h4>
-                    <p className="text-gray-700">Most videos have all resolutions available, but some older videos may not have max resolution thumbnails. Our tool will show all available options.</p>
+                    <p className="text-gray-700">Most videos have all resolutions available, but some older videos may not have max resolution thumbnails. The auto-generated thumbnails (1, 2, 3) are usually available for most videos and provide alternative high-quality options.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">What are the auto-generated thumbnails?</h4>
+                    <p className="text-gray-700">Auto-generated thumbnails are three high-resolution images (1280×720) that YouTube automatically creates from different moments in your video. These are the same thumbnails you see when uploading a video and choosing a thumbnail. They're great alternatives if you want a different frame from the video.</p>
                   </div>
                 </div>
               </div>
