@@ -505,44 +505,44 @@ export const PDFCompressor: React.FC = () => {
 
               {/* Batch Compression Success Message */}
               {batchCompressed && batchMode && batchResults.length > 0 && (
-                <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('compress_pdf.batch_compression_complete')}</h4>
+                <div className="mt-6 p-4 sm:p-6 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 mr-2 sm:mr-3 flex-shrink-0" />
+                    <h4 className="text-base sm:text-lg font-semibold text-green-800 break-words">{t('compress_pdf.batch_compression_complete')}</h4>
                   </div>
-                  <p className="text-green-700 mb-4">
+                  <p className="text-sm sm:text-base text-green-700 mb-3 sm:mb-4">
                     {t('compress_pdf.batch_success_message', { count: batchResults.length })}
                   </p>
                   
                   {/* Download All as ZIP Button */}
-                  <div className="mb-4">
+                  <div className="mb-3 sm:mb-4">
                     <button
                       onClick={handleBatchDownloadZip}
-                      className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center mb-2"
+                      className="w-full bg-blue-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center text-sm sm:text-base"
                     >
-                      <Download className="w-5 h-5 mr-2" />
+                      <Download className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                       {t('compress_pdf.download_all_zip')}
                     </button>
                   </div>
                   
-                  <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
+                  <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result: { file: File; blob: Blob; originalSize: number; newSize: number }, index: number) => {
                       const savingsPercent = ((result.originalSize - result.newSize) / result.originalSize * 100).toFixed(1);
                       return (
-                        <div key={index} className="flex items-center justify-between bg-white rounded-lg p-3 border border-green-200">
-                          <div className="flex-1">
-                            <p className="text-sm font-medium text-gray-900">
+                        <div key={index} className="flex flex-col sm:flex-row sm:items-center sm:justify-between bg-white rounded-lg p-3 sm:p-4 border border-green-200 gap-2 sm:gap-0">
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs sm:text-sm font-medium text-gray-900 break-words mb-1">
                               {result.file.name.replace(/\.(pdf)$/i, '')}_compressed.pdf
                             </p>
-                            <p className="text-xs text-gray-500">
+                            <p className="text-xs text-gray-500 break-words">
                               {formatFileSize(result.originalSize)} → {formatFileSize(result.newSize)} ({savingsPercent}% {t('compress_pdf.savings')})
                             </p>
                           </div>
                           <button
                             onClick={() => handleBatchFileDownload(result.file, result.blob)}
-                            className="ml-4 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex items-center"
+                            className="w-full sm:w-auto sm:ml-4 bg-green-600 text-white px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-green-700 transition-colors flex items-center justify-center flex-shrink-0"
                           >
-                            <Download className="w-4 h-4 mr-1" />
+                            <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-1" />
                             {t('common.download')}
                           </button>
                         </div>
@@ -551,9 +551,9 @@ export const PDFCompressor: React.FC = () => {
                   </div>
                   <button
                     onClick={resetForm}
-                    className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
+                    className="w-full bg-gray-600 text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center text-sm sm:text-base"
                   >
-                    <RefreshCw className="w-5 h-5 mr-2" />
+                    <RefreshCw className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                     {t('common.convert_more_files')}
                   </button>
                 </div>
