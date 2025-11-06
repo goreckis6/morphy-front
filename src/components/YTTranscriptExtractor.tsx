@@ -42,11 +42,21 @@ interface TranscriptEntry {
 export const YTTranscriptExtractor: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [videoId, setVideoId] = useState('');
-  // Initialize format from localStorage or default to 'txt-timestamps'
-  const [format, setFormat] = useState<TranscriptFormat>(() => {
-    const savedFormat = localStorage.getItem('transcript-display-format');
-    return (savedFormat === 'txt' || savedFormat === 'txt-timestamps') ? savedFormat as TranscriptFormat : 'txt-timestamps';
+  // Separate state for showing/hiding timestamps in display (independent from download format)
+  const [showTimestamps, setShowTimestamps] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem('transcript-show-timestamps');
+      if (saved !== null) {
+        return saved === 'true';
+      }
+    } catch (e) {
+      // localStorage might not be available
+    }
+    return true; // Default to true (show timestamps)
   });
+  
+  // Format for download only
+  const [format, setFormat] = useState<TranscriptFormat>('txt-timestamps');
   const [transcript, setTranscript] = useState<string | null>(null);
   const [transcriptData, setTranscriptData] = useState<TranscriptEntry[]>([]);
   const [isExtracting, setIsExtracting] = useState(false);
@@ -998,12 +1008,16 @@ export const YTTranscriptExtractor: React.FC = () => {
                        <label className="flex items-center gap-2 cursor-pointer px-3 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                          <input
                            type="checkbox"
-                           checked={format === 'txt-timestamps'}
+                           checked={showTimestamps}
                            onChange={(e) => {
-                             const newFormat = e.target.checked ? 'txt-timestamps' : 'txt';
-                             setFormat(newFormat);
+                             const newValue = e.target.checked;
+                             setShowTimestamps(newValue);
                              // Save user preference to localStorage
-                             localStorage.setItem('transcript-display-format', newFormat);
+                             try {
+                               localStorage.setItem('transcript-show-timestamps', String(newValue));
+                             } catch (err) {
+                               // localStorage might not be available
+                             }
                            }}
                            className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                          />
@@ -1112,22 +1126,82 @@ export const YTTranscriptExtractor: React.FC = () => {
                              ? transcriptData.findIndex(e => e.start === entry.start && e.text === entry.text)
                              : index;
                            const hasNote = notes[entry.start];
-                           const showTimestamps = format === 'txt-timestamps';
+                           
                            return (
-                             <div key={index} className="group relative">
+                             <div key={`${entry.start}-${index}`} className="group relative">
                                <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-pink-300 hover:bg-pink-50/30 hover:shadow-md transition-all duration-200 cursor-pointer">
-                                 <div className="flex gap-3 items-start">
-                                   {showTimestamps && (
-                                     <span className="text-pink-600 font-mono text-xs flex-shrink-0 font-semibold bg-pink-100 px-2.5 py-1 rounded-md border border-pink-200">
+                                 {showTimestamps ? (
+                                   // With timestamps layout
+                                   <div className="flex gap-3 items-start">
+                                     <span className="text-pink-600 font-mono text-xs flex-shrink-0 font-semibold bg-pink-100 px-2.5 py-1 rounded-md border border-pink-200 mt-0.5">
                                        {formatTime(entry.start)}
                                      </span>
-                                   )}
-                                   <div className={`flex-1 min-w-0 ${!showTimestamps ? 'pl-0' : ''}`}>
+                                     <div className="flex-1 min-w-0">
+                                       <p className="text-gray-900 text-[15px] leading-relaxed mb-2.5 group-hover:text-gray-800 transition-colors font-normal">
+                                         {entry.text}
+                                       </p>
+                                       {/* Interactive buttons - show on hover */}
+                                       <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-2">
+                                         <button
+                                           onClick={(e) => {
+                                             e.stopPropagation();
+                                             handleCopyTimestampLink(entry.start);
+                                           }}
+                                           className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-all duration-150 shadow-sm hover:shadow-md font-medium"
+                                           title="Copy YouTube link with timestamp"
+                                         >
+                                           <LinkIcon className="w-3.5 h-3.5" />
+                                           <span>Copy link</span>
+                                           {copiedTimestamp === entry.start && (
+                                             <CheckCircle className="w-3.5 h-3.5 text-green-300" />
+                                           )}
+                                         </button>
+                                         <button
+                                           onClick={(e) => {
+                                             e.stopPropagation();
+                                             handleCopyFragment(entry.text, entryIndex);
+                                           }}
+                                           className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs bg-gray-600 hover:bg-gray-700 text-white rounded-md transition-all duration-150 shadow-sm hover:shadow-md font-medium"
+                                           title="Copy transcript text"
+                                         >
+                                           <Copy className="w-3.5 h-3.5" />
+                                           <span>Copy text</span>
+                                           {copiedFragment === entryIndex && (
+                                             <CheckCircle className="w-3.5 h-3.5 text-green-300" />
+                                           )}
+                                         </button>
+                                         <button
+                                           onClick={(e) => {
+                                             e.stopPropagation();
+                                             handleAddNote(entry.start);
+                                           }}
+                                           className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs bg-amber-500 hover:bg-amber-600 text-white rounded-md transition-all duration-150 shadow-sm hover:shadow-md font-medium"
+                                           title="Add a note to this segment"
+                                         >
+                                           <Pin className="w-3.5 h-3.5" />
+                                           <span>Add note</span>
+                                         </button>
+                                         <button
+                                           onClick={(e) => {
+                                             e.stopPropagation();
+                                             handleJumpTo(entry.start);
+                                           }}
+                                           className="flex items-center gap-1.5 px-3 py-1.5 text-xs bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-all duration-150 shadow-md hover:shadow-lg font-medium"
+                                           title="Jump to this timestamp in YouTube video"
+                                         >
+                                           <Play className="w-3.5 h-3.5 fill-white" />
+                                           <span>Jump To</span>
+                                         </button>
+                                       </div>
+                                     </div>
+                                   </div>
+                                 ) : (
+                                   // Without timestamps layout - cleaner display
+                                   <div className="w-full">
                                      <p className="text-gray-900 text-[15px] leading-relaxed mb-2.5 group-hover:text-gray-800 transition-colors font-normal">
                                        {entry.text}
                                      </p>
-                                     
-                                     {/* Interactive buttons - show on hover with better visibility */}
+                                     {/* Interactive buttons - show on hover */}
                                      <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-2">
                                        <button
                                          onClick={(e) => {
@@ -1143,7 +1217,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            <CheckCircle className="w-3.5 h-3.5 text-green-300" />
                                          )}
                                        </button>
-                                       
                                        <button
                                          onClick={(e) => {
                                            e.stopPropagation();
@@ -1158,7 +1231,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            <CheckCircle className="w-3.5 h-3.5 text-green-300" />
                                          )}
                                        </button>
-                                       
                                        <button
                                          onClick={(e) => {
                                            e.stopPropagation();
@@ -1170,7 +1242,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                                          <Pin className="w-3.5 h-3.5" />
                                          <span>Add note</span>
                                        </button>
-                                       
                                        <button
                                          onClick={(e) => {
                                            e.stopPropagation();
@@ -1184,7 +1255,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                                        </button>
                                      </div>
                                    </div>
-                                 </div>
+                                 )}
                                </div>
                                
                                {/* Note display - yellow bar */}
