@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2 } from 'lucide-react';
+import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical } from 'lucide-react';
 import { API_BASE_URL } from '../services/api';
 
 type TranscriptFormat = 'txt' | 'txt-timestamps' | 'json' | 'srt' | 'vtt';
@@ -17,15 +17,40 @@ interface TranscriptResult {
   error?: string;
 }
 
+interface VideoMetadata {
+  title: string;
+  thumbnail: string;
+  author: string;
+  duration?: string;
+  channelId?: string;
+}
+
+interface TranscriptEntry {
+  text: string;
+  start: number;
+  duration: number;
+}
+
 export const YTTranscriptExtractor: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [videoId, setVideoId] = useState('');
-  const [format, setFormat] = useState<TranscriptFormat>('txt');
+  const [format, setFormat] = useState<TranscriptFormat>('txt-timestamps');
   const [transcript, setTranscript] = useState<string | null>(null);
+  const [transcriptData, setTranscriptData] = useState<TranscriptEntry[]>([]);
   const [isExtracting, setIsExtracting] = useState(false);
+  const [isLoadingMetadata, setIsLoadingMetadata] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const [videoIdCopied, setVideoIdCopied] = useState(false);
+  const [channelIdCopied, setChannelIdCopied] = useState(false);
   const [entriesCount, setEntriesCount] = useState<number | null>(null);
+  const [videoMetadata, setVideoMetadata] = useState<VideoMetadata | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [language, setLanguage] = useState('en');
+  const [autoscroll, setAutoscroll] = useState(false);
+  const transcriptRef = useRef<HTMLDivElement>(null);
+  const [wordCount, setWordCount] = useState(0);
+  const [charCount, setCharCount] = useState(0);
 
   const extractVideoId = (url: string): string | null => {
     const patterns = [
@@ -43,11 +68,153 @@ export const YTTranscriptExtractor: React.FC = () => {
     return null;
   };
 
+  const fetchVideoMetadata = async (id: string) => {
+    setIsLoadingMetadata(true);
+    try {
+      // Use YouTube oEmbed API (no API key required)
+      const response = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`);
+      if (response.ok) {
+        const data = await response.json();
+        setVideoMetadata({
+          title: data.title,
+          thumbnail: data.thumbnail_url,
+          author: data.author_name,
+          channelId: data.author_url ? data.author_url.split('/').pop() : undefined
+        });
+      } else {
+        // Fallback: use thumbnail URL directly
+        setVideoMetadata({
+          title: `Video ${id}`,
+          thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
+          author: 'Unknown'
+        });
+      }
+    } catch (err) {
+      // Fallback: use thumbnail URL directly
+      setVideoMetadata({
+        title: `Video ${id}`,
+        thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
+        author: 'Unknown'
+      });
+    } finally {
+      setIsLoadingMetadata(false);
+    }
+  };
+
+  const parseTranscript = (content: string, format: TranscriptFormat): TranscriptEntry[] => {
+    if (format === 'json') {
+      try {
+        const parsed = JSON.parse(content);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch {
+        return [];
+      }
+    } else if (format === 'txt-timestamps') {
+      const entries: TranscriptEntry[] = [];
+      const lines = content.split('\n');
+      
+      lines.forEach(line => {
+        // Match [HH:MM:SS] format
+        const timestampMatch = line.match(/\[(\d{2}):(\d{2}):(\d{2})\]/);
+        if (timestampMatch) {
+          const hours = parseInt(timestampMatch[1]);
+          const minutes = parseInt(timestampMatch[2]);
+          const seconds = parseInt(timestampMatch[3]);
+          const start = hours * 3600 + minutes * 60 + seconds;
+          const text = line.replace(/\[\d{2}:\d{2}:\d{2}\]\s*/, '').trim();
+          if (text) {
+            entries.push({ text, start, duration: 3 });
+          }
+        }
+      });
+      
+      return entries;
+    } else if (format === 'srt') {
+      const entries: TranscriptEntry[] = [];
+      const blocks = content.split(/\n\s*\n/).filter(b => b.trim());
+      
+      blocks.forEach(block => {
+        const lines = block.split('\n');
+        if (lines.length >= 3) {
+          const timeMatch = lines[1].match(/(\d{2}):(\d{2}):(\d{2})[.,](\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2})[.,](\d{3})/);
+          if (timeMatch) {
+            const startHours = parseInt(timeMatch[1]);
+            const startMinutes = parseInt(timeMatch[2]);
+            const startSeconds = parseInt(timeMatch[3]);
+            const startMs = parseInt(timeMatch[4]);
+            const start = startHours * 3600 + startMinutes * 60 + startSeconds + startMs / 1000;
+            
+            const endHours = parseInt(timeMatch[5]);
+            const endMinutes = parseInt(timeMatch[6]);
+            const endSeconds = parseInt(timeMatch[7]);
+            const endMs = parseInt(timeMatch[8]);
+            const end = endHours * 3600 + endMinutes * 60 + endSeconds + endMs / 1000;
+            
+            const text = lines.slice(2).join(' ').trim();
+            if (text) {
+              entries.push({ text, start, duration: end - start });
+            }
+          }
+        }
+      });
+      
+      return entries;
+    } else if (format === 'vtt') {
+      const entries: TranscriptEntry[] = [];
+      const lines = content.split('\n');
+      let i = 0;
+      
+      // Skip WEBVTT header
+      while (i < lines.length && !lines[i].includes('-->')) {
+        i++;
+      }
+      
+      while (i < lines.length) {
+        const timeMatch = lines[i].match(/(\d{2}):(\d{2}):(\d{2})[.,](\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2})[.,](\d{3})/);
+        if (timeMatch) {
+          const startHours = parseInt(timeMatch[1]);
+          const startMinutes = parseInt(timeMatch[2]);
+          const startSeconds = parseInt(timeMatch[3]);
+          const startMs = parseInt(timeMatch[4]);
+          const start = startHours * 3600 + startMinutes * 60 + startSeconds + startMs / 1000;
+          
+          const endHours = parseInt(timeMatch[5]);
+          const endMinutes = parseInt(timeMatch[6]);
+          const endSeconds = parseInt(timeMatch[7]);
+          const endMs = parseInt(timeMatch[8]);
+          const end = endHours * 3600 + endMinutes * 60 + endSeconds + endMs / 1000;
+          
+          i++;
+          const textLines: string[] = [];
+          while (i < lines.length && lines[i].trim() && !lines[i].includes('-->')) {
+            textLines.push(lines[i].trim());
+            i++;
+          }
+          
+          const text = textLines.join(' ').trim();
+          if (text) {
+            entries.push({ text, start, duration: end - start });
+          }
+        } else {
+          i++;
+        }
+      }
+      
+      return entries;
+    }
+    
+    return [];
+  };
+
   const handleExtract = async () => {
     setError(null);
     setTranscript(null);
+    setTranscriptData([]);
     setCopied(false);
     setEntriesCount(null);
+    setVideoMetadata(null);
+    setWordCount(0);
+    setCharCount(0);
 
     if (!videoUrl.trim()) {
       setError('Please enter a YouTube URL or Video ID');
@@ -69,6 +236,9 @@ export const YTTranscriptExtractor: React.FC = () => {
     setVideoId(id);
     setIsExtracting(true);
 
+    // Fetch video metadata
+    await fetchVideoMetadata(id);
+
     try {
       const response = await fetch(`${API_BASE_URL}/api/youtube/transcript`, {
         method: 'POST',
@@ -89,6 +259,30 @@ export const YTTranscriptExtractor: React.FC = () => {
 
       setTranscript(data.content);
       setEntriesCount(data.entries_count || null);
+      
+      // Parse transcript for display
+      if (format === 'json' || format === 'txt-timestamps' || format === 'srt' || format === 'vtt') {
+        const parsed = parseTranscript(data.content, format);
+        setTranscriptData(parsed);
+        
+        // Calculate word and character count from parsed entries
+        if (parsed.length > 0) {
+          const fullText = parsed.map(e => e.text).join(' ');
+          setWordCount(fullText.split(/\s+/).filter(w => w.length > 0).length);
+          setCharCount(fullText.length);
+        } else {
+          // Fallback: use raw content
+          const words = data.content.split(/\s+/).filter(w => w.length > 0);
+          setWordCount(words.length);
+          setCharCount(data.content.length);
+        }
+      } else {
+        // For plain text
+        const words = data.content.split(/\s+/).filter(w => w.length > 0);
+        setWordCount(words.length);
+        setCharCount(data.content.length);
+        setTranscriptData([]);
+      }
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to extract transcript. The video may not have transcripts available.';
       setError(errorMessage);
@@ -136,6 +330,42 @@ export const YTTranscriptExtractor: React.FC = () => {
     });
   };
 
+  const handleCopyVideoId = () => {
+    navigator.clipboard.writeText(videoId).then(() => {
+      setVideoIdCopied(true);
+      setTimeout(() => setVideoIdCopied(false), 2000);
+    });
+  };
+
+  const handleCopyChannelId = () => {
+    if (videoMetadata?.channelId) {
+      navigator.clipboard.writeText(videoMetadata.channelId).then(() => {
+        setChannelIdCopied(true);
+        setTimeout(() => setChannelIdCopied(false), 2000);
+      });
+    }
+  };
+
+  const formatTime = (seconds: number): string => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+    if (hours > 0) {
+      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+    return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  const filteredTranscript = transcriptData.filter(entry => 
+    entry.text.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  useEffect(() => {
+    if (autoscroll && transcriptRef.current) {
+      transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
+    }
+  }, [transcriptData, autoscroll]);
+
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       handleExtract();
@@ -144,14 +374,6 @@ export const YTTranscriptExtractor: React.FC = () => {
 
   const handleBack = () => {
     window.location.href = '/';
-  };
-
-  const formatLabels: Record<TranscriptFormat, string> = {
-    'txt': 'Plain Text',
-    'txt-timestamps': 'Plain Text (with Timestamps)',
-    'json': 'JSON',
-    'srt': 'SRT',
-    'vtt': 'VTT'
   };
 
   const pageJsonLd = {
@@ -197,7 +419,7 @@ export const YTTranscriptExtractor: React.FC = () => {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-rose-50">
+      <div className="min-h-screen bg-white">
         <Header />
         
         {/* Hero Section */}
@@ -211,316 +433,319 @@ export const YTTranscriptExtractor: React.FC = () => {
               <p className="text-lg sm:text-xl text-red-100 mb-6 max-w-2xl mx-auto">
                 Extract and download transcripts from any YouTube video in multiple formats
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm text-red-200">
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
-                  <span>Instant Extraction</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4" />
-                  <span>100% Free</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>No Registration</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            {/* Main Panel */}
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-                
-                {/* Input Section */}
-                <div className="mb-6">
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
-                    YouTube Video URL or Video ID
-                  </label>
-                  <div className="relative">
-                    <LinkIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
-                    <input
-                      type="text"
-                      value={videoUrl}
-                      onChange={(e) => setVideoUrl(e.target.value)}
-                      onKeyPress={handleKeyPress}
-                      placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ"
-                      className="w-full pl-12 pr-4 py-4 text-base border-2 border-red-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
-                    />
-                  </div>
-                  <p className="mt-2 text-xs sm:text-sm text-gray-500">
-                    Supports: youtube.com/watch?v=, youtu.be/, youtube.com/embed/, or direct Video ID
-                  </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* Input Section - Only show when no transcript */}
+          {!transcript && (
+            <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 mb-8">
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-gray-700 mb-3">
+                  YouTube Video URL or Video ID
+                </label>
+                <div className="relative">
+                  <LinkIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                  <input
+                    type="text"
+                    value={videoUrl}
+                    onChange={(e) => setVideoUrl(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ"
+                    className="w-full pl-12 pr-4 py-4 text-base border-2 border-red-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
+                  />
                 </div>
+              </div>
 
-                {/* Format Selection */}
-                <div className="mb-6">
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
-                    Output Format
-                  </label>
-                  <select
-                    value={format}
-                    onChange={(e) => setFormat(e.target.value as TranscriptFormat)}
-                    className="w-full px-4 py-3 text-base border-2 border-red-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all bg-white"
-                  >
-                    <option value="txt">Plain Text</option>
-                    <option value="txt-timestamps">Plain Text (with Timestamps)</option>
-                    <option value="json">JSON</option>
-                    <option value="srt">SRT</option>
-                    <option value="vtt">VTT</option>
-                  </select>
-                  <p className="mt-2 text-xs sm:text-sm text-gray-500">
-                    Choose your preferred transcript format. SRT and VTT include timestamps automatically.
-                  </p>
-                </div>
-
-                {error && (
-                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start space-x-3">
-                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-red-700">{error}</p>
-                  </div>
-                )}
-
-                <button
-                  onClick={handleExtract}
-                  disabled={isExtracting}
-                  className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] disabled:transform-none flex items-center justify-center space-x-2 mb-8"
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-gray-700 mb-3">
+                  Output Format
+                </label>
+                <select
+                  value={format}
+                  onChange={(e) => setFormat(e.target.value as TranscriptFormat)}
+                  className="w-full px-4 py-3 text-base border-2 border-red-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all bg-white"
                 >
-                  {isExtracting ? (
-                    <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Extracting Transcript...</span>
-                    </>
-                  ) : (
-                    <>
-                      <FileText className="w-5 h-5" />
-                      <span>Extract Transcript</span>
-                    </>
-                  )}
-                </button>
+                  <option value="txt-timestamps">Plain Text (with Timestamps)</option>
+                  <option value="txt">Plain Text</option>
+                  <option value="json">JSON</option>
+                  <option value="srt">SRT</option>
+                  <option value="vtt">VTT</option>
+                </select>
+              </div>
 
-                {/* Transcript Display */}
-                {transcript && (
-                  <div className="mt-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <div>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-1">Transcript</h2>
-                        <p className="text-sm text-gray-600">
-                          Video ID: <span className="font-mono font-semibold text-red-600">{videoId}</span>
-                          {entriesCount && (
-                            <> • <span>{entriesCount} entries</span></>
-                          )}
-                        </p>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <button
-                          onClick={handleCopy}
-                          className="px-4 py-2 bg-white border-2 border-red-200 text-red-600 rounded-lg hover:bg-red-50 transition-colors flex items-center space-x-2 text-sm font-medium"
-                        >
-                          {copied ? (
-                            <>
-                              <CheckCircle className="w-4 h-4" />
-                              <span>Copied!</span>
-                            </>
-                          ) : (
-                            <>
-                              <Copy className="w-4 h-4" />
-                              <span>Copy</span>
-                            </>
-                          )}
-                        </button>
-                        <button
-                          onClick={handleDownload}
-                          className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors flex items-center space-x-2 text-sm font-medium"
-                        >
-                          <Download className="w-4 h-4" />
-                          <span>Download</span>
-                        </button>
-                      </div>
-                    </div>
+              {error && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start space-x-3">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <p className="text-sm text-red-700">{error}</p>
+                </div>
+              )}
 
-                    <div className="bg-gray-50 rounded-xl border-2 border-red-100 p-4 max-h-96 overflow-y-auto">
-                      <pre className="whitespace-pre-wrap text-sm text-gray-800 font-mono">
-                        {transcript}
-                      </pre>
-                    </div>
-                  </div>
+              <button
+                onClick={handleExtract}
+                disabled={isExtracting}
+                className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] disabled:transform-none flex items-center justify-center space-x-2"
+              >
+                {isExtracting ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                    <span>Extracting Transcript...</span>
+                  </>
+                ) : (
+                  <>
+                    <FileText className="w-5 h-5" />
+                    <span>Extract Transcript</span>
+                  </>
                 )}
+              </button>
+            </div>
+          )}
+
+          {/* Two Panel Layout - Show when transcript is loaded */}
+          {transcript && videoMetadata && (
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Left Panel - Video Info */}
+              <div className="lg:col-span-1">
+                <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4">
+                  {/* Video Header */}
+                  <div className="flex items-center justify-between mb-4">
+                    <button
+                      onClick={() => {
+                        setTranscript(null);
+                        setVideoMetadata(null);
+                        setVideoUrl('');
+                        setVideoId('');
+                      }}
+                      className="text-gray-600 hover:text-gray-900 transition-colors"
+                    >
+                      <ArrowLeft className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  {/* Video Title */}
+                  <h2 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
+                    {videoMetadata.title}
+                  </h2>
+
+                  {/* Video Thumbnail */}
+                  <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
+                    <img
+                      src={videoMetadata.thumbnail}
+                      alt={videoMetadata.title}
+                      className="w-full aspect-video object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                      }}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors cursor-pointer"
+                      onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank')}>
+                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+                        <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Video Metadata */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
+                      {videoMetadata.author}
+                    </span>
+                    {entriesCount && (
+                      <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full flex items-center gap-1">
+                        <Clock className="w-3 h-3" />
+                        {entriesCount} entries
+                      </span>
+                    )}
+                  </div>
+
+                  {/* IDs */}
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Channel ID:</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-mono text-gray-800 truncate max-w-[120px]">
+                          {videoMetadata.channelId || 'N/A'}
+                        </span>
+                        <button
+                          onClick={handleCopyChannelId}
+                          className="text-gray-500 hover:text-gray-700 transition-colors"
+                        >
+                          {channelIdCopied ? (
+                            <CheckCircle className="w-4 h-4 text-green-500" />
+                          ) : (
+                            <Copy className="w-4 h-4" />
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600">Video ID:</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-mono text-gray-800">
+                          {videoId}
+                        </span>
+                        <button
+                          onClick={handleCopyVideoId}
+                          className="text-gray-500 hover:text-gray-700 transition-colors"
+                        >
+                          {videoIdCopied ? (
+                            <CheckCircle className="w-4 h-4 text-green-500" />
+                          ) : (
+                            <Copy className="w-4 h-4" />
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Free Credits Section */}
+                  <div className="border-t pt-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-gray-700">Free Credits</span>
+                      <a href="#" className="text-sm text-pink-600 hover:text-pink-700 font-medium">
+                        Upgrade →
+                      </a>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
+                      <div className="bg-pink-500 h-2 rounded-full" style={{ width: '4%' }}></div>
+                    </div>
+                    <p className="text-xs text-gray-500">1 of 25 used</p>
+                    <p className="text-xs text-gray-500 mt-1">Resets in 25 days</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Panel - Transcript Viewer */}
+              <div className="lg:col-span-2">
+                <div className="bg-white rounded-xl shadow-lg p-6">
+                  {/* Transcript Header */}
+                  <div className="flex items-center gap-3 mb-4 flex-wrap">
+                    <button
+                      onClick={handleCopy}
+                      className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg font-medium flex items-center gap-2 transition-colors"
+                    >
+                      {copied ? (
+                        <>
+                          <CheckCircle className="w-4 h-4" />
+                          <span>Copied!</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-4 h-4" />
+                          <span>Copy Transcript</span>
+                        </>
+                      )}
+                    </button>
+                    
+                    <button
+                      onClick={handleDownload}
+                      className="px-4 py-2 bg-white border-2 border-pink-600 text-pink-600 hover:bg-pink-50 rounded-lg font-medium flex items-center gap-2 transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      <span>Download</span>
+                    </button>
+                    
+                    <div className="flex-1 relative min-w-[200px]">
+                      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                      <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Search Transcript"
+                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm"
+                      />
+                    </div>
+
+                    <select
+                      value={language}
+                      onChange={(e) => setLanguage(e.target.value)}
+                      className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white"
+                    >
+                      <option value="en">en</option>
+                      <option value="es">es</option>
+                      <option value="fr">fr</option>
+                      <option value="de">de</option>
+                      <option value="pl">pl</option>
+                    </select>
+
+                    <button className="p-2 text-gray-500 hover:text-gray-700 transition-colors">
+                      <MoreVertical className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  {/* Transcript Content */}
+                  <div
+                    ref={transcriptRef}
+                    className="bg-gray-50 rounded-lg p-4 max-h-[600px] overflow-y-auto mb-4"
+                  >
+                    {format === 'txt' ? (
+                      <div className="text-sm text-gray-800 whitespace-pre-wrap">
+                        {transcript}
+                      </div>
+                    ) : transcriptData.length > 0 ? (
+                      <div className="space-y-3">
+                        {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => (
+                          <div key={index} className="flex gap-3">
+                            <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1">
+                              {formatTime(entry.start)}
+                            </span>
+                            <span className="text-gray-800 text-sm flex-1">
+                              {entry.text}
+                            </span>
+                          </div>
+                        ))}
+                        {searchQuery && filteredTranscript.length === 0 && (
+                          <p className="text-gray-500 text-sm text-center py-8">
+                            No results found for "{searchQuery}"
+                          </p>
+                        )}
+                      </div>
+                    ) : (
+                      <div className="text-sm text-gray-800 whitespace-pre-wrap">
+                        {transcript}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Transcript Footer */}
+                  <div className="flex items-center justify-between border-t pt-4">
+                    <div className="flex items-center gap-6 text-sm text-gray-600">
+                      <span>Word Count: {wordCount.toLocaleString()}</span>
+                      <span>Character count: {charCount.toLocaleString()}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-gray-600">Autoscroll</span>
+                      <button
+                        onClick={() => setAutoscroll(!autoscroll)}
+                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                          autoscroll ? 'bg-pink-600' : 'bg-gray-300'
+                        }`}
+                      >
+                        <span
+                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                            autoscroll ? 'translate-x-6' : 'translate-x-1'
+                          }`}
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            {/* Sidebar */}
-            <div className="space-y-6">
-              
-              {/* Features */}
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center">
-                  <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                  Why Choose Our Tool?
-                </h3>
-                <div className="space-y-4">
-                  {[
-                    'Extract transcripts from any YouTube video',
-                    '5 different output formats available',
-                    'Support for multiple languages',
-                    'Instant extraction - no waiting time',
-                    'Copy or download transcripts',
-                    '100% free - no registration required'
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Use Cases */}
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center">
-                  <Camera className="w-5 h-5 mr-2 text-red-600" />
-                  Perfect For
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    'Content creators and bloggers',
-                    'Researchers and students',
-                    'Video editors and translators',
-                    'Accessibility professionals',
-                    'Language learners',
-                    'Content analysts'
-                  ].map((useCase, index) => (
-                    <div key={index} className="flex items-center">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
-                      <span className="text-sm text-gray-700">{useCase}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Format Info */}
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center">
-                  <Info className="w-5 h-5 mr-2 text-red-600" />
-                  Available Formats
-                </h3>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <span className="font-semibold text-gray-900">Plain Text</span>
-                    <p className="text-gray-600 text-xs mt-1">Simple text format, perfect for reading</p>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-gray-900">Plain Text (Timestamps)</span>
-                    <p className="text-gray-600 text-xs mt-1">Text with timestamps for each line</p>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-gray-900">JSON</span>
-                    <p className="text-gray-600 text-xs mt-1">Structured data with text and timing</p>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-gray-900">SRT</span>
-                    <p className="text-gray-600 text-xs mt-1">SubRip subtitle format</p>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-gray-900">VTT</span>
-                    <p className="text-gray-600 text-xs mt-1">WebVTT subtitle format</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          )}
 
           {/* Back Button */}
-          <div className="mt-12 text-center">
-            <button
-              onClick={handleBack}
-              className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
-            >
-              ← Back to Home
-            </button>
-          </div>
-
-          {/* SEO Content Section */}
-          <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Extract YouTube Transcripts</h2>
-              
-              <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 mb-6">
-                  Our YouTube transcript extractor is a free online tool that allows you to extract and download transcripts from any YouTube video. Whether you need transcripts for research, translation, accessibility, or content creation, our tool makes it easy to get the text content from any video.
-                </p>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Step-by-Step Guide</h3>
-                <ol className="list-decimal list-inside space-y-3 text-gray-700 mb-6">
-                  <li><strong>Copy the YouTube Video URL:</strong> Find the YouTube video you want to extract the transcript from and copy its URL from the address bar. You can also use the video ID directly.</li>
-                  <li><strong>Paste the URL:</strong> Paste the YouTube URL or video ID into the input field on our tool.</li>
-                  <li><strong>Choose Format:</strong> Select your preferred output format from the dropdown menu (Plain Text, JSON, SRT, or VTT).</li>
-                  <li><strong>Extract Transcript:</strong> Click the "Extract Transcript" button to get the transcript in your chosen format.</li>
-                  <li><strong>Download or Copy:</strong> Use the download button to save the transcript, or copy it to your clipboard for immediate use.</li>
-                </ol>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Understanding Transcript Formats</h3>
-                <p className="text-gray-700 mb-4">
-                  Our tool supports multiple output formats to suit different needs:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><strong>Plain Text:</strong> Simple text format without timestamps, perfect for reading or copying into documents.</li>
-                  <li><strong>Plain Text (with Timestamps):</strong> Text format with timestamps for each line, useful for reference.</li>
-                  <li><strong>JSON:</strong> Structured data format with text, start time, and duration for each segment. Perfect for developers and data processing.</li>
-                  <li><strong>SRT:</strong> SubRip subtitle format commonly used in video editing software. Includes timestamps and is compatible with most video players.</li>
-                  <li><strong>VTT:</strong> WebVTT (Web Video Text Tracks) format used for web-based video players. Similar to SRT but with web-specific features.</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Why Use Our YouTube Transcript Extractor?</h3>
-                <p className="text-gray-700 mb-4">
-                  Our tool offers several advantages:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><strong>Multiple Formats:</strong> Choose from 5 different output formats to suit your needs.</li>
-                  <li><strong>Easy to Use:</strong> No technical knowledge required. Simply paste the URL and click extract.</li>
-                  <li><strong>Fast and Free:</strong> Get transcripts instantly without any cost or registration.</li>
-                  <li><strong>Language Support:</strong> Works with videos in multiple languages, automatically detecting the available transcript language.</li>
-                  <li><strong>Direct Download:</strong> Download transcripts directly to your device or copy them for immediate use.</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Common Use Cases</h3>
-                <p className="text-gray-700 mb-4">
-                  Our YouTube transcript extractor is useful for:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><strong>Content Creation:</strong> Bloggers and content creators can use transcripts for articles, blog posts, and social media content.</li>
-                  <li><strong>Research:</strong> Researchers and students can extract transcripts for analysis, note-taking, and citation.</li>
-                  <li><strong>Translation:</strong> Translators can use transcripts as a base for creating subtitles in other languages.</li>
-                  <li><strong>Accessibility:</strong> Create accessible content by providing text versions of video content.</li>
-                  <li><strong>Language Learning:</strong> Language learners can use transcripts to follow along with videos and improve comprehension.</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Frequently Asked Questions</h3>
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Is this tool free to use?</h4>
-                    <p className="text-gray-700">Yes, our YouTube transcript extractor is completely free to use. No registration or payment is required.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Do all YouTube videos have transcripts?</h4>
-                    <p className="text-gray-700">Not all videos have transcripts available. Videos with transcripts enabled by the creator or auto-generated transcripts will work with our tool.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">What languages are supported?</h4>
-                    <p className="text-gray-700">Our tool works with transcripts in any language that YouTube supports. It will automatically use the available transcript language for the video.</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Can I extract transcripts from private videos?</h4>
-                    <p className="text-gray-700">No, transcripts can only be extracted from publicly available videos that have transcripts enabled.</p>
-                  </div>
-                </div>
-              </div>
+          {!transcript && (
+            <div className="mt-8 text-center">
+              <button
+                onClick={handleBack}
+                className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+              >
+                ← Back to Home
+              </button>
             </div>
-          </div>
+          )}
         </div>
 
         <Footer />
@@ -528,4 +753,3 @@ export const YTTranscriptExtractor: React.FC = () => {
     </>
   );
 };
-
