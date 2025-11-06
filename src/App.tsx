@@ -246,6 +246,7 @@ import { JPGCompressor } from './components/compress/JPGCompressor';
 import { PNGCompressor } from './components/compress/PNGCompressor';
 import { PDFCompressor } from './components/compress/PDFCompressor';
 import { YTThumbnailDownloader } from './components/YTThumbnailDownloader';
+import { YTTranscriptExtractor } from './components/YTTranscriptExtractor';
 
 function App() {
   // Make addToConversionCounter available globally
@@ -280,6 +281,9 @@ function App() {
 
         {/* YouTube Thumbnail Downloader */}
         <Route path="/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+
+        {/* YouTube Transcript Extractor */}
+        <Route path="/youtube-transcript" element={<YTTranscriptExtractor />} />
 
         {/* Samples Hub */}
         <Route path="/samples" element={<Samples />} />
