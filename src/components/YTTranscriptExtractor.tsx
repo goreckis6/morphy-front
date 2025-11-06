@@ -128,18 +128,30 @@ export const YTTranscriptExtractor: React.FC = () => {
   };
 
   const parseTranscript = (content: string, format: TranscriptFormat): TranscriptEntry[] => {
+    // Helper function to remove ALL timestamp patterns from text (used everywhere)
+    const removeAllTimestamps = (text: string): string => {
+      return text
+        .replace(/\[\s*\d{1,2}:\d{2}:\d{2}(?:[,:]?\d{1,3})?\s*\]/g, '') // Remove timestamps
+        .replace(/\s+/g, ' ') // Normalize whitespace
+        .trim();
+    };
+    
     if (format === 'json' || format === 'json-timestamps') {
       try {
         const parsed = JSON.parse(content);
         if (Array.isArray(parsed)) {
           // Check if it's an array of strings (no timestamps) or objects (with timestamps)
           if (parsed.length > 0 && typeof parsed[0] === 'string') {
-            // Array of strings - no timestamps, create entries with dummy timestamps
-            return parsed.map((text, i) => ({ text, start: i * 3, duration: 3 }));
+            // Array of strings - remove any timestamps that might be in the text
+            return parsed.map((text, i) => ({ 
+              text: removeAllTimestamps(text), 
+              start: i * 3, 
+              duration: 3 
+            }));
           } else {
-            // Array of objects with timestamps
+            // Array of objects with timestamps - remove timestamps from text
             return parsed.map((item: any) => ({
-              text: item.text || '',
+              text: removeAllTimestamps(item.text || ''),
               start: item.start || 0,
               duration: item.duration || 3
             }));
@@ -154,15 +166,37 @@ export const YTTranscriptExtractor: React.FC = () => {
       const lines = content.split('\n');
       
       lines.forEach(line => {
-        const timestampMatch = line.match(/\[(\d{2}):(\d{2}):(\d{2})\]/);
+        const trimmedLine = line.trim();
+        if (!trimmedLine) return; // Skip empty lines
+        
+        // Match timestamp with optional milliseconds: [HH:MM:SS] or [HH:MM:SS:mmm] or [HH:MM:SS,mmm]
+        // Support both formats: [00:00:00:000] (colon) and [00:00:00,000] (comma)
+        // Also match at start of line with optional spaces
+        const timestampMatch = trimmedLine.match(/^\[\s*(\d{1,2}):(\d{2}):(\d{2})(?:[,:](\d{1,3}))?\s*\]/);
+        
         if (timestampMatch) {
           const hours = parseInt(timestampMatch[1]);
           const minutes = parseInt(timestampMatch[2]);
           const seconds = parseInt(timestampMatch[3]);
-          const start = hours * 3600 + minutes * 60 + seconds;
-          const text = line.replace(/\[\d{2}:\d{2}:\d{2}\]\s*/, '').trim();
+          const milliseconds = timestampMatch[4] ? parseInt(timestampMatch[4]) : 0;
+          const start = hours * 3600 + minutes * 60 + seconds + milliseconds / 1000;
+          
+          // Remove ALL timestamps from the line (in case there are multiple)
+          let text = removeAllTimestamps(trimmedLine);
+          
+          // If text is empty after removing timestamps, skip this line
           if (text) {
             entries.push({ text, start, duration: 3 });
+          }
+        } else {
+          // No timestamp at start - might be continuation or line with timestamp in middle
+          // Remove any timestamps that might be in the text
+          const cleanedText = removeAllTimestamps(trimmedLine);
+          
+          if (cleanedText) {
+            // Use previous entry's timestamp + 3 seconds, or 0 if first entry
+            const start = entries.length > 0 ? entries[entries.length - 1].start + 3 : 0;
+            entries.push({ text: cleanedText, start, duration: 3 });
           }
         }
       });
@@ -391,18 +425,35 @@ export const YTTranscriptExtractor: React.FC = () => {
   const convertToFormat = (targetFormat: TranscriptFormat): string => {
     // If we have transcriptData, use it to convert
     if (transcriptData.length > 0) {
+      // Helper function to clean text from any remaining timestamp patterns (aggressive)
+      const removeTimestamps = (text: string): string => {
+        // Remove timestamps in various formats: [HH:MM:SS], [HH:MM:SS:mmm], [HH:MM:SS,mmm]
+        // Also handle with spaces and variations
+        return text
+          .replace(/\[\s*\d{1,2}:\d{2}:\d{2}(?:[,:]?\d{1,3})?\s*\]/g, '') // Remove timestamps
+          .replace(/\s+/g, ' ') // Normalize whitespace
+          .trim();
+      };
+      
       if (targetFormat === 'txt') {
-        // Plain text without timestamps
-        return transcriptData.map(e => e.text).join(' ');
+        // Plain text without timestamps - clean any timestamp patterns that might be in text
+        return transcriptData.map(e => removeTimestamps(e.text)).filter(t => t.length > 0).join(' ');
       } else if (targetFormat === 'txt-timestamps') {
         // Plain text with timestamps
-        return transcriptData.map(e => `[${formatTime(e.start)}] ${e.text}`).join('\n');
+        return transcriptData.map(e => {
+          const cleanEntryText = removeTimestamps(e.text);
+          return `[${formatTime(e.start)}] ${cleanEntryText}`;
+        }).join('\n');
       } else if (targetFormat === 'json') {
-        // JSON without timestamps - just array of text strings
-        return JSON.stringify(transcriptData.map(e => e.text), null, 2);
+        // JSON without timestamps - just array of text strings (cleaned)
+        return JSON.stringify(transcriptData.map(e => removeTimestamps(e.text)).filter(t => t.length > 0), null, 2);
       } else if (targetFormat === 'json-timestamps') {
-        // JSON with timestamps - full transcript data
-        return JSON.stringify(transcriptData, null, 2);
+        // JSON with timestamps - full transcript data (with cleaned text)
+        return JSON.stringify(transcriptData.map(e => ({
+          text: removeTimestamps(e.text),
+          start: e.start,
+          duration: e.duration
+        })), null, 2);
       } else if (targetFormat === 'srt') {
         // SRT format always includes timestamps (standard requirement)
         const formatSRTTime = (seconds: number): string => {
@@ -415,7 +466,8 @@ export const YTTranscriptExtractor: React.FC = () => {
         return transcriptData.map((e, i) => {
           const start = formatSRTTime(e.start);
           const end = formatSRTTime(e.start + e.duration);
-          return `${i + 1}\n${start} --> ${end}\n${e.text}\n`;
+          const cleanText = removeTimestamps(e.text); // Remove any timestamp patterns from text
+          return `${i + 1}\n${start} --> ${end}\n${cleanText}\n`;
         }).join('\n');
       } else if (targetFormat === 'vtt') {
         // VTT format always includes timestamps (standard requirement)
@@ -429,16 +481,22 @@ export const YTTranscriptExtractor: React.FC = () => {
         return `WEBVTT\n\n${transcriptData.map(e => {
           const start = formatVTTTime(e.start);
           const end = formatVTTTime(e.start + e.duration);
-          return `${start} --> ${end}\n${e.text}`;
+          const cleanText = removeTimestamps(e.text); // Remove any timestamp patterns from text
+          return `${start} --> ${end}\n${cleanText}`;
         }).join('\n\n')}`;
       }
     }
 
     // If we don't have transcriptData but have transcript, handle plain text formats
     if (transcript) {
+      // Helper function to remove timestamps (support both comma and colon for milliseconds)
+      const removeTimestampsFromText = (text: string): string => {
+        return text.replace(/\[\d{2}:\d{2}:\d{2}(?:[,:]\d{3})?\]\s*/g, '').trim();
+      };
+      
       if (targetFormat === 'txt') {
-        // Remove timestamps if present
-        return transcript.replace(/\[\d{2}:\d{2}:\d{2}\]\s*/g, '').trim();
+        // Remove timestamps if present (support multiple formats)
+        return removeTimestampsFromText(transcript);
       } else if (targetFormat === 'txt-timestamps') {
         // Return as-is (already has timestamps)
         return transcript;
@@ -1138,7 +1196,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                                      </span>
                                      <div className="flex-1 min-w-0">
                                        <p className="text-gray-900 text-[15px] leading-relaxed mb-2.5 group-hover:text-gray-800 transition-colors font-normal">
-                                         {entry.text}
+                                         {entry.text.replace(/\[\s*\d{1,2}:\d{2}:\d{2}(?:[,:]?\d{1,3})?\s*\]/g, '').replace(/\s+/g, ' ').trim()}
                                        </p>
                                        {/* Interactive buttons - show on hover */}
                                        <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-2">
@@ -1199,7 +1257,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                                    // Without timestamps layout - cleaner display
                                    <div className="w-full">
                                      <p className="text-gray-900 text-[15px] leading-relaxed mb-2.5 group-hover:text-gray-800 transition-colors font-normal">
-                                       {entry.text}
+                                       {entry.text.replace(/\[\s*\d{1,2}:\d{2}:\d{2}(?:[,:]?\d{1,3})?\s*\]/g, '').replace(/\s+/g, ' ').trim()}
                                      </p>
                                      {/* Interactive buttons - show on hover */}
                                      <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-2">
