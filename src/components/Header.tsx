@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
                 className="h-12 w-auto object-contain"
               />
               <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-600 bg-clip-text text-transparent">
+                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent">
                   MorphyHub
                 </h1>
                 <p className="text-xs text-gray-500">File Conversion & Viewer</p>
