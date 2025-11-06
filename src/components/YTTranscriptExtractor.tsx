@@ -42,7 +42,11 @@ interface TranscriptEntry {
 export const YTTranscriptExtractor: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [videoId, setVideoId] = useState('');
-  const [format, setFormat] = useState<TranscriptFormat>('txt-timestamps'); // Always use txt-timestamps as default
+  // Initialize format from localStorage or default to 'txt-timestamps'
+  const [format, setFormat] = useState<TranscriptFormat>(() => {
+    const savedFormat = localStorage.getItem('transcript-display-format');
+    return (savedFormat === 'txt' || savedFormat === 'txt-timestamps') ? savedFormat as TranscriptFormat : 'txt-timestamps';
+  });
   const [transcript, setTranscript] = useState<string | null>(null);
   const [transcriptData, setTranscriptData] = useState<TranscriptEntry[]>([]);
   const [isExtracting, setIsExtracting] = useState(false);
@@ -304,8 +308,8 @@ export const YTTranscriptExtractor: React.FC = () => {
 
       setTranscript(data.content);
       setEntriesCount(data.entries_count || null);
-      // Always keep display format as txt-timestamps
-      setFormat('txt-timestamps');
+      // Don't override user's display format preference - keep current format
+      // setFormat('txt-timestamps'); // Removed - let user control display format
       setDownloadFormat('txt-timestamps'); // Default download format matches display
       
       // Always parse as txt-timestamps since that's what we extract
@@ -365,8 +369,10 @@ export const YTTranscriptExtractor: React.FC = () => {
     if (videoId && !isExtracting) {
       setLanguage(newLanguage);
       setError(null); // Clear previous errors
-      // Always use txt-timestamps for extraction
+      // Always use txt-timestamps for extraction (backend format)
+      // Display format is controlled by user via checkbox
       await handleExtractWithId(videoId, 'txt-timestamps', newLanguage);
+      // Keep user's display format preference (don't reset to txt-timestamps)
     }
   };
 
@@ -994,7 +1000,10 @@ export const YTTranscriptExtractor: React.FC = () => {
                            type="checkbox"
                            checked={format === 'txt-timestamps'}
                            onChange={(e) => {
-                             setFormat(e.target.checked ? 'txt-timestamps' : 'txt');
+                             const newFormat = e.target.checked ? 'txt-timestamps' : 'txt';
+                             setFormat(newFormat);
+                             // Save user preference to localStorage
+                             localStorage.setItem('transcript-display-format', newFormat);
                            }}
                            className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                          />
