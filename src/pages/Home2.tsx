@@ -24,7 +24,7 @@ import {
   Layers,
   Rocket,
   FolderOpen,
-  Compress
+  Minimize2
 } from 'lucide-react';
 
 export default function Home2() {
@@ -337,7 +337,7 @@ export default function Home2() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
                 <div className="relative">
                   <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                    <Compress className="w-8 h-8 text-white" />
+                    <Minimize2 className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     Compress
