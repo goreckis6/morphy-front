@@ -22,7 +22,9 @@ import {
   CheckCircle2,
   Sparkles,
   Layers,
-  Rocket
+  Rocket,
+  FolderOpen,
+  Compress
 } from 'lucide-react';
 
 export default function Home2() {
@@ -264,6 +266,114 @@ export default function Home2() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Main Sections - Converters, Viewers, Compress, Samples */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                Explore Our Tools
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Everything you need for file conversion, viewing, compression, and more
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Converters */}
+              <button
+                onClick={() => navigate('/converters')}
+                className="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-blue-100 hover:border-blue-300 overflow-hidden text-left"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-blue-500 to-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                    <RefreshCw className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Converters
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Convert between 300+ file formats instantly. Images, documents, ebooks, and data files.
+                  </p>
+                  <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all">
+                    <span>Explore</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </button>
+
+              {/* Viewers */}
+              <button
+                onClick={() => navigate('/viewers')}
+                className="group relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-purple-100 hover:border-purple-300 overflow-hidden text-left"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                    <Eye className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Viewers
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Preview and view files directly in your browser. No downloads needed.
+                  </p>
+                  <div className="flex items-center gap-2 text-purple-600 font-semibold group-hover:gap-3 transition-all">
+                    <span>Explore</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </button>
+
+              {/* Compress */}
+              <button
+                onClick={() => navigate('/compress')}
+                className="group relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-green-100 hover:border-green-300 overflow-hidden text-left"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                    <Compress className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Compress
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Reduce file sizes without losing quality. JPG, PNG, and PDF compression.
+                  </p>
+                  <div className="flex items-center gap-2 text-green-600 font-semibold group-hover:gap-3 transition-all">
+                    <span>Explore</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </button>
+
+              {/* Samples */}
+              <button
+                onClick={() => navigate('/samples')}
+                className="group relative bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-orange-100 hover:border-orange-300 overflow-hidden text-left"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-400 to-amber-400 rounded-full -mr-16 -mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-orange-500 to-amber-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                    <FolderOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Samples
+                  </h3>
+                  <p className="text-gray-600 mb-4 leading-relaxed">
+                    Browse sample files for all supported formats. Test before you convert.
+                  </p>
+                  <div className="flex items-center gap-2 text-orange-600 font-semibold group-hover:gap-3 transition-all">
+                    <span>Explore</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </button>
             </div>
           </div>
         </section>
