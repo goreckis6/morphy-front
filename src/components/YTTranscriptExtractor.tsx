@@ -66,7 +66,6 @@ export const YTTranscriptExtractor: React.FC = () => {
   const [downloadDialog, setDownloadDialog] = useState(false);
   const [downloadFormat, setDownloadFormat] = useState<TranscriptFormat>('txt-timestamps');
   const [availableLanguages, setAvailableLanguages] = useState<AvailableLanguage[]>([]);
-  const playerRef = useRef<any>(null);
 
   const extractVideoId = (url: string): string | null => {
     const patterns = [
@@ -358,104 +357,6 @@ export const YTTranscriptExtractor: React.FC = () => {
   };
 
 
-  // Load YouTube IFrame API for controlling the player
-  useEffect(() => {
-    // Declare global type for YouTube API
-    declare global {
-      interface Window {
-        YT: any;
-        onYouTubeIframeAPIReady: () => void;
-      }
-    }
-
-    // Only initialize API when we have videoId and transcript
-    if (!videoId || !transcript) {
-      return;
-    }
-
-    const initializePlayer = () => {
-      const iframe = document.getElementById('youtube-player') as HTMLIFrameElement;
-      if (iframe && window.YT && window.YT.Player) {
-        try {
-          // Destroy existing player if any (e.g., when video changes)
-          if (playerRef.current) {
-            try {
-              if (typeof playerRef.current.destroy === 'function') {
-                playerRef.current.destroy();
-              }
-            } catch (e) {
-              // Ignore destroy errors
-            }
-            playerRef.current = null;
-          }
-          
-          // Initialize new player on the iframe for API control
-          // Use the iframe element directly, not just the ID
-          playerRef.current = new window.YT.Player(iframe, {
-            events: {
-              onReady: (event: any) => {
-                console.log('YouTube player ready');
-              },
-              onStateChange: (event: any) => {
-                // Player state changed (playing, paused, etc.)
-                console.log('YouTube player state changed:', event.data);
-              },
-              onError: (event: any) => {
-                console.error('YouTube player error:', event.data);
-              },
-            },
-          });
-        } catch (e) {
-          console.error('Error initializing YouTube player API:', e);
-          // If initialization fails, try with just the ID
-          try {
-            playerRef.current = new window.YT.Player('youtube-player', {
-              events: {
-                onReady: (event: any) => {
-                  console.log('YouTube player ready (fallback)');
-                },
-              },
-            });
-          } catch (e2) {
-            console.error('Error initializing YouTube player API (fallback):', e2);
-          }
-        }
-      }
-    };
-
-    if (!window.YT) {
-      // Load YouTube IFrame API
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      if (firstScriptTag && firstScriptTag.parentNode) {
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      }
-
-      // Set up callback for when API is ready
-      window.onYouTubeIframeAPIReady = () => {
-        setTimeout(initializePlayer, 500);
-      };
-    } else if (window.YT.Player) {
-      // API already loaded
-      setTimeout(initializePlayer, 500);
-    }
-
-    return () => {
-      clearTimeout(checkIframeLoad);
-      // Cleanup: destroy player on unmount or video change
-      if (playerRef.current) {
-        try {
-          if (typeof playerRef.current.destroy === 'function') {
-            playerRef.current.destroy();
-          }
-        } catch (e) {
-          // Ignore destroy errors
-        }
-        playerRef.current = null;
-      }
-    };
-  }, [videoId, transcript]);
 
   const convertToFormat = (targetFormat: TranscriptFormat): string => {
     // If target format matches current format, return transcript as-is
@@ -630,62 +531,8 @@ export const YTTranscriptExtractor: React.FC = () => {
     if (!videoId) return;
     
     const timestampSeconds = Math.floor(timestamp);
-    
-    // Use YouTube IFrame API to seek to timestamp and play
-    if (playerRef.current) {
-      try {
-        // Check if player is ready and has seekTo method
-        if (typeof playerRef.current.seekTo === 'function') {
-          // Seek to timestamp (true = allowSeekAhead)
-          playerRef.current.seekTo(timestamp, true);
-          // Play the video
-          if (typeof playerRef.current.playVideo === 'function') {
-            playerRef.current.playVideo();
-          }
-          return;
-        }
-      } catch (error) {
-        console.error('Error using YouTube API:', error);
-      }
-    }
-    
-    // Fallback: update iframe src directly with timestamp
-    const iframe = document.getElementById('youtube-player') as HTMLIFrameElement;
-    if (iframe && videoId) {
-      // Try youtube-nocookie.com first (less likely to be blocked)
-      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&start=${timestampSeconds}&autoplay=1&modestbranding=1&rel=0`;
-      
-      // Re-initialize the player after src change
-      setTimeout(() => {
-        if (window.YT && window.YT.Player) {
-          try {
-            // Destroy old player instance if exists
-            if (playerRef.current) {
-              try {
-                if (typeof playerRef.current.destroy === 'function') {
-                  playerRef.current.destroy();
-                }
-              } catch (e) {
-                // Ignore destroy errors
-              }
-            }
-            // Create new player instance
-            playerRef.current = new window.YT.Player('youtube-player', {
-              events: {
-                onReady: (event: any) => {
-                  console.log('YouTube player ready after jump');
-                },
-              },
-            });
-          } catch (e) {
-            console.error('Error re-initializing player:', e);
-          }
-        }
-      }, 1000);
-    } else {
-      // If iframe doesn't exist, open YouTube in new tab with timestamp
-      window.open(`https://www.youtube.com/watch?v=${videoId}&t=${timestampSeconds}s`, '_blank');
-    }
+    // Open YouTube with timestamp in new tab since iframe is blocked
+    window.open(`https://www.youtube.com/watch?v=${videoId}&t=${timestampSeconds}s`, '_blank');
   };
 
   const filteredTranscript = transcriptData.filter(entry => 
@@ -977,17 +824,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                      <button
                        onClick={() => {
-                         // Cleanup player before resetting
-                         if (playerRef.current) {
-                           try {
-                             if (typeof playerRef.current.destroy === 'function') {
-                               playerRef.current.destroy();
-                             }
-                           } catch (e) {
-                             // Ignore destroy errors
-                           }
-                           playerRef.current = null;
-                         }
                          setTranscript(null);
                          setVideoMetadata(null);
                          setVideoUrl('');
@@ -1007,16 +843,27 @@ export const YTTranscriptExtractor: React.FC = () => {
 
                    <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
                      {videoId ? (
-                       <div className="relative w-full aspect-video bg-black rounded-lg overflow-hidden">
-                         <iframe
-                           id="youtube-player"
-                           className="w-full h-full"
-                           src={`https://www.youtube-nocookie.com/embed/${videoId}?enablejsapi=1&modestbranding=1&rel=0`}
-                           frameBorder="0"
-                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                           allowFullScreen
-                           title={videoMetadata.title}
-                         ></iframe>
+                       <div 
+                         className="relative w-full aspect-video bg-black rounded-lg overflow-hidden cursor-pointer group"
+                         onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank')}
+                       >
+                         <img
+                           src={videoMetadata.thumbnail || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                           alt={videoMetadata.title}
+                           className="w-full h-full object-cover"
+                           onError={(e) => {
+                             (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+                           }}
+                         />
+                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                           <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
+                             <Play className="w-10 h-10 text-white ml-1" fill="white" />
+                           </div>
+                         </div>
+                         <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
+                           <Youtube className="w-3 h-3" />
+                           <span>Click to watch on YouTube</span>
+                         </div>
                        </div>
                      ) : (
                        <div className="w-full aspect-video bg-gray-200 flex items-center justify-center">
@@ -1237,65 +1084,77 @@ export const YTTranscriptExtractor: React.FC = () => {
                         {transcript}
                       </div>
                      ) : transcriptData.length > 0 ? (
-                       <div className="space-y-3">
+                       <div className="space-y-4">
                          {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => {
                            const entryIndex = searchQuery 
                              ? transcriptData.findIndex(e => e.start === entry.start && e.text === entry.text)
                              : index;
                            const hasNote = notes[entry.start];
                            return (
-                             <div key={index} className="group">
-                               <div className="bg-white border border-gray-200 rounded-lg p-4 hover:border-pink-300 hover:shadow-md transition-all">
-                                 <div className="flex gap-3">
-                                   <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1 font-semibold">
+                             <div key={index} className="group relative">
+                               <div className="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-pink-400 hover:shadow-lg transition-all duration-200 cursor-pointer">
+                                 <div className="flex gap-4 items-start">
+                                   <span className="text-pink-600 font-mono text-sm flex-shrink-0 font-bold bg-pink-50 px-2 py-1 rounded">
                                      {formatTime(entry.start)}
                                    </span>
-                                   <div className="flex-1">
-                                     <p className="text-gray-800 text-sm leading-relaxed block mb-2">
+                                   <div className="flex-1 min-w-0">
+                                     <p className="text-gray-900 text-base leading-relaxed mb-3 group-hover:text-gray-700 transition-colors">
                                        {entry.text}
                                      </p>
                                      
                                      {/* Interactive buttons - show on hover */}
-                                     <div className="mt-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                     <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-y-0 translate-y-1">
                                        <button
-                                         onClick={() => handleCopyTimestampLink(entry.start)}
-                                         className="flex items-center gap-1.5 px-3 py-1.5 text-xs bg-gray-100 hover:bg-gray-200 rounded-md text-gray-700 transition-colors border border-gray-300"
-                                         title="Copy timestamp link"
+                                         onClick={(e) => {
+                                           e.stopPropagation();
+                                           handleCopyTimestampLink(entry.start);
+                                         }}
+                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition-all duration-150 border border-blue-200 hover:border-blue-300 hover:shadow-sm font-medium"
+                                         title="Copy YouTube link with timestamp"
                                        >
-                                         <LinkIcon className="w-3.5 h-3.5" />
+                                         <LinkIcon className="w-4 h-4" />
                                          <span>Copy link</span>
                                          {copiedTimestamp === entry.start && (
-                                           <CheckCircle className="w-3.5 h-3.5 text-green-600" />
+                                           <CheckCircle className="w-4 h-4 text-green-600" />
                                          )}
                                        </button>
                                        
                                        <button
-                                         onClick={() => handleCopyFragment(entry.text, entryIndex)}
-                                         className="flex items-center gap-1.5 px-3 py-1.5 text-xs bg-gray-100 hover:bg-gray-200 rounded-md text-gray-700 transition-colors border border-gray-300"
-                                         title="Copy fragment"
+                                         onClick={(e) => {
+                                           e.stopPropagation();
+                                           handleCopyFragment(entry.text, entryIndex);
+                                         }}
+                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-all duration-150 border border-gray-200 hover:border-gray-300 hover:shadow-sm font-medium"
+                                         title="Copy transcript text"
                                        >
-                                         <Copy className="w-3.5 h-3.5" />
-                                         <span>Copy</span>
+                                         <Copy className="w-4 h-4" />
+                                         <span>Copy text</span>
                                          {copiedFragment === entryIndex && (
-                                           <CheckCircle className="w-3.5 h-3.5 text-green-600" />
+                                           <CheckCircle className="w-4 h-4 text-green-600" />
                                          )}
                                        </button>
                                        
                                        <button
-                                         onClick={() => handleAddNote(entry.start)}
-                                         className="flex items-center gap-1.5 px-3 py-1.5 text-xs bg-gray-100 hover:bg-gray-200 rounded-md text-gray-700 transition-colors border border-gray-300"
-                                         title="Add note"
+                                         onClick={(e) => {
+                                           e.stopPropagation();
+                                           handleAddNote(entry.start);
+                                         }}
+                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-amber-50 hover:bg-amber-100 text-amber-700 rounded-lg transition-all duration-150 border border-amber-200 hover:border-amber-300 hover:shadow-sm font-medium"
+                                         title="Add a note to this segment"
                                        >
-                                         <Pin className="w-3.5 h-3.5" />
+                                         <Pin className="w-4 h-4" />
                                          <span>Add note</span>
                                        </button>
                                        
                                        <button
-                                         onClick={() => handleJumpTo(entry.start)}
-                                         className="flex items-center gap-1.5 px-3 py-1.5 text-xs bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors shadow-sm"
-                                         title="Jump to timestamp and play"
+                                         onClick={(e) => {
+                                           e.stopPropagation();
+                                           handleJumpTo(entry.start);
+                                         }}
+                                         className="flex items-center gap-2 px-4 py-2 text-sm bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-all duration-150 shadow-md hover:shadow-lg font-medium"
+                                         title="Jump to this timestamp in YouTube video"
                                        >
-                                         <Play className="w-3.5 h-3.5 fill-white" />
+                                         <Play className="w-4 h-4 fill-white" />
                                          <span>Jump To</span>
                                        </button>
                                      </div>
@@ -1305,12 +1164,15 @@ export const YTTranscriptExtractor: React.FC = () => {
                                
                                {/* Note display - yellow bar */}
                                {hasNote && (
-                                 <div className="mt-2 ml-14 bg-yellow-400 rounded-lg p-3 flex items-start gap-2 border border-yellow-500">
-                                   <Lightbulb className="w-4 h-4 text-gray-800 flex-shrink-0 mt-0.5" />
-                                   <p className="text-sm text-gray-900 flex-1">{hasNote}</p>
+                                 <div className="mt-3 ml-20 bg-yellow-400 rounded-lg p-4 flex items-start gap-3 border-2 border-yellow-500 shadow-md">
+                                   <Lightbulb className="w-5 h-5 text-gray-800 flex-shrink-0 mt-0.5" />
+                                   <p className="text-sm text-gray-900 flex-1 font-medium">{hasNote}</p>
                                    <button
-                                     onClick={() => handleDeleteNote(entry.start)}
-                                     className="text-gray-700 hover:text-gray-900 transition-colors"
+                                     onClick={(e) => {
+                                       e.stopPropagation();
+                                       handleDeleteNote(entry.start);
+                                     }}
+                                     className="text-gray-700 hover:text-gray-900 transition-colors p-1 hover:bg-yellow-500 rounded"
                                      title="Delete note"
                                    >
                                      <X className="w-4 h-4" />
