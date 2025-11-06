@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
+import Home2 from './pages/Home2';
 import Converters from './pages/Converters';
 import Viewers from './pages/Viewers';
 import Compress from './pages/Compress';
@@ -264,6 +265,9 @@ function App() {
       <Routes>
         {/* Strona główna */}
         <Route path="/" element={<Home />} />
+
+        {/* Redesigned Home Page */}
+        <Route path="/index2" element={<Home2 />} />
 
         {/* Konwertery — prawidłowa ścieżka */}
         <Route path="/converters" element={<Converters />} />
