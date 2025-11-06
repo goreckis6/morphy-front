@@ -68,10 +68,10 @@ export default function SampleJsonl() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free JSONL Sample Files - Download Test JSON Lines Files",
-    "url": "https://morphyimg.com/samples/sample-jsonl",
+    "url": "https://morphyhub.com/samples/sample-jsonl",
     "description": "Download free JSONL sample JSON Lines files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSONL parsing, data streaming, and big data processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleJsonl() {
         <meta property="og:title" content="Free JSONL Sample Files Download - Test JSON Lines Files | MorphyIMG" />
         <meta property="og:description" content="Download free JSONL sample JSON Lines files for testing. Multiple file sizes available for testing JSONL parsing and data streaming tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-jsonl" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-jsonl" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free JSONL Sample Files Download - Test JSON Lines Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free JSONL sample JSON Lines files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-jsonl" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-jsonl" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

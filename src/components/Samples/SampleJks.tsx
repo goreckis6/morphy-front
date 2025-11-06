@@ -68,10 +68,10 @@ export default function SampleJks() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free JKS Sample Files - Download Test Java KeyStore Files",
-    "url": "https://morphyimg.com/samples/sample-jks",
+    "url": "https://morphyhub.com/samples/sample-jks",
     "description": "Download free JKS sample Java KeyStore files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java KeyStore management, JKS parsing, and SSL certificate storage tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleJks() {
         <meta property="og:title" content="Free JKS Sample Files Download - Test Java KeyStore Files | MorphyIMG" />
         <meta property="og:description" content="Download free JKS sample Java KeyStore files for testing. Multiple file sizes available for testing Java KeyStore management and JKS parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-jks" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-jks" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free JKS Sample Files Download - Test Java KeyStore Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free JKS sample Java KeyStore files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-jks" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-jks" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

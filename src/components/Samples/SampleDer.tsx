@@ -68,10 +68,10 @@ export default function SampleDer() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free DER Sample Files - Download Test DER Certificate Files",
-    "url": "https://morphyimg.com/samples/sample-der",
+    "url": "https://morphyhub.com/samples/sample-der",
     "description": "Download free DER sample DER certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate processing and DER parsing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleDer() {
         <meta property="og:title" content="Free DER Sample Files Download - Test DER Certificate Files | MorphyIMG" />
         <meta property="og:description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available for testing SSL certificate processing and DER parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-der" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-der" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free DER Sample Files Download - Test DER Certificate Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free DER sample DER certificate files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-der" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-der" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

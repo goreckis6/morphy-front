@@ -176,7 +176,7 @@ export const TXTViewer: React.FC = () => {
         <meta property="og:title" content="Free TXT Viewer - View Text Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files with syntax highlighting and line numbers." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/txt" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/txt" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free TXT Viewer - View Text Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files." />
@@ -186,7 +186,7 @@ export const TXTViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free TXT Viewer",
             "description": "Free professional TXT viewer for viewing text files online",
-            "url": "https://morphyimg.com/viewers/txt",
+            "url": "https://morphyhub.com/viewers/txt",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

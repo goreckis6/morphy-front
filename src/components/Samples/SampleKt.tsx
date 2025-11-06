@@ -68,10 +68,10 @@ export default function SampleKt() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free KT Sample Files - Download Test Kotlin Code Files",
-    "url": "https://morphyimg.com/samples/sample-kt",
+    "url": "https://morphyhub.com/samples/sample-kt",
     "description": "Download free KT sample Kotlin code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Kotlin compilation, KT syntax checking, and Android development tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleKt() {
         <meta property="og:title" content="Free KT Sample Files Download - Test Kotlin Code Files | MorphyIMG" />
         <meta property="og:description" content="Download free KT sample Kotlin code files for testing. Multiple file sizes available for testing Kotlin compilation and KT syntax checking tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-kt" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-kt" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free KT Sample Files Download - Test Kotlin Code Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free KT sample Kotlin code files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-kt" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-kt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

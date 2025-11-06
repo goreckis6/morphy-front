@@ -68,10 +68,10 @@ export default function SampleHpp() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free HPP Sample Files - Download Test C++ Header Files",
-    "url": "https://morphyimg.com/samples/sample-hpp",
+    "url": "https://morphyhub.com/samples/sample-hpp",
     "description": "Download free HPP sample C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, header file processing, and development tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleHpp() {
         <meta property="og:title" content="Free HPP Sample Files Download - Test C++ Header Files | MorphyIMG" />
         <meta property="og:description" content="Download free HPP sample C++ header files for testing. Multiple file sizes available for testing C++ code compilation and header file processing." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-hpp" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-hpp" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free HPP Sample Files Download - Test C++ Header Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free HPP sample C++ header files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-hpp" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-hpp" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

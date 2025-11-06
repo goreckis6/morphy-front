@@ -68,10 +68,10 @@ export default function SampleH() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free H Sample Files - Download Test C/C++ Header Files",
-    "url": "https://morphyimg.com/samples/sample-h",
+    "url": "https://morphyhub.com/samples/sample-h",
     "description": "Download free H sample C/C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C/C++ code compilation, header file processing, and development tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleH() {
         <meta property="og:title" content="Free H Sample Files Download - Test C/C++ Header Files | MorphyIMG" />
         <meta property="og:description" content="Download free H sample C/C++ header files for testing. Multiple file sizes available for testing C/C++ code compilation and header file processing." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-h" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-h" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free H Sample Files Download - Test C/C++ Header Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free H sample C/C++ header files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-h" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-h" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

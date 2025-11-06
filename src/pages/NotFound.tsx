@@ -35,7 +35,7 @@ export default function NotFound() {
       <Helmet>
         <title>404 - Page Not Found - MorphyIMG</title>
         <meta name="description" content="Oops! The page you're looking for got lost in the digital void. Let's get you back on track!" />
-        <link rel="canonical" href="https://morphyimg.com/404" />
+        <link rel="canonical" href="https://morphyhub.com/404" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 overflow-hidden relative">

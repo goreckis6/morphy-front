@@ -426,7 +426,7 @@ export const PEFViewer: React.FC = () => {
         <meta property="og:title" content="Free PEF Viewer - View Pentax RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional PEF (Pentax Electronic File) viewer with high-quality rendering. Upload and preview Pentax RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/pef" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/pef" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free PEF Viewer - View Pentax RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional PEF (Pentax Electronic File) viewer with high-quality rendering. Upload and preview Pentax RAW files online." />
@@ -436,7 +436,7 @@ export const PEFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free PEF Viewer",
             "description": "Free professional PEF (Pentax Electronic File) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/pef",
+            "url": "https://morphyhub.com/viewers/pef",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

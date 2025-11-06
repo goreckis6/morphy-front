@@ -426,7 +426,7 @@ export const ARWViewer: React.FC = () => {
         <meta property="og:title" content="Free ARW Viewer - View Sony RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional ARW (Sony RAW) viewer with high-quality rendering. Upload and preview Sony RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/arw" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/arw" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free ARW Viewer - View Sony RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional ARW (Sony RAW) viewer with high-quality rendering. Upload and preview Sony RAW files online." />
@@ -436,7 +436,7 @@ export const ARWViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free ARW Viewer",
             "description": "Free professional ARW (Sony RAW) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/arw",
+            "url": "https://morphyhub.com/viewers/arw",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

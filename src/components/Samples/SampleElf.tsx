@@ -68,10 +68,10 @@ export default function SampleElf() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free ELF Sample Files - Download Test Executable and Linkable Format Files",
-    "url": "https://morphyimg.com/samples/sample-elf",
+    "url": "https://morphyhub.com/samples/sample-elf",
     "description": "Download free ELF sample Executable and Linkable Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ELF file analysis, binary parsing, and executable file processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleElf() {
         <meta property="og:title" content="Free ELF Sample Files Download - Test Executable and Linkable Format Files | MorphyIMG" />
         <meta property="og:description" content="Download free ELF sample Executable and Linkable Format files for testing. Multiple file sizes available for testing ELF file analysis and binary parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-elf" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-elf" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free ELF Sample Files Download - Test Executable and Linkable Format Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free ELF sample Executable and Linkable Format files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-elf" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-elf" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

@@ -68,10 +68,10 @@ export default function SampleDmp() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free DMP Sample Files - Download Test Memory Dump Files",
-    "url": "https://morphyimg.com/samples/sample-dmp",
+    "url": "https://morphyhub.com/samples/sample-dmp",
     "description": "Download free DMP sample memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing crash dump analysis and memory dump parsing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleDmp() {
         <meta property="og:title" content="Free DMP Sample Files Download - Test Memory Dump Files | MorphyIMG" />
         <meta property="og:description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available for testing crash dump analysis and memory dump parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-dmp" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-dmp" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free DMP Sample Files Download - Test Memory Dump Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free DMP sample memory dump files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-dmp" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-dmp" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

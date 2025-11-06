@@ -68,10 +68,10 @@ export default function SampleKey() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free KEY Sample Files - Download Test Private Key Files",
-    "url": "https://morphyimg.com/samples/sample-key",
+    "url": "https://morphyhub.com/samples/sample-key",
     "description": "Download free KEY sample private key files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate management, key parsing, and cryptographic key storage tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleKey() {
         <meta property="og:title" content="Free KEY Sample Files Download - Test Private Key Files | MorphyIMG" />
         <meta property="og:description" content="Download free KEY sample private key files for testing. Multiple file sizes available for testing SSL certificate management and key parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-key" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-key" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free KEY Sample Files Download - Test Private Key Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free KEY sample private key files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-key" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-key" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

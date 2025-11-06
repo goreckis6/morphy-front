@@ -435,7 +435,7 @@ export const X3FViewer: React.FC = () => {
         <meta property="og:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma Foveon sensor files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/x3f" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/x3f" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma RAW files online." />
@@ -445,7 +445,7 @@ export const X3FViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free X3F Viewer",
             "description": "Free professional X3F (Sigma RAW) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/x3f",
+            "url": "https://morphyhub.com/viewers/x3f",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

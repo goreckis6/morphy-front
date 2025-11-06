@@ -68,10 +68,10 @@ export default function SampleHdr() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free HDR Sample Files - Download Test High Dynamic Range Image Files",
-    "url": "https://morphyimg.com/samples/sample-hdr",
+    "url": "https://morphyhub.com/samples/sample-hdr",
     "description": "Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, tone mapping, and high dynamic range viewing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleHdr() {
         <meta property="og:title" content="Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyIMG" />
         <meta property="og:description" content="Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available for testing HDR image processing and tone mapping tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-hdr" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-hdr" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-hdr" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-hdr" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

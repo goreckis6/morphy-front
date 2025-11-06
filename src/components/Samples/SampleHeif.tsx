@@ -68,10 +68,10 @@ export default function SampleHeif() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free HEIF Sample Files - Download Test High Efficiency Image Format Files",
-    "url": "https://morphyimg.com/samples/sample-heif",
+    "url": "https://morphyhub.com/samples/sample-heif",
     "description": "Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIF image conversion, viewing, and processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleHeif() {
         <meta property="og:title" content="Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyIMG" />
         <meta property="og:description" content="Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available for testing HEIF image conversion and viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-heif" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-heif" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-heif" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-heif" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

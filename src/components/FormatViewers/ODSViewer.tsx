@@ -168,7 +168,7 @@ export const ODSViewer: React.FC = () => {
         <meta property="og:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyIMG" />
         <meta property="og:description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/ods" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/ods" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis." />
@@ -178,7 +178,7 @@ export const ODSViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free ODS Viewer",
             "description": "Free professional ODS viewer for OpenDocument spreadsheets",
-            "url": "https://morphyimg.com/viewers/ods",
+            "url": "https://morphyhub.com/viewers/ods",
             "applicationCategory": "SpreadsheetViewer",
             "operatingSystem": "Web Browser",
             "offers": {

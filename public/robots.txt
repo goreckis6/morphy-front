@@ -8,5 +8,5 @@ Disallow: /pl
 Disallow: /de
 
 # Sitemap
-Sitemap: https://morphyimg.com/sitemap.xml
+Sitemap: https://morphyhub.com/sitemap.xml
 

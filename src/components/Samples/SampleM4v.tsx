@@ -68,10 +68,10 @@ export default function SampleM4v() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free M4V Sample Files - Download Test M4V Video Files",
-    "url": "https://morphyimg.com/samples/sample-m4v",
+    "url": "https://morphyhub.com/samples/sample-m4v",
     "description": "Download free M4V sample M4V video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4V video conversion, M4V playback, and video processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleM4v() {
         <meta property="og:title" content="Free M4V Sample Files Download - Test M4V Video Files | MorphyIMG" />
         <meta property="og:description" content="Download free M4V sample M4V video files for testing. Multiple file sizes available for testing M4V video conversion and M4V playback tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-m4v" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-m4v" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free M4V Sample Files Download - Test M4V Video Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free M4V sample M4V video files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-m4v" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-m4v" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

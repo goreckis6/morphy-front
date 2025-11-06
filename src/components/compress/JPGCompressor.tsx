@@ -330,7 +330,7 @@ export const JPGCompressor: React.FC = () => {
         <title>{t('compress_jpg.meta_title')}</title>
         <meta name="description" content={t('compress_jpg.meta_description')} />
         <meta name="keywords" content={t('compress_jpg.meta_keywords')} />
-        <link rel="canonical" href="https://morphyimg.com/compress/jpg" />
+        <link rel="canonical" href="https://morphyhub.com/compress/jpg" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <Header />

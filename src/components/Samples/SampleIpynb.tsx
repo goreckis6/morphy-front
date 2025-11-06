@@ -68,10 +68,10 @@ export default function SampleIpynb() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free IPYNB Sample Files - Download Test Jupyter Notebook Files",
-    "url": "https://morphyimg.com/samples/sample-ipynb",
+    "url": "https://morphyhub.com/samples/sample-ipynb",
     "description": "Download free IPYNB sample Jupyter notebook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Jupyter notebook processing, IPYNB parsing, and data science development tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleIpynb() {
         <meta property="og:title" content="Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyIMG" />
         <meta property="og:description" content="Download free IPYNB sample Jupyter notebook files for testing. Multiple file sizes available for testing Jupyter notebook processing and IPYNB parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-ipynb" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-ipynb" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free IPYNB sample Jupyter notebook files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-ipynb" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-ipynb" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

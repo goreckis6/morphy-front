@@ -426,7 +426,7 @@ export const DCRViewer: React.FC = () => {
         <meta property="og:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview Kodak RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/dcr" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/dcr" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview Kodak RAW files online." />
@@ -436,7 +436,7 @@ export const DCRViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free DCR Viewer",
             "description": "Free professional DCR (Kodak RAW) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/dcr",
+            "url": "https://morphyhub.com/viewers/dcr",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

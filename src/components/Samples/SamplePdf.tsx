@@ -71,10 +71,10 @@ export default function SamplePdf() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free PDF Sample Files - Download Test Files",
-    "url": "https://morphyimg.com/samples/sample-pdf",
+    "url": "https://morphyhub.com/samples/sample-pdf",
     "description": "Download free PDF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing document conversion tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -90,11 +90,11 @@ export default function SamplePdf() {
         <meta property="og:title" content="Free PDF Sample Files Download - Test Files | MorphyIMG" />
         <meta property="og:description" content="Download free PDF sample files for testing. Multiple file sizes available for testing document conversion tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-pdf" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-pdf" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free PDF Sample Files Download - Test Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free PDF sample files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-pdf" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-pdf" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

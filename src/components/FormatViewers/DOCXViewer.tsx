@@ -238,7 +238,7 @@ export const DOCXViewer: React.FC = () => {
         <meta property="og:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG" />
         <meta property="og:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/docx" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/docx" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free DOCX Viewer - View Microsoft Word Documents Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional DOCX viewer for Microsoft Word documents. Upload and preview DOCX, DOC, DOCM files online with advanced document viewing tools." />
@@ -248,7 +248,7 @@ export const DOCXViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free DOCX Viewer",
             "description": "Free professional DOCX viewer for Microsoft Word documents",
-            "url": "https://morphyimg.com/viewers/docx",
+            "url": "https://morphyhub.com/viewers/docx",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

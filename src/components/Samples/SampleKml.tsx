@@ -68,10 +68,10 @@ export default function SampleKml() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free KML Sample Files - Download Test Keyhole Markup Language Files",
-    "url": "https://morphyimg.com/samples/sample-kml",
+    "url": "https://morphyhub.com/samples/sample-kml",
     "description": "Download free KML sample Keyhole Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KML parsing, geographic data processing, and Google Earth integration tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleKml() {
         <meta property="og:title" content="Free KML Sample Files Download - Test Keyhole Markup Language Files | MorphyIMG" />
         <meta property="og:description" content="Download free KML sample Keyhole Markup Language files for testing. Multiple file sizes available for testing KML parsing and geographic data processing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-kml" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-kml" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free KML Sample Files Download - Test Keyhole Markup Language Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free KML sample Keyhole Markup Language files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-kml" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-kml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

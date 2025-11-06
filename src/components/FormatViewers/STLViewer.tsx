@@ -257,20 +257,20 @@ export const STLViewer: React.FC = () => {
         <title>Free STL Viewer Online - View 3D Models & 3D Printing Files | MorphyIMG</title>
         <meta name="description" content="Free online STL viewer for 3D models and 3D printing files. Interactive 3D viewer with rotation, zoom, and pan controls. View stereolithography files instantly in your browser. No software installation or registration required. Supports ASCII and binary STL formats up to 100MB." />
         <meta name="keywords" content="free STL viewer, 3D model viewer, stereolithography viewer, 3D printing viewer, free 3D file viewer, online STL viewer, CAD viewer, STL file viewer free, 3D viewer online, free 3D model viewer, STL preview, batch STL viewer" />
-        <link rel="canonical" href="https://morphyimg.com/viewers/stl" />
+        <link rel="canonical" href="https://morphyhub.com/viewers/stl" />
         
         {/* Open Graph */}
         <meta property="og:title" content="Free STL Viewer Online - View 3D Models & 3D Printing Files | MorphyIMG" />
         <meta property="og:description" content="Free online STL viewer. Preview 3D models and 3D printing files directly in your browser with interactive 3D rendering. No installation required." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/stl" />
-        <meta property="og:image" content="https://morphyimg.com/og-stl-viewer.jpg" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/stl" />
+        <meta property="og:image" content="https://morphyhub.com/og-stl-viewer.jpg" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free STL Viewer Online - View 3D Models & 3D Printing Files" />
         <meta name="twitter:description" content="Free online STL viewer. Preview 3D models directly in your browser with interactive 3D rendering." />
-        <meta name="twitter:image" content="https://morphyimg.com/og-stl-viewer.jpg" />
+        <meta name="twitter:image" content="https://morphyhub.com/og-stl-viewer.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
@@ -279,7 +279,7 @@ export const STLViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free STL Viewer",
             "description": "Free online STL file viewer for 3D models and 3D printing files with interactive rendering",
-            "url": "https://morphyimg.com/viewers/stl",
+            "url": "https://morphyhub.com/viewers/stl",
             "applicationCategory": "UtilityApplication",
             "operatingSystem": "Any",
             "browserRequirements": "Requires WebGL",

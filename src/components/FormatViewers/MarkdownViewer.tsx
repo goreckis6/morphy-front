@@ -174,7 +174,7 @@ export const MarkdownViewer: React.FC = () => {
         <meta property="og:title" content="Free Markdown Viewer - View MD Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional Markdown viewer for viewing MD files online. Upload and preview Markdown documents with live rendering and syntax highlighting." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/md" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/md" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Markdown Viewer - View MD Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional Markdown viewer for viewing MD files online. Upload and preview Markdown documents with live rendering." />
@@ -184,7 +184,7 @@ export const MarkdownViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free Markdown Viewer",
             "description": "Free professional Markdown viewer for viewing MD files online",
-            "url": "https://morphyimg.com/viewers/md",
+            "url": "https://morphyhub.com/viewers/md",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

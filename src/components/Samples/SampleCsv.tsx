@@ -71,10 +71,10 @@ export default function SampleCsv() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free CSV Sample Files - Download Test Data Files",
-    "url": "https://morphyimg.com/samples/sample-csv",
+    "url": "https://morphyhub.com/samples/sample-csv",
     "description": "Download free CSV sample data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSV conversion, data processing, and spreadsheet tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -90,11 +90,11 @@ export default function SampleCsv() {
         <meta property="og:title" content="Free CSV Sample Files Download - Test Data Files | MorphyIMG" />
         <meta property="og:description" content="Download free CSV sample data files for testing. Multiple file sizes available for testing CSV conversion and data processing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-csv" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-csv" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free CSV Sample Files Download - Test Data Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free CSV sample data files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-csv" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-csv" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

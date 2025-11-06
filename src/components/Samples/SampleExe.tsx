@@ -68,10 +68,10 @@ export default function SampleExe() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free EXE Sample Files - Download Test Windows Executable Files",
-    "url": "https://morphyimg.com/samples/sample-exe",
+    "url": "https://morphyhub.com/samples/sample-exe",
     "description": "Download free EXE sample Windows executable files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows executable analysis, binary parsing, and application installation tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleExe() {
         <meta property="og:title" content="Free EXE Sample Files Download - Test Windows Executable Files | MorphyIMG" />
         <meta property="og:description" content="Download free EXE sample Windows executable files for testing. Multiple file sizes available for testing Windows executable analysis and binary parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-exe" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-exe" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free EXE Sample Files Download - Test Windows Executable Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free EXE sample Windows executable files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-exe" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-exe" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

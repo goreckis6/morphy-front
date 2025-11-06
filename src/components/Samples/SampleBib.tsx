@@ -68,10 +68,10 @@ export default function SampleBib() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free BIB Sample Files - Download Test Bibliography Files",
-    "url": "https://morphyimg.com/samples/sample-bib",
+    "url": "https://morphyhub.com/samples/sample-bib",
     "description": "Download free BIB sample BibTeX bibliography files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing bibliography management, citation processing, and BibTeX format tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleBib() {
         <meta property="og:title" content="Free BIB Sample Files Download - Test Bibliography Files | MorphyIMG" />
         <meta property="og:description" content="Download free BIB sample BibTeX bibliography files for testing. Multiple file sizes available for testing bibliography management and citation processing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-bib" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-bib" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free BIB Sample Files Download - Test Bibliography Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free BIB sample BibTeX bibliography files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-bib" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-bib" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

@@ -426,7 +426,7 @@ export const RAFViewer: React.FC = () => {
         <meta property="og:title" content="Free RAF Viewer - View Fujifilm RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional RAF (Fujifilm RAW) viewer with high-quality rendering. Upload and preview Fujifilm X-Trans sensor files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/raf" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/raf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free RAF Viewer - View Fujifilm RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional RAF (Fujifilm RAW) viewer with high-quality rendering. Upload and preview Fujifilm RAW files online." />
@@ -436,7 +436,7 @@ export const RAFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free RAF Viewer",
             "description": "Free professional RAF (Fujifilm RAW) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/raf",
+            "url": "https://morphyhub.com/viewers/raf",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

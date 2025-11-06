@@ -68,10 +68,10 @@ export default function SampleHtml() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free HTML Sample Files - Download Test HyperText Markup Language Files",
-    "url": "https://morphyimg.com/samples/sample-html",
+    "url": "https://morphyhub.com/samples/sample-html",
     "description": "Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HTML parsing, web development, and HTML validation tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleHtml() {
         <meta property="og:title" content="Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyIMG" />
         <meta property="og:description" content="Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available for testing HTML parsing and web development tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-html" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-html" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-html" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-html" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

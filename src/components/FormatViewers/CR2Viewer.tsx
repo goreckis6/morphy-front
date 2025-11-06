@@ -426,7 +426,7 @@ export const CR2Viewer: React.FC = () => {
         <meta property="og:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview Canon RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/cr2" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/cr2" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview Canon RAW files online." />
@@ -436,7 +436,7 @@ export const CR2Viewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free CR2 Viewer",
             "description": "Free professional CR2 (Canon RAW) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/cr2",
+            "url": "https://morphyhub.com/viewers/cr2",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

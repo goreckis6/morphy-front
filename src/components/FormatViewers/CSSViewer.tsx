@@ -169,7 +169,7 @@ export const CSSViewer: React.FC = () => {
         <meta property="og:title" content="Free CSS Viewer - View & Validate CSS Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional CSS viewer with syntax highlighting. Upload and preview CSS files online with formatted display and rule analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/css" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/css" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free CSS Viewer - View & Validate CSS Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional CSS viewer with syntax highlighting. Upload and preview CSS files online with formatted display." />
@@ -179,7 +179,7 @@ export const CSSViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free CSS Viewer",
             "description": "Free professional CSS viewer with syntax highlighting",
-            "url": "https://morphyimg.com/viewers/css",
+            "url": "https://morphyhub.com/viewers/css",
             "applicationCategory": "WebDevelopmentTool",
             "operatingSystem": "Web Browser",
             "offers": {

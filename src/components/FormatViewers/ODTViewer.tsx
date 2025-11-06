@@ -173,7 +173,7 @@ export const ODTViewer: React.FC = () => {
         <meta property="og:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/odt" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/odt" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools." />
@@ -183,7 +183,7 @@ export const ODTViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free ODT Viewer",
             "description": "Free professional ODT viewer for viewing OpenDocument Text files online",
-            "url": "https://morphyimg.com/viewers/odt",
+            "url": "https://morphyhub.com/viewers/odt",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

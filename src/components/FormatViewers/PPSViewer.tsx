@@ -259,7 +259,7 @@ export const PPSViewer: React.FC = () => {
         <meta property="og:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional PPS/PPSX (PowerPoint Slide Show) viewer. Upload and preview Microsoft PowerPoint slide show files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/pps" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/pps" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free PPS/PPSX Viewer - View PowerPoint Slide Show Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional PPS/PPSX viewer. Upload and preview PowerPoint Slide Show files online." />
@@ -269,7 +269,7 @@ export const PPSViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free PPS/PPSX Viewer",
             "description": "Free professional PPS/PPSX (PowerPoint Slide Show) viewer",
-            "url": "https://morphyimg.com/viewers/pps",
+            "url": "https://morphyhub.com/viewers/pps",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

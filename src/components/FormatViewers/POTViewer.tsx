@@ -259,7 +259,7 @@ export const POTViewer: React.FC = () => {
         <meta property="og:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional POT (PowerPoint Template) viewer. Upload and preview Microsoft PowerPoint template files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/pot" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/pot" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional POT viewer. Upload and preview PowerPoint Template files online." />
@@ -269,7 +269,7 @@ export const POTViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free POT Viewer",
             "description": "Free professional POT (PowerPoint Template) viewer",
-            "url": "https://morphyimg.com/viewers/pot",
+            "url": "https://morphyhub.com/viewers/pot",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

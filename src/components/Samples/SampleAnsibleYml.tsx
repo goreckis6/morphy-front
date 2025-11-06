@@ -68,10 +68,10 @@ export default function SampleAnsibleYml() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Ansible YML Sample Files - Download Test Configuration Files",
-    "url": "https://morphyimg.com/samples/sample-ansible-yml",
+    "url": "https://morphyhub.com/samples/sample-ansible-yml",
     "description": "Download free Ansible YML sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing YAML parsing, configuration management, and Ansible automation tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleAnsibleYml() {
         <meta property="og:title" content="Free Ansible YML Sample Files Download - Test Configuration Files | MorphyIMG" />
         <meta property="og:description" content="Download free Ansible YML sample configuration files for testing. Multiple file sizes available for testing YAML parsing and configuration management tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-ansible-yml" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-ansible-yml" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free Ansible YML Sample Files Download - Test Configuration Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free Ansible YML sample configuration files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-ansible-yml" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-ansible-yml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

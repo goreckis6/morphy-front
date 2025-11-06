@@ -181,7 +181,7 @@ export const PDFViewer: React.FC = () => {
         <meta property="og:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
         <meta property="og:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/pdf" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/pdf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free PDF Viewer - View PDF Documents Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
@@ -191,7 +191,7 @@ export const PDFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free PDF Viewer",
             "description": "Free professional PDF viewer for viewing PDF documents online",
-            "url": "https://morphyimg.com/viewers/pdf",
+            "url": "https://morphyhub.com/viewers/pdf",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

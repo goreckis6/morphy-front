@@ -68,10 +68,10 @@ export default function SampleMakefile() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Makefile Sample Files - Download Test Makefile Build Configuration Files",
-    "url": "https://morphyimg.com/samples/sample-makefile",
+    "url": "https://morphyhub.com/samples/sample-makefile",
     "description": "Download free Makefile sample build configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Makefile parsing, build system automation, and software compilation tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleMakefile() {
         <meta property="og:title" content="Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyIMG" />
         <meta property="og:description" content="Download free Makefile sample build configuration files for testing. Multiple file sizes available for testing Makefile parsing and build system automation tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-makefile" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-makefile" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free Makefile sample build configuration files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-makefile" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-makefile" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

@@ -68,10 +68,10 @@ export default function SampleApiResponseJson() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free API Response JSON Sample Files - Download Test JSON Files",
-    "url": "https://morphyimg.com/samples/sample-api-response-json",
+    "url": "https://morphyhub.com/samples/sample-api-response-json",
     "description": "Download free API response JSON sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsing, API response handling, and data processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleApiResponseJson() {
         <meta property="og:title" content="Free API Response JSON Sample Files Download - Test JSON Files | MorphyIMG" />
         <meta property="og:description" content="Download free API response JSON sample files for testing. Multiple file sizes available for testing JSON parsing and API response handling tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-api-response-json" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-api-response-json" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free API Response JSON Sample Files Download - Test JSON Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free API response JSON sample files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-api-response-json" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-api-response-json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

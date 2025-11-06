@@ -68,10 +68,10 @@ export default function SampleCrx() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free CRX Sample Files - Download Test Chrome Extension Files",
-    "url": "https://morphyimg.com/samples/sample-crx",
+    "url": "https://morphyhub.com/samples/sample-crx",
     "description": "Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleCrx() {
         <meta property="og:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyIMG" />
         <meta property="og:description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available for testing Chrome extension installation and CRX analysis tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-crx" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-crx" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-crx" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-crx" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

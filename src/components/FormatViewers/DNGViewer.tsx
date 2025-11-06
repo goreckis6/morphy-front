@@ -426,7 +426,7 @@ export const DNGViewer: React.FC = () => {
         <meta property="og:title" content="Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional DNG (Digital Negative) viewer with high-quality rendering. Upload and preview Adobe universal RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/dng" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/dng" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free DNG Viewer - View Adobe Digital Negative RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional DNG (Digital Negative) viewer with high-quality rendering. Upload and preview Adobe DNG RAW files online." />
@@ -436,7 +436,7 @@ export const DNGViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free DNG Viewer",
             "description": "Free professional DNG (Digital Negative) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/dng",
+            "url": "https://morphyhub.com/viewers/dng",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

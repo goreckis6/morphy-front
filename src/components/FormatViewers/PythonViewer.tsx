@@ -182,7 +182,7 @@ export const PythonViewer: React.FC = () => {
         <meta property="og:title" content="Free Python Viewer - View Python Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional Python viewer with syntax highlighting. Upload and preview Python files online with formatted display and code analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/python" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/python" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Python Viewer - View Python Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional Python viewer with syntax highlighting. Upload and preview Python files online with formatted display." />
@@ -192,7 +192,7 @@ export const PythonViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free Python Viewer",
             "description": "Free professional Python viewer with syntax highlighting",
-            "url": "https://morphyimg.com/viewers/python",
+            "url": "https://morphyhub.com/viewers/python",
             "applicationCategory": "DeveloperTool",
             "operatingSystem": "Web Browser",
             "offers": {

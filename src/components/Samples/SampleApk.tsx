@@ -68,10 +68,10 @@ export default function SampleApk() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free APK Sample Files - Download Test Android Application Files",
-    "url": "https://morphyimg.com/samples/sample-apk",
+    "url": "https://morphyhub.com/samples/sample-apk",
     "description": "Download free APK sample Android application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Android app installation, APK analysis, and mobile application processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleApk() {
         <meta property="og:title" content="Free APK Sample Files Download - Test Android Application Files | MorphyIMG" />
         <meta property="og:description" content="Download free APK sample Android application package files for testing. Multiple file sizes available for testing Android app installation and APK analysis tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-apk" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-apk" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free APK Sample Files Download - Test Android Application Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free APK sample Android application package files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-apk" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-apk" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

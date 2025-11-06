@@ -330,7 +330,7 @@ export const PNGCompressor: React.FC = () => {
         <title>{t('compress_png.meta_title')}</title>
         <meta name="description" content={t('compress_png.meta_description')} />
         <meta name="keywords" content={t('compress_png.meta_keywords')} />
-        <link rel="canonical" href="https://morphyimg.com/compress/png" />
+        <link rel="canonical" href="https://morphyhub.com/compress/png" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <Header />

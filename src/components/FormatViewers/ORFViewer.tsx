@@ -426,7 +426,7 @@ export const ORFViewer: React.FC = () => {
         <meta property="og:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview Olympus RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/orf" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/orf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview Olympus RAW files online." />
@@ -436,7 +436,7 @@ export const ORFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free ORF Viewer",
             "description": "Free professional ORF (Olympus RAW) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/orf",
+            "url": "https://morphyhub.com/viewers/orf",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

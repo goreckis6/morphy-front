@@ -68,10 +68,10 @@ export default function SampleLua() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free LUA Sample Files - Download Test Lua Script Files",
-    "url": "https://morphyimg.com/samples/sample-lua",
+    "url": "https://morphyhub.com/samples/sample-lua",
     "description": "Download free LUA sample Lua script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Lua script execution, LUA syntax checking, and embedded scripting tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleLua() {
         <meta property="og:title" content="Free LUA Sample Files Download - Test Lua Script Files | MorphyIMG" />
         <meta property="og:description" content="Download free LUA sample Lua script files for testing. Multiple file sizes available for testing Lua script execution and LUA syntax checking tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-lua" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-lua" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free LUA Sample Files Download - Test Lua Script Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free LUA sample Lua script files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-lua" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-lua" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

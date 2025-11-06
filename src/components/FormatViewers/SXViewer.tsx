@@ -259,7 +259,7 @@ export const SXViewer: React.FC = () => {
         <meta property="og:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional SX (Stat Studio Program) viewer. Upload and preview statistical program files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/sx" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/sx" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional SX viewer. Upload and preview Stat Studio Program files online." />
@@ -269,7 +269,7 @@ export const SXViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free SX Viewer",
             "description": "Free professional SX (Stat Studio Program) viewer",
-            "url": "https://morphyimg.com/viewers/sx",
+            "url": "https://morphyhub.com/viewers/sx",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

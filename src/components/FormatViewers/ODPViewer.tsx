@@ -259,7 +259,7 @@ export const ODPViewer: React.FC = () => {
         <meta property="og:title" content="Free ODP Viewer - View OpenDocument Presentation Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional ODP (OpenDocument Presentation) viewer. Upload and preview LibreOffice Impress presentation files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/odp" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/odp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free ODP Viewer - View OpenDocument Presentation Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional ODP viewer. Upload and preview OpenDocument Presentation files online." />
@@ -269,7 +269,7 @@ export const ODPViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free ODP Viewer",
             "description": "Free professional ODP (OpenDocument Presentation) viewer",
-            "url": "https://morphyimg.com/viewers/odp",
+            "url": "https://morphyhub.com/viewers/odp",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

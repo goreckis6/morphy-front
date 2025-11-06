@@ -7,13 +7,13 @@ export default function Compress() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Online File Compressor",
-    "url": "https://morphyimg.com/compress",
+    "url": "https://morphyhub.com/compress",
     "description": "Compress images, PDFs, videos, and more directly in your browser with MorphyIMG. Reduce file size while keeping great quality — fast and secure.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" },
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://morphyimg.com/compress"
+      "@id": "https://morphyhub.com/compress"
     }
   };
 
@@ -26,7 +26,7 @@ export default function Compress() {
           content="Compress images, PDFs, videos, and documents online. MorphyIMG makes your files smaller and faster to share — without losing quality."
         />
         <meta name="keywords" content="file compressor, online compressor, image compression, compress jpg, compress images, reduce file size, batch compression, free compressor, video compression" />
-        <link rel="canonical" href="https://morphyimg.com/compress" />
+        <link rel="canonical" href="https://morphyhub.com/compress" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

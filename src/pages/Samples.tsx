@@ -7,13 +7,13 @@ export default function Samples() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Sample Files for Download and Testing",
-    "url": "https://morphyimg.com/samples",
+    "url": "https://morphyhub.com/samples",
     "description": "Download free sample files of various types — images, documents, audio, video, and archives. Use them for testing, demos, or software validation on any platform.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" },
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://morphyimg.com/samples"
+      "@id": "https://morphyhub.com/samples"
     }
   };
 
@@ -26,7 +26,7 @@ export default function Samples() {
           content="Get free sample images, documents, and archives to test MorphyIMG converters, compressors, and viewers."
         />
         <meta name="keywords" content="sample files, test files, download samples, free test files, DOCX samples, file samples, test files for conversion" />
-        <link rel="canonical" href="https://morphyimg.com/samples" />
+        <link rel="canonical" href="https://morphyhub.com/samples" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

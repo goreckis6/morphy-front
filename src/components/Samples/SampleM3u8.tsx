@@ -68,10 +68,10 @@ export default function SampleM3u8() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free M3U8 Sample Files - Download Test M3U8 HLS Playlist Files",
-    "url": "https://morphyimg.com/samples/sample-m3u8",
+    "url": "https://morphyhub.com/samples/sample-m3u8",
     "description": "Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U8 playlist parsing, HLS streaming, and video player compatibility tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleM3u8() {
         <meta property="og:title" content="Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyIMG" />
         <meta property="og:description" content="Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available for testing M3U8 playlist parsing and HLS streaming tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-m3u8" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-m3u8" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-m3u8" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-m3u8" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

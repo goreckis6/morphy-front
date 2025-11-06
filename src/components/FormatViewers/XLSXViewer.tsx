@@ -168,7 +168,7 @@ export const XLSXViewer: React.FC = () => {
         <meta property="og:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | MorphyIMG" />
         <meta property="og:description" content="Free professional Excel viewer for spreadsheets. Upload and preview XLSX, XLS, XLSM, ODS files online with table formatting and data analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/xlsx" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/xlsx" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free Excel Viewer - View XLSX, XLS & Spreadsheets Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional Excel viewer for spreadsheets. Upload and preview XLSX, XLS, XLSM, ODS files online with table formatting and data analysis." />
@@ -178,7 +178,7 @@ export const XLSXViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free Excel Viewer",
             "description": "Free professional Excel viewer for spreadsheets",
-            "url": "https://morphyimg.com/viewers/xlsx",
+            "url": "https://morphyhub.com/viewers/xlsx",
             "applicationCategory": "SpreadsheetViewer",
             "operatingSystem": "Web Browser",
             "offers": {

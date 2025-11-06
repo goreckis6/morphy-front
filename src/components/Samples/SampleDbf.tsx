@@ -68,10 +68,10 @@ export default function SampleDbf() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free DBF Sample Files - Download Test dBASE Database Files",
-    "url": "https://morphyimg.com/samples/sample-dbf",
+    "url": "https://morphyhub.com/samples/sample-dbf",
     "description": "Download free DBF sample dBASE database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion and DBF parsing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleDbf() {
         <meta property="og:title" content="Free DBF Sample Files Download - Test dBASE Database Files | MorphyIMG" />
         <meta property="og:description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available for testing database conversion and DBF parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-dbf" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-dbf" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free DBF Sample Files Download - Test dBASE Database Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free DBF sample dBASE database files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-dbf" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-dbf" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

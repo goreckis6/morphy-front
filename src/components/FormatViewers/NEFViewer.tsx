@@ -183,7 +183,7 @@ export const NEFViewer: React.FC = () => {
         <meta property="og:title" content="Free NEF Viewer - View Nikon RAW Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional NEF (Nikon RAW) viewer with high-quality rendering. Upload and preview Nikon RAW files online with EXIF metadata." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/nef" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/nef" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free NEF Viewer - View Nikon RAW Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional NEF (Nikon RAW) viewer with high-quality rendering. Upload and preview Nikon RAW files online." />
@@ -193,7 +193,7 @@ export const NEFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free NEF Viewer",
             "description": "Free professional NEF (Nikon RAW) viewer with high-quality rendering",
-            "url": "https://morphyimg.com/viewers/nef",
+            "url": "https://morphyhub.com/viewers/nef",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
             "offers": {

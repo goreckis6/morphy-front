@@ -169,7 +169,7 @@ export const JSViewer: React.FC = () => {
         <meta property="og:title" content="Free JavaScript Viewer - View JS Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional JavaScript viewer with syntax highlighting. Upload and preview JS files online with formatted display and code analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/js" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/js" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free JavaScript Viewer - View JS Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional JavaScript viewer with syntax highlighting. Upload and preview JS files online with formatted display." />
@@ -179,7 +179,7 @@ export const JSViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free JavaScript Viewer",
             "description": "Free professional JavaScript viewer with syntax highlighting",
-            "url": "https://morphyimg.com/viewers/js",
+            "url": "https://morphyhub.com/viewers/js",
             "applicationCategory": "DeveloperTool",
             "operatingSystem": "Web Browser",
             "offers": {

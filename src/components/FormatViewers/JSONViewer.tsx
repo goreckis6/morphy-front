@@ -182,7 +182,7 @@ export const JSONViewer: React.FC = () => {
         <meta property="og:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display and error detection." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/json" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/json" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display." />
@@ -192,7 +192,7 @@ export const JSONViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free JSON Viewer",
             "description": "Free professional JSON viewer with syntax highlighting",
-            "url": "https://morphyimg.com/viewers/json",
+            "url": "https://morphyhub.com/viewers/json",
             "applicationCategory": "DataViewer",
             "operatingSystem": "Web Browser",
             "offers": {

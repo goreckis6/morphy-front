@@ -7,10 +7,10 @@ export default function Viewers() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free Online File Viewers - View Files Online in Browser",
-    "url": "https://morphyimg.com/viewers",
+    "url": "https://morphyhub.com/viewers",
     "description": "View and preview files directly in your browser. Support for images, documents, spreadsheets, and more. No download required.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   return (
@@ -19,7 +19,7 @@ export default function Viewers() {
         <title>Free Online File Viewers - MorphyIMG | View Files in Browser</title>
         <meta name="description" content="View and preview files directly in your browser. Support for images, documents, spreadsheets, and more. No download required." />
         <meta name="keywords" content="file viewer, online viewer, image viewer, document viewer, pdf viewer, excel viewer, free viewer" />
-        <link rel="canonical" href="https://morphyimg.com/viewers" />
+        <link rel="canonical" href="https://morphyhub.com/viewers" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

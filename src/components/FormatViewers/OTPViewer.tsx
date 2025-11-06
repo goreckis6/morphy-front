@@ -259,7 +259,7 @@ export const OTPViewer: React.FC = () => {
         <meta property="og:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional OTP (OpenDocument Presentation Template) viewer. Upload and preview LibreOffice Impress template files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/otp" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/otp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional OTP viewer. Upload and preview OpenDocument Presentation Template files online." />
@@ -269,7 +269,7 @@ export const OTPViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free OTP Viewer",
             "description": "Free professional OTP (OpenDocument Presentation Template) viewer",
-            "url": "https://morphyimg.com/viewers/otp",
+            "url": "https://morphyhub.com/viewers/otp",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

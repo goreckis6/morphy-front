@@ -68,10 +68,10 @@ export default function SampleIntelhex() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free IntelHex Sample Files - Download Test Intel Hexadecimal Files",
-    "url": "https://morphyimg.com/samples/sample-intelhex",
+    "url": "https://morphyhub.com/samples/sample-intelhex",
     "description": "Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing firmware programming, IntelHex parsing, and embedded systems development tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleIntelhex() {
         <meta property="og:title" content="Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyIMG" />
         <meta property="og:description" content="Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available for testing firmware programming and IntelHex parsing tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-intelhex" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-intelhex" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-intelhex" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-intelhex" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

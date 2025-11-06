@@ -173,7 +173,7 @@ export const RTFViewer: React.FC = () => {
         <meta property="og:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyIMG" />
         <meta property="og:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/rtf" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/rtf" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
@@ -183,7 +183,7 @@ export const RTFViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free RTF Viewer",
             "description": "Free professional RTF viewer for viewing Rich Text Format documents online",
-            "url": "https://morphyimg.com/viewers/rtf",
+            "url": "https://morphyhub.com/viewers/rtf",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

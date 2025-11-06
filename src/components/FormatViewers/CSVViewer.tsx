@@ -168,7 +168,7 @@ export const CSVViewer: React.FC = () => {
         <meta property="og:title" content="Free CSV Viewer - View CSV & TSV Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional CSV viewer for data files. Upload and preview CSV, TSV files online with table formatting and data analysis." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/csv" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/csv" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free CSV Viewer - View CSV & TSV Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional CSV viewer for data files. Upload and preview CSV, TSV files online with table formatting and data analysis." />
@@ -178,7 +178,7 @@ export const CSVViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free CSV Viewer",
             "description": "Free professional CSV viewer for data files",
-            "url": "https://morphyimg.com/viewers/csv",
+            "url": "https://morphyhub.com/viewers/csv",
             "applicationCategory": "DataViewer",
             "operatingSystem": "Web Browser",
             "offers": {

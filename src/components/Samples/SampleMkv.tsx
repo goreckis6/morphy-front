@@ -68,10 +68,10 @@ export default function SampleMkv() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free MKV Sample Files - Download Test Matroska Video Files",
-    "url": "https://morphyimg.com/samples/sample-mkv",
+    "url": "https://morphyhub.com/samples/sample-mkv",
     "description": "Download free MKV sample Matroska video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MKV video conversion, MKV playback, and video processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleMkv() {
         <meta property="og:title" content="Free MKV Sample Files Download - Test Matroska Video Files | MorphyIMG" />
         <meta property="og:description" content="Download free MKV sample Matroska video files for testing. Multiple file sizes available for testing MKV video conversion and MKV playback tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-mkv" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-mkv" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free MKV Sample Files Download - Test Matroska Video Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free MKV sample Matroska video files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-mkv" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-mkv" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

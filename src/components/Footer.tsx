@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
           </p>
           
           <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-            <span>© 2025 MorphyIMG. Built with</span>
+            <span>© 2025 MorphyHub Built with</span>
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
             <span>by developers who care about quality.</span>
           </div>

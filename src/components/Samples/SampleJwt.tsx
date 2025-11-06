@@ -68,10 +68,10 @@ export default function SampleJwt() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free JWT Sample Files - Download Test JSON Web Token Files",
-    "url": "https://morphyimg.com/samples/sample-jwt",
+    "url": "https://morphyhub.com/samples/sample-jwt",
     "description": "Download free JWT sample JSON Web Token files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JWT token parsing, authentication, and API security tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleJwt() {
         <meta property="og:title" content="Free JWT Sample Files Download - Test JSON Web Token Files | MorphyIMG" />
         <meta property="og:description" content="Download free JWT sample JSON Web Token files for testing. Multiple file sizes available for testing JWT token parsing and authentication tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-jwt" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-jwt" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free JWT Sample Files Download - Test JSON Web Token Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free JWT sample JSON Web Token files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-jwt" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-jwt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

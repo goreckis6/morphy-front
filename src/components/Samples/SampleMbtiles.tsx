@@ -68,10 +68,10 @@ export default function SampleMbtiles() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free MBTiles Sample Files - Download Test MBTiles Map Database Files",
-    "url": "https://morphyimg.com/samples/sample-mbtiles",
+    "url": "https://morphyhub.com/samples/sample-mbtiles",
     "description": "Download free MBTiles sample map database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MBTiles parsing, map tile extraction, and geographic data processing tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleMbtiles() {
         <meta property="og:title" content="Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyIMG" />
         <meta property="og:description" content="Download free MBTiles sample map database files for testing. Multiple file sizes available for testing MBTiles parsing and map tile extraction tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-mbtiles" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-mbtiles" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free MBTiles sample map database files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-mbtiles" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-mbtiles" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

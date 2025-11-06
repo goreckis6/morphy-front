@@ -259,7 +259,7 @@ export const SDDViewer: React.FC = () => {
         <meta property="og:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional SDD (StarOffice Presentation) viewer. Upload and preview legacy StarOffice presentation files online." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/sdd" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/sdd" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional SDD viewer. Upload and preview StarOffice Presentation files online." />
@@ -269,7 +269,7 @@ export const SDDViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free SDD Viewer",
             "description": "Free professional SDD (StarOffice Presentation) viewer",
-            "url": "https://morphyimg.com/viewers/sdd",
+            "url": "https://morphyhub.com/viewers/sdd",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
             "offers": {

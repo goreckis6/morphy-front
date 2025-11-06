@@ -68,10 +68,10 @@ export default function SampleLog() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Free LOG Sample Files - Download Test Log Files",
-    "url": "https://morphyimg.com/samples/sample-log",
+    "url": "https://morphyhub.com/samples/sample-log",
     "description": "Download free LOG sample log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing log parsing, log analysis, and system monitoring tools.",
-    "isPartOf": { "@id": "https://morphyimg.com#website" },
-    "publisher": { "@id": "https://morphyimg.com#organization" }
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
@@ -87,11 +87,11 @@ export default function SampleLog() {
         <meta property="og:title" content="Free LOG Sample Files Download - Test Log Files | MorphyIMG" />
         <meta property="og:description" content="Download free LOG sample log files for testing. Multiple file sizes available for testing log parsing and log analysis tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/samples/sample-log" />
+        <meta property="og:url" content="https://morphyhub.com/samples/sample-log" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Free LOG Sample Files Download - Test Log Files | MorphyIMG" />
         <meta name="twitter:description" content="Download free LOG sample log files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyimg.com/samples/sample-log" />
+        <link rel="canonical" href="https://morphyhub.com/samples/sample-log" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}

@@ -169,7 +169,7 @@ export const HTMLViewer: React.FC = () => {
         <meta property="og:title" content="Free HTML Viewer - View & Validate HTML Files Online | MorphyIMG" />
         <meta property="og:description" content="Free professional HTML viewer with syntax highlighting and validation. Upload and preview HTML files online with formatted display and error detection." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyimg.com/viewers/html" />
+        <meta property="og:url" content="https://morphyhub.com/viewers/html" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free HTML Viewer - View & Validate HTML Files Online | MorphyIMG" />
         <meta name="twitter:description" content="Free professional HTML viewer with syntax highlighting and validation. Upload and preview HTML files online with formatted display." />
@@ -179,7 +179,7 @@ export const HTMLViewer: React.FC = () => {
             "@type": "WebApplication",
             "name": "Free HTML Viewer",
             "description": "Free professional HTML viewer with syntax highlighting",
-            "url": "https://morphyimg.com/viewers/html",
+            "url": "https://morphyhub.com/viewers/html",
             "applicationCategory": "WebDevelopmentTool",
             "operatingSystem": "Web Browser",
             "offers": {

@@ -60,28 +60,28 @@ export default function Home() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://morphyimg.com#organization",
+        "@id": "https://morphyhub.com#organization",
         "name": "MorphyIMG",
-        "url": "https://morphyimg.com",
-        "logo": "https://morphyimg.com/logo.png",
+        "url": "https://morphyhub.com",
+        "logo": "https://morphyhub.com/logo.png",
         "sameAs": []
       },
       {
         "@type": "WebSite",
-        "@id": "https://morphyimg.com#website",
-        "url": "https://morphyimg.com",
+        "@id": "https://morphyhub.com#website",
+        "url": "https://morphyhub.com",
         "name": "MorphyIMG - Free Online File Converter",
         "description": "Convert files between 300+ formats instantly. Fast, secure, and free file conversion service.",
-        "publisher": { "@id": "https://morphyimg.com#organization" }
+        "publisher": { "@id": "https://morphyhub.com#organization" }
       },
       {
         "@type": "WebPage",
-        "@id": "https://morphyimg.com#webpage",
-        "url": "https://morphyimg.com",
+        "@id": "https://morphyhub.com#webpage",
+        "url": "https://morphyhub.com",
         "name": "Free Online File Converter - MorphyIMG",
         "description": "Convert any file format instantly. Support for 300+ formats including images, documents, ebooks, and data files.",
-        "isPartOf": { "@id": "https://morphyimg.com#website" },
-        "publisher": { "@id": "https://morphyimg.com#organization" }
+        "isPartOf": { "@id": "https://morphyhub.com#website" },
+        "publisher": { "@id": "https://morphyhub.com#organization" }
       }
     ]
   };
@@ -107,7 +107,7 @@ export default function Home() {
         <title>Free Online File Converter - MorphyIMG | Convert 300+ Formats Instantly</title>
         <meta name="description" content="Convert files between 300+ formats instantly. Fast, secure, and free file conversion service. Support for images, documents, ebooks, and data files." />
         <meta name="keywords" content="file converter, online converter, image converter, document converter, ebook converter, batch conversion, free converter" />
-        <link rel="canonical" href="https://morphyimg.com" />
+        <link rel="canonical" href="https://morphyhub.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
