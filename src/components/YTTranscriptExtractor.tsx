@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical, Globe, Users, BookOpen, Code, FileCode, Sparkles } from 'lucide-react';
+import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical, Globe, Users, BookOpen, Code, FileCode, Sparkles, Pin, X } from 'lucide-react';
 import { API_BASE_URL } from '../services/api';
 
 type TranscriptFormat = 'txt' | 'txt-timestamps' | 'json' | 'srt' | 'vtt';
@@ -51,13 +51,11 @@ export const YTTranscriptExtractor: React.FC = () => {
   const transcriptRef = useRef<HTMLDivElement>(null);
   const [wordCount, setWordCount] = useState(0);
   const [charCount, setCharCount] = useState(0);
-
-  // Update URL when video ID changes
-  const updateUrl = (id: string) => {
-    const url = new URL(window.location.href);
-    url.searchParams.set('video_id', id);
-    window.history.pushState({}, '', url.toString());
-  };
+  const [notes, setNotes] = useState<{ [key: number]: string }>({});
+  const [noteDialog, setNoteDialog] = useState<{ open: boolean; timestamp: number; text: string }>({ open: false, timestamp: 0, text: '' });
+  const [copiedTimestamp, setCopiedTimestamp] = useState<number | null>(null);
+  const [copiedFragment, setCopiedFragment] = useState<number | null>(null);
+  const playerRef = useRef<any>(null);
 
   const extractVideoId = (url: string): string | null => {
     const patterns = [
@@ -225,9 +223,6 @@ export const YTTranscriptExtractor: React.FC = () => {
     setVideoId(id);
     setIsExtracting(true);
 
-    // Update URL with video ID
-    updateUrl(id);
-
     // Fetch metadata if not already loaded
     if (!videoMetadata || videoMetadata.title === `Video ${id}`) {
       await fetchVideoMetadata(id);
@@ -249,7 +244,12 @@ export const YTTranscriptExtractor: React.FC = () => {
       const data: TranscriptResult = await response.json();
 
       if (!response.ok || !data.success) {
-        throw new Error(data.error || 'Failed to extract transcript');
+        const errorMsg = data.error || 'Failed to extract transcript';
+        // Check if it's a "no transcript available" error
+        if (errorMsg.includes('No transcript available') || errorMsg.includes('No transcript found')) {
+          throw new Error('No transcript available for this video. The video may not have captions enabled, or transcripts may not be available in the selected language.');
+        }
+        throw new Error(errorMsg);
       }
 
       setTranscript(data.content);
@@ -318,18 +318,74 @@ export const YTTranscriptExtractor: React.FC = () => {
     }
   };
 
-  // Read video_id from URL on mount
+  // Load YouTube IFrame API and initialize player
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const urlVideoId = params.get('video_id');
-    if (urlVideoId && urlVideoId.length === 11 && !videoId) {
-      setVideoId(urlVideoId);
-      setVideoUrl(`https://www.youtube.com/watch?v=${urlVideoId}`);
-      // Auto-extract if video ID is in URL
-      handleExtractWithId(urlVideoId, format, language);
+    const initializePlayer = () => {
+      if (videoId && window.YT && window.YT.Player) {
+        // Destroy existing player if any
+        if (playerRef.current) {
+          try {
+            playerRef.current.destroy();
+          } catch (e) {
+            // Ignore destroy errors
+          }
+          playerRef.current = null;
+        }
+        
+        // Small delay to ensure DOM element exists
+        setTimeout(() => {
+          const playerElement = document.getElementById('youtube-player');
+          if (playerElement && window.YT && window.YT.Player) {
+            try {
+              playerRef.current = new window.YT.Player('youtube-player', {
+                videoId: videoId,
+                playerVars: {
+                  autoplay: 0,
+                  controls: 1,
+                  rel: 0,
+                  modestbranding: 1,
+                },
+                events: {
+                  onReady: (event: any) => {
+                    // Player is ready
+                  },
+                },
+              });
+            } catch (e) {
+              console.error('Error creating YouTube player:', e);
+            }
+          }
+        }, 100);
+      }
+    };
+
+    if (!window.YT) {
+      // Load YouTube IFrame API
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+
+      // Set up callback for when API is ready
+      window.onYouTubeIframeAPIReady = () => {
+        initializePlayer();
+      };
+    } else if (window.YT.Player) {
+      // API already loaded
+      initializePlayer();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+    return () => {
+      if (playerRef.current) {
+        try {
+          playerRef.current.destroy();
+        } catch (e) {
+          // Ignore destroy errors
+        }
+        playerRef.current = null;
+      }
+    };
+  }, [videoId]);
 
   const handleDownload = () => {
     if (!transcript) return;
@@ -394,6 +450,54 @@ export const YTTranscriptExtractor: React.FC = () => {
       return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     }
     return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
+
+
+  const handleCopyTimestampLink = (timestamp: number) => {
+    const url = `https://www.youtube.com/watch?v=${videoId}&t=${Math.floor(timestamp)}s`;
+    navigator.clipboard.writeText(url).then(() => {
+      setCopiedTimestamp(timestamp);
+      setTimeout(() => setCopiedTimestamp(null), 2000);
+    });
+  };
+
+  const handleCopyFragment = (text: string, index: number) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopiedFragment(index);
+      setTimeout(() => setCopiedFragment(null), 2000);
+    });
+  };
+
+  const handleAddNote = (timestamp: number) => {
+    setNoteDialog({
+      open: true,
+      timestamp: timestamp,
+      text: notes[timestamp] || ''
+    });
+  };
+
+  const handleSaveNote = () => {
+    if (noteDialog.text.trim()) {
+      setNotes({ ...notes, [noteDialog.timestamp]: noteDialog.text });
+    } else {
+      const newNotes = { ...notes };
+      delete newNotes[noteDialog.timestamp];
+      setNotes(newNotes);
+    }
+    setNoteDialog({ open: false, timestamp: 0, text: '' });
+  };
+
+  const handleDeleteNote = (timestamp: number) => {
+    const newNotes = { ...notes };
+    delete newNotes[timestamp];
+    setNotes(newNotes);
+  };
+
+  const handleJumpTo = (timestamp: number) => {
+    if (playerRef.current && playerRef.current.seekTo) {
+      playerRef.current.seekTo(timestamp, true);
+      playerRef.current.playVideo();
+    }
   };
 
   const filteredTranscript = transcriptData.filter(entry => 
@@ -679,10 +783,15 @@ export const YTTranscriptExtractor: React.FC = () => {
                         setVideoMetadata(null);
                         setVideoUrl('');
                         setVideoId('');
-                        // Clear URL parameter
-                        const url = new URL(window.location.href);
-                        url.searchParams.delete('video_id');
-                        window.history.pushState({}, '', url.toString());
+                        setNotes({});
+                        if (playerRef.current) {
+                          try {
+                            playerRef.current.destroy();
+                          } catch (e) {
+                            // Ignore destroy errors
+                          }
+                          playerRef.current = null;
+                        }
                       }}
                       className="text-gray-600 hover:text-gray-900 transition-colors"
                     >
@@ -695,20 +804,7 @@ export const YTTranscriptExtractor: React.FC = () => {
                   </h2>
 
                   <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
-                    <img
-                      src={videoMetadata.thumbnail}
-                      alt={videoMetadata.title}
-                      className="w-full aspect-video object-cover"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-                      }}
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors cursor-pointer"
-                      onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank')}>
-                      <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-                        <Play className="w-8 h-8 text-white ml-1" fill="white" />
-                      </div>
-                    </div>
+                    <div id="youtube-player" className="w-full aspect-video"></div>
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -847,17 +943,86 @@ export const YTTranscriptExtractor: React.FC = () => {
                         {transcript}
                       </div>
                     ) : transcriptData.length > 0 ? (
-                      <div className="space-y-3">
-                        {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => (
-                          <div key={index} className="flex gap-3 hover:bg-white/50 p-2 rounded transition-colors">
-                            <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1 font-semibold">
-                              {formatTime(entry.start)}
-                            </span>
-                            <span className="text-gray-800 text-sm flex-1 leading-relaxed">
-                              {entry.text}
-                            </span>
-                          </div>
-                        ))}
+                      <div className="space-y-4">
+                        {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => {
+                          const entryIndex = searchQuery 
+                            ? transcriptData.findIndex(e => e.start === entry.start && e.text === entry.text)
+                            : index;
+                          const hasNote = notes[entry.start];
+                          return (
+                            <div key={index} className="group">
+                              <div className="flex gap-3 hover:bg-white/50 p-3 rounded transition-colors relative">
+                                <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1 font-semibold">
+                                  {formatTime(entry.start)}
+                                </span>
+                                <div className="flex-1">
+                                  <span className="text-gray-800 text-sm leading-relaxed block">
+                                    {entry.text}
+                                  </span>
+                                  
+                                  {/* Interactive buttons - shown on hover */}
+                                  <div className="mt-2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button
+                                      onClick={() => handleCopyTimestampLink(entry.start)}
+                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
+                                      title="Copy timestamp link"
+                                    >
+                                      <LinkIcon className="w-3 h-3" />
+                                      <span>{Math.floor(entry.start)}s</span>
+                                      {copiedTimestamp === entry.start && (
+                                        <CheckCircle className="w-3 h-3 text-green-600" />
+                                      )}
+                                    </button>
+                                    
+                                    <button
+                                      onClick={() => handleCopyFragment(entry.text, entryIndex)}
+                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
+                                      title="Copy fragment"
+                                    >
+                                      <Copy className="w-3 h-3" />
+                                      {copiedFragment === entryIndex && (
+                                        <CheckCircle className="w-3 h-3 text-green-600" />
+                                      )}
+                                    </button>
+                                    
+                                    <button
+                                      onClick={() => handleAddNote(entry.start)}
+                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
+                                      title="Add note"
+                                    >
+                                      <Pin className="w-3 h-3" />
+                                      <span>Add a note</span>
+                                    </button>
+                                    
+                                    <button
+                                      onClick={() => handleJumpTo(entry.start)}
+                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-pink-600 hover:bg-pink-700 text-white rounded transition-colors"
+                                      title="Jump to timestamp"
+                                    >
+                                      <Play className="w-3 h-3" />
+                                      <span>Jump to</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              {/* Note display - yellow bar */}
+                              {hasNote && (
+                                <div className="mt-2 ml-12 bg-yellow-400 rounded-lg p-3 flex items-start gap-2">
+                                  <Pin className="w-4 h-4 text-gray-800 flex-shrink-0 mt-0.5" />
+                                  <p className="text-sm text-gray-900 flex-1">{hasNote}</p>
+                                  <button
+                                    onClick={() => handleDeleteNote(entry.start)}
+                                    className="text-gray-700 hover:text-gray-900 transition-colors"
+                                    title="Delete note"
+                                  >
+                                    <X className="w-4 h-4" />
+                                  </button>
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
                         {searchQuery && filteredTranscript.length === 0 && (
                           <p className="text-gray-500 text-sm text-center py-8">
                             No results found for "{searchQuery}"
@@ -892,6 +1057,47 @@ export const YTTranscriptExtractor: React.FC = () => {
                       </button>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Note Dialog Modal */}
+          {noteDialog.open && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+              <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900">Add Note</h3>
+                  <button
+                    onClick={() => setNoteDialog({ open: false, timestamp: 0, text: '' })}
+                    className="text-gray-400 hover:text-gray-600 transition-colors"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                <p className="text-sm text-gray-600 mb-4">
+                  Timestamp: {formatTime(noteDialog.timestamp)}
+                </p>
+                <textarea
+                  value={noteDialog.text}
+                  onChange={(e) => setNoteDialog({ ...noteDialog, text: e.target.value })}
+                  placeholder="Enter your note here..."
+                  className="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none resize-none text-sm"
+                  autoFocus
+                />
+                <div className="flex items-center justify-end gap-3 mt-4">
+                  <button
+                    onClick={() => setNoteDialog({ open: false, timestamp: 0, text: '' })}
+                    className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors text-sm font-medium"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={handleSaveNote}
+                    className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors text-sm font-medium"
+                  >
+                    Save Note
+                  </button>
                 </div>
               </div>
             </div>
