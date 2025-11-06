@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical, Globe, Users, BookOpen, Code, FileCode, Sparkles, Pin, X } from 'lucide-react';
+import { Download, Youtube, FileText, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, Zap, Shield, Clock, Star, Camera, Info, Loader2, Search, Play, ChevronDown, MoreVertical, Globe, Users, BookOpen, Code, FileCode, Sparkles, Pin, X, Lightbulb } from 'lucide-react';
 import { API_BASE_URL } from '../services/api';
 
 type TranscriptFormat = 'txt' | 'txt-timestamps' | 'json' | 'srt' | 'vtt';
@@ -320,6 +320,14 @@ export const YTTranscriptExtractor: React.FC = () => {
 
   // Load YouTube IFrame API and initialize player
   useEffect(() => {
+    // Declare global type for YouTube API
+    declare global {
+      interface Window {
+        YT: any;
+        onYouTubeIframeAPIReady: () => void;
+      }
+    }
+
     const initializePlayer = () => {
       if (videoId && window.YT && window.YT.Player) {
         // Destroy existing player if any
@@ -451,7 +459,6 @@ export const YTTranscriptExtractor: React.FC = () => {
     }
     return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
-
 
   const handleCopyTimestampLink = (timestamp: number) => {
     const url = `https://www.youtube.com/watch?v=${videoId}&t=${Math.floor(timestamp)}s`;
@@ -624,32 +631,32 @@ export const YTTranscriptExtractor: React.FC = () => {
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
             }}
           ></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6">
                 <Youtube className="w-10 h-10 text-white" />
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
                 YouTube Transcript Extractor
               </h1>
-              <p className="text-xl sm:text-2xl text-red-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl text-red-100 mb-6 max-w-2xl mx-auto">
                 Extract and download transcripts from any YouTube video in multiple formats. Free, fast, and easy to use.
               </p>
-              <div className="flex flex-wrap justify-center gap-4 text-sm sm:text-base text-red-100">
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <Zap className="w-5 h-5" />
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-red-200">
+                <div className="flex items-center gap-2">
+                  <Zap className="w-4 h-4" />
                   <span>Instant Extraction</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <Shield className="w-5 h-5" />
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
                   <span>100% Free</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <Globe className="w-5 h-5" />
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
                   <span>Multiple Languages</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                  <FileText className="w-5 h-5" />
+                <div className="flex items-center gap-2">
+                  <FileText className="w-4 h-4" />
                   <span>5 Export Formats</span>
                 </div>
               </div>
@@ -777,35 +784,35 @@ export const YTTranscriptExtractor: React.FC = () => {
               <div className="lg:col-span-1">
                 <div className="bg-white rounded-xl shadow-lg p-6 sticky top-4 border border-gray-100">
                   <div className="flex items-center justify-between mb-4">
-                    <button
-                      onClick={() => {
-                        setTranscript(null);
-                        setVideoMetadata(null);
-                        setVideoUrl('');
-                        setVideoId('');
-                        setNotes({});
-                        if (playerRef.current) {
-                          try {
-                            playerRef.current.destroy();
-                          } catch (e) {
-                            // Ignore destroy errors
-                          }
-                          playerRef.current = null;
-                        }
-                      }}
-                      className="text-gray-600 hover:text-gray-900 transition-colors"
-                    >
-                      <ArrowLeft className="w-5 h-5" />
-                    </button>
-                  </div>
+                     <button
+                       onClick={() => {
+                         setTranscript(null);
+                         setVideoMetadata(null);
+                         setVideoUrl('');
+                         setVideoId('');
+                         setNotes({});
+                         if (playerRef.current) {
+                           try {
+                             playerRef.current.destroy();
+                           } catch (e) {
+                             // Ignore destroy errors
+                           }
+                           playerRef.current = null;
+                         }
+                       }}
+                       className="text-gray-600 hover:text-gray-900 transition-colors"
+                     >
+                       <ArrowLeft className="w-5 h-5" />
+                     </button>
+                   </div>
 
-                  <h2 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
-                    {videoMetadata.title}
-                  </h2>
+                   <h2 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
+                     {videoMetadata.title}
+                   </h2>
 
-                  <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
-                    <div id="youtube-player" className="w-full aspect-video"></div>
-                  </div>
+                   <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
+                     <div id="youtube-player" className="w-full aspect-video"></div>
+                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
@@ -899,27 +906,27 @@ export const YTTranscriptExtractor: React.FC = () => {
                         placeholder="Search Transcript"
                         className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm"
                       />
-                    </div>
+                     </div>
 
-                    <select
-                      value={format}
-                      onChange={(e) => handleFormatChange(e.target.value as TranscriptFormat)}
-                      disabled={isExtracting}
-                      className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
+                     <select
+                       value={format}
+                       onChange={(e) => handleFormatChange(e.target.value as TranscriptFormat)}
+                       disabled={isExtracting}
+                       className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
+                     >
                       <option value="txt-timestamps">Plain Text (with Timestamps)</option>
                       <option value="txt">Plain Text</option>
                       <option value="json">JSON</option>
                       <option value="srt">SRT</option>
                       <option value="vtt">VTT</option>
-                    </select>
+                     </select>
 
-                    <select
-                      value={language}
-                      onChange={(e) => handleLanguageChange(e.target.value)}
-                      disabled={isExtracting}
-                      className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
+                     <select
+                       value={language}
+                       onChange={(e) => handleLanguageChange(e.target.value)}
+                       disabled={isExtracting}
+                       className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
+                     >
                       <option value="en">English (en)</option>
                       <option value="es">Spanish (es)</option>
                       <option value="fr">French (fr)</option>
@@ -934,6 +941,15 @@ export const YTTranscriptExtractor: React.FC = () => {
                     </select>
                   </div>
 
+                  {isExtracting && (
+                    <div className="mb-4">
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="bg-pink-600 h-2 rounded-full animate-pulse" style={{ width: '100%' }}></div>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1 text-center">Extracting transcript...</p>
+                    </div>
+                  )}
+
                   <div
                     ref={transcriptRef}
                     className="bg-gray-50 rounded-lg p-4 max-h-[600px] overflow-y-auto mb-4 border border-gray-200"
@@ -942,94 +958,94 @@ export const YTTranscriptExtractor: React.FC = () => {
                       <div className="text-sm text-gray-800 whitespace-pre-wrap leading-relaxed">
                         {transcript}
                       </div>
-                    ) : transcriptData.length > 0 ? (
-                      <div className="space-y-4">
-                        {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => {
-                          const entryIndex = searchQuery 
-                            ? transcriptData.findIndex(e => e.start === entry.start && e.text === entry.text)
-                            : index;
-                          const hasNote = notes[entry.start];
-                          return (
-                            <div key={index} className="group">
-                              <div className="flex gap-3 hover:bg-white/50 p-3 rounded transition-colors relative">
-                                <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1 font-semibold">
-                                  {formatTime(entry.start)}
-                                </span>
-                                <div className="flex-1">
-                                  <span className="text-gray-800 text-sm leading-relaxed block">
-                                    {entry.text}
-                                  </span>
-                                  
-                                  {/* Interactive buttons - shown on hover */}
-                                  <div className="mt-2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <button
-                                      onClick={() => handleCopyTimestampLink(entry.start)}
-                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
-                                      title="Copy timestamp link"
-                                    >
-                                      <LinkIcon className="w-3 h-3" />
-                                      <span>{Math.floor(entry.start)}s</span>
-                                      {copiedTimestamp === entry.start && (
-                                        <CheckCircle className="w-3 h-3 text-green-600" />
-                                      )}
-                                    </button>
-                                    
-                                    <button
-                                      onClick={() => handleCopyFragment(entry.text, entryIndex)}
-                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
-                                      title="Copy fragment"
-                                    >
-                                      <Copy className="w-3 h-3" />
-                                      {copiedFragment === entryIndex && (
-                                        <CheckCircle className="w-3 h-3 text-green-600" />
-                                      )}
-                                    </button>
-                                    
-                                    <button
-                                      onClick={() => handleAddNote(entry.start)}
-                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
-                                      title="Add note"
-                                    >
-                                      <Pin className="w-3 h-3" />
-                                      <span>Add a note</span>
-                                    </button>
-                                    
-                                    <button
-                                      onClick={() => handleJumpTo(entry.start)}
-                                      className="flex items-center gap-1 px-2 py-1 text-xs bg-pink-600 hover:bg-pink-700 text-white rounded transition-colors"
-                                      title="Jump to timestamp"
-                                    >
-                                      <Play className="w-3 h-3" />
-                                      <span>Jump to</span>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              
-                              {/* Note display - yellow bar */}
-                              {hasNote && (
-                                <div className="mt-2 ml-12 bg-yellow-400 rounded-lg p-3 flex items-start gap-2">
-                                  <Pin className="w-4 h-4 text-gray-800 flex-shrink-0 mt-0.5" />
-                                  <p className="text-sm text-gray-900 flex-1">{hasNote}</p>
-                                  <button
-                                    onClick={() => handleDeleteNote(entry.start)}
-                                    className="text-gray-700 hover:text-gray-900 transition-colors"
-                                    title="Delete note"
-                                  >
-                                    <X className="w-4 h-4" />
-                                  </button>
-                                </div>
-                              )}
-                            </div>
-                          );
-                        })}
-                        {searchQuery && filteredTranscript.length === 0 && (
-                          <p className="text-gray-500 text-sm text-center py-8">
-                            No results found for "{searchQuery}"
-                          </p>
-                        )}
-                      </div>
-                    ) : (
+                     ) : transcriptData.length > 0 ? (
+                       <div className="space-y-4">
+                         {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => {
+                           const entryIndex = searchQuery 
+                             ? transcriptData.findIndex(e => e.start === entry.start && e.text === entry.text)
+                             : index;
+                           const hasNote = notes[entry.start];
+                           return (
+                             <div key={index} className="group">
+                               <div className="flex gap-3 hover:bg-white/50 p-3 rounded transition-colors relative">
+                                 <span className="text-pink-600 font-mono text-xs flex-shrink-0 pt-1 font-semibold">
+                                   {formatTime(entry.start)}
+                                 </span>
+                                 <div className="flex-1">
+                                   <span className="text-gray-800 text-sm leading-relaxed block">
+                                     {entry.text}
+                                   </span>
+                                   
+                                   {/* Interactive buttons - shown on hover */}
+                                   <div className="mt-2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                     <button
+                                       onClick={() => handleCopyTimestampLink(entry.start)}
+                                       className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
+                                       title="Copy timestamp link"
+                                     >
+                                       <LinkIcon className="w-3 h-3" />
+                                       <span>{Math.floor(entry.start)}s</span>
+                                       {copiedTimestamp === entry.start && (
+                                         <CheckCircle className="w-3 h-3 text-green-600" />
+                                       )}
+                                     </button>
+                                     
+                                     <button
+                                       onClick={() => handleCopyFragment(entry.text, entryIndex)}
+                                       className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
+                                       title="Copy fragment"
+                                     >
+                                       <Copy className="w-3 h-3" />
+                                       {copiedFragment === entryIndex && (
+                                         <CheckCircle className="w-3 h-3 text-green-600" />
+                                       )}
+                                     </button>
+                                     
+                                     <button
+                                       onClick={() => handleAddNote(entry.start)}
+                                       className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
+                                       title="Add note"
+                                     >
+                                       <Pin className="w-3 h-3" />
+                                       <span>Add a note</span>
+                                     </button>
+                                     
+                                     <button
+                                       onClick={() => handleJumpTo(entry.start)}
+                                       className="flex items-center gap-1 px-2 py-1 text-xs bg-pink-600 hover:bg-pink-700 text-white rounded transition-colors"
+                                       title="Jump to timestamp"
+                                     >
+                                       <Play className="w-3 h-3" />
+                                       <span>Jump to</span>
+                                     </button>
+                                   </div>
+                                 </div>
+                               </div>
+                               
+                               {/* Note display - yellow bar */}
+                               {hasNote && (
+                                 <div className="mt-2 ml-12 bg-yellow-400 rounded-lg p-3 flex items-start gap-2">
+                                   <Lightbulb className="w-4 h-4 text-gray-800 flex-shrink-0 mt-0.5" />
+                                   <p className="text-sm text-gray-900 flex-1">{hasNote}</p>
+                                   <button
+                                     onClick={() => handleDeleteNote(entry.start)}
+                                     className="text-gray-700 hover:text-gray-900 transition-colors"
+                                     title="Delete note"
+                                   >
+                                     <X className="w-4 h-4" />
+                                   </button>
+                                 </div>
+                               )}
+                             </div>
+                           );
+                         })}
+                         {searchQuery && filteredTranscript.length === 0 && (
+                           <p className="text-gray-500 text-sm text-center py-8">
+                             No results found for "{searchQuery}"
+                           </p>
+                         )}
+                       </div>
+                     ) : (
                       <div className="text-sm text-gray-800 whitespace-pre-wrap leading-relaxed">
                         {transcript}
                       </div>
@@ -1056,54 +1072,54 @@ export const YTTranscriptExtractor: React.FC = () => {
                         />
                       </button>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+                   </div>
+                 </div>
+               </div>
+             </div>
+           )}
 
-          {/* Note Dialog Modal */}
-          {noteDialog.open && (
-            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-              <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-gray-900">Add Note</h3>
-                  <button
-                    onClick={() => setNoteDialog({ open: false, timestamp: 0, text: '' })}
-                    className="text-gray-400 hover:text-gray-600 transition-colors"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  Timestamp: {formatTime(noteDialog.timestamp)}
-                </p>
-                <textarea
-                  value={noteDialog.text}
-                  onChange={(e) => setNoteDialog({ ...noteDialog, text: e.target.value })}
-                  placeholder="Enter your note here..."
-                  className="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none resize-none text-sm"
-                  autoFocus
-                />
-                <div className="flex items-center justify-end gap-3 mt-4">
-                  <button
-                    onClick={() => setNoteDialog({ open: false, timestamp: 0, text: '' })}
-                    className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors text-sm font-medium"
-                  >
-                    Cancel
-                  </button>
-                  <button
-                    onClick={handleSaveNote}
-                    className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors text-sm font-medium"
-                  >
-                    Save Note
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
+           {/* Note Dialog Modal */}
+           {noteDialog.open && (
+             <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+               <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
+                 <div className="flex items-center justify-between mb-4">
+                   <h3 className="text-lg font-semibold text-gray-900">Add Note</h3>
+                   <button
+                     onClick={() => setNoteDialog({ open: false, timestamp: 0, text: '' })}
+                     className="text-gray-400 hover:text-gray-600 transition-colors"
+                   >
+                     <X className="w-5 h-5" />
+                   </button>
+                 </div>
+                 <p className="text-sm text-gray-600 mb-4">
+                   Timestamp: {formatTime(noteDialog.timestamp)}
+                 </p>
+                 <textarea
+                   value={noteDialog.text}
+                   onChange={(e) => setNoteDialog({ ...noteDialog, text: e.target.value })}
+                   placeholder="Enter your note here..."
+                   className="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none resize-none text-sm"
+                   autoFocus
+                 />
+                 <div className="flex items-center justify-end gap-3 mt-4">
+                   <button
+                     onClick={() => setNoteDialog({ open: false, timestamp: 0, text: '' })}
+                     className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors text-sm font-medium"
+                   >
+                     Cancel
+                   </button>
+                   <button
+                     onClick={handleSaveNote}
+                     className="px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors text-sm font-medium"
+                   >
+                     Save Note
+                   </button>
+                 </div>
+               </div>
+             </div>
+           )}
 
-          {/* SEO Content Section */}
+           {/* SEO Content Section */}
           {!transcript && (
             <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 mb-12 border border-gray-100">
               <div className="max-w-4xl mx-auto">
