@@ -41,7 +41,7 @@ interface TranscriptEntry {
 export const YTTranscriptExtractor: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [videoId, setVideoId] = useState('');
-  const [format, setFormat] = useState<TranscriptFormat>('txt-timestamps');
+  const [format, setFormat] = useState<TranscriptFormat>('txt-timestamps'); // Always use txt-timestamps as default
   const [transcript, setTranscript] = useState<string | null>(null);
   const [transcriptData, setTranscriptData] = useState<TranscriptEntry[]>([]);
   const [isExtracting, setIsExtracting] = useState(false);
@@ -244,6 +244,10 @@ export const YTTranscriptExtractor: React.FC = () => {
     }
 
     try {
+      // Always use txt-timestamps for extraction/display
+      const validFormat = 'txt-timestamps';
+      const validLanguage = transcriptLanguage || 'en';
+      
       const response = await fetch(`${API_BASE_URL}/api/youtube/transcript`, {
         method: 'POST',
         headers: {
@@ -251,8 +255,8 @@ export const YTTranscriptExtractor: React.FC = () => {
         },
         body: JSON.stringify({
           videoId: id,
-          format: transcriptFormat,
-          language: transcriptLanguage
+          format: validFormat,
+          language: validLanguage
         })
       });
 
@@ -285,26 +289,22 @@ export const YTTranscriptExtractor: React.FC = () => {
 
       setTranscript(data.content);
       setEntriesCount(data.entries_count || null);
-      setDownloadFormat(transcriptFormat);
+      // Always keep display format as txt-timestamps
+      setFormat('txt-timestamps');
+      setDownloadFormat('txt-timestamps'); // Default download format matches display
       
-      if (transcriptFormat === 'json' || transcriptFormat === 'txt-timestamps' || transcriptFormat === 'srt' || transcriptFormat === 'vtt') {
-        const parsed = parseTranscript(data.content, transcriptFormat);
-        setTranscriptData(parsed);
-        
-        if (parsed.length > 0) {
-          const fullText = parsed.map(e => e.text).join(' ');
-          setWordCount(fullText.split(/\s+/).filter(w => w.length > 0).length);
-          setCharCount(fullText.length);
-        } else {
-          const words = data.content.split(/\s+/).filter(w => w.length > 0);
-          setWordCount(words.length);
-          setCharCount(data.content.length);
-        }
+      // Always parse as txt-timestamps since that's what we extract
+      const parsed = parseTranscript(data.content, 'txt-timestamps');
+      setTranscriptData(parsed);
+      
+      if (parsed.length > 0) {
+        const fullText = parsed.map(e => e.text).join(' ');
+        setWordCount(fullText.split(/\s+/).filter(w => w.length > 0).length);
+        setCharCount(fullText.length);
       } else {
         const words = data.content.split(/\s+/).filter(w => w.length > 0);
         setWordCount(words.length);
         setCharCount(data.content.length);
-        setTranscriptData([]);
       }
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to extract transcript. The video may not have transcripts available.';
@@ -333,14 +333,16 @@ export const YTTranscriptExtractor: React.FC = () => {
     }
 
     setVideoMetadata(null);
-    await handleExtractWithId(id, format, language);
+    // Always use txt-timestamps for extraction
+    await handleExtractWithId(id, 'txt-timestamps', language);
   };
 
   const handleFormatChange = async (newFormat: TranscriptFormat) => {
-    if (videoId) {
-      setFormat(newFormat);
+    // Format change should only affect download, not display
+    // Display always uses txt-timestamps, format changes only affect download dialog
+    if (videoId && !isExtracting) {
       setDownloadFormat(newFormat);
-      await handleExtractWithId(videoId, newFormat, language);
+      // Don't re-extract, just update download format
     }
   };
 
@@ -348,8 +350,8 @@ export const YTTranscriptExtractor: React.FC = () => {
     if (videoId && !isExtracting) {
       setLanguage(newLanguage);
       setError(null); // Clear previous errors
-      // Don't clear transcript data immediately - let the new request handle it
-      await handleExtractWithId(videoId, format, newLanguage);
+      // Always use txt-timestamps for extraction
+      await handleExtractWithId(videoId, 'txt-timestamps', newLanguage);
     }
   };
 
@@ -751,25 +753,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mb-6">
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
-                    Output Format
-                  </label>
-                  <select
-                    value={format}
-                    onChange={(e) => setFormat(e.target.value as TranscriptFormat)}
-                    className="w-full px-4 py-3 text-base border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all bg-white"
-                  >
-                    <option value="txt-timestamps">Plain Text (with Timestamps)</option>
-                    <option value="txt">Plain Text</option>
-                    <option value="json">JSON</option>
-                    <option value="srt">SRT</option>
-                    <option value="vtt">VTT</option>
-                  </select>
-                  <p className="mt-2 text-xs sm:text-sm text-gray-500">
-                    Choose your preferred transcript format. SRT and VTT include timestamps automatically.
-                  </p>
-                </div>
 
                 {error && (
                   <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
@@ -978,19 +961,6 @@ export const YTTranscriptExtractor: React.FC = () => {
                      </div>
 
                      <select
-                       value={format}
-                       onChange={(e) => handleFormatChange(e.target.value as TranscriptFormat)}
-                       disabled={isExtracting}
-                       className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
-                     >
-                      <option value="txt-timestamps">Plain Text (with Timestamps)</option>
-                      <option value="txt">Plain Text</option>
-                      <option value="json">JSON</option>
-                      <option value="srt">SRT</option>
-                      <option value="vtt">VTT</option>
-                     </select>
-
-                     <select
                        value={language}
                        onChange={(e) => {
                          e.preventDefault();
@@ -1125,8 +1095,8 @@ export const YTTranscriptExtractor: React.FC = () => {
                                      {entry.text}
                                    </span>
                                    
-                                   {/* Interactive buttons - shown on hover */}
-                                   <div className="mt-2 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                   {/* Interactive buttons - always visible */}
+                                   <div className="mt-2 flex items-center gap-2">
                                      <button
                                        onClick={() => handleCopyTimestampLink(entry.start)}
                                        className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded text-gray-700 transition-colors"
