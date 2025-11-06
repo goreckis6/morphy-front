@@ -988,30 +988,62 @@ export const YTTranscriptExtractor: React.FC = () => {
                       />
                      </div>
 
-                    {availableLanguages.length > 0 ? (
-                      <select
-                        value={language}
-                        onChange={(e) => {
-                          e.preventDefault();
-                          handleLanguageChange(e.target.value);
-                        }}
-                        disabled={isExtracting || !videoId}
-                        className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {availableLanguages.map(lang => (
+                     {transcriptData.length > 0 && (
+                       <label className="flex items-center gap-2 cursor-pointer px-3 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                         <input
+                           type="checkbox"
+                           checked={format === 'txt-timestamps'}
+                           onChange={(e) => {
+                             setFormat(e.target.checked ? 'txt-timestamps' : 'txt');
+                           }}
+                           className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
+                         />
+                         <span className="text-sm text-gray-700 font-medium">Show Timestamps</span>
+                       </label>
+                     )}
+
+                    <select
+                      value={language}
+                      onChange={(e) => {
+                        e.preventDefault();
+                        handleLanguageChange(e.target.value);
+                      }}
+                      disabled={isExtracting}
+                      className="px-3 py-2 border border-gray-300 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-200 outline-none text-sm bg-white disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {availableLanguages.length > 0 ? (
+                        // Show only available languages for this video after extraction
+                        availableLanguages.map(lang => (
                           <option key={lang.code} value={lang.code}>
                             {lang.name} ({lang.code}){lang.is_generated ? ' [Auto]' : ''}
                           </option>
-                        ))}
-                      </select>
-                    ) : (
-                      <select
-                        value={language}
-                        disabled
-                        className="px-3 py-2 border border-gray-300 rounded-lg bg-gray-100 text-sm text-gray-500 cursor-not-allowed"
-                      >
-                        <option value="en">Loading available languages...</option>
-                      </select>
+                        ))
+                      ) : (
+                        // Show default/common languages before extraction or if no languages are detected
+                        <>
+                          <option value="en">English (en)</option>
+                          <option value="es">Spanish (es)</option>
+                          <option value="fr">French (fr)</option>
+                          <option value="de">German (de)</option>
+                          <option value="it">Italian (it)</option>
+                          <option value="pt">Portuguese (pt)</option>
+                          <option value="ru">Russian (ru)</option>
+                          <option value="ja">Japanese (ja)</option>
+                          <option value="ko">Korean (ko)</option>
+                          <option value="zh">Chinese (zh)</option>
+                          <option value="ar">Arabic (ar)</option>
+                          <option value="nl">Dutch (nl)</option>
+                          <option value="pl">Polish (pl)</option>
+                          <option value="sv">Swedish (sv)</option>
+                          <option value="tr">Turkish (tr)</option>
+                          <option value="hi">Hindi (hi)</option>
+                        </>
+                      )}
+                    </select>
+                    {availableLanguages.length > 0 && (
+                      <p className="mt-1 text-xs text-gray-500">
+                        Showing only languages available for this video
+                      </p>
                     )}
                   </div>
 
@@ -1062,45 +1094,44 @@ export const YTTranscriptExtractor: React.FC = () => {
 
                   <div
                     ref={transcriptRef}
-                    className="bg-gray-50 rounded-lg p-4 max-h-[600px] overflow-y-auto mb-4 border border-gray-200"
+                    className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 max-h-[700px] overflow-y-auto mb-4 border-2 border-gray-200 shadow-inner"
                   >
-                    {format === 'txt' ? (
-                      <div className="text-sm text-gray-800 whitespace-pre-wrap leading-relaxed">
-                        {transcript}
-                      </div>
-                     ) : transcriptData.length > 0 ? (
-                       <div className="space-y-4">
+                    {transcriptData.length > 0 ? (
+                       <div className="space-y-3">
                          {(searchQuery ? filteredTranscript : transcriptData).map((entry, index) => {
                            const entryIndex = searchQuery 
                              ? transcriptData.findIndex(e => e.start === entry.start && e.text === entry.text)
                              : index;
                            const hasNote = notes[entry.start];
+                           const showTimestamps = format === 'txt-timestamps';
                            return (
                              <div key={index} className="group relative">
-                               <div className="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-pink-400 hover:shadow-lg transition-all duration-200">
-                                 <div className="flex gap-4 items-start">
-                                   <span className="text-pink-600 font-mono text-sm flex-shrink-0 font-bold bg-pink-50 px-2 py-1 rounded">
-                                     {formatTime(entry.start)}
-                                   </span>
-                                   <div className="flex-1 min-w-0">
-                                     <p className="text-gray-900 text-base leading-relaxed mb-3 group-hover:text-gray-700 transition-colors">
+                               <div className="bg-white border-2 border-gray-200 rounded-lg p-4 hover:border-pink-300 hover:bg-pink-50/30 hover:shadow-md transition-all duration-200 cursor-pointer">
+                                 <div className="flex gap-3 items-start">
+                                   {showTimestamps && (
+                                     <span className="text-pink-600 font-mono text-xs flex-shrink-0 font-semibold bg-pink-100 px-2.5 py-1 rounded-md border border-pink-200">
+                                       {formatTime(entry.start)}
+                                     </span>
+                                   )}
+                                   <div className={`flex-1 min-w-0 ${!showTimestamps ? 'pl-0' : ''}`}>
+                                     <p className="text-gray-900 text-[15px] leading-relaxed mb-2.5 group-hover:text-gray-800 transition-colors font-normal">
                                        {entry.text}
                                      </p>
                                      
-                                     {/* Interactive buttons - show on hover */}
-                                     <div className="flex items-center gap-2 invisible group-hover:visible transition-all duration-200">
+                                     {/* Interactive buttons - show on hover with better visibility */}
+                                     <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-2">
                                        <button
                                          onClick={(e) => {
                                            e.stopPropagation();
                                            handleCopyTimestampLink(entry.start);
                                          }}
-                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-lg transition-all duration-150 border border-blue-200 hover:border-blue-300 hover:shadow-sm font-medium z-10"
+                                         className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-all duration-150 shadow-sm hover:shadow-md font-medium"
                                          title="Copy YouTube link with timestamp"
                                        >
-                                         <LinkIcon className="w-4 h-4" />
+                                         <LinkIcon className="w-3.5 h-3.5" />
                                          <span>Copy link</span>
                                          {copiedTimestamp === entry.start && (
-                                           <CheckCircle className="w-4 h-4 text-green-600" />
+                                           <CheckCircle className="w-3.5 h-3.5 text-green-300" />
                                          )}
                                        </button>
                                        
@@ -1109,13 +1140,13 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            e.stopPropagation();
                                            handleCopyFragment(entry.text, entryIndex);
                                          }}
-                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-lg transition-all duration-150 border border-gray-200 hover:border-gray-300 hover:shadow-sm font-medium z-10"
+                                         className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs bg-gray-600 hover:bg-gray-700 text-white rounded-md transition-all duration-150 shadow-sm hover:shadow-md font-medium"
                                          title="Copy transcript text"
                                        >
-                                         <Copy className="w-4 h-4" />
+                                         <Copy className="w-3.5 h-3.5" />
                                          <span>Copy text</span>
                                          {copiedFragment === entryIndex && (
-                                           <CheckCircle className="w-4 h-4 text-green-600" />
+                                           <CheckCircle className="w-3.5 h-3.5 text-green-300" />
                                          )}
                                        </button>
                                        
@@ -1124,10 +1155,10 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            e.stopPropagation();
                                            handleAddNote(entry.start);
                                          }}
-                                         className="flex items-center gap-2 px-3 py-2 text-sm bg-amber-50 hover:bg-amber-100 text-amber-700 rounded-lg transition-all duration-150 border border-amber-200 hover:border-amber-300 hover:shadow-sm font-medium z-10"
+                                         className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs bg-amber-500 hover:bg-amber-600 text-white rounded-md transition-all duration-150 shadow-sm hover:shadow-md font-medium"
                                          title="Add a note to this segment"
                                        >
-                                         <Pin className="w-4 h-4" />
+                                         <Pin className="w-3.5 h-3.5" />
                                          <span>Add note</span>
                                        </button>
                                        
@@ -1136,10 +1167,10 @@ export const YTTranscriptExtractor: React.FC = () => {
                                            e.stopPropagation();
                                            handleJumpTo(entry.start);
                                          }}
-                                         className="flex items-center gap-2 px-4 py-2 text-sm bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-all duration-150 shadow-md hover:shadow-lg font-medium z-10"
+                                         className="flex items-center gap-1.5 px-3 py-1.5 text-xs bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-all duration-150 shadow-md hover:shadow-lg font-medium"
                                          title="Jump to this timestamp in YouTube video"
                                        >
-                                         <Play className="w-4 h-4 fill-white" />
+                                         <Play className="w-3.5 h-3.5 fill-white" />
                                          <span>Jump To</span>
                                        </button>
                                      </div>
@@ -1149,8 +1180,8 @@ export const YTTranscriptExtractor: React.FC = () => {
                                
                                {/* Note display - yellow bar */}
                                {hasNote && (
-                                 <div className="mt-3 ml-20 bg-yellow-400 rounded-lg p-4 flex items-start gap-3 border-2 border-yellow-500 shadow-md">
-                                   <Lightbulb className="w-5 h-5 text-gray-800 flex-shrink-0 mt-0.5" />
+                                 <div className="mt-2 ml-4 bg-yellow-400 rounded-lg p-3 flex items-start gap-2 border-2 border-yellow-500 shadow-sm">
+                                   <Lightbulb className="w-4 h-4 text-gray-800 flex-shrink-0 mt-0.5" />
                                    <p className="text-sm text-gray-900 flex-1 font-medium">{hasNote}</p>
                                    <button
                                      onClick={(e) => {
@@ -1168,14 +1199,18 @@ export const YTTranscriptExtractor: React.FC = () => {
                            );
                          })}
                          {searchQuery && filteredTranscript.length === 0 && (
-                           <p className="text-gray-500 text-sm text-center py-8">
+                           <p className="text-gray-500 text-center py-8 bg-white rounded-lg border border-gray-200">
                              No results found for "{searchQuery}"
                            </p>
                          )}
                        </div>
-                     ) : (
-                      <div className="text-sm text-gray-800 whitespace-pre-wrap leading-relaxed">
+                     ) : transcript ? (
+                      <div className="text-[15px] text-gray-800 whitespace-pre-wrap leading-relaxed bg-white rounded-lg p-4 border border-gray-200">
                         {transcript}
+                      </div>
+                    ) : (
+                      <div className="text-center py-12 text-gray-500">
+                        No transcript available
                       </div>
                     )}
                   </div>
