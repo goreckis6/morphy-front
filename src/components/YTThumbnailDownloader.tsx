@@ -411,8 +411,8 @@ export const YTThumbnailDownloader: React.FC = () => {
               </div>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-1 space-y-6">
-                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 sticky top-4">
+                <div className="lg:col-span-1 lg:sticky lg:top-4">
+                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                     <div className="flex items-center justify-between mb-4">
                       <button
                         onClick={handleReset}
@@ -490,57 +490,6 @@ export const YTThumbnailDownloader: React.FC = () => {
                           </button>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                    <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                      <Star className="w-5 h-5 text-yellow-500" />
-                      Why Choose This Tool?
-                    </h3>
-                    <div className="space-y-3 text-sm text-gray-700">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                        <p>Instant access to every YouTube thumbnail quality in one place.</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                        <p>No watermarks, no compression – direct downloads from YouTube servers.</p>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                        <p>Copy URLs or download images directly for your workflow.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                    <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                      <Camera className="w-5 h-5 text-red-600" />
-                      Perfect For
-                    </h3>
-                    <div className="space-y-2 text-sm text-gray-700">
-                      {perfectFor.map((item) => (
-                        <div key={item} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                    <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                      <Info className="w-5 h-5 text-red-600" />
-                      Available Qualities
-                    </h3>
-                    <div className="space-y-3 text-sm">
-                      {qualityDetails.map((quality) => (
-                        <div key={quality.label} className="flex items-center justify-between">
-                          <span className="text-gray-700 font-medium">{quality.label}</span>
-                          <span className="text-gray-500">{quality.resolution}</span>
-                        </div>
-                      ))}
                     </div>
                   </div>
                 </div>
@@ -628,6 +577,58 @@ export const YTThumbnailDownloader: React.FC = () => {
                           </div>
                         </div>
                       ))}
+                    </div>
+
+                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                      <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <Star className="w-5 h-5 text-yellow-500" />
+                        Why Choose This Tool?
+                      </h3>
+                      <div className="space-y-3 text-sm text-gray-700">
+                        <div className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                          <p>Instant access to every YouTube thumbnail quality in one place.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                          <p>No watermarks, no compression – direct downloads from YouTube servers.</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                          <p>Copy URLs or download images directly for your workflow.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                      <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <Camera className="w-5 h-5 text-red-600" />
+                        Perfect For
+                      </h3>
+                      <div className="space-y-2 text-sm text-gray-700">
+                        {perfectFor.map((item) => (
+                          <div key={item} className="flex items-center gap-2">
+                            <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                      <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                        <Info className="w-5 h-5 text-red-600" />
+                        Available Qualities
+                      </h3>
+                      <div className="space-y-3 text-sm">
+                        {qualityDetails.map((quality) => (
+                          <div key={quality.label} className="flex items-center justify-between">
+                            <span className="text-gray-700 font-medium">{quality.label}</span>
+                            <span className="text-gray-500">{quality.resolution}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
