@@ -2,7 +2,25 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from './Header';
 import { Footer } from './Footer';
-import { Download, Youtube, Image as ImageIcon, Link as LinkIcon, CheckCircle, AlertCircle, ArrowLeft, Copy, ExternalLink, Zap, Shield, Clock, Star, Camera, Info } from 'lucide-react';
+import {
+  Download,
+  Youtube,
+  Image as ImageIcon,
+  Link as LinkIcon,
+  CheckCircle,
+  AlertCircle,
+  ArrowLeft,
+  Copy,
+  ExternalLink,
+  Zap,
+  Shield,
+  Clock,
+  Globe,
+  Sparkles,
+  Camera,
+  Info,
+  Star
+} from 'lucide-react';
 
 interface ThumbnailQuality {
   name: string;
@@ -11,18 +29,28 @@ interface ThumbnailQuality {
   quality: string;
 }
 
+interface VideoMetadata {
+  title: string;
+  thumbnail: string;
+  author: string;
+  channelId?: string;
+}
+
 export const YTThumbnailDownloader: React.FC = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [videoId, setVideoId] = useState('');
   const [thumbnails, setThumbnails] = useState<ThumbnailQuality[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
+  const [videoMetadata, setVideoMetadata] = useState<VideoMetadata | null>(null);
+  const [isLoadingMetadata, setIsLoadingMetadata] = useState(false);
+  const [videoIdCopied, setVideoIdCopied] = useState(false);
+  const [channelIdCopied, setChannelIdCopied] = useState(false);
 
   const extractVideoId = (url: string): string | null => {
-    // Handle various YouTube URL formats
     const patterns = [
       /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/v\/)([^&\n?#]+)/,
-      /^([a-zA-Z0-9_-]{11})$/ // Direct video ID
+      /^([a-zA-Z0-9_-]{11})$/
     ];
 
     for (const pattern of patterns) {
@@ -88,6 +116,36 @@ export const YTThumbnailDownloader: React.FC = () => {
     ];
   };
 
+  const fetchVideoMetadata = async (id: string) => {
+    setIsLoadingMetadata(true);
+    try {
+      const response = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`);
+      if (response.ok) {
+        const data = await response.json();
+        setVideoMetadata({
+          title: data.title,
+          thumbnail: data.thumbnail_url,
+          author: data.author_name,
+          channelId: data.author_url ? data.author_url.split('/').pop() : undefined
+        });
+      } else {
+        setVideoMetadata({
+          title: `Video ${id}`,
+          thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
+          author: 'Unknown'
+        });
+      }
+    } catch (err) {
+      setVideoMetadata({
+        title: `Video ${id}`,
+        thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
+        author: 'Unknown'
+      });
+    } finally {
+      setIsLoadingMetadata(false);
+    }
+  };
+
   const handleExtract = () => {
     setError(null);
     setThumbnails([]);
@@ -99,7 +157,7 @@ export const YTThumbnailDownloader: React.FC = () => {
     }
 
     const id = extractVideoId(videoUrl.trim());
-    
+
     if (!id) {
       setError('Invalid YouTube URL or Video ID. Please check and try again.');
       return;
@@ -111,6 +169,7 @@ export const YTThumbnailDownloader: React.FC = () => {
     }
 
     setVideoId(id);
+    fetchVideoMetadata(id);
     const thumbnailUrls = generateThumbnailUrls(id);
     setThumbnails(thumbnailUrls);
   };
@@ -138,29 +197,107 @@ export const YTThumbnailDownloader: React.FC = () => {
     }
   };
 
-  const handleBack = () => {
-    window.location.href = '/';
+  const handleReset = () => {
+    setVideoUrl('');
+    setVideoId('');
+    setThumbnails([]);
+    setVideoMetadata(null);
+    setError(null);
+    setCopied(null);
+    setVideoIdCopied(false);
+    setChannelIdCopied(false);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "YouTube Thumbnail Downloader",
-    "description": "Free online tool to extract and download YouTube video thumbnails in multiple resolutions. Get high-quality thumbnails from any YouTube video instantly.",
-    "url": "https://morphyhub.com/yt-thumbnail-downloader",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Web Browser",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+  const handleCopyVideoId = () => {
+    if (!videoId) return;
+    navigator.clipboard.writeText(videoId).then(() => {
+      setVideoIdCopied(true);
+      setTimeout(() => setVideoIdCopied(false), 2000);
+    });
+  };
+
+  const handleCopyChannelId = () => {
+    if (!videoMetadata?.channelId) return;
+    navigator.clipboard.writeText(videoMetadata.channelId).then(() => {
+      setChannelIdCopied(true);
+      setTimeout(() => setChannelIdCopied(false), 2000);
+    });
+  };
+
+  const heroFeatureBadges = [
+    { icon: Zap, label: 'Instant Extraction' },
+    { icon: Shield, label: '100% Free' },
+    { icon: Clock, label: 'No Registration' },
+    { icon: Globe, label: 'All YouTube URLs' }
+  ];
+
+  const featureCards = [
+    {
+      title: 'All YouTube URLs Supported',
+      description: 'Works with watch, share, embed URLs, and direct video IDs.',
+      color: 'bg-red-100',
+      icon: LinkIcon
     },
-    "featureList": [
-      "Extract thumbnails from YouTube videos",
-      "Download in 5 different resolutions",
-      "Copy thumbnail URLs",
-      "Support for multiple YouTube URL formats",
-      "No registration required"
+    {
+      title: '8 Thumbnail Qualities',
+      description: 'From default to max resolution and auto-generated options.',
+      color: 'bg-rose-100',
+      icon: ImageIcon
+    },
+    {
+      title: 'Copy or Download Instantly',
+      description: 'Get direct URLs or download files in one click.',
+      color: 'bg-pink-100',
+      icon: Download
+    },
+    {
+      title: 'Perfect for Creators',
+      description: 'Ideal for social media, blog posts, and video previews.',
+      color: 'bg-red-100',
+      icon: Sparkles
+    }
+  ];
+
+  const perfectFor = [
+    'Content creators and bloggers',
+    'Social media managers',
+    'Video editors and designers',
+    'Website developers',
+    'Marketing professionals',
+    'YouTube channel owners'
+  ];
+
+  const qualityDetails = [
+    { label: 'Default', resolution: '120×90' },
+    { label: 'Medium', resolution: '320×180' },
+    { label: 'High', resolution: '480×360' },
+    { label: 'Standard', resolution: '640×480' },
+    { label: 'Max Resolution', resolution: '1280×720+' },
+    { label: 'Auto-Generated 1', resolution: '1280×720' },
+    { label: 'Auto-Generated 2', resolution: '1280×720' },
+    { label: 'Auto-Generated 3', resolution: '1280×720' }
+  ];
+
+  const pageJsonLd = {
+    "@context": 'https://schema.org',
+    "@type": 'WebApplication',
+    name: 'YouTube Thumbnail Downloader',
+    description:
+      'Free online tool to extract and download YouTube video thumbnails in multiple resolutions. Get high-quality thumbnails from any YouTube video instantly.',
+    url: 'https://morphyhub.com/yt-thumbnail-downloader',
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Web Browser',
+    offers: {
+      "@type": 'Offer',
+      price: '0',
+      priceCurrency: 'USD'
+    },
+    featureList: [
+      'Extract thumbnails from YouTube videos',
+      'Download in 8 different resolutions',
+      'Copy thumbnail URLs',
+      'Support for multiple YouTube URL formats',
+      'No registration required'
     ]
   };
 
@@ -168,119 +305,291 @@ export const YTThumbnailDownloader: React.FC = () => {
     <>
       <Helmet>
         <title>YouTube Thumbnail Downloader - Free Online Tool | MorphyHub</title>
-        <meta name="description" content="Download YouTube video thumbnails in 8 different resolutions. Extract high-quality thumbnails (120×90 to 1280×720+) including auto-generated options from any YouTube video instantly. Free, fast, and easy to use. No registration required." />
-        <meta name="keywords" content="youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail extractor, youtube thumbnail grabber, free youtube thumbnail, youtube thumbnail download, extract youtube thumbnail, youtube thumbnail url, youtube video thumbnail" />
+        <meta
+          name="description"
+          content="Download YouTube video thumbnails in 8 different resolutions. Extract high-quality thumbnails (120×90 to 1280×720+) including auto-generated options from any YouTube video instantly. Free, fast, and easy to use. No registration required."
+        />
+        <meta
+          name="keywords"
+          content="youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail extractor, youtube thumbnail grabber, free youtube thumbnail, youtube thumbnail download, extract youtube thumbnail, youtube thumbnail url, youtube video thumbnail"
+        />
         <meta property="og:title" content="YouTube Thumbnail Downloader - Free Online Tool | MorphyHub" />
-        <meta property="og:description" content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly." />
+        <meta
+          property="og:description"
+          content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/yt-thumbnail-downloader" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="YouTube Thumbnail Downloader - Free Online Tool" />
-        <meta name="twitter:description" content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly." />
+        <meta
+          name="twitter:description"
+          content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly."
+        />
         <link rel="canonical" href="https://morphyhub.com/yt-thumbnail-downloader" />
         <meta name="robots" content="noindex, nofollow" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-rose-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-red-50">
         <Header />
-        
+
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 via-rose-600 to-pink-600">
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
+            }}
+          ></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             <div className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6">
+                <Youtube className="w-10 h-10 text-white" />
+              </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
                 YouTube Thumbnail Downloader
               </h1>
               <p className="text-lg sm:text-xl text-red-100 mb-6 max-w-2xl mx-auto">
-                Extract and download high-quality thumbnails from any YouTube video in multiple resolutions
+                Extract and download high-quality thumbnails from any YouTube video in multiple resolutions. Simple, fast, and
+                completely free.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm text-red-200">
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
-                  <span>Instant Extraction</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4" />
-                  <span>100% Free</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>No Registration</span>
-                </div>
+                {heroFeatureBadges.map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex items-center gap-2">
+                    <Icon className="w-4 h-4" />
+                    <span>{label}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            {/* Main Panel */}
-            <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-                
-                {/* Input Section */}
-                <div className="mb-6">
-                  <label className="block text-sm font-semibold text-gray-700 mb-3">
-                    YouTube Video URL or Video ID
-                  </label>
-                  <div className="relative">
-                    <LinkIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
-                    <input
-                      type="text"
-                      value={videoUrl}
-                      onChange={(e) => setVideoUrl(e.target.value)}
-                      onKeyPress={handleKeyPress}
-                      placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ"
-                      className="w-full pl-12 pr-4 py-4 text-base border-2 border-red-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
-                    />
-                  </div>
-                  <p className="mt-2 text-xs sm:text-sm text-gray-500">
-                    Supports: youtube.com/watch?v=, youtu.be/, youtube.com/embed/, or direct Video ID
-                  </p>
-                </div>
-
-                {error && (
-                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start space-x-3">
-                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm text-red-700">{error}</p>
-                  </div>
-                )}
-
-                <button
-                  onClick={handleExtract}
-                  className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2 mb-8"
+          {!thumbnails.length && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {featureCards.map((card, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
                 >
-                  <ImageIcon className="w-5 h-5" />
-                  <span>Extract Thumbnails</span>
-                </button>
+                  <div className={`w-12 h-12 ${card.color} rounded-lg flex items-center justify-center mb-4`}>
+                    <card.icon className="w-6 h-6 text-red-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{card.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
 
-                {/* Thumbnails Grid */}
-                {thumbnails.length > 0 && (
-                  <div className="mt-8">
-                    <div className="flex items-center justify-between mb-6">
-                      <div>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-1">Available Thumbnails</h2>
-                        <p className="text-sm text-gray-600">Video ID: <span className="font-mono font-semibold text-red-600">{videoId}</span></p>
+          <div className="max-w-7xl mx-auto pb-12 space-y-12">
+            {!thumbnails.length ? (
+              <div className="bg-white rounded-2xl shadow-2xl p-8 sm:p-10 border border-gray-100">
+                <div className="max-w-3xl mx-auto">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+                    Download YouTube Thumbnails in Seconds
+                  </h2>
+
+                  <div className="mb-6">
+                    <label className="block text-sm font-semibold text-gray-700 mb-3">YouTube Video URL or Video ID</label>
+                    <div className="relative">
+                      <LinkIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
+                      <input
+                        type="text"
+                        value={videoUrl}
+                        onChange={(e) => setVideoUrl(e.target.value)}
+                        onKeyPress={handleKeyPress}
+                        placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ"
+                        className="w-full pl-12 pr-4 py-4 text-base border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
+                      />
+                    </div>
+                    <p className="mt-2 text-xs sm:text-sm text-gray-500">
+                      Supports: youtube.com/watch?v=, youtu.be/, youtube.com/embed/, or direct Video ID
+                    </p>
+                  </div>
+
+                  {error && (
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl">
+                      <div className="flex items-start gap-2">
+                        <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                        <p className="text-sm text-red-700">{error}</p>
                       </div>
-                      <div className="hidden sm:flex items-center space-x-2 px-4 py-2 bg-red-50 rounded-lg">
-                        <CheckCircle className="w-5 h-5 text-red-600" />
-                        <span className="text-sm font-semibold text-red-700">{thumbnails.length} Qualities</span>
+                    </div>
+                  )}
+
+                  <button
+                    onClick={handleExtract}
+                    className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2"
+                  >
+                    <ImageIcon className="w-5 h-5" />
+                    <span>Extract Thumbnails</span>
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="lg:col-span-1 space-y-6">
+                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 sticky top-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <button
+                        onClick={handleReset}
+                        className="text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 text-sm font-medium"
+                      >
+                        <ArrowLeft className="w-5 h-5" />
+                        Back
+                      </button>
+                      {thumbnails.length > 0 && (
+                        <span className="px-3 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded-full">
+                          {thumbnails.length} Qualities
+                        </span>
+                      )}
+                    </div>
+
+                    <h2 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
+                      {videoMetadata?.title || `Video ${videoId}`}
+                    </h2>
+
+                    <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
+                      <div
+                        className="relative w-full aspect-video bg-black rounded-lg overflow-hidden cursor-pointer group"
+                        onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank')}
+                      >
+                        <img
+                          src={videoMetadata?.thumbnail || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                          alt={videoMetadata?.title || 'YouTube video thumbnail preview'}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center" />
                       </div>
                     </div>
 
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
+                        {isLoadingMetadata ? 'Loading...' : videoMetadata?.author || 'Unknown channel'}
+                      </span>
+                    </div>
+
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-600">Channel ID:</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-mono text-gray-800 truncate max-w-[140px]">
+                            {videoMetadata?.channelId || 'N/A'}
+                          </span>
+                          <button
+                            onClick={handleCopyChannelId}
+                            className="text-gray-500 hover:text-gray-700 transition-colors"
+                          >
+                            {channelIdCopied ? (
+                              <CheckCircle className="w-4 h-4 text-green-500" />
+                            ) : (
+                              <Copy className="w-4 h-4" />
+                            )}
+                          </button>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-600">Video ID:</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-mono text-gray-800">{videoId}</span>
+                          <button
+                            onClick={handleCopyVideoId}
+                            className="text-gray-500 hover:text-gray-700 transition-colors"
+                          >
+                            {videoIdCopied ? (
+                              <CheckCircle className="w-4 h-4 text-green-500" />
+                            ) : (
+                              <Copy className="w-4 h-4" />
+                            )}
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                      <Star className="w-5 h-5 text-yellow-500" />
+                      Why Choose This Tool?
+                    </h3>
+                    <div className="space-y-3 text-sm text-gray-700">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                        <p>Instant access to every YouTube thumbnail quality in one place.</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                        <p>No watermarks, no compression – direct downloads from YouTube servers.</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                        <p>Copy URLs or download images directly for your workflow.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                      <Camera className="w-5 h-5 text-red-600" />
+                      Perfect For
+                    </h3>
+                    <div className="space-y-2 text-sm text-gray-700">
+                      {perfectFor.map((item) => (
+                        <div key={item} className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                      <Info className="w-5 h-5 text-red-600" />
+                      Available Qualities
+                    </h3>
+                    <div className="space-y-3 text-sm">
+                      {qualityDetails.map((quality) => (
+                        <div key={quality.label} className="flex items-center justify-between">
+                          <span className="text-gray-700 font-medium">{quality.label}</span>
+                          <span className="text-gray-500">{quality.resolution}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="lg:col-span-2">
+                  <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                      <div>
+                        <h2 className="text-2xl font-bold text-gray-900 mb-1">Available Thumbnails</h2>
+                        <p className="text-sm text-gray-600">
+                          Video ID: <span className="font-mono font-semibold text-red-600">{videoId}</span>
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank')}
+                        className="px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Open on YouTube
+                      </button>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                      {thumbnails.map((thumbnail, index) => (
+                      {thumbnails.map((thumbnail) => (
                         <div
-                          key={index}
+                          key={thumbnail.quality}
                           className="bg-gradient-to-br from-red-50 to-rose-50 rounded-xl border-2 border-red-100 overflow-hidden hover:shadow-lg transition-all"
                         >
-                          {/* Thumbnail Preview */}
                           <div className="relative bg-gray-100 aspect-video">
                             <img
                               src={thumbnail.url}
@@ -288,7 +597,8 @@ export const YTThumbnailDownloader: React.FC = () => {
                               className="w-full h-full object-cover"
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement;
-                                target.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="640" height="360"%3E%3Crect fill="%23f3f4f6" width="640" height="360"/%3E%3Ctext fill="%239ca3af" font-family="sans-serif" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage not available%3C/text%3E%3C/svg%3E';
+                                target.src =
+                                  'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="640" height="360"%3E%3Crect fill="%23f3f4f6" width="640" height="360"/%3E%3Ctext fill="%239ca3af" font-family="sans-serif" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage not available%3C/text%3E%3C/svg%3E';
                               }}
                             />
                             <div className="absolute top-2 right-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">
@@ -296,16 +606,14 @@ export const YTThumbnailDownloader: React.FC = () => {
                             </div>
                           </div>
 
-                          {/* Thumbnail Info */}
                           <div className="p-4">
                             <h3 className="font-bold text-gray-900 mb-1">{thumbnail.name}</h3>
                             <p className="text-xs text-gray-600 mb-4">{thumbnail.resolution}</p>
 
-                            {/* Action Buttons */}
                             <div className="space-y-2">
                               <button
                                 onClick={() => handleDownload(thumbnail.url, `youtube-thumbnail-${videoId}-${thumbnail.quality}.jpg`)}
-                                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                                className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                               >
                                 <Download className="w-4 h-4" />
                                 <span>Download</span>
@@ -313,7 +621,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                               <div className="grid grid-cols-2 gap-2">
                                 <button
                                   onClick={() => handleCopy(thumbnail.url, thumbnail.quality)}
-                                  className="bg-white hover:bg-red-50 text-red-600 border-2 border-red-200 font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center space-x-1 text-sm"
+                                  className="bg-white hover:bg-red-50 text-red-600 border-2 border-red-200 font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center gap-1 text-sm"
                                 >
                                   {copied === thumbnail.quality ? (
                                     <>
@@ -331,7 +639,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                                   href={thumbnail.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="bg-white hover:bg-red-50 text-red-600 border-2 border-red-200 font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center space-x-1 text-sm"
+                                  className="bg-white hover:bg-red-50 text-red-600 border-2 border-red-200 font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center gap-1 text-sm"
                                 >
                                   <ExternalLink className="w-4 h-4" />
                                   <span>Open</span>
@@ -343,193 +651,99 @@ export const YTThumbnailDownloader: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                )}
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Sidebar */}
-            <div className="space-y-6">
-              
-              {/* Features */}
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center">
-                  <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                  Why Choose Our Tool?
+            <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 border border-gray-100">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">How to Download YouTube Thumbnails</h2>
+                <p className="text-gray-700 mb-6 text-lg leading-relaxed text-center">
+                  Our YouTube thumbnail downloader is a free online tool that allows you to extract and download high-quality thumbnails from any YouTube video. Whether you're a content creator, social media manager, or need a thumbnail for a project, our tool makes it simple to get the perfect image.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                  <div className="bg-gradient-to-br from-red-50 to-rose-50 p-6 rounded-xl border border-red-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <LinkIcon className="w-6 h-6 text-red-600" />
+                      Step 1: Paste URL
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Copy the YouTube video URL or video ID and paste it into our tool. We support all common YouTube URL formats including share and embed links.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-xl border border-pink-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <ImageIcon className="w-6 h-6 text-pink-600" />
+                      Step 2: Extract
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Click the extract button to instantly generate all available thumbnails. You'll receive up to eight different resolutions including auto-generated options.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <Download className="w-6 h-6 text-rose-600" />
+                      Step 3: Download
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Choose your preferred quality and download the image directly. You can also copy the direct image URL for use in design tools or sharing.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border border-red-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <Sparkles className="w-6 h-6 text-red-600" />
+                      Step 4: Use Anywhere
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Perfect for social media previews, blog posts, video editing, marketing campaigns, and more. Download thumbnails without watermarks or quality loss.
+                    </p>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">
+                  Understanding YouTube Thumbnail Resolutions
                 </h3>
-                <div className="space-y-4">
-                  {[
-                    'Extract thumbnails from any YouTube video',
-                    '8 different resolution options available',
-                    'Includes auto-generated YouTube thumbnails',
-                    'Instant extraction - no waiting time',
-                    'Copy URLs or download directly',
-                    '100% free - no registration required',
-                    'Works with all YouTube URL formats'
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
-                      <span className="text-sm text-gray-700">{feature}</span>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  YouTube provides multiple thumbnail resolutions for every video. Our downloader retrieves all available options, including the auto-generated thumbnails that YouTube offers inside Creator Studio when uploading content. These variants help you find the perfect frame or resolution for any use case.
+                </p>
+
+                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">Common Use Cases</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                  {perfectFor.map((item) => (
+                    <div key={item} className="flex items-start gap-4 bg-gray-50 p-6 rounded-xl border border-gray-200">
+                      <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Camera className="w-5 h-5 text-red-600" />
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">{item}</p>
                     </div>
                   ))}
                 </div>
-              </div>
 
-              {/* Use Cases */}
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center">
-                  <Camera className="w-5 h-5 mr-2 text-red-600" />
-                  Perfect For
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    'Content creators and bloggers',
-                    'Social media managers',
-                    'Video editors and designers',
-                    'Website developers',
-                    'Marketing professionals',
-                    'YouTube channel owners'
-                  ].map((useCase, index) => (
-                    <div key={index} className="flex items-center">
-                      <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
-                      <span className="text-sm text-gray-700">{useCase}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Thumbnail Qualities Info */}
-              <div className="bg-white rounded-2xl shadow-xl p-6">
-                <h3 className="text-xl font-semibold mb-6 flex items-center">
-                  <Info className="w-5 h-5 mr-2 text-red-600" />
-                  Available Qualities
-                </h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-medium">Default</span>
-                    <span className="text-gray-500">120×90</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-medium">Medium</span>
-                    <span className="text-gray-500">320×180</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-medium">High</span>
-                    <span className="text-gray-500">480×360</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-medium">Standard</span>
-                    <span className="text-gray-500">640×480</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-700 font-medium">Max Resolution</span>
-                    <span className="text-gray-500">1280×720+</span>
-                  </div>
-                  <div className="pt-2 border-t border-gray-200">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-700 font-medium">Auto-Generated 1</span>
-                      <span className="text-gray-500">1280×720</span>
-                    </div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-gray-700 font-medium">Auto-Generated 2</span>
-                      <span className="text-gray-500">1280×720</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 font-medium">Auto-Generated 3</span>
-                      <span className="text-gray-500">1280×720</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Back Button */}
-          <div className="mt-12 text-center">
-            <button
-              onClick={handleBack}
-              className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
-            >
-              ← Back to Home
-            </button>
-          </div>
-
-          {/* SEO Content Section */}
-          <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Download YouTube Thumbnails</h2>
-              
-              <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 mb-6">
-                  Our YouTube thumbnail downloader is a free online tool that allows you to extract and download high-quality thumbnails from any YouTube video. Whether you're a content creator, social media manager, or just need a thumbnail for your project, our tool makes it easy to get the perfect image.
-                </p>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Step-by-Step Guide</h3>
-                <ol className="list-decimal list-inside space-y-3 text-gray-700 mb-6">
-                  <li><strong>Copy the YouTube Video URL:</strong> Find the YouTube video you want to extract the thumbnail from and copy its URL from the address bar. You can also use the video ID directly.</li>
-                  <li><strong>Paste the URL:</strong> Paste the YouTube URL or video ID into the input field on our tool. We support multiple formats including youtube.com/watch?v=, youtu.be/, and embed URLs.</li>
-                  <li><strong>Extract Thumbnails:</strong> Click the "Extract Thumbnails" button to generate all available thumbnail resolutions for the video.</li>
-                  <li><strong>Choose Your Quality:</strong> Browse through the available thumbnail qualities (Default, Medium, High, Standard, and Max Resolution) and select the one that best fits your needs.</li>
-                  <li><strong>Download or Copy:</strong> Click the "Download" button to save the thumbnail to your device, or use "Copy URL" to get the direct link to the image.</li>
-                </ol>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Understanding YouTube Thumbnail Resolutions</h3>
-                <p className="text-gray-700 mb-4">
-                  YouTube provides thumbnails in several resolutions. Here's what each quality offers:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><strong>Default (120×90):</strong> The smallest thumbnail size, perfect for previews and small displays.</li>
-                  <li><strong>Medium (320×180):</strong> A good balance between file size and quality, ideal for web use.</li>
-                  <li><strong>High (480×360):</strong> Higher quality thumbnail suitable for larger displays and presentations.</li>
-                  <li><strong>Standard (640×480):</strong> High-quality thumbnail perfect for most professional uses.</li>
-                  <li><strong>Max Resolution (1280×720+):</strong> The highest quality available, perfect for print or high-resolution displays. Note that not all videos have max resolution thumbnails available.</li>
-                  <li><strong>Auto-Generated Thumbnails (1, 2, 3):</strong> YouTube automatically generates three high-resolution thumbnails (1280×720) from different moments in the video. These are the same thumbnails you see when uploading a video to YouTube. They provide alternative options if the main thumbnail doesn't suit your needs.</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Why Use Our YouTube Thumbnail Downloader?</h3>
-                <p className="text-gray-700 mb-4">
-                  Our tool offers several advantages over other methods:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><strong>Multiple Resolutions:</strong> Access all available thumbnail sizes in one place, from the smallest default to the maximum resolution.</li>
-                  <li><strong>Easy to Use:</strong> No technical knowledge required. Simply paste the URL and click extract.</li>
-                  <li><strong>Fast and Free:</strong> Get thumbnails instantly without any cost or registration.</li>
-                  <li><strong>Multiple Formats Supported:</strong> Works with various YouTube URL formats, making it compatible with any video link.</li>
-                  <li><strong>Direct Download:</strong> Download thumbnails directly to your device or copy the URL for use in your projects.</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Common Use Cases</h3>
-                <p className="text-gray-700 mb-4">
-                  Our YouTube thumbnail downloader is useful for:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                  <li><strong>Content Creation:</strong> Bloggers and content creators can use thumbnails in their articles and social media posts.</li>
-                  <li><strong>Social Media:</strong> Social media managers can extract thumbnails for sharing on various platforms.</li>
-                  <li><strong>Web Development:</strong> Developers can use thumbnails in their websites and applications.</li>
-                  <li><strong>Marketing:</strong> Marketing professionals can use thumbnails in their campaigns and presentations.</li>
-                  <li><strong>Video Editing:</strong> Video editors can use thumbnails as reference or in their projects.</li>
-                </ul>
-
-                <h3 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Frequently Asked Questions</h3>
-                <div className="space-y-4 mb-6">
+                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">Frequently Asked Questions</h3>
+                <div className="space-y-4 text-gray-700">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Is this tool free to use?</h4>
-                    <p className="text-gray-700">Yes, our YouTube thumbnail downloader is completely free to use. No registration or payment is required.</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Is this tool free to use?</h4>
+                    <p>Yes, the YouTube thumbnail downloader is completely free. No registration or payment is required.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Do I need to download any software?</h4>
-                    <p className="text-gray-700">No, our tool works entirely in your web browser. No downloads or installations are needed.</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Do I need to download any software?</h4>
+                    <p>No, everything runs directly in your browser. Just paste a YouTube link and download.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">What YouTube URL formats are supported?</h4>
-                    <p className="text-gray-700">We support all common YouTube URL formats including youtube.com/watch?v=, youtu.be/, youtube.com/embed/, and direct video IDs.</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Are all resolutions available for every video?</h4>
+                    <p>
+                      Most videos offer all resolutions, but older content may not include max resolution thumbnails. The auto-generated
+                      thumbnails (1, 2, 3) provide alternative high-quality frames.
+                    </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Are all thumbnail resolutions available for every video?</h4>
-                    <p className="text-gray-700">Most videos have all resolutions available, but some older videos may not have max resolution thumbnails. The auto-generated thumbnails (1, 2, 3) are usually available for most videos and provide alternative high-quality options.</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Can I copy the thumbnail URL instead of downloading?</h4>
+                    <p>Yes, each thumbnail includes a “Copy URL” button for easy sharing or use in design tools.</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">What are the auto-generated thumbnails?</h4>
-                    <p className="text-gray-700">Auto-generated thumbnails are three high-resolution images (1280×720) that YouTube automatically creates from different moments in your video. These are the same thumbnails you see when uploading a video and choosing a thumbnail. They're great alternatives if you want a different frame from the video.</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Is there any watermark or quality loss?</h4>
+                    <p>No, images are retrieved directly from YouTube’s CDN. There are no watermarks or quality changes.</p>
                   </div>
                 </div>
               </div>
