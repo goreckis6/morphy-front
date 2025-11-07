@@ -411,7 +411,7 @@ export const YTThumbnailDownloader: React.FC = () => {
               </div>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-1 lg:sticky lg:top-4">
+                <div className="lg:col-span-1 space-y-6 lg:sticky lg:top-4">
                   <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                     <div className="flex items-center justify-between mb-4">
                       <button
@@ -494,7 +494,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 space-y-8">
                   <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                       <div>
@@ -578,8 +578,9 @@ export const YTThumbnailDownloader: React.FC = () => {
                         </div>
                       ))}
                     </div>
+                  </div>
 
-                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                     <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                       <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                         <Star className="w-5 h-5 text-yellow-500" />
