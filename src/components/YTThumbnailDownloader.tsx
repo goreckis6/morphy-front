@@ -94,24 +94,6 @@ export const YTThumbnailDownloader: React.FC = () => {
         resolution: '1280×720+',
         url: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
         quality: 'maxresdefault'
-      },
-      {
-        name: 'Auto-Generated 1',
-        resolution: '1280×720',
-        url: `https://img.youtube.com/vi/${id}/1.jpg`,
-        quality: '1'
-      },
-      {
-        name: 'Auto-Generated 2',
-        resolution: '1280×720',
-        url: `https://img.youtube.com/vi/${id}/2.jpg`,
-        quality: '2'
-      },
-      {
-        name: 'Auto-Generated 3',
-        resolution: '1280×720',
-        url: `https://img.youtube.com/vi/${id}/3.jpg`,
-        quality: '3'
       }
     ];
   };
@@ -239,8 +221,8 @@ export const YTThumbnailDownloader: React.FC = () => {
       icon: LinkIcon
     },
     {
-      title: '8 Thumbnail Qualities',
-      description: 'From default to max resolution and auto-generated options.',
+      title: 'Multiple Thumbnail Qualities',
+      description: 'Access every official YouTube thumbnail size up to max resolution.',
       color: 'bg-rose-100',
       icon: ImageIcon
     },
@@ -272,10 +254,7 @@ export const YTThumbnailDownloader: React.FC = () => {
     { label: 'Medium', resolution: '320×180' },
     { label: 'High', resolution: '480×360' },
     { label: 'Standard', resolution: '640×480' },
-    { label: 'Max Resolution', resolution: '1280×720+' },
-    { label: 'Auto-Generated 1', resolution: '1280×720' },
-    { label: 'Auto-Generated 2', resolution: '1280×720' },
-    { label: 'Auto-Generated 3', resolution: '1280×720' }
+    { label: 'Max Resolution', resolution: '1280×720+' }
   ];
 
   const pageJsonLd = {
@@ -294,7 +273,7 @@ export const YTThumbnailDownloader: React.FC = () => {
     },
     featureList: [
       'Extract thumbnails from YouTube videos',
-      'Download in 8 different resolutions',
+      'Download in 5 different resolutions',
       'Copy thumbnail URLs',
       'Support for multiple YouTube URL formats',
       'No registration required'
@@ -307,7 +286,7 @@ export const YTThumbnailDownloader: React.FC = () => {
         <title>YouTube Thumbnail Downloader - Free Online Tool | MorphyHub</title>
         <meta
           name="description"
-          content="Download YouTube video thumbnails in 8 different resolutions. Extract high-quality thumbnails (120×90 to 1280×720+) including auto-generated options from any YouTube video instantly. Free, fast, and easy to use. No registration required."
+          content="Download YouTube video thumbnails in five different resolutions. Extract high-quality thumbnails (120×90 to 1280×720+) from any YouTube video instantly. Free, fast, and easy to use. No registration required."
         />
         <meta
           name="keywords"
@@ -678,7 +657,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                       Step 2: Extract
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      Click the extract button to instantly generate all available thumbnails. You'll receive up to eight different resolutions including auto-generated options.
+                      Click the extract button to instantly generate every available thumbnail. You'll receive up to five official YouTube resolutions, including the maximised version when provided by the channel.
                     </p>
                   </div>
                   <div className="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-100">
@@ -705,7 +684,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                   Understanding YouTube Thumbnail Resolutions
                 </h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  YouTube provides multiple thumbnail resolutions for every video. Our downloader retrieves all available options, including the auto-generated thumbnails that YouTube offers inside Creator Studio when uploading content. These variants help you find the perfect frame or resolution for any use case.
+                  YouTube provides multiple thumbnail resolutions for every video. Our downloader retrieves all official options, helping you find the exact size you need for any screen or platform.
                 </p>
 
                 <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">Common Use Cases</h3>
@@ -733,8 +712,8 @@ export const YTThumbnailDownloader: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-lg text-gray-900 mb-2">Are all resolutions available for every video?</h4>
                     <p>
-                      Most videos offer all resolutions, but older content may not include max resolution thumbnails. The auto-generated
-                      thumbnails (1, 2, 3) provide alternative high-quality frames.
+                      Most videos offer all resolutions, but older content may not include the maximum size. If a max-resolution image
+                      isn’t available, you can still download every other official thumbnail that YouTube generates.
                     </p>
                   </div>
                   <div>
