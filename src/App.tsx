@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Converters from './pages/Converters';
@@ -262,6 +263,12 @@ function App() {
 
   return (
     <Router>
+      <Helmet>
+        <meta
+          name="description"
+          content="Convert and view files online for free. Support for 50+ formats including images, documents, spreadsheets, and more. No registration required."
+        />
+      </Helmet>
       <Routes>
         {/* Strona główna */}
         <Route path="/" element={<Home />} />

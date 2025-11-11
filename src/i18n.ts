@@ -152,7 +152,7 @@ const resources = {
       
       // HEIC to WEBP
       'heic_to_webp.title': 'Free HEIC to WEBP Converter',
-      'heic_to_webp.meta_title': 'Free HEIC to WEBP Converter Online - Convert iPhone HEIC Images to WEBP | MorphyHub',
+      'heic_to_webp.meta_title': 'Free HEIC to WEBP Converter Online | MorphyHub',
       'heic_to_webp.meta_description': 'Convert HEIC images (iPhone photos) to modern WEBP format online for free. Fast, secure HEIC to WEBP converter with batch support and adjustable quality.',
       'heic_to_webp.subtitle': 'Convert Apple HEIC photos to efficient WEBP images for web and apps. Fast, secure, and free with batch processing.',
       'heic_to_webp.upload_single': 'Upload HEIC File',
