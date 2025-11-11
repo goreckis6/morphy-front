@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Image, Upload, Eye, Download, ArrowLeft, Camera, Palette, Zap, Info, CheckCircle, Star, Layers } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const PNGViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+
+  useEffect(() => {
+    const lang = getLanguageFromUrl();
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only PNG files
@@ -22,9 +32,9 @@ export const PNGViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free PNG Viewer - View PNG Images with Transparency Online</title>
-        <meta name="description" content="Free PNG viewer. View PNG images online with alpha transparency support. Free online tool with batch processing." />
-        <meta name="keywords" content="PNG viewer, PNG converter, view PNG online, PNG transparency, PNG to JPG, image viewer, alpha channel viewer" />
+        <title>{t('viewers.png.meta_title')}</title>
+        <meta name="description" content={t('viewers.png.meta_description')} />
+        <meta name="keywords" content={t('viewers.png.meta_keywords')} />
       </Helmet>
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -47,10 +57,10 @@ export const PNGViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">
-                    Free PNG Viewer
+                    {t('viewers.png.hero_title')}
                   </h1>
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-green-100">
-                    View PNG images with transparency support
+                    {t('viewers.png.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -68,11 +78,11 @@ export const PNGViewer: React.FC = () => {
               <Upload className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              Upload PNG Files
+              {t('viewers.png.upload_title')}
             </h2>
           </div>
           <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-            Drag and drop your PNG images or click to browse. Supports transparency and alpha channels up to 100MB each.
+            {t('viewers.png.upload_description')}
           </p>
           <FileUpload 
             onFilesSelected={handleFilesSelected}
@@ -93,7 +103,7 @@ export const PNGViewer: React.FC = () => {
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-                  Your PNG Files ({selectedFiles.length})
+                  {t('viewers.png.files_heading', { count: selectedFiles.length })}
                 </h2>
               </div>
             </div>
@@ -122,7 +132,7 @@ export const PNGViewer: React.FC = () => {
                       className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white text-xs sm:text-sm font-semibold py-2 sm:py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                     >
                       <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
-                      <span>View</span>
+                      <span>{t('viewers.png.buttons.view')}</span>
                     </button>
                     <button 
                       onClick={() => {
@@ -147,41 +157,21 @@ export const PNGViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-            <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
-              <Layers className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
+          {t('viewers.png.features', { returnObjects: true }).map((feature: any, index: number) => (
+            <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-green-50 to-emerald-50 border-green-200' : index === 1 ? 'from-blue-50 to-indigo-50 border-blue-200' : 'from-purple-50 to-pink-50 border-purple-200'} rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border hover:shadow-xl transition-all transform hover:scale-105 ${index === 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`}>
+              <div className={`bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4`}>
+                {index === 0 && <Layers className={`w-6 h-6 sm:w-8 sm:h-8 text-green-600`} />}
+                {index === 1 && <Zap className={`w-6 h-6 sm:w-8 sm:h-8 text-blue-600`} />}
+                {index === 2 && <Palette className={`w-6 h-6 sm:w-8 sm:h-8 text-purple-600`} />}
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                {feature.description}
+              </p>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
-              Transparency Support
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              Full alpha channel support with checkered background preview for transparent regions
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-            <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
-              <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
-            </div>
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
-              Lossless Quality
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              PNG uses lossless compression, preserving every pixel with perfect quality
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105 sm:col-span-2 lg:col-span-1">
-            <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
-              <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" />
-            </div>
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
-              Format Conversion
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              Convert PNG to JPG, WebP, PDF and other formats with advanced settings
-            </p>
-          </div>
+          ))}
         </div>
 
         {/* PNG Information */}
@@ -191,38 +181,28 @@ export const PNGViewer: React.FC = () => {
               <Info className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              About PNG Format
+              {t('viewers.png.about_title')}
             </h2>
           </div>
           <div className="prose max-w-none text-gray-600">
-            <p className="mb-4 text-sm sm:text-base">
-              PNG (Portable Network Graphics) is a raster-graphics file format that supports lossless data compression. 
-              Created as an improved, non-patented replacement for GIF, PNG is widely used for web graphics, digital art, 
-              and images requiring transparency. Unlike JPEG, PNG preserves image quality without any loss during compression.
-            </p>
+            <p className="mb-4 text-sm sm:text-base" dangerouslySetInnerHTML={{ __html: t('viewers.png.about_intro') }} />
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-4 sm:mt-6">
               <div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">Key Advantages</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">{t('viewers.png.advantages_title')}</h3>
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li>• <strong>Transparency support</strong> - Full alpha channel (0-255)</li>
-                  <li>• <strong>Lossless compression</strong> - No quality degradation</li>
-                  <li>• <strong>True color</strong> - 16.7 million colors (24-bit RGB)</li>
-                  <li>• <strong>Web optimized</strong> - Perfect for web graphics and logos</li>
-                  <li>• <strong>Universal support</strong> - All browsers and applications</li>
-                  <li>• <strong>Metadata support</strong> - Text chunks for image information</li>
+                  {t('viewers.png.advantages', { returnObjects: true }).map((item: string, index: number) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                  ))}
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">Best Use Cases</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">{t('viewers.png.use_cases_title')}</h3>
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li>• <strong>Web graphics</strong> - Logos, icons, and UI elements</li>
-                  <li>• <strong>Screenshots</strong> - Perfect for captures with text</li>
-                  <li>• <strong>Digital art</strong> - Illustrations with transparency</li>
-                  <li>• <strong>Infographics</strong> - Charts and diagrams</li>
-                  <li>• <strong>Game assets</strong> - Sprites with alpha channels</li>
-                  <li>• <strong>Print graphics</strong> - High-quality printing needs</li>
+                  {t('viewers.png.use_cases', { returnObjects: true }).map((item: string, index: number) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                  ))}
                 </ul>
               </div>
             </div>
@@ -236,7 +216,7 @@ export const PNGViewer: React.FC = () => {
               <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              PNG Technical Specifications
+              {t('viewers.png.specs_title')}
             </h2>
           </div>
           
@@ -244,43 +224,17 @@ export const PNGViewer: React.FC = () => {
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">Specification</th>
-                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">Details</th>
+                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">{t('viewers.png.specs_header_label')}</th>
+                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">{t('viewers.png.specs_header_value')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">File Extension</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">.png</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">MIME Type</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">image/png</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Compression</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">Lossless using DEFLATE algorithm</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Color Support</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">RGB, RGBA, Grayscale, Indexed (up to 48-bit color)</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">6,500 × 6,500 pixels</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Transparency</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">Full alpha channel support (256 levels)</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Animation</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">Supported via APNG extension</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Interlacing</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">Adam7 interlacing supported</td>
-                </tr>
+                {t('viewers.png.specs', { returnObjects: true }).map((spec: any, index: number) => (
+                  <tr key={index}>
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">{spec.label}</td>
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">{spec.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -293,35 +247,28 @@ export const PNGViewer: React.FC = () => {
               <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              PNG Viewer Features
+              {t('viewers.png.seo_title')}
             </h2>
           </div>
           
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4 text-sm sm:text-base">
-              Our professional PNG viewer provides comprehensive support for all PNG variants including 
-              PNG-8, PNG-24, PNG-32, and APNG (Animated PNG). Whether you're a web designer, graphic artist, or developer, 
-              our platform offers the tools you need for professional PNG processing with full transparency support.
+              {t('viewers.png.seo_intro')}
             </p>
             
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Advanced Viewing Features</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">{t('viewers.png.seo_advanced_title')}</h3>
             <p className="mb-4 text-sm sm:text-base">
-              View PNG images with pixel-perfect accuracy, checkered background for transparency visualization, zoom 
-              capabilities up to 500%, and detailed metadata display. Our viewer automatically detects and displays 
-              alpha channel information, color depth, and embedded text chunks.
+              {t('viewers.png.seo_advanced_text')}
             </p>
             
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Professional Viewing Tools</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">{t('viewers.png.seo_professional_title')}</h3>
             <p className="mb-4 text-sm sm:text-base">
-              View PNG files with transparency handling options, background color selection for formats that don't support alpha channels, and batch processing 
-              for viewing multiple PNG files simultaneously while preserving quality.
+              {t('viewers.png.seo_professional_text')}
             </p>
             
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Transparency Optimization</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">{t('viewers.png.seo_optimization_title')}</h3>
             <p className="text-sm sm:text-base">
-              Optimize PNG files for web use with smart compression that reduces file sizes by up to 70% without 
-              quality loss. Perfect for website optimization, app assets, and digital publishing where transparency 
-              and quality are both essential.
+              {t('viewers.png.seo_optimization_text')}
             </p>
           </div>
         </div>
@@ -332,7 +279,7 @@ export const PNGViewer: React.FC = () => {
             href="/viewers"
             className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
           >
-            ← Back to All Viewers
+            {t('viewers.png.buttons.back')}
           </a>
         </div>
       </div>

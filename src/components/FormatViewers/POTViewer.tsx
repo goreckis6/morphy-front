@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Presentation, Layout } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const POTViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+
+  useEffect(() => {
+    const lang = getLanguageFromUrl();
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -41,17 +51,20 @@ export const POTViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.pot.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: 100 }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the POT file');
+        alert(t('viewers.pot.alerts.popup_blocked'));
         return;
       }
 
+      const loadingTitle = t('viewers.pot.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.pot.loading_window.message');
+      
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
@@ -89,8 +102,8 @@ export const POTViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Converting PowerPoint template for preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -200,6 +213,10 @@ export const POTViewer: React.FC = () => {
         `);
         loadingWindow.document.close();
       } else {
+        const errorTitle = t('viewers.pot.error_window.title');
+        const errorMessage = t('viewers.pot.error_window.message');
+        const errorClose = t('viewers.pot.error_window.close');
+        
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
@@ -235,9 +252,9 @@ export const POTViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate POT preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${errorTitle}</h1>
+              <p>${errorMessage}</p>
+              <button onclick="window.close()">${errorClose}</button>
             </div>
           </body>
           </html>
@@ -246,16 +263,16 @@ export const POTViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('POT view error:', error);
-      alert('Failed to open POT preview. Please try again or download the file.');
+      alert(t('viewers.pot.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free POT Viewer - View PowerPoint Template Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional POT (PowerPoint Template) viewer. Upload and preview POT template files online with slide rendering. Supports batch viewing up to 20 files. 100% free POT viewer tool." />
-        <meta name="keywords" content="POT viewer, PowerPoint Template viewer, POT file viewer online, presentation template viewer, Microsoft template viewer, free POT viewer, POT preview" />
+        <title>{t('viewers.pot.meta_title')}</title>
+        <meta name="description" content={t('viewers.pot.meta_description')} />
+        <meta name="keywords" content={t('viewers.pot.meta_keywords')} />
         <meta property="og:title" content="Free POT Viewer - View PowerPoint Template Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional POT (PowerPoint Template) viewer. Upload and preview Microsoft PowerPoint template files online." />
         <meta property="og:type" content="website" />
@@ -301,10 +318,10 @@ export const POTViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free POT Viewer
+                    {t('viewers.pot.hero_title')}
                   </h1>
                   <p className="text-xl text-red-100">
-                    View PowerPoint Template files online - 100% free
+                    {t('viewers.pot.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -321,11 +338,11 @@ export const POTViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload POT Files
+                {t('viewers.pot.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your PowerPoint Template (POT) files or click to browse. Supports POT files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.pot.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -355,7 +372,7 @@ export const POTViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your POT Files ({selectedFiles.length})
+                    {t('viewers.pot.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -364,11 +381,8 @@ export const POTViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-red-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-red-900 mb-1">How to View POT Files</h4>
-                    <p className="text-sm text-red-700">
-                      Click the <strong>"View Template"</strong> button to render and preview the POT file. 
-                      The viewer will convert the PowerPoint template to HTML format for web viewing. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-red-900 mb-1">{t('viewers.pot.how_to_title')}</h4>
+                    <p className="text-sm text-red-700" dangerouslySetInnerHTML={{ __html: t('viewers.pot.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -396,14 +410,14 @@ export const POTViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Template</span>
+                        <span>{t('viewers.pot.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.pot.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -414,41 +428,21 @@ export const POTViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-2xl shadow-lg p-8 border border-red-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Presentation className="w-8 h-8 text-red-600" />
+            {t('viewers.pot.features', { returnObjects: true }).map((feature: any, index: number) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-red-50 to-rose-50 border-red-200' : index === 1 ? 'from-rose-50 to-pink-50 border-rose-200' : 'from-pink-50 to-red-50 border-pink-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <Presentation className={`w-8 h-8 text-red-600`} />}
+                  {index === 1 && <Layout className={`w-8 h-8 text-rose-600`} />}
+                  {index === 2 && <Zap className={`w-8 h-8 text-pink-600`} />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Template Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View PowerPoint templates converted to HTML format with preserved master slides and layouts
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-rose-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Layout className="w-8 h-8 text-rose-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Rendering
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Preview template files with full rendering including theme colors, fonts, and slide masters
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-2xl shadow-lg p-8 border border-pink-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-pink-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with LibreOffice for instant viewing in your browser
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About POT Format Section */}
@@ -458,75 +452,50 @@ export const POTViewer: React.FC = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About POT Format
+                {t('viewers.pot.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                POT (PowerPoint Template) is Microsoft's legacy template format for PowerPoint presentations, used primarily in 
-                PowerPoint 97-2003. POT files serve as reusable templates that define the master slides, layouts, color themes, 
-                fonts, and default formatting for presentations. Unlike PPT files which contain actual presentation content, 
-                POT files are designed to be starting points for creating new presentations with consistent branding and styling. 
-                While the newer POTX format (Office Open XML) has largely replaced POT, many organizations still use POT templates 
-                for compatibility with older PowerPoint versions.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.pot.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.pot.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Reusable templates</strong> - Create consistent presentations</li>
-                    <li>• <strong>Master slides</strong> - Define layouts and formatting</li>
-                    <li>• <strong>Brand consistency</strong> - Maintain corporate identity</li>
-                    <li>• <strong>Legacy compatibility</strong> - Works with PowerPoint 97-2003</li>
-                    <li>• <strong>Widely supported</strong> - Compatible with LibreOffice</li>
-                    <li>• <strong>Theme preservation</strong> - Colors, fonts, and styles</li>
+                    {t('viewers.pot.advantages', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Applications</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.pot.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Microsoft PowerPoint</strong> - Native POT support (all versions)</li>
-                    <li>• <strong>LibreOffice Impress</strong> - Full compatibility</li>
-                    <li>• <strong>Apache OpenOffice Impress</strong> - Can open POT</li>
-                    <li>• <strong>Google Slides</strong> - Import POT templates</li>
-                    <li>• <strong>OnlyOffice</strong> - Complete template support</li>
-                    <li>• <strong>WPS Office</strong> - Cross-platform compatibility</li>
+                    {t('viewers.pot.use_cases', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.pot.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.pot.specs_header_label')}</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.pot.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.pot</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/vnd.ms-powerpoint</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Format Type</td>
-                        <td className="py-2 text-sm text-gray-900">Binary (OLE2 Compound Document)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">PowerPoint Version</td>
-                        <td className="py-2 text-sm text-gray-900">PowerPoint 97-2003</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Modern Equivalent</td>
-                        <td className="py-2 text-sm text-gray-900">POTX (Office Open XML)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Microsoft Corporation</td>
-                      </tr>
+                      {t('viewers.pot.specs', { returnObjects: true }).map((spec: any, index: number) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -540,7 +509,7 @@ export const POTViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.pot.buttons.back')}
             </a>
           </div>
         </div>

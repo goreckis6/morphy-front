@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Image, Upload, Eye, Download, Share2, ArrowLeft, Palette, Code, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const PSViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+
+  useEffect(() => {
+    const lang = getLanguageFromUrl();
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only PS files
@@ -19,6 +30,12 @@ export const PSViewer: React.FC = () => {
   };
 
   return (
+    <>
+      <Helmet>
+        <title>{t('viewers.ps.meta_title')}</title>
+        <meta name="description" content={t('viewers.ps.meta_description')} />
+        <meta name="keywords" content={t('viewers.ps.meta_keywords')} />
+      </Helmet>
     <div className="min-h-screen bg-gray-50">
       <Header />
       
@@ -37,10 +54,10 @@ export const PSViewer: React.FC = () => {
             </div>
             <div>
               <h1 className="text-3xl font-bold text-gray-900">
-                PostScript Viewer & Converter
+                {t('viewers.ps.hero_title')}
               </h1>
               <p className="text-lg text-gray-600 mt-2">
-                Upload, view, and convert PostScript (PS) files
+                {t('viewers.ps.hero_subtitle')}
               </p>
             </div>
           </div>
@@ -52,7 +69,7 @@ export const PSViewer: React.FC = () => {
         {/* Upload Section */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Upload PostScript Files
+            {t('viewers.ps.upload_title')}
           </h2>
           <FileUpload 
             onFilesSelected={handleFilesSelected}
@@ -65,7 +82,7 @@ export const PSViewer: React.FC = () => {
         {selectedFiles.length > 0 && (
           <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
-              Preview PostScript Files ({selectedFiles.length})
+              {t('viewers.ps.files_heading', { count: selectedFiles.length })}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {selectedFiles.map((file, index) => (
@@ -89,7 +106,7 @@ export const PSViewer: React.FC = () => {
                       className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-xs font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center space-x-1"
                     >
                       <Eye className="w-3 h-3" />
-                      <span>View</span>
+                      <span>{t('viewers.ps.buttons.view')}</span>
                     </button>
                     <button className="p-2 text-gray-500 hover:text-green-500 hover:bg-green-50 rounded-lg transition-colors">
                       <Download className="w-3 h-3" />
@@ -106,45 +123,29 @@ export const PSViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Code className="w-8 h-8 text-purple-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Programming Language
-            </h3>
-            <p className="text-gray-600">
-              PostScript is a complete programming language for graphics and text
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Palette className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Print Quality
-            </h3>
-            <p className="text-gray-600">
-              Designed for high-quality printing and professional publishing
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Zap className="w-8 h-8 text-yellow-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Device Independent
-            </h3>
-            <p className="text-gray-600">
-              Resolution-independent graphics that work on any output device
-            </p>
-          </div>
+          {t('viewers.ps.features', { returnObjects: true }).map((feature: any, index: number) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+              {index === 0 && <Code className="w-8 h-8 text-purple-600 mb-4" />}
+              {index === 1 && <Palette className="w-8 h-8 text-blue-600 mb-4" />}
+              {index === 2 && <Zap className="w-8 h-8 text-yellow-600 mb-4" />}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Back to Home Section */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            Back to Home - All Supported Formats
+            {t('viewers.ps.back_title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Standard Image Formats</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.ps.back_standard_title')}</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• JPEG (Joint Photographic Experts Group)</li>
                 <li>• JPEG 2000 Core Image File</li>
@@ -159,7 +160,7 @@ export const PSViewer: React.FC = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Professional & Specialized</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.ps.back_professional_title')}</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>• High Efficiency Image Container</li>
                 <li>• Scalable Vector Graphics</li>
@@ -177,7 +178,7 @@ export const PSViewer: React.FC = () => {
               href="/"
               className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Back to Home
+              {t('viewers.ps.back_button')}
             </a>
           </div>
         </div>
@@ -194,5 +195,6 @@ export const PSViewer: React.FC = () => {
         />
       )}
     </div>
+    </>
   );
 };

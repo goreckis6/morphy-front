@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Code, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Terminal, FileCode } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const PythonViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+
+  useEffect(() => {
+    const lang = getLanguageFromUrl();
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -54,22 +64,25 @@ export const PythonViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.python.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: 100 }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the Python file');
+        alert(t('viewers.python.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.python.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.python.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -102,8 +115,8 @@ export const PythonViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Formatting Python for preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -123,6 +136,10 @@ export const PythonViewer: React.FC = () => {
         loadingWindow.document.write(html);
         loadingWindow.document.close();
       } else {
+        const errorTitle = t('viewers.python.error_window.title');
+        const errorMessage = t('viewers.python.error_window.message');
+        const errorClose = t('viewers.python.error_window.close');
+        
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
@@ -158,9 +175,9 @@ export const PythonViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate Python preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${errorTitle}</h1>
+              <p>${errorMessage}</p>
+              <button onclick="window.close()">${errorClose}</button>
             </div>
           </body>
           </html>
@@ -169,16 +186,16 @@ export const PythonViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('Python view error:', error);
-      alert('Failed to open Python preview. Please try again or download the file.');
+      alert(t('viewers.python.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free Python Viewer - View Python Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional Python viewer with syntax highlighting. Upload and preview PY files online with formatted display and code analysis. Supports batch viewing up to 20 files. 100% free Python viewer tool." />
-        <meta name="keywords" content="Python viewer, PY viewer, Python file viewer online, Python formatter, Python preview, code viewer, Python online, free Python viewer" />
+        <title>{t('viewers.python.meta_title')}</title>
+        <meta name="description" content={t('viewers.python.meta_description')} />
+        <meta name="keywords" content={t('viewers.python.meta_keywords')} />
         <meta property="og:title" content="Free Python Viewer - View Python Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional Python viewer with syntax highlighting. Upload and preview Python files online with formatted display and code analysis." />
         <meta property="og:type" content="website" />
@@ -224,10 +241,10 @@ export const PythonViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free Python Viewer
+                    {t('viewers.python.hero_title')}
                   </h1>
                   <p className="text-xl text-blue-100">
-                    View and analyze Python code with syntax highlighting - 100% free
+                    {t('viewers.python.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -244,11 +261,11 @@ export const PythonViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload Python Files
+                {t('viewers.python.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Python files or click to browse. Supports PY, PYW, PYX, PYI files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.python.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -278,7 +295,7 @@ export const PythonViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your Python Files ({selectedFiles.length})
+                    {t('viewers.python.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -287,11 +304,8 @@ export const PythonViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View Python Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View Code"</strong> button to open the Python file in a preview window with syntax highlighting. 
-                      Files under 100 MB can be previewed. You can also download the original file.
-                    </p>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.python.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.python.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -319,14 +333,14 @@ export const PythonViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Code</span>
+                        <span>{t('viewers.python.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.python.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -337,41 +351,21 @@ export const PythonViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Code className="w-8 h-8 text-blue-600" />
+            {t('viewers.python.features', { returnObjects: true }).map((feature: any, index: number) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-blue-50 to-indigo-50 border-blue-200' : index === 1 ? 'from-indigo-50 to-purple-50 border-indigo-200' : 'from-purple-50 to-pink-50 border-purple-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <Code className="w-8 h-8 text-blue-600" />}
+                  {index === 1 && <Terminal className="w-8 h-8 text-indigo-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-purple-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Syntax Highlighting
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View Python with beautiful syntax highlighting for keywords, functions, strings, and decorators
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-lg p-8 border border-indigo-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Terminal className="w-8 h-8 text-indigo-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Code Analysis
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Analyze Python code with function counts, class definitions, and detailed statistics
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Version Support
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Support for Python 2.7 and Python 3.x with proper syntax recognition
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About Python Format Section */}
@@ -381,72 +375,52 @@ export const PythonViewer: React.FC = () => {
                 <Code className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About Python Format
+                {t('viewers.python.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
-                Python is a high-level, interpreted programming language known for its clear syntax and code readability. 
-                Created by Guido van Rossum and first released in 1991, Python emphasizes code readability with significant 
-                whitespace. It supports multiple programming paradigms including procedural, object-oriented, and functional programming.
+                {t('viewers.python.about_intro')}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.python.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Readable syntax</strong> - Clean and easy to understand code</li>
-                    <li>• <strong>Extensive libraries</strong> - Rich standard library and packages</li>
-                    <li>• <strong>Cross-platform</strong> - Runs on Windows, macOS, Linux</li>
-                    <li>• <strong>Versatile</strong> - Web, data science, AI, automation</li>
-                    <li>• <strong>Large community</strong> - Extensive documentation and support</li>
-                    <li>• <strong>Rapid development</strong> - Fast prototyping and iteration</li>
+                    {t('viewers.python.advantages', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.python.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Web development</strong> - Django, Flask, FastAPI frameworks</li>
-                    <li>• <strong>Data science</strong> - Pandas, NumPy, SciPy analysis</li>
-                    <li>• <strong>Machine learning</strong> - TensorFlow, PyTorch, scikit-learn</li>
-                    <li>• <strong>Automation</strong> - Scripts and task automation</li>
-                    <li>• <strong>Scientific computing</strong> - Research and simulations</li>
-                    <li>• <strong>Backend APIs</strong> - RESTful and GraphQL services</li>
+                    {t('viewers.python.use_cases', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.python.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.python.specs_header_label')}</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.python.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extensions</td>
-                        <td className="py-2 text-sm text-gray-900">.py, .pyw, .pyx, .pyi</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">text/x-python, application/x-python-code</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Version</td>
-                        <td className="py-2 text-sm text-gray-900">Python 2.7, Python 3.x (3.6-3.13)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">UTF-8 (default), ASCII, Latin-1</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Indentation</td>
-                        <td className="py-2 text-sm text-gray-900">Spaces (4 spaces recommended) or Tabs</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Guido van Rossum (1991), PSF</td>
-                      </tr>
+                      {t('viewers.python.specs', { returnObjects: true }).map((spec: any, index: number) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -460,7 +434,7 @@ export const PythonViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.python.buttons.back')}
             </a>
           </div>
         </div>

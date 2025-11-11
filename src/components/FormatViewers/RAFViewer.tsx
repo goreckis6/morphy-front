@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const RAFViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+
+  useEffect(() => {
+    const lang = getLanguageFromUrl();
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -54,22 +64,25 @@ export const RAFViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.raf.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: 100 }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the RAF file');
+        alert(t('viewers.raf.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.raf.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.raf.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -102,8 +115,8 @@ export const RAFViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Processing RAF RAW Image...</h2>
-            <p>Rendering ${file.name} (X-Trans Sensor)...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -367,6 +380,10 @@ export const RAFViewer: React.FC = () => {
         `);
         loadingWindow.document.close();
       } else {
+        const errorTitle = t('viewers.raf.error_window.title');
+        const errorMessage = t('viewers.raf.error_window.message');
+        const errorClose = t('viewers.raf.error_window.close');
+        
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
@@ -402,9 +419,9 @@ export const RAFViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate RAF preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${errorTitle}</h1>
+              <p>${errorMessage}</p>
+              <button onclick="window.close()">${errorClose}</button>
             </div>
           </body>
           </html>
@@ -413,16 +430,16 @@ export const RAFViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('RAF view error:', error);
-      alert('Failed to open RAF preview. Please try again or download the file.');
+      alert(t('viewers.raf.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free RAF Viewer - View Fujifilm RAW Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional RAF (Fujifilm RAW) viewer with high-quality rendering. Upload and preview RAF X-Trans sensor files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free RAF viewer tool." />
-        <meta name="keywords" content="RAF viewer, Fujifilm RAW viewer, RAF file viewer online, RAW viewer, Fuji X viewer, X-Trans viewer, camera RAW viewer, free RAF viewer, RAF preview" />
+        <title>{t('viewers.raf.meta_title')}</title>
+        <meta name="description" content={t('viewers.raf.meta_description')} />
+        <meta name="keywords" content={t('viewers.raf.meta_keywords')} />
         <meta property="og:title" content="Free RAF Viewer - View Fujifilm RAW Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional RAF (Fujifilm RAW) viewer with high-quality rendering. Upload and preview Fujifilm X-Trans sensor files online with EXIF metadata." />
         <meta property="og:type" content="website" />
@@ -468,10 +485,10 @@ export const RAFViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free RAF Viewer
+                    {t('viewers.raf.hero_title')}
                   </h1>
                   <p className="text-xl text-cyan-100">
-                    View Fujifilm X-Trans RAW files with professional rendering - 100% free
+                    {t('viewers.raf.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -488,11 +505,11 @@ export const RAFViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload RAF Files
+                {t('viewers.raf.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Fujifilm RAF (RAW) files or click to browse. Supports RAF X-Trans sensor files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.raf.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -522,7 +539,7 @@ export const RAFViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your RAF Files ({selectedFiles.length})
+                    {t('viewers.raf.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -531,11 +548,8 @@ export const RAFViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-cyan-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-cyan-900 mb-1">How to View RAF Files</h4>
-                    <p className="text-sm text-cyan-700">
-                      Click the <strong>"View RAW"</strong> button to render and preview the RAF file with professional quality. 
-                      The viewer will process the X-Trans sensor RAW data with zoom, rotation, and EXIF metadata display. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-cyan-900 mb-1">{t('viewers.raf.how_to_title')}</h4>
+                    <p className="text-sm text-cyan-700" dangerouslySetInnerHTML={{ __html: t('viewers.raf.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -563,14 +577,14 @@ export const RAFViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View RAW</span>
+                        <span>{t('viewers.raf.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.raf.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -581,41 +595,21 @@ export const RAFViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-2xl shadow-lg p-8 border border-cyan-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <ImageIcon className="w-8 h-8 text-cyan-600" />
+            {t('viewers.raf.features', { returnObjects: true }).map((feature: any, index: number) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-cyan-50 to-teal-50 border-cyan-200' : index === 1 ? 'from-teal-50 to-blue-50 border-teal-200' : 'from-blue-50 to-cyan-50 border-blue-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <ImageIcon className="w-8 h-8 text-cyan-600" />}
+                  {index === 1 && <Maximize2 className="w-8 h-8 text-teal-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-blue-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                X-Trans Processing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Professional X-Trans sensor processing with rawpy (LibRaw) for Fujifilm's unique color reproduction
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl shadow-lg p-8 border border-teal-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Maximize2 className="w-8 h-8 text-teal-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Resolution
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View RAF files at full resolution with X-Trans demosaicing and film simulation
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with embedded JPEG extraction for instant viewing
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About RAF Format Section */}
@@ -625,73 +619,52 @@ export const RAFViewer: React.FC = () => {
                 <Camera className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About RAF Format
+                {t('viewers.raf.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
-                RAF (Raw Image File) is Fujifilm's proprietary RAW image format used by Fujifilm X-series and GFX cameras. 
-                RAF files contain unprocessed sensor data from Fujifilm's unique X-Trans CMOS sensors or larger GFX medium format sensors. 
-                The X-Trans sensor uses a non-repeating 6×6 color filter array pattern instead of the traditional Bayer pattern, 
-                eliminating the need for an anti-aliasing filter and providing exceptional sharpness and color accuracy.
+                {t('viewers.raf.about_intro')}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.raf.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>X-Trans sensor</strong> - Unique 6×6 color filter array</li>
-                    <li>• <strong>No anti-aliasing filter</strong> - Superior sharpness</li>
-                    <li>• <strong>14-bit depth</strong> - Greater tonal range</li>
-                    <li>• <strong>Film simulations</strong> - Fujifilm's legendary color</li>
-                    <li>• <strong>Extended dynamic range</strong> - 14+ stops</li>
-                    <li>• <strong>Non-destructive</strong> - Original data preserved</li>
+                    {t('viewers.raf.advantages', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Cameras</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.raf.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Fujifilm X-H Series</strong> - X-H2S, X-H2, X-H1</li>
-                    <li>• <strong>Fujifilm X-T Series</strong> - X-T5, X-T4, X-T3, X-T30 II</li>
-                    <li>• <strong>Fujifilm X-Pro Series</strong> - X-Pro3, X-Pro2</li>
-                    <li>• <strong>Fujifilm X-E Series</strong> - X-E4, X-E3</li>
-                    <li>• <strong>Fujifilm GFX Series</strong> - GFX 100 II, GFX 50S II</li>
-                    <li>• <strong>All Fujifilm X & GFX</strong> - Full RAF support</li>
+                    {t('viewers.raf.use_cases', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.raf.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.raf.specs_header_label')}</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.raf.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.raf</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">image/x-fuji-raf</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Bit Depth</td>
-                        <td className="py-2 text-sm text-gray-900">14-bit (compressed or uncompressed)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Sensor Type</td>
-                        <td className="py-2 text-sm text-gray-900">X-Trans CMOS (6×6 pattern) or Bayer (GFX)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">Lossless or uncompressed</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Fujifilm Corporation</td>
-                      </tr>
+                      {t('viewers.raf.specs', { returnObjects: true }).map((spec: any, index: number) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -705,7 +678,7 @@ export const RAFViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.raf.buttons.back')}
             </a>
           </div>
         </div>

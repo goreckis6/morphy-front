@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const RTFViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+
+  useEffect(() => {
+    const lang = getLanguageFromUrl();
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     // Clear previous validation errors
@@ -43,7 +53,7 @@ export const RTFViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.rtf.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: 100 }));
       return;
     }
     
@@ -51,15 +61,18 @@ export const RTFViewer: React.FC = () => {
       // Show loading state
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the document');
+        alert(t('viewers.rtf.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.rtf.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.rtf.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -91,8 +104,8 @@ export const RTFViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Converting RTF to HTML preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -113,7 +126,10 @@ export const RTFViewer: React.FC = () => {
         loadingWindow.document.write(html);
         loadingWindow.document.close();
       } else {
-        const error = await response.text();
+        const errorTitle = t('viewers.rtf.error_window.title');
+        const errorMessage = t('viewers.rtf.error_window.message');
+        const errorClose = t('viewers.rtf.error_window.close');
+        
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
@@ -149,9 +165,9 @@ export const RTFViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate RTF preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${errorTitle}</h1>
+              <p>${errorMessage}</p>
+              <button onclick="window.close()">${errorClose}</button>
             </div>
           </body>
           </html>
@@ -160,16 +176,16 @@ export const RTFViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('RTF view error:', error);
-      alert('Failed to open RTF preview. Please try again or download the file.');
+      alert(t('viewers.rtf.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free RTF Viewer - View Rich Text Format Documents Online | MorphyHub</title>
-        <meta name="description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility. Supports batch viewing up to 20 files. 100% free RTF viewer tool." />
-        <meta name="keywords" content="RTF viewer, view RTF online, RTF preview, Rich Text Format viewer, document viewer, RTF viewer tool, online RTF viewer, RTF viewer free" />
+        <title>{t('viewers.rtf.meta_title')}</title>
+        <meta name="description" content={t('viewers.rtf.meta_description')} />
+        <meta name="keywords" content={t('viewers.rtf.meta_keywords')} />
         <meta property="og:title" content="Free RTF Viewer - View Rich Text Format Documents Online | MorphyHub" />
         <meta property="og:description" content="Free professional RTF viewer for viewing Rich Text Format documents online. Upload and preview RTF files with formatting preservation and cross-platform compatibility." />
         <meta property="og:type" content="website" />
@@ -215,10 +231,10 @@ export const RTFViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free RTF Viewer
+                    {t('viewers.rtf.hero_title')}
                   </h1>
                   <p className="text-xl text-orange-100">
-                    View and analyze Rich Text Format documents with professional tools - 100% free
+                    {t('viewers.rtf.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -235,11 +251,11 @@ export const RTFViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload RTF Files
+                {t('viewers.rtf.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Rich Text Format documents or click to browse. Supports .rtf files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.rtf.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -269,7 +285,7 @@ export const RTFViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your RTF Files ({selectedFiles.length})
+                    {t('viewers.rtf.files_heading', { count: selectedFiles.length })}
                   </h2>
           </div>
         </div>
@@ -279,11 +295,8 @@ export const RTFViewer: React.FC = () => {
                   <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View RTF Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View Document"</strong> button to preview the RTF file. 
-                      You can also download the original file for offline viewing or editing in your preferred word processor.
-                    </p>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.rtf.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.rtf.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -311,14 +324,14 @@ export const RTFViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                         >
                         <Eye className="w-4 h-4" />
-                        <span>View Document</span>
+                        <span>{t('viewers.rtf.buttons.view')}</span>
                         </button>
                         <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                         >
                         <Download className="w-4 h-4" />
-                          <span>Download</span>
+                          <span>{t('viewers.rtf.buttons.download')}</span>
                         </button>
                   </div>
                 </div>
@@ -329,41 +342,19 @@ export const RTFViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl shadow-lg p-8 border border-orange-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-orange-600" />
+            {t('viewers.rtf.features', { returnObjects: true }).map((feature: any, index: number) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-orange-50 to-red-50 border-orange-200' : index === 1 ? 'from-blue-50 to-indigo-50 border-blue-200' : 'from-green-50 to-emerald-50 border-green-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  <FileText className={`w-8 h-8 ${index === 0 ? 'text-orange-600' : index === 1 ? 'text-blue-600' : 'text-green-600'}`} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Universal Compatibility
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Opens in virtually any word processor on any platform - from modern Microsoft Word to legacy applications and open-source alternatives
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Text-Based Format
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Human-readable ASCII format that can be edited with any text editor - perfect for debugging and manual formatting adjustments
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Lightweight & Efficient
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Smaller file sizes compared to modern formats for simple documents - ideal for email attachments and legacy system compatibility
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About RTF Format Section */}
@@ -373,78 +364,53 @@ export const RTFViewer: React.FC = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About RTF Format
+                {t('viewers.rtf.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
-              Rich Text Format (RTF) is a proprietary document file format developed by Microsoft in 1987 
-              for cross-platform document interchange. RTF files can contain formatted text, images, and 
-              other document elements while maintaining compatibility across different word processors and platforms.
-                The format uses simple ASCII text with control codes to define formatting.
-            </p>
+                {t('viewers.rtf.about_intro')}
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.rtf.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Cross-platform compatibility</strong> - Works on Windows, Mac, and Linux</li>
-                    <li>• <strong>Preserves text formatting</strong> - Maintains fonts, colors, and styles</li>
-                    <li>• <strong>Smaller file sizes</strong> - More compact than DOCX for simple documents</li>
-                    <li>• <strong>Wide application support</strong> - Opens in most word processors</li>
-                    <li>• <strong>Human-readable</strong> - Text-based format that can be edited manually</li>
-                    <li>• <strong>Legacy compatibility</strong> - Supports older systems and software</li>
+                    {t('viewers.rtf.advantages', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.rtf.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Document exchange</strong> - Between different platforms and applications</li>
-                    <li>• <strong>Legacy systems</strong> - Compatibility with older software</li>
-                    <li>• <strong>Email attachments</strong> - Smaller files for easy sharing</li>
-                    <li>• <strong>Simple formatted documents</strong> - Letters, memos, basic reports</li>
-                    <li>• <strong>Template files</strong> - Reusable document templates</li>
-                    <li>• <strong>Backup format</strong> - Preserving document content and formatting</li>
+                    {t('viewers.rtf.use_cases', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                 </ul>
               </div>
             </div>
 
             {/* Technical Specifications */}
             <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.rtf.specs_title')}</h3>
               <div className="overflow-x-auto">
                 <table className="min-w-full">
+                  <thead>
+                    <tr className="bg-gray-100">
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.rtf.specs_header_label')}</th>
+                      <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.rtf.specs_header_value')}</th>
+                    </tr>
+                  </thead>
                   <tbody className="divide-y divide-gray-200">
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                      <td className="py-2 text-sm text-gray-900">.rtf</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                      <td className="py-2 text-sm text-gray-900">application/rtf, text/rtf</td>
-                    </tr>
-                    <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Microsoft Corporation (1987)</td>
-                    </tr>
-                    <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Current Version</td>
-                        <td className="py-2 text-sm text-gray-900">RTF 1.9.1 (2008)</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">Format Type</td>
-                        <td className="py-2 text-sm text-gray-900">Text-based document format</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">Encoding</td>
-                      <td className="py-2 text-sm text-gray-900">ASCII with control words</td>
-                    </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Character Set</td>
-                        <td className="py-2 text-sm text-gray-900">Unicode support (UTF-8, UTF-16)</td>
+                    {t('viewers.rtf.specs', { returnObjects: true }).map((spec: any, index: number) => (
+                      <tr key={index}>
+                        <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                        <td className="py-2 text-sm text-gray-900">{spec.value}</td>
                       </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -458,7 +424,7 @@ export const RTFViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.rtf.buttons.back')}
             </a>
         </div>
       </div>

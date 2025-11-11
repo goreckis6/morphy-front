@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Presentation, Layout } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { getLanguageFromUrl } from '../../i18n';
 
 export const SDDViewer: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+
+  useEffect(() => {
+    const lang = getLanguageFromUrl();
+    if (i18n.language !== lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -41,22 +51,25 @@ export const SDDViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.sdd.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: 100 }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the SDD file');
+        alert(t('viewers.sdd.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.sdd.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.sdd.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -89,8 +102,8 @@ export const SDDViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Converting StarOffice presentation for preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -200,6 +213,10 @@ export const SDDViewer: React.FC = () => {
         `);
         loadingWindow.document.close();
       } else {
+        const errorTitle = t('viewers.sdd.error_window.title');
+        const errorMessage = t('viewers.sdd.error_window.message');
+        const errorClose = t('viewers.sdd.error_window.close');
+        
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
@@ -235,9 +252,9 @@ export const SDDViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate StarOffice preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${errorTitle}</h1>
+              <p>${errorMessage}</p>
+              <button onclick="window.close()">${errorClose}</button>
             </div>
           </body>
           </html>
@@ -246,16 +263,16 @@ export const SDDViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('SDD view error:', error);
-      alert('Failed to open StarOffice preview. Please try again or download the file.');
+      alert(t('viewers.sdd.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional SDD (StarOffice Presentation) viewer. Upload and preview legacy StarOffice/StarDraw presentation files online with slide rendering. Supports batch viewing up to 20 files. 100% free SDD viewer tool." />
-        <meta name="keywords" content="SDD viewer, StarOffice viewer, StarDraw viewer, SDD file viewer online, legacy presentation viewer, StarOffice Impress viewer, free SDD viewer, SDD preview" />
+        <title>{t('viewers.sdd.meta_title')}</title>
+        <meta name="description" content={t('viewers.sdd.meta_description')} />
+        <meta name="keywords" content={t('viewers.sdd.meta_keywords')} />
         <meta property="og:title" content="Free SDD Viewer - View StarOffice Presentation Files Online | MorphyHub" />
         <meta property="og:description" content="Free professional SDD (StarOffice Presentation) viewer. Upload and preview legacy StarOffice presentation files online." />
         <meta property="og:type" content="website" />
@@ -301,10 +318,10 @@ export const SDDViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free SDD Viewer
+                    {t('viewers.sdd.hero_title')}
                   </h1>
                   <p className="text-xl text-cyan-100">
-                    View StarOffice Presentation files online - 100% free
+                    {t('viewers.sdd.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -321,11 +338,11 @@ export const SDDViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload SDD Files
+                {t('viewers.sdd.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your StarOffice Presentation (SDD) files or click to browse. Supports legacy SDD files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.sdd.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -355,7 +372,7 @@ export const SDDViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your SDD Files ({selectedFiles.length})
+                    {t('viewers.sdd.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -364,11 +381,8 @@ export const SDDViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-cyan-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-cyan-900 mb-1">How to View SDD Files</h4>
-                    <p className="text-sm text-cyan-700">
-                      Click the <strong>"View Presentation"</strong> button to render and preview the SDD file. 
-                      The viewer will convert the StarOffice presentation to HTML format for web viewing. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-cyan-900 mb-1">{t('viewers.sdd.how_to_title')}</h4>
+                    <p className="text-sm text-cyan-700" dangerouslySetInnerHTML={{ __html: t('viewers.sdd.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -396,14 +410,14 @@ export const SDDViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Presentation</span>
+                        <span>{t('viewers.sdd.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.sdd.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -414,41 +428,21 @@ export const SDDViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-cyan-50 to-teal-50 rounded-2xl shadow-lg p-8 border border-cyan-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Presentation className="w-8 h-8 text-cyan-600" />
+            {t('viewers.sdd.features', { returnObjects: true }).map((feature: any, index: number) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-cyan-50 to-teal-50 border-cyan-200' : index === 1 ? 'from-teal-50 to-blue-50 border-teal-200' : 'from-blue-50 to-cyan-50 border-blue-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <Presentation className="w-8 h-8 text-cyan-600" />}
+                  {index === 1 && <Layout className="w-8 h-8 text-teal-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-blue-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Legacy Format Support
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View StarOffice presentations from the 1990s-2000s with full conversion to modern HTML
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl shadow-lg p-8 border border-teal-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Layout className="w-8 h-8 text-teal-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Rendering
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Preview legacy presentations with full rendering including text, images, and formatting
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Archive Access
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Access old presentation archives from StarOffice era with LibreOffice compatibility
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About SDD Format Section */}
@@ -458,75 +452,52 @@ export const SDDViewer: React.FC = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About SDD Format
+                {t('viewers.sdd.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
-                SDD (StarOffice Draw/StarImpress) is a legacy presentation file format from the StarOffice suite, which was developed 
-                by Sun Microsystems in the 1990s and early 2000s. StarOffice was the predecessor to OpenOffice.org, which later became 
-                LibreOffice. SDD files were created by StarImpress (StarOffice's presentation module) and contain slides with text, 
-                images, charts, and formatting. While the format is now obsolete and replaced by ODP (OpenDocument Presentation), many 
-                organizations still have archived SDD files from the StarOffice era. LibreOffice Impress can open and convert SDD files 
-                for modern use.
+                {t('viewers.sdd.about_intro')}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Characteristics</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.sdd.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Legacy format</strong> - From StarOffice era (1990s-2005)</li>
-                    <li>• <strong>Historical significance</strong> - Predecessor to ODP</li>
-                    <li>• <strong>Archive access</strong> - Open old presentation files</li>
-                    <li>• <strong>LibreOffice compatible</strong> - Can still be opened today</li>
-                    <li>• <strong>Convertible</strong> - Can convert to ODP, PPTX, PDF</li>
-                    <li>• <strong>Binary format</strong> - Pre-XML era structure</li>
+                    {t('viewers.sdd.advantages', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Applications</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.sdd.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>LibreOffice Impress</strong> - Full SDD support</li>
-                    <li>• <strong>Apache OpenOffice Impress</strong> - Can open SDD</li>
-                    <li>• <strong>StarOffice</strong> - Original application (discontinued)</li>
-                    <li>• <strong>OpenOffice.org</strong> - StarOffice successor</li>
-                    <li>• <strong>Conversion tools</strong> - Convert to modern formats</li>
-                    <li>• <strong>Archive viewers</strong> - Legacy document access</li>
+                    {t('viewers.sdd.use_cases', { returnObjects: true }).map((item: string, index: number) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.sdd.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.sdd.specs_header_label')}</th>
+                        <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">{t('viewers.sdd.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.sdd</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/vnd.stardivision.impress</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Format Type</td>
-                        <td className="py-2 text-sm text-gray-900">Binary (StarOffice proprietary)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Application</td>
-                        <td className="py-2 text-sm text-gray-900">StarImpress / StarOffice (1990s-2005)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Modern Equivalent</td>
-                        <td className="py-2 text-sm text-gray-900">ODP (OpenDocument Presentation)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Sun Microsystems (StarDivision)</td>
-                      </tr>
+                      {t('viewers.sdd.specs', { returnObjects: true }).map((spec: any, index: number) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -540,7 +511,7 @@ export const SDDViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.sdd.buttons.back')}
             </a>
           </div>
         </div>
