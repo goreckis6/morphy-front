@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Presentation, Layout } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const ODPViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.odp.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.odp.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.odp.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.odp.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -41,22 +59,28 @@ export const ODPViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.odp.alerts.file_too_large', {
+        size: (file.size / 1024 / 1024).toFixed(2),
+        max: 100
+      }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the ODP file');
+        alert(t('viewers.odp.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.odp.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.odp.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -89,8 +113,8 @@ export const ODPViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Converting presentation for preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -205,7 +229,7 @@ export const ODPViewer: React.FC = () => {
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Error</title>
+            <title>${t('viewers.odp.error_window.title')}</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -235,9 +259,9 @@ export const ODPViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate ODP preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.odp.error_window.title')}</h1>
+              <p>${t('viewers.odp.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.odp.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -246,31 +270,31 @@ export const ODPViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('ODP view error:', error);
-      alert('Failed to open ODP preview. Please try again or download the file.');
+      alert(t('viewers.odp.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free ODP Viewer - View OpenDocument Presentation Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional ODP (OpenDocument Presentation) viewer. Upload and preview ODP presentation files online with slide rendering. Supports batch viewing up to 20 files. 100% free ODP viewer tool." />
-        <meta name="keywords" content="ODP viewer, OpenDocument Presentation viewer, ODP file viewer online, presentation viewer, LibreOffice Impress viewer, free ODP viewer, ODP preview" />
-        <meta property="og:title" content="Free ODP Viewer - View OpenDocument Presentation Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional ODP (OpenDocument Presentation) viewer. Upload and preview LibreOffice Impress presentation files online." />
+        <title>{t('viewers.odp.meta_title')}</title>
+        <meta name="description" content={t('viewers.odp.meta_description')} />
+        <meta name="keywords" content={t('viewers.odp.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.odp.meta_title')} />
+        <meta property="og:description" content={t('viewers.odp.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/odp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free ODP Viewer - View OpenDocument Presentation Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional ODP viewer. Upload and preview OpenDocument Presentation files online." />
+        <meta name="twitter:title" content={t('viewers.odp.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.odp.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free ODP Viewer",
-            "description": "Free professional ODP (OpenDocument Presentation) viewer",
+            "name": t('viewers.odp.hero_title'),
+            "description": t('viewers.odp.meta_description'),
             "url": "https://morphyhub.com/viewers/odp",
-            "applicationCategory": "DocumentViewer",
+            "applicationCategory": "PresentationViewer",
             "operatingSystem": "Web Browser",
             "offers": {
               "@type": "Offer",
@@ -301,10 +325,10 @@ export const ODPViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free ODP Viewer
+                    {t('viewers.odp.hero_title')}
                   </h1>
                   <p className="text-xl text-orange-100">
-                    View OpenDocument Presentation files online - 100% free
+                    {t('viewers.odp.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -321,11 +345,11 @@ export const ODPViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload ODP Files
+                {t('viewers.odp.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your OpenDocument Presentation (ODP) files or click to browse. Supports ODP files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.odp.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -355,7 +379,7 @@ export const ODPViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your ODP Files ({selectedFiles.length})
+                    {t('viewers.odp.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -364,11 +388,8 @@ export const ODPViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-orange-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-orange-900 mb-1">How to View ODP Files</h4>
-                    <p className="text-sm text-orange-700">
-                      Click the <strong>"View Presentation"</strong> button to render and preview the ODP file. 
-                      The viewer will convert the presentation to HTML format for web viewing. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-orange-900 mb-1">{t('viewers.odp.how_to_title')}</h4>
+                    <p className="text-sm text-orange-800" dangerouslySetInnerHTML={{ __html: t('viewers.odp.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -393,17 +414,17 @@ export const ODPViewer: React.FC = () => {
                     <div className="space-y-2">
                       <button
                         onClick={() => handleViewODP(file)}
-                        className="w-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                        className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Presentation</span>
+                        <span>{t('viewers.odp.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.odp.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -414,117 +435,88 @@ export const ODPViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg p-8 border border-orange-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Presentation className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Slide Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View ODP presentation slides converted to HTML format with preserved formatting and layout
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl shadow-lg p-8 border border-amber-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Layout className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Rendering
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Preview ODP files with full rendering including text, images, and formatting
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 border border-yellow-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-yellow-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with LibreOffice for instant viewing in your browser
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const backgrounds = [
+                'from-orange-50 to-red-50 border border-orange-200',
+                'from-blue-50 to-indigo-50 border border-blue-200',
+                'from-amber-50 to-yellow-50 border border-yellow-200'
+              ];
+              const icons = [
+                <Presentation className="w-8 h-8 text-orange-500" key="presentation" />,
+                <Layout className="w-8 h-8 text-indigo-500" key="layout" />,
+                <Zap className="w-8 h-8 text-yellow-500" key="zap" />
+              ];
+
+              return (
+                <div
+                  key={feature.title}
+                  className={`bg-gradient-to-br ${backgrounds[index]} rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105`}
+                >
+                  <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           {/* About ODP Format Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl">
-                <FileText className="w-6 h-6 text-white" />
+              <div className="p-3 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl">
+                <Presentation className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About ODP Format
+                {t('viewers.odp.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                ODP (OpenDocument Presentation) is an open standard file format for presentations, primarily used by LibreOffice Impress 
-                and Apache OpenOffice Impress. ODP files are part of the OpenDocument Format (ODF) family, which is an ISO/IEC standard 
-                designed to ensure long-term accessibility and interoperability. Unlike proprietary formats, ODP files are XML-based and 
-                can be opened by any compatible application without licensing restrictions.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.odp.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.odp.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Open standard</strong> - ISO/IEC 26300 standard format</li>
-                    <li>• <strong>Cross-platform</strong> - Works on Windows, Mac, Linux</li>
-                    <li>• <strong>Free & open</strong> - No licensing fees required</li>
-                    <li>• <strong>XML-based</strong> - Human-readable structure</li>
-                    <li>• <strong>Long-term archival</strong> - Future-proof format</li>
-                    <li>• <strong>Rich features</strong> - Supports slides, animations, multimedia</li>
+                    {advantages.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Applications</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.odp.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>LibreOffice Impress</strong> - Native ODP support</li>
-                    <li>• <strong>Apache OpenOffice Impress</strong> - Full compatibility</li>
-                    <li>• <strong>Microsoft PowerPoint</strong> - Can open and save ODP</li>
-                    <li>• <strong>Google Slides</strong> - Import and export ODP</li>
-                    <li>• <strong>OnlyOffice</strong> - Complete ODP editing</li>
-                    <li>• <strong>WPS Office</strong> - Cross-platform support</li>
+                    {useCases.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.odp.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.odp.specs_header_label')}</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.odp.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.odp</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/vnd.oasis.opendocument.presentation</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Based On</td>
-                        <td className="py-2 text-sm text-gray-900">XML (OASIS OpenDocument Format)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
-                        <td className="py-2 text-sm text-gray-900">ISO/IEC 26300</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">ZIP compression (default)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">OASIS Consortium</td>
-                      </tr>
+                      {specs.map((row) => (
+                        <tr key={row.label}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -536,9 +528,9 @@ export const ODPViewer: React.FC = () => {
           <div className="text-center mt-8">
             <a
               href="/viewers"
-              className="inline-block bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-block bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.odp.buttons.back')}
             </a>
           </div>
         </div>

@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const ODTViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.odt.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.odt.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.odt.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.odt.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Clear previous validation errors
@@ -43,7 +61,10 @@ export const ODTViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.odt.alerts.file_too_large', {
+        size: (file.size / 1024 / 1024).toFixed(2),
+        max: 100
+      }));
       return;
     }
     
@@ -51,15 +72,18 @@ export const ODTViewer: React.FC = () => {
       // Show loading state
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the document');
+        alert(t('viewers.odt.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.odt.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.odt.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -91,8 +115,8 @@ export const ODTViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Converting ODT to HTML preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -119,7 +143,7 @@ export const ODTViewer: React.FC = () => {
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Error</title>
+            <title>${t('viewers.odt.error_window.title')}</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -149,9 +173,9 @@ export const ODTViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate ODT preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.odt.error_window.title')}</h1>
+              <p>${t('viewers.odt.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.odt.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -160,29 +184,29 @@ export const ODTViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('ODT view error:', error);
-      alert('Failed to open ODT preview. Please try again or download the file.');
+      alert(t('viewers.odt.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free ODT Viewer - View OpenDocument Text Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools. Supports batch viewing up to 20 files. 100% free ODT viewer tool." />
-        <meta name="keywords" content="ODT viewer, OpenDocument Text viewer, view ODT online, ODT preview, document viewer, ODT viewer tool, online ODT viewer, ODT viewer free" />
-        <meta property="og:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools." />
+        <title>{t('viewers.odt.meta_title')}</title>
+        <meta name="description" content={t('viewers.odt.meta_description')} />
+        <meta name="keywords" content={t('viewers.odt.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.odt.meta_title')} />
+        <meta property="og:description" content={t('viewers.odt.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/odt" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free ODT Viewer - View OpenDocument Text Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional ODT viewer for viewing OpenDocument Text files online. Upload and preview ODT documents with advanced viewing tools." />
+        <meta name="twitter:title" content={t('viewers.odt.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.odt.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free ODT Viewer",
-            "description": "Free professional ODT viewer for viewing OpenDocument Text files online",
+            "name": t('viewers.odt.hero_title'),
+            "description": t('viewers.odt.meta_description'),
             "url": "https://morphyhub.com/viewers/odt",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
@@ -215,10 +239,10 @@ export const ODTViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free ODT Viewer
+                    {t('viewers.odt.hero_title')}
                   </h1>
                   <p className="text-xl text-orange-100">
-                    View and analyze OpenDocument Text files with professional tools - 100% free
+                    {t('viewers.odt.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -235,11 +259,11 @@ export const ODTViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload ODT Files
+                {t('viewers.odt.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your OpenDocument Text files or click to browse. Supports .odt files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.odt.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -269,7 +293,7 @@ export const ODTViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your ODT Files ({selectedFiles.length})
+                    {t('viewers.odt.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -279,11 +303,8 @@ export const ODTViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View ODT Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View Document"</strong> button to open the OpenDocument file in a formatted preview. 
-                      You can also download the original file for offline viewing or editing in LibreOffice or compatible applications.
-                    </p>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.odt.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.odt.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -311,14 +332,14 @@ export const ODTViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Document</span>
+                        <span>{t('viewers.odt.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.odt.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -329,41 +350,35 @@ export const ODTViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg p-8 border border-orange-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Open Standard
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                ISO/IEC 26300 international standard format ensuring long-term accessibility and freedom from vendor lock-in
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Cross-Platform Support
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Compatible with LibreOffice, OpenOffice, Google Docs, and Microsoft Word - works seamlessly across all platforms
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Free & Open Source
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                No licensing fees or restrictions - completely free to use with full access to document content and structure
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const backgrounds = [
+                'from-orange-50 to-amber-50 border border-orange-200',
+                'from-blue-50 to-indigo-50 border border-blue-200',
+                'from-green-50 to-emerald-50 border border-green-200'
+              ];
+              const icons = [
+                <FileText className="w-8 h-8 text-orange-600" key="feature-odt-1" />,
+                <Info className="w-8 h-8 text-blue-600" key="feature-odt-2" />,
+                <CheckCircle className="w-8 h-8 text-green-600" key="feature-odt-3" />
+              ];
+
+              return (
+                <div
+                  key={feature.title}
+                  className={`bg-gradient-to-br ${backgrounds[index]} rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105`}
+                >
+                  <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           {/* About ODT Format Section */}
@@ -373,78 +388,51 @@ export const ODTViewer: React.FC = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About ODT Format
+                {t('viewers.odt.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                OpenDocument Text (ODT) is an open standard document format developed by OASIS and adopted as ISO/IEC 26300. 
-                It's the native format for LibreOffice Writer and OpenOffice Writer, and is supported by many other word processors 
-                including Microsoft Word and Google Docs. The format uses XML-based content within a ZIP container, making it 
-                both human-readable and compact.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.odt.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.odt.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Open standard</strong> - No vendor lock-in, ISO standardized</li>
-                    <li>• <strong>Cross-platform</strong> - Works on Windows, Mac, Linux</li>
-                    <li>• <strong>Free to use</strong> - No licensing fees or restrictions</li>
-                    <li>• <strong>Rich formatting</strong> - Advanced typography and styles</li>
-                    <li>• <strong>XML-based</strong> - Human-readable structure</li>
-                    <li>• <strong>Future-proof</strong> - Long-term archival format</li>
+                    {advantages.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.odt.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Academic documents</strong> - Papers, theses, research</li>
-                    <li>• <strong>Government documents</strong> - Official forms and reports</li>
-                    <li>• <strong>Open source projects</strong> - Documentation and guides</li>
-                    <li>• <strong>Business documents</strong> - Reports, proposals, letters</li>
-                    <li>• <strong>Educational materials</strong> - Textbooks, assignments</li>
-                    <li>• <strong>Long-term archival</strong> - Future-proof document storage</li>
+                    {useCases.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               {/* Technical Specifications */}
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.odt.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.odt.specs_header_label')}</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.odt.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.odt</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/vnd.oasis.opendocument.text</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
-                        <td className="py-2 text-sm text-gray-900">ISO/IEC 26300 (OASIS OpenDocument)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">OASIS (2005)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Structure</td>
-                        <td className="py-2 text-sm text-gray-900">ZIP archive with XML files</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">UTF-8</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">ZIP-based compression</td>
-                      </tr>
+                      {specs.map((row) => (
+                        <tr key={row.label}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -458,7 +446,7 @@ export const ODTViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.odt.buttons.back')}
             </a>
           </div>
         </div>

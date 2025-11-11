@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
-import { Image, Upload, Eye, Download, Share2, ArrowLeft, CheckCircle, Grid3x3, Layers } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Image, Upload, Eye, Download, ArrowLeft, CheckCircle, Grid3x3 } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 export const ICOViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const specs = t('viewers.ico.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  const advantages = t('viewers.ico.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.ico.use_cases', { returnObjects: true }) as string[];
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only ICO files
@@ -22,9 +39,9 @@ export const ICOViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>ICO Viewer - Free Online Windows Icon File Viewer</title>
-        <meta name="description" content="View ICO (Windows Icon) files online for free. Multi-size icon viewer with transparency support and multiple resolution display. Up to 20 files, 100MB total. No registration required." />
-        <meta name="keywords" content="ICO viewer, icon viewer, Windows icon, favicon viewer, CUR viewer, multi-size icon, ICO file viewer, batch viewing" />
+        <title>{t('viewers.ico.meta_title')}</title>
+        <meta name="description" content={t('viewers.ico.meta_description')} />
+        <meta name="keywords" content={t('viewers.ico.meta_keywords')} />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -46,10 +63,10 @@ export const ICOViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold mb-3">
-                    ICO Viewer
+                    {t('viewers.ico.hero_title')}
                   </h1>
                   <p className="text-xl text-orange-100">
-                    View Windows icon files with multiple size support
+                    {t('viewers.ico.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -66,11 +83,11 @@ export const ICOViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload ICO Files
+                {t('viewers.ico.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Windows icon files (ICO, CUR) or click to browse. Supports multiple sizes and transparency up to 100MB total.
+              {t('viewers.ico.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -91,7 +108,7 @@ export const ICOViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your ICO Files ({selectedFiles.length})
+                    {t('viewers.ico.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -118,7 +135,7 @@ export const ICOViewer: React.FC = () => {
                         className="flex-1 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View</span>
+                        <span>{t('viewers.ico.buttons.view')}</span>
                       </button>
                       <button 
                         onClick={() => {
@@ -130,9 +147,10 @@ export const ICOViewer: React.FC = () => {
                           URL.revokeObjectURL(url);
                         }}
                         className="p-2 text-orange-600 hover:bg-orange-100 rounded-lg transition-colors"
-                        title="Download"
+                        title={t('viewers.ico.buttons.download')}
                       >
                         <Download className="w-4 h-4" />
+                        <span className="sr-only">{t('viewers.ico.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -144,50 +162,25 @@ export const ICOViewer: React.FC = () => {
         {/* Format Information */}
         <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            About ICO Format
+            {t('viewers.ico.about_title')}
           </h2>
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4">
-              ICO is a file format for computer icons in Microsoft Windows. ICO files contain one or more 
-              small images at multiple sizes and color depths, such that they may be scaled appropriately. 
-              In Windows, all executables that display an icon to the user, on the desktop, in the Start Menu, 
-              or in Windows Explorer, must carry the icon in ICO format.
+              {t('viewers.ico.about_intro')}
             </p>
             
             {/* Technical Specifications */}
             <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.ico.specs_title')}</h3>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                   <tbody className="divide-y divide-gray-200">
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">File Extensions</td>
-                      <td className="py-2 text-sm text-gray-900">.ico, .cur</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                      <td className="py-2 text-sm text-gray-900">image/x-icon, image/vnd.microsoft.icon</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                      <td className="py-2 text-sm text-gray-900">Microsoft</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">First Released</td>
-                      <td className="py-2 text-sm text-gray-900">1985</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">Color Depth</td>
-                      <td className="py-2 text-sm text-gray-900">1, 4, 8, 16, 24, 32 bits</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">Max Dimensions</td>
-                      <td className="py-2 text-sm text-gray-900">256×256 pixels</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 text-sm font-medium text-gray-500">Transparency</td>
-                      <td className="py-2 text-sm text-gray-900">Yes (Alpha channel)</td>
-                    </tr>
+                    {specs.map((row) => (
+                      <tr key={row.label}>
+                        <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                        <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -195,25 +188,19 @@ export const ICOViewer: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">Key Advantages</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">{t('viewers.ico.advantages_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• Multiple sizes in one file</li>
-                  <li>• Native Windows support</li>
-                  <li>• Transparency support</li>
-                  <li>• Small file sizes</li>
-                  <li>• Wide compatibility</li>
-                  <li>• Professional appearance</li>
+                  {advantages.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
                 </ul>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">Best Use Cases</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">{t('viewers.ico.use_cases_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• Application icons</li>
-                  <li>• Website favicons</li>
-                  <li>• Desktop shortcuts</li>
-                  <li>• System icons</li>
-                  <li>• Toolbar buttons</li>
-                  <li>• Menu items</li>
+                  {useCases.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -227,7 +214,7 @@ export const ICOViewer: React.FC = () => {
             href="/viewers"
             className="inline-block bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            ← Back to All Viewers
+            {t('viewers.ico.buttons.back')}
           </a>
         </div>
       </div>

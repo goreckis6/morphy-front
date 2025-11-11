@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Image, Upload, Eye, Download, ArrowLeft, Camera, Palette, Zap, Info, CheckCircle, Star } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { useTranslation } from 'react-i18next';
 
 export const JPEGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.jpeg.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.jpeg.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.jpeg.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.jpeg.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only JPEG files
@@ -22,9 +40,9 @@ export const JPEGViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free JPG Viewer - View JPG Images Online</title>
-        <meta name="description" content="Free JPG viewer. View JPG images online, extract EXIF metadata. Free online tool with batch processing support." />
-        <meta name="keywords" content="JPEG viewer, JPG viewer, image viewer, JPEG converter, JPG to PNG, view JPEG online, EXIF viewer, photo viewer" />
+        <title>{t('viewers.jpeg.meta_title')}</title>
+        <meta name="description" content={t('viewers.jpeg.meta_description')} />
+        <meta name="keywords" content={t('viewers.jpeg.meta_keywords')} />
       </Helmet>
       <div className="min-h-screen bg-gray-50">
         <Header />
@@ -47,10 +65,10 @@ export const JPEGViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2">
-                    Free JPG Viewer
+                    {t('viewers.jpeg.hero_title')}
                   </h1>
                   <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100">
-                    View and analyze JPEG images with professional tools
+                    {t('viewers.jpeg.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -68,11 +86,11 @@ export const JPEGViewer: React.FC = () => {
               <Upload className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              Upload JPEG Files
+              {t('viewers.jpeg.upload_title')}
             </h2>
           </div>
           <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-            Drag and drop your JPEG images or click to browse. Supports .jpg, .jpeg, and .jpe files up to 100MB each.
+            {t('viewers.jpeg.upload_description')}
           </p>
           <FileUpload 
             onFilesSelected={handleFilesSelected}
@@ -93,7 +111,7 @@ export const JPEGViewer: React.FC = () => {
                   <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-                  Your JPEG Files ({selectedFiles.length})
+                  {t('viewers.jpeg.files_heading', { count: selectedFiles.length })}
                 </h2>
               </div>
             </div>
@@ -120,7 +138,7 @@ export const JPEGViewer: React.FC = () => {
                       className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs sm:text-sm font-semibold py-2 sm:py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                     >
                       <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
-                      <span>View</span>
+                      <span>{t('viewers.jpeg.buttons.view')}</span>
                     </button>
                     <button 
                       onClick={() => {
@@ -132,9 +150,10 @@ export const JPEGViewer: React.FC = () => {
                         URL.revokeObjectURL(url);
                       }}
                       className="p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
-                      title="Download"
+                      title={t('viewers.jpeg.buttons.download')}
                     >
                       <Download className="w-3 h-3 sm:w-4 sm:h-4" />
+                      <span className="sr-only">{t('viewers.jpeg.buttons.download')}</span>
                     </button>
                   </div>
                 </div>
@@ -145,41 +164,34 @@ export const JPEGViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-            <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
-              <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
-            </div>
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
-              Professional Quality
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              View JPEG images with full quality preservation, zoom capabilities, and detailed EXIF metadata inspection
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border border-yellow-200 hover:shadow-xl transition-all transform hover:scale-105">
-            <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
-              <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" />
-            </div>
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
-              Fast Processing
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              Lightning-fast JPEG processing with instant previews and optimized rendering for large batches
-            </p>
-          </div>
-          
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105 sm:col-span-2 lg:col-span-1">
-            <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
-              <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" />
-            </div>
-            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
-              Format Conversion
-            </h3>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-              Convert JPEG to PNG, WebP, PDF and other formats with advanced quality control settings
-            </p>
-          </div>
+          {features.map((feature, index) => {
+            const cardStyles = [
+              'from-blue-50 to-indigo-50 border border-blue-200',
+              'from-yellow-50 to-orange-50 border border-yellow-200',
+              'from-purple-50 to-pink-50 border border-purple-200'
+            ];
+            const iconNodes = [
+              <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" key="camera" />,
+              <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" key="zap" />,
+              <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" key="palette" />
+            ];
+            return (
+              <div
+                key={feature.title}
+                className={`bg-gradient-to-br ${cardStyles[index]} rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all transform hover:scale-105 ${index === 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`}
+              >
+                <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
+                  {iconNodes[index]}
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         {/* JPEG Information */}
@@ -189,39 +201,30 @@ export const JPEGViewer: React.FC = () => {
               <Info className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              About JPEG Format
+              {t('viewers.jpeg.about_title')}
             </h2>
           </div>
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4 text-sm sm:text-base">
-              JPEG (Joint Photographic Experts Group) is one of the most widely used image compression formats 
-              in the world. Developed in 1992, JPEG uses lossy compression to significantly reduce file sizes 
-              while maintaining acceptable image quality, making it perfect for digital photography, web images, 
-              and storage-conscious applications.
+              {t('viewers.jpeg.about_intro')}
             </p>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mt-4 sm:mt-6">
               <div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">Key Advantages</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">{t('viewers.jpeg.advantages_title')}</h3>
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li>• <strong>Small file sizes</strong> - Excellent compression ratios</li>
-                  <li>• <strong>Universal support</strong> - Works on all devices and browsers</li>
-                  <li>• <strong>Adjustable quality</strong> - Balance between size and quality</li>
-                  <li>• <strong>Fast processing</strong> - Quick to encode and decode</li>
-                  <li>• <strong>Wide compatibility</strong> - Supported by all image software</li>
-                  <li>• <strong>EXIF metadata</strong> - Stores camera settings and information</li>
+                  {advantages.map((item, idx) => (
+                    <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                  ))}
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">Best Use Cases</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">{t('viewers.jpeg.use_cases_title')}</h3>
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
-                  <li>• <strong>Digital photography</strong> - Perfect for photos with many colors</li>
-                  <li>• <strong>Web images</strong> - Ideal for website backgrounds and photos</li>
-                  <li>• <strong>Social media</strong> - Standard format for sharing images</li>
-                  <li>• <strong>Email attachments</strong> - Small sizes for easy sharing</li>
-                  <li>• <strong>Print media</strong> - High-quality printing when needed</li>
-                  <li>• <strong>Mobile photography</strong> - Default format for most cameras</li>
+                  {useCases.map((item, idx) => (
+                    <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                  ))}
                 </ul>
               </div>
             </div>
@@ -235,7 +238,7 @@ export const JPEGViewer: React.FC = () => {
               <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              JPEG Technical Specifications
+              {t('viewers.jpeg.specs_title')}
             </h2>
           </div>
           
@@ -243,43 +246,17 @@ export const JPEGViewer: React.FC = () => {
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">Specification</th>
-                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">Details</th>
+                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">{t('viewers.jpeg.specs_header_label')}</th>
+                  <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-700">{t('viewers.jpeg.specs_header_value')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">File Extensions</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">.jpg, .jpeg, .jpe</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">MIME Type</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">image/jpeg</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Compression</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">Lossy compression using DCT (Discrete Cosine Transform)</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Color Support</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">24-bit RGB, 8-bit Grayscale, CMYK</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">6,500 × 6,500 pixels</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Transparency</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">Not supported</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Animation</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">Not supported</td>
-                </tr>
-                <tr>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">Metadata</td>
-                  <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">EXIF, IPTC, XMP supported</td>
-                </tr>
+                {specs.map((row) => (
+                  <tr key={row.label}>
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-gray-800">{row.label}</td>
+                    <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-600">{row.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -292,37 +269,28 @@ export const JPEGViewer: React.FC = () => {
               <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
-              JPEG Viewer and Converter Features
+              {t('viewers.jpeg.seo_title')}
             </h2>
           </div>
           
           <div className="prose max-w-none text-gray-600">
             <p className="mb-4 text-sm sm:text-base">
-              Our professional JPEG viewer and converter provides comprehensive support for all JPEG variants 
-              including standard JPEG (.jpg), JPEG 2000 (.jp2), and progressive JPEG files. Whether you're 
-              a photographer, web developer, or graphic designer, our platform offers the tools you need for 
-              professional JPEG processing.
+              {t('viewers.jpeg.seo_intro')}
             </p>
             
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Advanced Viewing Features</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">{t('viewers.jpeg.seo_viewing_title')}</h3>
             <p className="mb-4 text-sm sm:text-base">
-              View JPEG images with pixel-perfect accuracy, zoom capabilities up to 500%, and detailed metadata 
-              display including EXIF data from digital cameras. Our viewer supports all JPEG color spaces 
-              including RGB, CMYK, and grayscale, ensuring accurate color representation across different devices.
+              {t('viewers.jpeg.seo_viewing_text')}
             </p>
             
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Professional Conversion Tools</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">{t('viewers.jpeg.seo_conversion_title')}</h3>
             <p className="mb-4 text-sm sm:text-base">
-              Convert JPEG files to PNG, WebP, AVIF, TIFF, and other formats while maintaining optimal quality. 
-              Our conversion engine offers adjustable quality settings, resize options, and batch processing 
-              capabilities for handling multiple files simultaneously.
+              {t('viewers.jpeg.seo_conversion_text')}
             </p>
             
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">Quality Optimization</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 sm:mb-3 mt-4 sm:mt-6">{t('viewers.jpeg.seo_optimization_title')}</h3>
             <p className="text-sm sm:text-base">
-              Optimize JPEG files for web use with our smart compression algorithms that reduce file sizes 
-              by up to 80% while preserving visual quality. Perfect for website optimization, email attachments, 
-              and social media sharing where file size matters.
+              {t('viewers.jpeg.seo_optimization_text')}
             </p>
           </div>
         </div>
@@ -333,7 +301,7 @@ export const JPEGViewer: React.FC = () => {
             href="/viewers"
             className="inline-block bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
           >
-            ← Back to All Viewers
+            {t('viewers.jpeg.buttons.back')}
           </a>
         </div>
       </div>

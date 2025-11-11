@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code2, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Shield, Database } from 'lucide-react';
+import { Code2, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Shield } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const JSONViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.json.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.json.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.json.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.json.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
-    
-    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
     
     // Filter only JSON files
     const jsonFiles = files.filter(file => {
@@ -21,21 +37,14 @@ export const JSONViewer: React.FC = () => {
       return ['json', 'jsonl', 'geojson'].includes(extension || '');
     });
     
-    console.log('JSON files after filter:', jsonFiles.map(f => ({ name: f.name, size: f.size })));
-    
     if (jsonFiles.length === 0) {
-      console.warn('No valid JSON files found');
       return;
     }
     
     const validation = validateBatchFiles(jsonFiles);
-    console.log('Validation result:', validation);
     
     if (validation.isValid) {
       setSelectedFiles(jsonFiles);
-      console.log('Files set successfully');
-    } else {
-      console.error('Validation failed:', validation.error);
     }
   };
 
@@ -54,22 +63,28 @@ export const JSONViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.json.alerts.file_too_large', {
+        size: (file.size / 1024 / 1024).toFixed(2),
+        max: 100
+      }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the JSON file');
+        alert(t('viewers.json.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.json.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.json.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -102,8 +117,8 @@ export const JSONViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Formatting JSON for preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -123,12 +138,15 @@ export const JSONViewer: React.FC = () => {
         loadingWindow.document.write(html);
         loadingWindow.document.close();
       } else {
+        const errorTitle = t('viewers.json.error_window.title');
+        const errorMessage = t('viewers.json.error_window.message');
+        const closeText = t('viewers.json.error_window.close');
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Error</title>
+            <title>${errorTitle}</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -158,9 +176,9 @@ export const JSONViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate JSON preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${errorTitle}</h1>
+              <p>${errorMessage}</p>
+              <button onclick="window.close()">${closeText}</button>
             </div>
           </body>
           </html>
@@ -169,29 +187,29 @@ export const JSONViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('JSON view error:', error);
-      alert('Failed to open JSON preview. Please try again or download the file.');
+      alert(t('viewers.json.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free JSON Viewer - View & Validate JSON Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display and error detection. Supports batch viewing up to 20 files. 100% free JSON viewer tool." />
-        <meta name="keywords" content="JSON viewer, JSON validator, JSON file viewer online, JSON formatter, JSON preview, API data viewer, JSON online, free JSON viewer" />
-        <meta property="og:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display and error detection." />
+        <title>{t('viewers.json.meta_title')}</title>
+        <meta name="description" content={t('viewers.json.meta_description')} />
+        <meta name="keywords" content={t('viewers.json.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.json.meta_title')} />
+        <meta property="og:description" content={t('viewers.json.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/json" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free JSON Viewer - View & Validate JSON Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional JSON viewer with syntax highlighting and validation. Upload and preview JSON files online with formatted display." />
+        <meta name="twitter:title" content={t('viewers.json.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.json.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free JSON Viewer",
-            "description": "Free professional JSON viewer with syntax highlighting",
+            "name": t('viewers.json.hero_title'),
+            "description": t('viewers.json.meta_description'),
             "url": "https://morphyhub.com/viewers/json",
             "applicationCategory": "DataViewer",
             "operatingSystem": "Web Browser",
@@ -224,10 +242,10 @@ export const JSONViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free JSON Viewer
+                    {t('viewers.json.hero_title')}
                   </h1>
                   <p className="text-xl text-blue-100">
-                    View, validate and format JSON files with syntax highlighting - 100% free
+                    {t('viewers.json.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -244,11 +262,11 @@ export const JSONViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload JSON Files
+                {t('viewers.json.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your JSON data files or click to browse. Supports JSON, JSONL, GeoJSON files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.json.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -278,7 +296,7 @@ export const JSONViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your JSON Files ({selectedFiles.length})
+                    {t('viewers.json.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -287,11 +305,8 @@ export const JSONViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View JSON Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View JSON"</strong> button to open the JSON file in a preview window with syntax highlighting and validation. 
-                      You can also download the original file for offline viewing or editing.
-                    </p>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.json.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.json.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -319,14 +334,15 @@ export const JSONViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View JSON</span>
+                        <span>{t('viewers.json.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                        aria-label={t('viewers.json.buttons.download_aria_label', { filename: file.name })}
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.json.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -337,41 +353,35 @@ export const JSONViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Code2 className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Syntax Highlighting
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View JSON with beautiful syntax highlighting for keys, values, strings, numbers, and booleans
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Validation
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Automatically validate JSON structure and detect syntax errors with detailed error messages
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Formatting
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Instantly format and prettify JSON for better readability with proper indentation
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const backgrounds = [
+                'from-blue-50 to-indigo-50 border border-blue-200',
+                'from-green-50 to-emerald-50 border border-green-200',
+                'from-purple-50 to-pink-50 border border-purple-200'
+              ];
+              const icons = [
+                <Code2 className="w-8 h-8 text-blue-600" key="code2" />,
+                <Shield className="w-8 h-8 text-green-600" key="shield" />,
+                <Zap className="w-8 h-8 text-purple-600" key="zap" />
+              ];
+
+              return (
+                <div
+                  key={feature.title}
+                  className={`bg-gradient-to-br ${backgrounds[index]} rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105`}
+                >
+                  <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           {/* About JSON Format Section */}
@@ -381,72 +391,52 @@ export const JSONViewer: React.FC = () => {
                 <Code2 className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About JSON Format
+                {t('viewers.json.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
               <p className="mb-6">
-                JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write, 
-                and easy for machines to parse and generate. It's based on a subset of JavaScript and has become the de facto standard 
-                for API communication, configuration files, and data exchange between systems.
+                {t('viewers.json.about_intro')}
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.json.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Human readable</strong> - Easy to read and understand</li>
-                    <li>• <strong>Language independent</strong> - Works with all programming languages</li>
-                    <li>• <strong>Lightweight</strong> - Minimal syntax overhead</li>
-                    <li>• <strong>Self-describing</strong> - Structure is obvious from content</li>
-                    <li>• <strong>Universal support</strong> - Native support in all modern languages</li>
-                    <li>• <strong>Flexible nesting</strong> - Supports complex hierarchical data</li>
+                    {advantages.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.json.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>API responses</strong> - RESTful API data exchange</li>
-                    <li>• <strong>Configuration files</strong> - Application and system settings</li>
-                    <li>• <strong>Data storage</strong> - NoSQL databases and document stores</li>
-                    <li>• <strong>Web applications</strong> - Client-server communication</li>
-                    <li>• <strong>Logging</strong> - Structured log files and events</li>
-                    <li>• <strong>Data interchange</strong> - Cross-platform data transfer</li>
+                    {useCases.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.json.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.json.specs_header_label')}</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.json.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extensions</td>
-                        <td className="py-2 text-sm text-gray-900">.json, .jsonl, .geojson</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/json</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
-                        <td className="py-2 text-sm text-gray-900">RFC 8259, ECMA-404</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">UTF-8 (recommended), UTF-16, UTF-32</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Data Types</td>
-                        <td className="py-2 text-sm text-gray-900">String, Number, Boolean, Array, Object, null</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Douglas Crockford (2001)</td>
-                      </tr>
+                      {specs.map((row) => (
+                        <tr key={row.label}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -460,7 +450,7 @@ export const JSONViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.json.buttons.back')}
             </a>
           </div>
         </div>

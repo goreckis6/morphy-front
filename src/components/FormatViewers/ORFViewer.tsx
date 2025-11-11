@@ -1,41 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const ORFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.orf.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.orf.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.orf.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.orf.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
-    
-    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
-    
+
     // Filter only ORF files
     const orfFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return extension === 'orf';
     });
-    
-    console.log('ORF files after filter:', orfFiles.map(f => ({ name: f.name, size: f.size })));
-    
-    if (orfFiles.length === 0) {
-      console.warn('No valid ORF files found');
-      return;
-    }
-    
+
     const validation = validateBatchFiles(orfFiles);
-    console.log('Validation result:', validation);
     
     if (validation.isValid) {
       setSelectedFiles(orfFiles);
-      console.log('Files set successfully');
-    } else {
-      console.error('Validation failed:', validation.error);
     }
   };
 
@@ -54,22 +59,28 @@ export const ORFViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.orf.alerts.file_too_large', {
+        size: (file.size / 1024 / 1024).toFixed(2),
+        max: 100
+      }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the ORF file');
+        alert(t('viewers.orf.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.orf.loading_window.title');
+      const loadingMessage = t('viewers.orf.loading_window.message', { filename: file.name });
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -102,8 +113,8 @@ export const ORFViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Processing ORF RAW Image...</h2>
-            <p>Rendering ${file.name}...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -372,7 +383,7 @@ export const ORFViewer: React.FC = () => {
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Error</title>
+            <title>${t('viewers.orf.error_window.title')}</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -402,9 +413,9 @@ export const ORFViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate ORF preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.orf.error_window.title')}</h1>
+              <p>${t('viewers.orf.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.orf.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -413,29 +424,29 @@ export const ORFViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('ORF view error:', error);
-      alert('Failed to open ORF preview. Please try again or download the file.');
+      alert(t('viewers.orf.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free ORF Viewer - View Olympus RAW Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview ORF files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free ORF viewer tool." />
-        <meta name="keywords" content="ORF viewer, Olympus RAW viewer, ORF file viewer online, RAW viewer, Olympus OM viewer, camera RAW viewer, free ORF viewer, ORF preview" />
-        <meta property="og:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview Olympus RAW files online with EXIF metadata." />
+        <title>{t('viewers.orf.meta_title')}</title>
+        <meta name="description" content={t('viewers.orf.meta_description')} />
+        <meta name="keywords" content={t('viewers.orf.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.orf.meta_title')} />
+        <meta property="og:description" content={t('viewers.orf.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/orf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free ORF Viewer - View Olympus RAW Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional ORF (Olympus RAW) viewer with high-quality rendering. Upload and preview Olympus RAW files online." />
+        <meta name="twitter:title" content={t('viewers.orf.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.orf.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free ORF Viewer",
-            "description": "Free professional ORF (Olympus RAW) viewer with high-quality rendering",
+            "name": t('viewers.orf.hero_title'),
+            "description": t('viewers.orf.meta_description'),
             "url": "https://morphyhub.com/viewers/orf",
             "applicationCategory": "ImageViewer",
             "operatingSystem": "Web Browser",
@@ -468,10 +479,10 @@ export const ORFViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free ORF Viewer
+                    {t('viewers.orf.hero_title')}
                   </h1>
                   <p className="text-xl text-blue-100">
-                    View Olympus RAW files with professional rendering - 100% free
+                    {t('viewers.orf.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -488,11 +499,11 @@ export const ORFViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload ORF Files
+                {t('viewers.orf.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Olympus ORF (RAW) files or click to browse. Supports ORF files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.orf.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -522,7 +533,7 @@ export const ORFViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your ORF Files ({selectedFiles.length})
+                    {t('viewers.orf.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -531,11 +542,8 @@ export const ORFViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View ORF Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View RAW"</strong> button to render and preview the ORF file with professional quality. 
-                      The viewer will process the RAW data with zoom, rotation, and EXIF metadata display. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.orf.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.orf.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -563,14 +571,14 @@ export const ORFViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View RAW</span>
+                        <span>{t('viewers.orf.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.orf.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -581,41 +589,35 @@ export const ORFViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <ImageIcon className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                RAW Processing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Professional RAW processing with rawpy (LibRaw) for accurate Olympus color rendering
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl shadow-lg p-8 border border-indigo-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Maximize2 className="w-8 h-8 text-indigo-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Resolution
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View ORF files at full resolution with proper demosaicing and color correction
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-violet-50 to-blue-50 rounded-2xl shadow-lg p-8 border border-violet-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-violet-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with embedded JPEG extraction for instant viewing
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const backgrounds = [
+                'from-blue-50 to-indigo-50 border border-blue-200',
+                'from-indigo-50 to-violet-50 border border-indigo-200',
+                'from-violet-50 to-blue-50 border border-violet-200'
+              ];
+              const icons = [
+                <ImageIcon className="w-8 h-8 text-blue-600" key="orf-feature-1" />,
+                <Maximize2 className="w-8 h-8 text-indigo-600" key="orf-feature-2" />,
+                <Zap className="w-8 h-8 text-violet-600" key="orf-feature-3" />
+              ];
+
+              return (
+                <div
+                  key={feature.title}
+                  className={`bg-gradient-to-br ${backgrounds[index]} rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105`}
+                >
+                  <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           {/* About ORF Format Section */}
@@ -625,73 +627,50 @@ export const ORFViewer: React.FC = () => {
                 <Camera className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About ORF Format
+                {t('viewers.orf.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                ORF (Olympus Raw Format) is Olympus's proprietary RAW image format used by Olympus and OM System digital cameras. 
-                ORF files contain unprocessed sensor data from Olympus cameras, providing maximum flexibility for post-processing 
-                and the highest image quality. The format preserves all the information captured by the camera's sensor, 
-                including extended dynamic range and 12-bit color depth. OM System (formerly Olympus) continues to use ORF format.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.orf.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.orf.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Maximum quality</strong> - Uncompressed sensor data</li>
-                    <li>• <strong>12-bit depth</strong> - Greater color and tonal range</li>
-                    <li>• <strong>Non-destructive</strong> - Original data always preserved</li>
-                    <li>• <strong>White balance</strong> - Adjust after capture</li>
-                    <li>• <strong>Extended dynamic range</strong> - More detail in highlights/shadows</li>
-                    <li>• <strong>In-body stabilization</strong> - Works with all lenses</li>
+                    {advantages.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Cameras</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.orf.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>OM System OM-1</strong> - Latest flagship (20 MP)</li>
-                    <li>• <strong>OM System OM-5</strong> - Compact flagship</li>
-                    <li>• <strong>Olympus OM-D E-M1 Series</strong> - E-M1 Mark III, E-M1X</li>
-                    <li>• <strong>Olympus OM-D E-M5 Series</strong> - E-M5 Mark III</li>
-                    <li>• <strong>Olympus PEN Series</strong> - E-P7, E-PL10</li>
-                    <li>• <strong>All Olympus & OM System</strong> - Full ORF support</li>
+                    {useCases.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.orf.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.orf.specs_header_label')}</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.orf.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.orf</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">image/x-olympus-orf</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Bit Depth</td>
-                        <td className="py-2 text-sm text-gray-900">12-bit (compressed or uncompressed)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Color Space</td>
-                        <td className="py-2 text-sm text-gray-900">Linear RGB (sensor native)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">Lossless or uncompressed</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Olympus / OM System</td>
-                      </tr>
+                      {specs.map((row) => (
+                        <tr key={row.label}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -705,7 +684,7 @@ export const ORFViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.orf.buttons.back')}
             </a>
           </div>
         </div>

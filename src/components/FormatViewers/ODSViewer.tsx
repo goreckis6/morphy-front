@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Table, FileSpreadsheet, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const ODSViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.ods.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.ods.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.ods.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.ods.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -41,22 +59,28 @@ export const ODSViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.ods.alerts.file_too_large', {
+        size: (file.size / 1024 / 1024).toFixed(2),
+        max: 100
+      }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the spreadsheet');
+        alert(t('viewers.ods.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.ods.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.ods.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -88,8 +112,8 @@ export const ODSViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Converting ODS spreadsheet to HTML preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -109,12 +133,15 @@ export const ODSViewer: React.FC = () => {
         loadingWindow.document.write(html);
         loadingWindow.document.close();
       } else {
+        const errorTitle = t('viewers.ods.error_window.title');
+        const errorMessage = t('viewers.ods.error_window.message');
+        const closeText = t('viewers.ods.error_window.close');
         loadingWindow.document.open();
         loadingWindow.document.write(`
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Error</title>
+            <title>${errorTitle}</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -144,9 +171,9 @@ export const ODSViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate ODS preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${errorTitle}</h1>
+              <p>${errorMessage}</p>
+              <button onclick="window.close()">${closeText}</button>
             </div>
           </body>
           </html>
@@ -155,29 +182,29 @@ export const ODSViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('ODS view error:', error);
-      alert('Failed to open ODS preview. Please try again or download the file.');
+      alert(t('viewers.ods.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyHub</title>
-        <meta name="description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis. Supports batch viewing up to 20 files. 100% free ODS viewer tool." />
-        <meta name="keywords" content="ODS viewer, OpenDocument viewer, ODS file viewer online, LibreOffice Calc viewer, ODS preview, spreadsheet viewer, ODS online, free ODS viewer" />
-        <meta property="og:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyHub" />
-        <meta property="og:description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis." />
+        <title>{t('viewers.ods.meta_title')}</title>
+        <meta name="description" content={t('viewers.ods.meta_description')} />
+        <meta name="keywords" content={t('viewers.ods.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.ods.meta_title')} />
+        <meta property="og:description" content={t('viewers.ods.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/ods" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free ODS Viewer - View OpenDocument Spreadsheets Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional ODS viewer for OpenDocument spreadsheets. Upload and preview ODS files online with table formatting and data analysis." />
+        <meta name="twitter:title" content={t('viewers.ods.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.ods.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free ODS Viewer",
-            "description": "Free professional ODS viewer for OpenDocument spreadsheets",
+            "name": t('viewers.ods.hero_title'),
+            "description": t('viewers.ods.meta_description'),
             "url": "https://morphyhub.com/viewers/ods",
             "applicationCategory": "SpreadsheetViewer",
             "operatingSystem": "Web Browser",
@@ -210,10 +237,10 @@ export const ODSViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free ODS Viewer
+                    {t('viewers.ods.hero_title')}
                   </h1>
                   <p className="text-xl text-green-100">
-                    View and analyze OpenDocument spreadsheets with professional tools - 100% free
+                    {t('viewers.ods.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -230,11 +257,11 @@ export const ODSViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload ODS Files
+                {t('viewers.ods.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your OpenDocument spreadsheets or click to browse. Supports ODS files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.ods.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -264,7 +291,7 @@ export const ODSViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your ODS Files ({selectedFiles.length})
+                    {t('viewers.ods.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -273,11 +300,8 @@ export const ODSViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View ODS Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View Spreadsheet"</strong> button to open the ODS file in a preview window with formatted tables. 
-                      You can also download the original file for offline viewing or editing in LibreOffice Calc.
-                    </p>
+                    <h4 className="font-semibold text-emerald-900 mb-1">{t('viewers.ods.how_to_title')}</h4>
+                    <p className="text-sm text-emerald-800" dangerouslySetInnerHTML={{ __html: t('viewers.ods.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -301,19 +325,19 @@ export const ODSViewer: React.FC = () => {
 
                     <div className="space-y-2">
                       <button
-                        onClick={() => handleViewODS(file)}
-                        className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>View Spreadsheet</span>
-                      </button>
-                      <button
-                        onClick={() => handleDownload(file)}
-                        className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
-                      >
-                        <Download className="w-4 h-4" />
-                        <span>Download</span>
-                      </button>
+                         onClick={() => handleViewODS(file)}
+                         className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                       >
+                         <Eye className="w-4 h-4" />
+                        <span>{t('viewers.ods.buttons.view')}</span>
+                       </button>
+                       <button
+                         onClick={() => handleDownload(file)}
+                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                       >
+                         <Download className="w-4 h-4" />
+                        <span>{t('viewers.ods.buttons.download')}</span>
+                       </button>
                   </div>
                 </div>
               ))}
@@ -323,118 +347,91 @@ export const ODSViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Table className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Open Standard
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Based on ISO/IEC 26300 open standard, ensuring long-term accessibility and interoperability
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileSpreadsheet className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                LibreOffice Native
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Native format for LibreOffice Calc with full support for formulas, charts, and macros
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Processing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick ODS processing and rendering for instant preview without downloading
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const backgrounds = [
+                'from-green-50 to-emerald-50 border border-emerald-200',
+                'from-teal-50 to-cyan-50 border border-teal-200',
+                'from-emerald-50 to-teal-50 border border-emerald-200'
+              ];
+              const icons = [
+                <Table className="w-8 h-8 text-emerald-500" key="table" />,
+                <BarChart3 className="w-8 h-8 text-teal-500" key="chart" />,
+                <Zap className="w-8 h-8 text-emerald-500" key="zap" />
+              ];
+
+              return (
+                <div
+                  key={feature.title}
+                  className={`bg-gradient-to-br ${backgrounds[index]} rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105`}
+                >
+                  <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
-          {/* About ODS Format Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                <FileSpreadsheet className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900">
-                About ODS Format
-              </h2>
-            </div>
-            
-            <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                ODS (OpenDocument Spreadsheet) is an open standard file format for spreadsheets, part of the OpenDocument Format (ODF) family. 
-                It's the native format for LibreOffice Calc and Apache OpenOffice Calc. ODS files use XML-based markup and ZIP compression, 
-                making them both human-readable and space-efficient while supporting advanced spreadsheet features.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+          {/* About ODS Section */}
+           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
+             <div className="flex items-center space-x-3 mb-6">
+               <div className="p-3 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl">
+                 <FileSpreadsheet className="w-6 h-6 text-white" />
+               </div>
+               <h2 className="text-3xl font-bold text-gray-900">
+                {t('viewers.ods.about_title')}
+               </h2>
+             </div>
+             
+             <div className="prose max-w-none text-gray-600">
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.ods.about_intro') }} />
+ 
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+                 <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.ods.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Open standard</strong> - ISO/IEC 26300 international standard</li>
-                    <li>• <strong>Cross-platform</strong> - Works with LibreOffice, OpenOffice, Excel</li>
-                    <li>• <strong>Free format</strong> - No licensing fees or proprietary restrictions</li>
-                    <li>• <strong>Advanced features</strong> - Formulas, charts, pivot tables, macros</li>
-                    <li>• <strong>XML-based</strong> - Human-readable and easy to process</li>
-                    <li>• <strong>Compression</strong> - ZIP compression for smaller file sizes</li>
+                    {advantages.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
-              </div>
+                </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.ods.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Open-source projects</strong> - GNU/Linux and FOSS workflows</li>
-                    <li>• <strong>Government</strong> - Public sector document standards</li>
-                    <li>• <strong>Education</strong> - Academic institutions and students</li>
-                    <li>• <strong>Data analysis</strong> - Scientific and research data</li>
-                    <li>• <strong>Cross-platform work</strong> - Teams using different OS</li>
-                    <li>• <strong>Long-term archival</strong> - Future-proof data storage</li>
+                    {useCases.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
+                </div>
               </div>
-              </div>
-
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+ 
+               <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.ods.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.ods.specs_header_label')}</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.ods.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.ods</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/vnd.oasis.opendocument.spreadsheet</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
-                        <td className="py-2 text-sm text-gray-900">OpenDocument Format (ODF) - ISO/IEC 26300</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Maximum Sheets</td>
-                        <td className="py-2 text-sm text-gray-900">1,024 sheets per file</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">OASIS (2005)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">ZIP-based compression</td>
-                      </tr>
+                      {specs.map((row) => (
+                        <tr key={row.label}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
+                </div>
               </div>
             </div>
           </div>
@@ -444,12 +441,11 @@ export const ODSViewer: React.FC = () => {
           <div className="text-center mt-8">
             <a
               href="/viewers"
-              className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.ods.buttons.back')}
             </a>
           </div>
-        </div>
 
         {/* Footer */}
         <Footer />
