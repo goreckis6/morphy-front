@@ -50,7 +50,7 @@ const resources = {
       
       // HEIF to JPG
       'heif_to_jpg.title': 'HEIF to JPG Converter',
-      'heif_to_jpg.meta_title': 'Free HEIF to JPG Converter Online - Convert iPhone Photos to JPEG | MorphyHub',
+      'heif_to_jpg.meta_title': 'Free HEIF to JPG Converter Online - Convert iPhone Photos to JPEG ',
       'heif_to_jpg.meta_description': 'Convert HEIF (iPhone) photos to standard JPG online for free. Fast, secure HEIF to JPEG converter with batch support, quality control, and smart downscaling.',
       'heif_to_jpg.subtitle': 'Convert HEIF images to universally compatible JPG for websites, apps, and sharing. Fast, secure, free — with batch processing.',
       'heif_to_jpg.upload_single': 'Upload HEIF File',
@@ -101,7 +101,7 @@ const resources = {
 
       // HEIF to PNG
       'heif_to_png.title': 'Free HEIF to PNG Converter',
-      'heif_to_png.meta_title': 'Free HEIF to PNG Converter Online - Convert iPhone Photos to PNG | MorphyHub',
+      'heif_to_png.meta_title': 'Free HEIF to PNG Converter Online - Convert iPhone Photos to PNG ',
       'heif_to_png.meta_description': 'Convert HEIF photos to PNG online for free. Fast, secure HEIF to PNG converter with batch processing, quality control (compression level), and smart downscaling.',
       'heif_to_png.subtitle': 'Convert HEIF images to high-quality PNG for transparent graphics, editing, and archiving. Fast, secure, and free with batch support.',
       'heif_to_png.upload_single': 'Upload HEIF File',
@@ -152,7 +152,7 @@ const resources = {
       
       // HEIC to WEBP
       'heic_to_webp.title': 'Free HEIC to WEBP Converter',
-      'heic_to_webp.meta_title': 'Free HEIC to WEBP Converter Online | MorphyHub',
+      'heic_to_webp.meta_title': 'Free HEIC to WEBP Converter Online ',
       'heic_to_webp.meta_description': 'Convert HEIC images (iPhone photos) to modern WEBP format online for free. Fast, secure HEIC to WEBP converter with batch support and adjustable quality.',
       'heic_to_webp.subtitle': 'Convert Apple HEIC photos to efficient WEBP images for web and apps. Fast, secure, and free with batch processing.',
       'heic_to_webp.upload_single': 'Upload HEIC File',
@@ -205,7 +205,7 @@ const resources = {
 
       // DOC to EPUB
       'doc_to_epub.title': 'DOC to EPUB Converter',
-      'doc_to_epub.meta_title': 'Free DOC to EPUB Converter Online - Convert Word Documents to eBook Format | MorphyHub',
+      'doc_to_epub.meta_title': 'Free DOC to EPUB Converter Online - Convert Word Documents to eBook Format ',
       'doc_to_epub.meta_description': 'Convert Microsoft Word DOC files to EPUB eBook format online for free. Fast, secure DOC to EPUB converter with batch processing. Perfect for Kindle, Kobo, and all e-readers.',
       'doc_to_epub.subtitle': 'Convert Microsoft Word DOC files to EPUB eBook format online for free. Perfect for Kindle, Kobo, and all e-readers with no registration required.',
       'doc_to_epub.heading': 'Convert DOC to EPUB',
@@ -319,7 +319,7 @@ const resources = {
       
       // DOC to MOBI
       'doc_to_mobi.title': 'DOC to MOBI Converter',
-      'doc_to_mobi.meta_title': 'Free DOC to MOBI Converter Online - Convert Word Documents to Kindle MOBI Format | MorphyHub',
+      'doc_to_mobi.meta_title': 'Free DOC to MOBI Converter Online - Convert Word Documents to Kindle MOBI Format ',
       'doc_to_mobi.meta_description': 'Convert DOC Word documents to MOBI ebook format online for free. Transform legacy Word documents into Kindle-compatible MOBI files for Amazon Kindle e-readers. Free online converter with batch support.',
       'doc_to_mobi.subtitle': 'Convert Microsoft Word DOC files to MOBI format for Kindle e-readers. Transform legacy Word documents into Kindle-compatible e-book format using Calibre ebook-convert.',
       'doc_to_mobi.heading': 'Convert DOC to MOBI',
@@ -388,7 +388,7 @@ const resources = {
       
       // DOC to TXT
       'doc_to_txt.title': 'DOC to TXT Converter',
-      'doc_to_txt.meta_title': 'Free DOC to TXT Converter Online - Convert Word Documents to Plain Text Format | MorphyHub',
+      'doc_to_txt.meta_title': 'Free DOC to TXT Converter Online - Convert Word Documents to Plain Text Format ',
       'doc_to_txt.meta_description': 'Convert DOC Word documents to TXT plain text format online for free. Transform legacy Microsoft Word documents into clean, unformatted text files. Free online converter with batch support powered by pypandoc/Pandoc for clean text output.',
       'doc_to_txt.subtitle': 'Convert Microsoft Word DOC files to TXT plain text format. Transform legacy Word documents into clean, unformatted text files using pypandoc/Pandoc for best text extraction quality.',
       'doc_to_txt.heading': 'Convert DOC to TXT',
@@ -453,7 +453,7 @@ const resources = {
       
       // HEIC to SVG
       'heic_to_svg.title': 'HEIC to SVG Converter',
-      'heic_to_svg.meta_title': 'Free HEIC to SVG Converter Online - Convert Apple HEIC Images to Scalable Vector Graphics | MorphyHub',
+      'heic_to_svg.meta_title': 'Free HEIC to SVG Converter Online ',
       'heic_to_svg.meta_description': 'Convert HEIC (High Efficiency Image Container) files to SVG format online for free. Transform Apple iPhone photos and HEIF images into scalable vector graphics. Free online converter with batch support powered by pillow-heif and ImageMagick.',
       'heic_to_svg.subtitle': 'Convert HEIC images to SVG scalable vector graphics format. Transform Apple iPhone photos into vector graphics suitable for web, design, and universal compatibility.',
       'heic_to_svg.heading': 'Convert HEIC to SVG',
@@ -520,7 +520,7 @@ const resources = {
       
       // HEIC to PDF
       'heic_to_pdf.title': 'HEIC to PDF Converter',
-      'heic_to_pdf.meta_title': 'HEIC to PDF Converter Online - Convert iPhone Photos to PDF Documents | MorphyHub',
+      'heic_to_pdf.meta_title': 'Free HEIC to PDF Converter Online ',
       'heic_to_pdf.meta_description': 'Convert HEIC (High Efficiency Image Container) files to PDF format online for free. Transform Apple iPhone photos and HEIF images into PDF documents for printing, sharing, and archiving. Free online converter with batch support powered by pillow-heif, ImageMagick, and reportlab.',
       'heic_to_pdf.subtitle': 'Convert HEIC images to PDF format for documents. Transform Apple iPhone photos into PDF files suitable for printing, sharing, archiving, and universal document compatibility.',
       'heic_to_pdf.upload_single': 'Upload HEIC File',
@@ -589,7 +589,7 @@ const resources = {
 
       // HEIC to PNG
       'heic_to_png.title': 'HEIC to PNG Converter',
-      'heic_to_png.meta_title': 'Free HEIC to PNG Converter Online | MorphyHub',
+      'heic_to_png.meta_title': 'Free HEIC to PNG Converter Online ',
       'heic_to_png.meta_description': 'Convert HEIC images to PNG online for free. Preserve transparency and high quality. Batch conversion supported.',
       'heic_to_png.subtitle': 'Convert iPhone HEIC images to PNG with transparency and high quality.',
       'heic_to_png.upload_single': 'Upload HEIC File',
@@ -650,7 +650,7 @@ const resources = {
 
       // HEIC to EPS
       'heic_to_eps.title': 'Free HEIC to EPS Converter',
-      'heic_to_eps.meta_title': 'Free HEIC to EPS Converter Online – Print‑Ready EPS from iPhone HEIC | MorphyHub',
+      'heic_to_eps.meta_title': 'Free HEIC to EPS Converter Online ',
       'heic_to_eps.meta_description': 'Convert HEIC images to EPS online for free. Generate print‑friendly EPS files for desktop publishing (DTP), packaging, and documentation. Fast, reliable, and supports batch conversion.',
       'heic_to_eps.subtitle': 'Turn iPhone HEIC images into print‑ready EPS files for professional publishing and documentation workflows.',
       'heic_to_eps.upload_single': 'Upload HEIC File',
@@ -868,7 +868,7 @@ const resources = {
       
       // EPUB to CSV
       'epub_to_csv.title': 'Free EPUB to CSV Converter',
-      'epub_to_csv.meta_title': 'Free EPUB to CSV Converter Online - Extract eBook Content to CSV Format | MorphyHub',
+      'epub_to_csv.meta_title': 'Free EPUB to CSV Converter Online - Extract eBook Content to CSV Format',
       'epub_to_csv.meta_description': 'Convert EPUB ebook files to CSV format online for free. Extract text content, chapters, and metadata from EPUB files for data analysis, content management, and text processing.',
       'epub_to_csv.subtitle': 'Convert EPUB ebook files to CSV format for easy data analysis and content extraction. Extract chapters, paragraphs, and metadata from your ebooks.',
       'upload_epub_file': 'Click or drag & drop EPUB file here',
@@ -911,7 +911,7 @@ const resources = {
       
       // DOCX to CSV
       'docx_to_csv.title': 'DOCX to CSV Converter',
-      'docx_to_csv.meta_title': 'Free DOCX to CSV Converter Online - Extract Tables from Word Documents to CSV Format | MorphyHub',
+      'docx_to_csv.meta_title': 'Free DOCX to CSV Converter Online - Extract Tables from Word Documents to CSV Format ',
       'docx_to_csv.meta_description': 'Convert DOCX Word documents to CSV format online for free. Extract tables and text content from modern Word documents for data analysis, spreadsheets, and databases. Free online converter with batch support.',
       'docx_to_csv.subtitle': 'Convert Microsoft Word DOCX files to CSV format for easy data analysis. Extract tables and text content from Word documents and transform into spreadsheet-compatible format.',
       'docx_to_csv.upload_single': 'Upload DOCX File',
@@ -978,7 +978,7 @@ const resources = {
       
       // DOC to CSV
       'doc_to_csv.title': 'DOC to CSV Converter',
-      'doc_to_csv.meta_title': 'Free DOC to CSV Converter Online - Extract Tables from Word 97-2003 Documents to CSV Format | MorphyHub',
+      'doc_to_csv.meta_title': 'Free DOC to CSV Converter Online - Extract Tables from Word 97-2003 Documents to CSV Format',
       'doc_to_csv.meta_description': 'Convert DOC Word documents to CSV format online for free. Extract tables and text content from legacy Word 97-2003 documents for data analysis, spreadsheets, and databases. Free online converter with batch support using LibreOffice.',
       'doc_to_csv.subtitle': 'Convert Microsoft Word DOC files (Word 97-2003) to CSV format for easy data analysis. Extract tables and text content from legacy Word documents and transform into spreadsheet-compatible format using LibreOffice.',
       'doc_to_csv.upload_single': 'Upload DOC File',
@@ -1045,7 +1045,7 @@ const resources = {
       
       // DOCX to EPUB
       'docx_to_epub.title': 'DOCX to EPUB Converter',
-      'docx_to_epub.meta_title': 'Free DOCX to EPUB Converter Online - Convert Word Documents to eBook Format | MorphyHub',
+      'docx_to_epub.meta_title': 'Free DOCX to EPUB Converter Online - Convert Word Documents to eBook Format',
       'docx_to_epub.meta_description': 'Convert DOCX Word documents to EPUB ebook format online for free. Transform modern Word documents into digital books for e-readers, tablets, and mobile devices. Free online converter with batch support.',
       'docx_to_epub.subtitle': 'Convert Microsoft Word DOCX files to EPUB format for e-books. Transform modern Word documents into digital book format compatible with e-readers and mobile devices.',
       'docx_to_epub.upload_single': 'Upload DOCX File',
@@ -1110,7 +1110,7 @@ const resources = {
       
       // DOCX to MOBI
       'docx_to_mobi.title': 'DOCX to MOBI Converter',
-      'docx_to_mobi.meta_title': 'Free DOCX to MOBI Converter Online - Convert Word Documents to Kindle MOBI Format | MorphyHub',
+      'docx_to_mobi.meta_title': 'Free DOCX to MOBI Converter Online - Convert Word Documents to Kindle MOBI Format',
       'docx_to_mobi.meta_description': 'Convert DOCX Word documents to MOBI ebook format online for free. Transform modern Word documents into Kindle-compatible MOBI files for Amazon Kindle e-readers. Free online converter with batch support.',
       'docx_to_mobi.subtitle': 'Convert Microsoft Word DOCX files to MOBI format for Kindle e-readers. Transform modern Word documents into Kindle-compatible e-book format using Calibre ebook-convert.',
       'docx_to_mobi.upload_single': 'Upload DOCX File',
@@ -1177,7 +1177,7 @@ const resources = {
       
       // DOCX to ODT
       'docx_to_odt.title': 'DOCX to ODT Converter',
-      'docx_to_odt.meta_title': 'Free DOCX to ODT Converter Online - Convert Word Documents to OpenDocument Text Format | MorphyHub',
+      'docx_to_odt.meta_title': 'Free DOCX to ODT Converter Online - Convert Word Documents to OpenDocument Text Format',
       'docx_to_odt.meta_description': 'Convert DOCX Word documents to ODT OpenDocument Text format online for free. Transform Microsoft Word documents into LibreOffice-compatible ODT files. Free online converter with batch support powered by LibreOffice.',
       'docx_to_odt.subtitle': 'Convert Microsoft Word DOCX files to ODT OpenDocument Text format. Transform Word documents into LibreOffice-compatible format using LibreOffice for best conversion quality.',
       'docx_to_odt.upload_single': 'Upload DOCX File',
@@ -1240,7 +1240,7 @@ const resources = {
       
       // DOCX to TXT
       'docx_to_txt.title': 'DOCX to TXT Converter',
-      'docx_to_txt.meta_title': 'Free DOCX to TXT Converter Online - Convert Word Documents to Plain Text Format | MorphyHub',
+      'docx_to_txt.meta_title': 'Free DOCX to TXT Converter Online - Convert Word Documents to Plain Text Format',
       'docx_to_txt.meta_description': 'Convert DOCX Word documents to TXT plain text format online for free. Transform Microsoft Word documents into clean, unformatted text files. Free online converter with batch support powered by Pandoc for clean text output.',
       'docx_to_txt.subtitle': 'Convert Microsoft Word DOCX files to TXT plain text format. Transform Word documents into clean, unformatted text files using Pandoc for best text extraction quality.',
       'docx_to_txt.upload_single': 'Upload DOCX File',
@@ -2873,7 +2873,7 @@ const resources = {
       
       // JPG Compression
       'compress_jpg.title': 'Free JPG/JPEG Compressor',
-      'compress_jpg.meta_title': 'Free JPG/JPEG Compressor Online - Reduce Image File Size Fast | MorphyHub',
+      'compress_jpg.meta_title': 'Free JPG/JPEG Compressor Online - Reduce Image File Size Fast',
       'compress_jpg.meta_description': 'Free online JPG/JPEG compressor. Quickly reduce JPEG file size while keeping high image quality. Fast, secure, and easy-to-use JPG compression with adjustable quality levels, bulk upload, and instant preview.',
       'compress_jpg.meta_keywords': 'free jpg compressor, free jpeg compressor, compress jpg online, compress jpeg online, reduce jpg file size, image size reducer, jpeg optimization, photo compressor, picture compressor, bulk jpg compressor, online image compressor, optimize jpg for web, jpg size reducer, jpeg file shrinker, jpg optimizer, jpeg resizer, compress photos for website, free jpeg file compressor, reduce jpeg kb size, shrink jpg images online',
       'compress_jpg.subtitle': 'Free online tool to reduce JPEG file size without losing visible quality',
@@ -2946,7 +2946,7 @@ const resources = {
       
       // PNG Compression
       'compress_png.title': 'Free PNG Compressor',
-      'compress_png.meta_title': 'Free PNG Compressor Online - Reduce PNG File Size Fast | MorphyHub',
+      'compress_png.meta_title': 'Free PNG Compressor Online - Reduce PNG File Size Fast',
       'compress_png.meta_description': 'Free online PNG compressor. Quickly reduce PNG file size while keeping high image quality and transparency. Fast, secure, and easy-to-use PNG compression with adjustable quality levels, bulk upload, and instant preview.',
       'compress_png.meta_keywords': 'free png compressor, compress png online, reduce png file size, png size reducer, png optimization, compress png images, png file shrinker, png optimizer, shrink png images online, compress png for web, reduce png kb size, optimize png images, free png file compressor, png compression tool, compress transparent png',
       'compress_png.subtitle': 'Free online tool to reduce PNG file size without losing visible quality or transparency',
@@ -3019,7 +3019,7 @@ const resources = {
       
       // PDF Compression
       'compress_pdf.title': 'Free PDF Compressor',
-      'compress_pdf.meta_title': 'Free PDF Compressor Online - Reduce PDF File Size Fast | MorphyHub',
+      'compress_pdf.meta_title': 'Free PDF Compressor Online - Reduce PDF File Size Fast',
       'compress_pdf.meta_description': 'Free online PDF compressor. Quickly reduce PDF file size while maintaining document quality. Fast, secure, and easy-to-use PDF compression with adjustable quality levels, bulk upload, and instant results.',
       'compress_pdf.meta_keywords': 'free pdf compressor, compress pdf online, reduce pdf file size, pdf size reducer, pdf optimization, compress pdf files, pdf file shrinker, pdf optimizer, shrink pdf files online, compress pdf for web, reduce pdf kb size, optimize pdf files, free pdf file compressor, pdf compression tool, compress pdf documents',
       'compress_pdf.subtitle': 'Free online tool to reduce PDF file size without losing document quality',
@@ -3136,7 +3136,7 @@ const resources = {
       
       // DOC to EPUB
       'doc_to_epub.title': 'Darmowy Konwerter DOC na EPUB',
-      'doc_to_epub.meta_title': 'Konwerter DOC na EPUB Za Darmo Online - Konwertuj Word na eBook Bez Rejestracji | MorphyHub',
+      'doc_to_epub.meta_title': 'Konwerter DOC na EPUB Za Darmo Online - Konwertuj Word na eBook Bez Rejestracji ',
       'doc_to_epub.meta_description': 'Darmowy konwerter DOC na EPUB online ⚡ Konwertuj Microsoft Word do formatu eBook EPUB za darmo. Wsadowe przetwarzanie, bez rejestracji, 100% bezpieczne. Idealny dla Kindle, Kobo, Nook i wszystkich czytników e-booków. Nieograniczone konwersje!',
       'doc_to_epub.subtitle': 'Konwertuj pliki Microsoft Word DOC na format eBook EPUB online za darmo. Idealny dla Kindle, Kobo i wszystkich czytników e-booków. Bez rejestracji.',
       'doc_to_epub.heading': 'Konwertuj DOC na EPUB',
@@ -3250,7 +3250,7 @@ const resources = {
       
       // DOC to MOBI
       'doc_to_mobi.title': 'Konwerter DOC na MOBI',
-      'doc_to_mobi.meta_title': 'Bezpłatny Konwerter DOC na MOBI Online - Konwertuj Dokumenty Word na Format Kindle MOBI | MorphyHub',
+      'doc_to_mobi.meta_title': 'Bezpłatny Konwerter DOC na MOBI Online - Konwertuj Dokumenty Word na Format Kindle MOBI ',
       'doc_to_mobi.meta_description': 'Konwertuj dokumenty Word DOC na format MOBI online za darmo. Przekształć starsze dokumenty Word w pliki MOBI kompatybilne z Kindle dla czytników Amazon Kindle. Bezpłatny konwerter online z obsługą wsadową.',
       'doc_to_mobi.subtitle': 'Konwertuj pliki Microsoft Word DOC na format MOBI dla czytników Kindle. Przekształć starsze dokumenty Word w format e-book kompatybilny z Kindle używając Calibre ebook-convert.',
       'doc_to_mobi.heading': 'Konwertuj DOC na MOBI',
@@ -3319,7 +3319,7 @@ const resources = {
       
       // DOC to TXT
       'doc_to_txt.title': 'Konwerter DOC na TXT',
-      'doc_to_txt.meta_title': 'Bezpłatny Konwerter DOC na TXT Online - Konwertuj Dokumenty Word na Format Tekstowy | MorphyHub',
+      'doc_to_txt.meta_title': 'Bezpłatny Konwerter DOC na TXT Online - Konwertuj Dokumenty Word na Format Tekstowy ',
       'doc_to_txt.meta_description': 'Konwertuj dokumenty Word DOC na format TXT online za darmo. Przekształć starsze dokumenty Microsoft Word w czyste, nieformatowane pliki tekstowe. Bezpłatny konwerter online z obsługą wsadową zasilany przez pypandoc/Pandoc dla czystego wyjścia tekstowego.',
       'doc_to_txt.subtitle': 'Konwertuj pliki Microsoft Word DOC na format TXT. Przekształć starsze dokumenty Word w czyste, nieformatowane pliki tekstowe używając pypandoc/Pandoc dla najlepszej jakości ekstrakcji tekstu.',
       'doc_to_txt.heading': 'Konwertuj DOC na TXT',
@@ -3384,7 +3384,7 @@ const resources = {
       
       // HEIC to SVG
       'heic_to_svg.title': 'Konwerter HEIC na SVG',
-      'heic_to_svg.meta_title': 'Bezpłatny Konwerter HEIC na SVG Online - Konwertuj Obrazy Apple HEIC na Grafiki Wektorowe | MorphyHub',
+      'heic_to_svg.meta_title': 'Bezpłatny Konwerter HEIC na SVG Online - Konwertuj Obrazy Apple HEIC na Grafiki Wektorowe ',
       'heic_to_svg.meta_description': 'Konwertuj pliki HEIC (High Efficiency Image Container) na format SVG online za darmo. Przekształć zdjęcia z iPhone Apple i obrazy HEIF w skalowalne grafiki wektorowe. Bezpłatny konwerter online z obsługą wsadową zasilany przez pillow-heif i ImageMagick.',
       'heic_to_svg.subtitle': 'Konwertuj obrazy HEIC na skalowalny format grafik wektorowych SVG. Przekształć zdjęcia z iPhone Apple w grafiki wektorowe odpowiednie dla webu, projektowania i uniwersalnej kompatybilności.',
       'heic_to_svg.heading': 'Konwertuj HEIC na SVG',
@@ -3451,7 +3451,7 @@ const resources = {
       
       // HEIC to PDF - Polish
       'heic_to_pdf.title': 'Darmowy Konwerter HEIC do PDF',
-      'heic_to_pdf.meta_title': 'Darmowy Konwerter HEIC do PDF Online - Konwertuj Zdjęcia iPhone na Dokumenty PDF | MorphyHub',
+      'heic_to_pdf.meta_title': 'Darmowy Konwerter HEIC do PDF Online - Konwertuj Zdjęcia iPhone na Dokumenty PDF ',
       'heic_to_pdf.meta_description': 'Konwertuj pliki HEIC (High Efficiency Image Container) do formatu PDF online za darmo. Przekształć zdjęcia z iPhone Apple i obrazy HEIF w dokumenty PDF do druku, udostępniania i archiwizacji. Darmowy konwerter online z obsługą wsadową zasilany przez pillow-heif, ImageMagick i reportlab.',
       'heic_to_pdf.subtitle': 'Konwertuj obrazy HEIC do formatu PDF dla dokumentów. Przekształć zdjęcia z iPhone Apple w pliki PDF odpowiednie do druku, udostępniania, archiwizacji i uniwersalnej kompatybilności dokumentów.',
       'heic_to_pdf.upload_single': 'Prześlij Plik HEIC',
@@ -4722,7 +4722,7 @@ const resources = {
       
       // EPUB to CSV - Polish
       'epub_to_csv.title': 'Darmowy Konwerter EPUB do CSV',
-      'epub_to_csv.meta_title': 'Darmowy Konwerter EPUB do CSV Online - Wyodrębnij Treść eBook w Formacie CSV | MorphyHub',
+      'epub_to_csv.meta_title': 'Darmowy Konwerter EPUB do CSV Online - Wyodrębnij Treść eBook w Formacie CSV ',
       'epub_to_csv.meta_description': 'Konwertuj pliki EPUB eBook do formatu CSV online za darmo. Wyodrębnij treść tekstową, rozdziały i metadane z plików EPUB do analizy danych, zarządzania treścią i przetwarzania tekstu.',
       'epub_to_csv.subtitle': 'Konwertuj pliki EPUB eBook do formatu CSV dla łatwej analizy danych i wyodrębniania treści. Wyodrębnij rozdziały, akapity i metadane z Twoich eBooków.',
       'epub_to_csv.success_message': 'Twój plik EPUB został pomyślnie skonwertowany do formatu CSV z wyodrębnionymi wszystkimi rozdziałami i treścią.',
@@ -4746,7 +4746,7 @@ const resources = {
       
       // DOCX to CSV - Polish
       'docx_to_csv.title': 'Darmowy Konwerter DOCX do CSV',
-      'docx_to_csv.meta_title': 'Darmowy Konwerter DOCX do CSV Online - Wyodrębnij Tabele z Dokumentów Word do Format CSV | MorphyHub',
+      'docx_to_csv.meta_title': 'Darmowy Konwerter DOCX do CSV Online - Wyodrębnij Tabele z Dokumentów Word do Format CSV ',
       'docx_to_csv.meta_description': 'Konwertuj dokumenty DOCX Word do formatu CSV online za darmo. Wyodrębnij tabele i treść tekstową z nowoczesnych dokumentów Word do analizy danych, arkuszy kalkulacyjnych i baz danych. Darmowy konwerter online z przetwarzaniem wsadowym.',
       'docx_to_csv.subtitle': 'Konwertuj pliki DOCX Microsoft Word do formatu CSV dla łatwej analizy danych. Wyodrębnij tabele i treść tekstową z dokumentów Word i przekształć w format zgodny z arkuszami kalkulacyjnymi.',
       'docx_to_csv.upload_single': 'Prześlij Plik DOCX',
@@ -4813,7 +4813,7 @@ const resources = {
       
       // DOC to CSV - Polish
       'doc_to_csv.title': 'Konwerter DOC do CSV',
-      'doc_to_csv.meta_title': 'Darmowy Konwerter DOC do CSV Online - Wyodrębnij Tabele z Dokumentów Word 97-2003 do Format CSV | MorphyHub',
+      'doc_to_csv.meta_title': 'Darmowy Konwerter DOC do CSV Online - Wyodrębnij Tabele z Dokumentów Word 97-2003 do Format CSV ',
       'doc_to_csv.meta_description': 'Konwertuj dokumenty DOC Word do formatu CSV online za darmo. Wyodrębnij tabele i treść tekstową z starszych dokumentów Word 97-2003 do analizy danych, arkuszy kalkulacyjnych i baz danych. Darmowy konwerter online z przetwarzaniem wsadowym używający LibreOffice.',
       'doc_to_csv.subtitle': 'Konwertuj pliki DOC Microsoft Word (Word 97-2003) do formatu CSV dla łatwej analizy danych. Wyodrębnij tabele i treść tekstową z starszych dokumentów Word i przekształć w format zgodny z arkuszami kalkulacyjnymi używając LibreOffice.',
       'doc_to_csv.upload_single': 'Prześlij Plik DOC',
@@ -4880,7 +4880,7 @@ const resources = {
       
       // DOCX to EPUB - Polish
       'docx_to_epub.title': 'Darmowy Konwerter DOCX do EPUB',
-      'docx_to_epub.meta_title': 'Darmowy Konwerter DOCX do EPUB Online - Konwertuj Dokumenty Word na Format eBook | MorphyHub',
+      'docx_to_epub.meta_title': 'Darmowy Konwerter DOCX do EPUB Online - Konwertuj Dokumenty Word na Format eBook ',
       'docx_to_epub.meta_description': 'Konwertuj dokumenty DOCX Word do formatu EPUB ebook online za darmo. Przekształć nowoczesne dokumenty Word w cyfrowe książki dla czytników e-book, tabletów i urządzeń mobilnych. Darmowy konwerter online z przetwarzaniem wsadowym.',
       'docx_to_epub.subtitle': 'Konwertuj pliki DOCX Microsoft Word do formatu EPUB dla e-booków. Przekształć nowoczesne dokumenty Word w cyfrowy format książki zgodny z czytnikami e-book i urządzeniami mobilnymi.',
       'docx_to_epub.upload_single': 'Prześlij Plik DOCX',
@@ -4945,7 +4945,7 @@ const resources = {
       
       // DOCX to MOBI - Polish
       'docx_to_mobi.title': 'Darmowy Konwerter DOCX do MOBI',
-      'docx_to_mobi.meta_title': 'Darmowy Konwerter DOCX do MOBI Online - Konwertuj Dokumenty Word na Format Kindle MOBI | MorphyHub',
+      'docx_to_mobi.meta_title': 'Darmowy Konwerter DOCX do MOBI Online - Konwertuj Dokumenty Word na Format Kindle MOBI ',
       'docx_to_mobi.meta_description': 'Konwertuj dokumenty DOCX Word do formatu MOBI ebook online za darmo. Przekształć nowoczesne dokumenty Word w kompatybilne pliki MOBI dla czytników Amazon Kindle. Darmowy konwerter online z przetwarzaniem wsadowym.',
       'docx_to_mobi.subtitle': 'Konwertuj pliki DOCX Microsoft Word do formatu MOBI dla czytników Kindle. Przekształć nowoczesne dokumenty Word w kompatybilny format e-booka Kindle używając Calibre ebook-convert.',
       'docx_to_mobi.upload_single': 'Prześlij Plik DOCX',
@@ -5012,7 +5012,7 @@ const resources = {
       
       // DOCX to ODT - Polish
       'docx_to_odt.title': 'Darmowy Konwerter DOCX do ODT',
-      'docx_to_odt.meta_title': 'Darmowy Konwerter DOCX do ODT Online - Konwertuj Dokumenty Word na Format OpenDocument Text | MorphyHub',
+      'docx_to_odt.meta_title': 'Darmowy Konwerter DOCX do ODT Online - Konwertuj Dokumenty Word na Format OpenDocument Text ',
       'docx_to_odt.meta_description': 'Konwertuj dokumenty DOCX Word do formatu ODT OpenDocument Text online za darmo. Przekształć dokumenty Microsoft Word w kompatybilne pliki ODT dla LibreOffice. Darmowy konwerter online z przetwarzaniem wsadowym zasilany przez LibreOffice.',
       'docx_to_odt.subtitle': 'Konwertuj pliki DOCX Microsoft Word do formatu ODT OpenDocument Text. Przekształć dokumenty Word w kompatybilny format LibreOffice używając LibreOffice dla najlepszej jakości konwersji.',
       'docx_to_odt.upload_single': 'Prześlij Plik DOCX',
@@ -5075,7 +5075,7 @@ const resources = {
       
       // DOCX to TXT - Polish
       'docx_to_txt.title': 'Darmowy Konwerter DOCX do TXT',
-      'docx_to_txt.meta_title': 'Darmowy Konwerter DOCX do TXT Online - Konwertuj Dokumenty Word na Format Zwykłego Tekstu | MorphyHub',
+      'docx_to_txt.meta_title': 'Darmowy Konwerter DOCX do TXT Online - Konwertuj Dokumenty Word na Format Zwykłego Tekstu ',
       'docx_to_txt.meta_description': 'Konwertuj dokumenty DOCX Word do formatu TXT zwykłego tekstu online za darmo. Przekształć dokumenty Microsoft Word w czyste, niesformatowane pliki tekstowe. Darmowy konwerter online z przetwarzaniem wsadowym zasilany przez Pandoc dla czystego wyjścia tekstowego.',
       'docx_to_txt.subtitle': 'Konwertuj pliki DOCX Microsoft Word do formatu TXT zwykłego tekstu. Przekształć dokumenty Word w czyste, niesformatowane pliki tekstowe używając Pandoc dla najlepszej jakości ekstrakcji tekstu.',
       'docx_to_txt.upload_single': 'Prześlij Plik DOCX',
@@ -5143,7 +5143,7 @@ const resources = {
       
       // EPUB to DOC
       'epub_to_doc.title': 'Darmowy Konwerter EPUB do DOC',
-      'epub_to_doc.meta_title': 'Darmowy Konwerter EPUB do DOC Online - Konwertuj eBooki na Dokumenty Word | MorphyHub',
+      'epub_to_doc.meta_title': 'Darmowy Konwerter EPUB do DOC Online - Konwertuj eBooki na Dokumenty Word ',
       'epub_to_doc.meta_description': 'Konwertuj pliki EPUB eBook do formatu DOC online za darmo. Przekształć e-booki w edytowalne dokumenty Word z zachowaniem formatowania. Bez rejestracji, bezpieczne, szybkie.',
       'epub_to_doc.subtitle': 'Konwertuj pliki EPUB eBook do formatu DOC dla Microsoft Word. Przekształć e-booki w edytowalne dokumenty Word z zachowaniem formatowania.',
       'epub_to_doc.heading': 'Konwertuj EPUB na DOC',
@@ -5165,7 +5165,7 @@ const resources = {
       
       // EPUB to DOCX
       'epub_to_docx.title': 'Darmowy Konwerter EPUB do DOCX',
-      'epub_to_docx.meta_title': 'Darmowy Konwerter EPUB do DOCX Online - Konwertuj eBooki na Format Word | MorphyHub',
+      'epub_to_docx.meta_title': 'Darmowy Konwerter EPUB do DOCX Online - Konwertuj eBooki na Format Word ',
       'epub_to_docx.meta_description': 'Konwertuj pliki EPUB eBook do formatu DOCX online za darmo. Profesjonalna konwersja e-booków na dokumenty z zachowaniem formatowania. Bez rejestracji, bezpieczne.',
       'epub_to_docx.subtitle': 'Konwertuj pliki EPUB eBook do formatu DOCX dla Microsoft Word. Profesjonalna konwersja e-booków na dokumenty z zachowaniem formatowania.',
       'epub_to_docx.heading': 'Konwertuj EPUB na DOCX',
@@ -5187,7 +5187,7 @@ const resources = {
       
       // EPUB to HTML - Polish
       'epub_to_html.title': 'Darmowy Konwerter EPUB do HTML',
-      'epub_to_html.meta_title': 'Darmowy Konwerter EPUB do HTML Online - Konwertuj eBooki na Format Web | MorphyHub',
+      'epub_to_html.meta_title': 'Darmowy Konwerter EPUB do HTML Online - Konwertuj eBooki na Format Web ',
       'epub_to_html.meta_description': 'Konwertuj pliki EPUB eBook do HTML dla publikacji w sieci za darmo. Wyodrębnij treść eBook jako HTML ze stylami CSS i obrazami. Darmowy konwerter online z przetwarzaniem wsadowym.',
       'epub_to_html.subtitle': 'Konwertuj pliki EPUB eBook do formatu HTML dla publikacji w sieci. Wyodrębnij treść e-booków jako HTML ze stylami CSS i obrazami.',
       'epub_to_html.heading': 'Konwertuj EPUB na HTML',
@@ -5203,7 +5203,7 @@ const resources = {
       
       // EPUB to MD - Polish
       'epub_to_md.title': 'Darmowy Konwerter EPUB do Markdown',
-      'epub_to_md.meta_title': 'Darmowy Konwerter EPUB do Markdown Online - Konwertuj eBooki na Format MD | MorphyHub',
+      'epub_to_md.meta_title': 'Darmowy Konwerter EPUB do Markdown Online - Konwertuj eBooki na Format MD ',
       'epub_to_md.meta_description': 'Konwertuj pliki EPUB eBook do formatu Markdown za darmo. Przekształć e-booki w lekkie pliki Markdown dla dokumentacji, blogów i stron internetowych.',
       'epub_to_md.subtitle': 'Konwertuj pliki EPUB eBook do formatu Markdown dla dokumentacji i blogów. Przekształć e-booki w lekkie pliki Markdown.',
       'epub_to_md.heading': 'Konwertuj EPUB na Markdown',
@@ -5219,7 +5219,7 @@ const resources = {
       
       // EPUB to MOBI - Polish
       'epub_to_mobi.title': 'Darmowy Konwerter EPUB do MOBI',
-      'epub_to_mobi.meta_title': 'Darmowy Konwerter EPUB do MOBI Online - Konwertuj eBooki dla Kindle | MorphyHub',
+      'epub_to_mobi.meta_title': 'Darmowy Konwerter EPUB do MOBI Online - Konwertuj eBooki dla Kindle ',
       'epub_to_mobi.meta_description': 'Konwertuj pliki EPUB do formatu MOBI za darmo dla czytników Kindle. Przekształć e-booki EPUB w format MOBI kompatybilny z Kindle Amazon.',
       'epub_to_mobi.subtitle': 'Konwertuj pliki EPUB do formatu MOBI dla czytników Kindle. Przekształć e-booki EPUB w format MOBI kompatybilny z Amazon Kindle.',
       'epub_to_mobi.heading': 'Konwertuj EPUB na MOBI',
@@ -5235,7 +5235,7 @@ const resources = {
       
       // EPUB to ODP - Polish
       'epub_to_odp.title': 'Darmowy Konwerter EPUB do ODP',
-      'epub_to_odp.meta_title': 'Darmowy Konwerter EPUB do ODP Online - Konwertuj eBooki na Prezentacje | MorphyHub',
+      'epub_to_odp.meta_title': 'Darmowy Konwerter EPUB do ODP Online - Konwertuj eBooki na Prezentacje ',
       'epub_to_odp.meta_description': 'Konwertuj pliki EPUB eBook do formatu ODP za darmo. Przekształć treść e-booków w prezentacje OpenDocument dla LibreOffice Impress.',
       'epub_to_odp.subtitle': 'Konwertuj pliki EPUB eBook do formatu ODP dla prezentacji. Przekształć treść e-booków w prezentacje OpenDocument.',
       'epub_to_odp.heading': 'Konwertuj EPUB na ODP',
@@ -5251,7 +5251,7 @@ const resources = {
       
       // EPUB to ODT - Polish
       'epub_to_odt.title': 'Darmowy Konwerter EPUB do ODT',
-      'epub_to_odt.meta_title': 'Darmowy Konwerter EPUB do ODT Online - Konwertuj eBooki na OpenDocument | MorphyHub',
+      'epub_to_odt.meta_title': 'Darmowy Konwerter EPUB do ODT Online - Konwertuj eBooki na OpenDocument ',
       'epub_to_odt.meta_description': 'Konwertuj pliki EPUB eBook do formatu ODT za darmo. Przekształć e-booki w dokumenty OpenDocument dla LibreOffice Writer z zachowaniem formatowania.',
       'epub_to_odt.subtitle': 'Konwertuj pliki EPUB eBook do formatu ODT dla LibreOffice. Przekształć e-booki w dokumenty OpenDocument z zachowaniem formatowania.',
       'epub_to_odt.heading': 'Konwertuj EPUB na ODT',
@@ -5267,7 +5267,7 @@ const resources = {
       
       // EPUB to PDF - Polish
       'epub_to_pdf.title': 'Darmowy Konwerter EPUB do PDF',
-      'epub_to_pdf.meta_title': 'Darmowy Konwerter EPUB do PDF Online - Konwertuj eBooki na Format PDF | MorphyHub',
+      'epub_to_pdf.meta_title': 'Darmowy Konwerter EPUB do PDF Online - Konwertuj eBooki na Format PDF ',
       'epub_to_pdf.meta_description': 'Konwertuj pliki EPUB eBook do formatu PDF za darmo. Przekształć e-booki w uniwersalne dokumenty PDF do drukowania, udostępniania i archiwizacji.',
       'epub_to_pdf.subtitle': 'Konwertuj pliki EPUB eBook do formatu PDF dla uniwersalnej kompatybilności. Przekształć e-booki w dokumenty PDF do drukowania i udostępniania.',
       'epub_to_pdf.heading': 'Konwertuj EPUB na PDF',
@@ -5283,7 +5283,7 @@ const resources = {
       
       // EPUB to PPT - Polish
       'epub_to_ppt.title': 'Darmowy Konwerter EPUB do PPT',
-      'epub_to_ppt.meta_title': 'Darmowy Konwerter EPUB do PPT Online - Konwertuj eBooki na PowerPoint | MorphyHub',
+      'epub_to_ppt.meta_title': 'Darmowy Konwerter EPUB do PPT Online - Konwertuj eBooki na PowerPoint ',
       'epub_to_ppt.meta_description': 'Konwertuj pliki EPUB eBook do formatu PPT za darmo. Przekształć treść e-booków w prezentacje PowerPoint dla edukacji i szkoleń.',
       'epub_to_ppt.subtitle': 'Konwertuj pliki EPUB eBook do formatu PPT dla prezentacji. Przekształć treść e-booków w prezentacje PowerPoint.',
       'epub_to_ppt.heading': 'Konwertuj EPUB na PPT',
@@ -5299,7 +5299,7 @@ const resources = {
       
       // EPUB to PPTX - Polish
       'epub_to_pptx.title': 'Darmowy Konwerter EPUB do PPTX',
-      'epub_to_pptx.meta_title': 'Darmowy Konwerter EPUB do PPTX Online - Konwertuj eBooki na PowerPoint | MorphyHub',
+      'epub_to_pptx.meta_title': 'Darmowy Konwerter EPUB do PPTX Online - Konwertuj eBooki na PowerPoint ',
       'epub_to_pptx.meta_description': 'Konwertuj pliki EPUB eBook do formatu PPTX za darmo. Przekształć e-booki w nowoczesne prezentacje PowerPoint z zachowaniem treści.',
       'epub_to_pptx.subtitle': 'Konwertuj pliki EPUB eBook do formatu PPTX dla nowoczesnych prezentacji. Przekształć e-booki w prezentacje PowerPoint z zachowaniem treści.',
       'epub_to_pptx.heading': 'Konwertuj EPUB na PPTX',
@@ -5315,7 +5315,7 @@ const resources = {
       
       // EPUB to RTF - Polish
       'epub_to_rtf.title': 'Darmowy Konwerter EPUB do RTF',
-      'epub_to_rtf.meta_title': 'Darmowy Konwerter EPUB do RTF Online - Konwertuj eBooki na Rich Text | MorphyHub',
+      'epub_to_rtf.meta_title': 'Darmowy Konwerter EPUB do RTF Online - Konwertuj eBooki na Rich Text ',
       'epub_to_rtf.meta_description': 'Konwertuj pliki EPUB eBook do formatu RTF za darmo. Przekształć e-booki w uniwersalny format Rich Text kompatybilny z większością edytorów tekstu.',
       'epub_to_rtf.subtitle': 'Konwertuj pliki EPUB eBook do formatu RTF dla uniwersalnej kompatybilności. Przekształć e-booki w format Rich Text.',
       'epub_to_rtf.heading': 'Konwertuj EPUB na RTF',
@@ -5331,7 +5331,7 @@ const resources = {
       
       // EPUB to TXT - Polish
       'epub_to_txt.title': 'Darmowy Konwerter EPUB do TXT',
-      'epub_to_txt.meta_title': 'Darmowy Konwerter EPUB do TXT Online - Konwertuj eBooki na Czysty Tekst | MorphyHub',
+      'epub_to_txt.meta_title': 'Darmowy Konwerter EPUB do TXT Online - Konwertuj eBooki na Czysty Tekst ',
       'epub_to_txt.meta_description': 'Konwertuj pliki EPUB eBook do formatu TXT za darmo. Wyodrębnij czysty tekst z e-booków dla analizy tekstu, edycji i przetwarzania.',
       'epub_to_txt.subtitle': 'Konwertuj pliki EPUB eBook do formatu TXT dla analizy tekstu. Wyodrębnij czysty tekst z e-booków.',
       'epub_to_txt.heading': 'Konwertuj EPUB na TXT',
@@ -5347,7 +5347,7 @@ const resources = {
       
       // EPUB to XLSX - Polish
       'epub_to_xlsx.title': 'Darmowy Konwerter EPUB do XLSX',
-      'epub_to_xlsx.meta_title': 'Darmowy Konwerter EPUB do XLSX Online - Konwertuj eBooki na Format Excel | MorphyHub',
+      'epub_to_xlsx.meta_title': 'Darmowy Konwerter EPUB do XLSX Online - Konwertuj eBooki na Format Excel ',
       'epub_to_xlsx.meta_description': 'Konwertuj pliki EPUB eBook do formatu XLSX za darmo. Wyodrębnij treść e-booków do arkuszy kalkulacyjnych Excel dla analizy danych i zarządzania treścią.',
       'epub_to_xlsx.subtitle': 'Konwertuj pliki EPUB eBook do formatu XLSX dla analizy danych. Wyodrębnij treść e-booków do arkuszy kalkulacyjnych Excel.',
       'epub_to_xlsx.heading': 'Konwertuj EPUB na XLSX',
@@ -5363,7 +5363,7 @@ const resources = {
       
       // JPG Compression - Polish
       'compress_jpg.title': 'Kompresor JPG - Kompresuj Obrazy JPEG Online',
-      'compress_jpg.meta_title': 'Darmowy Kompresor JPG/JPEG Online - Zmniejsz Rozmiar Pliku JPEG | MorphyHub',
+      'compress_jpg.meta_title': 'Darmowy Kompresor JPG/JPEG Online - Zmniejsz Rozmiar Pliku JPEG ',
       'compress_jpg.meta_description': 'Kompresuj obrazy JPG/JPEG online za darmo. Zmniejsz rozmiar pliku JPEG zachowując jakość. Szybka, bezpieczna kompresja JPEG z regulowanymi ustawieniami jakości i obsługą przetwarzania wsadowego.',
       'compress_jpg.meta_keywords': 'kompresor jpg, kompresor jpeg, kompresuj jpg, kompresuj jpeg, zmniejsz rozmiar jpg, kompresja obrazów, optymalizacja jpeg',
       'compress_jpg.subtitle': 'Zmniejsz rozmiar pliku JPEG bez utraty jakości. Kompresuj obrazy JPG dla szybszych przesyłek, mniejszego miejsca i lepszej wydajności w sieci. Darmowe, bezpieczne i bez rejestracji.',
@@ -5436,7 +5436,7 @@ const resources = {
       
       // PNG Compression - Polish
       'compress_png.title': 'Kompresor PNG - Kompresuj Obrazy PNG Online',
-      'compress_png.meta_title': 'Darmowy Kompresor PNG Online - Zmniejsz Rozmiar Pliku PNG | MorphyHub',
+      'compress_png.meta_title': 'Darmowy Kompresor PNG Online - Zmniejsz Rozmiar Pliku PNG ',
       'compress_png.meta_description': 'Kompresuj obrazy PNG online za darmo. Zmniejsz rozmiar pliku PNG zachowując jakość i przezroczystość. Szybka, bezpieczna kompresja PNG z regulowanymi ustawieniami jakości i obsługą przetwarzania wsadowego.',
       'compress_png.meta_keywords': 'kompresor png, kompresuj png, zmniejsz rozmiar png, kompresja png, optymalizacja png, kompresuj obrazy png, zmniejsz png',
       'compress_png.subtitle': 'Zmniejsz rozmiar pliku PNG bez utraty jakości i przezroczystości. Kompresuj obrazy PNG dla szybszych przesyłek, mniejszego miejsca i lepszej wydajności w sieci.',
@@ -5509,7 +5509,7 @@ const resources = {
       
       // PDF Compression - Polish
       'compress_pdf.title': 'Kompresor PDF - Kompresuj Pliki PDF Online',
-      'compress_pdf.meta_title': 'Darmowy Kompresor PDF Online - Zmniejsz Rozmiar Pliku PDF | MorphyHub',
+      'compress_pdf.meta_title': 'Darmowy Kompresor PDF Online - Zmniejsz Rozmiar Pliku PDF ',
       'compress_pdf.meta_description': 'Kompresuj pliki PDF online za darmo. Zmniejsz rozmiar pliku PDF zachowując jakość dokumentu. Szybka, bezpieczna kompresja PDF z regulowanymi ustawieniami jakości i obsługą przetwarzania wsadowego.',
       'compress_pdf.meta_keywords': 'kompresor pdf, kompresuj pdf, zmniejsz rozmiar pdf, kompresja pdf, optymalizacja pdf, kompresuj pliki pdf, zmniejsz pdf',
       'compress_pdf.subtitle': 'Zmniejsz rozmiar pliku PDF bez utraty jakości dokumentu. Kompresuj pliki PDF dla szybszych przesyłek, mniejszego miejsca i lepszej wydajności.',
@@ -5626,7 +5626,7 @@ const resources = {
       
       // DOC to EPUB
       'doc_to_epub.title': 'Kostenloser DOC zu EPUB Konverter',
-      'doc_to_epub.meta_title': 'DOC zu EPUB Konverter Kostenlos Online - Word in eBook Umwandeln Ohne Anmeldung | MorphyHub',
+      'doc_to_epub.meta_title': 'DOC zu EPUB Konverter Kostenlos Online - Word in eBook Umwandeln Ohne Anmeldung ',
       'doc_to_epub.meta_description': 'Kostenloser DOC zu EPUB Konverter online ⚡ Konvertieren Sie Microsoft Word in EPUB eBook-Format gratis. Stapelverarbeitung, keine Registrierung, 100% sicher. Perfekt für Kindle, Kobo, Nook und alle E-Reader. Unbegrenzte Konvertierungen!',
       'doc_to_epub.subtitle': 'Konvertieren Sie Microsoft Word DOC-Dateien kostenlos online in das EPUB eBook-Format. Perfekt für Kindle, Kobo und alle E-Reader. Keine Registrierung erforderlich.',
       'doc_to_epub.heading': 'DOC zu EPUB konvertieren',
@@ -5740,7 +5740,7 @@ const resources = {
       
       // DOC to MOBI
       'doc_to_mobi.title': 'DOC zu MOBI Konverter',
-      'doc_to_mobi.meta_title': 'Kostenloser DOC zu MOBI Konverter Online - Word Dokumente zu Kindle MOBI Format konvertieren | MorphyHub',
+      'doc_to_mobi.meta_title': 'Kostenloser DOC zu MOBI Konverter Online - Word Dokumente zu Kindle MOBI Format konvertieren ',
       'doc_to_mobi.meta_description': 'Konvertieren Sie DOC Word-Dokumente online kostenlos in das MOBI E-Book-Format. Verwandeln Sie ältere Word-Dokumente in Kindle-kompatible MOBI-Dateien für Amazon Kindle E-Reader. Kostenloser Online-Konverter mit Stapelunterstützung.',
       'doc_to_mobi.subtitle': 'Konvertieren Sie Microsoft Word DOC-Dateien in das MOBI-Format für Kindle E-Reader. Verwandeln Sie ältere Word-Dokumente in das Kindle-kompatible E-Book-Format mit Calibre ebook-convert.',
       'doc_to_mobi.heading': 'DOC zu MOBI konvertieren',
@@ -5809,7 +5809,7 @@ const resources = {
       
       // DOC to TXT
       'doc_to_txt.title': 'DOC zu TXT Konverter',
-      'doc_to_txt.meta_title': 'Kostenloser DOC zu TXT Konverter Online - Word Dokumente zu Klartext Format konvertieren | MorphyHub',
+      'doc_to_txt.meta_title': 'Kostenloser DOC zu TXT Konverter Online - Word Dokumente zu Klartext Format konvertieren ',
       'doc_to_txt.meta_description': 'Konvertieren Sie DOC Word-Dokumente online kostenlos in das TXT Klartext-Format. Verwandeln Sie ältere Microsoft Word-Dokumente in saubere, nicht formatierte Textdateien. Kostenloser Online-Konverter mit Stapelunterstützung, angetrieben von pypandoc/Pandoc für saubere Textausgabe.',
       'doc_to_txt.subtitle': 'Konvertieren Sie Microsoft Word DOC-Dateien in das TXT Klartext-Format. Verwandeln Sie ältere Word-Dokumente in saubere, nicht formatierte Textdateien mit pypandoc/Pandoc für beste Textextraktionsqualität.',
       'doc_to_txt.heading': 'DOC zu TXT konvertieren',
@@ -5874,7 +5874,7 @@ const resources = {
       
       // HEIC to SVG
       'heic_to_svg.title': 'HEIC zu SVG Konverter',
-      'heic_to_svg.meta_title': 'Kostenloser HEIC zu SVG Konverter Online - Apple HEIC Bilder zu Skalierbare Vektorgrafiken konvertieren | MorphyHub',
+      'heic_to_svg.meta_title': 'Kostenloser HEIC zu SVG Konverter Online - Apple HEIC Bilder zu Skalierbare Vektorgrafiken konvertieren ',
       'heic_to_svg.meta_description': 'Konvertieren Sie HEIC (High Efficiency Image Container) Dateien online kostenlos in das SVG-Format. Verwandeln Sie Apple iPhone Fotos und HEIF Bilder in skalierbare Vektorgrafiken. Kostenloser Online-Konverter mit Stapelunterstützung, angetrieben von pillow-heif und ImageMagick.',
       'heic_to_svg.subtitle': 'Konvertieren Sie HEIC Bilder in das SVG-Format für skalierbare Vektorgrafiken. Verwandeln Sie Apple iPhone Fotos in Vektorgrafiken für Web, Design und universelle Kompatibilität.',
       'heic_to_svg.heading': 'HEIC zu SVG konvertieren',
@@ -5941,7 +5941,7 @@ const resources = {
       
       // HEIC to PDF - German
       'heic_to_pdf.title': 'Kostenloser HEIC zu PDF Konverter',
-      'heic_to_pdf.meta_title': 'Kostenloser HEIC zu PDF Konverter Online - Konvertieren Sie iPhone-Fotos in PDF-Dokumente | MorphyHub',
+      'heic_to_pdf.meta_title': 'Kostenloser HEIC zu PDF Konverter Online - Konvertieren Sie iPhone-Fotos in PDF-Dokumente ',
       'heic_to_pdf.meta_description': 'Konvertieren Sie HEIC (High Efficiency Image Container) Dateien kostenlos online in das PDF-Format. Transformieren Sie Apple iPhone-Fotos und HEIF-Bilder in PDF-Dokumente zum Drucken, Teilen und Archivieren. Kostenloser Online-Konverter mit Batch-Unterstützung, betrieben von pillow-heif, ImageMagick und reportlab.',
       'heic_to_pdf.subtitle': 'Konvertieren Sie HEIC Bilder in das PDF-Format für Dokumente. Transformieren Sie Apple iPhone-Fotos in PDF-Dateien, die sich zum Drucken, Teilen, Archivieren und für universelle Dokumentenkompatibilität eignen.',
       'heic_to_pdf.upload_single': 'HEIC-Datei Hochladen',
@@ -7160,7 +7160,7 @@ const resources = {
       
       // EPUB to CSV - German
       'epub_to_csv.title': 'Kostenloser EPUB zu CSV Konverter',
-      'epub_to_csv.meta_title': 'Kostenloser EPUB zu CSV Konverter Online - eBook-Inhalte in CSV-Format extrahieren | MorphyHub',
+      'epub_to_csv.meta_title': 'Kostenloser EPUB zu CSV Konverter Online - eBook-Inhalte in CSV-Format extrahieren ',
       'epub_to_csv.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos online in CSV-Format. Extrahieren Sie Textinhalte, Kapitel und Metadaten aus EPUB-Dateien für Datenanalyse, Content-Management und Textverarbeitung.',
       'epub_to_csv.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in CSV-Format für einfache Datenanalyse und Content-Extraktion. Extrahieren Sie Kapitel, Absätze und Metadaten aus Ihren eBooks.',
       'epub_to_csv.success_message': 'Ihre EPUB-Datei wurde erfolgreich in CSV-Format konvertiert mit allen Kapiteln und Inhalten extrahiert.',
@@ -7184,7 +7184,7 @@ const resources = {
       
       // DOCX to CSV - German
       'docx_to_csv.title': 'Kostenloser DOCX zu CSV Konverter',
-      'docx_to_csv.meta_title': 'Kostenloser DOCX zu CSV Konverter Online - Tabellen aus Word-Dokumenten in CSV-Format extrahieren | MorphyHub',
+      'docx_to_csv.meta_title': 'Kostenloser DOCX zu CSV Konverter Online - Tabellen aus Word-Dokumenten in CSV-Format extrahieren ',
       'docx_to_csv.meta_description': 'Konvertieren Sie DOCX Word-Dokumente kostenlos online in CSV-Format. Extrahieren Sie Tabellen und Textinhalte aus modernen Word-Dokumenten für Datenanalyse, Tabellenkalkulationen und Datenbanken. Kostenloser Online-Konverter mit Stapelverarbeitung.',
       'docx_to_csv.subtitle': 'Konvertieren Sie DOCX Microsoft Word-Dateien in CSV-Format für einfache Datenanalyse. Extrahieren Sie Tabellen und Textinhalte aus Word-Dokumenten und wandeln Sie sie in tabellenkalkulationskompatibles Format um.',
       'docx_to_csv.upload_single': 'DOCX-Datei hochladen',
@@ -7251,7 +7251,7 @@ const resources = {
       
       // DOC to CSV - German
       'doc_to_csv.title': 'DOC zu CSV Konverter',
-      'doc_to_csv.meta_title': 'Kostenloser DOC zu CSV Konverter Online - Tabellen aus Word 97-2003 Dokumenten in CSV-Format extrahieren | MorphyHub',
+      'doc_to_csv.meta_title': 'Kostenloser DOC zu CSV Konverter Online - Tabellen aus Word 97-2003 Dokumenten in CSV-Format extrahieren ',
       'doc_to_csv.meta_description': 'Konvertieren Sie DOC Word-Dokumente online kostenlos in CSV-Format. Extrahieren Sie Tabellen und Textinhalt aus Legacy Word 97-2003 Dokumenten für Datenanalyse, Tabellenkalkulationen und Datenbanken. Kostenloser Online-Konverter mit Batch-Unterstützung mit LibreOffice.',
       'doc_to_csv.subtitle': 'Konvertieren Sie Microsoft Word DOC-Dateien (Word 97-2003) in CSV-Format für einfache Datenanalyse. Extrahieren Sie Tabellen und Textinhalt aus Legacy Word-Dokumenten und transformieren Sie sie in ein tabellenkalkulationskompatibles Format mit LibreOffice.',
       'doc_to_csv.upload_single': 'DOC-Datei hochladen',
@@ -7318,7 +7318,7 @@ const resources = {
       
       // DOCX to EPUB - German
       'docx_to_epub.title': 'Kostenloser DOCX zu EPUB Konverter',
-      'docx_to_epub.meta_title': 'Kostenloser DOCX zu EPUB Konverter Online - Word-Dokumente in eBook-Format umwandeln | MorphyHub',
+      'docx_to_epub.meta_title': 'Kostenloser DOCX zu EPUB Konverter Online - Word-Dokumente in eBook-Format umwandeln ',
       'docx_to_epub.meta_description': 'Konvertieren Sie DOCX Word-Dokumente kostenlos online in EPUB eBook-Format. Wandeln Sie moderne Word-Dokumente in digitale Bücher für E-Reader, Tablets und mobile Geräte um. Kostenloser Online-Konverter mit Stapelverarbeitung.',
       'docx_to_epub.subtitle': 'Konvertieren Sie DOCX Microsoft Word-Dateien in EPUB-Format für E-Books. Wandeln Sie moderne Word-Dokumente in digitales Buchformat um, das mit E-Readern und mobilen Geräten kompatibel ist.',
       'docx_to_epub.upload_single': 'DOCX-Datei hochladen',
@@ -7383,7 +7383,7 @@ const resources = {
       
       // DOCX to MOBI - German
       'docx_to_mobi.title': 'Kostenloser DOCX zu MOBI Konverter',
-      'docx_to_mobi.meta_title': 'Kostenloser DOCX zu MOBI Konverter Online - Word-Dokumente in Kindle MOBI-Format umwandeln | MorphyHub',
+      'docx_to_mobi.meta_title': 'Kostenloser DOCX zu MOBI Konverter Online - Word-Dokumente in Kindle MOBI-Format umwandeln ',
       'docx_to_mobi.meta_description': 'Konvertieren Sie DOCX Word-Dokumente kostenlos online in MOBI eBook-Format. Wandeln Sie moderne Word-Dokumente in Kindle-kompatible MOBI-Dateien für Amazon Kindle E-Reader um. Kostenloser Online-Konverter mit Stapelverarbeitung.',
       'docx_to_mobi.subtitle': 'Konvertieren Sie DOCX Microsoft Word-Dateien in MOBI-Format für Kindle E-Reader. Wandeln Sie moderne Word-Dokumente in Kindle-kompatibles E-Book-Format um, verwenden Sie Calibre ebook-convert.',
       'docx_to_mobi.upload_single': 'DOCX-Datei hochladen',
@@ -7450,7 +7450,7 @@ const resources = {
       
       // DOCX to ODT - German
       'docx_to_odt.title': 'Kostenloser DOCX zu ODT Konverter',
-      'docx_to_odt.meta_title': 'Kostenloser DOCX zu ODT Konverter Online - Word-Dokumente in OpenDocument Text-Format umwandeln | MorphyHub',
+      'docx_to_odt.meta_title': 'Kostenloser DOCX zu ODT Konverter Online - Word-Dokumente in OpenDocument Text-Format umwandeln ',
       'docx_to_odt.meta_description': 'Konvertieren Sie DOCX Word-Dokumente kostenlos online in ODT OpenDocument Text-Format. Wandeln Sie Microsoft Word-Dokumente in LibreOffice-kompatible ODT-Dateien um. Kostenloser Online-Konverter mit Stapelverarbeitung, angetrieben von LibreOffice.',
       'docx_to_odt.subtitle': 'Konvertieren Sie DOCX Microsoft Word-Dateien in ODT OpenDocument Text-Format. Wandeln Sie Word-Dokumente in LibreOffice-kompatibles Format um, verwenden Sie LibreOffice für beste Konvertierungsqualität.',
       'docx_to_odt.upload_single': 'DOCX-Datei hochladen',
@@ -7513,7 +7513,7 @@ const resources = {
       
       // DOCX to TXT - German
       'docx_to_txt.title': 'Kostenloser DOCX zu TXT Konverter',
-      'docx_to_txt.meta_title': 'Kostenloser DOCX zu TXT Konverter Online - Word-Dokumente in Nur-Text-Format umwandeln | MorphyHub',
+      'docx_to_txt.meta_title': 'Kostenloser DOCX zu TXT Konverter Online - Word-Dokumente in Nur-Text-Format umwandeln ',
       'docx_to_txt.meta_description': 'Konvertieren Sie DOCX Word-Dokumente kostenlos online in TXT Nur-Text-Format. Wandeln Sie Microsoft Word-Dokumente in saubere, unformatierte Textdateien um. Kostenloser Online-Konverter mit Stapelverarbeitung, angetrieben von Pandoc für saubere Textausgabe.',
       'docx_to_txt.subtitle': 'Konvertieren Sie DOCX Microsoft Word-Dateien in TXT Nur-Text-Format. Wandeln Sie Word-Dokumente in saubere, unformatierte Textdateien um, verwenden Sie Pandoc für beste Textextraktionsqualität.',
       'docx_to_txt.upload_single': 'DOCX-Datei hochladen',
@@ -7581,7 +7581,7 @@ const resources = {
       
       // EPUB to DOC - German
       'epub_to_doc.title': 'Kostenloser EPUB zu DOC Konverter',
-      'epub_to_doc.meta_title': 'Kostenloser EPUB zu DOC Konverter Online - eBooks in Word-Dokumente umwandeln | MorphyHub',
+      'epub_to_doc.meta_title': 'Kostenloser EPUB zu DOC Konverter Online - eBooks in Word-Dokumente umwandeln ',
       'epub_to_doc.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos online in DOC-Format. Wandeln Sie eBooks in bearbeitbare Word-Dokumente mit Formatierungserhaltung um. Ohne Registrierung, sicher, schnell.',
       'epub_to_doc.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in DOC-Format für Microsoft Word. Wandeln Sie eBooks in bearbeitbare Word-Dokumente mit Formatierungserhaltung um.',
       'epub_to_doc.heading': 'EPUB zu DOC konvertieren',
@@ -7603,7 +7603,7 @@ const resources = {
       
       // EPUB to DOCX - German
       'epub_to_docx.title': 'Kostenloser EPUB zu DOCX Konverter',
-      'epub_to_docx.meta_title': 'Kostenloser EPUB zu DOCX Konverter Online - eBooks in Word-Format umwandeln | MorphyHub',
+      'epub_to_docx.meta_title': 'Kostenloser EPUB zu DOCX Konverter Online - eBooks in Word-Format umwandeln ',
       'epub_to_docx.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos online in DOCX-Format. Professionelle eBook-zu-Dokument-Konvertierung mit Formatierungserhaltung. Ohne Registrierung, sicher.',
       'epub_to_docx.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in DOCX-Format für Microsoft Word. Professionelle eBook-zu-Dokument-Konvertierung mit Formatierungserhaltung.',
       'epub_to_docx.heading': 'EPUB zu DOCX konvertieren',
@@ -7625,7 +7625,7 @@ const resources = {
       
       // EPUB to HTML - German
       'epub_to_html.title': 'Kostenloser EPUB zu HTML Konverter',
-      'epub_to_html.meta_title': 'Kostenloser EPUB zu HTML Konverter Online - eBooks in Webformat umwandeln | MorphyHub',
+      'epub_to_html.meta_title': 'Kostenloser EPUB zu HTML Konverter Online - eBooks in Webformat umwandeln ',
       'epub_to_html.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in HTML für Web-Publishing. Extrahieren Sie eBook-Inhalte als HTML mit CSS-Styling und Bildern. Kostenloser Online-Konverter mit Stapelverarbeitung.',
       'epub_to_html.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in HTML-Format für Web-Publishing. Extrahieren Sie eBook-Inhalte als HTML mit CSS-Styling und Bildern.',
       'epub_to_html.heading': 'EPUB zu HTML konvertieren',
@@ -7641,7 +7641,7 @@ const resources = {
       
       // EPUB to MD - German
       'epub_to_md.title': 'Kostenloser EPUB zu Markdown Konverter',
-      'epub_to_md.meta_title': 'Kostenloser EPUB zu Markdown Konverter Online - eBooks in MD-Format umwandeln | MorphyHub',
+      'epub_to_md.meta_title': 'Kostenloser EPUB zu Markdown Konverter Online - eBooks in MD-Format umwandeln ',
       'epub_to_md.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in Markdown-Format. Wandeln Sie eBooks in leichte Markdown-Dateien für Dokumentation, Blogs und Websites um.',
       'epub_to_md.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in Markdown-Format für Dokumentation und Blogs. Wandeln Sie eBooks in leichte Markdown-Dateien um.',
       'epub_to_md.heading': 'EPUB zu Markdown konvertieren',
@@ -7657,7 +7657,7 @@ const resources = {
       
       // EPUB to MOBI - German
       'epub_to_mobi.title': 'Kostenloser EPUB zu MOBI Konverter',
-      'epub_to_mobi.meta_title': 'Kostenloser EPUB zu MOBI Konverter Online - eBooks für Kindle umwandeln | MorphyHub',
+      'epub_to_mobi.meta_title': 'Kostenloser EPUB zu MOBI Konverter Online - eBooks für Kindle umwandeln ',
       'epub_to_mobi.meta_description': 'Konvertieren Sie EPUB-Dateien kostenlos in MOBI-Format für Kindle-Reader. Wandeln Sie EPUB eBooks in Amazon Kindle-kompatibles MOBI-Format um.',
       'epub_to_mobi.subtitle': 'Konvertieren Sie EPUB-Dateien in MOBI-Format für Kindle-Reader. Wandeln Sie EPUB eBooks in Amazon Kindle-kompatibles MOBI-Format um.',
       'epub_to_mobi.heading': 'EPUB zu MOBI konvertieren',
@@ -7673,7 +7673,7 @@ const resources = {
       
       // EPUB to ODP - German
       'epub_to_odp.title': 'Kostenloser EPUB zu ODP Konverter',
-      'epub_to_odp.meta_title': 'Kostenloser EPUB zu ODP Konverter Online - eBooks in Präsentationen umwandeln | MorphyHub',
+      'epub_to_odp.meta_title': 'Kostenloser EPUB zu ODP Konverter Online - eBooks in Präsentationen umwandeln ',
       'epub_to_odp.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in ODP-Format. Wandeln Sie eBook-Inhalte in OpenDocument-Präsentationen für LibreOffice Impress um.',
       'epub_to_odp.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in ODP-Format für Präsentationen. Wandeln Sie eBook-Inhalte in OpenDocument-Präsentationen um.',
       'epub_to_odp.heading': 'EPUB zu ODP konvertieren',
@@ -7689,7 +7689,7 @@ const resources = {
       
       // EPUB to ODT - German
       'epub_to_odt.title': 'Kostenloser EPUB zu ODT Konverter',
-      'epub_to_odt.meta_title': 'Kostenloser EPUB zu ODT Konverter Online - eBooks in OpenDocument umwandeln | MorphyHub',
+      'epub_to_odt.meta_title': 'Kostenloser EPUB zu ODT Konverter Online - eBooks in OpenDocument umwandeln ',
       'epub_to_odt.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in ODT-Format. Wandeln Sie eBooks in OpenDocument-Dokumente für LibreOffice Writer mit Formatierungserhaltung um.',
       'epub_to_odt.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in ODT-Format für LibreOffice. Wandeln Sie eBooks in OpenDocument-Dokumente mit Formatierungserhaltung um.',
       'epub_to_odt.heading': 'EPUB zu ODT konvertieren',
@@ -7705,7 +7705,7 @@ const resources = {
       
       // EPUB to PDF - German
       'epub_to_pdf.title': 'Kostenloser EPUB zu PDF Konverter',
-      'epub_to_pdf.meta_title': 'Kostenloser EPUB zu PDF Konverter Online - eBooks in PDF-Format umwandeln | MorphyHub',
+      'epub_to_pdf.meta_title': 'Kostenloser EPUB zu PDF Konverter Online - eBooks in PDF-Format umwandeln ',
       'epub_to_pdf.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in PDF-Format. Wandeln Sie eBooks in universelle PDF-Dokumente zum Drucken, Teilen und Archivieren um.',
       'epub_to_pdf.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in PDF-Format für universelle Kompatibilität. Wandeln Sie eBooks in PDF-Dokumente zum Drucken und Teilen um.',
       'epub_to_pdf.heading': 'EPUB zu PDF konvertieren',
@@ -7721,7 +7721,7 @@ const resources = {
       
       // EPUB to PPT - German
       'epub_to_ppt.title': 'Kostenloser EPUB zu PPT Konverter',
-      'epub_to_ppt.meta_title': 'Kostenloser EPUB zu PPT Konverter Online - eBooks in PowerPoint umwandeln | MorphyHub',
+      'epub_to_ppt.meta_title': 'Kostenloser EPUB zu PPT Konverter Online - eBooks in PowerPoint umwandeln ',
       'epub_to_ppt.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in PPT-Format. Wandeln Sie eBook-Inhalte in PowerPoint-Präsentationen für Bildung und Schulungen um.',
       'epub_to_ppt.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in PPT-Format für Präsentationen. Wandeln Sie eBook-Inhalte in PowerPoint-Präsentationen um.',
       'epub_to_ppt.heading': 'EPUB zu PPT konvertieren',
@@ -7737,7 +7737,7 @@ const resources = {
       
       // EPUB to PPTX - German
       'epub_to_pptx.title': 'Kostenloser EPUB zu PPTX Konverter',
-      'epub_to_pptx.meta_title': 'Kostenloser EPUB zu PPTX Konverter Online - eBooks in PowerPoint umwandeln | MorphyHub',
+      'epub_to_pptx.meta_title': 'Kostenloser EPUB zu PPTX Konverter Online - eBooks in PowerPoint umwandeln ',
       'epub_to_pptx.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in PPTX-Format. Wandeln Sie eBooks in moderne PowerPoint-Präsentationen mit Inhaltserhaltung um.',
       'epub_to_pptx.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in PPTX-Format für moderne Präsentationen. Wandeln Sie eBooks in PowerPoint-Präsentationen mit Inhaltserhaltung um.',
       'epub_to_pptx.heading': 'EPUB zu PPTX konvertieren',
@@ -7753,7 +7753,7 @@ const resources = {
       
       // EPUB to RTF - German
       'epub_to_rtf.title': 'Kostenloser EPUB zu RTF Konverter',
-      'epub_to_rtf.meta_title': 'Kostenloser EPUB zu RTF Konverter Online - eBooks in Rich Text umwandeln | MorphyHub',
+      'epub_to_rtf.meta_title': 'Kostenloser EPUB zu RTF Konverter Online - eBooks in Rich Text umwandeln ',
       'epub_to_rtf.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in RTF-Format. Wandeln Sie eBooks in universelles Rich-Text-Format um, kompatibel mit den meisten Texteditoren.',
       'epub_to_rtf.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in RTF-Format für universelle Kompatibilität. Wandeln Sie eBooks in Rich-Text-Format um.',
       'epub_to_rtf.heading': 'EPUB zu RTF konvertieren',
@@ -7769,7 +7769,7 @@ const resources = {
       
       // EPUB to TXT - German
       'epub_to_txt.title': 'Kostenloser EPUB zu TXT Konverter',
-      'epub_to_txt.meta_title': 'Kostenloser EPUB zu TXT Konverter Online - eBooks in Klartext umwandeln | MorphyHub',
+      'epub_to_txt.meta_title': 'Kostenloser EPUB zu TXT Konverter Online - eBooks in Klartext umwandeln ',
       'epub_to_txt.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in TXT-Format. Extrahieren Sie Klartext aus eBooks für Textanalyse, Bearbeitung und Verarbeitung.',
       'epub_to_txt.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in TXT-Format für Textanalyse. Extrahieren Sie Klartext aus eBooks.',
       'epub_to_txt.heading': 'EPUB zu TXT konvertieren',
@@ -7785,7 +7785,7 @@ const resources = {
       
       // EPUB to XLSX - German
       'epub_to_xlsx.title': 'Kostenloser EPUB zu XLSX Konverter',
-      'epub_to_xlsx.meta_title': 'Kostenloser EPUB zu XLSX Konverter Online - eBooks in Excel-Format umwandeln | MorphyHub',
+      'epub_to_xlsx.meta_title': 'Kostenloser EPUB zu XLSX Konverter Online - eBooks in Excel-Format umwandeln ',
       'epub_to_xlsx.meta_description': 'Konvertieren Sie EPUB eBook-Dateien kostenlos in XLSX-Format. Extrahieren Sie eBook-Inhalte in Excel-Tabellen für Datenanalyse und Content-Management.',
       'epub_to_xlsx.subtitle': 'Konvertieren Sie EPUB eBook-Dateien in XLSX-Format für Datenanalyse. Extrahieren Sie eBook-Inhalte in Excel-Tabellen.',
       'epub_to_xlsx.heading': 'EPUB zu XLSX konvertieren',
@@ -7801,7 +7801,7 @@ const resources = {
       
       // JPG Compression - German
       'compress_jpg.title': 'JPG Kompressor - JPEG Bilder Online Komprimieren',
-      'compress_jpg.meta_title': 'Kostenloser JPG/JPEG Kompressor Online - JPEG Dateigröße Reduzieren | MorphyHub',
+      'compress_jpg.meta_title': 'Kostenloser JPG/JPEG Kompressor Online - JPEG Dateigröße Reduzieren ',
       'compress_jpg.meta_description': 'Komprimieren Sie JPG/JPEG Bilder online kostenlos. Reduzieren Sie die JPEG Dateigröße bei gleichbleibender Qualität. Schnelle, sichere JPEG-Komprimierung mit einstellbaren Qualitätseinstellungen und Batch-Verarbeitungsunterstützung.',
       'compress_jpg.meta_keywords': 'jpg kompressor, jpeg kompressor, jpg komprimieren, jpeg komprimieren, jpg größe reduzieren, bildkomprimierung, jpeg optimierung',
       'compress_jpg.subtitle': 'Reduzieren Sie die JPEG Dateigröße ohne Qualitätsverlust. Komprimieren Sie JPG Bilder für schnellere Uploads, weniger Speicherplatz und bessere Web-Performance. Kostenlos, sicher und ohne Registrierung.',
@@ -7874,7 +7874,7 @@ const resources = {
       
       // PNG Compression - German
       'compress_png.title': 'PNG Kompressor - PNG Bilder Online Komprimieren',
-      'compress_png.meta_title': 'Kostenloser PNG Kompressor Online - PNG Dateigröße Reduzieren | MorphyHub',
+      'compress_png.meta_title': 'Kostenloser PNG Kompressor Online - PNG Dateigröße Reduzieren ',
       'compress_png.meta_description': 'Komprimieren Sie PNG Bilder online kostenlos. Reduzieren Sie die PNG Dateigröße bei Beibehaltung der Qualität und Transparenz. Schnelle, sichere PNG Komprimierung mit einstellbaren Qualitätseinstellungen und Batch-Verarbeitung.',
       'compress_png.meta_keywords': 'png kompressor, png komprimieren, png dateigröße reduzieren, png optimierung, png bilder komprimieren, png verkleinern',
       'compress_png.subtitle': 'Reduzieren Sie die PNG Dateigröße ohne Qualitäts- und Transparenzverlust. Komprimieren Sie PNG Bilder für schnellere Uploads, weniger Speicherplatz und bessere Web-Performance.',
@@ -7947,7 +7947,7 @@ const resources = {
       
       // PDF Compression - German
       'compress_pdf.title': 'Kostenloser PDF Kompressor',
-      'compress_pdf.meta_title': 'Kostenloser PDF Kompressor Online - PDF Dateigröße Reduzieren | MorphyHub',
+      'compress_pdf.meta_title': 'Kostenloser PDF Kompressor Online - PDF Dateigröße Reduzieren ',
       'compress_pdf.meta_description': 'Komprimieren Sie PDF Dateien online kostenlos. Reduzieren Sie die PDF Dateigröße bei Beibehaltung der Dokumentqualität. Schnelle, sichere PDF Komprimierung mit einstellbaren Qualitätseinstellungen und Batch-Verarbeitung.',
       'compress_pdf.meta_keywords': 'pdf kompressor, pdf komprimieren, pdf dateigröße reduzieren, pdf optimierung, pdf dateien komprimieren, pdf verkleinern',
       'compress_pdf.subtitle': 'Reduzieren Sie die PDF Dateigröße ohne Qualitätsverlust. Komprimieren Sie PDF Dateien für schnellere Uploads, weniger Speicherplatz und bessere Performance.',
