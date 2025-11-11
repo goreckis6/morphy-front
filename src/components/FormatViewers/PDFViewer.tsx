@@ -1,41 +1,46 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Book, Search, ZoomIn } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const PDFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.pdf.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.pdf.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.pdf.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.pdf.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
-    
-    console.log('Files selected:', files.map(f => ({ name: f.name, size: f.size })));
     
     // Filter only PDF files
     const pdfFiles = files.filter(file => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return extension === 'pdf';
     });
-    
-    console.log('PDF files after filter:', pdfFiles.map(f => ({ name: f.name, size: f.size })));
-    
-    if (pdfFiles.length === 0) {
-      console.warn('No valid PDF files found');
-      return;
-    }
-    
+
     const validation = validateBatchFiles(pdfFiles);
-    console.log('Validation result:', validation);
     
     if (validation.isValid) {
       setSelectedFiles(pdfFiles);
-      console.log('Files set successfully');
-    } else {
-      console.error('Validation failed:', validation.error);
     }
   };
 
@@ -54,22 +59,28 @@ export const PDFViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.pdf.alerts.file_too_large', {
+        size: (file.size / 1024 / 1024).toFixed(2),
+        max: 100
+      }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the PDF file');
+        alert(t('viewers.pdf.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.pdf.loading_window.title');
+      const loadingMessage = t('viewers.pdf.loading_window.message', { filename: file.name });
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -101,8 +112,8 @@ export const PDFViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading PDF...</h2>
-            <p>Rendering ${file.name}...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -127,7 +138,7 @@ export const PDFViewer: React.FC = () => {
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Error</title>
+            <title>${t('viewers.pdf.error_window.title')}</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -157,9 +168,9 @@ export const PDFViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate PDF preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.pdf.error_window.title')}</h1>
+              <p>${t('viewers.pdf.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.pdf.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -168,29 +179,29 @@ export const PDFViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('PDF view error:', error);
-      alert('Failed to open PDF preview. Please try again or download the file.');
+      alert(t('viewers.pdf.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free PDF Viewer - View PDF Documents Online | MorphyHub</title>
-        <meta name="description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDFs with page navigation and zoom controls. Supports batch viewing up to 20 files. 100% free PDF viewer tool." />
-        <meta name="keywords" content="PDF viewer, view PDF online, PDF preview, PDF reader, document viewer, PDF viewer tool, online PDF viewer, PDF viewer free, PDF page viewer" />
-        <meta property="og:title" content="Free PDF Viewer - View PDF Documents Online | MorphyHub" />
-        <meta property="og:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
+        <title>{t('viewers.pdf.meta_title')}</title>
+        <meta name="description" content={t('viewers.pdf.meta_description')} />
+        <meta name="keywords" content={t('viewers.pdf.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.pdf.meta_title')} />
+        <meta property="og:description" content={t('viewers.pdf.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/pdf" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free PDF Viewer - View PDF Documents Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional PDF viewer for viewing PDF documents online. Upload and preview PDF files with high-quality rendering and page navigation." />
+        <meta name="twitter:title" content={t('viewers.pdf.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.pdf.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free PDF Viewer",
-            "description": "Free professional PDF viewer for viewing PDF documents online",
+            "name": t('viewers.pdf.hero_title'),
+            "description": t('viewers.pdf.meta_description'),
             "url": "https://morphyhub.com/viewers/pdf",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
@@ -223,10 +234,10 @@ export const PDFViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free PDF Viewer
+                    {t('viewers.pdf.hero_title')}
                   </h1>
                   <p className="text-xl text-red-100">
-                    View PDF documents with page navigation and zoom - 100% free
+                    {t('viewers.pdf.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -243,11 +254,11 @@ export const PDFViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload PDF Files
+                {t('viewers.pdf.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your PDF documents or click to browse. Supports PDF files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.pdf.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -277,7 +288,7 @@ export const PDFViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your PDF Files ({selectedFiles.length})
+                    {t('viewers.pdf.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -286,11 +297,8 @@ export const PDFViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-red-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-red-900 mb-1">How to View PDF Files</h4>
-                    <p className="text-sm text-red-700">
-                      Click the <strong>"View PDF"</strong> button to open the PDF in a preview window with page navigation and zoom controls. 
-                      Files under 100 MB can be previewed. You can also download the original file.
-                    </p>
+                    <h4 className="font-semibold text-red-900 mb-1">{t('viewers.pdf.how_to_title')}</h4>
+                    <p className="text-sm text-red-700" dangerouslySetInnerHTML={{ __html: t('viewers.pdf.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -318,14 +326,14 @@ export const PDFViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View PDF</span>
+                        <span>{t('viewers.pdf.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.pdf.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -336,41 +344,35 @@ export const PDFViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-red-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Book className="w-8 h-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Page Navigation
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Navigate through PDF pages with next/previous buttons and page jump controls
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl shadow-lg p-8 border border-pink-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <ZoomIn className="w-8 h-8 text-pink-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Zoom & Pan
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Zoom in/out and pan across pages for detailed viewing of PDF content
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl shadow-lg p-8 border border-rose-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Search className="w-8 h-8 text-rose-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Print & Download
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Print PDF pages directly or download the original file for offline use
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const backgrounds = [
+                'from-red-50 to-pink-50 border border-red-200',
+                'from-pink-50 to-rose-50 border border-pink-200',
+                'from-rose-50 to-red-50 border border-rose-200'
+              ];
+              const icons = [
+                <Book className="w-8 h-8 text-red-600" key="pdf-feature-1" />,
+                <ZoomIn className="w-8 h-8 text-pink-600" key="pdf-feature-2" />,
+                <Search className="w-8 h-8 text-rose-600" key="pdf-feature-3" />
+              ];
+
+              return (
+                <div
+                  key={feature.title}
+                  className={`bg-gradient-to-br ${backgrounds[index]} rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105`}
+                >
+                  <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           {/* About PDF Format Section */}
@@ -380,72 +382,50 @@ export const PDFViewer: React.FC = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About PDF Format
+                {t('viewers.pdf.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                PDF (Portable Document Format) is a file format developed by Adobe that presents documents, 
-                including text formatting and images, independently of application software, hardware, and operating systems. 
-                PDFs are widely used for sharing documents while preserving their layout and formatting across different platforms.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.pdf.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Features</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.pdf.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Platform independent</strong> - Same appearance on all devices</li>
-                    <li>• <strong>Preserves formatting</strong> - Fonts, images, layout intact</li>
-                    <li>• <strong>Secure</strong> - Password protection and encryption</li>
-                    <li>• <strong>Interactive</strong> - Forms, links, multimedia support</li>
-                    <li>• <strong>Compact</strong> - Efficient compression algorithms</li>
-                    <li>• <strong>Searchable</strong> - Text search and indexing</li>
+                    {advantages.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Common Uses</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.pdf.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Business documents</strong> - Contracts, reports, invoices</li>
-                    <li>• <strong>Academic papers</strong> - Research papers, dissertations</li>
-                    <li>• <strong>eBooks</strong> - Digital books and manuals</li>
-                    <li>• <strong>Forms</strong> - Fillable forms and applications</li>
-                    <li>• <strong>Presentations</strong> - Slide decks and portfolios</li>
-                    <li>• <strong>Archives</strong> - Long-term document storage</li>
+                    {useCases.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.pdf.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.pdf.specs_header_label')}</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.pdf.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.pdf</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/pdf</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Current Version</td>
-                        <td className="py-2 text-sm text-gray-900">PDF 2.0 (ISO 32000-2:2020)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">Flate, JPEG, JBIG2, JPEG 2000</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Security</td>
-                        <td className="py-2 text-sm text-gray-900">128/256-bit AES encryption</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Adobe Systems (1993)</td>
-                      </tr>
+                      {specs.map((row) => (
+                        <tr key={row.label}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -459,7 +439,7 @@ export const PDFViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.pdf.buttons.back')}
             </a>
           </div>
         </div>

@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Presentation, Layout } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const OTPViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.otp.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.otp.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.otp.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.otp.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -41,22 +59,28 @@ export const OTPViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.otp.alerts.file_too_large', {
+        size: (file.size / 1024 / 1024).toFixed(2),
+        max: 100
+      }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the OTP file');
+        alert(t('viewers.otp.alerts.popup_blocked'));
         return;
       }
+
+      const loadingTitle = t('viewers.otp.loading_window.title', { filename: file.name });
+      const loadingMessage = t('viewers.otp.loading_window.message');
 
       loadingWindow.document.write(`
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${loadingTitle}</title>
           <style>
             body {
               display: flex;
@@ -89,8 +113,8 @@ export const OTPViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Converting template for preview...</p>
+            <h2>${loadingTitle}</h2>
+            <p>${loadingMessage}</p>
           </div>
         </body>
         </html>
@@ -205,7 +229,7 @@ export const OTPViewer: React.FC = () => {
           <!DOCTYPE html>
           <html>
           <head>
-            <title>Error</title>
+            <title>${t('viewers.otp.error_window.title')}</title>
             <style>
               body {
                 font-family: Arial, sans-serif;
@@ -235,9 +259,9 @@ export const OTPViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate OTP preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.otp.error_window.title')}</h1>
+              <p>${t('viewers.otp.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.otp.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -246,29 +270,29 @@ export const OTPViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('OTP view error:', error);
-      alert('Failed to open OTP preview. Please try again or download the file.');
+      alert(t('viewers.otp.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional OTP (OpenDocument Presentation Template) viewer. Upload and preview OTP template files online with slide rendering. Supports batch viewing up to 20 files. 100% free OTP viewer tool." />
-        <meta name="keywords" content="OTP viewer, OpenDocument Presentation Template viewer, OTP file viewer online, presentation template viewer, LibreOffice Impress template viewer, free OTP viewer, OTP preview" />
-        <meta property="og:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional OTP (OpenDocument Presentation Template) viewer. Upload and preview LibreOffice Impress template files online." />
+        <title>{t('viewers.otp.meta_title')}</title>
+        <meta name="description" content={t('viewers.otp.meta_description')} />
+        <meta name="keywords" content={t('viewers.otp.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.otp.meta_title')} />
+        <meta property="og:description" content={t('viewers.otp.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/otp" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free OTP Viewer - View OpenDocument Presentation Template Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional OTP viewer. Upload and preview OpenDocument Presentation Template files online." />
+        <meta name="twitter:title" content={t('viewers.otp.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.otp.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free OTP Viewer",
-            "description": "Free professional OTP (OpenDocument Presentation Template) viewer",
+            "name": t('viewers.otp.hero_title'),
+            "description": t('viewers.otp.meta_description'),
             "url": "https://morphyhub.com/viewers/otp",
             "applicationCategory": "DocumentViewer",
             "operatingSystem": "Web Browser",
@@ -301,10 +325,10 @@ export const OTPViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free OTP Viewer
+                    {t('viewers.otp.hero_title')}
                   </h1>
                   <p className="text-xl text-orange-100">
-                    View OpenDocument Presentation Template files online - 100% free
+                    {t('viewers.otp.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -321,11 +345,11 @@ export const OTPViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload OTP Files
+                {t('viewers.otp.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your OpenDocument Presentation Template (OTP) files or click to browse. Supports OTP files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.otp.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -355,7 +379,7 @@ export const OTPViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your OTP Files ({selectedFiles.length})
+                    {t('viewers.otp.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -364,11 +388,8 @@ export const OTPViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-orange-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-orange-900 mb-1">How to View OTP Files</h4>
-                    <p className="text-sm text-orange-700">
-                      Click the <strong>"View Template"</strong> button to render and preview the OTP file. 
-                      The viewer will convert the presentation template to HTML format for web viewing. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-orange-900 mb-1">{t('viewers.otp.how_to_title')}</h4>
+                    <p className="text-sm text-orange-700" dangerouslySetInnerHTML={{ __html: t('viewers.otp.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -396,14 +417,14 @@ export const OTPViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Template</span>
+                        <span>{t('viewers.otp.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.otp.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -414,41 +435,35 @@ export const OTPViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl shadow-lg p-8 border border-orange-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Presentation className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Template Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View OTP presentation templates converted to HTML format with preserved layout and styling
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl shadow-lg p-8 border border-amber-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Layout className="w-8 h-8 text-amber-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Rendering
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Preview template files with full rendering including master slides, layouts, and placeholders
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 border border-yellow-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-yellow-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with LibreOffice for instant viewing in your browser
-              </p>
-            </div>
+            {features.map((feature, index) => {
+              const backgrounds = [
+                'from-orange-50 to-amber-50 border border-orange-200',
+                'from-amber-50 to-yellow-50 border border-amber-200',
+                'from-yellow-50 to-orange-50 border border-yellow-200'
+              ];
+              const icons = [
+                <Presentation className="w-8 h-8 text-orange-600" key="otp-feature-1" />,
+                <Layout className="w-8 h-8 text-amber-600" key="otp-feature-2" />,
+                <Zap className="w-8 h-8 text-yellow-600" key="otp-feature-3" />
+              ];
+
+              return (
+                <div
+                  key={feature.title}
+                  className={`bg-gradient-to-br ${backgrounds[index]} rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all transform hover:scale-105`}
+                >
+                  <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                    {icons[index]}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           {/* About OTP Format Section */}
@@ -458,74 +473,50 @@ export const OTPViewer: React.FC = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About OTP Format
+                {t('viewers.otp.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                OTP (OpenDocument Presentation Template) is the template format for OpenDocument presentations, primarily used by 
-                LibreOffice Impress and Apache OpenOffice Impress. OTP files serve as reusable templates that define the master slides, 
-                layouts, color schemes, fonts, and default formatting for presentations. Unlike ODP files which contain actual presentation 
-                content, OTP files are designed to be starting points for creating new presentations with consistent branding and styling. 
-                OTP is part of the ISO/IEC 26300 OpenDocument Format standard.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.otp.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.otp.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Reusable templates</strong> - Create consistent presentations</li>
-                    <li>• <strong>Master slides</strong> - Define layouts and formatting</li>
-                    <li>• <strong>Brand consistency</strong> - Maintain corporate identity</li>
-                    <li>• <strong>Open standard</strong> - ISO/IEC 26300 format</li>
-                    <li>• <strong>Cross-platform</strong> - Works on all operating systems</li>
-                    <li>• <strong>XML-based</strong> - Human-readable structure</li>
+                    {advantages.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Applications</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.otp.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>LibreOffice Impress</strong> - Native OTP support</li>
-                    <li>• <strong>Apache OpenOffice Impress</strong> - Full compatibility</li>
-                    <li>• <strong>Microsoft PowerPoint</strong> - Can open OTP templates</li>
-                    <li>• <strong>Google Slides</strong> - Import OTP templates</li>
-                    <li>• <strong>OnlyOffice</strong> - Complete template editing</li>
-                    <li>• <strong>WPS Office</strong> - Cross-platform support</li>
+                    {useCases.map((item, idx) => (
+                      <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.otp.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.otp.specs_header_label')}</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-700">{t('viewers.otp.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.otp</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">application/vnd.oasis.opendocument.presentation-template</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Based On</td>
-                        <td className="py-2 text-sm text-gray-900">XML (OASIS OpenDocument Format)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
-                        <td className="py-2 text-sm text-gray-900">ISO/IEC 26300</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">ZIP compression (default)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">OASIS Consortium</td>
-                      </tr>
+                      {specs.map((row) => (
+                        <tr key={row.label}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{row.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{row.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -539,7 +530,7 @@ export const OTPViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.otp.buttons.back')}
             </a>
           </div>
         </div>
