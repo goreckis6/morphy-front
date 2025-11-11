@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Box, Upload, Eye, Download, Share2, ArrowLeft, Zap, Grid3x3, Cpu, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { useTranslation } from 'react-i18next';
 
 export const STLViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.stl.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.stl.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.stl.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.stl.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only STL files
@@ -254,22 +272,22 @@ export const STLViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free STL Viewer Online - View 3D Models & 3D Printing Files | MorphyHub</title>
-        <meta name="description" content="Free online STL viewer for 3D models and 3D printing files. Interactive 3D viewer with rotation, zoom, and pan controls. View stereolithography files instantly in your browser. No software installation or registration required. Supports ASCII and binary STL formats up to 100MB." />
-        <meta name="keywords" content="free STL viewer, 3D model viewer, stereolithography viewer, 3D printing viewer, free 3D file viewer, online STL viewer, CAD viewer, STL file viewer free, 3D viewer online, free 3D model viewer, STL preview, batch STL viewer" />
+        <title>{t('viewers.stl.meta_title')}</title>
+        <meta name="description" content={t('viewers.stl.meta_description')} />
+        <meta name="keywords" content={t('viewers.stl.meta_keywords')} />
         <link rel="canonical" href="https://morphyhub.com/viewers/stl" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Free STL Viewer Online - View 3D Models & 3D Printing Files | MorphyHub" />
-        <meta property="og:description" content="Free online STL viewer. Preview 3D models and 3D printing files directly in your browser with interactive 3D rendering. No installation required." />
+        <meta property="og:title" content={t('viewers.stl.meta_title')} />
+        <meta property="og:description" content={t('viewers.stl.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/stl" />
         <meta property="og:image" content="https://morphyhub.com/og-stl-viewer.jpg" />
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free STL Viewer Online - View 3D Models & 3D Printing Files" />
-        <meta name="twitter:description" content="Free online STL viewer. Preview 3D models directly in your browser with interactive 3D rendering." />
+        <meta name="twitter:title" content={t('viewers.stl.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.stl.meta_description')} />
         <meta name="twitter:image" content="https://morphyhub.com/og-stl-viewer.jpg" />
 
         {/* JSON-LD Structured Data */}
@@ -319,10 +337,10 @@ export const STLViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold mb-3">
-                    STL Viewer
+                    {t('viewers.stl.hero_title')}
                   </h1>
                   <p className="text-xl text-blue-100">
-                    View 3D models with interactive rotation and zoom
+                    {t('viewers.stl.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -338,13 +356,13 @@ export const STLViewer: React.FC = () => {
               <div className="p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl">
                 <Upload className="w-6 h-6 text-white" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900">
-                Upload STL Files
-              </h2>
-            </div>
-            <p className="text-gray-600 mb-6">
-              Drag and drop your 3D model (STL) files or click to browse. Supports ASCII and binary STL formats up to 100MB total.
-            </p>
+                    <h2 className="text-3xl font-bold text-gray-900">
+                      {t('viewers.stl.upload_title')}
+                    </h2>
+                  </div>
+                  <p className="text-gray-600 mb-6">
+                    {t('viewers.stl.upload_description')}
+                  </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
               acceptedFormats={['stl']}
@@ -364,7 +382,7 @@ export const STLViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your 3D Models ({selectedFiles.length})
+                    {t('viewers.stl.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -387,7 +405,7 @@ export const STLViewer: React.FC = () => {
                         className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View 3D</span>
+                        <span>{t('viewers.stl.buttons.view')}</span>
                       </button>
                       <button 
                         onClick={() => {
@@ -399,7 +417,7 @@ export const STLViewer: React.FC = () => {
                           URL.revokeObjectURL(url);
                         }}
                         className="p-2 text-blue-600 hover:bg-blue-100 rounded-lg transition-colors"
-                        title="Download"
+                        title={t('viewers.stl.buttons.download')}
                       >
                         <Download className="w-4 h-4" />
                       </button>
@@ -412,72 +430,41 @@ export const STLViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Zap className="w-8 h-8 text-yellow-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Interactive 3D View
-            </h3>
-            <p className="text-gray-600">
-              Rotate, zoom, and pan your 3D models with smooth WebGL-powered controls
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Grid3x3 className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              3D Printing Ready
-            </h3>
-            <p className="text-gray-600">
-              STL is the industry standard format for 3D printing and rapid prototyping
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Cpu className="w-8 h-8 text-green-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              No Upload Required
-            </h3>
-            <p className="text-gray-600">
-              Files are processed locally in your browser for maximum privacy and speed
-            </p>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+              {index === 0 && <Zap className="w-8 h-8 text-yellow-600 mb-4" />}
+              {index === 1 && <Grid3x3 className="w-8 h-8 text-blue-600 mb-4" />}
+              {index === 2 && <Cpu className="w-8 h-8 text-green-600 mb-4" />}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2" dangerouslySetInnerHTML={{ __html: feature.title }} />
+              <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+            </div>
+          ))}
         </div>
 
         {/* STL Information */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            About STL Format
+            {t('viewers.stl.about_title')}
           </h2>
           <div className="prose max-w-none text-gray-600">
-            <p className="mb-4">
-              STL (Stereolithography) is a file format native to 3D Systems' stereolithography CAD software. 
-              It is the most widely used format for 3D printing and additive manufacturing. STL files describe 
-              only the surface geometry of a 3D object as a triangular mesh, without any representation of color, 
-              texture, or other common CAD model attributes.
-            </p>
+            <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('viewers.stl.about_intro') }} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.stl.advantages_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Universal support</strong> - Supported by all 3D printers</li>
-                  <li>• <strong>Simple format</strong> - Easy to generate and parse</li>
-                  <li>• <strong>Industry standard</strong> - Default for 3D printing</li>
-                  <li>• <strong>Mesh accuracy</strong> - Precise triangle representation</li>
-                  <li>• <strong>Two variants</strong> - ASCII (text) and binary formats</li>
-                  <li>• <strong>CAD compatible</strong> - Exports from all CAD software</li>
+                  {advantages.map((advantage, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                  ))}
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.stl.use_cases_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>3D Printing</strong> - Slicing and printing preparation</li>
-                  <li>• <strong>Rapid Prototyping</strong> - Quick design iterations</li>
-                  <li>• <strong>CAD/CAM</strong> - Manufacturing and engineering</li>
-                  <li>• <strong>3D Modeling</strong> - Design verification and review</li>
-                  <li>• <strong>Architecture</strong> - Building and structure models</li>
-                  <li>• <strong>Medical</strong> - Anatomical models and prosthetics</li>
+                  {useCases.map((useCase, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                  ))}
                 </ul>
               </div>
             </div>
@@ -487,50 +474,24 @@ export const STLViewer: React.FC = () => {
         {/* Technical Specifications */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            STL Technical Specifications
+            {t('viewers.stl.specs_title')}
           </h2>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Specification</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Details</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.stl.specs_header_label')}</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.stl.specs_header_value')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">File Extension</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">.stl</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">MIME Type</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">application/sla, model/stl, application/vnd.ms-pki.stl</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Format Types</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">ASCII (text-based) and Binary</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Geometry</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Triangle mesh (facets with normals)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Coordinate System</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">3D Cartesian coordinates (X, Y, Z)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Color Support</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Not officially supported (extensions exist)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Texture/Materials</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Not supported</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Limited by number of triangles</td>
-                </tr>
+                {specs.map((spec, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-800">{spec.label}</td>
+                    <td className="px-6 py-4 text-sm text-gray-600">{spec.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -542,7 +503,7 @@ export const STLViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.stl.buttons.back')}
             </a>
           </div>
         </div>

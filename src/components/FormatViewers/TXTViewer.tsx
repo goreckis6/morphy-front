@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const TXTViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.txt.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.txt.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.txt.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.txt.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Clear previous validation errors
@@ -43,7 +61,7 @@ export const TXTViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.txt.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: '100' }));
       return;
     }
     
@@ -51,7 +69,7 @@ export const TXTViewer: React.FC = () => {
       // Show loading state
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the document');
+        alert(t('viewers.txt.alerts.popup_blocked'));
         return;
       }
 
@@ -59,7 +77,7 @@ export const TXTViewer: React.FC = () => {
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${t('viewers.txt.loading_window.title', { filename: file.name })}</title>
           <style>
             body {
               display: flex;
@@ -92,8 +110,8 @@ export const TXTViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Processing text file...</p>
+            <h2>${t('viewers.txt.loading_window.title', { filename: file.name })}</h2>
+            <p>${t('viewers.txt.loading_window.message')}</p>
           </div>
         </body>
         </html>
@@ -152,9 +170,9 @@ export const TXTViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate text file preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.txt.error_window.title')}</h1>
+              <p>${t('viewers.txt.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.txt.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -163,23 +181,23 @@ export const TXTViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('TXT view error:', error);
-      alert('Failed to open text file preview. Please try again or download the file.');
+      alert(t('viewers.txt.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free TXT Viewer - View Text Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files with syntax highlighting and line numbers. Supports batch viewing up to 20 files. 100% free text viewer tool." />
-        <meta name="keywords" content="TXT viewer, text viewer, view TXT online, text file viewer, log viewer, plain text viewer, TXT viewer free, online text viewer" />
-        <meta property="og:title" content="Free TXT Viewer - View Text Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files with syntax highlighting and line numbers." />
+        <title>{t('viewers.txt.meta_title')}</title>
+        <meta name="description" content={t('viewers.txt.meta_description')} />
+        <meta name="keywords" content={t('viewers.txt.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.txt.meta_title')} />
+        <meta property="og:description" content={t('viewers.txt.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/txt" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free TXT Viewer - View Text Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional TXT viewer for viewing text files online. Upload and preview TXT, LOG, MD, and other text-based files." />
+        <meta name="twitter:title" content={t('viewers.txt.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.txt.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -218,10 +236,10 @@ export const TXTViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free TXT Viewer
+                    {t('viewers.txt.hero_title')}
                   </h1>
                   <p className="text-xl text-gray-300">
-                    View and analyze text files with professional tools - 100% free
+                    {t('viewers.txt.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -238,11 +256,11 @@ export const TXTViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload Text Files
+                {t('viewers.txt.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your text files or click to browse. Supports TXT, LOG, MD, JSON, XML, CSV, and code files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.txt.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -272,7 +290,7 @@ export const TXTViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your Text Files ({selectedFiles.length})
+                    {t('viewers.txt.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -282,11 +300,8 @@ export const TXTViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View Text Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View Text"</strong> button to open the file in a code editor-style viewer with line numbers, 
-                      copy functionality, and print support. Perfect for viewing logs, code, and configuration files.
-                    </p>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.txt.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.txt.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -314,14 +329,14 @@ export const TXTViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Text</span>
+                        <span>{t('viewers.txt.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.txt.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -332,41 +347,15 @@ export const TXTViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-gray-600" />
+            {features.map((feature, index) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-gray-50 to-slate-50 border-gray-200' : index === 1 ? 'from-blue-50 to-indigo-50 border-blue-200' : 'from-green-50 to-emerald-50 border-green-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  <FileText className={`w-8 h-8 ${index === 0 ? 'text-gray-600' : index === 1 ? 'text-blue-600' : 'text-green-600'}`} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
+                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Line Numbers
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View text files with line numbers for easy code review, debugging, and navigation through large files
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Copy & Print
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick copy-to-clipboard functionality and print support for documentation, code sharing, and archival purposes
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileText className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Multiple Formats
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Supports TXT, LOG, MD, JSON, XML, CSV, and various code files - perfect for developers and system administrators
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About TXT Format Section */}
@@ -376,73 +365,51 @@ export const TXTViewer: React.FC = () => {
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About TXT Format
+                {t('viewers.txt.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                Plain text (TXT) files are the simplest and most universal form of digital documents. They contain only 
-                unformatted text without any styling, fonts, or embedded objects. TXT files are universally compatible, 
-                human-readable, and can be opened on any computer or device with any text editor or word processor.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.txt.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.txt.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Universal compatibility</strong> - Opens on any device or platform</li>
-                    <li>• <strong>Smallest file size</strong> - No formatting overhead</li>
-                    <li>• <strong>Fast loading</strong> - Instant preview even for large files</li>
-                    <li>• <strong>Human-readable</strong> - No special software required</li>
-                    <li>• <strong>Version control friendly</strong> - Perfect for Git and code repositories</li>
-                    <li>• <strong>No corruption</strong> - Simple structure prevents file damage</li>
+                    {advantages.map((advantage, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.txt.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Log files</strong> - System logs, error logs, access logs</li>
-                    <li>• <strong>Configuration files</strong> - App configs, environment variables</li>
-                    <li>• <strong>Code and scripts</strong> - Source code, shell scripts</li>
-                    <li>• <strong>Documentation</strong> - README files, changelogs, notes</li>
-                    <li>• <strong>Data files</strong> - CSV, TSV, JSON, XML</li>
-                    <li>• <strong>Simple notes</strong> - To-do lists, quick notes, drafts</li>
+                    {useCases.map((useCase, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               {/* Technical Specifications */}
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.txt.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.txt.specs_header_label')}</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.txt.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extensions</td>
-                        <td className="py-2 text-sm text-gray-900">.txt, .log, .md, .csv, .tsv, .json, .xml</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">text/plain</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Format Type</td>
-                        <td className="py-2 text-sm text-gray-900">Plain text (unformatted)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">UTF-8, ASCII, Unicode</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Line Endings</td>
-                        <td className="py-2 text-sm text-gray-900">LF (Unix), CRLF (Windows), CR (Mac)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">None (raw text)</td>
-                      </tr>
+                      {specs.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -456,7 +423,7 @@ export const TXTViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.txt.buttons.back')}
             </a>
           </div>
         </div>

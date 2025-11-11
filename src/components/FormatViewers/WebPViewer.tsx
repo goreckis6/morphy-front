@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Upload, Eye, Download, ArrowLeft, Zap, Globe, Palette, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 export const WebPViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.webp.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.webp.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.webp.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.webp.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only WebP files
@@ -22,9 +40,9 @@ export const WebPViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free WebP Viewer - Open and View WebP Images Online</title>
-        <meta name="description" content="Free WebP viewer. View Online and convert WebP images online for free. Modern image format with superior compression, transparency support, and animation. No registration required." />
-        <meta name="keywords" content="WebP viewer, WebP to JPG, WebP to PNG, image viewer, web optimization, lossless compression, transparency, batch processing" />
+        <title>{t('viewers.webp.meta_title')}</title>
+        <meta name="description" content={t('viewers.webp.meta_description')} />
+        <meta name="keywords" content={t('viewers.webp.meta_keywords')} />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -46,10 +64,10 @@ export const WebPViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold mb-3">
-                    WebP Viewer
+                    {t('viewers.webp.hero_title')}
                   </h1>
                   <p className="text-xl text-green-100">
-                    View and convert WebP images with modern compression
+                    {t('viewers.webp.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -66,11 +84,11 @@ export const WebPViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload WebP Files
+                {t('viewers.webp.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your WebP images or click to browse. Supports modern compression and transparency up to 100MB total.
+              {t('viewers.webp.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -91,7 +109,7 @@ export const WebPViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your WebP Files ({selectedFiles.length})
+                    {t('viewers.webp.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -118,7 +136,7 @@ export const WebPViewer: React.FC = () => {
                         className="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View</span>
+                        <span>{t('viewers.webp.buttons.view')}</span>
                       </button>
                       <button 
                         onClick={() => {
@@ -130,7 +148,7 @@ export const WebPViewer: React.FC = () => {
                           URL.revokeObjectURL(url);
                         }}
                         className="p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
-                        title="Download"
+                        title={t('viewers.webp.buttons.download')}
                       >
                         <Download className="w-4 h-4" />
                       </button>
@@ -143,72 +161,41 @@ export const WebPViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Zap className="w-8 h-8 text-yellow-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Superior Compression
-            </h3>
-            <p className="text-gray-600">
-              WebP provides 25-35% better compression than JPEG while maintaining quality
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Globe className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Modern Web Standard
-            </h3>
-            <p className="text-gray-600">
-              Supported by all modern browsers and optimized for web performance
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Palette className="w-8 h-8 text-purple-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Advanced Features
-            </h3>
-            <p className="text-gray-600">
-              Supports transparency, animation, and both lossy and lossless compression
-            </p>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+              {index === 0 && <Zap className="w-8 h-8 text-yellow-600 mb-4" />}
+              {index === 1 && <Globe className="w-8 h-8 text-blue-600 mb-4" />}
+              {index === 2 && <Palette className="w-8 h-8 text-purple-600 mb-4" />}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2" dangerouslySetInnerHTML={{ __html: feature.title }} />
+              <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+            </div>
+          ))}
         </div>
 
         {/* WebP Information */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            About WebP Format
+            {t('viewers.webp.about_title')}
           </h2>
           <div className="prose max-w-none text-gray-600">
-            <p className="mb-4">
-              WebP is a modern image format developed by Google that provides superior lossless and lossy 
-              compression for images on the web. Using WebP, webmasters and web developers can create 
-              smaller, richer images that make the web faster. WebP lossless images are 26% smaller in 
-              size compared to PNGs, and WebP lossy images are 25-35% smaller than comparable JPEG images.
-            </p>
+            <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('viewers.webp.about_intro') }} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.webp.advantages_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Superior compression</strong> - 25-35% smaller than JPEG</li>
-                  <li>• <strong>Transparency support</strong> - Like PNG with better compression</li>
-                  <li>• <strong>Animation support</strong> - Better than GIF with smaller sizes</li>
-                  <li>• <strong>Lossless and lossy</strong> - Choose the best compression method</li>
-                  <li>• <strong>Modern browser support</strong> - Supported by all major browsers</li>
-                  <li>• <strong>Metadata support</strong> - EXIF, XMP, and color profile support</li>
+                  {advantages.map((advantage, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                  ))}
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.webp.use_cases_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Web optimization</strong> - Faster loading websites</li>
-                  <li>• <strong>Mobile applications</strong> - Reduced bandwidth usage</li>
-                  <li>• <strong>E-commerce</strong> - Product images with smaller file sizes</li>
-                  <li>• <strong>Progressive web apps</strong> - Optimized image delivery</li>
-                  <li>• <strong>Content delivery</strong> - Reduced server costs</li>
-                  <li>• <strong>Image galleries</strong> - More images, less storage</li>
+                  {useCases.map((useCase, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                  ))}
                 </ul>
               </div>
             </div>
@@ -218,50 +205,24 @@ export const WebPViewer: React.FC = () => {
         {/* Technical Specifications */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            WebP Technical Specifications
+            {t('viewers.webp.specs_title')}
           </h2>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Specification</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Details</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.webp.specs_header_label')}</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.webp.specs_header_value')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">File Extension</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">.webp</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">MIME Type</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">image/webp</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Compression</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Both lossy (VP8) and lossless compression</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Color Support</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">24-bit RGB with 8-bit alpha channel</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">6,500 × 6,500 pixels</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Transparency</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Full alpha channel support</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Animation</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Supported (better than GIF)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Metadata</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">EXIF, XMP, color profiles</td>
-                </tr>
+                {specs.map((spec, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-800">{spec.label}</td>
+                    <td className="px-6 py-4 text-sm text-gray-600">{spec.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -273,7 +234,7 @@ export const WebPViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.webp.buttons.back')}
             </a>
           </div>
         </div>

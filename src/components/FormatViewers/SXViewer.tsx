@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Code, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Zap, Terminal, FileCode } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const SXViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.sx.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.sx.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.sx.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.sx.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -41,14 +59,14 @@ export const SXViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.sx.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: '100' }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the SX file');
+        alert(t('viewers.sx.alerts.popup_blocked'));
         return;
       }
 
@@ -56,7 +74,7 @@ export const SXViewer: React.FC = () => {
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${t('viewers.sx.loading_window.title', { filename: file.name })}</title>
           <style>
             body {
               display: flex;
@@ -89,8 +107,8 @@ export const SXViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Formatting statistical program for preview...</p>
+            <h2>${t('viewers.sx.loading_window.title', { filename: file.name })}</h2>
+            <p>${t('viewers.sx.loading_window.message')}</p>
           </div>
         </body>
         </html>
@@ -235,9 +253,9 @@ export const SXViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate SX preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.sx.error_window.title')}</h1>
+              <p>${t('viewers.sx.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.sx.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -246,23 +264,23 @@ export const SXViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('SX view error:', error);
-      alert('Failed to open SX preview. Please try again or download the file.');
+      alert(t('viewers.sx.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free SX Viewer - View Stat Studio Program Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional SX (Stat Studio Program) viewer. Upload and preview SX statistical program files online with syntax highlighting. Supports batch viewing up to 20 files. 100% free SX viewer tool." />
-        <meta name="keywords" content="SX viewer, Stat Studio viewer, SX file viewer online, statistical program viewer, stats viewer, free SX viewer, SX preview" />
-        <meta property="og:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional SX (Stat Studio Program) viewer. Upload and preview statistical program files online." />
+        <title>{t('viewers.sx.meta_title')}</title>
+        <meta name="description" content={t('viewers.sx.meta_description')} />
+        <meta name="keywords" content={t('viewers.sx.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.sx.meta_title')} />
+        <meta property="og:description" content={t('viewers.sx.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/sx" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free SX Viewer - View Stat Studio Program Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional SX viewer. Upload and preview Stat Studio Program files online." />
+        <meta name="twitter:title" content={t('viewers.sx.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.sx.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -301,10 +319,10 @@ export const SXViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free SX Viewer
+                    {t('viewers.sx.hero_title')}
                   </h1>
                   <p className="text-xl text-emerald-100">
-                    View Stat Studio Program files online - 100% free
+                    {t('viewers.sx.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -321,11 +339,11 @@ export const SXViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload SX Files
+                {t('viewers.sx.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Stat Studio Program (SX) files or click to browse. Supports SX statistical program files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.sx.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -355,7 +373,7 @@ export const SXViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your SX Files ({selectedFiles.length})
+                    {t('viewers.sx.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -364,11 +382,8 @@ export const SXViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-emerald-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-emerald-900 mb-1">How to View SX Files</h4>
-                    <p className="text-sm text-emerald-700">
-                      Click the <strong>"View Program"</strong> button to render and preview the SX file. 
-                      The viewer will format the statistical program code with syntax highlighting for web viewing. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-emerald-900 mb-1">{t('viewers.sx.how_to_title')}</h4>
+                    <p className="text-sm text-emerald-700" dangerouslySetInnerHTML={{ __html: t('viewers.sx.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -396,14 +411,14 @@ export const SXViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View Program</span>
+                        <span>{t('viewers.sx.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.sx.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -414,41 +429,17 @@ export const SXViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl shadow-lg p-8 border border-emerald-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Terminal className="w-8 h-8 text-emerald-600" />
+            {features.map((feature, index) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-emerald-50 to-green-50 border-emerald-200' : index === 1 ? 'from-green-50 to-teal-50 border-green-200' : 'from-teal-50 to-emerald-50 border-teal-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <Terminal className="w-8 h-8 text-emerald-600" />}
+                  {index === 1 && <FileCode className="w-8 h-8 text-green-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-teal-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
+                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Statistical Code
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View SX statistical program files with syntax highlighting and formatted code display
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-lg p-8 border border-green-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <FileCode className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Code Analysis
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Preview statistical programs with formatted display and code structure analysis
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-2xl shadow-lg p-8 border border-teal-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-teal-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with syntax highlighting for instant viewing in your browser
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About SX Format Section */}
@@ -458,73 +449,50 @@ export const SXViewer: React.FC = () => {
                 <Code className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About SX Format
+                {t('viewers.sx.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                SX (Stat Studio Program) is a file format used for statistical programming and data analysis scripts. SX files typically 
-                contain statistical code, data manipulation commands, analysis procedures, and statistical modeling scripts. These files 
-                are used in statistical computing environments for reproducible research, data analysis workflows, and scientific computing. 
-                SX files are plain text-based and contain human-readable code that can be executed in statistical software packages.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.sx.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Characteristics</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.sx.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Statistical code</strong> - Data analysis and modeling scripts</li>
-                    <li>• <strong>Plain text</strong> - Human-readable code format</li>
-                    <li>• <strong>Reproducible research</strong> - Document analysis workflows</li>
-                    <li>• <strong>Data manipulation</strong> - Commands for data processing</li>
-                    <li>• <strong>Version control</strong> - Compatible with Git, SVN</li>
-                    <li>• <strong>Cross-platform</strong> - Works on all operating systems</li>
+                    {advantages.map((advantage, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Common Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.sx.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Data analysis</strong> - Statistical computing and modeling</li>
-                    <li>• <strong>Research</strong> - Academic and scientific studies</li>
-                    <li>• <strong>Automation</strong> - Batch processing scripts</li>
-                    <li>• <strong>Reporting</strong> - Automated report generation</li>
-                    <li>• <strong>Quality control</strong> - Statistical process control</li>
-                    <li>• <strong>Machine learning</strong> - Model training scripts</li>
+                    {useCases.map((useCase, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.sx.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.sx.specs_header_label')}</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.sx.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.sx</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">text/plain, application/x-sx</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Format Type</td>
-                        <td className="py-2 text-sm text-gray-900">Plain text (statistical code)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">UTF-8, ASCII, or platform-specific</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Line Endings</td>
-                        <td className="py-2 text-sm text-gray-900">LF (Unix), CRLF (Windows), CR (Mac)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Category</td>
-                        <td className="py-2 text-sm text-gray-900">Statistical programming / Data analysis</td>
-                      </tr>
+                      {specs.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -538,7 +506,7 @@ export const SXViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.sx.buttons.back')}
             </a>
           </div>
         </div>

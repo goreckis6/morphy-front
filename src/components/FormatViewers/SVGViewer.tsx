@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Upload, Eye, Download, Share2, ArrowLeft, Code, Palette, Zap, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 export const SVGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.svg.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.svg.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.svg.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.svg.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only SVG files
@@ -22,9 +40,9 @@ export const SVGViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free SVG Viewer - Online Scalable Vector Graphic Viewer</title>
-        <meta name="description" content="View and convert SVG (Scalable Vector Graphics) files online for free. Infinite scalability, code-based editing, and interactive elements. Up to 20 files, 100MB total. No registration required." />
-        <meta name="keywords" content="SVG viewer, vector graphics, SVG to PNG, SVG to JPEG, scalable graphics, XML graphics, logo viewer, icon viewer, batch processing" />
+        <title>{t('viewers.svg.meta_title')}</title>
+        <meta name="description" content={t('viewers.svg.meta_description')} />
+        <meta name="keywords" content={t('viewers.svg.meta_keywords')} />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -46,10 +64,10 @@ export const SVGViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold mb-3">
-                    SVG Viewer
+                    {t('viewers.svg.hero_title')}
                   </h1>
                   <p className="text-xl text-indigo-100">
-                    View and convert scalable vector graphics with infinite quality
+                    {t('viewers.svg.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -66,11 +84,11 @@ export const SVGViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload SVG Files
+                {t('viewers.svg.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your scalable vector graphics (SVG/SVGZ) or click to browse. Supports infinite scalability and code-based editing up to 100MB total.
+              {t('viewers.svg.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -91,7 +109,7 @@ export const SVGViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your SVG Files ({selectedFiles.length})
+                    {t('viewers.svg.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -118,7 +136,7 @@ export const SVGViewer: React.FC = () => {
                         className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View</span>
+                        <span>{t('viewers.svg.buttons.view')}</span>
                       </button>
                       <button 
                         onClick={() => {
@@ -130,7 +148,7 @@ export const SVGViewer: React.FC = () => {
                           URL.revokeObjectURL(url);
                         }}
                         className="p-2 text-indigo-600 hover:bg-indigo-100 rounded-lg transition-colors"
-                        title="Download"
+                        title={t('viewers.svg.buttons.download')}
                       >
                         <Download className="w-4 h-4" />
                       </button>
@@ -143,73 +161,41 @@ export const SVGViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Zap className="w-8 h-8 text-yellow-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Infinite Scalability
-            </h3>
-            <p className="text-gray-600">
-              Vector graphics that scale to any size without quality loss - perfect for all devices
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Code className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Code-Based Graphics
-            </h3>
-            <p className="text-gray-600">
-              XML-based format that's editable with code and supports interactive elements
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Palette className="w-8 h-8 text-purple-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Advanced Styling
-            </h3>
-            <p className="text-gray-600">
-              CSS styling, gradients, filters, and animations built right into the format
-            </p>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+              {index === 0 && <Zap className="w-8 h-8 text-yellow-600 mb-4" />}
+              {index === 1 && <Code className="w-8 h-8 text-blue-600 mb-4" />}
+              {index === 2 && <Palette className="w-8 h-8 text-purple-600 mb-4" />}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2" dangerouslySetInnerHTML={{ __html: feature.title }} />
+              <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+            </div>
+          ))}
         </div>
 
         {/* SVG Information */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            About SVG Format
+            {t('viewers.svg.about_title')}
           </h2>
           <div className="prose max-w-none text-gray-600">
-            <p className="mb-4">
-              SVG (Scalable Vector Graphics) is an XML-based vector image format for two-dimensional graphics 
-              with support for interactivity and animation. SVG images are defined in XML text files, which 
-              means they can be created and edited with any text editor, as well as with drawing software. 
-              All major modern web browsers support SVG rendering, making it an ideal format for web graphics, 
-              icons, and illustrations.
-            </p>
+            <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('viewers.svg.about_intro') }} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.svg.advantages_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Infinite scalability</strong> - No quality loss at any size</li>
-                  <li>• <strong>Small file sizes</strong> - Efficient for simple graphics</li>
-                  <li>• <strong>Editable with code</strong> - XML-based and human-readable</li>
-                  <li>• <strong>CSS styling</strong> - Style with external stylesheets</li>
-                  <li>• <strong>Interactive elements</strong> - JavaScript and CSS animations</li>
-                  <li>• <strong>SEO friendly</strong> - Text content is searchable</li>
+                  {advantages.map((advantage, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                  ))}
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.svg.use_cases_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Web icons</strong> - Crisp icons at any resolution</li>
-                  <li>• <strong>Logos and branding</strong> - Perfect for responsive design</li>
-                  <li>• <strong>Illustrations</strong> - Simple graphics and diagrams</li>
-                  <li>• <strong>Data visualizations</strong> - Charts and interactive graphics</li>
-                  <li>• <strong>Print graphics</strong> - High-quality printing at any size</li>
-                  <li>• <strong>Mobile apps</strong> - Retina-ready graphics</li>
+                  {useCases.map((useCase, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                  ))}
                 </ul>
               </div>
             </div>
@@ -219,50 +205,24 @@ export const SVGViewer: React.FC = () => {
         {/* Technical Specifications */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            SVG Technical Specifications
+            {t('viewers.svg.specs_title')}
           </h2>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Specification</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Details</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.svg.specs_header_label')}</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.svg.specs_header_value')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">File Extensions</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">.svg, .svgz (compressed)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">MIME Type</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">image/svg+xml</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Format Type</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">XML-based vector graphics</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Color Support</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Full RGB, gradients, patterns</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Resolution</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Resolution independent (vector)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Transparency</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Full alpha channel support</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Animation</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">SMIL animations and CSS transitions</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Interactivity</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">JavaScript events and DOM manipulation</td>
-                </tr>
+                {specs.map((spec, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-800">{spec.label}</td>
+                    <td className="px-6 py-4 text-sm text-gray-600">{spec.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -274,7 +234,7 @@ export const SVGViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.svg.buttons.back')}
             </a>
           </div>
         </div>

@@ -1,16 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Upload, Eye, Download, Share2, ArrowLeft, Camera, Layers, Archive, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 export const TIFFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [previewUrls, setPreviewUrls] = useState<Map<string, string>>(new Map());
   const [loadingPreviews, setLoadingPreviews] = useState<Set<string>>(new Set());
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.tiff.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.tiff.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.tiff.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.tiff.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = async (files: File[]) => {
     // Filter only TIFF files
@@ -83,9 +101,9 @@ export const TIFFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free TIFF Viewer - Online TIFF Image Viewer</title>
-        <meta name="description" content="View TIFF (Tagged Image File Format) images online for free. Professional quality viewer with multi-page support, high bit-depth, and metadata display. Up to 20 files, 100MB total. No registration required." />
-        <meta name="keywords" content="TIFF viewer, TIF viewer, multi-page TIFF, professional photography viewer, lossless image viewer, EXIF viewer, batch viewing" />
+        <title>{t('viewers.tiff.meta_title')}</title>
+        <meta name="description" content={t('viewers.tiff.meta_description')} />
+        <meta name="keywords" content={t('viewers.tiff.meta_keywords')} />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -107,10 +125,10 @@ export const TIFFViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold mb-3">
-                    TIFF Viewer
+                    {t('viewers.tiff.hero_title')}
                   </h1>
                   <p className="text-xl text-orange-100">
-                    View TIFF images with professional quality and multi-page support
+                    {t('viewers.tiff.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -127,11 +145,11 @@ export const TIFFViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload TIFF Files
+                {t('viewers.tiff.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your TIFF images (TIF, TIFF, TIFF64, PTIF) or click to browse. Supports multi-page documents and high bit-depth images up to 100MB total.
+              {t('viewers.tiff.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -151,9 +169,9 @@ export const TIFFViewer: React.FC = () => {
                   <Camera className="w-5 h-5 text-blue-600" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-sm font-semibold text-blue-900 mb-1">Generating Previews</h4>
+                  <h4 className="text-sm font-semibold text-blue-900 mb-1">{t('viewers.tiff.preview_generating_title')}</h4>
                   <p className="text-sm text-blue-700">
-                    TIFF files are being converted to PNG format for web preview. This may take a few moments for large files.
+                    {t('viewers.tiff.preview_generating_message')}
                   </p>
                 </div>
               </div>
@@ -169,7 +187,7 @@ export const TIFFViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your TIFF Files ({selectedFiles.length})
+                    {t('viewers.tiff.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -186,7 +204,7 @@ export const TIFFViewer: React.FC = () => {
                         {isLoading ? (
                           <div className="text-center p-4">
                             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto mb-2"></div>
-                            <p className="text-xs text-gray-500">Generating preview...</p>
+                            <p className="text-xs text-gray-500">{t('viewers.tiff.generating_preview')}</p>
                           </div>
                         ) : previewUrl ? (
                           <img
@@ -215,7 +233,7 @@ export const TIFFViewer: React.FC = () => {
                           disabled={isLoading}
                         >
                           <Eye className="w-4 h-4" />
-                          <span>View</span>
+                          <span>{t('viewers.tiff.buttons.view')}</span>
                         </button>
                         <button 
                           onClick={() => {
@@ -227,7 +245,7 @@ export const TIFFViewer: React.FC = () => {
                             URL.revokeObjectURL(url);
                           }}
                           className="p-2 text-orange-600 hover:bg-orange-100 rounded-lg transition-colors"
-                          title="Download"
+                          title={t('viewers.tiff.buttons.download')}
                         >
                           <Download className="w-4 h-4" />
                         </button>
@@ -241,73 +259,41 @@ export const TIFFViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Camera className="w-8 h-8 text-orange-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Professional Quality
-            </h3>
-            <p className="text-gray-600">
-              Lossless compression and high bit-depth support for professional photography
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Layers className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Multi-Page Support
-            </h3>
-            <p className="text-gray-600">
-              View and extract individual pages from multi-page TIFF documents
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Archive className="w-8 h-8 text-purple-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Metadata Rich
-            </h3>
-            <p className="text-gray-600">
-              Comprehensive metadata support including EXIF, IPTC, and custom tags
-            </p>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+              {index === 0 && <Camera className="w-8 h-8 text-orange-600 mb-4" />}
+              {index === 1 && <Layers className="w-8 h-8 text-blue-600 mb-4" />}
+              {index === 2 && <Archive className="w-8 h-8 text-purple-600 mb-4" />}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2" dangerouslySetInnerHTML={{ __html: feature.title }} />
+              <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+            </div>
+          ))}
         </div>
 
         {/* TIFF Information */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            About TIFF Format
+            {t('viewers.tiff.about_title')}
           </h2>
           <div className="prose max-w-none text-gray-600">
-            <p className="mb-4">
-              TIFF (Tagged Image File Format) is a computer file format for storing raster graphics images, 
-              popular among graphic artists, the publishing industry, and photographers. TIFF is widely 
-              supported by scanning, faxing, word processing, optical character recognition, image manipulation, 
-              desktop publishing, and page-layout applications. The format was created by Aldus Corporation 
-              for use in desktop publishing and is now controlled by Adobe Systems.
-            </p>
+            <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('viewers.tiff.about_intro') }} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.tiff.advantages_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Lossless compression</strong> - No quality degradation</li>
-                  <li>• <strong>High bit-depth</strong> - Support for 16-bit and 32-bit images</li>
-                  <li>• <strong>Multi-page support</strong> - Multiple images in one file</li>
-                  <li>• <strong>Extensive metadata</strong> - Rich tagging system</li>
-                  <li>• <strong>Professional standard</strong> - Industry-wide acceptance</li>
-                  <li>• <strong>Flexible compression</strong> - Multiple compression options</li>
+                  {advantages.map((advantage, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                  ))}
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.tiff.use_cases_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Professional photography</strong> - High-quality image storage</li>
-                  <li>• <strong>Print publishing</strong> - CMYK and spot color support</li>
-                  <li>• <strong>Medical imaging</strong> - High bit-depth requirements</li>
-                  <li>• <strong>Archival storage</strong> - Long-term image preservation</li>
-                  <li>• <strong>Scientific imaging</strong> - Precise color and data integrity</li>
-                  <li>• <strong>Document scanning</strong> - Multi-page document storage</li>
+                  {useCases.map((useCase, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                  ))}
                 </ul>
               </div>
             </div>
@@ -317,50 +303,24 @@ export const TIFFViewer: React.FC = () => {
         {/* Technical Specifications */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            TIFF Technical Specifications
+            {t('viewers.tiff.specs_title')}
           </h2>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Specification</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Details</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.tiff.specs_header_label')}</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.tiff.specs_header_value')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">File Extensions</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">.tif, .tiff, .tiff64, .ptif</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">MIME Type</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">image/tiff</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Compression</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">None, LZW, ZIP, JPEG, CCITT</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Color Support</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">RGB, CMYK, LAB, Grayscale, Indexed</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Bit Depth</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">1, 8, 16, 32 bits per channel</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Size</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">4GB file size limit (TIFF64 unlimited)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Multi-page</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Multiple images per file supported</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Metadata</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Extensive tag system, EXIF, IPTC</td>
-                </tr>
+                {specs.map((spec, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-800">{spec.label}</td>
+                    <td className="px-6 py-4 text-sm text-gray-600">{spec.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -372,7 +332,7 @@ export const TIFFViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.tiff.buttons.back')}
             </a>
           </div>
         </div>

@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const X3FViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.x3f.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.x3f.advantages', { returnObjects: true }) as string[];
+  const compatibleCameras = t('viewers.x3f.compatible_cameras', { returnObjects: true }) as string[];
+  const specs = t('viewers.x3f.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -54,14 +72,14 @@ export const X3FViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.x3f.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: '100' }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the X3F file');
+        alert(t('viewers.x3f.alerts.popup_blocked'));
         return;
       }
 
@@ -69,7 +87,7 @@ export const X3FViewer: React.FC = () => {
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${t('viewers.x3f.loading_window.title', { filename: file.name })}</title>
           <style>
             body {
               display: flex;
@@ -102,8 +120,8 @@ export const X3FViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Processing X3F RAW Image...</h2>
-            <p>Rendering ${file.name} (Foveon Sensor)...</p>
+            <h2>${t('viewers.x3f.loading_window.title', { filename: file.name })}</h2>
+            <p>${t('viewers.x3f.loading_window.message', { filename: file.name })}</p>
           </div>
         </body>
         </html>
@@ -411,9 +429,9 @@ export const X3FViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate X3F preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.x3f.error_window.title')}</h1>
+              <p>${t('viewers.x3f.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.x3f.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -422,23 +440,23 @@ export const X3FViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('X3F view error:', error);
-      alert('Failed to open X3F preview. Please try again or download the file.');
+      alert(t('viewers.x3f.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free X3F Viewer - View Sigma RAW Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview X3F Foveon sensor files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free X3F viewer tool." />
-        <meta name="keywords" content="X3F viewer, Sigma RAW viewer, X3F file viewer online, RAW viewer, Sigma SD viewer, Foveon viewer, camera RAW viewer, free X3F viewer, X3F preview" />
-        <meta property="og:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma Foveon sensor files online with EXIF metadata." />
+        <title>{t('viewers.x3f.meta_title')}</title>
+        <meta name="description" content={t('viewers.x3f.meta_description')} />
+        <meta name="keywords" content={t('viewers.x3f.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.x3f.meta_title')} />
+        <meta property="og:description" content={t('viewers.x3f.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/x3f" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free X3F Viewer - View Sigma RAW Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional X3F (Sigma RAW) viewer with high-quality rendering. Upload and preview Sigma RAW files online." />
+        <meta name="twitter:title" content={t('viewers.x3f.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.x3f.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -477,10 +495,10 @@ export const X3FViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free X3F Viewer
+                    {t('viewers.x3f.hero_title')}
                   </h1>
                   <p className="text-xl text-sky-100">
-                    View Sigma Foveon RAW files with professional rendering - 100% free
+                    {t('viewers.x3f.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -497,11 +515,11 @@ export const X3FViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload X3F Files
+                {t('viewers.x3f.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Sigma X3F (RAW) files or click to browse. Supports X3F Foveon sensor files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.x3f.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -531,7 +549,7 @@ export const X3FViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your X3F Files ({selectedFiles.length})
+                    {t('viewers.x3f.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -540,11 +558,8 @@ export const X3FViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-sky-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-sky-900 mb-1">How to View X3F Files</h4>
-                    <p className="text-sm text-sky-700">
-                      Click the <strong>"View RAW"</strong> button to render and preview the X3F file with professional quality. 
-                      The viewer will process the Foveon sensor RAW data and display it as a high-quality image. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-sky-900 mb-1">{t('viewers.x3f.how_to_title')}</h4>
+                    <p className="text-sm text-sky-700" dangerouslySetInnerHTML={{ __html: t('viewers.x3f.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -572,14 +587,14 @@ export const X3FViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View RAW</span>
+                        <span>{t('viewers.x3f.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.x3f.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -590,41 +605,17 @@ export const X3FViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-2xl shadow-lg p-8 border border-sky-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <ImageIcon className="w-8 h-8 text-sky-600" />
+            {features.map((feature, index) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-sky-50 to-cyan-50 border-sky-200' : index === 1 ? 'from-cyan-50 to-blue-50 border-cyan-200' : 'from-blue-50 to-sky-50 border-blue-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <ImageIcon className="w-8 h-8 text-sky-600" />}
+                  {index === 1 && <Maximize2 className="w-8 h-8 text-cyan-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-blue-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
+                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Foveon Processing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Professional Foveon X3 sensor processing with rawpy (LibRaw) for true color accuracy
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl shadow-lg p-8 border border-cyan-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Maximize2 className="w-8 h-8 text-cyan-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Resolution
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View X3F files at full resolution with Foveon's unique 3-layer color capture
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-2xl shadow-lg p-8 border border-blue-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with embedded JPEG extraction for instant viewing
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About X3F Format Section */}
@@ -634,73 +625,50 @@ export const X3FViewer: React.FC = () => {
                 <Camera className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About X3F Format
+                {t('viewers.x3f.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                X3F is Sigma's proprietary RAW image format used by Sigma cameras with the unique Foveon X3 sensor. 
-                Unlike conventional Bayer sensors, Foveon X3 captures all three primary colors (RGB) at each pixel location 
-                using three vertically stacked photodiodes. This results in exceptional color accuracy and sharpness without 
-                interpolation artifacts. X3F files preserve the full sensor data for maximum post-processing flexibility.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.x3f.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.x3f.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Foveon X3 sensor</strong> - True RGB at every pixel</li>
-                    <li>• <strong>No interpolation</strong> - Superior color accuracy</li>
-                    <li>• <strong>14-bit depth</strong> - Greater tonal range</li>
-                    <li>• <strong>Non-destructive</strong> - Original data always preserved</li>
-                    <li>• <strong>White balance</strong> - Adjust after capture</li>
-                    <li>• <strong>Unique quality</strong> - Foveon's signature rendering</li>
+                    {advantages.map((advantage, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Cameras</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.x3f.compatible_cameras_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Sigma fp Series</strong> - fp, fp L (mirrorless)</li>
-                    <li>• <strong>Sigma sd Quattro Series</strong> - sd Quattro, sd Quattro H</li>
-                    <li>• <strong>Sigma SD1 Series</strong> - SD1, SD1 Merrill</li>
-                    <li>• <strong>Sigma DP Series</strong> - DP1-DP3 Merrill, Quattro</li>
-                    <li>• <strong>Legacy Models</strong> - SD9, SD10, SD14, SD15</li>
-                    <li>• <strong>All Sigma Foveon</strong> - Full X3F support</li>
+                    {compatibleCameras.map((camera, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: camera }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.x3f.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.x3f.specs_header_label')}</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.x3f.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.x3f</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">image/x-sigma-x3f</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Bit Depth</td>
-                        <td className="py-2 text-sm text-gray-900">14-bit per layer (3 layers)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Sensor Type</td>
-                        <td className="py-2 text-sm text-gray-900">Foveon X3 (3-layer RGB)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">Lossless or uncompressed</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Sigma Corporation</td>
-                      </tr>
+                      {specs.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -714,7 +682,7 @@ export const X3FViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-700 hover:to-cyan-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.x3f.buttons.back')}
             </a>
           </div>
         </div>
