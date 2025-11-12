@@ -635,12 +635,9 @@ export const ARWViewer: React.FC = () => {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.arw.compatible_cameras_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    {(() => {
-                      const compatibleCameras = t('viewers.arw.compatible_cameras', { returnObjects: true }) as string[];
-                      return compatibleCameras.map((camera, index) => (
-                        <li key={index} dangerouslySetInnerHTML={{ __html: camera }} />
-                      ));
-                    })()}
+                    {getArray<string>('viewers.arw.compatible_cameras').map((camera, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: camera }} />
+                    ))}
                   </ul>
                 </div>
               </div>

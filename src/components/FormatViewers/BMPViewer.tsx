@@ -15,10 +15,19 @@ export const BMPViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
-  const features = t('viewers.bmp.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.bmp.advantages', { returnObjects: true }) as string[];
-  const useCases = t('viewers.bmp.use_cases', { returnObjects: true }) as string[];
-  const specs = t('viewers.bmp.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  const getFallbackArray = <T,>(key: string) => {
+    const value = t(key, { returnObjects: true });
+    if (Array.isArray(value)) {
+      return value as T[];
+    }
+    const fallback = i18n.getFixedT('en')(key, { returnObjects: true });
+    return Array.isArray(fallback) ? (fallback as T[]) : [];
+  };
+
+  const features = getFallbackArray<{ title: string; description: string }>('viewers.bmp.features');
+  const advantages = getFallbackArray<string>('viewers.bmp.advantages');
+  const useCases = getFallbackArray<string>('viewers.bmp.use_cases');
+  const specs = getFallbackArray<{ label: string; value: string }>('viewers.bmp.specs');
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only BMP files

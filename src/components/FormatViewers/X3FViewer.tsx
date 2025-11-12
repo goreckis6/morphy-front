@@ -14,18 +14,19 @@ export const X3FViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
-  const fixedT = i18n.getFixedT('en');
-  const getArray = <T,>(key: string) => {
+  const getFallbackArray = <T,>(key: string) => {
     const value = t(key, { returnObjects: true });
-    if (Array.isArray(value)) return value as T[];
-    const fallback = fixedT(key, { returnObjects: true });
+    if (Array.isArray(value)) {
+      return value as T[];
+    }
+    const fallback = i18n.getFixedT('en')(key, { returnObjects: true });
     return Array.isArray(fallback) ? (fallback as T[]) : [];
   };
 
-  const features = getArray<{ title: string; description: string }>('viewers.x3f.features');
-  const advantages = getArray<string>('viewers.x3f.advantages');
-  const compatibleCameras = getArray<string>('viewers.x3f.compatible_cameras');
-  const specs = getArray<{ label: string; value: string }>('viewers.x3f.specs');
+  const features = getFallbackArray<{ title: string; description: string }>('viewers.x3f.features');
+  const advantages = getFallbackArray<string>('viewers.x3f.advantages');
+  const compatibleCameras = getFallbackArray<string>('viewers.x3f.compatible_cameras');
+  const specs = getFallbackArray<{ label: string; value: string }>('viewers.x3f.specs');
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();

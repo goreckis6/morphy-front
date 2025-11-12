@@ -14,10 +14,19 @@ export const CSVViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
-  const features = t('viewers.csv.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.csv.advantages', { returnObjects: true }) as string[];
-  const useCases = t('viewers.csv.use_cases', { returnObjects: true }) as string[];
-  const specs = t('viewers.csv.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  const getFallbackArray = <T,>(key: string) => {
+    const value = t(key, { returnObjects: true });
+    if (Array.isArray(value)) {
+      return value as T[];
+    }
+    const fallback = i18n.getFixedT('en')(key, { returnObjects: true });
+    return Array.isArray(fallback) ? (fallback as T[]) : [];
+  };
+
+  const features = getFallbackArray<{ title: string; description: string }>('viewers.csv.features');
+  const advantages = getFallbackArray<string>('viewers.csv.advantages');
+  const useCases = getFallbackArray<string>('viewers.csv.use_cases');
+  const specs = getFallbackArray<{ label: string; value: string }>('viewers.csv.specs');
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();

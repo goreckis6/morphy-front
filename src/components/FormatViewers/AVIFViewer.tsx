@@ -14,6 +14,15 @@ export const AVIFViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
+  const getFallbackArray = <T,>(key: string) => {
+    const value = t(key, { returnObjects: true });
+    if (Array.isArray(value)) {
+      return value as T[];
+    }
+    const fallback = i18n.getFixedT('en')(key, { returnObjects: true });
+    return Array.isArray(fallback) ? (fallback as T[]) : [];
+  };
+
   const handleFilesSelected = (files: File[]) => {
     // Filter only AVIF files
     const avifFiles = files.filter(file => {
@@ -181,30 +190,24 @@ export const AVIFViewer: React.FC = () => {
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">{t('viewers.avif.advantages_title')}</h3>
                 <ul className="space-y-2 text-gray-600">
-                  {(() => {
-                    const advantages = t('viewers.avif.advantages', { returnObjects: true }) as string[];
-                    return advantages.map((advantage, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                        <span dangerouslySetInnerHTML={{ __html: advantage }} />
-                      </li>
-                    ));
-                  })()}
+                  {getFallbackArray<string>('viewers.avif.advantages').map((advantage, index) => (
+                    <li key={index} className="flex items-start space-x-2">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                      <span dangerouslySetInnerHTML={{ __html: advantage }} />
+                    </li>
+                  ))}
                 </ul>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">{t('viewers.avif.use_cases_title')}</h3>
                 <ul className="space-y-2 text-gray-600">
-                  {(() => {
-                    const useCases = t('viewers.avif.use_cases', { returnObjects: true }) as string[];
-                    return useCases.map((useCase, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
-                        <span dangerouslySetInnerHTML={{ __html: useCase }} />
-                      </li>
-                    ));
-                  })()}
+                  {getFallbackArray<string>('viewers.avif.use_cases').map((useCase, index) => (
+                    <li key={index} className="flex items-start space-x-2">
+                      <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
+                      <span dangerouslySetInnerHTML={{ __html: useCase }} />
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -220,16 +223,13 @@ export const AVIFViewer: React.FC = () => {
                       <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.avif.specs_header_value')}</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    {(() => {
-                      const specs = t('viewers.avif.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
-                      return specs.map((spec, index) => (
-                        <tr key={index}>
-                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
-                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
-                        </tr>
-                      ));
-                    })()}
+                <tbody className="divide-y divide-gray-200">
+                  {getFallbackArray<{ label: string; value: string }>('viewers.avif.specs').map((spec, index) => (
+                    <tr key={index}>
+                      <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                      <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                    </tr>
+                  ))}
                   </tbody>
                 </table>
               </div>
