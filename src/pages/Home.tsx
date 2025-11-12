@@ -78,6 +78,12 @@ export default function Home() {
     return `${gb.toFixed(1)} GB`;
   };
 
+  const locale = i18n.language;
+  const isEnglish = locale === 'en';
+  const getLocalizedPath = (path: string) => (isEnglish ? path : `/${locale}${path}`);
+  const localizedBasePath = getLocalizedPath('');
+  const canonicalUrl = `https://morphyhub.com${localizedBasePath}`;
+
   const metaTitle = t('home.meta.title');
   const metaDescription = t('home.meta.description');
   const metaKeywords = t('home.meta.keywords');
@@ -99,19 +105,19 @@ export default function Home() {
       },
       {
         "@type": "WebSite",
-        "@id": "https://morphyhub.com#website",
-        "url": "https://morphyhub.com",
+        "@id": `${canonicalUrl}#website`,
+        "url": canonicalUrl,
         "name": schemaWebsiteName,
         "description": schemaWebsiteDescription,
         "publisher": { "@id": "https://morphyhub.com#organization" }
       },
       {
         "@type": "WebPage",
-        "@id": "https://morphyhub.com#webpage",
-        "url": "https://morphyhub.com",
+        "@id": `${canonicalUrl}#webpage`,
+        "url": canonicalUrl,
         "name": schemaWebpageName,
         "description": schemaWebpageDescription,
-        "isPartOf": { "@id": "https://morphyhub.com#website" },
+        "isPartOf": { "@id": `${canonicalUrl}#website` },
         "publisher": { "@id": "https://morphyhub.com#organization" }
       }
     ]
@@ -177,6 +183,7 @@ export default function Home() {
   const popularConverters = popularConvertersConfig.map((converter) => ({
     ...converter,
     name: t(`home.popular.converters.${converter.key}`),
+    href: getLocalizedPath(converter.href),
   }));
 
   const heroBadge = t('home.hero.badge');
@@ -263,7 +270,7 @@ export default function Home() {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
-        <link rel="canonical" href="https://morphyhub.com" />
+        <link rel="canonical" href={canonicalUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
@@ -312,7 +319,7 @@ export default function Home() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4">
                 <button 
-                  onClick={() => navigate('/converters')}
+                  onClick={() => navigate(getLocalizedPath('/converters'))}
                   className="group relative bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3.5 px-6 sm:py-4 sm:px-8 md:py-5 md:px-10 rounded-xl sm:rounded-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/50 flex items-center gap-2 sm:gap-3 overflow-hidden w-full sm:w-auto text-sm sm:text-base"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
@@ -321,7 +328,7 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button 
-                  onClick={() => navigate('/viewers')}
+                  onClick={() => navigate(getLocalizedPath('/viewers'))}
                   className="group border-2 border-white/30 backdrop-blur-sm bg-white/5 text-white font-bold py-3.5 px-6 sm:py-4 sm:px-8 md:py-5 md:px-10 rounded-xl sm:rounded-2xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center gap-2 sm:gap-3 w-full sm:w-auto text-sm sm:text-base"
                 >
                   <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -383,7 +390,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
               {/* Converters */}
               <button
-                onClick={() => navigate('/converters')}
+                onClick={() => navigate(getLocalizedPath('/converters'))}
                 className="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-blue-100 hover:border-blue-300 overflow-hidden text-left"
               >
                 <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-blue-400 to-indigo-400 rounded-full -mr-12 -mt-12 sm:-mr-16 sm:-mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
@@ -406,7 +413,7 @@ export default function Home() {
 
               {/* Viewers */}
               <button
-                onClick={() => navigate('/viewers')}
+                onClick={() => navigate(getLocalizedPath('/viewers'))}
                 className="group relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-purple-100 hover:border-purple-300 overflow-hidden text-left"
               >
                 <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full -mr-12 -mt-12 sm:-mr-16 sm:-mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
@@ -429,7 +436,7 @@ export default function Home() {
 
               {/* Compress */}
               <button
-                onClick={() => navigate('/compress')}
+                onClick={() => navigate(getLocalizedPath('/compress'))}
                 className="group relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-green-100 hover:border-green-300 overflow-hidden text-left"
               >
                 <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-green-400 to-emerald-400 rounded-full -mr-12 -mt-12 sm:-mr-16 sm:-mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
@@ -452,7 +459,7 @@ export default function Home() {
 
               {/* Samples */}
               <button
-                onClick={() => navigate('/samples')}
+                onClick={() => navigate(getLocalizedPath('/samples'))}
                 className="group relative bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-orange-100 hover:border-orange-300 overflow-hidden text-left"
               >
                 <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-orange-400 to-amber-400 rounded-full -mr-12 -mt-12 sm:-mr-16 sm:-mt-16 opacity-20 group-hover:opacity-30 transition-opacity"></div>
@@ -544,7 +551,7 @@ export default function Home() {
 
             <div className="text-center">
               <button
-                onClick={() => navigate('/converters')}
+                onClick={() => navigate(getLocalizedPath('/converters'))}
                 className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 <Rocket className="w-4 h-4 sm:w-5 sm:h-5" />
