@@ -2009,15 +2009,15 @@ const resources = {
       'viewers.xml.error_window.message': 'Failed to generate XML preview. Please try downloading the file instead.',
       'viewers.xml.error_window.close': 'Close',
 
-      // HEIC to WEBP
+      // HEIF to WEBP_v1
       'heic_to_webp.title': 'Free HEIF to WEBP Converter',
       'heic_to_webp.meta_title': 'Free HEIF to WEBP Converter Online ',
       'heic_to_webp.meta_description': 'Convert HEIF images (iPhone photos) to modern WEBP format online for free. Fast, secure HEIF to WEBP converter with batch support and adjustable quality.',
       'heic_to_webp.subtitle': 'Convert Apple HEIF photos to efficient WEBP images for web and apps. Fast, secure, and free with batch processing.',
       'heic_to_webp.upload_single': 'Upload HEIF File',
       'heic_to_webp.upload_batch': 'Upload Multiple HEIF Files',
-      'heic_to_webp.upload_text_single': 'Drag and drop your HEIC file here or click to browse',
-      'heic_to_webp.upload_text_batch': 'Select multiple HEIC files to convert them all at once',
+      'heic_to_webp.upload_text_single': 'Drag and drop your HEIF file here or click to browse',
+      'heic_to_webp.upload_text_batch': 'Select multiple HEIF files to convert them all at once',
       'heic_to_webp.file_limits_single': 'Single file limit: 100.00 MB per file.',
       'heic_to_webp.file_limits_batch': 'Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.',
       'heic_to_webp.batch_size_warning': 'Total file size is approaching the limit. Some files may not be processed.',
@@ -2050,7 +2050,7 @@ const resources = {
       'heic_to_webp.ready_title': 'Ready to Convert Your HEIF Files?',
       'heic_to_webp.ready_text': 'Use our free online HEIF to WEBP converter to transform your iPhone photos into efficient WEBP images. Start converting now — no registration required.',
       'heic_to_webp.seo.title': 'Convert HEIF to WEBP Online Free',
-      'heic_to_webp.seo.description': 'Convert HEIC (iPhone) photos to WEBP with studio‑grade control. Fine‑tune quality (or use lossless), preserve transparency, and auto‑downscale oversized images for blazing‑fast, SEO‑friendly delivery. Batch up to 20 files with consistent color, metadata safety, and predictable output sizes for production pipelines.',
+      'heic_to_webp.seo.description': 'Convert HEIF (iPhone) photos to WEBP with studio‑grade control. Fine‑tune quality (or use lossless), preserve transparency, and auto‑downscale oversized images for blazing‑fast, SEO‑friendly delivery. Batch up to 20 files with consistent color, metadata safety, and predictable output sizes for production pipelines.',
       'heic_to_webp.seo.features_title': 'Professional HEIF to WEBP Conversion Features',
       'heic_to_webp.seo.feature_1_title': 'High-Quality Output',
       'heic_to_webp.seo.feature_1_text': 'Precisely balance quality and size for every use case. Choose lossy quality levels for lightweight assets or lossless WEBP for pixel‑perfect fidelity. Ideal for design handoffs, app assets, and automated CI/CD image pipelines.',
@@ -7335,7 +7335,7 @@ const resources = {
       'heic_to_eps.ready_title': 'Gotowy do Konwersji Plików HEIC do EPS?',
       'heic_to_eps.ready_text': 'Użyj naszego darmowego konwertera HEIC do EPS, aby tworzyć zasoby przyjazne drukowi, które od razu pasują do profesjonalnych workflow wydawniczych.',
 
-      // HEIC to WEBP - Polish
+      // HEIC to WEBP - Polishv1
       'heic_to_webp.title': 'Konwerter HEIF do WEBP',
       'heic_to_webp.meta_title': 'Darmowy Konwerter HEIF do WEBP Online ',
       'heic_to_webp.meta_description': 'Konwertuj obrazy HEIF (zdjęcia z iPhone) na nowoczesny format WEBP online za darmo. Szybki, bezpieczny konwerter HEIC do WEBP z obsługą wsadową i regulacją jakości.',
@@ -7439,7 +7439,7 @@ const resources = {
       'heif_to_png.seo.use_case_2_title': 'Edycja i Archiwizacja',
       'heif_to_png.seo.use_case_2_text': 'Wybierz PNG do workflow bezstratnej edycji i kopii archiwalnych z konsekwentnym kolorem.',
 
-      // HEIF to WEBP - Polish
+      // HEIF to WEBP - Polish_v1
       'heif_to_webp.title': 'Konwerter HEIF do WEBP',
       'heif_to_webp.meta_title': 'Darmowy Konwerter HEIF do WEBP Online ',
       'heif_to_webp.meta_description': 'Konwertuj obrazy HEIF (zdjęcia z iPhone) na nowoczesny format WEBP online za darmo. Szybki, bezpieczny konwerter HEIF do WEBP z obsługą wsadową i regulacją jakości.',
@@ -11940,7 +11940,7 @@ const resources = {
       'heic_to_eps.ready_title': 'Bereit, Ihre HEIC-Dateien in EPS Zu Konvertieren?',
       'heic_to_eps.ready_text': 'Nutzen Sie unseren kostenlosen HEIC-zu-EPS-Konverter, um druckfreundliche Assets zu erstellen, die sich nahtlos in professionelle Publishing-Workflows einfügen.',
 
-      // HEIC to WEBP - German
+      // HEIC to WEBP - German_v1
       'heic_to_webp.title': 'HEIF zu WEBP Konverter',
       'heic_to_webp.meta_title': 'Kostenloser HEIF zu WEBP Konverter Online ',
       'heic_to_webp.meta_description': 'Konvertieren Sie HEIF-Bilder (iPhone-Fotos) kostenlos online in das moderne WEBP-Format. Schneller, sicherer HEIF-zu-WEBP-Konverter mit Stapelunterstützung und einstellbarer Qualität.',
