@@ -14,10 +14,19 @@ export const DNGViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
-  const features = t('viewers.dng.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.dng.advantages', { returnObjects: true }) as string[];
+  const fixedT = i18n.getFixedT('en');
+  const getArray = <T,>(key: string) => {
+    const value = t(key, { returnObjects: true });
+    if (Array.isArray(value)) return value as T[];
+    const fallback = fixedT(key, { returnObjects: true });
+    return Array.isArray(fallback) ? (fallback as T[]) : [];
+  };
+
+  const features = getArray<{ title: string; description: string }>('viewers.dng.features');
+  const advantages = getArray<string>('viewers.dng.advantages');
+  const specs = getArray<{ label: string; value: string }>('viewers.dng.specs');
+
   const compatibleCameras = t('viewers.dng.compatible_cameras', { returnObjects: true }) as string[];
-  const specs = t('viewers.dng.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();

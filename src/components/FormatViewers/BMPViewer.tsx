@@ -7,6 +7,7 @@ import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import '../../locales/viewersBmp';
 
 export const BMPViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);

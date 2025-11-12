@@ -13,6 +13,13 @@ export const ARWViewer: React.FC = () => {
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
+  const fixedT = i18n.getFixedT('en');
+  const getArray = <T,>(key: string) => {
+    const value = t(key, { returnObjects: true });
+    if (Array.isArray(value)) return value as T[];
+    const fallback = fixedT(key, { returnObjects: true });
+    return Array.isArray(fallback) ? (fallback as T[]) : [];
+  };
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -583,7 +590,7 @@ export const ARWViewer: React.FC = () => {
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {(() => {
-              const features = t('viewers.arw.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+              const features = getArray<{ title: string; description: string }>('viewers.arw.features');
               return features.map((feature, index) => (
                 <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-emerald-50 to-green-50 border-emerald-200' : index === 1 ? 'from-green-50 to-teal-50 border-green-200' : 'from-teal-50 to-emerald-50 border-teal-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
                   <div className="bg-white p-3 rounded-xl w-fit mb-4">
@@ -617,7 +624,7 @@ export const ARWViewer: React.FC = () => {
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.arw.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
                     {(() => {
-                      const advantages = t('viewers.arw.advantages', { returnObjects: true }) as string[];
+                      const advantages = getArray<string>('viewers.arw.advantages');
                       return advantages.map((advantage, index) => (
                         <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
                       ));
@@ -650,7 +657,7 @@ export const ARWViewer: React.FC = () => {
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       {(() => {
-                        const specs = t('viewers.arw.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+                        const specs = getArray<{ label: string; value: string }>('viewers.arw.specs');
                         return specs.map((spec, index) => (
                           <tr key={index}>
                             <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>

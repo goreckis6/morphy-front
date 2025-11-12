@@ -14,10 +14,18 @@ export const DCRViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
-  const features = t('viewers.dcr.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.dcr.advantages', { returnObjects: true }) as string[];
-  const compatibleCameras = t('viewers.dcr.compatible_cameras', { returnObjects: true }) as string[];
-  const specs = t('viewers.dcr.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  const fixedT = i18n.getFixedT('en');
+  const getArray = <T,>(key: string) => {
+    const value = t(key, { returnObjects: true });
+    if (Array.isArray(value)) return value as T[];
+    const fallback = fixedT(key, { returnObjects: true });
+    return Array.isArray(fallback) ? (fallback as T[]) : [];
+  };
+
+  const features = getArray<{ title: string; description: string }>('viewers.dcr.features');
+  const advantages = getArray<string>('viewers.dcr.advantages');
+  const compatibleCameras = getArray<string>('viewers.dcr.compatible_cameras');
+  const specs = getArray<{ label: string; value: string }>('viewers.dcr.specs');
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();

@@ -435,6 +435,52 @@ const resources = {
       ],
       'viewers.ico.buttons.back': '← Back to All Viewers',
 
+      // Viewers - BMP
+      'viewers.bmp.meta_title': 'Free BMP Viewer - View Bitmap Images Online | MorphyHub',
+      'viewers.bmp.meta_description': 'View BMP bitmap images online instantly. Free BMP viewer with color-depth support, pixel inspection tools, and batch preview for up to 20 files.',
+      'viewers.bmp.meta_keywords': 'bmp viewer, bitmap viewer, online bmp viewer, windows bitmap, bmp preview, free bmp viewer',
+      'viewers.bmp.hero_title': 'Free BMP Viewer',
+      'viewers.bmp.hero_subtitle': 'Inspect Windows Bitmap (BMP) images with true color fidelity, pixel-level zoom, and batch preview tools.',
+      'viewers.bmp.upload_title': 'Upload BMP Images',
+      'viewers.bmp.upload_description': 'Drag and drop your BMP files or click to browse. Supports up to 20 files, 100MB total, with instant browser preview.',
+      'viewers.bmp.files_heading': 'Your BMP Files ({{count}})',
+      'viewers.bmp.buttons.view': 'Open Preview',
+      'viewers.bmp.buttons.download': 'Download BMP',
+      'viewers.bmp.buttons.back': '← Back to All Viewers',
+      'viewers.bmp.features': [
+        { title: '<strong>True color fidelity</strong>', description: 'Render 1-, 4-, 8-, 24- and 32-bit BMPs with accurate palettes, alpha channels, and optional dithering.' },
+        { title: '<strong>Precise inspection tools</strong>', description: 'Zoom to the pixel, analyze image dimensions, and review metadata before exporting to other formats.' },
+        { title: '<strong>Batch-friendly workflow</strong>', description: 'Preview up to 20 BMP files at once, compare variants, and download originals without leaving the browser.' }
+      ],
+      'viewers.bmp.about_title': 'About the BMP Format',
+      'viewers.bmp.about_intro': 'BMP (Bitmap Image File) is a raster graphics format developed by Microsoft for storing uncompressed or lightly compressed bitmap data. It is widely used across Windows applications, legacy design workflows, and embedded systems thanks to its simple structure and support for multiple color depths.',
+      'viewers.bmp.advantages_title': 'Key Advantages',
+      'viewers.bmp.advantages': [
+        '• <strong>Lossless quality</strong> – Stores pixel data without compression artifacts',
+        '• <strong>Multiple color depths</strong> – Supports 1-bit monochrome up to 32-bit RGBA',
+        '• <strong>Straightforward structure</strong> – Easy to parse for custom tooling and automation',
+        '• <strong>Broad Windows support</strong> – Native compatibility across Microsoft platforms',
+        '• <strong>Reliable archival</strong> – Ideal for preserving pixel-perfect UI assets'
+      ],
+      'viewers.bmp.use_cases_title': 'Popular Use Cases',
+      'viewers.bmp.use_cases': [
+        '• <strong>Legacy UI assets</strong> – Review Windows icons, cursors, and interface bitmaps',
+        '• <strong>Game development</strong> – Inspect sprite sheets and texture atlases exported as BMP',
+        '• <strong>Digital archiving</strong> – Validate scans captured in BMP before converting to modern formats',
+        '• <strong>Pixel-art workflows</strong> – Check anti-aliasing and color palettes for retro artwork'
+      ],
+      'viewers.bmp.specs_title': 'Technical Specifications',
+      'viewers.bmp.specs_header_label': 'Property',
+      'viewers.bmp.specs_header_value': 'Details',
+      'viewers.bmp.specs': [
+        { label: 'File Extension', value: '.bmp' },
+        { label: 'MIME Type', value: 'image/bmp, image/x-windows-bmp' },
+        { label: 'Developed By', value: 'Microsoft' },
+        { label: 'Initial Release', value: '1985' },
+        { label: 'Color Depth', value: '1, 4, 8, 16, 24, 32 bits' },
+        { label: 'Compression', value: 'BI_RGB (none), RLE8, RLE4, BITFIELDS' }
+      ],
+
       // Viewers - JPEG
       'viewers.jpeg.meta_title': 'Free JPG Viewer - View JPG Images Online | MorphyHub',
       'viewers.jpeg.meta_description': 'Free JPG viewer. View JPG images online, inspect EXIF metadata, and organize batches. Free online tool with instant preview support.',
@@ -2430,6 +2476,13 @@ const resources = {
       'doc_to_mobi.ready_title': 'Ready to Convert Your DOC Files?',
       'doc_to_mobi.ready_text': 'Use our free online DOC to MOBI converter to transform your Word documents into Kindle-compatible eBooks for Amazon Kindle devices.',
       
+      'DOC': 'DOC',
+      'ODT': 'ODT',
+
+      // DOC to ODT
+      'doc_to_odt.title': 'DOC to ODT Converter',
+      'doc_to_odt.subtitle': 'Convert Microsoft Word DOC files to ODT OpenDocument Text format. Transform Word documents into LibreOffice-compatible format using LibreOffice for best conversion quality.',
+
       // DOC to TXT
       'doc_to_txt.title': 'DOC to TXT Converter',
       'doc_to_txt.meta_title': 'Free DOC to TXT Converter Online - Convert Word Documents to Plain Text Format ',
@@ -7388,6 +7441,13 @@ const resources = {
       'doc_to_mobi.ready_title': 'Gotowy do Konwersji Plików DOC?',
       'doc_to_mobi.ready_text': 'Użyj naszego bezpłatnego konwertera DOC na MOBI online, aby przekształcić dokumenty Word w eBooki kompatybilne z Kindle dla urządzeń Amazon Kindle.',
       
+      'DOC': 'DOC',
+      'ODT': 'ODT',
+
+      // DOC to ODT
+      'doc_to_odt.title': 'Konwerter DOC na ODT',
+      'doc_to_odt.subtitle': 'Konwertuj pliki Microsoft Word DOC do formatu OpenDocument Text (ODT). Przekształć dokumenty Word w format kompatybilny z LibreOffice z zachowaniem najlepszej jakości.',
+
       // DOC to TXT
       'doc_to_txt.title': 'Konwerter DOC na TXT',
       'doc_to_txt.meta_title': 'Bezpłatny Konwerter DOC na TXT Online - Konwertuj Dokumenty Word na Format Tekstowy ',

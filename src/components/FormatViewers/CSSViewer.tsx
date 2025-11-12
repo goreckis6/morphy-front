@@ -14,10 +14,18 @@ export const CSSViewer: React.FC = () => {
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
-  const features = t('viewers.css.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
-  const advantages = t('viewers.css.advantages', { returnObjects: true }) as string[];
-  const useCases = t('viewers.css.use_cases', { returnObjects: true }) as string[];
-  const specs = t('viewers.css.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+  const fixedT = i18n.getFixedT('en');
+  const getArray = <T,>(key: string) => {
+    const value = t(key, { returnObjects: true });
+    if (Array.isArray(value)) return value as T[];
+    const fallback = fixedT(key, { returnObjects: true });
+    return Array.isArray(fallback) ? (fallback as T[]) : [];
+  };
+
+  const features = getArray<{ title: string; description: string }>('viewers.css.features');
+  const advantages = getArray<string>('viewers.css.advantages');
+  const useCases = getArray<string>('viewers.css.use_cases');
+  const specs = getArray<{ label: string; value: string }>('viewers.css.specs');
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();

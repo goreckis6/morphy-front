@@ -45,6 +45,203 @@ interface ViewersPageTranslations {
 }
 
 const viewersPageResources: Record<string, ViewersPageTranslations> = {
+  en: {
+    viewers_page: {
+      meta: {
+        title: 'Free Online File Viewers - MorphyHub | View Files in Browser',
+        description:
+          'View and preview files directly in your browser. Support for images, documents, spreadsheets, and more. No download required.',
+        keywords:
+          'file viewer, online viewer, image viewer, document viewer, pdf viewer, excel viewer, free viewer'
+      },
+      schema: {
+        name: 'Online File Viewers',
+        description:
+          'Preview files across 50+ formats directly in your browser with specialized viewers for every file type.'
+      },
+      hero: {
+        title: 'File Viewers',
+        description:
+          'View and preview files in your browser without downloading. Support for images, documents, spreadsheets, and more.'
+      },
+      search: {
+        placeholder: 'Search viewers... (e.g., PDF, JPEG, Excel, JSON)',
+        example_one: 'PDF',
+        example_two: 'JPEG',
+        results: 'Found {{count}} viewer',
+        results_one: 'Found {{count}} viewer',
+        results_other: 'Found {{count}} viewers',
+        suggestion: 'Try searching for something like "{{exampleOne}}" or "{{exampleTwo}}".',
+        clear: 'Clear search'
+      },
+      categories: {
+        image_standard: 'STANDARD IMAGE FORMATS',
+        document: 'DOCUMENT FORMATS',
+        spreadsheet: 'SPREADSHEET FORMATS',
+        code_data: 'CODE & DATA FORMATS',
+        image_raw: 'RAW CAMERA FORMATS'
+      },
+      features: {
+        title: 'Why Choose Our Viewers?',
+        items: [
+          {
+            title: 'Instant Preview',
+            description: 'View files instantly without downloading or installing software.'
+          },
+          {
+            title: 'Secure & Private',
+            description: 'Files are processed locally and never stored on our servers.'
+          },
+          {
+            title: 'Universal Support',
+            description: 'Support for 50+ file formats across every major category.'
+          }
+        ]
+      },
+      actions: {
+        view: 'View Now'
+      },
+      no_results: {
+        title: 'No viewers found',
+        description: 'Try searching for something like "{{exampleOne}}" or "{{exampleTwo}}".',
+        clear: 'Clear search'
+      },
+      formats: {
+        jpeg: {
+          title: 'JPEG Viewer',
+          description: 'View JPEG images with zoom and pan controls.'
+        },
+        png: {
+          title: 'PNG Viewer',
+          description: 'View PNG images with transparency support.'
+        },
+        webp: {
+          title: 'WebP Viewer',
+          description: 'View WebP images with modern compression.'
+        },
+        gif: {
+          title: 'GIF Viewer',
+          description: 'View animated GIF images with playback controls.'
+        },
+        svg: {
+          title: 'SVG Viewer',
+          description: 'View scalable vector graphics with zoom.'
+        },
+        bmp: {
+          title: 'BMP Viewer',
+          description: 'View bitmap images with color depth support.'
+        },
+        ico: {
+          title: 'ICO Viewer',
+          description: 'View Windows icon files with multiple sizes.'
+        },
+        heic: {
+          title: 'HEIC Viewer',
+          description: 'View HEIC images from modern cameras.'
+        },
+        avif: {
+          title: 'AVIF Viewer',
+          description: 'View AVIF images with next-gen compression.'
+        },
+        pdf: {
+          title: 'PDF Viewer',
+          description: 'View PDF documents with page navigation.'
+        },
+        docx: {
+          title: 'DOCX Viewer',
+          description: 'View Microsoft Word documents.'
+        },
+        rtf: {
+          title: 'RTF Viewer',
+          description: 'View Rich Text Format documents.'
+        },
+        odt: {
+          title: 'ODT Viewer',
+          description: 'View OpenDocument Text files.'
+        },
+        txt: {
+          title: 'TXT Viewer',
+          description: 'View plain text files with syntax highlighting.'
+        },
+        md: {
+          title: 'Markdown Viewer',
+          description: 'View Markdown files with rendered formatting.'
+        },
+        xlsx: {
+          title: 'Excel Viewer',
+          description: 'View Excel spreadsheets with formula support.'
+        },
+        csv: {
+          title: 'CSV Viewer',
+          description: 'View CSV files with table formatting.'
+        },
+        ods: {
+          title: 'ODS Viewer',
+          description: 'View OpenDocument Spreadsheet files.'
+        },
+        json: {
+          title: 'JSON Viewer',
+          description: 'View JSON files with syntax highlighting and formatting.'
+        },
+        xml: {
+          title: 'XML Viewer',
+          description: 'View XML files with tree structure.'
+        },
+        html: {
+          title: 'HTML Viewer',
+          description: 'View HTML files with rendered content.'
+        },
+        css: {
+          title: 'CSS Viewer',
+          description: 'View CSS files with syntax highlighting.'
+        },
+        js: {
+          title: 'JavaScript Viewer',
+          description: 'View JS files with syntax highlighting.'
+        },
+        py: {
+          title: 'Python Viewer',
+          description: 'View Python files with syntax highlighting.'
+        },
+        nef: {
+          title: 'NEF Viewer',
+          description: 'View Nikon raw camera files.'
+        },
+        cr2: {
+          title: 'CR2 Viewer',
+          description: 'View Canon raw camera files.'
+        },
+        dcr: {
+          title: 'DCR Viewer',
+          description: 'View Kodak raw camera files.'
+        },
+        x3f: {
+          title: 'X3F Viewer',
+          description: 'View Sigma raw camera files.'
+        },
+        arw: {
+          title: 'ARW Viewer',
+          description: 'View Sony raw camera files.'
+        },
+        raf: {
+          title: 'RAF Viewer',
+          description: 'View Fuji raw camera files.'
+        },
+        orf: {
+          title: 'ORF Viewer',
+          description: 'View Olympus raw camera files.'
+        },
+        dng: {
+          title: 'DNG Viewer',
+          description: 'View Adobe Digital Negative files.'
+        },
+        pef: {
+          title: 'PEF Viewer',
+          description: 'View Pentax raw camera files.'
+        }
+      }
+    }
+  },
   pl: {
     viewers_page: {
       meta: {
