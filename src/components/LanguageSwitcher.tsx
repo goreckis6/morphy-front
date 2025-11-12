@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown } from 'lucide-react';
 import { getLocalizedUrl } from '../i18n';
 
-const FlagEN: React.FC<{ className?: string }> = ({ className = '' }) => (
+const FlagUS: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
     viewBox="0 0 24 16"
     className={className}
@@ -11,18 +11,27 @@ const FlagEN: React.FC<{ className?: string }> = ({ className = '' }) => (
     aria-label="English"
   >
     <defs>
-      <clipPath id="flag-en-clip">
+      <clipPath id="flag-us-clip">
         <rect width="24" height="16" rx="2" ry="2" />
       </clipPath>
     </defs>
-    <g clipPath="url(#flag-en-clip)">
-      <rect width="24" height="16" fill="#0A17A7" />
-      <path d="M0 0 L24 16 M24 0 L0 16" stroke="#fff" strokeWidth="4" />
-      <path d="M0 0 L24 16 M24 0 L0 16" stroke="#FF2B3F" strokeWidth="2.2" />
-      <rect x="10" width="4" height="16" fill="#fff" />
-      <rect y="6" width="24" height="4" fill="#fff" />
-      <rect x="10.8" width="2.4" height="16" fill="#FF2B3F" />
-      <rect y="6.8" width="24" height="2.4" fill="#FF2B3F" />
+    <g clipPath="url(#flag-us-clip)">
+      <rect width="24" height="16" fill="#B22234" />
+      {[...Array(6)].map((_, idx) => (
+        <rect key={idx} y={(idx * 2 + 1) * (16 / 13)} width={24} height={16 / 13} fill="#FFFFFF" />
+      ))}
+      <rect width={10.4} height={8.615} fill="#3C3B6E" />
+      {[...Array(9)].map((_, row) => (
+        [...Array(row % 2 === 0 ? 6 : 5)].map((_, col) => (
+          <circle
+            key={`${row}-${col}`}
+            cx={row % 2 === 0 ? 1.04 + col * 1.73 : 1.91 + col * 1.73}
+            cy={0.86 + row * 0.96}
+            r={0.3}
+            fill="#FFFFFF"
+          />
+        ))
+      ))}
     </g>
   </svg>
 );
@@ -60,7 +69,7 @@ type LanguageOption = {
 };
 
 const languages: LanguageOption[] = [
-  { code: 'en', name: 'English', nativeName: 'English', icon: <FlagEN className="h-4 w-6 rounded-sm shadow-sm" /> },
+  { code: 'en', name: 'English', nativeName: 'English', icon: <FlagUS className="h-4 w-6 rounded-sm shadow-sm" /> },
   { code: 'pl', name: 'Polish', nativeName: 'Polski', icon: <FlagPL className="h-4 w-6 rounded-sm shadow-sm" /> },
   { code: 'de', name: 'German', nativeName: 'Deutsch', icon: <FlagDE className="h-4 w-6 rounded-sm shadow-sm" /> }
 ];
