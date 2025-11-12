@@ -2,53 +2,13 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, ArrowLeftRight, Eye, Minimize2, Download } from 'lucide-react';
 import { getLocalizedUrl } from '../i18n';
-
-const languages = [
-  { code: 'en', label: 'EN', flag: '🇬🇧', name: 'English' },
-  { code: 'pl', label: 'PL', flag: '🇵🇱', name: 'Polski' },
-  { code: 'de', label: 'DE', flag: '🇩🇪', name: 'Deutsch' }
-];
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const { i18n } = useTranslation();
 
   const getNavHref = (path: string) => getLocalizedUrl(path, i18n.language);
-
-  const changeLanguage = (code: string) => {
-    if (code === i18n.language) {
-      return;
-    }
-    const currentPath = window.location.pathname;
-    const newUrl = getLocalizedUrl(currentPath, code);
-    window.location.href = newUrl;
-  };
-
-  const renderLanguageButtons = (variant: 'desktop' | 'mobile') => (
-    <div
-      className={`flex ${variant === 'desktop' ? 'items-center space-x-2 border-l border-gray-200 pl-4' : 'items-center justify-center gap-3 pt-4 border-t border-gray-200 mt-2'}`}
-    >
-      {languages.map((lang) => {
-        const isActive = lang.code === i18n.language;
-        return (
-          <button
-            key={lang.code}
-            onClick={() => changeLanguage(lang.code)}
-            className={`flex items-center gap-1 px-2 py-1 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
-              isActive
-                ? 'bg-blue-600 text-white shadow-md'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-            aria-label={`Switch to ${lang.name}`}
-            aria-pressed={isActive}
-          >
-            <span className="text-lg leading-none">{lang.flag}</span>
-            <span className="text-xs font-semibold uppercase">{lang.label}</span>
-          </button>
-        );
-      })}
-    </div>
-  );
 
   return (
     <>
@@ -91,7 +51,9 @@ export const Header: React.FC = () => {
                 </a>
               </nav>
 
-              {renderLanguageButtons('desktop')}
+              <div className="relative flex items-center pl-4 border-l border-gray-200">
+                <LanguageSwitcher />
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -123,7 +85,9 @@ export const Header: React.FC = () => {
                   <Download className="w-5 h-5 text-teal-600 group-hover:text-teal-700" />
                   <span>Samples</span>
                 </a>
-                {renderLanguageButtons('mobile')}
+                <div className="pt-4 border-t border-gray-200 mt-2 flex justify-start">
+                  <LanguageSwitcher />
+                </div>
               </nav>
             </div>
           )}

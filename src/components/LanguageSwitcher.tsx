@@ -1,36 +1,75 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown } from 'lucide-react';
 import { getLocalizedUrl } from '../i18n';
 
-const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧', nativeName: 'English', fallback: 'GB', unicode: 'U+1F1EC U+1F1E7' },
-  { code: 'pl', name: 'Polish', flag: '🇵🇱', nativeName: 'Polski', fallback: 'PL', unicode: 'U+1F1F5 U+1F1F1' },
-  { code: 'de', name: 'German', flag: '🇩🇪', nativeName: 'Deutsch', fallback: 'DE', unicode: 'U+1F1E9 U+1F1EA' }
+const FlagEN: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <svg
+    viewBox="0 0 24 16"
+    className={className}
+    role="img"
+    aria-label="English"
+  >
+    <defs>
+      <clipPath id="flag-en-clip">
+        <rect width="24" height="16" rx="2" ry="2" />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#flag-en-clip)">
+      <rect width="24" height="16" fill="#0A17A7" />
+      <path d="M0 0 L24 16 M24 0 L0 16" stroke="#fff" strokeWidth="4" />
+      <path d="M0 0 L24 16 M24 0 L0 16" stroke="#FF2B3F" strokeWidth="2.2" />
+      <rect x="10" width="4" height="16" fill="#fff" />
+      <rect y="6" width="24" height="4" fill="#fff" />
+      <rect x="10.8" width="2.4" height="16" fill="#FF2B3F" />
+      <rect y="6.8" width="24" height="2.4" fill="#FF2B3F" />
+    </g>
+  </svg>
+);
+
+const FlagPL: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <svg
+    viewBox="0 0 24 16"
+    className={className}
+    role="img"
+    aria-label="Polski"
+  >
+    <rect width="24" height="16" rx="2" ry="2" fill="#F4F4F4" />
+    <path d="M0 8h24v8H0z" fill="#DC143C" />
+  </svg>
+);
+
+const FlagDE: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <svg
+    viewBox="0 0 24 16"
+    className={className}
+    role="img"
+    aria-label="Deutsch"
+  >
+    <rect width="24" height="16" rx="2" ry="2" fill="#000000" />
+    <path d="M0 5.33h24v5.34H0z" fill="#DD0000" />
+    <path d="M0 10.67h24V16H0z" fill="#FFCE00" />
+  </svg>
+);
+
+type LanguageOption = {
+  code: string;
+  name: string;
+  nativeName: string;
+  icon: React.ReactNode;
+};
+
+const languages: LanguageOption[] = [
+  { code: 'en', name: 'English', nativeName: 'English', icon: <FlagEN className="h-4 w-6 rounded-sm shadow-sm" /> },
+  { code: 'pl', name: 'Polish', nativeName: 'Polski', icon: <FlagPL className="h-4 w-6 rounded-sm shadow-sm" /> },
+  { code: 'de', name: 'German', nativeName: 'Deutsch', icon: <FlagDE className="h-4 w-6 rounded-sm shadow-sm" /> }
 ];
 
-// Flag component with fallback
-const FlagIcon = ({ flag, fallback, className = "" }: { flag: string, fallback: string, className?: string }) => {
-  return (
-    <div className={`relative flex items-center justify-center ${className}`}>
-      <span 
-        className="text-lg leading-none" 
-        style={{ 
-          fontFamily: 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Segoe UI Symbol, Android Emoji, EmojiSymbols, sans-serif',
-          fontSize: '1.1em',
-          display: 'inline-block',
-          minWidth: '1em',
-          textAlign: 'center'
-        }}
-      >
-        {flag}
-      </span>
-      <span className="absolute inset-0 text-[8px] font-bold text-gray-500 opacity-0 hover:opacity-100 transition-opacity leading-none flex items-center justify-center pointer-events-none">
-        {fallback}
-      </span>
-    </div>
-  );
-};
+const FlagIcon: React.FC<{ icon: React.ReactNode; className?: string }> = ({ icon, className = '' }) => (
+  <div className={`flex items-center justify-center ${className}`}>
+    {icon}
+  </div>
+);
 
 export const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
@@ -42,7 +81,10 @@ export const LanguageSwitcher: React.FC = () => {
     window.location.href = newUrl;
   };
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const currentLanguage = useMemo(
+    () => languages.find(lang => lang.code === i18n.language) || languages[0],
+    [i18n.language]
+  );
 
   return (
     <div className="relative">
@@ -51,7 +93,7 @@ export const LanguageSwitcher: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white border border-gray-200 rounded-md hover:border-blue-400 hover:shadow-sm transition-all duration-200 group"
       >
-        <FlagIcon flag={currentLanguage.flag} fallback={currentLanguage.fallback} className="w-5 h-4" />
+        <FlagIcon icon={currentLanguage.icon} className="w-6 h-4" />
         <span className="font-medium text-gray-700 text-xs">
           {currentLanguage.nativeName}
         </span>
@@ -83,7 +125,7 @@ export const LanguageSwitcher: React.FC = () => {
                       : 'hover:bg-gray-50 text-gray-700 hover:scale-[1.01]'
                   }`}
                 >
-                  <FlagIcon flag={lang.flag} fallback={lang.fallback} className="w-5 h-4" />
+                  <FlagIcon icon={lang.icon} className="w-6 h-4" />
                   <div className="flex-1 text-left">
                     <div className={`font-medium text-xs ${
                       lang.code === i18n.language ? 'text-white' : 'text-gray-800'
