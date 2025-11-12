@@ -11611,8 +11611,8 @@ const resources = {
       'heic_to_pdf.ready_text': 'Verwenden Sie unseren kostenlosen Online-HEIC-zu-PDF-Konverter, um Ihre Apple iPhone-Fotos in universelle PDF-Dokumente zum Drucken, Teilen und Archivieren zu transformieren.',
       
       // HEIC to PNG - German
-      'heic_to_png.title': 'HEIC-zu-PNG-Konverter',
-      'heic_to_png.meta_title': 'Kostenloser HEIC-zu-PNG-Konverter online ',
+      'heic_to_png.title': 'HEIC zu PNG Konverter',
+      'heic_to_png.meta_title': 'Kostenloser HEIC zu PNG Konverter online ',
       'heic_to_png.meta_description': 'Konvertiere HEIC-Bilder kostenlos online in PNG. Transparenz und hohe Qualität bleiben erhalten. Stapelverarbeitung wird unterstützt.',
       'heic_to_png.subtitle': 'Wandle HEIC-Fotos vom iPhone in PNG mit Transparenz und hoher Qualität um.',
       'heic_to_png.upload_single': 'HEIC-Datei Hochladen',
