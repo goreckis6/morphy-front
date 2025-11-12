@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { 
@@ -43,17 +44,10 @@ export const PDFCompressor: React.FC = () => {
   } = useFileValidation();
 
   // Ensure language is synced with URL on mount
-  useEffect(() => {
-    const path = window.location.pathname;
-    const urlLang = path.startsWith('/pl/') || path === '/pl' ? 'pl' :
-                    path.startsWith('/de/') || path === '/de' ? 'de' : 'en';
+    usePathLanguageSync(i18n);
 
-    if (i18n.language !== urlLang) {
-      i18n.changeLanguage(urlLang);
-    }
-  }, [i18n]);
 
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       if (file.type === 'application/pdf' || file.name.toLowerCase().match(/\.(pdf)$/)) {

@@ -14591,16 +14591,17 @@ const resources = {
   }
 };
 
+export const resolveLanguageFromPath = (path: string): string => {
+  if (path === '/pl' || path.startsWith('/pl/')) return 'pl';
+  if (path === '/de' || path.startsWith('/de/')) return 'de';
+  return 'en';
+};
+
 // Custom language detector from URL
 const urlLanguageDetector = {
   name: 'urlPath',
   lookup() {
-    const path = window.location.pathname;
-    // Check for language prefix: /pl/, /de/
-    // Otherwise use English (default, no prefix)
-    if (path.startsWith('/pl/') || path === '/pl') return 'pl';
-    if (path.startsWith('/de/') || path === '/de') return 'de';
-    return 'en';
+    return resolveLanguageFromPath(window.location.pathname);
   },
   cacheUserLanguage(lng: string) {
     localStorage.setItem('i18nextLng', lng);
@@ -14630,12 +14631,7 @@ window.addEventListener('popstate', () => {
 export default i18n;
 
 // Helper function to get current language from URL
-export const getLanguageFromUrl = (): string => {
-  const path = window.location.pathname;
-  if (path.startsWith('/pl/') || path === '/pl') return 'pl';
-  if (path.startsWith('/de/') || path === '/de') return 'de';
-  return 'en';
-};
+export const getLanguageFromUrl = (): string => resolveLanguageFromPath(window.location.pathname);
 
 // Helper function to toggle language URL (English = no prefix, other languages = /lang/ prefix)
 export const getLocalizedUrl = (currentPath: string, targetLanguage: string): string => {

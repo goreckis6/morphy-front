@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { 
@@ -41,18 +42,8 @@ export const DOCXToEPUBConverter: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Language synchronization
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
-    }
-  }, [i18n]);
-
-  // Use shared validation hook
+    usePathLanguageSync(i18n);
+// Use shared validation hook
   const {
     validateBatchFiles,
     getBatchSizeDisplay,

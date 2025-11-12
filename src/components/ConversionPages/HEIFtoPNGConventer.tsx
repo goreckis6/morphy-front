@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Upload, Download, Settings, RefreshCw, CheckCircle, AlertCircle, Zap, Shield, Clock, Star, File, BarChart3 } from 'lucide-react';
@@ -23,14 +24,11 @@ export const HEIFtoPNGConventer: React.FC = () => {
   const [maxDimension, setMaxDimension] = useState<number>(4096);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) i18n.changeLanguage('pl');
-    else if (path.startsWith('/de/')) i18n.changeLanguage('de');
-    else i18n.changeLanguage('en');
-  }, [i18n]);
+    usePathLanguageSync(i18n);
 
-  const { validateSingleFile, validateBatchFiles, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
+
+
+    const { validateSingleFile, validateBatchFiles, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
   const acceptHeif = (name: string) => name.toLowerCase().endsWith('.heif') || name.toLowerCase().endsWith('.heic');
 
   const resetForm = () => {

@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { 
@@ -34,14 +35,11 @@ export const HEICtoEPSConventer: React.FC = () => {
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) i18n.changeLanguage('pl');
-    else if (path.startsWith('/de/')) i18n.changeLanguage('de');
-    else i18n.changeLanguage('en');
-  }, [i18n]);
+    usePathLanguageSync(i18n);
 
-  const { validateSingleFile, validateBatchFiles, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
+
+
+    const { validateSingleFile, validateBatchFiles, getBatchSizeDisplay, formatFileSize, clearValidationError } = useFileValidation();
 
   const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];

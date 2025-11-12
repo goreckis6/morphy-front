@@ -1,25 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Box, Upload, Eye, Download, Share2, ArrowLeft, Zap, Grid3x3, Cpu, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 
 export const STLViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
-    }
-  }, [i18n]);
+  usePathLanguageSync(i18n);
 
   const features = t('viewers.stl.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
   const advantages = t('viewers.stl.advantages', { returnObjects: true }) as string[];

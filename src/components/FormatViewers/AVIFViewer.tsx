@@ -1,27 +1,18 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import { ArrowLeft, Upload, Download, Share2, Eye, X, ZoomIn, ZoomOut, CheckCircle, Smartphone } from 'lucide-react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
 import { FileUpload } from '../FileUpload';
 import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 
 export const AVIFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
-    }
-  }, [i18n]);
+  usePathLanguageSync(i18n);
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only AVIF files

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Image, Upload, Eye, Download, Share2, ArrowLeft } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
@@ -6,22 +6,13 @@ import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 
 export const JPGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
-    }
-  }, [i18n]);
+  usePathLanguageSync(i18n);
 
   const homeStandardItems = t('viewers.jpg.home_standard_items', { returnObjects: true }) as string[];
   const homeProItems = t('viewers.jpg.home_pro_items', { returnObjects: true }) as string[];

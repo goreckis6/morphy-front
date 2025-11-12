@@ -5,6 +5,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { FileViewer } from '../components/FileViewer';
 import { useTranslation, Trans } from 'react-i18next';
+import { usePathLanguageSync } from '../hooks/usePathLanguageSync';
 
 type HomeStep = {
   badge: string;
@@ -36,20 +37,12 @@ import {
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+  usePathLanguageSync(i18n);
+
   const navigate = useNavigate();
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [totalDataProcessed, setTotalDataProcessed] = useState(0);
 
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
-    }
-  }, [i18n]);
 
   // Load and track total data processed
   useEffect(() => {
