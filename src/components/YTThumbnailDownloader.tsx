@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -22,6 +22,7 @@ import {
   Star
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 interface ThumbnailQuality {
   name: string;
@@ -49,17 +50,21 @@ export const YTThumbnailDownloader: React.FC = () => {
   const [channelIdCopied, setChannelIdCopied] = useState(false);
 
   const { t, i18n } = useTranslation();
+  const location = useLocation();
+
+  const resolvedLanguage = useMemo(() => {
+    const segments = location.pathname.split('/').filter(Boolean);
+    const prefix = segments[0];
+    if (prefix === 'pl') return 'pl';
+    if (prefix === 'de') return 'de';
+    return 'en';
+  }, [location.pathname]);
 
   useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
+    if (i18n.language !== resolvedLanguage) {
+      i18n.changeLanguage(resolvedLanguage);
     }
-  }, [i18n]);
+  }, [i18n, resolvedLanguage]);
 
   const heroBadgeLabels = t('pages.yt_thumbnail.hero.badges', { returnObjects: true }) as string[];
   const heroBadgeIcons = [Zap, Shield, Clock, Globe];
