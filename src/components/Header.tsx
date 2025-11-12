@@ -1,10 +1,54 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Menu, X, ArrowLeftRight, Eye, Minimize2, Download } from 'lucide-react';
-// import { LanguageSwitcher } from './LanguageSwitcher';
+import { getLocalizedUrl } from '../i18n';
+
+const languages = [
+  { code: 'en', label: 'EN', flag: '🇬🇧', name: 'English' },
+  { code: 'pl', label: 'PL', flag: '🇵🇱', name: 'Polski' },
+  { code: 'de', label: 'DE', flag: '🇩🇪', name: 'Deutsch' }
+];
 
 export const Header: React.FC = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const { i18n } = useTranslation();
 
+  const getNavHref = (path: string) => getLocalizedUrl(path, i18n.language);
+
+  const changeLanguage = (code: string) => {
+    if (code === i18n.language) {
+      return;
+    }
+    const currentPath = window.location.pathname;
+    const newUrl = getLocalizedUrl(currentPath, code);
+    window.location.href = newUrl;
+  };
+
+  const renderLanguageButtons = (variant: 'desktop' | 'mobile') => (
+    <div
+      className={`flex ${variant === 'desktop' ? 'items-center space-x-2 border-l border-gray-200 pl-4' : 'items-center justify-center gap-3 pt-4 border-t border-gray-200 mt-2'}`}
+    >
+      {languages.map((lang) => {
+        const isActive = lang.code === i18n.language;
+        return (
+          <button
+            key={lang.code}
+            onClick={() => changeLanguage(lang.code)}
+            className={`flex items-center gap-1 px-2 py-1 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 ${
+              isActive
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+            aria-label={`Switch to ${lang.name}`}
+            aria-pressed={isActive}
+          >
+            <span className="text-lg leading-none">{lang.flag}</span>
+            <span className="text-xs font-semibold uppercase">{lang.label}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
 
   return (
     <>
@@ -29,27 +73,25 @@ export const Header: React.FC = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <nav className="flex items-center space-x-6">
-                <a href="/converters" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors group">
+                <a href={getNavHref('/converters')} className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors group">
                   <ArrowLeftRight className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
                   <span>Converters</span>
                 </a>
-                <a href="/viewers" className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors group">
+                <a href={getNavHref('/viewers')} className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors group">
                   <Eye className="w-5 h-5 text-purple-600 group-hover:text-purple-700" />
                   <span>Viewers</span>
                 </a>
-                <a href="/compress" className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors group">
+                <a href={getNavHref('/compress')} className="flex items-center space-x-2 text-gray-700 hover:text-orange-600 transition-colors group">
                   <Minimize2 className="w-5 h-5 text-orange-600 group-hover:text-orange-700" />
                   <span>Compress</span>
                 </a>
-                <a href="/samples" className="flex items-center space-x-2 text-gray-700 hover:text-teal-600 transition-colors group">
+                <a href={getNavHref('/samples')} className="flex items-center space-x-2 text-gray-700 hover:text-teal-600 transition-colors group">
                   <Download className="w-5 h-5 text-teal-600 group-hover:text-teal-700" />
                   <span>Samples</span>
                 </a>
               </nav>
 
-
-              {/* Language Switcher - Right side */}
-              {/* <LanguageSwitcher /> */}
+              {renderLanguageButtons('desktop')}
             </div>
 
             {/* Mobile Menu Button */}
@@ -65,27 +107,23 @@ export const Header: React.FC = () => {
           {showMobileMenu && (
             <div className="md:hidden border-t border-gray-200 py-4">
               <nav className="flex flex-col space-y-4">
-                <a href="/converters" className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 group">
+                <a href={getNavHref('/converters')} className="flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 group">
                   <ArrowLeftRight className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
                   <span>Converters</span>
                 </a>
-                <a href="/viewers" className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 group">
+                <a href={getNavHref('/viewers')} className="flex items-center space-x-3 text-gray-700 hover:text-purple-600 transition-colors font-medium py-2 group">
                   <Eye className="w-5 h-5 text-purple-600 group-hover:text-purple-700" />
                   <span>Viewers</span>
                 </a>
-                <a href="/compress" className="flex items-center space-x-3 text-gray-700 hover:text-orange-600 transition-colors font-medium py-2 group">
+                <a href={getNavHref('/compress')} className="flex items-center space-x-3 text-gray-700 hover:text-orange-600 transition-colors font-medium py-2 group">
                   <Minimize2 className="w-5 h-5 text-orange-600 group-hover:text-orange-700" />
                   <span>Compress</span>
                 </a>
-                <a href="/samples" className="flex items-center space-x-3 text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 group">
+                <a href={getNavHref('/samples')} className="flex items-center space-x-3 text-gray-700 hover:text-teal-600 transition-colors font-medium py-2 group">
                   <Download className="w-5 h-5 text-teal-600 group-hover:text-teal-700" />
                   <span>Samples</span>
                 </a>
-                
-                <div className="py-2">
-                  {/* <LanguageSwitcher /> */}
-                </div>
-                
+                {renderLanguageButtons('mobile')}
               </nav>
             </div>
           )}
