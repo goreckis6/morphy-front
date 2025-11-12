@@ -272,9 +272,13 @@ function App() {
       <Routes>
         {/* Strona główna */}
         <Route path="/" element={<Home />} />
+        <Route path="/pl" element={<Home />} />
+        <Route path="/de" element={<Home />} />
 
         {/* Konwertery — prawidłowa ścieżka */}
         <Route path="/converters" element={<Converters />} />
+        <Route path="/pl/converters" element={<Converters />} />
+        <Route path="/de/converters" element={<Converters />} />
 
         {/* Stara / błędna ścieżka — przekieruj na canonical */}
         <Route path="/conventers" element={<Navigate to="/converters" replace />} />
@@ -284,12 +288,18 @@ function App() {
 
         {/* Compression Hub */}
         <Route path="/compress" element={<Compress />} />
+        <Route path="/pl/compress" element={<Compress />} />
+        <Route path="/de/compress" element={<Compress />} />
 
         {/* YouTube Thumbnail Downloader */}
         <Route path="/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/pl/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/de/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
 
         {/* Samples Hub */}
         <Route path="/samples" element={<Samples />} />
+        <Route path="/pl/samples" element={<Samples />} />
+        <Route path="/de/samples" element={<Samples />} />
 
         {/* Converter Routes */}
         <Route path="/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
@@ -350,6 +360,124 @@ function App() {
         <Route path="/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
         <Route path="/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
 
+        {/* Polish (PL) Converter Routes */}
+        <Route path="/pl/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/pl/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/pl/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/pl/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/pl/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/pl/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/pl/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/pl/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/pl/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/pl/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/pl/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/pl/convert/csv-to-odt" element={<CSVToODTConverter />} />
+        <Route path="/pl/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/pl/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/pl/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
+        <Route path="/pl/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/pl/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/pl/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/pl/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/pl/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/pl/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/pl/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/pl/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/pl/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/pl/convert/doc-to-csv" element={<DOCToCSVConverter />} />
+        <Route path="/pl/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/pl/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/pl/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/pl/convert/doc-to-txt" element={<DOCToTXTConverter />} />
+        <Route path="/pl/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/pl/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/pl/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/pl/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/pl/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/pl/convert/heif-to-jpg" element={<HEIFtoJPGConventer />} />
+        <Route path="/pl/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/pl/convert/heif-to-webp" element={<HEIFtoWEBPConventer />} />
+        <Route path="/pl/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
+        <Route path="/pl/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
+        <Route path="/pl/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
+        <Route path="/pl/convert/docx-to-odt" element={<DOCXToODTConverter />} />
+        <Route path="/pl/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
+        <Route path="/pl/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/pl/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/pl/convert/epub-to-doc" element={<EPUBToDOCConverter />} />
+        <Route path="/pl/convert/epub-to-docx" element={<EPUBToDOCXConverter />} />
+        <Route path="/pl/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/pl/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/pl/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/pl/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/pl/convert/epub-to-odt" element={<EPUBToODTConverter />} />
+        <Route path="/pl/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/pl/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
+        <Route path="/pl/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
+        <Route path="/pl/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
+        <Route path="/pl/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/pl/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
+
+        {/* German (DE) Converter Routes */}
+        <Route path="/de/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/de/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/de/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/de/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/de/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/de/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/de/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/de/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/de/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/de/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/de/convert/csv-to-odt" element={<CSVToODTConverter />} />
+        <Route path="/de/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/de/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/de/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
+        <Route path="/de/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/de/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/de/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/de/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/de/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/de/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/de/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/de/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/de/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/de/convert/doc-to-csv" element={<DOCToCSVConverter />} />
+        <Route path="/de/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
+        <Route path="/de/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
+        <Route path="/de/convert/doc-to-odt" element={<DOCToODTConverter />} />
+        <Route path="/de/convert/doc-to-txt" element={<DOCToTXTConverter />} />
+        <Route path="/de/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/de/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/de/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/de/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/de/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/de/convert/heif-to-jpg" element={<HEIFtoJPGConventer />} />
+        <Route path="/de/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/de/convert/heif-to-webp" element={<HEIFtoWEBPConventer />} />
+        <Route path="/de/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
+        <Route path="/de/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
+        <Route path="/de/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
+        <Route path="/de/convert/docx-to-odt" element={<DOCXToODTConverter />} />
+        <Route path="/de/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
+        <Route path="/de/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/de/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/de/convert/epub-to-doc" element={<EPUBToDOCConverter />} />
+        <Route path="/de/convert/epub-to-docx" element={<EPUBToDOCXConverter />} />
+        <Route path="/de/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/de/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/de/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/de/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/de/convert/epub-to-odt" element={<EPUBToODTConverter />} />
+        <Route path="/de/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/de/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
+        <Route path="/de/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
+        <Route path="/de/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
+        <Route path="/de/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/de/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
+
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
@@ -401,11 +529,127 @@ function App() {
         <Route path="/viewers/sx" element={<SXViewer />} />
         <Route path="/viewers/stl" element={<STLViewer />} />
 
+        {/* Polish (PL) Viewer Routes */}
+        <Route path="/pl/viewers" element={<Viewers />} />
+        <Route path="/pl/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/pl/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/pl/viewers/png" element={<PNGViewer />} />
+        <Route path="/pl/viewers/webp" element={<WebPViewer />} />
+        <Route path="/pl/viewers/gif" element={<GIFViewer />} />
+        <Route path="/pl/viewers/svg" element={<SVGViewer />} />
+        <Route path="/pl/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/pl/viewers/ico" element={<ICOViewer />} />
+        <Route path="/pl/viewers/heic" element={<HEICViewer />} />
+        <Route path="/pl/viewers/heif" element={<HEICViewer />} />
+        <Route path="/pl/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/pl/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/pl/viewers/rtf" element={<RTFViewer />} />
+        <Route path="/pl/viewers/txt" element={<TXTViewer />} />
+        <Route path="/pl/viewers/md" element={<MarkdownViewer />} />
+        <Route path="/pl/viewers/markdown" element={<MarkdownViewer />} />
+        <Route path="/pl/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/pl/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/pl/viewers/odt" element={<ODTViewer />} />
+        <Route path="/pl/viewers/xlsx" element={<XLSXViewer />} />
+        <Route path="/pl/viewers/excel" element={<XLSXViewer />} />
+        <Route path="/pl/viewers/csv" element={<CSVViewer />} />
+        <Route path="/pl/viewers/ods" element={<ODSViewer />} />
+        <Route path="/pl/viewers/json" element={<JSONViewer />} />
+        <Route path="/pl/viewers/xml" element={<XMLViewer />} />
+        <Route path="/pl/viewers/html" element={<HTMLViewer />} />
+        <Route path="/pl/viewers/htm" element={<HTMLViewer />} />
+        <Route path="/pl/viewers/css" element={<CSSViewer />} />
+        <Route path="/pl/viewers/js" element={<JSViewer />} />
+        <Route path="/pl/viewers/javascript" element={<JSViewer />} />
+        <Route path="/pl/viewers/py" element={<PythonViewer />} />
+        <Route path="/pl/viewers/python" element={<PythonViewer />} />
+        <Route path="/pl/viewers/nef" element={<NEFViewer />} />
+        <Route path="/pl/viewers/cr2" element={<CR2Viewer />} />
+        <Route path="/pl/viewers/dcr" element={<DCRViewer />} />
+        <Route path="/pl/viewers/x3f" element={<X3FViewer />} />
+        <Route path="/pl/viewers/arw" element={<ARWViewer />} />
+        <Route path="/pl/viewers/raf" element={<RAFViewer />} />
+        <Route path="/pl/viewers/orf" element={<ORFViewer />} />
+        <Route path="/pl/viewers/dng" element={<DNGViewer />} />
+        <Route path="/pl/viewers/pef" element={<PEFViewer />} />
+        <Route path="/pl/viewers/odp" element={<ODPViewer />} />
+        <Route path="/pl/viewers/otp" element={<OTPViewer />} />
+        <Route path="/pl/viewers/pot" element={<POTViewer />} />
+        <Route path="/pl/viewers/pps" element={<PPSViewer />} />
+        <Route path="/pl/viewers/ppt" element={<PPTViewer />} />
+        <Route path="/pl/viewers/sdd" element={<SDDViewer />} />
+        <Route path="/pl/viewers/sx" element={<SXViewer />} />
+        <Route path="/pl/viewers/stl" element={<STLViewer />} />
+
+        {/* German (DE) Viewer Routes */}
+        <Route path="/de/viewers" element={<Viewers />} />
+        <Route path="/de/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/de/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/de/viewers/png" element={<PNGViewer />} />
+        <Route path="/de/viewers/webp" element={<WebPViewer />} />
+        <Route path="/de/viewers/gif" element={<GIFViewer />} />
+        <Route path="/de/viewers/svg" element={<SVGViewer />} />
+        <Route path="/de/viewers/bmp" element={<BMPViewer />} />
+        <Route path="/de/viewers/ico" element={<ICOViewer />} />
+        <Route path="/de/viewers/heic" element={<HEICViewer />} />
+        <Route path="/de/viewers/heif" element={<HEICViewer />} />
+        <Route path="/de/viewers/avif" element={<AVIFViewer />} />
+        <Route path="/de/viewers/pdf" element={<PDFViewer />} />
+        <Route path="/de/viewers/rtf" element={<RTFViewer />} />
+        <Route path="/de/viewers/txt" element={<TXTViewer />} />
+        <Route path="/de/viewers/md" element={<MarkdownViewer />} />
+        <Route path="/de/viewers/markdown" element={<MarkdownViewer />} />
+        <Route path="/de/viewers/docx" element={<DOCXViewer />} />
+        <Route path="/de/viewers/doc" element={<DOCXViewer />} />
+        <Route path="/de/viewers/odt" element={<ODTViewer />} />
+        <Route path="/de/viewers/xlsx" element={<XLSXViewer />} />
+        <Route path="/de/viewers/excel" element={<XLSXViewer />} />
+        <Route path="/de/viewers/csv" element={<CSVViewer />} />
+        <Route path="/de/viewers/ods" element={<ODSViewer />} />
+        <Route path="/de/viewers/json" element={<JSONViewer />} />
+        <Route path="/de/viewers/xml" element={<XMLViewer />} />
+        <Route path="/de/viewers/html" element={<HTMLViewer />} />
+        <Route path="/de/viewers/htm" element={<HTMLViewer />} />
+        <Route path="/de/viewers/css" element={<CSSViewer />} />
+        <Route path="/de/viewers/js" element={<JSViewer />} />
+        <Route path="/de/viewers/javascript" element={<JSViewer />} />
+        <Route path="/de/viewers/py" element={<PythonViewer />} />
+        <Route path="/de/viewers/python" element={<PythonViewer />} />
+        <Route path="/de/viewers/nef" element={<NEFViewer />} />
+        <Route path="/de/viewers/cr2" element={<CR2Viewer />} />
+        <Route path="/de/viewers/dcr" element={<DCRViewer />} />
+        <Route path="/de/viewers/x3f" element={<X3FViewer />} />
+        <Route path="/de/viewers/arw" element={<ARWViewer />} />
+        <Route path="/de/viewers/raf" element={<RAFViewer />} />
+        <Route path="/de/viewers/orf" element={<ORFViewer />} />
+        <Route path="/de/viewers/dng" element={<DNGViewer />} />
+        <Route path="/de/viewers/pef" element={<PEFViewer />} />
+        <Route path="/de/viewers/odp" element={<ODPViewer />} />
+        <Route path="/de/viewers/otp" element={<OTPViewer />} />
+        <Route path="/de/viewers/pot" element={<POTViewer />} />
+        <Route path="/de/viewers/pps" element={<PPSViewer />} />
+        <Route path="/de/viewers/ppt" element={<PPTViewer />} />
+        <Route path="/de/viewers/sdd" element={<SDDViewer />} />
+        <Route path="/de/viewers/sx" element={<SXViewer />} />
+        <Route path="/de/viewers/stl" element={<STLViewer />} />
+
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />
         <Route path="/compress/jpeg" element={<JPGCompressor />} />
         <Route path="/compress/png" element={<PNGCompressor />} />
         <Route path="/compress/pdf" element={<PDFCompressor />} />
+
+        {/* Polish (PL) Compression Routes */}
+        <Route path="/pl/compress/jpg" element={<JPGCompressor />} />
+        <Route path="/pl/compress/jpeg" element={<JPGCompressor />} />
+        <Route path="/pl/compress/png" element={<PNGCompressor />} />
+        <Route path="/pl/compress/pdf" element={<PDFCompressor />} />
+
+        {/* German (DE) Compression Routes */}
+        <Route path="/de/compress/jpg" element={<JPGCompressor />} />
+        <Route path="/de/compress/jpeg" element={<JPGCompressor />} />
+        <Route path="/de/compress/png" element={<PNGCompressor />} />
+        <Route path="/de/compress/pdf" element={<PDFCompressor />} />
 
         {/* Sample Files Routes */}
         <Route path="/samples/sample-docx" element={<SampleDocx />} />

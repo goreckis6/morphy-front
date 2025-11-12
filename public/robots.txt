@@ -1,11 +1,9 @@
 User-agent: *
 Allow: /
 
-# Block Polish and German subpages
-Disallow: /pl/
-Disallow: /de/
-Disallow: /pl
-Disallow: /de
+# Polish and German subpages are now enabled
+# Allow: /pl/
+# Allow: /de/
 
 # Sitemap
 Sitemap: https://morphyhub.com/sitemap.xml
