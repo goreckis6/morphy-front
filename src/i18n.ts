@@ -5364,65 +5364,6 @@ const resources = {
           clear: 'Wyczyść wyszukiwanie'
         }
       },
-      
-      converters_page: {
-        meta: {
-          title: 'Kostenlose Online-Dateikonverter - MorphyHub | Unterstützung für 300+ Formate',
-          description: 'Konvertiere Dateien in über 300 Formate in Sekunden. Kostenlose Online-Konverter für Bilder, Dokumente, E-Books und Daten. Unterstützt Stapelverarbeitung.',
-          keywords: 'dateikonverter, online konverter, bildkonverter, dokumentenkonverter, ebook konverter, stapelkonvertierung, kostenloser konverter'
-        },
-        schema: {
-          name: 'Online-Dateikonverter',
-          description: 'Konvertiere Dateien zwischen 300+ Formaten mit spezialisierten Tools für jeden Dateityp.'
-        },
-        hero: {
-          title: 'Dateikonverter',
-          description: 'Konvertiere Dateien zwischen verschiedenen Formaten mit unseren spezialisierten Konvertern. Jeder Konverter ist für spezifische Anwendungsfälle und Dateitypen optimiert.'
-        },
-        search: {
-          placeholder: 'Konverter durchsuchen... (z. B. CSV zu MOBI, CR2 zu ICO)',
-          example_one: 'CSV zu MOBI',
-          example_two: 'CR2 zu ICO',
-          results: '{{count}} Konverter gefunden',
-          results_one: '{{count}} Konverter gefunden',
-          results_other: '{{count}} Konverter gefunden',
-          suggestion: 'Versuche nach „{{exampleOne}}“ oder „{{exampleTwo}}“ zu suchen.',
-          clear: 'Suche zurücksetzen'
-        },
-        categories: {
-          image_general: 'Bildkonverter',
-          document_csv: 'Dokumentenkonverter',
-          developer_csv: 'Entwicklertools (CSV)',
-          image_raw: 'Bildkonverter (RAW)',
-          image_vector: 'Bildkonverter (Vektor)',
-          ebook_epub: 'E-Book-Konverter (EPUB)',
-          document_doc: 'Dokumentenkonverter (DOC)',
-          document_docx: 'Dokumentenkonverter (DOCX)'
-        },
-        features: {
-          title: 'Warum unsere Konverter wählen?',
-          items: [
-            {
-              title: 'Schnell & zuverlässig',
-              description: 'Konvertiere Dateien blitzschnell mit unseren optimierten Engines.'
-            },
-            {
-              title: 'Sicher & privat',
-              description: 'Deine Dateien werden sicher verarbeitet und niemals dauerhaft gespeichert.'
-            },
-            {
-              title: 'Hohe Qualität',
-              description: 'Bewahre Bildqualität und Dokumentstruktur während der Konvertierung.'
-            }
-          ]
-        },
-        no_results: {
-          title: 'Keine Konverter gefunden',
-          description: 'Versuche nach „{{exampleOne}}“ oder „{{exampleTwo}}“ zu suchen.',
-          clear: 'Suche zurücksetzen'
-        }
-      },
-      
       // Viewers - HTML
       'viewers.html.meta_title': 'Darmowy Podgląd HTML - Wyświetlaj i Waliduj Pliki HTML Online | MorphyHub',
       'viewers.html.meta_description': 'Darmowy, profesjonalny podgląd HTML z podświetlaniem składni i walidacją. Prześlij i przeglądaj pliki HTML, HTM, XHTML online z formatowaniem i wykrywaniem błędów. Obsługa do 20 plików. 100% darmowe narzędzie.',
@@ -10203,6 +10144,63 @@ const resources = {
               description: 'Konvertierung in Profi-Qualität mit anpassbaren Einstellungen.'
             }
           ]
+        }
+      },
+      converters_page: {
+        meta: {
+          title: 'Kostenlose Online-Dateikonverter - MorphyHub | Unterstützung für 300+ Formate',
+          description: 'Konvertiere Dateien in über 300 Formate in Sekunden. Kostenlose Online-Konverter für Bilder, Dokumente, E-Books und Daten. Unterstützt Stapelverarbeitung.',
+          keywords: 'dateikonverter, online konverter, bildkonverter, dokumentenkonverter, ebook konverter, stapelkonvertierung, kostenloser konverter'
+        },
+        schema: {
+          name: 'Online-Dateikonverter',
+          description: 'Konvertiere Dateien zwischen 300+ Formaten mit spezialisierten Tools für jeden Dateityp.'
+        },
+        hero: {
+          title: 'Dateikonverter',
+          description: 'Konvertiere Dateien zwischen verschiedenen Formaten mit unseren spezialisierten Konvertern. Jeder Konverter ist für spezifische Anwendungsfälle und Dateitypen optimiert.'
+        },
+        search: {
+          placeholder: 'Konverter durchsuchen... (z. B. CSV zu MOBI, CR2 zu ICO)',
+          example_one: 'CSV zu MOBI',
+          example_two: 'CR2 zu ICO',
+          results: '{{count}} Konverter gefunden',
+          results_one: '{{count}} Konverter gefunden',
+          results_other: '{{count}} Konverter gefunden',
+          suggestion: 'Versuche nach „{{exampleOne}}“ oder „{{exampleTwo}}“ zu suchen.',
+          clear: 'Suche zurücksetzen'
+        },
+        categories: {
+          image_general: 'Bildkonverter',
+          document_csv: 'Dokumentenkonverter',
+          developer_csv: 'Entwicklertools (CSV)',
+          image_raw: 'Bildkonverter (RAW)',
+          image_vector: 'Bildkonverter (Vektor)',
+          ebook_epub: 'E-Book-Konverter (EPUB)',
+          document_doc: 'Dokumentenkonverter (DOC)',
+          document_docx: 'Dokumentenkonverter (DOCX)'
+        },
+        features: {
+          title: 'Warum unsere Konverter wählen?',
+          items: [
+            {
+              title: 'Schnell & zuverlässig',
+              description: 'Konvertiere Dateien blitzschnell mit unseren optimierten Engines.'
+            },
+            {
+              title: 'Sicher & privat',
+              description: 'Deine Dateien werden sicher verarbeitet und niemals dauerhaft gespeichert.'
+            },
+            {
+              title: 'Hohe Qualität',
+              description: 'Bewahre Bildqualität und Dokumentstruktur während der Konvertierung.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Keine Konverter gefunden',
+          description: 'Versuche nach „{{exampleOne}}“ oder „{{exampleTwo}}“ zu suchen.',
+          clear: 'Suche zurücksetzen'
         }
       },
       
