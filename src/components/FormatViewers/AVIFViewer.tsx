@@ -1,14 +1,27 @@
-import React, { useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { ArrowLeft, Upload, Download, Share2, Eye, X, ZoomIn, ZoomOut, CheckCircle, Smartphone } from 'lucide-react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
 import { FileUpload } from '../FileUpload';
+import { useTranslation } from 'react-i18next';
 
 export const AVIFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only AVIF files
@@ -53,9 +66,9 @@ export const AVIFViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AVIF Viewer - Free Online AV1 Image File Viewer</title>
-        <meta name="description" content="View AVIF (AV1 Image File Format) images online for free. Next-generation image viewer with superior compression, HDR support, and wide color gamut. Up to 20 files, 100MB total. No registration required." />
-        <meta name="keywords" content="AVIF viewer, AV1 image viewer, next-gen image viewer, HDR image viewer, AVIF image viewer, modern image format, batch viewing" />
+        <title>{t('viewers.avif.meta_title')}</title>
+        <meta name="description" content={t('viewers.avif.meta_description')} />
+        <meta name="keywords" content={t('viewers.avif.meta_keywords')} />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -77,10 +90,10 @@ export const AVIFViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold mb-3">
-                    AVIF Viewer
+                    {t('viewers.avif.hero_title')}
                   </h1>
                   <p className="text-xl text-rose-100">
-                    View next-generation AVIF images with superior compression
+                    {t('viewers.avif.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -97,11 +110,11 @@ export const AVIFViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload AVIF Files
+                {t('viewers.avif.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your AVIF images or click to browse. Supports HDR, wide color gamut, and transparency up to 100MB total.
+              {t('viewers.avif.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -122,7 +135,7 @@ export const AVIFViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your AVIF Files ({selectedFiles.length})
+                    {t('viewers.avif.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -150,12 +163,12 @@ export const AVIFViewer: React.FC = () => {
                         className="flex-1 bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View</span>
+                        <span>{t('viewers.avif.buttons.view')}</span>
                       </button>
                       <button 
                         onClick={() => handleDownload(file)}
                         className="p-2 text-rose-600 hover:bg-rose-100 rounded-lg transition-colors"
-                        title="Download"
+                        title={t('viewers.avif.buttons.download')}
                       >
                         <Download className="w-4 h-4" />
                       </button>
@@ -168,107 +181,64 @@ export const AVIFViewer: React.FC = () => {
 
           {/* About AVIF Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-800 mb-6">About AVIF Format</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">{t('viewers.avif.about_title')}</h2>
           
           <div className="prose max-w-none">
-            <p className="text-lg text-gray-600 mb-6">
-              AVIF (AV1 Image File Format) is a modern image format based on the AV1 video codec. 
-              It offers superior compression efficiency compared to JPEG, PNG, and WebP, delivering 
-              smaller file sizes while maintaining excellent image quality.
-            </p>
+            <p className="text-lg text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.avif.about_intro') }} />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">{t('viewers.avif.advantages_title')}</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Up to 50% smaller file sizes than JPEG</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Superior image quality at low bitrates</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Support for HDR and wide color gamut</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Alpha channel transparency support</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Animation support (similar to GIF)</span>
-                  </li>
+                  {(() => {
+                    const advantages = t('viewers.avif.advantages', { returnObjects: true }) as string[];
+                    return advantages.map((advantage, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                        <span dangerouslySetInnerHTML={{ __html: advantage }} />
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">{t('viewers.avif.use_cases_title')}</h3>
                 <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Modern web applications</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>High-quality image storage</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Bandwidth-sensitive applications</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>HDR and wide color gamut images</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Next-generation image workflows</span>
-                  </li>
+                  {(() => {
+                    const useCases = t('viewers.avif.use_cases', { returnObjects: true }) as string[];
+                    return useCases.map((useCase, index) => (
+                      <li key={index} className="flex items-start space-x-2">
+                        <span className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></span>
+                        <span dangerouslySetInnerHTML={{ __html: useCase }} />
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
 
             {/* Technical Specifications */}
             <div className="bg-gray-50 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">{t('viewers.avif.specs_title')}</h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
-                  <tbody className="space-y-2">
-                    <tr className="border-b border-gray-200">
-                      <td className="font-medium text-gray-700 py-2">File Extension</td>
-                      <td className="text-gray-600 py-2">.avif</td>
+                  <thead>
+                    <tr className="bg-gray-100">
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.avif.specs_header_label')}</th>
+                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.avif.specs_header_value')}</th>
                     </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="font-medium text-gray-700 py-2">MIME Type</td>
-                      <td className="text-gray-600 py-2">image/avif</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="font-medium text-gray-700 py-2">Compression</td>
-                      <td className="text-gray-600 py-2">AV1 codec-based, lossy and lossless</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="font-medium text-gray-700 py-2">Color Depth</td>
-                      <td className="text-gray-600 py-2">8, 10, 12 bits per channel</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="font-medium text-gray-700 py-2">Color Space</td>
-                      <td className="text-gray-600 py-2">sRGB, Rec. 2020, P3</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="font-medium text-gray-700 py-2">Transparency</td>
-                      <td className="text-gray-600 py-2">Yes (alpha channel)</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="font-medium text-gray-700 py-2">Animation</td>
-                      <td className="text-gray-600 py-2">Yes</td>
-                    </tr>
-                    <tr>
-                      <td className="font-medium text-gray-700 py-2">Browser Support</td>
-                      <td className="text-gray-600 py-2">Chrome 85+, Firefox 93+, Safari 16+</td>
-                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200">
+                    {(() => {
+                      const specs = t('viewers.avif.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
+                      return specs.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ));
+                    })()}
                   </tbody>
                 </table>
               </div>
@@ -282,7 +252,7 @@ export const AVIFViewer: React.FC = () => {
             href="/viewers"
             className="inline-block bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
-            ← Back to All Viewers
+            {t('viewers.avif.buttons.back')}
           </a>
         </div>
       </div>

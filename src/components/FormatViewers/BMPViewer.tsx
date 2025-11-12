@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, Upload, Eye, Download, Share2, ArrowLeft, Palette, Monitor, Archive, CheckCircle } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 export const BMPViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.bmp.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.bmp.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.bmp.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.bmp.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     // Filter only BMP files
@@ -22,9 +40,9 @@ export const BMPViewer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>BMP Viewer - Free Online Windows Bitmap Image Viewer</title>
-        <meta name="description" content="View BMP (Windows Bitmap) images online for free. Uncompressed quality viewer with full color support and universal compatibility. Up to 20 files, 100MB total. No registration required." />
-        <meta name="keywords" content="BMP viewer, bitmap viewer, Windows bitmap, uncompressed image viewer, BMP image viewer, legacy format viewer, batch viewing" />
+        <title>{t('viewers.bmp.meta_title')}</title>
+        <meta name="description" content={t('viewers.bmp.meta_description')} />
+        <meta name="keywords" content={t('viewers.bmp.meta_keywords')} />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -46,10 +64,10 @@ export const BMPViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-5xl font-bold mb-3">
-                    BMP Viewer
+                    {t('viewers.bmp.hero_title')}
                   </h1>
                   <p className="text-xl text-blue-100">
-                    View Windows Bitmap images with uncompressed quality
+                    {t('viewers.bmp.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -66,11 +84,11 @@ export const BMPViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload BMP Files
+                {t('viewers.bmp.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Windows Bitmap (BMP) images or click to browse. Supports uncompressed quality viewing up to 100MB total.
+              {t('viewers.bmp.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -91,7 +109,7 @@ export const BMPViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your BMP Files ({selectedFiles.length})
+                    {t('viewers.bmp.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -118,7 +136,7 @@ export const BMPViewer: React.FC = () => {
                         className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-sm font-semibold py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View</span>
+                        <span>{t('viewers.bmp.buttons.view')}</span>
                       </button>
                       <button 
                         onClick={() => {
@@ -130,7 +148,7 @@ export const BMPViewer: React.FC = () => {
                           URL.revokeObjectURL(url);
                         }}
                         className="p-2 text-blue-600 hover:bg-blue-100 rounded-lg transition-colors"
-                        title="Download"
+                        title={t('viewers.bmp.buttons.download')}
                       >
                         <Download className="w-4 h-4" />
                       </button>
@@ -143,72 +161,41 @@ export const BMPViewer: React.FC = () => {
 
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Palette className="w-8 h-8 text-purple-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Uncompressed Quality
-            </h3>
-            <p className="text-gray-600">
-              BMP files store images without compression, preserving every pixel detail
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Monitor className="w-8 h-8 text-blue-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Windows Standard
-            </h3>
-            <p className="text-gray-600">
-              Native Windows format with universal compatibility across Microsoft systems
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6">
-            <Archive className="w-8 h-8 text-green-600 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
-              Simple Structure
-            </h3>
-            <p className="text-gray-600">
-              Straightforward file format that's easy to read and process programmatically
-            </p>
-          </div>
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+              {index === 0 && <Palette className="w-8 h-8 text-purple-600 mb-4" />}
+              {index === 1 && <Monitor className="w-8 h-8 text-blue-600 mb-4" />}
+              {index === 2 && <Archive className="w-8 h-8 text-green-600 mb-4" />}
+              <h3 className="text-xl font-semibold text-gray-800 mb-2" dangerouslySetInnerHTML={{ __html: feature.title }} />
+              <p className="text-gray-600" dangerouslySetInnerHTML={{ __html: feature.description }} />
+            </div>
+          ))}
         </div>
 
         {/* BMP Information */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            About BMP Format
+            {t('viewers.bmp.about_title')}
           </h2>
           <div className="prose max-w-none text-gray-600">
-            <p className="mb-4">
-              BMP (Bitmap) is a raster graphics image file format used to store bitmap digital images, 
-              independently of the display device. It was developed by Microsoft for Windows operating 
-              systems and is one of the simplest and most widely supported image formats. BMP files 
-              store images as a grid of pixels with each pixel's color information preserved without compression.
-            </p>
+            <p className="mb-4" dangerouslySetInnerHTML={{ __html: t('viewers.bmp.about_intro') }} />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.bmp.advantages_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Lossless quality</strong> - No compression artifacts</li>
-                  <li>• <strong>Universal support</strong> - Supported by all image viewers</li>
-                  <li>• <strong>Simple structure</strong> - Easy to read and process</li>
-                  <li>• <strong>Color accuracy</strong> - Preserves exact color information</li>
-                  <li>• <strong>Windows native</strong> - Default format for Windows Paint</li>
-                  <li>• <strong>Programming friendly</strong> - Simple format for developers</li>
+                  {advantages.map((advantage, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                  ))}
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.bmp.use_cases_title')}</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>• <strong>Windows applications</strong> - Native Windows image format</li>
-                  <li>• <strong>Simple graphics</strong> - Icons, logos, and basic images</li>
-                  <li>• <strong>Image processing</strong> - Raw data for manipulation</li>
-                  <li>• <strong>Legacy systems</strong> - Compatibility with older software</li>
-                  <li>• <strong>Screen captures</strong> - Uncompressed screenshots</li>
-                  <li>• <strong>Development</strong> - Testing and debugging graphics</li>
+                  {useCases.map((useCase, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                  ))}
                 </ul>
               </div>
             </div>
@@ -218,50 +205,24 @@ export const BMPViewer: React.FC = () => {
         {/* Technical Specifications */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            BMP Technical Specifications
+            {t('viewers.bmp.specs_title')}
           </h2>
           
           <div className="overflow-x-auto">
             <table className="min-w-full">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Specification</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Details</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.bmp.specs_header_label')}</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.bmp.specs_header_value')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">File Extension</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">.bmp</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">MIME Type</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">image/bmp, image/x-bmp</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Compression</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Typically uncompressed (RLE compression available)</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Color Support</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">1, 4, 8, 16, 24, and 32 bits per pixel</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Maximum Resolution</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Limited by available memory</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Transparency</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Alpha channel in 32-bit BMP</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Animation</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Not supported</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-800">Metadata</td>
-                  <td className="px-6 py-4 text-sm text-gray-600">Limited header information</td>
-                </tr>
+                {specs.map((spec, index) => (
+                  <tr key={index}>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-800">{spec.label}</td>
+                    <td className="px-6 py-4 text-sm text-gray-600">{spec.value}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -273,7 +234,7 @@ export const BMPViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.bmp.buttons.back')}
             </a>
           </div>
         </div>

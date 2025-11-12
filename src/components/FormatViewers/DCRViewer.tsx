@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const DCRViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.dcr.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.dcr.advantages', { returnObjects: true }) as string[];
+  const compatibleCameras = t('viewers.dcr.compatible_cameras', { returnObjects: true }) as string[];
+  const specs = t('viewers.dcr.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -54,14 +72,14 @@ export const DCRViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.dcr.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: '100' }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the DCR file');
+        alert(t('viewers.dcr.alerts.popup_blocked'));
         return;
       }
 
@@ -69,7 +87,7 @@ export const DCRViewer: React.FC = () => {
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${t('viewers.dcr.loading_window.title', { filename: file.name })}</title>
           <style>
             body {
               display: flex;
@@ -102,8 +120,8 @@ export const DCRViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Processing DCR RAW Image...</h2>
-            <p>Rendering ${file.name}...</p>
+            <h2>${t('viewers.dcr.loading_window.message')}</h2>
+            <p>${t('viewers.dcr.loading_window.title', { filename: file.name })}</p>
           </div>
         </body>
         </html>
@@ -402,9 +420,9 @@ export const DCRViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate DCR preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.dcr.error_window.title')}</h1>
+              <p>${t('viewers.dcr.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.dcr.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -413,23 +431,23 @@ export const DCRViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('DCR view error:', error);
-      alert('Failed to open DCR preview. Please try again or download the file.');
+      alert(t('viewers.dcr.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free DCR Viewer - View Kodak RAW Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview DCR files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free DCR viewer tool." />
-        <meta name="keywords" content="DCR viewer, Kodak RAW viewer, DCR file viewer online, RAW viewer, Kodak DCS viewer, camera RAW viewer, free DCR viewer, DCR preview" />
-        <meta property="og:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview Kodak RAW files online with EXIF metadata." />
+        <title>{t('viewers.dcr.meta_title')}</title>
+        <meta name="description" content={t('viewers.dcr.meta_description')} />
+        <meta name="keywords" content={t('viewers.dcr.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.dcr.meta_title')} />
+        <meta property="og:description" content={t('viewers.dcr.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/dcr" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free DCR Viewer - View Kodak RAW Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional DCR (Kodak RAW) viewer with high-quality rendering. Upload and preview Kodak RAW files online." />
+        <meta name="twitter:title" content={t('viewers.dcr.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.dcr.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -468,10 +486,10 @@ export const DCRViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free DCR Viewer
+                    {t('viewers.dcr.hero_title')}
                   </h1>
                   <p className="text-xl text-purple-100">
-                    View Kodak RAW files with professional rendering - 100% free
+                    {t('viewers.dcr.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -488,11 +506,11 @@ export const DCRViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload DCR Files
+                {t('viewers.dcr.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Kodak DCR (RAW) files or click to browse. Supports DCR files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.dcr.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -522,7 +540,7 @@ export const DCRViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your DCR Files ({selectedFiles.length})
+                    {t('viewers.dcr.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -531,11 +549,8 @@ export const DCRViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-purple-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-purple-900 mb-1">How to View DCR Files</h4>
-                    <p className="text-sm text-purple-700">
-                      Click the <strong>"View RAW"</strong> button to render and preview the DCR file with professional quality. 
-                      The viewer will process the RAW data and display it as a high-quality image. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-purple-900 mb-1">{t('viewers.dcr.how_to_title')}</h4>
+                    <p className="text-sm text-purple-700" dangerouslySetInnerHTML={{ __html: t('viewers.dcr.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -563,14 +578,14 @@ export const DCRViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View RAW</span>
+                        <span>{t('viewers.dcr.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.dcr.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -581,41 +596,17 @@ export const DCRViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <ImageIcon className="w-8 h-8 text-purple-600" />
+            {features.map((feature, index) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-purple-50 to-violet-50 border-purple-200' : index === 1 ? 'from-violet-50 to-indigo-50 border-violet-200' : 'from-indigo-50 to-purple-50 border-indigo-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <ImageIcon className="w-8 h-8 text-purple-600" />}
+                  {index === 1 && <Maximize2 className="w-8 h-8 text-violet-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-indigo-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
+                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                RAW Processing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Professional RAW processing with rawpy (LibRaw) for accurate color and detail rendering
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-violet-50 to-indigo-50 rounded-2xl shadow-lg p-8 border border-violet-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Maximize2 className="w-8 h-8 text-violet-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Resolution
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View DCR files at full resolution with proper demosaicing and color correction
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-lg p-8 border border-indigo-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-indigo-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with embedded JPEG extraction for instant viewing
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About DCR Format Section */}
@@ -625,73 +616,50 @@ export const DCRViewer: React.FC = () => {
                 <Camera className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About DCR Format
+                {t('viewers.dcr.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                DCR (Digital Camera Raw) is Kodak's proprietary RAW image format used by Kodak professional digital cameras. 
-                DCR files contain unprocessed sensor data from Kodak DCS cameras, providing maximum flexibility for 
-                post-processing and the highest image quality. The format preserves all the information captured by the 
-                camera's sensor, including extended dynamic range and full color depth.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.dcr.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.dcr.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Maximum quality</strong> - Uncompressed sensor data</li>
-                    <li>• <strong>12-bit depth</strong> - Greater color and tonal range</li>
-                    <li>• <strong>Non-destructive</strong> - Original data always preserved</li>
-                    <li>• <strong>White balance</strong> - Adjust after capture</li>
-                    <li>• <strong>Extended dynamic range</strong> - More detail in highlights/shadows</li>
-                    <li>• <strong>Professional workflow</strong> - Trusted by news agencies</li>
+                    {advantages.map((advantage, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Cameras</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.dcr.compatible_cameras_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Kodak DCS Pro Series</strong> - DCS Pro 14n, Pro SLR/n, Pro SLR/c</li>
-                    <li>• <strong>Kodak DCS 700 Series</strong> - DCS 760, 720x, 760m</li>
-                    <li>• <strong>Kodak Professional</strong> - DCS 660, 620x, 560</li>
-                    <li>• <strong>Legacy Models</strong> - DCS 460, 420, 315</li>
-                    <li>• <strong>All Kodak DCS</strong> - Full DCR support</li>
-                    <li>• <strong>Archive Format</strong> - Historical RAW files</li>
+                    {compatibleCameras.map((camera, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: camera }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.dcr.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.dcr.specs_header_label')}</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.dcr.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.dcr</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">image/x-kodak-dcr</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Bit Depth</td>
-                        <td className="py-2 text-sm text-gray-900">12-bit (uncompressed)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Color Space</td>
-                        <td className="py-2 text-sm text-gray-900">Linear RGB (sensor native)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">Uncompressed or lossless</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Kodak (Eastman Kodak Company)</td>
-                      </tr>
+                      {specs.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -705,7 +673,7 @@ export const DCRViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.dcr.buttons.back')}
             </a>
           </div>
         </div>

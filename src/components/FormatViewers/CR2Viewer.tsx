@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Camera, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Image as ImageIcon, Maximize2, Zap } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const CR2Viewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.cr2.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.cr2.advantages', { returnObjects: true }) as string[];
+  const compatibleCameras = t('viewers.cr2.compatible_cameras', { returnObjects: true }) as string[];
+  const specs = t('viewers.cr2.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -54,14 +72,14 @@ export const CR2Viewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.cr2.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: '100' }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the CR2 file');
+        alert(t('viewers.cr2.alerts.popup_blocked'));
         return;
       }
 
@@ -69,7 +87,7 @@ export const CR2Viewer: React.FC = () => {
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${t('viewers.cr2.loading_window.title', { filename: file.name })}</title>
           <style>
             body {
               display: flex;
@@ -102,8 +120,8 @@ export const CR2Viewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Processing CR2 RAW Image...</h2>
-            <p>Rendering ${file.name}...</p>
+            <h2>${t('viewers.cr2.loading_window.message')}</h2>
+            <p>${t('viewers.cr2.loading_window.title', { filename: file.name })}</p>
           </div>
         </body>
         </html>
@@ -402,9 +420,9 @@ export const CR2Viewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate CR2 preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.cr2.error_window.title')}</h1>
+              <p>${t('viewers.cr2.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.cr2.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -413,23 +431,23 @@ export const CR2Viewer: React.FC = () => {
       }
     } catch (error) {
       console.error('CR2 view error:', error);
-      alert('Failed to open CR2 preview. Please try again or download the file.');
+      alert(t('viewers.cr2.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free CR2 Viewer - View Canon RAW Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview CR2 files online with EXIF metadata and full resolution. Supports batch viewing up to 20 files. 100% free CR2 viewer tool." />
-        <meta name="keywords" content="CR2 viewer, Canon RAW viewer, CR2 file viewer online, RAW viewer, Canon EOS viewer, camera RAW viewer, free CR2 viewer, CR2 preview" />
-        <meta property="og:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview Canon RAW files online with EXIF metadata." />
+        <title>{t('viewers.cr2.meta_title')}</title>
+        <meta name="description" content={t('viewers.cr2.meta_description')} />
+        <meta name="keywords" content={t('viewers.cr2.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.cr2.meta_title')} />
+        <meta property="og:description" content={t('viewers.cr2.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/cr2" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free CR2 Viewer - View Canon RAW Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional CR2 (Canon RAW) viewer with high-quality rendering. Upload and preview Canon RAW files online." />
+        <meta name="twitter:title" content={t('viewers.cr2.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.cr2.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -468,10 +486,10 @@ export const CR2Viewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free CR2 Viewer
+                    {t('viewers.cr2.hero_title')}
                   </h1>
                   <p className="text-xl text-red-100">
-                    View Canon RAW files with professional rendering - 100% free
+                    {t('viewers.cr2.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -488,11 +506,11 @@ export const CR2Viewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload CR2 Files
+                {t('viewers.cr2.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your Canon CR2 (RAW) files or click to browse. Supports CR2 files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.cr2.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -522,7 +540,7 @@ export const CR2Viewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your CR2 Files ({selectedFiles.length})
+                    {t('viewers.cr2.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -531,11 +549,8 @@ export const CR2Viewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-red-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-red-900 mb-1">How to View CR2 Files</h4>
-                    <p className="text-sm text-red-700">
-                      Click the <strong>"View RAW"</strong> button to render and preview the CR2 file with professional quality. 
-                      The viewer will process the RAW data and display it as a high-quality image. Files under 100 MB can be previewed.
-                    </p>
+                    <h4 className="font-semibold text-red-900 mb-1">{t('viewers.cr2.how_to_title')}</h4>
+                    <p className="text-sm text-red-700" dangerouslySetInnerHTML={{ __html: t('viewers.cr2.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -563,14 +578,14 @@ export const CR2Viewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View RAW</span>
+                        <span>{t('viewers.cr2.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.cr2.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -581,41 +596,17 @@ export const CR2Viewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-red-50 to-rose-50 rounded-2xl shadow-lg p-8 border border-red-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <ImageIcon className="w-8 h-8 text-red-600" />
+            {features.map((feature, index) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-red-50 to-rose-50 border-red-200' : index === 1 ? 'from-rose-50 to-pink-50 border-rose-200' : 'from-pink-50 to-red-50 border-pink-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <ImageIcon className="w-8 h-8 text-red-600" />}
+                  {index === 1 && <Maximize2 className="w-8 h-8 text-rose-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-pink-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
+                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                RAW Processing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Professional RAW processing with rawpy (LibRaw) for accurate color and detail rendering
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-rose-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Maximize2 className="w-8 h-8 text-rose-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Full Resolution
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View CR2 files at full resolution with proper demosaicing and color correction
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-2xl shadow-lg p-8 border border-pink-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Zap className="w-8 h-8 text-pink-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Fast Preview
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Quick preview generation with embedded JPEG extraction for instant viewing
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About CR2 Format Section */}
@@ -625,73 +616,50 @@ export const CR2Viewer: React.FC = () => {
                 <Camera className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About CR2 Format
+                {t('viewers.cr2.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                CR2 (Canon Raw 2) is Canon's proprietary RAW image format used by Canon digital cameras. 
-                Based on the TIFF format specification, CR2 files contain unprocessed sensor data from Canon cameras, 
-                providing maximum flexibility for post-processing and the highest image quality. CR2 files preserve 
-                all the information captured by the camera's sensor, including extended dynamic range and 14-bit color depth.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.cr2.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.cr2.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Maximum quality</strong> - Uncompressed sensor data</li>
-                    <li>• <strong>14-bit depth</strong> - Greater color and tonal range</li>
-                    <li>• <strong>Non-destructive</strong> - Original data always preserved</li>
-                    <li>• <strong>White balance</strong> - Adjust after capture</li>
-                    <li>• <strong>Extended dynamic range</strong> - More detail in highlights/shadows</li>
-                    <li>• <strong>Professional workflow</strong> - Industry-standard RAW format</li>
+                    {advantages.map((advantage, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Compatible Cameras</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.cr2.compatible_cameras_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Canon EOS R Series</strong> - R5, R6, R3, RP, Ra</li>
-                    <li>• <strong>Canon EOS 5D Series</strong> - 5D Mark IV, 5DS R</li>
-                    <li>• <strong>Canon EOS 6D Series</strong> - 6D Mark II</li>
-                    <li>• <strong>Canon EOS 7D Series</strong> - 7D Mark II</li>
-                    <li>• <strong>Canon EOS 90D</strong> - Latest APS-C flagship</li>
-                    <li>• <strong>All Canon DSLRs</strong> - Full CR2 support</li>
+                    {compatibleCameras.map((camera, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: camera }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.cr2.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.cr2.specs_header_label')}</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.cr2.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extension</td>
-                        <td className="py-2 text-sm text-gray-900">.cr2</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">image/x-canon-cr2</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Bit Depth</td>
-                        <td className="py-2 text-sm text-gray-900">14-bit (lossless)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Color Space</td>
-                        <td className="py-2 text-sm text-gray-900">Linear RGB (sensor native)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Compression</td>
-                        <td className="py-2 text-sm text-gray-900">Lossless JPEG</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">Canon Inc.</td>
-                      </tr>
+                      {specs.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -705,7 +673,7 @@ export const CR2Viewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.cr2.buttons.back')}
             </a>
           </div>
         </div>

@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Palette, Upload, Eye, Download, ArrowLeft, CheckCircle, AlertCircle, Info, Code, Layers, Paintbrush } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import { useTranslation } from 'react-i18next';
 
 export const CSSViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
+
+  const features = t('viewers.css.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+  const advantages = t('viewers.css.advantages', { returnObjects: true }) as string[];
+  const useCases = t('viewers.css.use_cases', { returnObjects: true }) as string[];
+  const specs = t('viewers.css.specs', { returnObjects: true }) as Array<{ label: string; value: string }>;
 
   const handleFilesSelected = (files: File[]) => {
     clearValidationError();
@@ -41,14 +59,14 @@ export const CSSViewer: React.FC = () => {
     // Check file size (max 100MB for preview)
     const maxSize = 100 * 1024 * 1024; // 100MB
     if (file.size > maxSize) {
-      alert(`File is too large for preview (${(file.size / 1024 / 1024).toFixed(2)} MB). Maximum size is 100 MB. Please download the file instead.`);
+      alert(t('viewers.css.alerts.file_too_large', { size: (file.size / 1024 / 1024).toFixed(2), max: '100' }));
       return;
     }
     
     try {
       const loadingWindow = window.open('', '_blank', 'width=1200,height=800,scrollbars=yes,resizable=yes');
       if (!loadingWindow) {
-        alert('Please allow pop-ups to view the CSS file');
+        alert(t('viewers.css.alerts.popup_blocked'));
         return;
       }
 
@@ -56,7 +74,7 @@ export const CSSViewer: React.FC = () => {
         <!DOCTYPE html>
         <html>
         <head>
-          <title>Loading ${file.name}...</title>
+          <title>${t('viewers.css.loading_window.title', { filename: file.name })}</title>
           <style>
             body {
               display: flex;
@@ -89,8 +107,8 @@ export const CSSViewer: React.FC = () => {
         <body>
           <div class="loader">
             <div class="spinner"></div>
-            <h2>Loading ${file.name}...</h2>
-            <p>Formatting CSS for preview...</p>
+            <h2>${t('viewers.css.loading_window.title', { filename: file.name })}</h2>
+            <p>${t('viewers.css.loading_window.message')}</p>
           </div>
         </body>
         </html>
@@ -145,9 +163,9 @@ export const CSSViewer: React.FC = () => {
           </head>
           <body>
             <div class="error">
-              <h1>⚠️ Preview Error</h1>
-              <p>Failed to generate CSS preview. Please try downloading the file instead.</p>
-              <button onclick="window.close()">Close</button>
+              <h1>⚠️ ${t('viewers.css.error_window.title')}</h1>
+              <p>${t('viewers.css.error_window.message')}</p>
+              <button onclick="window.close()">${t('viewers.css.error_window.close')}</button>
             </div>
           </body>
           </html>
@@ -156,23 +174,23 @@ export const CSSViewer: React.FC = () => {
       }
     } catch (error) {
       console.error('CSS view error:', error);
-      alert('Failed to open CSS preview. Please try again or download the file.');
+      alert(t('viewers.css.alerts.preview_failed'));
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Free CSS Viewer - View & Validate CSS Files Online | MorphyHub</title>
-        <meta name="description" content="Free professional CSS viewer with syntax highlighting. Upload and preview CSS, SCSS, SASS, LESS files online with formatted display and rule analysis. Supports batch viewing up to 20 files. 100% free CSS viewer tool." />
-        <meta name="keywords" content="CSS viewer, CSS validator, CSS file viewer online, CSS formatter, SCSS viewer, SASS viewer, CSS preview, stylesheet viewer, CSS online, free CSS viewer" />
-        <meta property="og:title" content="Free CSS Viewer - View & Validate CSS Files Online | MorphyHub" />
-        <meta property="og:description" content="Free professional CSS viewer with syntax highlighting. Upload and preview CSS files online with formatted display and rule analysis." />
+        <title>{t('viewers.css.meta_title')}</title>
+        <meta name="description" content={t('viewers.css.meta_description')} />
+        <meta name="keywords" content={t('viewers.css.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.css.meta_title')} />
+        <meta property="og:description" content={t('viewers.css.meta_description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/viewers/css" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free CSS Viewer - View & Validate CSS Files Online | MorphyHub" />
-        <meta name="twitter:description" content="Free professional CSS viewer with syntax highlighting. Upload and preview CSS files online with formatted display." />
+        <meta name="twitter:title" content={t('viewers.css.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.css.meta_description')} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -211,10 +229,10 @@ export const CSSViewer: React.FC = () => {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    Free CSS Viewer
+                    {t('viewers.css.hero_title')}
                   </h1>
                   <p className="text-xl text-indigo-100">
-                    View and analyze CSS stylesheets with syntax highlighting - 100% free
+                    {t('viewers.css.hero_subtitle')}
                   </p>
                 </div>
               </div>
@@ -231,11 +249,11 @@ export const CSSViewer: React.FC = () => {
                 <Upload className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                Upload CSS Files
+                {t('viewers.css.upload_title')}
               </h2>
             </div>
             <p className="text-gray-600 mb-6">
-              Drag and drop your CSS stylesheet files or click to browse. Supports CSS, SCSS, SASS, LESS files up to 100MB each, with batch upload support for up to 20 files.
+              {t('viewers.css.upload_description')}
             </p>
             <FileUpload 
               onFilesSelected={handleFilesSelected}
@@ -265,7 +283,7 @@ export const CSSViewer: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900">
-                    Your CSS Files ({selectedFiles.length})
+                    {t('viewers.css.files_heading', { count: selectedFiles.length })}
                   </h2>
                 </div>
               </div>
@@ -274,11 +292,8 @@ export const CSSViewer: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Info className="w-5 h-5 text-blue-600 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">How to View CSS Files</h4>
-                    <p className="text-sm text-blue-700">
-                      Click the <strong>"View CSS"</strong> button to open the CSS file in a preview window with syntax highlighting. 
-                      Files under 100 MB can be previewed. You can also download the original file.
-                    </p>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.css.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.css.how_to_description') }} />
                   </div>
                 </div>
               </div>
@@ -306,14 +321,14 @@ export const CSSViewer: React.FC = () => {
                         className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-sm font-medium py-2.5 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                       >
                         <Eye className="w-4 h-4" />
-                        <span>View CSS</span>
+                        <span>{t('viewers.css.buttons.view')}</span>
                       </button>
                       <button
                         onClick={() => handleDownload(file)}
                         className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
                       >
                         <Download className="w-4 h-4" />
-                        <span>Download</span>
+                        <span>{t('viewers.css.buttons.download')}</span>
                       </button>
                     </div>
                   </div>
@@ -324,41 +339,17 @@ export const CSSViewer: React.FC = () => {
 
           {/* Features Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl shadow-lg p-8 border border-indigo-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Code className="w-8 h-8 text-indigo-600" />
+            {features.map((feature, index) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-indigo-50 to-purple-50 border-indigo-200' : index === 1 ? 'from-purple-50 to-pink-50 border-purple-200' : 'from-pink-50 to-rose-50 border-pink-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <Code className="w-8 h-8 text-indigo-600" />}
+                  {index === 1 && <Layers className="w-8 h-8 text-purple-600" />}
+                  {index === 2 && <Paintbrush className="w-8 h-8 text-pink-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
+                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Syntax Highlighting
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                View CSS with beautiful syntax highlighting for selectors, properties, values, and comments
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl shadow-lg p-8 border border-purple-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Layers className="w-8 h-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Rule Analysis
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Analyze CSS rules, selectors, and property counts with detailed statistics
-              </p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl shadow-lg p-8 border border-pink-200 hover:shadow-xl transition-all transform hover:scale-105">
-              <div className="bg-white p-3 rounded-xl w-fit mb-4">
-                <Paintbrush className="w-8 h-8 text-pink-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Preprocessor Support
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Support for CSS preprocessors like SCSS, SASS, and LESS with proper formatting
-              </p>
-            </div>
+            ))}
           </div>
 
           {/* About CSS Format Section */}
@@ -368,72 +359,50 @@ export const CSSViewer: React.FC = () => {
                 <Palette className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
-                About CSS Format
+                {t('viewers.css.about_title')}
               </h2>
             </div>
             
             <div className="prose max-w-none text-gray-600">
-              <p className="mb-6">
-                CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of documents written in HTML or XML. 
-                CSS describes how elements should be rendered on screen, on paper, in speech, or on other media. It's one of the cornerstone 
-                technologies of the World Wide Web, alongside HTML and JavaScript.
-              </p>
+              <p className="mb-6" dangerouslySetInnerHTML={{ __html: t('viewers.css.about_intro') }} />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Key Advantages</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.css.advantages_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Separation of concerns</strong> - Style separate from content</li>
-                    <li>• <strong>Cascading rules</strong> - Hierarchical style application</li>
-                    <li>• <strong>Responsive design</strong> - Media queries for all devices</li>
-                    <li>• <strong>Animations</strong> - CSS transitions and keyframe animations</li>
-                    <li>• <strong>Flexbox & Grid</strong> - Modern layout systems</li>
-                    <li>• <strong>Custom properties</strong> - CSS variables for maintainability</li>
+                    {advantages.map((advantage, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: advantage }} />
+                    ))}
                   </ul>
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Best Use Cases</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.css.use_cases_title')}</h3>
                   <ul className="space-y-2 text-sm">
-                    <li>• <strong>Web styling</strong> - Visual presentation of web pages</li>
-                    <li>• <strong>Responsive layouts</strong> - Multi-device compatibility</li>
-                    <li>• <strong>Print styles</strong> - Optimized printing layouts</li>
-                    <li>• <strong>Animations</strong> - Interactive user experiences</li>
-                    <li>• <strong>Component styling</strong> - React, Vue, Angular integration</li>
-                    <li>• <strong>Design systems</strong> - Consistent visual branding</li>
+                    {useCases.map((useCase, index) => (
+                      <li key={index} dangerouslySetInnerHTML={{ __html: useCase }} />
+                    ))}
                   </ul>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Technical Specifications</h3>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">{t('viewers.css.specs_title')}</h3>
                 <div className="overflow-x-auto">
                   <table className="min-w-full">
+                    <thead>
+                      <tr className="bg-gray-100">
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.css.specs_header_label')}</th>
+                        <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">{t('viewers.css.specs_header_value')}</th>
+                      </tr>
+                    </thead>
                     <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">File Extensions</td>
-                        <td className="py-2 text-sm text-gray-900">.css, .scss, .sass, .less</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">MIME Type</td>
-                        <td className="py-2 text-sm text-gray-900">text/css</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Standard</td>
-                        <td className="py-2 text-sm text-gray-900">W3C CSS Level 3 (CSS3)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Character Encoding</td>
-                        <td className="py-2 text-sm text-gray-900">UTF-8 (recommended), ASCII</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Preprocessors</td>
-                        <td className="py-2 text-sm text-gray-900">Sass, SCSS, Less, Stylus, PostCSS</td>
-                      </tr>
-                      <tr>
-                        <td className="py-2 text-sm font-medium text-gray-500">Developed By</td>
-                        <td className="py-2 text-sm text-gray-900">W3C, CSSWG</td>
-                      </tr>
+                      {specs.map((spec, index) => (
+                        <tr key={index}>
+                          <td className="py-2 text-sm font-medium text-gray-500">{spec.label}</td>
+                          <td className="py-2 text-sm text-gray-900">{spec.value}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -447,7 +416,7 @@ export const CSSViewer: React.FC = () => {
               href="/viewers"
               className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              ← Back to All Viewers
+              {t('viewers.css.buttons.back')}
             </a>
           </div>
         </div>
