@@ -4,6 +4,13 @@ import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { FileViewer } from '../components/FileViewer';
+import { useTranslation, Trans } from 'react-i18next';
+
+type HomeStep = {
+  badge: string;
+  title: string;
+  description: string;
+};
 import { 
   RefreshCw, 
   Eye, 
@@ -28,9 +35,21 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [totalDataProcessed, setTotalDataProcessed] = useState(0);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path.startsWith('/pl/')) {
+      i18n.changeLanguage('pl');
+    } else if (path.startsWith('/de/')) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
+  }, [i18n]);
 
   // Load and track total data processed
   useEffect(() => {
@@ -59,6 +78,14 @@ export default function Home() {
     return `${gb.toFixed(1)} GB`;
   };
 
+  const metaTitle = t('home.meta.title');
+  const metaDescription = t('home.meta.description');
+  const metaKeywords = t('home.meta.keywords');
+  const schemaWebsiteName = t('home.schema.website_name');
+  const schemaWebsiteDescription = t('home.schema.website_description');
+  const schemaWebpageName = t('home.schema.webpage_name');
+  const schemaWebpageDescription = t('home.schema.webpage_description');
+
   const siteJsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -74,90 +101,168 @@ export default function Home() {
         "@type": "WebSite",
         "@id": "https://morphyhub.com#website",
         "url": "https://morphyhub.com",
-        "name": "MorphyHub - Free Online File Converter",
-        "description": "Convert files between 300+ formats instantly. Fast, secure, and free file conversion service.",
+        "name": schemaWebsiteName,
+        "description": schemaWebsiteDescription,
         "publisher": { "@id": "https://morphyhub.com#organization" }
       },
       {
         "@type": "WebPage",
         "@id": "https://morphyhub.com#webpage",
         "url": "https://morphyhub.com",
-        "name": "Free Online File Converter - MorphyHub",
-        "description": "Convert any file format instantly. Support for 300+ formats including images, documents, ebooks, and data files.",
+        "name": schemaWebpageName,
+        "description": schemaWebpageDescription,
         "isPartOf": { "@id": "https://morphyhub.com#website" },
         "publisher": { "@id": "https://morphyhub.com#organization" }
       }
     ]
   };
 
+  const featureItems = t('home.features.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
   const features = [
     { 
       icon: <Zap className="w-8 h-8" />, 
-      title: 'Lightning Fast', 
-      description: 'Process files in seconds with our optimized conversion engine',
       color: 'from-yellow-400 to-orange-500',
       bgColor: 'bg-gradient-to-br from-yellow-50 to-orange-50'
     },
     { 
       icon: <Shield className="w-8 h-8" />, 
-      title: 'Secure & Private', 
-      description: 'Enterprise-grade security. Files are automatically deleted after processing',
       color: 'from-green-400 to-emerald-500',
       bgColor: 'bg-gradient-to-br from-green-50 to-emerald-50'
     },
     { 
       icon: <Globe className="w-8 h-8" />, 
-      title: 'Universal Support', 
-      description: 'Convert between 300+ format combinations across all file types',
       color: 'from-blue-400 to-cyan-500',
       bgColor: 'bg-gradient-to-br from-blue-50 to-cyan-50'
     },
     { 
       icon: <BarChart3 className="w-8 h-8" />, 
-      title: 'Batch Processing', 
-      description: 'Convert up to 20 files at once with our powerful batch engine',
       color: 'from-purple-400 to-pink-500',
       bgColor: 'bg-gradient-to-br from-purple-50 to-pink-50'
     },
     { 
       icon: <Eye className="w-8 h-8" />, 
-      title: 'File Viewer', 
-      description: 'Preview and view your files directly in the browser',
       color: 'from-pink-400 to-rose-500',
       bgColor: 'bg-gradient-to-br from-pink-50 to-rose-50'
     },
     { 
       icon: <Star className="w-8 h-8" />, 
-      title: 'Professional Quality', 
-      description: 'Industry-standard conversion with customizable settings',
       color: 'from-indigo-400 to-violet-500',
       bgColor: 'bg-gradient-to-br from-indigo-50 to-violet-50'
     },
   ];
 
+  const statsContent = t('home.stats', { returnObjects: true }) as {
+    supported_formats?: { value: string; label: string };
+    data_processed?: { label: string };
+    batch_processing?: { value: string; label: string };
+  };
+
   const stats = [
-    { icon: <FileText className="w-6 h-6" />, value: '300+', label: 'Supported Formats', color: 'text-blue-600' },
-    { icon: <TrendingUp className="w-6 h-6" />, value: formatDataProcessed(totalDataProcessed), label: 'Data Processed', color: 'text-green-600' },
-    { icon: <Zap className="w-6 h-6" />, value: '20 Files', label: 'Batch Processing', color: 'text-purple-600' },
+    { icon: <FileText className="w-6 h-6" />, value: statsContent?.supported_formats?.value ?? '300+', label: statsContent?.supported_formats?.label ?? '', color: 'text-blue-600' },
+    { icon: <TrendingUp className="w-6 h-6" />, value: formatDataProcessed(totalDataProcessed), label: statsContent?.data_processed?.label ?? '', color: 'text-green-600' },
+    { icon: <Zap className="w-6 h-6" />, value: statsContent?.batch_processing?.value ?? '20 Files', label: statsContent?.batch_processing?.label ?? '', color: 'text-purple-600' },
   ];
 
-  const popularConverters = [
-    { name: 'CSV to JSON', href: '/convert/csv-to-json', icon: <FileText className="w-5 h-5" />, color: 'blue' },
-    { name: 'CSV to NDJSON', href: '/convert/csv-to-ndjson', icon: <BarChart3 className="w-5 h-5" />, color: 'purple' },
-    { name: 'DNG to WebP', href: '/convert/dng-to-webp', icon: <Image className="w-5 h-5" />, color: 'pink' },
-    { name: 'CR2 to WebP', href: '/convert/cr2-to-webp', icon: <Image className="w-5 h-5" />, color: 'violet' },
-    { name: 'EPUB to PDF', href: '/convert/epub-to-pdf', icon: <File className="w-5 h-5" />, color: 'red' },
-    { name: 'EPUB to MOBI', href: '/convert/epub-to-mobi', icon: <File className="w-5 h-5" />, color: 'emerald' },
-    { name: 'CSV to XLSX', href: '/convert/csv-to-xlsx', icon: <BarChart3 className="w-5 h-5" />, color: 'teal' },
-    { name: 'DOCX to PDF', href: '/convert/docx-to-pdf', icon: <File className="w-5 h-5" />, color: 'slate' },
+  const popularConvertersConfig = [
+    { key: 'csv_to_json', href: '/convert/csv-to-json', icon: <FileText className="w-5 h-5" />, color: 'blue' },
+    { key: 'csv_to_ndjson', href: '/convert/csv-to-ndjson', icon: <BarChart3 className="w-5 h-5" />, color: 'purple' },
+    { key: 'dng_to_webp', href: '/convert/dng-to-webp', icon: <Image className="w-5 h-5" />, color: 'pink' },
+    { key: 'cr2_to_webp', href: '/convert/cr2-to-webp', icon: <Image className="w-5 h-5" />, color: 'violet' },
+    { key: 'epub_to_pdf', href: '/convert/epub-to-pdf', icon: <File className="w-5 h-5" />, color: 'red' },
+    { key: 'epub_to_mobi', href: '/convert/epub-to-mobi', icon: <File className="w-5 h-5" />, color: 'emerald' },
+    { key: 'csv_to_xlsx', href: '/convert/csv-to-xlsx', icon: <BarChart3 className="w-5 h-5" />, color: 'teal' },
+    { key: 'docx_to_pdf', href: '/convert/docx-to-pdf', icon: <File className="w-5 h-5" />, color: 'slate' },
   ];
+
+  const popularConverters = popularConvertersConfig.map((converter) => ({
+    ...converter,
+    name: t(`home.popular.converters.${converter.key}`),
+  }));
+
+  const heroBadge = t('home.hero.badge');
+  const heroTitle = t('home.hero.title');
+  const heroHighlight = t('home.hero.highlight');
+  const heroPrimaryCta = t('home.hero.cta_primary');
+  const heroSecondaryCta = t('home.hero.cta_secondary');
+  const heroTrustItems = t('home.hero.trust', { returnObjects: true }) as string[];
+
+  const exploreCardsContent = {
+    converters: {
+      title: t('home.explore.cards.converters.title'),
+      description: t('home.explore.cards.converters.description'),
+      cta: t('home.explore.cards.converters.cta'),
+    },
+    viewers: {
+      title: t('home.explore.cards.viewers.title'),
+      description: t('home.explore.cards.viewers.description'),
+      cta: t('home.explore.cards.viewers.cta'),
+    },
+    compress: {
+      title: t('home.explore.cards.compress.title'),
+      description: t('home.explore.cards.compress.description'),
+      cta: t('home.explore.cards.compress.cta'),
+    },
+    samples: {
+      title: t('home.explore.cards.samples.title'),
+      description: t('home.explore.cards.samples.description'),
+      cta: t('home.explore.cards.samples.cta'),
+    },
+  };
+
+  const howSteps = t('home.how.steps', { returnObjects: true }) as HomeStep[];
+  const howStepConfigs = [
+    {
+      icon: <Upload className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />,
+      glow: 'from-blue-400 to-cyan-400',
+      cardBg: 'from-blue-50 to-cyan-50',
+      border: 'border-blue-100',
+      hoverBorder: 'hover:border-blue-300',
+      badgeText: 'text-blue-600',
+      badgeBg: 'bg-blue-100',
+      iconBg: 'from-blue-500 to-cyan-600',
+      step: howSteps[0] ?? { badge: '', title: '', description: '' },
+    },
+    {
+      icon: <Layers className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />,
+      glow: 'from-purple-400 to-pink-400',
+      cardBg: 'from-purple-50 to-pink-50',
+      border: 'border-purple-100',
+      hoverBorder: 'hover:border-purple-300',
+      badgeText: 'text-purple-600',
+      badgeBg: 'bg-purple-100',
+      iconBg: 'from-purple-500 to-pink-600',
+      step: howSteps[1] ?? { badge: '', title: '', description: '' },
+    },
+    {
+      icon: <Download className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />,
+      glow: 'from-green-400 to-emerald-400',
+      cardBg: 'from-green-50 to-emerald-50',
+      border: 'border-green-100',
+      hoverBorder: 'hover:border-green-300',
+      badgeText: 'text-green-600',
+      badgeBg: 'bg-green-100',
+      iconBg: 'from-green-500 to-emerald-600',
+      step: howSteps[2] ?? { badge: '', title: '', description: '' },
+    },
+  ];
+
+  const popularButtonFull = t('home.popular.button_full');
+  const popularButtonMobile = t('home.popular.button_mobile');
+  const featureSectionTitle = t('home.features.title');
+  const featureSectionSubtitle = t('home.features.subtitle');
+  const exploreTitle = t('home.explore.title');
+  const exploreSubtitle = t('home.explore.subtitle');
+  const howTitle = t('home.how.title');
+  const howSubtitle = t('home.how.subtitle');
+  const popularTitle = t('home.popular.title');
+  const popularSubtitle = t('home.popular.subtitle');
 
   return (
     <>
       <Helmet>
-        <title>Free Online File Converter - MorphyHub | Convert 300+ Formats Instantly</title>
-        <meta name="description" content="Convert files between 300+ formats instantly. Fast, secure, and free file conversion service. Support for images, documents, ebooks, and data files." />
-        <meta name="keywords" content="file converter, online converter, image converter, document converter, ebook converter, batch conversion, free converter" />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="keywords" content={metaKeywords} />
         <link rel="canonical" href="https://morphyhub.com" />
         <script
           type="application/ld+json"
@@ -185,20 +290,23 @@ export default function Home() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/20 mb-6 sm:mb-8">
                 <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
-                <span className="text-xs sm:text-sm font-medium">Free Forever • No Registration</span>
+                <span className="text-xs sm:text-sm font-medium">{heroBadge}</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-4 sm:mb-6 leading-tight px-2">
-                Transform Files
+                {heroTitle}
                 <br />
                 <span className="bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
-                  Instantly
+                  {heroHighlight}
                 </span>
               </h1>
               
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-                Convert between <span className="font-bold text-white">300+ formats</span> with lightning speed. 
-                Secure, free, and no sign-up required.
+                <Trans
+                  i18nKey="home.hero.subtitle"
+                  components={{ bold: <span className="font-bold text-white" /> }}
+                  values={{ count: '300+' }}
+                />
               </p>
               
               {/* CTA Buttons */}
@@ -209,7 +317,7 @@ export default function Home() {
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
                   <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 relative z-10" />
-                  <span className="relative z-10">Start Converting</span>
+                  <span className="relative z-10">{heroPrimaryCta}</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button 
@@ -217,28 +325,18 @@ export default function Home() {
                   className="group border-2 border-white/30 backdrop-blur-sm bg-white/5 text-white font-bold py-3.5 px-6 sm:py-4 sm:px-8 md:py-5 md:px-10 rounded-xl sm:rounded-2xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center gap-2 sm:gap-3 w-full sm:w-auto text-sm sm:text-base"
                 >
                   <Eye className="w-5 h-5 sm:w-6 sm:h-6" />
-                  <span>View Files</span>
+                  <span>{heroSecondaryCta}</span>
                 </button>
               </div>
 
               {/* Trust Indicators */}
               <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-gray-400 px-4">
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
-                  <span>100% Free</span>
-                </div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
-                  <span>No Registration</span>
-                </div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
-                  <span>Secure & Private</span>
-                </div>
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
-                  <span>Batch Processing</span>
-                </div>
+                {heroTrustItems.map((item, index) => (
+                  <div key={index} className="flex items-center gap-1.5 sm:gap-2">
+                    <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -275,10 +373,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16 md:mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-3 sm:mb-4 md:mb-6">
-                Explore Our Tools
+                {exploreTitle}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-                Everything you need for file conversion, viewing, compression, and more
+                {exploreSubtitle}
               </p>
             </div>
 
@@ -294,13 +392,13 @@ export default function Home() {
                     <RefreshCw className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
-                    Converters
+                    {exploreCardsContent.converters.title}
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
-                    Convert between 300+ file formats instantly. Images, documents, ebooks, and data files.
+                    {exploreCardsContent.converters.description}
                   </p>
                   <div className="flex items-center gap-2 text-blue-600 font-semibold text-sm sm:text-base group-hover:gap-3 transition-all">
-                    <span>Explore</span>
+                    <span>{exploreCardsContent.converters.cta}</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -317,13 +415,13 @@ export default function Home() {
                     <Eye className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
-                    Viewers
+                    {exploreCardsContent.viewers.title}
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
-                    Preview and view files directly in your browser. No downloads needed.
+                    {exploreCardsContent.viewers.description}
                   </p>
                   <div className="flex items-center gap-2 text-purple-600 font-semibold text-sm sm:text-base group-hover:gap-3 transition-all">
-                    <span>Explore</span>
+                    <span>{exploreCardsContent.viewers.cta}</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -340,13 +438,13 @@ export default function Home() {
                     <Minimize2 className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
-                    Compress
+                    {exploreCardsContent.compress.title}
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
-                    Reduce file sizes without losing quality. JPG, PNG, and PDF compression.
+                    {exploreCardsContent.compress.description}
                   </p>
                   <div className="flex items-center gap-2 text-green-600 font-semibold text-sm sm:text-base group-hover:gap-3 transition-all">
-                    <span>Explore</span>
+                    <span>{exploreCardsContent.compress.cta}</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -363,13 +461,13 @@ export default function Home() {
                     <FolderOpen className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
-                    Samples
+                    {exploreCardsContent.samples.title}
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
-                    Browse sample files for all supported formats. Test before you convert.
+                    {exploreCardsContent.samples.description}
                   </p>
                   <div className="flex items-center gap-2 text-orange-600 font-semibold text-sm sm:text-base group-hover:gap-3 transition-all">
-                    <span>Explore</span>
+                    <span>{exploreCardsContent.samples.cta}</span>
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -383,61 +481,31 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16 md:mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-3 sm:mb-4 md:mb-6">
-                How Our Conventers Work?
+                {howTitle}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-                Three simple steps to convert any file format
+                {howSubtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-              <div className="relative">
-                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-2xl sm:rounded-3xl opacity-20 blur-2xl"></div>
-                <div className="relative bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-blue-100 hover:border-blue-300 transition-all duration-300">
-                  <div className="bg-gradient-to-br from-blue-500 to-cyan-600 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
-                    <Upload className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
+              {howStepConfigs.map((config, index) => (
+                <div key={index} className="relative">
+                  <div className={`absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br ${config.glow} rounded-2xl sm:rounded-3xl opacity-20 blur-2xl`}></div>
+                  <div className={`relative bg-gradient-to-br ${config.cardBg} rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 ${config.border} ${config.hoverBorder} transition-all duration-300`}>
+                    <div className={`bg-gradient-to-br ${config.iconBg} w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg`}>
+                      {config.icon}
+                    </div>
+                    <div className="text-center mb-3 sm:mb-4">
+                      <span className={`text-xs sm:text-sm font-bold ${config.badgeText} ${config.badgeBg} px-2.5 py-1 sm:px-3 sm:py-1 rounded-full`}>{config.step.badge}</span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 text-center">{config.step.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">
+                      {config.step.description}
+                    </p>
                   </div>
-                  <div className="text-center mb-3 sm:mb-4">
-                    <span className="text-xs sm:text-sm font-bold text-blue-600 bg-blue-100 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full">STEP 1</span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 text-center">Upload File</h3>
-                  <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">
-                    Drag & drop or browse to select your file. Supports up to 100MB per file.
-                  </p>
                 </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl sm:rounded-3xl opacity-20 blur-2xl"></div>
-                <div className="relative bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-purple-100 hover:border-purple-300 transition-all duration-300">
-                  <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
-                    <Layers className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
-                  </div>
-                  <div className="text-center mb-3 sm:mb-4">
-                    <span className="text-xs sm:text-sm font-bold text-purple-600 bg-purple-100 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full">STEP 2</span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 text-center">Choose Format</h3>
-                  <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">
-                    Select your desired output format from 300+ supported formats.
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-400 to-emerald-400 rounded-2xl sm:rounded-3xl opacity-20 blur-2xl"></div>
-                <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border-2 border-green-100 hover:border-green-300 transition-all duration-300">
-                  <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
-                    <Download className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
-                  </div>
-                  <div className="text-center mb-3 sm:mb-4">
-                    <span className="text-xs sm:text-sm font-bold text-green-600 bg-green-100 px-2.5 py-1 sm:px-3 sm:py-1 rounded-full">STEP 3</span>
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3 text-center">Download</h3>
-                  <p className="text-sm sm:text-base text-gray-600 text-center leading-relaxed">
-                    Click convert and download your file instantly. No waiting, no queues.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -447,10 +515,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16 md:mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-3 sm:mb-4 md:mb-6">
-                Popular Converters
+                {popularTitle}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-                Quick access to our most-used conversion tools
+                {popularSubtitle}
               </p>
             </div>
 
@@ -480,8 +548,8 @@ export default function Home() {
                 className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-900 to-gray-700 hover:from-gray-800 hover:to-gray-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-xl sm:rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
               >
                 <Rocket className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span className="hidden sm:inline">View All 300+ Converters</span>
-                <span className="sm:hidden">View All Converters</span>
+                <span className="hidden sm:inline">{popularButtonFull}</span>
+                <span className="sm:hidden">{popularButtonMobile}</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
@@ -493,32 +561,35 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 sm:mb-16 md:mb-20">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-3 sm:mb-4 md:mb-6">
-                Why Choose MorphyHub?
+                {featureSectionTitle}
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-                Built for professionals and everyday users alike
+                {featureSectionSubtitle}
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-gray-200 overflow-hidden">
-                  <div className={`absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br ${feature.bgColor} rounded-full -mr-12 -mt-12 sm:-mr-16 sm:-mt-16 opacity-50 group-hover:opacity-75 transition-opacity`}></div>
-                  <div className="relative">
-                    <div className={`inline-flex p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${feature.color} mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
-                      <div className="text-white">
-                        {feature.icon}
+              {features.map((feature, index) => {
+                const item = featureItems[index] ?? { title: '', description: '' };
+                return (
+                  <div key={index} className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-gray-200 overflow-hidden">
+                    <div className={`absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br ${feature.bgColor} rounded-full -mr-12 -mt-12 sm:-mr-16 sm:-mt-16 opacity-50 group-hover:opacity-75 transition-opacity`}></div>
+                    <div className="relative">
+                      <div className={`inline-flex p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${feature.color} mb-4 sm:mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
+                        <div className="text-white">
+                          {feature.icon}
+                        </div>
                       </div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

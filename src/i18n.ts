@@ -48,6 +48,133 @@ const resources = {
       'features.no_registration': 'No Registration',
       'features.secure': '100% Secure',
       
+      // Home Page
+      home: {
+        meta: {
+          title: 'Free Online File Converter - MorphyHub | Convert 300+ Formats Instantly',
+          description: 'Convert files between 300+ formats instantly. Fast, secure, and free file conversion service. Support for images, documents, ebooks, and data files.',
+          keywords: 'file converter, online converter, image converter, document converter, ebook converter, batch conversion, free converter'
+        },
+        schema: {
+          website_name: 'MorphyHub - Free Online File Converter',
+          website_description: 'Convert files between 300+ formats instantly. Fast, secure, and free file conversion service.',
+          webpage_name: 'Free Online File Converter - MorphyHub',
+          webpage_description: 'Convert any file format instantly. Support for 300+ formats including images, documents, ebooks, and data files.'
+        },
+        hero: {
+          badge: 'Free Forever • No Registration',
+          title: 'Transform Files',
+          highlight: 'Instantly',
+          subtitle: 'Convert between <bold>{{count}} formats</bold> with lightning speed. Secure, free, and no sign-up required.',
+          cta_primary: 'Start Converting',
+          cta_secondary: 'View Files',
+          trust: [
+            '100% Free',
+            'No Registration',
+            'Secure & Private',
+            'Batch Processing'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Supported Formats' },
+          data_processed: { label: 'Data Processed' },
+          batch_processing: { value: '20 Files', label: 'Batch Processing' }
+        },
+        explore: {
+          title: 'Explore Our Tools',
+          subtitle: 'Everything you need for file conversion, viewing, compression, and more',
+          cards: {
+            converters: {
+              title: 'Converters',
+              description: 'Convert between 300+ file formats instantly. Images, documents, ebooks, and data files.',
+              cta: 'Explore'
+            },
+            viewers: {
+              title: 'Viewers',
+              description: 'Preview and view files directly in your browser. No downloads needed.',
+              cta: 'Explore'
+            },
+            compress: {
+              title: 'Compress',
+              description: 'Reduce file sizes without losing quality. JPG, PNG, and PDF compression.',
+              cta: 'Explore'
+            },
+            samples: {
+              title: 'Samples',
+              description: 'Browse sample files for all supported formats. Test before you convert.',
+              cta: 'Explore'
+            }
+          }
+        },
+        how: {
+          title: 'How Our Converters Work?',
+          subtitle: 'Three simple steps to convert any file format',
+          steps: [
+            {
+              badge: 'STEP 1',
+              title: 'Upload File',
+              description: 'Drag & drop or browse to select your file. Supports up to 100MB per file.'
+            },
+            {
+              badge: 'STEP 2',
+              title: 'Choose Format',
+              description: 'Select your desired output format from 300+ supported formats.'
+            },
+            {
+              badge: 'STEP 3',
+              title: 'Download',
+              description: 'Click convert and download your file instantly. No waiting, no queues.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Popular Converters',
+          subtitle: 'Quick access to our most-used conversion tools',
+          button_full: 'View All 300+ Converters',
+          button_mobile: 'View All Converters',
+          converters: {
+            csv_to_json: 'CSV to JSON',
+            csv_to_ndjson: 'CSV to NDJSON',
+            dng_to_webp: 'DNG to WebP',
+            cr2_to_webp: 'CR2 to WebP',
+            epub_to_pdf: 'EPUB to PDF',
+            epub_to_mobi: 'EPUB to MOBI',
+            csv_to_xlsx: 'CSV to XLSX',
+            docx_to_pdf: 'DOCX to PDF'
+          }
+        },
+        features: {
+          title: 'Why Choose MorphyHub?',
+          subtitle: 'Built for professionals and everyday users alike',
+          items: [
+            {
+              title: 'Lightning Fast',
+              description: 'Process files in seconds with our optimized conversion engine'
+            },
+            {
+              title: 'Secure & Private',
+              description: 'Enterprise-grade security. Files are automatically deleted after processing'
+            },
+            {
+              title: 'Universal Support',
+              description: 'Convert between 300+ format combinations across all file types'
+            },
+            {
+              title: 'Batch Processing',
+              description: 'Convert up to 20 files at once with our powerful batch engine'
+            },
+            {
+              title: 'File Viewer',
+              description: 'Preview and view your files directly in the browser'
+            },
+            {
+              title: 'Professional Quality',
+              description: 'Industry-standard conversion with customizable settings'
+            }
+          ]
+        }
+      },
+      
       // HEIF to JPG
       'heif_to_jpg.title': 'HEIF to JPG Converter',
       'heif_to_jpg.meta_title': 'Free HEIF to JPG Converter Online - Convert iPhone Photos to JPEG ',
@@ -4993,6 +5120,133 @@ const resources = {
       'features.no_registration': 'Bez Rejestracji',
       'features.secure': '100% Bezpieczny',
       
+      // Strona główna
+      home: {
+        meta: {
+          title: 'Darmowy Konwerter Plików Online - MorphyHub | Konwertuj Ponad 300 Formatów',
+          description: 'Konwertuj pliki między ponad 300 formatami w kilka chwil. Szybki, bezpieczny i darmowy serwis konwersji plików. Obsługa obrazów, dokumentów, ebooków i plików danych.',
+          keywords: 'konwerter plików, konwerter online, konwerter obrazów, konwerter dokumentów, konwerter ebooków, konwersja wsadowa, darmowy konwerter'
+        },
+        schema: {
+          website_name: 'MorphyHub - Darmowy Konwerter Plików Online',
+          website_description: 'Konwertuj pliki między ponad 300 formatami w kilka chwil. Szybki, bezpieczny i darmowy serwis konwersji plików.',
+          webpage_name: 'Darmowy Konwerter Plików Online - MorphyHub',
+          webpage_description: 'Konwertuj dowolny format pliku natychmiast. Obsługa ponad 300 formatów, w tym obrazów, dokumentów, ebooków i plików danych.'
+        },
+        hero: {
+          badge: 'Zawsze za darmo • Bez rejestracji',
+          title: 'Przekształcaj pliki',
+          highlight: 'Natychmiast',
+          subtitle: 'Konwertuj między <bold>{{count}} formatami</bold> z błyskawiczną prędkością. Bezpiecznie, za darmo i bez rejestracji.',
+          cta_primary: 'Rozpocznij konwersję',
+          cta_secondary: 'Zobacz pliki',
+          trust: [
+            '100% darmowe',
+            'Bez rejestracji',
+            'Bezpiecznie i prywatnie',
+            'Przetwarzanie wsadowe'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Obsługiwane formaty' },
+          data_processed: { label: 'Przetworzone dane' },
+          batch_processing: { value: '20 plików', label: 'Przetwarzanie wsadowe' }
+        },
+        explore: {
+          title: 'Poznaj nasze narzędzia',
+          subtitle: 'Wszystko, czego potrzebujesz do konwersji, podglądu i kompresji plików',
+          cards: {
+            converters: {
+              title: 'Konwertery',
+              description: 'Konwertuj ponad 300 formatów plików w kilka sekund. Obrazy, dokumenty, ebooki i pliki danych.',
+              cta: 'Zobacz'
+            },
+            viewers: {
+              title: 'Wizualizatory',
+              description: 'Przeglądaj pliki bezpośrednio w przeglądarce. Bez pobierania.',
+              cta: 'Zobacz'
+            },
+            compress: {
+              title: 'Kompresja',
+              description: 'Zmniejszaj rozmiar plików bez utraty jakości. Kompresja JPG, PNG i PDF.',
+              cta: 'Zobacz'
+            },
+            samples: {
+              title: 'Próbki',
+              description: 'Przeglądaj próbki dla wszystkich obsługiwanych formatów. Przetestuj przed konwersją.',
+              cta: 'Zobacz'
+            }
+          }
+        },
+        how: {
+          title: 'Jak działają nasze konwertery?',
+          subtitle: 'Trzy proste kroki, aby przekonwertować dowolny format pliku',
+          steps: [
+            {
+              badge: 'KROK 1',
+              title: 'Prześlij plik',
+              description: 'Przeciągnij i upuść lub wybierz plik z dysku. Obsługa plików do 100 MB.'
+            },
+            {
+              badge: 'KROK 2',
+              title: 'Wybierz format',
+              description: 'Wybierz docelowy format spośród ponad 300 obsługiwanych opcji.'
+            },
+            {
+              badge: 'KROK 3',
+              title: 'Pobierz',
+              description: 'Kliknij Konwertuj i pobierz plik natychmiast. Bez czekania i kolejek.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Popularne konwersje',
+          subtitle: 'Szybki dostęp do najczęściej używanych narzędzi',
+          button_full: 'Zobacz wszystkie 300+ konwerterów',
+          button_mobile: 'Zobacz wszystkie konwertery',
+          converters: {
+            csv_to_json: 'CSV na JSON',
+            csv_to_ndjson: 'CSV na NDJSON',
+            dng_to_webp: 'DNG na WebP',
+            cr2_to_webp: 'CR2 na WebP',
+            epub_to_pdf: 'EPUB na PDF',
+            epub_to_mobi: 'EPUB na MOBI',
+            csv_to_xlsx: 'CSV na XLSX',
+            docx_to_pdf: 'DOCX na PDF'
+          }
+        },
+        features: {
+          title: 'Dlaczego warto wybrać MorphyHub?',
+          subtitle: 'Stworzone dla profesjonalistów i użytkowników codziennych',
+          items: [
+            {
+              title: 'Błyskawiczna prędkość',
+              description: 'Przetwarzaj pliki w kilka sekund dzięki zoptymalizowanemu silnikowi konwersji'
+            },
+            {
+              title: 'Bezpieczeństwo i prywatność',
+              description: 'Zabezpieczenia klasy enterprise. Pliki są automatycznie usuwane po konwersji.'
+            },
+            {
+              title: 'Uniwersalne wsparcie',
+              description: 'Konwersja między ponad 300 kombinacjami formatów wszystkich typów plików.'
+            },
+            {
+              title: 'Przetwarzanie wsadowe',
+              description: 'Konwertuj do 20 plików jednocześnie dzięki wydajnemu trybowi wsadowemu.'
+            },
+            {
+              title: 'Podgląd plików',
+              description: 'Przeglądaj i podglądaj pliki bezpośrednio w przeglądarce.'
+            },
+            {
+              title: 'Profesjonalna jakość',
+              description: 'Konwersja na poziomie profesjonalnym z możliwością personalizacji ustawień.'
+            }
+          ]
+        }
+      },
+      
       // Viewers - HTML
       'viewers.html.meta_title': 'Darmowy Podgląd HTML - Wyświetlaj i Waliduj Pliki HTML Online | MorphyHub',
       'viewers.html.meta_description': 'Darmowy, profesjonalny podgląd HTML z podświetlaniem składni i walidacją. Prześlij i przeglądaj pliki HTML, HTM, XHTML online z formatowaniem i wykrywaniem błędów. Obsługa do 20 plików. 100% darmowe narzędzie.',
@@ -9648,6 +9902,133 @@ const resources = {
       'features.100_free': '100% Kostenlos',
       'features.no_registration': 'Keine Registrierung',
       'features.secure': '100% Sicher',
+      
+      // Startseite
+      home: {
+        meta: {
+          title: 'Kostenloser Online-Dateikonverter - MorphyHub | Über 300 Formate sofort umwandeln',
+          description: 'Konvertiere Dateien zwischen über 300 Formaten in Sekunden. Schneller, sicherer und kostenloser Dateikonverter für Bilder, Dokumente, E-Books und Daten.',
+          keywords: 'dateikonverter, online konverter, bildkonverter, dokumentenkonverter, ebook konverter, stapelkonvertierung, kostenloser konverter'
+        },
+        schema: {
+          website_name: 'MorphyHub - Kostenloser Online-Dateikonverter',
+          website_description: 'Konvertiere Dateien zwischen über 300 Formaten in Sekunden. Schneller, sicherer und kostenloser Dateikonverter.',
+          webpage_name: 'Kostenloser Online-Dateikonverter - MorphyHub',
+          webpage_description: 'Konvertiere jedes Dateiformat sofort. Unterstützung für über 300 Formate wie Bilder, Dokumente, E-Books und Daten.'
+        },
+        hero: {
+          badge: 'Für immer kostenlos • Keine Registrierung',
+          title: 'Dateien transformieren',
+          highlight: 'Sofort',
+          subtitle: 'Konvertiere zwischen <bold>{{count}} Formaten</bold> in Sekundenschnelle. Sicher, kostenlos und ohne Registrierung.',
+          cta_primary: 'Jetzt konvertieren',
+          cta_secondary: 'Dateien ansehen',
+          trust: [
+            '100% kostenlos',
+            'Keine Registrierung',
+            'Sicher & privat',
+            'Stapelverarbeitung'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Unterstützte Formate' },
+          data_processed: { label: 'Verarbeitete Daten' },
+          batch_processing: { value: '20 Dateien', label: 'Stapelverarbeitung' }
+        },
+        explore: {
+          title: 'Entdecke unsere Tools',
+          subtitle: 'Alles, was du für Konvertierung, Vorschau und Komprimierung von Dateien brauchst',
+          cards: {
+            converters: {
+              title: 'Konverter',
+              description: 'Konvertiere über 300 Dateiformate in Sekunden. Bilder, Dokumente, E-Books und Daten.',
+              cta: 'Entdecken'
+            },
+            viewers: {
+              title: 'Viewer',
+              description: 'Zeige Dateien direkt im Browser an. Kein Download erforderlich.',
+              cta: 'Entdecken'
+            },
+            compress: {
+              title: 'Komprimieren',
+              description: 'Reduziere Dateigrößen ohne Qualitätsverlust. JPG-, PNG- und PDF-Komprimierung.',
+              cta: 'Entdecken'
+            },
+            samples: {
+              title: 'Beispieldateien',
+              description: 'Stöbere in Beispieldateien für alle unterstützten Formate. Teste vor der Konvertierung.',
+              cta: 'Entdecken'
+            }
+          }
+        },
+        how: {
+          title: 'Wie funktionieren unsere Konverter?',
+          subtitle: 'Drei einfache Schritte, um jedes Dateiformat zu konvertieren',
+          steps: [
+            {
+              badge: 'SCHRITT 1',
+              title: 'Datei hochladen',
+              description: 'Ziehe deine Datei per Drag & Drop hinein oder wähle sie aus. Unterstützt Dateien bis 100 MB.'
+            },
+            {
+              badge: 'SCHRITT 2',
+              title: 'Format wählen',
+              description: 'Wähle dein Zielformat aus über 300 unterstützten Optionen.'
+            },
+            {
+              badge: 'SCHRITT 3',
+              title: 'Download',
+              description: 'Klicke auf Konvertieren und lade die Datei sofort herunter. Keine Wartezeiten, keine Warteschlangen.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Beliebte Konverter',
+          subtitle: 'Schnellzugriff auf unsere meistgenutzten Tools',
+          button_full: 'Alle 300+ Konverter anzeigen',
+          button_mobile: 'Alle Konverter anzeigen',
+          converters: {
+            csv_to_json: 'CSV in JSON',
+            csv_to_ndjson: 'CSV in NDJSON',
+            dng_to_webp: 'DNG in WebP',
+            cr2_to_webp: 'CR2 in WebP',
+            epub_to_pdf: 'EPUB in PDF',
+            epub_to_mobi: 'EPUB in MOBI',
+            csv_to_xlsx: 'CSV in XLSX',
+            docx_to_pdf: 'DOCX in PDF'
+          }
+        },
+        features: {
+          title: 'Warum MorphyHub?',
+          subtitle: 'Für Profis und Alltagsnutzer gleichermaßen gemacht',
+          items: [
+            {
+              title: 'Blitzschnell',
+              description: 'Verarbeite Dateien in Sekunden mit unserer optimierten Konvertierungs-Engine.'
+            },
+            {
+              title: 'Sicher & privat',
+              description: 'Sicherheit auf Enterprise-Niveau. Dateien werden nach der Verarbeitung automatisch gelöscht.'
+            },
+            {
+              title: 'Universelle Unterstützung',
+              description: 'Konvertiere zwischen über 300 Format-Kombinationen für alle Dateitypen.'
+            },
+            {
+              title: 'Stapelverarbeitung',
+              description: 'Konvertiere bis zu 20 Dateien gleichzeitig mit unserer leistungsstarken Batch-Engine.'
+            },
+            {
+              title: 'Dateivorschau',
+              description: 'Zeige und prüfe Dateien direkt im Browser an.'
+            },
+            {
+              title: 'Professionelle Qualität',
+              description: 'Konvertierung in Profi-Qualität mit anpassbaren Einstellungen.'
+            }
+          ]
+        }
+      },
       
       // Viewers - HTML
       'viewers.html.meta_title': 'Kostenloser HTML Viewer – HTML-Dateien Online Anzeigen & Validieren | MorphyHub',
