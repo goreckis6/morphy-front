@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -21,8 +21,6 @@ import {
   Info,
   Star
 } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
 
 interface ThumbnailQuality {
   name: string;
@@ -49,59 +47,6 @@ export const YTThumbnailDownloader: React.FC = () => {
   const [videoIdCopied, setVideoIdCopied] = useState(false);
   const [channelIdCopied, setChannelIdCopied] = useState(false);
 
-  const { t, i18n } = useTranslation();
-  const location = useLocation();
-
-  const resolvedLanguage = useMemo(() => {
-    const segments = location.pathname.split('/').filter(Boolean);
-    const prefix = segments[0];
-    if (prefix === 'pl') return 'pl';
-    if (prefix === 'de') return 'de';
-    return 'en';
-  }, [location.pathname]);
-
-  useEffect(() => {
-    if (i18n.language !== resolvedLanguage) {
-      i18n.changeLanguage(resolvedLanguage);
-    }
-  }, [i18n, resolvedLanguage]);
-
-  const heroBadgeLabels = t('pages.yt_thumbnail.hero.badges', { returnObjects: true }) as string[];
-  const heroBadgeIcons = [Zap, Shield, Clock, Globe];
-  const heroFeatureBadges = heroBadgeIcons.map((Icon, index) => ({
-    icon: Icon,
-    label: heroBadgeLabels[index] ?? ''
-  }));
-
-  const featureTranslations = t('pages.yt_thumbnail.features', { returnObjects: true }) as Array<{
-    title: string;
-    description: string;
-  }>;
-  const featureIcons = [LinkIcon, ImageIcon, Download, Sparkles];
-  const featureColors = ['bg-red-100', 'bg-rose-100', 'bg-pink-100', 'bg-red-100'];
-  const featureCards = featureIcons.map((Icon, index) => ({
-    icon: Icon,
-    color: featureColors[index],
-    title: featureTranslations[index]?.title ?? '',
-    description: featureTranslations[index]?.description ?? ''
-  }));
-
-  const perfectFor = t('pages.yt_thumbnail.perfect_for.items', { returnObjects: true }) as string[];
-  const qualityDetails = t('pages.yt_thumbnail.video.quality_details', { returnObjects: true }) as Array<{
-    label: string;
-    resolution: string;
-  }>;
-  const whyChooseItems = t('pages.yt_thumbnail.video.why_choose_items', { returnObjects: true }) as string[];
-  const howToSteps = t('pages.yt_thumbnail.content.how_to.steps', { returnObjects: true }) as Array<{
-    title: string;
-    description: string;
-  }>;
-  const faqItems = t('pages.yt_thumbnail.content.faq.items', { returnObjects: true }) as Array<{
-    question: string;
-    answer: string;
-  }>;
-  const jsonLdFeatureList = t('pages.yt_thumbnail.meta.jsonld_feature_list', { returnObjects: true }) as string[];
-
   const extractVideoId = (url: string): string | null => {
     const patterns = [
       /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/v\/)([^&\n?#]+)/,
@@ -119,34 +64,33 @@ export const YTThumbnailDownloader: React.FC = () => {
   };
 
   const generateThumbnailUrls = (id: string): ThumbnailQuality[] => {
-    const qualityLabels = qualityDetails.map((item) => item.label);
     return [
       {
-        name: qualityLabels[0] ?? 'Default',
+        name: 'Default',
         resolution: '120×90',
         url: `https://img.youtube.com/vi/${id}/default.jpg`,
         quality: 'default'
       },
       {
-        name: qualityLabels[1] ?? 'Medium',
+        name: 'Medium',
         resolution: '320×180',
         url: `https://img.youtube.com/vi/${id}/mqdefault.jpg`,
         quality: 'mqdefault'
       },
       {
-        name: qualityLabels[2] ?? 'High',
+        name: 'High',
         resolution: '480×360',
         url: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
         quality: 'hqdefault'
       },
       {
-        name: qualityLabels[3] ?? 'Standard',
+        name: 'Standard',
         resolution: '640×480',
         url: `https://img.youtube.com/vi/${id}/sddefault.jpg`,
         quality: 'sddefault'
       },
       {
-        name: qualityLabels[4] ?? 'Max Resolution',
+        name: 'Max Resolution',
         resolution: '1280×720+',
         url: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
         quality: 'maxresdefault'
@@ -168,16 +112,16 @@ export const YTThumbnailDownloader: React.FC = () => {
         });
       } else {
         setVideoMetadata({
-          title: t('pages.yt_thumbnail.video.default_title', { id }),
+          title: `Video ${id}`,
           thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
-          author: t('pages.yt_thumbnail.video.unknown_author')
+          author: 'Unknown'
         });
       }
     } catch (err) {
       setVideoMetadata({
-        title: t('pages.yt_thumbnail.video.default_title', { id }),
+        title: `Video ${id}`,
         thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
-        author: t('pages.yt_thumbnail.video.unknown_author')
+        author: 'Unknown'
       });
     } finally {
       setIsLoadingMetadata(false);
@@ -190,19 +134,19 @@ export const YTThumbnailDownloader: React.FC = () => {
     setCopied(null);
 
     if (!videoUrl.trim()) {
-      setError(t('pages.yt_thumbnail.errors.empty'));
+      setError('Please enter a YouTube URL or Video ID');
       return;
     }
 
     const id = extractVideoId(videoUrl.trim());
 
     if (!id) {
-      setError(t('pages.yt_thumbnail.errors.invalid_url'));
+      setError('Invalid YouTube URL or Video ID. Please check and try again.');
       return;
     }
 
     if (id.length !== 11) {
-      setError(t('pages.yt_thumbnail.errors.invalid_id'));
+      setError('Invalid Video ID. YouTube Video IDs must be 11 characters long.');
       return;
     }
 
@@ -262,11 +206,63 @@ export const YTThumbnailDownloader: React.FC = () => {
     });
   };
 
+  const heroFeatureBadges = [
+    { icon: Zap, label: 'Instant Extraction' },
+    { icon: Shield, label: '100% Free' },
+    { icon: Clock, label: 'No Registration' },
+    { icon: Globe, label: 'All YouTube URLs' }
+  ];
+
+  const featureCards = [
+    {
+      title: 'All YouTube URLs Supported',
+      description: 'Works with watch, share, embed URLs, and direct video IDs.',
+      color: 'bg-red-100',
+      icon: LinkIcon
+    },
+    {
+      title: 'Multiple Thumbnail Qualities',
+      description: 'Access every official YouTube thumbnail size up to max resolution.',
+      color: 'bg-rose-100',
+      icon: ImageIcon
+    },
+    {
+      title: 'Copy or Download Instantly',
+      description: 'Get direct URLs or download files in one click.',
+      color: 'bg-pink-100',
+      icon: Download
+    },
+    {
+      title: 'Perfect for Creators',
+      description: 'Ideal for social media, blog posts, and video previews.',
+      color: 'bg-red-100',
+      icon: Sparkles
+    }
+  ];
+
+  const perfectFor = [
+    'Content creators and bloggers',
+    'Social media managers',
+    'Video editors and designers',
+    'Website developers',
+    'Marketing professionals',
+    'YouTube channel owners'
+  ];
+
+  const qualityDetails = [
+    { label: 'Default', resolution: '120×90' },
+    { label: 'Medium', resolution: '320×180' },
+    { label: 'High', resolution: '480×360' },
+    { label: 'Standard', resolution: '640×480' },
+    { label: 'Max Resolution', resolution: '1280×720+' }
+  ];
+
   const pageJsonLd = {
     "@context": 'https://schema.org',
     "@type": 'WebApplication',
-    name: t('pages.yt_thumbnail.meta.jsonld_name'),
-    description: t('pages.yt_thumbnail.meta.jsonld_description'),
+    name: 'YouTube Thumbnail Downloader',
+    description:
+      'Free online tool to extract and download YouTube video thumbnails in multiple resolutions. Get high-quality thumbnails from any YouTube video instantly.',
     url: 'https://morphyhub.com/yt-thumbnail-downloader',
     applicationCategory: 'UtilityApplication',
     operatingSystem: 'Web Browser',
@@ -275,24 +271,42 @@ export const YTThumbnailDownloader: React.FC = () => {
       price: '0',
       priceCurrency: 'USD'
     },
-    featureList: jsonLdFeatureList
+    featureList: [
+      'Extract thumbnails from YouTube videos',
+      'Download in 5 different resolutions',
+      'Copy thumbnail URLs',
+      'Support for multiple YouTube URL formats',
+      'No registration required'
+    ]
   };
 
   return (
     <>
       <Helmet>
-        <title>{t('pages.yt_thumbnail.meta.title')}</title>
-        <meta name="description" content={t('pages.yt_thumbnail.meta.description')} />
-        <meta name="keywords" content={t('pages.yt_thumbnail.meta.keywords')} />
-        <meta property="og:title" content={t('pages.yt_thumbnail.meta.og_title')} />
-        <meta property="og:description" content={t('pages.yt_thumbnail.meta.og_description')} />
+        <title>YouTube Thumbnail Downloader - Free Online Tool | MorphyHub</title>
+        <meta
+          name="description"
+          content="Download YouTube video thumbnails in five different resolutions. Extract high-quality thumbnails (120×90 to 1280×720+) from any YouTube video instantly. Free, fast, and easy to use. No registration required."
+        />
+        <meta
+          name="keywords"
+          content="youtube thumbnail downloader, download youtube thumbnail, youtube thumbnail extractor, youtube thumbnail grabber, free youtube thumbnail, youtube thumbnail download, extract youtube thumbnail, youtube thumbnail url, youtube video thumbnail"
+        />
+        <meta property="og:title" content="YouTube Thumbnail Downloader - Free Online Tool | MorphyHub" />
+        <meta
+          property="og:description"
+          content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/yt-thumbnail-downloader" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={t('pages.yt_thumbnail.meta.twitter_title')} />
-        <meta name="twitter:description" content={t('pages.yt_thumbnail.meta.twitter_description')} />
+        <meta name="twitter:title" content="YouTube Thumbnail Downloader - Free Online Tool" />
+        <meta
+          name="twitter:description"
+          content="Download YouTube video thumbnails in multiple resolutions. Extract high-quality thumbnails from any YouTube video instantly."
+        />
         <link rel="canonical" href="https://morphyhub.com/yt-thumbnail-downloader" />
-        <meta name="robots" content={t('pages.yt_thumbnail.meta.robots')} />
+        <meta name="robots" content="noindex, nofollow" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
       </Helmet>
 
@@ -315,10 +329,11 @@ export const YTThumbnailDownloader: React.FC = () => {
                 <Youtube className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                {t('pages.yt_thumbnail.hero.title')}
+                YouTube Thumbnail Downloader
               </h1>
               <p className="text-lg sm:text-xl text-red-100 mb-6 max-w-2xl mx-auto">
-                {t('pages.yt_thumbnail.hero.subtitle')}
+                Extract and download high-quality thumbnails from any YouTube video in multiple resolutions. Simple, fast, and
+                completely free.
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm text-red-200">
                 {heroFeatureBadges.map(({ icon: Icon, label }) => (
@@ -355,13 +370,11 @@ export const YTThumbnailDownloader: React.FC = () => {
               <div className="bg-white rounded-2xl shadow-2xl p-8 sm:p-10 border border-gray-100">
                 <div className="max-w-3xl mx-auto">
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
-                    {t('pages.yt_thumbnail.form.heading')}
+                    Download YouTube Thumbnails in Seconds
                   </h2>
 
                   <div className="mb-6">
-                    <label className="block text-sm font-semibold text-gray-700 mb-3">
-                      {t('pages.yt_thumbnail.form.label')}
-                    </label>
+                    <label className="block text-sm font-semibold text-gray-700 mb-3">YouTube Video URL or Video ID</label>
                     <div className="relative">
                       <LinkIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-red-500" />
                       <input
@@ -369,12 +382,12 @@ export const YTThumbnailDownloader: React.FC = () => {
                         value={videoUrl}
                         onChange={(e) => setVideoUrl(e.target.value)}
                         onKeyPress={handleKeyPress}
-                        placeholder={t('pages.yt_thumbnail.form.placeholder')}
+                        placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ or dQw4w9WgXcQ"
                         className="w-full pl-12 pr-4 py-4 text-base border-2 border-gray-200 rounded-xl focus:border-red-500 focus:ring-2 focus:ring-red-200 outline-none transition-all"
                       />
                     </div>
                     <p className="mt-2 text-xs sm:text-sm text-gray-500">
-                      {t('pages.yt_thumbnail.form.helper')}
+                      Supports: youtube.com/watch?v=, youtu.be/, youtube.com/embed/, or direct Video ID
                     </p>
                   </div>
 
@@ -392,7 +405,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                     className="w-full bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] flex items-center justify-center space-x-2"
                   >
                     <ImageIcon className="w-5 h-5" />
-                    <span>{t('pages.yt_thumbnail.form.button')}</span>
+                    <span>Extract Thumbnails</span>
                   </button>
                 </div>
               </div>
@@ -406,17 +419,17 @@ export const YTThumbnailDownloader: React.FC = () => {
                         className="text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 text-sm font-medium"
                       >
                         <ArrowLeft className="w-5 h-5" />
-                        {t('pages.yt_thumbnail.video.back')}
+                        Back
                       </button>
                       {thumbnails.length > 0 && (
                         <span className="px-3 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded-full">
-                          {t('pages.yt_thumbnail.video.qualities_badge', { count: thumbnails.length })}
+                          {thumbnails.length} Qualities
                         </span>
                       )}
                     </div>
 
                     <h2 className="text-lg font-semibold text-gray-900 mb-4 line-clamp-2">
-                      {videoMetadata?.title || t('pages.yt_thumbnail.video.default_title', { id: videoId })}
+                      {videoMetadata?.title || `Video ${videoId}`}
                     </h2>
 
                     <div className="relative mb-4 rounded-lg overflow-hidden bg-gray-100">
@@ -426,7 +439,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                       >
                         <img
                           src={videoMetadata?.thumbnail || `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                          alt={videoMetadata?.title || t('pages.yt_thumbnail.results.preview_alt')}
+                          alt={videoMetadata?.title || 'YouTube video thumbnail preview'}
                           className="w-full h-full object-cover"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
@@ -438,16 +451,16 @@ export const YTThumbnailDownloader: React.FC = () => {
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
-                        {isLoadingMetadata ? t('pages.yt_thumbnail.video.loading') : videoMetadata?.author || t('pages.yt_thumbnail.video.unknown_channel')}
+                        {isLoadingMetadata ? 'Loading...' : videoMetadata?.author || 'Unknown channel'}
                       </span>
                     </div>
 
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-600">{t('pages.yt_thumbnail.video.channel_id_label')}</span>
+                        <span className="text-sm text-gray-600">Channel ID:</span>
                         <div className="flex items-center gap-2">
                           <span className="text-xs font-mono text-gray-800 truncate max-w-[140px]">
-                            {videoMetadata?.channelId || t('pages.yt_thumbnail.video.not_available')}
+                            {videoMetadata?.channelId || 'N/A'}
                           </span>
                           <button
                             onClick={handleCopyChannelId}
@@ -462,7 +475,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-600">{t('pages.yt_thumbnail.video.video_id_label')}</span>
+                        <span className="text-sm text-gray-600">Video ID:</span>
                         <div className="flex items-center gap-2">
                           <span className="text-xs font-mono text-gray-800">{videoId}</span>
                           <button
@@ -483,22 +496,28 @@ export const YTThumbnailDownloader: React.FC = () => {
                   <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                     <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                       <Star className="w-5 h-5 text-yellow-500" />
-                      {t('pages.yt_thumbnail.video.why_choose_title')}
+                      Why Choose This Tool?
                     </h3>
                     <div className="space-y-3 text-sm text-gray-700">
-                      {whyChooseItems.map((item) => (
-                        <div key={item} className="flex items-start gap-3">
-                          <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                          <p>{item}</p>
-                        </div>
-                      ))}
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                        <p>Instant access to every YouTube thumbnail quality in one place.</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                        <p>No watermarks, no compression – direct downloads from YouTube servers.</p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                        <p>Copy URLs or download images directly for your workflow.</p>
+                      </div>
                     </div>
                   </div>
 
                   <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                     <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                       <Camera className="w-5 h-5 text-red-600" />
-                      {t('pages.yt_thumbnail.perfect_for.title')}
+                      Perfect For
                     </h3>
                     <div className="space-y-2 text-sm text-gray-700">
                       {perfectFor.map((item) => (
@@ -513,7 +532,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                   <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                     <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                       <Info className="w-5 h-5 text-red-600" />
-                      {t('pages.yt_thumbnail.video.available_qualities_title')}
+                      Available Qualities
                     </h3>
                     <div className="space-y-3 text-sm">
                       {qualityDetails.map((quality) => (
@@ -530,10 +549,9 @@ export const YTThumbnailDownloader: React.FC = () => {
                   <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                       <div>
-                        <h2 className="text-2xl font-bold text-gray-900 mb-1">{t('pages.yt_thumbnail.results.heading')}</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 mb-1">Available Thumbnails</h2>
                         <p className="text-sm text-gray-600">
-                          {t('pages.yt_thumbnail.results.video_id_label')}{' '}
-                          <span className="font-mono font-semibold text-red-600">{videoId}</span>
+                          Video ID: <span className="font-mono font-semibold text-red-600">{videoId}</span>
                         </p>
                       </div>
                       <button
@@ -541,7 +559,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                         className="px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        {t('pages.yt_thumbnail.results.open_youtube')}
+                        Open on YouTube
                       </button>
                     </div>
 
@@ -554,15 +572,12 @@ export const YTThumbnailDownloader: React.FC = () => {
                           <div className="relative bg-gray-100 aspect-video">
                             <img
                               src={thumbnail.url}
-                              alt={t('pages.yt_thumbnail.results.thumbnail_alt', {
-                                name: thumbnail.name,
-                                resolution: thumbnail.resolution
-                              })}
+                              alt={`${thumbnail.name} quality thumbnail - ${thumbnail.resolution}`}
                               className="w-full h-full object-cover"
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement;
-                                const placeholderText = encodeURIComponent(t('pages.yt_thumbnail.content.image_placeholder'));
-                                target.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect fill='%23f3f4f6' width='640' height='360'/%3E%3Ctext fill='%239ca3af' font-family='sans-serif' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E${placeholderText}%3C/text%3E%3C/svg%3E`;
+                                target.src =
+                                  'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="640" height="360"%3E%3Crect fill="%23f3f4f6" width="640" height="360"/%3E%3Ctext fill="%239ca3af" font-family="sans-serif" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage not available%3C/text%3E%3C/svg%3E';
                               }}
                             />
                             <div className="absolute top-2 right-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded">
@@ -576,13 +591,11 @@ export const YTThumbnailDownloader: React.FC = () => {
 
                             <div className="space-y-2">
                               <button
-                                onClick={() =>
-                                  handleDownload(thumbnail.url, `youtube-thumbnail-${videoId}-${thumbnail.quality}.jpg`)
-                                }
+                                onClick={() => handleDownload(thumbnail.url, `youtube-thumbnail-${videoId}-${thumbnail.quality}.jpg`)}
                                 className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                               >
                                 <Download className="w-4 h-4" />
-                                <span>{t('pages.yt_thumbnail.results.download')}</span>
+                                <span>Download</span>
                               </button>
                               <div className="grid grid-cols-2 gap-2">
                                 <button
@@ -592,12 +605,12 @@ export const YTThumbnailDownloader: React.FC = () => {
                                   {copied === thumbnail.quality ? (
                                     <>
                                       <CheckCircle className="w-4 h-4" />
-                                      <span>{t('pages.yt_thumbnail.results.copied')}</span>
+                                      <span>Copied!</span>
                                     </>
                                   ) : (
                                     <>
                                       <Copy className="w-4 h-4" />
-                                      <span>{t('pages.yt_thumbnail.results.copy_url')}</span>
+                                      <span>Copy URL</span>
                                     </>
                                   )}
                                 </button>
@@ -608,7 +621,7 @@ export const YTThumbnailDownloader: React.FC = () => {
                                   className="bg-white hover:bg-red-50 text-red-600 border-2 border-red-200 font-medium py-2 px-3 rounded-lg transition-colors flex items-center justify-center gap-1 text-sm"
                                 >
                                   <ExternalLink className="w-4 h-4" />
-                                  <span>{t('pages.yt_thumbnail.results.open')}</span>
+                                  <span>Open</span>
                                 </a>
                               </div>
                             </div>
@@ -623,49 +636,58 @@ export const YTThumbnailDownloader: React.FC = () => {
 
             <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-12 border border-gray-100">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-                  {t('pages.yt_thumbnail.content.how_to.title')}
-                </h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">How to Download YouTube Thumbnails</h2>
                 <p className="text-gray-700 mb-6 text-lg leading-relaxed text-center">
-                  {t('pages.yt_thumbnail.content.how_to.intro')}
+                  Our YouTube thumbnail downloader is a free online tool that allows you to extract and download high-quality thumbnails from any YouTube video. Whether you're a content creator, social media manager, or need a thumbnail for a project, our tool makes it simple to get the perfect image.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                  {howToSteps.map((step, index) => (
-                    <div
-                      key={step.title}
-                      className={
-                        index === 0
-                          ? 'bg-gradient-to-br from-red-50 to-rose-50 p-6 rounded-xl border border-red-100'
-                          : index === 1
-                          ? 'bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-xl border border-pink-100'
-                          : index === 2
-                          ? 'bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-100'
-                          : 'bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border border-red-100'
-                      }
-                    >
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                        {index === 0 && <LinkIcon className="w-6 h-6 text-red-600" />}
-                        {index === 1 && <ImageIcon className="w-6 h-6 text-pink-600" />}
-                        {index === 2 && <Download className="w-6 h-6 text-rose-600" />}
-                        {index === 3 && <Sparkles className="w-6 h-6 text-red-600" />}
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-700 text-sm">{step.description}</p>
-                    </div>
-                  ))}
+                  <div className="bg-gradient-to-br from-red-50 to-rose-50 p-6 rounded-xl border border-red-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <LinkIcon className="w-6 h-6 text-red-600" />
+                      Step 1: Paste URL
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Copy the YouTube video URL or video ID and paste it into our tool. We support all common YouTube URL formats including share and embed links.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-xl border border-pink-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <ImageIcon className="w-6 h-6 text-pink-600" />
+                      Step 2: Extract
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Click the extract button to instantly generate every available thumbnail. You'll receive up to five official YouTube resolutions, including the maximised version when provided by the channel.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <Download className="w-6 h-6 text-rose-600" />
+                      Step 3: Download
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Choose your preferred quality and download the image directly. You can also copy the direct image URL for use in design tools or sharing.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border border-red-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                      <Sparkles className="w-6 h-6 text-red-600" />
+                      Step 4: Use Anywhere
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      Perfect for social media previews, blog posts, video editing, marketing campaigns, and more. Download thumbnails without watermarks or quality loss.
+                    </p>
+                  </div>
                 </div>
 
                 <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">
-                  {t('pages.yt_thumbnail.content.resolutions.title')}
+                  Understanding YouTube Thumbnail Resolutions
                 </h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  {t('pages.yt_thumbnail.content.resolutions.description')}
+                  YouTube provides multiple thumbnail resolutions for every video. Our downloader retrieves all official options, helping you find the exact size you need for any screen or platform.
                 </p>
 
-                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">
-                  {t('pages.yt_thumbnail.content.common_use_cases.title')}
-                </h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">Common Use Cases</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                   {perfectFor.map((item) => (
                     <div key={item} className="flex items-start gap-4 bg-gray-50 p-6 rounded-xl border border-gray-200">
@@ -677,16 +699,31 @@ export const YTThumbnailDownloader: React.FC = () => {
                   ))}
                 </div>
 
-                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">
-                  {t('pages.yt_thumbnail.content.faq.title')}
-                </h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">Frequently Asked Questions</h3>
                 <div className="space-y-4 text-gray-700">
-                  {faqItems.map((item) => (
-                    <div key={item.question}>
-                      <h4 className="font-semibold text-lg text-gray-900 mb-2">{item.question}</h4>
-                      <p>{item.answer}</p>
-                    </div>
-                  ))}
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Is this tool free to use?</h4>
+                    <p>Yes, the YouTube thumbnail downloader is completely free. No registration or payment is required.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Do I need to download any software?</h4>
+                    <p>No, everything runs directly in your browser. Just paste a YouTube link and download.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Are all resolutions available for every video?</h4>
+                    <p>
+                      Most videos offer all resolutions, but older content may not include the maximum size. If a max-resolution image
+                      isn’t available, you can still download every other official thumbnail that YouTube generates.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Can I copy the thumbnail URL instead of downloading?</h4>
+                    <p>Yes, each thumbnail includes a “Copy URL” button for easy sharing or use in design tools.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">Is there any watermark or quality loss?</h4>
+                    <p>No, images are retrieved directly from YouTube’s CDN. There are no watermarks or quality changes.</p>
+                  </div>
                 </div>
               </div>
             </div>
