@@ -12044,7 +12044,7 @@ const resources = {
       'heif_to_png.seo.use_case_2_title': 'Bearbeitung & Archivierung',
       'heif_to_png.seo.use_case_2_text': 'Nutzen Sie PNG für verlustfreie Bearbeitungs-Workflows und Archivkopien mit konsistenter Farbgebung.',
 
-      // HEIF to WEBP - German
+      // HEIF to WEBP - German_v1 
       'heif_to_webp.title': 'HEIF zu WEBP Konverter',
       'heif_to_webp.meta_title': 'Kostenloser HEIF zu WEBP Konverter Online ',
       'heif_to_webp.meta_description': 'Konvertieren Sie HEIF-Bilder (iPhone-Fotos) kostenlos online in das moderne WEBP-Format. Schneller, sicherer HEIF-zu-WEBP-Konverter mit Stapelverarbeitung und einstellbarer Qualität.',
