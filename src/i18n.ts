@@ -12288,6 +12288,13 @@ const resources = {
       'doc_to_mobi.ready_title': 'Bereit, Ihre DOC-Dateien zu konvertieren?',
       'doc_to_mobi.ready_text': 'Verwenden Sie unseren kostenlosen Online-DOC-zu-MOBI-Konverter, um Ihre Word-Dokumente in Kindle-kompatible eBooks für Amazon Kindle-Geräte zu verwandeln.',
       
+      'DOC': 'DOC',
+      'ODT': 'ODT',
+
+      // DOC to ODT
+      'doc_to_odt.title': 'DOC zu ODT Konverter',
+      'doc_to_odt.subtitle': 'Konvertieren Sie Microsoft Word DOC-Dateien in das ODT OpenDocument Text-Format. Verwandeln Sie Word-Dokumente mit LibreOffice in ein LibreOffice-kompatibles Format für beste Konvertierungsqualität.',
+
       // DOC to TXT
       'doc_to_txt.title': 'DOC zu TXT Konverter',
       'doc_to_txt.meta_title': 'Kostenloser DOC zu TXT Konverter Online - Word Dokumente zu Klartext Format konvertieren ',

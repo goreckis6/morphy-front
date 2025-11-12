@@ -3,10 +3,10 @@ import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
-import { 
-  Upload, 
-  Download, 
-  Settings, 
+import {
+  Upload,
+  Download,
+  Settings,
   FileText,
   FileImage,
   RefreshCw,
@@ -19,6 +19,7 @@ import {
   BookOpen,
   BarChart3
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export const EPUBToODTConverter: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -72,10 +73,10 @@ export const EPUBToODTConverter: React.FC = () => {
 
   const handleBatchFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
-    const epubFiles = files.filter(file => 
+    const epubFiles = files.filter(file =>
       file.name.toLowerCase().endsWith('.epub')
     );
-    
+
     if (epubFiles.length === 0) {
       setError('No valid EPUB files selected.');
       return;
@@ -106,10 +107,10 @@ export const EPUBToODTConverter: React.FC = () => {
 
   const handleSingleConvert = async () => {
     if (!selectedFile) return;
-    
+
     setIsConverting(true);
     setError(null);
-    
+
     try {
       const result = await handleConvert(selectedFile);
       setConvertedFile(result.blob);
@@ -125,11 +126,11 @@ export const EPUBToODTConverter: React.FC = () => {
 
   const handleBatchConvert = async () => {
     if (batchFiles.length === 0) return;
-    
+
     setIsConverting(true);
     setError(null);
     setBatchConverted(false);
-    
+
     try {
       const result = await apiService.convertBatch(batchFiles, {
         format: 'odt',
@@ -220,7 +221,7 @@ export const EPUBToODTConverter: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-lime-50">
       <Header />
-      
+
       {/* Hero Section - Narrowed */}
       <div className="relative overflow-hidden bg-gradient-to-r from-green-600 via-lime-600 to-emerald-700">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -252,18 +253,18 @@ export const EPUBToODTConverter: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
+
           {/* Main Conversion Panel */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              
+
               {/* Mode Toggle */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
                   onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
-                    !batchMode 
-                      ? 'bg-green-600 text-white shadow-lg' 
+                    !batchMode
+                      ? 'bg-green-600 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -273,8 +274,8 @@ export const EPUBToODTConverter: React.FC = () => {
                 <button
                   onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
-                    batchMode 
-                      ? 'bg-green-600 text-white shadow-lg' 
+                    batchMode
+                      ? 'bg-green-600 text-white shadow-lg'
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -290,8 +291,8 @@ export const EPUBToODTConverter: React.FC = () => {
                   {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
+                  {batchMode
+                    ? 'Select multiple EPUB files to convert them all at once'
                     : 'Drag and drop your EPUB file here or click to browse'
                   }
                 </p>
@@ -496,14 +497,14 @@ export const EPUBToODTConverter: React.FC = () => {
 
           {/* Settings & Info Panel */}
           <div className="space-y-6">
-            
+
             {/* Conversion Settings */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-green-600" />
                 ODT Settings
               </h3>
-              
+
               {/* Preserve Formatting */}
               <div className="mb-6">
                 <label className="flex items-center">
@@ -620,14 +621,14 @@ export const EPUBToODTConverter: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
             Why Convert EPUB to ODT?
           </h2>
-          
+
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Converting EPUB e-book files to OpenDocument Text (ODT) format is essential for cross-platform document editing, open-source office workflows, and universal document compatibility. While EPUB files are excellent for reading, ODT format provides full document editing capabilities with seamless integration across different operating systems and office suites.
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ODT Format</h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-green-900 mb-3">OpenDocument Compatibility</h4>
@@ -635,21 +636,21 @@ export const EPUBToODTConverter: React.FC = () => {
                   ODT files are fully compatible with LibreOffice, OpenOffice, and other open-source office suites, ensuring universal accessibility and editing capabilities.
                 </p>
               </div>
-              
+
               <div className="bg-lime-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-lime-900 mb-3">Cross-platform Editing</h4>
                 <p className="text-gray-700">
                   ODT format works seamlessly across Windows, macOS, and Linux, providing consistent editing experience regardless of the operating system.
                 </p>
               </div>
-              
+
               <div className="bg-emerald-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-emerald-900 mb-3">Formatting Preservation</h4>
                 <p className="text-gray-700">
                   ODT format preserves the original formatting of e-book content while allowing for full editing and customization capabilities.
                 </p>
               </div>
-              
+
               <div className="bg-teal-50 p-6 rounded-lg">
                 <h4 className="text-xl font-semibold text-teal-900 mb-3">Open-source Office Support</h4>
                 <p className="text-gray-700">
@@ -659,7 +660,7 @@ export const EPUBToODTConverter: React.FC = () => {
             </div>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
-            
+
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
@@ -668,7 +669,7 @@ export const EPUBToODTConverter: React.FC = () => {
                   <p className="text-gray-700">Convert e-books to ODT format for editing across different operating systems and office suites with full compatibility.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-lime-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
@@ -676,7 +677,7 @@ export const EPUBToODTConverter: React.FC = () => {
                   <p className="text-gray-700">Integrate e-book content into open-source office workflows by converting it to ODT format for LibreOffice compatibility.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
@@ -684,7 +685,7 @@ export const EPUBToODTConverter: React.FC = () => {
                   <p className="text-gray-700">Repurpose e-book content for different purposes by converting it to ODT format for easy editing and adaptation.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
