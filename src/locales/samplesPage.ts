@@ -219,9 +219,41 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
           name: 'C++ Sample Files',
           description: 'Download free C++ sample source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation and syntax checking tools.'
         },
+        crx: {
+          name: 'CRX Sample Files',
+          description: 'Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension development tools.'
+        },
         cs: {
           name: 'C# Sample Files',
           description: 'Download free C# sample source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C# code compilation and syntax checking tools.'
+        },
+        gz: {
+          name: 'GZ Sample Files',
+          description: 'Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing gzip decompression, archive extraction, and file compression tools.'
+        },
+        h: {
+          name: 'C Header Sample Files',
+          description: 'Download free C header sample header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C code compilation and header file processing tools.'
+        },
+        hdr: {
+          name: 'HDR Sample Files',
+          description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, HDR conversion, and high dynamic range viewing tools.'
+        },
+        heic: {
+          name: 'HEIC Sample Files',
+          description: 'Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIC image conversion, HEIC viewing, and modern image format processing tools.'
+        },
+        heif: {
+          name: 'HEIF Sample Files',
+          description: 'Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIF image conversion, HEIF viewing, and modern image format processing tools.'
+        },
+        hex: {
+          name: 'HEX Sample Files',
+          description: 'Download free HEX sample hexadecimal files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing hexadecimal file parsing, firmware programming, and embedded systems development tools.'
+        },
+        hpp: {
+          name: 'C++ Header Sample Files',
+          description: 'Download free C++ header sample header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation and header file processing tools.'
         },
         css: {
           name: 'CSS Sample Files',
@@ -776,9 +808,41 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
           name: 'Przykładowe pliki C++',
           description: 'Pobierz darmowe przykładowe pliki C++ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++ i narzędzi sprawdzania składni.'
         },
+        crx: {
+          name: 'Przykładowe pliki CRX',
+          description: 'Pobierz darmowe przykładowe pliki CRX rozszerzeń Chrome do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji rozszerzeń Chrome, analizy CRX i narzędzi tworzenia rozszerzeń przeglądarki.'
+        },
         cs: {
           name: 'Przykładowe pliki C#',
           description: 'Pobierz darmowe przykładowe pliki C# do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C# i narzędzi sprawdzania składni.'
+        },
+        gz: {
+          name: 'Przykładowe pliki GZ',
+          description: 'Pobierz darmowe przykładowe pliki GZ skompresowane gzip do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji gzip, ekstrakcji archiwów i narzędzi kompresji plików.'
+        },
+        h: {
+          name: 'Przykładowe pliki nagłówkowe C',
+          description: 'Pobierz darmowe przykładowe pliki nagłówkowe C do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C i narzędzi przetwarzania plików nagłówkowych.'
+        },
+        hdr: {
+          name: 'Przykładowe pliki HDR',
+          description: 'Pobierz darmowe przykładowe pliki HDR High Dynamic Range do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania obrazów HDR, konwersji HDR i narzędzi wyświetlania wysokiego zakresu dynamicznego.'
+        },
+        heic: {
+          name: 'Przykładowe pliki HEIC',
+          description: 'Pobierz darmowe przykładowe pliki HEIC High Efficiency Image Container do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów HEIC, przeglądania HEIC i narzędzi przetwarzania nowoczesnych formatów obrazów.'
+        },
+        heif: {
+          name: 'Przykładowe pliki HEIF',
+          description: 'Pobierz darmowe przykładowe pliki HEIF High Efficiency Image Format do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów HEIF, przeglądania HEIF i narzędzi przetwarzania nowoczesnych formatów obrazów.'
+        },
+        hex: {
+          name: 'Przykładowe pliki HEX',
+          description: 'Pobierz darmowe przykładowe pliki HEX szesnastkowe do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików szesnastkowych, programowania firmware i narzędzi rozwoju systemów wbudowanych.'
+        },
+        hpp: {
+          name: 'Przykładowe pliki nagłówkowe C++',
+          description: 'Pobierz darmowe przykładowe pliki nagłówkowe C++ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++ i narzędzi przetwarzania plików nagłówkowych.'
         },
         css: {
           name: 'Przykładowe pliki CSS',
@@ -1333,9 +1397,41 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
           name: 'C++ Beispieldateien',
           description: 'Laden Sie kostenlose C++ Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Code-Kompilierung und Syntaxprüfungstools.'
         },
+        crx: {
+          name: 'CRX Beispieldateien',
+          description: 'Laden Sie kostenlose CRX Chrome-Erweiterungs-Paket-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Chrome-Erweiterungsinstallation, CRX-Analyse und Browser-Erweiterungsentwicklungstools.'
+        },
         cs: {
           name: 'C# Beispieldateien',
           description: 'Laden Sie kostenlose C# Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C#-Code-Kompilierung und Syntaxprüfungstools.'
+        },
+        gz: {
+          name: 'GZ Beispieldateien',
+          description: 'Laden Sie kostenlose GZ gzip-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von gzip-Dekompression, Archivextraktion und Dateikomprimierungstools.'
+        },
+        h: {
+          name: 'C Header Beispieldateien',
+          description: 'Laden Sie kostenlose C Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C-Code-Kompilierung und Header-Dateiverarbeitungstools.'
+        },
+        hdr: {
+          name: 'HDR Beispieldateien',
+          description: 'Laden Sie kostenlose HDR High Dynamic Range Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HDR-Bildverarbeitung, HDR-Konvertierung und High Dynamic Range-Anzeigetools.'
+        },
+        heic: {
+          name: 'HEIC Beispieldateien',
+          description: 'Laden Sie kostenlose HEIC High Efficiency Image Container Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HEIC-Bildkonvertierung, HEIC-Anzeige und modernen Bildformatverarbeitungstools.'
+        },
+        heif: {
+          name: 'HEIF Beispieldateien',
+          description: 'Laden Sie kostenlose HEIF High Efficiency Image Format Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HEIF-Bildkonvertierung, HEIF-Anzeige und modernen Bildformatverarbeitungstools.'
+        },
+        hex: {
+          name: 'HEX Beispieldateien',
+          description: 'Laden Sie kostenlose HEX hexadezimale Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von hexadezimaler Dateiparsing, Firmware-Programmierung und eingebetteten Systementwicklungstools.'
+        },
+        hpp: {
+          name: 'C++ Header Beispieldateien',
+          description: 'Laden Sie kostenlose C++ Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Code-Kompilierung und Header-Dateiverarbeitungstools.'
         },
         css: {
           name: 'CSS Beispieldateien',

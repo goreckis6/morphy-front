@@ -247,6 +247,30 @@ export const SamplesHub: React.FC = () => {
           iconColor: "text-purple-600"
         },
         { 
+          name: "C Header Sample Files", 
+          description: "Download free C header sample header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C code compilation and header file processing tools.",
+          path: "/samples/sample-h",
+          format: "H",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "C++ Header Sample Files", 
+          description: "Download free C++ header sample header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation and header file processing tools.",
+          path: "/samples/sample-hpp",
+          format: "HPP",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
+          name: "HEX Sample Files", 
+          description: "Download free HEX sample hexadecimal files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing hexadecimal file parsing, firmware programming, and embedded systems development tools.",
+          path: "/samples/sample-hex",
+          format: "HEX",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
           name: "C# Sample Files", 
           description: "Download free C# sample source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C# code compilation and syntax checking tools.",
           path: "/samples/sample-cs",
@@ -556,6 +580,14 @@ export const SamplesHub: React.FC = () => {
           format: "JAR",
           icon: <Smartphone className="w-5 h-5 text-green-600" />,
           iconColor: "text-green-600"
+        },
+        { 
+          name: "CRX Sample Files", 
+          description: "Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension development tools.",
+          path: "/samples/sample-crx",
+          format: "CRX",
+          icon: <Smartphone className="w-5 h-5 text-green-600" />,
+          iconColor: "text-green-600"
         }
       ]
     },
@@ -812,6 +844,30 @@ export const SamplesHub: React.FC = () => {
           iconColor: "text-cyan-600"
         },
         { 
+          name: "HDR Sample Files", 
+          description: "Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, HDR conversion, and high dynamic range viewing tools.",
+          path: "/samples/sample-hdr",
+          format: "HDR",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "HEIC Sample Files", 
+          description: "Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIC image conversion, HEIC viewing, and modern image format processing tools.",
+          path: "/samples/sample-heic",
+          format: "HEIC",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
+          name: "HEIF Sample Files", 
+          description: "Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIF image conversion, HEIF viewing, and modern image format processing tools.",
+          path: "/samples/sample-heif",
+          format: "HEIF",
+          icon: <Image className="w-5 h-5 text-cyan-600" />,
+          iconColor: "text-cyan-600"
+        },
+        { 
           name: "ICNS Sample Files", 
           description: "Download free ICNS sample macOS icon files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing macOS icon conversion, ICNS viewing, and icon design tools.",
           path: "/samples/sample-icns",
@@ -966,6 +1022,14 @@ export const SamplesHub: React.FC = () => {
           description: "Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive decompression and compression tools.",
           path: "/samples/sample-bz2",
           format: "BZ2",
+          icon: <Archive className="w-5 h-5 text-orange-600" />,
+          iconColor: "text-orange-600"
+        },
+        { 
+          name: "GZ Sample Files", 
+          description: "Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing gzip decompression, archive extraction, and file compression tools.",
+          path: "/samples/sample-gz",
+          format: "GZ",
           icon: <Archive className="w-5 h-5 text-orange-600" />,
           iconColor: "text-orange-600"
         },
