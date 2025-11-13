@@ -863,6 +863,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free 3MF sample 3D printing files for testing. Multiple file sizes available to test your 3D printing conversion, viewing, and 3MF format processing tools.'
           },
           about_description: 'These are test 3MF (3D Manufacturing Format) 3D printing files in various sizes for testing purposes'
+        },
+        apk: {
+          meta: {
+            title: 'Free APK Sample Files Download - Test Android Application Files | MorphyHub',
+            description: 'Download free APK sample Android application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Android app installation, APK analysis, and mobile application processing tools.',
+            keywords: 'APK sample files, test APK files, download APK samples, free APK test files, Android app samples, mobile application samples, APK package samples, APK installation test files, .apk test files, Android application samples, app installation samples'
+          },
+          schema: {
+            name: 'Free APK Sample Files - Download Test Android Application Files',
+            description: 'Download free APK sample Android application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Android app installation, APK analysis, and mobile application processing tools.'
+          },
+          hero: {
+            title: 'APK Sample Files',
+            description: 'Download free APK sample Android application package files for testing. Multiple file sizes available to test your Android app installation, APK analysis, and mobile application processing tools.'
+          },
+          about_description: 'These are test APK (Android Package) application files in various sizes for testing purposes'
+        },
+        mkv: {
+          meta: {
+            title: 'Free MKV Sample Files Download - Test Matroska Video Files | MorphyHub',
+            description: 'Download free MKV sample Matroska video container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video playback, media conversion, and MKV format processing tools.',
+            keywords: 'MKV sample files, test MKV files, download MKV samples, free MKV test files, Matroska video samples, video container samples, MKV playback test files, .mkv test files, video format samples, media container samples, MKV video samples'
+          },
+          schema: {
+            name: 'Free MKV Sample Files - Download Test Matroska Video Files',
+            description: 'Download free MKV sample Matroska video container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video playback, media conversion, and MKV format processing tools.'
+          },
+          hero: {
+            title: 'MKV Sample Files',
+            description: 'Download free MKV sample Matroska video container files for testing. Multiple file sizes available to test your video playback, media conversion, and MKV format processing tools.'
+          },
+          about_description: 'These are test MKV (Matroska Video) container files in various sizes for testing purposes'
+        },
+        midi: {
+          meta: {
+            title: 'Free MIDI Sample Files Download - Test Musical Instrument Digital Interface Files | MorphyHub',
+            description: 'Download free MIDI sample Musical Instrument Digital Interface files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing music synthesis, MIDI playback, and digital music processing tools.',
+            keywords: 'MIDI sample files, test MIDI files, download MIDI samples, free MIDI test files, music synthesis samples, MIDI playback samples, digital music samples, .midi test files, .mid test files, music format samples, MIDI music samples'
+          },
+          schema: {
+            name: 'Free MIDI Sample Files - Download Test Musical Instrument Digital Interface Files',
+            description: 'Download free MIDI sample Musical Instrument Digital Interface files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing music synthesis, MIDI playback, and digital music processing tools.'
+          },
+          hero: {
+            title: 'MIDI Sample Files',
+            description: 'Download free MIDI sample Musical Instrument Digital Interface files for testing. Multiple file sizes available to test your music synthesis, MIDI playback, and digital music processing tools.'
+          },
+          about_description: 'These are test MIDI (Musical Instrument Digital Interface) files in various sizes for testing purposes'
+        },
+        mdx: {
+          meta: {
+            title: 'Free MDX Sample Files Download - Test Markdown Extended Files | MorphyHub',
+            description: 'Download free MDX sample Markdown Extended files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing markdown processing, component documentation, and MDX format processing tools.',
+            keywords: 'MDX sample files, test MDX files, download MDX samples, free MDX test files, Markdown Extended samples, component documentation samples, MDX processing test files, .mdx test files, markdown format samples, documentation format samples'
+          },
+          schema: {
+            name: 'Free MDX Sample Files - Download Test Markdown Extended Files',
+            description: 'Download free MDX sample Markdown Extended files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing markdown processing, component documentation, and MDX format processing tools.'
+          },
+          hero: {
+            title: 'MDX Sample Files',
+            description: 'Download free MDX sample Markdown Extended files for testing. Multiple file sizes available to test your markdown processing, component documentation, and MDX format processing tools.'
+          },
+          about_description: 'These are test MDX (Markdown Extended) files in various sizes for testing purposes'
+        },
+        ico: {
+          meta: {
+            title: 'Free ICO Sample Files Download - Test Icon Image Files | MorphyHub',
+            description: 'Download free ICO sample icon image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing icon extraction, image conversion, and ICO format processing tools.',
+            keywords: 'ICO sample files, test ICO files, download ICO samples, free ICO test files, icon image samples, favicon samples, ICO extraction test files, .ico test files, icon format samples, image format samples, ICO icon samples'
+          },
+          schema: {
+            name: 'Free ICO Sample Files - Download Test Icon Image Files',
+            description: 'Download free ICO sample icon image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing icon extraction, image conversion, and ICO format processing tools.'
+          },
+          hero: {
+            title: 'ICO Sample Files',
+            description: 'Download free ICO sample icon image files for testing. Multiple file sizes available to test your icon extraction, image conversion, and ICO format processing tools.'
+          },
+          about_description: 'These are test ICO (Icon) image files in various sizes for testing purposes'
+        },
+        iso: {
+          meta: {
+            title: 'Free ISO Sample Files Download - Test Disc Image Files | MorphyHub',
+            description: 'Download free ISO sample disc image archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disc image mounting, ISO extraction, and archive processing tools.',
+            keywords: 'ISO sample files, test ISO files, download ISO samples, free ISO test files, disc image samples, ISO archive samples, disc mounting test files, .iso test files, image archive samples, disc format samples, ISO image samples'
+          },
+          schema: {
+            name: 'Free ISO Sample Files - Download Test Disc Image Files',
+            description: 'Download free ISO sample disc image archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disc image mounting, ISO extraction, and archive processing tools.'
+          },
+          hero: {
+            title: 'ISO Sample Files',
+            description: 'Download free ISO sample disc image archive files for testing. Multiple file sizes available to test your disc image mounting, ISO extraction, and archive processing tools.'
+          },
+          about_description: 'These are test ISO (International Organization for Standardization) disc image files in various sizes for testing purposes'
+        },
+        ipynb: {
+          meta: {
+            title: 'Free IPYNB Sample Files Download - Test Jupyter Notebook Files | MorphyHub',
+            description: 'Download free IPYNB sample Jupyter Notebook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing notebook execution, data science workflows, and IPYNB format processing tools.',
+            keywords: 'IPYNB sample files, test IPYNB files, download IPYNB samples, free IPYNB test files, Jupyter Notebook samples, data science samples, notebook execution test files, .ipynb test files, notebook format samples, data analysis samples'
+          },
+          schema: {
+            name: 'Free IPYNB Sample Files - Download Test Jupyter Notebook Files',
+            description: 'Download free IPYNB sample Jupyter Notebook files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing notebook execution, data science workflows, and IPYNB format processing tools.'
+          },
+          hero: {
+            title: 'IPYNB Sample Files',
+            description: 'Download free IPYNB sample Jupyter Notebook files for testing. Multiple file sizes available to test your notebook execution, data science workflows, and IPYNB format processing tools.'
+          },
+          about_description: 'These are test IPYNB (Jupyter Notebook) files in various sizes for testing purposes'
+        },
+        ipa: {
+          meta: {
+            title: 'Free IPA Sample Files Download - Test iOS Application Files | MorphyHub',
+            description: 'Download free IPA sample iOS application archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing iOS app installation, IPA analysis, and mobile application processing tools.',
+            keywords: 'IPA sample files, test IPA files, download IPA samples, free IPA test files, iOS app samples, mobile application samples, IPA package samples, IPA installation test files, .ipa test files, iOS application samples, app archive samples'
+          },
+          schema: {
+            name: 'Free IPA Sample Files - Download Test iOS Application Files',
+            description: 'Download free IPA sample iOS application archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing iOS app installation, IPA analysis, and mobile application processing tools.'
+          },
+          hero: {
+            title: 'IPA Sample Files',
+            description: 'Download free IPA sample iOS application archive files for testing. Multiple file sizes available to test your iOS app installation, IPA analysis, and mobile application processing tools.'
+          },
+          about_description: 'These are test IPA (iOS App Store Package) application files in various sizes for testing purposes'
+        },
+        heif: {
+          meta: {
+            title: 'Free HEIF Sample Files Download - Test High Efficiency Image Format Files | MorphyHub',
+            description: 'Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing image compression, HEIF conversion, and modern image format processing tools.',
+            keywords: 'HEIF sample files, test HEIF files, download HEIF samples, free HEIF test files, High Efficiency Image Format samples, HEIF image samples, image compression test files, .heif test files, modern image format samples, HEIF conversion samples'
+          },
+          schema: {
+            name: 'Free HEIF Sample Files - Download Test High Efficiency Image Format Files',
+            description: 'Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing image compression, HEIF conversion, and modern image format processing tools.'
+          },
+          hero: {
+            title: 'HEIF Sample Files',
+            description: 'Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available to test your image compression, HEIF conversion, and modern image format processing tools.'
+          },
+          about_description: 'These are test HEIF (High Efficiency Image Format) files in various sizes for testing purposes'
+        },
+        heic: {
+          meta: {
+            title: 'Free HEIC Sample Files Download - Test High Efficiency Image Container Files | MorphyHub',
+            description: 'Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing image compression, HEIC conversion, and modern image format processing tools.',
+            keywords: 'HEIC sample files, test HEIC files, download HEIC samples, free HEIC test files, High Efficiency Image Container samples, HEIC image samples, image compression test files, .heic test files, modern image format samples, HEIC conversion samples'
+          },
+          schema: {
+            name: 'Free HEIC Sample Files - Download Test High Efficiency Image Container Files',
+            description: 'Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing image compression, HEIC conversion, and modern image format processing tools.'
+          },
+          hero: {
+            title: 'HEIC Sample Files',
+            description: 'Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available to test your image compression, HEIC conversion, and modern image format processing tools.'
+          },
+          about_description: 'These are test HEIC (High Efficiency Image Container) files in various sizes for testing purposes'
         }
       }
     }
@@ -1682,6 +1842,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki 3MF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji druku 3D, przeglądania i przetwarzania formatu 3MF.'
           },
           about_description: 'To są testowe pliki druku 3D 3MF (3D Manufacturing Format) w różnych rozmiarach do celów testowych'
+        },
+        apk: {
+          meta: {
+            title: 'Darmowe przykładowe pliki APK – Pobierz pliki aplikacji Android | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki pakietów aplikacji Android APK do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji Android, analizy APK i narzędzi przetwarzania aplikacji mobilnych.',
+            keywords: 'przykładowe pliki APK, testowe pliki APK, pobierz przykłady APK, darmowe testowe pliki APK, przykłady aplikacji Android, przykłady aplikacji mobilnych, przykłady pakietów APK, testowe pliki instalacji APK, testowe pliki .apk, przykłady aplikacji Android, przykłady instalacji aplikacji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki APK – Pobierz testowe pliki aplikacji Android',
+            description: 'Pobierz darmowe przykładowe pliki pakietów aplikacji Android APK do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji Android, analizy APK i narzędzi przetwarzania aplikacji mobilnych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki APK',
+            description: 'Pobierz darmowe przykładowe pliki pakietów aplikacji Android APK do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia instalacji aplikacji Android, analizy APK i przetwarzania aplikacji mobilnych.'
+          },
+          about_description: 'To są testowe pliki aplikacji APK (Android Package) w różnych rozmiarach do celów testowych'
+        },
+        mkv: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MKV – Pobierz pliki wideo Matroska | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki kontenerów wideo Matroska MKV do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania wideo, konwersji multimediów i narzędzi przetwarzania formatu MKV.',
+            keywords: 'przykładowe pliki MKV, testowe pliki MKV, pobierz przykłady MKV, darmowe testowe pliki MKV, przykłady wideo Matroska, przykłady kontenerów wideo, testowe pliki odtwarzania MKV, testowe pliki .mkv, przykłady formatów wideo, przykłady kontenerów multimediów, przykłady wideo MKV'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MKV – Pobierz testowe pliki wideo Matroska',
+            description: 'Pobierz darmowe przykładowe pliki kontenerów wideo Matroska MKV do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania wideo, konwersji multimediów i narzędzi przetwarzania formatu MKV.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MKV',
+            description: 'Pobierz darmowe przykładowe pliki kontenerów wideo Matroska MKV do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania wideo, konwersji multimediów i przetwarzania formatu MKV.'
+          },
+          about_description: 'To są testowe pliki kontenerów MKV (Matroska Video) w różnych rozmiarach do celów testowych'
+        },
+        midi: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MIDI – Pobierz pliki cyfrowego interfejsu instrumentów muzycznych | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki cyfrowego interfejsu instrumentów muzycznych MIDI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania syntezy muzyki, odtwarzania MIDI i narzędzi przetwarzania muzyki cyfrowej.',
+            keywords: 'przykładowe pliki MIDI, testowe pliki MIDI, pobierz przykłady MIDI, darmowe testowe pliki MIDI, przykłady syntezy muzyki, przykłady odtwarzania MIDI, przykłady muzyki cyfrowej, testowe pliki .midi, testowe pliki .mid, przykłady formatów muzycznych, przykłady muzyki MIDI'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MIDI – Pobierz testowe pliki cyfrowego interfejsu instrumentów muzycznych',
+            description: 'Pobierz darmowe przykładowe pliki cyfrowego interfejsu instrumentów muzycznych MIDI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania syntezy muzyki, odtwarzania MIDI i narzędzi przetwarzania muzyki cyfrowej.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MIDI',
+            description: 'Pobierz darmowe przykładowe pliki cyfrowego interfejsu instrumentów muzycznych MIDI do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia syntezy muzyki, odtwarzania MIDI i przetwarzania muzyki cyfrowej.'
+          },
+          about_description: 'To są testowe pliki MIDI (Musical Instrument Digital Interface) w różnych rozmiarach do celów testowych'
+        },
+        mdx: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MDX – Pobierz pliki rozszerzonego Markdown | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki rozszerzonego Markdown MDX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania markdown, dokumentacji komponentów i narzędzi przetwarzania formatu MDX.',
+            keywords: 'przykładowe pliki MDX, testowe pliki MDX, pobierz przykłady MDX, darmowe testowe pliki MDX, przykłady rozszerzonego Markdown, przykłady dokumentacji komponentów, testowe pliki przetwarzania MDX, testowe pliki .mdx, przykłady formatów markdown, przykłady formatów dokumentacji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MDX – Pobierz testowe pliki rozszerzonego Markdown',
+            description: 'Pobierz darmowe przykładowe pliki rozszerzonego Markdown MDX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania markdown, dokumentacji komponentów i narzędzi przetwarzania formatu MDX.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MDX',
+            description: 'Pobierz darmowe przykładowe pliki rozszerzonego Markdown MDX do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania markdown, dokumentacji komponentów i przetwarzania formatu MDX.'
+          },
+          about_description: 'To są testowe pliki MDX (Markdown Extended) w różnych rozmiarach do celów testowych'
+        },
+        ico: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ICO – Pobierz pliki ikon | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki ikon ICO do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji ikon, konwersji obrazów i narzędzi przetwarzania formatu ICO.',
+            keywords: 'przykładowe pliki ICO, testowe pliki ICO, pobierz przykłady ICO, darmowe testowe pliki ICO, przykłady ikon, przykłady favicon, testowe pliki ekstrakcji ICO, testowe pliki .ico, przykłady formatów ikon, przykłady formatów obrazów, przykłady ikon ICO'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ICO – Pobierz testowe pliki ikon',
+            description: 'Pobierz darmowe przykładowe pliki ikon ICO do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji ikon, konwersji obrazów i narzędzi przetwarzania formatu ICO.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ICO',
+            description: 'Pobierz darmowe przykładowe pliki ikon ICO do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji ikon, konwersji obrazów i przetwarzania formatu ICO.'
+          },
+          about_description: 'To są testowe pliki ikon ICO (Icon) w różnych rozmiarach do celów testowych'
+        },
+        iso: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ISO – Pobierz pliki obrazów dysków | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwów obrazów dysków ISO do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania obrazów dysków, ekstrakcji ISO i narzędzi przetwarzania archiwów.',
+            keywords: 'przykładowe pliki ISO, testowe pliki ISO, pobierz przykłady ISO, darmowe testowe pliki ISO, przykłady obrazów dysków, przykłady archiwów ISO, testowe pliki montowania dysków, testowe pliki .iso, przykłady archiwów obrazów, przykłady formatów dysków, przykłady obrazów ISO'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ISO – Pobierz testowe pliki obrazów dysków',
+            description: 'Pobierz darmowe przykładowe pliki archiwów obrazów dysków ISO do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania obrazów dysków, ekstrakcji ISO i narzędzi przetwarzania archiwów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ISO',
+            description: 'Pobierz darmowe przykładowe pliki archiwów obrazów dysków ISO do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia montowania obrazów dysków, ekstrakcji ISO i przetwarzania archiwów.'
+          },
+          about_description: 'To są testowe pliki obrazów dysków ISO (International Organization for Standardization) w różnych rozmiarach do celów testowych'
+        },
+        ipynb: {
+          meta: {
+            title: 'Darmowe przykładowe pliki IPYNB – Pobierz pliki Jupyter Notebook | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki Jupyter Notebook IPYNB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania notatników, przepływów pracy data science i narzędzi przetwarzania formatu IPYNB.',
+            keywords: 'przykładowe pliki IPYNB, testowe pliki IPYNB, pobierz przykłady IPYNB, darmowe testowe pliki IPYNB, przykłady Jupyter Notebook, przykłady data science, testowe pliki wykonywania notatników, testowe pliki .ipynb, przykłady formatów notatników, przykłady analizy danych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki IPYNB – Pobierz testowe pliki Jupyter Notebook',
+            description: 'Pobierz darmowe przykładowe pliki Jupyter Notebook IPYNB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania notatników, przepływów pracy data science i narzędzi przetwarzania formatu IPYNB.'
+          },
+          hero: {
+            title: 'Przykładowe pliki IPYNB',
+            description: 'Pobierz darmowe przykładowe pliki Jupyter Notebook IPYNB do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wykonywania notatników, przepływów pracy data science i przetwarzania formatu IPYNB.'
+          },
+          about_description: 'To są testowe pliki IPYNB (Jupyter Notebook) w różnych rozmiarach do celów testowych'
+        },
+        ipa: {
+          meta: {
+            title: 'Darmowe przykładowe pliki IPA – Pobierz pliki aplikacji iOS | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwów aplikacji iOS IPA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji iOS, analizy IPA i narzędzi przetwarzania aplikacji mobilnych.',
+            keywords: 'przykładowe pliki IPA, testowe pliki IPA, pobierz przykłady IPA, darmowe testowe pliki IPA, przykłady aplikacji iOS, przykłady aplikacji mobilnych, przykłady pakietów IPA, testowe pliki instalacji IPA, testowe pliki .ipa, przykłady aplikacji iOS, przykłady archiwów aplikacji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki IPA – Pobierz testowe pliki aplikacji iOS',
+            description: 'Pobierz darmowe przykładowe pliki archiwów aplikacji iOS IPA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji iOS, analizy IPA i narzędzi przetwarzania aplikacji mobilnych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki IPA',
+            description: 'Pobierz darmowe przykładowe pliki archiwów aplikacji iOS IPA do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia instalacji aplikacji iOS, analizy IPA i przetwarzania aplikacji mobilnych.'
+          },
+          about_description: 'To są testowe pliki aplikacji IPA (iOS App Store Package) w różnych rozmiarach do celów testowych'
+        },
+        heif: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HEIF – Pobierz pliki High Efficiency Image Format | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki High Efficiency Image Format HEIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompresji obrazów, konwersji HEIF i narzędzi przetwarzania nowoczesnych formatów obrazów.',
+            keywords: 'przykładowe pliki HEIF, testowe pliki HEIF, pobierz przykłady HEIF, darmowe testowe pliki HEIF, przykłady High Efficiency Image Format, przykłady obrazów HEIF, testowe pliki kompresji obrazów, testowe pliki .heif, przykłady nowoczesnych formatów obrazów, przykłady konwersji HEIF'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HEIF – Pobierz testowe pliki High Efficiency Image Format',
+            description: 'Pobierz darmowe przykładowe pliki High Efficiency Image Format HEIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompresji obrazów, konwersji HEIF i narzędzi przetwarzania nowoczesnych formatów obrazów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HEIF',
+            description: 'Pobierz darmowe przykładowe pliki High Efficiency Image Format HEIF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompresji obrazów, konwersji HEIF i przetwarzania nowoczesnych formatów obrazów.'
+          },
+          about_description: 'To są testowe pliki HEIF (High Efficiency Image Format) w różnych rozmiarach do celów testowych'
+        },
+        heic: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HEIC – Pobierz pliki High Efficiency Image Container | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki High Efficiency Image Container HEIC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompresji obrazów, konwersji HEIC i narzędzi przetwarzania nowoczesnych formatów obrazów.',
+            keywords: 'przykładowe pliki HEIC, testowe pliki HEIC, pobierz przykłady HEIC, darmowe testowe pliki HEIC, przykłady High Efficiency Image Container, przykłady obrazów HEIC, testowe pliki kompresji obrazów, testowe pliki .heic, przykłady nowoczesnych formatów obrazów, przykłady konwersji HEIC'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HEIC – Pobierz testowe pliki High Efficiency Image Container',
+            description: 'Pobierz darmowe przykładowe pliki High Efficiency Image Container HEIC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompresji obrazów, konwersji HEIC i narzędzi przetwarzania nowoczesnych formatów obrazów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HEIC',
+            description: 'Pobierz darmowe przykładowe pliki High Efficiency Image Container HEIC do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompresji obrazów, konwersji HEIC i przetwarzania nowoczesnych formatów obrazów.'
+          },
+          about_description: 'To są testowe pliki HEIC (High Efficiency Image Container) w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -2501,6 +2821,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose 3MF 3D-Druck-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Druck-Konvertierung, Betrachtung und 3MF-Format-Verarbeitungstools zu testen.'
           },
           about_description: 'Dies sind 3MF (3D Manufacturing Format) 3D-Druck-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        apk: {
+          meta: {
+            title: 'Kostenlose APK Beispieldateien herunterladen – Android-Anwendungsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose APK Android-Anwendungspaket-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Android-App-Installation, APK-Analyse und mobilen Anwendungsverarbeitungstools.',
+            keywords: 'APK Beispieldateien, APK Testdateien, APK Beispiele herunterladen, kostenlose APK Testdateien, Android-App-Beispiele, mobile Anwendungs-Beispiele, APK-Paket-Beispiele, APK-Installations-Testdateien, .apk Testdateien, Android-Anwendungs-Beispiele, App-Installations-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose APK Beispieldateien – Android-Anwendungsdateien testen',
+            description: 'Laden Sie kostenlose APK Android-Anwendungspaket-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Android-App-Installation, APK-Analyse und mobilen Anwendungsverarbeitungstools.'
+          },
+          hero: {
+            title: 'APK Beispieldateien',
+            description: 'Laden Sie kostenlose APK Android-Anwendungspaket-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Android-App-Installation, APK-Analyse und mobilen Anwendungsverarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind APK (Android Package) Anwendungs-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        mkv: {
+          meta: {
+            title: 'Kostenlose MKV Beispieldateien herunterladen – Matroska-Videodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MKV Matroska-Videocontainer-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videowiedergabe, Medienkonvertierung und MKV-Format-Verarbeitungstools.',
+            keywords: 'MKV Beispieldateien, MKV Testdateien, MKV Beispiele herunterladen, kostenlose MKV Testdateien, Matroska-Video-Beispiele, Videocontainer-Beispiele, MKV-Wiedergabe-Testdateien, .mkv Testdateien, Videoformat-Beispiele, Mediencontainer-Beispiele, MKV-Video-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose MKV Beispieldateien – Matroska-Videodateien testen',
+            description: 'Laden Sie kostenlose MKV Matroska-Videocontainer-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videowiedergabe, Medienkonvertierung und MKV-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'MKV Beispieldateien',
+            description: 'Laden Sie kostenlose MKV Matroska-Videocontainer-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Videowiedergabe, Medienkonvertierung und MKV-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind MKV (Matroska Video) Container-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        midi: {
+          meta: {
+            title: 'Kostenlose MIDI Beispieldateien herunterladen – Musical Instrument Digital Interface-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MIDI Musical Instrument Digital Interface-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Musiksynthese, MIDI-Wiedergabe und digitalen Musikverarbeitungstools.',
+            keywords: 'MIDI Beispieldateien, MIDI Testdateien, MIDI Beispiele herunterladen, kostenlose MIDI Testdateien, Musiksynthese-Beispiele, MIDI-Wiedergabe-Beispiele, digitale Musik-Beispiele, .midi Testdateien, .mid Testdateien, Musikformat-Beispiele, MIDI-Musik-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose MIDI Beispieldateien – Musical Instrument Digital Interface-Dateien testen',
+            description: 'Laden Sie kostenlose MIDI Musical Instrument Digital Interface-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Musiksynthese, MIDI-Wiedergabe und digitalen Musikverarbeitungstools.'
+          },
+          hero: {
+            title: 'MIDI Beispieldateien',
+            description: 'Laden Sie kostenlose MIDI Musical Instrument Digital Interface-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Musiksynthese, MIDI-Wiedergabe und digitalen Musikverarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind MIDI (Musical Instrument Digital Interface) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        mdx: {
+          meta: {
+            title: 'Kostenlose MDX Beispieldateien herunterladen – Markdown Extended-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MDX Markdown Extended-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Markdown-Verarbeitung, Komponentendokumentation und MDX-Format-Verarbeitungstools.',
+            keywords: 'MDX Beispieldateien, MDX Testdateien, MDX Beispiele herunterladen, kostenlose MDX Testdateien, Markdown Extended-Beispiele, Komponentendokumentations-Beispiele, MDX-Verarbeitungs-Testdateien, .mdx Testdateien, Markdown-Format-Beispiele, Dokumentations-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose MDX Beispieldateien – Markdown Extended-Dateien testen',
+            description: 'Laden Sie kostenlose MDX Markdown Extended-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Markdown-Verarbeitung, Komponentendokumentation und MDX-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'MDX Beispieldateien',
+            description: 'Laden Sie kostenlose MDX Markdown Extended-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Markdown-Verarbeitung, Komponentendokumentation und MDX-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind MDX (Markdown Extended) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ico: {
+          meta: {
+            title: 'Kostenlose ICO Beispieldateien herunterladen – Icon-Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ICO Icon-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Icon-Extraktion, Bildkonvertierung und ICO-Format-Verarbeitungstools.',
+            keywords: 'ICO Beispieldateien, ICO Testdateien, ICO Beispiele herunterladen, kostenlose ICO Testdateien, Icon-Bild-Beispiele, Favicon-Beispiele, ICO-Extraktions-Testdateien, .ico Testdateien, Icon-Format-Beispiele, Bildformat-Beispiele, ICO-Icon-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ICO Beispieldateien – Icon-Bilddateien testen',
+            description: 'Laden Sie kostenlose ICO Icon-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Icon-Extraktion, Bildkonvertierung und ICO-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'ICO Beispieldateien',
+            description: 'Laden Sie kostenlose ICO Icon-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Icon-Extraktion, Bildkonvertierung und ICO-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind ICO (Icon) Bild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        iso: {
+          meta: {
+            title: 'Kostenlose ISO Beispieldateien herunterladen – Disc-Image-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ISO Disc-Image-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Disc-Image-Montage, ISO-Extraktion und Archiv-Verarbeitungstools.',
+            keywords: 'ISO Beispieldateien, ISO Testdateien, ISO Beispiele herunterladen, kostenlose ISO Testdateien, Disc-Image-Beispiele, ISO-Archiv-Beispiele, Disc-Montage-Testdateien, .iso Testdateien, Image-Archiv-Beispiele, Disc-Format-Beispiele, ISO-Image-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ISO Beispieldateien – Disc-Image-Dateien testen',
+            description: 'Laden Sie kostenlose ISO Disc-Image-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Disc-Image-Montage, ISO-Extraktion und Archiv-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'ISO Beispieldateien',
+            description: 'Laden Sie kostenlose ISO Disc-Image-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Disc-Image-Montage, ISO-Extraktion und Archiv-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind ISO (International Organization for Standardization) Disc-Image-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ipynb: {
+          meta: {
+            title: 'Kostenlose IPYNB Beispieldateien herunterladen – Jupyter Notebook-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose IPYNB Jupyter Notebook-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Notebook-Ausführung, Data-Science-Workflows und IPYNB-Format-Verarbeitungstools.',
+            keywords: 'IPYNB Beispieldateien, IPYNB Testdateien, IPYNB Beispiele herunterladen, kostenlose IPYNB Testdateien, Jupyter Notebook-Beispiele, Data-Science-Beispiele, Notebook-Ausführungs-Testdateien, .ipynb Testdateien, Notebook-Format-Beispiele, Datenanalyse-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose IPYNB Beispieldateien – Jupyter Notebook-Dateien testen',
+            description: 'Laden Sie kostenlose IPYNB Jupyter Notebook-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Notebook-Ausführung, Data-Science-Workflows und IPYNB-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'IPYNB Beispieldateien',
+            description: 'Laden Sie kostenlose IPYNB Jupyter Notebook-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Notebook-Ausführung, Data-Science-Workflows und IPYNB-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind IPYNB (Jupyter Notebook) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ipa: {
+          meta: {
+            title: 'Kostenlose IPA Beispieldateien herunterladen – iOS-Anwendungsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose IPA iOS-Anwendungsarchiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von iOS-App-Installation, IPA-Analyse und mobilen Anwendungsverarbeitungstools.',
+            keywords: 'IPA Beispieldateien, IPA Testdateien, IPA Beispiele herunterladen, kostenlose IPA Testdateien, iOS-App-Beispiele, mobile Anwendungs-Beispiele, IPA-Paket-Beispiele, IPA-Installations-Testdateien, .ipa Testdateien, iOS-Anwendungs-Beispiele, App-Archiv-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose IPA Beispieldateien – iOS-Anwendungsdateien testen',
+            description: 'Laden Sie kostenlose IPA iOS-Anwendungsarchiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von iOS-App-Installation, IPA-Analyse und mobilen Anwendungsverarbeitungstools.'
+          },
+          hero: {
+            title: 'IPA Beispieldateien',
+            description: 'Laden Sie kostenlose IPA iOS-Anwendungsarchiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre iOS-App-Installation, IPA-Analyse und mobilen Anwendungsverarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind IPA (iOS App Store Package) Anwendungs-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        heif: {
+          meta: {
+            title: 'Kostenlose HEIF Beispieldateien herunterladen – High Efficiency Image Format-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose HEIF High Efficiency Image Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Bildkompression, HEIF-Konvertierung und modernen Bildformat-Verarbeitungstools.',
+            keywords: 'HEIF Beispieldateien, HEIF Testdateien, HEIF Beispiele herunterladen, kostenlose HEIF Testdateien, High Efficiency Image Format-Beispiele, HEIF-Bild-Beispiele, Bildkompressions-Testdateien, .heif Testdateien, moderne Bildformat-Beispiele, HEIF-Konvertierungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose HEIF Beispieldateien – High Efficiency Image Format-Dateien testen',
+            description: 'Laden Sie kostenlose HEIF High Efficiency Image Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Bildkompression, HEIF-Konvertierung und modernen Bildformat-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'HEIF Beispieldateien',
+            description: 'Laden Sie kostenlose HEIF High Efficiency Image Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Bildkompression, HEIF-Konvertierung und modernen Bildformat-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind HEIF (High Efficiency Image Format) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        heic: {
+          meta: {
+            title: 'Kostenlose HEIC Beispieldateien herunterladen – High Efficiency Image Container-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose HEIC High Efficiency Image Container-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Bildkompression, HEIC-Konvertierung und modernen Bildformat-Verarbeitungstools.',
+            keywords: 'HEIC Beispieldateien, HEIC Testdateien, HEIC Beispiele herunterladen, kostenlose HEIC Testdateien, High Efficiency Image Container-Beispiele, HEIC-Bild-Beispiele, Bildkompressions-Testdateien, .heic Testdateien, moderne Bildformat-Beispiele, HEIC-Konvertierungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose HEIC Beispieldateien – High Efficiency Image Container-Dateien testen',
+            description: 'Laden Sie kostenlose HEIC High Efficiency Image Container-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Bildkompression, HEIC-Konvertierung und modernen Bildformat-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'HEIC Beispieldateien',
+            description: 'Laden Sie kostenlose HEIC High Efficiency Image Container-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Bildkompression, HEIC-Konvertierung und modernen Bildformat-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind HEIC (High Efficiency Image Container) Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }

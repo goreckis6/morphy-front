@@ -225,8 +225,7 @@ export default function SampleHpp() {
               <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
               {aboutItems && aboutItems.length > 0 && aboutItems.slice(1).map((item, idx) => (
                 <li key={idx}>• {item}</li>
-              ))}
-            </ul>
+              ))}</ul>
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">

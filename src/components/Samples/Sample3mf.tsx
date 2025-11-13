@@ -219,16 +219,13 @@ export default function Sample3mf() {
 
           <div className="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              About These Sample Files
+              {t('sample_page.common.about_title')}
             </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
               {aboutItems && aboutItems.length > 0 && aboutItems.slice(1).map((item, idx) => (
                 <li key={idx}>• {item}</li>
-              ))} securely and available for free download</li>
-              <li>• Perfect for testing 3D printing conversion, viewing, and 3MF format processing tools</li>
-              <li>• No registration or account required</li>
-            </ul>
+              ))}</ul>
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
