@@ -1023,6 +1023,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available to test your image compression, HEIC conversion, and modern image format processing tools.'
           },
           about_description: 'These are test HEIC (High Efficiency Image Container) files in various sizes for testing purposes'
+        },
+        exr: {
+          meta: {
+            title: 'Free EXR Sample Files Download - Test OpenEXR Image Files | MorphyHub',
+            description: 'Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, EXR conversion, and high dynamic range viewing tools.',
+            keywords: 'EXR sample files, test EXR files, download EXR samples, free EXR test files, OpenEXR image samples, HDR image files, EXR image files, .exr test files, high dynamic range images, EXR conversion test files'
+          },
+          schema: {
+            name: 'Free EXR Sample Files - Download Test OpenEXR Image Files',
+            description: 'Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, EXR conversion, and high dynamic range viewing tools.'
+          },
+          hero: {
+            title: 'EXR Sample Files',
+            description: 'Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available to test your HDR image processing, EXR conversion, and high dynamic range viewing tools.'
+          },
+          about_description: 'These are test EXR (OpenEXR) high dynamic range image files in various sizes for testing purposes'
+        },
+        exe: {
+          meta: {
+            title: 'Free EXE Sample Files Download - Test Windows Executable Files | MorphyHub',
+            description: 'Download free EXE sample Windows executable application files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing executable analysis, Windows application processing, and binary file handling tools.',
+            keywords: 'EXE sample files, test EXE files, download EXE samples, free EXE test files, Windows executable samples, application files, EXE binary samples, .exe test files, executable analysis samples, Windows app samples'
+          },
+          schema: {
+            name: 'Free EXE Sample Files - Download Test Windows Executable Files',
+            description: 'Download free EXE sample Windows executable application files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing executable analysis, Windows application processing, and binary file handling tools.'
+          },
+          hero: {
+            title: 'EXE Sample Files',
+            description: 'Download free EXE sample Windows executable application files for testing. Multiple file sizes available to test your executable analysis, Windows application processing, and binary file handling tools.'
+          },
+          about_description: 'These are test EXE (Windows Executable) application files in various sizes for testing purposes'
+        },
+        eps: {
+          meta: {
+            title: 'Free EPS Sample Files Download - Test Encapsulated PostScript Files | MorphyHub',
+            description: 'Download free EPS sample Encapsulated PostScript vector image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics processing, EPS conversion, and PostScript format handling tools.',
+            keywords: 'EPS sample files, test EPS files, download EPS samples, free EPS test files, Encapsulated PostScript samples, vector graphics samples, EPS image samples, .eps test files, PostScript format samples, vector format samples'
+          },
+          schema: {
+            name: 'Free EPS Sample Files - Download Test Encapsulated PostScript Files',
+            description: 'Download free EPS sample Encapsulated PostScript vector image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics processing, EPS conversion, and PostScript format handling tools.'
+          },
+          hero: {
+            title: 'EPS Sample Files',
+            description: 'Download free EPS sample Encapsulated PostScript vector image files for testing. Multiple file sizes available to test your vector graphics processing, EPS conversion, and PostScript format handling tools.'
+          },
+          about_description: 'These are test EPS (Encapsulated PostScript) vector image files in various sizes for testing purposes'
+        },
+        elf: {
+          meta: {
+            title: 'Free ELF Sample Files Download - Test Executable and Linkable Format Files | MorphyHub',
+            description: 'Download free ELF sample Executable and Linkable Format binary files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing binary analysis, ELF parsing, and executable format processing tools.',
+            keywords: 'ELF sample files, test ELF files, download ELF samples, free ELF test files, Executable and Linkable Format samples, binary file samples, ELF executable samples, .elf test files, binary analysis samples, executable format samples'
+          },
+          schema: {
+            name: 'Free ELF Sample Files - Download Test Executable and Linkable Format Files',
+            description: 'Download free ELF sample Executable and Linkable Format binary files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing binary analysis, ELF parsing, and executable format processing tools.'
+          },
+          hero: {
+            title: 'ELF Sample Files',
+            description: 'Download free ELF sample Executable and Linkable Format binary files for testing. Multiple file sizes available to test your binary analysis, ELF parsing, and executable format processing tools.'
+          },
+          about_description: 'These are test ELF (Executable and Linkable Format) binary files in various sizes for testing purposes'
+        },
+        editorconfig: {
+          meta: {
+            title: 'Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyHub',
+            description: 'Download free EditorConfig sample editor configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing editor configuration parsing, code formatting tools, and development environment setup.',
+            keywords: 'EditorConfig sample files, test EditorConfig files, download EditorConfig samples, free EditorConfig test files, editor configuration samples, .editorconfig test files, code formatting samples, editor settings samples, development config samples'
+          },
+          schema: {
+            name: 'Free EditorConfig Sample Files - Download Test Editor Configuration Files',
+            description: 'Download free EditorConfig sample editor configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing editor configuration parsing, code formatting tools, and development environment setup.'
+          },
+          hero: {
+            title: 'EditorConfig Sample Files',
+            description: 'Download free EditorConfig sample editor configuration files for testing. Multiple file sizes available to test your editor configuration parsing, code formatting tools, and development environment setup.'
+          },
+          about_description: 'These are test EditorConfig editor configuration files in various sizes for testing purposes'
+        },
+        dxf: {
+          meta: {
+            title: 'Free DXF Sample Files Download - Test AutoCAD Drawing Exchange Format Files | MorphyHub',
+            description: 'Download free DXF sample AutoCAD Drawing Exchange Format CAD files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD file processing, DXF conversion, and drawing format handling tools.',
+            keywords: 'DXF sample files, test DXF files, download DXF samples, free DXF test files, AutoCAD DXF samples, CAD file samples, DXF drawing samples, .dxf test files, CAD format samples, drawing exchange format samples'
+          },
+          schema: {
+            name: 'Free DXF Sample Files - Download Test AutoCAD Drawing Exchange Format Files',
+            description: 'Download free DXF sample AutoCAD Drawing Exchange Format CAD files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD file processing, DXF conversion, and drawing format handling tools.'
+          },
+          hero: {
+            title: 'DXF Sample Files',
+            description: 'Download free DXF sample AutoCAD Drawing Exchange Format CAD files for testing. Multiple file sizes available to test your CAD file processing, DXF conversion, and drawing format handling tools.'
+          },
+          about_description: 'These are test DXF (AutoCAD Drawing Exchange Format) CAD files in various sizes for testing purposes'
+        },
+        dwg: {
+          meta: {
+            title: 'Free DWG Sample Files Download - Test AutoCAD Drawing Files | MorphyHub',
+            description: 'Download free DWG sample AutoCAD drawing CAD files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD file processing, DWG conversion, and AutoCAD format handling tools.',
+            keywords: 'DWG sample files, test DWG files, download DWG samples, free DWG test files, AutoCAD DWG samples, CAD file samples, DWG drawing samples, .dwg test files, CAD format samples, AutoCAD drawing samples'
+          },
+          schema: {
+            name: 'Free DWG Sample Files - Download Test AutoCAD Drawing Files',
+            description: 'Download free DWG sample AutoCAD drawing CAD files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD file processing, DWG conversion, and AutoCAD format handling tools.'
+          },
+          hero: {
+            title: 'DWG Sample Files',
+            description: 'Download free DWG sample AutoCAD drawing CAD files for testing. Multiple file sizes available to test your CAD file processing, DWG conversion, and AutoCAD format handling tools.'
+          },
+          about_description: 'These are test DWG (AutoCAD Drawing) CAD files in various sizes for testing purposes'
+        },
+        dockerfile: {
+          meta: {
+            title: 'Free Dockerfile Sample Files Download - Test Docker Configuration Files | MorphyHub',
+            description: 'Download free Dockerfile sample Docker container configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker build processes, container configuration parsing, and DevOps tooling.',
+            keywords: 'Dockerfile sample files, test Dockerfile files, download Dockerfile samples, free Dockerfile test files, Docker configuration samples, container config samples, .dockerfile test files, Docker build samples, containerization samples'
+          },
+          schema: {
+            name: 'Free Dockerfile Sample Files - Download Test Docker Configuration Files',
+            description: 'Download free Dockerfile sample Docker container configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker build processes, container configuration parsing, and DevOps tooling.'
+          },
+          hero: {
+            title: 'Dockerfile Sample Files',
+            description: 'Download free Dockerfile sample Docker container configuration files for testing. Multiple file sizes available to test your Docker build processes, container configuration parsing, and DevOps tooling.'
+          },
+          about_description: 'These are test Dockerfile Docker container configuration files in various sizes for testing purposes'
+        },
+        'docker-compose-yml': {
+          meta: {
+            title: 'Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyHub',
+            description: 'Download free Docker Compose YML sample multi-container Docker configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose parsing, multi-container orchestration, and DevOps configuration tools.',
+            keywords: 'Docker Compose YML sample files, test docker-compose.yml files, download Docker Compose samples, free docker-compose test files, multi-container config samples, Docker orchestration samples, .yml test files, container orchestration samples'
+          },
+          schema: {
+            name: 'Free Docker Compose YML Sample Files - Download Test Docker Compose Configuration Files',
+            description: 'Download free Docker Compose YML sample multi-container Docker configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose parsing, multi-container orchestration, and DevOps configuration tools.'
+          },
+          hero: {
+            title: 'Docker Compose YML Sample Files',
+            description: 'Download free Docker Compose YML sample multi-container Docker configuration files for testing. Multiple file sizes available to test your Docker Compose parsing, multi-container orchestration, and DevOps configuration tools.'
+          },
+          about_description: 'These are test Docker Compose YML multi-container Docker configuration files in various sizes for testing purposes'
+        },
+        dmp: {
+          meta: {
+            title: 'Free DMP Sample Files Download - Test Windows Memory Dump Files | MorphyHub',
+            description: 'Download free DMP sample Windows memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing memory dump analysis, crash debugging, and system diagnostic tools.',
+            keywords: 'DMP sample files, test DMP files, download DMP samples, free DMP test files, Windows memory dump samples, crash dump samples, .dmp test files, memory analysis samples, system diagnostic samples'
+          },
+          schema: {
+            name: 'Free DMP Sample Files - Download Test Windows Memory Dump Files',
+            description: 'Download free DMP sample Windows memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing memory dump analysis, crash debugging, and system diagnostic tools.'
+          },
+          hero: {
+            title: 'DMP Sample Files',
+            description: 'Download free DMP sample Windows memory dump files for testing. Multiple file sizes available to test your memory dump analysis, crash debugging, and system diagnostic tools.'
+          },
+          about_description: 'These are test DMP (Windows Memory Dump) files in various sizes for testing purposes'
         }
       }
     }
@@ -2002,6 +2162,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki High Efficiency Image Container HEIC do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompresji obrazów, konwersji HEIC i przetwarzania nowoczesnych formatów obrazów.'
           },
           about_description: 'To są testowe pliki HEIC (High Efficiency Image Container) w różnych rozmiarach do celów testowych'
+        },
+        exr: {
+          meta: {
+            title: 'Darmowe przykładowe pliki EXR – Pobierz pliki OpenEXR | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki OpenEXR wysokiego zakresu dynamicznego EXR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania obrazów HDR, konwersji EXR i narzędzi przeglądania wysokiego zakresu dynamicznego.',
+            keywords: 'przykładowe pliki EXR, testowe pliki EXR, pobierz przykłady EXR, darmowe testowe pliki EXR, przykłady obrazów OpenEXR, pliki obrazów HDR, pliki obrazów EXR, testowe pliki .exr, obrazy wysokiego zakresu dynamicznego, testowe pliki konwersji EXR'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki EXR – Pobierz testowe pliki OpenEXR',
+            description: 'Pobierz darmowe przykładowe pliki OpenEXR wysokiego zakresu dynamicznego EXR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania obrazów HDR, konwersji EXR i narzędzi przeglądania wysokiego zakresu dynamicznego.'
+          },
+          hero: {
+            title: 'Przykładowe pliki EXR',
+            description: 'Pobierz darmowe przykładowe pliki OpenEXR wysokiego zakresu dynamicznego EXR do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania obrazów HDR, konwersji EXR i przeglądania wysokiego zakresu dynamicznego.'
+          },
+          about_description: 'To są testowe pliki EXR (OpenEXR) wysokiego zakresu dynamicznego w różnych rozmiarach do celów testowych'
+        },
+        exe: {
+          meta: {
+            title: 'Darmowe przykładowe pliki EXE – Pobierz pliki wykonywalne Windows | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki aplikacji wykonywalnych Windows EXE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy plików wykonywalnych, przetwarzania aplikacji Windows i narzędzi obsługi plików binarnych.',
+            keywords: 'przykładowe pliki EXE, testowe pliki EXE, pobierz przykłady EXE, darmowe testowe pliki EXE, przykłady plików wykonywalnych Windows, pliki aplikacji, przykłady binarnych EXE, testowe pliki .exe, przykłady analizy plików wykonywalnych, przykłady aplikacji Windows'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki EXE – Pobierz testowe pliki wykonywalne Windows',
+            description: 'Pobierz darmowe przykładowe pliki aplikacji wykonywalnych Windows EXE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy plików wykonywalnych, przetwarzania aplikacji Windows i narzędzi obsługi plików binarnych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki EXE',
+            description: 'Pobierz darmowe przykładowe pliki aplikacji wykonywalnych Windows EXE do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia analizy plików wykonywalnych, przetwarzania aplikacji Windows i obsługi plików binarnych.'
+          },
+          about_description: 'To są testowe pliki aplikacji EXE (Windows Executable) w różnych rozmiarach do celów testowych'
+        },
+        eps: {
+          meta: {
+            title: 'Darmowe przykładowe pliki EPS – Pobierz pliki Encapsulated PostScript | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki obrazów wektorowych Encapsulated PostScript EPS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania grafiki wektorowej, konwersji EPS i narzędzi obsługi formatu PostScript.',
+            keywords: 'przykładowe pliki EPS, testowe pliki EPS, pobierz przykłady EPS, darmowe testowe pliki EPS, przykłady Encapsulated PostScript, przykłady grafiki wektorowej, przykłady obrazów EPS, testowe pliki .eps, przykłady formatu PostScript, przykłady formatów wektorowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki EPS – Pobierz testowe pliki Encapsulated PostScript',
+            description: 'Pobierz darmowe przykładowe pliki obrazów wektorowych Encapsulated PostScript EPS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania grafiki wektorowej, konwersji EPS i narzędzi obsługi formatu PostScript.'
+          },
+          hero: {
+            title: 'Przykładowe pliki EPS',
+            description: 'Pobierz darmowe przykładowe pliki obrazów wektorowych Encapsulated PostScript EPS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania grafiki wektorowej, konwersji EPS i obsługi formatu PostScript.'
+          },
+          about_description: 'To są testowe pliki obrazów wektorowych EPS (Encapsulated PostScript) w różnych rozmiarach do celów testowych'
+        },
+        elf: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ELF – Pobierz pliki Executable and Linkable Format | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki binarne Executable and Linkable Format ELF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy binarnych, parsowania ELF i narzędzi przetwarzania formatów wykonywalnych.',
+            keywords: 'przykładowe pliki ELF, testowe pliki ELF, pobierz przykłady ELF, darmowe testowe pliki ELF, przykłady Executable and Linkable Format, przykłady plików binarnych, przykłady wykonywalnych ELF, testowe pliki .elf, przykłady analizy binarnych, przykłady formatów wykonywalnych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ELF – Pobierz testowe pliki Executable and Linkable Format',
+            description: 'Pobierz darmowe przykładowe pliki binarne Executable and Linkable Format ELF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy binarnych, parsowania ELF i narzędzi przetwarzania formatów wykonywalnych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ELF',
+            description: 'Pobierz darmowe przykładowe pliki binarne Executable and Linkable Format ELF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia analizy binarnych, parsowania ELF i przetwarzania formatów wykonywalnych.'
+          },
+          about_description: 'To są testowe pliki binarne ELF (Executable and Linkable Format) w różnych rozmiarach do celów testowych'
+        },
+        editorconfig: {
+          meta: {
+            title: 'Darmowe przykładowe pliki EditorConfig – Pobierz pliki konfiguracji edytora | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji edytora EditorConfig do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania konfiguracji edytora, narzędzi formatowania kodu i konfiguracji środowiska deweloperskiego.',
+            keywords: 'przykładowe pliki EditorConfig, testowe pliki EditorConfig, pobierz przykłady EditorConfig, darmowe testowe pliki EditorConfig, przykłady konfiguracji edytora, testowe pliki .editorconfig, przykłady formatowania kodu, przykłady ustawień edytora, przykłady konfiguracji deweloperskiej'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki EditorConfig – Pobierz testowe pliki konfiguracji edytora',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji edytora EditorConfig do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania konfiguracji edytora, narzędzi formatowania kodu i konfiguracji środowiska deweloperskiego.'
+          },
+          hero: {
+            title: 'Przykładowe pliki EditorConfig',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji edytora EditorConfig do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania konfiguracji edytora, formatowania kodu i konfiguracji środowiska deweloperskiego.'
+          },
+          about_description: 'To są testowe pliki konfiguracji edytora EditorConfig w różnych rozmiarach do celów testowych'
+        },
+        dxf: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DXF – Pobierz pliki AutoCAD Drawing Exchange Format | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki CAD AutoCAD Drawing Exchange Format DXF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania plików CAD, konwersji DXF i narzędzi obsługi formatów rysunków.',
+            keywords: 'przykładowe pliki DXF, testowe pliki DXF, pobierz przykłady DXF, darmowe testowe pliki DXF, przykłady AutoCAD DXF, przykłady plików CAD, przykłady rysunków DXF, testowe pliki .dxf, przykłady formatów CAD, przykłady formatów wymiany rysunków'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DXF – Pobierz testowe pliki AutoCAD Drawing Exchange Format',
+            description: 'Pobierz darmowe przykładowe pliki CAD AutoCAD Drawing Exchange Format DXF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania plików CAD, konwersji DXF i narzędzi obsługi formatów rysunków.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DXF',
+            description: 'Pobierz darmowe przykładowe pliki CAD AutoCAD Drawing Exchange Format DXF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania plików CAD, konwersji DXF i obsługi formatów rysunków.'
+          },
+          about_description: 'To są testowe pliki CAD DXF (AutoCAD Drawing Exchange Format) w różnych rozmiarach do celów testowych'
+        },
+        dwg: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DWG – Pobierz pliki rysunków AutoCAD | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki CAD rysunków AutoCAD DWG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania plików CAD, konwersji DWG i narzędzi obsługi formatów AutoCAD.',
+            keywords: 'przykładowe pliki DWG, testowe pliki DWG, pobierz przykłady DWG, darmowe testowe pliki DWG, przykłady AutoCAD DWG, przykłady plików CAD, przykłady rysunków DWG, testowe pliki .dwg, przykłady formatów CAD, przykłady rysunków AutoCAD'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DWG – Pobierz testowe pliki rysunków AutoCAD',
+            description: 'Pobierz darmowe przykładowe pliki CAD rysunków AutoCAD DWG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania plików CAD, konwersji DWG i narzędzi obsługi formatów AutoCAD.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DWG',
+            description: 'Pobierz darmowe przykładowe pliki CAD rysunków AutoCAD DWG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania plików CAD, konwersji DWG i obsługi formatów AutoCAD.'
+          },
+          about_description: 'To są testowe pliki CAD DWG (AutoCAD Drawing) w różnych rozmiarach do celów testowych'
+        },
+        dockerfile: {
+          meta: {
+            title: 'Darmowe przykładowe pliki Dockerfile – Pobierz pliki konfiguracji Docker | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji kontenerów Docker Dockerfile do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania procesów budowania Docker, parsowania konfiguracji kontenerów i narzędzi DevOps.',
+            keywords: 'przykładowe pliki Dockerfile, testowe pliki Dockerfile, pobierz przykłady Dockerfile, darmowe testowe pliki Dockerfile, przykłady konfiguracji Docker, przykłady konfiguracji kontenerów, testowe pliki .dockerfile, przykłady budowania Docker, przykłady konteneryzacji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Dockerfile – Pobierz testowe pliki konfiguracji Docker',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji kontenerów Docker Dockerfile do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania procesów budowania Docker, parsowania konfiguracji kontenerów i narzędzi DevOps.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Dockerfile',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji kontenerów Docker Dockerfile do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje procesy budowania Docker, parsowania konfiguracji kontenerów i narzędzia DevOps.'
+          },
+          about_description: 'To są testowe pliki konfiguracji kontenerów Docker Dockerfile w różnych rozmiarach do celów testowych'
+        },
+        'docker-compose-yml': {
+          meta: {
+            title: 'Darmowe przykładowe pliki Docker Compose YML – Pobierz pliki konfiguracji Docker Compose | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji wielokontenerowych Docker Docker Compose YML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania Docker Compose, orkiestracji wielokontenerowej i narzędzi konfiguracji DevOps.',
+            keywords: 'przykładowe pliki Docker Compose YML, testowe pliki docker-compose.yml, pobierz przykłady Docker Compose, darmowe testowe pliki docker-compose, przykłady konfiguracji wielokontenerowej, przykłady orkiestracji Docker, testowe pliki .yml, przykłady orkiestracji kontenerów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Docker Compose YML – Pobierz testowe pliki konfiguracji Docker Compose',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji wielokontenerowych Docker Docker Compose YML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania Docker Compose, orkiestracji wielokontenerowej i narzędzi konfiguracji DevOps.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Docker Compose YML',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji wielokontenerowych Docker Docker Compose YML do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania Docker Compose, orkiestracji wielokontenerowej i konfiguracji DevOps.'
+          },
+          about_description: 'To są testowe pliki konfiguracji wielokontenerowych Docker Docker Compose YML w różnych rozmiarach do celów testowych'
+        },
+        dmp: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DMP – Pobierz pliki zrzutów pamięci Windows | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki zrzutów pamięci Windows DMP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy zrzutów pamięci, debugowania awarii i narzędzi diagnostycznych systemu.',
+            keywords: 'przykładowe pliki DMP, testowe pliki DMP, pobierz przykłady DMP, darmowe testowe pliki DMP, przykłady zrzutów pamięci Windows, przykłady zrzutów awarii, testowe pliki .dmp, przykłady analizy pamięci, przykłady diagnostyki systemu'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DMP – Pobierz testowe pliki zrzutów pamięci Windows',
+            description: 'Pobierz darmowe przykładowe pliki zrzutów pamięci Windows DMP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy zrzutów pamięci, debugowania awarii i narzędzi diagnostycznych systemu.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DMP',
+            description: 'Pobierz darmowe przykładowe pliki zrzutów pamięci Windows DMP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia analizy zrzutów pamięci, debugowania awarii i diagnostyki systemu.'
+          },
+          about_description: 'To są testowe pliki DMP (Windows Memory Dump) w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -2981,6 +3301,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose HEIC High Efficiency Image Container-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Bildkompression, HEIC-Konvertierung und modernen Bildformat-Verarbeitungstools zu testen.'
           },
           about_description: 'Dies sind HEIC (High Efficiency Image Container) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        exr: {
+          meta: {
+            title: 'Kostenlose EXR Beispieldateien herunterladen – OpenEXR-Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose EXR OpenEXR High Dynamic Range Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HDR-Bildverarbeitung, EXR-Konvertierung und High Dynamic Range Betrachtungstools.',
+            keywords: 'EXR Beispieldateien, EXR Testdateien, EXR Beispiele herunterladen, kostenlose EXR Testdateien, OpenEXR-Bild-Beispiele, HDR-Bilddateien, EXR-Bilddateien, .exr Testdateien, High Dynamic Range Bilder, EXR-Konvertierungs-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose EXR Beispieldateien – OpenEXR-Bilddateien testen',
+            description: 'Laden Sie kostenlose EXR OpenEXR High Dynamic Range Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HDR-Bildverarbeitung, EXR-Konvertierung und High Dynamic Range Betrachtungstools.'
+          },
+          hero: {
+            title: 'EXR Beispieldateien',
+            description: 'Laden Sie kostenlose EXR OpenEXR High Dynamic Range Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre HDR-Bildverarbeitung, EXR-Konvertierung und High Dynamic Range Betrachtungstools zu testen.'
+          },
+          about_description: 'Dies sind EXR (OpenEXR) High Dynamic Range Bild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        exe: {
+          meta: {
+            title: 'Kostenlose EXE Beispieldateien herunterladen – Windows-Executable-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose EXE Windows-Executable-Anwendungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Executable-Analyse, Windows-Anwendungsverarbeitung und Binärdatei-Verarbeitungstools.',
+            keywords: 'EXE Beispieldateien, EXE Testdateien, EXE Beispiele herunterladen, kostenlose EXE Testdateien, Windows-Executable-Beispiele, Anwendungsdateien, EXE-Binärdatei-Beispiele, .exe Testdateien, Executable-Analyse-Beispiele, Windows-App-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose EXE Beispieldateien – Windows-Executable-Dateien testen',
+            description: 'Laden Sie kostenlose EXE Windows-Executable-Anwendungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Executable-Analyse, Windows-Anwendungsverarbeitung und Binärdatei-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'EXE Beispieldateien',
+            description: 'Laden Sie kostenlose EXE Windows-Executable-Anwendungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Executable-Analyse, Windows-Anwendungsverarbeitung und Binärdatei-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind EXE (Windows Executable) Anwendungs-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        eps: {
+          meta: {
+            title: 'Kostenlose EPS Beispieldateien herunterladen – Encapsulated PostScript-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose EPS Encapsulated PostScript Vektorbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Vektorgrafik-Verarbeitung, EPS-Konvertierung und PostScript-Format-Verarbeitungstools.',
+            keywords: 'EPS Beispieldateien, EPS Testdateien, EPS Beispiele herunterladen, kostenlose EPS Testdateien, Encapsulated PostScript-Beispiele, Vektorgrafik-Beispiele, EPS-Bild-Beispiele, .eps Testdateien, PostScript-Format-Beispiele, Vektorformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose EPS Beispieldateien – Encapsulated PostScript-Dateien testen',
+            description: 'Laden Sie kostenlose EPS Encapsulated PostScript Vektorbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Vektorgrafik-Verarbeitung, EPS-Konvertierung und PostScript-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'EPS Beispieldateien',
+            description: 'Laden Sie kostenlose EPS Encapsulated PostScript Vektorbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Vektorgrafik-Verarbeitung, EPS-Konvertierung und PostScript-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind EPS (Encapsulated PostScript) Vektorbild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        elf: {
+          meta: {
+            title: 'Kostenlose ELF Beispieldateien herunterladen – Executable and Linkable Format-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ELF Executable and Linkable Format Binärdatei-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Binäranalyse, ELF-Parsing und Executable-Format-Verarbeitungstools.',
+            keywords: 'ELF Beispieldateien, ELF Testdateien, ELF Beispiele herunterladen, kostenlose ELF Testdateien, Executable and Linkable Format-Beispiele, Binärdatei-Beispiele, ELF-Executable-Beispiele, .elf Testdateien, Binäranalyse-Beispiele, Executable-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ELF Beispieldateien – Executable and Linkable Format-Dateien testen',
+            description: 'Laden Sie kostenlose ELF Executable and Linkable Format Binärdatei-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Binäranalyse, ELF-Parsing und Executable-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'ELF Beispieldateien',
+            description: 'Laden Sie kostenlose ELF Executable and Linkable Format Binärdatei-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Binäranalyse, ELF-Parsing und Executable-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind ELF (Executable and Linkable Format) Binärdatei-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        editorconfig: {
+          meta: {
+            title: 'Kostenlose EditorConfig Beispieldateien herunterladen – Editor-Konfigurationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose EditorConfig Editor-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Editor-Konfigurations-Parsing, Code-Formatierungs-Tools und Entwicklungsumgebungs-Setup.',
+            keywords: 'EditorConfig Beispieldateien, EditorConfig Testdateien, EditorConfig Beispiele herunterladen, kostenlose EditorConfig Testdateien, Editor-Konfigurations-Beispiele, .editorconfig Testdateien, Code-Formatierungs-Beispiele, Editor-Einstellungs-Beispiele, Entwicklungs-Konfigurations-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose EditorConfig Beispieldateien – Editor-Konfigurationsdateien testen',
+            description: 'Laden Sie kostenlose EditorConfig Editor-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Editor-Konfigurations-Parsing, Code-Formatierungs-Tools und Entwicklungsumgebungs-Setup.'
+          },
+          hero: {
+            title: 'EditorConfig Beispieldateien',
+            description: 'Laden Sie kostenlose EditorConfig Editor-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Editor-Konfigurations-Parsing, Code-Formatierungs-Tools und Entwicklungsumgebungs-Setup zu testen.'
+          },
+          about_description: 'Dies sind EditorConfig Editor-Konfigurations-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dxf: {
+          meta: {
+            title: 'Kostenlose DXF Beispieldateien herunterladen – AutoCAD Drawing Exchange Format-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DXF AutoCAD Drawing Exchange Format CAD-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Datei-Verarbeitung, DXF-Konvertierung und Zeichnungs-Format-Verarbeitungstools.',
+            keywords: 'DXF Beispieldateien, DXF Testdateien, DXF Beispiele herunterladen, kostenlose DXF Testdateien, AutoCAD DXF-Beispiele, CAD-Datei-Beispiele, DXF-Zeichnungs-Beispiele, .dxf Testdateien, CAD-Format-Beispiele, Zeichnungs-Austausch-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DXF Beispieldateien – AutoCAD Drawing Exchange Format-Dateien testen',
+            description: 'Laden Sie kostenlose DXF AutoCAD Drawing Exchange Format CAD-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Datei-Verarbeitung, DXF-Konvertierung und Zeichnungs-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'DXF Beispieldateien',
+            description: 'Laden Sie kostenlose DXF AutoCAD Drawing Exchange Format CAD-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Datei-Verarbeitung, DXF-Konvertierung und Zeichnungs-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind DXF (AutoCAD Drawing Exchange Format) CAD-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dwg: {
+          meta: {
+            title: 'Kostenlose DWG Beispieldateien herunterladen – AutoCAD-Zeichnungsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DWG AutoCAD-Zeichnungs-CAD-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Datei-Verarbeitung, DWG-Konvertierung und AutoCAD-Format-Verarbeitungstools.',
+            keywords: 'DWG Beispieldateien, DWG Testdateien, DWG Beispiele herunterladen, kostenlose DWG Testdateien, AutoCAD DWG-Beispiele, CAD-Datei-Beispiele, DWG-Zeichnungs-Beispiele, .dwg Testdateien, CAD-Format-Beispiele, AutoCAD-Zeichnungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DWG Beispieldateien – AutoCAD-Zeichnungsdateien testen',
+            description: 'Laden Sie kostenlose DWG AutoCAD-Zeichnungs-CAD-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Datei-Verarbeitung, DWG-Konvertierung und AutoCAD-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'DWG Beispieldateien',
+            description: 'Laden Sie kostenlose DWG AutoCAD-Zeichnungs-CAD-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Datei-Verarbeitung, DWG-Konvertierung und AutoCAD-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind DWG (AutoCAD Drawing) CAD-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dockerfile: {
+          meta: {
+            title: 'Kostenlose Dockerfile Beispieldateien herunterladen – Docker-Konfigurationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Dockerfile Docker-Container-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker-Build-Prozessen, Container-Konfigurations-Parsing und DevOps-Tools.',
+            keywords: 'Dockerfile Beispieldateien, Dockerfile Testdateien, Dockerfile Beispiele herunterladen, kostenlose Dockerfile Testdateien, Docker-Konfigurations-Beispiele, Container-Konfigurations-Beispiele, .dockerfile Testdateien, Docker-Build-Beispiele, Containerisierungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Dockerfile Beispieldateien – Docker-Konfigurationsdateien testen',
+            description: 'Laden Sie kostenlose Dockerfile Docker-Container-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker-Build-Prozessen, Container-Konfigurations-Parsing und DevOps-Tools.'
+          },
+          hero: {
+            title: 'Dockerfile Beispieldateien',
+            description: 'Laden Sie kostenlose Dockerfile Docker-Container-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Docker-Build-Prozesse, Container-Konfigurations-Parsing und DevOps-Tools zu testen.'
+          },
+          about_description: 'Dies sind Dockerfile Docker-Container-Konfigurations-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'docker-compose-yml': {
+          meta: {
+            title: 'Kostenlose Docker Compose YML Beispieldateien herunterladen – Docker Compose-Konfigurationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Docker Compose YML Multi-Container-Docker-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker Compose-Parsing, Multi-Container-Orchestrierung und DevOps-Konfigurations-Tools.',
+            keywords: 'Docker Compose YML Beispieldateien, docker-compose.yml Testdateien, Docker Compose Beispiele herunterladen, kostenlose docker-compose Testdateien, Multi-Container-Konfigurations-Beispiele, Docker-Orchestrierungs-Beispiele, .yml Testdateien, Container-Orchestrierungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Docker Compose YML Beispieldateien – Docker Compose-Konfigurationsdateien testen',
+            description: 'Laden Sie kostenlose Docker Compose YML Multi-Container-Docker-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker Compose-Parsing, Multi-Container-Orchestrierung und DevOps-Konfigurations-Tools.'
+          },
+          hero: {
+            title: 'Docker Compose YML Beispieldateien',
+            description: 'Laden Sie kostenlose Docker Compose YML Multi-Container-Docker-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Docker Compose-Parsing, Multi-Container-Orchestrierung und DevOps-Konfigurations-Tools zu testen.'
+          },
+          about_description: 'Dies sind Docker Compose YML Multi-Container-Docker-Konfigurations-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dmp: {
+          meta: {
+            title: 'Kostenlose DMP Beispieldateien herunterladen – Windows-Speicherdump-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DMP Windows-Speicherdump-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Speicherdump-Analyse, Crash-Debugging und Systemdiagnose-Tools.',
+            keywords: 'DMP Beispieldateien, DMP Testdateien, DMP Beispiele herunterladen, kostenlose DMP Testdateien, Windows-Speicherdump-Beispiele, Crash-Dump-Beispiele, .dmp Testdateien, Speicheranalyse-Beispiele, Systemdiagnose-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DMP Beispieldateien – Windows-Speicherdump-Dateien testen',
+            description: 'Laden Sie kostenlose DMP Windows-Speicherdump-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Speicherdump-Analyse, Crash-Debugging und Systemdiagnose-Tools.'
+          },
+          hero: {
+            title: 'DMP Beispieldateien',
+            description: 'Laden Sie kostenlose DMP Windows-Speicherdump-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Speicherdump-Analyse, Crash-Debugging und Systemdiagnose-Tools zu testen.'
+          },
+          about_description: 'Dies sind DMP (Windows Memory Dump) Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }
