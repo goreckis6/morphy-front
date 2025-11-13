@@ -21,46 +21,10 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://morphyhub.com/pl/pl</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/pl" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/pl" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/pl" />
-    <lastmod>2025-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://morphyhub.com/de/pl</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/pl" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/pl" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/pl" />
-    <lastmod>2025-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://morphyhub.com/de</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl" />
     <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de" />
-    <lastmod>2025-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://morphyhub.com/pl/de</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/de" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/de" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/de" />
-    <lastmod>2025-11-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://morphyhub.com/de/de</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/de" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/de" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/de" />
     <lastmod>2025-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
