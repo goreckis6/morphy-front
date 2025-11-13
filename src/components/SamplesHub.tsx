@@ -135,6 +135,14 @@ export const SamplesHub: React.FC = () => {
           iconColor: "text-purple-600"
         },
         { 
+          name: "HTML Sample Files", 
+          description: "Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HTML parsing, web development, and HTML validation tools.",
+          path: "/samples/sample-html",
+          format: "HTML",
+          icon: <FileSpreadsheet className="w-5 h-5 text-purple-600" />,
+          iconColor: "text-purple-600"
+        },
+        { 
           name: "ODS Sample Files", 
           description: "Download free ODS sample OpenDocument spreadsheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing spreadsheet conversion and data processing tools.",
           path: "/samples/sample-ods",

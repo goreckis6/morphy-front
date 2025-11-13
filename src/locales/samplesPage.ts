@@ -163,6 +163,10 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
           name: 'XML Sample Files',
           description: 'Download free XML sample markup files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing XML parsing and data conversion tools.'
         },
+        html: {
+          name: 'HTML Sample Files',
+          description: 'Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HTML parsing, web development, and HTML validation tools.'
+        },
         ods: {
           name: 'ODS Sample Files',
           description: 'Download free ODS sample OpenDocument spreadsheet files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing spreadsheet conversion and data processing tools.'
@@ -716,6 +720,10 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
           name: 'Przykładowe pliki XML',
           description: 'Pobierz darmowe przykładowe pliki XML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania XML i narzędzi konwersji danych.'
         },
+        html: {
+          name: 'Przykładowe pliki HTML',
+          description: 'Pobierz darmowe przykładowe pliki HTML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania HTML, tworzenia stron internetowych i narzędzi walidacji HTML.'
+        },
         ods: {
           name: 'Przykładowe pliki ODS',
           description: 'Pobierz darmowe przykładowe pliki ODS OpenDocument do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji arkuszy kalkulacyjnych i narzędzi przetwarzania danych.'
@@ -1268,6 +1276,10 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
         xml: {
           name: 'XML Beispieldateien',
           description: 'Laden Sie kostenlose XML Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von XML-Parsing und Datenkonvertierungstools.'
+        },
+        html: {
+          name: 'HTML Beispieldateien',
+          description: 'Laden Sie kostenlose HTML Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HTML-Parsing, Webentwicklung und HTML-Validierungstools.'
         },
         ods: {
           name: 'ODS Beispieldateien',
