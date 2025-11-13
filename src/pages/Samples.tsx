@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { SamplesHub } from '../components/SamplesHub';
 import { useTranslation } from 'react-i18next';
-import { getLocalizedUrl, usePathLanguageSync } from '../i18n';
+import { getLocalizedUrl } from '../i18n';
+import { usePathLanguageSync } from '../hooks/usePathLanguageSync';
 import '../locales/samplesPage';
 
 export default function Samples() {

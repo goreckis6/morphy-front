@@ -3,7 +3,8 @@ import { FileText, Archive, FileSpreadsheet, ArrowLeft, Search, Download, Box, M
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { useTranslation } from 'react-i18next';
-import { getLocalizedUrl, usePathLanguageSync } from '../i18n';
+import { getLocalizedUrl } from '../i18n';
+import { usePathLanguageSync } from '../hooks/usePathLanguageSync';
 import { useNavigate } from 'react-router-dom';
 import '../locales/samplesPage';
 
