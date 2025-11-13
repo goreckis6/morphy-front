@@ -26,4 +26,8 @@ applications:
               value: 'DENY'
             - key: 'X-Content-Type-Options'
               value: 'nosniff'
+        - pattern: '/sitemap.xml'
+          headers:
+            - key: 'Content-Type'
+              value: 'application/xml; charset=utf-8'
     appRoot: .
