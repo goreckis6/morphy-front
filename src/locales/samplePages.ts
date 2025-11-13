@@ -703,6 +703,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free CAF sample Apple Core Audio files for testing. Multiple file sizes available to test your audio conversion and playback tools.'
           },
           about_description: 'These are test CAF (Apple Core Audio Format) audio files in various sizes for testing purposes'
+        },
+        key: {
+          meta: {
+            title: 'Free KEY Sample Files Download - Test Private Key Files | MorphyHub',
+            description: 'Download free KEY sample private key files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate management, key parsing, and cryptographic key storage tools.',
+            keywords: 'KEY sample files, test KEY files, download KEY samples, free KEY test files, private key samples, SSL key files, KEY certificate files, .key test files, cryptographic key files, KEY parsing test files'
+          },
+          schema: {
+            name: 'Free KEY Sample Files - Download Test Private Key Files',
+            description: 'Download free KEY sample private key files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate management, key parsing, and cryptographic key storage tools.'
+          },
+          hero: {
+            title: 'KEY Sample Files',
+            description: 'Download free KEY sample private key files for testing. Multiple file sizes available to test your SSL certificate management and key parsing tools.'
+          },
+          about_description: 'These are test KEY (private key) files in various sizes for testing purposes'
+        },
+        crx: {
+          meta: {
+            title: 'Free CRX Sample Files Download - Test Chrome Extension Files | MorphyHub',
+            description: 'Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension processing tools.',
+            keywords: 'CRX sample files, test CRX files, download CRX samples, free CRX test files, Chrome extension samples, browser extension samples, CRX package samples, CRX conversion test files, .crx test files, Chrome extension installation samples, web extension samples'
+          },
+          schema: {
+            name: 'Free CRX Sample Files - Download Test Chrome Extension Files',
+            description: 'Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension processing tools.'
+          },
+          hero: {
+            title: 'CRX Sample Files',
+            description: 'Download free CRX sample Chrome extension package files for testing. Multiple file sizes available to test your Chrome extension installation, CRX analysis, and browser extension processing tools.'
+          },
+          about_description: 'These are test CRX (Chrome Extension) package files in various sizes for testing purposes'
+        },
+        hpp: {
+          meta: {
+            title: 'Free HPP Sample Files Download - Test C++ Header Files | MorphyHub',
+            description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, header file processing, and development tools.',
+            keywords: 'HPP sample files, test HPP files, download HPP samples, free HPP test files, C++ header samples, header file samples, .hpp test files, C++ header files, programming header samples, code header files, C++ development files'
+          },
+          schema: {
+            name: 'Free HPP Sample Files - Download Test C++ Header Files',
+            description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, header file processing, and development tools.'
+          },
+          hero: {
+            title: 'HPP Sample Files',
+            description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available to test your C++ code compilation and header file processing tools.'
+          },
+          about_description: 'These are test HPP (C++ header) files in various sizes for testing purposes'
+        },
+        hex: {
+          meta: {
+            title: 'Free HEX Sample Files Download - Test Hexadecimal Format Files | MorphyHub',
+            description: 'Download free HEX sample hexadecimal format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing hexadecimal parsing, binary data analysis, and hex file processing tools.',
+            keywords: 'HEX sample files, test HEX files, download HEX samples, free HEX test files, hexadecimal format samples, hex dump samples, HEX parsing test files, .hex test files, binary hex samples, hex editor files, hexadecimal data samples'
+          },
+          schema: {
+            name: 'Free HEX Sample Files - Download Test Hexadecimal Format Files',
+            description: 'Download free HEX sample hexadecimal format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing hexadecimal parsing, binary data analysis, and hex file processing tools.'
+          },
+          hero: {
+            title: 'HEX Sample Files',
+            description: 'Download free HEX sample hexadecimal format files for testing. Multiple file sizes available to test your hexadecimal parsing and binary data analysis tools.'
+          },
+          about_description: 'These are test HEX (hexadecimal format) files in various sizes for testing purposes'
+        },
+        hdr: {
+          meta: {
+            title: 'Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyHub',
+            description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, tone mapping, and high dynamic range viewing tools.',
+            keywords: 'HDR sample files, test HDR files, download HDR samples, free HDR test files, High Dynamic Range samples, HDR image samples, HDR tone mapping test files, .hdr test files, HDR image processing samples, high dynamic range images, HDR viewer samples'
+          },
+          schema: {
+            name: 'Free HDR Sample Files - Download Test High Dynamic Range Image Files',
+            description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image processing, tone mapping, and high dynamic range viewing tools.'
+          },
+          hero: {
+            title: 'HDR Sample Files',
+            description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available to test your HDR image processing and tone mapping tools.'
+          },
+          about_description: 'These are test HDR (High Dynamic Range) image files in various sizes for testing purposes'
+        },
+        h: {
+          meta: {
+            title: 'Free H Sample Files Download - Test C/C++ Header Files | MorphyHub',
+            description: 'Download free H sample C/C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C/C++ code compilation, header file processing, and development tools.',
+            keywords: 'H sample files, test H files, download H samples, free H test files, C header samples, C++ header samples, header file samples, .h test files, C/C++ header files, programming header samples, code header files'
+          },
+          schema: {
+            name: 'Free H Sample Files - Download Test C/C++ Header Files',
+            description: 'Download free H sample C/C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C/C++ code compilation, header file processing, and development tools.'
+          },
+          hero: {
+            title: 'H Sample Files',
+            description: 'Download free H sample C/C++ header files for testing. Multiple file sizes available to test your C/C++ code compilation and header file processing tools.'
+          },
+          about_description: 'These are test H (C/C++ header) files in various sizes for testing purposes'
+        },
+        gz: {
+          meta: {
+            title: 'Free GZ Sample Files Download - Test gzip Compressed Archive Files | MorphyHub',
+            description: 'Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing compression tools, archive extraction, and gzip file processing.',
+            keywords: 'GZ sample files, test GZ files, download GZ samples, free GZ test files, gzip compressed samples, archive samples, GZ compression test files, .gz test files, gzip archive samples, compressed file samples, GZ file samples'
+          },
+          schema: {
+            name: 'Free GZ Sample Files - Download Test gzip Compressed Archive Files',
+            description: 'Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing compression tools, archive extraction, and gzip file processing.'
+          },
+          hero: {
+            title: 'GZ Sample Files',
+            description: 'Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available to test your compression tools and archive extraction software.'
+          },
+          about_description: 'These are test GZ (gzip) compressed archive files in various sizes for testing purposes'
+        },
+        ace: {
+          meta: {
+            title: 'Free ACE Sample Files Download - Test Archive Files | MorphyHub',
+            description: 'Download free ACE sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and ACE format processing tools.',
+            keywords: 'ACE sample files, test ACE files, download ACE samples, free ACE test files, archive samples, WinACE samples, compressed file samples, .ace test files, file compression samples, archive format samples'
+          },
+          schema: {
+            name: 'Free ACE Sample Files - Download Test Archive Files',
+            description: 'Download free ACE sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and ACE format processing tools.'
+          },
+          hero: {
+            title: 'ACE Sample Files',
+            description: 'Download free ACE sample archive files for testing. Multiple file sizes available to test your archive extraction, compression, and ACE format processing tools.'
+          },
+          about_description: 'These are test ACE (WinACE) archive files in various sizes for testing purposes'
+        },
+        '7z': {
+          meta: {
+            title: 'Free 7Z Sample Files Download - Test Archive Files | MorphyHub',
+            description: 'Download free 7Z sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive conversion, compression, and extraction tools.',
+            keywords: '7Z sample files, test 7Z files, download 7Z samples, free 7Z test files, archive samples, 7-Zip samples, compressed file samples, .7z test files, archive conversion samples, file compression samples'
+          },
+          schema: {
+            name: 'Free 7Z Sample Files - Download Test Archives',
+            description: 'Download free 7Z sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive conversion and extraction tools.'
+          },
+          hero: {
+            title: '7Z Sample Files',
+            description: 'Download free 7Z sample archive files for testing. Multiple file sizes available to test your archive conversion, compression, and extraction tools.'
+          },
+          about_description: 'These are test 7Z archive files in various sizes for testing purposes'
+        },
+        '3mf': {
+          meta: {
+            title: 'Free 3MF Sample Files Download - Test 3D Printing Files | MorphyHub',
+            description: 'Download free 3MF sample 3D printing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printing conversion, viewing, and 3MF format processing tools.',
+            keywords: '3MF sample files, test 3MF files, download 3MF samples, free 3MF test files, 3D printing samples, 3MF format samples, 3D printing conversion test files, .3mf test files, additive manufacturing samples, 3D printer samples'
+          },
+          schema: {
+            name: 'Free 3MF Sample Files - Download Test 3D Printing Files',
+            description: 'Download free 3MF sample 3D printing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printing conversion, viewing, and 3MF format processing tools.'
+          },
+          hero: {
+            title: '3MF Sample Files',
+            description: 'Download free 3MF sample 3D printing files for testing. Multiple file sizes available to test your 3D printing conversion, viewing, and 3MF format processing tools.'
+          },
+          about_description: 'These are test 3MF (3D Manufacturing Format) 3D printing files in various sizes for testing purposes'
         }
       }
     }
@@ -1362,6 +1522,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki CAF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji audio i odtwarzania.'
           },
           about_description: 'To są testowe pliki audio CAF (Apple Core Audio Format) w różnych rozmiarach do celów testowych'
+        },
+        key: {
+          meta: {
+            title: 'Darmowe przykładowe pliki KEY – Pobierz pliki kluczy prywatnych | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki KEY do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania zarządzania certyfikatami SSL, parsowania kluczy i narzędzi przechowywania kluczy kryptograficznych.',
+            keywords: 'przykładowe pliki KEY, testowe pliki KEY, pobierz przykłady KEY, darmowe testowe pliki KEY, przykłady kluczy prywatnych, pliki kluczy SSL, pliki certyfikatów KEY, testowe pliki .key, pliki kluczy kryptograficznych, testowe pliki parsowania KEY'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki KEY – Pobierz testowe pliki kluczy prywatnych',
+            description: 'Pobierz darmowe przykładowe pliki KEY do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania zarządzania certyfikatami SSL, parsowania kluczy i narzędzi przechowywania kluczy kryptograficznych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki KEY',
+            description: 'Pobierz darmowe przykładowe pliki KEY do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia zarządzania certyfikatami SSL i parsowania kluczy.'
+          },
+          about_description: 'To są testowe pliki kluczy prywatnych KEY w różnych rozmiarach do celów testowych'
+        },
+        crx: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CRX – Pobierz pliki rozszerzeń Chrome | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki CRX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji rozszerzeń Chrome, analizy CRX i narzędzi przetwarzania rozszerzeń przeglądarek.',
+            keywords: 'przykładowe pliki CRX, testowe pliki CRX, pobierz przykłady CRX, darmowe testowe pliki CRX, przykłady rozszerzeń Chrome, przykłady rozszerzeń przeglądarek, przykłady pakietów CRX, testowe pliki konwersji CRX, testowe pliki .crx, przykłady instalacji rozszerzeń Chrome, przykłady rozszerzeń web'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CRX – Pobierz testowe pliki rozszerzeń Chrome',
+            description: 'Pobierz darmowe przykładowe pliki CRX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji rozszerzeń Chrome, analizy CRX i narzędzi przetwarzania rozszerzeń przeglądarek.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CRX',
+            description: 'Pobierz darmowe przykładowe pliki CRX do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia instalacji rozszerzeń Chrome, analizy CRX i przetwarzania rozszerzeń przeglądarek.'
+          },
+          about_description: 'To są testowe pliki pakietów CRX (Chrome Extension) w różnych rozmiarach do celów testowych'
+        },
+        hpp: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HPP – Pobierz pliki nagłówkowe C++ | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki HPP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++, przetwarzania plików nagłówkowych i narzędzi programowania.',
+            keywords: 'przykładowe pliki HPP, testowe pliki HPP, pobierz przykłady HPP, darmowe testowe pliki HPP, przykłady nagłówków C++, przykłady plików nagłówkowych, testowe pliki .hpp, pliki nagłówkowe C++, przykłady nagłówków programowania, pliki nagłówków kodu, pliki programowania C++'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HPP – Pobierz testowe pliki nagłówkowe C++',
+            description: 'Pobierz darmowe przykładowe pliki HPP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++, przetwarzania plików nagłówkowych i narzędzi programowania.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HPP',
+            description: 'Pobierz darmowe przykładowe pliki HPP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji kodu C++ i przetwarzania plików nagłówkowych.'
+          },
+          about_description: 'To są testowe pliki nagłówkowe HPP (C++) w różnych rozmiarach do celów testowych'
+        },
+        hex: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HEX – Pobierz pliki formatu szesnastkowego | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki HEX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania szesnastkowego, analizy danych binarnych i narzędzi przetwarzania plików hex.',
+            keywords: 'przykładowe pliki HEX, testowe pliki HEX, pobierz przykłady HEX, darmowe testowe pliki HEX, przykłady formatu szesnastkowego, przykłady zrzutów hex, testowe pliki parsowania HEX, testowe pliki .hex, przykłady binarnych hex, pliki edytorów hex, przykłady danych szesnastkowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HEX – Pobierz testowe pliki formatu szesnastkowego',
+            description: 'Pobierz darmowe przykładowe pliki HEX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania szesnastkowego, analizy danych binarnych i narzędzi przetwarzania plików hex.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HEX',
+            description: 'Pobierz darmowe przykładowe pliki HEX do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania szesnastkowego i analizy danych binarnych.'
+          },
+          about_description: 'To są testowe pliki formatu szesnastkowego HEX w różnych rozmiarach do celów testowych'
+        },
+        hdr: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HDR – Pobierz pliki obrazów High Dynamic Range | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki HDR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania obrazów HDR, mapowania tonów i narzędzi przeglądania wysokiego zakresu dynamicznego.',
+            keywords: 'przykładowe pliki HDR, testowe pliki HDR, pobierz przykłady HDR, darmowe testowe pliki HDR, przykłady High Dynamic Range, przykłady obrazów HDR, testowe pliki mapowania tonów HDR, testowe pliki .hdr, przykłady przetwarzania obrazów HDR, przykłady obrazów wysokiego zakresu dynamicznego, przykłady przeglądarek HDR'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HDR – Pobierz testowe pliki obrazów High Dynamic Range',
+            description: 'Pobierz darmowe przykładowe pliki HDR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania obrazów HDR, mapowania tonów i narzędzi przeglądania wysokiego zakresu dynamicznego.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HDR',
+            description: 'Pobierz darmowe przykładowe pliki HDR do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania obrazów HDR i mapowania tonów.'
+          },
+          about_description: 'To są testowe pliki obrazów HDR (High Dynamic Range) w różnych rozmiarach do celów testowych'
+        },
+        h: {
+          meta: {
+            title: 'Darmowe przykładowe pliki H – Pobierz pliki nagłówkowe C/C++ | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki H do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C/C++, przetwarzania plików nagłówkowych i narzędzi programowania.',
+            keywords: 'przykładowe pliki H, testowe pliki H, pobierz przykłady H, darmowe testowe pliki H, przykłady nagłówków C, przykłady nagłówków C++, przykłady plików nagłówkowych, testowe pliki .h, pliki nagłówkowe C/C++, przykłady nagłówków programowania, pliki nagłówków kodu'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki H – Pobierz testowe pliki nagłówkowe C/C++',
+            description: 'Pobierz darmowe przykładowe pliki H do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C/C++, przetwarzania plików nagłówkowych i narzędzi programowania.'
+          },
+          hero: {
+            title: 'Przykładowe pliki H',
+            description: 'Pobierz darmowe przykładowe pliki H do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji kodu C/C++ i przetwarzania plików nagłówkowych.'
+          },
+          about_description: 'To są testowe pliki nagłówkowe H (C/C++) w różnych rozmiarach do celów testowych'
+        },
+        gz: {
+          meta: {
+            title: 'Darmowe przykładowe pliki GZ – Pobierz skompresowane pliki archiwów gzip | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki GZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania narzędzi kompresji, wyodrębniania archiwów i przetwarzania plików gzip.',
+            keywords: 'przykładowe pliki GZ, testowe pliki GZ, pobierz przykłady GZ, darmowe testowe pliki GZ, przykłady skompresowanych gzip, przykłady archiwów, testowe pliki kompresji GZ, testowe pliki .gz, przykłady archiwów gzip, przykłady skompresowanych plików, przykłady plików GZ'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki GZ – Pobierz testowe skompresowane pliki archiwów gzip',
+            description: 'Pobierz darmowe przykładowe pliki GZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania narzędzi kompresji, wyodrębniania archiwów i przetwarzania plików gzip.'
+          },
+          hero: {
+            title: 'Przykładowe pliki GZ',
+            description: 'Pobierz darmowe przykładowe pliki GZ do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompresji i oprogramowanie do wyodrębniania archiwów.'
+          },
+          about_description: 'To są testowe skompresowane pliki archiwów GZ (gzip) w różnych rozmiarach do celów testowych'
+        },
+        ace: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ACE – Pobierz pliki archiwów | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki ACE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wyodrębniania archiwów, kompresji i narzędzi przetwarzania formatu ACE.',
+            keywords: 'przykładowe pliki ACE, testowe pliki ACE, pobierz przykłady ACE, darmowe testowe pliki ACE, przykłady archiwów, przykłady WinACE, przykłady skompresowanych plików, testowe pliki .ace, przykłady kompresji plików, przykłady formatów archiwów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ACE – Pobierz testowe pliki archiwów',
+            description: 'Pobierz darmowe przykładowe pliki ACE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wyodrębniania archiwów, kompresji i narzędzi przetwarzania formatu ACE.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ACE',
+            description: 'Pobierz darmowe przykładowe pliki ACE do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wyodrębniania archiwów, kompresji i przetwarzania formatu ACE.'
+          },
+          about_description: 'To są testowe pliki archiwów ACE (WinACE) w różnych rozmiarach do celów testowych'
+        },
+        '7z': {
+          meta: {
+            title: 'Darmowe przykładowe pliki 7Z – Pobierz pliki archiwów | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki 7Z do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji archiwów, kompresji i narzędzi wyodrębniania.',
+            keywords: 'przykładowe pliki 7Z, testowe pliki 7Z, pobierz przykłady 7Z, darmowe testowe pliki 7Z, przykłady archiwów, przykłady 7-Zip, przykłady skompresowanych plików, testowe pliki .7z, przykłady konwersji archiwów, przykłady kompresji plików'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki 7Z – Pobierz testowe archiwa',
+            description: 'Pobierz darmowe przykładowe pliki 7Z do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji archiwów i narzędzi wyodrębniania.'
+          },
+          hero: {
+            title: 'Przykładowe pliki 7Z',
+            description: 'Pobierz darmowe przykładowe pliki 7Z do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji archiwów, kompresji i wyodrębniania.'
+          },
+          about_description: 'To są testowe pliki archiwów 7Z w różnych rozmiarach do celów testowych'
+        },
+        '3mf': {
+          meta: {
+            title: 'Darmowe przykładowe pliki 3MF – Pobierz pliki druku 3D | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki 3MF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji druku 3D, przeglądania i narzędzi przetwarzania formatu 3MF.',
+            keywords: 'przykładowe pliki 3MF, testowe pliki 3MF, pobierz przykłady 3MF, darmowe testowe pliki 3MF, przykłady druku 3D, przykłady formatów 3MF, testowe pliki konwersji druku 3D, testowe pliki .3mf, przykłady produkcji addytywnej, przykłady drukarek 3D'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki 3MF – Pobierz testowe pliki druku 3D',
+            description: 'Pobierz darmowe przykładowe pliki 3MF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji druku 3D, przeglądania i narzędzi przetwarzania formatu 3MF.'
+          },
+          hero: {
+            title: 'Przykładowe pliki 3MF',
+            description: 'Pobierz darmowe przykładowe pliki 3MF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji druku 3D, przeglądania i przetwarzania formatu 3MF.'
+          },
+          about_description: 'To są testowe pliki druku 3D 3MF (3D Manufacturing Format) w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -2021,6 +2341,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose CAF Apple Core Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audio-Konvertierung und Wiedergabetools zu testen.'
           },
           about_description: 'Dies sind CAF (Apple Core Audio Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        key: {
+          meta: {
+            title: 'Kostenlose KEY Beispieldateien herunterladen – Private Schlüssel-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose KEY private Schlüssel-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SSL-Zertifikatsverwaltung, Schlüssel-Parsing und kryptografischen Schlüssel-Speichertools.',
+            keywords: 'KEY Beispieldateien, KEY Testdateien, KEY Beispiele herunterladen, kostenlose KEY Testdateien, private Schlüssel Beispiele, SSL-Schlüssel-Dateien, KEY-Zertifikatsdateien, .key Testdateien, kryptografische Schlüssel-Dateien, KEY-Parsing-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose KEY Beispieldateien – Private Schlüssel-Dateien testen',
+            description: 'Laden Sie kostenlose KEY private Schlüssel-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SSL-Zertifikatsverwaltung, Schlüssel-Parsing und kryptografischen Schlüssel-Speichertools.'
+          },
+          hero: {
+            title: 'KEY Beispieldateien',
+            description: 'Laden Sie kostenlose KEY private Schlüssel-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre SSL-Zertifikatsverwaltung und Schlüssel-Parsing-Tools zu testen.'
+          },
+          about_description: 'Dies sind KEY (private Schlüssel) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        crx: {
+          meta: {
+            title: 'Kostenlose CRX Beispieldateien herunterladen – Chrome-Erweiterungsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CRX Chrome-Erweiterungs-Paket-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Chrome-Erweiterungsinstallation, CRX-Analyse und Browser-Erweiterungs-Verarbeitungstools.',
+            keywords: 'CRX Beispieldateien, CRX Testdateien, CRX Beispiele herunterladen, kostenlose CRX Testdateien, Chrome-Erweiterungs Beispiele, Browser-Erweiterungs Beispiele, CRX-Paket-Beispiele, CRX-Konvertierungstestdateien, .crx Testdateien, Chrome-Erweiterungs-Installations-Beispiele, Web-Erweiterungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CRX Beispieldateien – Chrome-Erweiterungsdateien testen',
+            description: 'Laden Sie kostenlose CRX Chrome-Erweiterungs-Paket-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Chrome-Erweiterungsinstallation, CRX-Analyse und Browser-Erweiterungs-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'CRX Beispieldateien',
+            description: 'Laden Sie kostenlose CRX Chrome-Erweiterungs-Paket-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Chrome-Erweiterungsinstallation, CRX-Analyse und Browser-Erweiterungs-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind CRX (Chrome Extension) Paket-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        hpp: {
+          meta: {
+            title: 'Kostenlose HPP Beispieldateien herunterladen – C++-Header-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose HPP C++-Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Code-Kompilierung, Header-Datei-Verarbeitung und Entwicklungstools.',
+            keywords: 'HPP Beispieldateien, HPP Testdateien, HPP Beispiele herunterladen, kostenlose HPP Testdateien, C++-Header Beispiele, Header-Datei Beispiele, .hpp Testdateien, C++-Header-Dateien, Programmier-Header-Beispiele, Code-Header-Dateien, C++-Entwicklungsdateien'
+          },
+          schema: {
+            name: 'Kostenlose HPP Beispieldateien – C++-Header-Dateien testen',
+            description: 'Laden Sie kostenlose HPP C++-Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Code-Kompilierung, Header-Datei-Verarbeitung und Entwicklungstools.'
+          },
+          hero: {
+            title: 'HPP Beispieldateien',
+            description: 'Laden Sie kostenlose HPP C++-Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C++-Code-Kompilierung und Header-Datei-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind HPP (C++-Header) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        hex: {
+          meta: {
+            title: 'Kostenlose HEX Beispieldateien herunterladen – Hexadezimalformat-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose HEX Hexadezimalformat-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Hexadezimal-Parsing, Binärdatenanalyse und Hex-Datei-Verarbeitungstools.',
+            keywords: 'HEX Beispieldateien, HEX Testdateien, HEX Beispiele herunterladen, kostenlose HEX Testdateien, Hexadezimalformat Beispiele, Hex-Dump-Beispiele, HEX-Parsing-Testdateien, .hex Testdateien, binäre Hex-Beispiele, Hex-Editor-Dateien, Hexadezimaldaten-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose HEX Beispieldateien – Hexadezimalformat-Dateien testen',
+            description: 'Laden Sie kostenlose HEX Hexadezimalformat-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Hexadezimal-Parsing, Binärdatenanalyse und Hex-Datei-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'HEX Beispieldateien',
+            description: 'Laden Sie kostenlose HEX Hexadezimalformat-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Hexadezimal-Parsing- und Binärdatenanalyse-Tools zu testen.'
+          },
+          about_description: 'Dies sind HEX (Hexadezimalformat) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        hdr: {
+          meta: {
+            title: 'Kostenlose HDR Beispieldateien herunterladen – High Dynamic Range Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose HDR High Dynamic Range Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HDR-Bildverarbeitung, Ton-Mapping und High Dynamic Range Betrachtungstools.',
+            keywords: 'HDR Beispieldateien, HDR Testdateien, HDR Beispiele herunterladen, kostenlose HDR Testdateien, High Dynamic Range Beispiele, HDR-Bild-Beispiele, HDR-Ton-Mapping-Testdateien, .hdr Testdateien, HDR-Bildverarbeitungs-Beispiele, High Dynamic Range Bilder, HDR-Viewer-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose HDR Beispieldateien – High Dynamic Range Bilddateien testen',
+            description: 'Laden Sie kostenlose HDR High Dynamic Range Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HDR-Bildverarbeitung, Ton-Mapping und High Dynamic Range Betrachtungstools.'
+          },
+          hero: {
+            title: 'HDR Beispieldateien',
+            description: 'Laden Sie kostenlose HDR High Dynamic Range Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre HDR-Bildverarbeitungs- und Ton-Mapping-Tools zu testen.'
+          },
+          about_description: 'Dies sind HDR (High Dynamic Range) Bild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        h: {
+          meta: {
+            title: 'Kostenlose H Beispieldateien herunterladen – C/C++-Header-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose H C/C++-Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C/C++-Code-Kompilierung, Header-Datei-Verarbeitung und Entwicklungstools.',
+            keywords: 'H Beispieldateien, H Testdateien, H Beispiele herunterladen, kostenlose H Testdateien, C-Header Beispiele, C++-Header Beispiele, Header-Datei Beispiele, .h Testdateien, C/C++-Header-Dateien, Programmier-Header-Beispiele, Code-Header-Dateien'
+          },
+          schema: {
+            name: 'Kostenlose H Beispieldateien – C/C++-Header-Dateien testen',
+            description: 'Laden Sie kostenlose H C/C++-Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C/C++-Code-Kompilierung, Header-Datei-Verarbeitung und Entwicklungstools.'
+          },
+          hero: {
+            title: 'H Beispieldateien',
+            description: 'Laden Sie kostenlose H C/C++-Header-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C/C++-Code-Kompilierung und Header-Datei-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind H (C/C++-Header) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        gz: {
+          meta: {
+            title: 'Kostenlose GZ Beispieldateien herunterladen – gzip-komprimierte Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose GZ gzip-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Komprimierungstools, Archiv-Extraktion und gzip-Datei-Verarbeitung.',
+            keywords: 'GZ Beispieldateien, GZ Testdateien, GZ Beispiele herunterladen, kostenlose GZ Testdateien, gzip-komprimierte Beispiele, Archiv-Beispiele, GZ-Komprimierungs-Testdateien, .gz Testdateien, gzip-Archiv-Beispiele, komprimierte Datei-Beispiele, GZ-Datei-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose GZ Beispieldateien – gzip-komprimierte Archivdateien testen',
+            description: 'Laden Sie kostenlose GZ gzip-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Komprimierungstools, Archiv-Extraktion und gzip-Datei-Verarbeitung.'
+          },
+          hero: {
+            title: 'GZ Beispieldateien',
+            description: 'Laden Sie kostenlose GZ gzip-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Komprimierungs- und Archiv-Extraktionssoftware zu testen.'
+          },
+          about_description: 'Dies sind GZ (gzip) komprimierte Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ace: {
+          meta: {
+            title: 'Kostenlose ACE Beispieldateien herunterladen – Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ACE Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archiv-Extraktion, Komprimierung und ACE-Format-Verarbeitungstools.',
+            keywords: 'ACE Beispieldateien, ACE Testdateien, ACE Beispiele herunterladen, kostenlose ACE Testdateien, Archiv-Beispiele, WinACE-Beispiele, komprimierte Datei-Beispiele, .ace Testdateien, Datei-Komprimierungs-Beispiele, Archiv-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ACE Beispieldateien – Archivdateien testen',
+            description: 'Laden Sie kostenlose ACE Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archiv-Extraktion, Komprimierung und ACE-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'ACE Beispieldateien',
+            description: 'Laden Sie kostenlose ACE Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archiv-Extraktion, Komprimierung und ACE-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind ACE (WinACE) Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        '7z': {
+          meta: {
+            title: 'Kostenlose 7Z Beispieldateien herunterladen – Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose 7Z Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archiv-Konvertierung, Komprimierung und Extraktionstools.',
+            keywords: '7Z Beispieldateien, 7Z Testdateien, 7Z Beispiele herunterladen, kostenlose 7Z Testdateien, Archiv-Beispiele, 7-Zip-Beispiele, komprimierte Datei-Beispiele, .7z Testdateien, Archiv-Konvertierungs-Beispiele, Datei-Komprimierungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose 7Z Beispieldateien – Archive testen',
+            description: 'Laden Sie kostenlose 7Z Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archiv-Konvertierung und Extraktionstools.'
+          },
+          hero: {
+            title: '7Z Beispieldateien',
+            description: 'Laden Sie kostenlose 7Z Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archiv-Konvertierung, Komprimierung und Extraktionstools zu testen.'
+          },
+          about_description: 'Dies sind 7Z Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        '3mf': {
+          meta: {
+            title: 'Kostenlose 3MF Beispieldateien herunterladen – 3D-Druckdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose 3MF 3D-Druck-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Druck-Konvertierung, Betrachtung und 3MF-Format-Verarbeitungstools.',
+            keywords: '3MF Beispieldateien, 3MF Testdateien, 3MF Beispiele herunterladen, kostenlose 3MF Testdateien, 3D-Druck-Beispiele, 3MF-Format-Beispiele, 3D-Druck-Konvertierungs-Testdateien, .3mf Testdateien, additive Fertigungs-Beispiele, 3D-Drucker-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose 3MF Beispieldateien – 3D-Druckdateien testen',
+            description: 'Laden Sie kostenlose 3MF 3D-Druck-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Druck-Konvertierung, Betrachtung und 3MF-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: '3MF Beispieldateien',
+            description: 'Laden Sie kostenlose 3MF 3D-Druck-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Druck-Konvertierung, Betrachtung und 3MF-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind 3MF (3D Manufacturing Format) 3D-Druck-Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }

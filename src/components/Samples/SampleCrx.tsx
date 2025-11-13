@@ -4,6 +4,11 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Download, Package, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import { getStorageUrl } from '../../config/storage';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { useNavigate } from 'react-router-dom';
+import '../../locales/samplePages';
 
 interface SampleFile {
   size: string;
@@ -12,6 +17,10 @@ interface SampleFile {
 }
 
 export default function SampleCrx() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  usePathLanguageSync(i18n);
+
   const [downloadingIndex, setDownloadingIndex] = useState<number | null>(null);
   const [countdown, setCountdown] = useState<number | null>(null);
   const [readyToDownload, setReadyToDownload] = useState<number | null>(null);
@@ -64,34 +73,39 @@ export default function SampleCrx() {
     }, 2000);
   };
 
+  const formatKey = 'crx';
+  const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
+
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Free CRX Sample Files - Download Test Chrome Extension Files",
-    "url": "https://morphyhub.com/samples/sample-crx",
-    "description": "Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension processing tools.",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
     "isPartOf": { "@id": "https://morphyhub.com#website" },
     "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
-    window.location.href = '/';
+    navigate(getLocalizedUrl('/', i18n.language));
   };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
 
   return (
     <>
       <Helmet>
-        <title>Free CRX Sample Files Download - Test Chrome Extension Files | MorphyHub</title>
-        <meta name="description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Chrome extension installation, CRX analysis, and browser extension processing tools." />
-        <meta name="keywords" content="CRX sample files, test CRX files, download CRX samples, free CRX test files, Chrome extension samples, browser extension samples, CRX package samples, CRX conversion test files, .crx test files, Chrome extension installation samples, web extension samples" />
-        <meta property="og:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyHub" />
-        <meta property="og:description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available for testing Chrome extension installation and CRX analysis tools." />
+        <title>{t(`sample_page.formats.${formatKey}.meta.title`)}</title>
+        <meta name="description" content={t(`sample_page.formats.${formatKey}.meta.description`)} />
+        <meta name="keywords" content={t(`sample_page.formats.${formatKey}.meta.keywords`)} />
+        <meta property="og:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta property="og:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/samples/sample-crx" />
+        <meta property="og:url" content={canonicalUrl} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free CRX Sample Files Download - Test Chrome Extension Files | MorphyHub" />
-        <meta name="twitter:description" content="Download free CRX sample Chrome extension package files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyhub.com/samples/sample-crx" />
+        <meta name="twitter:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta name="twitter:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
+        <link rel="canonical" href={canonicalUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
@@ -109,7 +123,7 @@ export default function SampleCrx() {
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors text-sm sm:text-base"
               >
                 <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Back to Home</span>
+                <span>{t('sample_page.common.back_button')}</span>
               </button>
             </div>
           </div>
@@ -122,11 +136,11 @@ export default function SampleCrx() {
                 <Package className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                CRX Sample Files
+                {t(`sample_page.formats.${formatKey}.hero.title`)}
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free CRX sample Chrome extension package files for testing. Multiple file sizes available to test your Chrome extension installation, CRX analysis, and browser extension processing tools.
+              {t(`sample_page.formats.${formatKey}.hero.description`)}
             </p>
           </div>
 
@@ -149,7 +163,7 @@ export default function SampleCrx() {
                           {file.filename}
                         </h3>
                         <p className="text-sm text-gray-500 mt-1">
-                          File size: <span className="font-medium text-gray-700">{file.displaySize}</span>
+                          {t('sample_page.common.file_size')} <span className="font-medium text-gray-700">{file.displaySize}</span>
                         </p>
                       </div>
                     </div>
@@ -158,15 +172,15 @@ export default function SampleCrx() {
                         <div className="flex flex-col items-center sm:items-end space-y-2">
                           {countdown !== null && countdown > 0 ? (
                             <>
-                              <div className="flex items-center space-x-2 text-orange-600">
+                              <div className="flex items-center space-x-2 text-blue-600">
                                 <Clock className="w-4 h-4 animate-spin" />
                                 <span className="text-sm font-medium">
-                                  Download ready in {countdown}s...
+                                  {t('sample_page.common.download_ready_in', { countdown })}
                                 </span>
                               </div>
                               <div className="w-full sm:w-48 bg-gray-200 rounded-full h-2">
                                 <div
-                                  className="bg-orange-600 h-2 rounded-full transition-all duration-1000"
+                                  className="bg-blue-600 h-2 rounded-full transition-all duration-1000"
                                   style={{ width: `${((10 - countdown) / 10) * 100}%` }}
                                 />
                               </div>
@@ -179,12 +193,12 @@ export default function SampleCrx() {
                           className="inline-flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto shadow-lg"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download Now</span>
+                          <span>{t('sample_page.common.download_now')}</span>
                         </button>
                       ) : downloadComplete === index ? (
                         <div className="flex items-center space-x-2 text-green-600">
                           <CheckCircle className="w-5 h-5" />
-                          <span className="text-sm font-medium">Download started</span>
+                          <span className="text-sm font-medium">{t('sample_page.common.download_started')}</span>
                         </div>
                       ) : (
                         <button
@@ -193,7 +207,7 @@ export default function SampleCrx() {
                           className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download</span>
+                          <span>{t('sample_page.common.download')}</span>
                         </button>
                       )}
                     </div>
@@ -205,13 +219,13 @@ export default function SampleCrx() {
 
           <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              About These Sample Files
+              {t('sample_page.common.about_title')}
             </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
-              <li>• These are test CRX (Chrome Extension) package files in various sizes for testing purposes</li>
-              <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing Chrome extension installation, CRX analysis, and browser extension processing tools</li>
-              <li>• No registration or account required</li>
+              <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
+              {aboutItems && aboutItems.length > 0 && aboutItems.slice(1).map((item, idx) => (
+                <li key={idx}>• {item}</li>
+              ))}
             </ul>
           </div>
 
@@ -221,10 +235,10 @@ export default function SampleCrx() {
                 <Package className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Multiple Sizes
+                {t('sample_page.common.features.multiple_sizes.title')}
               </h3>
               <p className="text-sm text-gray-600">
-                Test files ranging from 100 KB to 100 MB
+                {t('sample_page.common.features.multiple_sizes.description')}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
@@ -232,10 +246,10 @@ export default function SampleCrx() {
                 <Download className="w-6 h-6 text-indigo-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Free Download
+                {t('sample_page.common.features.free_download.title')}
               </h3>
               <p className="text-sm text-gray-600">
-                No registration or payment required
+                {t('sample_page.common.features.free_download.description')}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
@@ -243,10 +257,10 @@ export default function SampleCrx() {
                 <CheckCircle className="w-6 h-6 text-green-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Safe & Tested
+                {t('sample_page.common.features.safe_tested.title')}
               </h3>
               <p className="text-sm text-gray-600">
-                All files are safe and tested for compatibility
+                {t('sample_page.common.features.safe_tested.description')}
               </p>
             </div>
           </div>

@@ -4,6 +4,11 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Download, Box, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import { getStorageUrl } from '../../config/storage';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { useNavigate } from 'react-router-dom';
+import '../../locales/samplePages';
 
 interface SampleFile {
   size: string;
@@ -12,6 +17,10 @@ interface SampleFile {
 }
 
 export default function Sample3mf() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  usePathLanguageSync(i18n);
+
   const [downloadingIndex, setDownloadingIndex] = useState<number | null>(null);
   const [countdown, setCountdown] = useState<number | null>(null);
   const [readyToDownload, setReadyToDownload] = useState<number | null>(null);
@@ -64,34 +73,39 @@ export default function Sample3mf() {
     }, 2000);
   };
 
+  const formatKey = '3mf';
+  const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
+
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Free 3MF Sample Files - Download Test 3D Printing Files",
-    "url": "https://morphyhub.com/samples/sample-3mf",
-    "description": "Download free 3MF sample 3D printing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printing conversion, viewing, and 3MF format processing tools.",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
     "isPartOf": { "@id": "https://morphyhub.com#website" },
     "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
-    window.location.href = '/';
+    navigate(getLocalizedUrl('/', i18n.language));
   };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
 
   return (
     <>
       <Helmet>
-        <title>Free 3MF Sample Files Download - Test 3D Printing Files | MorphyHub</title>
-        <meta name="description" content="Download free 3MF sample 3D printing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printing conversion, viewing, and 3MF format processing tools." />
-        <meta name="keywords" content="3MF sample files, test 3MF files, download 3MF samples, free 3MF test files, 3D printing samples, 3MF format samples, 3D printing conversion test files, .3mf test files, additive manufacturing samples, 3D printer samples" />
-        <meta property="og:title" content="Free 3MF Sample Files Download - Test 3D Printing Files | MorphyHub" />
-        <meta property="og:description" content="Download free 3MF sample 3D printing files for testing. Multiple file sizes available for testing 3D printing conversion and viewing tools." />
+        <title>{t(`sample_page.formats.${formatKey}.meta.title`)}</title>
+        <meta name="description" content={t(`sample_page.formats.${formatKey}.meta.description`)} />
+        <meta name="keywords" content={t(`sample_page.formats.${formatKey}.meta.keywords`)} />
+        <meta property="og:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta property="og:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/samples/sample-3mf" />
+        <meta property="og:url" content={canonicalUrl} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free 3MF Sample Files Download - Test 3D Printing Files | MorphyHub" />
-        <meta name="twitter:description" content="Download free 3MF sample 3D printing files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyhub.com/samples/sample-3mf" />
+        <meta name="twitter:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta name="twitter:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
+        <link rel="canonical" href={canonicalUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
@@ -109,7 +123,7 @@ export default function Sample3mf() {
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors text-sm sm:text-base"
               >
                 <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Back to Home</span>
+                <span>{t('sample_page.common.back_button')}</span>
               </button>
             </div>
           </div>
@@ -122,11 +136,11 @@ export default function Sample3mf() {
                 <Box className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                3MF Sample Files
+                {t(`sample_page.formats.${formatKey}.hero.title`)}
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free 3MF sample 3D printing files for testing. Multiple file sizes available to test your 3D printing conversion, viewing, and 3MF format processing tools.
+              {t(`sample_page.formats.${formatKey}.hero.description`)}
             </p>
           </div>
 
@@ -149,7 +163,7 @@ export default function Sample3mf() {
                           {file.filename}
                         </h3>
                         <p className="text-sm text-gray-500 mt-1">
-                          File size: <span className="font-medium text-gray-700">{file.displaySize}</span>
+                          {t('sample_page.common.file_size')} <span className="font-medium text-gray-700">{file.displaySize}</span>
                         </p>
                       </div>
                     </div>
@@ -158,15 +172,15 @@ export default function Sample3mf() {
                         <div className="flex flex-col items-center sm:items-end space-y-2">
                           {countdown !== null && countdown > 0 ? (
                             <>
-                              <div className="flex items-center space-x-2 text-orange-600">
+                              <div className="flex items-center space-x-2 text-amber-600">
                                 <Clock className="w-4 h-4 animate-spin" />
                                 <span className="text-sm font-medium">
-                                  Download ready in {countdown}s...
+                                  {t('sample_page.common.download_ready_in', { countdown })}
                                 </span>
                               </div>
                               <div className="w-full sm:w-48 bg-gray-200 rounded-full h-2">
                                 <div
-                                  className="bg-orange-600 h-2 rounded-full transition-all duration-1000"
+                                  className="bg-amber-600 h-2 rounded-full transition-all duration-1000"
                                   style={{ width: `${((10 - countdown) / 10) * 100}%` }}
                                 />
                               </div>
@@ -179,12 +193,12 @@ export default function Sample3mf() {
                           className="inline-flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto shadow-lg"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download Now</span>
+                          <span>{t('sample_page.common.download_now')}</span>
                         </button>
                       ) : downloadComplete === index ? (
                         <div className="flex items-center space-x-2 text-green-600">
                           <CheckCircle className="w-5 h-5" />
-                          <span className="text-sm font-medium">Download started</span>
+                          <span className="text-sm font-medium">{t('sample_page.common.download_started')}</span>
                         </div>
                       ) : (
                         <button
@@ -193,7 +207,7 @@ export default function Sample3mf() {
                           className="inline-flex items-center justify-center space-x-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download</span>
+                          <span>{t('sample_page.common.download')}</span>
                         </button>
                       )}
                     </div>
@@ -208,8 +222,10 @@ export default function Sample3mf() {
               About These Sample Files
             </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
-              <li>• These are test 3MF (3D Manufacturing Format) 3D printing files in various sizes for testing purposes</li>
-              <li>• Files are hosted securely and available for free download</li>
+              <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
+              {aboutItems && aboutItems.length > 0 && aboutItems.slice(1).map((item, idx) => (
+                <li key={idx}>• {item}</li>
+              ))} securely and available for free download</li>
               <li>• Perfect for testing 3D printing conversion, viewing, and 3MF format processing tools</li>
               <li>• No registration or account required</li>
             </ul>
@@ -224,7 +240,7 @@ export default function Sample3mf() {
                 Multiple Sizes
               </h3>
               <p className="text-sm text-gray-600">
-                Test files ranging from 100 KB to 100 MB
+                {t('sample_page.common.features.multiple_sizes.description')}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
@@ -235,7 +251,7 @@ export default function Sample3mf() {
                 Free Download
               </h3>
               <p className="text-sm text-gray-600">
-                No registration or payment required
+                {t('sample_page.common.features.free_download.description')}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
@@ -246,7 +262,7 @@ export default function Sample3mf() {
                 Safe & Tested
               </h3>
               <p className="text-sm text-gray-600">
-                All files are safe and tested for compatibility
+                {t('sample_page.common.features.safe_tested.description')}
               </p>
             </div>
           </div>
