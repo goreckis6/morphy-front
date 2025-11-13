@@ -1,0 +1,4050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Main Pages -->
+  <url>
+    <loc>https://morphyhub.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/pl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/pl" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/pl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/pl" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/pl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/pl" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/pl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/pl" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/de</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/de" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/de" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/de" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/de</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/de" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/de" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/de" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/converters</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/converters" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/converters" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/converters" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/converters</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/converters" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/converters" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/converters" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/converters</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/converters" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/converters" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/converters" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/compress</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/compress</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/compress</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/samples" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/samples" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/samples" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/samples</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/samples" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/samples" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/samples" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/samples</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/samples" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/samples" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/samples" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/yt-thumbnail-downloader</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/yt-thumbnail-downloader" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/yt-thumbnail-downloader" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/yt-thumbnail-downloader" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/yt-thumbnail-downloader</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/yt-thumbnail-downloader" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/yt-thumbnail-downloader" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/yt-thumbnail-downloader" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/yt-thumbnail-downloader</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/yt-thumbnail-downloader" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/yt-thumbnail-downloader" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/yt-thumbnail-downloader" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Compression Pages -->
+  <url>
+    <loc>https://morphyhub.com/compress/jpg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/jpg" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/compress/jpg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/jpg" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/compress/jpg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/jpg" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/compress/jpeg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/jpeg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/jpeg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/jpeg" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/compress/jpeg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/jpeg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/jpeg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/jpeg" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/compress/jpeg</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/jpeg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/jpeg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/jpeg" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/compress/pdf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/pdf" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/compress/pdf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/pdf" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/compress/pdf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/pdf" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/compress/png</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/png" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/compress/png</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/png" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/compress/png</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/compress/png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/compress/png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/compress/png" />
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Sample Files Pages -->
+  <url>
+    <loc>https://morphyhub.com/samples/sample-docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-doc</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-xls</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-zip</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ods</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-3ds</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-3gp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-3mf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-aac</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ac3</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ace</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ai</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-aif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-aiff</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-amr</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-animated-gif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-animation-fbx</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ansible-yml</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-api-response-json</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-apk</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-apng</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-appimage</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-arduino-ino</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-arj</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-asc</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ase</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-assetbundle</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-avi</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-avif</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-barcode-svg</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-bat</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-bib</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-blend</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-bmp</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-bvh</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-bz2</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-c</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-cab</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-caf</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-can-log</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-cmd</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-conf</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-config-ini</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-cpio</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-cpp</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-crx</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-cs</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-csr</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-css</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-cue</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-customer-database-sql</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dav</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dbf</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dds</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dem</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-der</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dmg</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dmp</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dng</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-docker-compose-yml</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dockerfile</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dwg</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-dxf</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-editorconfig</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-elf</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-eps</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-epub</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-exe</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-exr</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-icns</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ico</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ifc</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-iges</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-igs</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-img</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-indd</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ini</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-intelhex</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-invoice-pdf</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ipa</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ipynb</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-iso</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-jar</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-java</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-jks</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-json</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-jsonl</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-jpeg</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-jpg</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-js</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-jsx</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-jwt</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-key</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-kml</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-kmz</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-kt</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-las</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-laz</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-lha</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-log</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-lua</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-lzh</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-lzma</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-m3u</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-m3u8</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-m4a</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-m4v</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-ma</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-makefile</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-max</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-mb</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-mbtiles</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-md</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-mdx</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-midi</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-mkv</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-mobi</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-gz</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-h</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-hdr</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-heic</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-heif</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-hex</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-hpp</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-html</loc>
+    <lastmod>2025-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/samples/sample-7z</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Converter Pages -->
+  <url>
+    <loc>https://morphyhub.com/convert/jpg-to-text</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-text" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-text" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-text" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/jpg-to-text</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-text" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-text" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-text" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/jpg-to-text</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-text" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-text" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-text" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/jpg-to-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-pdf" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/jpg-to-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-pdf" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/jpg-to-pdf</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-pdf" />
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/jpg-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/jpg-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/jpg-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/jpg-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/jpg-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/jpg-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/cr2-to-ico</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/cr2-to-ico" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/cr2-to-ico" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/cr2-to-ico" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/cr2-to-ico</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/cr2-to-ico" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/cr2-to-ico" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/cr2-to-ico" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/cr2-to-ico</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/cr2-to-ico" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/cr2-to-ico" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/cr2-to-ico" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/cr2-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/cr2-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/cr2-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/cr2-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/cr2-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/cr2-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/cr2-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/cr2-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/cr2-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/cr2-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/cr2-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/cr2-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-json</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-json" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-json" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-json" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-json</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-json" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-json" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-json" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-json</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-json" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-json" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-json" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-ndjson</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-ndjson" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-ndjson" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-ndjson" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-ndjson</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-ndjson" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-ndjson" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-ndjson" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-ndjson</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-ndjson" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-ndjson" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-ndjson" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-parquet</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-parquet" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-parquet" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-parquet" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-parquet</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-parquet" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-parquet" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-parquet" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-parquet</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-parquet" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-parquet" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-parquet" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-pptx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-pptx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-pptx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-pptx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-pptx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-pptx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-sql</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-sql" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-sql" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-sql" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-sql</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-sql" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-sql" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-sql" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-sql</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-sql" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-sql" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-sql" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-toml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-toml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-toml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-toml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-toml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-toml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-toml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-toml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-toml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-toml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-toml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-toml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-xls</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xls" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xls" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xls" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-xls</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xls" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xls" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xls" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-xls</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xls" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xls" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xls" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-xml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-xml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-xml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/csv-to-yaml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-yaml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-yaml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-yaml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/csv-to-yaml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-yaml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-yaml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-yaml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/csv-to-yaml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/csv-to-yaml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/csv-to-yaml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/csv-to-yaml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/dng-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/dng-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/dng-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/dng-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/dng-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/dng-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/dng-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/dng-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/dng-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/dng-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/dng-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/dng-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/doc-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/doc-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/doc-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/doc-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/doc-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/doc-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/doc-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/doc-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/doc-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/doc-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/doc-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/doc-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/doc-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/doc-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/doc-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/doc-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/doc-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/doc-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heic-to-svg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-svg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-svg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-svg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heic-to-svg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-svg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-svg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-svg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heic-to-svg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-svg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-svg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-svg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heic-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heic-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heic-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heic-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heic-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heic-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heic-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heic-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heic-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heic-to-eps</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-eps" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-eps" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-eps" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heic-to-eps</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-eps" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-eps" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-eps" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heic-to-eps</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heic-to-eps" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heic-to-eps" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heic-to-eps" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heif-to-jpg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-jpg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heif-to-jpg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-jpg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heif-to-jpg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-jpg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heif-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heif-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heif-to-png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/heif-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/heif-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/heif-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/heif-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/heif-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/heif-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/docx-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/docx-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/docx-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/docx-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/docx-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/docx-to-epub</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-epub" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-epub" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-epub" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/docx-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/docx-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/docx-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/docx-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/docx-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/docx-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/docx-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/docx-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/docx-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/docx-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/docx-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/docx-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/eps-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/eps-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/eps-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/eps-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/eps-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/eps-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/eps-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/eps-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/eps-to-webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/eps-to-webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/eps-to-webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/eps-to-webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-doc</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-doc" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-doc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-doc" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-doc</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-doc" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-doc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-doc" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-doc</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-doc" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-doc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-doc" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-mobi</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-mobi" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-mobi" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-pptx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-pptx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-pptx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-pptx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-pptx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-pptx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-pptx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/convert/epub-to-xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/convert/epub-to-xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/convert/epub-to-xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/convert/epub-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/convert/epub-to-xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/convert/epub-to-xlsx" />
+  </url>
+  <!-- Viewer Pages -->
+  <url>
+    <loc>https://morphyhub.com/viewers/jpg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/jpg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/jpg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/jpg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/jpg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/jpg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/jpg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/jpg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/png</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/png" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/png" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/png" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/webp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/webp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/webp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/webp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/gif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/gif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/gif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/gif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/gif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/gif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/gif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/gif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/gif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/gif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/gif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/gif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/svg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/svg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/svg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/svg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/svg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/svg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/svg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/svg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/svg</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/svg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/svg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/svg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/bmp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/bmp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/bmp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/bmp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/bmp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/bmp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/bmp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/bmp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/bmp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/bmp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/bmp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/bmp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/ico</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ico" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ico" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ico" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/ico</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ico" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ico" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ico" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/ico</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ico" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ico" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ico" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/heic</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/heic" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/heic" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/heic" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/heic</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/heic" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/heic" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/heic" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/heic</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/heic" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/heic" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/heic" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/avif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/avif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/avif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/avif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/avif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/avif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/avif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/avif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/avif</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/avif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/avif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/avif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/pdf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pdf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pdf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pdf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/rtf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/rtf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/rtf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/rtf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/txt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/txt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/txt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/txt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/md</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/md" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/md" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/md" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/docx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/docx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/docx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/docx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/odt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/odt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/odt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/odt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/xlsx</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/xlsx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/xlsx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/xlsx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/csv</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/csv" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/csv" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/csv" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/ods</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ods" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ods" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ods" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/ods</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ods" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ods" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ods" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/ods</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ods" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ods" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ods" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/json</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/json" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/json" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/json" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/json</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/json" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/json" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/json" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/json</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/json" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/json" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/json" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/xml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/xml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/xml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/xml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/xml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/xml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/xml</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/xml" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/xml" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/xml" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/html" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/html" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/css</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/css" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/css" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/css" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/css</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/css" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/css" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/css" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/css</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/css" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/css" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/css" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/js</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/js" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/js" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/js" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/js</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/js" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/js" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/js" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/js</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/js" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/js" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/js" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/python</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/python" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/python" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/python" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/python</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/python" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/python" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/python" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/python</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/python" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/python" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/python" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/nef</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/nef" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/nef" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/nef" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/nef</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/nef" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/nef" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/nef" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/nef</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/nef" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/nef" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/nef" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/cr2</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/cr2" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/cr2" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/cr2" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/cr2</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/cr2" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/cr2" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/cr2" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/cr2</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/cr2" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/cr2" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/cr2" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/dcr</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/dcr" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/dcr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/dcr" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/dcr</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/dcr" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/dcr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/dcr" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/dcr</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/dcr" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/dcr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/dcr" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/x3f</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/x3f" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/x3f" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/x3f" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/x3f</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/x3f" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/x3f" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/x3f" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/x3f</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/x3f" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/x3f" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/x3f" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/arw</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/arw" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/arw" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/arw" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/arw</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/arw" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/arw" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/arw" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/arw</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/arw" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/arw" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/arw" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/raf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/raf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/raf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/raf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/raf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/raf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/raf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/raf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/raf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/raf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/raf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/raf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/orf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/orf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/orf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/orf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/orf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/orf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/orf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/orf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/orf</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/orf" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/orf" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/orf" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/dng</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/dng" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/dng" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/dng" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/dng</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/dng" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/dng" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/dng" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/dng</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/dng" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/dng" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/dng" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/pef</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pef" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pef" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pef" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/pef</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pef" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pef" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pef" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/pef</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pef" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pef" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pef" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/odp</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/odp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/odp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/odp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/ppt</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/ppt" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/ppt" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/ppt" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/stl</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/stl" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/stl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/stl" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/stl</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/stl" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/stl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/stl" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/stl</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/stl" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/stl" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/stl" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/jpeg</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/jpeg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/jpeg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/jpeg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/jpeg</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/jpeg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/jpeg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/jpeg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/jpeg</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/jpeg" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/jpeg" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/jpeg" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/heif</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/heif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/heif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/heif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/heif</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/heif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/heif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/heif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/heif</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/heif" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/heif" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/heif" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/markdown</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/markdown" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/markdown" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/markdown" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/markdown</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/markdown" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/markdown" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/markdown" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/markdown</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/markdown" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/markdown" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/markdown" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/doc</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/doc" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/doc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/doc" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/doc</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/doc" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/doc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/doc" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/doc</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/doc" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/doc" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/doc" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/excel</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/excel" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/excel" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/excel" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/excel</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/excel" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/excel" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/excel" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/excel</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/excel" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/excel" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/excel" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/htm</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/htm" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/htm" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/htm" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/htm</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/htm" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/htm" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/htm" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/htm</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/htm" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/htm" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/htm" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/javascript</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/javascript" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/javascript" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/javascript" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/javascript</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/javascript" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/javascript" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/javascript" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/javascript</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/javascript" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/javascript" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/javascript" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/py</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/py" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/py" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/py" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/py</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/py" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/py" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/py" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/py</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/py" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/py" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/py" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/otp</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/otp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/otp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/otp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/otp</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/otp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/otp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/otp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/otp</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/otp" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/otp" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/otp" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/pot</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pot" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pot" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pot" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/pot</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pot" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pot" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pot" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/pot</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pot" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pot" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pot" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/pps</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pps" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pps" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pps" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/pps</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pps" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pps" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pps" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/pps</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/pps" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/pps" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/pps" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/sdd</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/sdd" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/sdd" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/sdd" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/sdd</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/sdd" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/sdd" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/sdd" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/sdd</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/sdd" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/sdd" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/sdd" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/viewers/sx</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/sx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/sx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/sx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/pl/viewers/sx</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/sx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/sx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/sx" />
+  </url>
+  <url>
+    <loc>https://morphyhub.com/de/viewers/sx</loc>
+    <lastmod>2025-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/viewers/sx" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/viewers/sx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/viewers/sx" />
+  </url>
+</urlset>

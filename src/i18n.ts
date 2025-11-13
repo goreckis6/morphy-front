@@ -14875,7 +14875,7 @@ export default i18n;
 export const getLanguageFromUrl = (): string => resolveLanguageFromPath(window.location.pathname);
 
 // Helper function to toggle language URL (English = no prefix, other languages = /lang/ prefix)
-export const getLocalizedUrl = (currentPath: string, targetLanguage: string): string => {
+export const getLocalizedUrl = (currentPath: string, targetLanguage: string, absolute?: boolean): string => {
   // Remove any language prefix if it exists
   const cleanPath = currentPath
     .replace(/^\/pl\//, '/')
@@ -14883,16 +14883,24 @@ export const getLocalizedUrl = (currentPath: string, targetLanguage: string): st
     .replace(/^\/pl$/, '/')
     .replace(/^\/de$/, '/');
   
+  let localizedPath: string;
+  
   // Add language prefix only for non-English languages
   if (targetLanguage === 'pl') {
-    return `/pl${cleanPath}`;
-  }
-  if (targetLanguage === 'de') {
-    return `/de${cleanPath}`;
+    localizedPath = `/pl${cleanPath}`;
+  } else if (targetLanguage === 'de') {
+    localizedPath = `/de${cleanPath}`;
+  } else {
+    // English = no prefix
+    localizedPath = cleanPath;
   }
   
-  // English = no prefix
-  return cleanPath;
+  // Return absolute URL if requested
+  if (absolute) {
+    return `https://morphyhub.com${localizedPath}`;
+  }
+  
+  return localizedPath;
 };
 
 
