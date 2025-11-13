@@ -1,32 +1,39 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { CompressHub } from '../components/CompressHub';
+import { usePathLanguageSync } from '../hooks/usePathLanguageSync';
+import { getLocalizedUrl } from '../i18n';
+import '../locales/compressPage';
 
 export default function Compress() {
+  const { t, i18n } = useTranslation();
+  usePathLanguageSync(i18n);
+
+  const localizedPath = getLocalizedUrl('/compress', i18n.language);
+  const canonicalUrl = `https://morphyhub.com${localizedPath}`;
+
   const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Online File Compressor",
-    "url": "https://morphyhub.com/compress",
-    "description": "Compress images, PDFs, videos, and more directly in your browser with MorphyHub. Reduce file size while keeping great quality — fast and secure.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://morphyhub.com/compress"
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t('compress_page.schema.name'),
+    url: canonicalUrl,
+    description: t('compress_page.schema.description'),
+    isPartOf: { '@id': 'https://morphyhub.com#website' },
+    publisher: { '@id': 'https://morphyhub.com#organization' },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl
     }
   };
 
   return (
     <>
       <Helmet>
-        <title>Online File Compressor – Reduce File Size | MorphyHub</title>
-        <meta
-          name="description"
-          content="Compress images, PDFs, videos, and documents online. MorphyHub makes your files smaller and faster to share — without losing quality."
-        />
-        <meta name="keywords" content="file compressor, online compressor, image compression, compress jpg, compress images, reduce file size, batch compression, free compressor, video compression" />
-        <link rel="canonical" href="https://morphyhub.com/compress" />
+        <title>{t('compress_page.meta.title')}</title>
+        <meta name="description" content={t('compress_page.meta.description')} />
+        <meta name="keywords" content={t('compress_page.meta.keywords')} />
+        <link rel="canonical" href={canonicalUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
