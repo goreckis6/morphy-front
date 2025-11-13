@@ -27,231 +27,7 @@ interface SamplePageTranslations {
       };
     };
     formats: {
-      docx: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      doc: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      pdf: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      odp: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      rtf: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      epub: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      'invoice-pdf': {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      mobi: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      csv: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      xls: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      xlsx: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      xml: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      ods: {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      'ansible-yml': {
-        meta: {
-          title: string;
-          description: string;
-          keywords: string;
-        };
-        schema: {
-          name: string;
-          description: string;
-        };
-        hero: {
-          title: string;
-          description: string;
-        };
-        about_description: string;
-      };
-      'api-response-json': {
+      [key: string]: {
         meta: {
           title: string;
           description: string;
@@ -543,6 +319,70 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free API response JSON sample files for testing. Multiple file sizes available to test your JSON parsing, API response handling, and data processing tools.'
           },
           about_description: 'These are test API response JSON files in various sizes for testing purposes'
+        },
+        json: {
+          meta: {
+            title: 'Free JSON Sample Files Download - Test JSON Data Files | MorphyHub',
+            description: 'Download free JSON sample JSON data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsing, data processing, and API response handling tools.',
+            keywords: 'JSON sample files, test JSON files, download JSON samples, free JSON test files, JSON data samples, JSON format files, .json test files, data exchange files, JSON parsing test files'
+          },
+          schema: {
+            name: 'Free JSON Sample Files - Download Test JSON Data Files',
+            description: 'Download free JSON sample JSON data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsing, data processing, and API response handling tools.'
+          },
+          hero: {
+            title: 'JSON Sample Files',
+            description: 'Download free JSON sample JSON data files for testing. Multiple file sizes available to test your JSON parsing and data processing tools.'
+          },
+          about_description: 'These are test JSON (data) files in various sizes for testing purposes'
+        },
+        java: {
+          meta: {
+            title: 'Free Java Sample Files Download - Test Java Source Code Files | MorphyHub',
+            description: 'Download free Java sample Java source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java code compilation, Java syntax checking, and Java development tools.',
+            keywords: 'Java sample files, test Java files, download Java samples, free Java test files, Java source code samples, Java code files, .java test files, Java programming files, Java compilation test files'
+          },
+          schema: {
+            name: 'Free Java Sample Files - Download Test Java Source Code Files',
+            description: 'Download free Java sample Java source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java code compilation, Java syntax checking, and Java development tools.'
+          },
+          hero: {
+            title: 'Java Sample Files',
+            description: 'Download free Java sample Java source code files for testing. Multiple file sizes available to test your Java code compilation and Java syntax checking tools.'
+          },
+          about_description: 'These are test Java source code files in various sizes for testing purposes'
+        },
+        jpeg: {
+          meta: {
+            title: 'Free JPEG Sample Files Download - Test JPEG Image Files | MorphyHub',
+            description: 'Download free JPEG sample JPEG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPEG image conversion, JPEG compression, and image processing tools.',
+            keywords: 'JPEG sample files, test JPEG files, download JPEG samples, free JPEG test files, JPEG image samples, JPEG photo files, .jpeg test files, image compression files, JPEG conversion test files'
+          },
+          schema: {
+            name: 'Free JPEG Sample Files - Download Test JPEG Image Files',
+            description: 'Download free JPEG sample JPEG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPEG image conversion, JPEG compression, and image processing tools.'
+          },
+          hero: {
+            title: 'JPEG Sample Files',
+            description: 'Download free JPEG sample JPEG image files for testing. Multiple file sizes available to test your JPEG image conversion and JPEG compression tools.'
+          },
+          about_description: 'These are test JPEG image files in various sizes for testing purposes'
+        },
+        jpg: {
+          meta: {
+            title: 'Free JPG Sample Files Download - Test JPG Image Files | MorphyHub',
+            description: 'Download free JPG sample JPG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPG image conversion, JPG compression, and image processing tools.',
+            keywords: 'JPG sample files, test JPG files, download JPG samples, free JPG test files, JPG image samples, JPG photo files, .jpg test files, image compression files, JPG conversion test files'
+          },
+          schema: {
+            name: 'Free JPG Sample Files - Download Test JPG Image Files',
+            description: 'Download free JPG sample JPG image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPG image conversion, JPG compression, and image processing tools.'
+          },
+          hero: {
+            title: 'JPG Sample Files',
+            description: 'Download free JPG sample JPG image files for testing. Multiple file sizes available to test your JPG image conversion and JPG compression tools.'
+          },
+          about_description: 'These are test JPG image files in various sizes for testing purposes'
         }
       }
     }
@@ -818,6 +658,70 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki API Response JSON do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania JSON, obsługi odpowiedzi API i przetwarzania danych.'
           },
           about_description: 'To są testowe pliki API Response JSON w różnych rozmiarach do celów testowych'
+        },
+        json: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JSON – Pobierz pliki danych JSON | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki JSON do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania JSON, przetwarzania danych i narzędzi obsługi odpowiedzi API.',
+            keywords: 'przykładowe pliki JSON, testowe pliki JSON, pobierz przykłady JSON, darmowe testowe pliki JSON, przykłady danych JSON, przykłady formatów JSON, testowe pliki .json, pliki wymiany danych, testowe pliki parsowania JSON'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JSON – Pobierz testowe pliki danych JSON',
+            description: 'Pobierz darmowe przykładowe pliki JSON do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania JSON, przetwarzania danych i narzędzi obsługi odpowiedzi API.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JSON',
+            description: 'Pobierz darmowe przykładowe pliki JSON do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania JSON i przetwarzania danych.'
+          },
+          about_description: 'To są testowe pliki JSON (dane) w różnych rozmiarach do celów testowych'
+        },
+        java: {
+          meta: {
+            title: 'Darmowe przykładowe pliki Java – Pobierz pliki kodu źródłowego Java | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki Java do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu Java, sprawdzania składni Java i narzędzi programowania Java.',
+            keywords: 'przykładowe pliki Java, testowe pliki Java, pobierz przykłady Java, darmowe testowe pliki Java, przykłady kodu źródłowego Java, przykłady plików Java, testowe pliki .java, pliki programowania Java, testowe pliki kompilacji Java'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Java – Pobierz testowe pliki kodu źródłowego Java',
+            description: 'Pobierz darmowe przykładowe pliki Java do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu Java, sprawdzania składni Java i narzędzi programowania Java.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Java',
+            description: 'Pobierz darmowe przykładowe pliki Java do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji kodu Java i sprawdzania składni Java.'
+          },
+          about_description: 'To są testowe pliki kodu źródłowego Java w różnych rozmiarach do celów testowych'
+        },
+        jpeg: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JPEG – Pobierz pliki obrazów JPEG | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki JPEG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów JPEG, kompresji JPEG i narzędzi przetwarzania obrazów.',
+            keywords: 'przykładowe pliki JPEG, testowe pliki JPEG, pobierz przykłady JPEG, darmowe testowe pliki JPEG, przykłady obrazów JPEG, przykłady zdjęć JPEG, testowe pliki .jpeg, pliki kompresji obrazów, testowe pliki konwersji JPEG'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JPEG – Pobierz testowe pliki obrazów JPEG',
+            description: 'Pobierz darmowe przykładowe pliki JPEG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów JPEG, kompresji JPEG i narzędzi przetwarzania obrazów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JPEG',
+            description: 'Pobierz darmowe przykładowe pliki JPEG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji obrazów JPEG i kompresji JPEG.'
+          },
+          about_description: 'To są testowe pliki obrazów JPEG w różnych rozmiarach do celów testowych'
+        },
+        jpg: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JPG – Pobierz pliki obrazów JPG | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki JPG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów JPG, kompresji JPG i narzędzi przetwarzania obrazów.',
+            keywords: 'przykładowe pliki JPG, testowe pliki JPG, pobierz przykłady JPG, darmowe testowe pliki JPG, przykłady obrazów JPG, przykłady zdjęć JPG, testowe pliki .jpg, pliki kompresji obrazów, testowe pliki konwersji JPG'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JPG – Pobierz testowe pliki obrazów JPG',
+            description: 'Pobierz darmowe przykładowe pliki JPG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów JPG, kompresji JPG i narzędzi przetwarzania obrazów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JPG',
+            description: 'Pobierz darmowe przykładowe pliki JPG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji obrazów JPG i kompresji JPG.'
+          },
+          about_description: 'To są testowe pliki obrazów JPG w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -1093,6 +997,70 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose API Response JSON Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JSON-Parsing, API-Antwortbehandlung und Datenverarbeitungstools zu testen.'
           },
           about_description: 'Dies sind API Response JSON Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        json: {
+          meta: {
+            title: 'Kostenlose JSON Beispieldateien herunterladen – JSON-Datendateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JSON Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSON-Parsing, Datenverarbeitung und API-Antwortverarbeitungstools.',
+            keywords: 'JSON Beispieldateien, JSON Testdateien, JSON Beispiele herunterladen, kostenlose JSON Testdateien, JSON-Datenbeispiele, JSON-Formatdateien, .json Testdateien, Datenaustauschdateien, JSON-Parsing-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose JSON Beispieldateien – JSON-Datendateien testen',
+            description: 'Laden Sie kostenlose JSON Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSON-Parsing, Datenverarbeitung und API-Antwortverarbeitungstools.'
+          },
+          hero: {
+            title: 'JSON Beispieldateien',
+            description: 'Laden Sie kostenlose JSON Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JSON-Parsing und Datenverarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind JSON (Daten) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        java: {
+          meta: {
+            title: 'Kostenlose Java Beispieldateien herunterladen – Java-Quellcodedateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Java Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java-Code-Kompilierung, Java-Syntax-Prüfung und Java-Entwicklungstools.',
+            keywords: 'Java Beispieldateien, Java Testdateien, Java Beispiele herunterladen, kostenlose Java Testdateien, Java-Quellcodebeispiele, Java-Codedateien, .java Testdateien, Java-Programmierdateien, Java-Kompilierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose Java Beispieldateien – Java-Quellcodedateien testen',
+            description: 'Laden Sie kostenlose Java Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java-Code-Kompilierung, Java-Syntax-Prüfung und Java-Entwicklungstools.'
+          },
+          hero: {
+            title: 'Java Beispieldateien',
+            description: 'Laden Sie kostenlose Java Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Java-Code-Kompilierung und Java-Syntax-Prüfungstools zu testen.'
+          },
+          about_description: 'Dies sind Java-Quellcode Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        jpeg: {
+          meta: {
+            title: 'Kostenlose JPEG Beispieldateien herunterladen – JPEG-Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JPEG Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPEG-Bildkonvertierung, JPEG-Komprimierung und Bildverarbeitungstools.',
+            keywords: 'JPEG Beispieldateien, JPEG Testdateien, JPEG Beispiele herunterladen, kostenlose JPEG Testdateien, JPEG-Bildbeispiele, JPEG-Fotodateien, .jpeg Testdateien, Bildkomprimierungsdateien, JPEG-Konvertierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose JPEG Beispieldateien – JPEG-Bilddateien testen',
+            description: 'Laden Sie kostenlose JPEG Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPEG-Bildkonvertierung, JPEG-Komprimierung und Bildverarbeitungstools.'
+          },
+          hero: {
+            title: 'JPEG Beispieldateien',
+            description: 'Laden Sie kostenlose JPEG Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JPEG-Bildkonvertierung und JPEG-Komprimierungstools zu testen.'
+          },
+          about_description: 'Dies sind JPEG-Bild Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        jpg: {
+          meta: {
+            title: 'Kostenlose JPG Beispieldateien herunterladen – JPG-Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JPG Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPG-Bildkonvertierung, JPG-Komprimierung und Bildverarbeitungstools.',
+            keywords: 'JPG Beispieldateien, JPG Testdateien, JPG Beispiele herunterladen, kostenlose JPG Testdateien, JPG-Bildbeispiele, JPG-Fotodateien, .jpg Testdateien, Bildkomprimierungsdateien, JPG-Konvertierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose JPG Beispieldateien – JPG-Bilddateien testen',
+            description: 'Laden Sie kostenlose JPG Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPG-Bildkonvertierung, JPG-Komprimierung und Bildverarbeitungstools.'
+          },
+          hero: {
+            title: 'JPG Beispieldateien',
+            description: 'Laden Sie kostenlose JPG Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JPG-Bildkonvertierung und JPG-Komprimierungstools zu testen.'
+          },
+          about_description: 'Dies sind JPG-Bild Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }
