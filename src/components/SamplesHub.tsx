@@ -1061,15 +1061,29 @@ export const SamplesHub: React.FC = () => {
     }
   ];
 
+  // Helper function to extract format key from path
+  const getFormatKeyFromPath = (path: string): string => {
+    // Extract format from path like "/samples/sample-docx" -> "docx"
+    const match = path.match(/\/samples\/sample-(.+)$/);
+    return match ? match[1] : '';
+  };
+
   // Localize categories with translations
   const localizedCategories = useMemo(() => {
     return sampleCategories.map(category => ({
       ...category,
       title: category.titleKey ? t(category.titleKey, { defaultValue: category.title }) : category.title,
-      formats: category.formats.map(format => ({
-        ...format,
-        path: getLocalizedUrl(format.path, i18n.language)
-      }))
+      formats: category.formats.map(format => {
+        const formatKey = getFormatKeyFromPath(format.path);
+        const translationKey = `samples_page.formats.${formatKey}`;
+        
+        return {
+          ...format,
+          name: t(`${translationKey}.name`, { defaultValue: format.name }),
+          description: t(`${translationKey}.description`, { defaultValue: format.description }),
+          path: getLocalizedUrl(format.path, i18n.language)
+        };
+      })
     }));
   }, [t, i18n.language]);
 
