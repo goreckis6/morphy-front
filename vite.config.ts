@@ -1,13 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Plugin to serve sitemap.xml with correct Content-Type
+// Plugin to serve sitemap files with correct Content-Type
 const sitemapPlugin = () => {
   return {
     name: 'sitemap-content-type',
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
         if (req.url === '/sitemap.xml') {
+          res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+        } else if (req.url === '/sitemap.xsl') {
           res.setHeader('Content-Type', 'application/xml; charset=utf-8');
         }
         next();

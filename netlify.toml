@@ -28,3 +28,8 @@
   for = "/sitemap.xml"
   [headers.values]
     Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/sitemap.xsl"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
