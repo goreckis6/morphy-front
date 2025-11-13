@@ -7,12 +7,17 @@ import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { getLocalizedUrl } from '../../i18n';
+import '../../locales/viewersCsv';
 
 export const CSVViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
+
+  const localizedPath = getLocalizedUrl('/viewers/csv', i18n.language);
+  const canonicalUrl = `https://morphyhub.com${localizedPath}`;
 
   const getFallbackArray = <T,>(key: string) => {
     const value = t(key, { returnObjects: true });
@@ -186,7 +191,8 @@ export const CSVViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.csv.meta_title')} />
         <meta property="og:description" content={t('viewers.csv.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/csv" />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.csv.meta_title')} />
         <meta name="twitter:description" content={t('viewers.csv.meta_description')} />
@@ -194,9 +200,9 @@ export const CSVViewer: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free CSV Viewer",
-            "description": "Free professional CSV viewer for data files",
-            "url": "https://morphyhub.com/viewers/csv",
+            "name": t('viewers.csv.hero_title'),
+            "description": t('viewers.csv.meta_description'),
+            "url": canonicalUrl,
             "applicationCategory": "DataViewer",
             "operatingSystem": "Web Browser",
             "offers": {
@@ -218,7 +224,7 @@ export const CSVViewer: React.FC = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <button
-                  onClick={() => window.location.href = '/viewers'}
+                  onClick={() => window.location.href = getLocalizedUrl('/viewers', i18n.language)}
                   className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
                 >
                   <ArrowLeft className="w-5 h-5" />
@@ -412,7 +418,7 @@ export const CSVViewer: React.FC = () => {
           {/* Back to Viewers Button */}
           <div className="text-center mt-8">
             <a
-              href="/viewers"
+              href={getLocalizedUrl('/viewers', i18n.language)}
               className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {t('viewers.csv.buttons.back')}
