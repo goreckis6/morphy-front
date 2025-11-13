@@ -7,6 +7,7 @@ import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import '../../locales/viewersCr2';
 
 export const CR2Viewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
