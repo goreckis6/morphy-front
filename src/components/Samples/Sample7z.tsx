@@ -232,7 +232,8 @@ export default function Sample7z() {
               <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
               {aboutItems && aboutItems.length > 0 && aboutItems.slice(1).map((item, idx) => (
                 <li key={idx}>• {item}</li>
-              ))}</ul>
+              ))}
+            </ul>
           </div>
 
           {/* Features Section */}
