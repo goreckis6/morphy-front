@@ -30,8 +30,4 @@ applications:
           headers:
             - key: 'Content-Type'
               value: 'application/xml; charset=utf-8'
-        - pattern: '/sitemap.xsl'
-          headers:
-            - key: 'Content-Type'
-              value: 'application/xml; charset=utf-8'
     appRoot: .

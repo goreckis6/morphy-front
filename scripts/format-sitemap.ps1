@@ -8,16 +8,6 @@ if (-not (Test-Path $sitemapPath)) {
 }
 
 Write-Host "Loading sitemap..." -ForegroundColor Cyan
-$content = Get-Content -Path $sitemapPath -Raw
-
-# Check if stylesheet reference exists, preserve it
-$hasStylesheet = $content -match 'xml-stylesheet'
-if (-not $hasStylesheet) {
-    Write-Host "Adding XSL stylesheet reference..." -ForegroundColor Yellow
-    $content = $content -replace '(<\?xml[^>]*>)', '$1`n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>'
-    Set-Content -Path $sitemapPath -Value $content -NoNewline
-}
-
 [xml]$xml = Get-Content -Path $sitemapPath
 
 Write-Host "Formatting sitemap with proper indentation..." -ForegroundColor Cyan
