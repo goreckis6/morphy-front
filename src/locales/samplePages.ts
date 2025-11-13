@@ -543,6 +543,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free BMP sample BMP image files for testing. Multiple file sizes available to test your BMP image conversion and BMP compression tools.'
           },
           about_description: 'These are test BMP image files in various sizes for testing purposes'
+        },
+        'animated-gif': {
+          meta: {
+            title: 'Free Animated GIF Sample Files Download - Test Animation Files | MorphyHub',
+            description: 'Download free animated GIF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIF animation conversion, viewing, and animation format processing tools.',
+            keywords: 'animated GIF sample files, test animated GIF files, download animated GIF samples, free animated GIF test files, GIF animation samples, animation file samples, animated GIF conversion test files, .gif test files, web animation samples, animated image samples'
+          },
+          schema: {
+            name: 'Free Animated GIF Sample Files - Download Test Animation Files',
+            description: 'Download free animated GIF sample files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIF animation conversion, viewing, and animation format processing tools.'
+          },
+          hero: {
+            title: 'Animated GIF Sample Files',
+            description: 'Download free animated GIF sample files for testing. Multiple file sizes available to test your GIF animation conversion, viewing, and animation format processing tools.'
+          },
+          about_description: 'These are test animated GIF (Graphics Interchange Format) files in various sizes for testing purposes'
+        },
+        apng: {
+          meta: {
+            title: 'Free APNG Sample Files Download - Test Animated PNG Files | MorphyHub',
+            description: 'Download free APNG sample animated PNG files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing animated PNG conversion, viewing, and APNG format processing tools.',
+            keywords: 'APNG sample files, test APNG files, download APNG samples, free APNG test files, animated PNG samples, APNG animation samples, image animation samples, APNG conversion test files, .apng test files, web animation samples, PNG animation samples'
+          },
+          schema: {
+            name: 'Free APNG Sample Files - Download Test Animated PNG Files',
+            description: 'Download free APNG sample animated PNG files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing animated PNG conversion, viewing, and APNG format processing tools.'
+          },
+          hero: {
+            title: 'APNG Sample Files',
+            description: 'Download free APNG sample animated PNG files for testing. Multiple file sizes available to test your animated PNG conversion, viewing, and APNG format processing tools.'
+          },
+          about_description: 'These are test APNG (Animated Portable Network Graphics) files in various sizes for testing purposes'
+        },
+        avif: {
+          meta: {
+            title: 'Free AVIF Sample Files Download - Test Next-Generation Image Files | MorphyHub',
+            description: 'Download free AVIF sample image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AVIF conversion, viewing, and next-generation image format processing tools.',
+            keywords: 'AVIF sample files, test AVIF files, download AVIF samples, free AVIF test files, image samples, AV1 image format samples, next-gen image samples, AVIF conversion test files, .avif test files, modern image format samples, web image samples'
+          },
+          schema: {
+            name: 'Free AVIF Sample Files - Download Test Next-Generation Image Files',
+            description: 'Download free AVIF sample image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AVIF conversion, viewing, and next-generation image format processing tools.'
+          },
+          hero: {
+            title: 'AVIF Sample Files',
+            description: 'Download free AVIF sample image files for testing. Multiple file sizes available to test your AVIF conversion, viewing, and next-generation image format processing tools.'
+          },
+          about_description: 'These are test AVIF (AV1 Image File Format) image files in various sizes for testing purposes'
+        },
+        avi: {
+          meta: {
+            title: 'Free AVI Sample Files Download - Test Video Files | MorphyHub',
+            description: 'Download free AVI sample video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion, playback, and AVI format processing tools.',
+            keywords: 'AVI sample files, test AVI files, download AVI samples, free AVI test files, video samples, Audio Video Interleave samples, AVI conversion test files, .avi test files, video playback samples, multimedia file samples'
+          },
+          schema: {
+            name: 'Free AVI Sample Files - Download Test Video Files',
+            description: 'Download free AVI sample video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video conversion, playback, and AVI format processing tools.'
+          },
+          hero: {
+            title: 'AVI Sample Files',
+            description: 'Download free AVI sample video files for testing. Multiple file sizes available to test your video conversion, playback, and AVI format processing tools.'
+          },
+          about_description: 'These are test AVI (Audio Video Interleave) video files in various sizes for testing purposes'
+        },
+        bat: {
+          meta: {
+            title: 'Free BAT Sample Files Download - Test Batch Script Files | MorphyHub',
+            description: 'Download free BAT sample batch script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution, Windows automation, and command-line processing tools.',
+            keywords: 'BAT sample files, test BAT files, download BAT samples, free BAT test files, batch script samples, Windows batch files, automation script samples, BAT conversion test files, .bat test files, command-line script samples, Windows automation samples'
+          },
+          schema: {
+            name: 'Free BAT Sample Files - Download Test Batch Script Files',
+            description: 'Download free BAT sample batch script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution, Windows automation, and command-line processing tools.'
+          },
+          hero: {
+            title: 'BAT Sample Files',
+            description: 'Download free BAT sample batch script files for testing. Multiple file sizes available to test your batch script execution, Windows automation, and command-line processing tools.'
+          },
+          about_description: 'These are test BAT (Batch) script files in various sizes for testing purposes'
+        },
+        bib: {
+          meta: {
+            title: 'Free BIB Sample Files Download - Test Bibliography Files | MorphyHub',
+            description: 'Download free BIB sample bibliography files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing bibliography management, citation tools, and BibTeX format processing.',
+            keywords: 'BIB sample files, test BIB files, download BIB samples, free BIB test files, bibliography samples, BibTeX files, citation samples, BIB conversion test files, .bib test files, reference management samples, academic citation samples'
+          },
+          schema: {
+            name: 'Free BIB Sample Files - Download Test Bibliography Files',
+            description: 'Download free BIB sample bibliography files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing bibliography management, citation tools, and BibTeX format processing.'
+          },
+          hero: {
+            title: 'BIB Sample Files',
+            description: 'Download free BIB sample bibliography files for testing. Multiple file sizes available to test your bibliography management and citation tools.'
+          },
+          about_description: 'These are test BIB (Bibliography) files in various sizes for testing purposes'
+        },
+        blend: {
+          meta: {
+            title: 'Free BLEND Sample Files Download - Test 3D Model Files | MorphyHub',
+            description: 'Download free BLEND sample 3D model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D modeling, Blender project files, and 3D format processing tools.',
+            keywords: 'BLEND sample files, test BLEND files, download BLEND samples, free BLEND test files, 3D model samples, Blender project files, 3D modeling samples, BLEND conversion test files, .blend test files, 3D graphics samples, Blender file samples'
+          },
+          schema: {
+            name: 'Free BLEND Sample Files - Download Test 3D Model Files',
+            description: 'Download free BLEND sample 3D model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D modeling, Blender project files, and 3D format processing tools.'
+          },
+          hero: {
+            title: 'BLEND Sample Files',
+            description: 'Download free BLEND sample 3D model files for testing. Multiple file sizes available to test your 3D modeling and Blender project file processing tools.'
+          },
+          about_description: 'These are test BLEND (Blender 3D) files in various sizes for testing purposes'
+        },
+        bz2: {
+          meta: {
+            title: 'Free BZ2 Sample Files Download - Test Compressed Archive Files | MorphyHub',
+            description: 'Download free BZ2 sample compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing compression, decompression, and BZ2 archive processing tools.',
+            keywords: 'BZ2 sample files, test BZ2 files, download BZ2 samples, free BZ2 test files, compressed archive samples, Bzip2 files, compression samples, BZ2 conversion test files, .bz2 test files, archive decompression samples, file compression samples'
+          },
+          schema: {
+            name: 'Free BZ2 Sample Files - Download Test Compressed Archive Files',
+            description: 'Download free BZ2 sample compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing compression, decompression, and BZ2 archive processing tools.'
+          },
+          hero: {
+            title: 'BZ2 Sample Files',
+            description: 'Download free BZ2 sample compressed archive files for testing. Multiple file sizes available to test your compression and decompression tools.'
+          },
+          about_description: 'These are test BZ2 (Bzip2 compressed) archive files in various sizes for testing purposes'
+        },
+        cab: {
+          meta: {
+            title: 'Free CAB Sample Files Download - Test Windows Cabinet Files | MorphyHub',
+            description: 'Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAB extraction, Windows installation, and cabinet archive processing tools.',
+            keywords: 'CAB sample files, test CAB files, download CAB samples, free CAB test files, Windows cabinet samples, CAB archive files, Windows installation samples, CAB conversion test files, .cab test files, archive extraction samples, Windows installer samples'
+          },
+          schema: {
+            name: 'Free CAB Sample Files - Download Test Windows Cabinet Files',
+            description: 'Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAB extraction, Windows installation, and cabinet archive processing tools.'
+          },
+          hero: {
+            title: 'CAB Sample Files',
+            description: 'Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available to test your CAB extraction and Windows installation tools.'
+          },
+          about_description: 'These are test CAB (Windows Cabinet) archive files in various sizes for testing purposes'
+        },
+        caf: {
+          meta: {
+            title: 'Free CAF Sample Files Download - Test Apple Core Audio Files | MorphyHub',
+            description: 'Download free CAF sample Apple Core Audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and CAF format processing tools.',
+            keywords: 'CAF sample files, test CAF files, download CAF samples, free CAF test files, audio samples, Apple Core Audio files, audio format samples, CAF conversion test files, .caf test files, audio playback samples, Apple audio samples'
+          },
+          schema: {
+            name: 'Free CAF Sample Files - Download Test Apple Core Audio Files',
+            description: 'Download free CAF sample Apple Core Audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and CAF format processing tools.'
+          },
+          hero: {
+            title: 'CAF Sample Files',
+            description: 'Download free CAF sample Apple Core Audio files for testing. Multiple file sizes available to test your audio conversion and playback tools.'
+          },
+          about_description: 'These are test CAF (Apple Core Audio Format) audio files in various sizes for testing purposes'
         }
       }
     }
@@ -1042,6 +1202,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki BMP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji obrazów BMP i kompresji BMP.'
           },
           about_description: 'To są testowe pliki obrazów BMP w różnych rozmiarach do celów testowych'
+        },
+        'animated-gif': {
+          meta: {
+            title: 'Darmowe przykładowe pliki animowanych GIF – Pobierz pliki animacji | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki animowanych GIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji animacji GIF, przeglądania i narzędzi przetwarzania formatów animacji.',
+            keywords: 'przykładowe pliki animowanych GIF, testowe pliki animowanych GIF, pobierz przykłady animowanych GIF, darmowe testowe pliki animowanych GIF, przykłady animacji GIF, przykłady plików animacji, testowe pliki konwersji animowanych GIF, testowe pliki .gif, przykłady animacji internetowych, przykłady animowanych obrazów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki animowanych GIF – Pobierz testowe pliki animacji',
+            description: 'Pobierz darmowe przykładowe pliki animowanych GIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji animacji GIF, przeglądania i narzędzi przetwarzania formatów animacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki animowanych GIF',
+            description: 'Pobierz darmowe przykładowe pliki animowanych GIF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji animacji GIF, przeglądania i przetwarzania formatów animacji.'
+          },
+          about_description: 'To są testowe pliki animowanych GIF (Graphics Interchange Format) w różnych rozmiarach do celów testowych'
+        },
+        apng: {
+          meta: {
+            title: 'Darmowe przykładowe pliki APNG – Pobierz animowane pliki PNG | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki APNG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji animowanych PNG, przeglądania i narzędzi przetwarzania formatu APNG.',
+            keywords: 'przykładowe pliki APNG, testowe pliki APNG, pobierz przykłady APNG, darmowe testowe pliki APNG, przykłady animowanych PNG, przykłady animacji APNG, przykłady animacji obrazów, testowe pliki konwersji APNG, testowe pliki .apng, przykłady animacji internetowych, przykłady animacji PNG'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki APNG – Pobierz testowe animowane pliki PNG',
+            description: 'Pobierz darmowe przykładowe pliki APNG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji animowanych PNG, przeglądania i narzędzi przetwarzania formatu APNG.'
+          },
+          hero: {
+            title: 'Przykładowe pliki APNG',
+            description: 'Pobierz darmowe przykładowe pliki APNG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji animowanych PNG, przeglądania i przetwarzania formatu APNG.'
+          },
+          about_description: 'To są testowe pliki APNG (Animated Portable Network Graphics) w różnych rozmiarach do celów testowych'
+        },
+        avif: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AVIF – Pobierz pliki obrazów nowej generacji | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki AVIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji AVIF, przeglądania i narzędzi przetwarzania formatów obrazów nowej generacji.',
+            keywords: 'przykładowe pliki AVIF, testowe pliki AVIF, pobierz przykłady AVIF, darmowe testowe pliki AVIF, przykłady obrazów, przykłady formatu obrazów AV1, przykłady obrazów nowej generacji, testowe pliki konwersji AVIF, testowe pliki .avif, przykłady nowoczesnych formatów obrazów, przykłady obrazów internetowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AVIF – Pobierz testowe pliki obrazów nowej generacji',
+            description: 'Pobierz darmowe przykładowe pliki AVIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji AVIF, przeglądania i narzędzi przetwarzania formatów obrazów nowej generacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AVIF',
+            description: 'Pobierz darmowe przykładowe pliki AVIF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji AVIF, przeglądania i przetwarzania formatów obrazów nowej generacji.'
+          },
+          about_description: 'To są testowe pliki obrazów AVIF (AV1 Image File Format) w różnych rozmiarach do celów testowych'
+        },
+        avi: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AVI – Pobierz pliki wideo | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki AVI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji wideo, odtwarzania i narzędzi przetwarzania formatu AVI.',
+            keywords: 'przykładowe pliki AVI, testowe pliki AVI, pobierz przykłady AVI, darmowe testowe pliki AVI, przykłady wideo, przykłady Audio Video Interleave, testowe pliki konwersji AVI, testowe pliki .avi, przykłady odtwarzania wideo, przykłady plików multimedialnych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AVI – Pobierz testowe pliki wideo',
+            description: 'Pobierz darmowe przykładowe pliki AVI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji wideo, odtwarzania i narzędzi przetwarzania formatu AVI.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AVI',
+            description: 'Pobierz darmowe przykładowe pliki AVI do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji wideo, odtwarzania i przetwarzania formatu AVI.'
+          },
+          about_description: 'To są testowe pliki wideo AVI (Audio Video Interleave) w różnych rozmiarach do celów testowych'
+        },
+        bat: {
+          meta: {
+            title: 'Darmowe przykładowe pliki BAT – Pobierz pliki skryptów wsadowych | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki BAT do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów wsadowych, automatyzacji Windows i narzędzi przetwarzania wiersza poleceń.',
+            keywords: 'przykładowe pliki BAT, testowe pliki BAT, pobierz przykłady BAT, darmowe testowe pliki BAT, przykłady skryptów wsadowych, pliki wsadowe Windows, przykłady skryptów automatyzacji, testowe pliki konwersji BAT, testowe pliki .bat, przykłady skryptów wiersza poleceń, przykłady automatyzacji Windows'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki BAT – Pobierz testowe pliki skryptów wsadowych',
+            description: 'Pobierz darmowe przykładowe pliki BAT do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów wsadowych, automatyzacji Windows i narzędzi przetwarzania wiersza poleceń.'
+          },
+          hero: {
+            title: 'Przykładowe pliki BAT',
+            description: 'Pobierz darmowe przykładowe pliki BAT do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wykonywania skryptów wsadowych, automatyzacji Windows i przetwarzania wiersza poleceń.'
+          },
+          about_description: 'To są testowe pliki skryptów BAT (Batch) w różnych rozmiarach do celów testowych'
+        },
+        bib: {
+          meta: {
+            title: 'Darmowe przykładowe pliki BIB – Pobierz pliki bibliografii | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki BIB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania zarządzania bibliografią, narzędzi cytowań i przetwarzania formatu BibTeX.',
+            keywords: 'przykładowe pliki BIB, testowe pliki BIB, pobierz przykłady BIB, darmowe testowe pliki BIB, przykłady bibliografii, pliki BibTeX, przykłady cytowań, testowe pliki konwersji BIB, testowe pliki .bib, przykłady zarządzania referencjami, przykłady cytowań akademickich'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki BIB – Pobierz testowe pliki bibliografii',
+            description: 'Pobierz darmowe przykładowe pliki BIB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania zarządzania bibliografią, narzędzi cytowań i przetwarzania formatu BibTeX.'
+          },
+          hero: {
+            title: 'Przykładowe pliki BIB',
+            description: 'Pobierz darmowe przykładowe pliki BIB do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia zarządzania bibliografią i cytowań.'
+          },
+          about_description: 'To są testowe pliki BIB (Bibliography) w różnych rozmiarach do celów testowych'
+        },
+        blend: {
+          meta: {
+            title: 'Darmowe przykładowe pliki BLEND – Pobierz pliki modeli 3D | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki BLEND do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania modelowania 3D, plików projektów Blender i narzędzi przetwarzania formatów 3D.',
+            keywords: 'przykładowe pliki BLEND, testowe pliki BLEND, pobierz przykłady BLEND, darmowe testowe pliki BLEND, przykłady modeli 3D, pliki projektów Blender, przykłady modelowania 3D, testowe pliki konwersji BLEND, testowe pliki .blend, przykłady grafiki 3D, przykłady plików Blender'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki BLEND – Pobierz testowe pliki modeli 3D',
+            description: 'Pobierz darmowe przykładowe pliki BLEND do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania modelowania 3D, plików projektów Blender i narzędzi przetwarzania formatów 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki BLEND',
+            description: 'Pobierz darmowe przykładowe pliki BLEND do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia modelowania 3D i przetwarzania plików projektów Blender.'
+          },
+          about_description: 'To są testowe pliki BLEND (Blender 3D) w różnych rozmiarach do celów testowych'
+        },
+        bz2: {
+          meta: {
+            title: 'Darmowe przykładowe pliki BZ2 – Pobierz skompresowane pliki archiwum | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki BZ2 do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompresji, dekompresji i narzędzi przetwarzania archiwów BZ2.',
+            keywords: 'przykładowe pliki BZ2, testowe pliki BZ2, pobierz przykłady BZ2, darmowe testowe pliki BZ2, przykłady skompresowanych archiwów, pliki Bzip2, przykłady kompresji, testowe pliki konwersji BZ2, testowe pliki .bz2, przykłady dekompresji archiwów, przykłady kompresji plików'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki BZ2 – Pobierz testowe skompresowane pliki archiwum',
+            description: 'Pobierz darmowe przykładowe pliki BZ2 do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompresji, dekompresji i narzędzi przetwarzania archiwów BZ2.'
+          },
+          hero: {
+            title: 'Przykładowe pliki BZ2',
+            description: 'Pobierz darmowe przykładowe pliki BZ2 do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompresji i dekompresji.'
+          },
+          about_description: 'To są testowe pliki archiwów BZ2 (skompresowane Bzip2) w różnych rozmiarach do celów testowych'
+        },
+        cab: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CAB – Pobierz pliki archiwów Windows Cabinet | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki CAB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji CAB, instalacji Windows i narzędzi przetwarzania archiwów cabinet.',
+            keywords: 'przykładowe pliki CAB, testowe pliki CAB, pobierz przykłady CAB, darmowe testowe pliki CAB, przykłady archiwów Windows cabinet, pliki archiwów CAB, przykłady instalacji Windows, testowe pliki konwersji CAB, testowe pliki .cab, przykłady ekstrakcji archiwów, przykłady instalatorów Windows'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CAB – Pobierz testowe pliki archiwów Windows Cabinet',
+            description: 'Pobierz darmowe przykładowe pliki CAB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji CAB, instalacji Windows i narzędzi przetwarzania archiwów cabinet.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CAB',
+            description: 'Pobierz darmowe przykładowe pliki CAB do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji CAB i instalacji Windows.'
+          },
+          about_description: 'To są testowe pliki archiwów CAB (Windows Cabinet) w różnych rozmiarach do celów testowych'
+        },
+        caf: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CAF – Pobierz pliki Apple Core Audio | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki CAF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji audio, odtwarzania i narzędzi przetwarzania formatu CAF.',
+            keywords: 'przykładowe pliki CAF, testowe pliki CAF, pobierz przykłady CAF, darmowe testowe pliki CAF, przykłady audio, pliki Apple Core Audio, przykłady formatów audio, testowe pliki konwersji CAF, testowe pliki .caf, przykłady odtwarzania audio, przykłady audio Apple'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CAF – Pobierz testowe pliki Apple Core Audio',
+            description: 'Pobierz darmowe przykładowe pliki CAF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji audio, odtwarzania i narzędzi przetwarzania formatu CAF.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CAF',
+            description: 'Pobierz darmowe przykładowe pliki CAF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji audio i odtwarzania.'
+          },
+          about_description: 'To są testowe pliki audio CAF (Apple Core Audio Format) w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -1541,6 +1861,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose BMP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre BMP-Bildkonvertierung und BMP-Komprimierungstools zu testen.'
           },
           about_description: 'Dies sind BMP-Bild Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'animated-gif': {
+          meta: {
+            title: 'Kostenlose animierte GIF Beispieldateien herunterladen – Animationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose animierte GIF Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIF-Animation-Konvertierung, Anzeige und Animationsformat-Verarbeitungstools.',
+            keywords: 'animierte GIF Beispieldateien, animierte GIF Testdateien, animierte GIF Beispiele herunterladen, kostenlose animierte GIF Testdateien, GIF-Animation Beispiele, Animationsdatei-Beispiele, animierte GIF-Konvertierungstestdateien, .gif Testdateien, Web-Animation Beispiele, animierte Bildbeispiele'
+          },
+          schema: {
+            name: 'Kostenlose animierte GIF Beispieldateien – Animationsdateien testen',
+            description: 'Laden Sie kostenlose animierte GIF Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIF-Animation-Konvertierung, Anzeige und Animationsformat-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'Animierte GIF Beispieldateien',
+            description: 'Laden Sie kostenlose animierte GIF Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre GIF-Animation-Konvertierung, Anzeige und Animationsformat-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind animierte GIF (Graphics Interchange Format) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        apng: {
+          meta: {
+            title: 'Kostenlose APNG Beispieldateien herunterladen – Animierte PNG-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose APNG animierte PNG-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von animierter PNG-Konvertierung, Anzeige und APNG-Format-Verarbeitungstools.',
+            keywords: 'APNG Beispieldateien, APNG Testdateien, APNG Beispiele herunterladen, kostenlose APNG Testdateien, animierte PNG Beispiele, APNG-Animation Beispiele, Bildanimation Beispiele, APNG-Konvertierungstestdateien, .apng Testdateien, Web-Animation Beispiele, PNG-Animation Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose APNG Beispieldateien – Animierte PNG-Dateien testen',
+            description: 'Laden Sie kostenlose APNG animierte PNG-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von animierter PNG-Konvertierung, Anzeige und APNG-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'APNG Beispieldateien',
+            description: 'Laden Sie kostenlose APNG animierte PNG-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre animierte PNG-Konvertierung, Anzeige und APNG-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind APNG (Animated Portable Network Graphics) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        avif: {
+          meta: {
+            title: 'Kostenlose AVIF Beispieldateien herunterladen – Next-Generation Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AVIF Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AVIF-Konvertierung, Anzeige und Next-Generation Bildformat-Verarbeitungstools.',
+            keywords: 'AVIF Beispieldateien, AVIF Testdateien, AVIF Beispiele herunterladen, kostenlose AVIF Testdateien, Bildbeispiele, AV1-Bildformat Beispiele, Next-Gen Bildbeispiele, AVIF-Konvertierungstestdateien, .avif Testdateien, moderne Bildformat Beispiele, Web-Bildbeispiele'
+          },
+          schema: {
+            name: 'Kostenlose AVIF Beispieldateien – Next-Generation Bilddateien testen',
+            description: 'Laden Sie kostenlose AVIF Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AVIF-Konvertierung, Anzeige und Next-Generation Bildformat-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'AVIF Beispieldateien',
+            description: 'Laden Sie kostenlose AVIF Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre AVIF-Konvertierung, Anzeige und Next-Generation Bildformat-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind AVIF (AV1 Image File Format) Bild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        avi: {
+          meta: {
+            title: 'Kostenlose AVI Beispieldateien herunterladen – Videodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AVI Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videokonvertierung, Wiedergabe und AVI-Format-Verarbeitungstools.',
+            keywords: 'AVI Beispieldateien, AVI Testdateien, AVI Beispiele herunterladen, kostenlose AVI Testdateien, Videobeispiele, Audio Video Interleave Beispiele, AVI-Konvertierungstestdateien, .avi Testdateien, Videowiedergabe Beispiele, Multimediadatei-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AVI Beispieldateien – Videodateien testen',
+            description: 'Laden Sie kostenlose AVI Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videokonvertierung, Wiedergabe und AVI-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'AVI Beispieldateien',
+            description: 'Laden Sie kostenlose AVI Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Videokonvertierung, Wiedergabe und AVI-Format-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind AVI (Audio Video Interleave) Video-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        bat: {
+          meta: {
+            title: 'Kostenlose BAT Beispieldateien herunterladen – Batch-Skriptdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose BAT Batch-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Batch-Skript-Ausführung, Windows-Automatisierung und Befehlszeilen-Verarbeitungstools.',
+            keywords: 'BAT Beispieldateien, BAT Testdateien, BAT Beispiele herunterladen, kostenlose BAT Testdateien, Batch-Skript Beispiele, Windows-Batch-Dateien, Automatisierungs-Skript Beispiele, BAT-Konvertierungstestdateien, .bat Testdateien, Befehlszeilen-Skript Beispiele, Windows-Automatisierung Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose BAT Beispieldateien – Batch-Skriptdateien testen',
+            description: 'Laden Sie kostenlose BAT Batch-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Batch-Skript-Ausführung, Windows-Automatisierung und Befehlszeilen-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'BAT Beispieldateien',
+            description: 'Laden Sie kostenlose BAT Batch-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Batch-Skript-Ausführung, Windows-Automatisierung und Befehlszeilen-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind BAT (Batch) Skript-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        bib: {
+          meta: {
+            title: 'Kostenlose BIB Beispieldateien herunterladen – Bibliographiedateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose BIB Bibliographie-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Bibliographieverwaltung, Zitier-Tools und BibTeX-Format-Verarbeitung.',
+            keywords: 'BIB Beispieldateien, BIB Testdateien, BIB Beispiele herunterladen, kostenlose BIB Testdateien, Bibliographie Beispiele, BibTeX-Dateien, Zitier-Beispiele, BIB-Konvertierungstestdateien, .bib Testdateien, Referenzverwaltung Beispiele, akademische Zitier-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose BIB Beispieldateien – Bibliographiedateien testen',
+            description: 'Laden Sie kostenlose BIB Bibliographie-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Bibliographieverwaltung, Zitier-Tools und BibTeX-Format-Verarbeitung.'
+          },
+          hero: {
+            title: 'BIB Beispieldateien',
+            description: 'Laden Sie kostenlose BIB Bibliographie-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Bibliographieverwaltung und Zitier-Tools zu testen.'
+          },
+          about_description: 'Dies sind BIB (Bibliography) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        blend: {
+          meta: {
+            title: 'Kostenlose BLEND Beispieldateien herunterladen – 3D-Modelldateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose BLEND 3D-Model-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Modellierung, Blender-Projektdateien und 3D-Format-Verarbeitungstools.',
+            keywords: 'BLEND Beispieldateien, BLEND Testdateien, BLEND Beispiele herunterladen, kostenlose BLEND Testdateien, 3D-Model Beispiele, Blender-Projektdateien, 3D-Modellierung Beispiele, BLEND-Konvertierungstestdateien, .blend Testdateien, 3D-Grafik Beispiele, Blender-Datei Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose BLEND Beispieldateien – 3D-Modelldateien testen',
+            description: 'Laden Sie kostenlose BLEND 3D-Model-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Modellierung, Blender-Projektdateien und 3D-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'BLEND Beispieldateien',
+            description: 'Laden Sie kostenlose BLEND 3D-Model-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Modellierung und Blender-Projektdatei-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind BLEND (Blender 3D) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        bz2: {
+          meta: {
+            title: 'Kostenlose BZ2 Beispieldateien herunterladen – Komprimierte Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose BZ2 komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Komprimierung, Dekomprimierung und BZ2-Archiv-Verarbeitungstools.',
+            keywords: 'BZ2 Beispieldateien, BZ2 Testdateien, BZ2 Beispiele herunterladen, kostenlose BZ2 Testdateien, komprimierte Archiv Beispiele, Bzip2-Dateien, Komprimierungs-Beispiele, BZ2-Konvertierungstestdateien, .bz2 Testdateien, Archiv-Dekomprimierung Beispiele, Datei-Komprimierung Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose BZ2 Beispieldateien – Komprimierte Archivdateien testen',
+            description: 'Laden Sie kostenlose BZ2 komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Komprimierung, Dekomprimierung und BZ2-Archiv-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'BZ2 Beispieldateien',
+            description: 'Laden Sie kostenlose BZ2 komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Komprimierungs- und Dekomprimierungstools zu testen.'
+          },
+          about_description: 'Dies sind BZ2 (Bzip2-komprimierte) Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        cab: {
+          meta: {
+            title: 'Kostenlose CAB Beispieldateien herunterladen – Windows Cabinet-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CAB Windows Cabinet-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAB-Extraktion, Windows-Installation und Cabinet-Archiv-Verarbeitungstools.',
+            keywords: 'CAB Beispieldateien, CAB Testdateien, CAB Beispiele herunterladen, kostenlose CAB Testdateien, Windows Cabinet Beispiele, CAB-Archiv-Dateien, Windows-Installation Beispiele, CAB-Konvertierungstestdateien, .cab Testdateien, Archiv-Extraktion Beispiele, Windows-Installer Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CAB Beispieldateien – Windows Cabinet-Dateien testen',
+            description: 'Laden Sie kostenlose CAB Windows Cabinet-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAB-Extraktion, Windows-Installation und Cabinet-Archiv-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'CAB Beispieldateien',
+            description: 'Laden Sie kostenlose CAB Windows Cabinet-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAB-Extraktion und Windows-Installationstools zu testen.'
+          },
+          about_description: 'Dies sind CAB (Windows Cabinet) Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        caf: {
+          meta: {
+            title: 'Kostenlose CAF Beispieldateien herunterladen – Apple Core Audio-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CAF Apple Core Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audio-Konvertierung, Wiedergabe und CAF-Format-Verarbeitungstools.',
+            keywords: 'CAF Beispieldateien, CAF Testdateien, CAF Beispiele herunterladen, kostenlose CAF Testdateien, Audio-Beispiele, Apple Core Audio-Dateien, Audioformat Beispiele, CAF-Konvertierungstestdateien, .caf Testdateien, Audio-Wiedergabe Beispiele, Apple-Audio Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CAF Beispieldateien – Apple Core Audio-Dateien testen',
+            description: 'Laden Sie kostenlose CAF Apple Core Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audio-Konvertierung, Wiedergabe und CAF-Format-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'CAF Beispieldateien',
+            description: 'Laden Sie kostenlose CAF Apple Core Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audio-Konvertierung und Wiedergabetools zu testen.'
+          },
+          about_description: 'Dies sind CAF (Apple Core Audio Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }
