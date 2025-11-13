@@ -9818,7 +9818,7 @@ const resources = {
       'epub_to_xlsx.ready_text': 'Użyj naszego darmowego konwertera online EPUB do XLSX, aby przekształcić e-booki w arkusze kalkulacyjne Excel.',
       
       // JPG Compression - Polish
-      'compress_jpg.title': 'Kompresor JPG - Kompresuj Obrazy JPEG Online',
+      'compress_jpg.title': 'Darmowy Kompresor JPG/JPEG',
       'compress_jpg.meta_title': 'Darmowy Kompresor JPG/JPEG Online - Zmniejsz Rozmiar Pliku JPEG ',
       'compress_jpg.meta_description': 'Kompresuj obrazy JPG/JPEG online za darmo. Zmniejsz rozmiar pliku JPEG zachowując jakość. Szybka, bezpieczna kompresja JPEG z regulowanymi ustawieniami jakości i obsługą przetwarzania wsadowego.',
       'compress_jpg.meta_keywords': 'kompresor jpg, kompresor jpeg, kompresuj jpg, kompresuj jpeg, zmniejsz rozmiar jpg, kompresja obrazów, optymalizacja jpeg',
@@ -9891,7 +9891,7 @@ const resources = {
       'compress_jpg.ready_text': 'Użyj naszego darmowego kompresora JPG online, aby zmniejszyć rozmiary plików przy zachowaniu doskonałej jakości. Zacznij kompresować teraz — bez rejestracji.',
       
       // PNG Compression - Polish
-      'compress_png.title': 'Kompresor PNG - Kompresuj Obrazy PNG Online',
+      'compress_png.title': 'Darmowy Kompresor PNG',
       'compress_png.meta_title': 'Darmowy Kompresor PNG Online - Zmniejsz Rozmiar Pliku PNG ',
       'compress_png.meta_description': 'Kompresuj obrazy PNG online za darmo. Zmniejsz rozmiar pliku PNG zachowując jakość i przezroczystość. Szybka, bezpieczna kompresja PNG z regulowanymi ustawieniami jakości i obsługą przetwarzania wsadowego.',
       'compress_png.meta_keywords': 'kompresor png, kompresuj png, zmniejsz rozmiar png, kompresja png, optymalizacja png, kompresuj obrazy png, zmniejsz png',
@@ -9964,7 +9964,7 @@ const resources = {
       'compress_png.ready_text': 'Użyj naszego darmowego kompresora PNG online, aby zmniejszyć rozmiary plików przy zachowaniu doskonałej jakości i przezroczystości. Zacznij kompresować teraz — bez rejestracji.',
       
       // PDF Compression - Polish
-      'compress_pdf.title': 'Kompresor PDF - Kompresuj Pliki PDF Online',
+      'compress_pdf.title': 'Darmowy Kompresor PDF Online',
       'compress_pdf.meta_title': 'Darmowy Kompresor PDF Online - Zmniejsz Rozmiar Pliku PDF ',
       'compress_pdf.meta_description': 'Kompresuj pliki PDF online za darmo. Zmniejsz rozmiar pliku PDF zachowując jakość dokumentu. Szybka, bezpieczna kompresja PDF z regulowanymi ustawieniami jakości i obsługą przetwarzania wsadowego.',
       'compress_pdf.meta_keywords': 'kompresor pdf, kompresuj pdf, zmniejsz rozmiar pdf, kompresja pdf, optymalizacja pdf, kompresuj pliki pdf, zmniejsz pdf',
@@ -14685,7 +14685,7 @@ const resources = {
       'compress_jpg.ready_text': 'Verwenden Sie unseren kostenlosen Online-JPG-Kompressor, um Dateigrößen zu reduzieren, während die ausgezeichnete Qualität erhalten bleibt. Jetzt komprimieren — keine Registrierung erforderlich.',
       
       // PNG Compression - German
-      'compress_png.title': 'PNG Kompressor - PNG Bilder Online Komprimieren',
+      'compress_png.title': 'Kostenloser PNG Kompressor',
       'compress_png.meta_title': 'Kostenloser PNG Kompressor Online - PNG Dateigröße Reduzieren ',
       'compress_png.meta_description': 'Komprimieren Sie PNG Bilder online kostenlos. Reduzieren Sie die PNG Dateigröße bei Beibehaltung der Qualität und Transparenz. Schnelle, sichere PNG Komprimierung mit einstellbaren Qualitätseinstellungen und Batch-Verarbeitung.',
       'compress_png.meta_keywords': 'png kompressor, png komprimieren, png dateigröße reduzieren, png optimierung, png bilder komprimieren, png verkleinern',

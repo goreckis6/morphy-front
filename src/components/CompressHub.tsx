@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Minimize2, ArrowLeft, FileImage, Search, RefreshCw, FileText } from 'lucide-react';
+import { Minimize2, ArrowLeft, FileImage, Search, RefreshCw, FileText, Zap, Shield, CheckCircle } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { useTranslation } from 'react-i18next';
@@ -171,21 +171,6 @@ export const CompressHub: React.FC = () => {
           </div>
         </div>
 
-        {/* Features Section */}
-        <div className="mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8">
-            {t('compress_page.features.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {t('compress_page.features.items', { returnObjects: true }).map((feature: { title: string; description: string }, index: number) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all transform hover:scale-105">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Compression Categories */}
         <div className="space-y-8 sm:space-y-12">
           {filteredCategories.length > 0 ? (
@@ -259,6 +244,33 @@ export const CompressHub: React.FC = () => {
               </button>
             </div>
           )}
+        </div>
+
+        {/* Features Section */}
+        <div className="mt-16 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">{t('compress_page.features.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {(() => {
+              const featureItems = t('compress_page.features.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
+              const featureIconConfig = [
+                { bg: 'bg-orange-100', icon: <Zap className="w-6 h-6 text-orange-600" /> },
+                { bg: 'bg-green-100', icon: <Shield className="w-6 h-6 text-green-600" /> },
+                { bg: 'bg-blue-100', icon: <CheckCircle className="w-6 h-6 text-blue-600" /> }
+              ];
+              return featureItems.slice(0, featureIconConfig.length).map((item, index) => {
+                const iconConfig = featureIconConfig[index];
+                return (
+                  <div className="text-center" key={index}>
+                    <div className={`w-12 h-12 ${iconConfig.bg} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      {iconConfig.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                );
+              });
+            })()}
+          </div>
         </div>
       </div>
 
