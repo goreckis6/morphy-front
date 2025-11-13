@@ -1,11 +1,13 @@
 import React, { useState, useCallback } from 'react';
-import { ArrowLeft, Upload, Download, Share2, Eye, X, ZoomIn, ZoomOut, CheckCircle, Smartphone } from 'lucide-react';
+import { ArrowLeft, Upload, Download, Share2, Eye, X, ZoomIn, ZoomOut, CheckCircle, Smartphone, Info, Image, Zap } from 'lucide-react';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Helmet } from 'react-helmet-async';
 import { FileUpload } from '../FileUpload';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { getLocalizedUrl } from '../../i18n';
+import '../../locales/viewersAvif';
 
 export const AVIFViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -13,6 +15,9 @@ export const AVIFViewer: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
+
+  const localizedPath = getLocalizedUrl('/viewers/avif', i18n.language);
+  const canonicalUrl = `https://morphyhub.com${localizedPath}`;
 
   const getFallbackArray = <T,>(key: string) => {
     const value = t(key, { returnObjects: true });
@@ -69,6 +74,30 @@ export const AVIFViewer: React.FC = () => {
         <title>{t('viewers.avif.meta_title')}</title>
         <meta name="description" content={t('viewers.avif.meta_description')} />
         <meta name="keywords" content={t('viewers.avif.meta_keywords')} />
+        <meta property="og:title" content={t('viewers.avif.meta_title')} />
+        <meta property="og:description" content={t('viewers.avif.meta_description')} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('viewers.avif.meta_title')} />
+        <meta name="twitter:description" content={t('viewers.avif.meta_description')} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": t('viewers.avif.hero_title'),
+            "description": t('viewers.avif.meta_description'),
+            "url": canonicalUrl,
+            "applicationCategory": "ImageViewer",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -80,7 +109,7 @@ export const AVIFViewer: React.FC = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
                 <a
-                  href="/viewers"
+                  href={getLocalizedUrl('/viewers', i18n.language)}
                   className="p-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 rounded-xl transition-all border border-white/20"
                 >
                   <ArrowLeft className="w-6 h-6 text-white" />
@@ -139,6 +168,16 @@ export const AVIFViewer: React.FC = () => {
                   </h2>
                 </div>
               </div>
+
+              <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                <div className="flex items-start space-x-3">
+                  <Info className="w-5 h-5 text-blue-600 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-blue-900 mb-1">{t('viewers.avif.how_to_title')}</h4>
+                    <p className="text-sm text-blue-700" dangerouslySetInnerHTML={{ __html: t('viewers.avif.how_to_description') }} />
+                  </div>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {selectedFiles.map((file, index) => (
@@ -178,6 +217,21 @@ export const AVIFViewer: React.FC = () => {
               </div>
             </div>
           )}
+
+          {/* Features Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {getFallbackArray<{ title: string; description: string }>('viewers.avif.features').map((feature, index) => (
+              <div key={index} className={`bg-gradient-to-br ${index === 0 ? 'from-rose-50 to-pink-50 border-rose-200' : index === 1 ? 'from-pink-50 to-fuchsia-50 border-pink-200' : 'from-fuchsia-50 to-purple-50 border-fuchsia-200'} rounded-2xl shadow-lg p-8 border hover:shadow-xl transition-all transform hover:scale-105`}>
+                <div className="bg-white p-3 rounded-xl w-fit mb-4">
+                  {index === 0 && <Image className="w-8 h-8 text-rose-600" />}
+                  {index === 1 && <Smartphone className="w-8 h-8 text-pink-600" />}
+                  {index === 2 && <Zap className="w-8 h-8 text-fuchsia-600" />}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dangerouslySetInnerHTML={{ __html: feature.title }} />
+                <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: feature.description }} />
+              </div>
+            ))}
+          </div>
 
           {/* About AVIF Section */}
           <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-gray-200">
@@ -240,7 +294,7 @@ export const AVIFViewer: React.FC = () => {
         {/* Back to Viewers Button */}
         <div className="text-center">
           <a
-            href="/viewers"
+            href={getLocalizedUrl('/viewers', i18n.language)}
             className="inline-block bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             {t('viewers.avif.buttons.back')}
