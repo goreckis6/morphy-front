@@ -181,7 +181,7 @@ const resources: Record<string, ViewerBmpTranslations> = {
           'Zeige Bitmap-Bilder (BMP) direkt im Browser. Kostenloser BMP-Viewer mit Farbtiefe-Unterstützung, Pixel-Inspektion und Stapelvorschau für bis zu 20 Dateien.',
         meta_keywords:
           'bmp viewer, bitmap viewer, bmp anzeigen, bmp online, windows bitmap, kostenloser bmp viewer',
-        hero_title: 'Kostenloser BMP-Viewer',
+        hero_title: 'Kostenloser BMP Viewer',
         hero_subtitle:
           'Analysiere Windows-Bitmaps (BMP) mit originalgetreuer Farbwiedergabe, Pixel-Zoom und Stapelvorschau.',
         upload_title: 'BMP-Dateien hochladen',
