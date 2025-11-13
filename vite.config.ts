@@ -1,9 +1,24 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// Plugin to serve sitemap.xml with correct Content-Type
+const sitemapPlugin = () => {
+  return {
+    name: 'sitemap-content-type',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url === '/sitemap.xml') {
+          res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+        }
+        next();
+      });
+    },
+  };
+};
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), sitemapPlugin()],
   server: {
     headers: {
       'Cross-Origin-Embedder-Policy': 'require-corp',

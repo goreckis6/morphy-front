@@ -107,7 +107,21 @@ foreach ($urlNode in $urls) {
     }
 }
 
-$xml.Save($sitemapPath)
+# Save with proper formatting
+$settings = New-Object System.Xml.XmlWriterSettings
+$settings.Indent = $true
+$settings.IndentChars = "  "
+$settings.NewLineChars = "`n"
+$settings.OmitXmlDeclaration = $false
+$settings.Encoding = [System.Text.Encoding]::UTF8
+
+$writer = [System.Xml.XmlWriter]::Create($sitemapPath, $settings)
+try {
+    $xml.Save($writer)
+} finally {
+    $writer.Close()
+}
+
 Write-Host "Sitemap updated successfully." -ForegroundColor Green
 Write-Host "Added hreflang links to $updatedCount URLs." -ForegroundColor Yellow
 Write-Host "Skipped $skippedSamples sample URLs." -ForegroundColor Yellow
