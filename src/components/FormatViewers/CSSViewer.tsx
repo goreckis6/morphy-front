@@ -7,12 +7,17 @@ import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { getLocalizedUrl } from '../../i18n';
+import '../../locales/viewersCss';
 
 export const CSSViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const { validateBatchFiles, validationError, clearValidationError } = useFileValidation();
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
+
+  const localizedPath = getLocalizedUrl('/viewers/css', i18n.language);
+  const canonicalUrl = `https://morphyhub.com${localizedPath}`;
 
   const getFallbackArray = <T,>(key: string) => {
     const value = t(key, { returnObjects: true });
@@ -186,7 +191,8 @@ export const CSSViewer: React.FC = () => {
         <meta property="og:title" content={t('viewers.css.meta_title')} />
         <meta property="og:description" content={t('viewers.css.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/viewers/css" />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('viewers.css.meta_title')} />
         <meta name="twitter:description" content={t('viewers.css.meta_description')} />
@@ -194,9 +200,9 @@ export const CSSViewer: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            "name": "Free CSS Viewer",
-            "description": "Free professional CSS viewer with syntax highlighting",
-            "url": "https://morphyhub.com/viewers/css",
+            "name": t('viewers.css.hero_title'),
+            "description": t('viewers.css.meta_description'),
+            "url": canonicalUrl,
             "applicationCategory": "WebDevelopmentTool",
             "operatingSystem": "Web Browser",
             "offers": {
@@ -218,7 +224,7 @@ export const CSSViewer: React.FC = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <button
-                  onClick={() => window.location.href = '/viewers'}
+                  onClick={() => window.location.href = getLocalizedUrl('/viewers', i18n.language)}
                   className="p-2 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors"
                 >
                   <ArrowLeft className="w-5 h-5" />
@@ -412,7 +418,7 @@ export const CSSViewer: React.FC = () => {
           {/* Back to Viewers Button */}
           <div className="text-center mt-8">
             <a
-              href="/viewers"
+              href={getLocalizedUrl('/viewers', i18n.language)}
               className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {t('viewers.css.buttons.back')}
