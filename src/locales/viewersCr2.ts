@@ -323,10 +323,9 @@ const resources: Record<string, ViewerCr2Translations> = {
   }
 };
 
-// Add resources to i18n
-Object.keys(resources).forEach((locale) => {
-  i18n.addResourceBundle(locale, 'translation', resources[locale], true, true);
+Object.entries(resources).forEach(([lng, bundle]) => {
+  i18n.addResourceBundle(lng, 'translation', bundle, true, true);
 });
 
-export default resources;
+export {};
 
