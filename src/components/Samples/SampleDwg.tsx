@@ -33,6 +33,25 @@ export default function SampleDwg() {
     { size: '100mb', filename: 'sample-dwg-100mb.dwg', displaySize: '100 MB' }
   ];
 
+  const formatKey = 'dwg';
+  const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
+
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
+  };
+
+  const handleBack = () => {
+    navigate(getLocalizedUrl('/', i18n.language));
+  };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
+
   const handleDownload = async (index: number, filename: string) => {
     setDownloadingIndex(index);
     setDownloadComplete(null);
@@ -70,20 +89,6 @@ export default function SampleDwg() {
     setTimeout(() => {
       setDownloadComplete(null);
     }, 2000);
-  };
-
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free DWG Sample Files - Download Test AutoCAD Drawing Files",
-    "url": "https://morphyhub.com/samples/sample-dwg",
-    "description": "Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, AutoCAD conversion, and drawing file processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
   };
 
   return (

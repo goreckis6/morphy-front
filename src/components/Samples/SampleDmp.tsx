@@ -33,6 +33,25 @@ export default function SampleDmp() {
     { size: '100mb', filename: 'sample-dmp-100mb.dmp', displaySize: '100 MB' }
   ];
 
+  const formatKey = 'dmp';
+  const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
+
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
+  };
+
+  const handleBack = () => {
+    navigate(getLocalizedUrl('/', i18n.language));
+  };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
+
   const handleDownload = async (index: number, filename: string) => {
     setDownloadingIndex(index);
     setDownloadComplete(null);
@@ -70,20 +89,6 @@ export default function SampleDmp() {
     setTimeout(() => {
       setDownloadComplete(null);
     }, 2000);
-  };
-
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free DMP Sample Files - Download Test Memory Dump Files",
-    "url": "https://morphyhub.com/samples/sample-dmp",
-    "description": "Download free DMP sample memory dump files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing crash dump analysis and memory dump parsing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
   };
 
   return (

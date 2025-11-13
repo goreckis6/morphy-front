@@ -33,6 +33,25 @@ export default function SampleDxf() {
     { size: '100mb', filename: 'sample-dxf-100mb.dxf', displaySize: '100 MB' }
   ];
 
+  const formatKey = 'dxf';
+  const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
+
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
+  };
+
+  const handleBack = () => {
+    navigate(getLocalizedUrl('/', i18n.language));
+  };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
+
   const handleDownload = async (index: number, filename: string) => {
     setDownloadingIndex(index);
     setDownloadComplete(null);
@@ -70,20 +89,6 @@ export default function SampleDxf() {
     setTimeout(() => {
       setDownloadComplete(null);
     }, 2000);
-  };
-
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free DXF Sample Files - Download Test Drawing Exchange Format Files",
-    "url": "https://morphyhub.com/samples/sample-dxf",
-    "description": "Download free DXF sample Drawing Exchange Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, DXF conversion, and drawing file exchange tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
   };
 
   return (
