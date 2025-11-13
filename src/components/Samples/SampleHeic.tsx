@@ -91,20 +91,6 @@ export default function SampleHeic() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free HEIC Sample Files - Download Test High Efficiency Image Container Files",
-    "url": "https://morphyhub.com/samples/sample-heic",
-    "description": "Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIC image conversion, viewing, and processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
-  };
-
   return (
     <>
       <Helmet>

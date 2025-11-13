@@ -91,20 +91,6 @@ export default function SampleIpa() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free IPA Sample Files - Download Test iOS Application Package Files",
-    "url": "https://morphyhub.com/samples/sample-ipa",
-    "description": "Download free IPA sample iOS application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing iOS app installation, IPA analysis, and mobile application development tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
-  };
-
   return (
     <>
       <Helmet>

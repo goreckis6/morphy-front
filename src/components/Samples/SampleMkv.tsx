@@ -91,20 +91,6 @@ export default function SampleMkv() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free MKV Sample Files - Download Test Matroska Video Files",
-    "url": "https://morphyhub.com/samples/sample-mkv",
-    "description": "Download free MKV sample Matroska video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MKV video conversion, MKV playback, and video processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
-  };
-
   return (
     <>
       <Helmet>

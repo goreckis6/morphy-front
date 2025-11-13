@@ -91,20 +91,6 @@ export default function SampleMdx() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free MDX Sample Files - Download Test MDX Component Documentation Files",
-    "url": "https://morphyhub.com/samples/sample-mdx",
-    "description": "Download free MDX sample MDX component documentation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MDX parsing, React component documentation, and documentation generation tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
-  };
-
   return (
     <>
       <Helmet>
