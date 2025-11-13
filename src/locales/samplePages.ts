@@ -383,6 +383,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free JPG sample JPG image files for testing. Multiple file sizes available to test your JPG image conversion and JPG compression tools.'
           },
           about_description: 'These are test JPG image files in various sizes for testing purposes'
+        },
+        zip: {
+          meta: {
+            title: 'Free ZIP Sample Files Download - Test Archive Files | MorphyHub',
+            description: 'Download free ZIP sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and file archiving tools.',
+            keywords: 'ZIP sample files, test ZIP files, download ZIP samples, free ZIP test files, archive sample files, compressed file samples, ZIP archive samples, .zip test files, file compression samples, ZIP extraction test files'
+          },
+          schema: {
+            name: 'Free ZIP Sample Files - Download Test Archive Files',
+            description: 'Download free ZIP sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and file archiving tools.'
+          },
+          hero: {
+            title: 'ZIP Sample Files',
+            description: 'Download free ZIP sample archive files for testing. Multiple file sizes available to test your archive extraction, compression, and file archiving tools.'
+          },
+          about_description: 'These are test ZIP archive files in various sizes for testing purposes'
+        },
+        js: {
+          meta: {
+            title: 'Free JS Sample Files Download - Test JavaScript Files | MorphyHub',
+            description: 'Download free JS sample JavaScript files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JavaScript code execution, JS syntax checking, and web development tools.',
+            keywords: 'JS sample files, test JS files, download JS samples, free JS test files, JavaScript code samples, JS script files, .js test files, web development files, JS syntax checking test files'
+          },
+          schema: {
+            name: 'Free JS Sample Files - Download Test JavaScript Files',
+            description: 'Download free JS sample JavaScript files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JavaScript code execution, JS syntax checking, and web development tools.'
+          },
+          hero: {
+            title: 'JS Sample Files',
+            description: 'Download free JS sample JavaScript files for testing. Multiple file sizes available to test your JavaScript code execution and JS syntax checking tools.'
+          },
+          about_description: 'These are test JavaScript files in various sizes for testing purposes'
+        },
+        html: {
+          meta: {
+            title: 'Free HTML Sample Files Download - Test HyperText Markup Language Files | MorphyHub',
+            description: 'Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HTML parsing, web development, and HTML validation tools.',
+            keywords: 'HTML sample files, test HTML files, download HTML samples, free HTML test files, HyperText Markup Language samples, HTML web page samples, HTML parsing test files, .html test files, web development samples, HTML validation files, HTML editor samples'
+          },
+          schema: {
+            name: 'Free HTML Sample Files - Download Test HyperText Markup Language Files',
+            description: 'Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HTML parsing, web development, and HTML validation tools.'
+          },
+          hero: {
+            title: 'HTML Sample Files',
+            description: 'Download free HTML sample HyperText Markup Language files for testing. Multiple file sizes available to test your HTML parsing and web development tools.'
+          },
+          about_description: 'These are test HTML files in various sizes for testing purposes'
+        },
+        css: {
+          meta: {
+            title: 'Free CSS Sample Files Download - Test Cascading Style Sheets Files | MorphyHub',
+            description: 'Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSS parsing, web styling, and CSS validation tools.',
+            keywords: 'CSS sample files, test CSS files, download CSS samples, free CSS test files, Cascading Style Sheets samples, CSS stylesheet samples, CSS parsing test files, .css test files, web styling samples, CSS validation files, CSS editor samples'
+          },
+          schema: {
+            name: 'Free CSS Sample Files - Download Test Cascading Style Sheets Files',
+            description: 'Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSS parsing, web styling, and CSS validation tools.'
+          },
+          hero: {
+            title: 'CSS Sample Files',
+            description: 'Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available to test your CSS parsing and web styling tools.'
+          },
+          about_description: 'These are test CSS files in various sizes for testing purposes'
+        },
+        md: {
+          meta: {
+            title: 'Free MD Sample Files Download - Test Markdown Files | MorphyHub',
+            description: 'Download free MD sample Markdown files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Markdown parsing, documentation tools, and Markdown conversion tools.',
+            keywords: 'MD sample files, test MD files, download MD samples, free MD test files, Markdown samples, MD documentation samples, Markdown parsing test files, .md test files, documentation samples, Markdown conversion files, Markdown editor samples'
+          },
+          schema: {
+            name: 'Free MD Sample Files - Download Test Markdown Files',
+            description: 'Download free MD sample Markdown files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Markdown parsing, documentation tools, and Markdown conversion tools.'
+          },
+          hero: {
+            title: 'MD Sample Files',
+            description: 'Download free MD sample Markdown files for testing. Multiple file sizes available to test your Markdown parsing and documentation tools.'
+          },
+          about_description: 'These are test Markdown files in various sizes for testing purposes'
+        },
+        jsx: {
+          meta: {
+            title: 'Free JSX Sample Files Download - Test JSX React Files | MorphyHub',
+            description: 'Download free JSX sample JSX React files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSX parsing, React development, and JSX syntax checking tools.',
+            keywords: 'JSX sample files, test JSX files, download JSX samples, free JSX test files, JSX React samples, JSX component samples, JSX parsing test files, .jsx test files, React development samples, JSX syntax checking files, JSX editor samples'
+          },
+          schema: {
+            name: 'Free JSX Sample Files - Download Test JSX React Files',
+            description: 'Download free JSX sample JSX React files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSX parsing, React development, and JSX syntax checking tools.'
+          },
+          hero: {
+            title: 'JSX Sample Files',
+            description: 'Download free JSX sample JSX React files for testing. Multiple file sizes available to test your JSX parsing and React development tools.'
+          },
+          about_description: 'These are test JSX React files in various sizes for testing purposes'
+        },
+        jsonl: {
+          meta: {
+            title: 'Free JSONL Sample Files Download - Test JSON Lines Files | MorphyHub',
+            description: 'Download free JSONL sample JSON Lines files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSONL parsing, data processing, and JSON Lines handling tools.',
+            keywords: 'JSONL sample files, test JSONL files, download JSONL samples, free JSONL test files, JSON Lines samples, JSONL data samples, JSONL parsing test files, .jsonl test files, data processing samples, JSON Lines handling files, JSONL editor samples'
+          },
+          schema: {
+            name: 'Free JSONL Sample Files - Download Test JSON Lines Files',
+            description: 'Download free JSONL sample JSON Lines files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSONL parsing, data processing, and JSON Lines handling tools.'
+          },
+          hero: {
+            title: 'JSONL Sample Files',
+            description: 'Download free JSONL sample JSON Lines files for testing. Multiple file sizes available to test your JSONL parsing and data processing tools.'
+          },
+          about_description: 'These are test JSON Lines files in various sizes for testing purposes'
+        },
+        cpp: {
+          meta: {
+            title: 'Free CPP Sample Files Download - Test C++ Source Code Files | MorphyHub',
+            description: 'Download free CPP sample C++ source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, C++ syntax checking, and C++ development tools.',
+            keywords: 'CPP sample files, test CPP files, download CPP samples, free CPP test files, C++ source code samples, C++ code files, .cpp test files, C++ programming files, C++ compilation test files'
+          },
+          schema: {
+            name: 'Free CPP Sample Files - Download Test C++ Source Code Files',
+            description: 'Download free CPP sample C++ source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, C++ syntax checking, and C++ development tools.'
+          },
+          hero: {
+            title: 'CPP Sample Files',
+            description: 'Download free CPP sample C++ source code files for testing. Multiple file sizes available to test your C++ code compilation and C++ syntax checking tools.'
+          },
+          about_description: 'These are test C++ source code files in various sizes for testing purposes'
+        },
+        c: {
+          meta: {
+            title: 'Free C Sample Files Download - Test C Source Code Files | MorphyHub',
+            description: 'Download free C sample C source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C code compilation, C syntax checking, and C development tools.',
+            keywords: 'C sample files, test C files, download C samples, free C test files, C source code samples, C code files, .c test files, C programming files, C compilation test files'
+          },
+          schema: {
+            name: 'Free C Sample Files - Download Test C Source Code Files',
+            description: 'Download free C sample C source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C code compilation, C syntax checking, and C development tools.'
+          },
+          hero: {
+            title: 'C Sample Files',
+            description: 'Download free C sample C source code files for testing. Multiple file sizes available to test your C code compilation and C syntax checking tools.'
+          },
+          about_description: 'These are test C source code files in various sizes for testing purposes'
+        },
+        bmp: {
+          meta: {
+            title: 'Free BMP Sample Files Download - Test BMP Image Files | MorphyHub',
+            description: 'Download free BMP sample BMP image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BMP image conversion, BMP compression, and image processing tools.',
+            keywords: 'BMP sample files, test BMP files, download BMP samples, free BMP test files, BMP image samples, BMP bitmap files, .bmp test files, image compression files, BMP conversion test files'
+          },
+          schema: {
+            name: 'Free BMP Sample Files - Download Test BMP Image Files',
+            description: 'Download free BMP sample BMP image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BMP image conversion, BMP compression, and image processing tools.'
+          },
+          hero: {
+            title: 'BMP Sample Files',
+            description: 'Download free BMP sample BMP image files for testing. Multiple file sizes available to test your BMP image conversion and BMP compression tools.'
+          },
+          about_description: 'These are test BMP image files in various sizes for testing purposes'
         }
       }
     }
@@ -722,6 +882,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki JPG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji obrazów JPG i kompresji JPG.'
           },
           about_description: 'To są testowe pliki obrazów JPG w różnych rozmiarach do celów testowych'
+        },
+        zip: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ZIP – Pobierz pliki archiwów | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki ZIP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wyodrębniania archiwów, kompresji i narzędzi archiwizacji plików.',
+            keywords: 'przykładowe pliki ZIP, testowe pliki ZIP, pobierz przykłady ZIP, darmowe testowe pliki ZIP, przykłady archiwów, przykłady skompresowanych plików, przykłady archiwów ZIP, testowe pliki .zip, przykłady kompresji plików, testowe pliki wyodrębniania ZIP'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ZIP – Pobierz testowe pliki archiwów',
+            description: 'Pobierz darmowe przykładowe pliki ZIP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wyodrębniania archiwów, kompresji i narzędzi archiwizacji plików.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ZIP',
+            description: 'Pobierz darmowe przykładowe pliki ZIP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wyodrębniania archiwów, kompresji i archiwizacji plików.'
+          },
+          about_description: 'To są testowe pliki archiwów ZIP w różnych rozmiarach do celów testowych'
+        },
+        js: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JS – Pobierz pliki JavaScript | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki JS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania kodu JavaScript, sprawdzania składni JS i narzędzi programowania web.',
+            keywords: 'przykładowe pliki JS, testowe pliki JS, pobierz przykłady JS, darmowe testowe pliki JS, przykłady kodu JavaScript, przykłady plików skryptów JS, testowe pliki .js, pliki programowania web, testowe pliki sprawdzania składni JS'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JS – Pobierz testowe pliki JavaScript',
+            description: 'Pobierz darmowe przykładowe pliki JS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania kodu JavaScript, sprawdzania składni JS i narzędzi programowania web.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JS',
+            description: 'Pobierz darmowe przykładowe pliki JS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wykonywania kodu JavaScript i sprawdzania składni JS.'
+          },
+          about_description: 'To są testowe pliki JavaScript w różnych rozmiarach do celów testowych'
+        },
+        html: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HTML – Pobierz pliki HyperText Markup Language | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki HTML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania HTML, programowania web i narzędzi walidacji HTML.',
+            keywords: 'przykładowe pliki HTML, testowe pliki HTML, pobierz przykłady HTML, darmowe testowe pliki HTML, przykłady HyperText Markup Language, przykłady stron web HTML, testowe pliki parsowania HTML, testowe pliki .html, przykłady programowania web, pliki walidacji HTML, przykłady edytorów HTML'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HTML – Pobierz testowe pliki HyperText Markup Language',
+            description: 'Pobierz darmowe przykładowe pliki HTML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania HTML, programowania web i narzędzi walidacji HTML.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HTML',
+            description: 'Pobierz darmowe przykładowe pliki HTML do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania HTML i programowania web.'
+          },
+          about_description: 'To są testowe pliki HTML w różnych rozmiarach do celów testowych'
+        },
+        css: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CSS – Pobierz pliki Cascading Style Sheets | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki CSS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania CSS, stylowania web i narzędzi walidacji CSS.',
+            keywords: 'przykładowe pliki CSS, testowe pliki CSS, pobierz przykłady CSS, darmowe testowe pliki CSS, przykłady Cascading Style Sheets, przykłady arkuszy stylów CSS, testowe pliki parsowania CSS, testowe pliki .css, przykłady stylowania web, pliki walidacji CSS, przykłady edytorów CSS'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CSS – Pobierz testowe pliki Cascading Style Sheets',
+            description: 'Pobierz darmowe przykładowe pliki CSS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania CSS, stylowania web i narzędzi walidacji CSS.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CSS',
+            description: 'Pobierz darmowe przykładowe pliki CSS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania CSS i stylowania web.'
+          },
+          about_description: 'To są testowe pliki CSS w różnych rozmiarach do celów testowych'
+        },
+        md: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MD – Pobierz pliki Markdown | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki MD do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania Markdown, narzędzi dokumentacji i narzędzi konwersji Markdown.',
+            keywords: 'przykładowe pliki MD, testowe pliki MD, pobierz przykłady MD, darmowe testowe pliki MD, przykłady Markdown, przykłady dokumentacji MD, testowe pliki parsowania Markdown, testowe pliki .md, przykłady dokumentacji, pliki konwersji Markdown, przykłady edytorów Markdown'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MD – Pobierz testowe pliki Markdown',
+            description: 'Pobierz darmowe przykładowe pliki MD do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania Markdown, narzędzi dokumentacji i narzędzi konwersji Markdown.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MD',
+            description: 'Pobierz darmowe przykładowe pliki MD do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania Markdown i dokumentacji.'
+          },
+          about_description: 'To są testowe pliki Markdown w różnych rozmiarach do celów testowych'
+        },
+        jsx: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JSX – Pobierz pliki JSX React | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki JSX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania JSX, programowania React i narzędzi sprawdzania składni JSX.',
+            keywords: 'przykładowe pliki JSX, testowe pliki JSX, pobierz przykłady JSX, darmowe testowe pliki JSX, przykłady JSX React, przykłady komponentów JSX, testowe pliki parsowania JSX, testowe pliki .jsx, przykłady programowania React, pliki sprawdzania składni JSX, przykłady edytorów JSX'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JSX – Pobierz testowe pliki JSX React',
+            description: 'Pobierz darmowe przykładowe pliki JSX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania JSX, programowania React i narzędzi sprawdzania składni JSX.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JSX',
+            description: 'Pobierz darmowe przykładowe pliki JSX do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania JSX i programowania React.'
+          },
+          about_description: 'To są testowe pliki JSX React w różnych rozmiarach do celów testowych'
+        },
+        jsonl: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JSONL – Pobierz pliki JSON Lines | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki JSONL do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania JSONL, przetwarzania danych i narzędzi obsługi JSON Lines.',
+            keywords: 'przykładowe pliki JSONL, testowe pliki JSONL, pobierz przykłady JSONL, darmowe testowe pliki JSONL, przykłady JSON Lines, przykłady danych JSONL, testowe pliki parsowania JSONL, testowe pliki .jsonl, przykłady przetwarzania danych, pliki obsługi JSON Lines, przykłady edytorów JSONL'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JSONL – Pobierz testowe pliki JSON Lines',
+            description: 'Pobierz darmowe przykładowe pliki JSONL do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania JSONL, przetwarzania danych i narzędzi obsługi JSON Lines.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JSONL',
+            description: 'Pobierz darmowe przykładowe pliki JSONL do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania JSONL i przetwarzania danych.'
+          },
+          about_description: 'To są testowe pliki JSON Lines w różnych rozmiarach do celów testowych'
+        },
+        cpp: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CPP – Pobierz pliki kodu źródłowego C++ | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki CPP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++, sprawdzania składni C++ i narzędzi programowania C++.',
+            keywords: 'przykładowe pliki CPP, testowe pliki CPP, pobierz przykłady CPP, darmowe testowe pliki CPP, przykłady kodu źródłowego C++, przykłady plików C++, testowe pliki .cpp, pliki programowania C++, testowe pliki kompilacji C++'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CPP – Pobierz testowe pliki kodu źródłowego C++',
+            description: 'Pobierz darmowe przykładowe pliki CPP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++, sprawdzania składni C++ i narzędzi programowania C++.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CPP',
+            description: 'Pobierz darmowe przykładowe pliki CPP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji kodu C++ i sprawdzania składni C++.'
+          },
+          about_description: 'To są testowe pliki kodu źródłowego C++ w różnych rozmiarach do celów testowych'
+        },
+        c: {
+          meta: {
+            title: 'Darmowe przykładowe pliki C – Pobierz pliki kodu źródłowego C | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki C do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C, sprawdzania składni C i narzędzi programowania C.',
+            keywords: 'przykładowe pliki C, testowe pliki C, pobierz przykłady C, darmowe testowe pliki C, przykłady kodu źródłowego C, przykłady plików C, testowe pliki .c, pliki programowania C, testowe pliki kompilacji C'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki C – Pobierz testowe pliki kodu źródłowego C',
+            description: 'Pobierz darmowe przykładowe pliki C do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C, sprawdzania składni C i narzędzi programowania C.'
+          },
+          hero: {
+            title: 'Przykładowe pliki C',
+            description: 'Pobierz darmowe przykładowe pliki C do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji kodu C i sprawdzania składni C.'
+          },
+          about_description: 'To są testowe pliki kodu źródłowego C w różnych rozmiarach do celów testowych'
+        },
+        bmp: {
+          meta: {
+            title: 'Darmowe przykładowe pliki BMP – Pobierz pliki obrazów BMP | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki BMP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów BMP, kompresji BMP i narzędzi przetwarzania obrazów.',
+            keywords: 'przykładowe pliki BMP, testowe pliki BMP, pobierz przykłady BMP, darmowe testowe pliki BMP, przykłady obrazów BMP, przykłady plików bitmap BMP, testowe pliki .bmp, pliki kompresji obrazów, testowe pliki konwersji BMP'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki BMP – Pobierz testowe pliki obrazów BMP',
+            description: 'Pobierz darmowe przykładowe pliki BMP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji obrazów BMP, kompresji BMP i narzędzi przetwarzania obrazów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki BMP',
+            description: 'Pobierz darmowe przykładowe pliki BMP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji obrazów BMP i kompresji BMP.'
+          },
+          about_description: 'To są testowe pliki obrazów BMP w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -1061,6 +1381,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose JPG Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JPG-Bildkonvertierung und JPG-Komprimierungstools zu testen.'
           },
           about_description: 'Dies sind JPG-Bild Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        zip: {
+          meta: {
+            title: 'Kostenlose ZIP Beispieldateien herunterladen – Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ZIP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archivextraktion, Komprimierung und Dateiarchivierungstools.',
+            keywords: 'ZIP Beispieldateien, ZIP Testdateien, ZIP Beispiele herunterladen, kostenlose ZIP Testdateien, Archivbeispieldateien, komprimierte Dateibeispiele, ZIP-Archivbeispiele, .zip Testdateien, Dateikomprimierungsbeispiele, ZIP-Extraktions-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose ZIP Beispieldateien – Archivdateien testen',
+            description: 'Laden Sie kostenlose ZIP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archivextraktion, Komprimierung und Dateiarchivierungstools.'
+          },
+          hero: {
+            title: 'ZIP Beispieldateien',
+            description: 'Laden Sie kostenlose ZIP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archivextraktion, Komprimierung und Dateiarchivierungstools zu testen.'
+          },
+          about_description: 'Dies sind ZIP-Archiv Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        js: {
+          meta: {
+            title: 'Kostenlose JS Beispieldateien herunterladen – JavaScript-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JS Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JavaScript-Code-Ausführung, JS-Syntax-Prüfung und Webentwicklungstools.',
+            keywords: 'JS Beispieldateien, JS Testdateien, JS Beispiele herunterladen, kostenlose JS Testdateien, JavaScript-Codebeispiele, JS-Skriptdateien, .js Testdateien, Webentwicklungsdateien, JS-Syntax-Prüfungs-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose JS Beispieldateien – JavaScript-Dateien testen',
+            description: 'Laden Sie kostenlose JS Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JavaScript-Code-Ausführung, JS-Syntax-Prüfung und Webentwicklungstools.'
+          },
+          hero: {
+            title: 'JS Beispieldateien',
+            description: 'Laden Sie kostenlose JS Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JavaScript-Code-Ausführung und JS-Syntax-Prüfungstools zu testen.'
+          },
+          about_description: 'Dies sind JavaScript Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        html: {
+          meta: {
+            title: 'Kostenlose HTML Beispieldateien herunterladen – HyperText Markup Language-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose HTML Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HTML-Parsing, Webentwicklung und HTML-Validierungstools.',
+            keywords: 'HTML Beispieldateien, HTML Testdateien, HTML Beispiele herunterladen, kostenlose HTML Testdateien, HyperText Markup Language Beispiele, HTML-Webseitenbeispiele, HTML-Parsing-Testdateien, .html Testdateien, Webentwicklungsbeispiele, HTML-Validierungsdateien, HTML-Editor-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose HTML Beispieldateien – HyperText Markup Language-Dateien testen',
+            description: 'Laden Sie kostenlose HTML Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HTML-Parsing, Webentwicklung und HTML-Validierungstools.'
+          },
+          hero: {
+            title: 'HTML Beispieldateien',
+            description: 'Laden Sie kostenlose HTML Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre HTML-Parsing und Webentwicklungstools zu testen.'
+          },
+          about_description: 'Dies sind HTML Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        css: {
+          meta: {
+            title: 'Kostenlose CSS Beispieldateien herunterladen – Cascading Style Sheets-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CSS Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CSS-Parsing, Web-Styling und CSS-Validierungstools.',
+            keywords: 'CSS Beispieldateien, CSS Testdateien, CSS Beispiele herunterladen, kostenlose CSS Testdateien, Cascading Style Sheets Beispiele, CSS-Stylesheet-Beispiele, CSS-Parsing-Testdateien, .css Testdateien, Web-Styling-Beispiele, CSS-Validierungsdateien, CSS-Editor-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CSS Beispieldateien – Cascading Style Sheets-Dateien testen',
+            description: 'Laden Sie kostenlose CSS Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CSS-Parsing, Web-Styling und CSS-Validierungstools.'
+          },
+          hero: {
+            title: 'CSS Beispieldateien',
+            description: 'Laden Sie kostenlose CSS Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CSS-Parsing und Web-Styling-Tools zu testen.'
+          },
+          about_description: 'Dies sind CSS Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        md: {
+          meta: {
+            title: 'Kostenlose MD Beispieldateien herunterladen – Markdown-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MD Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Markdown-Parsing, Dokumentationstools und Markdown-Konvertierungstools.',
+            keywords: 'MD Beispieldateien, MD Testdateien, MD Beispiele herunterladen, kostenlose MD Testdateien, Markdown Beispiele, MD-Dokumentationsbeispiele, Markdown-Parsing-Testdateien, .md Testdateien, Dokumentationsbeispiele, Markdown-Konvertierungsdateien, Markdown-Editor-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose MD Beispieldateien – Markdown-Dateien testen',
+            description: 'Laden Sie kostenlose MD Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Markdown-Parsing, Dokumentationstools und Markdown-Konvertierungstools.'
+          },
+          hero: {
+            title: 'MD Beispieldateien',
+            description: 'Laden Sie kostenlose MD Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Markdown-Parsing und Dokumentationstools zu testen.'
+          },
+          about_description: 'Dies sind Markdown Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        jsx: {
+          meta: {
+            title: 'Kostenlose JSX Beispieldateien herunterladen – JSX React-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JSX Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSX-Parsing, React-Entwicklung und JSX-Syntax-Prüfungstools.',
+            keywords: 'JSX Beispieldateien, JSX Testdateien, JSX Beispiele herunterladen, kostenlose JSX Testdateien, JSX React Beispiele, JSX-Komponentenbeispiele, JSX-Parsing-Testdateien, .jsx Testdateien, React-Entwicklungsbeispiele, JSX-Syntax-Prüfungsdateien, JSX-Editor-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose JSX Beispieldateien – JSX React-Dateien testen',
+            description: 'Laden Sie kostenlose JSX Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSX-Parsing, React-Entwicklung und JSX-Syntax-Prüfungstools.'
+          },
+          hero: {
+            title: 'JSX Beispieldateien',
+            description: 'Laden Sie kostenlose JSX Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JSX-Parsing und React-Entwicklungstools zu testen.'
+          },
+          about_description: 'Dies sind JSX React Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        jsonl: {
+          meta: {
+            title: 'Kostenlose JSONL Beispieldateien herunterladen – JSON Lines-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JSONL Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSONL-Parsing, Datenverarbeitung und JSON Lines-Verarbeitungstools.',
+            keywords: 'JSONL Beispieldateien, JSONL Testdateien, JSONL Beispiele herunterladen, kostenlose JSONL Testdateien, JSON Lines Beispiele, JSONL-Datenbeispiele, JSONL-Parsing-Testdateien, .jsonl Testdateien, Datenverarbeitungsbeispiele, JSON Lines-Verarbeitungsdateien, JSONL-Editor-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose JSONL Beispieldateien – JSON Lines-Dateien testen',
+            description: 'Laden Sie kostenlose JSONL Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSONL-Parsing, Datenverarbeitung und JSON Lines-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'JSONL Beispieldateien',
+            description: 'Laden Sie kostenlose JSONL Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JSONL-Parsing und Datenverarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind JSON Lines Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        cpp: {
+          meta: {
+            title: 'Kostenlose CPP Beispieldateien herunterladen – C++-Quellcodedateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CPP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Code-Kompilierung, C++-Syntax-Prüfung und C++-Entwicklungstools.',
+            keywords: 'CPP Beispieldateien, CPP Testdateien, CPP Beispiele herunterladen, kostenlose CPP Testdateien, C++-Quellcodebeispiele, C++-Codedateien, .cpp Testdateien, C++-Programmierdateien, C++-Kompilierungs-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose CPP Beispieldateien – C++-Quellcodedateien testen',
+            description: 'Laden Sie kostenlose CPP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Code-Kompilierung, C++-Syntax-Prüfung und C++-Entwicklungstools.'
+          },
+          hero: {
+            title: 'CPP Beispieldateien',
+            description: 'Laden Sie kostenlose CPP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C++-Code-Kompilierung und C++-Syntax-Prüfungstools zu testen.'
+          },
+          about_description: 'Dies sind C++-Quellcode Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        c: {
+          meta: {
+            title: 'Kostenlose C Beispieldateien herunterladen – C-Quellcodedateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose C Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C-Code-Kompilierung, C-Syntax-Prüfung und C-Entwicklungstools.',
+            keywords: 'C Beispieldateien, C Testdateien, C Beispiele herunterladen, kostenlose C Testdateien, C-Quellcodebeispiele, C-Codedateien, .c Testdateien, C-Programmierdateien, C-Kompilierungs-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose C Beispieldateien – C-Quellcodedateien testen',
+            description: 'Laden Sie kostenlose C Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C-Code-Kompilierung, C-Syntax-Prüfung und C-Entwicklungstools.'
+          },
+          hero: {
+            title: 'C Beispieldateien',
+            description: 'Laden Sie kostenlose C Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C-Code-Kompilierung und C-Syntax-Prüfungstools zu testen.'
+          },
+          about_description: 'Dies sind C-Quellcode Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        bmp: {
+          meta: {
+            title: 'Kostenlose BMP Beispieldateien herunterladen – BMP-Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose BMP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BMP-Bildkonvertierung, BMP-Komprimierung und Bildverarbeitungstools.',
+            keywords: 'BMP Beispieldateien, BMP Testdateien, BMP Beispiele herunterladen, kostenlose BMP Testdateien, BMP-Bildbeispiele, BMP-Bitmapdateien, .bmp Testdateien, Bildkomprimierungsdateien, BMP-Konvertierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose BMP Beispieldateien – BMP-Bilddateien testen',
+            description: 'Laden Sie kostenlose BMP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BMP-Bildkonvertierung, BMP-Komprimierung und Bildverarbeitungstools.'
+          },
+          hero: {
+            title: 'BMP Beispieldateien',
+            description: 'Laden Sie kostenlose BMP Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre BMP-Bildkonvertierung und BMP-Komprimierungstools zu testen.'
+          },
+          about_description: 'Dies sind BMP-Bild Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }
