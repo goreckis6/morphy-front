@@ -5061,6 +5061,134 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose ASE Adobe Swatch Exchange-Farbpaletten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Farbpaletten-Import, Design-Software-Integration und Farbmanagement-Tools zu testen.'
           },
           about_description: 'Dies sind ASE (Adobe Swatch Exchange) Farbpaletten-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        asc: {
+          meta: {
+            title: 'Kostenlose ASC Beispieldateien herunterladen – ASCII-Textdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ASC ASCII-Text-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Textverarbeitung, ASCII-Kodierung und Tools zur Handhabung von Klartextdateien.',
+            keywords: 'ASC Beispieldateien, ASC Testdateien, ASC Beispiele herunterladen, kostenlose ASC Testdateien, ASCII-Text-Beispiele, Klartext-Beispiele, ASC-Datei-Beispiele, .asc Testdateien, Textformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ASC Beispieldateien – ASCII-Textdateien testen',
+            description: 'Laden Sie kostenlose ASC ASCII-Text-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Textverarbeitung, ASCII-Kodierung und Tools zur Handhabung von Klartextdateien.'
+          },
+          hero: {
+            title: 'ASC Beispieldateien',
+            description: 'Laden Sie kostenlose ASC ASCII-Text-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Textverarbeitung, ASCII-Kodierung und Tools zur Handhabung von Klartextdateien zu testen.'
+          },
+          about_description: 'Dies sind ASC (ASCII Text) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        arj: {
+          meta: {
+            title: 'Kostenlose ARJ Beispieldateien herunterladen – ARJ-Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ARJ ARJ-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archiv-Extraktion, ARJ-Kompression und Tools für ältere Archivformate.',
+            keywords: 'ARJ Beispieldateien, ARJ Testdateien, ARJ Beispiele herunterladen, kostenlose ARJ Testdateien, ARJ-Archiv-Beispiele, komprimierte Archiv-Beispiele, ARJ-Archiv-Beispiele, .arj Testdateien, ältere Archiv-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ARJ Beispieldateien – ARJ-Archivdateien testen',
+            description: 'Laden Sie kostenlose ARJ ARJ-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Archiv-Extraktion, ARJ-Kompression und Tools für ältere Archivformate.'
+          },
+          hero: {
+            title: 'ARJ Beispieldateien',
+            description: 'Laden Sie kostenlose ARJ ARJ-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archiv-Extraktion, ARJ-Kompression und Tools für ältere Archivformate zu testen.'
+          },
+          about_description: 'Dies sind ARJ (ARJ Archive) komprimierte Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'arduino-ino': {
+          meta: {
+            title: 'Kostenlose Arduino INO Beispieldateien herunterladen – Arduino-Sketch-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Arduino INO Arduino-Sketch-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Arduino-Entwicklung, Sketch-Kompilierung und Tools für eingebettete Programmierung.',
+            keywords: 'Arduino INO Beispieldateien, Arduino INO Testdateien, Arduino INO Beispiele herunterladen, kostenlose Arduino INO Testdateien, Arduino-Sketch-Beispiele, Beispiele für eingebetteten Code, Arduino .ino Beispiele, .ino Testdateien, Mikrocontroller-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Arduino INO Beispieldateien – Arduino-Sketch-Dateien testen',
+            description: 'Laden Sie kostenlose Arduino INO Arduino-Sketch-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Arduino-Entwicklung, Sketch-Kompilierung und Tools für eingebettete Programmierung.'
+          },
+          hero: {
+            title: 'Arduino INO Beispieldateien',
+            description: 'Laden Sie kostenlose Arduino INO Arduino-Sketch-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Arduino-Entwicklung, Sketch-Kompilierung und Tools für eingebettete Programmierung zu testen.'
+          },
+          about_description: 'Dies sind Arduino INO (Arduino Sketch) Quellcode-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        appimage: {
+          meta: {
+            title: 'Kostenlose AppImage Beispieldateien herunterladen – AppImage-Anwendungsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AppImage AppImage portable Linux-Anwendungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Linux-App-Installation, AppImage-Ausführung und Tools für portable Anwendungen.',
+            keywords: 'AppImage Beispieldateien, AppImage Testdateien, AppImage Beispiele herunterladen, kostenlose AppImage Testdateien, Linux-App-Beispiele, portable App-Beispiele, AppImage-Anwendungs-Beispiele, .appimage Testdateien, Linux-Executable-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AppImage Beispieldateien – AppImage-Anwendungsdateien testen',
+            description: 'Laden Sie kostenlose AppImage AppImage portable Linux-Anwendungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Linux-App-Installation, AppImage-Ausführung und Tools für portable Anwendungen.'
+          },
+          hero: {
+            title: 'AppImage Beispieldateien',
+            description: 'Laden Sie kostenlose AppImage AppImage portable Linux-Anwendungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Linux-App-Installation, AppImage-Ausführung und Tools für portable Anwendungen zu testen.'
+          },
+          about_description: 'Dies sind AppImage portable Linux-Anwendungs-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'animation-fbx': {
+          meta: {
+            title: 'Kostenlose Animation FBX Beispieldateien herunterladen – FBX 3D-Animationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Animation FBX FBX 3D-Animations- und Modelldatei-Beispiele zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Animationswiedergabe, FBX-Import und 3D-Modellierungs-Tools.',
+            keywords: 'Animation FBX Beispieldateien, FBX-Animations-Testdateien, FBX-Animations-Beispiele herunterladen, kostenlose FBX-Animations-Testdateien, 3D-Animations-Beispiele, FBX-Modell-Beispiele, FBX-Animations-Beispiele, .fbx Testdateien, 3D-Modell-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Animation FBX Beispieldateien – FBX 3D-Animationsdateien testen',
+            description: 'Laden Sie kostenlose Animation FBX FBX 3D-Animations- und Modelldatei-Beispiele zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Animationswiedergabe, FBX-Import und 3D-Modellierungs-Tools.'
+          },
+          hero: {
+            title: 'Animation FBX Beispieldateien',
+            description: 'Laden Sie kostenlose Animation FBX FBX 3D-Animations- und Modelldatei-Beispiele zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Animationswiedergabe, FBX-Import und 3D-Modellierungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind Animation FBX (FBX 3D Animation) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        amr: {
+          meta: {
+            title: 'Kostenlose AMR Beispieldateien herunterladen – AMR-Audiodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AMR AMR Adaptive Multi-Rate Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AMR-Konvertierung und Tools für Sprachaufnahmeformate.',
+            keywords: 'AMR Beispieldateien, AMR Testdateien, AMR Beispiele herunterladen, kostenlose AMR Testdateien, AMR-Audio-Beispiele, Sprachaufnahme-Beispiele, AMR-Sound-Beispiele, .amr Testdateien, Audioformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AMR Beispieldateien – AMR-Audiodateien testen',
+            description: 'Laden Sie kostenlose AMR AMR Adaptive Multi-Rate Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AMR-Konvertierung und Tools für Sprachaufnahmeformate.'
+          },
+          hero: {
+            title: 'AMR Beispieldateien',
+            description: 'Laden Sie kostenlose AMR AMR Adaptive Multi-Rate Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiowiedergabe, AMR-Konvertierung und Tools für Sprachaufnahmeformate zu testen.'
+          },
+          about_description: 'Dies sind AMR (Adaptive Multi-Rate) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ai: {
+          meta: {
+            title: 'Kostenlose AI Beispieldateien herunterladen – Adobe Illustrator-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AI Adobe Illustrator Vektorgrafik-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Vektorgrafik-Anzeige, AI-Konvertierung und Tools für Illustrationsdesign.',
+            keywords: 'AI Beispieldateien, AI Testdateien, AI Beispiele herunterladen, kostenlose AI Testdateien, Adobe Illustrator-Beispiele, Vektorgrafik-Beispiele, AI-Illustrations-Beispiele, .ai Testdateien, Designformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AI Beispieldateien – Adobe Illustrator-Dateien testen',
+            description: 'Laden Sie kostenlose AI Adobe Illustrator Vektorgrafik-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Vektorgrafik-Anzeige, AI-Konvertierung und Tools für Illustrationsdesign.'
+          },
+          hero: {
+            title: 'AI Beispieldateien',
+            description: 'Laden Sie kostenlose AI Adobe Illustrator Vektorgrafik-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Vektorgrafik-Anzeige, AI-Konvertierung und Tools für Illustrationsdesign zu testen.'
+          },
+          about_description: 'Dies sind AI (Adobe Illustrator) Vektorgrafik-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ac3: {
+          meta: {
+            title: 'Kostenlose AC3 Beispieldateien herunterladen – AC3-Audiodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AC3 AC3 Dolby Digital Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AC3-Konvertierung und Tools für Surround-Sound-Formate.',
+            keywords: 'AC3 Beispieldateien, AC3 Testdateien, AC3 Beispiele herunterladen, kostenlose AC3 Testdateien, AC3-Audio-Beispiele, Dolby Digital-Beispiele, AC3-Sound-Beispiele, .ac3 Testdateien, Audioformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AC3 Beispieldateien – AC3-Audiodateien testen',
+            description: 'Laden Sie kostenlose AC3 AC3 Dolby Digital Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AC3-Konvertierung und Tools für Surround-Sound-Formate.'
+          },
+          hero: {
+            title: 'AC3 Beispieldateien',
+            description: 'Laden Sie kostenlose AC3 AC3 Dolby Digital Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiowiedergabe, AC3-Konvertierung und Tools für Surround-Sound-Formate zu testen.'
+          },
+          about_description: 'Dies sind AC3 (Dolby Digital) Audio-Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }
