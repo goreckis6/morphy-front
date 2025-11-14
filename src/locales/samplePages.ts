@@ -256,6 +256,150 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
           },
           about_description: 'These are test KT (Kotlin) source code files in various sizes for testing purposes'
         },
+        ifc: {
+          meta: {
+            title: 'Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyHub',
+            description: 'Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BIM software, IFC conversion, and building information modeling tools.',
+            keywords: 'IFC sample files, test IFC files, download IFC samples, free IFC test files, Industry Foundation Classes samples, BIM files, IFC building model files, .ifc test files, building information modeling files, IFC conversion test files'
+          },
+          schema: {
+            name: 'Free IFC Sample Files - Download Test Industry Foundation Classes Files',
+            description: 'Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BIM software, IFC conversion, and building information modeling tools.'
+          },
+          hero: {
+            title: 'IFC Sample Files',
+            description: 'Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available to test your BIM software and IFC conversion tools.'
+          },
+          about_description: 'These are test IFC (Industry Foundation Classes) files in various sizes for testing purposes'
+        },
+        iges: {
+          meta: {
+            title: 'Free IGES Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub',
+            description: 'Download free IGES sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGES conversion, and 3D model exchange tools.',
+            keywords: 'IGES sample files, test IGES files, download IGES samples, free IGES test files, Initial Graphics Exchange Specification samples, CAD model files, IGES 3D files, .iges test files, CAD exchange files, IGES conversion test files'
+          },
+          schema: {
+            name: 'Free IGES Sample Files - Download Test Initial Graphics Exchange Specification Files',
+            description: 'Download free IGES sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGES conversion, and 3D model exchange tools.'
+          },
+          hero: {
+            title: 'IGES Sample Files',
+            description: 'Download free IGES sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available to test your CAD software and IGES conversion tools.'
+          },
+          about_description: 'These are test IGES (Initial Graphics Exchange Specification) files in various sizes for testing purposes'
+        },
+        igs: {
+          meta: {
+            title: 'Free IGS Sample Files Download - Test Initial Graphics Exchange Specification Files | MorphyHub',
+            description: 'Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGS conversion, and 3D model exchange tools.',
+            keywords: 'IGS sample files, test IGS files, download IGS samples, free IGS test files, Initial Graphics Exchange Specification samples, CAD model files, IGS 3D files, .igs test files, CAD exchange files, IGS conversion test files'
+          },
+          schema: {
+            name: 'Free IGS Sample Files - Download Test Initial Graphics Exchange Specification Files',
+            description: 'Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAD software, IGS conversion, and 3D model exchange tools.'
+          },
+          hero: {
+            title: 'IGS Sample Files',
+            description: 'Download free IGS sample Initial Graphics Exchange Specification files for testing. Multiple file sizes available to test your CAD software and IGS conversion tools.'
+          },
+          about_description: 'These are test IGS (Initial Graphics Exchange Specification) files in various sizes for testing purposes'
+        },
+        img: {
+          meta: {
+            title: 'Free IMG Sample Files Download - Test Disk Image Files | MorphyHub',
+            description: 'Download free IMG sample disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting, IMG extraction, and disk image processing tools.',
+            keywords: 'IMG sample files, test IMG files, download IMG samples, free IMG test files, disk image samples, IMG disk image files, .img test files, disk image mounting files, IMG extraction test files'
+          },
+          schema: {
+            name: 'Free IMG Sample Files - Download Test Disk Image Files',
+            description: 'Download free IMG sample disk image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing disk image mounting, IMG extraction, and disk image processing tools.'
+          },
+          hero: {
+            title: 'IMG Sample Files',
+            description: 'Download free IMG sample disk image files for testing. Multiple file sizes available to test your disk image mounting and IMG extraction tools.'
+          },
+          about_description: 'These are test IMG (disk image) files in various sizes for testing purposes'
+        },
+        indd: {
+          meta: {
+            title: 'Free INDD Sample Files Download - Test Adobe InDesign Document Files | MorphyHub',
+            description: 'Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing InDesign document conversion, INDD viewing, and desktop publishing tools.',
+            keywords: 'INDD sample files, test INDD files, download INDD samples, free INDD test files, Adobe InDesign samples, desktop publishing files, INDD document files, .indd test files, InDesign files, INDD conversion test files'
+          },
+          schema: {
+            name: 'Free INDD Sample Files - Download Test Adobe InDesign Document Files',
+            description: 'Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing InDesign document conversion, INDD viewing, and desktop publishing tools.'
+          },
+          hero: {
+            title: 'INDD Sample Files',
+            description: 'Download free INDD sample Adobe InDesign document files for testing. Multiple file sizes available to test your InDesign document conversion and INDD viewing tools.'
+          },
+          about_description: 'These are test INDD (Adobe InDesign) files in various sizes for testing purposes'
+        },
+        ini: {
+          meta: {
+            title: 'Free INI Sample Files Download - Test Configuration Files | MorphyHub',
+            description: 'Download free INI sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and settings file processing tools.',
+            keywords: 'INI sample files, test INI files, download INI samples, free INI test files, configuration file samples, INI config files, .ini test files, settings file samples, INI parsing test files'
+          },
+          schema: {
+            name: 'Free INI Sample Files - Download Test Configuration Files',
+            description: 'Download free INI sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and settings file processing tools.'
+          },
+          hero: {
+            title: 'INI Sample Files',
+            description: 'Download free INI sample configuration files for testing. Multiple file sizes available to test your INI file parsing and configuration management tools.'
+          },
+          about_description: 'These are test INI (configuration) files in various sizes for testing purposes'
+        },
+        intelhex: {
+          meta: {
+            title: 'Free IntelHex Sample Files Download - Test Intel Hexadecimal Files | MorphyHub',
+            description: 'Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing firmware programming, IntelHex parsing, and embedded systems development tools.',
+            keywords: 'IntelHex sample files, test IntelHex files, download IntelHex samples, free IntelHex test files, Intel hexadecimal samples, firmware files, IntelHex hex files, .intelhex test files, embedded systems files, IntelHex parsing test files'
+          },
+          schema: {
+            name: 'Free IntelHex Sample Files - Download Test Intel Hexadecimal Files',
+            description: 'Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing firmware programming, IntelHex parsing, and embedded systems development tools.'
+          },
+          hero: {
+            title: 'IntelHex Sample Files',
+            description: 'Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available to test your firmware programming and IntelHex parsing tools.'
+          },
+          about_description: 'These are test IntelHex (Intel hexadecimal) files in various sizes for testing purposes'
+        },
+        jar: {
+          meta: {
+            title: 'Free JAR Sample Files Download - Test Java Archive Files | MorphyHub',
+            description: 'Download free JAR sample Java archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java application execution, JAR extraction, and Java development tools.',
+            keywords: 'JAR sample files, test JAR files, download JAR samples, free JAR test files, Java archive samples, JAR application files, .jar test files, Java package files, JAR extraction test files'
+          },
+          schema: {
+            name: 'Free JAR Sample Files - Download Test Java Archive Files',
+            description: 'Download free JAR sample Java archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java application execution, JAR extraction, and Java development tools.'
+          },
+          hero: {
+            title: 'JAR Sample Files',
+            description: 'Download free JAR sample Java archive files for testing. Multiple file sizes available to test your Java application execution and JAR extraction tools.'
+          },
+          about_description: 'These are test JAR (Java Archive) files in various sizes for testing purposes'
+        },
+        jks: {
+          meta: {
+            title: 'Free JKS Sample Files Download - Test Java KeyStore Files | MorphyHub',
+            description: 'Download free JKS sample Java KeyStore files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java KeyStore management, JKS parsing, and SSL certificate storage tools.',
+            keywords: 'JKS sample files, test JKS files, download JKS samples, free JKS test files, Java KeyStore samples, SSL certificate files, JKS keystore files, .jks test files, Java security files, JKS parsing test files'
+          },
+          schema: {
+            name: 'Free JKS Sample Files - Download Test Java KeyStore Files',
+            description: 'Download free JKS sample Java KeyStore files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java KeyStore management, JKS parsing, and SSL certificate storage tools.'
+          },
+          hero: {
+            title: 'JKS Sample Files',
+            description: 'Download free JKS sample Java KeyStore files for testing. Multiple file sizes available to test your Java KeyStore management and JKS parsing tools.'
+          },
+          about_description: 'These are test JKS (Java KeyStore) files in various sizes for testing purposes'
+        },
         kml: {
           meta: {
             title: 'Free KML Sample Files Download - Test Keyhole Markup Language Files | MorphyHub',
@@ -2355,6 +2499,150 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
           },
           about_description: 'To są testowe pliki KT (Kotlin) źródłowe w różnych rozmiarach do celów testowych'
         },
+        ifc: {
+          meta: {
+            title: 'Darmowe przykładowe pliki IFC – Pobierz pliki Industry Foundation Classes | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki Industry Foundation Classes IFC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania BIM, konwersji IFC i narzędzi modelowania informacji o budynku.',
+            keywords: 'przykładowe pliki IFC, testowe pliki IFC, pobierz przykłady IFC, darmowe testowe pliki IFC, przykłady Industry Foundation Classes, pliki BIM, pliki modelu budynku IFC, testowe pliki .ifc, pliki modelowania informacji o budynku, testowe pliki konwersji IFC'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki IFC – Pobierz testowe pliki Industry Foundation Classes',
+            description: 'Pobierz darmowe przykładowe pliki Industry Foundation Classes IFC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania BIM, konwersji IFC i narzędzi modelowania informacji o budynku.'
+          },
+          hero: {
+            title: 'Przykładowe pliki IFC',
+            description: 'Pobierz darmowe przykładowe pliki Industry Foundation Classes IFC do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje oprogramowanie BIM i narzędzia konwersji IFC.'
+          },
+          about_description: 'To są testowe pliki IFC (Industry Foundation Classes) w różnych rozmiarach do celów testowych'
+        },
+        iges: {
+          meta: {
+            title: 'Darmowe przykładowe pliki IGES – Pobierz pliki Initial Graphics Exchange Specification | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki Initial Graphics Exchange Specification IGES do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania CAD, konwersji IGES i narzędzi wymiany modeli 3D.',
+            keywords: 'przykładowe pliki IGES, testowe pliki IGES, pobierz przykłady IGES, darmowe testowe pliki IGES, przykłady Initial Graphics Exchange Specification, pliki modeli CAD, pliki 3D IGES, testowe pliki .iges, pliki wymiany CAD, testowe pliki konwersji IGES'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki IGES – Pobierz testowe pliki Initial Graphics Exchange Specification',
+            description: 'Pobierz darmowe przykładowe pliki Initial Graphics Exchange Specification IGES do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania CAD, konwersji IGES i narzędzi wymiany modeli 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki IGES',
+            description: 'Pobierz darmowe przykładowe pliki Initial Graphics Exchange Specification IGES do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje oprogramowanie CAD i narzędzia konwersji IGES.'
+          },
+          about_description: 'To są testowe pliki IGES (Initial Graphics Exchange Specification) w różnych rozmiarach do celów testowych'
+        },
+        igs: {
+          meta: {
+            title: 'Darmowe przykładowe pliki IGS – Pobierz pliki Initial Graphics Exchange Specification | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki Initial Graphics Exchange Specification IGS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania CAD, konwersji IGS i narzędzi wymiany modeli 3D.',
+            keywords: 'przykładowe pliki IGS, testowe pliki IGS, pobierz przykłady IGS, darmowe testowe pliki IGS, przykłady Initial Graphics Exchange Specification, pliki modeli CAD, pliki 3D IGS, testowe pliki .igs, pliki wymiany CAD, testowe pliki konwersji IGS'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki IGS – Pobierz testowe pliki Initial Graphics Exchange Specification',
+            description: 'Pobierz darmowe przykładowe pliki Initial Graphics Exchange Specification IGS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania CAD, konwersji IGS i narzędzi wymiany modeli 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki IGS',
+            description: 'Pobierz darmowe przykładowe pliki Initial Graphics Exchange Specification IGS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje oprogramowanie CAD i narzędzia konwersji IGS.'
+          },
+          about_description: 'To są testowe pliki IGS (Initial Graphics Exchange Specification) w różnych rozmiarach do celów testowych'
+        },
+        img: {
+          meta: {
+            title: 'Darmowe przykładowe pliki IMG – Pobierz pliki obrazu dysku | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki obrazu dysku IMG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania obrazu dysku, ekstrakcji IMG i narzędzi przetwarzania obrazu dysku.',
+            keywords: 'przykładowe pliki IMG, testowe pliki IMG, pobierz przykłady IMG, darmowe testowe pliki IMG, przykłady obrazu dysku, pliki obrazu dysku IMG, testowe pliki .img, pliki montowania obrazu dysku, testowe pliki ekstrakcji IMG'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki IMG – Pobierz testowe pliki obrazu dysku',
+            description: 'Pobierz darmowe przykładowe pliki obrazu dysku IMG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania obrazu dysku, ekstrakcji IMG i narzędzi przetwarzania obrazu dysku.'
+          },
+          hero: {
+            title: 'Przykładowe pliki IMG',
+            description: 'Pobierz darmowe przykładowe pliki obrazu dysku IMG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia montowania obrazu dysku i ekstrakcji IMG.'
+          },
+          about_description: 'To są testowe pliki IMG (obrazu dysku) w różnych rozmiarach do celów testowych'
+        },
+        indd: {
+          meta: {
+            title: 'Darmowe przykładowe pliki INDD – Pobierz pliki dokumentów Adobe InDesign | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki dokumentów Adobe InDesign INDD do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji dokumentów InDesign, przeglądania INDD i narzędzi publikacji.',
+            keywords: 'przykładowe pliki INDD, testowe pliki INDD, pobierz przykłady INDD, darmowe testowe pliki INDD, przykłady Adobe InDesign, pliki publikacji, pliki dokumentów INDD, testowe pliki .indd, pliki InDesign, testowe pliki konwersji INDD'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki INDD – Pobierz testowe pliki dokumentów Adobe InDesign',
+            description: 'Pobierz darmowe przykładowe pliki dokumentów Adobe InDesign INDD do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji dokumentów InDesign, przeglądania INDD i narzędzi publikacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki INDD',
+            description: 'Pobierz darmowe przykładowe pliki dokumentów Adobe InDesign INDD do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji dokumentów InDesign i przeglądania INDD.'
+          },
+          about_description: 'To są testowe pliki INDD (Adobe InDesign) w różnych rozmiarach do celów testowych'
+        },
+        ini: {
+          meta: {
+            title: 'Darmowe przykładowe pliki INI – Pobierz pliki konfiguracyjne | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne INI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików INI, zarządzania konfiguracją i narzędzi przetwarzania plików ustawień.',
+            keywords: 'przykładowe pliki INI, testowe pliki INI, pobierz przykłady INI, darmowe testowe pliki INI, przykłady plików konfiguracyjnych, pliki konfiguracyjne INI, testowe pliki .ini, przykłady plików ustawień, testowe pliki parsowania INI'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki INI – Pobierz testowe pliki konfiguracyjne',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne INI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików INI, zarządzania konfiguracją i narzędzi przetwarzania plików ustawień.'
+          },
+          hero: {
+            title: 'Przykładowe pliki INI',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne INI do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania plików INI i zarządzania konfiguracją.'
+          },
+          about_description: 'To są testowe pliki INI (konfiguracyjne) w różnych rozmiarach do celów testowych'
+        },
+        intelhex: {
+          meta: {
+            title: 'Darmowe przykładowe pliki IntelHex – Pobierz pliki szesnastkowe Intel | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki szesnastkowe Intel IntelHex do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania programowania oprogramowania układowego, parsowania IntelHex i narzędzi programistycznych systemów wbudowanych.',
+            keywords: 'przykładowe pliki IntelHex, testowe pliki IntelHex, pobierz przykłady IntelHex, darmowe testowe pliki IntelHex, przykłady szesnastkowe Intel, pliki oprogramowania układowego, pliki hex IntelHex, testowe pliki .intelhex, pliki systemów wbudowanych, testowe pliki parsowania IntelHex'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki IntelHex – Pobierz testowe pliki szesnastkowe Intel',
+            description: 'Pobierz darmowe przykładowe pliki szesnastkowe Intel IntelHex do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania programowania oprogramowania układowego, parsowania IntelHex i narzędzi programistycznych systemów wbudowanych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki IntelHex',
+            description: 'Pobierz darmowe przykładowe pliki szesnastkowe Intel IntelHex do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia programowania oprogramowania układowego i parsowania IntelHex.'
+          },
+          about_description: 'To są testowe pliki IntelHex (szesnastkowe Intel) w różnych rozmiarach do celów testowych'
+        },
+        jar: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JAR – Pobierz pliki archiwum Java | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwum Java JAR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania aplikacji Java, ekstrakcji JAR i narzędzi programistycznych Java.',
+            keywords: 'przykładowe pliki JAR, testowe pliki JAR, pobierz przykłady JAR, darmowe testowe pliki JAR, przykłady archiwum Java, pliki aplikacji JAR, testowe pliki .jar, pliki pakietów Java, testowe pliki ekstrakcji JAR'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JAR – Pobierz testowe pliki archiwum Java',
+            description: 'Pobierz darmowe przykładowe pliki archiwum Java JAR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania aplikacji Java, ekstrakcji JAR i narzędzi programistycznych Java.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JAR',
+            description: 'Pobierz darmowe przykładowe pliki archiwum Java JAR do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wykonywania aplikacji Java i ekstrakcji JAR.'
+          },
+          about_description: 'To są testowe pliki JAR (Java Archive) w różnych rozmiarach do celów testowych'
+        },
+        jks: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JKS – Pobierz pliki Java KeyStore | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki Java KeyStore JKS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania zarządzania Java KeyStore, parsowania JKS i narzędzi przechowywania certyfikatów SSL.',
+            keywords: 'przykładowe pliki JKS, testowe pliki JKS, pobierz przykłady JKS, darmowe testowe pliki JKS, przykłady Java KeyStore, pliki certyfikatów SSL, pliki keystore JKS, testowe pliki .jks, pliki bezpieczeństwa Java, testowe pliki parsowania JKS'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JKS – Pobierz testowe pliki Java KeyStore',
+            description: 'Pobierz darmowe przykładowe pliki Java KeyStore JKS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania zarządzania Java KeyStore, parsowania JKS i narzędzi przechowywania certyfikatów SSL.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JKS',
+            description: 'Pobierz darmowe przykładowe pliki Java KeyStore JKS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia zarządzania Java KeyStore i parsowania JKS.'
+          },
+          about_description: 'To są testowe pliki JKS (Java KeyStore) w różnych rozmiarach do celów testowych'
+        },
         kml: {
           meta: {
             title: 'Darmowe przykładowe pliki KML – Pobierz pliki Keyhole Markup Language | MorphyHub',
@@ -4453,6 +4741,150 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose KT Kotlin-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Kotlin-Kompilierungs- und Entwicklungstools zu testen.'
           },
           about_description: 'Dies sind KT (Kotlin) Quellcode-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ifc: {
+          meta: {
+            title: 'Kostenlose IFC Beispieldateien herunterladen – Industry Foundation Classes-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose IFC Industry Foundation Classes-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BIM-Software, IFC-Konvertierung und Gebäudeinformationsmodellierungstools.',
+            keywords: 'IFC Beispieldateien, IFC Testdateien, IFC Beispiele herunterladen, kostenlose IFC Testdateien, Industry Foundation Classes-Beispiele, BIM-Dateien, IFC Gebäudemodelldateien, .ifc Testdateien, Gebäudeinformationsmodellierungsdateien, IFC-Konvertierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose IFC Beispieldateien – Industry Foundation Classes-Dateien testen',
+            description: 'Laden Sie kostenlose IFC Industry Foundation Classes-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BIM-Software, IFC-Konvertierung und Gebäudeinformationsmodellierungstools.'
+          },
+          hero: {
+            title: 'IFC Beispieldateien',
+            description: 'Laden Sie kostenlose IFC Industry Foundation Classes-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre BIM-Software und IFC-Konvertierungstools zu testen.'
+          },
+          about_description: 'Dies sind IFC (Industry Foundation Classes) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        iges: {
+          meta: {
+            title: 'Kostenlose IGES Beispieldateien herunterladen – Initial Graphics Exchange Specification-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose IGES Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Software, IGES-Konvertierung und 3D-Modellaustausch-Tools.',
+            keywords: 'IGES Beispieldateien, IGES Testdateien, IGES Beispiele herunterladen, kostenlose IGES Testdateien, Initial Graphics Exchange Specification-Beispiele, CAD-Modelldateien, IGES 3D-Dateien, .iges Testdateien, CAD-Austauschdateien, IGES-Konvertierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose IGES Beispieldateien – Initial Graphics Exchange Specification-Dateien testen',
+            description: 'Laden Sie kostenlose IGES Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Software, IGES-Konvertierung und 3D-Modellaustausch-Tools.'
+          },
+          hero: {
+            title: 'IGES Beispieldateien',
+            description: 'Laden Sie kostenlose IGES Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Software und IGES-Konvertierungstools zu testen.'
+          },
+          about_description: 'Dies sind IGES (Initial Graphics Exchange Specification) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        igs: {
+          meta: {
+            title: 'Kostenlose IGS Beispieldateien herunterladen – Initial Graphics Exchange Specification-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose IGS Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Software, IGS-Konvertierung und 3D-Modellaustausch-Tools.',
+            keywords: 'IGS Beispieldateien, IGS Testdateien, IGS Beispiele herunterladen, kostenlose IGS Testdateien, Initial Graphics Exchange Specification-Beispiele, CAD-Modelldateien, IGS 3D-Dateien, .igs Testdateien, CAD-Austauschdateien, IGS-Konvertierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose IGS Beispieldateien – Initial Graphics Exchange Specification-Dateien testen',
+            description: 'Laden Sie kostenlose IGS Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Software, IGS-Konvertierung und 3D-Modellaustausch-Tools.'
+          },
+          hero: {
+            title: 'IGS Beispieldateien',
+            description: 'Laden Sie kostenlose IGS Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Software und IGS-Konvertierungstools zu testen.'
+          },
+          about_description: 'Dies sind IGS (Initial Graphics Exchange Specification) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        img: {
+          meta: {
+            title: 'Kostenlose IMG Beispieldateien herunterladen – Festplattenabbild-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose IMG Festplattenabbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Festplattenabbild-Montage, IMG-Extraktion und Festplattenabbild-Verarbeitungstools.',
+            keywords: 'IMG Beispieldateien, IMG Testdateien, IMG Beispiele herunterladen, kostenlose IMG Testdateien, Festplattenabbild-Beispiele, IMG Festplattenabbild-Dateien, .img Testdateien, Festplattenabbild-Montagedateien, IMG-Extraktionstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose IMG Beispieldateien – Festplattenabbild-Dateien testen',
+            description: 'Laden Sie kostenlose IMG Festplattenabbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Festplattenabbild-Montage, IMG-Extraktion und Festplattenabbild-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'IMG Beispieldateien',
+            description: 'Laden Sie kostenlose IMG Festplattenabbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Festplattenabbild-Montage- und IMG-Extraktionstools zu testen.'
+          },
+          about_description: 'Dies sind IMG (Festplattenabbild) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        indd: {
+          meta: {
+            title: 'Kostenlose INDD Beispieldateien herunterladen – Adobe InDesign-Dokumentdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose INDD Adobe InDesign-Dokument-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von InDesign-Dokumentkonvertierung, INDD-Anzeige und Desktop-Publishing-Tools.',
+            keywords: 'INDD Beispieldateien, INDD Testdateien, INDD Beispiele herunterladen, kostenlose INDD Testdateien, Adobe InDesign-Beispiele, Desktop-Publishing-Dateien, INDD Dokumentdateien, .indd Testdateien, InDesign-Dateien, INDD-Konvertierungstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose INDD Beispieldateien – Adobe InDesign-Dokumentdateien testen',
+            description: 'Laden Sie kostenlose INDD Adobe InDesign-Dokument-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von InDesign-Dokumentkonvertierung, INDD-Anzeige und Desktop-Publishing-Tools.'
+          },
+          hero: {
+            title: 'INDD Beispieldateien',
+            description: 'Laden Sie kostenlose INDD Adobe InDesign-Dokument-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre InDesign-Dokumentkonvertierungs- und INDD-Anzeigetools zu testen.'
+          },
+          about_description: 'Dies sind INDD (Adobe InDesign) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ini: {
+          meta: {
+            title: 'Kostenlose INI Beispieldateien herunterladen – Konfigurationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose INI Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Dateiparsing, Konfigurationsverwaltung und Einstellungsdatei-Verarbeitungstools.',
+            keywords: 'INI Beispieldateien, INI Testdateien, INI Beispiele herunterladen, kostenlose INI Testdateien, Konfigurationsdatei-Beispiele, INI Konfigurationsdateien, .ini Testdateien, Einstellungsdatei-Beispiele, INI-Parsing-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose INI Beispieldateien – Konfigurationsdateien testen',
+            description: 'Laden Sie kostenlose INI Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Dateiparsing, Konfigurationsverwaltung und Einstellungsdatei-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'INI Beispieldateien',
+            description: 'Laden Sie kostenlose INI Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre INI-Dateiparsing- und Konfigurationsverwaltungstools zu testen.'
+          },
+          about_description: 'Dies sind INI (Konfigurations-) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        intelhex: {
+          meta: {
+            title: 'Kostenlose IntelHex Beispieldateien herunterladen – Intel-Hexadezimaldateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose IntelHex Intel-Hexadezimal-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Firmware-Programmierung, IntelHex-Parsing und Embedded-System-Entwicklungstools.',
+            keywords: 'IntelHex Beispieldateien, IntelHex Testdateien, IntelHex Beispiele herunterladen, kostenlose IntelHex Testdateien, Intel-Hexadezimal-Beispiele, Firmware-Dateien, IntelHex Hex-Dateien, .intelhex Testdateien, Embedded-System-Dateien, IntelHex-Parsing-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose IntelHex Beispieldateien – Intel-Hexadezimaldateien testen',
+            description: 'Laden Sie kostenlose IntelHex Intel-Hexadezimal-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Firmware-Programmierung, IntelHex-Parsing und Embedded-System-Entwicklungstools.'
+          },
+          hero: {
+            title: 'IntelHex Beispieldateien',
+            description: 'Laden Sie kostenlose IntelHex Intel-Hexadezimal-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Firmware-Programmierungs- und IntelHex-Parsing-Tools zu testen.'
+          },
+          about_description: 'Dies sind IntelHex (Intel-Hexadezimal-) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        jar: {
+          meta: {
+            title: 'Kostenlose JAR Beispieldateien herunterladen – Java-Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JAR Java-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java-Anwendungsausführung, JAR-Extraktion und Java-Entwicklungstools.',
+            keywords: 'JAR Beispieldateien, JAR Testdateien, JAR Beispiele herunterladen, kostenlose JAR Testdateien, Java-Archiv-Beispiele, JAR-Anwendungsdateien, .jar Testdateien, Java-Paketdateien, JAR-Extraktionstestdateien'
+          },
+          schema: {
+            name: 'Kostenlose JAR Beispieldateien – Java-Archivdateien testen',
+            description: 'Laden Sie kostenlose JAR Java-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java-Anwendungsausführung, JAR-Extraktion und Java-Entwicklungstools.'
+          },
+          hero: {
+            title: 'JAR Beispieldateien',
+            description: 'Laden Sie kostenlose JAR Java-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Java-Anwendungsausführungs- und JAR-Extraktionstools zu testen.'
+          },
+          about_description: 'Dies sind JAR (Java Archive) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        jks: {
+          meta: {
+            title: 'Kostenlose JKS Beispieldateien herunterladen – Java KeyStore-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JKS Java KeyStore-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java KeyStore-Verwaltung, JKS-Parsing und SSL-Zertifikatsspeicher-Tools.',
+            keywords: 'JKS Beispieldateien, JKS Testdateien, JKS Beispiele herunterladen, kostenlose JKS Testdateien, Java KeyStore-Beispiele, SSL-Zertifikatsdateien, JKS Keystore-Dateien, .jks Testdateien, Java-Sicherheitsdateien, JKS-Parsing-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose JKS Beispieldateien – Java KeyStore-Dateien testen',
+            description: 'Laden Sie kostenlose JKS Java KeyStore-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java KeyStore-Verwaltung, JKS-Parsing und SSL-Zertifikatsspeicher-Tools.'
+          },
+          hero: {
+            title: 'JKS Beispieldateien',
+            description: 'Laden Sie kostenlose JKS Java KeyStore-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Java KeyStore-Verwaltungs- und JKS-Parsing-Tools zu testen.'
+          },
+          about_description: 'Dies sind JKS (Java KeyStore) Testdateien in verschiedenen Größen für Testzwecke'
         },
         kml: {
           meta: {

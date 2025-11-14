@@ -4,6 +4,11 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Download, Box, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import { getStorageUrl } from '../../config/storage';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { useNavigate } from 'react-router-dom';
+import '../../locales/samplePages';
 
 interface SampleFile {
   size: string;
@@ -12,6 +17,9 @@ interface SampleFile {
 }
 
 export default function SampleIfc() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  usePathLanguageSync(i18n);
   const [downloadingIndex, setDownloadingIndex] = useState<number | null>(null);
   const [countdown, setCountdown] = useState<number | null>(null);
   const [readyToDownload, setReadyToDownload] = useState<number | null>(null);
@@ -64,34 +72,40 @@ export default function SampleIfc() {
     }, 2000);
   };
 
+    
+  const formatKey = 'ifc';
+  const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
+
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Free IFC Sample Files - Download Test Industry Foundation Classes Files",
-    "url": "https://morphyhub.com/samples/sample-ifc",
-    "description": "Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BIM software, IFC conversion, and building information modeling tools.",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
     "isPartOf": { "@id": "https://morphyhub.com#website" },
     "publisher": { "@id": "https://morphyhub.com#organization" }
   };
 
   const handleBack = () => {
-    window.location.href = '/';
+    navigate(getLocalizedUrl('/', i18n.language));
   };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
 
   return (
     <>
       <Helmet>
-        <title>Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyHub</title>
-        <meta name="description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BIM software, IFC conversion, and building information modeling tools." />
-        <meta name="keywords" content="IFC sample files, test IFC files, download IFC samples, free IFC test files, Industry Foundation Classes samples, BIM files, IFC building model files, .ifc test files, building information modeling files, IFC conversion test files" />
-        <meta property="og:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyHub" />
-        <meta property="og:description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available for testing BIM software and IFC conversion tools." />
+        <title>{t(`sample_page.formats.${formatKey}.meta.title`)}</title>
+        <meta name="description" content={t(`sample_page.formats.${formatKey}.meta.description`)} />
+        <meta name="keywords" content={t(`sample_page.formats.${formatKey}.meta.keywords`)} />
+        <meta property="og:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta property="og:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://morphyhub.com/samples/sample-ifc" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free IFC Sample Files Download - Test Industry Foundation Classes Files | MorphyHub" />
-        <meta name="twitter:description" content="Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyhub.com/samples/sample-ifc" />
+        <meta name="twitter:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta name="twitter:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
+        <link rel="canonical" href={canonicalUrl} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
@@ -108,7 +122,7 @@ export default function SampleIfc() {
                 className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors text-sm sm:text-base"
               >
                 <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Back to Home</span>
+                <span>{t('sample_page.common.back_button')}</span>
               </button>
             </div>
           </div>
@@ -121,11 +135,11 @@ export default function SampleIfc() {
                 <Box className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                IFC Sample Files
+                {t(`sample_page.formats.${formatKey}.hero.title`)}
               </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free IFC sample Industry Foundation Classes files for testing. Multiple file sizes available to test your BIM software and IFC conversion tools.
+            {t(`sample_page.formats.${formatKey}.hero.description`)}
             </p>
           </div>
 
@@ -148,7 +162,7 @@ export default function SampleIfc() {
                           {file.filename}
                         </h3>
                         <p className="text-sm text-gray-500 mt-1">
-                          File size: <span className="font-medium text-gray-700">{file.displaySize}</span>
+                          {t('sample_page.common.file_size')} <span className="font-medium text-gray-700">{file.displaySize}</span>
                         </p>
                       </div>
                     </div>
@@ -160,7 +174,7 @@ export default function SampleIfc() {
                               <div className="flex items-center space-x-2 text-orange-600">
                                 <Clock className="w-4 h-4 animate-spin" />
                                 <span className="text-sm font-medium">
-                                  Download ready in {countdown}s...
+                                  {t('sample_page.common.download_ready_in', { countdown })}
                                 </span>
                               </div>
                               <div className="w-full sm:w-48 bg-gray-200 rounded-full h-2">
@@ -178,12 +192,12 @@ export default function SampleIfc() {
                           className="inline-flex items-center justify-center space-x-2 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto shadow-lg"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download Now</span>
+                          <span>{t('sample_page.common.download_now')}</span>
                         </button>
                       ) : downloadComplete === index ? (
                         <div className="flex items-center space-x-2 text-green-600">
                           <CheckCircle className="w-5 h-5" />
-                          <span className="text-sm font-medium">Download started</span>
+                          <span className="text-sm font-medium">{t('sample_page.common.download_started')}</span>
                         </div>
                       ) : (
                         <button
@@ -192,7 +206,7 @@ export default function SampleIfc() {
                           className="inline-flex items-center justify-center space-x-2 bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download</span>
+                          <span>{t('sample_page.common.download')}</span>
                         </button>
                       )}
                     </div>
@@ -204,14 +218,14 @@ export default function SampleIfc() {
 
           <div className="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              About These Sample Files
-            </h3>
+            {t('sample_page.common.about_title')}
+          </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
-              <li>• These are test IFC (Industry Foundation Classes) files in various sizes for testing purposes</li>
-              <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing BIM software and IFC conversion tools</li>
-              <li>• No registration or account required</li>
-            </ul>
+            <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
+            {Array.isArray(aboutItems) && aboutItems.slice(1).map((item, idx) => (
+              <li key={idx}>• {item}</li>
+            ))}
+          </ul>
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
@@ -220,33 +234,33 @@ export default function SampleIfc() {
                 <Box className="w-6 h-6 text-amber-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Multiple Sizes
-              </h3>
+            {t('sample_page.common.features.multiple_sizes.title')}
+          </h3>
               <p className="text-sm text-gray-600">
-                Test files ranging from 100 KB to 100 MB
-              </p>
+            {t('sample_page.common.features.multiple_sizes.description')}
+          </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
               <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Download className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Free Download
-              </h3>
+            {t('sample_page.common.features.free_download.title')}
+          </h3>
               <p className="text-sm text-gray-600">
-                No registration or payment required
-              </p>
+            {t('sample_page.common.features.free_download.description')}
+          </p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6 text-center">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-6 h-6 text-green-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Safe & Tested
-              </h3>
+            {t('sample_page.common.features.safe_tested.title')}
+          </h3>
               <p className="text-sm text-gray-600">
-                All files are safe and tested for compatibility
-              </p>
+            {t('sample_page.common.features.safe_tested.description')}
+          </p>
             </div>
           </div>
         </div>
