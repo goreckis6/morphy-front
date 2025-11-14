@@ -91,17 +91,6 @@ export default function SampleAnimationFbx() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free Animation FBX Sample Files - Download Test 3D Animation Files",
-    "url": "https://morphyhub.com/samples/sample-animation-fbx",
-    "description": "Download free animation FBX sample 3D animation files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation conversion, viewing, and FBX format processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-
   return (
     <>
       <Helmet>

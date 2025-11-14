@@ -91,17 +91,6 @@ export default function SampleAmr() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free AMR Sample Files - Download Test Audio Files",
-    "url": "https://morphyhub.com/samples/sample-amr",
-    "description": "Download free AMR sample Adaptive Multi-Rate audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and mobile audio format processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-
   return (
     <>
       <Helmet>

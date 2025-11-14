@@ -91,17 +91,6 @@ export default function SampleArj() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free ARJ Sample Files - Download Test Archive Files",
-    "url": "https://morphyhub.com/samples/sample-arj",
-    "description": "Download free ARJ sample archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, compression, and ARJ format processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-
   return (
     <>
       <Helmet>

@@ -91,17 +91,6 @@ export default function SampleAppimage() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free AppImage Sample Files - Download Test Linux Application Files",
-    "url": "https://morphyhub.com/samples/sample-appimage",
-    "description": "Download free AppImage sample Linux application package files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Linux app installation, AppImage analysis, and portable application processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-
   return (
     <>
       <Helmet>

@@ -91,17 +91,6 @@ export default function SampleAiff() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free AIFF Sample Files - Download Test Audio Files",
-    "url": "https://morphyhub.com/samples/sample-aiff",
-    "description": "Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio conversion, playback, and AIFF format processing tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-
   return (
     <>
       <Helmet>
