@@ -1503,6 +1503,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available to test your color palette import, design software integration, and color management tools.'
           },
           about_description: 'These are test ASE (Adobe Swatch Exchange) color palette files in various sizes for testing purposes'
+        },
+        asc: {
+          meta: {
+            title: 'Free ASC Sample Files Download - Test ASCII Text Files | MorphyHub',
+            description: 'Download free ASC sample ASCII text files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing text processing, ASCII encoding, and plain text file handling tools.',
+            keywords: 'ASC sample files, test ASC files, download ASC samples, free ASC test files, ASCII text samples, plain text samples, ASC file samples, .asc test files, text format samples'
+          },
+          schema: {
+            name: 'Free ASC Sample Files - Download Test ASCII Text Files',
+            description: 'Download free ASC sample ASCII text files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing text processing, ASCII encoding, and plain text file handling tools.'
+          },
+          hero: {
+            title: 'ASC Sample Files',
+            description: 'Download free ASC sample ASCII text files for testing. Multiple file sizes available to test your text processing, ASCII encoding, and plain text file handling tools.'
+          },
+          about_description: 'These are test ASC (ASCII Text) files in various sizes for testing purposes'
+        },
+        arj: {
+          meta: {
+            title: 'Free ARJ Sample Files Download - Test ARJ Archive Files | MorphyHub',
+            description: 'Download free ARJ sample ARJ compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, ARJ compression, and legacy archive format tools.',
+            keywords: 'ARJ sample files, test ARJ files, download ARJ samples, free ARJ test files, ARJ archive samples, compressed archive samples, ARJ archive samples, .arj test files, legacy archive samples'
+          },
+          schema: {
+            name: 'Free ARJ Sample Files - Download Test ARJ Archive Files',
+            description: 'Download free ARJ sample ARJ compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, ARJ compression, and legacy archive format tools.'
+          },
+          hero: {
+            title: 'ARJ Sample Files',
+            description: 'Download free ARJ sample ARJ compressed archive files for testing. Multiple file sizes available to test your archive extraction, ARJ compression, and legacy archive format tools.'
+          },
+          about_description: 'These are test ARJ (ARJ Archive) compressed archive files in various sizes for testing purposes'
+        },
+        'arduino-ino': {
+          meta: {
+            title: 'Free Arduino INO Sample Files Download - Test Arduino Sketch Files | MorphyHub',
+            description: 'Download free Arduino INO sample Arduino sketch source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Arduino development, sketch compilation, and embedded programming tools.',
+            keywords: 'Arduino INO sample files, test Arduino INO files, download Arduino INO samples, free Arduino INO test files, Arduino sketch samples, embedded code samples, Arduino .ino samples, .ino test files, microcontroller samples'
+          },
+          schema: {
+            name: 'Free Arduino INO Sample Files - Download Test Arduino Sketch Files',
+            description: 'Download free Arduino INO sample Arduino sketch source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Arduino development, sketch compilation, and embedded programming tools.'
+          },
+          hero: {
+            title: 'Arduino INO Sample Files',
+            description: 'Download free Arduino INO sample Arduino sketch source code files for testing. Multiple file sizes available to test your Arduino development, sketch compilation, and embedded programming tools.'
+          },
+          about_description: 'These are test Arduino INO (Arduino Sketch) source code files in various sizes for testing purposes'
+        },
+        appimage: {
+          meta: {
+            title: 'Free AppImage Sample Files Download - Test AppImage Application Files | MorphyHub',
+            description: 'Download free AppImage sample AppImage portable Linux application files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Linux app installation, AppImage execution, and portable application tools.',
+            keywords: 'AppImage sample files, test AppImage files, download AppImage samples, free AppImage test files, Linux app samples, portable app samples, AppImage application samples, .appimage test files, Linux executable samples'
+          },
+          schema: {
+            name: 'Free AppImage Sample Files - Download Test AppImage Application Files',
+            description: 'Download free AppImage sample AppImage portable Linux application files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Linux app installation, AppImage execution, and portable application tools.'
+          },
+          hero: {
+            title: 'AppImage Sample Files',
+            description: 'Download free AppImage sample AppImage portable Linux application files for testing. Multiple file sizes available to test your Linux app installation, AppImage execution, and portable application tools.'
+          },
+          about_description: 'These are test AppImage portable Linux application files in various sizes for testing purposes'
+        },
+        'animation-fbx': {
+          meta: {
+            title: 'Free Animation FBX Sample Files Download - Test FBX 3D Animation Files | MorphyHub',
+            description: 'Download free Animation FBX sample FBX 3D animation and model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation playback, FBX import, and 3D modeling tools.',
+            keywords: 'Animation FBX sample files, test FBX animation files, download FBX animation samples, free FBX animation test files, 3D animation samples, FBX model samples, FBX animation samples, .fbx test files, 3D model samples'
+          },
+          schema: {
+            name: 'Free Animation FBX Sample Files - Download Test FBX 3D Animation Files',
+            description: 'Download free Animation FBX sample FBX 3D animation and model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation playback, FBX import, and 3D modeling tools.'
+          },
+          hero: {
+            title: 'Animation FBX Sample Files',
+            description: 'Download free Animation FBX sample FBX 3D animation and model files for testing. Multiple file sizes available to test your 3D animation playback, FBX import, and 3D modeling tools.'
+          },
+          about_description: 'These are test Animation FBX (FBX 3D Animation) files in various sizes for testing purposes'
+        },
+        amr: {
+          meta: {
+            title: 'Free AMR Sample Files Download - Test AMR Audio Files | MorphyHub',
+            description: 'Download free AMR sample AMR Adaptive Multi-Rate audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AMR conversion, and voice recording format tools.',
+            keywords: 'AMR sample files, test AMR files, download AMR samples, free AMR test files, AMR audio samples, voice recording samples, AMR sound samples, .amr test files, audio format samples'
+          },
+          schema: {
+            name: 'Free AMR Sample Files - Download Test AMR Audio Files',
+            description: 'Download free AMR sample AMR Adaptive Multi-Rate audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AMR conversion, and voice recording format tools.'
+          },
+          hero: {
+            title: 'AMR Sample Files',
+            description: 'Download free AMR sample AMR Adaptive Multi-Rate audio files for testing. Multiple file sizes available to test your audio playback, AMR conversion, and voice recording format tools.'
+          },
+          about_description: 'These are test AMR (Adaptive Multi-Rate) audio files in various sizes for testing purposes'
+        },
+        aiff: {
+          meta: {
+            title: 'Free AIFF Sample Files Download - Test AIFF Audio Files | MorphyHub',
+            description: 'Download free AIFF sample AIFF Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AIFF conversion, and professional audio format tools.',
+            keywords: 'AIFF sample files, test AIFF files, download AIFF samples, free AIFF test files, AIFF audio samples, professional audio samples, AIFF sound samples, .aiff test files, audio format samples'
+          },
+          schema: {
+            name: 'Free AIFF Sample Files - Download Test AIFF Audio Files',
+            description: 'Download free AIFF sample AIFF Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AIFF conversion, and professional audio format tools.'
+          },
+          hero: {
+            title: 'AIFF Sample Files',
+            description: 'Download free AIFF sample AIFF Audio Interchange File Format files for testing. Multiple file sizes available to test your audio playback, AIFF conversion, and professional audio format tools.'
+          },
+          about_description: 'These are test AIFF (Audio Interchange File Format) audio files in various sizes for testing purposes'
+        },
+        aif: {
+          meta: {
+            title: 'Free AIF Sample Files Download - Test AIF Audio Files | MorphyHub',
+            description: 'Download free AIF sample AIF Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AIF conversion, and professional audio format tools.',
+            keywords: 'AIF sample files, test AIF files, download AIF samples, free AIF test files, AIF audio samples, professional audio samples, AIF sound samples, .aif test files, audio format samples'
+          },
+          schema: {
+            name: 'Free AIF Sample Files - Download Test AIF Audio Files',
+            description: 'Download free AIF sample AIF Audio Interchange File Format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AIF conversion, and professional audio format tools.'
+          },
+          hero: {
+            title: 'AIF Sample Files',
+            description: 'Download free AIF sample AIF Audio Interchange File Format files for testing. Multiple file sizes available to test your audio playback, AIF conversion, and professional audio format tools.'
+          },
+          about_description: 'These are test AIF (Audio Interchange File Format) audio files in various sizes for testing purposes'
+        },
+        ai: {
+          meta: {
+            title: 'Free AI Sample Files Download - Test Adobe Illustrator Files | MorphyHub',
+            description: 'Download free AI sample Adobe Illustrator vector graphics files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics viewing, AI conversion, and illustration design tools.',
+            keywords: 'AI sample files, test AI files, download AI samples, free AI test files, Adobe Illustrator samples, vector graphics samples, AI illustration samples, .ai test files, design format samples'
+          },
+          schema: {
+            name: 'Free AI Sample Files - Download Test Adobe Illustrator Files',
+            description: 'Download free AI sample Adobe Illustrator vector graphics files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing vector graphics viewing, AI conversion, and illustration design tools.'
+          },
+          hero: {
+            title: 'AI Sample Files',
+            description: 'Download free AI sample Adobe Illustrator vector graphics files for testing. Multiple file sizes available to test your vector graphics viewing, AI conversion, and illustration design tools.'
+          },
+          about_description: 'These are test AI (Adobe Illustrator) vector graphics files in various sizes for testing purposes'
+        },
+        ac3: {
+          meta: {
+            title: 'Free AC3 Sample Files Download - Test AC3 Audio Files | MorphyHub',
+            description: 'Download free AC3 sample AC3 Dolby Digital audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AC3 conversion, and surround sound format tools.',
+            keywords: 'AC3 sample files, test AC3 files, download AC3 samples, free AC3 test files, AC3 audio samples, Dolby Digital samples, AC3 sound samples, .ac3 test files, audio format samples'
+          },
+          schema: {
+            name: 'Free AC3 Sample Files - Download Test AC3 Audio Files',
+            description: 'Download free AC3 sample AC3 Dolby Digital audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AC3 conversion, and surround sound format tools.'
+          },
+          hero: {
+            title: 'AC3 Sample Files',
+            description: 'Download free AC3 sample AC3 Dolby Digital audio files for testing. Multiple file sizes available to test your audio playback, AC3 conversion, and surround sound format tools.'
+          },
+          about_description: 'These are test AC3 (Dolby Digital) audio files in various sizes for testing purposes'
         }
       }
     }
@@ -2962,6 +3122,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki palet kolorów Adobe Swatch Exchange ASE do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia importu palet kolorów, integracji oprogramowania do projektowania i zarządzania kolorami.'
           },
           about_description: 'To są testowe pliki palet kolorów ASE (Adobe Swatch Exchange) w różnych rozmiarach do celów testowych'
+        },
+        asc: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ASC – Pobierz pliki tekstowe ASCII | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki tekstowe ASCII ASC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania tekstu, kodowania ASCII i narzędzi obsługi plików tekstowych.',
+            keywords: 'przykładowe pliki ASC, testowe pliki ASC, pobierz przykłady ASC, darmowe testowe pliki ASC, przykłady tekstu ASCII, przykłady zwykłego tekstu, przykłady plików ASC, testowe pliki .asc, przykłady formatów tekstowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ASC – Pobierz testowe pliki tekstowe ASCII',
+            description: 'Pobierz darmowe przykładowe pliki tekstowe ASCII ASC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania tekstu, kodowania ASCII i narzędzi obsługi plików tekstowych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ASC',
+            description: 'Pobierz darmowe przykładowe pliki tekstowe ASCII ASC do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania tekstu, kodowania ASCII i obsługi plików tekstowych.'
+          },
+          about_description: 'To są testowe pliki ASC (ASCII Text) w różnych rozmiarach do celów testowych'
+        },
+        arj: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ARJ – Pobierz pliki archiwum ARJ | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ARJ ARJ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, kompresji ARJ i narzędzi starszych formatów archiwów.',
+            keywords: 'przykładowe pliki ARJ, testowe pliki ARJ, pobierz przykłady ARJ, darmowe testowe pliki ARJ, przykłady archiwów ARJ, przykłady skompresowanych archiwów, przykłady archiwów ARJ, testowe pliki .arj, przykłady starszych archiwów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ARJ – Pobierz testowe pliki archiwum ARJ',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ARJ ARJ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, kompresji ARJ i narzędzi starszych formatów archiwów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ARJ',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ARJ ARJ do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów, kompresji ARJ i starszych formatów archiwów.'
+          },
+          about_description: 'To są testowe pliki archiwum skompresowanego ARJ (ARJ Archive) w różnych rozmiarach do celów testowych'
+        },
+        'arduino-ino': {
+          meta: {
+            title: 'Darmowe przykładowe pliki Arduino INO – Pobierz pliki szkiców Arduino | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki kodu źródłowego szkiców Arduino INO Arduino do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania deweloperskiego Arduino, kompilacji szkiców i narzędzi programowania wbudowanego.',
+            keywords: 'przykładowe pliki Arduino INO, testowe pliki Arduino INO, pobierz przykłady Arduino INO, darmowe testowe pliki Arduino INO, przykłady szkiców Arduino, przykłady kodu wbudowanego, przykłady Arduino .ino, testowe pliki .ino, przykłady mikrokontrolerów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Arduino INO – Pobierz testowe pliki szkiców Arduino',
+            description: 'Pobierz darmowe przykładowe pliki kodu źródłowego szkiców Arduino INO Arduino do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania deweloperskiego Arduino, kompilacji szkiców i narzędzi programowania wbudowanego.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Arduino INO',
+            description: 'Pobierz darmowe przykładowe pliki kodu źródłowego szkiców Arduino INO Arduino do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia deweloperskie Arduino, kompilacji szkiców i programowania wbudowanego.'
+          },
+          about_description: 'To są testowe pliki kodu źródłowego Arduino INO (Arduino Sketch) w różnych rozmiarach do celów testowych'
+        },
+        appimage: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AppImage – Pobierz pliki aplikacji AppImage | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki aplikacji przenośnych Linux AppImage AppImage do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji Linux, wykonywania AppImage i narzędzi aplikacji przenośnych.',
+            keywords: 'przykładowe pliki AppImage, testowe pliki AppImage, pobierz przykłady AppImage, darmowe testowe pliki AppImage, przykłady aplikacji Linux, przykłady aplikacji przenośnych, przykłady aplikacji AppImage, testowe pliki .appimage, przykłady wykonywalnych Linux'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AppImage – Pobierz testowe pliki aplikacji AppImage',
+            description: 'Pobierz darmowe przykładowe pliki aplikacji przenośnych Linux AppImage AppImage do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji Linux, wykonywania AppImage i narzędzi aplikacji przenośnych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AppImage',
+            description: 'Pobierz darmowe przykładowe pliki aplikacji przenośnych Linux AppImage AppImage do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia instalacji aplikacji Linux, wykonywania AppImage i aplikacji przenośnych.'
+          },
+          about_description: 'To są testowe pliki aplikacji przenośnych Linux AppImage w różnych rozmiarach do celów testowych'
+        },
+        'animation-fbx': {
+          meta: {
+            title: 'Darmowe przykładowe pliki Animation FBX – Pobierz pliki animacji 3D FBX | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki animacji i modeli 3D FBX Animation FBX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania animacji 3D, importu FBX i narzędzi modelowania 3D.',
+            keywords: 'przykładowe pliki Animation FBX, testowe pliki animacji FBX, pobierz przykłady animacji FBX, darmowe testowe pliki animacji FBX, przykłady animacji 3D, przykłady modeli FBX, przykłady animacji FBX, testowe pliki .fbx, przykłady modeli 3D'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Animation FBX – Pobierz testowe pliki animacji 3D FBX',
+            description: 'Pobierz darmowe przykładowe pliki animacji i modeli 3D FBX Animation FBX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania animacji 3D, importu FBX i narzędzi modelowania 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Animation FBX',
+            description: 'Pobierz darmowe przykładowe pliki animacji i modeli 3D FBX Animation FBX do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania animacji 3D, importu FBX i modelowania 3D.'
+          },
+          about_description: 'To są testowe pliki Animation FBX (FBX 3D Animation) w różnych rozmiarach do celów testowych'
+        },
+        amr: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AMR – Pobierz pliki audio AMR | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki audio AMR Adaptive Multi-Rate AMR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AMR i narzędzi formatów nagrywania głosu.',
+            keywords: 'przykładowe pliki AMR, testowe pliki AMR, pobierz przykłady AMR, darmowe testowe pliki AMR, przykłady audio AMR, przykłady nagrywania głosu, przykłady dźwięku AMR, testowe pliki .amr, przykłady formatów audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AMR – Pobierz testowe pliki audio AMR',
+            description: 'Pobierz darmowe przykładowe pliki audio AMR Adaptive Multi-Rate AMR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AMR i narzędzi formatów nagrywania głosu.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AMR',
+            description: 'Pobierz darmowe przykładowe pliki audio AMR Adaptive Multi-Rate AMR do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania audio, konwersji AMR i formatów nagrywania głosu.'
+          },
+          about_description: 'To są testowe pliki audio AMR (Adaptive Multi-Rate) w różnych rozmiarach do celów testowych'
+        },
+        aiff: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AIFF – Pobierz pliki audio AIFF | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki audio AIFF Audio Interchange File Format AIFF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AIFF i narzędzi profesjonalnych formatów audio.',
+            keywords: 'przykładowe pliki AIFF, testowe pliki AIFF, pobierz przykłady AIFF, darmowe testowe pliki AIFF, przykłady audio AIFF, przykłady profesjonalnego audio, przykłady dźwięku AIFF, testowe pliki .aiff, przykłady formatów audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AIFF – Pobierz testowe pliki audio AIFF',
+            description: 'Pobierz darmowe przykładowe pliki audio AIFF Audio Interchange File Format AIFF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AIFF i narzędzi profesjonalnych formatów audio.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AIFF',
+            description: 'Pobierz darmowe przykładowe pliki audio AIFF Audio Interchange File Format AIFF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania audio, konwersji AIFF i profesjonalnych formatów audio.'
+          },
+          about_description: 'To są testowe pliki audio AIFF (Audio Interchange File Format) w różnych rozmiarach do celów testowych'
+        },
+        aif: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AIF – Pobierz pliki audio AIF | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki audio AIF Audio Interchange File Format AIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AIF i narzędzi profesjonalnych formatów audio.',
+            keywords: 'przykładowe pliki AIF, testowe pliki AIF, pobierz przykłady AIF, darmowe testowe pliki AIF, przykłady audio AIF, przykłady profesjonalnego audio, przykłady dźwięku AIF, testowe pliki .aif, przykłady formatów audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AIF – Pobierz testowe pliki audio AIF',
+            description: 'Pobierz darmowe przykładowe pliki audio AIF Audio Interchange File Format AIF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AIF i narzędzi profesjonalnych formatów audio.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AIF',
+            description: 'Pobierz darmowe przykładowe pliki audio AIF Audio Interchange File Format AIF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania audio, konwersji AIF i profesjonalnych formatów audio.'
+          },
+          about_description: 'To są testowe pliki audio AIF (Audio Interchange File Format) w różnych rozmiarach do celów testowych'
+        },
+        ai: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AI – Pobierz pliki Adobe Illustrator | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki grafiki wektorowej Adobe Illustrator AI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądania grafiki wektorowej, konwersji AI i narzędzi projektowania ilustracji.',
+            keywords: 'przykładowe pliki AI, testowe pliki AI, pobierz przykłady AI, darmowe testowe pliki AI, przykłady Adobe Illustrator, przykłady grafiki wektorowej, przykłady ilustracji AI, testowe pliki .ai, przykłady formatów projektowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AI – Pobierz testowe pliki Adobe Illustrator',
+            description: 'Pobierz darmowe przykładowe pliki grafiki wektorowej Adobe Illustrator AI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądania grafiki wektorowej, konwersji AI i narzędzi projektowania ilustracji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AI',
+            description: 'Pobierz darmowe przykładowe pliki grafiki wektorowej Adobe Illustrator AI do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przeglądania grafiki wektorowej, konwersji AI i projektowania ilustracji.'
+          },
+          about_description: 'To są testowe pliki grafiki wektorowej AI (Adobe Illustrator) w różnych rozmiarach do celów testowych'
+        },
+        ac3: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AC3 – Pobierz pliki audio AC3 | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki audio AC3 Dolby Digital AC3 do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AC3 i narzędzi formatów dźwięku przestrzennego.',
+            keywords: 'przykładowe pliki AC3, testowe pliki AC3, pobierz przykłady AC3, darmowe testowe pliki AC3, przykłady audio AC3, przykłady Dolby Digital, przykłady dźwięku AC3, testowe pliki .ac3, przykłady formatów audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AC3 – Pobierz testowe pliki audio AC3',
+            description: 'Pobierz darmowe przykładowe pliki audio AC3 Dolby Digital AC3 do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AC3 i narzędzi formatów dźwięku przestrzennego.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AC3',
+            description: 'Pobierz darmowe przykładowe pliki audio AC3 Dolby Digital AC3 do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania audio, konwersji AC3 i formatów dźwięku przestrzennego.'
+          },
+          about_description: 'To są testowe pliki audio AC3 (Dolby Digital) w różnych rozmiarach do celów testowych'
         }
       }
     }
