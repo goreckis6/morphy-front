@@ -4,6 +4,11 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Download, FileSpreadsheet, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import { getStorageUrl } from '../../config/storage';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { useNavigate } from 'react-router-dom';
+import '../../locales/samplePages';
 
 interface SampleFile {
   size: string;
@@ -12,6 +17,9 @@ interface SampleFile {
 }
 
 export default function SampleCustomerDatabaseSql() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  usePathLanguageSync(i18n);
   const [downloadingIndex, setDownloadingIndex] = useState<number | null>(null);
   const [countdown, setCountdown] = useState<number | null>(null);
   const [readyToDownload, setReadyToDownload] = useState<number | null>(null);
@@ -24,6 +32,25 @@ export default function SampleCustomerDatabaseSql() {
     { size: '50mb', filename: 'sample-customer-database-sql-50mb.sql', displaySize: '50 MB' },
     { size: '100mb', filename: 'sample-customer-database-sql-100mb.sql', displaySize: '100 MB' }
   ];
+
+  const formatKey = 'customer-database-sql';
+  const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
+
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
+  };
+
+  const handleBack = () => {
+    navigate(getLocalizedUrl('/', i18n.language));
+  };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
 
   const handleDownload = async (index: number, filename: string) => {
     setDownloadingIndex(index);
@@ -62,20 +89,6 @@ export default function SampleCustomerDatabaseSql() {
     setTimeout(() => {
       setDownloadComplete(null);
     }, 2000);
-  };
-
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free Customer Database SQL Sample Files - Download Test SQL Database Files",
-    "url": "https://morphyhub.com/samples/sample-customer-database-sql",
-    "description": "Download free Customer Database SQL sample SQL database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL database imports, SQL parsing, and database management tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    navigate(getLocalizedUrl('/', i18n.language));
   };
 
   return (
