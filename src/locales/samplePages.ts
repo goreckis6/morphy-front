@@ -1343,6 +1343,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available to test your SSL certificate generation, CSR parsing, and certificate authority tools.'
           },
           about_description: 'These are test CSR (Certificate Signing Request) files in various sizes for testing purposes'
+        },
+        cs: {
+          meta: {
+            title: 'Free C# Sample Files Download - Test C# Source Code Files | MorphyHub',
+            description: 'Download free C# sample C# source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C# code analysis, .NET compilation, and C# development tools.',
+            keywords: 'C# sample files, test C# files, download C# samples, free C# test files, C# source code samples, .NET code samples, C# program samples, .cs test files, C# development samples, C# code samples'
+          },
+          schema: {
+            name: 'Free C# Sample Files - Download Test C# Source Code Files',
+            description: 'Download free C# sample C# source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C# code analysis, .NET compilation, and C# development tools.'
+          },
+          hero: {
+            title: 'C# Sample Files',
+            description: 'Download free C# sample C# source code files for testing. Multiple file sizes available to test your C# code analysis, .NET compilation, and C# development tools.'
+          },
+          about_description: 'These are test C# source code files in various sizes for testing purposes'
+        },
+        cpio: {
+          meta: {
+            title: 'Free CPIO Sample Files Download - Test CPIO Archive Files | MorphyHub',
+            description: 'Download free CPIO sample CPIO archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CPIO archive extraction, CPIO compression, and Unix archive tools.',
+            keywords: 'CPIO sample files, test CPIO files, download CPIO samples, free CPIO test files, CPIO archive samples, Unix archive samples, CPIO compression samples, .cpio test files, archive format samples'
+          },
+          schema: {
+            name: 'Free CPIO Sample Files - Download Test CPIO Archive Files',
+            description: 'Download free CPIO sample CPIO archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CPIO archive extraction, CPIO compression, and Unix archive tools.'
+          },
+          hero: {
+            title: 'CPIO Sample Files',
+            description: 'Download free CPIO sample CPIO archive files for testing. Multiple file sizes available to test your CPIO archive extraction, CPIO compression, and Unix archive tools.'
+          },
+          about_description: 'These are test CPIO (Copy In, Copy Out) archive files in various sizes for testing purposes'
+        },
+        'config-ini': {
+          meta: {
+            title: 'Free Config INI Sample Files Download - Test Configuration INI Files | MorphyHub',
+            description: 'Download free Config INI sample configuration INI files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and application settings tools.',
+            keywords: 'Config INI sample files, test INI files, download INI samples, free INI test files, configuration INI samples, INI config samples, .ini test files, configuration file samples'
+          },
+          schema: {
+            name: 'Free Config INI Sample Files - Download Test Configuration INI Files',
+            description: 'Download free Config INI sample configuration INI files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI file parsing, configuration management, and application settings tools.'
+          },
+          hero: {
+            title: 'Config INI Sample Files',
+            description: 'Download free Config INI sample configuration INI files for testing. Multiple file sizes available to test your INI file parsing, configuration management, and application settings tools.'
+          },
+          about_description: 'These are test Config INI configuration files in various sizes for testing purposes'
+        },
+        conf: {
+          meta: {
+            title: 'Free CONF Sample Files Download - Test Configuration Files | MorphyHub',
+            description: 'Download free CONF sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing configuration file parsing, server configuration, and application settings tools.',
+            keywords: 'CONF sample files, test CONF files, download CONF samples, free CONF test files, configuration file samples, server config samples, .conf test files, config file samples'
+          },
+          schema: {
+            name: 'Free CONF Sample Files - Download Test Configuration Files',
+            description: 'Download free CONF sample configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing configuration file parsing, server configuration, and application settings tools.'
+          },
+          hero: {
+            title: 'CONF Sample Files',
+            description: 'Download free CONF sample configuration files for testing. Multiple file sizes available to test your configuration file parsing, server configuration, and application settings tools.'
+          },
+          about_description: 'These are test CONF configuration files in various sizes for testing purposes'
+        },
+        cmd: {
+          meta: {
+            title: 'Free CMD Sample Files Download - Test Windows Command Script Files | MorphyHub',
+            description: 'Download free CMD sample Windows command script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution, Windows command processing, and automation tools.',
+            keywords: 'CMD sample files, test CMD files, download CMD samples, free CMD test files, Windows command script samples, batch script samples, .cmd test files, command script samples'
+          },
+          schema: {
+            name: 'Free CMD Sample Files - Download Test Windows Command Script Files',
+            description: 'Download free CMD sample Windows command script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution, Windows command processing, and automation tools.'
+          },
+          hero: {
+            title: 'CMD Sample Files',
+            description: 'Download free CMD sample Windows command script files for testing. Multiple file sizes available to test your batch script execution, Windows command processing, and automation tools.'
+          },
+          about_description: 'These are test CMD (Windows Command Script) files in various sizes for testing purposes'
+        },
+        'can-log': {
+          meta: {
+            title: 'Free CAN Log Sample Files Download - Test Controller Area Network Log Files | MorphyHub',
+            description: 'Download free CAN Log sample Controller Area Network log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAN bus analysis, automotive diagnostics, and network protocol tools.',
+            keywords: 'CAN Log sample files, test CAN log files, download CAN log samples, free CAN log test files, Controller Area Network samples, CAN bus samples, .log test files, automotive diagnostic samples'
+          },
+          schema: {
+            name: 'Free CAN Log Sample Files - Download Test Controller Area Network Log Files',
+            description: 'Download free CAN Log sample Controller Area Network log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAN bus analysis, automotive diagnostics, and network protocol tools.'
+          },
+          hero: {
+            title: 'CAN Log Sample Files',
+            description: 'Download free CAN Log sample Controller Area Network log files for testing. Multiple file sizes available to test your CAN bus analysis, automotive diagnostics, and network protocol tools.'
+          },
+          about_description: 'These are test CAN Log (Controller Area Network) log files in various sizes for testing purposes'
+        },
+        bvh: {
+          meta: {
+            title: 'Free BVH Sample Files Download - Test BioVision Hierarchy Motion Capture Files | MorphyHub',
+            description: 'Download free BVH sample BioVision Hierarchy motion capture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture playback, 3D animation, and character rigging tools.',
+            keywords: 'BVH sample files, test BVH files, download BVH samples, free BVH test files, BioVision Hierarchy samples, motion capture samples, BVH animation samples, .bvh test files, 3D animation samples'
+          },
+          schema: {
+            name: 'Free BVH Sample Files - Download Test BioVision Hierarchy Motion Capture Files',
+            description: 'Download free BVH sample BioVision Hierarchy motion capture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture playback, 3D animation, and character rigging tools.'
+          },
+          hero: {
+            title: 'BVH Sample Files',
+            description: 'Download free BVH sample BioVision Hierarchy motion capture files for testing. Multiple file sizes available to test your motion capture playback, 3D animation, and character rigging tools.'
+          },
+          about_description: 'These are test BVH (BioVision Hierarchy) motion capture files in various sizes for testing purposes'
+        },
+        'barcode-svg': {
+          meta: {
+            title: 'Free Barcode SVG Sample Files Download - Test Barcode SVG Image Files | MorphyHub',
+            description: 'Download free Barcode SVG sample barcode SVG vector image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing barcode scanning, SVG rendering, and vector graphics tools.',
+            keywords: 'Barcode SVG sample files, test barcode SVG files, download barcode SVG samples, free barcode SVG test files, barcode image samples, SVG barcode samples, .svg test files, vector barcode samples'
+          },
+          schema: {
+            name: 'Free Barcode SVG Sample Files - Download Test Barcode SVG Image Files',
+            description: 'Download free Barcode SVG sample barcode SVG vector image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing barcode scanning, SVG rendering, and vector graphics tools.'
+          },
+          hero: {
+            title: 'Barcode SVG Sample Files',
+            description: 'Download free Barcode SVG sample barcode SVG vector image files for testing. Multiple file sizes available to test your barcode scanning, SVG rendering, and vector graphics tools.'
+          },
+          about_description: 'These are test Barcode SVG vector image files in various sizes for testing purposes'
+        },
+        assetbundle: {
+          meta: {
+            title: 'Free AssetBundle Sample Files Download - Test Unity AssetBundle Files | MorphyHub',
+            description: 'Download free AssetBundle sample Unity AssetBundle archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Unity asset loading, game asset management, and Unity development tools.',
+            keywords: 'AssetBundle sample files, test AssetBundle files, download AssetBundle samples, free AssetBundle test files, Unity AssetBundle samples, game asset samples, .assetbundle test files, Unity asset samples'
+          },
+          schema: {
+            name: 'Free AssetBundle Sample Files - Download Test Unity AssetBundle Files',
+            description: 'Download free AssetBundle sample Unity AssetBundle archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Unity asset loading, game asset management, and Unity development tools.'
+          },
+          hero: {
+            title: 'AssetBundle Sample Files',
+            description: 'Download free AssetBundle sample Unity AssetBundle archive files for testing. Multiple file sizes available to test your Unity asset loading, game asset management, and Unity development tools.'
+          },
+          about_description: 'These are test AssetBundle Unity archive files in various sizes for testing purposes'
+        },
+        ase: {
+          meta: {
+            title: 'Free ASE Sample Files Download - Test Adobe Swatch Exchange Files | MorphyHub',
+            description: 'Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing color palette import, design software integration, and color management tools.',
+            keywords: 'ASE sample files, test ASE files, download ASE samples, free ASE test files, Adobe Swatch Exchange samples, color palette samples, ASE color samples, .ase test files, design color samples'
+          },
+          schema: {
+            name: 'Free ASE Sample Files - Download Test Adobe Swatch Exchange Files',
+            description: 'Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing color palette import, design software integration, and color management tools.'
+          },
+          hero: {
+            title: 'ASE Sample Files',
+            description: 'Download free ASE sample Adobe Swatch Exchange color palette files for testing. Multiple file sizes available to test your color palette import, design software integration, and color management tools.'
+          },
+          about_description: 'These are test ASE (Adobe Swatch Exchange) color palette files in various sizes for testing purposes'
         }
       }
     }
@@ -2642,6 +2802,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki Certificate Signing Request CSR do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia generowania certyfikatów SSL, parsowania CSR i urzędów certyfikacji.'
           },
           about_description: 'To są testowe pliki CSR (Certificate Signing Request) w różnych rozmiarach do celów testowych'
+        },
+        cs: {
+          meta: {
+            title: 'Darmowe przykładowe pliki C# – Pobierz pliki kodu źródłowego C# | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki kodu źródłowego C# C# do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy kodu C#, kompilacji .NET i narzędzi deweloperskich C#.',
+            keywords: 'przykładowe pliki C#, testowe pliki C#, pobierz przykłady C#, darmowe testowe pliki C#, przykłady kodu źródłowego C#, przykłady kodu .NET, przykłady programów C#, testowe pliki .cs, przykłady deweloperskie C#, przykłady kodu C#'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki C# – Pobierz testowe pliki kodu źródłowego C#',
+            description: 'Pobierz darmowe przykładowe pliki kodu źródłowego C# C# do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy kodu C#, kompilacji .NET i narzędzi deweloperskich C#.'
+          },
+          hero: {
+            title: 'Przykładowe pliki C#',
+            description: 'Pobierz darmowe przykładowe pliki kodu źródłowego C# C# do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia analizy kodu C#, kompilacji .NET i deweloperskie C#.'
+          },
+          about_description: 'To są testowe pliki kodu źródłowego C# w różnych rozmiarach do celów testowych'
+        },
+        cpio: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CPIO – Pobierz pliki archiwum CPIO | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwum CPIO CPIO do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów CPIO, kompresji CPIO i narzędzi archiwów Unix.',
+            keywords: 'przykładowe pliki CPIO, testowe pliki CPIO, pobierz przykłady CPIO, darmowe testowe pliki CPIO, przykłady archiwów CPIO, przykłady archiwów Unix, przykłady kompresji CPIO, testowe pliki .cpio, przykłady formatów archiwów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CPIO – Pobierz testowe pliki archiwum CPIO',
+            description: 'Pobierz darmowe przykładowe pliki archiwum CPIO CPIO do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów CPIO, kompresji CPIO i narzędzi archiwów Unix.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CPIO',
+            description: 'Pobierz darmowe przykładowe pliki archiwum CPIO CPIO do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów CPIO, kompresji CPIO i archiwów Unix.'
+          },
+          about_description: 'To są testowe pliki archiwum CPIO (Copy In, Copy Out) w różnych rozmiarach do celów testowych'
+        },
+        'config-ini': {
+          meta: {
+            title: 'Darmowe przykładowe pliki Config INI – Pobierz pliki konfiguracyjne INI | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne INI Config INI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików INI, zarządzania konfiguracją i narzędzi ustawień aplikacji.',
+            keywords: 'przykładowe pliki Config INI, testowe pliki INI, pobierz przykłady INI, darmowe testowe pliki INI, przykłady konfiguracyjne INI, przykłady konfiguracji INI, testowe pliki .ini, przykłady plików konfiguracyjnych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Config INI – Pobierz testowe pliki konfiguracyjne INI',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne INI Config INI do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików INI, zarządzania konfiguracją i narzędzi ustawień aplikacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Config INI',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne INI Config INI do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania plików INI, zarządzania konfiguracją i ustawień aplikacji.'
+          },
+          about_description: 'To są testowe pliki konfiguracyjne Config INI w różnych rozmiarach do celów testowych'
+        },
+        conf: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CONF – Pobierz pliki konfiguracyjne | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne CONF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików konfiguracyjnych, konfiguracji serwerów i narzędzi ustawień aplikacji.',
+            keywords: 'przykładowe pliki CONF, testowe pliki CONF, pobierz przykłady CONF, darmowe testowe pliki CONF, przykłady plików konfiguracyjnych, przykłady konfiguracji serwerów, testowe pliki .conf, przykłady plików konfiguracyjnych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CONF – Pobierz testowe pliki konfiguracyjne',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne CONF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików konfiguracyjnych, konfiguracji serwerów i narzędzi ustawień aplikacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CONF',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracyjne CONF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania plików konfiguracyjnych, konfiguracji serwerów i ustawień aplikacji.'
+          },
+          about_description: 'To są testowe pliki konfiguracyjne CONF w różnych rozmiarach do celów testowych'
+        },
+        cmd: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CMD – Pobierz pliki skryptów poleceń Windows | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki skryptów poleceń Windows CMD do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów wsadowych, przetwarzania poleceń Windows i narzędzi automatyzacji.',
+            keywords: 'przykładowe pliki CMD, testowe pliki CMD, pobierz przykłady CMD, darmowe testowe pliki CMD, przykłady skryptów poleceń Windows, przykłady skryptów wsadowych, testowe pliki .cmd, przykłady skryptów poleceń'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CMD – Pobierz testowe pliki skryptów poleceń Windows',
+            description: 'Pobierz darmowe przykładowe pliki skryptów poleceń Windows CMD do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów wsadowych, przetwarzania poleceń Windows i narzędzi automatyzacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CMD',
+            description: 'Pobierz darmowe przykładowe pliki skryptów poleceń Windows CMD do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wykonywania skryptów wsadowych, przetwarzania poleceń Windows i automatyzacji.'
+          },
+          about_description: 'To są testowe pliki CMD (Windows Command Script) w różnych rozmiarach do celów testowych'
+        },
+        'can-log': {
+          meta: {
+            title: 'Darmowe przykładowe pliki CAN Log – Pobierz pliki logów Controller Area Network | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki logów Controller Area Network CAN Log do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy magistrali CAN, diagnostyki motoryzacyjnej i narzędzi protokołów sieciowych.',
+            keywords: 'przykładowe pliki CAN Log, testowe pliki logów CAN, pobierz przykłady logów CAN, darmowe testowe pliki logów CAN, przykłady Controller Area Network, przykłady magistrali CAN, testowe pliki .log, przykłady diagnostyki motoryzacyjnej'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CAN Log – Pobierz testowe pliki logów Controller Area Network',
+            description: 'Pobierz darmowe przykładowe pliki logów Controller Area Network CAN Log do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy magistrali CAN, diagnostyki motoryzacyjnej i narzędzi protokołów sieciowych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CAN Log',
+            description: 'Pobierz darmowe przykładowe pliki logów Controller Area Network CAN Log do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia analizy magistrali CAN, diagnostyki motoryzacyjnej i protokołów sieciowych.'
+          },
+          about_description: 'To są testowe pliki logów CAN Log (Controller Area Network) w różnych rozmiarach do celów testowych'
+        },
+        bvh: {
+          meta: {
+            title: 'Darmowe przykładowe pliki BVH – Pobierz pliki BioVision Hierarchy | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki motion capture BioVision Hierarchy BVH do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania motion capture, animacji 3D i narzędzi rigowania postaci.',
+            keywords: 'przykładowe pliki BVH, testowe pliki BVH, pobierz przykłady BVH, darmowe testowe pliki BVH, przykłady BioVision Hierarchy, przykłady motion capture, przykłady animacji BVH, testowe pliki .bvh, przykłady animacji 3D'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki BVH – Pobierz testowe pliki motion capture BioVision Hierarchy',
+            description: 'Pobierz darmowe przykładowe pliki motion capture BioVision Hierarchy BVH do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania motion capture, animacji 3D i narzędzi rigowania postaci.'
+          },
+          hero: {
+            title: 'Przykładowe pliki BVH',
+            description: 'Pobierz darmowe przykładowe pliki motion capture BioVision Hierarchy BVH do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania motion capture, animacji 3D i rigowania postaci.'
+          },
+          about_description: 'To są testowe pliki motion capture BVH (BioVision Hierarchy) w różnych rozmiarach do celów testowych'
+        },
+        'barcode-svg': {
+          meta: {
+            title: 'Darmowe przykładowe pliki Barcode SVG – Pobierz pliki obrazów kodów kreskowych SVG | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki obrazów kodów kreskowych SVG Barcode SVG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania skanowania kodów kreskowych, renderowania SVG i narzędzi grafiki wektorowej.',
+            keywords: 'przykładowe pliki Barcode SVG, testowe pliki kodów kreskowych SVG, pobierz przykłady kodów kreskowych SVG, darmowe testowe pliki kodów kreskowych SVG, przykłady obrazów kodów kreskowych, przykłady kodów kreskowych SVG, testowe pliki .svg, przykłady kodów kreskowych wektorowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Barcode SVG – Pobierz testowe pliki obrazów kodów kreskowych SVG',
+            description: 'Pobierz darmowe przykładowe pliki obrazów kodów kreskowych SVG Barcode SVG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania skanowania kodów kreskowych, renderowania SVG i narzędzi grafiki wektorowej.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Barcode SVG',
+            description: 'Pobierz darmowe przykładowe pliki obrazów kodów kreskowych SVG Barcode SVG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia skanowania kodów kreskowych, renderowania SVG i grafiki wektorowej.'
+          },
+          about_description: 'To są testowe pliki obrazów kodów kreskowych SVG Barcode SVG w różnych rozmiarach do celów testowych'
+        },
+        assetbundle: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AssetBundle – Pobierz pliki Unity AssetBundle | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwum Unity AssetBundle AssetBundle do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ładowania zasobów Unity, zarządzania zasobami gier i narzędzi deweloperskich Unity.',
+            keywords: 'przykładowe pliki AssetBundle, testowe pliki AssetBundle, pobierz przykłady AssetBundle, darmowe testowe pliki AssetBundle, przykłady Unity AssetBundle, przykłady zasobów gier, testowe pliki .assetbundle, przykłady zasobów Unity'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AssetBundle – Pobierz testowe pliki Unity AssetBundle',
+            description: 'Pobierz darmowe przykładowe pliki archiwum Unity AssetBundle AssetBundle do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ładowania zasobów Unity, zarządzania zasobami gier i narzędzi deweloperskich Unity.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AssetBundle',
+            description: 'Pobierz darmowe przykładowe pliki archiwum Unity AssetBundle AssetBundle do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ładowania zasobów Unity, zarządzania zasobami gier i deweloperskie Unity.'
+          },
+          about_description: 'To są testowe pliki archiwum Unity AssetBundle w różnych rozmiarach do celów testowych'
+        },
+        ase: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ASE – Pobierz pliki Adobe Swatch Exchange | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki palet kolorów Adobe Swatch Exchange ASE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania importu palet kolorów, integracji oprogramowania do projektowania i narzędzi zarządzania kolorami.',
+            keywords: 'przykładowe pliki ASE, testowe pliki ASE, pobierz przykłady ASE, darmowe testowe pliki ASE, przykłady Adobe Swatch Exchange, przykłady palet kolorów, przykłady kolorów ASE, testowe pliki .ase, przykłady kolorów projektowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ASE – Pobierz testowe pliki Adobe Swatch Exchange',
+            description: 'Pobierz darmowe przykładowe pliki palet kolorów Adobe Swatch Exchange ASE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania importu palet kolorów, integracji oprogramowania do projektowania i narzędzi zarządzania kolorami.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ASE',
+            description: 'Pobierz darmowe przykładowe pliki palet kolorów Adobe Swatch Exchange ASE do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia importu palet kolorów, integracji oprogramowania do projektowania i zarządzania kolorami.'
+          },
+          about_description: 'To są testowe pliki palet kolorów ASE (Adobe Swatch Exchange) w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -3941,6 +4261,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose CSR Certificate Signing Request-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre SSL-Zertifikats-Generierung, CSR-Parsing und Zertifizierungsstelle-Tools zu testen.'
           },
           about_description: 'Dies sind CSR (Certificate Signing Request) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        cs: {
+          meta: {
+            title: 'Kostenlose C# Beispieldateien herunterladen – C#-Quellcodedateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose C# C#-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C#-Code-Analyse, .NET-Kompilierung und C#-Entwicklungstools.',
+            keywords: 'C# Beispieldateien, C# Testdateien, C# Beispiele herunterladen, kostenlose C# Testdateien, C#-Quellcode-Beispiele, .NET-Code-Beispiele, C#-Programm-Beispiele, .cs Testdateien, C#-Entwicklungs-Beispiele, C#-Code-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose C# Beispieldateien – C#-Quellcodedateien testen',
+            description: 'Laden Sie kostenlose C# C#-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C#-Code-Analyse, .NET-Kompilierung und C#-Entwicklungstools.'
+          },
+          hero: {
+            title: 'C# Beispieldateien',
+            description: 'Laden Sie kostenlose C# C#-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C#-Code-Analyse, .NET-Kompilierung und C#-Entwicklungstools zu testen.'
+          },
+          about_description: 'Dies sind C#-Quellcode-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        cpio: {
+          meta: {
+            title: 'Kostenlose CPIO Beispieldateien herunterladen – CPIO-Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CPIO CPIO-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CPIO-Archiv-Extraktion, CPIO-Kompression und Unix-Archiv-Tools.',
+            keywords: 'CPIO Beispieldateien, CPIO Testdateien, CPIO Beispiele herunterladen, kostenlose CPIO Testdateien, CPIO-Archiv-Beispiele, Unix-Archiv-Beispiele, CPIO-Kompressions-Beispiele, .cpio Testdateien, Archiv-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CPIO Beispieldateien – CPIO-Archivdateien testen',
+            description: 'Laden Sie kostenlose CPIO CPIO-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CPIO-Archiv-Extraktion, CPIO-Kompression und Unix-Archiv-Tools.'
+          },
+          hero: {
+            title: 'CPIO Beispieldateien',
+            description: 'Laden Sie kostenlose CPIO CPIO-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CPIO-Archiv-Extraktion, CPIO-Kompression und Unix-Archiv-Tools zu testen.'
+          },
+          about_description: 'Dies sind CPIO (Copy In, Copy Out) Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'config-ini': {
+          meta: {
+            title: 'Kostenlose Config INI Beispieldateien herunterladen – Konfigurations-INI-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Config INI Konfigurations-INI-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Datei-Parsing, Konfigurations-Management und Anwendungseinstellungs-Tools.',
+            keywords: 'Config INI Beispieldateien, INI Testdateien, INI Beispiele herunterladen, kostenlose INI Testdateien, Konfigurations-INI-Beispiele, INI-Konfigurations-Beispiele, .ini Testdateien, Konfigurationsdatei-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Config INI Beispieldateien – Konfigurations-INI-Dateien testen',
+            description: 'Laden Sie kostenlose Config INI Konfigurations-INI-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Datei-Parsing, Konfigurations-Management und Anwendungseinstellungs-Tools.'
+          },
+          hero: {
+            title: 'Config INI Beispieldateien',
+            description: 'Laden Sie kostenlose Config INI Konfigurations-INI-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre INI-Datei-Parsing, Konfigurations-Management und Anwendungseinstellungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind Config INI Konfigurations-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        conf: {
+          meta: {
+            title: 'Kostenlose CONF Beispieldateien herunterladen – Konfigurationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CONF Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Konfigurationsdatei-Parsing, Server-Konfiguration und Anwendungseinstellungs-Tools.',
+            keywords: 'CONF Beispieldateien, CONF Testdateien, CONF Beispiele herunterladen, kostenlose CONF Testdateien, Konfigurationsdatei-Beispiele, Server-Konfigurations-Beispiele, .conf Testdateien, Konfigurationsdatei-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CONF Beispieldateien – Konfigurationsdateien testen',
+            description: 'Laden Sie kostenlose CONF Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Konfigurationsdatei-Parsing, Server-Konfiguration und Anwendungseinstellungs-Tools.'
+          },
+          hero: {
+            title: 'CONF Beispieldateien',
+            description: 'Laden Sie kostenlose CONF Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Konfigurationsdatei-Parsing, Server-Konfiguration und Anwendungseinstellungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind CONF Konfigurations-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        cmd: {
+          meta: {
+            title: 'Kostenlose CMD Beispieldateien herunterladen – Windows-Befehlsskriptdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CMD Windows-Befehlsskript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Batch-Skript-Ausführung, Windows-Befehl-Verarbeitung und Automatisierungs-Tools.',
+            keywords: 'CMD Beispieldateien, CMD Testdateien, CMD Beispiele herunterladen, kostenlose CMD Testdateien, Windows-Befehlsskript-Beispiele, Batch-Skript-Beispiele, .cmd Testdateien, Befehlsskript-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CMD Beispieldateien – Windows-Befehlsskriptdateien testen',
+            description: 'Laden Sie kostenlose CMD Windows-Befehlsskript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Batch-Skript-Ausführung, Windows-Befehl-Verarbeitung und Automatisierungs-Tools.'
+          },
+          hero: {
+            title: 'CMD Beispieldateien',
+            description: 'Laden Sie kostenlose CMD Windows-Befehlsskript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Batch-Skript-Ausführung, Windows-Befehl-Verarbeitung und Automatisierungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind CMD (Windows Command Script) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'can-log': {
+          meta: {
+            title: 'Kostenlose CAN Log Beispieldateien herunterladen – Controller Area Network-Logdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CAN Log Controller Area Network-Log-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAN-Bus-Analyse, Automobildiagnose und Netzwerkprotokoll-Tools.',
+            keywords: 'CAN Log Beispieldateien, CAN-Log-Testdateien, CAN-Log-Beispiele herunterladen, kostenlose CAN-Log-Testdateien, Controller Area Network-Beispiele, CAN-Bus-Beispiele, .log Testdateien, Automobildiagnose-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CAN Log Beispieldateien – Controller Area Network-Logdateien testen',
+            description: 'Laden Sie kostenlose CAN Log Controller Area Network-Log-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAN-Bus-Analyse, Automobildiagnose und Netzwerkprotokoll-Tools.'
+          },
+          hero: {
+            title: 'CAN Log Beispieldateien',
+            description: 'Laden Sie kostenlose CAN Log Controller Area Network-Log-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAN-Bus-Analyse, Automobildiagnose und Netzwerkprotokoll-Tools zu testen.'
+          },
+          about_description: 'Dies sind CAN Log (Controller Area Network) Log-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        bvh: {
+          meta: {
+            title: 'Kostenlose BVH Beispieldateien herunterladen – BioVision Hierarchy Motion-Capture-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose BVH BioVision Hierarchy Motion-Capture-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Motion-Capture-Wiedergabe, 3D-Animation und Character-Rigging-Tools.',
+            keywords: 'BVH Beispieldateien, BVH Testdateien, BVH Beispiele herunterladen, kostenlose BVH Testdateien, BioVision Hierarchy-Beispiele, Motion-Capture-Beispiele, BVH-Animations-Beispiele, .bvh Testdateien, 3D-Animations-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose BVH Beispieldateien – BioVision Hierarchy Motion-Capture-Dateien testen',
+            description: 'Laden Sie kostenlose BVH BioVision Hierarchy Motion-Capture-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Motion-Capture-Wiedergabe, 3D-Animation und Character-Rigging-Tools.'
+          },
+          hero: {
+            title: 'BVH Beispieldateien',
+            description: 'Laden Sie kostenlose BVH BioVision Hierarchy Motion-Capture-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Motion-Capture-Wiedergabe, 3D-Animation und Character-Rigging-Tools zu testen.'
+          },
+          about_description: 'Dies sind BVH (BioVision Hierarchy) Motion-Capture-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'barcode-svg': {
+          meta: {
+            title: 'Kostenlose Barcode SVG Beispieldateien herunterladen – Barcode-SVG-Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Barcode SVG Barcode-SVG-Vektorbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Barcode-Scanning, SVG-Rendering und Vektorgrafik-Tools.',
+            keywords: 'Barcode SVG Beispieldateien, Barcode-SVG-Testdateien, Barcode-SVG-Beispiele herunterladen, kostenlose Barcode-SVG-Testdateien, Barcode-Bild-Beispiele, SVG-Barcode-Beispiele, .svg Testdateien, Vektor-Barcode-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Barcode SVG Beispieldateien – Barcode-SVG-Bilddateien testen',
+            description: 'Laden Sie kostenlose Barcode SVG Barcode-SVG-Vektorbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Barcode-Scanning, SVG-Rendering und Vektorgrafik-Tools.'
+          },
+          hero: {
+            title: 'Barcode SVG Beispieldateien',
+            description: 'Laden Sie kostenlose Barcode SVG Barcode-SVG-Vektorbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Barcode-Scanning, SVG-Rendering und Vektorgrafik-Tools zu testen.'
+          },
+          about_description: 'Dies sind Barcode SVG Vektorbild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        assetbundle: {
+          meta: {
+            title: 'Kostenlose AssetBundle Beispieldateien herunterladen – Unity AssetBundle-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AssetBundle Unity AssetBundle-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Unity-Asset-Laden, Spiel-Asset-Management und Unity-Entwicklungstools.',
+            keywords: 'AssetBundle Beispieldateien, AssetBundle Testdateien, AssetBundle Beispiele herunterladen, kostenlose AssetBundle Testdateien, Unity AssetBundle-Beispiele, Spiel-Asset-Beispiele, .assetbundle Testdateien, Unity-Asset-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AssetBundle Beispieldateien – Unity AssetBundle-Dateien testen',
+            description: 'Laden Sie kostenlose AssetBundle Unity AssetBundle-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Unity-Asset-Laden, Spiel-Asset-Management und Unity-Entwicklungstools.'
+          },
+          hero: {
+            title: 'AssetBundle Beispieldateien',
+            description: 'Laden Sie kostenlose AssetBundle Unity AssetBundle-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Unity-Asset-Laden, Spiel-Asset-Management und Unity-Entwicklungstools zu testen.'
+          },
+          about_description: 'Dies sind AssetBundle Unity-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ase: {
+          meta: {
+            title: 'Kostenlose ASE Beispieldateien herunterladen – Adobe Swatch Exchange-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ASE Adobe Swatch Exchange-Farbpaletten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Farbpaletten-Import, Design-Software-Integration und Farbmanagement-Tools.',
+            keywords: 'ASE Beispieldateien, ASE Testdateien, ASE Beispiele herunterladen, kostenlose ASE Testdateien, Adobe Swatch Exchange-Beispiele, Farbpaletten-Beispiele, ASE-Farb-Beispiele, .ase Testdateien, Design-Farb-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ASE Beispieldateien – Adobe Swatch Exchange-Dateien testen',
+            description: 'Laden Sie kostenlose ASE Adobe Swatch Exchange-Farbpaletten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Farbpaletten-Import, Design-Software-Integration und Farbmanagement-Tools.'
+          },
+          hero: {
+            title: 'ASE Beispieldateien',
+            description: 'Laden Sie kostenlose ASE Adobe Swatch Exchange-Farbpaletten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Farbpaletten-Import, Design-Software-Integration und Farbmanagement-Tools zu testen.'
+          },
+          about_description: 'Dies sind ASE (Adobe Swatch Exchange) Farbpaletten-Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }
