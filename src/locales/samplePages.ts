@@ -224,6 +224,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
           },
           about_description: 'These are test LZMA (Lempel-Ziv-Markov chain Algorithm) compressed archive files in various sizes for testing purposes'
         },
+        jwt: {
+          meta: {
+            title: 'Free JWT Sample Files Download - Test JSON Web Token Files | MorphyHub',
+            description: 'Download free JWT sample JSON Web Token files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JWT token parsing, authentication, and API security tools.',
+            keywords: 'JWT sample files, test JWT files, download JWT samples, free JWT test files, JSON Web Token samples, JWT token files, .jwt test files, authentication token files, JWT parsing test files'
+          },
+          schema: {
+            name: 'Free JWT Sample Files - Download Test JSON Web Token Files',
+            description: 'Download free JWT sample JSON Web Token files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JWT token parsing, authentication, and API security tools.'
+          },
+          hero: {
+            title: 'JWT Sample Files',
+            description: 'Download free JWT sample JSON Web Token files for testing. Multiple file sizes available to test your JWT token parsing and authentication tools.'
+          },
+          about_description: 'These are test JWT (JSON Web Token) files in various sizes for testing purposes'
+        },
+        kt: {
+          meta: {
+            title: 'Free KT Sample Files Download - Test Kotlin Source Files | MorphyHub',
+            description: 'Download free KT sample Kotlin source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Kotlin compilation, IDE support, and development tools.',
+            keywords: 'KT sample files, test KT files, download KT samples, free KT test files, Kotlin source samples, Kotlin code samples, .kt test files, Kotlin programming samples'
+          },
+          schema: {
+            name: 'Free KT Sample Files - Download Test Kotlin Source Files',
+            description: 'Download free KT sample Kotlin source code files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Kotlin compilation, IDE support, and development tools.'
+          },
+          hero: {
+            title: 'KT Sample Files',
+            description: 'Download free KT sample Kotlin source code files for testing. Multiple file sizes available to test your Kotlin compilation and development tools.'
+          },
+          about_description: 'These are test KT (Kotlin) source code files in various sizes for testing purposes'
+        },
+        kml: {
+          meta: {
+            title: 'Free KML Sample Files Download - Test Keyhole Markup Language Files | MorphyHub',
+            description: 'Download free KML sample Keyhole Markup Language geographic data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing geographic visualization, map rendering, and GIS tools.',
+            keywords: 'KML sample files, test KML files, download KML samples, free KML test files, Keyhole Markup Language samples, geographic data samples, .kml test files, map data samples'
+          },
+          schema: {
+            name: 'Free KML Sample Files - Download Test Keyhole Markup Language Files',
+            description: 'Download free KML sample Keyhole Markup Language geographic data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing geographic visualization, map rendering, and GIS tools.'
+          },
+          hero: {
+            title: 'KML Sample Files',
+            description: 'Download free KML sample Keyhole Markup Language geographic data files for testing. Multiple file sizes available to test your geographic visualization and GIS tools.'
+          },
+          about_description: 'These are test KML (Keyhole Markup Language) geographic data files in various sizes for testing purposes'
+        },
+        kmz: {
+          meta: {
+            title: 'Free KMZ Sample Files Download - Test Compressed KML Archive Files | MorphyHub',
+            description: 'Download free KMZ sample compressed KML archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KML archive extraction, geographic data processing, and GIS tools.',
+            keywords: 'KMZ sample files, test KMZ files, download KMZ samples, free KMZ test files, compressed KML samples, KML archive samples, .kmz test files, geographic archive samples'
+          },
+          schema: {
+            name: 'Free KMZ Sample Files - Download Test Compressed KML Archive Files',
+            description: 'Download free KMZ sample compressed KML archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KML archive extraction, geographic data processing, and GIS tools.'
+          },
+          hero: {
+            title: 'KMZ Sample Files',
+            description: 'Download free KMZ sample compressed KML archive files for testing. Multiple file sizes available to test your KML archive extraction and GIS tools.'
+          },
+          about_description: 'These are test KMZ (compressed KML archive) files in various sizes for testing purposes'
+        },
+        laz: {
+          meta: {
+            title: 'Free LAZ Sample Files Download - Test Compressed LAS Point Cloud Files | MorphyHub',
+            description: 'Download free LAZ sample compressed LAS point cloud files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing point cloud processing, 3D scanning data, and LiDAR tools.',
+            keywords: 'LAZ sample files, test LAZ files, download LAZ samples, free LAZ test files, compressed LAS samples, point cloud samples, .laz test files, LiDAR data samples'
+          },
+          schema: {
+            name: 'Free LAZ Sample Files - Download Test Compressed LAS Point Cloud Files',
+            description: 'Download free LAZ sample compressed LAS point cloud files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing point cloud processing, 3D scanning data, and LiDAR tools.'
+          },
+          hero: {
+            title: 'LAZ Sample Files',
+            description: 'Download free LAZ sample compressed LAS point cloud files for testing. Multiple file sizes available to test your point cloud processing and LiDAR tools.'
+          },
+          about_description: 'These are test LAZ (compressed LAS point cloud) files in various sizes for testing purposes'
+        },
+        las: {
+          meta: {
+            title: 'Free LAS Sample Files Download - Test LAS Point Cloud Files | MorphyHub',
+            description: 'Download free LAS sample LAS point cloud files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing point cloud visualization, 3D scanning data, and LiDAR tools.',
+            keywords: 'LAS sample files, test LAS files, download LAS samples, free LAS test files, point cloud samples, LiDAR data samples, .las test files, 3D scanning samples'
+          },
+          schema: {
+            name: 'Free LAS Sample Files - Download Test LAS Point Cloud Files',
+            description: 'Download free LAS sample LAS point cloud files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing point cloud visualization, 3D scanning data, and LiDAR tools.'
+          },
+          hero: {
+            title: 'LAS Sample Files',
+            description: 'Download free LAS sample LAS point cloud files for testing. Multiple file sizes available to test your point cloud visualization and LiDAR tools.'
+          },
+          about_description: 'These are test LAS (point cloud) files in various sizes for testing purposes'
+        },
+        log: {
+          meta: {
+            title: 'Free LOG Sample Files Download - Test Log Files | MorphyHub',
+            description: 'Download free LOG sample log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing log parsing, log analysis, and debugging tools.',
+            keywords: 'LOG sample files, test LOG files, download LOG samples, free LOG test files, log file samples, log data samples, .log test files, log analysis samples'
+          },
+          schema: {
+            name: 'Free LOG Sample Files - Download Test Log Files',
+            description: 'Download free LOG sample log files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing log parsing, log analysis, and debugging tools.'
+          },
+          hero: {
+            title: 'LOG Sample Files',
+            description: 'Download free LOG sample log files for testing. Multiple file sizes available to test your log parsing and analysis tools.'
+          },
+          about_description: 'These are test LOG files in various sizes for testing purposes'
+        },
+        lua: {
+          meta: {
+            title: 'Free LUA Sample Files Download - Test Lua Script Files | MorphyHub',
+            description: 'Download free LUA sample Lua script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Lua script execution, game development, and automation tools.',
+            keywords: 'LUA sample files, test LUA files, download LUA samples, free LUA test files, Lua script samples, Lua code samples, .lua test files, scripting samples'
+          },
+          schema: {
+            name: 'Free LUA Sample Files - Download Test Lua Script Files',
+            description: 'Download free LUA sample Lua script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Lua script execution, game development, and automation tools.'
+          },
+          hero: {
+            title: 'LUA Sample Files',
+            description: 'Download free LUA sample Lua script files for testing. Multiple file sizes available to test your Lua script execution and automation tools.'
+          },
+          about_description: 'These are test LUA (Lua script) files in various sizes for testing purposes'
+        },
+        lha: {
+          meta: {
+            title: 'Free LHA Sample Files Download - Test LHA Archive Files | MorphyHub',
+            description: 'Download free LHA sample LHA archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LHA archive extraction, compression tools, and legacy archive formats.',
+            keywords: 'LHA sample files, test LHA files, download LHA samples, free LHA test files, LHA archive samples, compressed archive samples, .lha test files, archive format samples'
+          },
+          schema: {
+            name: 'Free LHA Sample Files - Download Test LHA Archive Files',
+            description: 'Download free LHA sample LHA archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LHA archive extraction, compression tools, and legacy archive formats.'
+          },
+          hero: {
+            title: 'LHA Sample Files',
+            description: 'Download free LHA sample LHA archive files for testing. Multiple file sizes available to test your LHA archive extraction and compression tools.'
+          },
+          about_description: 'These are test LHA (archive) files in various sizes for testing purposes'
+        },
+        lzh: {
+          meta: {
+            title: 'Free LZH Sample Files Download - Test LZH Archive Files | MorphyHub',
+            description: 'Download free LZH sample LZH archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH archive extraction, compression tools, and legacy archive formats.',
+            keywords: 'LZH sample files, test LZH files, download LZH samples, free LZH test files, LZH archive samples, compressed archive samples, .lzh test files, archive format samples'
+          },
+          schema: {
+            name: 'Free LZH Sample Files - Download Test LZH Archive Files',
+            description: 'Download free LZH sample LZH archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH archive extraction, compression tools, and legacy archive formats.'
+          },
+          hero: {
+            title: 'LZH Sample Files',
+            description: 'Download free LZH sample LZH archive files for testing. Multiple file sizes available to test your LZH archive extraction and compression tools.'
+          },
+          about_description: 'These are test LZH (archive) files in various sizes for testing purposes'
+        },
         m3u: {
           meta: {
             title: 'Free M3U Sample Files Download - Test M3U Playlist Files | MorphyHub',
@@ -2163,6 +2323,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
           },
           about_description: 'To są testowe pliki archiwów skompresowanych LZMA (Lempel-Ziv-Markov chain Algorithm) w różnych rozmiarach do celów testowych'
         },
+        jwt: {
+          meta: {
+            title: 'Darmowe przykładowe pliki JWT – Pobierz pliki tokenów JSON Web Token | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki tokenów JSON Web Token JWT do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania tokenów JWT, uwierzytelniania i narzędzi bezpieczeństwa API.',
+            keywords: 'przykładowe pliki JWT, testowe pliki JWT, pobierz przykłady JWT, darmowe testowe pliki JWT, przykłady tokenów JSON Web Token, pliki tokenów JWT, testowe pliki .jwt, pliki tokenów uwierzytelniania, testowe pliki parsowania JWT'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki JWT – Pobierz testowe pliki tokenów JSON Web Token',
+            description: 'Pobierz darmowe przykładowe pliki tokenów JSON Web Token JWT do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania tokenów JWT, uwierzytelniania i narzędzi bezpieczeństwa API.'
+          },
+          hero: {
+            title: 'Przykładowe pliki JWT',
+            description: 'Pobierz darmowe przykładowe pliki tokenów JSON Web Token JWT do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania tokenów JWT i uwierzytelniania.'
+          },
+          about_description: 'To są testowe pliki JWT (JSON Web Token) w różnych rozmiarach do celów testowych'
+        },
+        kt: {
+          meta: {
+            title: 'Darmowe przykładowe pliki KT – Pobierz pliki źródłowe Kotlin | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki źródłowe Kotlin KT do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji Kotlin, wsparcia IDE i narzędzi programistycznych.',
+            keywords: 'przykładowe pliki KT, testowe pliki KT, pobierz przykłady KT, darmowe testowe pliki KT, przykłady źródłowe Kotlin, przykłady kodu Kotlin, testowe pliki .kt, przykłady programowania Kotlin'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki KT – Pobierz testowe pliki źródłowe Kotlin',
+            description: 'Pobierz darmowe przykładowe pliki źródłowe Kotlin KT do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji Kotlin, wsparcia IDE i narzędzi programistycznych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki KT',
+            description: 'Pobierz darmowe przykładowe pliki źródłowe Kotlin KT do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji Kotlin i programistyczne.'
+          },
+          about_description: 'To są testowe pliki KT (Kotlin) źródłowe w różnych rozmiarach do celów testowych'
+        },
+        kml: {
+          meta: {
+            title: 'Darmowe przykładowe pliki KML – Pobierz pliki Keyhole Markup Language | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki danych geograficznych Keyhole Markup Language KML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wizualizacji geograficznej, renderowania map i narzędzi GIS.',
+            keywords: 'przykładowe pliki KML, testowe pliki KML, pobierz przykłady KML, darmowe testowe pliki KML, przykłady Keyhole Markup Language, przykłady danych geograficznych, testowe pliki .kml, przykłady danych mapowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki KML – Pobierz testowe pliki Keyhole Markup Language',
+            description: 'Pobierz darmowe przykładowe pliki danych geograficznych Keyhole Markup Language KML do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wizualizacji geograficznej, renderowania map i narzędzi GIS.'
+          },
+          hero: {
+            title: 'Przykładowe pliki KML',
+            description: 'Pobierz darmowe przykładowe pliki danych geograficznych Keyhole Markup Language KML do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wizualizacji geograficznej i GIS.'
+          },
+          about_description: 'To są testowe pliki KML (Keyhole Markup Language) danych geograficznych w różnych rozmiarach do celów testowych'
+        },
+        kmz: {
+          meta: {
+            title: 'Darmowe przykładowe pliki KMZ – Pobierz pliki archiwów skompresowanych KML | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwów skompresowanych KML KMZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów KML, przetwarzania danych geograficznych i narzędzi GIS.',
+            keywords: 'przykładowe pliki KMZ, testowe pliki KMZ, pobierz przykłady KMZ, darmowe testowe pliki KMZ, przykłady skompresowanych KML, przykłady archiwów KML, testowe pliki .kmz, przykłady archiwów geograficznych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki KMZ – Pobierz testowe pliki archiwów skompresowanych KML',
+            description: 'Pobierz darmowe przykładowe pliki archiwów skompresowanych KML KMZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów KML, przetwarzania danych geograficznych i narzędzi GIS.'
+          },
+          hero: {
+            title: 'Przykładowe pliki KMZ',
+            description: 'Pobierz darmowe przykładowe pliki archiwów skompresowanych KML KMZ do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów KML i GIS.'
+          },
+          about_description: 'To są testowe pliki KMZ (skompresowane archiwa KML) w różnych rozmiarach do celów testowych'
+        },
+        laz: {
+          meta: {
+            title: 'Darmowe przykładowe pliki LAZ – Pobierz pliki skompresowanych chmur punktów LAS | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki skompresowanych chmur punktów LAS LAZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania chmur punktów, danych skanowania 3D i narzędzi LiDAR.',
+            keywords: 'przykładowe pliki LAZ, testowe pliki LAZ, pobierz przykłady LAZ, darmowe testowe pliki LAZ, przykłady skompresowanych LAS, przykłady chmur punktów, testowe pliki .laz, przykłady danych LiDAR'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki LAZ – Pobierz testowe pliki skompresowanych chmur punktów LAS',
+            description: 'Pobierz darmowe przykładowe pliki skompresowanych chmur punktów LAS LAZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania chmur punktów, danych skanowania 3D i narzędzi LiDAR.'
+          },
+          hero: {
+            title: 'Przykładowe pliki LAZ',
+            description: 'Pobierz darmowe przykładowe pliki skompresowanych chmur punktów LAS LAZ do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania chmur punktów i LiDAR.'
+          },
+          about_description: 'To są testowe pliki LAZ (skompresowane chmury punktów LAS) w różnych rozmiarach do celów testowych'
+        },
+        las: {
+          meta: {
+            title: 'Darmowe przykładowe pliki LAS – Pobierz pliki chmur punktów LAS | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki chmur punktów LAS LAS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wizualizacji chmur punktów, danych skanowania 3D i narzędzi LiDAR.',
+            keywords: 'przykładowe pliki LAS, testowe pliki LAS, pobierz przykłady LAS, darmowe testowe pliki LAS, przykłady chmur punktów, przykłady danych LiDAR, testowe pliki .las, przykłady skanowania 3D'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki LAS – Pobierz testowe pliki chmur punktów LAS',
+            description: 'Pobierz darmowe przykładowe pliki chmur punktów LAS LAS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wizualizacji chmur punktów, danych skanowania 3D i narzędzi LiDAR.'
+          },
+          hero: {
+            title: 'Przykładowe pliki LAS',
+            description: 'Pobierz darmowe przykładowe pliki chmur punktów LAS LAS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wizualizacji chmur punktów i LiDAR.'
+          },
+          about_description: 'To są testowe pliki LAS (chmury punktów) w różnych rozmiarach do celów testowych'
+        },
+        log: {
+          meta: {
+            title: 'Darmowe przykładowe pliki LOG – Pobierz pliki logów | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki logów LOG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania logów, analizy logów i narzędzi debugowania.',
+            keywords: 'przykładowe pliki LOG, testowe pliki LOG, pobierz przykłady LOG, darmowe testowe pliki LOG, przykłady plików logów, przykłady danych logów, testowe pliki .log, przykłady analizy logów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki LOG – Pobierz testowe pliki logów',
+            description: 'Pobierz darmowe przykładowe pliki logów LOG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania logów, analizy logów i narzędzi debugowania.'
+          },
+          hero: {
+            title: 'Przykładowe pliki LOG',
+            description: 'Pobierz darmowe przykładowe pliki logów LOG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania i analizy logów.'
+          },
+          about_description: 'To są testowe pliki LOG w różnych rozmiarach do celów testowych'
+        },
+        lua: {
+          meta: {
+            title: 'Darmowe przykładowe pliki LUA – Pobierz pliki skryptów Lua | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki skryptów Lua LUA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów Lua, rozwoju gier i narzędzi automatyzacji.',
+            keywords: 'przykładowe pliki LUA, testowe pliki LUA, pobierz przykłady LUA, darmowe testowe pliki LUA, przykłady skryptów Lua, przykłady kodu Lua, testowe pliki .lua, przykłady skryptowania'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki LUA – Pobierz testowe pliki skryptów Lua',
+            description: 'Pobierz darmowe przykładowe pliki skryptów Lua LUA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów Lua, rozwoju gier i narzędzi automatyzacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki LUA',
+            description: 'Pobierz darmowe przykładowe pliki skryptów Lua LUA do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia wykonywania skryptów Lua i automatyzacji.'
+          },
+          about_description: 'To są testowe pliki LUA (skrypty Lua) w różnych rozmiarach do celów testowych'
+        },
+        lha: {
+          meta: {
+            title: 'Darmowe przykładowe pliki LHA – Pobierz pliki archiwów LHA | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwów LHA LHA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LHA, narzędzi kompresji i starszych formatów archiwów.',
+            keywords: 'przykładowe pliki LHA, testowe pliki LHA, pobierz przykłady LHA, darmowe testowe pliki LHA, przykłady archiwów LHA, przykłady skompresowanych archiwów, testowe pliki .lha, przykłady formatów archiwów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki LHA – Pobierz testowe pliki archiwów LHA',
+            description: 'Pobierz darmowe przykładowe pliki archiwów LHA LHA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LHA, narzędzi kompresji i starszych formatów archiwów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki LHA',
+            description: 'Pobierz darmowe przykładowe pliki archiwów LHA LHA do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów LHA i kompresji.'
+          },
+          about_description: 'To są testowe pliki LHA (archiwa) w różnych rozmiarach do celów testowych'
+        },
+        lzh: {
+          meta: {
+            title: 'Darmowe przykładowe pliki LZH – Pobierz pliki archiwów LZH | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwów LZH LZH do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LZH, narzędzi kompresji i starszych formatów archiwów.',
+            keywords: 'przykładowe pliki LZH, testowe pliki LZH, pobierz przykłady LZH, darmowe testowe pliki LZH, przykłady archiwów LZH, przykłady skompresowanych archiwów, testowe pliki .lzh, przykłady formatów archiwów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki LZH – Pobierz testowe pliki archiwów LZH',
+            description: 'Pobierz darmowe przykładowe pliki archiwów LZH LZH do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LZH, narzędzi kompresji i starszych formatów archiwów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki LZH',
+            description: 'Pobierz darmowe przykładowe pliki archiwów LZH LZH do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów LZH i kompresji.'
+          },
+          about_description: 'To są testowe pliki LZH (archiwa) w różnych rozmiarach do celów testowych'
+        },
         m3u: {
           meta: {
             title: 'Darmowe przykładowe pliki M3U – Pobierz pliki listy odtwarzania M3U | MorphyHub',
@@ -4101,6 +4421,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose LZMA LZMA-komprimierte Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LZMA-Dekomprimierung, Archiv-Extraktion und Tools für Dateikompression zu testen.'
           },
           about_description: 'Dies sind LZMA (Lempel-Ziv-Markov chain Algorithm) komprimierte Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        jwt: {
+          meta: {
+            title: 'Kostenlose JWT Beispieldateien herunterladen – JSON Web Token-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose JWT JSON Web Token-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JWT-Token-Parsing, Authentifizierung und API-Sicherheitstools.',
+            keywords: 'JWT Beispieldateien, JWT Testdateien, JWT Beispiele herunterladen, kostenlose JWT Testdateien, JSON Web Token-Beispiele, JWT-Token-Dateien, .jwt Testdateien, Authentifizierungs-Token-Dateien, JWT-Parsing-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose JWT Beispieldateien – JSON Web Token-Dateien testen',
+            description: 'Laden Sie kostenlose JWT JSON Web Token-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JWT-Token-Parsing, Authentifizierung und API-Sicherheitstools.'
+          },
+          hero: {
+            title: 'JWT Beispieldateien',
+            description: 'Laden Sie kostenlose JWT JSON Web Token-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JWT-Token-Parsing- und Authentifizierungstools zu testen.'
+          },
+          about_description: 'Dies sind JWT (JSON Web Token) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        kt: {
+          meta: {
+            title: 'Kostenlose KT Beispieldateien herunterladen – Kotlin-Quelldateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose KT Kotlin-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Kotlin-Kompilierung, IDE-Unterstützung und Entwicklungstools.',
+            keywords: 'KT Beispieldateien, KT Testdateien, KT Beispiele herunterladen, kostenlose KT Testdateien, Kotlin-Quellcode-Beispiele, Kotlin-Code-Beispiele, .kt Testdateien, Kotlin-Programmierungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose KT Beispieldateien – Kotlin-Quelldateien testen',
+            description: 'Laden Sie kostenlose KT Kotlin-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Kotlin-Kompilierung, IDE-Unterstützung und Entwicklungstools.'
+          },
+          hero: {
+            title: 'KT Beispieldateien',
+            description: 'Laden Sie kostenlose KT Kotlin-Quellcode-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Kotlin-Kompilierungs- und Entwicklungstools zu testen.'
+          },
+          about_description: 'Dies sind KT (Kotlin) Quellcode-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        kml: {
+          meta: {
+            title: 'Kostenlose KML Beispieldateien herunterladen – Keyhole Markup Language-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose KML Keyhole Markup Language geografische Daten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von geografischer Visualisierung, Karten-Rendering und GIS-Tools.',
+            keywords: 'KML Beispieldateien, KML Testdateien, KML Beispiele herunterladen, kostenlose KML Testdateien, Keyhole Markup Language-Beispiele, geografische Daten-Beispiele, .kml Testdateien, Kartendaten-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose KML Beispieldateien – Keyhole Markup Language-Dateien testen',
+            description: 'Laden Sie kostenlose KML Keyhole Markup Language geografische Daten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von geografischer Visualisierung, Karten-Rendering und GIS-Tools.'
+          },
+          hero: {
+            title: 'KML Beispieldateien',
+            description: 'Laden Sie kostenlose KML Keyhole Markup Language geografische Daten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre geografische Visualisierungs- und GIS-Tools zu testen.'
+          },
+          about_description: 'Dies sind KML (Keyhole Markup Language) geografische Daten-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        kmz: {
+          meta: {
+            title: 'Kostenlose KMZ Beispieldateien herunterladen – komprimierte KML-Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose KMZ komprimierte KML-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von KML-Archiv-Extraktion, geografischer Datenverarbeitung und GIS-Tools.',
+            keywords: 'KMZ Beispieldateien, KMZ Testdateien, KMZ Beispiele herunterladen, kostenlose KMZ Testdateien, komprimierte KML-Beispiele, KML-Archiv-Beispiele, .kmz Testdateien, geografische Archiv-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose KMZ Beispieldateien – komprimierte KML-Archivdateien testen',
+            description: 'Laden Sie kostenlose KMZ komprimierte KML-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von KML-Archiv-Extraktion, geografischer Datenverarbeitung und GIS-Tools.'
+          },
+          hero: {
+            title: 'KMZ Beispieldateien',
+            description: 'Laden Sie kostenlose KMZ komprimierte KML-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre KML-Archiv-Extraktions- und GIS-Tools zu testen.'
+          },
+          about_description: 'Dies sind KMZ (komprimierte KML-Archive) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        laz: {
+          meta: {
+            title: 'Kostenlose LAZ Beispieldateien herunterladen – komprimierte LAS-Punktwolken-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose LAZ komprimierte LAS-Punktwolken-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Punktwolken-Verarbeitung, 3D-Scanning-Daten und LiDAR-Tools.',
+            keywords: 'LAZ Beispieldateien, LAZ Testdateien, LAZ Beispiele herunterladen, kostenlose LAZ Testdateien, komprimierte LAS-Beispiele, Punktwolken-Beispiele, .laz Testdateien, LiDAR-Daten-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose LAZ Beispieldateien – komprimierte LAS-Punktwolken-Dateien testen',
+            description: 'Laden Sie kostenlose LAZ komprimierte LAS-Punktwolken-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Punktwolken-Verarbeitung, 3D-Scanning-Daten und LiDAR-Tools.'
+          },
+          hero: {
+            title: 'LAZ Beispieldateien',
+            description: 'Laden Sie kostenlose LAZ komprimierte LAS-Punktwolken-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Punktwolken-Verarbeitungs- und LiDAR-Tools zu testen.'
+          },
+          about_description: 'Dies sind LAZ (komprimierte LAS-Punktwolken) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        las: {
+          meta: {
+            title: 'Kostenlose LAS Beispieldateien herunterladen – LAS-Punktwolken-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose LAS LAS-Punktwolken-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Punktwolken-Visualisierung, 3D-Scanning-Daten und LiDAR-Tools.',
+            keywords: 'LAS Beispieldateien, LAS Testdateien, LAS Beispiele herunterladen, kostenlose LAS Testdateien, Punktwolken-Beispiele, LiDAR-Daten-Beispiele, .las Testdateien, 3D-Scanning-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose LAS Beispieldateien – LAS-Punktwolken-Dateien testen',
+            description: 'Laden Sie kostenlose LAS LAS-Punktwolken-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Punktwolken-Visualisierung, 3D-Scanning-Daten und LiDAR-Tools.'
+          },
+          hero: {
+            title: 'LAS Beispieldateien',
+            description: 'Laden Sie kostenlose LAS LAS-Punktwolken-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Punktwolken-Visualisierungs- und LiDAR-Tools zu testen.'
+          },
+          about_description: 'Dies sind LAS (Punktwolken) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        log: {
+          meta: {
+            title: 'Kostenlose LOG Beispieldateien herunterladen – Log-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose LOG Log-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Log-Parsing, Log-Analyse und Debugging-Tools.',
+            keywords: 'LOG Beispieldateien, LOG Testdateien, LOG Beispiele herunterladen, kostenlose LOG Testdateien, Log-Datei-Beispiele, Log-Daten-Beispiele, .log Testdateien, Log-Analyse-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose LOG Beispieldateien – Log-Dateien testen',
+            description: 'Laden Sie kostenlose LOG Log-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Log-Parsing, Log-Analyse und Debugging-Tools.'
+          },
+          hero: {
+            title: 'LOG Beispieldateien',
+            description: 'Laden Sie kostenlose LOG Log-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Log-Parsing- und Analyse-Tools zu testen.'
+          },
+          about_description: 'Dies sind LOG Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        lua: {
+          meta: {
+            title: 'Kostenlose LUA Beispieldateien herunterladen – Lua-Skript-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose LUA Lua-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Lua-Skript-Ausführung, Spielentwicklung und Automatisierungs-Tools.',
+            keywords: 'LUA Beispieldateien, LUA Testdateien, LUA Beispiele herunterladen, kostenlose LUA Testdateien, Lua-Skript-Beispiele, Lua-Code-Beispiele, .lua Testdateien, Skripting-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose LUA Beispieldateien – Lua-Skript-Dateien testen',
+            description: 'Laden Sie kostenlose LUA Lua-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Lua-Skript-Ausführung, Spielentwicklung und Automatisierungs-Tools.'
+          },
+          hero: {
+            title: 'LUA Beispieldateien',
+            description: 'Laden Sie kostenlose LUA Lua-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Lua-Skript-Ausführungs- und Automatisierungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind LUA (Lua-Skript) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        lha: {
+          meta: {
+            title: 'Kostenlose LHA Beispieldateien herunterladen – LHA-Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose LHA LHA-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LHA-Archiv-Extraktion, Komprimierungs-Tools und Legacy-Archivformaten.',
+            keywords: 'LHA Beispieldateien, LHA Testdateien, LHA Beispiele herunterladen, kostenlose LHA Testdateien, LHA-Archiv-Beispiele, komprimierte Archiv-Beispiele, .lha Testdateien, Archivformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose LHA Beispieldateien – LHA-Archivdateien testen',
+            description: 'Laden Sie kostenlose LHA LHA-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LHA-Archiv-Extraktion, Komprimierungs-Tools und Legacy-Archivformaten.'
+          },
+          hero: {
+            title: 'LHA Beispieldateien',
+            description: 'Laden Sie kostenlose LHA LHA-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LHA-Archiv-Extraktions- und Komprimierungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind LHA (Archiv) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        lzh: {
+          meta: {
+            title: 'Kostenlose LZH Beispieldateien herunterladen – LZH-Archivdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose LZH LZH-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZH-Archiv-Extraktion, Komprimierungs-Tools und Legacy-Archivformaten.',
+            keywords: 'LZH Beispieldateien, LZH Testdateien, LZH Beispiele herunterladen, kostenlose LZH Testdateien, LZH-Archiv-Beispiele, komprimierte Archiv-Beispiele, .lzh Testdateien, Archivformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose LZH Beispieldateien – LZH-Archivdateien testen',
+            description: 'Laden Sie kostenlose LZH LZH-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZH-Archiv-Extraktion, Komprimierungs-Tools und Legacy-Archivformaten.'
+          },
+          hero: {
+            title: 'LZH Beispieldateien',
+            description: 'Laden Sie kostenlose LZH LZH-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LZH-Archiv-Extraktions- und Komprimierungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind LZH (Archiv) Testdateien in verschiedenen Größen für Testzwecke'
         },
         m3u: {
           meta: {
