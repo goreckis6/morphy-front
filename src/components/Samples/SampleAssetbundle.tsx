@@ -4,6 +4,11 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { Download, Box, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import { getStorageUrl } from '../../config/storage';
+import { useTranslation } from 'react-i18next';
+import { getLocalizedUrl } from '../../i18n';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import { useNavigate } from 'react-router-dom';
+import '../../locales/samplePages';
 
 interface SampleFile {
   size: string;
@@ -12,6 +17,9 @@ interface SampleFile {
 }
 
 export default function SampleAssetbundle() {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  usePathLanguageSync(i18n);
   const [downloadingIndex, setDownloadingIndex] = useState<number | null>(null);
   const [countdown, setCountdown] = useState<number | null>(null);
   const [readyToDownload, setReadyToDownload] = useState<number | null>(null);
