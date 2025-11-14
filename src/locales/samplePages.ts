@@ -208,6 +208,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
           },
           about_description: 'These are test MOBI files in various sizes for testing purposes'
         },
+        lzma: {
+          meta: {
+            title: 'Free LZMA Sample Files Download - Test LZMA Compressed Files | MorphyHub',
+            description: 'Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZMA decompression, archive extraction, and file compression tools.',
+            keywords: 'LZMA sample files, test LZMA files, download LZMA samples, free LZMA test files, LZMA compressed archive samples, compressed file samples, .lzma test files, compression format samples'
+          },
+          schema: {
+            name: 'Free LZMA Sample Files - Download Test LZMA Compressed Files',
+            description: 'Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZMA decompression, archive extraction, and file compression tools.'
+          },
+          hero: {
+            title: 'LZMA Sample Files',
+            description: 'Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available to test your LZMA decompression, archive extraction, and file compression tools.'
+          },
+          about_description: 'These are test LZMA (Lempel-Ziv-Markov chain Algorithm) compressed archive files in various sizes for testing purposes'
+        },
+        m3u: {
+          meta: {
+            title: 'Free M3U Sample Files Download - Test M3U Playlist Files | MorphyHub',
+            description: 'Download free M3U sample M3U playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U playlist parsing, media player compatibility, and audio streaming tools.',
+            keywords: 'M3U sample files, test M3U files, download M3U samples, free M3U test files, M3U playlist samples, media player playlist samples, .m3u test files, audio playlist samples'
+          },
+          schema: {
+            name: 'Free M3U Sample Files - Download Test M3U Playlist Files',
+            description: 'Download free M3U sample M3U playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U playlist parsing, media player compatibility, and audio streaming tools.'
+          },
+          hero: {
+            title: 'M3U Sample Files',
+            description: 'Download free M3U sample M3U playlist files for testing. Multiple file sizes available to test your M3U playlist parsing, media player compatibility, and audio streaming tools.'
+          },
+          about_description: 'These are test M3U (MP3 URL) playlist files in various sizes for testing purposes'
+        },
+        m3u8: {
+          meta: {
+            title: 'Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files | MorphyHub',
+            description: 'Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U8 playlist parsing, HLS streaming, and video player compatibility tools.',
+            keywords: 'M3U8 sample files, test M3U8 files, download M3U8 samples, free M3U8 test files, M3U8 HLS playlist samples, HLS streaming playlist samples, .m3u8 test files, video playlist samples'
+          },
+          schema: {
+            name: 'Free M3U8 Sample Files - Download Test M3U8 HLS Playlist Files',
+            description: 'Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M3U8 playlist parsing, HLS streaming, and video player compatibility tools.'
+          },
+          hero: {
+            title: 'M3U8 Sample Files',
+            description: 'Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available to test your M3U8 playlist parsing, HLS streaming, and video player compatibility tools.'
+          },
+          about_description: 'These are test M3U8 (HTTP Live Streaming) playlist files in various sizes for testing purposes'
+        },
+        m4a: {
+          meta: {
+            title: 'Free M4A Sample Files Download - Test M4A Audio Files | MorphyHub',
+            description: 'Download free M4A sample M4A audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4A audio conversion, M4A playback, and audio processing tools.',
+            keywords: 'M4A sample files, test M4A files, download M4A samples, free M4A test files, M4A audio samples, Apple audio format samples, .m4a test files, audio format samples'
+          },
+          schema: {
+            name: 'Free M4A Sample Files - Download Test M4A Audio Files',
+            description: 'Download free M4A sample M4A audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4A audio conversion, M4A playback, and audio processing tools.'
+          },
+          hero: {
+            title: 'M4A Sample Files',
+            description: 'Download free M4A sample M4A audio files for testing. Multiple file sizes available to test your M4A audio conversion, M4A playback, and audio processing tools.'
+          },
+          about_description: 'These are test M4A (MPEG-4 Audio) audio files in various sizes for testing purposes'
+        },
+        m4v: {
+          meta: {
+            title: 'Free M4V Sample Files Download - Test M4V Video Files | MorphyHub',
+            description: 'Download free M4V sample M4V video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4V video conversion, M4V playback, and video processing tools.',
+            keywords: 'M4V sample files, test M4V files, download M4V samples, free M4V test files, M4V video samples, Apple video format samples, .m4v test files, video format samples'
+          },
+          schema: {
+            name: 'Free M4V Sample Files - Download Test M4V Video Files',
+            description: 'Download free M4V sample M4V video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4V video conversion, M4V playback, and video processing tools.'
+          },
+          hero: {
+            title: 'M4V Sample Files',
+            description: 'Download free M4V sample M4V video files for testing. Multiple file sizes available to test your M4V video conversion, M4V playback, and video processing tools.'
+          },
+          about_description: 'These are test M4V (MPEG-4 Video) video files in various sizes for testing purposes'
+        },
+        ma: {
+          meta: {
+            title: 'Free MA Sample Files Download - Test Maya ASCII Scene Files | MorphyHub',
+            description: 'Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MA file parsing, and 3D animation tools.',
+            keywords: 'MA sample files, test MA files, download MA samples, free MA test files, Maya ASCII scene samples, 3D animation scene samples, .ma test files, Maya scene samples'
+          },
+          schema: {
+            name: 'Free MA Sample Files - Download Test Maya ASCII Scene Files',
+            description: 'Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MA file parsing, and 3D animation tools.'
+          },
+          hero: {
+            title: 'MA Sample Files',
+            description: 'Download free MA sample Maya ASCII scene files for testing. Multiple file sizes available to test your Maya scene conversion, MA file parsing, and 3D animation tools.'
+          },
+          about_description: 'These are test MA (Maya ASCII) scene files in various sizes for testing purposes'
+        },
+        makefile: {
+          meta: {
+            title: 'Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyHub',
+            description: 'Download free Makefile sample build configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Makefile parsing, build system automation, and software compilation tools.',
+            keywords: 'Makefile sample files, test Makefile files, download Makefile samples, free Makefile test files, build configuration samples, Makefile build samples, Makefile test files, build automation samples'
+          },
+          schema: {
+            name: 'Free Makefile Sample Files - Download Test Makefile Build Configuration Files',
+            description: 'Download free Makefile sample build configuration files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Makefile parsing, build system automation, and software compilation tools.'
+          },
+          hero: {
+            title: 'Makefile Sample Files',
+            description: 'Download free Makefile sample build configuration files for testing. Multiple file sizes available to test your Makefile parsing, build system automation, and software compilation tools.'
+          },
+          about_description: 'These are test Makefile build configuration files in various sizes for testing purposes'
+        },
+        max: {
+          meta: {
+            title: 'Free MAX Sample Files Download - Test 3ds Max Scene Files | MorphyHub',
+            description: 'Download free MAX sample 3ds Max scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3ds Max scene conversion, MAX file parsing, and 3D modeling tools.',
+            keywords: 'MAX sample files, test MAX files, download MAX samples, free MAX test files, 3ds Max scene samples, 3D modeling scene samples, .max test files, 3ds Max scene samples'
+          },
+          schema: {
+            name: 'Free MAX Sample Files - Download Test 3ds Max Scene Files',
+            description: 'Download free MAX sample 3ds Max scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3ds Max scene conversion, MAX file parsing, and 3D modeling tools.'
+          },
+          hero: {
+            title: 'MAX Sample Files',
+            description: 'Download free MAX sample 3ds Max scene files for testing. Multiple file sizes available to test your 3ds Max scene conversion, MAX file parsing, and 3D modeling tools.'
+          },
+          about_description: 'These are test MAX (3ds Max) scene files in various sizes for testing purposes'
+        },
+        mb: {
+          meta: {
+            title: 'Free MB Sample Files Download - Test Maya Binary Scene Files | MorphyHub',
+            description: 'Download free MB sample Maya Binary scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MB file parsing, and 3D animation tools.',
+            keywords: 'MB sample files, test MB files, download MB samples, free MB test files, Maya Binary scene samples, 3D animation scene samples, .mb test files, Maya scene samples'
+          },
+          schema: {
+            name: 'Free MB Sample Files - Download Test Maya Binary Scene Files',
+            description: 'Download free MB sample Maya Binary scene files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Maya scene conversion, MB file parsing, and 3D animation tools.'
+          },
+          hero: {
+            title: 'MB Sample Files',
+            description: 'Download free MB sample Maya Binary scene files for testing. Multiple file sizes available to test your Maya scene conversion, MB file parsing, and 3D animation tools.'
+          },
+          about_description: 'These are test MB (Maya Binary) scene files in various sizes for testing purposes'
+        },
+        mbtiles: {
+          meta: {
+            title: 'Free MBTiles Sample Files Download - Test MBTiles Map Database Files | MorphyHub',
+            description: 'Download free MBTiles sample map database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MBTiles parsing, map tile extraction, and geographic data processing tools.',
+            keywords: 'MBTiles sample files, test MBTiles files, download MBTiles samples, free MBTiles test files, MBTiles map database samples, MBTiles geographic files, .mbtiles test files, map tile files, MBTiles parsing test files'
+          },
+          schema: {
+            name: 'Free MBTiles Sample Files - Download Test MBTiles Map Database Files',
+            description: 'Download free MBTiles sample map database files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MBTiles parsing, map tile extraction, and geographic data processing tools.'
+          },
+          hero: {
+            title: 'MBTiles Sample Files',
+            description: 'Download free MBTiles sample map database files for testing. Multiple file sizes available to test your MBTiles parsing and map tile extraction tools.'
+          },
+          about_description: 'These are test MBTiles (map database) files in various sizes for testing purposes'
+        },
         csv: {
           meta: {
             title: 'Free CSV Sample Files Download - Test Data Files | MorphyHub',
@@ -1987,6 +2147,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
           },
           about_description: 'To są testowe pliki MOBI w różnych rozmiarach do celów testowych'
         },
+        lzma: {
+          meta: {
+            title: 'Darmowe przykładowe pliki LZMA – Pobierz pliki skompresowane LZMA | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki skompresowane LZMA LZMA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji LZMA, ekstrakcji archiwów i narzędzi kompresji plików.',
+            keywords: 'przykładowe pliki LZMA, testowe pliki LZMA, pobierz przykłady LZMA, darmowe testowe pliki LZMA, przykłady archiwów skompresowanych LZMA, przykłady skompresowanych plików, testowe pliki .lzma, przykłady formatów kompresji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki LZMA – Pobierz testowe pliki skompresowane LZMA',
+            description: 'Pobierz darmowe przykładowe pliki skompresowane LZMA LZMA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji LZMA, ekstrakcji archiwów i narzędzi kompresji plików.'
+          },
+          hero: {
+            title: 'Przykładowe pliki LZMA',
+            description: 'Pobierz darmowe przykładowe pliki skompresowane LZMA LZMA do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia dekompresji LZMA, ekstrakcji archiwów i kompresji plików.'
+          },
+          about_description: 'To są testowe pliki archiwów skompresowanych LZMA (Lempel-Ziv-Markov chain Algorithm) w różnych rozmiarach do celów testowych'
+        },
+        m3u: {
+          meta: {
+            title: 'Darmowe przykładowe pliki M3U – Pobierz pliki listy odtwarzania M3U | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki listy odtwarzania M3U M3U do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania listy odtwarzania M3U, zgodności z odtwarzaczami multimedialnymi i narzędzi strumieniowania audio.',
+            keywords: 'przykładowe pliki M3U, testowe pliki M3U, pobierz przykłady M3U, darmowe testowe pliki M3U, przykłady listy odtwarzania M3U, przykłady listy odtwarzania odtwarzaczy multimedialnych, testowe pliki .m3u, przykłady listy odtwarzania audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki M3U – Pobierz testowe pliki listy odtwarzania M3U',
+            description: 'Pobierz darmowe przykładowe pliki listy odtwarzania M3U M3U do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania listy odtwarzania M3U, zgodności z odtwarzaczami multimedialnymi i narzędzi strumieniowania audio.'
+          },
+          hero: {
+            title: 'Przykładowe pliki M3U',
+            description: 'Pobierz darmowe przykładowe pliki listy odtwarzania M3U M3U do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania listy odtwarzania M3U, zgodności z odtwarzaczami multimedialnymi i strumieniowania audio.'
+          },
+          about_description: 'To są testowe pliki listy odtwarzania M3U (MP3 URL) w różnych rozmiarach do celów testowych'
+        },
+        m3u8: {
+          meta: {
+            title: 'Darmowe przykładowe pliki M3U8 – Pobierz pliki listy odtwarzania HLS M3U8 | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki listy odtwarzania HLS M3U8 M3U8 do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania listy odtwarzania M3U8, strumieniowania HLS i zgodności z odtwarzaczami wideo.',
+            keywords: 'przykładowe pliki M3U8, testowe pliki M3U8, pobierz przykłady M3U8, darmowe testowe pliki M3U8, przykłady listy odtwarzania HLS M3U8, przykłady listy odtwarzania strumieniowania HLS, testowe pliki .m3u8, przykłady listy odtwarzania wideo'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki M3U8 – Pobierz testowe pliki listy odtwarzania HLS M3U8',
+            description: 'Pobierz darmowe przykładowe pliki listy odtwarzania HLS M3U8 M3U8 do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania listy odtwarzania M3U8, strumieniowania HLS i zgodności z odtwarzaczami wideo.'
+          },
+          hero: {
+            title: 'Przykładowe pliki M3U8',
+            description: 'Pobierz darmowe przykładowe pliki listy odtwarzania HLS M3U8 M3U8 do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania listy odtwarzania M3U8, strumieniowania HLS i zgodności z odtwarzaczami wideo.'
+          },
+          about_description: 'To są testowe pliki listy odtwarzania M3U8 (HTTP Live Streaming) w różnych rozmiarach do celów testowych'
+        },
+        m4a: {
+          meta: {
+            title: 'Darmowe przykładowe pliki M4A – Pobierz pliki audio M4A | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki audio M4A M4A do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji audio M4A, odtwarzania M4A i narzędzi przetwarzania audio.',
+            keywords: 'przykładowe pliki M4A, testowe pliki M4A, pobierz przykłady M4A, darmowe testowe pliki M4A, przykłady audio M4A, przykłady formatów audio Apple, testowe pliki .m4a, przykłady formatów audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki M4A – Pobierz testowe pliki audio M4A',
+            description: 'Pobierz darmowe przykładowe pliki audio M4A M4A do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji audio M4A, odtwarzania M4A i narzędzi przetwarzania audio.'
+          },
+          hero: {
+            title: 'Przykładowe pliki M4A',
+            description: 'Pobierz darmowe przykładowe pliki audio M4A M4A do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji audio M4A, odtwarzania M4A i przetwarzania audio.'
+          },
+          about_description: 'To są testowe pliki audio M4A (MPEG-4 Audio) w różnych rozmiarach do celów testowych'
+        },
+        m4v: {
+          meta: {
+            title: 'Darmowe przykładowe pliki M4V – Pobierz pliki wideo M4V | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki wideo M4V M4V do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji wideo M4V, odtwarzania M4V i narzędzi przetwarzania wideo.',
+            keywords: 'przykładowe pliki M4V, testowe pliki M4V, pobierz przykłady M4V, darmowe testowe pliki M4V, przykłady wideo M4V, przykłady formatów wideo Apple, testowe pliki .m4v, przykłady formatów wideo'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki M4V – Pobierz testowe pliki wideo M4V',
+            description: 'Pobierz darmowe przykładowe pliki wideo M4V M4V do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji wideo M4V, odtwarzania M4V i narzędzi przetwarzania wideo.'
+          },
+          hero: {
+            title: 'Przykładowe pliki M4V',
+            description: 'Pobierz darmowe przykładowe pliki wideo M4V M4V do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji wideo M4V, odtwarzania M4V i przetwarzania wideo.'
+          },
+          about_description: 'To są testowe pliki wideo M4V (MPEG-4 Video) w różnych rozmiarach do celów testowych'
+        },
+        ma: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MA – Pobierz pliki sceny ASCII Maya | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki sceny ASCII Maya MA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji sceny Maya, parsowania plików MA i narzędzi animacji 3D.',
+            keywords: 'przykładowe pliki MA, testowe pliki MA, pobierz przykłady MA, darmowe testowe pliki MA, przykłady sceny ASCII Maya, przykłady sceny animacji 3D, testowe pliki .ma, przykłady sceny Maya'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MA – Pobierz testowe pliki sceny ASCII Maya',
+            description: 'Pobierz darmowe przykładowe pliki sceny ASCII Maya MA do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji sceny Maya, parsowania plików MA i narzędzi animacji 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MA',
+            description: 'Pobierz darmowe przykładowe pliki sceny ASCII Maya MA do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji sceny Maya, parsowania plików MA i animacji 3D.'
+          },
+          about_description: 'To są testowe pliki sceny MA (Maya ASCII) w różnych rozmiarach do celów testowych'
+        },
+        makefile: {
+          meta: {
+            title: 'Darmowe przykładowe pliki Makefile – Pobierz pliki konfiguracji kompilacji Makefile | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji kompilacji Makefile do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania Makefile, automatyzacji systemu kompilacji i narzędzi kompilacji oprogramowania.',
+            keywords: 'przykładowe pliki Makefile, testowe pliki Makefile, pobierz przykłady Makefile, darmowe testowe pliki Makefile, przykłady konfiguracji kompilacji, przykłady kompilacji Makefile, testowe pliki Makefile, przykłady automatyzacji kompilacji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Makefile – Pobierz testowe pliki konfiguracji kompilacji Makefile',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji kompilacji Makefile do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania Makefile, automatyzacji systemu kompilacji i narzędzi kompilacji oprogramowania.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Makefile',
+            description: 'Pobierz darmowe przykładowe pliki konfiguracji kompilacji Makefile do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania Makefile, automatyzacji systemu kompilacji i kompilacji oprogramowania.'
+          },
+          about_description: 'To są testowe pliki konfiguracji kompilacji Makefile w różnych rozmiarach do celów testowych'
+        },
+        max: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MAX – Pobierz pliki sceny 3ds Max | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki sceny 3ds Max MAX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji sceny 3ds Max, parsowania plików MAX i narzędzi modelowania 3D.',
+            keywords: 'przykładowe pliki MAX, testowe pliki MAX, pobierz przykłady MAX, darmowe testowe pliki MAX, przykłady sceny 3ds Max, przykłady sceny modelowania 3D, testowe pliki .max, przykłady sceny 3ds Max'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MAX – Pobierz testowe pliki sceny 3ds Max',
+            description: 'Pobierz darmowe przykładowe pliki sceny 3ds Max MAX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji sceny 3ds Max, parsowania plików MAX i narzędzi modelowania 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MAX',
+            description: 'Pobierz darmowe przykładowe pliki sceny 3ds Max MAX do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji sceny 3ds Max, parsowania plików MAX i modelowania 3D.'
+          },
+          about_description: 'To są testowe pliki sceny MAX (3ds Max) w różnych rozmiarach do celów testowych'
+        },
+        mb: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MB – Pobierz pliki sceny binarnej Maya | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki sceny binarnej Maya MB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji sceny Maya, parsowania plików MB i narzędzi animacji 3D.',
+            keywords: 'przykładowe pliki MB, testowe pliki MB, pobierz przykłady MB, darmowe testowe pliki MB, przykłady sceny binarnej Maya, przykłady sceny animacji 3D, testowe pliki .mb, przykłady sceny Maya'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MB – Pobierz testowe pliki sceny binarnej Maya',
+            description: 'Pobierz darmowe przykładowe pliki sceny binarnej Maya MB do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji sceny Maya, parsowania plików MB i narzędzi animacji 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MB',
+            description: 'Pobierz darmowe przykładowe pliki sceny binarnej Maya MB do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji sceny Maya, parsowania plików MB i animacji 3D.'
+          },
+          about_description: 'To są testowe pliki sceny MB (Maya Binary) w różnych rozmiarach do celów testowych'
+        },
+        mbtiles: {
+          meta: {
+            title: 'Darmowe przykładowe pliki MBTiles – Pobierz pliki bazy danych map MBTiles | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki bazy danych map MBTiles do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania MBTiles, ekstrakcji kafelków map i narzędzi przetwarzania danych geograficznych.',
+            keywords: 'przykładowe pliki MBTiles, testowe pliki MBTiles, pobierz przykłady MBTiles, darmowe testowe pliki MBTiles, przykłady bazy danych map MBTiles, przykłady plików geograficznych MBTiles, testowe pliki .mbtiles, przykłady plików kafelków map, przykłady parsowania MBTiles'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki MBTiles – Pobierz testowe pliki bazy danych map MBTiles',
+            description: 'Pobierz darmowe przykładowe pliki bazy danych map MBTiles do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania MBTiles, ekstrakcji kafelków map i narzędzi przetwarzania danych geograficznych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki MBTiles',
+            description: 'Pobierz darmowe przykładowe pliki bazy danych map MBTiles do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania MBTiles i ekstrakcji kafelków map.'
+          },
+          about_description: 'To są testowe pliki MBTiles (baza danych map) w różnych rozmiarach do celów testowych'
+        },
         csv: {
           meta: {
             title: 'Darmowe przykładowe pliki CSV – Pobierz pliki testowe | MorphyHub',
@@ -3765,6 +4085,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose MOBI E-Book-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre MOBI E-Book-Konvertierung, MOBI-Lesung und E-Book-Verarbeitungstools zu testen.'
           },
           about_description: 'Dies sind MOBI Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        lzma: {
+          meta: {
+            title: 'Kostenlose LZMA Beispieldateien herunterladen – LZMA-komprimierte Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose LZMA LZMA-komprimierte Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZMA-Dekomprimierung, Archiv-Extraktion und Tools für Dateikompression.',
+            keywords: 'LZMA Beispieldateien, LZMA Testdateien, LZMA Beispiele herunterladen, kostenlose LZMA Testdateien, LZMA-komprimierte Archiv-Beispiele, komprimierte Datei-Beispiele, .lzma Testdateien, Komprimierungsformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose LZMA Beispieldateien – LZMA-komprimierte Dateien testen',
+            description: 'Laden Sie kostenlose LZMA LZMA-komprimierte Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZMA-Dekomprimierung, Archiv-Extraktion und Tools für Dateikompression.'
+          },
+          hero: {
+            title: 'LZMA Beispieldateien',
+            description: 'Laden Sie kostenlose LZMA LZMA-komprimierte Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LZMA-Dekomprimierung, Archiv-Extraktion und Tools für Dateikompression zu testen.'
+          },
+          about_description: 'Dies sind LZMA (Lempel-Ziv-Markov chain Algorithm) komprimierte Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        m3u: {
+          meta: {
+            title: 'Kostenlose M3U Beispieldateien herunterladen – M3U-Playlist-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose M3U M3U-Playlist-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M3U-Playlist-Parsing, Medienplayer-Kompatibilität und Tools für Audio-Streaming.',
+            keywords: 'M3U Beispieldateien, M3U Testdateien, M3U Beispiele herunterladen, kostenlose M3U Testdateien, M3U-Playlist-Beispiele, Medienplayer-Playlist-Beispiele, .m3u Testdateien, Audio-Playlist-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose M3U Beispieldateien – M3U-Playlist-Dateien testen',
+            description: 'Laden Sie kostenlose M3U M3U-Playlist-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M3U-Playlist-Parsing, Medienplayer-Kompatibilität und Tools für Audio-Streaming.'
+          },
+          hero: {
+            title: 'M3U Beispieldateien',
+            description: 'Laden Sie kostenlose M3U M3U-Playlist-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre M3U-Playlist-Parsing, Medienplayer-Kompatibilität und Tools für Audio-Streaming zu testen.'
+          },
+          about_description: 'Dies sind M3U (MP3 URL) Playlist-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        m3u8: {
+          meta: {
+            title: 'Kostenlose M3U8 Beispieldateien herunterladen – M3U8 HLS-Playlist-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose M3U8 M3U8 HLS-Playlist-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M3U8-Playlist-Parsing, HLS-Streaming und Tools für Video-Player-Kompatibilität.',
+            keywords: 'M3U8 Beispieldateien, M3U8 Testdateien, M3U8 Beispiele herunterladen, kostenlose M3U8 Testdateien, M3U8 HLS-Playlist-Beispiele, HLS-Streaming-Playlist-Beispiele, .m3u8 Testdateien, Video-Playlist-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose M3U8 Beispieldateien – M3U8 HLS-Playlist-Dateien testen',
+            description: 'Laden Sie kostenlose M3U8 M3U8 HLS-Playlist-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M3U8-Playlist-Parsing, HLS-Streaming und Tools für Video-Player-Kompatibilität.'
+          },
+          hero: {
+            title: 'M3U8 Beispieldateien',
+            description: 'Laden Sie kostenlose M3U8 M3U8 HLS-Playlist-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre M3U8-Playlist-Parsing, HLS-Streaming und Tools für Video-Player-Kompatibilität zu testen.'
+          },
+          about_description: 'Dies sind M3U8 (HTTP Live Streaming) Playlist-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        m4a: {
+          meta: {
+            title: 'Kostenlose M4A Beispieldateien herunterladen – M4A-Audiodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose M4A M4A-Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4A-Audio-Konvertierung, M4A-Wiedergabe und Tools für Audio-Verarbeitung.',
+            keywords: 'M4A Beispieldateien, M4A Testdateien, M4A Beispiele herunterladen, kostenlose M4A Testdateien, M4A-Audio-Beispiele, Apple-Audioformat-Beispiele, .m4a Testdateien, Audioformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose M4A Beispieldateien – M4A-Audiodateien testen',
+            description: 'Laden Sie kostenlose M4A M4A-Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4A-Audio-Konvertierung, M4A-Wiedergabe und Tools für Audio-Verarbeitung.'
+          },
+          hero: {
+            title: 'M4A Beispieldateien',
+            description: 'Laden Sie kostenlose M4A M4A-Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre M4A-Audio-Konvertierung, M4A-Wiedergabe und Tools für Audio-Verarbeitung zu testen.'
+          },
+          about_description: 'Dies sind M4A (MPEG-4 Audio) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        m4v: {
+          meta: {
+            title: 'Kostenlose M4V Beispieldateien herunterladen – M4V-Videodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose M4V M4V-Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4V-Video-Konvertierung, M4V-Wiedergabe und Tools für Video-Verarbeitung.',
+            keywords: 'M4V Beispieldateien, M4V Testdateien, M4V Beispiele herunterladen, kostenlose M4V Testdateien, M4V-Video-Beispiele, Apple-Videoformat-Beispiele, .m4v Testdateien, Videoformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose M4V Beispieldateien – M4V-Videodateien testen',
+            description: 'Laden Sie kostenlose M4V M4V-Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4V-Video-Konvertierung, M4V-Wiedergabe und Tools für Video-Verarbeitung.'
+          },
+          hero: {
+            title: 'M4V Beispieldateien',
+            description: 'Laden Sie kostenlose M4V M4V-Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre M4V-Video-Konvertierung, M4V-Wiedergabe und Tools für Video-Verarbeitung zu testen.'
+          },
+          about_description: 'Dies sind M4V (MPEG-4 Video) Video-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        ma: {
+          meta: {
+            title: 'Kostenlose MA Beispieldateien herunterladen – Maya ASCII-Szenendateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MA Maya ASCII-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Maya-Szenen-Konvertierung, MA-Datei-Parsing und Tools für 3D-Animation.',
+            keywords: 'MA Beispieldateien, MA Testdateien, MA Beispiele herunterladen, kostenlose MA Testdateien, Maya ASCII-Szenen-Beispiele, 3D-Animations-Szenen-Beispiele, .ma Testdateien, Maya-Szenen-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose MA Beispieldateien – Maya ASCII-Szenendateien testen',
+            description: 'Laden Sie kostenlose MA Maya ASCII-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Maya-Szenen-Konvertierung, MA-Datei-Parsing und Tools für 3D-Animation.'
+          },
+          hero: {
+            title: 'MA Beispieldateien',
+            description: 'Laden Sie kostenlose MA Maya ASCII-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Maya-Szenen-Konvertierung, MA-Datei-Parsing und Tools für 3D-Animation zu testen.'
+          },
+          about_description: 'Dies sind MA (Maya ASCII) Szenen-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        makefile: {
+          meta: {
+            title: 'Kostenlose Makefile Beispieldateien herunterladen – Makefile Build-Konfigurationsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Makefile Build-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Makefile-Parsing, Build-System-Automatisierung und Tools für Software-Kompilierung.',
+            keywords: 'Makefile Beispieldateien, Makefile Testdateien, Makefile Beispiele herunterladen, kostenlose Makefile Testdateien, Build-Konfigurations-Beispiele, Makefile-Build-Beispiele, Makefile Testdateien, Build-Automatisierungs-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Makefile Beispieldateien – Makefile Build-Konfigurationsdateien testen',
+            description: 'Laden Sie kostenlose Makefile Build-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Makefile-Parsing, Build-System-Automatisierung und Tools für Software-Kompilierung.'
+          },
+          hero: {
+            title: 'Makefile Beispieldateien',
+            description: 'Laden Sie kostenlose Makefile Build-Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Makefile-Parsing, Build-System-Automatisierung und Tools für Software-Kompilierung zu testen.'
+          },
+          about_description: 'Dies sind Makefile Build-Konfigurations-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        max: {
+          meta: {
+            title: 'Kostenlose MAX Beispieldateien herunterladen – 3ds Max-Szenendateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MAX 3ds Max-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3ds Max-Szenen-Konvertierung, MAX-Datei-Parsing und Tools für 3D-Modellierung.',
+            keywords: 'MAX Beispieldateien, MAX Testdateien, MAX Beispiele herunterladen, kostenlose MAX Testdateien, 3ds Max-Szenen-Beispiele, 3D-Modellierungs-Szenen-Beispiele, .max Testdateien, 3ds Max-Szenen-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose MAX Beispieldateien – 3ds Max-Szenendateien testen',
+            description: 'Laden Sie kostenlose MAX 3ds Max-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3ds Max-Szenen-Konvertierung, MAX-Datei-Parsing und Tools für 3D-Modellierung.'
+          },
+          hero: {
+            title: 'MAX Beispieldateien',
+            description: 'Laden Sie kostenlose MAX 3ds Max-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3ds Max-Szenen-Konvertierung, MAX-Datei-Parsing und Tools für 3D-Modellierung zu testen.'
+          },
+          about_description: 'Dies sind MAX (3ds Max) Szenen-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        mb: {
+          meta: {
+            title: 'Kostenlose MB Beispieldateien herunterladen – Maya Binary-Szenendateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MB Maya Binary-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Maya-Szenen-Konvertierung, MB-Datei-Parsing und Tools für 3D-Animation.',
+            keywords: 'MB Beispieldateien, MB Testdateien, MB Beispiele herunterladen, kostenlose MB Testdateien, Maya Binary-Szenen-Beispiele, 3D-Animations-Szenen-Beispiele, .mb Testdateien, Maya-Szenen-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose MB Beispieldateien – Maya Binary-Szenendateien testen',
+            description: 'Laden Sie kostenlose MB Maya Binary-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Maya-Szenen-Konvertierung, MB-Datei-Parsing und Tools für 3D-Animation.'
+          },
+          hero: {
+            title: 'MB Beispieldateien',
+            description: 'Laden Sie kostenlose MB Maya Binary-Szenen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Maya-Szenen-Konvertierung, MB-Datei-Parsing und Tools für 3D-Animation zu testen.'
+          },
+          about_description: 'Dies sind MB (Maya Binary) Szenen-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        mbtiles: {
+          meta: {
+            title: 'Kostenlose MBTiles Beispieldateien herunterladen – MBTiles-Kartendatenbank-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose MBTiles Kartendatenbank-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MBTiles-Parsing, Kartenkachel-Extraktion und Tools für geografische Datenverarbeitung.',
+            keywords: 'MBTiles Beispieldateien, MBTiles Testdateien, MBTiles Beispiele herunterladen, kostenlose MBTiles Testdateien, MBTiles Kartendatenbank-Beispiele, MBTiles geografische Datei-Beispiele, .mbtiles Testdateien, Kartenkachel-Datei-Beispiele, MBTiles-Parsing-Testdateien'
+          },
+          schema: {
+            name: 'Kostenlose MBTiles Beispieldateien – MBTiles-Kartendatenbank-Dateien testen',
+            description: 'Laden Sie kostenlose MBTiles Kartendatenbank-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MBTiles-Parsing, Kartenkachel-Extraktion und Tools für geografische Datenverarbeitung.'
+          },
+          hero: {
+            title: 'MBTiles Beispieldateien',
+            description: 'Laden Sie kostenlose MBTiles Kartendatenbank-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre MBTiles-Parsing und Kartenkachel-Extraktion zu testen.'
+          },
+          about_description: 'Dies sind MBTiles (Kartendatenbank) Testdateien in verschiedenen Größen für Testzwecke'
         },
         csv: {
           meta: {
