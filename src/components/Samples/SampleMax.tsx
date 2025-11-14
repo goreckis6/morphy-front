@@ -75,7 +75,21 @@ export default function SampleMax() {
   const formatKey = 'max';
   const canonicalUrl = getLocalizedUrl(`/samples/sample-${formatKey}`, i18n.language, true);
 
-  
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": t(`sample_page.formats.${formatKey}.schema.name`),
+    "url": canonicalUrl,
+    "description": t(`sample_page.formats.${formatKey}.schema.description`),
+    "isPartOf": { "@id": "https://morphyhub.com#website" },
+    "publisher": { "@id": "https://morphyhub.com#organization" }
+  };
+
+  const handleBack = () => {
+    navigate(getLocalizedUrl('/', i18n.language));
+  };
+
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
 
   return (
     <>
