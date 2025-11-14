@@ -75,23 +75,26 @@ export default function SampleDds() {
   };
 
   const handleBack = () => {
-    window.location.href = '/';
+    navigate(getLocalizedUrl('/', i18n.language));
   };
 
   return (
     <>
       <Helmet>
-        <title>Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyHub</title>
-        <meta name="description" content="Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing texture conversion and DDS processing tools." />
-        <meta name="keywords" content="DDS sample files, test DDS files, download DDS samples, free DDS test files, DirectDraw Surface samples, texture file samples, DDS texture files, DDS conversion test files, .dds test files, texture format samples, game texture samples" />
-        <meta property="og:title" content="Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyHub" />
-        <meta property="og:description" content="Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available for testing texture conversion and DDS processing tools." />
+        <title>{t(`sample_page.formats.${formatKey}.meta.title`)}</title>
+        <meta name="description" content={t(`sample_page.formats.${formatKey}.meta.description`)} />
+        <meta name="keywords" content={t(`sample_page.formats.${formatKey}.meta.keywords`)} />
+        <meta property="og:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta property="og:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://morphyhub.com/samples/sample-dds" />
+        <meta property="og:url" content={canonicalUrl} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Free DDS Sample Files Download - Test DirectDraw Surface Texture Files | MorphyHub" />
-        <meta name="twitter:description" content="Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available." />
-        <link rel="canonical" href="https://morphyhub.com/samples/sample-dds" />
+        <meta name="twitter:title" content={t(`sample_page.formats.${formatKey}.meta.title`)} />
+        <meta name="twitter:description" content={t(`sample_page.formats.${formatKey}.hero.description`)} />
+        <link rel="canonical" href={canonicalUrl} />
+              <script type="application/ld+json">
+                {JSON.stringify(pageJsonLd)}
+              </script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
@@ -121,13 +124,9 @@ export default function SampleDds() {
               <div className="p-2 sm:p-3 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl">
                 <Image className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                DDS Sample Files
-              </h1>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">{t(`sample_page.formats.${formatKey}.hero.title`)}</h1>
             </div>
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              Download free DDS sample DirectDraw Surface texture files for testing. Multiple file sizes available to test your texture conversion and DDS processing tools.
-            </p>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">{t(`sample_page.formats.${formatKey}.hero.description`)}</p>
           </div>
 
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
@@ -179,12 +178,12 @@ export default function SampleDds() {
                           className="inline-flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto shadow-lg"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download Now</span>
+                          <span>{t('sample_page.common.download_now')}</span>
                         </button>
                       ) : downloadComplete === index ? (
                         <div className="flex items-center space-x-2 text-green-600">
                           <CheckCircle className="w-5 h-5" />
-                          <span className="text-sm font-medium">Download started</span>
+                          <span className="text-sm font-medium">{t('sample_page.common.download_started')}</span>
                         </div>
                       ) : (
                         <button
@@ -193,7 +192,7 @@ export default function SampleDds() {
                           className="inline-flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium transition-colors w-full sm:w-auto"
                         >
                           <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                          <span>Download</span>
+                          <span>{t('sample_page.common.download')}</span>
                         </button>
                       )}
                     </div>
@@ -205,14 +204,14 @@ export default function SampleDds() {
 
           <div className="mt-8 bg-cyan-50 border border-cyan-200 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              About These Sample Files
-            </h3>
-            <ul className="space-y-2 text-sm sm:text-base text-gray-600">
-              <li>• These are test DDS (DirectDraw Surface) texture files in various sizes for testing purposes</li>
-              <li>• Files are hosted securely and available for free download</li>
-              <li>• Perfect for testing texture conversion and DDS processing tools</li>
-              <li>• No registration or account required</li>
-            </ul>
+                    {t('sample_page.common.about_title')}
+                  </h3>
+                  <ul className="space-y-2 text-sm sm:text-base text-gray-600">
+                    <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
+                    {aboutItems && aboutItems.length > 0 && aboutItems.slice(1).map((item, idx) => (
+                      <li key={idx}>• {item}</li>
+                    ))}
+                  </ul>
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">

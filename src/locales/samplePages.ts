@@ -1183,6 +1183,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free DMP sample Windows memory dump files for testing. Multiple file sizes available to test your memory dump analysis, crash debugging, and system diagnostic tools.'
           },
           about_description: 'These are test DMP (Windows Memory Dump) files in various sizes for testing purposes'
+        },
+        dng: {
+          meta: {
+            title: 'Free DNG Sample Files Download - Test Digital Negative Format Files | MorphyHub',
+            description: 'Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing RAW image processing, DNG conversion, and digital photography workflows.',
+            keywords: 'DNG sample files, test DNG files, download DNG samples, free DNG test files, Digital Negative samples, RAW image samples, DNG photo samples, .dng test files, RAW format samples, camera RAW samples'
+          },
+          schema: {
+            name: 'Free DNG Sample Files - Download Test Digital Negative Format Files',
+            description: 'Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing RAW image processing, DNG conversion, and digital photography workflows.'
+          },
+          hero: {
+            title: 'DNG Sample Files',
+            description: 'Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available to test your RAW image processing, DNG conversion, and digital photography workflows.'
+          },
+          about_description: 'These are test DNG (Digital Negative) raw image files in various sizes for testing purposes'
+        },
+        dmg: {
+          meta: {
+            title: 'Free DMG Sample Files Download - Test macOS Disk Image Files | MorphyHub',
+            description: 'Download free DMG sample macOS disk image archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing macOS app installation, DMG extraction, and disk image processing tools.',
+            keywords: 'DMG sample files, test DMG files, download DMG samples, free DMG test files, macOS disk image samples, Mac app samples, DMG archive samples, .dmg test files, disk image samples, macOS installer samples'
+          },
+          schema: {
+            name: 'Free DMG Sample Files - Download Test macOS Disk Image Files',
+            description: 'Download free DMG sample macOS disk image archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing macOS app installation, DMG extraction, and disk image processing tools.'
+          },
+          hero: {
+            title: 'DMG Sample Files',
+            description: 'Download free DMG sample macOS disk image archive files for testing. Multiple file sizes available to test your macOS app installation, DMG extraction, and disk image processing tools.'
+          },
+          about_description: 'These are test DMG (macOS Disk Image) archive files in various sizes for testing purposes'
+        },
+        der: {
+          meta: {
+            title: 'Free DER Sample Files Download - Test Distinguished Encoding Rules Certificate Files | MorphyHub',
+            description: 'Download free DER sample Distinguished Encoding Rules certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing certificate parsing, SSL/TLS configuration, and cryptographic file processing tools.',
+            keywords: 'DER sample files, test DER files, download DER samples, free DER test files, certificate samples, SSL certificate samples, DER certificate samples, .der test files, cryptographic samples, certificate format samples'
+          },
+          schema: {
+            name: 'Free DER Sample Files - Download Test Distinguished Encoding Rules Certificate Files',
+            description: 'Download free DER sample Distinguished Encoding Rules certificate files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing certificate parsing, SSL/TLS configuration, and cryptographic file processing tools.'
+          },
+          hero: {
+            title: 'DER Sample Files',
+            description: 'Download free DER sample Distinguished Encoding Rules certificate files for testing. Multiple file sizes available to test your certificate parsing, SSL/TLS configuration, and cryptographic file processing tools.'
+          },
+          about_description: 'These are test DER (Distinguished Encoding Rules) certificate files in various sizes for testing purposes'
+        },
+        dem: {
+          meta: {
+            title: 'Free DEM Sample Files Download - Test Digital Elevation Model Files | MorphyHub',
+            description: 'Download free DEM sample Digital Elevation Model geographic data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS software, terrain mapping, and elevation data processing tools.',
+            keywords: 'DEM sample files, test DEM files, download DEM samples, free DEM test files, Digital Elevation Model samples, GIS data samples, terrain data samples, .dem test files, elevation model samples, geographic data samples'
+          },
+          schema: {
+            name: 'Free DEM Sample Files - Download Test Digital Elevation Model Files',
+            description: 'Download free DEM sample Digital Elevation Model geographic data files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS software, terrain mapping, and elevation data processing tools.'
+          },
+          hero: {
+            title: 'DEM Sample Files',
+            description: 'Download free DEM sample Digital Elevation Model geographic data files for testing. Multiple file sizes available to test your GIS software, terrain mapping, and elevation data processing tools.'
+          },
+          about_description: 'These are test DEM (Digital Elevation Model) geographic data files in various sizes for testing purposes'
+        },
+        dds: {
+          meta: {
+            title: 'Free DDS Sample Files Download - Test DirectDraw Surface Image Files | MorphyHub',
+            description: 'Download free DDS sample DirectDraw Surface texture image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing game texture processing, DDS conversion, and graphics engine tools.',
+            keywords: 'DDS sample files, test DDS files, download DDS samples, free DDS test files, DirectDraw Surface samples, texture image samples, DDS texture samples, .dds test files, game texture samples, graphics format samples'
+          },
+          schema: {
+            name: 'Free DDS Sample Files - Download Test DirectDraw Surface Image Files',
+            description: 'Download free DDS sample DirectDraw Surface texture image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing game texture processing, DDS conversion, and graphics engine tools.'
+          },
+          hero: {
+            title: 'DDS Sample Files',
+            description: 'Download free DDS sample DirectDraw Surface texture image files for testing. Multiple file sizes available to test your game texture processing, DDS conversion, and graphics engine tools.'
+          },
+          about_description: 'These are test DDS (DirectDraw Surface) texture image files in various sizes for testing purposes'
+        },
+        dbf: {
+          meta: {
+            title: 'Free DBF Sample Files Download - Test dBASE Database Files | MorphyHub',
+            description: 'Download free DBF sample dBASE database table files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion, DBF parsing, and legacy database format handling tools.',
+            keywords: 'DBF sample files, test DBF files, download DBF samples, free DBF test files, dBASE database samples, database table samples, DBF database samples, .dbf test files, legacy database samples, database format samples'
+          },
+          schema: {
+            name: 'Free DBF Sample Files - Download Test dBASE Database Files',
+            description: 'Download free DBF sample dBASE database table files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing database conversion, DBF parsing, and legacy database format handling tools.'
+          },
+          hero: {
+            title: 'DBF Sample Files',
+            description: 'Download free DBF sample dBASE database table files for testing. Multiple file sizes available to test your database conversion, DBF parsing, and legacy database format handling tools.'
+          },
+          about_description: 'These are test DBF (dBASE Database) table files in various sizes for testing purposes'
+        },
+        dav: {
+          meta: {
+            title: 'Free DAV Sample Files Download - Test DAV Video Files | MorphyHub',
+            description: 'Download free DAV sample DAV video surveillance files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video surveillance playback, DAV conversion, and security camera file processing tools.',
+            keywords: 'DAV sample files, test DAV files, download DAV samples, free DAV test files, DAV video samples, surveillance video samples, DAV camera samples, .dav test files, security camera samples, video format samples'
+          },
+          schema: {
+            name: 'Free DAV Sample Files - Download Test DAV Video Files',
+            description: 'Download free DAV sample DAV video surveillance files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video surveillance playback, DAV conversion, and security camera file processing tools.'
+          },
+          hero: {
+            title: 'DAV Sample Files',
+            description: 'Download free DAV sample DAV video surveillance files for testing. Multiple file sizes available to test your video surveillance playback, DAV conversion, and security camera file processing tools.'
+          },
+          about_description: 'These are test DAV video surveillance files in various sizes for testing purposes'
+        },
+        'customer-database-sql': {
+          meta: {
+            title: 'Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyHub',
+            description: 'Download free Customer Database SQL sample SQL database script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL database import, customer data processing, and database management tools.',
+            keywords: 'Customer Database SQL sample files, test SQL database files, download SQL samples, free SQL test files, database script samples, customer data samples, SQL import samples, .sql test files, database management samples'
+          },
+          schema: {
+            name: 'Free Customer Database SQL Sample Files - Download Test SQL Database Files',
+            description: 'Download free Customer Database SQL sample SQL database script files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL database import, customer data processing, and database management tools.'
+          },
+          hero: {
+            title: 'Customer Database SQL Sample Files',
+            description: 'Download free Customer Database SQL sample SQL database script files for testing. Multiple file sizes available to test your SQL database import, customer data processing, and database management tools.'
+          },
+          about_description: 'These are test Customer Database SQL database script files in various sizes for testing purposes'
+        },
+        cue: {
+          meta: {
+            title: 'Free CUE Sample Files Download - Test CUE Sheet Files | MorphyHub',
+            description: 'Download free CUE sample CUE sheet audio disc image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio disc burning, CUE sheet parsing, and CD/DVD image creation tools.',
+            keywords: 'CUE sample files, test CUE files, download CUE samples, free CUE test files, CUE sheet samples, audio disc samples, CUE disc image samples, .cue test files, CD image samples, audio format samples'
+          },
+          schema: {
+            name: 'Free CUE Sample Files - Download Test CUE Sheet Files',
+            description: 'Download free CUE sample CUE sheet audio disc image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio disc burning, CUE sheet parsing, and CD/DVD image creation tools.'
+          },
+          hero: {
+            title: 'CUE Sample Files',
+            description: 'Download free CUE sample CUE sheet audio disc image files for testing. Multiple file sizes available to test your audio disc burning, CUE sheet parsing, and CD/DVD image creation tools.'
+          },
+          about_description: 'These are test CUE (CUE Sheet) audio disc image files in various sizes for testing purposes'
+        },
+        csr: {
+          meta: {
+            title: 'Free CSR Sample Files Download - Test Certificate Signing Request Files | MorphyHub',
+            description: 'Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate generation, CSR parsing, and certificate authority tools.',
+            keywords: 'CSR sample files, test CSR files, download CSR samples, free CSR test files, Certificate Signing Request samples, SSL certificate samples, CSR certificate samples, .csr test files, certificate authority samples'
+          },
+          schema: {
+            name: 'Free CSR Sample Files - Download Test Certificate Signing Request Files',
+            description: 'Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SSL certificate generation, CSR parsing, and certificate authority tools.'
+          },
+          hero: {
+            title: 'CSR Sample Files',
+            description: 'Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available to test your SSL certificate generation, CSR parsing, and certificate authority tools.'
+          },
+          about_description: 'These are test CSR (Certificate Signing Request) files in various sizes for testing purposes'
         }
       }
     }
@@ -2322,6 +2482,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki zrzutów pamięci Windows DMP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia analizy zrzutów pamięci, debugowania awarii i diagnostyki systemu.'
           },
           about_description: 'To są testowe pliki DMP (Windows Memory Dump) w różnych rozmiarach do celów testowych'
+        },
+        dng: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DNG – Pobierz pliki Digital Negative Format | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki surowych obrazów Digital Negative DNG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania obrazów RAW, konwersji DNG i przepływów pracy cyfrowej fotografii.',
+            keywords: 'przykładowe pliki DNG, testowe pliki DNG, pobierz przykłady DNG, darmowe testowe pliki DNG, przykłady Digital Negative, przykłady obrazów RAW, przykłady zdjęć DNG, testowe pliki .dng, przykłady formatów RAW, przykłady RAW z aparatu'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DNG – Pobierz testowe pliki Digital Negative Format',
+            description: 'Pobierz darmowe przykładowe pliki surowych obrazów Digital Negative DNG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania obrazów RAW, konwersji DNG i przepływów pracy cyfrowej fotografii.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DNG',
+            description: 'Pobierz darmowe przykładowe pliki surowych obrazów Digital Negative DNG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania obrazów RAW, konwersji DNG i przepływów pracy cyfrowej fotografii.'
+          },
+          about_description: 'To są testowe pliki surowych obrazów DNG (Digital Negative) w różnych rozmiarach do celów testowych'
+        },
+        dmg: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DMG – Pobierz pliki obrazów dysku macOS | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwum obrazów dysku macOS DMG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji macOS, ekstrakcji DMG i narzędzi przetwarzania obrazów dysku.',
+            keywords: 'przykładowe pliki DMG, testowe pliki DMG, pobierz przykłady DMG, darmowe testowe pliki DMG, przykłady obrazów dysku macOS, przykłady aplikacji Mac, przykłady archiwów DMG, testowe pliki .dmg, przykłady obrazów dysku, przykłady instalatorów macOS'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DMG – Pobierz testowe pliki obrazów dysku macOS',
+            description: 'Pobierz darmowe przykładowe pliki archiwum obrazów dysku macOS DMG do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalacji aplikacji macOS, ekstrakcji DMG i narzędzi przetwarzania obrazów dysku.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DMG',
+            description: 'Pobierz darmowe przykładowe pliki archiwum obrazów dysku macOS DMG do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia instalacji aplikacji macOS, ekstrakcji DMG i przetwarzania obrazów dysku.'
+          },
+          about_description: 'To są testowe pliki archiwum DMG (macOS Disk Image) w różnych rozmiarach do celów testowych'
+        },
+        der: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DER – Pobierz pliki certyfikatów Distinguished Encoding Rules | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki certyfikatów Distinguished Encoding Rules DER do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania certyfikatów, konfiguracji SSL/TLS i narzędzi przetwarzania plików kryptograficznych.',
+            keywords: 'przykładowe pliki DER, testowe pliki DER, pobierz przykłady DER, darmowe testowe pliki DER, przykłady certyfikatów, przykłady certyfikatów SSL, przykłady certyfikatów DER, testowe pliki .der, przykłady kryptograficzne, przykłady formatów certyfikatów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DER – Pobierz testowe pliki certyfikatów Distinguished Encoding Rules',
+            description: 'Pobierz darmowe przykładowe pliki certyfikatów Distinguished Encoding Rules DER do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania certyfikatów, konfiguracji SSL/TLS i narzędzi przetwarzania plików kryptograficznych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DER',
+            description: 'Pobierz darmowe przykładowe pliki certyfikatów Distinguished Encoding Rules DER do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania certyfikatów, konfiguracji SSL/TLS i przetwarzania plików kryptograficznych.'
+          },
+          about_description: 'To są testowe pliki certyfikatów DER (Distinguished Encoding Rules) w różnych rozmiarach do celów testowych'
+        },
+        dem: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DEM – Pobierz pliki Digital Elevation Model | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki danych geograficznych Digital Elevation Model DEM do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania GIS, mapowania terenu i narzędzi przetwarzania danych wysokościowych.',
+            keywords: 'przykładowe pliki DEM, testowe pliki DEM, pobierz przykłady DEM, darmowe testowe pliki DEM, przykłady Digital Elevation Model, przykłady danych GIS, przykłady danych terenu, testowe pliki .dem, przykłady modeli wysokościowych, przykłady danych geograficznych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DEM – Pobierz testowe pliki Digital Elevation Model',
+            description: 'Pobierz darmowe przykładowe pliki danych geograficznych Digital Elevation Model DEM do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania GIS, mapowania terenu i narzędzi przetwarzania danych wysokościowych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DEM',
+            description: 'Pobierz darmowe przykładowe pliki danych geograficznych Digital Elevation Model DEM do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje oprogramowanie GIS, mapowanie terenu i narzędzia przetwarzania danych wysokościowych.'
+          },
+          about_description: 'To są testowe pliki danych geograficznych DEM (Digital Elevation Model) w różnych rozmiarach do celów testowych'
+        },
+        dds: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DDS – Pobierz pliki obrazów DirectDraw Surface | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki obrazów tekstur DirectDraw Surface DDS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania tekstur gier, konwersji DDS i narzędzi silników graficznych.',
+            keywords: 'przykładowe pliki DDS, testowe pliki DDS, pobierz przykłady DDS, darmowe testowe pliki DDS, przykłady DirectDraw Surface, przykłady obrazów tekstur, przykłady tekstur DDS, testowe pliki .dds, przykłady tekstur gier, przykłady formatów graficznych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DDS – Pobierz testowe pliki obrazów DirectDraw Surface',
+            description: 'Pobierz darmowe przykładowe pliki obrazów tekstur DirectDraw Surface DDS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania tekstur gier, konwersji DDS i narzędzi silników graficznych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DDS',
+            description: 'Pobierz darmowe przykładowe pliki obrazów tekstur DirectDraw Surface DDS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przetwarzania tekstur gier, konwersji DDS i silników graficznych.'
+          },
+          about_description: 'To są testowe pliki obrazów tekstur DDS (DirectDraw Surface) w różnych rozmiarach do celów testowych'
+        },
+        dbf: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DBF – Pobierz pliki bazy danych dBASE | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki tabel bazy danych dBASE DBF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji baz danych, parsowania DBF i narzędzi obsługi starszych formatów baz danych.',
+            keywords: 'przykładowe pliki DBF, testowe pliki DBF, pobierz przykłady DBF, darmowe testowe pliki DBF, przykłady bazy danych dBASE, przykłady tabel baz danych, przykłady baz danych DBF, testowe pliki .dbf, przykłady starszych baz danych, przykłady formatów baz danych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DBF – Pobierz testowe pliki bazy danych dBASE',
+            description: 'Pobierz darmowe przykładowe pliki tabel bazy danych dBASE DBF do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwersji baz danych, parsowania DBF i narzędzi obsługi starszych formatów baz danych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DBF',
+            description: 'Pobierz darmowe przykładowe pliki tabel bazy danych dBASE DBF do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia konwersji baz danych, parsowania DBF i obsługi starszych formatów baz danych.'
+          },
+          about_description: 'To są testowe pliki tabel DBF (dBASE Database) w różnych rozmiarach do celów testowych'
+        },
+        dav: {
+          meta: {
+            title: 'Darmowe przykładowe pliki DAV – Pobierz pliki wideo DAV | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki wideo nadzoru DAV DAV do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania wideo nadzoru, konwersji DAV i narzędzi przetwarzania plików kamer bezpieczeństwa.',
+            keywords: 'przykładowe pliki DAV, testowe pliki DAV, pobierz przykłady DAV, darmowe testowe pliki DAV, przykłady wideo DAV, przykłady wideo nadzoru, przykłady kamer DAV, testowe pliki .dav, przykłady kamer bezpieczeństwa, przykłady formatów wideo'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki DAV – Pobierz testowe pliki wideo DAV',
+            description: 'Pobierz darmowe przykładowe pliki wideo nadzoru DAV DAV do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania wideo nadzoru, konwersji DAV i narzędzi przetwarzania plików kamer bezpieczeństwa.'
+          },
+          hero: {
+            title: 'Przykładowe pliki DAV',
+            description: 'Pobierz darmowe przykładowe pliki wideo nadzoru DAV DAV do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania wideo nadzoru, konwersji DAV i przetwarzania plików kamer bezpieczeństwa.'
+          },
+          about_description: 'To są testowe pliki wideo nadzoru DAV w różnych rozmiarach do celów testowych'
+        },
+        'customer-database-sql': {
+          meta: {
+            title: 'Darmowe przykładowe pliki Customer Database SQL – Pobierz pliki bazy danych SQL | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki skryptów bazy danych SQL Customer Database SQL do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania importu baz danych SQL, przetwarzania danych klientów i narzędzi zarządzania bazami danych.',
+            keywords: 'przykładowe pliki Customer Database SQL, testowe pliki bazy danych SQL, pobierz przykłady SQL, darmowe testowe pliki SQL, przykłady skryptów baz danych, przykłady danych klientów, przykłady importów SQL, testowe pliki .sql, przykłady zarządzania bazami danych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki Customer Database SQL – Pobierz testowe pliki bazy danych SQL',
+            description: 'Pobierz darmowe przykładowe pliki skryptów bazy danych SQL Customer Database SQL do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania importu baz danych SQL, przetwarzania danych klientów i narzędzi zarządzania bazami danych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki Customer Database SQL',
+            description: 'Pobierz darmowe przykładowe pliki skryptów bazy danych SQL Customer Database SQL do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia importu baz danych SQL, przetwarzania danych klientów i zarządzania bazami danych.'
+          },
+          about_description: 'To są testowe pliki skryptów bazy danych Customer Database SQL w różnych rozmiarach do celów testowych'
+        },
+        cue: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CUE – Pobierz pliki CUE Sheet | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki obrazów dysków audio CUE Sheet CUE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania nagrywania dysków audio, parsowania CUE Sheet i narzędzi tworzenia obrazów CD/DVD.',
+            keywords: 'przykładowe pliki CUE, testowe pliki CUE, pobierz przykłady CUE, darmowe testowe pliki CUE, przykłady CUE Sheet, przykłady dysków audio, przykłady obrazów dysków CUE, testowe pliki .cue, przykłady obrazów CD, przykłady formatów audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CUE – Pobierz testowe pliki CUE Sheet',
+            description: 'Pobierz darmowe przykładowe pliki obrazów dysków audio CUE Sheet CUE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania nagrywania dysków audio, parsowania CUE Sheet i narzędzi tworzenia obrazów CD/DVD.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CUE',
+            description: 'Pobierz darmowe przykładowe pliki obrazów dysków audio CUE Sheet CUE do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia nagrywania dysków audio, parsowania CUE Sheet i tworzenia obrazów CD/DVD.'
+          },
+          about_description: 'To są testowe pliki obrazów dysków audio CUE (CUE Sheet) w różnych rozmiarach do celów testowych'
+        },
+        csr: {
+          meta: {
+            title: 'Darmowe przykładowe pliki CSR – Pobierz pliki Certificate Signing Request | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki Certificate Signing Request CSR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania generowania certyfikatów SSL, parsowania CSR i narzędzi urzędów certyfikacji.',
+            keywords: 'przykładowe pliki CSR, testowe pliki CSR, pobierz przykłady CSR, darmowe testowe pliki CSR, przykłady Certificate Signing Request, przykłady certyfikatów SSL, przykłady certyfikatów CSR, testowe pliki .csr, przykłady urzędów certyfikacji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki CSR – Pobierz testowe pliki Certificate Signing Request',
+            description: 'Pobierz darmowe przykładowe pliki Certificate Signing Request CSR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania generowania certyfikatów SSL, parsowania CSR i narzędzi urzędów certyfikacji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki CSR',
+            description: 'Pobierz darmowe przykładowe pliki Certificate Signing Request CSR do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia generowania certyfikatów SSL, parsowania CSR i urzędów certyfikacji.'
+          },
+          about_description: 'To są testowe pliki CSR (Certificate Signing Request) w różnych rozmiarach do celów testowych'
         }
       }
     }
@@ -3461,6 +3781,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose DMP Windows-Speicherdump-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Speicherdump-Analyse, Crash-Debugging und Systemdiagnose-Tools zu testen.'
           },
           about_description: 'Dies sind DMP (Windows Memory Dump) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dng: {
+          meta: {
+            title: 'Kostenlose DNG Beispieldateien herunterladen – Digital Negative Format-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DNG Digital Negative RAW-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von RAW-Bildverarbeitung, DNG-Konvertierung und digitalen Fotografie-Workflows.',
+            keywords: 'DNG Beispieldateien, DNG Testdateien, DNG Beispiele herunterladen, kostenlose DNG Testdateien, Digital Negative-Beispiele, RAW-Bild-Beispiele, DNG-Foto-Beispiele, .dng Testdateien, RAW-Format-Beispiele, Kamera-RAW-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DNG Beispieldateien – Digital Negative Format-Dateien testen',
+            description: 'Laden Sie kostenlose DNG Digital Negative RAW-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von RAW-Bildverarbeitung, DNG-Konvertierung und digitalen Fotografie-Workflows.'
+          },
+          hero: {
+            title: 'DNG Beispieldateien',
+            description: 'Laden Sie kostenlose DNG Digital Negative RAW-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre RAW-Bildverarbeitung, DNG-Konvertierung und digitalen Fotografie-Workflows zu testen.'
+          },
+          about_description: 'Dies sind DNG (Digital Negative) RAW-Bild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dmg: {
+          meta: {
+            title: 'Kostenlose DMG Beispieldateien herunterladen – macOS-Disk-Image-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DMG macOS-Disk-Image-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von macOS-App-Installation, DMG-Extraktion und Disk-Image-Verarbeitungstools.',
+            keywords: 'DMG Beispieldateien, DMG Testdateien, DMG Beispiele herunterladen, kostenlose DMG Testdateien, macOS-Disk-Image-Beispiele, Mac-App-Beispiele, DMG-Archiv-Beispiele, .dmg Testdateien, Disk-Image-Beispiele, macOS-Installer-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DMG Beispieldateien – macOS-Disk-Image-Dateien testen',
+            description: 'Laden Sie kostenlose DMG macOS-Disk-Image-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von macOS-App-Installation, DMG-Extraktion und Disk-Image-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'DMG Beispieldateien',
+            description: 'Laden Sie kostenlose DMG macOS-Disk-Image-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre macOS-App-Installation, DMG-Extraktion und Disk-Image-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind DMG (macOS Disk Image) Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        der: {
+          meta: {
+            title: 'Kostenlose DER Beispieldateien herunterladen – Distinguished Encoding Rules-Zertifikatsdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DER Distinguished Encoding Rules-Zertifikats-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Zertifikats-Parsing, SSL/TLS-Konfiguration und kryptografischen Datei-Verarbeitungstools.',
+            keywords: 'DER Beispieldateien, DER Testdateien, DER Beispiele herunterladen, kostenlose DER Testdateien, Zertifikats-Beispiele, SSL-Zertifikats-Beispiele, DER-Zertifikats-Beispiele, .der Testdateien, kryptografische Beispiele, Zertifikats-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DER Beispieldateien – Distinguished Encoding Rules-Zertifikatsdateien testen',
+            description: 'Laden Sie kostenlose DER Distinguished Encoding Rules-Zertifikats-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Zertifikats-Parsing, SSL/TLS-Konfiguration und kryptografischen Datei-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'DER Beispieldateien',
+            description: 'Laden Sie kostenlose DER Distinguished Encoding Rules-Zertifikats-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Zertifikats-Parsing, SSL/TLS-Konfiguration und kryptografischen Datei-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind DER (Distinguished Encoding Rules) Zertifikats-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dem: {
+          meta: {
+            title: 'Kostenlose DEM Beispieldateien herunterladen – Digital Elevation Model-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DEM Digital Elevation Model geografische Daten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIS-Software, Geländekartierung und Höhendaten-Verarbeitungstools.',
+            keywords: 'DEM Beispieldateien, DEM Testdateien, DEM Beispiele herunterladen, kostenlose DEM Testdateien, Digital Elevation Model-Beispiele, GIS-Daten-Beispiele, Geländedaten-Beispiele, .dem Testdateien, Höhenmodell-Beispiele, geografische Daten-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DEM Beispieldateien – Digital Elevation Model-Dateien testen',
+            description: 'Laden Sie kostenlose DEM Digital Elevation Model geografische Daten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIS-Software, Geländekartierung und Höhendaten-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'DEM Beispieldateien',
+            description: 'Laden Sie kostenlose DEM Digital Elevation Model geografische Daten-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre GIS-Software, Geländekartierung und Höhendaten-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind DEM (Digital Elevation Model) geografische Daten-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dds: {
+          meta: {
+            title: 'Kostenlose DDS Beispieldateien herunterladen – DirectDraw Surface-Bilddateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DDS DirectDraw Surface Texturbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Spieltextur-Verarbeitung, DDS-Konvertierung und Grafik-Engine-Tools.',
+            keywords: 'DDS Beispieldateien, DDS Testdateien, DDS Beispiele herunterladen, kostenlose DDS Testdateien, DirectDraw Surface-Beispiele, Texturbild-Beispiele, DDS-Textur-Beispiele, .dds Testdateien, Spieltextur-Beispiele, Grafik-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DDS Beispieldateien – DirectDraw Surface-Bilddateien testen',
+            description: 'Laden Sie kostenlose DDS DirectDraw Surface Texturbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Spieltextur-Verarbeitung, DDS-Konvertierung und Grafik-Engine-Tools.'
+          },
+          hero: {
+            title: 'DDS Beispieldateien',
+            description: 'Laden Sie kostenlose DDS DirectDraw Surface Texturbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Spieltextur-Verarbeitung, DDS-Konvertierung und Grafik-Engine-Tools zu testen.'
+          },
+          about_description: 'Dies sind DDS (DirectDraw Surface) Texturbild-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dbf: {
+          meta: {
+            title: 'Kostenlose DBF Beispieldateien herunterladen – dBASE-Datenbankdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DBF dBASE-Datenbank-Tabellen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Datenbankkonvertierung, DBF-Parsing und Legacy-Datenbankformat-Verarbeitungstools.',
+            keywords: 'DBF Beispieldateien, DBF Testdateien, DBF Beispiele herunterladen, kostenlose DBF Testdateien, dBASE-Datenbank-Beispiele, Datenbank-Tabellen-Beispiele, DBF-Datenbank-Beispiele, .dbf Testdateien, Legacy-Datenbank-Beispiele, Datenbank-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DBF Beispieldateien – dBASE-Datenbankdateien testen',
+            description: 'Laden Sie kostenlose DBF dBASE-Datenbank-Tabellen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Datenbankkonvertierung, DBF-Parsing und Legacy-Datenbankformat-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'DBF Beispieldateien',
+            description: 'Laden Sie kostenlose DBF dBASE-Datenbank-Tabellen-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Datenbankkonvertierung, DBF-Parsing und Legacy-Datenbankformat-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind DBF (dBASE Database) Tabellen-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        dav: {
+          meta: {
+            title: 'Kostenlose DAV Beispieldateien herunterladen – DAV-Videodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose DAV DAV-Videoüberwachungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videoüberwachungs-Wiedergabe, DAV-Konvertierung und Sicherheitskamera-Datei-Verarbeitungstools.',
+            keywords: 'DAV Beispieldateien, DAV Testdateien, DAV Beispiele herunterladen, kostenlose DAV Testdateien, DAV-Video-Beispiele, Videoüberwachungs-Beispiele, DAV-Kamera-Beispiele, .dav Testdateien, Sicherheitskamera-Beispiele, Video-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose DAV Beispieldateien – DAV-Videodateien testen',
+            description: 'Laden Sie kostenlose DAV DAV-Videoüberwachungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videoüberwachungs-Wiedergabe, DAV-Konvertierung und Sicherheitskamera-Datei-Verarbeitungstools.'
+          },
+          hero: {
+            title: 'DAV Beispieldateien',
+            description: 'Laden Sie kostenlose DAV DAV-Videoüberwachungs-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Videoüberwachungs-Wiedergabe, DAV-Konvertierung und Sicherheitskamera-Datei-Verarbeitungstools zu testen.'
+          },
+          about_description: 'Dies sind DAV-Videoüberwachungs-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        'customer-database-sql': {
+          meta: {
+            title: 'Kostenlose Customer Database SQL Beispieldateien herunterladen – SQL-Datenbankdateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose Customer Database SQL SQL-Datenbank-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SQL-Datenbank-Import, Kundendaten-Verarbeitung und Datenbank-Management-Tools.',
+            keywords: 'Customer Database SQL Beispieldateien, SQL-Datenbank-Testdateien, SQL Beispiele herunterladen, kostenlose SQL Testdateien, Datenbank-Skript-Beispiele, Kundendaten-Beispiele, SQL-Import-Beispiele, .sql Testdateien, Datenbank-Management-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose Customer Database SQL Beispieldateien – SQL-Datenbankdateien testen',
+            description: 'Laden Sie kostenlose Customer Database SQL SQL-Datenbank-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SQL-Datenbank-Import, Kundendaten-Verarbeitung und Datenbank-Management-Tools.'
+          },
+          hero: {
+            title: 'Customer Database SQL Beispieldateien',
+            description: 'Laden Sie kostenlose Customer Database SQL SQL-Datenbank-Skript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre SQL-Datenbank-Import, Kundendaten-Verarbeitung und Datenbank-Management-Tools zu testen.'
+          },
+          about_description: 'Dies sind Customer Database SQL Datenbank-Skript-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        cue: {
+          meta: {
+            title: 'Kostenlose CUE Beispieldateien herunterladen – CUE Sheet-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CUE CUE Sheet Audio-Disc-Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audio-Disc-Brennen, CUE Sheet-Parsing und CD/DVD-Image-Erstellungs-Tools.',
+            keywords: 'CUE Beispieldateien, CUE Testdateien, CUE Beispiele herunterladen, kostenlose CUE Testdateien, CUE Sheet-Beispiele, Audio-Disc-Beispiele, CUE-Disc-Image-Beispiele, .cue Testdateien, CD-Image-Beispiele, Audio-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CUE Beispieldateien – CUE Sheet-Dateien testen',
+            description: 'Laden Sie kostenlose CUE CUE Sheet Audio-Disc-Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audio-Disc-Brennen, CUE Sheet-Parsing und CD/DVD-Image-Erstellungs-Tools.'
+          },
+          hero: {
+            title: 'CUE Beispieldateien',
+            description: 'Laden Sie kostenlose CUE CUE Sheet Audio-Disc-Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audio-Disc-Brennen, CUE Sheet-Parsing und CD/DVD-Image-Erstellungs-Tools zu testen.'
+          },
+          about_description: 'Dies sind CUE (CUE Sheet) Audio-Disc-Image-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        csr: {
+          meta: {
+            title: 'Kostenlose CSR Beispieldateien herunterladen – Certificate Signing Request-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose CSR Certificate Signing Request-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SSL-Zertifikats-Generierung, CSR-Parsing und Zertifizierungsstelle-Tools.',
+            keywords: 'CSR Beispieldateien, CSR Testdateien, CSR Beispiele herunterladen, kostenlose CSR Testdateien, Certificate Signing Request-Beispiele, SSL-Zertifikats-Beispiele, CSR-Zertifikats-Beispiele, .csr Testdateien, Zertifizierungsstelle-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose CSR Beispieldateien – Certificate Signing Request-Dateien testen',
+            description: 'Laden Sie kostenlose CSR Certificate Signing Request-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SSL-Zertifikats-Generierung, CSR-Parsing und Zertifizierungsstelle-Tools.'
+          },
+          hero: {
+            title: 'CSR Beispieldateien',
+            description: 'Laden Sie kostenlose CSR Certificate Signing Request-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre SSL-Zertifikats-Generierung, CSR-Parsing und Zertifizierungsstelle-Tools zu testen.'
+          },
+          about_description: 'Dies sind CSR (Certificate Signing Request) Testdateien in verschiedenen Größen für Testzwecke'
         }
       }
     }
