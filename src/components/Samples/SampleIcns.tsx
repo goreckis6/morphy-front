@@ -91,20 +91,6 @@ export default function SampleIcns() {
     }, 2000);
   };
 
-  const pageJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Free ICNS Sample Files - Download Test macOS Icon Files",
-    "url": "https://morphyhub.com/samples/sample-icns",
-    "description": "Download free ICNS sample macOS icon files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing macOS icon conversion, ICNS viewing, and icon design tools.",
-    "isPartOf": { "@id": "https://morphyhub.com#website" },
-    "publisher": { "@id": "https://morphyhub.com#organization" }
-  };
-
-  const handleBack = () => {
-    window.location.href = '/';
-  };
-
   return (
     <>
       <Helmet>
