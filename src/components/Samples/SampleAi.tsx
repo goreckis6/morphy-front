@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
-import { Download, Image, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Download, Box, Clock, CheckCircle, ArrowLeft } from 'lucide-react';
 import { getStorageUrl } from '../../config/storage';
 import { useTranslation } from 'react-i18next';
 import { getLocalizedUrl } from '../../i18n';

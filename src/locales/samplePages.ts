@@ -1663,6 +1663,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free AC3 sample AC3 Dolby Digital audio files for testing. Multiple file sizes available to test your audio playback, AC3 conversion, and surround sound format tools.'
           },
           about_description: 'These are test AC3 (Dolby Digital) audio files in various sizes for testing purposes'
+        },
+        '3ds': {
+          meta: {
+            title: 'Free 3DS Sample Files Download - Test 3D Studio Mesh Files | MorphyHub',
+            description: 'Download free 3DS sample 3D Studio mesh and model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model viewing, 3DS conversion, and 3D graphics tools.',
+            keywords: '3DS sample files, test 3DS files, download 3DS samples, free 3DS test files, 3D Studio mesh samples, 3D model samples, .3ds test files, 3D graphics samples'
+          },
+          schema: {
+            name: 'Free 3DS Sample Files - Download Test 3D Studio Mesh Files',
+            description: 'Download free 3DS sample 3D Studio mesh and model files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model viewing, 3DS conversion, and 3D graphics tools.'
+          },
+          hero: {
+            title: '3DS Sample Files',
+            description: 'Download free 3DS sample 3D Studio mesh and model files for testing. Multiple file sizes available to test your 3D model viewing, 3DS conversion, and 3D graphics tools.'
+          },
+          about_description: 'These are test 3DS (3D Studio Mesh) files in various sizes for testing purposes'
+        },
+        '3gp': {
+          meta: {
+            title: 'Free 3GP Sample Files Download - Test 3GPP Video Files | MorphyHub',
+            description: 'Download free 3GP sample 3GPP video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video playback, 3GP conversion, and mobile video format tools.',
+            keywords: '3GP sample files, test 3GP files, download 3GP samples, free 3GP test files, 3GPP video samples, mobile video samples, .3gp test files, video format samples'
+          },
+          schema: {
+            name: 'Free 3GP Sample Files - Download Test 3GPP Video Files',
+            description: 'Download free 3GP sample 3GPP video files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing video playback, 3GP conversion, and mobile video format tools.'
+          },
+          hero: {
+            title: '3GP Sample Files',
+            description: 'Download free 3GP sample 3GPP video files for testing. Multiple file sizes available to test your video playback, 3GP conversion, and mobile video format tools.'
+          },
+          about_description: 'These are test 3GP (3GPP Video) files in various sizes for testing purposes'
+        },
+        aac: {
+          meta: {
+            title: 'Free AAC Sample Files Download - Test Advanced Audio Coding Files | MorphyHub',
+            description: 'Download free AAC sample Advanced Audio Coding audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AAC conversion, and modern audio format tools.',
+            keywords: 'AAC sample files, test AAC files, download AAC samples, free AAC test files, Advanced Audio Coding samples, audio format samples, .aac test files, audio codec samples'
+          },
+          schema: {
+            name: 'Free AAC Sample Files - Download Test Advanced Audio Coding Files',
+            description: 'Download free AAC sample Advanced Audio Coding audio files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing audio playback, AAC conversion, and modern audio format tools.'
+          },
+          hero: {
+            title: 'AAC Sample Files',
+            description: 'Download free AAC sample Advanced Audio Coding audio files for testing. Multiple file sizes available to test your audio playback, AAC conversion, and modern audio format tools.'
+          },
+          about_description: 'These are test AAC (Advanced Audio Coding) audio files in various sizes for testing purposes'
+        },
+        icns: {
+          meta: {
+            title: 'Free ICNS Sample Files Download - Test Apple Icon Image Files | MorphyHub',
+            description: 'Download free ICNS sample Apple Icon Image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing icon rendering, ICNS conversion, and macOS icon format tools.',
+            keywords: 'ICNS sample files, test ICNS files, download ICNS samples, free ICNS test files, Apple Icon Image samples, macOS icon samples, .icns test files, icon format samples'
+          },
+          schema: {
+            name: 'Free ICNS Sample Files - Download Test Apple Icon Image Files',
+            description: 'Download free ICNS sample Apple Icon Image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing icon rendering, ICNS conversion, and macOS icon format tools.'
+          },
+          hero: {
+            title: 'ICNS Sample Files',
+            description: 'Download free ICNS sample Apple Icon Image files for testing. Multiple file sizes available to test your icon rendering, ICNS conversion, and macOS icon format tools.'
+          },
+          about_description: 'These are test ICNS (Apple Icon Image) files in various sizes for testing purposes'
+        },
+        ace: {
+          meta: {
+            title: 'Free ACE Sample Files Download - Test ACE Archive Files | MorphyHub',
+            description: 'Download free ACE sample ACE compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, ACE compression, and archive format tools.',
+            keywords: 'ACE sample files, test ACE files, download ACE samples, free ACE test files, ACE archive samples, compressed archive samples, .ace test files, archive format samples'
+          },
+          schema: {
+            name: 'Free ACE Sample Files - Download Test ACE Archive Files',
+            description: 'Download free ACE sample ACE compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, ACE compression, and archive format tools.'
+          },
+          hero: {
+            title: 'ACE Sample Files',
+            description: 'Download free ACE sample ACE compressed archive files for testing. Multiple file sizes available to test your archive extraction, ACE compression, and archive format tools.'
+          },
+          about_description: 'These are test ACE (ACE Archive) compressed archive files in various sizes for testing purposes'
+        },
+        gz: {
+          meta: {
+            title: 'Free GZ Sample Files Download - Test Gzip Compressed Files | MorphyHub',
+            description: 'Download free GZ sample Gzip compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, Gzip decompression, and compression format tools.',
+            keywords: 'GZ sample files, test GZ files, download GZ samples, free GZ test files, Gzip archive samples, compressed file samples, .gz test files, compression format samples'
+          },
+          schema: {
+            name: 'Free GZ Sample Files - Download Test Gzip Compressed Files',
+            description: 'Download free GZ sample Gzip compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, Gzip decompression, and compression format tools.'
+          },
+          hero: {
+            title: 'GZ Sample Files',
+            description: 'Download free GZ sample Gzip compressed archive files for testing. Multiple file sizes available to test your archive extraction, Gzip decompression, and compression format tools.'
+          },
+          about_description: 'These are test GZ (Gzip Compressed) archive files in various sizes for testing purposes'
+        },
+        h: {
+          meta: {
+            title: 'Free H Sample Files Download - Test C Header Files | MorphyHub',
+            description: 'Download free H sample C header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C code compilation, header file parsing, and C development tools.',
+            keywords: 'H sample files, test H files, download H samples, free H test files, C header samples, C++ header samples, .h test files, header file samples'
+          },
+          schema: {
+            name: 'Free H Sample Files - Download Test C Header Files',
+            description: 'Download free H sample C header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C code compilation, header file parsing, and C development tools.'
+          },
+          hero: {
+            title: 'H Sample Files',
+            description: 'Download free H sample C header files for testing. Multiple file sizes available to test your C code compilation, header file parsing, and C development tools.'
+          },
+          about_description: 'These are test H (C Header) files in various sizes for testing purposes'
+        },
+        hdr: {
+          meta: {
+            title: 'Free HDR Sample Files Download - Test High Dynamic Range Image Files | MorphyHub',
+            description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image viewing, HDR processing, and high dynamic range format tools.',
+            keywords: 'HDR sample files, test HDR files, download HDR samples, free HDR test files, High Dynamic Range samples, HDR image samples, .hdr test files, HDR format samples'
+          },
+          schema: {
+            name: 'Free HDR Sample Files - Download Test High Dynamic Range Image Files',
+            description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR image viewing, HDR processing, and high dynamic range format tools.'
+          },
+          hero: {
+            title: 'HDR Sample Files',
+            description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available to test your HDR image viewing, HDR processing, and high dynamic range format tools.'
+          },
+          about_description: 'These are test HDR (High Dynamic Range) image files in various sizes for testing purposes'
+        },
+        hex: {
+          meta: {
+            title: 'Free HEX Sample Files Download - Test Intel HEX Files | MorphyHub',
+            description: 'Download free HEX sample Intel HEX format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEX file parsing, firmware programming, and embedded systems tools.',
+            keywords: 'HEX sample files, test HEX files, download HEX samples, free HEX test files, Intel HEX samples, firmware samples, .hex test files, embedded systems samples'
+          },
+          schema: {
+            name: 'Free HEX Sample Files - Download Test Intel HEX Files',
+            description: 'Download free HEX sample Intel HEX format files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEX file parsing, firmware programming, and embedded systems tools.'
+          },
+          hero: {
+            title: 'HEX Sample Files',
+            description: 'Download free HEX sample Intel HEX format files for testing. Multiple file sizes available to test your HEX file parsing, firmware programming, and embedded systems tools.'
+          },
+          about_description: 'These are test HEX (Intel HEX Format) files in various sizes for testing purposes'
+        },
+        hpp: {
+          meta: {
+            title: 'Free HPP Sample Files Download - Test C++ Header Files | MorphyHub',
+            description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, header file parsing, and C++ development tools.',
+            keywords: 'HPP sample files, test HPP files, download HPP samples, free HPP test files, C++ header samples, header file samples, .hpp test files, C++ development samples'
+          },
+          schema: {
+            name: 'Free HPP Sample Files - Download Test C++ Header Files',
+            description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ code compilation, header file parsing, and C++ development tools.'
+          },
+          hero: {
+            title: 'HPP Sample Files',
+            description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available to test your C++ code compilation, header file parsing, and C++ development tools.'
+          },
+          about_description: 'These are test HPP (C++ Header) files in various sizes for testing purposes'
         }
       }
     }
@@ -3282,6 +3442,166 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki audio AC3 Dolby Digital AC3 do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania audio, konwersji AC3 i formatów dźwięku przestrzennego.'
           },
           about_description: 'To są testowe pliki audio AC3 (Dolby Digital) w różnych rozmiarach do celów testowych'
+        },
+        '3ds': {
+          meta: {
+            title: 'Darmowe przykładowe pliki 3DS – Pobierz pliki siatki 3D Studio | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki siatki i modeli 3D Studio 3DS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądania modeli 3D, konwersji 3DS i narzędzi grafiki 3D.',
+            keywords: 'przykładowe pliki 3DS, testowe pliki 3DS, pobierz przykłady 3DS, darmowe testowe pliki 3DS, przykłady siatki 3D Studio, przykłady modeli 3D, testowe pliki .3ds, przykłady grafiki 3D'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki 3DS – Pobierz testowe pliki siatki 3D Studio',
+            description: 'Pobierz darmowe przykładowe pliki siatki i modeli 3D Studio 3DS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądania modeli 3D, konwersji 3DS i narzędzi grafiki 3D.'
+          },
+          hero: {
+            title: 'Przykładowe pliki 3DS',
+            description: 'Pobierz darmowe przykładowe pliki siatki i modeli 3D Studio 3DS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przeglądania modeli 3D, konwersji 3DS i grafiki 3D.'
+          },
+          about_description: 'To są testowe pliki 3DS (3D Studio Mesh) w różnych rozmiarach do celów testowych'
+        },
+        '3gp': {
+          meta: {
+            title: 'Darmowe przykładowe pliki 3GP – Pobierz pliki wideo 3GPP | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki wideo 3GPP 3GP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania wideo, konwersji 3GP i narzędzi formatów wideo mobilnych.',
+            keywords: 'przykładowe pliki 3GP, testowe pliki 3GP, pobierz przykłady 3GP, darmowe testowe pliki 3GP, przykłady wideo 3GPP, przykłady wideo mobilnych, testowe pliki .3gp, przykłady formatów wideo'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki 3GP – Pobierz testowe pliki wideo 3GPP',
+            description: 'Pobierz darmowe przykładowe pliki wideo 3GPP 3GP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania wideo, konwersji 3GP i narzędzi formatów wideo mobilnych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki 3GP',
+            description: 'Pobierz darmowe przykładowe pliki wideo 3GPP 3GP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania wideo, konwersji 3GP i formatów wideo mobilnych.'
+          },
+          about_description: 'To są testowe pliki 3GP (3GPP Video) w różnych rozmiarach do celów testowych'
+        },
+        aac: {
+          meta: {
+            title: 'Darmowe przykładowe pliki AAC – Pobierz pliki Advanced Audio Coding | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki audio Advanced Audio Coding AAC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AAC i narzędzi nowoczesnych formatów audio.',
+            keywords: 'przykładowe pliki AAC, testowe pliki AAC, pobierz przykłady AAC, darmowe testowe pliki AAC, przykłady Advanced Audio Coding, przykłady formatów audio, testowe pliki .aac, przykłady kodeków audio'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki AAC – Pobierz testowe pliki Advanced Audio Coding',
+            description: 'Pobierz darmowe przykładowe pliki audio Advanced Audio Coding AAC do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzania audio, konwersji AAC i narzędzi nowoczesnych formatów audio.'
+          },
+          hero: {
+            title: 'Przykładowe pliki AAC',
+            description: 'Pobierz darmowe przykładowe pliki audio Advanced Audio Coding AAC do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia odtwarzania audio, konwersji AAC i nowoczesnych formatów audio.'
+          },
+          about_description: 'To są testowe pliki audio AAC (Advanced Audio Coding) w różnych rozmiarach do celów testowych'
+        },
+        icns: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ICNS – Pobierz pliki ikon Apple Icon Image | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki ikon Apple Icon Image ICNS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania renderowania ikon, konwersji ICNS i narzędzi formatów ikon macOS.',
+            keywords: 'przykładowe pliki ICNS, testowe pliki ICNS, pobierz przykłady ICNS, darmowe testowe pliki ICNS, przykłady Apple Icon Image, przykłady ikon macOS, testowe pliki .icns, przykłady formatów ikon'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ICNS – Pobierz testowe pliki ikon Apple Icon Image',
+            description: 'Pobierz darmowe przykładowe pliki ikon Apple Icon Image ICNS do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania renderowania ikon, konwersji ICNS i narzędzi formatów ikon macOS.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ICNS',
+            description: 'Pobierz darmowe przykładowe pliki ikon Apple Icon Image ICNS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia renderowania ikon, konwersji ICNS i formatów ikon macOS.'
+          },
+          about_description: 'To są testowe pliki ICNS (Apple Icon Image) w różnych rozmiarach do celów testowych'
+        },
+        ace: {
+          meta: {
+            title: 'Darmowe przykładowe pliki ACE – Pobierz pliki archiwum ACE | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ACE ACE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, kompresji ACE i narzędzi formatów archiwów.',
+            keywords: 'przykładowe pliki ACE, testowe pliki ACE, pobierz przykłady ACE, darmowe testowe pliki ACE, przykłady archiwów ACE, przykłady skompresowanych archiwów, testowe pliki .ace, przykłady formatów archiwów'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki ACE – Pobierz testowe pliki archiwum ACE',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ACE ACE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, kompresji ACE i narzędzi formatów archiwów.'
+          },
+          hero: {
+            title: 'Przykładowe pliki ACE',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ACE ACE do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów, kompresji ACE i formatów archiwów.'
+          },
+          about_description: 'To są testowe pliki archiwum skompresowanego ACE (ACE Archive) w różnych rozmiarach do celów testowych'
+        },
+        gz: {
+          meta: {
+            title: 'Darmowe przykładowe pliki GZ – Pobierz pliki skompresowane Gzip | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego Gzip GZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, dekompresji Gzip i narzędzi formatów kompresji.',
+            keywords: 'przykładowe pliki GZ, testowe pliki GZ, pobierz przykłady GZ, darmowe testowe pliki GZ, przykłady archiwów Gzip, przykłady skompresowanych plików, testowe pliki .gz, przykłady formatów kompresji'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki GZ – Pobierz testowe pliki skompresowane Gzip',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego Gzip GZ do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, dekompresji Gzip i narzędzi formatów kompresji.'
+          },
+          hero: {
+            title: 'Przykładowe pliki GZ',
+            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego Gzip GZ do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów, dekompresji Gzip i formatów kompresji.'
+          },
+          about_description: 'To są testowe pliki archiwum skompresowanego Gzip GZ w różnych rozmiarach do celów testowych'
+        },
+        h: {
+          meta: {
+            title: 'Darmowe przykładowe pliki H – Pobierz pliki nagłówkowe C | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki nagłówkowe C H do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C, parsowania plików nagłówkowych i narzędzi deweloperskich C.',
+            keywords: 'przykładowe pliki H, testowe pliki H, pobierz przykłady H, darmowe testowe pliki H, przykłady nagłówkowych C, przykłady nagłówkowych C++, testowe pliki .h, przykłady plików nagłówkowych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki H – Pobierz testowe pliki nagłówkowe C',
+            description: 'Pobierz darmowe przykładowe pliki nagłówkowe C H do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C, parsowania plików nagłówkowych i narzędzi deweloperskich C.'
+          },
+          hero: {
+            title: 'Przykładowe pliki H',
+            description: 'Pobierz darmowe przykładowe pliki nagłówkowe C H do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji kodu C, parsowania plików nagłówkowych i deweloperskie C.'
+          },
+          about_description: 'To są testowe pliki H (C Header) w różnych rozmiarach do celów testowych'
+        },
+        hdr: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HDR – Pobierz pliki obrazów High Dynamic Range | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki obrazów High Dynamic Range HDR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądania obrazów HDR, przetwarzania HDR i narzędzi formatów wysokiego zakresu dynamicznego.',
+            keywords: 'przykładowe pliki HDR, testowe pliki HDR, pobierz przykłady HDR, darmowe testowe pliki HDR, przykłady High Dynamic Range, przykłady obrazów HDR, testowe pliki .hdr, przykłady formatów HDR'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HDR – Pobierz testowe pliki obrazów High Dynamic Range',
+            description: 'Pobierz darmowe przykładowe pliki obrazów High Dynamic Range HDR do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądania obrazów HDR, przetwarzania HDR i narzędzi formatów wysokiego zakresu dynamicznego.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HDR',
+            description: 'Pobierz darmowe przykładowe pliki obrazów High Dynamic Range HDR do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia przeglądania obrazów HDR, przetwarzania HDR i formatów wysokiego zakresu dynamicznego.'
+          },
+          about_description: 'To są testowe pliki obrazów HDR (High Dynamic Range) w różnych rozmiarach do celów testowych'
+        },
+        hex: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HEX – Pobierz pliki Intel HEX | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki formatu Intel HEX HEX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików HEX, programowania firmware i narzędzi systemów wbudowanych.',
+            keywords: 'przykładowe pliki HEX, testowe pliki HEX, pobierz przykłady HEX, darmowe testowe pliki HEX, przykłady Intel HEX, przykłady firmware, testowe pliki .hex, przykłady systemów wbudowanych'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HEX – Pobierz testowe pliki Intel HEX',
+            description: 'Pobierz darmowe przykładowe pliki formatu Intel HEX HEX do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parsowania plików HEX, programowania firmware i narzędzi systemów wbudowanych.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HEX',
+            description: 'Pobierz darmowe przykładowe pliki formatu Intel HEX HEX do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia parsowania plików HEX, programowania firmware i systemów wbudowanych.'
+          },
+          about_description: 'To są testowe pliki HEX (Intel HEX Format) w różnych rozmiarach do celów testowych'
+        },
+        hpp: {
+          meta: {
+            title: 'Darmowe przykładowe pliki HPP – Pobierz pliki nagłówkowe C++ | MorphyHub',
+            description: 'Pobierz darmowe przykładowe pliki nagłówkowe C++ HPP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++, parsowania plików nagłówkowych i narzędzi deweloperskich C++.',
+            keywords: 'przykładowe pliki HPP, testowe pliki HPP, pobierz przykłady HPP, darmowe testowe pliki HPP, przykłady nagłówkowych C++, przykłady plików nagłówkowych, testowe pliki .hpp, przykłady deweloperskie C++'
+          },
+          schema: {
+            name: 'Darmowe przykładowe pliki HPP – Pobierz testowe pliki nagłówkowe C++',
+            description: 'Pobierz darmowe przykładowe pliki nagłówkowe C++ HPP do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilacji kodu C++, parsowania plików nagłówkowych i narzędzi deweloperskich C++.'
+          },
+          hero: {
+            title: 'Przykładowe pliki HPP',
+            description: 'Pobierz darmowe przykładowe pliki nagłówkowe C++ HPP do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia kompilacji kodu C++, parsowania plików nagłówkowych i deweloperskie C++.'
+          },
+          about_description: 'To są testowe pliki HPP (C++ Header) w różnych rozmiarach do celów testowych'
         }
       }
     }

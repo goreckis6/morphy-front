@@ -136,12 +136,12 @@ export default function SampleHdr() {
                 <Image className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                {t(`sample_page.formats.${formatKey}.hero.title`)}
-              </h1>
+                    {t(`sample_page.formats.${formatKey}.hero.title`)}
+                  </h1>
             </div>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
-              {t(`sample_page.formats.${formatKey}.hero.description`)}
-            </p>
+                    {t(`sample_page.formats.${formatKey}.hero.description`)}
+                  </p>
           </div>
 
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
