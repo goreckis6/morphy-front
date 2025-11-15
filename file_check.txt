@@ -362,3 +362,33 @@ Improvements from Batch 11:
 
 Status: ✅ All 9 components completed and ready for verification
 
+Batch 13 - Sample Component Translations Completed (10 files)
+============================================================
+
+All components already had translations set up but had hardcoded strings in JSX. Fixed all hardcoded strings to use t() calls.
+
+Components Fixed:
+1. ✅ SampleAse.tsx (formatKey: ase)
+2. ✅ SampleAssetbundle.tsx (formatKey: assetbundle)
+3. ✅ SampleBarcodeSvg.tsx (formatKey: barcode-svg)
+4. ✅ SampleBvh.tsx (formatKey: bvh)
+5. ✅ SampleCanLog.tsx (formatKey: can-log)
+6. ✅ SampleCmd.tsx (formatKey: cmd)
+7. ✅ SampleConf.tsx (formatKey: conf)
+8. ✅ SampleConfigIni.tsx (formatKey: config-ini)
+9. ✅ SampleCpio.tsx (formatKey: cpio)
+10. ✅ SampleCs.tsx (formatKey: cs)
+
+Fixes Applied:
+- Replaced "Back to Home" with t('sample_page.common.back_button')
+- Replaced "File size:" with t('sample_page.common.file_size')
+- Replaced "Download ready in {countdown}s..." with t('sample_page.common.download_ready_in', { countdown })
+- Replaced "Download started" with t('sample_page.common.download_started')
+- Replaced hero titles with t(`sample_page.formats.${formatKey}.hero.title`)
+- Replaced hero descriptions with t(`sample_page.formats.${formatKey}.hero.description`)
+- Replaced "About These Sample Files" with t('sample_page.common.about_title')
+- Replaced about items list with dynamic t() calls
+- Replaced features section strings with t() calls
+
+Status: ✅ All 10 components completed and ready for verification
+
