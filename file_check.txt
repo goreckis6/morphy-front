@@ -445,3 +445,26 @@ Fixes Applied:
 
 Status: ✅ All 10 components completed and ready for verification
 
+Batch 16 - Sample Component Translations Completed (10 files)
+============================================================
+
+All components already had translations set up but were missing the aboutItems declaration. Added missing aboutItems declarations and standardized usage.
+
+Components Fixed:
+1. ✅ SampleXml.tsx (formatKey: xml)
+2. ✅ SampleCsv.tsx (formatKey: csv)
+3. ✅ SampleZip.tsx (formatKey: zip)
+4. ✅ SampleInvoicePdf.tsx (formatKey: invoice-pdf)
+5. ✅ SampleHtml.tsx (formatKey: html)
+6. ✅ SampleJs.tsx (formatKey: js)
+7. ✅ SampleJsx.tsx (formatKey: jsx)
+8. ✅ SampleCss.tsx (formatKey: css)
+9. ✅ SampleMd.tsx (formatKey: md)
+10. ✅ SampleJson.tsx (formatKey: json)
+
+Fixes Applied:
+- Added missing `const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];` declaration after handleBack
+- Replaced direct `t('sample_page.common.about_items', { returnObjects: true }).slice(1).map((item: string, idx: number)` calls with `Array.isArray(aboutItems) && aboutItems.slice(1).map((item, idx)` pattern for consistency
+
+Status: ✅ All 10 components completed and ready for verification
+
