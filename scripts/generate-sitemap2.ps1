@@ -37,8 +37,13 @@ function Get-UrlXml {
         [bool]$addHreflang = $true
     )
     
-    if ([string]::IsNullOrWhiteSpace($path) -or $path -eq '/') {
+    if ([string]::IsNullOrWhiteSpace($path)) {
         return ''
+    }
+    
+    # Normalize path - ensure it starts with /
+    if ($path -ne '/' -and -not $path.StartsWith('/')) {
+        $path = "/$path"
     }
     
     $url = "$baseUrl$path"

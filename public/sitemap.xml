@@ -2,6 +2,15 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://morphyhub.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/" />
+    <lastmod>2025-11-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://morphyhub.com/pl</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/" />
@@ -65,10 +74,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://morphyhub.com*</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com*" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl*" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de*" />
+    <loc>https://morphyhub.com/*</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://morphyhub.com/*" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://morphyhub.com/pl/*" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://morphyhub.com/de/*" />
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
