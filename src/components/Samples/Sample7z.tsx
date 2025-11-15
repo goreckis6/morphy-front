@@ -243,7 +243,7 @@ export default function Sample7z() {
                 <Archive className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Multiple Sizes
+                {t('sample_page.common.features.multiple_sizes.title')}
               </h3>
               <p className="text-sm text-gray-600">
                 {t('sample_page.common.features.multiple_sizes.description')}
@@ -254,7 +254,7 @@ export default function Sample7z() {
                 <Download className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Free Download
+                {t('sample_page.common.features.free_download.title')}
               </h3>
               <p className="text-sm text-gray-600">
                 {t('sample_page.common.features.free_download.description')}
@@ -265,7 +265,7 @@ export default function Sample7z() {
                 <CheckCircle className="w-6 h-6 text-orange-600" />
               </div>
               <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
-                Safe & Tested
+                {t('sample_page.common.features.safe_tested.title')}
               </h3>
               <p className="text-sm text-gray-600">
                 {t('sample_page.common.features.safe_tested.description')}

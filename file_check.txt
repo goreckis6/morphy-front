@@ -468,3 +468,41 @@ Fixes Applied:
 
 Status: ✅ All 10 components completed and ready for verification
 
+Batch 17 - Sample Component Translations Completed (9 files)
+============================================================
+
+All components already had translations set up but were missing the aboutItems declaration. Added missing aboutItems declarations and standardized usage.
+
+Components Fixed:
+1. ✅ SampleJsonl.tsx (formatKey: jsonl)
+2. ✅ SampleJpeg.tsx (formatKey: jpeg)
+3. ✅ SampleJpg.tsx (formatKey: jpg)
+4. ✅ SampleJava.tsx (formatKey: java)
+5. ✅ SampleCpp.tsx (formatKey: cpp)
+6. ✅ SampleC.tsx (formatKey: c)
+7. ✅ SampleBmp.tsx (formatKey: bmp)
+8. ✅ SampleApiResponseJson.tsx (formatKey: api-response-json)
+9. ✅ SampleAnsibleYml.tsx (formatKey: ansible-yml)
+
+Fixes Applied:
+- Added missing `const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];` declaration after handleBack
+- Replaced direct `t('sample_page.common.about_items', { returnObjects: true }).slice(1).map((item: string, idx: number)` calls with `Array.isArray(aboutItems) && aboutItems.slice(1).map((item, idx)` pattern for consistency
+
+Status: ✅ All 9 components completed and ready for verification
+
+Batch 18 - Sample Component Translations Completed (2 files)
+============================================================
+
+All components already had translations set up but had hardcoded feature titles. Fixed all hardcoded feature titles to use t() calls.
+
+Components Fixed:
+1. ✅ Sample7z.tsx (formatKey: 7z)
+2. ✅ Sample3mf.tsx (formatKey: 3mf)
+
+Fixes Applied:
+- Replaced "Multiple Sizes" with t('sample_page.common.features.multiple_sizes.title')
+- Replaced "Free Download" with t('sample_page.common.features.free_download.title')
+- Replaced "Safe & Tested" with t('sample_page.common.features.safe_tested.title')
+
+Status: ✅ All 2 components completed and ready for verification
+
