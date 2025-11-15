@@ -221,7 +221,7 @@ export default function SampleXlsx() {
             </h3>
             <ul className="space-y-2 text-sm sm:text-base text-gray-600">
               <li>• {t(`sample_page.formats.${formatKey}.about_description`)}</li>
-              {t('sample_page.common.about_items', { returnObjects: true }).slice(1).map((item: string, idx: number) => (
+              {Array.isArray(aboutItems) && aboutItems.slice(1).map((item, idx) => (
                 <li key={idx}>• {item}</li>
               ))}
             </ul>
