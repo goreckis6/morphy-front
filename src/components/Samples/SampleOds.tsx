@@ -90,6 +90,8 @@ export default function SampleOds() {
     navigate(getLocalizedUrl('/', i18n.language));
   };
 
+  const aboutItems = t('sample_page.common.about_items', { returnObjects: true }) as string[];
+
   return (
     <>
       <Helmet>
