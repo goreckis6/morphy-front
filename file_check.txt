@@ -392,3 +392,33 @@ Fixes Applied:
 
 Status: ✅ All 10 components completed and ready for verification
 
+Batch 14 - Sample Component Translations Completed (10 files)
+============================================================
+
+All components already had translations set up but had hardcoded strings in JSX. Fixed all hardcoded strings to use t() calls.
+
+Components Fixed:
+1. ✅ SampleCsr.tsx (formatKey: csr)
+2. ✅ SampleCue.tsx (formatKey: cue)
+3. ✅ SampleDav.tsx (formatKey: dav)
+4. ✅ SampleDbf.tsx (formatKey: dbf)
+5. ✅ SampleDds.tsx (formatKey: dds)
+6. ✅ SampleDem.tsx (formatKey: dem)
+7. ✅ SampleDer.tsx (formatKey: der)
+8. ✅ SampleDmg.tsx (formatKey: dmg)
+9. ✅ SampleDng.tsx (formatKey: dng)
+10. ✅ SampleCustomerDatabaseSql.tsx (formatKey: customer-database-sql)
+
+Fixes Applied:
+- Replaced "Back to Home" with t('sample_page.common.back_button')
+- Replaced "File size:" with t('sample_page.common.file_size')
+- Replaced "Download ready in {countdown}s..." with t('sample_page.common.download_ready_in', { countdown })
+- Replaced "Download started" with t('sample_page.common.download_started')
+- Verified hero titles and descriptions are using t() calls (already translated)
+- Replaced "About These Sample Files" with t('sample_page.common.about_title')
+- Replaced about items list with dynamic t() calls
+- Replaced features section strings with t() calls
+- Fixed duplicate pageJsonLd script tag in SampleCustomerDatabaseSql.tsx
+
+Status: ✅ All 10 components completed and ready for verification
+
