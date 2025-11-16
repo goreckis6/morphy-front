@@ -15252,6 +15252,39 @@ const resources = {
   },
   id: {
     translation: {
+      // Common
+      'common.free': 'Gratis',
+      'common.upload': 'Unggah',
+      'common.download': 'Unduh',
+      'common.convert': 'Konversi',
+      'common.converting': 'Mengonversi...',
+      'common.choose_files': 'Pilih File',
+      'common.single_file': 'File Tunggal',
+      'common.batch_convert': 'Konversi Batch',
+      'common.back_to_home': 'Kembali ke Beranda',
+      'common.back_to_converters': 'Kembali ke Konverter',
+      'common.start_converting': 'Mulai Mengonversi Sekarang',
+      'common.convert_more': 'Konversi Lebih Banyak File',
+      'common.convert_another': 'Konversi Lainnya',
+      'common.convert_more_files': 'Konversi Lebih Banyak File',
+      'common.start_converting_now': 'Mulai Mengonversi Sekarang',
+      'common.batch_conversion_complete': 'Konversi Batch Selesai',
+      'common.batch_success_count': 'Berhasil mengonversi {{successful}} dari {{total}} file',
+      'common.convert_files': 'Konversi File',
+      'common.selected_files': 'File yang Dipilih ({{count}})',
+      'common.conversion_complete': 'Konversi Selesai',
+      'common.lightning_fast': 'Sangat Cepat',
+      'common.secure': 'Aman',
+      'common.no_registration': 'Tidak Perlu Registrasi',
+      'common.preview': 'Pratinjau',
+      'common.total_size': 'Ukuran total: {{current}} dari {{max}} yang diizinkan.',
+      
+      // Features
+      'features.lightning_fast': 'Sangat Cepat',
+      'features.100_free': '100% Gratis',
+      'features.no_registration': 'Tanpa Registrasi',
+      'features.secure': '100% Aman',
+      
       // CR2 to ICO - Bahasa Indonesia
       'cr2_to_ico.title': 'Konverter CR2 ke ICO',
       'cr2_to_ico.meta_title': 'Konverter CR2 ke ICO Gratis - Konversi Canon RAW ke Ikon Windows',
@@ -15340,6 +15373,39 @@ const resources = {
   },
   sv: {
     translation: {
+      // Common
+      'common.free': 'Gratis',
+      'common.upload': 'Ladda upp',
+      'common.download': 'Ladda ner',
+      'common.convert': 'Konvertera',
+      'common.converting': 'Konverterar...',
+      'common.choose_files': 'Välj filer',
+      'common.single_file': 'Enskild fil',
+      'common.batch_convert': 'Batchkonvertering',
+      'common.back_to_home': 'Tillbaka till startsidan',
+      'common.back_to_converters': 'Tillbaka till konverterare',
+      'common.start_converting': 'Börja konvertera nu',
+      'common.convert_more': 'Konvertera fler filer',
+      'common.convert_another': 'Konvertera en annan',
+      'common.convert_more_files': 'Konvertera fler filer',
+      'common.start_converting_now': 'Börja konvertera nu',
+      'common.batch_conversion_complete': 'Batchkonvertering klar',
+      'common.batch_success_count': 'Framgångsrikt konverterat {{successful}} av {{total}} filer',
+      'common.convert_files': 'Konvertera filer',
+      'common.selected_files': 'Valda filer ({{count}})',
+      'common.conversion_complete': 'Konvertering klar',
+      'common.lightning_fast': 'Blixtsnabb',
+      'common.secure': 'Säker',
+      'common.no_registration': 'Ingen registrering krävs',
+      'common.preview': 'Förhandsvisning',
+      'common.total_size': 'Total storlek: {{current}} av {{max}} tillåten.',
+      
+      // Features
+      'features.lightning_fast': 'Blixtsnabb',
+      'features.100_free': '100% Gratis',
+      'features.no_registration': 'Ingen registrering',
+      'features.secure': '100% Säker',
+      
       // CR2 to ICO - Svenska
       'cr2_to_ico.title': 'CR2 till ICO-konverterare',
       'cr2_to_ico.meta_title': 'Gratis CR2 till ICO-konverterare - Konvertera Canon RAW till Windows-ikoner',
@@ -15428,6 +15494,39 @@ const resources = {
   },
   es: {
     translation: {
+      // Common
+      'common.free': 'Gratis',
+      'common.upload': 'Subir',
+      'common.download': 'Descargar',
+      'common.convert': 'Convertir',
+      'common.converting': 'Convirtiendo...',
+      'common.choose_files': 'Elegir Archivos',
+      'common.single_file': 'Archivo Único',
+      'common.batch_convert': 'Conversión por Lotes',
+      'common.back_to_home': 'Volver al Inicio',
+      'common.back_to_converters': 'Volver a Convertidores',
+      'common.start_converting': 'Comenzar a Convertir Ahora',
+      'common.convert_more': 'Convertir Más Archivos',
+      'common.convert_another': 'Convertir Otro',
+      'common.convert_more_files': 'Convertir Más Archivos',
+      'common.start_converting_now': 'Comenzar a Convertir Ahora',
+      'common.batch_conversion_complete': 'Conversión por Lotes Completa',
+      'common.batch_success_count': 'Convertidos exitosamente {{successful}} de {{total}} archivos',
+      'common.convert_files': 'Convertir Archivos',
+      'common.selected_files': 'Archivos Seleccionados ({{count}})',
+      'common.conversion_complete': 'Conversión Completa',
+      'common.lightning_fast': 'Súper Rápido',
+      'common.secure': 'Seguro',
+      'common.no_registration': 'No Se Requiere Registro',
+      'common.preview': 'Vista Previa',
+      'common.total_size': 'Tamaño total: {{current}} de {{max}} permitidos.',
+      
+      // Features
+      'features.lightning_fast': 'Súper Rápido',
+      'features.100_free': '100% Gratis',
+      'features.no_registration': 'Sin Registro',
+      'features.secure': '100% Seguro',
+      
       // CR2 to ICO - Español
       'cr2_to_ico.title': 'Convertidor CR2 a ICO',
       'cr2_to_ico.meta_title': 'Convertidor CR2 a ICO Gratis - Convertir Canon RAW a Iconos de Windows',
@@ -15516,6 +15615,39 @@ const resources = {
   },
   fr: {
     translation: {
+      // Common
+      'common.free': 'Gratuit',
+      'common.upload': 'Télécharger',
+      'common.download': 'Télécharger',
+      'common.convert': 'Convertir',
+      'common.converting': 'Conversion en cours...',
+      'common.choose_files': 'Choisir des Fichiers',
+      'common.single_file': 'Fichier Unique',
+      'common.batch_convert': 'Conversion par Lots',
+      'common.back_to_home': 'Retour à l\'Accueil',
+      'common.back_to_converters': 'Retour aux Convertisseurs',
+      'common.start_converting': 'Commencer la Conversion',
+      'common.convert_more': 'Convertir Plus de Fichiers',
+      'common.convert_another': 'Convertir un Autre',
+      'common.convert_more_files': 'Convertir Plus de Fichiers',
+      'common.start_converting_now': 'Commencer la Conversion Maintenant',
+      'common.batch_conversion_complete': 'Conversion par Lots Terminée',
+      'common.batch_success_count': '{{successful}} fichiers sur {{total}} convertis avec succès',
+      'common.convert_files': 'Convertir les Fichiers',
+      'common.selected_files': 'Fichiers Sélectionnés ({{count}})',
+      'common.conversion_complete': 'Conversion Terminée',
+      'common.lightning_fast': 'Ultra Rapide',
+      'common.secure': 'Sécurisé',
+      'common.no_registration': 'Aucune Inscription Requise',
+      'common.preview': 'Aperçu',
+      'common.total_size': 'Taille totale : {{current}} sur {{max}} autorisés.',
+      
+      // Features
+      'features.lightning_fast': 'Ultra Rapide',
+      'features.100_free': '100% Gratuit',
+      'features.no_registration': 'Sans Inscription',
+      'features.secure': '100% Sécurisé',
+      
       // CR2 to ICO - Français
       'cr2_to_ico.title': 'Convertisseur CR2 vers ICO',
       'cr2_to_ico.meta_title': 'Convertisseur CR2 vers ICO Gratuit - Convertir Canon RAW en Icônes Windows',
@@ -15604,6 +15736,39 @@ const resources = {
   },
   it: {
     translation: {
+      // Common
+      'common.free': 'Gratuito',
+      'common.upload': 'Carica',
+      'common.download': 'Scarica',
+      'common.convert': 'Converti',
+      'common.converting': 'Conversione in corso...',
+      'common.choose_files': 'Scegli File',
+      'common.single_file': 'File Singolo',
+      'common.batch_convert': 'Conversione Batch',
+      'common.back_to_home': 'Torna alla Home',
+      'common.back_to_converters': 'Torna ai Convertitori',
+      'common.start_converting': 'Inizia a Convertire Ora',
+      'common.convert_more': 'Converti Altri File',
+      'common.convert_another': 'Converti un Altro',
+      'common.convert_more_files': 'Converti Altri File',
+      'common.start_converting_now': 'Inizia a Convertire Ora',
+      'common.batch_conversion_complete': 'Conversione Batch Completata',
+      'common.batch_success_count': 'Convertiti con successo {{successful}} su {{total}} file',
+      'common.convert_files': 'Converti File',
+      'common.selected_files': 'File Selezionati ({{count}})',
+      'common.conversion_complete': 'Conversione Completata',
+      'common.lightning_fast': 'Ultra Veloce',
+      'common.secure': 'Sicuro',
+      'common.no_registration': 'Nessuna Registrazione Richiesta',
+      'common.preview': 'Anteprima',
+      'common.total_size': 'Dimensione totale: {{current}} di {{max}} consentiti.',
+      
+      // Features
+      'features.lightning_fast': 'Ultra Veloce',
+      'features.100_free': '100% Gratuito',
+      'features.no_registration': 'Senza Registrazione',
+      'features.secure': '100% Sicuro',
+      
       // CR2 to ICO - Italiano
       'cr2_to_ico.title': 'Convertitore CR2 in ICO',
       'cr2_to_ico.meta_title': 'Convertitore CR2 in ICO Gratuito - Converti Canon RAW in Icone Windows',
@@ -15692,6 +15857,39 @@ const resources = {
   },
   nl: {
     translation: {
+      // Common
+      'common.free': 'Gratis',
+      'common.upload': 'Uploaden',
+      'common.download': 'Downloaden',
+      'common.convert': 'Converteren',
+      'common.converting': 'Converteren...',
+      'common.choose_files': 'Kies Bestanden',
+      'common.single_file': 'Enkel Bestand',
+      'common.batch_convert': 'Batch Conversie',
+      'common.back_to_home': 'Terug naar Home',
+      'common.back_to_converters': 'Terug naar Converters',
+      'common.start_converting': 'Begin Nu met Converteren',
+      'common.convert_more': 'Meer Bestanden Converteren',
+      'common.convert_another': 'Nog Een Converteren',
+      'common.convert_more_files': 'Meer Bestanden Converteren',
+      'common.start_converting_now': 'Begin Nu met Converteren',
+      'common.batch_conversion_complete': 'Batch Conversie Voltooid',
+      'common.batch_success_count': 'Succesvol {{successful}} van {{total}} bestanden geconverteerd',
+      'common.convert_files': 'Bestanden Converteren',
+      'common.selected_files': 'Geselecteerde Bestanden ({{count}})',
+      'common.conversion_complete': 'Conversie Voltooid',
+      'common.lightning_fast': 'Bliksemsnel',
+      'common.secure': 'Veilig',
+      'common.no_registration': 'Geen Registratie Vereist',
+      'common.preview': 'Voorvertoning',
+      'common.total_size': 'Totale grootte: {{current}} van {{max}} toegestaan.',
+      
+      // Features
+      'features.lightning_fast': 'Bliksemsnel',
+      'features.100_free': '100% Gratis',
+      'features.no_registration': 'Geen Registratie',
+      'features.secure': '100% Veilig',
+      
       // CR2 to ICO - Nederlands
       'cr2_to_ico.title': 'CR2 naar ICO Converter',
       'cr2_to_ico.meta_title': 'Gratis CR2 naar ICO Converter - Converteer Canon RAW naar Windows Pictogrammen',
@@ -15780,6 +15978,39 @@ const resources = {
   },
   pt: {
     translation: {
+      // Common
+      'common.free': 'Gratuito',
+      'common.upload': 'Enviar',
+      'common.download': 'Baixar',
+      'common.convert': 'Converter',
+      'common.converting': 'Convertendo...',
+      'common.choose_files': 'Escolher Arquivos',
+      'common.single_file': 'Arquivo Único',
+      'common.batch_convert': 'Conversão em Lote',
+      'common.back_to_home': 'Voltar ao Início',
+      'common.back_to_converters': 'Voltar aos Conversores',
+      'common.start_converting': 'Começar a Converter Agora',
+      'common.convert_more': 'Converter Mais Arquivos',
+      'common.convert_another': 'Converter Outro',
+      'common.convert_more_files': 'Converter Mais Arquivos',
+      'common.start_converting_now': 'Começar a Converter Agora',
+      'common.batch_conversion_complete': 'Conversão em Lote Completa',
+      'common.batch_success_count': 'Convertidos com sucesso {{successful}} de {{total}} arquivos',
+      'common.convert_files': 'Converter Arquivos',
+      'common.selected_files': 'Arquivos Selecionados ({{count}})',
+      'common.conversion_complete': 'Conversão Completa',
+      'common.lightning_fast': 'Ultra Rápido',
+      'common.secure': 'Seguro',
+      'common.no_registration': 'Nenhum Registro Necessário',
+      'common.preview': 'Pré-visualização',
+      'common.total_size': 'Tamanho total: {{current}} de {{max}} permitidos.',
+      
+      // Features
+      'features.lightning_fast': 'Ultra Rápido',
+      'features.100_free': '100% Gratuito',
+      'features.no_registration': 'Sem Registro',
+      'features.secure': '100% Seguro',
+      
       // CR2 to ICO - Português
       'cr2_to_ico.title': 'Conversor CR2 para ICO',
       'cr2_to_ico.meta_title': 'Conversor CR2 para ICO Gratuito - Converter Canon RAW para Ícones Windows',
@@ -15868,6 +16099,39 @@ const resources = {
   },
   vi: {
     translation: {
+      // Common
+      'common.free': 'Miễn phí',
+      'common.upload': 'Tải lên',
+      'common.download': 'Tải xuống',
+      'common.convert': 'Chuyển đổi',
+      'common.converting': 'Đang chuyển đổi...',
+      'common.choose_files': 'Chọn Tệp',
+      'common.single_file': 'Tệp Đơn',
+      'common.batch_convert': 'Chuyển Đổi Hàng Loạt',
+      'common.back_to_home': 'Về Trang Chủ',
+      'common.back_to_converters': 'Về Trang Chuyển Đổi',
+      'common.start_converting': 'Bắt Đầu Chuyển Đổi Ngay',
+      'common.convert_more': 'Chuyển Đổi Thêm Tệp',
+      'common.convert_another': 'Chuyển Đổi Tệp Khác',
+      'common.convert_more_files': 'Chuyển Đổi Thêm Tệp',
+      'common.start_converting_now': 'Bắt Đầu Chuyển Đổi Ngay',
+      'common.batch_conversion_complete': 'Chuyển Đổi Hàng Loạt Hoàn Tất',
+      'common.batch_success_count': 'Đã chuyển đổi thành công {{successful}} trong số {{total}} tệp',
+      'common.convert_files': 'Chuyển Đổi Tệp',
+      'common.selected_files': 'Tệp Đã Chọn ({{count}})',
+      'common.conversion_complete': 'Chuyển Đổi Hoàn Tất',
+      'common.lightning_fast': 'Cực Nhanh',
+      'common.secure': 'An Toàn',
+      'common.no_registration': 'Không Cần Đăng Ký',
+      'common.preview': 'Xem Trước',
+      'common.total_size': 'Tổng kích thước: {{current}} trong số {{max}} được phép.',
+      
+      // Features
+      'features.lightning_fast': 'Cực Nhanh',
+      'features.100_free': '100% Miễn Phí',
+      'features.no_registration': 'Không Cần Đăng Ký',
+      'features.secure': '100% An Toàn',
+      
       // CR2 to ICO - Tiếng Việt
       'cr2_to_ico.title': 'Bộ Chuyển Đổi CR2 sang ICO',
       'cr2_to_ico.meta_title': 'Bộ Chuyển Đổi CR2 sang ICO Miễn Phí - Chuyển Đổi Canon RAW sang Biểu Tượng Windows',
@@ -15956,6 +16220,39 @@ const resources = {
   },
   tr: {
     translation: {
+      // Common
+      'common.free': 'Ücretsiz',
+      'common.upload': 'Yükle',
+      'common.download': 'İndir',
+      'common.convert': 'Dönüştür',
+      'common.converting': 'Dönüştürülüyor...',
+      'common.choose_files': 'Dosya Seç',
+      'common.single_file': 'Tek Dosya',
+      'common.batch_convert': 'Toplu Dönüşüm',
+      'common.back_to_home': 'Ana Sayfaya Dön',
+      'common.back_to_converters': 'Dönüştürücülere Dön',
+      'common.start_converting': 'Şimdi Dönüştürmeye Başla',
+      'common.convert_more': 'Daha Fazla Dosya Dönüştür',
+      'common.convert_another': 'Başka Bir Tane Dönüştür',
+      'common.convert_more_files': 'Daha Fazla Dosya Dönüştür',
+      'common.start_converting_now': 'Şimdi Dönüştürmeye Başla',
+      'common.batch_conversion_complete': 'Toplu Dönüşüm Tamamlandı',
+      'common.batch_success_count': '{{total}} dosyadan {{successful}} tanesi başarıyla dönüştürüldü',
+      'common.convert_files': 'Dosyaları Dönüştür',
+      'common.selected_files': 'Seçilen Dosyalar ({{count}})',
+      'common.conversion_complete': 'Dönüşüm Tamamlandı',
+      'common.lightning_fast': 'Çok Hızlı',
+      'common.secure': 'Güvenli',
+      'common.no_registration': 'Kayıt Gerekmez',
+      'common.preview': 'Önizleme',
+      'common.total_size': 'Toplam boyut: {{current}} / {{max}} izin verilen.',
+      
+      // Features
+      'features.lightning_fast': 'Çok Hızlı',
+      'features.100_free': '100% Ücretsiz',
+      'features.no_registration': 'Kayıt Yok',
+      'features.secure': '100% Güvenli',
+      
       // CR2 to ICO - Türkçe
       'cr2_to_ico.title': 'CR2\'den ICO\'ya Dönüştürücü',
       'cr2_to_ico.meta_title': 'Ücretsiz CR2\'den ICO\'ya Dönüştürücü - Canon RAW\'ı Windows İkonlarına Dönüştür',
@@ -16044,6 +16341,39 @@ const resources = {
   },
   ru: {
     translation: {
+      // Common
+      'common.free': 'Бесплатно',
+      'common.upload': 'Загрузить',
+      'common.download': 'Скачать',
+      'common.convert': 'Конвертировать',
+      'common.converting': 'Конвертация...',
+      'common.choose_files': 'Выбрать Файлы',
+      'common.single_file': 'Один Файл',
+      'common.batch_convert': 'Пакетная Конвертация',
+      'common.back_to_home': 'Вернуться на Главную',
+      'common.back_to_converters': 'Вернуться к Конвертерам',
+      'common.start_converting': 'Начать Конвертацию Сейчас',
+      'common.convert_more': 'Конвертировать Больше Файлов',
+      'common.convert_another': 'Конвертировать Другой',
+      'common.convert_more_files': 'Конвертировать Больше Файлов',
+      'common.start_converting_now': 'Начать Конвертацию Сейчас',
+      'common.batch_conversion_complete': 'Пакетная Конвертация Завершена',
+      'common.batch_success_count': 'Успешно конвертировано {{successful}} из {{total}} файлов',
+      'common.convert_files': 'Конвертировать Файлы',
+      'common.selected_files': 'Выбранные Файлы ({{count}})',
+      'common.conversion_complete': 'Конвертация Завершена',
+      'common.lightning_fast': 'Молниеносно Быстро',
+      'common.secure': 'Безопасно',
+      'common.no_registration': 'Регистрация Не Требуется',
+      'common.preview': 'Предпросмотр',
+      'common.total_size': 'Общий размер: {{current}} из {{max}} разрешено.',
+      
+      // Features
+      'features.lightning_fast': 'Молниеносно Быстро',
+      'features.100_free': '100% Бесплатно',
+      'features.no_registration': 'Без Регистрации',
+      'features.secure': '100% Безопасно',
+      
       // CR2 to ICO - Русский
       'cr2_to_ico.title': 'Конвертер CR2 в ICO',
       'cr2_to_ico.meta_title': 'Бесплатный конвертер CR2 в ICO - Конвертация Canon RAW в иконки Windows',
@@ -16132,6 +16462,39 @@ const resources = {
   },
   ar: {
     translation: {
+      // Common
+      'common.free': 'مجاني',
+      'common.upload': 'رفع',
+      'common.download': 'تنزيل',
+      'common.convert': 'تحويل',
+      'common.converting': 'جارٍ التحويل...',
+      'common.choose_files': 'اختر الملفات',
+      'common.single_file': 'ملف واحد',
+      'common.batch_convert': 'تحويل مجمع',
+      'common.back_to_home': 'العودة إلى الصفحة الرئيسية',
+      'common.back_to_converters': 'العودة إلى المحولات',
+      'common.start_converting': 'ابدأ التحويل الآن',
+      'common.convert_more': 'تحويل المزيد من الملفات',
+      'common.convert_another': 'تحويل ملف آخر',
+      'common.convert_more_files': 'تحويل المزيد من الملفات',
+      'common.start_converting_now': 'ابدأ التحويل الآن',
+      'common.batch_conversion_complete': 'اكتمل التحويل المجمع',
+      'common.batch_success_count': 'تم تحويل {{successful}} من {{total}} ملف بنجاح',
+      'common.convert_files': 'تحويل الملفات',
+      'common.selected_files': 'الملفات المحددة ({{count}})',
+      'common.conversion_complete': 'اكتمل التحويل',
+      'common.lightning_fast': 'سريع جدًا',
+      'common.secure': 'آمن',
+      'common.no_registration': 'لا حاجة للتسجيل',
+      'common.preview': 'معاينة',
+      'common.total_size': 'الحجم الإجمالي: {{current}} من {{max}} مسموح.',
+      
+      // Features
+      'features.lightning_fast': 'سريع جدًا',
+      'features.100_free': '100% مجاني',
+      'features.no_registration': 'بدون تسجيل',
+      'features.secure': '100% آمن',
+      
       // CR2 to ICO - العربية
       'cr2_to_ico.title': 'محول CR2 إلى ICO',
       'cr2_to_ico.meta_title': 'محول CR2 إلى ICO مجاني - تحويل Canon RAW إلى أيقونات Windows',
@@ -16220,6 +16583,39 @@ const resources = {
   },
   th: {
     translation: {
+      // Common
+      'common.free': 'ฟรี',
+      'common.upload': 'อัปโหลด',
+      'common.download': 'ดาวน์โหลด',
+      'common.convert': 'แปลง',
+      'common.converting': 'กำลังแปลง...',
+      'common.choose_files': 'เลือกไฟล์',
+      'common.single_file': 'ไฟล์เดียว',
+      'common.batch_convert': 'แปลงแบบชุด',
+      'common.back_to_home': 'กลับไปหน้าแรก',
+      'common.back_to_converters': 'กลับไปตัวแปลง',
+      'common.start_converting': 'เริ่มแปลงตอนนี้',
+      'common.convert_more': 'แปลงไฟล์เพิ่มเติม',
+      'common.convert_another': 'แปลงอีกไฟล์',
+      'common.convert_more_files': 'แปลงไฟล์เพิ่มเติม',
+      'common.start_converting_now': 'เริ่มแปลงตอนนี้',
+      'common.batch_conversion_complete': 'การแปลงแบบชุดเสร็จสมบูรณ์',
+      'common.batch_success_count': 'แปลงสำเร็จ {{successful}} จาก {{total}} ไฟล์',
+      'common.convert_files': 'แปลงไฟล์',
+      'common.selected_files': 'ไฟล์ที่เลือก ({{count}})',
+      'common.conversion_complete': 'การแปลงเสร็จสมบูรณ์',
+      'common.lightning_fast': 'เร็วมาก',
+      'common.secure': 'ปลอดภัย',
+      'common.no_registration': 'ไม่ต้องลงทะเบียน',
+      'common.preview': 'ตัวอย่าง',
+      'common.total_size': 'ขนาดรวม: {{current}} จาก {{max}} ที่อนุญาต',
+      
+      // Features
+      'features.lightning_fast': 'เร็วมาก',
+      'features.100_free': '100% ฟรี',
+      'features.no_registration': 'ไม่ต้องลงทะเบียน',
+      'features.secure': '100% ปลอดภัย',
+      
       // CR2 to ICO - ไทย
       'cr2_to_ico.title': 'ตัวแปลง CR2 เป็น ICO',
       'cr2_to_ico.meta_title': 'ตัวแปลง CR2 เป็น ICO ฟรี - แปลง Canon RAW เป็นไอคอน Windows',
@@ -16308,6 +16704,39 @@ const resources = {
   },
   ja: {
     translation: {
+      // Common
+      'common.free': '無料',
+      'common.upload': 'アップロード',
+      'common.download': 'ダウンロード',
+      'common.convert': '変換',
+      'common.converting': '変換中...',
+      'common.choose_files': 'ファイルを選択',
+      'common.single_file': '単一ファイル',
+      'common.batch_convert': 'バッチ変換',
+      'common.back_to_home': 'ホームに戻る',
+      'common.back_to_converters': 'コンバーターに戻る',
+      'common.start_converting': '今すぐ変換を開始',
+      'common.convert_more': 'さらにファイルを変換',
+      'common.convert_another': '別のファイルを変換',
+      'common.convert_more_files': 'さらにファイルを変換',
+      'common.start_converting_now': '今すぐ変換を開始',
+      'common.batch_conversion_complete': 'バッチ変換完了',
+      'common.batch_success_count': '{{total}}ファイル中{{successful}}ファイルの変換に成功しました',
+      'common.convert_files': 'ファイルを変換',
+      'common.selected_files': '選択されたファイル ({{count}})',
+      'common.conversion_complete': '変換完了',
+      'common.lightning_fast': '超高速',
+      'common.secure': '安全',
+      'common.no_registration': '登録不要',
+      'common.preview': 'プレビュー',
+      'common.total_size': '合計サイズ: {{current}} / {{max}} 許可されています。',
+      
+      // Features
+      'features.lightning_fast': '超高速',
+      'features.100_free': '100%無料',
+      'features.no_registration': '登録不要',
+      'features.secure': '100%安全',
+      
       // CR2 to ICO - 日本語
       'cr2_to_ico.title': 'CR2からICOへのコンバーター',
       'cr2_to_ico.meta_title': '無料CR2からICOへのコンバーター - Canon RAWをWindowsアイコンに変換',
@@ -16396,6 +16825,39 @@ const resources = {
   },
   zh: {
     translation: {
+      // Common
+      'common.free': '免费',
+      'common.upload': '上传',
+      'common.download': '下载',
+      'common.convert': '转换',
+      'common.converting': '转换中...',
+      'common.choose_files': '选择文件',
+      'common.single_file': '单个文件',
+      'common.batch_convert': '批量转换',
+      'common.back_to_home': '返回首页',
+      'common.back_to_converters': '返回转换器',
+      'common.start_converting': '立即开始转换',
+      'common.convert_more': '转换更多文件',
+      'common.convert_another': '转换另一个',
+      'common.convert_more_files': '转换更多文件',
+      'common.start_converting_now': '立即开始转换',
+      'common.batch_conversion_complete': '批量转换完成',
+      'common.batch_success_count': '成功转换 {{total}} 个文件中的 {{successful}} 个',
+      'common.convert_files': '转换文件',
+      'common.selected_files': '选定的文件 ({{count}})',
+      'common.conversion_complete': '转换完成',
+      'common.lightning_fast': '超快',
+      'common.secure': '安全',
+      'common.no_registration': '无需注册',
+      'common.preview': '预览',
+      'common.total_size': '总大小：{{current}} / {{max}} 允许。',
+      
+      // Features
+      'features.lightning_fast': '超快',
+      'features.100_free': '100%免费',
+      'features.no_registration': '无需注册',
+      'features.secure': '100%安全',
+      
       // CR2 to ICO - 简体中文
       'cr2_to_ico.title': 'CR2转ICO转换器',
       'cr2_to_ico.meta_title': '免费CR2转ICO转换器 - 将Canon RAW转换为Windows图标',
