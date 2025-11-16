@@ -314,7 +314,7 @@ export const LanguageSwitcher: React.FC = () => {
           />
           
           {/* Menu */}
-          <div className="absolute left-0 md:right-0 md:left-auto mt-1 w-56 max-w-[calc(100vw-2rem)] bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200 max-h-[32rem] overflow-y-auto">
+          <div className="absolute left-0 md:right-0 md:left-auto mt-1 w-56 max-w-[calc(100vw-2rem)] bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200 max-h-[calc(100vh-8rem)] md:max-h-[32rem] overflow-y-auto overscroll-contain scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
             <div className="p-1">
               {languages.map((lang) => (
                 <button
@@ -323,27 +323,27 @@ export const LanguageSwitcher: React.FC = () => {
                     changeLanguage(lang.code);
                     setIsOpen(false);
                   }}
-                  className={`w-full flex items-center gap-2 px-2.5 py-2 rounded-md transition-all duration-200 ${
+                  className={`w-full flex items-center gap-2 px-2.5 py-2 rounded-md transition-all duration-200 flex-shrink-0 ${
                     lang.code === i18n.language
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-md scale-[1.01]'
                       : 'hover:bg-gray-50 text-gray-700 hover:scale-[1.01]'
                   }`}
                 >
                   <FlagIcon icon={lang.icon} className="w-6 h-4 flex-shrink-0" />
-                  <div className="flex-1 text-left">
-                    <div className={`font-medium text-xs ${
+                  <div className="flex-1 text-left min-w-0">
+                    <div className={`font-medium text-xs truncate ${
                       lang.code === i18n.language ? 'text-white' : 'text-gray-800'
                     }`}>
                       {lang.nativeName}
                     </div>
-                    <div className={`text-[9px] ${
+                    <div className={`text-[9px] truncate ${
                       lang.code === i18n.language ? 'text-blue-100' : 'text-gray-500'
                     }`}>
                       {lang.name}
                     </div>
                   </div>
                   {lang.code === i18n.language && (
-                    <div className="w-1 h-1 bg-white rounded-full animate-pulse" />
+                    <div className="w-1 h-1 bg-white rounded-full animate-pulse flex-shrink-0" />
                   )}
                 </button>
               ))}
