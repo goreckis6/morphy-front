@@ -295,13 +295,13 @@ export const LanguageSwitcher: React.FC = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white border border-gray-200 rounded-md hover:border-blue-400 hover:shadow-sm transition-all duration-200 group"
+        className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white border border-gray-200 rounded-md hover:border-blue-400 hover:shadow-sm transition-all duration-200 group w-full md:w-auto"
       >
-        <FlagIcon icon={currentLanguage.icon} className="w-6 h-4" />
-        <span className="font-medium text-gray-700 text-xs">
+        <FlagIcon icon={currentLanguage.icon} className="w-6 h-4 flex-shrink-0" />
+        <span className="font-medium text-gray-700 text-xs truncate">
           {currentLanguage.nativeName}
         </span>
-        <ChevronDown className={`w-3 h-3 text-gray-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-3 h-3 text-gray-500 transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown Menu */}
@@ -314,7 +314,7 @@ export const LanguageSwitcher: React.FC = () => {
           />
           
           {/* Menu */}
-          <div className="absolute right-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200 max-h-[32rem] overflow-y-auto">
+          <div className="absolute left-0 md:right-0 md:left-auto mt-1 w-56 max-w-[calc(100vw-2rem)] bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200 max-h-[32rem] overflow-y-auto">
             <div className="p-1">
               {languages.map((lang) => (
                 <button
@@ -329,7 +329,7 @@ export const LanguageSwitcher: React.FC = () => {
                       : 'hover:bg-gray-50 text-gray-700 hover:scale-[1.01]'
                   }`}
                 >
-                  <FlagIcon icon={lang.icon} className="w-6 h-4" />
+                  <FlagIcon icon={lang.icon} className="w-6 h-4 flex-shrink-0" />
                   <div className="flex-1 text-left">
                     <div className={`font-medium text-xs ${
                       lang.code === i18n.language ? 'text-white' : 'text-gray-800'
