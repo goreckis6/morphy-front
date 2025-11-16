@@ -15253,27 +15253,8 @@ const resources = {
 };
 
 export const resolveLanguageFromPath = (path: string): string => {
-  // English (default, no prefix)
-  if (path === '/' || path === '') return 'en';
-
-  // Map URL prefixes to language codes
   if (path === '/pl' || path.startsWith('/pl/')) return 'pl';
   if (path === '/de' || path.startsWith('/de/')) return 'de';
-  if (path === '/id' || path.startsWith('/id/')) return 'id';
-  if (path === '/sv' || path.startsWith('/sv/')) return 'sv';
-  if (path === '/es' || path.startsWith('/es/')) return 'es';
-  if (path === '/fr' || path.startsWith('/fr/')) return 'fr';
-  if (path === '/it' || path.startsWith('/it/')) return 'it';
-  if (path === '/nl' || path.startsWith('/nl/')) return 'nl';
-  if (path === '/pt' || path.startsWith('/pt/')) return 'pt';
-  if (path === '/vi' || path.startsWith('/vi/')) return 'vi';
-  if (path === '/tr' || path.startsWith('/tr/')) return 'tr';
-  if (path === '/ru' || path.startsWith('/ru/')) return 'ru';
-  if (path === '/ar' || path.startsWith('/ar/')) return 'ar';
-  if (path === '/th' || path.startsWith('/th/')) return 'th';
-  if (path === '/ja' || path.startsWith('/ja/')) return 'ja';
-  if (path === '/zh' || path.startsWith('/zh/')) return 'zh';
-
   return 'en';
 };
 
@@ -15293,26 +15274,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
-    // Extend supported languages
-    supportedLngs: [
-      'en', // English
-      'id', // Bahasa Indonesia
-      'sv', // Svenska
-      'de', // Deutsch
-      'es', // Español
-      'fr', // Français
-      'it', // Italiano
-      'nl', // Nederlands
-      'pl', // Polski
-      'pt', // Português
-      'vi', // Tiếng Việt
-      'tr', // Türkçe
-      'ru', // Русский
-      'ar', // العربية
-      'th', // ไทย
-      'ja', // 日本語
-      'zh', // 简体中文
-    ],
+    supportedLngs: ['en', 'pl', 'de'],
     lng: urlLanguageDetector.lookup(), // Set initial language from URL
     interpolation: {
       escapeValue: false
@@ -15334,25 +15296,30 @@ export const getLanguageFromUrl = (): string => resolveLanguageFromPath(window.l
 
 // Helper function to toggle language URL (English = no prefix, other languages = /lang/ prefix)
 export const getLocalizedUrl = (currentPath: string, targetLanguage: string, absolute?: boolean): string => {
-  // Remove any existing language prefix if it exists
+  // Remove any language prefix if it exists
   const cleanPath = currentPath
-    .replace(/^\/(pl|de|id|sv|es|fr|it|nl|pt|vi|tr|ru|ar|th|ja|zh)(\/|$)/, '/');
-
+    .replace(/^\/pl\//, '/')
+    .replace(/^\/de\//, '/')
+    .replace(/^\/pl$/, '/')
+    .replace(/^\/de$/, '/');
+  
   let localizedPath: string;
-
-  // English = no prefix
-  if (targetLanguage === 'en') {
-    localizedPath = cleanPath;
+  
+  // Add language prefix only for non-English languages
+  if (targetLanguage === 'pl') {
+    localizedPath = `/pl${cleanPath}`;
+  } else if (targetLanguage === 'de') {
+    localizedPath = `/de${cleanPath}`;
   } else {
-    // All non-English languages use /<lang> prefix
-    localizedPath = `/${targetLanguage}${cleanPath}`;
+    // English = no prefix
+    localizedPath = cleanPath;
   }
-
+  
   // Return absolute URL if requested
   if (absolute) {
     return `https://morphyhub.com${localizedPath}`;
   }
-
+  
   return localizedPath;
 };
 
