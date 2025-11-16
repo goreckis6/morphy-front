@@ -2191,22 +2191,6 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Download free ICNS sample Apple Icon Image files for testing. Multiple file sizes available to test your icon rendering, ICNS conversion, and macOS icon format tools.'
           },
           about_description: 'These are test ICNS (Apple Icon Image) files in various sizes for testing purposes'
-        },
-        ace: {
-          meta: {
-            title: 'Free ACE Sample Files Download - Test ACE Archive Files | MorphyHub',
-            description: 'Download free ACE sample ACE compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, ACE compression, and archive format tools.',
-            keywords: 'ACE sample files, test ACE files, download ACE samples, free ACE test files, ACE archive samples, compressed archive samples, .ace test files, archive format samples'
-          },
-          schema: {
-            name: 'Free ACE Sample Files - Download Test ACE Archive Files',
-            description: 'Download free ACE sample ACE compressed archive files for testing. Multiple file sizes available: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing archive extraction, ACE compression, and archive format tools.'
-          },
-          hero: {
-            title: 'ACE Sample Files',
-            description: 'Download free ACE sample ACE compressed archive files for testing. Multiple file sizes available to test your archive extraction, ACE compression, and archive format tools.'
-          },
-          about_description: 'These are test ACE (ACE Archive) compressed archive files in various sizes for testing purposes'
         }
       }
     }
@@ -4354,22 +4338,6 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Pobierz darmowe przykładowe pliki ikon Apple Icon Image ICNS do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia renderowania ikon, konwersji ICNS i formatów ikon macOS.'
           },
           about_description: 'To są testowe pliki ICNS (Apple Icon Image) w różnych rozmiarach do celów testowych'
-        },
-        ace: {
-          meta: {
-            title: 'Darmowe przykładowe pliki ACE – Pobierz pliki archiwum ACE | MorphyHub',
-            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ACE ACE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, kompresji ACE i narzędzi formatów archiwów.',
-            keywords: 'przykładowe pliki ACE, testowe pliki ACE, pobierz przykłady ACE, darmowe testowe pliki ACE, przykłady archiwów ACE, przykłady skompresowanych archiwów, testowe pliki .ace, przykłady formatów archiwów'
-          },
-          schema: {
-            name: 'Darmowe przykładowe pliki ACE – Pobierz testowe pliki archiwum ACE',
-            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ACE ACE do testowania. Dostępne różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów, kompresji ACE i narzędzi formatów archiwów.'
-          },
-          hero: {
-            title: 'Przykładowe pliki ACE',
-            description: 'Pobierz darmowe przykładowe pliki archiwum skompresowanego ACE ACE do testowania. Dostępne różne rozmiary plików, aby przetestować Twoje narzędzia ekstrakcji archiwów, kompresji ACE i formatów archiwów.'
-          },
-          about_description: 'To są testowe pliki archiwum skompresowanego ACE (ACE Archive) w różnych rozmiarach do celów testowych'
         }
       }
     }
