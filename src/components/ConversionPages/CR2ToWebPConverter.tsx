@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { 
@@ -24,7 +24,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 import { apiService } from '../../services/api';
 
 export const CR2ToWebPConverter: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [isConverting, setIsConverting] = useState(false);
@@ -40,17 +40,8 @@ export const CR2ToWebPConverter: React.FC = () => {
   const [imagePreview, setImagePreview] = useState<{url: string, width: number, height: number} | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Language detection from URL
-  useEffect(() => {
-    const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
-    }
-  }, []);
+  // Language synchronization
+  usePathLanguageSync(i18n);
 
   // Use shared validation hook
   const {
