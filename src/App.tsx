@@ -550,6 +550,22 @@ function App() {
         <Route path="/ja/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
         <Route path="/zh/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
 
+        {/* New Languages Converter Routes - CR2 to WebP */}
+        <Route path="/id/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/sv/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/es/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/fr/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/it/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/nl/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/pt/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/vi/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/tr/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/ru/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/ar/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/th/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/ja/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+        <Route path="/zh/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
+
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
