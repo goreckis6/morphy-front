@@ -170,7 +170,7 @@ export default function SampleMbtiles() {
                               <div className="flex items-center space-x-2 text-purple-600">
                                 <Clock className="w-4 h-4 animate-spin" />
                                 <span className="text-sm font-medium">
-                                  {t('sample_page.common.download_ready_in', { count: countdown })}
+                                  {t('sample_page.common.download_ready_in', { countdown })}
                                 </span>
                               </div>
                               <div className="w-full sm:w-48 bg-gray-200 rounded-full h-2">
