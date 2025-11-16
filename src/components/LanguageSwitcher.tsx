@@ -70,8 +70,22 @@ type LanguageOption = {
 
 const languages: LanguageOption[] = [
   { code: 'en', name: 'English', nativeName: 'English', icon: <FlagUS className="h-4 w-6 rounded-sm shadow-sm" /> },
+  { code: 'id', name: 'Bahasa Indonesia', nativeName: 'Bahasa Indonesia', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'sv', name: 'Swedish', nativeName: 'Svenska', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'de', name: 'German', nativeName: 'Deutsch', icon: <FlagDE className="h-4 w-6 rounded-sm shadow-sm" /> },
+  { code: 'es', name: 'Spanish', nativeName: 'Español', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'fr', name: 'French', nativeName: 'Français', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'it', name: 'Italian', nativeName: 'Italiano', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'nl', name: 'Dutch', nativeName: 'Nederlands', icon: <Globe className="h-4 w-4 text-gray-600" /> },
   { code: 'pl', name: 'Polish', nativeName: 'Polski', icon: <FlagPL className="h-4 w-6 rounded-sm shadow-sm" /> },
-  { code: 'de', name: 'German', nativeName: 'Deutsch', icon: <FlagDE className="h-4 w-6 rounded-sm shadow-sm" /> }
+  { code: 'pt', name: 'Portuguese', nativeName: 'Português', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'vi', name: 'Vietnamese', nativeName: 'Tiếng Việt', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'ru', name: 'Russian', nativeName: 'Русский', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'ar', name: 'Arabic', nativeName: 'العربية', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'th', name: 'Thai', nativeName: 'ไทย', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'ja', name: 'Japanese', nativeName: '日本語', icon: <Globe className="h-4 w-4 text-gray-600" /> },
+  { code: 'zh', name: 'Chinese (Simplified)', nativeName: '简体中文', icon: <Globe className="h-4 w-4 text-gray-600" /> },
 ];
 
 const FlagIcon: React.FC<{ icon: React.ReactNode; className?: string }> = ({ icon, className = '' }) => (
