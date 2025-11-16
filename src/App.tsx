@@ -274,11 +274,39 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/pl" element={<Home />} />
         <Route path="/de" element={<Home />} />
+        <Route path="/id" element={<Home />} />
+        <Route path="/sv" element={<Home />} />
+        <Route path="/es" element={<Home />} />
+        <Route path="/fr" element={<Home />} />
+        <Route path="/it" element={<Home />} />
+        <Route path="/nl" element={<Home />} />
+        <Route path="/pt" element={<Home />} />
+        <Route path="/vi" element={<Home />} />
+        <Route path="/tr" element={<Home />} />
+        <Route path="/ru" element={<Home />} />
+        <Route path="/ar" element={<Home />} />
+        <Route path="/th" element={<Home />} />
+        <Route path="/ja" element={<Home />} />
+        <Route path="/zh" element={<Home />} />
 
         {/* Konwertery — prawidłowa ścieżka */}
         <Route path="/converters" element={<Converters />} />
         <Route path="/pl/converters" element={<Converters />} />
         <Route path="/de/converters" element={<Converters />} />
+        <Route path="/id/converters" element={<Converters />} />
+        <Route path="/sv/converters" element={<Converters />} />
+        <Route path="/es/converters" element={<Converters />} />
+        <Route path="/fr/converters" element={<Converters />} />
+        <Route path="/it/converters" element={<Converters />} />
+        <Route path="/nl/converters" element={<Converters />} />
+        <Route path="/pt/converters" element={<Converters />} />
+        <Route path="/vi/converters" element={<Converters />} />
+        <Route path="/tr/converters" element={<Converters />} />
+        <Route path="/ru/converters" element={<Converters />} />
+        <Route path="/ar/converters" element={<Converters />} />
+        <Route path="/th/converters" element={<Converters />} />
+        <Route path="/ja/converters" element={<Converters />} />
+        <Route path="/zh/converters" element={<Converters />} />
 
         {/* Stara / błędna ścieżka — przekieruj na canonical */}
         <Route path="/conventers" element={<Navigate to="/converters" replace />} />
@@ -290,6 +318,20 @@ function App() {
         <Route path="/compress" element={<Compress />} />
         <Route path="/pl/compress" element={<Compress />} />
         <Route path="/de/compress" element={<Compress />} />
+        <Route path="/id/compress" element={<Compress />} />
+        <Route path="/sv/compress" element={<Compress />} />
+        <Route path="/es/compress" element={<Compress />} />
+        <Route path="/fr/compress" element={<Compress />} />
+        <Route path="/it/compress" element={<Compress />} />
+        <Route path="/nl/compress" element={<Compress />} />
+        <Route path="/pt/compress" element={<Compress />} />
+        <Route path="/vi/compress" element={<Compress />} />
+        <Route path="/tr/compress" element={<Compress />} />
+        <Route path="/ru/compress" element={<Compress />} />
+        <Route path="/ar/compress" element={<Compress />} />
+        <Route path="/th/compress" element={<Compress />} />
+        <Route path="/ja/compress" element={<Compress />} />
+        <Route path="/zh/compress" element={<Compress />} />
 
         {/* YouTube Thumbnail Downloader */}
         <Route path="/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
@@ -300,6 +342,20 @@ function App() {
         <Route path="/samples" element={<Samples />} />
         <Route path="/pl/samples" element={<Samples />} />
         <Route path="/de/samples" element={<Samples />} />
+        <Route path="/id/samples" element={<Samples />} />
+        <Route path="/sv/samples" element={<Samples />} />
+        <Route path="/es/samples" element={<Samples />} />
+        <Route path="/fr/samples" element={<Samples />} />
+        <Route path="/it/samples" element={<Samples />} />
+        <Route path="/nl/samples" element={<Samples />} />
+        <Route path="/pt/samples" element={<Samples />} />
+        <Route path="/vi/samples" element={<Samples />} />
+        <Route path="/tr/samples" element={<Samples />} />
+        <Route path="/ru/samples" element={<Samples />} />
+        <Route path="/ar/samples" element={<Samples />} />
+        <Route path="/th/samples" element={<Samples />} />
+        <Route path="/ja/samples" element={<Samples />} />
+        <Route path="/zh/samples" element={<Samples />} />
 
         {/* Converter Routes */}
         <Route path="/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
@@ -477,6 +533,22 @@ function App() {
         <Route path="/de/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/de/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
         <Route path="/de/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
+
+        {/* New Languages Converter Routes - CR2 to ICO */}
+        <Route path="/id/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/sv/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/es/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/fr/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/it/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/nl/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/pt/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/vi/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/tr/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/ru/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/ar/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/th/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/ja/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
+        <Route path="/zh/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
 
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
