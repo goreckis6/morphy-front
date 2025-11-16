@@ -13,8 +13,8 @@ $matches = [regex]::Matches($content, $routePattern)
 
 foreach ($match in $matches) {
     $path = $match.Groups[1].Value
-    # Skip Navigate, NotFound, and empty paths
-    if ($path -notmatch 'Navigate' -and $path -notmatch 'NotFound' -and $path -ne '') {
+    # Skip Navigate, NotFound, empty paths, and wildcard routes
+    if ($path -notmatch 'Navigate' -and $path -notmatch 'NotFound' -and $path -ne '' -and $path -ne '*') {
         $allRoutes += $path
     }
 }
