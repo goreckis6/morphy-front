@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe, ChevronDown } from 'lucide-react';
 import { getLocalizedUrl } from '../i18n';
@@ -278,6 +278,9 @@ const FlagIcon: React.FC<{ icon: React.ReactNode; className?: string }> = ({ ico
 export const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [menuStyle, setMenuStyle] = useState<React.CSSProperties>({});
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const changeLanguage = (lng: string) => {
     const currentPath = window.location.pathname;
@@ -290,10 +293,60 @@ export const LanguageSwitcher: React.FC = () => {
     [i18n.language]
   );
 
+  // Calculate menu position on mobile
+  useEffect(() => {
+    if (isOpen && buttonRef.current) {
+      const buttonRect = buttonRef.current.getBoundingClientRect();
+      const isMobile = window.innerWidth < 768; // md breakpoint
+      
+      if (isMobile) {
+        // On mobile: position below button with proper spacing
+        // Calculate available space from button bottom to viewport bottom
+        const availableHeight = window.innerHeight - buttonRect.bottom - 16; // 16px for spacing
+        const maxHeight = Math.min(availableHeight, window.innerHeight - 120); // Leave space for header
+        
+        setMenuStyle({
+          top: `${buttonRect.bottom + 8}px`,
+          left: '1rem',
+          right: '1rem',
+          width: 'auto',
+          maxHeight: `${maxHeight}px`,
+        });
+      } else {
+        // On desktop: reset to default (absolute positioning will handle it)
+        setMenuStyle({});
+      }
+    }
+  }, [isOpen]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        buttonRef.current &&
+        menuRef.current &&
+        !buttonRef.current.contains(event.target as Node) &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
     <div className="relative">
       {/* Toggle Button */}
       <button
+        ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 px-2.5 py-1.5 bg-white border border-gray-200 rounded-md hover:border-blue-400 hover:shadow-sm transition-all duration-200 group w-full md:w-auto"
       >
@@ -309,12 +362,20 @@ export const LanguageSwitcher: React.FC = () => {
         <>
           {/* Backdrop */}
           <div 
-            className="fixed inset-0 z-40" 
+            className="fixed inset-0 z-40 bg-black/20 md:bg-transparent" 
             onClick={() => setIsOpen(false)}
           />
           
-          {/* Menu */}
-          <div className="absolute left-0 md:right-0 md:left-auto mt-1 w-56 max-w-[calc(100vw-2rem)] bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200 max-h-[calc(100vh-8rem)] md:max-h-[32rem] overflow-y-auto overscroll-contain scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+          {/* Menu - Fixed on mobile, absolute on desktop */}
+          <div 
+            ref={menuRef}
+            className="fixed md:absolute left-4 right-4 md:left-0 md:right-0 md:left-auto md:mt-1 w-auto md:w-56 max-w-[calc(100vw-2rem)] md:max-w-none bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200 md:max-h-[32rem] overflow-y-auto overscroll-contain"
+            style={{
+              ...menuStyle,
+              WebkitOverflowScrolling: 'touch',
+              touchAction: 'pan-y',
+            }}
+          >
             <div className="p-1">
               {languages.map((lang) => (
                 <button
@@ -350,7 +411,7 @@ export const LanguageSwitcher: React.FC = () => {
             </div>
             
             {/* Footer */}
-            <div className="border-t border-gray-100 px-2.5 py-1 bg-gradient-to-r from-blue-50 to-indigo-50">
+            <div className="border-t border-gray-100 px-2.5 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 flex-shrink-0">
               <div className="flex items-center gap-1 text-[9px] text-gray-600">
                 <Globe className="w-2 h-2" />
                 <span>Choose your language</span>
