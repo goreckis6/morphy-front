@@ -3,6 +3,10 @@ $ErrorActionPreference = 'Stop'
 $baseUrl = 'https://morphyhub.com'
 $today = Get-Date -Format 'yyyy-MM-dd'
 
+# All supported language codes
+$languages = @('pl', 'de', 'id', 'sv', 'es', 'fr', 'it', 'nl', 'pt', 'vi', 'tr', 'ru', 'ar', 'th', 'ja', 'zh')
+$languagePattern = '(' + ($languages -join '|') + ')'
+
 # Extract all routes from App.tsx
 $appTsxPath = Join-Path $PSScriptRoot '..\src\App.tsx'
 $routePattern = 'path="([^"]+)"'
@@ -34,7 +38,8 @@ function Get-UrlXml {
         [string]$path,
         [string]$changefreq = 'weekly',
         [string]$priority = '0.8',
-        [bool]$addHreflang = $true
+        [bool]$addHreflang = $true,
+        [string[]]$availableLanguages = $script:languages
     )
     
     if ([string]::IsNullOrWhiteSpace($path)) {
@@ -49,7 +54,8 @@ function Get-UrlXml {
     $url = "$baseUrl$path"
     
     # Determine base path (without language prefix)
-    $basePath = $path -replace '^/(pl|de)', ''
+    $langPattern = '(' + ($script:languages -join '|') + ')'
+    $basePath = $path -replace "^/$langPattern", ''
     if ($basePath -eq '') { $basePath = '/' }
     
     # Remove trailing slash for consistency (except root)
@@ -57,17 +63,19 @@ function Get-UrlXml {
         $basePath = $basePath.TrimEnd('/')
     }
     
-    $enUrl = "$baseUrl$basePath"
-    $plUrl = "$baseUrl/pl$basePath"
-    $deUrl = "$baseUrl/de$basePath"
-    
     $xml = "  <url>`n"
     $xml += "    <loc>$url</loc>`n"
     
     if ($addHreflang) {
+        # Always add English
+        $enUrl = "$baseUrl$basePath"
         $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"en`" href=`"$enUrl`" />`n"
-        $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"pl`" href=`"$plUrl`" />`n"
-        $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"de`" href=`"$deUrl`" />`n"
+        
+        # Add all available language versions
+        foreach ($lang in $availableLanguages) {
+            $langUrl = "$baseUrl/$lang$basePath"
+            $xml += "    <xhtml:link rel=`"alternate`" hreflang=`"$lang`" href=`"$langUrl`" />`n"
+        }
     }
     
     $xml += "    <lastmod>$today</lastmod>`n"
@@ -81,25 +89,38 @@ function Get-UrlXml {
 # Add main pages first
 Write-Host "Adding main pages..." -ForegroundColor Yellow
 $xmlContent += Get-UrlXml -path '/' -changefreq 'daily' -priority '1.0'
-$xmlContent += Get-UrlXml -path '/pl' -changefreq 'daily' -priority '1.0'
-$xmlContent += Get-UrlXml -path '/de' -changefreq 'daily' -priority '1.0'
+foreach ($lang in $languages) {
+    $xmlContent += Get-UrlXml -path "/$lang" -changefreq 'daily' -priority '1.0'
+}
 
 # Add hub pages
 Write-Host "Adding hub pages..." -ForegroundColor Yellow
-$xmlContent += Get-UrlXml -path '/converters' -changefreq 'weekly' -priority '0.9'
-$xmlContent += Get-UrlXml -path '/viewers' -changefreq 'weekly' -priority '0.9'
-$xmlContent += Get-UrlXml -path '/compress' -changefreq 'weekly' -priority '0.9'
-$xmlContent += Get-UrlXml -path '/samples' -changefreq 'weekly' -priority '0.9'
-$xmlContent += Get-UrlXml -path '/yt-thumbnail-downloader' -changefreq 'monthly' -priority '0.8'
+$hubPages = @('/converters', '/viewers', '/compress', '/samples', '/yt-thumbnail-downloader')
+foreach ($hub in $hubPages) {
+    $xmlContent += Get-UrlXml -path $hub -changefreq 'weekly' -priority '0.9'
+    foreach ($lang in $languages) {
+        $xmlContent += Get-UrlXml -path "/$lang$hub" -changefreq 'weekly' -priority '0.9'
+    }
+}
 
 # Process all other routes
 Write-Host "Processing routes..." -ForegroundColor Yellow
 $count = 0
 $processedPaths = New-Object System.Collections.Generic.HashSet[string]
 
+# Build list of main pages and hubs to skip
+$skipRoutes = @('/', '/conventers')
+foreach ($lang in $languages) {
+    $skipRoutes += "/$lang"
+}
+$skipRoutes += '/converters', '/viewers', '/compress', '/samples', '/yt-thumbnail-downloader'
+foreach ($lang in $languages) {
+    $skipRoutes += "/$lang/converters", "/$lang/viewers", "/$lang/compress", "/$lang/samples", "/$lang/yt-thumbnail-downloader"
+}
+
 foreach ($route in $uniqueRoutes) {
     # Skip main pages and hubs (already added)
-    if ($route -in @('/', '/pl', '/de', '/converters', '/viewers', '/compress', '/samples', '/yt-thumbnail-downloader', '/conventers')) {
+    if ($route -in $skipRoutes) {
         continue
     }
     
@@ -127,26 +148,29 @@ foreach ($route in $uniqueRoutes) {
         $priority = '0.7'
     }
     
-    # Add the route
-    $xmlContent += Get-UrlXml -path $route -changefreq $changefreq -priority $priority
-    $count++
+    # Check if this is a language-specific route
+    $langPattern = '(' + ($languages -join '|') + ')'
+    $isLanguageRoute = $route -match "^/$langPattern/"
     
-    # Also add language-specific versions if this is a base route
-    if ($route -notmatch '^/(pl|de)/') {
-        # Add Polish version
-        $plRoute = "/pl$route"
-        if (-not $processedPaths.Contains($plRoute) -and ($uniqueRoutes -contains $plRoute -or $route -match '^/(convert|viewers|samples|compress)')) {
-            $xmlContent += Get-UrlXml -path $plRoute -changefreq $changefreq -priority $priority
-            $null = $processedPaths.Add($plRoute)
-            $count++
-        }
+    if ($isLanguageRoute) {
+        # This is already a language route, just add it
+        $xmlContent += Get-UrlXml -path $route -changefreq $changefreq -priority $priority
+        $count++
+    } else {
+        # This is a base route, add it and all language versions
+        $xmlContent += Get-UrlXml -path $route -changefreq $changefreq -priority $priority
+        $count++
         
-        # Add German version
-        $deRoute = "/de$route"
-        if (-not $processedPaths.Contains($deRoute) -and ($uniqueRoutes -contains $deRoute -or $route -match '^/(convert|viewers|samples|compress)')) {
-            $xmlContent += Get-UrlXml -path $deRoute -changefreq $changefreq -priority $priority
-            $null = $processedPaths.Add($deRoute)
-            $count++
+        # Add all language versions if they exist in routes or if it's a standard page type
+        if ($route -match '^/(convert|viewers|samples|compress)') {
+            foreach ($lang in $languages) {
+                $langRoute = "/$lang$route"
+                if (-not $processedPaths.Contains($langRoute) -and ($uniqueRoutes -contains $langRoute)) {
+                    $xmlContent += Get-UrlXml -path $langRoute -changefreq $changefreq -priority $priority
+                    $null = $processedPaths.Add($langRoute)
+                    $count++
+                }
+            }
         }
     }
     
