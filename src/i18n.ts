@@ -15599,6 +15599,64 @@ const resources = {
         }
       },
       
+      converters_page: {
+        meta: {
+          title: 'Konverter File Online Gratis - MorphyHub | Dukungan 300+ Format',
+          description: 'Konversi file antara 300+ format secara instan. Konverter file online gratis untuk gambar, dokumen, ebook, dan file data. Pemrosesan batch didukung.',
+          keywords: 'konverter file, konverter online, konverter gambar, konverter dokumen, konverter ebook, konversi batch, konverter gratis'
+        },
+        schema: {
+          name: 'Konverter File Online',
+          description: 'Konversi file antara 300+ format secara instan dengan konverter khusus untuk setiap jenis file.'
+        },
+        hero: {
+          title: 'Konverter File',
+          description: 'Konversi file antara berbagai format dengan konverter khusus kami. Setiap konverter dioptimalkan untuk kasus penggunaan dan jenis file tertentu.'
+        },
+        search: {
+          placeholder: 'Cari konverter... (mis., CSV ke MOBI, CR2 ke ICO)',
+          example_one: 'CSV ke MOBI',
+          example_two: 'CR2 ke ICO',
+          results: 'Ditemukan {{count}} konverter',
+          results_one: 'Ditemukan {{count}} konverter',
+          results_other: 'Ditemukan {{count}} konverter',
+          suggestion: 'Coba cari seperti "{{exampleOne}}" atau "{{exampleTwo}}".',
+          clear: 'Hapus pencarian'
+        },
+        categories: {
+          image_general: 'Konverter Gambar',
+          document_csv: 'Konverter Dokumen',
+          developer_csv: 'Alat Pengembang (CSV)',
+          image_raw: 'Konverter Gambar (RAW)',
+          image_vector: 'Konverter Gambar (Vektor)',
+          ebook_epub: 'Konverter E-book (EPUB)',
+          document_doc: 'Konverter Dokumen (DOC)',
+          document_docx: 'Konverter Dokumen (DOCX)'
+        },
+        features: {
+          title: 'Mengapa Memilih Konverter Kami?',
+          items: [
+            {
+              title: 'Cepat & Andal',
+              description: 'Konversi file dengan cepat menggunakan mesin konversi yang dioptimalkan.'
+            },
+            {
+              title: 'Aman & Privat',
+              description: 'File Anda diproses dengan aman dan tidak pernah disimpan secara permanen.'
+            },
+            {
+              title: 'Kualitas Tinggi',
+              description: 'Pertahankan kualitas gambar dan struktur dokumen selama konversi.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Tidak Ada Konverter Ditemukan',
+          description: 'Coba cari seperti "{{exampleOne}}" atau "{{exampleTwo}}".',
+          clear: 'Hapus pencarian'
+        }
+      },
+      
       // CR2 to ICO - Bahasa Indonesia
       'cr2_to_ico.title': 'Konverter CR2 ke ICO',
       'cr2_to_ico.meta_title': 'Konverter CR2 ke ICO Gratis - Konversi Canon RAW ke Ikon Windows',
@@ -16221,6 +16279,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Konversi HEIF ke JPG untuk sistem yang tidak mendukung format modern, seperti CMS lama, klien email, viewer, dan aplikasi lama. Pastikan kompatibilitas maksimum di semua platform.',
       'heif_to_jpg.seo.use_case_2_title': 'Pipeline Konten',
       'heif_to_jpg.seo.use_case_2_text': 'Standarisasi gambar sebagai JPG untuk pemrosesan yang dapat diprediksi dalam pipeline otomasi, alur kerja desain, dan sistem manajemen konten. Ideal untuk pemrosesan batch dan pemformatan output yang konsisten.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'Konverter CSV ke DOCX',
+      'csv_to_docx.subtitle': 'Konversi file CSV ke format dokumen Word DOCX untuk pengeditan dan berbagi profesional.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'Konverter CSV ke EPUB',
+      'csv_to_epub.subtitle': 'Konversi data CSV ke format ebook EPUB untuk membaca di perangkat e-reader.',
+      // CSV to HTML
+      'csv_to_html.title': 'Konverter CSV ke HTML',
+      'csv_to_html.subtitle': 'Konversi file CSV ke format HTML untuk ditampilkan di browser web.',
+      // CSV to MD
+      'csv_to_md.title': 'Konverter CSV ke MD',
+      'csv_to_md.subtitle': 'Konversi file CSV ke format Markdown untuk dokumentasi dan pengeditan teks.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'Konverter CSV ke MOBI',
+      'csv_to_mobi.subtitle': 'Konversi data CSV ke format ebook MOBI untuk perangkat Kindle dan e-reader.',
+      // CSV to ODP
+      'csv_to_odp.title': 'Konverter CSV ke ODP',
+      'csv_to_odp.subtitle': 'Konversi file CSV ke format presentasi OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'Konverter CSV ke ODT',
+      'csv_to_odt.subtitle': 'Konversi file CSV ke format dokumen OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'Konverter CSV ke PDF',
+      'csv_to_pdf.subtitle': 'Konversi file CSV ke format PDF untuk berbagi dan pencetakan universal.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'Konverter CSV ke PPT',
+      'csv_to_ppt.subtitle': 'Konversi file CSV ke format presentasi PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'Konverter CSV ke PPTX',
+      'csv_to_pptx.subtitle': 'Konversi file CSV ke format presentasi PowerPoint modern PPTX.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'Konverter CSV ke RTF',
+      'csv_to_rtf.subtitle': 'Konversi file CSV ke format dokumen Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'Konverter CSV ke TXT',
+      'csv_to_txt.subtitle': 'Konversi file CSV ke format teks biasa TXT untuk kompatibilitas universal.',
+      // CSV to XLS
+      'csv_to_xls.title': 'Konverter CSV ke XLS',
+      'csv_to_xls.subtitle': 'Konversi file CSV ke format spreadsheet Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'Konverter CSV ke XLSX',
+      'csv_to_xlsx.subtitle': 'Konversi file CSV ke format spreadsheet Excel modern XLSX.',
+      // CSV to JSON
+      'csv_to_json.title': 'Konverter CSV ke JSON',
+      'csv_to_json.subtitle': 'Konversi file CSV ke format JSON untuk pengembangan web dan API.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'Konverter CSV ke NDJSON',
+      'csv_to_ndjson.subtitle': 'Konversi file CSV ke format NDJSON (Newline Delimited JSON) untuk streaming data.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'Konverter CSV ke Parquet',
+      'csv_to_parquet.subtitle': 'Konversi file CSV ke format Parquet untuk analitik data yang efisien.',
+      // CSV to SQL
+      'csv_to_sql.title': 'Konverter CSV ke SQL',
+      'csv_to_sql.subtitle': 'Konversi file CSV ke pernyataan SQL untuk impor database.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Konverter CSV ke TOML',
+      'csv_to_toml.subtitle': 'Konversi file CSV ke format TOML untuk file konfigurasi.',
+      // CSV to XML
+      'csv_to_xml.title': 'Konverter CSV ke XML',
+      'csv_to_xml.subtitle': 'Konversi file CSV ke format XML untuk pertukaran data terstruktur.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Konverter CSV ke YAML',
+      'csv_to_yaml.subtitle': 'Konversi file CSV ke format YAML untuk konfigurasi dan data terstruktur.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Konverter DNG ke WebP',
+      'dng_to_webp.subtitle': 'Konversi file gambar mentah DNG ke format WebP yang dioptimalkan untuk web.',
+      // EPS to WebP
+      'eps_to_webp.title': 'Konverter EPS ke WebP',
+      'eps_to_webp.subtitle': 'Konversi file grafik vektor EPS ke format WebP untuk web dan aplikasi.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'Konverter EPUB ke CSV',
+      'epub_to_csv.subtitle': 'Konversi file ebook EPUB ke format CSV untuk analisis data.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'Konverter EPUB ke DOC',
+      'epub_to_doc.subtitle': 'Konversi file ebook EPUB ke format dokumen Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'Konverter EPUB ke DOCX',
+      'epub_to_docx.subtitle': 'Konversi file ebook EPUB ke format dokumen Word modern DOCX.',
+      // EPUB to HTML
+      'epub_to_html.title': 'Konverter EPUB ke HTML',
+      'epub_to_html.subtitle': 'Konversi file ebook EPUB ke format HTML untuk web.',
+      // EPUB to MD
+      'epub_to_md.title': 'Konverter EPUB ke MD',
+      'epub_to_md.subtitle': 'Konversi file ebook EPUB ke format Markdown untuk dokumentasi.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'Konverter EPUB ke MOBI',
+      'epub_to_mobi.subtitle': 'Konversi file ebook EPUB ke format MOBI untuk perangkat Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'Konverter EPUB ke ODP',
+      'epub_to_odp.subtitle': 'Konversi file ebook EPUB ke format presentasi OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'Konverter EPUB ke ODT',
+      'epub_to_odt.subtitle': 'Konversi file ebook EPUB ke format dokumen OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'Konverter EPUB ke PDF',
+      'epub_to_pdf.subtitle': 'Konversi file ebook EPUB ke format PDF untuk berbagi dan pencetakan universal.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'Konverter EPUB ke PPT',
+      'epub_to_ppt.subtitle': 'Konversi file ebook EPUB ke format presentasi PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'Konverter EPUB ke PPTX',
+      'epub_to_pptx.subtitle': 'Konversi file ebook EPUB ke format presentasi PowerPoint modern PPTX.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'Konverter EPUB ke RTF',
+      'epub_to_rtf.subtitle': 'Konversi file ebook EPUB ke format dokumen Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'Konverter EPUB ke TXT',
+      'epub_to_txt.subtitle': 'Konversi file ebook EPUB ke format teks biasa TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'Konverter EPUB ke XLSX',
+      'epub_to_xlsx.subtitle': 'Konversi file ebook EPUB ke format spreadsheet Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'Konverter DOC ke CSV',
+      'doc_to_csv.subtitle': 'Konversi file dokumen Word DOC ke format CSV untuk analisis data.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'Konverter DOC ke EPUB',
+      'doc_to_epub.subtitle': 'Konversi file dokumen Word DOC ke format ebook EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'Konverter DOC ke MOBI',
+      'doc_to_mobi.subtitle': 'Konversi file dokumen Word DOC ke format ebook MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'Konverter DOC ke ODT',
+      'doc_to_odt.subtitle': 'Konversi file dokumen Word DOC ke format OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'Konverter DOC ke TXT',
+      'doc_to_txt.subtitle': 'Konversi file dokumen Word DOC ke format teks biasa TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'Konverter DOCX ke CSV',
+      'docx_to_csv.subtitle': 'Konversi file dokumen Word DOCX ke format CSV untuk analisis data.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'Konverter DOCX ke EPUB',
+      'docx_to_epub.subtitle': 'Konversi file dokumen Word DOCX ke format ebook EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'Konverter DOCX ke MOBI',
+      'docx_to_mobi.subtitle': 'Konversi file dokumen Word DOCX ke format ebook MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'Konverter DOCX ke ODT',
+      'docx_to_odt.subtitle': 'Konversi file dokumen Word DOCX ke format OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'Konverter DOCX ke TXT',
+      'docx_to_txt.subtitle': 'Konversi file dokumen Word DOCX ke format teks biasa TXT.',
     }
   },
   sv: {
@@ -16382,6 +16582,64 @@ const resources = {
               description: 'Branschstandardkonvertering med anpassningsbara inställningar'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Gratis Online Filkonverterare - MorphyHub | 300+ Formatstöd',
+          description: 'Konvertera filer mellan 300+ format direkt. Gratis online filkonverterare för bilder, dokument, e-böcker och datafiler. Batchbearbetning stöds.',
+          keywords: 'filkonverterare, online konverterare, bildkonverterare, dokumentkonverterare, e-bok konverterare, batchkonvertering, gratis konverterare'
+        },
+        schema: {
+          name: 'Online Filkonverterare',
+          description: 'Konvertera filer mellan 300+ format direkt med specialiserade konverterare för varje filtyp.'
+        },
+        hero: {
+          title: 'Filkonverterare',
+          description: 'Konvertera filer mellan olika format med våra specialiserade konverterare. Varje konverterare är optimerad för specifika användningsfall och filtyper.'
+        },
+        search: {
+          placeholder: 'Sök konverterare... (t.ex., CSV till MOBI, CR2 till ICO)',
+          example_one: 'CSV till MOBI',
+          example_two: 'CR2 till ICO',
+          results: 'Hittade {{count}} konverterare',
+          results_one: 'Hittade {{count}} konverterare',
+          results_other: 'Hittade {{count}} konverterare',
+          suggestion: 'Försök söka efter något som "{{exampleOne}}" eller "{{exampleTwo}}".',
+          clear: 'Rensa sökning'
+        },
+        categories: {
+          image_general: 'Bildkonverterare',
+          document_csv: 'Dokumentkonverterare',
+          developer_csv: 'Utvecklarverktyg (CSV)',
+          image_raw: 'Bildkonverterare (RAW)',
+          image_vector: 'Bildkonverterare (Vektor)',
+          ebook_epub: 'E-bok Konverterare (EPUB)',
+          document_doc: 'Dokumentkonverterare (DOC)',
+          document_docx: 'Dokumentkonverterare (DOCX)'
+        },
+        features: {
+          title: 'Varför Välja Våra Konverterare?',
+          items: [
+            {
+              title: 'Snabb & Pålitlig',
+              description: 'Konvertera filer snabbt med våra optimerade konverteringsmotorer.'
+            },
+            {
+              title: 'Säker & Privat',
+              description: 'Dina filer bearbetas säkert och lagras aldrig permanent.'
+            },
+            {
+              title: 'Hög Kvalitet',
+              description: 'Behåll bildkvalitet och dokumentstruktur under konvertering.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Inga Konverterare Hittades',
+          description: 'Försök söka efter något som "{{exampleOne}}" eller "{{exampleTwo}}".',
+          clear: 'Rensa sökning'
         }
       },
       
@@ -17007,6 +17265,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Konvertera HEIF till JPG för system som inte stöder moderna format, såsom äldre CMS, e-postklienter, visningsprogram och äldre applikationer. Säkerställ maximal kompatibilitet på alla plattformar.',
       'heif_to_jpg.seo.use_case_2_title': 'Innehållspipelines',
       'heif_to_jpg.seo.use_case_2_text': 'Standardisera bilder som JPG för förutsägbar bearbetning i automatiseringspipelines, designarbetsflöden och innehållshanteringssystem. Ideal för batchbearbetning och konsekvent utdataformatering.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'CSV till DOCX Konverterare',
+      'csv_to_docx.subtitle': 'Konvertera CSV-filer till Word DOCX-dokumentformat för professionell redigering och delning.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'CSV till EPUB Konverterare',
+      'csv_to_epub.subtitle': 'Konvertera CSV-data till EPUB e-bokformat för läsning på e-läsare.',
+      // CSV to HTML
+      'csv_to_html.title': 'CSV till HTML Konverterare',
+      'csv_to_html.subtitle': 'Konvertera CSV-filer till HTML-format för visning i webbläsare.',
+      // CSV to MD
+      'csv_to_md.title': 'CSV till MD Konverterare',
+      'csv_to_md.subtitle': 'Konvertera CSV-filer till Markdown-format för dokumentation och textredigering.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'CSV till MOBI Konverterare',
+      'csv_to_mobi.subtitle': 'Konvertera CSV-data till MOBI e-bokformat för Kindle och e-läsare.',
+      // CSV to ODP
+      'csv_to_odp.title': 'CSV till ODP Konverterare',
+      'csv_to_odp.subtitle': 'Konvertera CSV-filer till OpenDocument ODP-presentationsformat.',
+      // CSV to ODT
+      'csv_to_odt.title': 'CSV till ODT Konverterare',
+      'csv_to_odt.subtitle': 'Konvertera CSV-filer till OpenDocument ODT-dokumentformat.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'CSV till PDF Konverterare',
+      'csv_to_pdf.subtitle': 'Konvertera CSV-filer till PDF-format för universell delning och utskrift.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'CSV till PPT Konverterare',
+      'csv_to_ppt.subtitle': 'Konvertera CSV-filer till PowerPoint PPT-presentationsformat.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'CSV till PPTX Konverterare',
+      'csv_to_pptx.subtitle': 'Konvertera CSV-filer till modernt PowerPoint PPTX-presentationsformat.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'CSV till RTF Konverterare',
+      'csv_to_rtf.subtitle': 'Konvertera CSV-filer till Rich Text Format RTF-dokumentformat.',
+      // CSV to TXT
+      'csv_to_txt.title': 'CSV till TXT Konverterare',
+      'csv_to_txt.subtitle': 'Konvertera CSV-filer till vanligt textformat TXT för universell kompatibilitet.',
+      // CSV to XLS
+      'csv_to_xls.title': 'CSV till XLS Konverterare',
+      'csv_to_xls.subtitle': 'Konvertera CSV-filer till Excel XLS-kalkylbladsformat.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'CSV till XLSX Konverterare',
+      'csv_to_xlsx.subtitle': 'Konvertera CSV-filer till modernt Excel XLSX-kalkylbladsformat.',
+      // CSV to JSON
+      'csv_to_json.title': 'CSV till JSON Konverterare',
+      'csv_to_json.subtitle': 'Konvertera CSV-filer till JSON-format för webbutveckling och API:er.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'CSV till NDJSON Konverterare',
+      'csv_to_ndjson.subtitle': 'Konvertera CSV-filer till NDJSON (Newline Delimited JSON) format för dataströmning.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'CSV till Parquet Konverterare',
+      'csv_to_parquet.subtitle': 'Konvertera CSV-filer till Parquet-format för effektiv dataanalys.',
+      // CSV to SQL
+      'csv_to_sql.title': 'CSV till SQL Konverterare',
+      'csv_to_sql.subtitle': 'Konvertera CSV-filer till SQL-uttryck för databasimport.',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSV till TOML Konverterare',
+      'csv_to_toml.subtitle': 'Konvertera CSV-filer till TOML-format för konfigurationsfiler.',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV till XML Konverterare',
+      'csv_to_xml.subtitle': 'Konvertera CSV-filer till XML-format för strukturerad datautbyte.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV till YAML Konverterare',
+      'csv_to_yaml.subtitle': 'Konvertera CSV-filer till YAML-format för konfiguration och strukturerad data.',
+      // DNG to WebP
+      'dng_to_webp.title': 'DNG till WebP Konverterare',
+      'dng_to_webp.subtitle': 'Konvertera DNG-rawbildfiler till webboptimerat WebP-format.',
+      // EPS to WebP
+      'eps_to_webp.title': 'EPS till WebP Konverterare',
+      'eps_to_webp.subtitle': 'Konvertera EPS-vektorgrafikfiler till WebP-format för webb och appar.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'EPUB till CSV Konverterare',
+      'epub_to_csv.subtitle': 'Konvertera EPUB e-bokfiler till CSV-format för dataanalys.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'EPUB till DOC Konverterare',
+      'epub_to_doc.subtitle': 'Konvertera EPUB e-bokfiler till Word DOC-dokumentformat.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'EPUB till DOCX Konverterare',
+      'epub_to_docx.subtitle': 'Konvertera EPUB e-bokfiler till modernt Word DOCX-dokumentformat.',
+      // EPUB to HTML
+      'epub_to_html.title': 'EPUB till HTML Konverterare',
+      'epub_to_html.subtitle': 'Konvertera EPUB e-bokfiler till HTML-format för webb.',
+      // EPUB to MD
+      'epub_to_md.title': 'EPUB till MD Konverterare',
+      'epub_to_md.subtitle': 'Konvertera EPUB e-bokfiler till Markdown-format för dokumentation.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'EPUB till MOBI Konverterare',
+      'epub_to_mobi.subtitle': 'Konvertera EPUB e-bokfiler till MOBI-format för Kindle-enheter.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'EPUB till ODP Konverterare',
+      'epub_to_odp.subtitle': 'Konvertera EPUB e-bokfiler till OpenDocument ODP-presentationsformat.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'EPUB till ODT Konverterare',
+      'epub_to_odt.subtitle': 'Konvertera EPUB e-bokfiler till OpenDocument ODT-dokumentformat.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'EPUB till PDF Konverterare',
+      'epub_to_pdf.subtitle': 'Konvertera EPUB e-bokfiler till PDF-format för universell delning och utskrift.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'EPUB till PPT Konverterare',
+      'epub_to_ppt.subtitle': 'Konvertera EPUB e-bokfiler till PowerPoint PPT-presentationsformat.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'EPUB till PPTX Konverterare',
+      'epub_to_pptx.subtitle': 'Konvertera EPUB e-bokfiler till modernt PowerPoint PPTX-presentationsformat.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'EPUB till RTF Konverterare',
+      'epub_to_rtf.subtitle': 'Konvertera EPUB e-bokfiler till Rich Text Format RTF-dokumentformat.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'EPUB till TXT Konverterare',
+      'epub_to_txt.subtitle': 'Konvertera EPUB e-bokfiler till vanligt textformat TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'EPUB till XLSX Konverterare',
+      'epub_to_xlsx.subtitle': 'Konvertera EPUB e-bokfiler till Excel XLSX-kalkylbladsformat.',
+      // DOC to CSV
+      'doc_to_csv.title': 'DOC till CSV Konverterare',
+      'doc_to_csv.subtitle': 'Konvertera Word DOC-dokumentfiler till CSV-format för dataanalys.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'DOC till EPUB Konverterare',
+      'doc_to_epub.subtitle': 'Konvertera Word DOC-dokumentfiler till EPUB e-bokformat.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'DOC till MOBI Konverterare',
+      'doc_to_mobi.subtitle': 'Konvertera Word DOC-dokumentfiler till MOBI e-bokformat.',
+      // DOC to ODT
+      'doc_to_odt.title': 'DOC till ODT Konverterare',
+      'doc_to_odt.subtitle': 'Konvertera Word DOC-dokumentfiler till OpenDocument ODT-format.',
+      // DOC to TXT
+      'doc_to_txt.title': 'DOC till TXT Konverterare',
+      'doc_to_txt.subtitle': 'Konvertera Word DOC-dokumentfiler till vanligt textformat TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'DOCX till CSV Konverterare',
+      'docx_to_csv.subtitle': 'Konvertera Word DOCX-dokumentfiler till CSV-format för dataanalys.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'DOCX till EPUB Konverterare',
+      'docx_to_epub.subtitle': 'Konvertera Word DOCX-dokumentfiler till EPUB e-bokformat.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'DOCX till MOBI Konverterare',
+      'docx_to_mobi.subtitle': 'Konvertera Word DOCX-dokumentfiler till MOBI e-bokformat.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'DOCX till ODT Konverterare',
+      'docx_to_odt.subtitle': 'Konvertera Word DOCX-dokumentfiler till OpenDocument ODT-format.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'DOCX till TXT Konverterare',
+      'docx_to_txt.subtitle': 'Konvertera Word DOCX-dokumentfiler till vanligt textformat TXT.',
     }
   },
   es: {
@@ -17168,6 +17568,64 @@ const resources = {
               description: 'Conversión de estándar de la industria con configuraciones personalizables'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Convertidores de Archivos Online Gratis - MorphyHub | Soporte para 300+ Formatos',
+          description: 'Convierte archivos entre 300+ formatos instantáneamente. Convertidores de archivos online gratis para imágenes, documentos, ebooks y archivos de datos. Procesamiento por lotes soportado.',
+          keywords: 'convertidor de archivos, convertidor online, convertidor de imágenes, convertidor de documentos, convertidor de ebooks, conversión por lotes, convertidor gratis'
+        },
+        schema: {
+          name: 'Convertidores de Archivos Online',
+          description: 'Convierte archivos entre 300+ formatos instantáneamente con convertidores especializados para cada tipo de archivo.'
+        },
+        hero: {
+          title: 'Convertidores de Archivos',
+          description: 'Convierte archivos entre diferentes formatos con nuestros convertidores especializados. Cada convertidor está optimizado para casos de uso específicos y tipos de archivo.'
+        },
+        search: {
+          placeholder: 'Buscar convertidores... (ej., CSV a MOBI, CR2 a ICO)',
+          example_one: 'CSV a MOBI',
+          example_two: 'CR2 a ICO',
+          results: 'Se encontraron {{count}} convertidores',
+          results_one: 'Se encontró {{count}} convertidor',
+          results_other: 'Se encontraron {{count}} convertidores',
+          suggestion: 'Intenta buscar algo como "{{exampleOne}}" o "{{exampleTwo}}".',
+          clear: 'Limpiar búsqueda'
+        },
+        categories: {
+          image_general: 'Convertidores de Imágenes',
+          document_csv: 'Convertidores de Documentos',
+          developer_csv: 'Herramientas para Desarrolladores (CSV)',
+          image_raw: 'Convertidores de Imágenes (RAW)',
+          image_vector: 'Convertidores de Imágenes (Vector)',
+          ebook_epub: 'Convertidores de E-books (EPUB)',
+          document_doc: 'Convertidores de Documentos (DOC)',
+          document_docx: 'Convertidores de Documentos (DOCX)'
+        },
+        features: {
+          title: '¿Por Qué Elegir Nuestros Convertidores?',
+          items: [
+            {
+              title: 'Rápido y Confiable',
+              description: 'Convierte archivos rápidamente con nuestros motores de conversión optimizados.'
+            },
+            {
+              title: 'Seguro y Privado',
+              description: 'Tus archivos se procesan de forma segura y nunca se almacenan permanentemente.'
+            },
+            {
+              title: 'Alta Calidad',
+              description: 'Mantén la calidad de imagen y la estructura del documento durante la conversión.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'No Se Encontraron Convertidores',
+          description: 'Intenta buscar algo como "{{exampleOne}}" o "{{exampleTwo}}".',
+          clear: 'Limpiar búsqueda'
         }
       },
       
@@ -17793,6 +18251,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Convierte HEIF a JPG para sistemas que no admiten formatos modernos, como CMS antiguos, clientes de correo, visores y aplicaciones heredadas. Asegura máxima compatibilidad en todas las plataformas.',
       'heif_to_jpg.seo.use_case_2_title': 'Pipelines de Contenido',
       'heif_to_jpg.seo.use_case_2_text': 'Estandariza imágenes como JPG para procesamiento predecible en pipelines de automatización, flujos de trabajo de diseño y sistemas de gestión de contenido. Ideal para procesamiento por lotes y formato de salida consistente.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'Convertidor CSV a DOCX',
+      'csv_to_docx.subtitle': 'Convierte archivos CSV al formato de documento Word DOCX para edición y compartición profesional.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'Convertidor CSV a EPUB',
+      'csv_to_epub.subtitle': 'Convierte datos CSV al formato de libro electrónico EPUB para lectura en lectores electrónicos.',
+      // CSV to HTML
+      'csv_to_html.title': 'Convertidor CSV a HTML',
+      'csv_to_html.subtitle': 'Convierte archivos CSV al formato HTML para visualización en navegadores web.',
+      // CSV to MD
+      'csv_to_md.title': 'Convertidor CSV a MD',
+      'csv_to_md.subtitle': 'Convierte archivos CSV al formato Markdown para documentación y edición de texto.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'Convertidor CSV a MOBI',
+      'csv_to_mobi.subtitle': 'Convierte datos CSV al formato de libro electrónico MOBI para dispositivos Kindle y lectores electrónicos.',
+      // CSV to ODP
+      'csv_to_odp.title': 'Convertidor CSV a ODP',
+      'csv_to_odp.subtitle': 'Convierte archivos CSV al formato de presentación OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'Convertidor CSV a ODT',
+      'csv_to_odt.subtitle': 'Convierte archivos CSV al formato de documento OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'Convertidor CSV a PDF',
+      'csv_to_pdf.subtitle': 'Convierte archivos CSV al formato PDF para compartición e impresión universal.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'Convertidor CSV a PPT',
+      'csv_to_ppt.subtitle': 'Convierte archivos CSV al formato de presentación PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'Convertidor CSV a PPTX',
+      'csv_to_pptx.subtitle': 'Convierte archivos CSV al formato moderno de presentación PowerPoint PPTX.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'Convertidor CSV a RTF',
+      'csv_to_rtf.subtitle': 'Convierte archivos CSV al formato de documento Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'Convertidor CSV a TXT',
+      'csv_to_txt.subtitle': 'Convierte archivos CSV al formato de texto plano TXT para compatibilidad universal.',
+      // CSV to XLS
+      'csv_to_xls.title': 'Convertidor CSV a XLS',
+      'csv_to_xls.subtitle': 'Convierte archivos CSV al formato de hoja de cálculo Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'Convertidor CSV a XLSX',
+      'csv_to_xlsx.subtitle': 'Convierte archivos CSV al formato moderno de hoja de cálculo Excel XLSX.',
+      // CSV to JSON
+      'csv_to_json.title': 'Convertidor CSV a JSON',
+      'csv_to_json.subtitle': 'Convierte archivos CSV al formato JSON para desarrollo web y API.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'Convertidor CSV a NDJSON',
+      'csv_to_ndjson.subtitle': 'Convierte archivos CSV al formato NDJSON (Newline Delimited JSON) para transmisión de datos.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'Convertidor CSV a Parquet',
+      'csv_to_parquet.subtitle': 'Convierte archivos CSV al formato Parquet para análisis de datos eficiente.',
+      // CSV to SQL
+      'csv_to_sql.title': 'Convertidor CSV a SQL',
+      'csv_to_sql.subtitle': 'Convierte archivos CSV a declaraciones SQL para importación de bases de datos.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Convertidor CSV a TOML',
+      'csv_to_toml.subtitle': 'Convierte archivos CSV al formato TOML para archivos de configuración.',
+      // CSV to XML
+      'csv_to_xml.title': 'Convertidor CSV a XML',
+      'csv_to_xml.subtitle': 'Convierte archivos CSV al formato XML para intercambio de datos estructurados.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Convertidor CSV a YAML',
+      'csv_to_yaml.subtitle': 'Convierte archivos CSV al formato YAML para configuración y datos estructurados.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Convertidor DNG a WebP',
+      'dng_to_webp.subtitle': 'Convierte archivos de imagen RAW DNG al formato WebP optimizado para web.',
+      // EPS to WebP
+      'eps_to_webp.title': 'Convertidor EPS a WebP',
+      'eps_to_webp.subtitle': 'Convierte archivos de gráficos vectoriales EPS al formato WebP para web y aplicaciones.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'Convertidor EPUB a CSV',
+      'epub_to_csv.subtitle': 'Convierte archivos de libro electrónico EPUB al formato CSV para análisis de datos.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'Convertidor EPUB a DOC',
+      'epub_to_doc.subtitle': 'Convierte archivos de libro electrónico EPUB al formato de documento Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'Convertidor EPUB a DOCX',
+      'epub_to_docx.subtitle': 'Convierte archivos de libro electrónico EPUB al formato moderno de documento Word DOCX.',
+      // EPUB to HTML
+      'epub_to_html.title': 'Convertidor EPUB a HTML',
+      'epub_to_html.subtitle': 'Convierte archivos de libro electrónico EPUB al formato HTML para web.',
+      // EPUB to MD
+      'epub_to_md.title': 'Convertidor EPUB a MD',
+      'epub_to_md.subtitle': 'Convierte archivos de libro electrónico EPUB al formato Markdown para documentación.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'Convertidor EPUB a MOBI',
+      'epub_to_mobi.subtitle': 'Convierte archivos de libro electrónico EPUB al formato MOBI para dispositivos Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'Convertidor EPUB a ODP',
+      'epub_to_odp.subtitle': 'Convierte archivos de libro electrónico EPUB al formato de presentación OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'Convertidor EPUB a ODT',
+      'epub_to_odt.subtitle': 'Convierte archivos de libro electrónico EPUB al formato de documento OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'Convertidor EPUB a PDF',
+      'epub_to_pdf.subtitle': 'Convierte archivos de libro electrónico EPUB al formato PDF para compartición e impresión universal.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'Convertidor EPUB a PPT',
+      'epub_to_ppt.subtitle': 'Convierte archivos de libro electrónico EPUB al formato de presentación PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'Convertidor EPUB a PPTX',
+      'epub_to_pptx.subtitle': 'Convierte archivos de libro electrónico EPUB al formato moderno de presentación PowerPoint PPTX.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'Convertidor EPUB a RTF',
+      'epub_to_rtf.subtitle': 'Convierte archivos de libro electrónico EPUB al formato de documento Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'Convertidor EPUB a TXT',
+      'epub_to_txt.subtitle': 'Convierte archivos de libro electrónico EPUB al formato de texto plano TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'Convertidor EPUB a XLSX',
+      'epub_to_xlsx.subtitle': 'Convierte archivos de libro electrónico EPUB al formato de hoja de cálculo Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'Convertidor DOC a CSV',
+      'doc_to_csv.subtitle': 'Convierte archivos de documento Word DOC al formato CSV para análisis de datos.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'Convertidor DOC a EPUB',
+      'doc_to_epub.subtitle': 'Convierte archivos de documento Word DOC al formato de libro electrónico EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'Convertidor DOC a MOBI',
+      'doc_to_mobi.subtitle': 'Convierte archivos de documento Word DOC al formato de libro electrónico MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'Convertidor DOC a ODT',
+      'doc_to_odt.subtitle': 'Convierte archivos de documento Word DOC al formato OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'Convertidor DOC a TXT',
+      'doc_to_txt.subtitle': 'Convierte archivos de documento Word DOC al formato de texto plano TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'Convertidor DOCX a CSV',
+      'docx_to_csv.subtitle': 'Convierte archivos de documento Word DOCX al formato CSV para análisis de datos.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'Convertidor DOCX a EPUB',
+      'docx_to_epub.subtitle': 'Convierte archivos de documento Word DOCX al formato de libro electrónico EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'Convertidor DOCX a MOBI',
+      'docx_to_mobi.subtitle': 'Convierte archivos de documento Word DOCX al formato de libro electrónico MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'Convertidor DOCX a ODT',
+      'docx_to_odt.subtitle': 'Convierte archivos de documento Word DOCX al formato OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'Convertidor DOCX a TXT',
+      'docx_to_txt.subtitle': 'Convierte archivos de documento Word DOCX al formato de texto plano TXT.',
     }
   },
   fr: {
@@ -17954,6 +18554,64 @@ const resources = {
               description: 'Conversion de qualité industrielle avec des paramètres personnalisables'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Convertisseurs de Fichiers En Ligne Gratuits - MorphyHub | Support 300+ Formats',
+          description: 'Convertissez des fichiers entre 300+ formats instantanément. Convertisseurs de fichiers en ligne gratuits pour images, documents, ebooks et fichiers de données. Traitement par lots pris en charge.',
+          keywords: 'convertisseur de fichiers, convertisseur en ligne, convertisseur d\'images, convertisseur de documents, convertisseur d\'ebooks, conversion par lots, convertisseur gratuit'
+        },
+        schema: {
+          name: 'Convertisseurs de Fichiers En Ligne',
+          description: 'Convertissez des fichiers entre 300+ formats instantanément avec des convertisseurs spécialisés pour chaque type de fichier.'
+        },
+        hero: {
+          title: 'Convertisseurs de Fichiers',
+          description: 'Convertissez des fichiers entre différents formats avec nos convertisseurs spécialisés. Chaque convertisseur est optimisé pour des cas d\'utilisation spécifiques et des types de fichiers.'
+        },
+        search: {
+          placeholder: 'Rechercher des convertisseurs... (ex., CSV vers MOBI, CR2 vers ICO)',
+          example_one: 'CSV vers MOBI',
+          example_two: 'CR2 vers ICO',
+          results: '{{count}} convertisseur trouvé',
+          results_one: '{{count}} convertisseur trouvé',
+          results_other: '{{count}} convertisseurs trouvés',
+          suggestion: 'Essayez de rechercher quelque chose comme "{{exampleOne}}" ou "{{exampleTwo}}".',
+          clear: 'Effacer la recherche'
+        },
+        categories: {
+          image_general: 'Convertisseurs d\'Images',
+          document_csv: 'Convertisseurs de Documents',
+          developer_csv: 'Outils Développeur (CSV)',
+          image_raw: 'Convertisseurs d\'Images (RAW)',
+          image_vector: 'Convertisseurs d\'Images (Vecteur)',
+          ebook_epub: 'Convertisseurs d\'E-books (EPUB)',
+          document_doc: 'Convertisseurs de Documents (DOC)',
+          document_docx: 'Convertisseurs de Documents (DOCX)'
+        },
+        features: {
+          title: 'Pourquoi Choisir Nos Convertisseurs ?',
+          items: [
+            {
+              title: 'Rapide et Fiable',
+              description: 'Convertissez des fichiers rapidement avec nos moteurs de conversion optimisés.'
+            },
+            {
+              title: 'Sécurisé et Privé',
+              description: 'Vos fichiers sont traités en toute sécurité et ne sont jamais stockés de façon permanente.'
+            },
+            {
+              title: 'Haute Qualité',
+              description: 'Maintenez la qualité d\'image et la structure du document pendant la conversion.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Aucun Convertisseur Trouvé',
+          description: 'Essayez de rechercher quelque chose comme "{{exampleOne}}" ou "{{exampleTwo}}".',
+          clear: 'Effacer la recherche'
         }
       },
       
@@ -18579,6 +19237,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Convertissez HEIF en JPG pour les systèmes qui ne prennent pas en charge les formats modernes, tels que les CMS anciens, clients email, visionneuses et applications héritées. Assurez une compatibilité maximale sur toutes les plateformes.',
       'heif_to_jpg.seo.use_case_2_title': 'Pipelines de Contenu',
       'heif_to_jpg.seo.use_case_2_text': 'Standardisez les images en JPG pour un traitement prévisible dans les pipelines d\'automatisation, flux de travail de conception et systèmes de gestion de contenu. Idéal pour le traitement par lots et le formatage de sortie cohérent.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'Convertisseur CSV vers DOCX',
+      'csv_to_docx.subtitle': 'Convertissez les fichiers CSV au format de document Word DOCX pour l\'édition et le partage professionnel.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'Convertisseur CSV vers EPUB',
+      'csv_to_epub.subtitle': 'Convertissez les données CSV au format de livre électronique EPUB pour la lecture sur les lecteurs électroniques.',
+      // CSV to HTML
+      'csv_to_html.title': 'Convertisseur CSV vers HTML',
+      'csv_to_html.subtitle': 'Convertissez les fichiers CSV au format HTML pour l\'affichage dans les navigateurs web.',
+      // CSV to MD
+      'csv_to_md.title': 'Convertisseur CSV vers MD',
+      'csv_to_md.subtitle': 'Convertissez les fichiers CSV au format Markdown pour la documentation et l\'édition de texte.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'Convertisseur CSV vers MOBI',
+      'csv_to_mobi.subtitle': 'Convertissez les données CSV au format de livre électronique MOBI pour les appareils Kindle et les lecteurs électroniques.',
+      // CSV to ODP
+      'csv_to_odp.title': 'Convertisseur CSV vers ODP',
+      'csv_to_odp.subtitle': 'Convertissez les fichiers CSV au format de présentation OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'Convertisseur CSV vers ODT',
+      'csv_to_odt.subtitle': 'Convertissez les fichiers CSV au format de document OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'Convertisseur CSV vers PDF',
+      'csv_to_pdf.subtitle': 'Convertissez les fichiers CSV au format PDF pour le partage et l\'impression universels.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'Convertisseur CSV vers PPT',
+      'csv_to_ppt.subtitle': 'Convertissez les fichiers CSV au format de présentation PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'Convertisseur CSV vers PPTX',
+      'csv_to_pptx.subtitle': 'Convertissez les fichiers CSV au format moderne de présentation PowerPoint PPTX.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'Convertisseur CSV vers RTF',
+      'csv_to_rtf.subtitle': 'Convertissez les fichiers CSV au format de document Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'Convertisseur CSV vers TXT',
+      'csv_to_txt.subtitle': 'Convertissez les fichiers CSV au format de texte brut TXT pour une compatibilité universelle.',
+      // CSV to XLS
+      'csv_to_xls.title': 'Convertisseur CSV vers XLS',
+      'csv_to_xls.subtitle': 'Convertissez les fichiers CSV au format de feuille de calcul Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'Convertisseur CSV vers XLSX',
+      'csv_to_xlsx.subtitle': 'Convertissez les fichiers CSV au format moderne de feuille de calcul Excel XLSX.',
+      // CSV to JSON
+      'csv_to_json.title': 'Convertisseur CSV vers JSON',
+      'csv_to_json.subtitle': 'Convertissez les fichiers CSV au format JSON pour le développement web et les API.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'Convertisseur CSV vers NDJSON',
+      'csv_to_ndjson.subtitle': 'Convertissez les fichiers CSV au format NDJSON (Newline Delimited JSON) pour la diffusion de données.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'Convertisseur CSV vers Parquet',
+      'csv_to_parquet.subtitle': 'Convertissez les fichiers CSV au format Parquet pour l\'analyse de données efficace.',
+      // CSV to SQL
+      'csv_to_sql.title': 'Convertisseur CSV vers SQL',
+      'csv_to_sql.subtitle': 'Convertissez les fichiers CSV en instructions SQL pour l\'importation de bases de données.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Convertisseur CSV vers TOML',
+      'csv_to_toml.subtitle': 'Convertissez les fichiers CSV au format TOML pour les fichiers de configuration.',
+      // CSV to XML
+      'csv_to_xml.title': 'Convertisseur CSV vers XML',
+      'csv_to_xml.subtitle': 'Convertissez les fichiers CSV au format XML pour l\'échange de données structurées.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Convertisseur CSV vers YAML',
+      'csv_to_yaml.subtitle': 'Convertissez les fichiers CSV au format YAML pour la configuration et les données structurées.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Convertisseur DNG vers WebP',
+      'dng_to_webp.subtitle': 'Convertissez les fichiers d\'image RAW DNG au format WebP optimisé pour le web.',
+      // EPS to WebP
+      'eps_to_webp.title': 'Convertisseur EPS vers WebP',
+      'eps_to_webp.subtitle': 'Convertissez les fichiers de graphiques vectoriels EPS au format WebP pour le web et les applications.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'Convertisseur EPUB vers CSV',
+      'epub_to_csv.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format CSV pour l\'analyse de données.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'Convertisseur EPUB vers DOC',
+      'epub_to_doc.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format de document Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'Convertisseur EPUB vers DOCX',
+      'epub_to_docx.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format moderne de document Word DOCX.',
+      // EPUB to HTML
+      'epub_to_html.title': 'Convertisseur EPUB vers HTML',
+      'epub_to_html.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format HTML pour le web.',
+      // EPUB to MD
+      'epub_to_md.title': 'Convertisseur EPUB vers MD',
+      'epub_to_md.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format Markdown pour la documentation.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'Convertisseur EPUB vers MOBI',
+      'epub_to_mobi.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format MOBI pour les appareils Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'Convertisseur EPUB vers ODP',
+      'epub_to_odp.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format de présentation OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'Convertisseur EPUB vers ODT',
+      'epub_to_odt.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format de document OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'Convertisseur EPUB vers PDF',
+      'epub_to_pdf.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format PDF pour le partage et l\'impression universels.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'Convertisseur EPUB vers PPT',
+      'epub_to_ppt.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format de présentation PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'Convertisseur EPUB vers PPTX',
+      'epub_to_pptx.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format moderne de présentation PowerPoint PPTX.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'Convertisseur EPUB vers RTF',
+      'epub_to_rtf.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format de document Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'Convertisseur EPUB vers TXT',
+      'epub_to_txt.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format de texte brut TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'Convertisseur EPUB vers XLSX',
+      'epub_to_xlsx.subtitle': 'Convertissez les fichiers de livre électronique EPUB au format de feuille de calcul Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'Convertisseur DOC vers CSV',
+      'doc_to_csv.subtitle': 'Convertissez les fichiers de document Word DOC au format CSV pour l\'analyse de données.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'Convertisseur DOC vers EPUB',
+      'doc_to_epub.subtitle': 'Convertissez les fichiers de document Word DOC au format de livre électronique EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'Convertisseur DOC vers MOBI',
+      'doc_to_mobi.subtitle': 'Convertissez les fichiers de document Word DOC au format de livre électronique MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'Convertisseur DOC vers ODT',
+      'doc_to_odt.subtitle': 'Convertissez les fichiers de document Word DOC au format OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'Convertisseur DOC vers TXT',
+      'doc_to_txt.subtitle': 'Convertissez les fichiers de document Word DOC au format de texte brut TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'Convertisseur DOCX vers CSV',
+      'docx_to_csv.subtitle': 'Convertissez les fichiers de document Word DOCX au format CSV pour l\'analyse de données.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'Convertisseur DOCX vers EPUB',
+      'docx_to_epub.subtitle': 'Convertissez les fichiers de document Word DOCX au format de livre électronique EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'Convertisseur DOCX vers MOBI',
+      'docx_to_mobi.subtitle': 'Convertissez les fichiers de document Word DOCX au format de livre électronique MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'Convertisseur DOCX vers ODT',
+      'docx_to_odt.subtitle': 'Convertissez les fichiers de document Word DOCX au format OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'Convertisseur DOCX vers TXT',
+      'docx_to_txt.subtitle': 'Convertissez les fichiers de document Word DOCX au format de texte brut TXT.',
     }
   },
   it: {
@@ -18740,6 +19540,64 @@ const resources = {
               description: 'Conversione di standard industriale con impostazioni personalizzabili'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Convertitori di File Online Gratuiti - MorphyHub | Supporto 300+ Formati',
+          description: 'Converti file tra 300+ formati istantaneamente. Convertitori di file online gratuiti per immagini, documenti, ebook e file di dati. Elaborazione batch supportata.',
+          keywords: 'convertitore di file, convertitore online, convertitore di immagini, convertitore di documenti, convertitore di ebook, conversione batch, convertitore gratuito'
+        },
+        schema: {
+          name: 'Convertitori di File Online',
+          description: 'Converti file tra 300+ formati istantaneamente con convertitori specializzati per ogni tipo di file.'
+        },
+        hero: {
+          title: 'Convertitori di File',
+          description: 'Converti file tra diversi formati con i nostri convertitori specializzati. Ogni convertitore è ottimizzato per casi d\'uso specifici e tipi di file.'
+        },
+        search: {
+          placeholder: 'Cerca convertitori... (es., CSV in MOBI, CR2 in ICO)',
+          example_one: 'CSV in MOBI',
+          example_two: 'CR2 in ICO',
+          results: 'Trovati {{count}} convertitori',
+          results_one: 'Trovato {{count}} convertitore',
+          results_other: 'Trovati {{count}} convertitori',
+          suggestion: 'Prova a cercare qualcosa come "{{exampleOne}}" o "{{exampleTwo}}".',
+          clear: 'Cancella ricerca'
+        },
+        categories: {
+          image_general: 'Convertitori di Immagini',
+          document_csv: 'Convertitori di Documenti',
+          developer_csv: 'Strumenti per Sviluppatori (CSV)',
+          image_raw: 'Convertitori di Immagini (RAW)',
+          image_vector: 'Convertitori di Immagini (Vettore)',
+          ebook_epub: 'Convertitori di E-book (EPUB)',
+          document_doc: 'Convertitori di Documenti (DOC)',
+          document_docx: 'Convertitori di Documenti (DOCX)'
+        },
+        features: {
+          title: 'Perché Scegliere I Nostri Convertitori?',
+          items: [
+            {
+              title: 'Veloce e Affidabile',
+              description: 'Converti file rapidamente con i nostri motori di conversione ottimizzati.'
+            },
+            {
+              title: 'Sicuro e Privato',
+              description: 'I tuoi file vengono elaborati in modo sicuro e non vengono mai memorizzati permanentemente.'
+            },
+            {
+              title: 'Alta Qualità',
+              description: 'Mantieni la qualità dell\'immagine e la struttura del documento durante la conversione.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Nessun Convertitore Trovato',
+          description: 'Prova a cercare qualcosa come "{{exampleOne}}" o "{{exampleTwo}}".',
+          clear: 'Cancella ricerca'
         }
       },
       
@@ -19365,6 +20223,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Converti HEIF in JPG per sistemi che non supportano formati moderni, come CMS vecchi, client email, visualizzatori e applicazioni legacy. Assicura massima compatibilità su tutte le piattaforme.',
       'heif_to_jpg.seo.use_case_2_title': 'Pipeline di Contenuto',
       'heif_to_jpg.seo.use_case_2_text': 'Standardizza le immagini come JPG per elaborazione prevedibile in pipeline di automazione, flussi di lavoro di progettazione e sistemi di gestione contenuti. Ideale per elaborazione batch e formattazione output consistente.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'Convertitore CSV in DOCX',
+      'csv_to_docx.subtitle': 'Converti file CSV nel formato documento Word DOCX per modifica e condivisione professionale.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'Convertitore CSV in EPUB',
+      'csv_to_epub.subtitle': 'Converti dati CSV nel formato ebook EPUB per la lettura su e-reader.',
+      // CSV to HTML
+      'csv_to_html.title': 'Convertitore CSV in HTML',
+      'csv_to_html.subtitle': 'Converti file CSV nel formato HTML per la visualizzazione nei browser web.',
+      // CSV to MD
+      'csv_to_md.title': 'Convertitore CSV in MD',
+      'csv_to_md.subtitle': 'Converti file CSV nel formato Markdown per documentazione e modifica del testo.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'Convertitore CSV in MOBI',
+      'csv_to_mobi.subtitle': 'Converti dati CSV nel formato ebook MOBI per dispositivi Kindle e e-reader.',
+      // CSV to ODP
+      'csv_to_odp.title': 'Convertitore CSV in ODP',
+      'csv_to_odp.subtitle': 'Converti file CSV nel formato presentazione OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'Convertitore CSV in ODT',
+      'csv_to_odt.subtitle': 'Converti file CSV nel formato documento OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'Convertitore CSV in PDF',
+      'csv_to_pdf.subtitle': 'Converti file CSV nel formato PDF per condivisione e stampa universale.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'Convertitore CSV in PPT',
+      'csv_to_ppt.subtitle': 'Converti file CSV nel formato presentazione PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'Convertitore CSV in PPTX',
+      'csv_to_pptx.subtitle': 'Converti file CSV nel formato moderno presentazione PowerPoint PPTX.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'Convertitore CSV in RTF',
+      'csv_to_rtf.subtitle': 'Converti file CSV nel formato documento Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'Convertitore CSV in TXT',
+      'csv_to_txt.subtitle': 'Converti file CSV nel formato testo semplice TXT per compatibilità universale.',
+      // CSV to XLS
+      'csv_to_xls.title': 'Convertitore CSV in XLS',
+      'csv_to_xls.subtitle': 'Converti file CSV nel formato foglio di calcolo Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'Convertitore CSV in XLSX',
+      'csv_to_xlsx.subtitle': 'Converti file CSV nel formato moderno foglio di calcolo Excel XLSX.',
+      // CSV to JSON
+      'csv_to_json.title': 'Convertitore CSV in JSON',
+      'csv_to_json.subtitle': 'Converti file CSV nel formato JSON per sviluppo web e API.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'Convertitore CSV in NDJSON',
+      'csv_to_ndjson.subtitle': 'Converti file CSV nel formato NDJSON (Newline Delimited JSON) per streaming dati.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'Convertitore CSV in Parquet',
+      'csv_to_parquet.subtitle': 'Converti file CSV nel formato Parquet per analisi dati efficiente.',
+      // CSV to SQL
+      'csv_to_sql.title': 'Convertitore CSV in SQL',
+      'csv_to_sql.subtitle': 'Converti file CSV in istruzioni SQL per importazione database.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Convertitore CSV in TOML',
+      'csv_to_toml.subtitle': 'Converti file CSV nel formato TOML per file di configurazione.',
+      // CSV to XML
+      'csv_to_xml.title': 'Convertitore CSV in XML',
+      'csv_to_xml.subtitle': 'Converti file CSV nel formato XML per scambio dati strutturati.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Convertitore CSV in YAML',
+      'csv_to_yaml.subtitle': 'Converti file CSV nel formato YAML per configurazione e dati strutturati.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Convertitore DNG in WebP',
+      'dng_to_webp.subtitle': 'Converti file immagine RAW DNG nel formato WebP ottimizzato per web.',
+      // EPS to WebP
+      'eps_to_webp.title': 'Convertitore EPS in WebP',
+      'eps_to_webp.subtitle': 'Converti file grafica vettoriale EPS nel formato WebP per web e applicazioni.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'Convertitore EPUB in CSV',
+      'epub_to_csv.subtitle': 'Converti file ebook EPUB nel formato CSV per analisi dati.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'Convertitore EPUB in DOC',
+      'epub_to_doc.subtitle': 'Converti file ebook EPUB nel formato documento Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'Convertitore EPUB in DOCX',
+      'epub_to_docx.subtitle': 'Converti file ebook EPUB nel formato moderno documento Word DOCX.',
+      // EPUB to HTML
+      'epub_to_html.title': 'Convertitore EPUB in HTML',
+      'epub_to_html.subtitle': 'Converti file ebook EPUB nel formato HTML per web.',
+      // EPUB to MD
+      'epub_to_md.title': 'Convertitore EPUB in MD',
+      'epub_to_md.subtitle': 'Converti file ebook EPUB nel formato Markdown per documentazione.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'Convertitore EPUB in MOBI',
+      'epub_to_mobi.subtitle': 'Converti file ebook EPUB nel formato MOBI per dispositivi Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'Convertitore EPUB in ODP',
+      'epub_to_odp.subtitle': 'Converti file ebook EPUB nel formato presentazione OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'Convertitore EPUB in ODT',
+      'epub_to_odt.subtitle': 'Converti file ebook EPUB nel formato documento OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'Convertitore EPUB in PDF',
+      'epub_to_pdf.subtitle': 'Converti file ebook EPUB nel formato PDF per condivisione e stampa universale.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'Convertitore EPUB in PPT',
+      'epub_to_ppt.subtitle': 'Converti file ebook EPUB nel formato presentazione PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'Convertitore EPUB in PPTX',
+      'epub_to_pptx.subtitle': 'Converti file ebook EPUB nel formato moderno presentazione PowerPoint PPTX.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'Convertitore EPUB in RTF',
+      'epub_to_rtf.subtitle': 'Converti file ebook EPUB nel formato documento Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'Convertitore EPUB in TXT',
+      'epub_to_txt.subtitle': 'Converti file ebook EPUB nel formato testo semplice TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'Convertitore EPUB in XLSX',
+      'epub_to_xlsx.subtitle': 'Converti file ebook EPUB nel formato foglio di calcolo Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'Convertitore DOC in CSV',
+      'doc_to_csv.subtitle': 'Converti file documento Word DOC nel formato CSV per analisi dati.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'Convertitore DOC in EPUB',
+      'doc_to_epub.subtitle': 'Converti file documento Word DOC nel formato ebook EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'Convertitore DOC in MOBI',
+      'doc_to_mobi.subtitle': 'Converti file documento Word DOC nel formato ebook MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'Convertitore DOC in ODT',
+      'doc_to_odt.subtitle': 'Converti file documento Word DOC nel formato OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'Convertitore DOC in TXT',
+      'doc_to_txt.subtitle': 'Converti file documento Word DOC nel formato testo semplice TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'Convertitore DOCX in CSV',
+      'docx_to_csv.subtitle': 'Converti file documento Word DOCX nel formato CSV per analisi dati.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'Convertitore DOCX in EPUB',
+      'docx_to_epub.subtitle': 'Converti file documento Word DOCX nel formato ebook EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'Convertitore DOCX in MOBI',
+      'docx_to_mobi.subtitle': 'Converti file documento Word DOCX nel formato ebook MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'Convertitore DOCX in ODT',
+      'docx_to_odt.subtitle': 'Converti file documento Word DOCX nel formato OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'Convertitore DOCX in TXT',
+      'docx_to_txt.subtitle': 'Converti file documento Word DOCX nel formato testo semplice TXT.',
     }
   },
   nl: {
@@ -19526,6 +20526,64 @@ const resources = {
               description: 'Industriestandaard conversie met aanpasbare instellingen'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Gratis Online Bestandsconverters - MorphyHub | 300+ Formaatondersteuning',
+          description: 'Converteer bestanden tussen 300+ formaten direct. Gratis online bestandsconverters voor afbeeldingen, documenten, ebooks en gegevensbestanden. Batchverwerking ondersteund.',
+          keywords: 'bestandsconverter, online converter, afbeeldingsconverter, documentconverter, ebook converter, batchconversie, gratis converter'
+        },
+        schema: {
+          name: 'Online Bestandsconverters',
+          description: 'Converteer bestanden tussen 300+ formaten direct met gespecialiseerde converters voor elk bestandstype.'
+        },
+        hero: {
+          title: 'Bestandsconverters',
+          description: 'Converteer bestanden tussen verschillende formaten met onze gespecialiseerde converters. Elke converter is geoptimaliseerd voor specifieke use cases en bestandstypen.'
+        },
+        search: {
+          placeholder: 'Zoek converters... (bijv., CSV naar MOBI, CR2 naar ICO)',
+          example_one: 'CSV naar MOBI',
+          example_two: 'CR2 naar ICO',
+          results: '{{count}} converter gevonden',
+          results_one: '{{count}} converter gevonden',
+          results_other: '{{count}} converters gevonden',
+          suggestion: 'Probeer te zoeken naar iets zoals "{{exampleOne}}" of "{{exampleTwo}}".',
+          clear: 'Zoekopdracht wissen'
+        },
+        categories: {
+          image_general: 'Afbeeldingsconverters',
+          document_csv: 'Documentconverters',
+          developer_csv: 'Ontwikkelaarstools (CSV)',
+          image_raw: 'Afbeeldingsconverters (RAW)',
+          image_vector: 'Afbeeldingsconverters (Vector)',
+          ebook_epub: 'E-book Converters (EPUB)',
+          document_doc: 'Documentconverters (DOC)',
+          document_docx: 'Documentconverters (DOCX)'
+        },
+        features: {
+          title: 'Waarom Onze Converters Kiezen?',
+          items: [
+            {
+              title: 'Snel en Betrouwbaar',
+              description: 'Converteer bestanden snel met onze geoptimaliseerde conversiemotoren.'
+            },
+            {
+              title: 'Veilig en Privé',
+              description: 'Uw bestanden worden veilig verwerkt en nooit permanent opgeslagen.'
+            },
+            {
+              title: 'Hoge Kwaliteit',
+              description: 'Behoud beeldkwaliteit en documentstructuur tijdens conversie.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Geen Converters Gevonden',
+          description: 'Probeer te zoeken naar iets zoals "{{exampleOne}}" of "{{exampleTwo}}".',
+          clear: 'Zoekopdracht wissen'
         }
       },
       
@@ -20151,6 +21209,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Converteer HEIF naar JPG voor systemen die moderne formaten niet ondersteunen, zoals oudere CMS, e-mailclients, viewers en legacy applicaties. Zorg voor maximale compatibiliteit op alle platforms.',
       'heif_to_jpg.seo.use_case_2_title': 'Content Pijplijnen',
       'heif_to_jpg.seo.use_case_2_text': 'Standaardiseer afbeeldingen als JPG voor voorspelbare verwerking in automatiseringspijplijnen, ontwerpworkflows en contentmanagementsystemen. Ideaal voor batchverwerking en consistente outputformattering.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'CSV naar DOCX Converter',
+      'csv_to_docx.subtitle': 'Converteer CSV-bestanden naar Word DOCX-documentformaat voor professionele bewerking en delen.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'CSV naar EPUB Converter',
+      'csv_to_epub.subtitle': 'Converteer CSV-gegevens naar EPUB e-boekformaat voor lezen op e-readers.',
+      // CSV to HTML
+      'csv_to_html.title': 'CSV naar HTML Converter',
+      'csv_to_html.subtitle': 'Converteer CSV-bestanden naar HTML-formaat voor weergave in webbrowsers.',
+      // CSV to MD
+      'csv_to_md.title': 'CSV naar MD Converter',
+      'csv_to_md.subtitle': 'Converteer CSV-bestanden naar Markdown-formaat voor documentatie en tekstbewerking.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'CSV naar MOBI Converter',
+      'csv_to_mobi.subtitle': 'Converteer CSV-gegevens naar MOBI e-boekformaat voor Kindle-apparaten en e-readers.',
+      // CSV to ODP
+      'csv_to_odp.title': 'CSV naar ODP Converter',
+      'csv_to_odp.subtitle': 'Converteer CSV-bestanden naar OpenDocument ODP-presentatieformaat.',
+      // CSV to ODT
+      'csv_to_odt.title': 'CSV naar ODT Converter',
+      'csv_to_odt.subtitle': 'Converteer CSV-bestanden naar OpenDocument ODT-documentformaat.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'CSV naar PDF Converter',
+      'csv_to_pdf.subtitle': 'Converteer CSV-bestanden naar PDF-formaat voor universeel delen en printen.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'CSV naar PPT Converter',
+      'csv_to_ppt.subtitle': 'Converteer CSV-bestanden naar PowerPoint PPT-presentatieformaat.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'CSV naar PPTX Converter',
+      'csv_to_pptx.subtitle': 'Converteer CSV-bestanden naar modern PowerPoint PPTX-presentatieformaat.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'CSV naar RTF Converter',
+      'csv_to_rtf.subtitle': 'Converteer CSV-bestanden naar Rich Text Format RTF-documentformaat.',
+      // CSV to TXT
+      'csv_to_txt.title': 'CSV naar TXT Converter',
+      'csv_to_txt.subtitle': 'Converteer CSV-bestanden naar gewoon tekstformaat TXT voor universele compatibiliteit.',
+      // CSV to XLS
+      'csv_to_xls.title': 'CSV naar XLS Converter',
+      'csv_to_xls.subtitle': 'Converteer CSV-bestanden naar Excel XLS-spreadsheetformaat.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'CSV naar XLSX Converter',
+      'csv_to_xlsx.subtitle': 'Converteer CSV-bestanden naar modern Excel XLSX-spreadsheetformaat.',
+      // CSV to JSON
+      'csv_to_json.title': 'CSV naar JSON Converter',
+      'csv_to_json.subtitle': 'Converteer CSV-bestanden naar JSON-formaat voor webontwikkeling en API\'s.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'CSV naar NDJSON Converter',
+      'csv_to_ndjson.subtitle': 'Converteer CSV-bestanden naar NDJSON (Newline Delimited JSON) formaat voor datastreaming.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'CSV naar Parquet Converter',
+      'csv_to_parquet.subtitle': 'Converteer CSV-bestanden naar Parquet-formaat voor efficiënte data-analyse.',
+      // CSV to SQL
+      'csv_to_sql.title': 'CSV naar SQL Converter',
+      'csv_to_sql.subtitle': 'Converteer CSV-bestanden naar SQL-statements voor database-import.',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSV naar TOML Converter',
+      'csv_to_toml.subtitle': 'Converteer CSV-bestanden naar TOML-formaat voor configuratiebestanden.',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV naar XML Converter',
+      'csv_to_xml.subtitle': 'Converteer CSV-bestanden naar XML-formaat voor gestructureerde gegevensuitwisseling.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV naar YAML Converter',
+      'csv_to_yaml.subtitle': 'Converteer CSV-bestanden naar YAML-formaat voor configuratie en gestructureerde gegevens.',
+      // DNG to WebP
+      'dng_to_webp.title': 'DNG naar WebP Converter',
+      'dng_to_webp.subtitle': 'Converteer DNG RAW-afbeeldingsbestanden naar web-geoptimaliseerd WebP-formaat.',
+      // EPS to WebP
+      'eps_to_webp.title': 'EPS naar WebP Converter',
+      'eps_to_webp.subtitle': 'Converteer EPS-vectorgrafiekbestanden naar WebP-formaat voor web en apps.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'EPUB naar CSV Converter',
+      'epub_to_csv.subtitle': 'Converteer EPUB e-boekbestanden naar CSV-formaat voor data-analyse.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'EPUB naar DOC Converter',
+      'epub_to_doc.subtitle': 'Converteer EPUB e-boekbestanden naar Word DOC-documentformaat.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'EPUB naar DOCX Converter',
+      'epub_to_docx.subtitle': 'Converteer EPUB e-boekbestanden naar modern Word DOCX-documentformaat.',
+      // EPUB to HTML
+      'epub_to_html.title': 'EPUB naar HTML Converter',
+      'epub_to_html.subtitle': 'Converteer EPUB e-boekbestanden naar HTML-formaat voor web.',
+      // EPUB to MD
+      'epub_to_md.title': 'EPUB naar MD Converter',
+      'epub_to_md.subtitle': 'Converteer EPUB e-boekbestanden naar Markdown-formaat voor documentatie.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'EPUB naar MOBI Converter',
+      'epub_to_mobi.subtitle': 'Converteer EPUB e-boekbestanden naar MOBI-formaat voor Kindle-apparaten.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'EPUB naar ODP Converter',
+      'epub_to_odp.subtitle': 'Converteer EPUB e-boekbestanden naar OpenDocument ODP-presentatieformaat.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'EPUB naar ODT Converter',
+      'epub_to_odt.subtitle': 'Converteer EPUB e-boekbestanden naar OpenDocument ODT-documentformaat.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'EPUB naar PDF Converter',
+      'epub_to_pdf.subtitle': 'Converteer EPUB e-boekbestanden naar PDF-formaat voor universeel delen en printen.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'EPUB naar PPT Converter',
+      'epub_to_ppt.subtitle': 'Converteer EPUB e-boekbestanden naar PowerPoint PPT-presentatieformaat.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'EPUB naar PPTX Converter',
+      'epub_to_pptx.subtitle': 'Converteer EPUB e-boekbestanden naar modern PowerPoint PPTX-presentatieformaat.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'EPUB naar RTF Converter',
+      'epub_to_rtf.subtitle': 'Converteer EPUB e-boekbestanden naar Rich Text Format RTF-documentformaat.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'EPUB naar TXT Converter',
+      'epub_to_txt.subtitle': 'Converteer EPUB e-boekbestanden naar gewoon tekstformaat TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'EPUB naar XLSX Converter',
+      'epub_to_xlsx.subtitle': 'Converteer EPUB e-boekbestanden naar Excel XLSX-spreadsheetformaat.',
+      // DOC to CSV
+      'doc_to_csv.title': 'DOC naar CSV Converter',
+      'doc_to_csv.subtitle': 'Converteer Word DOC-documentbestanden naar CSV-formaat voor data-analyse.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'DOC naar EPUB Converter',
+      'doc_to_epub.subtitle': 'Converteer Word DOC-documentbestanden naar EPUB e-boekformaat.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'DOC naar MOBI Converter',
+      'doc_to_mobi.subtitle': 'Converteer Word DOC-documentbestanden naar MOBI e-boekformaat.',
+      // DOC to ODT
+      'doc_to_odt.title': 'DOC naar ODT Converter',
+      'doc_to_odt.subtitle': 'Converteer Word DOC-documentbestanden naar OpenDocument ODT-formaat.',
+      // DOC to TXT
+      'doc_to_txt.title': 'DOC naar TXT Converter',
+      'doc_to_txt.subtitle': 'Converteer Word DOC-documentbestanden naar gewoon tekstformaat TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'DOCX naar CSV Converter',
+      'docx_to_csv.subtitle': 'Converteer Word DOCX-documentbestanden naar CSV-formaat voor data-analyse.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'DOCX naar EPUB Converter',
+      'docx_to_epub.subtitle': 'Converteer Word DOCX-documentbestanden naar EPUB e-boekformaat.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'DOCX naar MOBI Converter',
+      'docx_to_mobi.subtitle': 'Converteer Word DOCX-documentbestanden naar MOBI e-boekformaat.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'DOCX naar ODT Converter',
+      'docx_to_odt.subtitle': 'Converteer Word DOCX-documentbestanden naar OpenDocument ODT-formaat.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'DOCX naar TXT Converter',
+      'docx_to_txt.subtitle': 'Converteer Word DOCX-documentbestanden naar gewoon tekstformaat TXT.',
     }
   },
   pt: {
@@ -20312,6 +21512,64 @@ const resources = {
               description: 'Conversão de padrão da indústria com configurações personalizáveis'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Conversores de Arquivos Online Gratuitos - MorphyHub | Suporte para 300+ Formatos',
+          description: 'Converta arquivos entre 300+ formatos instantaneamente. Conversores de arquivos online gratuitos para imagens, documentos, ebooks e arquivos de dados. Processamento em lote suportado.',
+          keywords: 'conversor de arquivos, conversor online, conversor de imagens, conversor de documentos, conversor de ebooks, conversão em lote, conversor gratuito'
+        },
+        schema: {
+          name: 'Conversores de Arquivos Online',
+          description: 'Converta arquivos entre 300+ formatos instantaneamente com conversores especializados para cada tipo de arquivo.'
+        },
+        hero: {
+          title: 'Conversores de Arquivos',
+          description: 'Converta arquivos entre diferentes formatos com nossos conversores especializados. Cada conversor é otimizado para casos de uso específicos e tipos de arquivo.'
+        },
+        search: {
+          placeholder: 'Buscar conversores... (ex., CSV para MOBI, CR2 para ICO)',
+          example_one: 'CSV para MOBI',
+          example_two: 'CR2 para ICO',
+          results: 'Encontrados {{count}} conversores',
+          results_one: 'Encontrado {{count}} conversor',
+          results_other: 'Encontrados {{count}} conversores',
+          suggestion: 'Tente buscar algo como "{{exampleOne}}" ou "{{exampleTwo}}".',
+          clear: 'Limpar busca'
+        },
+        categories: {
+          image_general: 'Conversores de Imagens',
+          document_csv: 'Conversores de Documentos',
+          developer_csv: 'Ferramentas para Desenvolvedores (CSV)',
+          image_raw: 'Conversores de Imagens (RAW)',
+          image_vector: 'Conversores de Imagens (Vetor)',
+          ebook_epub: 'Conversores de E-books (EPUB)',
+          document_doc: 'Conversores de Documentos (DOC)',
+          document_docx: 'Conversores de Documentos (DOCX)'
+        },
+        features: {
+          title: 'Por Que Escolher Nossos Conversores?',
+          items: [
+            {
+              title: 'Rápido e Confiável',
+              description: 'Converta arquivos rapidamente com nossos motores de conversão otimizados.'
+            },
+            {
+              title: 'Seguro e Privado',
+              description: 'Seus arquivos são processados com segurança e nunca são armazenados permanentemente.'
+            },
+            {
+              title: 'Alta Qualidade',
+              description: 'Mantenha a qualidade da imagem e a estrutura do documento durante a conversão.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Nenhum Conversor Encontrado',
+          description: 'Tente buscar algo como "{{exampleOne}}" ou "{{exampleTwo}}".',
+          clear: 'Limpar busca'
         }
       },
       
@@ -20886,6 +22144,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Converta HEIF para JPG para sistemas que não suportam formatos modernos, como CMS antigos, clientes de email, visualizadores e aplicativos legados. Garanta máxima compatibilidade em todas as plataformas.',
       'heif_to_jpg.seo.use_case_2_title': 'Pipelines de Conteúdo',
       'heif_to_jpg.seo.use_case_2_text': 'Padronize imagens como JPG para processamento previsível em pipelines de automação, fluxos de trabalho de design e sistemas de gerenciamento de conteúdo. Ideal para processamento em lote e formatação de saída consistente.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'Conversor CSV para DOCX',
+      'csv_to_docx.subtitle': 'Converta arquivos CSV para o formato de documento Word DOCX para edição e compartilhamento profissional.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'Conversor CSV para EPUB',
+      'csv_to_epub.subtitle': 'Converta dados CSV para o formato de ebook EPUB para leitura em leitores eletrônicos.',
+      // CSV to HTML
+      'csv_to_html.title': 'Conversor CSV para HTML',
+      'csv_to_html.subtitle': 'Converta arquivos CSV para o formato HTML para exibição em navegadores web.',
+      // CSV to MD
+      'csv_to_md.title': 'Conversor CSV para MD',
+      'csv_to_md.subtitle': 'Converta arquivos CSV para o formato Markdown para documentação e edição de texto.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'Conversor CSV para MOBI',
+      'csv_to_mobi.subtitle': 'Converta dados CSV para o formato de ebook MOBI para dispositivos Kindle e leitores eletrônicos.',
+      // CSV to ODP
+      'csv_to_odp.title': 'Conversor CSV para ODP',
+      'csv_to_odp.subtitle': 'Converta arquivos CSV para o formato de apresentação OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'Conversor CSV para ODT',
+      'csv_to_odt.subtitle': 'Converta arquivos CSV para o formato de documento OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'Conversor CSV para PDF',
+      'csv_to_pdf.subtitle': 'Converta arquivos CSV para o formato PDF para compartilhamento e impressão universal.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'Conversor CSV para PPT',
+      'csv_to_ppt.subtitle': 'Converta arquivos CSV para o formato de apresentação PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'Conversor CSV para PPTX',
+      'csv_to_pptx.subtitle': 'Converta arquivos CSV para o formato moderno de apresentação PowerPoint PPTX.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'Conversor CSV para RTF',
+      'csv_to_rtf.subtitle': 'Converta arquivos CSV para o formato de documento Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'Conversor CSV para TXT',
+      'csv_to_txt.subtitle': 'Converta arquivos CSV para o formato de texto simples TXT para compatibilidade universal.',
+      // CSV to XLS
+      'csv_to_xls.title': 'Conversor CSV para XLS',
+      'csv_to_xls.subtitle': 'Converta arquivos CSV para o formato de planilha Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'Conversor CSV para XLSX',
+      'csv_to_xlsx.subtitle': 'Converta arquivos CSV para o formato moderno de planilha Excel XLSX.',
+      // CSV to JSON
+      'csv_to_json.title': 'Conversor CSV para JSON',
+      'csv_to_json.subtitle': 'Converta arquivos CSV para o formato JSON para desenvolvimento web e APIs.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'Conversor CSV para NDJSON',
+      'csv_to_ndjson.subtitle': 'Converta arquivos CSV para o formato NDJSON (Newline Delimited JSON) para streaming de dados.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'Conversor CSV para Parquet',
+      'csv_to_parquet.subtitle': 'Converta arquivos CSV para o formato Parquet para análise de dados eficiente.',
+      // CSV to SQL
+      'csv_to_sql.title': 'Conversor CSV para SQL',
+      'csv_to_sql.subtitle': 'Converta arquivos CSV em instruções SQL para importação de banco de dados.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Conversor CSV para TOML',
+      'csv_to_toml.subtitle': 'Converta arquivos CSV para o formato TOML para arquivos de configuração.',
+      // CSV to XML
+      'csv_to_xml.title': 'Conversor CSV para XML',
+      'csv_to_xml.subtitle': 'Converta arquivos CSV para o formato XML para troca de dados estruturados.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Conversor CSV para YAML',
+      'csv_to_yaml.subtitle': 'Converta arquivos CSV para o formato YAML para configuração e dados estruturados.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Conversor DNG para WebP',
+      'dng_to_webp.subtitle': 'Converta arquivos de imagem RAW DNG para o formato WebP otimizado para web.',
+      // EPS to WebP
+      'eps_to_webp.title': 'Conversor EPS para WebP',
+      'eps_to_webp.subtitle': 'Converta arquivos de gráficos vetoriais EPS para o formato WebP para web e aplicativos.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'Conversor EPUB para CSV',
+      'epub_to_csv.subtitle': 'Converta arquivos de ebook EPUB para o formato CSV para análise de dados.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'Conversor EPUB para DOC',
+      'epub_to_doc.subtitle': 'Converta arquivos de ebook EPUB para o formato de documento Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'Conversor EPUB para DOCX',
+      'epub_to_docx.subtitle': 'Converta arquivos de ebook EPUB para o formato moderno de documento Word DOCX.',
+      // EPUB to HTML
+      'epub_to_html.title': 'Conversor EPUB para HTML',
+      'epub_to_html.subtitle': 'Converta arquivos de ebook EPUB para o formato HTML para web.',
+      // EPUB to MD
+      'epub_to_md.title': 'Conversor EPUB para MD',
+      'epub_to_md.subtitle': 'Converta arquivos de ebook EPUB para o formato Markdown para documentação.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'Conversor EPUB para MOBI',
+      'epub_to_mobi.subtitle': 'Converta arquivos de ebook EPUB para o formato MOBI para dispositivos Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'Conversor EPUB para ODP',
+      'epub_to_odp.subtitle': 'Converta arquivos de ebook EPUB para o formato de apresentação OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'Conversor EPUB para ODT',
+      'epub_to_odt.subtitle': 'Converta arquivos de ebook EPUB para o formato de documento OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'Conversor EPUB para PDF',
+      'epub_to_pdf.subtitle': 'Converta arquivos de ebook EPUB para o formato PDF para compartilhamento e impressão universal.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'Conversor EPUB para PPT',
+      'epub_to_ppt.subtitle': 'Converta arquivos de ebook EPUB para o formato de apresentação PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'Conversor EPUB para PPTX',
+      'epub_to_pptx.subtitle': 'Converta arquivos de ebook EPUB para o formato moderno de apresentação PowerPoint PPTX.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'Conversor EPUB para RTF',
+      'epub_to_rtf.subtitle': 'Converta arquivos de ebook EPUB para o formato de documento Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'Conversor EPUB para TXT',
+      'epub_to_txt.subtitle': 'Converta arquivos de ebook EPUB para o formato de texto simples TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'Conversor EPUB para XLSX',
+      'epub_to_xlsx.subtitle': 'Converta arquivos de ebook EPUB para o formato de planilha Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'Conversor DOC para CSV',
+      'doc_to_csv.subtitle': 'Converta arquivos de documento Word DOC para o formato CSV para análise de dados.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'Conversor DOC para EPUB',
+      'doc_to_epub.subtitle': 'Converta arquivos de documento Word DOC para o formato de ebook EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'Conversor DOC para MOBI',
+      'doc_to_mobi.subtitle': 'Converta arquivos de documento Word DOC para o formato de ebook MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'Conversor DOC para ODT',
+      'doc_to_odt.subtitle': 'Converta arquivos de documento Word DOC para o formato OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'Conversor DOC para TXT',
+      'doc_to_txt.subtitle': 'Converta arquivos de documento Word DOC para o formato de texto simples TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'Conversor DOCX para CSV',
+      'docx_to_csv.subtitle': 'Converta arquivos de documento Word DOCX para o formato CSV para análise de dados.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'Conversor DOCX para EPUB',
+      'docx_to_epub.subtitle': 'Converta arquivos de documento Word DOCX para o formato de ebook EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'Conversor DOCX para MOBI',
+      'docx_to_mobi.subtitle': 'Converta arquivos de documento Word DOCX para o formato de ebook MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'Conversor DOCX para ODT',
+      'docx_to_odt.subtitle': 'Converta arquivos de documento Word DOCX para o formato OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'Conversor DOCX para TXT',
+      'docx_to_txt.subtitle': 'Converta arquivos de documento Word DOCX para o formato de texto simples TXT.',
     }
   },
   vi: {
@@ -21047,6 +22447,64 @@ const resources = {
               description: 'Chuyển đổi tiêu chuẩn ngành với cài đặt có thể tùy chỉnh'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Bộ Chuyển Đổi File Trực Tuyến Miễn Phí - MorphyHub | Hỗ Trợ 300+ Định Dạng',
+          description: 'Chuyển đổi file giữa 300+ định dạng ngay lập tức. Bộ chuyển đổi file trực tuyến miễn phí cho hình ảnh, tài liệu, ebook và file dữ liệu. Hỗ trợ xử lý hàng loạt.',
+          keywords: 'bộ chuyển đổi file, bộ chuyển đổi trực tuyến, bộ chuyển đổi hình ảnh, bộ chuyển đổi tài liệu, bộ chuyển đổi ebook, chuyển đổi hàng loạt, bộ chuyển đổi miễn phí'
+        },
+        schema: {
+          name: 'Bộ Chuyển Đổi File Trực Tuyến',
+          description: 'Chuyển đổi file giữa 300+ định dạng ngay lập tức với các bộ chuyển đổi chuyên biệt cho mỗi loại file.'
+        },
+        hero: {
+          title: 'Bộ Chuyển Đổi File',
+          description: 'Chuyển đổi file giữa các định dạng khác nhau với các bộ chuyển đổi chuyên biệt của chúng tôi. Mỗi bộ chuyển đổi được tối ưu hóa cho các trường hợp sử dụng và loại file cụ thể.'
+        },
+        search: {
+          placeholder: 'Tìm kiếm bộ chuyển đổi... (vd., CSV sang MOBI, CR2 sang ICO)',
+          example_one: 'CSV sang MOBI',
+          example_two: 'CR2 sang ICO',
+          results: 'Tìm thấy {{count}} bộ chuyển đổi',
+          results_one: 'Tìm thấy {{count}} bộ chuyển đổi',
+          results_other: 'Tìm thấy {{count}} bộ chuyển đổi',
+          suggestion: 'Thử tìm kiếm như "{{exampleOne}}" hoặc "{{exampleTwo}}".',
+          clear: 'Xóa tìm kiếm'
+        },
+        categories: {
+          image_general: 'Bộ Chuyển Đổi Hình Ảnh',
+          document_csv: 'Bộ Chuyển Đổi Tài Liệu',
+          developer_csv: 'Công Cụ Nhà Phát Triển (CSV)',
+          image_raw: 'Bộ Chuyển Đổi Hình Ảnh (RAW)',
+          image_vector: 'Bộ Chuyển Đổi Hình Ảnh (Vectơ)',
+          ebook_epub: 'Bộ Chuyển Đổi E-book (EPUB)',
+          document_doc: 'Bộ Chuyển Đổi Tài Liệu (DOC)',
+          document_docx: 'Bộ Chuyển Đổi Tài Liệu (DOCX)'
+        },
+        features: {
+          title: 'Tại Sao Chọn Bộ Chuyển Đổi Của Chúng Tôi?',
+          items: [
+            {
+              title: 'Nhanh & Đáng Tin Cậy',
+              description: 'Chuyển đổi file nhanh chóng với công cụ chuyển đổi được tối ưu hóa của chúng tôi.'
+            },
+            {
+              title: 'An Toàn & Riêng Tư',
+              description: 'File của bạn được xử lý an toàn và không bao giờ được lưu trữ vĩnh viễn.'
+            },
+            {
+              title: 'Chất Lượng Cao',
+              description: 'Duy trì chất lượng hình ảnh và cấu trúc tài liệu trong quá trình chuyển đổi.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Không Tìm Thấy Bộ Chuyển Đổi',
+          description: 'Thử tìm kiếm như "{{exampleOne}}" hoặc "{{exampleTwo}}".',
+          clear: 'Xóa tìm kiếm'
         }
       },
       
@@ -21621,6 +23079,148 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Chuyển đổi HEIF sang JPG cho các hệ thống không hỗ trợ định dạng hiện đại, chẳng hạn như CMS cũ, ứng dụng email, trình xem và ứng dụng cũ. Đảm bảo tương thích tối đa trên tất cả các nền tảng.',
       'heif_to_jpg.seo.use_case_2_title': 'Đường Ống Nội Dung',
       'heif_to_jpg.seo.use_case_2_text': 'Chuẩn hóa hình ảnh dưới dạng JPG để xử lý có thể dự đoán trong đường ống tự động hóa, quy trình làm việc thiết kế và hệ thống quản lý nội dung. Lý tưởng cho xử lý hàng loạt và định dạng đầu ra nhất quán.',
+
+      // CSV to DOCX
+      'csv_to_docx.title': 'Chuyển Đổi CSV sang DOCX',
+      'csv_to_docx.subtitle': 'Chuyển đổi tệp CSV sang định dạng tài liệu Word DOCX để chỉnh sửa và chia sẻ chuyên nghiệp.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'Chuyển Đổi CSV sang EPUB',
+      'csv_to_epub.subtitle': 'Chuyển đổi dữ liệu CSV sang định dạng sách điện tử EPUB để đọc trên thiết bị đọc sách điện tử.',
+      // CSV to HTML
+      'csv_to_html.title': 'Chuyển Đổi CSV sang HTML',
+      'csv_to_html.subtitle': 'Chuyển đổi tệp CSV sang định dạng HTML để hiển thị trong trình duyệt web.',
+      // CSV to MD
+      'csv_to_md.title': 'Chuyển Đổi CSV sang MD',
+      'csv_to_md.subtitle': 'Chuyển đổi tệp CSV sang định dạng Markdown để tài liệu và chỉnh sửa văn bản.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'Chuyển Đổi CSV sang MOBI',
+      'csv_to_mobi.subtitle': 'Chuyển đổi dữ liệu CSV sang định dạng sách điện tử MOBI cho thiết bị Kindle và thiết bị đọc sách điện tử.',
+      // CSV to ODP
+      'csv_to_odp.title': 'Chuyển Đổi CSV sang ODP',
+      'csv_to_odp.subtitle': 'Chuyển đổi tệp CSV sang định dạng trình bày OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'Chuyển Đổi CSV sang ODT',
+      'csv_to_odt.subtitle': 'Chuyển đổi tệp CSV sang định dạng tài liệu OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'Chuyển Đổi CSV sang PDF',
+      'csv_to_pdf.subtitle': 'Chuyển đổi tệp CSV sang định dạng PDF để chia sẻ và in ấn phổ biến.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'Chuyển Đổi CSV sang PPT',
+      'csv_to_ppt.subtitle': 'Chuyển đổi tệp CSV sang định dạng trình bày PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'Chuyển Đổi CSV sang PPTX',
+      'csv_to_pptx.subtitle': 'Chuyển đổi tệp CSV sang định dạng trình bày PowerPoint PPTX hiện đại.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'Chuyển Đổi CSV sang RTF',
+      'csv_to_rtf.subtitle': 'Chuyển đổi tệp CSV sang định dạng tài liệu Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'Chuyển Đổi CSV sang TXT',
+      'csv_to_txt.subtitle': 'Chuyển đổi tệp CSV sang định dạng văn bản thuần TXT để tương thích phổ biến.',
+      // CSV to XLS
+      'csv_to_xls.title': 'Chuyển Đổi CSV sang XLS',
+      'csv_to_xls.subtitle': 'Chuyển đổi tệp CSV sang định dạng bảng tính Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'Chuyển Đổi CSV sang XLSX',
+      'csv_to_xlsx.subtitle': 'Chuyển đổi tệp CSV sang định dạng bảng tính Excel XLSX hiện đại.',
+      // CSV to JSON
+      'csv_to_json.title': 'Chuyển Đổi CSV sang JSON',
+      'csv_to_json.subtitle': 'Chuyển đổi tệp CSV sang định dạng JSON để phát triển web và API.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'Chuyển Đổi CSV sang NDJSON',
+      'csv_to_ndjson.subtitle': 'Chuyển đổi tệp CSV sang định dạng NDJSON (Newline Delimited JSON) để truyền dữ liệu.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'Chuyển Đổi CSV sang Parquet',
+      'csv_to_parquet.subtitle': 'Chuyển đổi tệp CSV sang định dạng Parquet để phân tích dữ liệu hiệu quả.',
+      // CSV to SQL
+      'csv_to_sql.title': 'Chuyển Đổi CSV sang SQL',
+      'csv_to_sql.subtitle': 'Chuyển đổi tệp CSV sang câu lệnh SQL để nhập cơ sở dữ liệu.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Chuyển Đổi CSV sang TOML',
+      'csv_to_toml.subtitle': 'Chuyển đổi tệp CSV sang định dạng TOML cho tệp cấu hình.',
+      // CSV to XML
+      'csv_to_xml.title': 'Chuyển Đổi CSV sang XML',
+      'csv_to_xml.subtitle': 'Chuyển đổi tệp CSV sang định dạng XML để trao đổi dữ liệu có cấu trúc.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Chuyển Đổi CSV sang YAML',
+      'csv_to_yaml.subtitle': 'Chuyển đổi tệp CSV sang định dạng YAML để cấu hình và dữ liệu có cấu trúc.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Chuyển Đổi DNG sang WebP',
+      'dng_to_webp.subtitle': 'Chuyển đổi tệp hình ảnh RAW DNG sang định dạng WebP tối ưu cho web.',
+      // EPS to WebP
+      'eps_to_webp.title': 'Chuyển Đổi EPS sang WebP',
+      'eps_to_webp.subtitle': 'Chuyển đổi tệp đồ họa vector EPS sang định dạng WebP cho web và ứng dụng.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'Chuyển Đổi EPUB sang CSV',
+      'epub_to_csv.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng CSV để phân tích dữ liệu.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'Chuyển Đổi EPUB sang DOC',
+      'epub_to_doc.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng tài liệu Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'Chuyển Đổi EPUB sang DOCX',
+      'epub_to_docx.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng tài liệu Word DOCX hiện đại.',
+      // EPUB to HTML
+      'epub_to_html.title': 'Chuyển Đổi EPUB sang HTML',
+      'epub_to_html.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng HTML cho web.',
+      // EPUB to MD
+      'epub_to_md.title': 'Chuyển Đổi EPUB sang MD',
+      'epub_to_md.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng Markdown để tài liệu.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'Chuyển Đổi EPUB sang MOBI',
+      'epub_to_mobi.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng MOBI cho thiết bị Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'Chuyển Đổi EPUB sang ODP',
+      'epub_to_odp.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng trình bày OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'Chuyển Đổi EPUB sang ODT',
+      'epub_to_odt.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng tài liệu OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'Chuyển Đổi EPUB sang PDF',
+      'epub_to_pdf.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng PDF để chia sẻ và in ấn phổ biến.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'Chuyển Đổi EPUB sang PPT',
+      'epub_to_ppt.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng trình bày PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'Chuyển Đổi EPUB sang PPTX',
+      'epub_to_pptx.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng trình bày PowerPoint PPTX hiện đại.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'Chuyển Đổi EPUB sang RTF',
+      'epub_to_rtf.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng tài liệu Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'Chuyển Đổi EPUB sang TXT',
+      'epub_to_txt.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng văn bản thuần TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'Chuyển Đổi EPUB sang XLSX',
+      'epub_to_xlsx.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng bảng tính Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'Chuyển Đổi DOC sang CSV',
+      'doc_to_csv.subtitle': 'Chuyển đổi tệp tài liệu Word DOC sang định dạng CSV để phân tích dữ liệu.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'Chuyển Đổi DOC sang EPUB',
+      'doc_to_epub.subtitle': 'Chuyển đổi tệp tài liệu Word DOC sang định dạng sách điện tử EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'Chuyển Đổi DOC sang MOBI',
+      'doc_to_mobi.subtitle': 'Chuyển đổi tệp tài liệu Word DOC sang định dạng sách điện tử MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'Chuyển Đổi DOC sang ODT',
+      'doc_to_odt.subtitle': 'Chuyển đổi tệp tài liệu Word DOC sang định dạng OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'Chuyển Đổi DOC sang TXT',
+      'doc_to_txt.subtitle': 'Chuyển đổi tệp tài liệu Word DOC sang định dạng văn bản thuần TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'Chuyển Đổi DOCX sang CSV',
+      'docx_to_csv.subtitle': 'Chuyển đổi tệp tài liệu Word DOCX sang định dạng CSV để phân tích dữ liệu.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'Chuyển Đổi DOCX sang EPUB',
+      'docx_to_epub.subtitle': 'Chuyển đổi tệp tài liệu Word DOCX sang định dạng sách điện tử EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'Chuyển Đổi DOCX sang MOBI',
+      'docx_to_mobi.subtitle': 'Chuyển đổi tệp tài liệu Word DOCX sang định dạng sách điện tử MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'Chuyển Đổi DOCX sang ODT',
+      'docx_to_odt.subtitle': 'Chuyển đổi tệp tài liệu Word DOCX sang định dạng OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'Chuyển Đổi DOCX sang TXT',
+      'docx_to_txt.subtitle': 'Chuyển đổi tệp tài liệu Word DOCX sang định dạng văn bản thuần TXT.',
     }
   },
   tr: {
@@ -21782,6 +23382,64 @@ const resources = {
               description: 'Özelleştirilebilir ayarlarla endüstri standardı dönüştürme'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'Ücretsiz Online Dosya Dönüştürücüler - MorphyHub | 300+ Format Desteği',
+          description: 'Dosyaları 300+ format arasında anında dönüştürün. Görüntüler, belgeler, e-kitaplar ve veri dosyaları için ücretsiz online dosya dönüştürücüler. Toplu işleme desteklenir.',
+          keywords: 'dosya dönüştürücü, online dönüştürücü, görüntü dönüştürücü, belge dönüştürücü, e-kitap dönüştürücü, toplu dönüştürme, ücretsiz dönüştürücü'
+        },
+        schema: {
+          name: 'Online Dosya Dönüştürücüler',
+          description: 'Her dosya türü için özel dönüştürücülerle 300+ format arasında dosyaları anında dönüştürün.'
+        },
+        hero: {
+          title: 'Dosya Dönüştürücüler',
+          description: 'Özel dönüştürücülerimizle dosyaları farklı formatlar arasında dönüştürün. Her dönüştürücü belirli kullanım durumları ve dosya türleri için optimize edilmiştir.'
+        },
+        search: {
+          placeholder: 'Dönüştürücüleri ara... (örn., CSV\'den MOBI\'ye, CR2\'den ICO\'ya)',
+          example_one: 'CSV\'den MOBI\'ye',
+          example_two: 'CR2\'den ICO\'ya',
+          results: '{{count}} dönüştürücü bulundu',
+          results_one: '{{count}} dönüştürücü bulundu',
+          results_other: '{{count}} dönüştürücü bulundu',
+          suggestion: '"{{exampleOne}}" veya "{{exampleTwo}}" gibi bir şey aramayı deneyin.',
+          clear: 'Aramayı temizle'
+        },
+        categories: {
+          image_general: 'Görüntü Dönüştürücüler',
+          document_csv: 'Belge Dönüştürücüler',
+          developer_csv: 'Geliştirici Araçları (CSV)',
+          image_raw: 'Görüntü Dönüştürücüler (RAW)',
+          image_vector: 'Görüntü Dönüştürücüler (Vektör)',
+          ebook_epub: 'E-kitap Dönüştürücüler (EPUB)',
+          document_doc: 'Belge Dönüştürücüler (DOC)',
+          document_docx: 'Belge Dönüştürücüler (DOCX)'
+        },
+        features: {
+          title: 'Neden Dönüştürücülerimizi Seçmelisiniz?',
+          items: [
+            {
+              title: 'Hızlı ve Güvenilir',
+              description: 'Optimize edilmiş dönüştürme motorlarımızla dosyaları hızlıca dönüştürün.'
+            },
+            {
+              title: 'Güvenli ve Özel',
+              description: 'Dosyalarınız güvenli bir şekilde işlenir ve asla kalıcı olarak saklanmaz.'
+            },
+            {
+              title: 'Yüksek Kalite',
+              description: 'Dönüştürme sırasında görüntü kalitesini ve belge yapısını koruyun.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Dönüştürücü Bulunamadı',
+          description: '"{{exampleOne}}" veya "{{exampleTwo}}" gibi bir şey aramayı deneyin.',
+          clear: 'Aramayı temizle'
         }
       },
       
@@ -22520,6 +24178,64 @@ const resources = {
         }
       },
       
+      converters_page: {
+        meta: {
+          title: 'Бесплатные Онлайн Конвертеры Файлов - MorphyHub | Поддержка 300+ Форматов',
+          description: 'Конвертируйте файлы между 300+ форматами мгновенно. Бесплатные онлайн конвертеры файлов для изображений, документов, электронных книг и файлов данных. Поддерживается пакетная обработка.',
+          keywords: 'конвертер файлов, онлайн конвертер, конвертер изображений, конвертер документов, конвертер электронных книг, пакетная конвертация, бесплатный конвертер'
+        },
+        schema: {
+          name: 'Онлайн Конвертеры Файлов',
+          description: 'Конвертируйте файлы между 300+ форматами мгновенно со специализированными конвертерами для каждого типа файла.'
+        },
+        hero: {
+          title: 'Конвертеры Файлов',
+          description: 'Конвертируйте файлы между различными форматами с нашими специализированными конвертерами. Каждый конвертер оптимизирован для конкретных случаев использования и типов файлов.'
+        },
+        search: {
+          placeholder: 'Поиск конвертеров... (напр., CSV в MOBI, CR2 в ICO)',
+          example_one: 'CSV в MOBI',
+          example_two: 'CR2 в ICO',
+          results: 'Найдено {{count}} конвертеров',
+          results_one: 'Найден {{count}} конвертер',
+          results_other: 'Найдено {{count}} конвертеров',
+          suggestion: 'Попробуйте поискать что-то вроде "{{exampleOne}}" или "{{exampleTwo}}".',
+          clear: 'Очистить поиск'
+        },
+        categories: {
+          image_general: 'Конвертеры Изображений',
+          document_csv: 'Конвертеры Документов',
+          developer_csv: 'Инструменты Разработчика (CSV)',
+          image_raw: 'Конвертеры Изображений (RAW)',
+          image_vector: 'Конвертеры Изображений (Вектор)',
+          ebook_epub: 'Конвертеры Электронных Книг (EPUB)',
+          document_doc: 'Конвертеры Документов (DOC)',
+          document_docx: 'Конвертеры Документов (DOCX)'
+        },
+        features: {
+          title: 'Почему Выбрать Наши Конвертеры?',
+          items: [
+            {
+              title: 'Быстро и Надежно',
+              description: 'Конвертируйте файлы быстро с нашими оптимизированными движками конвертации.'
+            },
+            {
+              title: 'Безопасно и Приватно',
+              description: 'Ваши файлы обрабатываются безопасно и никогда не хранятся постоянно.'
+            },
+            {
+              title: 'Высокое Качество',
+              description: 'Сохраняйте качество изображения и структуру документа во время конвертации.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'Конвертеры Не Найдены',
+          description: 'Попробуйте поискать что-то вроде "{{exampleOne}}" или "{{exampleTwo}}".',
+          clear: 'Очистить поиск'
+        }
+      },
+      
       // CR2 to ICO - Русский
       'cr2_to_ico.title': 'Конвертер CR2 в ICO',
       'cr2_to_ico.meta_title': 'Бесплатный конвертер CR2 в ICO - Конвертация Canon RAW в иконки Windows',
@@ -23252,6 +24968,64 @@ const resources = {
               description: 'تحويل بمعايير الصناعة مع إعدادات قابلة للتخصيص'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: 'محولات الملفات المجانية عبر الإنترنت - MorphyHub | دعم 300+ تنسيق',
+          description: 'حول الملفات بين 300+ تنسيق فورًا. محولات ملفات مجانية عبر الإنترنت للصور والمستندات والكتب الإلكترونية وملفات البيانات. معالجة مجمعة مدعومة.',
+          keywords: 'محول الملفات, محول عبر الإنترنت, محول الصور, محول المستندات, محول الكتب الإلكترونية, التحويل المجمع, محول مجاني'
+        },
+        schema: {
+          name: 'محولات الملفات عبر الإنترنت',
+          description: 'حول الملفات بين 300+ تنسيق فورًا مع محولات متخصصة لكل نوع ملف.'
+        },
+        hero: {
+          title: 'محولات الملفات',
+          description: 'حول الملفات بين تنسيقات مختلفة مع محولاتنا المتخصصة. كل محول محسّن لحالات استخدام وأنواع ملفات محددة.'
+        },
+        search: {
+          placeholder: 'البحث عن المحولات... (مثلاً، CSV إلى MOBI، CR2 إلى ICO)',
+          example_one: 'CSV إلى MOBI',
+          example_two: 'CR2 إلى ICO',
+          results: 'تم العثور على {{count}} محول',
+          results_one: 'تم العثور على {{count}} محول',
+          results_other: 'تم العثور على {{count}} محول',
+          suggestion: 'حاول البحث عن شيء مثل "{{exampleOne}}" أو "{{exampleTwo}}".',
+          clear: 'مسح البحث'
+        },
+        categories: {
+          image_general: 'محولات الصور',
+          document_csv: 'محولات المستندات',
+          developer_csv: 'أدوات المطور (CSV)',
+          image_raw: 'محولات الصور (RAW)',
+          image_vector: 'محولات الصور (المتجه)',
+          ebook_epub: 'محولات الكتب الإلكترونية (EPUB)',
+          document_doc: 'محولات المستندات (DOC)',
+          document_docx: 'محولات المستندات (DOCX)'
+        },
+        features: {
+          title: 'لماذا تختار محولاتنا؟',
+          items: [
+            {
+              title: 'سريع وموثوق',
+              description: 'حول الملفات بسرعة مع محركات التحويل المحسّنة لدينا.'
+            },
+            {
+              title: 'آمن وخاص',
+              description: 'يتم معالجة ملفاتك بأمان ولا يتم تخزينها بشكل دائم أبدًا.'
+            },
+            {
+              title: 'جودة عالية',
+              description: 'احتفظ بجودة الصورة وهيكل المستند أثناء التحويل.'
+            }
+          ]
+        },
+        no_results: {
+          title: 'لم يتم العثور على محولات',
+          description: 'حاول البحث عن شيء مثل "{{exampleOne}}" أو "{{exampleTwo}}".',
+          clear: 'مسح البحث'
         }
       },
       
@@ -23990,6 +25764,64 @@ const resources = {
         }
       },
       
+      converters_page: {
+        meta: {
+          title: 'ตัวแปลงไฟล์ออนไลน์ฟรี - MorphyHub | รองรับ 300+ รูปแบบ',
+          description: 'แปลงไฟล์ระหว่าง 300+ รูปแบบทันที ตัวแปลงไฟล์ออนไลน์ฟรีสำหรับรูปภาพ เอกสาร หนังสืออิเล็กทรอนิกส์ และไฟล์ข้อมูล รองรับการประมวลผลแบบกลุ่ม',
+          keywords: 'ตัวแปลงไฟล์, ตัวแปลงออนไลน์, ตัวแปลงรูปภาพ, ตัวแปลงเอกสาร, ตัวแปลงหนังสืออิเล็กทรอนิกส์, การแปลงแบบกลุ่ม, ตัวแปลงฟรี'
+        },
+        schema: {
+          name: 'ตัวแปลงไฟล์ออนไลน์',
+          description: 'แปลงไฟล์ระหว่าง 300+ รูปแบบทันทีด้วยตัวแปลงเฉพาะสำหรับแต่ละประเภทไฟล์'
+        },
+        hero: {
+          title: 'ตัวแปลงไฟล์',
+          description: 'แปลงไฟล์ระหว่างรูปแบบต่างๆ ด้วยตัวแปลงเฉพาะของเรา แต่ละตัวแปลงได้รับการปรับให้เหมาะกับกรณีการใช้งานและประเภทไฟล์เฉพาะ'
+        },
+        search: {
+          placeholder: 'ค้นหาตัวแปลง... (เช่น CSV เป็น MOBI, CR2 เป็น ICO)',
+          example_one: 'CSV เป็น MOBI',
+          example_two: 'CR2 เป็น ICO',
+          results: 'พบ {{count}} ตัวแปลง',
+          results_one: 'พบ {{count}} ตัวแปลง',
+          results_other: 'พบ {{count}} ตัวแปลง',
+          suggestion: 'ลองค้นหาบางอย่างเช่น "{{exampleOne}}" หรือ "{{exampleTwo}}"',
+          clear: 'ล้างการค้นหา'
+        },
+        categories: {
+          image_general: 'ตัวแปลงรูปภาพ',
+          document_csv: 'ตัวแปลงเอกสาร',
+          developer_csv: 'เครื่องมือสำหรับนักพัฒนา (CSV)',
+          image_raw: 'ตัวแปลงรูปภาพ (RAW)',
+          image_vector: 'ตัวแปลงรูปภาพ (เวกเตอร์)',
+          ebook_epub: 'ตัวแปลงหนังสืออิเล็กทรอนิกส์ (EPUB)',
+          document_doc: 'ตัวแปลงเอกสาร (DOC)',
+          document_docx: 'ตัวแปลงเอกสาร (DOCX)'
+        },
+        features: {
+          title: 'ทำไมต้องเลือกตัวแปลงของเรา?',
+          items: [
+            {
+              title: 'เร็วและเชื่อถือได้',
+              description: 'แปลงไฟล์อย่างรวดเร็วด้วยเครื่องมือแปลงที่ปรับปรุงแล้วของเรา'
+            },
+            {
+              title: 'ปลอดภัยและเป็นส่วนตัว',
+              description: 'ไฟล์ของคุณได้รับการประมวลผลอย่างปลอดภัยและไม่เคยถูกเก็บถาวร'
+            },
+            {
+              title: 'คุณภาพสูง',
+              description: 'รักษาคุณภาพรูปภาพและโครงสร้างเอกสารระหว่างการแปลง'
+            }
+          ]
+        },
+        no_results: {
+          title: 'ไม่พบตัวแปลง',
+          description: 'ลองค้นหาบางอย่างเช่น "{{exampleOne}}" หรือ "{{exampleTwo}}"',
+          clear: 'ล้างการค้นหา'
+        }
+      },
+      
       // CR2 to ICO - ไทย
       'cr2_to_ico.title': 'ตัวแปลง CR2 เป็น ICO',
       'cr2_to_ico.meta_title': 'ตัวแปลง CR2 เป็น ICO ฟรี - แปลง Canon RAW เป็นไอคอน Windows',
@@ -24725,6 +26557,64 @@ const resources = {
         }
       },
       
+      converters_page: {
+        meta: {
+          title: '無料オンラインファイルコンバーター - MorphyHub | 300+形式サポート',
+          description: '300+形式間でファイルを即座に変換。画像、文書、電子書籍、データファイル用の無料オンラインファイルコンバーター。バッチ処理サポート。',
+          keywords: 'ファイルコンバーター, オンラインコンバーター, 画像コンバーター, 文書コンバーター, 電子書籍コンバーター, バッチ変換, 無料コンバーター'
+        },
+        schema: {
+          name: 'オンラインファイルコンバーター',
+          description: '各ファイルタイプ用の専用コンバーターで300+形式間でファイルを即座に変換。'
+        },
+        hero: {
+          title: 'ファイルコンバーター',
+          description: '専用コンバーターでファイルを異なる形式間で変換。各コンバーターは特定のユースケースとファイルタイプに最適化されています。'
+        },
+        search: {
+          placeholder: 'コンバーターを検索... (例：CSVからMOBIへ、CR2からICOへ)',
+          example_one: 'CSVからMOBIへ',
+          example_two: 'CR2からICOへ',
+          results: '{{count}}個のコンバーターが見つかりました',
+          results_one: '{{count}}個のコンバーターが見つかりました',
+          results_other: '{{count}}個のコンバーターが見つかりました',
+          suggestion: '"{{exampleOne}}"や"{{exampleTwo}}"のようなものを検索してみてください。',
+          clear: '検索をクリア'
+        },
+        categories: {
+          image_general: '画像コンバーター',
+          document_csv: '文書コンバーター',
+          developer_csv: '開発者ツール (CSV)',
+          image_raw: '画像コンバーター (RAW)',
+          image_vector: '画像コンバーター (ベクター)',
+          ebook_epub: '電子書籍コンバーター (EPUB)',
+          document_doc: '文書コンバーター (DOC)',
+          document_docx: '文書コンバーター (DOCX)'
+        },
+        features: {
+          title: 'なぜ私たちのコンバーターを選ぶのか？',
+          items: [
+            {
+              title: '高速で信頼性',
+              description: '最適化された変換エンジンでファイルを迅速に変換。'
+            },
+            {
+              title: '安全でプライベート',
+              description: 'ファイルは安全に処理され、永久に保存されることはありません。'
+            },
+            {
+              title: '高品質',
+              description: '変換中に画像品質と文書構造を維持。'
+            }
+          ]
+        },
+        no_results: {
+          title: 'コンバーターが見つかりませんでした',
+          description: '"{{exampleOne}}"や"{{exampleTwo}}"のようなものを検索してみてください。',
+          clear: '検索をクリア'
+        }
+      },
+      
       // CR2 to ICO - 日本語
       'cr2_to_ico.title': 'CR2からICOへのコンバーター',
       'cr2_to_ico.meta_title': '無料CR2からICOへのコンバーター - Canon RAWをWindowsアイコンに変換',
@@ -25457,6 +27347,64 @@ const resources = {
               description: '具有可自定义设置的行业标准转换'
             }
           ]
+        }
+      },
+      
+      converters_page: {
+        meta: {
+          title: '免费在线文件转换器 - MorphyHub | 支持300+格式',
+          description: '在300+格式之间即时转换文件。用于图像、文档、电子书和数据文件的免费在线文件转换器。支持批量处理。',
+          keywords: '文件转换器, 在线转换器, 图像转换器, 文档转换器, 电子书转换器, 批量转换, 免费转换器'
+        },
+        schema: {
+          name: '在线文件转换器',
+          description: '使用针对每种文件类型的专用转换器，在300+格式之间即时转换文件。'
+        },
+        hero: {
+          title: '文件转换器',
+          description: '使用我们的专用转换器在不同格式之间转换文件。每个转换器都针对特定的用例和文件类型进行了优化。'
+        },
+        search: {
+          placeholder: '搜索转换器... (例如，CSV转MOBI，CR2转ICO)',
+          example_one: 'CSV转MOBI',
+          example_two: 'CR2转ICO',
+          results: '找到{{count}}个转换器',
+          results_one: '找到{{count}}个转换器',
+          results_other: '找到{{count}}个转换器',
+          suggestion: '尝试搜索类似"{{exampleOne}}"或"{{exampleTwo}}"的内容。',
+          clear: '清除搜索'
+        },
+        categories: {
+          image_general: '图像转换器',
+          document_csv: '文档转换器',
+          developer_csv: '开发者工具 (CSV)',
+          image_raw: '图像转换器 (RAW)',
+          image_vector: '图像转换器 (矢量)',
+          ebook_epub: '电子书转换器 (EPUB)',
+          document_doc: '文档转换器 (DOC)',
+          document_docx: '文档转换器 (DOCX)'
+        },
+        features: {
+          title: '为什么选择我们的转换器？',
+          items: [
+            {
+              title: '快速可靠',
+              description: '使用我们优化的转换引擎快速转换文件。'
+            },
+            {
+              title: '安全私密',
+              description: '您的文件会被安全处理，永远不会永久存储。'
+            },
+            {
+              title: '高质量',
+              description: '在转换过程中保持图像质量和文档结构。'
+            }
+          ]
+        },
+        no_results: {
+          title: '未找到转换器',
+          description: '尝试搜索类似"{{exampleOne}}"或"{{exampleTwo}}"的内容。',
+          clear: '清除搜索'
         }
       },
       
