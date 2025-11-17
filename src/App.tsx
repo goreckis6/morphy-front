@@ -598,6 +598,22 @@ function App() {
         <Route path="/ja/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
         <Route path="/zh/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
 
+        {/* New Languages Converter Routes - HEIC to PNG */}
+        <Route path="/id/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/sv/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/es/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/fr/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/it/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/nl/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/pt/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/vi/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/tr/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/ru/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/ar/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/th/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/ja/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+        <Route path="/zh/convert/heic-to-png" element={<HEICtoPNGConventer />} />
+
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
