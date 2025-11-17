@@ -280,7 +280,7 @@ const resources = {
       'heif_to_jpg.seo.feature_2_text': 'Downscale huge images to reasonable dimensions and compress efficiently to accelerate page loads, uploads, and delivery. Produce compact JPG images that load instantly and improve real-world performance.',
       'heif_to_jpg.seo.use_cases_title': 'When To Use HEIF to JPG Conversion',
       'heif_to_jpg.seo.use_case_1_title': 'Legacy App Support',
-      'heif_to_jpg.seo.use_case_1_text': 'Convert HEIF to JPG for systems that don't support modern formats, such as older CMS, email clients, viewers, and legacy applications. Ensure maximum compatibility across all platforms.',
+      'heif_to_jpg.seo.use_case_1_text': 'Convert HEIF to JPG for systems that don\'t support modern formats, such as older CMS, email clients, viewers, and legacy applications. Ensure maximum compatibility across all platforms.',
       'heif_to_jpg.seo.use_case_2_title': 'Content Pipelines',
       'heif_to_jpg.seo.use_case_2_text': 'Standardize images as JPG for predictable processing in automation pipelines, design workflows, and content management systems. Ideal for batch processing and consistent output formatting.',
 
