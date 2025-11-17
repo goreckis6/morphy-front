@@ -511,6 +511,20 @@ function App() {
         <Route path="/zh/convert/csv-to-html" element={<CSVToHTMLConverter />} />
         <Route path="/de/convert/csv-to-json" element={<CSVToJSONConverter />} />
         <Route path="/de/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/id/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/sv/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/es/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/fr/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/it/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/nl/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/pt/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/vi/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/tr/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/ru/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/ar/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/th/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/ja/convert/csv-to-md" element={<CSVToMDConverter />} />
+        <Route path="/zh/convert/csv-to-md" element={<CSVToMDConverter />} />
         <Route path="/de/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
         <Route path="/de/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
         <Route path="/de/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
