@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -24,6 +25,7 @@ import { apiService, API_BASE_URL } from '../../services/api';
 
 export const HEICtoWEBPConventer: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -38,6 +40,10 @@ export const HEICtoWEBPConventer: React.FC = () => {
   const [batchConverted, setBatchConverted] = useState(false);
   const [batchResults, setBatchResults] = useState<Array<{ file: File; blob: Blob }>>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Determine translation key prefix based on route
+  const isHeifRoute = location.pathname.includes('/heif-to-webp');
+  const translationKey = isHeifRoute ? 'heif_to_webp' : 'heic_to_webp';
 
     usePathLanguageSync(i18n);
 
@@ -220,8 +226,8 @@ export const HEICtoWEBPConventer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{t('heic_to_webp.meta_title')}</title>
-        <meta name="description" content={t('heic_to_webp.meta_description')} />
+        <title>{t(`${translationKey}.meta_title`)}</title>
+        <meta name="description" content={t(`${translationKey}.meta_description`)} />
         <meta name="keywords" content="HEIC to WEBP, HEIF to WEBP, convert HEIC, iPhone to WEBP, image converter, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
@@ -233,10 +239,10 @@ export const HEICtoWEBPConventer: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t('heic_to_webp.title')}
+              {t(`${translationKey}.title`)}
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-              {t('heic_to_webp.subtitle')}
+              {t(`${translationKey}.subtitle`)}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-100">
               <div className="flex items-center gap-2"><Zap className="w-4 h-4" /><span>{t('features.lightning_fast')}</span></div>
@@ -261,9 +267,9 @@ export const HEICtoWEBPConventer: React.FC = () => {
               {/* Upload */}
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{batchMode ? t('heic_to_webp.upload_batch') : t('heic_to_webp.upload_single')}</h3>
-                <p className="text-gray-600 mb-4">{batchMode ? t('heic_to_webp.upload_text_batch') : t('heic_to_webp.upload_text_single')}</p>
-                <p className="text-sm text-gray-500 mb-4">{batchMode ? t('heic_to_webp.file_limits_batch') : t('heic_to_webp.file_limits_single')}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{batchMode ? t(`${translationKey}.upload_batch`) : t(`${translationKey}.upload_single`)}</h3>
+                <p className="text-gray-600 mb-4">{batchMode ? t(`${translationKey}.upload_text_batch`) : t(`${translationKey}.upload_text_single`)}</p>
+                <p className="text-sm text-gray-500 mb-4">{batchMode ? t(`${translationKey}.file_limits_batch`) : t(`${translationKey}.file_limits_single`)}</p>
                 <input ref={fileInputRef} type="file" accept=".heic,.heif" multiple={batchMode} onChange={batchMode ? handleBatchFileSelect : handleFileSelect} className="hidden" />
                 <button onClick={() => fileInputRef.current?.click()} className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">{t('common.choose_files')}</button>
               </div>
@@ -271,7 +277,7 @@ export const HEICtoWEBPConventer: React.FC = () => {
               {/* File Preview */}
               {previewUrl && !batchMode && selectedFile && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">{t('heic_to_webp.file_info')}</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t(`${translationKey}.file_info`)}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <File className="w-12 h-12 text-gray-400" />
@@ -292,12 +298,12 @@ export const HEICtoWEBPConventer: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">{t('heic_to_webp.selected_files')} ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t(`${translationKey}.selected_files`)} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-blue-600' : 'text-gray-600'}`}>{sizeDisplay.text}</div>
                         </div>
                         {sizeDisplay.isWarning && (
                           <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                            <div className="flex items-center"><AlertCircle className="w-4 h-4 text-blue-500 mr-2" /><span className="text-sm text-blue-700">{t('heic_to_webp.batch_size_warning')}</span></div>
+                            <div className="flex items-center"><AlertCircle className="w-4 h-4 text-blue-500 mr-2" /><span className="text-sm text-blue-700">{t(`${translationKey}.batch_size_warning`)}</span></div>
                           </div>
                         )}
                         <div className="space-y-2 max-h-40 overflow-y-auto">
@@ -325,17 +331,17 @@ export const HEICtoWEBPConventer: React.FC = () => {
               {/* Convert Button */}
               <div className="mt-8">
                 <button onClick={batchMode ? handleBatchConvert : handleSingleConvert} disabled={isConverting || (batchMode ? batchFiles.length === 0 : !selectedFile)} className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl">
-                  {isConverting ? (<div className="flex items-center justify-center"><RefreshCw className="w-5 h-5 mr-2 animate-spin" />{t('common.converting')}</div>) : (<div className="flex items-center justify-center"><Zap className="w-5 h-5 mr-2" />{batchMode ? t('heic_to_webp.convert_files', { count: batchFiles.length }) : t('heic_to_webp.convert_to_webp')}</div>)}
+                  {isConverting ? (<div className="flex items-center justify-center"><RefreshCw className="w-5 h-5 mr-2 animate-spin" />{t('common.converting')}</div>) : (<div className="flex items-center justify-center"><Zap className="w-5 h-5 mr-2" />{batchMode ? t(`${translationKey}.convert_files`, { count: batchFiles.length }) : t(`${translationKey}.convert_to_webp`)}</div>)}
                 </button>
               </div>
 
               {/* Single Success */}
               {convertedFile && !batchMode && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4"><CheckCircle className="w-6 h-6 text-green-500 mr-3" /><h4 className="text-lg font-semibold text-green-800">{t('heic_to_webp.conversion_complete')}</h4></div>
-                  <p className="text-green-700 mb-4">{t('heic_to_webp.success_message')}</p>
+                  <div className="flex items-center mb-4"><CheckCircle className="w-6 h-6 text-green-500 mr-3" /><h4 className="text-lg font-semibold text-green-800">{t(`${translationKey}.conversion_complete`)}</h4></div>
+                  <p className="text-green-700 mb-4">{t(`${translationKey}.success_message`)}</p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button onClick={handleDownload} className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"><Download className="w-5 h-5 mr-2" />{t('heic_to_webp.download_webp')}</button>
+                    <button onClick={handleDownload} className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"><Download className="w-5 h-5 mr-2" />{t(`${translationKey}.download_webp`)}</button>
                     <button onClick={resetForm} className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"><RefreshCw className="w-5 h-5 mr-2" />{t('common.convert_another')}</button>
                   </div>
                 </div>
@@ -344,8 +350,8 @@ export const HEICtoWEBPConventer: React.FC = () => {
               {/* Batch Success */}
               {batchConverted && batchMode && batchResults.length > 0 && (
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
-                  <div className="flex items-center mb-4"><CheckCircle className="w-6 h-6 text-green-500 mr-3" /><h4 className="text-lg font-semibold text-green-800">{t('heic_to_webp.batch_conversion_complete')}</h4></div>
-                  <p className="text-green-700 mb-4">{t('heic_to_webp.batch_success_message', { count: batchResults.length })}</p>
+                  <div className="flex items-center mb-4"><CheckCircle className="w-6 h-6 text-green-500 mr-3" /><h4 className="text-lg font-semibold text-green-800">{t(`${translationKey}.batch_conversion_complete`)}</h4></div>
+                  <p className="text-green-700 mb-4">{t(`${translationKey}.batch_success_message`, { count: batchResults.length })}</p>
                   <div className="space-y-2 mb-4 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
                       <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white rounded-lg p-3 border border-green-200 gap-2">
@@ -369,34 +375,34 @@ export const HEICtoWEBPConventer: React.FC = () => {
           {/* Settings & Info */}
           <div className="space-y-6">
             <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center"><Settings className="w-5 h-5 mr-2 text-blue-600" />{t('heic_to_webp.webp_settings')}</h3>
+              <h3 className="text-xl font-semibold mb-6 flex items-center"><Settings className="w-5 h-5 mr-2 text-blue-600" />{t(`${translationKey}.webp_settings`)}</h3>
               {/* Quality */}
               <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-2">{t('heic_to_webp.quality_label')} ({quality})</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t(`${translationKey}.quality_label`)} ({quality})</label>
                 <input type="range" min={1} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value))} className="w-full" />
-                <p className="text-xs text-gray-500 mt-1">{t('heic_to_webp.quality_desc')}</p>
+                <p className="text-xs text-gray-500 mt-1">{t(`${translationKey}.quality_desc`)}</p>
               </div>
               {/* Lossless */}
               <div className="mb-6">
                 <label className="flex items-center">
                   <input type="checkbox" checked={lossless} onChange={(e) => setLossless(e.target.checked)} className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
-                  <span className="ml-2 text-sm text-gray-700">{t('heic_to_webp.lossless')}</span>
+                  <span className="ml-2 text-sm text-gray-700">{t(`${translationKey}.lossless`)}</span>
                 </label>
-                <p className="text-xs text-gray-500 mt-1 ml-6">{t('heic_to_webp.lossless_desc')}</p>
+                <p className="text-xs text-gray-500 mt-1 ml-6">{t(`${translationKey}.lossless_desc`)}</p>
               </div>
               {/* Max Dimension */}
               <div className="mb-2">
-                <label className="block text-sm font-medium text-gray-700 mb-2">{t('heic_to_webp.max_dimension')}</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">{t(`${translationKey}.max_dimension`)}</label>
                 <input type="number" min={256} max={8192} step={64} value={maxDimension} onChange={(e) => setMaxDimension(parseInt(e.target.value) || 4096)} className="w-full border rounded px-3 py-2" />
-                <p className="text-xs text-gray-500 mt-1">{t('heic_to_webp.max_dimension_desc')}</p>
+                <p className="text-xs text-gray-500 mt-1">{t(`${translationKey}.max_dimension_desc`)}</p>
               </div>
             </div>
 
             {/* Features */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center"><Star className="w-5 h-5 mr-2 text-yellow-500" />{t('heic_to_webp.sidebar_title')}</h3>
+              <h3 className="text-xl font-semibold mb-6 flex items-center"><Star className="w-5 h-5 mr-2 text-yellow-500" />{t(`${translationKey}.sidebar_title`)}</h3>
               <div className="space-y-4">
-                {[t('heic_to_webp.feature_1'), t('heic_to_webp.feature_2'), t('heic_to_webp.feature_3'), t('heic_to_webp.feature_4')].map((f, i) => (
+                {[t(`${translationKey}.feature_1`), t(`${translationKey}.feature_2`), t(`${translationKey}.feature_3`), t(`${translationKey}.feature_4`)].map((f, i) => (
                   <div key={i} className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" /><span className="text-sm text-gray-700">{f}</span></div>
                 ))}
               </div>
@@ -404,9 +410,9 @@ export const HEICtoWEBPConventer: React.FC = () => {
 
             {/* Use Cases */}
             <div className="bg-white rounded-2xl shadow-xl p-6">
-              <h3 className="text-xl font-semibold mb-6 flex items-center"><BarChart3 className="w-5 h-5 mr-2 text-blue-600" />{t('heic_to_webp.perfect_for_title')}</h3>
+              <h3 className="text-xl font-semibold mb-6 flex items-center"><BarChart3 className="w-5 h-5 mr-2 text-blue-600" />{t(`${translationKey}.perfect_for_title`)}</h3>
               <div className="space-y-3">
-                {[t('heic_to_webp.use_case_1'), t('heic_to_webp.use_case_2'), t('heic_to_webp.use_case_3'), t('heic_to_webp.use_case_4')].map((uc, i) => (
+                {[t(`${translationKey}.use_case_1`), t(`${translationKey}.use_case_2`), t(`${translationKey}.use_case_3`), t(`${translationKey}.use_case_4`)].map((uc, i) => (
                   <div key={i} className="flex items-center"><div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div><span className="text-sm text-gray-700">{uc}</span></div>
                 ))}
               </div>
@@ -421,22 +427,22 @@ export const HEICtoWEBPConventer: React.FC = () => {
 
         {/* SEO Content */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">{t('heic_to_webp.seo.title')}</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">{t(`${translationKey}.seo.title`)}</h2>
           <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">{t('heic_to_webp.seo.description')}</p>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('heic_to_webp.seo.features_title')}</h3>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">{t(`${translationKey}.seo.description`)}</p>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t(`${translationKey}.seo.features_title`)}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-blue-50 p-6 rounded-lg"><h4 className="text-xl font-semibold text-blue-900 mb-3">{t('heic_to_webp.seo.feature_1_title')}</h4><p className="text-gray-700">{t('heic_to_webp.seo.feature_1_text')}</p></div>
-              <div className="bg-cyan-50 p-6 rounded-lg"><h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('heic_to_webp.seo.feature_2_title')}</h4><p className="text-gray-700">{t('heic_to_webp.seo.feature_2_text')}</p></div>
+              <div className="bg-blue-50 p-6 rounded-lg"><h4 className="text-xl font-semibold text-blue-900 mb-3">{t(`${translationKey}.seo.feature_1_title`)}</h4><p className="text-gray-700">{t(`${translationKey}.seo.feature_1_text`)}</p></div>
+              <div className="bg-cyan-50 p-6 rounded-lg"><h4 className="text-xl font-semibold text-cyan-900 mb-3">{t(`${translationKey}.seo.feature_2_title`)}</h4><p className="text-gray-700">{t(`${translationKey}.seo.feature_2_text`)}</p></div>
             </div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('heic_to_webp.seo.use_cases_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t(`${translationKey}.seo.use_cases_title`)}</h3>
             <div className="space-y-4 mb-8">
-              <div className="flex items-start"><div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div><div><h4 className="text-lg font-semibold text-gray-900 mb-2">{t('heic_to_webp.seo.use_case_1_title')}</h4><p className="text-gray-700">{t('heic_to_webp.seo.use_case_1_text')}</p></div></div>
-              <div className="flex items-start"><div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div><div><h4 className="text-lg font-semibold text-gray-900 mb-2">{t('heic_to_webp.seo.use_case_2_title')}</h4><p className="text-gray-700">{t('heic_to_webp.seo.use_case_2_text')}</p></div></div>
+              <div className="flex items-start"><div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div><div><h4 className="text-lg font-semibold text-gray-900 mb-2">{t(`${translationKey}.seo.use_case_1_title`)}</h4><p className="text-gray-700">{t(`${translationKey}.seo.use_case_1_text`)}</p></div></div>
+              <div className="flex items-start"><div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div><div><h4 className="text-lg font-semibold text-gray-900 mb-2">{t(`${translationKey}.seo.use_case_2_title`)}</h4><p className="text-gray-700">{t(`${translationKey}.seo.use_case_2_text`)}</p></div></div>
             </div>
             <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-8 rounded-xl text-center mt-8">
-              <h3 className="text-2xl font-bold mb-4">{t('heic_to_webp.ready_title')}</h3>
-              <p className="text-lg mb-6 opacity-90">{t('heic_to_webp.ready_text')}</p>
+              <h3 className="text-2xl font-bold mb-4">{t(`${translationKey}.ready_title`)}</h3>
+              <p className="text-lg mb-6 opacity-90">{t(`${translationKey}.ready_text`)}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' as ScrollBehavior })} className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">{t('common.start_converting_now')}</button>
                 <button onClick={handleBack} className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">{t('common.back_to_home')}</button>
