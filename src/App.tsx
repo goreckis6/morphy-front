@@ -513,6 +513,22 @@ function App() {
         <Route path="/de/convert/heif-to-jpg" element={<HEIFtoJPGConventer />} />
         <Route path="/de/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
         <Route path="/de/convert/heif-to-webp" element={<HEIFtoWEBPConventer />} />
+        
+        {/* New Languages Converter Routes - HEIF to PNG */}
+        <Route path="/id/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/sv/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/es/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/fr/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/it/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/nl/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/pt/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/vi/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/tr/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/ru/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/ar/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/th/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/ja/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
+        <Route path="/zh/convert/heif-to-png" element={<HEIFtoPNGConventer />} />
         <Route path="/de/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
         <Route path="/de/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
         <Route path="/de/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
