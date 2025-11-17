@@ -3691,8 +3691,8 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'CSV to DOCX Converter',
-      'csv_to_docx.meta_title': 'Free CSV to DOCX Converter - Convert CSV to Word Documents',
-      'csv_to_docx.meta_description': 'Convert CSV spreadsheet files to DOCX format for Microsoft Word. Transform tabular data into formatted Word documents. Free online converter.',
+      'csv_to_docx.meta_title': 'Free CSV to DOCX Converter Online - Convert CSV to Word Documents Instantly',
+      'csv_to_docx.meta_description': 'Convert CSV files to DOCX Word documents online for free. Transform spreadsheet data into professional Word documents with table formatting, styling, and layout. Fast, secure, batch conversion support. No registration required.',
       'csv_to_docx.subtitle': 'Convert CSV files to Microsoft Word DOCX format. Transform tabular data into formatted documents for reports and presentations with professional styling.',
       'csv_to_docx.upload_single': 'Upload CSV File',
       'csv_to_docx.upload_batch': 'Upload Multiple CSV Files',
@@ -16280,9 +16280,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Pipeline Konten',
       'heif_to_jpg.seo.use_case_2_text': 'Standarisasi gambar sebagai JPG untuk pemrosesan yang dapat diprediksi dalam pipeline otomasi, alur kerja desain, dan sistem manajemen konten. Ideal untuk pemrosesan batch dan pemformatan output yang konsisten.',
 
-      // CSV to DOCX
+      // CSV to DOCX - Bahasa Indonesia
       'csv_to_docx.title': 'Konverter CSV ke DOCX',
-      'csv_to_docx.subtitle': 'Konversi file CSV ke format dokumen Word DOCX untuk pengeditan dan berbagi profesional.',
+      'csv_to_docx.meta_title': 'Konverter CSV ke DOCX Gratis Online - Konversi CSV ke Dokumen Word Secara Instan',
+      'csv_to_docx.meta_description': 'Konversi file CSV ke dokumen Word DOCX online gratis. Transformasikan data spreadsheet menjadi dokumen Word profesional dengan format tabel, styling, dan layout. Cepat, aman, dukungan konversi batch. Tidak perlu registrasi.',
+      'csv_to_docx.subtitle': 'Konversi file CSV ke format Microsoft Word DOCX. Transformasikan data tabel menjadi dokumen terformat untuk laporan dan presentasi dengan styling profesional.',
+      'csv_to_docx.upload_single': 'Unggah File CSV',
+      'csv_to_docx.upload_batch': 'Unggah Beberapa File CSV',
+      'csv_to_docx.upload_text_single': 'Seret dan lepas file CSV Anda di sini atau klik untuk menjelajah',
+      'csv_to_docx.upload_text_batch': 'Pilih beberapa file CSV untuk mengonversi semuanya sekaligus',
+      'csv_to_docx.preview': 'Pratinjau',
+      'csv_to_docx.selected_files': 'File yang Dipilih',
+      'csv_to_docx.total_size': 'Ukuran total',
+      'csv_to_docx.convert_to_docx': 'Konversi ke DOCX',
+      'csv_to_docx.convert_files': 'Konversi {{count}} File',
+      'csv_to_docx.conversion_complete': 'Konversi Selesai!',
+      'csv_to_docx.batch_conversion_complete': 'Konversi Batch Selesai',
+      'csv_to_docx.success_message': 'File CSV Anda telah berhasil dikonversi ke format DOCX.',
+      'csv_to_docx.download_docx': 'Unduh File DOCX',
+      'csv_to_docx.sidebar_title': 'Mengapa Memilih Konverter Kami?',
+      'csv_to_docx.feature_1': 'Format dan styling tabel',
+      'csv_to_docx.feature_2': 'Layout dokumen profesional',
+      'csv_to_docx.feature_3': 'Kompatibilitas Microsoft Word',
+      'csv_to_docx.feature_4': 'Opsi format yang dapat disesuaikan',
+      'csv_to_docx.feature_5': 'Dukungan konversi batch',
+      'csv_to_docx.feature_6': 'Output berkualitas tinggi',
+      'csv_to_docx.why_convert_title': 'Mengapa Mengonversi CSV ke DOCX?',
+      'csv_to_docx.seo_intro': 'Mengonversi file CSV ke format Microsoft Word DOCX sangat penting untuk pembuatan laporan, presentasi data, dan dokumentasi profesional. Sementara file CSV sangat baik untuk penyimpanan dan analisis data, format DOCX menyediakan format profesional, styling tabel, dan kemampuan layout dokumen yang penting untuk laporan bisnis, makalah akademik, dan hasil kerja klien.',
+      'csv_to_docx.benefits_title': 'Manfaat Utama Format DOCX',
+      'csv_to_docx.benefit_formatting_title': 'Format Profesional',
+      'csv_to_docx.benefit_formatting_text': 'Format DOCX menyediakan format tabel profesional, opsi styling, dan kemampuan layout dokumen yang membuat presentasi data Anda terlihat rapi dan profesional.',
+      'csv_to_docx.benefit_compatibility_title': 'Kompatibilitas Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'File DOCX sepenuhnya kompatibel dengan Microsoft Word dan pengolah kata lainnya, memastikan dokumen Anda dapat dibuka, diedit, dan dibagikan di berbagai platform.',
+      'csv_to_docx.benefit_styling_title': 'Opsi Styling Tabel',
+      'csv_to_docx.benefit_styling_text': 'Format DOCX menawarkan berbagai opsi styling tabel termasuk border, warna, font, dan layout yang meningkatkan presentasi visual data tabel Anda.',
+      'csv_to_docx.benefit_management_title': 'Manajemen Dokumen',
+      'csv_to_docx.benefit_management_text': 'Format DOCX terintegrasi dengan mulus dengan sistem manajemen dokumen, memudahkan untuk mengatur, mengarsipkan, dan mengambil dokumen yang dikonversi.',
+      'csv_to_docx.use_cases_title': 'Kasus Penggunaan Umum',
+      'csv_to_docx.use_case_reports_title': 'Pembuatan Laporan',
+      'csv_to_docx.use_case_reports_text': 'Konversi data CSV ke format DOCX untuk laporan bisnis komprehensif, ringkasan keuangan, dan dokumen analitis dengan format profesional.',
+      'csv_to_docx.use_case_presentation_title': 'Presentasi Data',
+      'csv_to_docx.use_case_presentation_text': 'Transformasikan data CSV mentah menjadi dokumen DOCX yang terformat dengan baik untuk presentasi, rapat, dan komunikasi stakeholder.',
+      'csv_to_docx.use_case_business_title': 'Dokumentasi Bisnis',
+      'csv_to_docx.use_case_business_text': 'Buat dokumen bisnis profesional dengan mengonversi data CSV ke format DOCX untuk kontrak, proposal, dan komunikasi resmi.',
+      'csv_to_docx.use_case_academic_title': 'Makalah Akademik',
+      'csv_to_docx.use_case_academic_text': 'Konversi data penelitian dari CSV ke format DOCX untuk makalah akademik, tesis, dan laporan penelitian dengan format dan kutipan yang tepat.',
+      'csv_to_docx.ready_title': 'Siap Mengonversi File CSV Anda?',
+      'csv_to_docx.ready_text': 'Gunakan konverter CSV ke DOCX online gratis kami untuk mengubah data tabel Anda menjadi dokumen Word profesional.',
       // CSV to EPUB
       'csv_to_epub.title': 'Konverter CSV ke EPUB',
       'csv_to_epub.subtitle': 'Konversi data CSV ke format ebook EPUB untuk membaca di perangkat e-reader.',
@@ -17266,9 +17310,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Innehållspipelines',
       'heif_to_jpg.seo.use_case_2_text': 'Standardisera bilder som JPG för förutsägbar bearbetning i automatiseringspipelines, designarbetsflöden och innehållshanteringssystem. Ideal för batchbearbetning och konsekvent utdataformatering.',
 
-      // CSV to DOCX
+      // CSV to DOCX - Swedish
       'csv_to_docx.title': 'CSV till DOCX Konverterare',
-      'csv_to_docx.subtitle': 'Konvertera CSV-filer till Word DOCX-dokumentformat för professionell redigering och delning.',
+      'csv_to_docx.meta_title': 'Gratis CSV till DOCX Konverterare Online - Konvertera CSV till Word-dokument Omedelbart',
+      'csv_to_docx.meta_description': 'Konvertera CSV-filer till DOCX Word-dokument online gratis. Transformera kalkylbladsdata till professionella Word-dokument med tabellformatering, styling och layout. Snabb, säker, batchkonverteringsstöd. Ingen registrering krävs.',
+      'csv_to_docx.subtitle': 'Konvertera CSV-filer till Microsoft Word DOCX-format. Transformera tabelldata till formaterade dokument för rapporter och presentationer med professionell styling.',
+      'csv_to_docx.upload_single': 'Ladda upp CSV-fil',
+      'csv_to_docx.upload_batch': 'Ladda upp Flera CSV-filer',
+      'csv_to_docx.upload_text_single': 'Dra och släpp din CSV-fil här eller klicka för att bläddra',
+      'csv_to_docx.upload_text_batch': 'Välj flera CSV-filer för att konvertera dem alla på en gång',
+      'csv_to_docx.preview': 'Förhandsvisning',
+      'csv_to_docx.selected_files': 'Valda Filer',
+      'csv_to_docx.total_size': 'Total storlek',
+      'csv_to_docx.convert_to_docx': 'Konvertera till DOCX',
+      'csv_to_docx.convert_files': 'Konvertera {{count}} Filer',
+      'csv_to_docx.conversion_complete': 'Konvertering Klar!',
+      'csv_to_docx.batch_conversion_complete': 'Batchkonvertering Klar',
+      'csv_to_docx.success_message': 'Din CSV-fil har framgångsrikt konverterats till DOCX-format.',
+      'csv_to_docx.download_docx': 'Ladda ner DOCX-fil',
+      'csv_to_docx.sidebar_title': 'Varför Välja Vår Konverterare?',
+      'csv_to_docx.feature_1': 'Tabellformatering och styling',
+      'csv_to_docx.feature_2': 'Professionell dokumentlayout',
+      'csv_to_docx.feature_3': 'Microsoft Word-kompatibilitet',
+      'csv_to_docx.feature_4': 'Anpassningsbara formateringsalternativ',
+      'csv_to_docx.feature_5': 'Batchkonverteringsstöd',
+      'csv_to_docx.feature_6': 'Högkvalitativ utdata',
+      'csv_to_docx.why_convert_title': 'Varför Konvertera CSV till DOCX?',
+      'csv_to_docx.seo_intro': 'Att konvertera CSV-filer till Microsoft Word DOCX-format är viktigt för rapportgenerering, datapresentation och professionell dokumentation. Medan CSV-filer är utmärkta för datalagring och analys, ger DOCX-format professionell formatering, tabellstyling och dokumentlayoutfunktioner som är viktiga för affärsrapporter, akademiska artiklar och kundleveranser.',
+      'csv_to_docx.benefits_title': 'Nyckelfördelar med DOCX-format',
+      'csv_to_docx.benefit_formatting_title': 'Professionell Formatering',
+      'csv_to_docx.benefit_formatting_text': 'DOCX-format ger professionell tabellformatering, stylingalternativ och dokumentlayoutfunktioner som gör din datapresentation polerad och professionell.',
+      'csv_to_docx.benefit_compatibility_title': 'Microsoft Word-kompatibilitet',
+      'csv_to_docx.benefit_compatibility_text': 'DOCX-filer är fullt kompatibla med Microsoft Word och andra ordbehandlare, vilket säkerställer att dina dokument kan öppnas, redigeras och delas på olika plattformar.',
+      'csv_to_docx.benefit_styling_title': 'Tabellstylingalternativ',
+      'csv_to_docx.benefit_styling_text': 'DOCX-format erbjuder olika tabellstylingalternativ inklusive ramar, färger, typsnitt och layouter som förbättrar den visuella presentationen av din tabelldata.',
+      'csv_to_docx.benefit_management_title': 'Dokumenthantering',
+      'csv_to_docx.benefit_management_text': 'DOCX-format integreras sömlöst med dokumenthanteringssystem, vilket gör det enkelt att organisera, arkivera och hämta dina konverterade dokument.',
+      'csv_to_docx.use_cases_title': 'Vanliga Användningsfall',
+      'csv_to_docx.use_case_reports_title': 'Rapportgenerering',
+      'csv_to_docx.use_case_reports_text': 'Konvertera CSV-data till DOCX-format för omfattande affärsrapporter, finansiella sammanfattningar och analytiska dokument med professionell formatering.',
+      'csv_to_docx.use_case_presentation_title': 'Datapresentation',
+      'csv_to_docx.use_case_presentation_text': 'Transformera rå CSV-data till välformaterade DOCX-dokument för presentationer, möten och intressentkommunikation.',
+      'csv_to_docx.use_case_business_title': 'Affärsdokumentation',
+      'csv_to_docx.use_case_business_text': 'Skapa professionella affärsdokument genom att konvertera CSV-data till DOCX-format för kontrakt, förslag och officiella kommunikationer.',
+      'csv_to_docx.use_case_academic_title': 'Akademiska Artiklar',
+      'csv_to_docx.use_case_academic_text': 'Konvertera forskningsdata från CSV till DOCX-format för akademiska artiklar, avhandlingar och forskningsrapporter med korrekt formatering och citat.',
+      'csv_to_docx.ready_title': 'Redo att Konvertera Dina CSV-filer?',
+      'csv_to_docx.ready_text': 'Använd vår gratis online CSV till DOCX-konverterare för att transformera din tabelldata till professionella Word-dokument.',
       // CSV to EPUB
       'csv_to_epub.title': 'CSV till EPUB Konverterare',
       'csv_to_epub.subtitle': 'Konvertera CSV-data till EPUB e-bokformat för läsning på e-läsare.',
@@ -18252,9 +18340,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Pipelines de Contenido',
       'heif_to_jpg.seo.use_case_2_text': 'Estandariza imágenes como JPG para procesamiento predecible en pipelines de automatización, flujos de trabajo de diseño y sistemas de gestión de contenido. Ideal para procesamiento por lotes y formato de salida consistente.',
 
-      // CSV to DOCX
+      // CSV to DOCX - Spanish
       'csv_to_docx.title': 'Convertidor CSV a DOCX',
-      'csv_to_docx.subtitle': 'Convierte archivos CSV al formato de documento Word DOCX para edición y compartición profesional.',
+      'csv_to_docx.meta_title': 'Convertidor CSV a DOCX Gratis Online - Convierte CSV a Documentos Word al Instante',
+      'csv_to_docx.meta_description': 'Convierte archivos CSV a documentos Word DOCX online gratis. Transforma datos de hojas de cálculo en documentos Word profesionales con formato de tabla, estilo y diseño. Rápido, seguro, soporte de conversión por lotes. No se requiere registro.',
+      'csv_to_docx.subtitle': 'Convierte archivos CSV al formato Microsoft Word DOCX. Transforma datos tabulares en documentos formateados para informes y presentaciones con estilo profesional.',
+      'csv_to_docx.upload_single': 'Subir Archivo CSV',
+      'csv_to_docx.upload_batch': 'Subir Múltiples Archivos CSV',
+      'csv_to_docx.upload_text_single': 'Arrastra y suelta tu archivo CSV aquí o haz clic para explorar',
+      'csv_to_docx.upload_text_batch': 'Selecciona múltiples archivos CSV para convertirlos todos a la vez',
+      'csv_to_docx.preview': 'Vista Previa',
+      'csv_to_docx.selected_files': 'Archivos Seleccionados',
+      'csv_to_docx.total_size': 'Tamaño total',
+      'csv_to_docx.convert_to_docx': 'Convertir a DOCX',
+      'csv_to_docx.convert_files': 'Convertir {{count}} Archivos',
+      'csv_to_docx.conversion_complete': '¡Conversión Completa!',
+      'csv_to_docx.batch_conversion_complete': 'Conversión por Lotes Completa',
+      'csv_to_docx.success_message': 'Tu archivo CSV se ha convertido exitosamente al formato DOCX.',
+      'csv_to_docx.download_docx': 'Descargar Archivo DOCX',
+      'csv_to_docx.sidebar_title': '¿Por Qué Elegir Nuestro Convertidor?',
+      'csv_to_docx.feature_1': 'Formato y estilo de tabla',
+      'csv_to_docx.feature_2': 'Diseño de documento profesional',
+      'csv_to_docx.feature_3': 'Compatibilidad con Microsoft Word',
+      'csv_to_docx.feature_4': 'Opciones de formato personalizables',
+      'csv_to_docx.feature_5': 'Soporte de conversión por lotes',
+      'csv_to_docx.feature_6': 'Salida de alta calidad',
+      'csv_to_docx.why_convert_title': '¿Por Qué Convertir CSV a DOCX?',
+      'csv_to_docx.seo_intro': 'Convertir archivos CSV al formato Microsoft Word DOCX es esencial para la generación de informes, presentación de datos y documentación profesional. Si bien los archivos CSV son excelentes para el almacenamiento y análisis de datos, el formato DOCX proporciona formato profesional, estilo de tabla y capacidades de diseño de documentos que son esenciales para informes comerciales, documentos académicos y entregables para clientes.',
+      'csv_to_docx.benefits_title': 'Beneficios Clave del Formato DOCX',
+      'csv_to_docx.benefit_formatting_title': 'Formato Profesional',
+      'csv_to_docx.benefit_formatting_text': 'El formato DOCX proporciona formato de tabla profesional, opciones de estilo y capacidades de diseño de documentos que hacen que tu presentación de datos se vea pulida y profesional.',
+      'csv_to_docx.benefit_compatibility_title': 'Compatibilidad con Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'Los archivos DOCX son totalmente compatibles con Microsoft Word y otros procesadores de texto, asegurando que tus documentos puedan abrirse, editarse y compartirse en diferentes plataformas.',
+      'csv_to_docx.benefit_styling_title': 'Opciones de Estilo de Tabla',
+      'csv_to_docx.benefit_styling_text': 'El formato DOCX ofrece varias opciones de estilo de tabla, incluyendo bordes, colores, fuentes y diseños que mejoran la presentación visual de tus datos tabulares.',
+      'csv_to_docx.benefit_management_title': 'Gestión de Documentos',
+      'csv_to_docx.benefit_management_text': 'El formato DOCX se integra perfectamente con los sistemas de gestión de documentos, facilitando la organización, archivado y recuperación de tus documentos convertidos.',
+      'csv_to_docx.use_cases_title': 'Casos de Uso Comunes',
+      'csv_to_docx.use_case_reports_title': 'Generación de Informes',
+      'csv_to_docx.use_case_reports_text': 'Convierte datos CSV al formato DOCX para informes comerciales completos, resúmenes financieros y documentos analíticos con formato profesional.',
+      'csv_to_docx.use_case_presentation_title': 'Presentación de Datos',
+      'csv_to_docx.use_case_presentation_text': 'Transforma datos CSV sin procesar en documentos DOCX bien formateados para presentaciones, reuniones y comunicaciones con partes interesadas.',
+      'csv_to_docx.use_case_business_title': 'Documentación Comercial',
+      'csv_to_docx.use_case_business_text': 'Crea documentos comerciales profesionales convirtiendo datos CSV al formato DOCX para contratos, propuestas y comunicaciones oficiales.',
+      'csv_to_docx.use_case_academic_title': 'Documentos Académicos',
+      'csv_to_docx.use_case_academic_text': 'Convierte datos de investigación de CSV al formato DOCX para documentos académicos, tesis e informes de investigación con formato y citas adecuados.',
+      'csv_to_docx.ready_title': '¿Listo para Convertir Tus Archivos CSV?',
+      'csv_to_docx.ready_text': 'Usa nuestro convertidor CSV a DOCX online gratis para transformar tus datos tabulares en documentos Word profesionales.',
       // CSV to EPUB
       'csv_to_epub.title': 'Convertidor CSV a EPUB',
       'csv_to_epub.subtitle': 'Convierte datos CSV al formato de libro electrónico EPUB para lectura en lectores electrónicos.',
@@ -19238,9 +19370,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Pipelines de Contenu',
       'heif_to_jpg.seo.use_case_2_text': 'Standardisez les images en JPG pour un traitement prévisible dans les pipelines d\'automatisation, flux de travail de conception et systèmes de gestion de contenu. Idéal pour le traitement par lots et le formatage de sortie cohérent.',
 
-      // CSV to DOCX
+      // CSV to DOCX - French
       'csv_to_docx.title': 'Convertisseur CSV vers DOCX',
-      'csv_to_docx.subtitle': 'Convertissez les fichiers CSV au format de document Word DOCX pour l\'édition et le partage professionnel.',
+      'csv_to_docx.meta_title': 'Convertisseur CSV vers DOCX Gratuit en Ligne - Convertissez CSV en Documents Word Instantanément',
+      'csv_to_docx.meta_description': 'Convertissez les fichiers CSV en documents Word DOCX en ligne gratuitement. Transformez les données de feuille de calcul en documents Word professionnels avec formatage de tableau, style et mise en page. Rapide, sécurisé, support de conversion par lots. Aucune inscription requise.',
+      'csv_to_docx.subtitle': 'Convertissez les fichiers CSV au format Microsoft Word DOCX. Transformez les données tabulaires en documents formatés pour les rapports et présentations avec un style professionnel.',
+      'csv_to_docx.upload_single': 'Télécharger un Fichier CSV',
+      'csv_to_docx.upload_batch': 'Télécharger Plusieurs Fichiers CSV',
+      'csv_to_docx.upload_text_single': 'Glissez-déposez votre fichier CSV ici ou cliquez pour parcourir',
+      'csv_to_docx.upload_text_batch': 'Sélectionnez plusieurs fichiers CSV pour les convertir tous à la fois',
+      'csv_to_docx.preview': 'Aperçu',
+      'csv_to_docx.selected_files': 'Fichiers Sélectionnés',
+      'csv_to_docx.total_size': 'Taille totale',
+      'csv_to_docx.convert_to_docx': 'Convertir en DOCX',
+      'csv_to_docx.convert_files': 'Convertir {{count}} Fichiers',
+      'csv_to_docx.conversion_complete': 'Conversion Terminée !',
+      'csv_to_docx.batch_conversion_complete': 'Conversion par Lots Terminée',
+      'csv_to_docx.success_message': 'Votre fichier CSV a été converti avec succès au format DOCX.',
+      'csv_to_docx.download_docx': 'Télécharger le Fichier DOCX',
+      'csv_to_docx.sidebar_title': 'Pourquoi Choisir Notre Convertisseur ?',
+      'csv_to_docx.feature_1': 'Formatage et style de tableau',
+      'csv_to_docx.feature_2': 'Mise en page de document professionnelle',
+      'csv_to_docx.feature_3': 'Compatibilité Microsoft Word',
+      'csv_to_docx.feature_4': 'Options de formatage personnalisables',
+      'csv_to_docx.feature_5': 'Support de conversion par lots',
+      'csv_to_docx.feature_6': 'Sortie de haute qualité',
+      'csv_to_docx.why_convert_title': 'Pourquoi Convertir CSV en DOCX ?',
+      'csv_to_docx.seo_intro': 'Convertir les fichiers CSV au format Microsoft Word DOCX est essentiel pour la génération de rapports, la présentation de données et la documentation professionnelle. Bien que les fichiers CSV soient excellents pour le stockage et l\'analyse de données, le format DOCX fournit un formatage professionnel, un style de tableau et des capacités de mise en page de documents qui sont essentielles pour les rapports d\'entreprise, les documents académiques et les livrables clients.',
+      'csv_to_docx.benefits_title': 'Avantages Clés du Format DOCX',
+      'csv_to_docx.benefit_formatting_title': 'Formatage Professionnel',
+      'csv_to_docx.benefit_formatting_text': 'Le format DOCX fournit un formatage de tableau professionnel, des options de style et des capacités de mise en page de documents qui rendent votre présentation de données polie et professionnelle.',
+      'csv_to_docx.benefit_compatibility_title': 'Compatibilité Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'Les fichiers DOCX sont entièrement compatibles avec Microsoft Word et d\'autres traitements de texte, garantissant que vos documents peuvent être ouverts, modifiés et partagés sur différentes plateformes.',
+      'csv_to_docx.benefit_styling_title': 'Options de Style de Tableau',
+      'csv_to_docx.benefit_styling_text': 'Le format DOCX offre diverses options de style de tableau, y compris les bordures, les couleurs, les polices et les mises en page qui améliorent la présentation visuelle de vos données tabulaires.',
+      'csv_to_docx.benefit_management_title': 'Gestion de Documents',
+      'csv_to_docx.benefit_management_text': 'Le format DOCX s\'intègre parfaitement aux systèmes de gestion de documents, facilitant l\'organisation, l\'archivage et la récupération de vos documents convertis.',
+      'csv_to_docx.use_cases_title': 'Cas d\'Utilisation Courants',
+      'csv_to_docx.use_case_reports_title': 'Génération de Rapports',
+      'csv_to_docx.use_case_reports_text': 'Convertissez les données CSV au format DOCX pour des rapports d\'entreprise complets, des résumés financiers et des documents analytiques avec un formatage professionnel.',
+      'csv_to_docx.use_case_presentation_title': 'Présentation de Données',
+      'csv_to_docx.use_case_presentation_text': 'Transformez les données CSV brutes en documents DOCX bien formatés pour les présentations, les réunions et les communications avec les parties prenantes.',
+      'csv_to_docx.use_case_business_title': 'Documentation Commerciale',
+      'csv_to_docx.use_case_business_text': 'Créez des documents commerciaux professionnels en convertissant les données CSV au format DOCX pour les contrats, les propositions et les communications officielles.',
+      'csv_to_docx.use_case_academic_title': 'Documents Académiques',
+      'csv_to_docx.use_case_academic_text': 'Convertissez les données de recherche de CSV au format DOCX pour les documents académiques, les thèses et les rapports de recherche avec un formatage et des citations appropriés.',
+      'csv_to_docx.ready_title': 'Prêt à Convertir Vos Fichiers CSV ?',
+      'csv_to_docx.ready_text': 'Utilisez notre convertisseur CSV vers DOCX en ligne gratuit pour transformer vos données tabulaires en documents Word professionnels.',
       // CSV to EPUB
       'csv_to_epub.title': 'Convertisseur CSV vers EPUB',
       'csv_to_epub.subtitle': 'Convertissez les données CSV au format de livre électronique EPUB pour la lecture sur les lecteurs électroniques.',
@@ -20224,9 +20400,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Pipeline di Contenuto',
       'heif_to_jpg.seo.use_case_2_text': 'Standardizza le immagini come JPG per elaborazione prevedibile in pipeline di automazione, flussi di lavoro di progettazione e sistemi di gestione contenuti. Ideale per elaborazione batch e formattazione output consistente.',
 
-      // CSV to DOCX
+      // CSV to DOCX - Italian
       'csv_to_docx.title': 'Convertitore CSV in DOCX',
-      'csv_to_docx.subtitle': 'Converti file CSV nel formato documento Word DOCX per modifica e condivisione professionale.',
+      'csv_to_docx.meta_title': 'Convertitore CSV in DOCX Gratuito Online - Converti CSV in Documenti Word Istantaneamente',
+      'csv_to_docx.meta_description': 'Converti file CSV in documenti Word DOCX online gratuitamente. Trasforma dati di fogli di calcolo in documenti Word professionali con formattazione tabella, stile e layout. Veloce, sicuro, supporto conversione batch. Nessuna registrazione richiesta.',
+      'csv_to_docx.subtitle': 'Converti file CSV nel formato Microsoft Word DOCX. Trasforma dati tabulari in documenti formattati per rapporti e presentazioni con stile professionale.',
+      'csv_to_docx.upload_single': 'Carica File CSV',
+      'csv_to_docx.upload_batch': 'Carica Più File CSV',
+      'csv_to_docx.upload_text_single': 'Trascina e rilascia il tuo file CSV qui o clicca per sfogliare',
+      'csv_to_docx.upload_text_batch': 'Seleziona più file CSV per convertirli tutti in una volta',
+      'csv_to_docx.preview': 'Anteprima',
+      'csv_to_docx.selected_files': 'File Selezionati',
+      'csv_to_docx.total_size': 'Dimensione totale',
+      'csv_to_docx.convert_to_docx': 'Converti in DOCX',
+      'csv_to_docx.convert_files': 'Converti {{count}} File',
+      'csv_to_docx.conversion_complete': 'Conversione Completata!',
+      'csv_to_docx.batch_conversion_complete': 'Conversione Batch Completata',
+      'csv_to_docx.success_message': 'Il tuo file CSV è stato convertito con successo nel formato DOCX.',
+      'csv_to_docx.download_docx': 'Scarica File DOCX',
+      'csv_to_docx.sidebar_title': 'Perché Scegliere il Nostro Convertitore?',
+      'csv_to_docx.feature_1': 'Formattazione e stile tabella',
+      'csv_to_docx.feature_2': 'Layout documento professionale',
+      'csv_to_docx.feature_3': 'Compatibilità Microsoft Word',
+      'csv_to_docx.feature_4': 'Opzioni di formattazione personalizzabili',
+      'csv_to_docx.feature_5': 'Supporto conversione batch',
+      'csv_to_docx.feature_6': 'Output di alta qualità',
+      'csv_to_docx.why_convert_title': 'Perché Convertire CSV in DOCX?',
+      'csv_to_docx.seo_intro': 'Convertire file CSV nel formato Microsoft Word DOCX è essenziale per la generazione di rapporti, presentazione di dati e documentazione professionale. Mentre i file CSV sono eccellenti per l\'archiviazione e l\'analisi dei dati, il formato DOCX fornisce formattazione professionale, stile tabella e capacità di layout del documento che sono essenziali per rapporti aziendali, documenti accademici e consegne ai clienti.',
+      'csv_to_docx.benefits_title': 'Vantaggi Chiave del Formato DOCX',
+      'csv_to_docx.benefit_formatting_title': 'Formattazione Professionale',
+      'csv_to_docx.benefit_formatting_text': 'Il formato DOCX fornisce formattazione tabella professionale, opzioni di stile e capacità di layout del documento che rendono la tua presentazione dei dati lucida e professionale.',
+      'csv_to_docx.benefit_compatibility_title': 'Compatibilità Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'I file DOCX sono completamente compatibili con Microsoft Word e altri elaboratori di testi, garantendo che i tuoi documenti possano essere aperti, modificati e condivisi su diverse piattaforme.',
+      'csv_to_docx.benefit_styling_title': 'Opzioni di Stile Tabella',
+      'csv_to_docx.benefit_styling_text': 'Il formato DOCX offre varie opzioni di stile tabella inclusi bordi, colori, font e layout che migliorano la presentazione visiva dei tuoi dati tabulari.',
+      'csv_to_docx.benefit_management_title': 'Gestione Documenti',
+      'csv_to_docx.benefit_management_text': 'Il formato DOCX si integra perfettamente con i sistemi di gestione documenti, facilitando l\'organizzazione, l\'archiviazione e il recupero dei tuoi documenti convertiti.',
+      'csv_to_docx.use_cases_title': 'Casi d\'Uso Comuni',
+      'csv_to_docx.use_case_reports_title': 'Generazione Rapporti',
+      'csv_to_docx.use_case_reports_text': 'Converti dati CSV nel formato DOCX per rapporti aziendali completi, riepiloghi finanziari e documenti analitici con formattazione professionale.',
+      'csv_to_docx.use_case_presentation_title': 'Presentazione Dati',
+      'csv_to_docx.use_case_presentation_text': 'Trasforma dati CSV grezzi in documenti DOCX ben formattati per presentazioni, riunioni e comunicazioni con gli stakeholder.',
+      'csv_to_docx.use_case_business_title': 'Documentazione Aziendale',
+      'csv_to_docx.use_case_business_text': 'Crea documenti aziendali professionali convertendo dati CSV nel formato DOCX per contratti, proposte e comunicazioni ufficiali.',
+      'csv_to_docx.use_case_academic_title': 'Documenti Accademici',
+      'csv_to_docx.use_case_academic_text': 'Converti dati di ricerca da CSV nel formato DOCX per documenti accademici, tesi e rapporti di ricerca con formattazione e citazioni appropriate.',
+      'csv_to_docx.ready_title': 'Pronto a Convertire i Tuoi File CSV?',
+      'csv_to_docx.ready_text': 'Usa il nostro convertitore CSV in DOCX online gratuito per trasformare i tuoi dati tabulari in documenti Word professionali.',
       // CSV to EPUB
       'csv_to_epub.title': 'Convertitore CSV in EPUB',
       'csv_to_epub.subtitle': 'Converti dati CSV nel formato ebook EPUB per la lettura su e-reader.',
@@ -21210,9 +21430,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Content Pijplijnen',
       'heif_to_jpg.seo.use_case_2_text': 'Standaardiseer afbeeldingen als JPG voor voorspelbare verwerking in automatiseringspijplijnen, ontwerpworkflows en contentmanagementsystemen. Ideaal voor batchverwerking en consistente outputformattering.',
 
-      // CSV to DOCX
+      // CSV to DOCX - Dutch
       'csv_to_docx.title': 'CSV naar DOCX Converter',
-      'csv_to_docx.subtitle': 'Converteer CSV-bestanden naar Word DOCX-documentformaat voor professionele bewerking en delen.',
+      'csv_to_docx.meta_title': 'Gratis CSV naar DOCX Converter Online - Converteer CSV naar Word-documenten Direct',
+      'csv_to_docx.meta_description': 'Converteer CSV-bestanden naar DOCX Word-documenten online gratis. Transformeer spreadsheetgegevens naar professionele Word-documenten met tabelformatering, styling en lay-out. Snel, veilig, batchconversie-ondersteuning. Geen registratie vereist.',
+      'csv_to_docx.subtitle': 'Converteer CSV-bestanden naar Microsoft Word DOCX-formaat. Transformeer tabelgegevens naar geformatteerde documenten voor rapporten en presentaties met professionele styling.',
+      'csv_to_docx.upload_single': 'Upload CSV Bestand',
+      'csv_to_docx.upload_batch': 'Upload Meerdere CSV Bestanden',
+      'csv_to_docx.upload_text_single': 'Sleep en zet uw CSV-bestand hier neer of klik om te bladeren',
+      'csv_to_docx.upload_text_batch': 'Selecteer meerdere CSV-bestanden om ze allemaal tegelijk te converteren',
+      'csv_to_docx.preview': 'Voorbeeld',
+      'csv_to_docx.selected_files': 'Geselecteerde Bestanden',
+      'csv_to_docx.total_size': 'Totale grootte',
+      'csv_to_docx.convert_to_docx': 'Converteer naar DOCX',
+      'csv_to_docx.convert_files': 'Converteer {{count}} Bestanden',
+      'csv_to_docx.conversion_complete': 'Conversie Voltooid!',
+      'csv_to_docx.batch_conversion_complete': 'Batchconversie Voltooid',
+      'csv_to_docx.success_message': 'Uw CSV-bestand is succesvol geconverteerd naar DOCX-formaat.',
+      'csv_to_docx.download_docx': 'Download DOCX Bestand',
+      'csv_to_docx.sidebar_title': 'Waarom Onze Converter Kiezen?',
+      'csv_to_docx.feature_1': 'Tabelformatering en styling',
+      'csv_to_docx.feature_2': 'Professionele documentlay-out',
+      'csv_to_docx.feature_3': 'Microsoft Word-compatibiliteit',
+      'csv_to_docx.feature_4': 'Aanpasbare formateringsopties',
+      'csv_to_docx.feature_5': 'Batchconversie-ondersteuning',
+      'csv_to_docx.feature_6': 'Hoge kwaliteit output',
+      'csv_to_docx.why_convert_title': 'Waarom CSV naar DOCX Converteren?',
+      'csv_to_docx.seo_intro': 'Het converteren van CSV-bestanden naar Microsoft Word DOCX-formaat is essentieel voor rapportgeneratie, datapresentatie en professionele documentatie. Hoewel CSV-bestanden uitstekend zijn voor gegevensopslag en -analyse, biedt DOCX-formaat professionele formatering, tabelstyling en documentlay-outmogelijkheden die essentieel zijn voor bedrijfsrapporten, academische documenten en klantleveringen.',
+      'csv_to_docx.benefits_title': 'Belangrijkste Voordelen van DOCX-formaat',
+      'csv_to_docx.benefit_formatting_title': 'Professionele Formatering',
+      'csv_to_docx.benefit_formatting_text': 'DOCX-formaat biedt professionele tabelformatering, stylingopties en documentlay-outmogelijkheden die uw datapresentatie gepolijst en professioneel maken.',
+      'csv_to_docx.benefit_compatibility_title': 'Microsoft Word-compatibiliteit',
+      'csv_to_docx.benefit_compatibility_text': 'DOCX-bestanden zijn volledig compatibel met Microsoft Word en andere tekstverwerkers, waardoor uw documenten kunnen worden geopend, bewerkt en gedeeld op verschillende platforms.',
+      'csv_to_docx.benefit_styling_title': 'Tabelstylingopties',
+      'csv_to_docx.benefit_styling_text': 'DOCX-formaat biedt verschillende tabelstylingopties, waaronder randen, kleuren, lettertypen en lay-outs die de visuele presentatie van uw tabelgegevens verbeteren.',
+      'csv_to_docx.benefit_management_title': 'Documentbeheer',
+      'csv_to_docx.benefit_management_text': 'DOCX-formaat integreert naadloos met documentbeheersystemen, waardoor het eenvoudig is om uw geconverteerde documenten te organiseren, archiveren en op te halen.',
+      'csv_to_docx.use_cases_title': 'Veelvoorkomende Gebruikssituaties',
+      'csv_to_docx.use_case_reports_title': 'Rapportgeneratie',
+      'csv_to_docx.use_case_reports_text': 'Converteer CSV-gegevens naar DOCX-formaat voor uitgebreide bedrijfsrapporten, financiële samenvattingen en analytische documenten met professionele formatering.',
+      'csv_to_docx.use_case_presentation_title': 'Datapresentatie',
+      'csv_to_docx.use_case_presentation_text': 'Transformeer ruwe CSV-gegevens naar goed geformatteerde DOCX-documenten voor presentaties, vergaderingen en stakeholdercommunicatie.',
+      'csv_to_docx.use_case_business_title': 'Bedrijfsdocumentatie',
+      'csv_to_docx.use_case_business_text': 'Maak professionele bedrijfsdocumenten door CSV-gegevens naar DOCX-formaat te converteren voor contracten, voorstellen en officiële communicatie.',
+      'csv_to_docx.use_case_academic_title': 'Academische Documenten',
+      'csv_to_docx.use_case_academic_text': 'Converteer onderzoeksgegevens van CSV naar DOCX-formaat voor academische documenten, scripties en onderzoeksrapporten met juiste formatering en citaten.',
+      'csv_to_docx.ready_title': 'Klaar om Uw CSV-bestanden te Converteren?',
+      'csv_to_docx.ready_text': 'Gebruik onze gratis online CSV naar DOCX-converter om uw tabelgegevens te transformeren naar professionele Word-documenten.',
       // CSV to EPUB
       'csv_to_epub.title': 'CSV naar EPUB Converter',
       'csv_to_epub.subtitle': 'Converteer CSV-gegevens naar EPUB e-boekformaat voor lezen op e-readers.',
@@ -22145,9 +22409,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Pipelines de Conteúdo',
       'heif_to_jpg.seo.use_case_2_text': 'Padronize imagens como JPG para processamento previsível em pipelines de automação, fluxos de trabalho de design e sistemas de gerenciamento de conteúdo. Ideal para processamento em lote e formatação de saída consistente.',
 
-      // CSV to DOCX
+      // CSV to DOCX - Portuguese
       'csv_to_docx.title': 'Conversor CSV para DOCX',
-      'csv_to_docx.subtitle': 'Converta arquivos CSV para o formato de documento Word DOCX para edição e compartilhamento profissional.',
+      'csv_to_docx.meta_title': 'Conversor CSV para DOCX Gratuito Online - Converta CSV para Documentos Word Instantaneamente',
+      'csv_to_docx.meta_description': 'Converta arquivos CSV para documentos Word DOCX online gratuitamente. Transforme dados de planilha em documentos Word profissionais com formatação de tabela, estilo e layout. Rápido, seguro, suporte a conversão em lote. Nenhum registro necessário.',
+      'csv_to_docx.subtitle': 'Converta arquivos CSV para o formato Microsoft Word DOCX. Transforme dados tabulares em documentos formatados para relatórios e apresentações com estilo profissional.',
+      'csv_to_docx.upload_single': 'Enviar Arquivo CSV',
+      'csv_to_docx.upload_batch': 'Enviar Múltiplos Arquivos CSV',
+      'csv_to_docx.upload_text_single': 'Arraste e solte seu arquivo CSV aqui ou clique para navegar',
+      'csv_to_docx.upload_text_batch': 'Selecione vários arquivos CSV para convertê-los todos de uma vez',
+      'csv_to_docx.preview': 'Visualização',
+      'csv_to_docx.selected_files': 'Arquivos Selecionados',
+      'csv_to_docx.total_size': 'Tamanho total',
+      'csv_to_docx.convert_to_docx': 'Converter para DOCX',
+      'csv_to_docx.convert_files': 'Converter {{count}} Arquivos',
+      'csv_to_docx.conversion_complete': 'Conversão Concluída!',
+      'csv_to_docx.batch_conversion_complete': 'Conversão em Lote Concluída',
+      'csv_to_docx.success_message': 'Seu arquivo CSV foi convertido com sucesso para o formato DOCX.',
+      'csv_to_docx.download_docx': 'Baixar Arquivo DOCX',
+      'csv_to_docx.sidebar_title': 'Por Que Escolher Nosso Conversor?',
+      'csv_to_docx.feature_1': 'Formatação e estilo de tabela',
+      'csv_to_docx.feature_2': 'Layout de documento profissional',
+      'csv_to_docx.feature_3': 'Compatibilidade com Microsoft Word',
+      'csv_to_docx.feature_4': 'Opções de formatação personalizáveis',
+      'csv_to_docx.feature_5': 'Suporte a conversão em lote',
+      'csv_to_docx.feature_6': 'Saída de alta qualidade',
+      'csv_to_docx.why_convert_title': 'Por Que Converter CSV para DOCX?',
+      'csv_to_docx.seo_intro': 'Converter arquivos CSV para o formato Microsoft Word DOCX é essencial para geração de relatórios, apresentação de dados e documentação profissional. Embora os arquivos CSV sejam excelentes para armazenamento e análise de dados, o formato DOCX fornece formatação profissional, estilo de tabela e capacidades de layout de documento que são essenciais para relatórios comerciais, documentos acadêmicos e entregas para clientes.',
+      'csv_to_docx.benefits_title': 'Principais Benefícios do Formato DOCX',
+      'csv_to_docx.benefit_formatting_title': 'Formatação Profissional',
+      'csv_to_docx.benefit_formatting_text': 'O formato DOCX fornece formatação de tabela profissional, opções de estilo e capacidades de layout de documento que tornam sua apresentação de dados polida e profissional.',
+      'csv_to_docx.benefit_compatibility_title': 'Compatibilidade com Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'Os arquivos DOCX são totalmente compatíveis com Microsoft Word e outros processadores de texto, garantindo que seus documentos possam ser abertos, editados e compartilhados em diferentes plataformas.',
+      'csv_to_docx.benefit_styling_title': 'Opções de Estilo de Tabela',
+      'csv_to_docx.benefit_styling_text': 'O formato DOCX oferece várias opções de estilo de tabela, incluindo bordas, cores, fontes e layouts que melhoram a apresentação visual dos seus dados tabulares.',
+      'csv_to_docx.benefit_management_title': 'Gerenciamento de Documentos',
+      'csv_to_docx.benefit_management_text': 'O formato DOCX se integra perfeitamente com sistemas de gerenciamento de documentos, facilitando a organização, arquivamento e recuperação dos seus documentos convertidos.',
+      'csv_to_docx.use_cases_title': 'Casos de Uso Comuns',
+      'csv_to_docx.use_case_reports_title': 'Geração de Relatórios',
+      'csv_to_docx.use_case_reports_text': 'Converta dados CSV para o formato DOCX para relatórios comerciais abrangentes, resumos financeiros e documentos analíticos com formatação profissional.',
+      'csv_to_docx.use_case_presentation_title': 'Apresentação de Dados',
+      'csv_to_docx.use_case_presentation_text': 'Transforme dados CSV brutos em documentos DOCX bem formatados para apresentações, reuniões e comunicações com partes interessadas.',
+      'csv_to_docx.use_case_business_title': 'Documentação Comercial',
+      'csv_to_docx.use_case_business_text': 'Crie documentos comerciais profissionais convertendo dados CSV para o formato DOCX para contratos, propostas e comunicações oficiais.',
+      'csv_to_docx.use_case_academic_title': 'Documentos Acadêmicos',
+      'csv_to_docx.use_case_academic_text': 'Converta dados de pesquisa de CSV para o formato DOCX para documentos acadêmicos, teses e relatórios de pesquisa com formatação e citações apropriadas.',
+      'csv_to_docx.ready_title': 'Pronto para Converter Seus Arquivos CSV?',
+      'csv_to_docx.ready_text': 'Use nosso conversor CSV para DOCX online gratuito para transformar seus dados tabulares em documentos Word profissionais.',
       // CSV to EPUB
       'csv_to_epub.title': 'Conversor CSV para EPUB',
       'csv_to_epub.subtitle': 'Converta dados CSV para o formato de ebook EPUB para leitura em leitores eletrônicos.',
@@ -23080,9 +23388,53 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_title': 'Đường Ống Nội Dung',
       'heif_to_jpg.seo.use_case_2_text': 'Chuẩn hóa hình ảnh dưới dạng JPG để xử lý có thể dự đoán trong đường ống tự động hóa, quy trình làm việc thiết kế và hệ thống quản lý nội dung. Lý tưởng cho xử lý hàng loạt và định dạng đầu ra nhất quán.',
 
-      // CSV to DOCX
+      // CSV to DOCX - Vietnamese
       'csv_to_docx.title': 'Chuyển Đổi CSV sang DOCX',
-      'csv_to_docx.subtitle': 'Chuyển đổi tệp CSV sang định dạng tài liệu Word DOCX để chỉnh sửa và chia sẻ chuyên nghiệp.',
+      'csv_to_docx.meta_title': 'Chuyển Đổi CSV sang DOCX Miễn Phí Online - Chuyển Đổi CSV sang Tài Liệu Word Ngay Lập Tức',
+      'csv_to_docx.meta_description': 'Chuyển đổi tệp CSV sang tài liệu Word DOCX online miễn phí. Chuyển đổi dữ liệu bảng tính thành tài liệu Word chuyên nghiệp với định dạng bảng, kiểu dáng và bố cục. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Không cần đăng ký.',
+      'csv_to_docx.subtitle': 'Chuyển đổi tệp CSV sang định dạng Microsoft Word DOCX. Chuyển đổi dữ liệu bảng thành tài liệu được định dạng cho báo cáo và trình bày với kiểu dáng chuyên nghiệp.',
+      'csv_to_docx.upload_single': 'Tải Lên Tệp CSV',
+      'csv_to_docx.upload_batch': 'Tải Lên Nhiều Tệp CSV',
+      'csv_to_docx.upload_text_single': 'Kéo và thả tệp CSV của bạn vào đây hoặc nhấp để duyệt',
+      'csv_to_docx.upload_text_batch': 'Chọn nhiều tệp CSV để chuyển đổi tất cả cùng một lúc',
+      'csv_to_docx.preview': 'Xem Trước',
+      'csv_to_docx.selected_files': 'Tệp Đã Chọn',
+      'csv_to_docx.total_size': 'Kích thước tổng',
+      'csv_to_docx.convert_to_docx': 'Chuyển Đổi sang DOCX',
+      'csv_to_docx.convert_files': 'Chuyển Đổi {{count}} Tệp',
+      'csv_to_docx.conversion_complete': 'Chuyển Đổi Hoàn Tất!',
+      'csv_to_docx.batch_conversion_complete': 'Chuyển Đổi Hàng Loạt Hoàn Tất',
+      'csv_to_docx.success_message': 'Tệp CSV của bạn đã được chuyển đổi thành công sang định dạng DOCX.',
+      'csv_to_docx.download_docx': 'Tải Xuống Tệp DOCX',
+      'csv_to_docx.sidebar_title': 'Tại Sao Chọn Bộ Chuyển Đổi Của Chúng Tôi?',
+      'csv_to_docx.feature_1': 'Định dạng và kiểu dáng bảng',
+      'csv_to_docx.feature_2': 'Bố cục tài liệu chuyên nghiệp',
+      'csv_to_docx.feature_3': 'Tương thích Microsoft Word',
+      'csv_to_docx.feature_4': 'Tùy chọn định dạng có thể tùy chỉnh',
+      'csv_to_docx.feature_5': 'Hỗ trợ chuyển đổi hàng loạt',
+      'csv_to_docx.feature_6': 'Đầu ra chất lượng cao',
+      'csv_to_docx.why_convert_title': 'Tại Sao Chuyển Đổi CSV sang DOCX?',
+      'csv_to_docx.seo_intro': 'Chuyển đổi tệp CSV sang định dạng Microsoft Word DOCX là điều cần thiết cho việc tạo báo cáo, trình bày dữ liệu và tài liệu chuyên nghiệp. Trong khi tệp CSV rất tốt cho việc lưu trữ và phân tích dữ liệu, định dạng DOCX cung cấp định dạng chuyên nghiệp, kiểu dáng bảng và khả năng bố cục tài liệu cần thiết cho báo cáo kinh doanh, tài liệu học thuật và giao hàng cho khách hàng.',
+      'csv_to_docx.benefits_title': 'Lợi Ích Chính Của Định Dạng DOCX',
+      'csv_to_docx.benefit_formatting_title': 'Định Dạng Chuyên Nghiệp',
+      'csv_to_docx.benefit_formatting_text': 'Định dạng DOCX cung cấp định dạng bảng chuyên nghiệp, tùy chọn kiểu dáng và khả năng bố cục tài liệu làm cho việc trình bày dữ liệu của bạn trông chuyên nghiệp và tinh tế.',
+      'csv_to_docx.benefit_compatibility_title': 'Tương Thích Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'Tệp DOCX hoàn toàn tương thích với Microsoft Word và các trình xử lý văn bản khác, đảm bảo tài liệu của bạn có thể được mở, chỉnh sửa và chia sẻ trên các nền tảng khác nhau.',
+      'csv_to_docx.benefit_styling_title': 'Tùy Chọn Kiểu Dáng Bảng',
+      'csv_to_docx.benefit_styling_text': 'Định dạng DOCX cung cấp nhiều tùy chọn kiểu dáng bảng bao gồm viền, màu sắc, phông chữ và bố cục giúp cải thiện việc trình bày trực quan dữ liệu bảng của bạn.',
+      'csv_to_docx.benefit_management_title': 'Quản Lý Tài Liệu',
+      'csv_to_docx.benefit_management_text': 'Định dạng DOCX tích hợp liền mạch với các hệ thống quản lý tài liệu, giúp dễ dàng tổ chức, lưu trữ và truy xuất các tài liệu đã chuyển đổi của bạn.',
+      'csv_to_docx.use_cases_title': 'Trường Hợp Sử Dụng Phổ Biến',
+      'csv_to_docx.use_case_reports_title': 'Tạo Báo Cáo',
+      'csv_to_docx.use_case_reports_text': 'Chuyển đổi dữ liệu CSV sang định dạng DOCX cho báo cáo kinh doanh toàn diện, tóm tắt tài chính và tài liệu phân tích với định dạng chuyên nghiệp.',
+      'csv_to_docx.use_case_presentation_title': 'Trình Bày Dữ Liệu',
+      'csv_to_docx.use_case_presentation_text': 'Chuyển đổi dữ liệu CSV thô thành tài liệu DOCX được định dạng tốt cho trình bày, cuộc họp và giao tiếp với các bên liên quan.',
+      'csv_to_docx.use_case_business_title': 'Tài Liệu Kinh Doanh',
+      'csv_to_docx.use_case_business_text': 'Tạo tài liệu kinh doanh chuyên nghiệp bằng cách chuyển đổi dữ liệu CSV sang định dạng DOCX cho hợp đồng, đề xuất và giao tiếp chính thức.',
+      'csv_to_docx.use_case_academic_title': 'Tài Liệu Học Thuật',
+      'csv_to_docx.use_case_academic_text': 'Chuyển đổi dữ liệu nghiên cứu từ CSV sang định dạng DOCX cho tài liệu học thuật, luận văn và báo cáo nghiên cứu với định dạng và trích dẫn phù hợp.',
+      'csv_to_docx.ready_title': 'Sẵn Sàng Chuyển Đổi Tệp CSV Của Bạn?',
+      'csv_to_docx.ready_text': 'Sử dụng bộ chuyển đổi CSV sang DOCX online miễn phí của chúng tôi để chuyển đổi dữ liệu bảng của bạn thành tài liệu Word chuyên nghiệp.',
       // CSV to EPUB
       'csv_to_epub.title': 'Chuyển Đổi CSV sang EPUB',
       'csv_to_epub.subtitle': 'Chuyển đổi dữ liệu CSV sang định dạng sách điện tử EPUB để đọc trên thiết bị đọc sách điện tử.',
@@ -24014,6 +24366,192 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Modern formatları desteklemeyen sistemler için HEIF\'i JPG\'ye dönüştürün, örneğin eski CMS, e-posta istemcileri, görüntüleyiciler ve eski uygulamalar. Tüm platformlarda maksimum uyumluluk sağlayın.',
       'heif_to_jpg.seo.use_case_2_title': 'İçerik Boru Hatları',
       'heif_to_jpg.seo.use_case_2_text': 'Otomasyon boru hatları, tasarım iş akışları ve içerik yönetim sistemlerinde öngörülebilir işleme için görüntüleri JPG olarak standartlaştırın. Toplu işleme ve tutarlı çıktı formatlaması için idealdir.',
+
+      // CSV to DOCX - Turkish
+      'csv_to_docx.title': 'CSV\'den DOCX\'e Dönüştürücü',
+      'csv_to_docx.meta_title': 'Ücretsiz CSV\'den DOCX\'e Dönüştürücü Online - CSV\'yi Word Belgelerine Anında Dönüştür',
+      'csv_to_docx.meta_description': 'CSV dosyalarını DOCX Word belgelerine online ücretsiz dönüştürün. Elektronik tablo verilerini tablo formatlaması, stil ve düzen ile profesyonel Word belgelerine dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. Kayıt gerekmez.',
+      'csv_to_docx.subtitle': 'CSV dosyalarını Microsoft Word DOCX formatına dönüştürün. Tablo verilerini raporlar ve sunumlar için profesyonel stillendirme ile formatlanmış belgelere dönüştürün.',
+      'csv_to_docx.upload_single': 'CSV Dosyası Yükle',
+      'csv_to_docx.upload_batch': 'Birden Fazla CSV Dosyası Yükle',
+      'csv_to_docx.upload_text_single': 'CSV dosyanızı buraya sürükleyip bırakın veya göz atmak için tıklayın',
+      'csv_to_docx.upload_text_batch': 'Hepsini aynı anda dönüştürmek için birden fazla CSV dosyası seçin',
+      'csv_to_docx.preview': 'Önizleme',
+      'csv_to_docx.selected_files': 'Seçilen Dosyalar',
+      'csv_to_docx.total_size': 'Toplam boyut',
+      'csv_to_docx.convert_to_docx': 'DOCX\'e Dönüştür',
+      'csv_to_docx.convert_files': '{{count}} Dosya Dönüştür',
+      'csv_to_docx.conversion_complete': 'Dönüştürme Tamamlandı!',
+      'csv_to_docx.batch_conversion_complete': 'Toplu Dönüştürme Tamamlandı',
+      'csv_to_docx.success_message': 'CSV dosyanız başarıyla DOCX formatına dönüştürüldü.',
+      'csv_to_docx.download_docx': 'DOCX Dosyasını İndir',
+      'csv_to_docx.sidebar_title': 'Neden Dönüştürücümüzü Seçmelisiniz?',
+      'csv_to_docx.feature_1': 'Tablo formatlaması ve stillendirme',
+      'csv_to_docx.feature_2': 'Profesyonel belge düzeni',
+      'csv_to_docx.feature_3': 'Microsoft Word uyumluluğu',
+      'csv_to_docx.feature_4': 'Özelleştirilebilir formatlama seçenekleri',
+      'csv_to_docx.feature_5': 'Toplu dönüştürme desteği',
+      'csv_to_docx.feature_6': 'Yüksek kaliteli çıktı',
+      'csv_to_docx.why_convert_title': 'Neden CSV\'yi DOCX\'e Dönüştürmelisiniz?',
+      'csv_to_docx.seo_intro': 'CSV dosyalarını Microsoft Word DOCX formatına dönüştürmek, rapor oluşturma, veri sunumu ve profesyonel dokümantasyon için gereklidir. CSV dosyaları veri depolama ve analiz için mükemmel olsa da, DOCX formatı iş raporları, akademik belgeler ve müşteri teslimatları için gerekli olan profesyonel formatlama, tablo stillendirme ve belge düzeni yetenekleri sağlar.',
+      'csv_to_docx.benefits_title': 'DOCX Formatının Temel Avantajları',
+      'csv_to_docx.benefit_formatting_title': 'Profesyonel Formatlama',
+      'csv_to_docx.benefit_formatting_text': 'DOCX formatı, veri sunumunuzu cilalı ve profesyonel görünmesini sağlayan profesyonel tablo formatlaması, stil seçenekleri ve belge düzeni yetenekleri sağlar.',
+      'csv_to_docx.benefit_compatibility_title': 'Microsoft Word Uyumluluğu',
+      'csv_to_docx.benefit_compatibility_text': 'DOCX dosyaları Microsoft Word ve diğer kelime işlemcilerle tamamen uyumludur, belgelerinizin farklı platformlarda açılabileceğini, düzenlenebileceğini ve paylaşılabileceğini garanti eder.',
+      'csv_to_docx.benefit_styling_title': 'Tablo Stil Seçenekleri',
+      'csv_to_docx.benefit_styling_text': 'DOCX formatı, tablo verilerinizin görsel sunumunu geliştiren kenarlıklar, renkler, yazı tipleri ve düzenler dahil olmak üzere çeşitli tablo stil seçenekleri sunar.',
+      'csv_to_docx.benefit_management_title': 'Belge Yönetimi',
+      'csv_to_docx.benefit_management_text': 'DOCX formatı, dönüştürülmüş belgelerinizi organize etmeyi, arşivlemeyi ve almayı kolaylaştıran belge yönetim sistemleriyle sorunsuz bir şekilde entegre olur.',
+      'csv_to_docx.use_cases_title': 'Yaygın Kullanım Durumları',
+      'csv_to_docx.use_case_reports_title': 'Rapor Oluşturma',
+      'csv_to_docx.use_case_reports_text': 'Kapsamlı iş raporları, finansal özetler ve profesyonel formatlamalı analitik belgeler için CSV verilerini DOCX formatına dönüştürün.',
+      'csv_to_docx.use_case_presentation_title': 'Veri Sunumu',
+      'csv_to_docx.use_case_presentation_text': 'Sunumlar, toplantılar ve paydaş iletişimi için ham CSV verilerini iyi formatlanmış DOCX belgelerine dönüştürün.',
+      'csv_to_docx.use_case_business_title': 'İş Dokümantasyonu',
+      'csv_to_docx.use_case_business_text': 'Sözleşmeler, teklifler ve resmi iletişimler için CSV verilerini DOCX formatına dönüştürerek profesyonel iş belgeleri oluşturun.',
+      'csv_to_docx.use_case_academic_title': 'Akademik Belgeler',
+      'csv_to_docx.use_case_academic_text': 'Uygun formatlama ve alıntılarla akademik belgeler, tezler ve araştırma raporları için araştırma verilerini CSV\'den DOCX formatına dönüştürün.',
+      'csv_to_docx.ready_title': 'CSV Dosyalarınızı Dönüştürmeye Hazır mısınız?',
+      'csv_to_docx.ready_text': 'Tablo verilerinizi profesyonel Word belgelerine dönüştürmek için ücretsiz online CSV\'den DOCX\'e dönüştürücümüzü kullanın.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'CSV\'den EPUB\'a Dönüştürücü',
+      'csv_to_epub.subtitle': 'CSV verilerini e-okuyucularda okumak için EPUB e-kitap formatına dönüştürün.',
+      // CSV to HTML
+      'csv_to_html.title': 'CSV\'den HTML\'e Dönüştürücü',
+      'csv_to_html.subtitle': 'CSV dosyalarını web tarayıcılarında görüntülemek için HTML formatına dönüştürün.',
+      // CSV to MD
+      'csv_to_md.title': 'CSV\'den MD\'ye Dönüştürücü',
+      'csv_to_md.subtitle': 'CSV dosyalarını dokümantasyon ve metin düzenleme için Markdown formatına dönüştürün.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'CSV\'den MOBI\'ye Dönüştürücü',
+      'csv_to_mobi.subtitle': 'CSV verilerini Kindle cihazları ve e-okuyucular için MOBI e-kitap formatına dönüştürün.',
+      // CSV to ODP
+      'csv_to_odp.title': 'CSV\'den ODP\'ye Dönüştürücü',
+      'csv_to_odp.subtitle': 'CSV dosyalarını OpenDocument ODP sunum formatına dönüştürün.',
+      // CSV to ODT
+      'csv_to_odt.title': 'CSV\'den ODT\'ye Dönüştürücü',
+      'csv_to_odt.subtitle': 'CSV dosyalarını OpenDocument ODT belge formatına dönüştürün.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'CSV\'den PDF\'ye Dönüştürücü',
+      'csv_to_pdf.subtitle': 'CSV dosyalarını evrensel paylaşım ve yazdırma için PDF formatına dönüştürün.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'CSV\'den PPT\'ye Dönüştürücü',
+      'csv_to_ppt.subtitle': 'CSV dosyalarını PowerPoint PPT sunum formatına dönüştürün.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'CSV\'den PPTX\'e Dönüştürücü',
+      'csv_to_pptx.subtitle': 'CSV dosyalarını modern PowerPoint PPTX sunum formatına dönüştürün.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'CSV\'den RTF\'ye Dönüştürücü',
+      'csv_to_rtf.subtitle': 'CSV dosyalarını Rich Text Format RTF belge formatına dönüştürün.',
+      // CSV to TXT
+      'csv_to_txt.title': 'CSV\'den TXT\'ye Dönüştürücü',
+      'csv_to_txt.subtitle': 'CSV dosyalarını evrensel uyumluluk için düz metin TXT formatına dönüştürün.',
+      // CSV to XLS
+      'csv_to_xls.title': 'CSV\'den XLS\'ye Dönüştürücü',
+      'csv_to_xls.subtitle': 'CSV dosyalarını Excel XLS elektronik tablo formatına dönüştürün.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'CSV\'den XLSX\'e Dönüştürücü',
+      'csv_to_xlsx.subtitle': 'CSV dosyalarını modern Excel XLSX elektronik tablo formatına dönüştürün.',
+      // CSV to JSON
+      'csv_to_json.title': 'CSV\'den JSON\'a Dönüştürücü',
+      'csv_to_json.subtitle': 'CSV dosyalarını web geliştirme ve API\'ler için JSON formatına dönüştürün.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'CSV\'den NDJSON\'a Dönüştürücü',
+      'csv_to_ndjson.subtitle': 'CSV dosyalarını veri akışı için NDJSON (Newline Delimited JSON) formatına dönüştürün.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'CSV\'den Parquet\'e Dönüştürücü',
+      'csv_to_parquet.subtitle': 'CSV dosyalarını verimli veri analizi için Parquet formatına dönüştürün.',
+      // CSV to SQL
+      'csv_to_sql.title': 'CSV\'den SQL\'e Dönüştürücü',
+      'csv_to_sql.subtitle': 'CSV dosyalarını veritabanı içe aktarma için SQL ifadelerine dönüştürün.',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSV\'den TOML\'ye Dönüştürücü',
+      'csv_to_toml.subtitle': 'CSV dosyalarını yapılandırma dosyaları için TOML formatına dönüştürün.',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV\'den XML\'e Dönüştürücü',
+      'csv_to_xml.subtitle': 'CSV dosyalarını yapılandırılmış veri değişimi için XML formatına dönüştürün.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV\'den YAML\'e Dönüştürücü',
+      'csv_to_yaml.subtitle': 'CSV dosyalarını yapılandırma ve yapılandırılmış veriler için YAML formatına dönüştürün.',
+      // DNG to WebP
+      'dng_to_webp.title': 'DNG\'den WebP\'ye Dönüştürücü',
+      'dng_to_webp.subtitle': 'DNG RAW görüntü dosyalarını web için optimize edilmiş WebP formatına dönüştürün.',
+      // EPS to WebP
+      'eps_to_webp.title': 'EPS\'den WebP\'ye Dönüştürücü',
+      'eps_to_webp.subtitle': 'EPS vektör grafik dosyalarını web ve uygulamalar için WebP formatına dönüştürün.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'EPUB\'dan CSV\'ye Dönüştürücü',
+      'epub_to_csv.subtitle': 'EPUB e-kitap dosyalarını veri analizi için CSV formatına dönüştürün.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'EPUB\'dan DOC\'a Dönüştürücü',
+      'epub_to_doc.subtitle': 'EPUB e-kitap dosyalarını Word DOC belge formatına dönüştürün.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'EPUB\'dan DOCX\'e Dönüştürücü',
+      'epub_to_docx.subtitle': 'EPUB e-kitap dosyalarını modern Word DOCX belge formatına dönüştürün.',
+      // EPUB to HTML
+      'epub_to_html.title': 'EPUB\'dan HTML\'e Dönüştürücü',
+      'epub_to_html.subtitle': 'EPUB e-kitap dosyalarını web için HTML formatına dönüştürün.',
+      // EPUB to MD
+      'epub_to_md.title': 'EPUB\'dan MD\'ye Dönüştürücü',
+      'epub_to_md.subtitle': 'EPUB e-kitap dosyalarını dokümantasyon için Markdown formatına dönüştürün.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'EPUB\'dan MOBI\'ye Dönüştürücü',
+      'epub_to_mobi.subtitle': 'EPUB e-kitap dosyalarını Kindle cihazları için MOBI formatına dönüştürün.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'EPUB\'dan ODP\'ye Dönüştürücü',
+      'epub_to_odp.subtitle': 'EPUB e-kitap dosyalarını OpenDocument ODP sunum formatına dönüştürün.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'EPUB\'dan ODT\'ye Dönüştürücü',
+      'epub_to_odt.subtitle': 'EPUB e-kitap dosyalarını OpenDocument ODT belge formatına dönüştürün.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'EPUB\'dan PDF\'ye Dönüştürücü',
+      'epub_to_pdf.subtitle': 'EPUB e-kitap dosyalarını evrensel paylaşım ve yazdırma için PDF formatına dönüştürün.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'EPUB\'dan PPT\'ye Dönüştürücü',
+      'epub_to_ppt.subtitle': 'EPUB e-kitap dosyalarını PowerPoint PPT sunum formatına dönüştürün.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'EPUB\'dan PPTX\'e Dönüştürücü',
+      'epub_to_pptx.subtitle': 'EPUB e-kitap dosyalarını modern PowerPoint PPTX sunum formatına dönüştürün.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'EPUB\'dan RTF\'ye Dönüştürücü',
+      'epub_to_rtf.subtitle': 'EPUB e-kitap dosyalarını Rich Text Format RTF belge formatına dönüştürün.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'EPUB\'dan TXT\'ye Dönüştürücü',
+      'epub_to_txt.subtitle': 'EPUB e-kitap dosyalarını düz metin TXT formatına dönüştürün.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'EPUB\'dan XLSX\'e Dönüştürücü',
+      'epub_to_xlsx.subtitle': 'EPUB e-kitap dosyalarını Excel XLSX elektronik tablo formatına dönüştürün.',
+      // DOC to CSV
+      'doc_to_csv.title': 'DOC\'tan CSV\'ye Dönüştürücü',
+      'doc_to_csv.subtitle': 'Word DOC belge dosyalarını veri analizi için CSV formatına dönüştürün.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'DOC\'tan EPUB\'a Dönüştürücü',
+      'doc_to_epub.subtitle': 'Word DOC belge dosyalarını EPUB e-kitap formatına dönüştürün.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'DOC\'tan MOBI\'ye Dönüştürücü',
+      'doc_to_mobi.subtitle': 'Word DOC belge dosyalarını MOBI e-kitap formatına dönüştürün.',
+      // DOC to ODT
+      'doc_to_odt.title': 'DOC\'tan ODT\'ye Dönüştürücü',
+      'doc_to_odt.subtitle': 'Word DOC belge dosyalarını OpenDocument ODT formatına dönüştürün.',
+      // DOC to TXT
+      'doc_to_txt.title': 'DOC\'tan TXT\'ye Dönüştürücü',
+      'doc_to_txt.subtitle': 'Word DOC belge dosyalarını düz metin TXT formatına dönüştürün.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'DOCX\'ten CSV\'ye Dönüştürücü',
+      'docx_to_csv.subtitle': 'Word DOCX belge dosyalarını veri analizi için CSV formatına dönüştürün.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'DOCX\'ten EPUB\'a Dönüştürücü',
+      'docx_to_epub.subtitle': 'Word DOCX belge dosyalarını EPUB e-kitap formatına dönüştürün.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'DOCX\'ten MOBI\'ye Dönüştürücü',
+      'docx_to_mobi.subtitle': 'Word DOCX belge dosyalarını MOBI e-kitap formatına dönüştürün.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'DOCX\'ten ODT\'ye Dönüştürücü',
+      'docx_to_odt.subtitle': 'Word DOCX belge dosyalarını OpenDocument ODT formatına dönüştürün.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'DOCX\'ten TXT\'ye Dönüştürücü',
+      'docx_to_txt.subtitle': 'Word DOCX belge dosyalarını düz metin TXT formatına dönüştürün.',
     }
   },
   ru: {
@@ -24807,6 +25345,191 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'Конвертируйте HEIF в JPG для систем, которые не поддерживают современные форматы, таких как старые CMS, почтовые клиенты, просмотрщики и устаревшие приложения. Обеспечьте максимальную совместимость на всех платформах.',
       'heif_to_jpg.seo.use_case_2_title': 'Конвейеры Контента',
       'heif_to_jpg.seo.use_case_2_text': 'Стандартизируйте изображения как JPG для предсказуемой обработки в конвейерах автоматизации, рабочих процессах дизайна и системах управления контентом. Идеально для пакетной обработки и согласованного форматирования вывода.',
+
+      // CSV to DOCX - Russian
+      'csv_to_docx.title': 'Конвертер CSV в DOCX',
+      'csv_to_docx.meta_title': 'Бесплатный Конвертер CSV в DOCX Онлайн - Конвертируйте CSV в Документы Word Мгновенно',
+      'csv_to_docx.meta_description': 'Конвертируйте файлы CSV в документы Word DOCX онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные документы Word с форматированием таблиц, стилями и макетом. Быстро, безопасно, поддержка пакетной конвертации. Регистрация не требуется.',
+      'csv_to_docx.subtitle': 'Конвертируйте файлы CSV в формат Microsoft Word DOCX. Преобразуйте табличные данные в отформатированные документы для отчетов и презентаций с профессиональным стилем.',
+      'csv_to_docx.upload_single': 'Загрузить Файл CSV',
+      'csv_to_docx.upload_batch': 'Загрузить Несколько Файлов CSV',
+      'csv_to_docx.upload_text_single': 'Перетащите ваш файл CSV сюда или нажмите для просмотра',
+      'csv_to_docx.upload_text_batch': 'Выберите несколько файлов CSV для конвертации всех сразу',
+      'csv_to_docx.preview': 'Предпросмотр',
+      'csv_to_docx.selected_files': 'Выбранные Файлы',
+      'csv_to_docx.total_size': 'Общий размер',
+      'csv_to_docx.convert_to_docx': 'Конвертировать в DOCX',
+      'csv_to_docx.convert_files': 'Конвертировать {{count}} Файлов',
+      'csv_to_docx.conversion_complete': 'Конвертация Завершена!',
+      'csv_to_docx.batch_conversion_complete': 'Пакетная Конвертация Завершена',
+      'csv_to_docx.success_message': 'Ваш файл CSV успешно конвертирован в формат DOCX.',
+      'csv_to_docx.download_docx': 'Скачать Файл DOCX',
+      'csv_to_docx.sidebar_title': 'Почему Выбрать Наш Конвертер?',
+      'csv_to_docx.feature_1': 'Форматирование и стилизация таблиц',
+      'csv_to_docx.feature_2': 'Профессиональный макет документа',
+      'csv_to_docx.feature_3': 'Совместимость с Microsoft Word',
+      'csv_to_docx.feature_4': 'Настраиваемые параметры форматирования',
+      'csv_to_docx.feature_5': 'Поддержка пакетной конвертации',
+      'csv_to_docx.feature_6': 'Высококачественный вывод',
+      'csv_to_docx.why_convert_title': 'Почему Конвертировать CSV в DOCX?',
+      'csv_to_docx.seo_intro': 'Конвертация файлов CSV в формат Microsoft Word DOCX необходима для создания отчетов, презентации данных и профессиональной документации. Хотя файлы CSV отлично подходят для хранения и анализа данных, формат DOCX предоставляет профессиональное форматирование, стилизацию таблиц и возможности макета документа, которые необходимы для бизнес-отчетов, академических документов и поставок клиентам.',
+      'csv_to_docx.benefits_title': 'Ключевые Преимущества Формата DOCX',
+      'csv_to_docx.benefit_formatting_title': 'Профессиональное Форматирование',
+      'csv_to_docx.benefit_formatting_text': 'Формат DOCX предоставляет профессиональное форматирование таблиц, параметры стилей и возможности макета документа, которые делают вашу презентацию данных отполированной и профессиональной.',
+      'csv_to_docx.benefit_compatibility_title': 'Совместимость с Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'Файлы DOCX полностью совместимы с Microsoft Word и другими текстовыми процессорами, гарантируя, что ваши документы могут быть открыты, отредактированы и поделены на разных платформах.',
+      'csv_to_docx.benefit_styling_title': 'Параметры Стилизации Таблиц',
+      'csv_to_docx.benefit_styling_text': 'Формат DOCX предлагает различные параметры стилизации таблиц, включая границы, цвета, шрифты и макеты, которые улучшают визуальную презентацию ваших табличных данных.',
+      'csv_to_docx.benefit_management_title': 'Управление Документами',
+      'csv_to_docx.benefit_management_text': 'Формат DOCX бесшовно интегрируется с системами управления документами, упрощая организацию, архивирование и извлечение ваших конвертированных документов.',
+      'csv_to_docx.use_cases_title': 'Распространенные Случаи Использования',
+      'csv_to_docx.use_case_reports_title': 'Создание Отчетов',
+      'csv_to_docx.use_case_reports_text': 'Конвертируйте данные CSV в формат DOCX для комплексных бизнес-отчетов, финансовых сводок и аналитических документов с профессиональным форматированием.',
+      'csv_to_docx.use_case_presentation_title': 'Презентация Данных',
+      'csv_to_docx.use_case_presentation_text': 'Преобразуйте необработанные данные CSV в хорошо отформатированные документы DOCX для презентаций, встреч и коммуникаций с заинтересованными сторонами.',
+      'csv_to_docx.use_case_business_title': 'Бизнес-Документация',
+      'csv_to_docx.use_case_business_text': 'Создавайте профессиональные бизнес-документы, конвертируя данные CSV в формат DOCX для контрактов, предложений и официальных коммуникаций.',
+      'csv_to_docx.use_case_academic_title': 'Академические Документы',
+      'csv_to_docx.use_case_academic_text': 'Конвертируйте исследовательские данные из CSV в формат DOCX для академических документов, диссертаций и исследовательских отчетов с соответствующим форматированием и цитатами.',
+      'csv_to_docx.ready_title': 'Готовы Конвертировать Ваши Файлы CSV?',
+      'csv_to_docx.ready_text': 'Используйте наш бесплатный онлайн конвертер CSV в DOCX для преобразования ваших табличных данных в профессиональные документы Word.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'Конвертер CSV в EPUB',
+      'csv_to_epub.subtitle': 'Конвертируйте данные CSV в формат электронной книги EPUB для чтения на электронных ридерах.',
+      // CSV to HTML
+      'csv_to_html.title': 'Конвертер CSV в HTML',
+      'csv_to_html.subtitle': 'Конвертируйте файлы CSV в формат HTML для отображения в веб-браузерах.',
+      // CSV to MD
+      'csv_to_md.title': 'Конвертер CSV в MD',
+      'csv_to_md.subtitle': 'Конвертируйте файлы CSV в формат Markdown для документации и редактирования текста.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'Конвертер CSV в MOBI',
+      'csv_to_mobi.subtitle': 'Конвертируйте данные CSV в формат электронной книги MOBI для устройств Kindle и электронных ридеров.',
+      // CSV to ODP
+      'csv_to_odp.title': 'Конвертер CSV в ODP',
+      'csv_to_odp.subtitle': 'Конвертируйте файлы CSV в формат презентации OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'Конвертер CSV в ODT',
+      'csv_to_odt.subtitle': 'Конвертируйте файлы CSV в формат документа OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'Конвертер CSV в PDF',
+      'csv_to_pdf.subtitle': 'Конвертируйте файлы CSV в формат PDF для универсального обмена и печати.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'Конвертер CSV в PPT',
+      'csv_to_ppt.subtitle': 'Конвертируйте файлы CSV в формат презентации PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'Конвертер CSV в PPTX',
+      'csv_to_pptx.subtitle': 'Конвертируйте файлы CSV в современный формат презентации PowerPoint PPTX.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'Конвертер CSV в RTF',
+      'csv_to_rtf.subtitle': 'Конвертируйте файлы CSV в формат документа Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'Конвертер CSV в TXT',
+      'csv_to_txt.subtitle': 'Конвертируйте файлы CSV в формат обычного текста TXT для универсальной совместимости.',
+      // CSV to XLS
+      'csv_to_xls.title': 'Конвертер CSV в XLS',
+      'csv_to_xls.subtitle': 'Конвертируйте файлы CSV в формат электронной таблицы Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'Конвертер CSV в XLSX',
+      'csv_to_xlsx.subtitle': 'Конвертируйте файлы CSV в современный формат электронной таблицы Excel XLSX.',
+      // CSV to JSON
+      'csv_to_json.title': 'Конвертер CSV в JSON',
+      'csv_to_json.subtitle': 'Конвертируйте файлы CSV в формат JSON для веб-разработки и API.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'Конвертер CSV в NDJSON',
+      'csv_to_ndjson.subtitle': 'Конвертируйте файлы CSV в формат NDJSON (Newline Delimited JSON) для потоковой передачи данных.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'Конвертер CSV в Parquet',
+      'csv_to_parquet.subtitle': 'Конвертируйте файлы CSV в формат Parquet для эффективного анализа данных.',
+      // CSV to SQL
+      'csv_to_sql.title': 'Конвертер CSV в SQL',
+      'csv_to_sql.subtitle': 'Конвертируйте файлы CSV в SQL-запросы для импорта базы данных.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Конвертер CSV в TOML',
+      'csv_to_toml.subtitle': 'Конвертируйте файлы CSV в формат TOML для файлов конфигурации.',
+      // CSV to XML
+      'csv_to_xml.title': 'Конвертер CSV в XML',
+      'csv_to_xml.subtitle': 'Конвертируйте файлы CSV в формат XML для обмена структурированными данными.',
+      'csv_to_yaml.title': 'Конвертер CSV в YAML',
+      'csv_to_yaml.subtitle': 'Конвертируйте файлы CSV в формат YAML для конфигурации и структурированных данных.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Конвертер DNG в WebP',
+      'dng_to_webp.subtitle': 'Конвертируйте файлы изображений RAW DNG в оптимизированный для веб формат WebP.',
+      // EPS to WebP
+      'eps_to_webp.title': 'Конвертер EPS в WebP',
+      'eps_to_webp.subtitle': 'Конвертируйте файлы векторной графики EPS в формат WebP для веб и приложений.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'Конвертер EPUB в CSV',
+      'epub_to_csv.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат CSV для анализа данных.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'Конвертер EPUB в DOC',
+      'epub_to_doc.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат документа Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'Конвертер EPUB в DOCX',
+      'epub_to_docx.subtitle': 'Конвертируйте файлы электронных книг EPUB в современный формат документа Word DOCX.',
+      // EPUB to HTML
+      'epub_to_html.title': 'Конвертер EPUB в HTML',
+      'epub_to_html.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат HTML для веб.',
+      // EPUB to MD
+      'epub_to_md.title': 'Конвертер EPUB в MD',
+      'epub_to_md.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат Markdown для документации.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'Конвертер EPUB в MOBI',
+      'epub_to_mobi.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат MOBI для устройств Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'Конвертер EPUB в ODP',
+      'epub_to_odp.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат презентации OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'Конвертер EPUB в ODT',
+      'epub_to_odt.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат документа OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'Конвертер EPUB в PDF',
+      'epub_to_pdf.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат PDF для универсального обмена и печати.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'Конвертер EPUB в PPT',
+      'epub_to_ppt.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат презентации PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'Конвертер EPUB в PPTX',
+      'epub_to_pptx.subtitle': 'Конвертируйте файлы электронных книг EPUB в современный формат презентации PowerPoint PPTX.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'Конвертер EPUB в RTF',
+      'epub_to_rtf.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат документа Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'Конвертер EPUB в TXT',
+      'epub_to_txt.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат обычного текста TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'Конвертер EPUB в XLSX',
+      'epub_to_xlsx.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат электронной таблицы Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'Конвертер DOC в CSV',
+      'doc_to_csv.subtitle': 'Конвертируйте файлы документов Word DOC в формат CSV для анализа данных.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'Конвертер DOC в EPUB',
+      'doc_to_epub.subtitle': 'Конвертируйте файлы документов Word DOC в формат электронной книги EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'Конвертер DOC в MOBI',
+      'doc_to_mobi.subtitle': 'Конвертируйте файлы документов Word DOC в формат электронной книги MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'Конвертер DOC в ODT',
+      'doc_to_odt.subtitle': 'Конвертируйте файлы документов Word DOC в формат OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'Конвертер DOC в TXT',
+      'doc_to_txt.subtitle': 'Конвертируйте файлы документов Word DOC в формат обычного текста TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'Конвертер DOCX в CSV',
+      'docx_to_csv.subtitle': 'Конвертируйте файлы документов Word DOCX в формат CSV для анализа данных.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'Конвертер DOCX в EPUB',
+      'docx_to_epub.subtitle': 'Конвертируйте файлы документов Word DOCX в формат электронной книги EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'Конвертер DOCX в MOBI',
+      'docx_to_mobi.subtitle': 'Конвертируйте файлы документов Word DOCX в формат электронной книги MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'Конвертер DOCX в ODT',
+      'docx_to_odt.subtitle': 'Конвертируйте файлы документов Word DOCX в формат OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'Конвертер DOCX в TXT',
+      'docx_to_txt.subtitle': 'Конвертируйте файлы документов Word DOCX в формат обычного текста TXT.',
     }
   },
   ar: {
@@ -25600,6 +26323,192 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'قم بتحويل HEIF إلى JPG للأنظمة التي لا تدعم التنسيقات الحديثة، مثل CMS القديمة وعملاء البريد الإلكتروني وعارضات الصور والتطبيقات القديمة. ضمان أقصى توافق على جميع المنصات.',
       'heif_to_jpg.seo.use_case_2_title': 'خطوط أنابيب المحتوى',
       'heif_to_jpg.seo.use_case_2_text': 'وحد الصور كـ JPG للمعالجة القابلة للتنبؤ في خطوط أنابيب الأتمتة وسير عمل التصميم وأنظمة إدارة المحتوى. مثالي للمعالجة المجمعة وتنسيق الإخراج المتسق.',
+
+      // CSV to DOCX - Arabic
+      'csv_to_docx.title': 'محول CSV إلى DOCX',
+      'csv_to_docx.meta_title': 'محول CSV إلى DOCX مجاني عبر الإنترنت - قم بتحويل CSV إلى مستندات Word على الفور',
+      'csv_to_docx.meta_description': 'قم بتحويل ملفات CSV إلى مستندات Word DOCX عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى مستندات Word احترافية مع تنسيق الجداول والأنماط والتخطيط. سريع وآمن ودعم التحويل المجمع. لا يلزم التسجيل.',
+      'csv_to_docx.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق Microsoft Word DOCX. قم بتحويل البيانات الجدولية إلى مستندات منسقة للتقارير والعروض التقديمية مع الأنماط الاحترافية.',
+      'csv_to_docx.upload_single': 'رفع ملف CSV',
+      'csv_to_docx.upload_batch': 'رفع ملفات CSV متعددة',
+      'csv_to_docx.upload_text_single': 'اسحب وأفلت ملف CSV الخاص بك هنا أو انقر للتصفح',
+      'csv_to_docx.upload_text_batch': 'حدد عدة ملفات CSV لتحويلها جميعًا في وقت واحد',
+      'csv_to_docx.preview': 'معاينة',
+      'csv_to_docx.selected_files': 'الملفات المحددة',
+      'csv_to_docx.total_size': 'الحجم الإجمالي',
+      'csv_to_docx.convert_to_docx': 'تحويل إلى DOCX',
+      'csv_to_docx.convert_files': 'تحويل {{count}} ملف',
+      'csv_to_docx.conversion_complete': 'اكتمل التحويل!',
+      'csv_to_docx.batch_conversion_complete': 'اكتمل التحويل المجمع',
+      'csv_to_docx.success_message': 'تم تحويل ملف CSV الخاص بك بنجاح إلى تنسيق DOCX.',
+      'csv_to_docx.download_docx': 'تنزيل ملف DOCX',
+      'csv_to_docx.sidebar_title': 'لماذا تختار محولنا؟',
+      'csv_to_docx.feature_1': 'تنسيق الجداول والأنماط',
+      'csv_to_docx.feature_2': 'تخطيط المستندات الاحترافي',
+      'csv_to_docx.feature_3': 'التوافق مع Microsoft Word',
+      'csv_to_docx.feature_4': 'خيارات التنسيق القابلة للتخصيص',
+      'csv_to_docx.feature_5': 'دعم التحويل المجمع',
+      'csv_to_docx.feature_6': 'إخراج عالي الجودة',
+      'csv_to_docx.why_convert_title': 'لماذا تحويل CSV إلى DOCX؟',
+      'csv_to_docx.seo_intro': 'تحويل ملفات CSV إلى تنسيق Microsoft Word DOCX ضروري لتوليد التقارير وعرض البيانات والتوثيق الاحترافي. بينما ملفات CSV ممتازة لتخزين البيانات والتحليل، يوفر تنسيق DOCX التنسيق الاحترافي وأنماط الجداول وإمكانيات تخطيط المستندات الضرورية لتقارير الأعمال والمستندات الأكاديمية والتسليمات للعملاء.',
+      'csv_to_docx.benefits_title': 'الفوائد الرئيسية لتنسيق DOCX',
+      'csv_to_docx.benefit_formatting_title': 'التنسيق الاحترافي',
+      'csv_to_docx.benefit_formatting_text': 'يوفر تنسيق DOCX تنسيق الجداول الاحترافي وخيارات الأنماط وإمكانيات تخطيط المستندات التي تجعل عرض بياناتك مصقولًا واحترافيًا.',
+      'csv_to_docx.benefit_compatibility_title': 'التوافق مع Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'ملفات DOCX متوافقة تمامًا مع Microsoft Word ومعالجات النصوص الأخرى، مما يضمن إمكانية فتح مستنداتك وتحريرها ومشاركتها على منصات مختلفة.',
+      'csv_to_docx.benefit_styling_title': 'خيارات أنماط الجداول',
+      'csv_to_docx.benefit_styling_text': 'يوفر تنسيق DOCX خيارات أنماط الجداول المختلفة بما في ذلك الحدود والألوان والخطوط والتخطيطات التي تعزز العرض المرئي لبياناتك الجدولية.',
+      'csv_to_docx.benefit_management_title': 'إدارة المستندات',
+      'csv_to_docx.benefit_management_text': 'يتكامل تنسيق DOCX بسلاسة مع أنظمة إدارة المستندات، مما يسهل تنظيم مستنداتك المحولة وأرشفتها واسترجاعها.',
+      'csv_to_docx.use_cases_title': 'حالات الاستخدام الشائعة',
+      'csv_to_docx.use_case_reports_title': 'توليد التقارير',
+      'csv_to_docx.use_case_reports_text': 'قم بتحويل بيانات CSV إلى تنسيق DOCX لتقارير الأعمال الشاملة والملخصات المالية والمستندات التحليلية مع التنسيق الاحترافي.',
+      'csv_to_docx.use_case_presentation_title': 'عرض البيانات',
+      'csv_to_docx.use_case_presentation_text': 'قم بتحويل بيانات CSV الخام إلى مستندات DOCX منسقة جيدًا للعروض التقديمية والاجتماعات والتواصل مع أصحاب المصلحة.',
+      'csv_to_docx.use_case_business_title': 'توثيق الأعمال',
+      'csv_to_docx.use_case_business_text': 'قم بإنشاء مستندات أعمال احترافية عن طريق تحويل بيانات CSV إلى تنسيق DOCX للعقود والعروض والاتصالات الرسمية.',
+      'csv_to_docx.use_case_academic_title': 'المستندات الأكاديمية',
+      'csv_to_docx.use_case_academic_text': 'قم بتحويل بيانات البحث من CSV إلى تنسيق DOCX للمستندات الأكاديمية والأطروحات وتقارير البحث مع التنسيق والاقتباسات المناسبة.',
+      'csv_to_docx.ready_title': 'هل أنت مستعد لتحويل ملفات CSV الخاصة بك؟',
+      'csv_to_docx.ready_text': 'استخدم محول CSV إلى DOCX المجاني عبر الإنترنت لتحويل بياناتك الجدولية إلى مستندات Word احترافية.',
+      // CSV to EPUB
+      'csv_to_epub.title': 'محول CSV إلى EPUB',
+      'csv_to_epub.subtitle': 'قم بتحويل بيانات CSV إلى تنسيق كتاب إلكتروني EPUB للقراءة على أجهزة القراءة الإلكترونية.',
+      // CSV to HTML
+      'csv_to_html.title': 'محول CSV إلى HTML',
+      'csv_to_html.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق HTML للعرض في متصفحات الويب.',
+      // CSV to MD
+      'csv_to_md.title': 'محول CSV إلى MD',
+      'csv_to_md.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق Markdown للتوثيق وتحرير النص.',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'محول CSV إلى MOBI',
+      'csv_to_mobi.subtitle': 'قم بتحويل بيانات CSV إلى تنسيق كتاب إلكتروني MOBI لأجهزة Kindle وأجهزة القراءة الإلكترونية.',
+      // CSV to ODP
+      'csv_to_odp.title': 'محول CSV إلى ODP',
+      'csv_to_odp.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق عرض OpenDocument ODP.',
+      // CSV to ODT
+      'csv_to_odt.title': 'محول CSV إلى ODT',
+      'csv_to_odt.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق مستند OpenDocument ODT.',
+      // CSV to PDF
+      'csv_to_pdf.title': 'محول CSV إلى PDF',
+      'csv_to_pdf.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق PDF للمشاركة والطباعة العالمية.',
+      // CSV to PPT
+      'csv_to_ppt.title': 'محول CSV إلى PPT',
+      'csv_to_ppt.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق عرض PowerPoint PPT.',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'محول CSV إلى PPTX',
+      'csv_to_pptx.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق عرض PowerPoint PPTX الحديث.',
+      // CSV to RTF
+      'csv_to_rtf.title': 'محول CSV إلى RTF',
+      'csv_to_rtf.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق مستند Rich Text Format RTF.',
+      // CSV to TXT
+      'csv_to_txt.title': 'محول CSV إلى TXT',
+      'csv_to_txt.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق نص عادي TXT للتوافق العالمي.',
+      // CSV to XLS
+      'csv_to_xls.title': 'محول CSV إلى XLS',
+      'csv_to_xls.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق جدول بيانات Excel XLS.',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'محول CSV إلى XLSX',
+      'csv_to_xlsx.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق جدول بيانات Excel XLSX الحديث.',
+      // CSV to JSON
+      'csv_to_json.title': 'محول CSV إلى JSON',
+      'csv_to_json.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق JSON لتطوير الويب وواجهات برمجة التطبيقات.',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'محول CSV إلى NDJSON',
+      'csv_to_ndjson.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق NDJSON (Newline Delimited JSON) لتدفق البيانات.',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'محول CSV إلى Parquet',
+      'csv_to_parquet.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق Parquet لتحليل البيانات الفعال.',
+      // CSV to SQL
+      'csv_to_sql.title': 'محول CSV إلى SQL',
+      'csv_to_sql.subtitle': 'قم بتحويل ملفات CSV إلى عبارات SQL لاستيراد قاعدة البيانات.',
+      // CSV to TOML
+      'csv_to_toml.title': 'محول CSV إلى TOML',
+      'csv_to_toml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق TOML لملفات التكوين.',
+      // CSV to XML
+      'csv_to_xml.title': 'محول CSV إلى XML',
+      'csv_to_xml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق XML لتبادل البيانات المهيكلة.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'محول CSV إلى YAML',
+      'csv_to_yaml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق YAML للتكوين والبيانات المهيكلة.',
+      // DNG to WebP
+      'dng_to_webp.title': 'محول DNG إلى WebP',
+      'dng_to_webp.subtitle': 'قم بتحويل ملفات صور RAW DNG إلى تنسيق WebP المحسّن للويب.',
+      // EPS to WebP
+      'eps_to_webp.title': 'محول EPS إلى WebP',
+      'eps_to_webp.subtitle': 'قم بتحويل ملفات الرسوم المتجهة EPS إلى تنسيق WebP للويب والتطبيقات.',
+      // EPUB to CSV
+      'epub_to_csv.title': 'محول EPUB إلى CSV',
+      'epub_to_csv.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق CSV لتحليل البيانات.',
+      // EPUB to DOC
+      'epub_to_doc.title': 'محول EPUB إلى DOC',
+      'epub_to_doc.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق مستند Word DOC.',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'محول EPUB إلى DOCX',
+      'epub_to_docx.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق مستند Word DOCX الحديث.',
+      // EPUB to HTML
+      'epub_to_html.title': 'محول EPUB إلى HTML',
+      'epub_to_html.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق HTML للويب.',
+      // EPUB to MD
+      'epub_to_md.title': 'محول EPUB إلى MD',
+      'epub_to_md.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق Markdown للتوثيق.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'محول EPUB إلى MOBI',
+      'epub_to_mobi.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق MOBI لأجهزة Kindle.',
+      // EPUB to ODP
+      'epub_to_odp.title': 'محول EPUB إلى ODP',
+      'epub_to_odp.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق عرض OpenDocument ODP.',
+      // EPUB to ODT
+      'epub_to_odt.title': 'محول EPUB إلى ODT',
+      'epub_to_odt.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق مستند OpenDocument ODT.',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'محول EPUB إلى PDF',
+      'epub_to_pdf.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق PDF للمشاركة والطباعة العالمية.',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'محول EPUB إلى PPT',
+      'epub_to_ppt.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق عرض PowerPoint PPT.',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'محول EPUB إلى PPTX',
+      'epub_to_pptx.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق عرض PowerPoint PPTX الحديث.',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'محول EPUB إلى RTF',
+      'epub_to_rtf.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق مستند Rich Text Format RTF.',
+      // EPUB to TXT
+      'epub_to_txt.title': 'محول EPUB إلى TXT',
+      'epub_to_txt.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق نص عادي TXT.',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'محول EPUB إلى XLSX',
+      'epub_to_xlsx.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق جدول بيانات Excel XLSX.',
+      // DOC to CSV
+      'doc_to_csv.title': 'محول DOC إلى CSV',
+      'doc_to_csv.subtitle': 'قم بتحويل ملفات مستندات Word DOC إلى تنسيق CSV لتحليل البيانات.',
+      // DOC to EPUB
+      'doc_to_epub.title': 'محول DOC إلى EPUB',
+      'doc_to_epub.subtitle': 'قم بتحويل ملفات مستندات Word DOC إلى تنسيق كتاب إلكتروني EPUB.',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'محول DOC إلى MOBI',
+      'doc_to_mobi.subtitle': 'قم بتحويل ملفات مستندات Word DOC إلى تنسيق كتاب إلكتروني MOBI.',
+      // DOC to ODT
+      'doc_to_odt.title': 'محول DOC إلى ODT',
+      'doc_to_odt.subtitle': 'قم بتحويل ملفات مستندات Word DOC إلى تنسيق OpenDocument ODT.',
+      // DOC to TXT
+      'doc_to_txt.title': 'محول DOC إلى TXT',
+      'doc_to_txt.subtitle': 'قم بتحويل ملفات مستندات Word DOC إلى تنسيق نص عادي TXT.',
+      // DOCX to CSV
+      'docx_to_csv.title': 'محول DOCX إلى CSV',
+      'docx_to_csv.subtitle': 'قم بتحويل ملفات مستندات Word DOCX إلى تنسيق CSV لتحليل البيانات.',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'محول DOCX إلى EPUB',
+      'docx_to_epub.subtitle': 'قم بتحويل ملفات مستندات Word DOCX إلى تنسيق كتاب إلكتروني EPUB.',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'محول DOCX إلى MOBI',
+      'docx_to_mobi.subtitle': 'قم بتحويل ملفات مستندات Word DOCX إلى تنسيق كتاب إلكتروني MOBI.',
+      // DOCX to ODT
+      'docx_to_odt.title': 'محول DOCX إلى ODT',
+      'docx_to_odt.subtitle': 'قم بتحويل ملفات مستندات Word DOCX إلى تنسيق OpenDocument ODT.',
+      // DOCX to TXT
+      'docx_to_txt.title': 'محول DOCX إلى TXT',
+      'docx_to_txt.subtitle': 'قم بتحويل ملفات مستندات Word DOCX إلى تنسيق نص عادي TXT.',
     }
   },
   th: {
@@ -26393,6 +27302,192 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': 'แปลง HEIF เป็น JPG สำหรับระบบที่ไม่ได้รองรับรูปแบบสมัยใหม่ เช่น CMS เก่า ไคลเอนต์อีเมล โปรแกรมดูภาพ และแอปเก่า รับประกันความเข้ากันได้สูงสุดบนทุกแพลตฟอร์ม',
       'heif_to_jpg.seo.use_case_2_title': 'ไปป์ไลน์เนื้อหา',
       'heif_to_jpg.seo.use_case_2_text': 'มาตรฐานรูปภาพเป็น JPG สำหรับการประมวลผลที่คาดการณ์ได้ในไปป์ไลน์อัตโนมัติ เวิร์กโฟลว์การออกแบบ และระบบจัดการเนื้อหา เหมาะสำหรับการประมวลผลแบบกลุ่มและการจัดรูปแบบผลลัพธ์ที่สม่ำเสมอ',
+
+      // CSV to DOCX - Thai
+      'csv_to_docx.title': 'ตัวแปลง CSV เป็น DOCX',
+      'csv_to_docx.meta_title': 'ตัวแปลง CSV เป็น DOCX ฟรีออนไลน์ - แปลง CSV เป็นเอกสาร Word ทันที',
+      'csv_to_docx.meta_description': 'แปลงไฟล์ CSV เป็นเอกสาร Word DOCX ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นเอกสาร Word มืออาชีพพร้อมการจัดรูปแบบตาราง สไตล์ และเลย์เอาต์ เร็ว ปลอดภัย รองรับการแปลงแบบกลุ่ม ไม่ต้องลงทะเบียน',
+      'csv_to_docx.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ Microsoft Word DOCX แปลงข้อมูลตารางเป็นเอกสารที่จัดรูปแบบสำหรับรายงานและการนำเสนอด้วยสไตล์มืออาชีพ',
+      'csv_to_docx.upload_single': 'อัปโหลดไฟล์ CSV',
+      'csv_to_docx.upload_batch': 'อัปโหลดไฟล์ CSV หลายไฟล์',
+      'csv_to_docx.upload_text_single': 'ลากและวางไฟล์ CSV ของคุณที่นี่หรือคลิกเพื่อเรียกดู',
+      'csv_to_docx.upload_text_batch': 'เลือกไฟล์ CSV หลายไฟล์เพื่อแปลงทั้งหมดพร้อมกัน',
+      'csv_to_docx.preview': 'ตัวอย่าง',
+      'csv_to_docx.selected_files': 'ไฟล์ที่เลือก',
+      'csv_to_docx.total_size': 'ขนาดรวม',
+      'csv_to_docx.convert_to_docx': 'แปลงเป็น DOCX',
+      'csv_to_docx.convert_files': 'แปลง {{count}} ไฟล์',
+      'csv_to_docx.conversion_complete': 'การแปลงเสร็จสมบูรณ์!',
+      'csv_to_docx.batch_conversion_complete': 'การแปลงแบบกลุ่มเสร็จสมบูรณ์',
+      'csv_to_docx.success_message': 'ไฟล์ CSV ของคุณถูกแปลงเป็นรูปแบบ DOCX สำเร็จแล้ว',
+      'csv_to_docx.download_docx': 'ดาวน์โหลดไฟล์ DOCX',
+      'csv_to_docx.sidebar_title': 'ทำไมต้องเลือกตัวแปลงของเรา?',
+      'csv_to_docx.feature_1': 'การจัดรูปแบบและสไตล์ตาราง',
+      'csv_to_docx.feature_2': 'เลย์เอาต์เอกสารมืออาชีพ',
+      'csv_to_docx.feature_3': 'ความเข้ากันได้กับ Microsoft Word',
+      'csv_to_docx.feature_4': 'ตัวเลือกการจัดรูปแบบที่ปรับแต่งได้',
+      'csv_to_docx.feature_5': 'รองรับการแปลงแบบกลุ่ม',
+      'csv_to_docx.feature_6': 'ผลลัพธ์คุณภาพสูง',
+      'csv_to_docx.why_convert_title': 'ทำไมต้องแปลง CSV เป็น DOCX?',
+      'csv_to_docx.seo_intro': 'การแปลงไฟล์ CSV เป็นรูปแบบ Microsoft Word DOCX เป็นสิ่งจำเป็นสำหรับการสร้างรายงาน การนำเสนอข้อมูล และเอกสารมืออาชีพ ในขณะที่ไฟล์ CSV เหมาะสำหรับการจัดเก็บและวิเคราะห์ข้อมูล รูปแบบ DOCX ให้การจัดรูปแบบมืออาชีพ สไตล์ตาราง และความสามารถในการจัดเลย์เอาต์เอกสารที่จำเป็นสำหรับรายงานธุรกิจ เอกสารทางวิชาการ และการส่งมอบให้ลูกค้า',
+      'csv_to_docx.benefits_title': 'ข้อดีหลักของรูปแบบ DOCX',
+      'csv_to_docx.benefit_formatting_title': 'การจัดรูปแบบมืออาชีพ',
+      'csv_to_docx.benefit_formatting_text': 'รูปแบบ DOCX ให้การจัดรูปแบบตารางมืออาชีพ ตัวเลือกสไตล์ และความสามารถในการจัดเลย์เอาต์เอกสารที่ทำให้การนำเสนอข้อมูลของคุณดูเรียบร้อยและมืออาชีพ',
+      'csv_to_docx.benefit_compatibility_title': 'ความเข้ากันได้กับ Microsoft Word',
+      'csv_to_docx.benefit_compatibility_text': 'ไฟล์ DOCX เข้ากันได้อย่างสมบูรณ์กับ Microsoft Word และโปรแกรมประมวลผลคำอื่นๆ รับประกันว่าเอกสารของคุณสามารถเปิด แก้ไข และแชร์บนแพลตฟอร์มต่างๆ ได้',
+      'csv_to_docx.benefit_styling_title': 'ตัวเลือกสไตล์ตาราง',
+      'csv_to_docx.benefit_styling_text': 'รูปแบบ DOCX เสนอตัวเลือกสไตล์ตารางต่างๆ รวมถึงเส้นขอบ สี ฟอนต์ และเลย์เอาต์ที่ปรับปรุงการนำเสนอภาพของข้อมูลตารางของคุณ',
+      'csv_to_docx.benefit_management_title': 'การจัดการเอกสาร',
+      'csv_to_docx.benefit_management_text': 'รูปแบบ DOCX รวมเข้ากับระบบจัดการเอกสารได้อย่างราบรื่น ทำให้ง่ายต่อการจัดระเบียบ จัดเก็บ และดึงเอกสารที่แปลงแล้วของคุณ',
+      'csv_to_docx.use_cases_title': 'กรณีการใช้งานทั่วไป',
+      'csv_to_docx.use_case_reports_title': 'การสร้างรายงาน',
+      'csv_to_docx.use_case_reports_text': 'แปลงข้อมูล CSV เป็นรูปแบบ DOCX สำหรับรายงานธุรกิจที่ครอบคลุม สรุปทางการเงิน และเอกสารวิเคราะห์ด้วยการจัดรูปแบบมืออาชีพ',
+      'csv_to_docx.use_case_presentation_title': 'การนำเสนอข้อมูล',
+      'csv_to_docx.use_case_presentation_text': 'แปลงข้อมูล CSV ดิบเป็นเอกสาร DOCX ที่จัดรูปแบบดีสำหรับการนำเสนอ การประชุม และการสื่อสารกับผู้มีส่วนได้ส่วนเสีย',
+      'csv_to_docx.use_case_business_title': 'เอกสารธุรกิจ',
+      'csv_to_docx.use_case_business_text': 'สร้างเอกสารธุรกิจมืออาชีพโดยการแปลงข้อมูล CSV เป็นรูปแบบ DOCX สำหรับสัญญา ข้อเสนอ และการสื่อสารอย่างเป็นทางการ',
+      'csv_to_docx.use_case_academic_title': 'เอกสารทางวิชาการ',
+      'csv_to_docx.use_case_academic_text': 'แปลงข้อมูลการวิจัยจาก CSV เป็นรูปแบบ DOCX สำหรับเอกสารทางวิชาการ วิทยานิพนธ์ และรายงานการวิจัยด้วยการจัดรูปแบบและการอ้างอิงที่เหมาะสม',
+      'csv_to_docx.ready_title': 'พร้อมแปลงไฟล์ CSV ของคุณหรือยัง?',
+      'csv_to_docx.ready_text': 'ใช้ตัวแปลง CSV เป็น DOCX ออนไลน์ฟรีของเราเพื่อแปลงข้อมูลตารางของคุณเป็นเอกสาร Word มืออาชีพ',
+      // CSV to EPUB
+      'csv_to_epub.title': 'ตัวแปลง CSV เป็น EPUB',
+      'csv_to_epub.subtitle': 'แปลงข้อมูล CSV เป็นรูปแบบหนังสืออิเล็กทรอนิกส์ EPUB สำหรับอ่านบนเครื่องอ่านหนังสืออิเล็กทรอนิกส์',
+      // CSV to HTML
+      'csv_to_html.title': 'ตัวแปลง CSV เป็น HTML',
+      'csv_to_html.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ HTML สำหรับแสดงในเว็บเบราว์เซอร์',
+      // CSV to MD
+      'csv_to_md.title': 'ตัวแปลง CSV เป็น MD',
+      'csv_to_md.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ Markdown สำหรับเอกสารและการแก้ไขข้อความ',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'ตัวแปลง CSV เป็น MOBI',
+      'csv_to_mobi.subtitle': 'แปลงข้อมูล CSV เป็นรูปแบบหนังสืออิเล็กทรอนิกส์ MOBI สำหรับอุปกรณ์ Kindle และเครื่องอ่านหนังสืออิเล็กทรอนิกส์',
+      // CSV to ODP
+      'csv_to_odp.title': 'ตัวแปลง CSV เป็น ODP',
+      'csv_to_odp.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบการนำเสนอ OpenDocument ODP',
+      // CSV to ODT
+      'csv_to_odt.title': 'ตัวแปลง CSV เป็น ODT',
+      'csv_to_odt.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบเอกสาร OpenDocument ODT',
+      // CSV to PDF
+      'csv_to_pdf.title': 'ตัวแปลง CSV เป็น PDF',
+      'csv_to_pdf.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ PDF สำหรับการแชร์และการพิมพ์สากล',
+      // CSV to PPT
+      'csv_to_ppt.title': 'ตัวแปลง CSV เป็น PPT',
+      'csv_to_ppt.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบการนำเสนอ PowerPoint PPT',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'ตัวแปลง CSV เป็น PPTX',
+      'csv_to_pptx.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบการนำเสนอ PowerPoint PPTX ที่ทันสมัย',
+      // CSV to RTF
+      'csv_to_rtf.title': 'ตัวแปลง CSV เป็น RTF',
+      'csv_to_rtf.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบเอกสาร Rich Text Format RTF',
+      // CSV to TXT
+      'csv_to_txt.title': 'ตัวแปลง CSV เป็น TXT',
+      'csv_to_txt.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบข้อความธรรมดา TXT สำหรับความเข้ากันได้สากล',
+      // CSV to XLS
+      'csv_to_xls.title': 'ตัวแปลง CSV เป็น XLS',
+      'csv_to_xls.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบสเปรดชีต Excel XLS',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'ตัวแปลง CSV เป็น XLSX',
+      'csv_to_xlsx.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบสเปรดชีต Excel XLSX ที่ทันสมัย',
+      // CSV to JSON
+      'csv_to_json.title': 'ตัวแปลง CSV เป็น JSON',
+      'csv_to_json.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ JSON สำหรับการพัฒนาเว็บและ API',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'ตัวแปลง CSV เป็น NDJSON',
+      'csv_to_ndjson.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ NDJSON (Newline Delimited JSON) สำหรับการสตรีมข้อมูล',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'ตัวแปลง CSV เป็น Parquet',
+      'csv_to_parquet.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ Parquet สำหรับการวิเคราะห์ข้อมูลที่มีประสิทธิภาพ',
+      // CSV to SQL
+      'csv_to_sql.title': 'ตัวแปลง CSV เป็น SQL',
+      'csv_to_sql.subtitle': 'แปลงไฟล์ CSV เป็นคำสั่ง SQL สำหรับการนำเข้าฐานข้อมูล',
+      // CSV to TOML
+      'csv_to_toml.title': 'ตัวแปลง CSV เป็น TOML',
+      'csv_to_toml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ TOML สำหรับไฟล์การกำหนดค่า',
+      // CSV to XML
+      'csv_to_xml.title': 'ตัวแปลง CSV เป็น XML',
+      'csv_to_xml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ XML สำหรับการแลกเปลี่ยนข้อมูลที่มีโครงสร้าง',
+      // CSV to YAML
+      'csv_to_yaml.title': 'ตัวแปลง CSV เป็น YAML',
+      'csv_to_yaml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ YAML สำหรับการกำหนดค่าและข้อมูลที่มีโครงสร้าง',
+      // DNG to WebP
+      'dng_to_webp.title': 'ตัวแปลง DNG เป็น WebP',
+      'dng_to_webp.subtitle': 'แปลงไฟล์ภาพ RAW DNG เป็นรูปแบบ WebP ที่ปรับให้เหมาะกับเว็บ',
+      // EPS to WebP
+      'eps_to_webp.title': 'ตัวแปลง EPS เป็น WebP',
+      'eps_to_webp.subtitle': 'แปลงไฟล์กราฟิกเวกเตอร์ EPS เป็นรูปแบบ WebP สำหรับเว็บและแอป',
+      // EPUB to CSV
+      'epub_to_csv.title': 'ตัวแปลง EPUB เป็น CSV',
+      'epub_to_csv.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบ CSV สำหรับการวิเคราะห์ข้อมูล',
+      // EPUB to DOC
+      'epub_to_doc.title': 'ตัวแปลง EPUB เป็น DOC',
+      'epub_to_doc.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบเอกสาร Word DOC',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'ตัวแปลง EPUB เป็น DOCX',
+      'epub_to_docx.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบเอกสาร Word DOCX ที่ทันสมัย',
+      // EPUB to HTML
+      'epub_to_html.title': 'ตัวแปลง EPUB เป็น HTML',
+      'epub_to_html.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบ HTML สำหรับเว็บ',
+      // EPUB to MD
+      'epub_to_md.title': 'ตัวแปลง EPUB เป็น MD',
+      'epub_to_md.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบ Markdown สำหรับเอกสาร',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'ตัวแปลง EPUB เป็น MOBI',
+      'epub_to_mobi.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบ MOBI สำหรับอุปกรณ์ Kindle',
+      // EPUB to ODP
+      'epub_to_odp.title': 'ตัวแปลง EPUB เป็น ODP',
+      'epub_to_odp.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบการนำเสนอ OpenDocument ODP',
+      // EPUB to ODT
+      'epub_to_odt.title': 'ตัวแปลง EPUB เป็น ODT',
+      'epub_to_odt.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบเอกสาร OpenDocument ODT',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'ตัวแปลง EPUB เป็น PDF',
+      'epub_to_pdf.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบ PDF สำหรับการแชร์และการพิมพ์สากล',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'ตัวแปลง EPUB เป็น PPT',
+      'epub_to_ppt.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบการนำเสนอ PowerPoint PPT',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'ตัวแปลง EPUB เป็น PPTX',
+      'epub_to_pptx.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบการนำเสนอ PowerPoint PPTX ที่ทันสมัย',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'ตัวแปลง EPUB เป็น RTF',
+      'epub_to_rtf.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบเอกสาร Rich Text Format RTF',
+      // EPUB to TXT
+      'epub_to_txt.title': 'ตัวแปลง EPUB เป็น TXT',
+      'epub_to_txt.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบข้อความธรรมดา TXT',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'ตัวแปลง EPUB เป็น XLSX',
+      'epub_to_xlsx.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบสเปรดชีต Excel XLSX',
+      // DOC to CSV
+      'doc_to_csv.title': 'ตัวแปลง DOC เป็น CSV',
+      'doc_to_csv.subtitle': 'แปลงไฟล์เอกสาร Word DOC เป็นรูปแบบ CSV สำหรับการวิเคราะห์ข้อมูล',
+      // DOC to EPUB
+      'doc_to_epub.title': 'ตัวแปลง DOC เป็น EPUB',
+      'doc_to_epub.subtitle': 'แปลงไฟล์เอกสาร Word DOC เป็นรูปแบบหนังสืออิเล็กทรอนิกส์ EPUB',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'ตัวแปลง DOC เป็น MOBI',
+      'doc_to_mobi.subtitle': 'แปลงไฟล์เอกสาร Word DOC เป็นรูปแบบหนังสืออิเล็กทรอนิกส์ MOBI',
+      // DOC to ODT
+      'doc_to_odt.title': 'ตัวแปลง DOC เป็น ODT',
+      'doc_to_odt.subtitle': 'แปลงไฟล์เอกสาร Word DOC เป็นรูปแบบ OpenDocument ODT',
+      // DOC to TXT
+      'doc_to_txt.title': 'ตัวแปลง DOC เป็น TXT',
+      'doc_to_txt.subtitle': 'แปลงไฟล์เอกสาร Word DOC เป็นรูปแบบข้อความธรรมดา TXT',
+      // DOCX to CSV
+      'docx_to_csv.title': 'ตัวแปลง DOCX เป็น CSV',
+      'docx_to_csv.subtitle': 'แปลงไฟล์เอกสาร Word DOCX เป็นรูปแบบ CSV สำหรับการวิเคราะห์ข้อมูล',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'ตัวแปลง DOCX เป็น EPUB',
+      'docx_to_epub.subtitle': 'แปลงไฟล์เอกสาร Word DOCX เป็นรูปแบบหนังสืออิเล็กทรอนิกส์ EPUB',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'ตัวแปลง DOCX เป็น MOBI',
+      'docx_to_mobi.subtitle': 'แปลงไฟล์เอกสาร Word DOCX เป็นรูปแบบหนังสืออิเล็กทรอนิกส์ MOBI',
+      // DOCX to ODT
+      'docx_to_odt.title': 'ตัวแปลง DOCX เป็น ODT',
+      'docx_to_odt.subtitle': 'แปลงไฟล์เอกสาร Word DOCX เป็นรูปแบบ OpenDocument ODT',
+      // DOCX to TXT
+      'docx_to_txt.title': 'ตัวแปลง DOCX เป็น TXT',
+      'docx_to_txt.subtitle': 'แปลงไฟล์เอกสาร Word DOCX เป็นรูปแบบข้อความธรรมดา TXT',
     }
   },
   ja: {
@@ -27186,6 +28281,192 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': '現代のフォーマットをサポートしないシステム用にHEIFをJPGに変換。例：古いCMS、メールクライアント、ビューア、レガシーアプリケーション。すべてのプラットフォームで最大の互換性を確保。',
       'heif_to_jpg.seo.use_case_2_title': 'コンテンツパイプライン',
       'heif_to_jpg.seo.use_case_2_text': '自動化パイプライン、デザインワークフロー、コンテンツ管理システムで予測可能な処理のために画像をJPGとして標準化。バッチ処理と一貫した出力フォーマットに最適。',
+
+      // CSV to DOCX - Japanese
+      'csv_to_docx.title': 'CSVからDOCXへのコンバーター',
+      'csv_to_docx.meta_title': '無料CSVからDOCXへのコンバーターオンライン - CSVをWord文書に即座に変換',
+      'csv_to_docx.meta_description': 'CSVファイルをDOCX Word文書にオンラインで無料変換。スプレッドシートデータを表形式、スタイル、レイアウト付きのプロフェッショナルなWord文書に変換。高速、安全、バッチ変換サポート。登録不要。',
+      'csv_to_docx.subtitle': 'CSVファイルをMicrosoft Word DOCX形式に変換。表形式データをレポートやプレゼンテーション用のプロフェッショナルなスタイル付きフォーマット済み文書に変換。',
+      'csv_to_docx.upload_single': 'CSVファイルをアップロード',
+      'csv_to_docx.upload_batch': '複数のCSVファイルをアップロード',
+      'csv_to_docx.upload_text_single': 'CSVファイルをここにドラッグ＆ドロップするか、クリックして参照',
+      'csv_to_docx.upload_text_batch': '複数のCSVファイルを選択して一度にすべて変換',
+      'csv_to_docx.preview': 'プレビュー',
+      'csv_to_docx.selected_files': '選択されたファイル',
+      'csv_to_docx.total_size': '合計サイズ',
+      'csv_to_docx.convert_to_docx': 'DOCXに変換',
+      'csv_to_docx.convert_files': '{{count}}ファイルを変換',
+      'csv_to_docx.conversion_complete': '変換完了！',
+      'csv_to_docx.batch_conversion_complete': 'バッチ変換完了',
+      'csv_to_docx.success_message': 'CSVファイルが正常にDOCX形式に変換されました。',
+      'csv_to_docx.download_docx': 'DOCXファイルをダウンロード',
+      'csv_to_docx.sidebar_title': 'なぜ当社のコンバーターを選ぶのか？',
+      'csv_to_docx.feature_1': '表のフォーマットとスタイリング',
+      'csv_to_docx.feature_2': 'プロフェッショナルな文書レイアウト',
+      'csv_to_docx.feature_3': 'Microsoft Word互換性',
+      'csv_to_docx.feature_4': 'カスタマイズ可能なフォーマットオプション',
+      'csv_to_docx.feature_5': 'バッチ変換サポート',
+      'csv_to_docx.feature_6': '高品質な出力',
+      'csv_to_docx.why_convert_title': 'なぜCSVをDOCXに変換するのか？',
+      'csv_to_docx.seo_intro': 'CSVファイルをMicrosoft Word DOCX形式に変換することは、レポート生成、データプレゼンテーション、プロフェッショナルな文書化に不可欠です。CSVファイルはデータストレージと分析に優れていますが、DOCX形式はビジネスレポート、学術文書、クライアントへの納品物に必要なプロフェッショナルなフォーマット、表スタイリング、文書レイアウト機能を提供します。',
+      'csv_to_docx.benefits_title': 'DOCX形式の主な利点',
+      'csv_to_docx.benefit_formatting_title': 'プロフェッショナルなフォーマット',
+      'csv_to_docx.benefit_formatting_text': 'DOCX形式は、データプレゼンテーションを洗練されたプロフェッショナルなものにするプロフェッショナルな表フォーマット、スタイルオプション、文書レイアウト機能を提供します。',
+      'csv_to_docx.benefit_compatibility_title': 'Microsoft Word互換性',
+      'csv_to_docx.benefit_compatibility_text': 'DOCXファイルはMicrosoft Wordやその他のワードプロセッサと完全に互換性があり、文書を異なるプラットフォームで開いたり、編集したり、共有したりできることを保証します。',
+      'csv_to_docx.benefit_styling_title': '表スタイルオプション',
+      'csv_to_docx.benefit_styling_text': 'DOCX形式は、表データの視覚的プレゼンテーションを向上させる境界線、色、フォント、レイアウトを含むさまざまな表スタイルオプションを提供します。',
+      'csv_to_docx.benefit_management_title': '文書管理',
+      'csv_to_docx.benefit_management_text': 'DOCX形式は文書管理システムとシームレスに統合され、変換された文書の整理、アーカイブ、取得を容易にします。',
+      'csv_to_docx.use_cases_title': '一般的な使用例',
+      'csv_to_docx.use_case_reports_title': 'レポート生成',
+      'csv_to_docx.use_case_reports_text': '包括的なビジネスレポート、財務要約、プロフェッショナルなフォーマット付き分析文書のためにCSVデータをDOCX形式に変換。',
+      'csv_to_docx.use_case_presentation_title': 'データプレゼンテーション',
+      'csv_to_docx.use_case_presentation_text': 'プレゼンテーション、会議、ステークホルダーとのコミュニケーションのために、生のCSVデータを適切にフォーマットされたDOCX文書に変換。',
+      'csv_to_docx.use_case_business_title': 'ビジネス文書化',
+      'csv_to_docx.use_case_business_text': '契約、提案、正式なコミュニケーションのためにCSVデータをDOCX形式に変換してプロフェッショナルなビジネス文書を作成。',
+      'csv_to_docx.use_case_academic_title': '学術文書',
+      'csv_to_docx.use_case_academic_text': '適切なフォーマットと引用付きで学術文書、論文、研究レポートのために研究データをCSVからDOCX形式に変換。',
+      'csv_to_docx.ready_title': 'CSVファイルの変換準備はできましたか？',
+      'csv_to_docx.ready_text': '無料のオンラインCSVからDOCXへのコンバーターを使用して、表形式データをプロフェッショナルなWord文書に変換。',
+      // CSV to EPUB
+      'csv_to_epub.title': 'CSVからEPUBへのコンバーター',
+      'csv_to_epub.subtitle': 'CSVデータを電子書籍EPUB形式に変換して電子リーダーで読む。',
+      // CSV to HTML
+      'csv_to_html.title': 'CSVからHTMLへのコンバーター',
+      'csv_to_html.subtitle': 'CSVファイルをHTML形式に変換してWebブラウザで表示。',
+      // CSV to MD
+      'csv_to_md.title': 'CSVからMDへのコンバーター',
+      'csv_to_md.subtitle': 'CSVファイルをMarkdown形式に変換してドキュメントとテキスト編集に使用。',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'CSVからMOBIへのコンバーター',
+      'csv_to_mobi.subtitle': 'CSVデータをKindleデバイスと電子リーダー用のMOBI電子書籍形式に変換。',
+      // CSV to ODP
+      'csv_to_odp.title': 'CSVからODPへのコンバーター',
+      'csv_to_odp.subtitle': 'CSVファイルをOpenDocument ODPプレゼンテーション形式に変換。',
+      // CSV to ODT
+      'csv_to_odt.title': 'CSVからODTへのコンバーター',
+      'csv_to_odt.subtitle': 'CSVファイルをOpenDocument ODT文書形式に変換。',
+      // CSV to PDF
+      'csv_to_pdf.title': 'CSVからPDFへのコンバーター',
+      'csv_to_pdf.subtitle': 'CSVファイルをユニバーサル共有と印刷用のPDF形式に変換。',
+      // CSV to PPT
+      'csv_to_ppt.title': 'CSVからPPTへのコンバーター',
+      'csv_to_ppt.subtitle': 'CSVファイルをPowerPoint PPTプレゼンテーション形式に変換。',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'CSVからPPTXへのコンバーター',
+      'csv_to_pptx.subtitle': 'CSVファイルを最新のPowerPoint PPTXプレゼンテーション形式に変換。',
+      // CSV to RTF
+      'csv_to_rtf.title': 'CSVからRTFへのコンバーター',
+      'csv_to_rtf.subtitle': 'CSVファイルをRich Text Format RTF文書形式に変換。',
+      // CSV to TXT
+      'csv_to_txt.title': 'CSVからTXTへのコンバーター',
+      'csv_to_txt.subtitle': 'CSVファイルをユニバーサル互換性用のプレーンテキストTXT形式に変換。',
+      // CSV to XLS
+      'csv_to_xls.title': 'CSVからXLSへのコンバーター',
+      'csv_to_xls.subtitle': 'CSVファイルをExcel XLSスプレッドシート形式に変換。',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'CSVからXLSXへのコンバーター',
+      'csv_to_xlsx.subtitle': 'CSVファイルを最新のExcel XLSXスプレッドシート形式に変換。',
+      // CSV to JSON
+      'csv_to_json.title': 'CSVからJSONへのコンバーター',
+      'csv_to_json.subtitle': 'CSVファイルをWeb開発とAPI用のJSON形式に変換。',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'CSVからNDJSONへのコンバーター',
+      'csv_to_ndjson.subtitle': 'CSVファイルをデータストリーミング用のNDJSON（Newline Delimited JSON）形式に変換。',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'CSVからParquetへのコンバーター',
+      'csv_to_parquet.subtitle': 'CSVファイルを効率的なデータ分析用のParquet形式に変換。',
+      // CSV to SQL
+      'csv_to_sql.title': 'CSVからSQLへのコンバーター',
+      'csv_to_sql.subtitle': 'CSVファイルをデータベースインポート用のSQLステートメントに変換。',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSVからTOMLへのコンバーター',
+      'csv_to_toml.subtitle': 'CSVファイルを設定ファイル用のTOML形式に変換。',
+      // CSV to XML
+      'csv_to_xml.title': 'CSVからXMLへのコンバーター',
+      'csv_to_xml.subtitle': 'CSVファイルを構造化データ交換用のXML形式に変換。',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSVからYAMLへのコンバーター',
+      'csv_to_yaml.subtitle': 'CSVファイルを設定と構造化データ用のYAML形式に変換。',
+      // DNG to WebP
+      'dng_to_webp.title': 'DNGからWebPへのコンバーター',
+      'dng_to_webp.subtitle': 'DNG RAW画像ファイルをWeb用に最適化されたWebP形式に変換。',
+      // EPS to WebP
+      'eps_to_webp.title': 'EPSからWebPへのコンバーター',
+      'eps_to_webp.subtitle': 'EPSベクターグラフィックファイルをWebとアプリ用のWebP形式に変換。',
+      // EPUB to CSV
+      'epub_to_csv.title': 'EPUBからCSVへのコンバーター',
+      'epub_to_csv.subtitle': 'EPUB電子書籍ファイルをデータ分析用のCSV形式に変換。',
+      // EPUB to DOC
+      'epub_to_doc.title': 'EPUBからDOCへのコンバーター',
+      'epub_to_doc.subtitle': 'EPUB電子書籍ファイルをWord DOC文書形式に変換。',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'EPUBからDOCXへのコンバーター',
+      'epub_to_docx.subtitle': 'EPUB電子書籍ファイルを最新のWord DOCX文書形式に変換。',
+      // EPUB to HTML
+      'epub_to_html.title': 'EPUBからHTMLへのコンバーター',
+      'epub_to_html.subtitle': 'EPUB電子書籍ファイルをWeb用のHTML形式に変換。',
+      // EPUB to MD
+      'epub_to_md.title': 'EPUBからMDへのコンバーター',
+      'epub_to_md.subtitle': 'EPUB電子書籍ファイルをドキュメント用のMarkdown形式に変換。',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'EPUBからMOBIへのコンバーター',
+      'epub_to_mobi.subtitle': 'EPUB電子書籍ファイルをKindleデバイス用のMOBI形式に変換。',
+      // EPUB to ODP
+      'epub_to_odp.title': 'EPUBからODPへのコンバーター',
+      'epub_to_odp.subtitle': 'EPUB電子書籍ファイルをOpenDocument ODPプレゼンテーション形式に変換。',
+      // EPUB to ODT
+      'epub_to_odt.title': 'EPUBからODTへのコンバーター',
+      'epub_to_odt.subtitle': 'EPUB電子書籍ファイルをOpenDocument ODT文書形式に変換。',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'EPUBからPDFへのコンバーター',
+      'epub_to_pdf.subtitle': 'EPUB電子書籍ファイルをユニバーサル共有と印刷用のPDF形式に変換。',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'EPUBからPPTへのコンバーター',
+      'epub_to_ppt.subtitle': 'EPUB電子書籍ファイルをPowerPoint PPTプレゼンテーション形式に変換。',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'EPUBからPPTXへのコンバーター',
+      'epub_to_pptx.subtitle': 'EPUB電子書籍ファイルを最新のPowerPoint PPTXプレゼンテーション形式に変換。',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'EPUBからRTFへのコンバーター',
+      'epub_to_rtf.subtitle': 'EPUB電子書籍ファイルをRich Text Format RTF文書形式に変換。',
+      // EPUB to TXT
+      'epub_to_txt.title': 'EPUBからTXTへのコンバーター',
+      'epub_to_txt.subtitle': 'EPUB電子書籍ファイルをプレーンテキストTXT形式に変換。',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'EPUBからXLSXへのコンバーター',
+      'epub_to_xlsx.subtitle': 'EPUB電子書籍ファイルをExcel XLSXスプレッドシート形式に変換。',
+      // DOC to CSV
+      'doc_to_csv.title': 'DOCからCSVへのコンバーター',
+      'doc_to_csv.subtitle': 'Word DOC文書ファイルをデータ分析用のCSV形式に変換。',
+      // DOC to EPUB
+      'doc_to_epub.title': 'DOCからEPUBへのコンバーター',
+      'doc_to_epub.subtitle': 'Word DOC文書ファイルをEPUB電子書籍形式に変換。',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'DOCからMOBIへのコンバーター',
+      'doc_to_mobi.subtitle': 'Word DOC文書ファイルをMOBI電子書籍形式に変換。',
+      // DOC to ODT
+      'doc_to_odt.title': 'DOCからODTへのコンバーター',
+      'doc_to_odt.subtitle': 'Word DOC文書ファイルをOpenDocument ODT形式に変換。',
+      // DOC to TXT
+      'doc_to_txt.title': 'DOCからTXTへのコンバーター',
+      'doc_to_txt.subtitle': 'Word DOC文書ファイルをプレーンテキストTXT形式に変換。',
+      // DOCX to CSV
+      'docx_to_csv.title': 'DOCXからCSVへのコンバーター',
+      'docx_to_csv.subtitle': 'Word DOCX文書ファイルをデータ分析用のCSV形式に変換。',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'DOCXからEPUBへのコンバーター',
+      'docx_to_epub.subtitle': 'Word DOCX文書ファイルをEPUB電子書籍形式に変換。',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'DOCXからMOBIへのコンバーター',
+      'docx_to_mobi.subtitle': 'Word DOCX文書ファイルをMOBI電子書籍形式に変換。',
+      // DOCX to ODT
+      'docx_to_odt.title': 'DOCXからODTへのコンバーター',
+      'docx_to_odt.subtitle': 'Word DOCX文書ファイルをOpenDocument ODT形式に変換。',
+      // DOCX to TXT
+      'docx_to_txt.title': 'DOCXからTXTへのコンバーター',
+      'docx_to_txt.subtitle': 'Word DOCX文書ファイルをプレーンテキストTXT形式に変換。',
     }
   },
   zh: {
@@ -27979,6 +29260,192 @@ const resources = {
       'heif_to_jpg.seo.use_case_1_text': '为不支持现代格式的系统将HEIF转换为JPG，例如旧CMS、电子邮件客户端、查看器和遗留应用程序。确保所有平台上的最大兼容性。',
       'heif_to_jpg.seo.use_case_2_title': '内容管道',
       'heif_to_jpg.seo.use_case_2_text': '将图像标准化为JPG，以便在自动化管道、设计工作流程和内容管理系统中进行可预测的处理。非常适合批量处理和一致的输出格式。',
+
+      // CSV to DOCX - Chinese
+      'csv_to_docx.title': 'CSV转DOCX转换器',
+      'csv_to_docx.meta_title': '免费CSV转DOCX转换器在线 - 立即将CSV转换为Word文档',
+      'csv_to_docx.meta_description': '在线免费将CSV文件转换为DOCX Word文档。将电子表格数据转换为具有表格格式、样式和布局的专业Word文档。快速、安全、支持批量转换。无需注册。',
+      'csv_to_docx.subtitle': '将CSV文件转换为Microsoft Word DOCX格式。将表格数据转换为用于报告和演示的格式化文档，具有专业样式。',
+      'csv_to_docx.upload_single': '上传CSV文件',
+      'csv_to_docx.upload_batch': '上传多个CSV文件',
+      'csv_to_docx.upload_text_single': '将CSV文件拖放到此处或点击浏览',
+      'csv_to_docx.upload_text_batch': '选择多个CSV文件以一次性转换所有文件',
+      'csv_to_docx.preview': '预览',
+      'csv_to_docx.selected_files': '已选文件',
+      'csv_to_docx.total_size': '总大小',
+      'csv_to_docx.convert_to_docx': '转换为DOCX',
+      'csv_to_docx.convert_files': '转换{{count}}个文件',
+      'csv_to_docx.conversion_complete': '转换完成！',
+      'csv_to_docx.batch_conversion_complete': '批量转换完成',
+      'csv_to_docx.success_message': '您的CSV文件已成功转换为DOCX格式。',
+      'csv_to_docx.download_docx': '下载DOCX文件',
+      'csv_to_docx.sidebar_title': '为什么选择我们的转换器？',
+      'csv_to_docx.feature_1': '表格格式和样式',
+      'csv_to_docx.feature_2': '专业文档布局',
+      'csv_to_docx.feature_3': 'Microsoft Word兼容性',
+      'csv_to_docx.feature_4': '可自定义的格式选项',
+      'csv_to_docx.feature_5': '批量转换支持',
+      'csv_to_docx.feature_6': '高质量输出',
+      'csv_to_docx.why_convert_title': '为什么将CSV转换为DOCX？',
+      'csv_to_docx.seo_intro': '将CSV文件转换为Microsoft Word DOCX格式对于报告生成、数据演示和专业文档至关重要。虽然CSV文件非常适合数据存储和分析，但DOCX格式提供了业务报告、学术文档和客户交付所需的专业格式、表格样式和文档布局功能。',
+      'csv_to_docx.benefits_title': 'DOCX格式的主要优势',
+      'csv_to_docx.benefit_formatting_title': '专业格式',
+      'csv_to_docx.benefit_formatting_text': 'DOCX格式提供专业的表格格式、样式选项和文档布局功能，使您的数据演示看起来精致专业。',
+      'csv_to_docx.benefit_compatibility_title': 'Microsoft Word兼容性',
+      'csv_to_docx.benefit_compatibility_text': 'DOCX文件与Microsoft Word和其他文字处理器完全兼容，确保您的文档可以在不同平台上打开、编辑和共享。',
+      'csv_to_docx.benefit_styling_title': '表格样式选项',
+      'csv_to_docx.benefit_styling_text': 'DOCX格式提供各种表格样式选项，包括边框、颜色、字体和布局，增强表格数据的视觉呈现。',
+      'csv_to_docx.benefit_management_title': '文档管理',
+      'csv_to_docx.benefit_management_text': 'DOCX格式与文档管理系统无缝集成，便于组织、归档和检索转换后的文档。',
+      'csv_to_docx.use_cases_title': '常见用例',
+      'csv_to_docx.use_case_reports_title': '报告生成',
+      'csv_to_docx.use_case_reports_text': '将CSV数据转换为DOCX格式，用于全面的业务报告、财务摘要和具有专业格式的分析文档。',
+      'csv_to_docx.use_case_presentation_title': '数据演示',
+      'csv_to_docx.use_case_presentation_text': '将原始CSV数据转换为格式良好的DOCX文档，用于演示、会议和利益相关者沟通。',
+      'csv_to_docx.use_case_business_title': '业务文档',
+      'csv_to_docx.use_case_business_text': '通过将CSV数据转换为DOCX格式，创建专业的业务文档，用于合同、提案和正式沟通。',
+      'csv_to_docx.use_case_academic_title': '学术文档',
+      'csv_to_docx.use_case_academic_text': '将研究数据从CSV转换为DOCX格式，用于具有适当格式和引用的学术文档、论文和研究报告。',
+      'csv_to_docx.ready_title': '准备好转换您的CSV文件了吗？',
+      'csv_to_docx.ready_text': '使用我们的免费在线CSV转DOCX转换器，将您的表格数据转换为专业Word文档。',
+      // CSV to EPUB
+      'csv_to_epub.title': 'CSV转EPUB转换器',
+      'csv_to_epub.subtitle': '将CSV数据转换为EPUB电子书格式，以便在电子阅读器上阅读。',
+      // CSV to HTML
+      'csv_to_html.title': 'CSV转HTML转换器',
+      'csv_to_html.subtitle': '将CSV文件转换为HTML格式，以便在Web浏览器中显示。',
+      // CSV to MD
+      'csv_to_md.title': 'CSV转MD转换器',
+      'csv_to_md.subtitle': '将CSV文件转换为Markdown格式，用于文档和文本编辑。',
+      // CSV to MOBI
+      'csv_to_mobi.title': 'CSV转MOBI转换器',
+      'csv_to_mobi.subtitle': '将CSV数据转换为MOBI电子书格式，用于Kindle设备和电子阅读器。',
+      // CSV to ODP
+      'csv_to_odp.title': 'CSV转ODP转换器',
+      'csv_to_odp.subtitle': '将CSV文件转换为OpenDocument ODP演示格式。',
+      // CSV to ODT
+      'csv_to_odt.title': 'CSV转ODT转换器',
+      'csv_to_odt.subtitle': '将CSV文件转换为OpenDocument ODT文档格式。',
+      // CSV to PDF
+      'csv_to_pdf.title': 'CSV转PDF转换器',
+      'csv_to_pdf.subtitle': '将CSV文件转换为PDF格式，用于通用共享和打印。',
+      // CSV to PPT
+      'csv_to_ppt.title': 'CSV转PPT转换器',
+      'csv_to_ppt.subtitle': '将CSV文件转换为PowerPoint PPT演示格式。',
+      // CSV to PPTX
+      'csv_to_pptx.title': 'CSV转PPTX转换器',
+      'csv_to_pptx.subtitle': '将CSV文件转换为现代PowerPoint PPTX演示格式。',
+      // CSV to RTF
+      'csv_to_rtf.title': 'CSV转RTF转换器',
+      'csv_to_rtf.subtitle': '将CSV文件转换为Rich Text Format RTF文档格式。',
+      // CSV to TXT
+      'csv_to_txt.title': 'CSV转TXT转换器',
+      'csv_to_txt.subtitle': '将CSV文件转换为纯文本TXT格式，用于通用兼容性。',
+      // CSV to XLS
+      'csv_to_xls.title': 'CSV转XLS转换器',
+      'csv_to_xls.subtitle': '将CSV文件转换为Excel XLS电子表格格式。',
+      // CSV to XLSX
+      'csv_to_xlsx.title': 'CSV转XLSX转换器',
+      'csv_to_xlsx.subtitle': '将CSV文件转换为现代Excel XLSX电子表格格式。',
+      // CSV to JSON
+      'csv_to_json.title': 'CSV转JSON转换器',
+      'csv_to_json.subtitle': '将CSV文件转换为JSON格式，用于Web开发和API。',
+      // CSV to NDJSON
+      'csv_to_ndjson.title': 'CSV转NDJSON转换器',
+      'csv_to_ndjson.subtitle': '将CSV文件转换为NDJSON（换行分隔JSON）格式，用于数据流。',
+      // CSV to Parquet
+      'csv_to_parquet.title': 'CSV转Parquet转换器',
+      'csv_to_parquet.subtitle': '将CSV文件转换为Parquet格式，用于高效数据分析。',
+      // CSV to SQL
+      'csv_to_sql.title': 'CSV转SQL转换器',
+      'csv_to_sql.subtitle': '将CSV文件转换为SQL语句，用于数据库导入。',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSV转TOML转换器',
+      'csv_to_toml.subtitle': '将CSV文件转换为TOML格式，用于配置文件。',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV转XML转换器',
+      'csv_to_xml.subtitle': '将CSV文件转换为XML格式，用于结构化数据交换。',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV转YAML转换器',
+      'csv_to_yaml.subtitle': '将CSV文件转换为YAML格式，用于配置和结构化数据。',
+      // DNG to WebP
+      'dng_to_webp.title': 'DNG转WebP转换器',
+      'dng_to_webp.subtitle': '将DNG RAW图像文件转换为针对Web优化的WebP格式。',
+      // EPS to WebP
+      'eps_to_webp.title': 'EPS转WebP转换器',
+      'eps_to_webp.subtitle': '将EPS矢量图形文件转换为Web和应用程序的WebP格式。',
+      // EPUB to CSV
+      'epub_to_csv.title': 'EPUB转CSV转换器',
+      'epub_to_csv.subtitle': '将EPUB电子书文件转换为CSV格式，用于数据分析。',
+      // EPUB to DOC
+      'epub_to_doc.title': 'EPUB转DOC转换器',
+      'epub_to_doc.subtitle': '将EPUB电子书文件转换为Word DOC文档格式。',
+      // EPUB to DOCX
+      'epub_to_docx.title': 'EPUB转DOCX转换器',
+      'epub_to_docx.subtitle': '将EPUB电子书文件转换为现代Word DOCX文档格式。',
+      // EPUB to HTML
+      'epub_to_html.title': 'EPUB转HTML转换器',
+      'epub_to_html.subtitle': '将EPUB电子书文件转换为HTML格式，用于Web。',
+      // EPUB to MD
+      'epub_to_md.title': 'EPUB转MD转换器',
+      'epub_to_md.subtitle': '将EPUB电子书文件转换为Markdown格式，用于文档。',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'EPUB转MOBI转换器',
+      'epub_to_mobi.subtitle': '将EPUB电子书文件转换为MOBI格式，用于Kindle设备。',
+      // EPUB to ODP
+      'epub_to_odp.title': 'EPUB转ODP转换器',
+      'epub_to_odp.subtitle': '将EPUB电子书文件转换为OpenDocument ODP演示格式。',
+      // EPUB to ODT
+      'epub_to_odt.title': 'EPUB转ODT转换器',
+      'epub_to_odt.subtitle': '将EPUB电子书文件转换为OpenDocument ODT文档格式。',
+      // EPUB to PDF
+      'epub_to_pdf.title': 'EPUB转PDF转换器',
+      'epub_to_pdf.subtitle': '将EPUB电子书文件转换为PDF格式，用于通用共享和打印。',
+      // EPUB to PPT
+      'epub_to_ppt.title': 'EPUB转PPT转换器',
+      'epub_to_ppt.subtitle': '将EPUB电子书文件转换为PowerPoint PPT演示格式。',
+      // EPUB to PPTX
+      'epub_to_pptx.title': 'EPUB转PPTX转换器',
+      'epub_to_pptx.subtitle': '将EPUB电子书文件转换为现代PowerPoint PPTX演示格式。',
+      // EPUB to RTF
+      'epub_to_rtf.title': 'EPUB转RTF转换器',
+      'epub_to_rtf.subtitle': '将EPUB电子书文件转换为Rich Text Format RTF文档格式。',
+      // EPUB to TXT
+      'epub_to_txt.title': 'EPUB转TXT转换器',
+      'epub_to_txt.subtitle': '将EPUB电子书文件转换为纯文本TXT格式。',
+      // EPUB to XLSX
+      'epub_to_xlsx.title': 'EPUB转XLSX转换器',
+      'epub_to_xlsx.subtitle': '将EPUB电子书文件转换为Excel XLSX电子表格格式。',
+      // DOC to CSV
+      'doc_to_csv.title': 'DOC转CSV转换器',
+      'doc_to_csv.subtitle': '将Word DOC文档文件转换为CSV格式，用于数据分析。',
+      // DOC to EPUB
+      'doc_to_epub.title': 'DOC转EPUB转换器',
+      'doc_to_epub.subtitle': '将Word DOC文档文件转换为EPUB电子书格式。',
+      // DOC to MOBI
+      'doc_to_mobi.title': 'DOC转MOBI转换器',
+      'doc_to_mobi.subtitle': '将Word DOC文档文件转换为MOBI电子书格式。',
+      // DOC to ODT
+      'doc_to_odt.title': 'DOC转ODT转换器',
+      'doc_to_odt.subtitle': '将Word DOC文档文件转换为OpenDocument ODT格式。',
+      // DOC to TXT
+      'doc_to_txt.title': 'DOC转TXT转换器',
+      'doc_to_txt.subtitle': '将Word DOC文档文件转换为纯文本TXT格式。',
+      // DOCX to CSV
+      'docx_to_csv.title': 'DOCX转CSV转换器',
+      'docx_to_csv.subtitle': '将Word DOCX文档文件转换为CSV格式，用于数据分析。',
+      // DOCX to EPUB
+      'docx_to_epub.title': 'DOCX转EPUB转换器',
+      'docx_to_epub.subtitle': '将Word DOCX文档文件转换为EPUB电子书格式。',
+      // DOCX to MOBI
+      'docx_to_mobi.title': 'DOCX转MOBI转换器',
+      'docx_to_mobi.subtitle': '将Word DOCX文档文件转换为MOBI电子书格式。',
+      // DOCX to ODT
+      'docx_to_odt.title': 'DOCX转ODT转换器',
+      'docx_to_odt.subtitle': '将Word DOCX文档文件转换为OpenDocument ODT格式。',
+      // DOCX to TXT
+      'docx_to_txt.title': 'DOCX转TXT转换器',
+      'docx_to_txt.subtitle': '将Word DOCX文档文件转换为纯文本TXT格式。',
     }
   }
 };

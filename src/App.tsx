@@ -545,6 +545,23 @@ function App() {
         <Route path="/th/convert/heif-to-jpg" element={<HEIFtoJPGConventer />} />
         <Route path="/ja/convert/heif-to-jpg" element={<HEIFtoJPGConventer />} />
         <Route path="/zh/convert/heif-to-jpg" element={<HEIFtoJPGConventer />} />
+
+        {/* New Languages Converter Routes - CSV to DOCX */}
+        <Route path="/id/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/sv/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/es/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/fr/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/it/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/nl/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/pt/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/vi/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/tr/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/ru/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/ar/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/th/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/ja/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+        <Route path="/zh/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
+
         <Route path="/de/convert/docx-to-csv" element={<DOCXToCSVConverter />} />
         <Route path="/de/convert/docx-to-epub" element={<DOCXToEPUBConverter />} />
         <Route path="/de/convert/docx-to-mobi" element={<DOCXToMOBIConverter />} />
