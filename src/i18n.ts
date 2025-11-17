@@ -15472,6 +15472,133 @@ const resources = {
       'features.no_registration': 'Tanpa Registrasi',
       'features.secure': '100% Aman',
       
+      // Home Page - Bahasa Indonesia
+      home: {
+        meta: {
+          title: 'Konverter File Online Gratis - MorphyHub | Konversi 300+ Format Instan',
+          description: 'Konversi file antara 300+ format secara instan. Layanan konversi file cepat, aman, dan gratis. Dukungan untuk gambar, dokumen, ebook, dan file data.',
+          keywords: 'konverter file, konverter online, konverter gambar, konverter dokumen, konverter ebook, konversi batch, konverter gratis'
+        },
+        schema: {
+          website_name: 'MorphyHub - Konverter File Online Gratis',
+          website_description: 'Konversi file antara 300+ format secara instan. Layanan konversi file cepat, aman, dan gratis.',
+          webpage_name: 'Konverter File Online Gratis - MorphyHub',
+          webpage_description: 'Konversi format file apa pun secara instan. Dukungan untuk 300+ format termasuk gambar, dokumen, ebook, dan file data.'
+        },
+        hero: {
+          badge: 'Gratis Selamanya • Tanpa Registrasi',
+          title: 'Ubah File',
+          highlight: 'Secara Instan',
+          subtitle: 'Konversi antara <bold>{{count}} format</bold> dengan kecepatan kilat. Aman, gratis, dan tidak perlu mendaftar.',
+          cta_primary: 'Mulai Mengonversi',
+          cta_secondary: 'Lihat File',
+          trust: [
+            '100% Gratis',
+            'Tanpa Registrasi',
+            'Aman & Privat',
+            'Pemrosesan Batch'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Format yang Didukung' },
+          data_processed: { label: 'Data yang Diproses' },
+          batch_processing: { value: '20 File', label: 'Pemrosesan Batch' }
+        },
+        explore: {
+          title: 'Jelajahi Alat Kami',
+          subtitle: 'Semua yang Anda butuhkan untuk konversi file, melihat, kompresi, dan lainnya',
+          cards: {
+            converters: {
+              title: 'Konverter',
+              description: 'Konversi antara 300+ format file secara instan. Gambar, dokumen, ebook, dan file data.',
+              cta: 'Jelajahi'
+            },
+            viewers: {
+              title: 'Penampil',
+              description: 'Pratinjau dan lihat file langsung di browser Anda. Tidak perlu mengunduh.',
+              cta: 'Jelajahi'
+            },
+            compress: {
+              title: 'Kompres',
+              description: 'Kurangi ukuran file tanpa kehilangan kualitas. Kompresi JPG, PNG, dan PDF.',
+              cta: 'Jelajahi'
+            },
+            samples: {
+              title: 'Sampel',
+              description: 'Jelajahi file sampel untuk semua format yang didukung. Uji sebelum mengonversi.',
+              cta: 'Jelajahi'
+            }
+          }
+        },
+        how: {
+          title: 'Bagaimana Konverter Kami Bekerja?',
+          subtitle: 'Tiga langkah sederhana untuk mengonversi format file apa pun',
+          steps: [
+            {
+              badge: 'LANGKAH 1',
+              title: 'Unggah File',
+              description: 'Seret & lepas atau jelajahi untuk memilih file Anda. Mendukung hingga 100MB per file.'
+            },
+            {
+              badge: 'LANGKAH 2',
+              title: 'Pilih Format',
+              description: 'Pilih format output yang diinginkan dari 300+ format yang didukung.'
+            },
+            {
+              badge: 'LANGKAH 3',
+              title: 'Unduh',
+              description: 'Klik konversi dan unduh file Anda secara instan. Tanpa menunggu, tanpa antrian.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Konverter Populer',
+          subtitle: 'Akses cepat ke alat konversi yang paling sering digunakan',
+          button_full: 'Lihat Semua 300+ Konverter',
+          button_mobile: 'Lihat Semua Konverter',
+          converters: {
+            csv_to_json: 'CSV ke JSON',
+            csv_to_ndjson: 'CSV ke NDJSON',
+            dng_to_webp: 'DNG ke WebP',
+            cr2_to_webp: 'CR2 ke WebP',
+            epub_to_pdf: 'EPUB ke PDF',
+            epub_to_mobi: 'EPUB ke MOBI',
+            csv_to_xlsx: 'CSV ke XLSX',
+            docx_to_pdf: 'DOCX ke PDF'
+          }
+        },
+        features: {
+          title: 'Mengapa Memilih MorphyHub?',
+          subtitle: 'Dibangun untuk profesional dan pengguna sehari-hari',
+          items: [
+            {
+              title: 'Sangat Cepat',
+              description: 'Proses file dalam hitungan detik dengan mesin konversi yang dioptimalkan'
+            },
+            {
+              title: 'Aman & Privat',
+              description: 'Keamanan tingkat perusahaan. File dihapus otomatis setelah diproses'
+            },
+            {
+              title: 'Dukungan Universal',
+              description: 'Konversi antara 300+ kombinasi format di semua jenis file'
+            },
+            {
+              title: 'Pemrosesan Batch',
+              description: 'Konversi hingga 20 file sekaligus dengan mesin batch yang kuat'
+            },
+            {
+              title: 'Penampil File',
+              description: 'Pratinjau dan lihat file Anda langsung di browser'
+            },
+            {
+              title: 'Kualitas Profesional',
+              description: 'Konversi standar industri dengan pengaturan yang dapat disesuaikan'
+            }
+          ]
+        }
+      },
+      
       // CR2 to ICO - Bahasa Indonesia
       'cr2_to_ico.title': 'Konverter CR2 ke ICO',
       'cr2_to_ico.meta_title': 'Konverter CR2 ke ICO Gratis - Konversi Canon RAW ke Ikon Windows',
@@ -16130,6 +16257,133 @@ const resources = {
       'features.100_free': '100% Gratis',
       'features.no_registration': 'Ingen registrering',
       'features.secure': '100% Säker',
+      
+      // Home Page - Svenska
+      home: {
+        meta: {
+          title: 'Gratis Online Filkonverterare - MorphyHub | Konvertera 300+ Format Direkt',
+          description: 'Konvertera filer mellan 300+ format direkt. Snabb, säker och gratis filkonverteringstjänst. Stöd för bilder, dokument, e-böcker och datafiler.',
+          keywords: 'filkonverterare, online konverterare, bildkonverterare, dokumentkonverterare, e-bok konverterare, batchkonvertering, gratis konverterare'
+        },
+        schema: {
+          website_name: 'MorphyHub - Gratis Online Filkonverterare',
+          website_description: 'Konvertera filer mellan 300+ format direkt. Snabb, säker och gratis filkonverteringstjänst.',
+          webpage_name: 'Gratis Online Filkonverterare - MorphyHub',
+          webpage_description: 'Konvertera vilket filformat som helst direkt. Stöd för 300+ format inklusive bilder, dokument, e-böcker och datafiler.'
+        },
+        hero: {
+          badge: 'Gratis För Alltid • Ingen Registrering',
+          title: 'Förvandla Filer',
+          highlight: 'Direkt',
+          subtitle: 'Konvertera mellan <bold>{{count}} format</bold> med blixtsnabb hastighet. Säker, gratis och ingen registrering krävs.',
+          cta_primary: 'Börja Konvertera',
+          cta_secondary: 'Visa Filer',
+          trust: [
+            '100% Gratis',
+            'Ingen Registrering',
+            'Säker & Privat',
+            'Batchbearbetning'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Format som Stöds' },
+          data_processed: { label: 'Bearbetad Data' },
+          batch_processing: { value: '20 Filer', label: 'Batchbearbetning' }
+        },
+        explore: {
+          title: 'Utforska Våra Verktyg',
+          subtitle: 'Allt du behöver för filkonvertering, visning, komprimering och mer',
+          cards: {
+            converters: {
+              title: 'Konverterare',
+              description: 'Konvertera mellan 300+ filformat direkt. Bilder, dokument, e-böcker och datafiler.',
+              cta: 'Utforska'
+            },
+            viewers: {
+              title: 'Visare',
+              description: 'Förhandsgranska och visa filer direkt i din webbläsare. Ingen nedladdning behövs.',
+              cta: 'Utforska'
+            },
+            compress: {
+              title: 'Komprimera',
+              description: 'Minska filstorlekar utan kvalitetsförlust. JPG, PNG och PDF-komprimering.',
+              cta: 'Utforska'
+            },
+            samples: {
+              title: 'Exempel',
+              description: 'Bläddra genom exempelfiler för alla format som stöds. Testa innan du konverterar.',
+              cta: 'Utforska'
+            }
+          }
+        },
+        how: {
+          title: 'Hur Fungerar Våra Konverterare?',
+          subtitle: 'Tre enkla steg för att konvertera vilket filformat som helst',
+          steps: [
+            {
+              badge: 'STEG 1',
+              title: 'Ladda Upp Fil',
+              description: 'Dra & släpp eller bläddra för att välja din fil. Stöder upp till 100MB per fil.'
+            },
+            {
+              badge: 'STEG 2',
+              title: 'Välj Format',
+              description: 'Välj önskat utdataformat från 300+ format som stöds.'
+            },
+            {
+              badge: 'STEG 3',
+              title: 'Ladda Ner',
+              description: 'Klicka på konvertera och ladda ner din fil direkt. Ingen väntan, inga köer.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Populära Konverterare',
+          subtitle: 'Snabb åtkomst till våra mest använda konverteringsverktyg',
+          button_full: 'Visa Alla 300+ Konverterare',
+          button_mobile: 'Visa Alla Konverterare',
+          converters: {
+            csv_to_json: 'CSV till JSON',
+            csv_to_ndjson: 'CSV till NDJSON',
+            dng_to_webp: 'DNG till WebP',
+            cr2_to_webp: 'CR2 till WebP',
+            epub_to_pdf: 'EPUB till PDF',
+            epub_to_mobi: 'EPUB till MOBI',
+            csv_to_xlsx: 'CSV till XLSX',
+            docx_to_pdf: 'DOCX till PDF'
+          }
+        },
+        features: {
+          title: 'Varför Välja MorphyHub?',
+          subtitle: 'Byggt för professionella och vardagsanvändare',
+          items: [
+            {
+              title: 'Blixtsnabb',
+              description: 'Bearbeta filer på sekunder med vår optimerade konverteringsmotor'
+            },
+            {
+              title: 'Säker & Privat',
+              description: 'Företagssäkerhet. Filer raderas automatiskt efter bearbetning'
+            },
+            {
+              title: 'Universellt Stöd',
+              description: 'Konvertera mellan 300+ formatkombinationer över alla filtyper'
+            },
+            {
+              title: 'Batchbearbetning',
+              description: 'Konvertera upp till 20 filer samtidigt med vår kraftfulla batchmotor'
+            },
+            {
+              title: 'Filvisare',
+              description: 'Förhandsgranska och visa dina filer direkt i webbläsaren'
+            },
+            {
+              title: 'Professionell Kvalitet',
+              description: 'Branschstandardkonvertering med anpassningsbara inställningar'
+            }
+          ]
+        }
+      },
       
       // CR2 to ICO - Svenska
       'cr2_to_ico.title': 'CR2 till ICO-konverterare',
@@ -16790,6 +17044,133 @@ const resources = {
       'features.no_registration': 'Sin Registro',
       'features.secure': '100% Seguro',
       
+      // Home Page - Español
+      home: {
+        meta: {
+          title: 'Convertidor de Archivos Online Gratis - MorphyHub | Convierte 300+ Formatos al Instante',
+          description: 'Convierte archivos entre 300+ formatos al instante. Servicio de conversión de archivos rápido, seguro y gratis. Soporte para imágenes, documentos, ebooks y archivos de datos.',
+          keywords: 'convertidor de archivos, convertidor online, convertidor de imágenes, convertidor de documentos, convertidor de ebooks, conversión por lotes, convertidor gratis'
+        },
+        schema: {
+          website_name: 'MorphyHub - Convertidor de Archivos Online Gratis',
+          website_description: 'Convierte archivos entre 300+ formatos al instante. Servicio de conversión de archivos rápido, seguro y gratis.',
+          webpage_name: 'Convertidor de Archivos Online Gratis - MorphyHub',
+          webpage_description: 'Convierte cualquier formato de archivo al instante. Soporte para 300+ formatos incluyendo imágenes, documentos, ebooks y archivos de datos.'
+        },
+        hero: {
+          badge: 'Gratis Para Siempre • Sin Registro',
+          title: 'Transforma Archivos',
+          highlight: 'Al Instante',
+          subtitle: 'Convierte entre <bold>{{count}} formatos</bold> con velocidad ultrarrápida. Seguro, gratis y sin necesidad de registro.',
+          cta_primary: 'Comenzar a Convertir',
+          cta_secondary: 'Ver Archivos',
+          trust: [
+            '100% Gratis',
+            'Sin Registro',
+            'Seguro y Privado',
+            'Procesamiento por Lotes'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Formatos Soportados' },
+          data_processed: { label: 'Datos Procesados' },
+          batch_processing: { value: '20 Archivos', label: 'Procesamiento por Lotes' }
+        },
+        explore: {
+          title: 'Explora Nuestras Herramientas',
+          subtitle: 'Todo lo que necesitas para conversión de archivos, visualización, compresión y más',
+          cards: {
+            converters: {
+              title: 'Convertidores',
+              description: 'Convierte entre 300+ formatos de archivo al instante. Imágenes, documentos, ebooks y archivos de datos.',
+              cta: 'Explorar'
+            },
+            viewers: {
+              title: 'Visores',
+              description: 'Vista previa y visualiza archivos directamente en tu navegador. No se necesita descarga.',
+              cta: 'Explorar'
+            },
+            compress: {
+              title: 'Comprimir',
+              description: 'Reduce el tamaño de archivos sin perder calidad. Compresión JPG, PNG y PDF.',
+              cta: 'Explorar'
+            },
+            samples: {
+              title: 'Muestras',
+              description: 'Explora archivos de muestra para todos los formatos soportados. Prueba antes de convertir.',
+              cta: 'Explorar'
+            }
+          }
+        },
+        how: {
+          title: '¿Cómo Funcionan Nuestros Convertidores?',
+          subtitle: 'Tres pasos simples para convertir cualquier formato de archivo',
+          steps: [
+            {
+              badge: 'PASO 1',
+              title: 'Subir Archivo',
+              description: 'Arrastra y suelta o navega para seleccionar tu archivo. Soporta hasta 100MB por archivo.'
+            },
+            {
+              badge: 'PASO 2',
+              title: 'Elegir Formato',
+              description: 'Selecciona el formato de salida deseado de entre 300+ formatos soportados.'
+            },
+            {
+              badge: 'PASO 3',
+              title: 'Descargar',
+              description: 'Haz clic en convertir y descarga tu archivo al instante. Sin esperas, sin colas.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Convertidores Populares',
+          subtitle: 'Acceso rápido a nuestras herramientas de conversión más utilizadas',
+          button_full: 'Ver Todos los 300+ Convertidores',
+          button_mobile: 'Ver Todos los Convertidores',
+          converters: {
+            csv_to_json: 'CSV a JSON',
+            csv_to_ndjson: 'CSV a NDJSON',
+            dng_to_webp: 'DNG a WebP',
+            cr2_to_webp: 'CR2 a WebP',
+            epub_to_pdf: 'EPUB a PDF',
+            epub_to_mobi: 'EPUB a MOBI',
+            csv_to_xlsx: 'CSV a XLSX',
+            docx_to_pdf: 'DOCX a PDF'
+          }
+        },
+        features: {
+          title: '¿Por Qué Elegir MorphyHub?',
+          subtitle: 'Construido para profesionales y usuarios cotidianos',
+          items: [
+            {
+              title: 'Súper Rápido',
+              description: 'Procesa archivos en segundos con nuestro motor de conversión optimizado'
+            },
+            {
+              title: 'Seguro y Privado',
+              description: 'Seguridad de nivel empresarial. Los archivos se eliminan automáticamente después del procesamiento'
+            },
+            {
+              title: 'Soporte Universal',
+              description: 'Convierte entre 300+ combinaciones de formatos en todos los tipos de archivo'
+            },
+            {
+              title: 'Procesamiento por Lotes',
+              description: 'Convierte hasta 20 archivos a la vez con nuestro potente motor por lotes'
+            },
+            {
+              title: 'Visor de Archivos',
+              description: 'Vista previa y visualiza tus archivos directamente en el navegador'
+            },
+            {
+              title: 'Calidad Profesional',
+              description: 'Conversión de estándar de la industria con configuraciones personalizables'
+            }
+          ]
+        }
+      },
+      
       // CR2 to ICO - Español
       'cr2_to_ico.title': 'Convertidor CR2 a ICO',
       'cr2_to_ico.meta_title': 'Convertidor CR2 a ICO Gratis - Convertir Canon RAW a Iconos de Windows',
@@ -17448,6 +17829,133 @@ const resources = {
       'features.100_free': '100% Gratuit',
       'features.no_registration': 'Sans Inscription',
       'features.secure': '100% Sécurisé',
+      
+      // Home Page - Français
+      home: {
+        meta: {
+          title: 'Convertisseur de Fichiers En Ligne Gratuit - MorphyHub | Convertir 300+ Formats Instantanément',
+          description: 'Convertissez des fichiers entre 300+ formats instantanément. Service de conversion de fichiers rapide, sécurisé et gratuit. Prise en charge des images, documents, ebooks et fichiers de données.',
+          keywords: 'convertisseur de fichiers, convertisseur en ligne, convertisseur d\'images, convertisseur de documents, convertisseur d\'ebooks, conversion par lots, convertisseur gratuit'
+        },
+        schema: {
+          website_name: 'MorphyHub - Convertisseur de Fichiers En Ligne Gratuit',
+          website_description: 'Convertissez des fichiers entre 300+ formats instantanément. Service de conversion de fichiers rapide, sécurisé et gratuit.',
+          webpage_name: 'Convertisseur de Fichiers En Ligne Gratuit - MorphyHub',
+          webpage_description: 'Convertissez n\'importe quel format de fichier instantanément. Prise en charge de 300+ formats incluant les images, documents, ebooks et fichiers de données.'
+        },
+        hero: {
+          badge: 'Gratuit Pour Toujours • Sans Inscription',
+          title: 'Transformez les Fichiers',
+          highlight: 'Instantanément',
+          subtitle: 'Convertissez entre <bold>{{count}} formats</bold> à vitesse éclair. Sécurisé, gratuit et sans inscription requise.',
+          cta_primary: 'Commencer à Convertir',
+          cta_secondary: 'Voir les Fichiers',
+          trust: [
+            '100% Gratuit',
+            'Sans Inscription',
+            'Sécurisé et Privé',
+            'Traitement par Lots'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Formats Pris en Charge' },
+          data_processed: { label: 'Données Traitées' },
+          batch_processing: { value: '20 Fichiers', label: 'Traitement par Lots' }
+        },
+        explore: {
+          title: 'Explorez Nos Outils',
+          subtitle: 'Tout ce dont vous avez besoin pour la conversion de fichiers, la visualisation, la compression et plus encore',
+          cards: {
+            converters: {
+              title: 'Convertisseurs',
+              description: 'Convertissez entre 300+ formats de fichiers instantanément. Images, documents, ebooks et fichiers de données.',
+              cta: 'Explorer'
+            },
+            viewers: {
+              title: 'Visualiseurs',
+              description: 'Aperçu et visualisez les fichiers directement dans votre navigateur. Aucun téléchargement nécessaire.',
+              cta: 'Explorer'
+            },
+            compress: {
+              title: 'Compresser',
+              description: 'Réduisez la taille des fichiers sans perte de qualité. Compression JPG, PNG et PDF.',
+              cta: 'Explorer'
+            },
+            samples: {
+              title: 'Échantillons',
+              description: 'Parcourez les fichiers d\'échantillon pour tous les formats pris en charge. Testez avant de convertir.',
+              cta: 'Explorer'
+            }
+          }
+        },
+        how: {
+          title: 'Comment Fonctionnent Nos Convertisseurs ?',
+          subtitle: 'Trois étapes simples pour convertir n\'importe quel format de fichier',
+          steps: [
+            {
+              badge: 'ÉTAPE 1',
+              title: 'Télécharger le Fichier',
+              description: 'Glissez-déposez ou parcourez pour sélectionner votre fichier. Prend en charge jusqu\'à 100 Mo par fichier.'
+            },
+            {
+              badge: 'ÉTAPE 2',
+              title: 'Choisir le Format',
+              description: 'Sélectionnez le format de sortie souhaité parmi 300+ formats pris en charge.'
+            },
+            {
+              badge: 'ÉTAPE 3',
+              title: 'Télécharger',
+              description: 'Cliquez sur convertir et téléchargez votre fichier instantanément. Pas d\'attente, pas de files d\'attente.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Convertisseurs Populaires',
+          subtitle: 'Accès rapide à nos outils de conversion les plus utilisés',
+          button_full: 'Voir Tous les 300+ Convertisseurs',
+          button_mobile: 'Voir Tous les Convertisseurs',
+          converters: {
+            csv_to_json: 'CSV vers JSON',
+            csv_to_ndjson: 'CSV vers NDJSON',
+            dng_to_webp: 'DNG vers WebP',
+            cr2_to_webp: 'CR2 vers WebP',
+            epub_to_pdf: 'EPUB vers PDF',
+            epub_to_mobi: 'EPUB vers MOBI',
+            csv_to_xlsx: 'CSV vers XLSX',
+            docx_to_pdf: 'DOCX vers PDF'
+          }
+        },
+        features: {
+          title: 'Pourquoi Choisir MorphyHub ?',
+          subtitle: 'Conçu pour les professionnels et les utilisateurs quotidiens',
+          items: [
+            {
+              title: 'Ultra Rapide',
+              description: 'Traitez les fichiers en quelques secondes avec notre moteur de conversion optimisé'
+            },
+            {
+              title: 'Sécurisé et Privé',
+              description: 'Sécurité de niveau entreprise. Les fichiers sont automatiquement supprimés après traitement'
+            },
+            {
+              title: 'Support Universel',
+              description: 'Convertissez entre 300+ combinaisons de formats sur tous les types de fichiers'
+            },
+            {
+              title: 'Traitement par Lots',
+              description: 'Convertissez jusqu\'à 20 fichiers à la fois avec notre puissant moteur par lots'
+            },
+            {
+              title: 'Visualiseur de Fichiers',
+              description: 'Aperçu et visualisez vos fichiers directement dans le navigateur'
+            },
+            {
+              title: 'Qualité Professionnelle',
+              description: 'Conversion de qualité industrielle avec des paramètres personnalisables'
+            }
+          ]
+        }
+      },
       
       // CR2 to ICO - Français
       'cr2_to_ico.title': 'Convertisseur CR2 vers ICO',
@@ -18108,6 +18616,133 @@ const resources = {
       'features.no_registration': 'Senza Registrazione',
       'features.secure': '100% Sicuro',
       
+      // Home Page - Italiano
+      home: {
+        meta: {
+          title: 'Convertitore di File Online Gratuito - MorphyHub | Converti 300+ Formati Istantaneamente',
+          description: 'Converti file tra 300+ formati istantaneamente. Servizio di conversione file veloce, sicuro e gratuito. Supporto per immagini, documenti, ebook e file di dati.',
+          keywords: 'convertitore di file, convertitore online, convertitore di immagini, convertitore di documenti, convertitore di ebook, conversione batch, convertitore gratuito'
+        },
+        schema: {
+          website_name: 'MorphyHub - Convertitore di File Online Gratuito',
+          website_description: 'Converti file tra 300+ formati istantaneamente. Servizio di conversione file veloce, sicuro e gratuito.',
+          webpage_name: 'Convertitore di File Online Gratuito - MorphyHub',
+          webpage_description: 'Converti qualsiasi formato di file istantaneamente. Supporto per 300+ formati inclusi immagini, documenti, ebook e file di dati.'
+        },
+        hero: {
+          badge: 'Gratuito Per Sempre • Nessuna Registrazione',
+          title: 'Trasforma File',
+          highlight: 'Istantaneamente',
+          subtitle: 'Converti tra <bold>{{count}} formati</bold> con velocità fulminea. Sicuro, gratuito e senza registrazione richiesta.',
+          cta_primary: 'Inizia a Convertire',
+          cta_secondary: 'Visualizza File',
+          trust: [
+            '100% Gratuito',
+            'Nessuna Registrazione',
+            'Sicuro e Privato',
+            'Elaborazione Batch'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Formati Supportati' },
+          data_processed: { label: 'Dati Elaborati' },
+          batch_processing: { value: '20 File', label: 'Elaborazione Batch' }
+        },
+        explore: {
+          title: 'Esplora I Nostri Strumenti',
+          subtitle: 'Tutto ciò di cui hai bisogno per la conversione di file, visualizzazione, compressione e altro',
+          cards: {
+            converters: {
+              title: 'Convertitori',
+              description: 'Converti tra 300+ formati di file istantaneamente. Immagini, documenti, ebook e file di dati.',
+              cta: 'Esplora'
+            },
+            viewers: {
+              title: 'Visualizzatori',
+              description: 'Anteprima e visualizza file direttamente nel tuo browser. Nessun download necessario.',
+              cta: 'Esplora'
+            },
+            compress: {
+              title: 'Comprimi',
+              description: 'Riduci le dimensioni dei file senza perdere qualità. Compressione JPG, PNG e PDF.',
+              cta: 'Esplora'
+            },
+            samples: {
+              title: 'Campioni',
+              description: 'Sfoglia file di esempio per tutti i formati supportati. Prova prima di convertire.',
+              cta: 'Esplora'
+            }
+          }
+        },
+        how: {
+          title: 'Come Funzionano I Nostri Convertitori?',
+          subtitle: 'Tre semplici passaggi per convertire qualsiasi formato di file',
+          steps: [
+            {
+              badge: 'PASSO 1',
+              title: 'Carica File',
+              description: 'Trascina e rilascia o sfoglia per selezionare il tuo file. Supporta fino a 100MB per file.'
+            },
+            {
+              badge: 'PASSO 2',
+              title: 'Scegli Formato',
+              description: 'Seleziona il formato di output desiderato tra 300+ formati supportati.'
+            },
+            {
+              badge: 'PASSO 3',
+              title: 'Scarica',
+              description: 'Clicca converti e scarica il tuo file istantaneamente. Nessuna attesa, nessuna coda.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Convertitori Popolari',
+          subtitle: 'Accesso rapido ai nostri strumenti di conversione più utilizzati',
+          button_full: 'Vedi Tutti i 300+ Convertitori',
+          button_mobile: 'Vedi Tutti i Convertitori',
+          converters: {
+            csv_to_json: 'CSV in JSON',
+            csv_to_ndjson: 'CSV in NDJSON',
+            dng_to_webp: 'DNG in WebP',
+            cr2_to_webp: 'CR2 in WebP',
+            epub_to_pdf: 'EPUB in PDF',
+            epub_to_mobi: 'EPUB in MOBI',
+            csv_to_xlsx: 'CSV in XLSX',
+            docx_to_pdf: 'DOCX in PDF'
+          }
+        },
+        features: {
+          title: 'Perché Scegliere MorphyHub?',
+          subtitle: 'Costruito per professionisti e utenti quotidiani',
+          items: [
+            {
+              title: 'Ultra Veloce',
+              description: 'Elabora file in secondi con il nostro motore di conversione ottimizzato'
+            },
+            {
+              title: 'Sicuro e Privato',
+              description: 'Sicurezza di livello aziendale. I file vengono eliminati automaticamente dopo l\'elaborazione'
+            },
+            {
+              title: 'Supporto Universale',
+              description: 'Converti tra 300+ combinazioni di formati su tutti i tipi di file'
+            },
+            {
+              title: 'Elaborazione Batch',
+              description: 'Converti fino a 20 file alla volta con il nostro potente motore batch'
+            },
+            {
+              title: 'Visualizzatore File',
+              description: 'Anteprima e visualizza i tuoi file direttamente nel browser'
+            },
+            {
+              title: 'Qualità Professionale',
+              description: 'Conversione di standard industriale con impostazioni personalizzabili'
+            }
+          ]
+        }
+      },
+      
       // CR2 to ICO - Italiano
       'cr2_to_ico.title': 'Convertitore CR2 in ICO',
       'cr2_to_ico.meta_title': 'Convertitore CR2 in ICO Gratuito - Converti Canon RAW in Icone Windows',
@@ -18766,6 +19401,133 @@ const resources = {
       'features.100_free': '100% Gratis',
       'features.no_registration': 'Geen Registratie',
       'features.secure': '100% Veilig',
+      
+      // Home Page - Nederlands
+      home: {
+        meta: {
+          title: 'Gratis Online Bestandsconverter - MorphyHub | Converteer 300+ Formaten Direct',
+          description: 'Converteer bestanden tussen 300+ formaten direct. Snelle, veilige en gratis bestandsconversieservice. Ondersteuning voor afbeeldingen, documenten, ebooks en gegevensbestanden.',
+          keywords: 'bestandsconverter, online converter, afbeeldingsconverter, documentconverter, ebook converter, batchconversie, gratis converter'
+        },
+        schema: {
+          website_name: 'MorphyHub - Gratis Online Bestandsconverter',
+          website_description: 'Converteer bestanden tussen 300+ formaten direct. Snelle, veilige en gratis bestandsconversieservice.',
+          webpage_name: 'Gratis Online Bestandsconverter - MorphyHub',
+          webpage_description: 'Converteer elk bestandsformaat direct. Ondersteuning voor 300+ formaten inclusief afbeeldingen, documenten, ebooks en gegevensbestanden.'
+        },
+        hero: {
+          badge: 'Voor Altijd Gratis • Geen Registratie',
+          title: 'Transformeer Bestanden',
+          highlight: 'Direct',
+          subtitle: 'Converteer tussen <bold>{{count}} formaten</bold> met bliksemsnelle snelheid. Veilig, gratis en geen registratie vereist.',
+          cta_primary: 'Begin Met Converteren',
+          cta_secondary: 'Bekijk Bestanden',
+          trust: [
+            '100% Gratis',
+            'Geen Registratie',
+            'Veilig en Privé',
+            'Batchverwerking'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Ondersteunde Formaten' },
+          data_processed: { label: 'Verwerkte Gegevens' },
+          batch_processing: { value: '20 Bestanden', label: 'Batchverwerking' }
+        },
+        explore: {
+          title: 'Ontdek Onze Tools',
+          subtitle: 'Alles wat je nodig hebt voor bestandsconversie, weergave, compressie en meer',
+          cards: {
+            converters: {
+              title: 'Converters',
+              description: 'Converteer tussen 300+ bestandsformaten direct. Afbeeldingen, documenten, ebooks en gegevensbestanden.',
+              cta: 'Ontdek'
+            },
+            viewers: {
+              title: 'Viewers',
+              description: 'Bekijk en bekijk bestanden direct in je browser. Geen downloads nodig.',
+              cta: 'Ontdek'
+            },
+            compress: {
+              title: 'Comprimeren',
+              description: 'Verminder bestandsgroottes zonder kwaliteitsverlies. JPG, PNG en PDF-compressie.',
+              cta: 'Ontdek'
+            },
+            samples: {
+              title: 'Voorbeelden',
+              description: 'Blader door voorbeeldbestanden voor alle ondersteunde formaten. Test voordat je converteert.',
+              cta: 'Ontdek'
+            }
+          }
+        },
+        how: {
+          title: 'Hoe Werken Onze Converters?',
+          subtitle: 'Drie eenvoudige stappen om elk bestandsformaat te converteren',
+          steps: [
+            {
+              badge: 'STAP 1',
+              title: 'Upload Bestand',
+              description: 'Sleep en zet neer of blader om je bestand te selecteren. Ondersteunt tot 100MB per bestand.'
+            },
+            {
+              badge: 'STAP 2',
+              title: 'Kies Formaat',
+              description: 'Selecteer het gewenste uitvoerformaat uit 300+ ondersteunde formaten.'
+            },
+            {
+              badge: 'STAP 3',
+              title: 'Download',
+              description: 'Klik converteren en download je bestand direct. Geen wachten, geen wachtrijen.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Populaire Converters',
+          subtitle: 'Snelle toegang tot onze meest gebruikte conversietools',
+          button_full: 'Bekijk Alle 300+ Converters',
+          button_mobile: 'Bekijk Alle Converters',
+          converters: {
+            csv_to_json: 'CSV naar JSON',
+            csv_to_ndjson: 'CSV naar NDJSON',
+            dng_to_webp: 'DNG naar WebP',
+            cr2_to_webp: 'CR2 naar WebP',
+            epub_to_pdf: 'EPUB naar PDF',
+            epub_to_mobi: 'EPUB naar MOBI',
+            csv_to_xlsx: 'CSV naar XLSX',
+            docx_to_pdf: 'DOCX naar PDF'
+          }
+        },
+        features: {
+          title: 'Waarom MorphyHub Kiezen?',
+          subtitle: 'Gebouwd voor professionals en dagelijkse gebruikers',
+          items: [
+            {
+              title: 'Bliksemsnel',
+              description: 'Verwerk bestanden in seconden met onze geoptimaliseerde conversiemotor'
+            },
+            {
+              title: 'Veilig en Privé',
+              description: 'Enterprise-niveau beveiliging. Bestanden worden automatisch verwijderd na verwerking'
+            },
+            {
+              title: 'Universele Ondersteuning',
+              description: 'Converteer tussen 300+ formaatcombinaties over alle bestandstypen'
+            },
+            {
+              title: 'Batchverwerking',
+              description: 'Converteer tot 20 bestanden tegelijk met onze krachtige batchmotor'
+            },
+            {
+              title: 'Bestandsviewer',
+              description: 'Bekijk en bekijk je bestanden direct in de browser'
+            },
+            {
+              title: 'Professionele Kwaliteit',
+              description: 'Industriestandaard conversie met aanpasbare instellingen'
+            }
+          ]
+        }
+      },
       
       // CR2 to ICO - Nederlands
       'cr2_to_ico.title': 'CR2 naar ICO Converter',
@@ -19426,6 +20188,133 @@ const resources = {
       'features.no_registration': 'Sem Registro',
       'features.secure': '100% Seguro',
       
+      // Home Page - Português
+      home: {
+        meta: {
+          title: 'Conversor de Arquivos Online Gratuito - MorphyHub | Converta 300+ Formatos Instantaneamente',
+          description: 'Converta arquivos entre 300+ formatos instantaneamente. Serviço de conversão de arquivos rápido, seguro e gratuito. Suporte para imagens, documentos, ebooks e arquivos de dados.',
+          keywords: 'conversor de arquivos, conversor online, conversor de imagens, conversor de documentos, conversor de ebooks, conversão em lote, conversor gratuito'
+        },
+        schema: {
+          website_name: 'MorphyHub - Conversor de Arquivos Online Gratuito',
+          website_description: 'Converta arquivos entre 300+ formatos instantaneamente. Serviço de conversão de arquivos rápido, seguro e gratuito.',
+          webpage_name: 'Conversor de Arquivos Online Gratuito - MorphyHub',
+          webpage_description: 'Converta qualquer formato de arquivo instantaneamente. Suporte para 300+ formatos incluindo imagens, documentos, ebooks e arquivos de dados.'
+        },
+        hero: {
+          badge: 'Gratuito Para Sempre • Sem Registro',
+          title: 'Transforme Arquivos',
+          highlight: 'Instantaneamente',
+          subtitle: 'Converta entre <bold>{{count}} formatos</bold> com velocidade ultrarrápida. Seguro, gratuito e sem necessidade de registro.',
+          cta_primary: 'Começar a Converter',
+          cta_secondary: 'Ver Arquivos',
+          trust: [
+            '100% Gratuito',
+            'Sem Registro',
+            'Seguro e Privado',
+            'Processamento em Lote'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Formatos Suportados' },
+          data_processed: { label: 'Dados Processados' },
+          batch_processing: { value: '20 Arquivos', label: 'Processamento em Lote' }
+        },
+        explore: {
+          title: 'Explore Nossas Ferramentas',
+          subtitle: 'Tudo que você precisa para conversão de arquivos, visualização, compressão e mais',
+          cards: {
+            converters: {
+              title: 'Conversores',
+              description: 'Converta entre 300+ formatos de arquivo instantaneamente. Imagens, documentos, ebooks e arquivos de dados.',
+              cta: 'Explorar'
+            },
+            viewers: {
+              title: 'Visualizadores',
+              description: 'Visualize e veja arquivos diretamente no seu navegador. Nenhum download necessário.',
+              cta: 'Explorar'
+            },
+            compress: {
+              title: 'Comprimir',
+              description: 'Reduza o tamanho dos arquivos sem perder qualidade. Compressão JPG, PNG e PDF.',
+              cta: 'Explorar'
+            },
+            samples: {
+              title: 'Amostras',
+              description: 'Navegue por arquivos de exemplo para todos os formatos suportados. Teste antes de converter.',
+              cta: 'Explorar'
+            }
+          }
+        },
+        how: {
+          title: 'Como Funcionam Nossos Conversores?',
+          subtitle: 'Três passos simples para converter qualquer formato de arquivo',
+          steps: [
+            {
+              badge: 'PASSO 1',
+              title: 'Enviar Arquivo',
+              description: 'Arraste e solte ou navegue para selecionar seu arquivo. Suporta até 100MB por arquivo.'
+            },
+            {
+              badge: 'PASSO 2',
+              title: 'Escolher Formato',
+              description: 'Selecione o formato de saída desejado entre 300+ formatos suportados.'
+            },
+            {
+              badge: 'PASSO 3',
+              title: 'Baixar',
+              description: 'Clique em converter e baixe seu arquivo instantaneamente. Sem espera, sem filas.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Conversores Populares',
+          subtitle: 'Acesso rápido às nossas ferramentas de conversão mais usadas',
+          button_full: 'Ver Todos os 300+ Conversores',
+          button_mobile: 'Ver Todos os Conversores',
+          converters: {
+            csv_to_json: 'CSV para JSON',
+            csv_to_ndjson: 'CSV para NDJSON',
+            dng_to_webp: 'DNG para WebP',
+            cr2_to_webp: 'CR2 para WebP',
+            epub_to_pdf: 'EPUB para PDF',
+            epub_to_mobi: 'EPUB para MOBI',
+            csv_to_xlsx: 'CSV para XLSX',
+            docx_to_pdf: 'DOCX para PDF'
+          }
+        },
+        features: {
+          title: 'Por Que Escolher MorphyHub?',
+          subtitle: 'Construído para profissionais e usuários do dia a dia',
+          items: [
+            {
+              title: 'Ultra Rápido',
+              description: 'Processe arquivos em segundos com nosso motor de conversão otimizado'
+            },
+            {
+              title: 'Seguro e Privado',
+              description: 'Segurança de nível empresarial. Arquivos são automaticamente excluídos após o processamento'
+            },
+            {
+              title: 'Suporte Universal',
+              description: 'Converta entre 300+ combinações de formatos em todos os tipos de arquivo'
+            },
+            {
+              title: 'Processamento em Lote',
+              description: 'Converta até 20 arquivos de uma vez com nosso poderoso motor em lote'
+            },
+            {
+              title: 'Visualizador de Arquivos',
+              description: 'Visualize e veja seus arquivos diretamente no navegador'
+            },
+            {
+              title: 'Qualidade Profissional',
+              description: 'Conversão de padrão da indústria com configurações personalizáveis'
+            }
+          ]
+        }
+      },
+      
       // CR2 to ICO - Português
       'cr2_to_ico.title': 'Conversor CR2 para ICO',
       'cr2_to_ico.meta_title': 'Conversor CR2 para ICO Gratuito - Converter Canon RAW para Ícones Windows',
@@ -20033,6 +20922,133 @@ const resources = {
       'features.100_free': '100% Miễn Phí',
       'features.no_registration': 'Không Cần Đăng Ký',
       'features.secure': '100% An Toàn',
+      
+      // Home Page - Tiếng Việt
+      home: {
+        meta: {
+          title: 'Bộ Chuyển Đổi File Trực Tuyến Miễn Phí - MorphyHub | Chuyển Đổi 300+ Định Dạng Ngay Lập Tức',
+          description: 'Chuyển đổi file giữa 300+ định dạng ngay lập tức. Dịch vụ chuyển đổi file nhanh, an toàn và miễn phí. Hỗ trợ hình ảnh, tài liệu, ebook và file dữ liệu.',
+          keywords: 'bộ chuyển đổi file, bộ chuyển đổi trực tuyến, bộ chuyển đổi hình ảnh, bộ chuyển đổi tài liệu, bộ chuyển đổi ebook, chuyển đổi hàng loạt, bộ chuyển đổi miễn phí'
+        },
+        schema: {
+          website_name: 'MorphyHub - Bộ Chuyển Đổi File Trực Tuyến Miễn Phí',
+          website_description: 'Chuyển đổi file giữa 300+ định dạng ngay lập tức. Dịch vụ chuyển đổi file nhanh, an toàn và miễn phí.',
+          webpage_name: 'Bộ Chuyển Đổi File Trực Tuyến Miễn Phí - MorphyHub',
+          webpage_description: 'Chuyển đổi bất kỳ định dạng file nào ngay lập tức. Hỗ trợ 300+ định dạng bao gồm hình ảnh, tài liệu, ebook và file dữ liệu.'
+        },
+        hero: {
+          badge: 'Miễn Phí Mãi Mãi • Không Cần Đăng Ký',
+          title: 'Chuyển Đổi File',
+          highlight: 'Ngay Lập Tức',
+          subtitle: 'Chuyển đổi giữa <bold>{{count}} định dạng</bold> với tốc độ cực nhanh. An toàn, miễn phí và không cần đăng ký.',
+          cta_primary: 'Bắt Đầu Chuyển Đổi',
+          cta_secondary: 'Xem File',
+          trust: [
+            '100% Miễn Phí',
+            'Không Cần Đăng Ký',
+            'An Toàn & Riêng Tư',
+            'Xử Lý Hàng Loạt'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Định Dạng Được Hỗ Trợ' },
+          data_processed: { label: 'Dữ Liệu Đã Xử Lý' },
+          batch_processing: { value: '20 File', label: 'Xử Lý Hàng Loạt' }
+        },
+        explore: {
+          title: 'Khám Phá Công Cụ Của Chúng Tôi',
+          subtitle: 'Tất cả những gì bạn cần cho chuyển đổi file, xem, nén và hơn thế nữa',
+          cards: {
+            converters: {
+              title: 'Bộ Chuyển Đổi',
+              description: 'Chuyển đổi giữa 300+ định dạng file ngay lập tức. Hình ảnh, tài liệu, ebook và file dữ liệu.',
+              cta: 'Khám Phá'
+            },
+            viewers: {
+              title: 'Trình Xem',
+              description: 'Xem trước và xem file trực tiếp trong trình duyệt của bạn. Không cần tải xuống.',
+              cta: 'Khám Phá'
+            },
+            compress: {
+              title: 'Nén',
+              description: 'Giảm kích thước file mà không mất chất lượng. Nén JPG, PNG và PDF.',
+              cta: 'Khám Phá'
+            },
+            samples: {
+              title: 'Mẫu',
+              description: 'Duyệt qua các file mẫu cho tất cả các định dạng được hỗ trợ. Kiểm tra trước khi chuyển đổi.',
+              cta: 'Khám Phá'
+            }
+          }
+        },
+        how: {
+          title: 'Bộ Chuyển Đổi Của Chúng Tôi Hoạt Động Như Thế Nào?',
+          subtitle: 'Ba bước đơn giản để chuyển đổi bất kỳ định dạng file nào',
+          steps: [
+            {
+              badge: 'BƯỚC 1',
+              title: 'Tải Lên File',
+              description: 'Kéo và thả hoặc duyệt để chọn file của bạn. Hỗ trợ tối đa 100MB mỗi file.'
+            },
+            {
+              badge: 'BƯỚC 2',
+              title: 'Chọn Định Dạng',
+              description: 'Chọn định dạng đầu ra mong muốn từ 300+ định dạng được hỗ trợ.'
+            },
+            {
+              badge: 'BƯỚC 3',
+              title: 'Tải Xuống',
+              description: 'Nhấp chuyển đổi và tải xuống file của bạn ngay lập tức. Không chờ đợi, không xếp hàng.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Bộ Chuyển Đổi Phổ Biến',
+          subtitle: 'Truy cập nhanh vào các công cụ chuyển đổi được sử dụng nhiều nhất của chúng tôi',
+          button_full: 'Xem Tất Cả 300+ Bộ Chuyển Đổi',
+          button_mobile: 'Xem Tất Cả Bộ Chuyển Đổi',
+          converters: {
+            csv_to_json: 'CSV sang JSON',
+            csv_to_ndjson: 'CSV sang NDJSON',
+            dng_to_webp: 'DNG sang WebP',
+            cr2_to_webp: 'CR2 sang WebP',
+            epub_to_pdf: 'EPUB sang PDF',
+            epub_to_mobi: 'EPUB sang MOBI',
+            csv_to_xlsx: 'CSV sang XLSX',
+            docx_to_pdf: 'DOCX sang PDF'
+          }
+        },
+        features: {
+          title: 'Tại Sao Chọn MorphyHub?',
+          subtitle: 'Được xây dựng cho các chuyên gia và người dùng hàng ngày',
+          items: [
+            {
+              title: 'Cực Nhanh',
+              description: 'Xử lý file trong vài giây với công cụ chuyển đổi được tối ưu hóa của chúng tôi'
+            },
+            {
+              title: 'An Toàn & Riêng Tư',
+              description: 'Bảo mật cấp doanh nghiệp. File được tự động xóa sau khi xử lý'
+            },
+            {
+              title: 'Hỗ Trợ Toàn Cầu',
+              description: 'Chuyển đổi giữa 300+ kết hợp định dạng trên tất cả các loại file'
+            },
+            {
+              title: 'Xử Lý Hàng Loạt',
+              description: 'Chuyển đổi tối đa 20 file cùng lúc với công cụ hàng loạt mạnh mẽ của chúng tôi'
+            },
+            {
+              title: 'Trình Xem File',
+              description: 'Xem trước và xem file của bạn trực tiếp trong trình duyệt'
+            },
+            {
+              title: 'Chất Lượng Chuyên Nghiệp',
+              description: 'Chuyển đổi tiêu chuẩn ngành với cài đặt có thể tùy chỉnh'
+            }
+          ]
+        }
+      },
       
       // CR2 to ICO - Tiếng Việt
       'cr2_to_ico.title': 'Bộ Chuyển Đổi CR2 sang ICO',
@@ -20642,6 +21658,133 @@ const resources = {
       'features.no_registration': 'Kayıt Yok',
       'features.secure': '100% Güvenli',
       
+      // Home Page - Türkçe
+      home: {
+        meta: {
+          title: 'Ücretsiz Online Dosya Dönüştürücü - MorphyHub | 300+ Formatı Anında Dönüştür',
+          description: 'Dosyaları 300+ format arasında anında dönüştürün. Hızlı, güvenli ve ücretsiz dosya dönüştürme hizmeti. Görüntüler, belgeler, e-kitaplar ve veri dosyaları için destek.',
+          keywords: 'dosya dönüştürücü, online dönüştürücü, görüntü dönüştürücü, belge dönüştürücü, e-kitap dönüştürücü, toplu dönüştürme, ücretsiz dönüştürücü'
+        },
+        schema: {
+          website_name: 'MorphyHub - Ücretsiz Online Dosya Dönüştürücü',
+          website_description: 'Dosyaları 300+ format arasında anında dönüştürün. Hızlı, güvenli ve ücretsiz dosya dönüştürme hizmeti.',
+          webpage_name: 'Ücretsiz Online Dosya Dönüştürücü - MorphyHub',
+          webpage_description: 'Herhangi bir dosya formatını anında dönüştürün. Görüntüler, belgeler, e-kitaplar ve veri dosyaları dahil 300+ format desteği.'
+        },
+        hero: {
+          badge: 'Sonsuza Kadar Ücretsiz • Kayıt Yok',
+          title: 'Dosyaları Dönüştür',
+          highlight: 'Anında',
+          subtitle: '<bold>{{count}} format</bold> arasında şimşek hızında dönüştürün. Güvenli, ücretsiz ve kayıt gerekmez.',
+          cta_primary: 'Dönüştürmeye Başla',
+          cta_secondary: 'Dosyaları Görüntüle',
+          trust: [
+            '100% Ücretsiz',
+            'Kayıt Yok',
+            'Güvenli ve Özel',
+            'Toplu İşleme'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Desteklenen Formatlar' },
+          data_processed: { label: 'İşlenen Veri' },
+          batch_processing: { value: '20 Dosya', label: 'Toplu İşleme' }
+        },
+        explore: {
+          title: 'Araçlarımızı Keşfedin',
+          subtitle: 'Dosya dönüştürme, görüntüleme, sıkıştırma ve daha fazlası için ihtiyacınız olan her şey',
+          cards: {
+            converters: {
+              title: 'Dönüştürücüler',
+              description: '300+ dosya formatı arasında anında dönüştürün. Görüntüler, belgeler, e-kitaplar ve veri dosyaları.',
+              cta: 'Keşfet'
+            },
+            viewers: {
+              title: 'Görüntüleyiciler',
+              description: 'Dosyaları tarayıcınızda doğrudan önizleyin ve görüntüleyin. İndirme gerekmez.',
+              cta: 'Keşfet'
+            },
+            compress: {
+              title: 'Sıkıştır',
+              description: 'Kalite kaybı olmadan dosya boyutlarını küçültün. JPG, PNG ve PDF sıkıştırma.',
+              cta: 'Keşfet'
+            },
+            samples: {
+              title: 'Örnekler',
+              description: 'Desteklenen tüm formatlar için örnek dosyalara göz atın. Dönüştürmeden önce test edin.',
+              cta: 'Keşfet'
+            }
+          }
+        },
+        how: {
+          title: 'Dönüştürücülerimiz Nasıl Çalışır?',
+          subtitle: 'Herhangi bir dosya formatını dönüştürmek için üç basit adım',
+          steps: [
+            {
+              badge: 'ADIM 1',
+              title: 'Dosya Yükle',
+              description: 'Dosyanızı seçmek için sürükleyip bırakın veya göz atın. Dosya başına 100MB\'a kadar destekler.'
+            },
+            {
+              badge: 'ADIM 2',
+              title: 'Format Seç',
+              description: '300+ desteklenen formattan istediğiniz çıktı formatını seçin.'
+            },
+            {
+              badge: 'ADIM 3',
+              title: 'İndir',
+              description: 'Dönüştür\'e tıklayın ve dosyanızı anında indirin. Bekleme yok, kuyruk yok.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Popüler Dönüştürücüler',
+          subtitle: 'En çok kullanılan dönüştürme araçlarımıza hızlı erişim',
+          button_full: 'Tüm 300+ Dönüştürücüleri Görüntüle',
+          button_mobile: 'Tüm Dönüştürücüleri Görüntüle',
+          converters: {
+            csv_to_json: 'CSV\'den JSON\'a',
+            csv_to_ndjson: 'CSV\'den NDJSON\'a',
+            dng_to_webp: 'DNG\'den WebP\'ye',
+            cr2_to_webp: 'CR2\'den WebP\'ye',
+            epub_to_pdf: 'EPUB\'den PDF\'e',
+            epub_to_mobi: 'EPUB\'den MOBI\'ye',
+            csv_to_xlsx: 'CSV\'den XLSX\'e',
+            docx_to_pdf: 'DOCX\'den PDF\'e'
+          }
+        },
+        features: {
+          title: 'Neden MorphyHub\'ı Seçmelisiniz?',
+          subtitle: 'Profesyoneller ve günlük kullanıcılar için oluşturuldu',
+          items: [
+            {
+              title: 'Çok Hızlı',
+              description: 'Optimize edilmiş dönüştürme motorumuzla dosyaları saniyeler içinde işleyin'
+            },
+            {
+              title: 'Güvenli ve Özel',
+              description: 'Kurumsal düzeyde güvenlik. Dosyalar işlemeden sonra otomatik olarak silinir'
+            },
+            {
+              title: 'Evrensel Destek',
+              description: 'Tüm dosya türlerinde 300+ format kombinasyonu arasında dönüştürün'
+            },
+            {
+              title: 'Toplu İşleme',
+              description: 'Güçlü toplu motorumuzla aynı anda 20 dosyaya kadar dönüştürün'
+            },
+            {
+              title: 'Dosya Görüntüleyici',
+              description: 'Dosyalarınızı tarayıcıda doğrudan önizleyin ve görüntüleyin'
+            },
+            {
+              title: 'Profesyonel Kalite',
+              description: 'Özelleştirilebilir ayarlarla endüstri standardı dönüştürme'
+            }
+          ]
+        }
+      },
+      
       // CR2 to ICO - Türkçe
       'cr2_to_ico.title': 'CR2\'den ICO\'ya Dönüştürücü',
       'cr2_to_ico.meta_title': 'Ücretsiz CR2\'den ICO\'ya Dönüştürücü - Canon RAW\'ı Windows İkonlarına Dönüştür',
@@ -21249,6 +22392,133 @@ const resources = {
       'features.100_free': '100% Бесплатно',
       'features.no_registration': 'Без Регистрации',
       'features.secure': '100% Безопасно',
+      
+      // Home Page - Русский
+      home: {
+        meta: {
+          title: 'Бесплатный Онлайн Конвертер Файлов - MorphyHub | Конвертируйте 300+ Форматов Мгновенно',
+          description: 'Конвертируйте файлы между 300+ форматами мгновенно. Быстрый, безопасный и бесплатный сервис конвертации файлов. Поддержка изображений, документов, электронных книг и файлов данных.',
+          keywords: 'конвертер файлов, онлайн конвертер, конвертер изображений, конвертер документов, конвертер электронных книг, пакетная конвертация, бесплатный конвертер'
+        },
+        schema: {
+          website_name: 'MorphyHub - Бесплатный Онлайн Конвертер Файлов',
+          website_description: 'Конвертируйте файлы между 300+ форматами мгновенно. Быстрый, безопасный и бесплатный сервис конвертации файлов.',
+          webpage_name: 'Бесплатный Онлайн Конвертер Файлов - MorphyHub',
+          webpage_description: 'Конвертируйте любой формат файла мгновенно. Поддержка 300+ форматов, включая изображения, документы, электронные книги и файлы данных.'
+        },
+        hero: {
+          badge: 'Бесплатно Навсегда • Без Регистрации',
+          title: 'Преобразуйте Файлы',
+          highlight: 'Мгновенно',
+          subtitle: 'Конвертируйте между <bold>{{count}} форматами</bold> с молниеносной скоростью. Безопасно, бесплатно и без регистрации.',
+          cta_primary: 'Начать Конвертацию',
+          cta_secondary: 'Просмотреть Файлы',
+          trust: [
+            '100% Бесплатно',
+            'Без Регистрации',
+            'Безопасно и Приватно',
+            'Пакетная Обработка'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'Поддерживаемые Форматы' },
+          data_processed: { label: 'Обработанные Данные' },
+          batch_processing: { value: '20 Файлов', label: 'Пакетная Обработка' }
+        },
+        explore: {
+          title: 'Исследуйте Наши Инструменты',
+          subtitle: 'Все, что вам нужно для конвертации файлов, просмотра, сжатия и многого другого',
+          cards: {
+            converters: {
+              title: 'Конвертеры',
+              description: 'Конвертируйте между 300+ форматами файлов мгновенно. Изображения, документы, электронные книги и файлы данных.',
+              cta: 'Исследовать'
+            },
+            viewers: {
+              title: 'Просмотрщики',
+              description: 'Просматривайте и просматривайте файлы прямо в браузере. Загрузка не требуется.',
+              cta: 'Исследовать'
+            },
+            compress: {
+              title: 'Сжать',
+              description: 'Уменьшите размер файлов без потери качества. Сжатие JPG, PNG и PDF.',
+              cta: 'Исследовать'
+            },
+            samples: {
+              title: 'Образцы',
+              description: 'Просмотрите примеры файлов для всех поддерживаемых форматов. Протестируйте перед конвертацией.',
+              cta: 'Исследовать'
+            }
+          }
+        },
+        how: {
+          title: 'Как Работают Наши Конвертеры?',
+          subtitle: 'Три простых шага для конвертации любого формата файла',
+          steps: [
+            {
+              badge: 'ШАГ 1',
+              title: 'Загрузить Файл',
+              description: 'Перетащите или выберите файл. Поддерживает до 100 МБ на файл.'
+            },
+            {
+              badge: 'ШАГ 2',
+              title: 'Выбрать Формат',
+              description: 'Выберите желаемый выходной формат из 300+ поддерживаемых форматов.'
+            },
+            {
+              badge: 'ШАГ 3',
+              title: 'Скачать',
+              description: 'Нажмите конвертировать и скачайте файл мгновенно. Без ожидания, без очередей.'
+            }
+          ]
+        },
+        popular: {
+          title: 'Популярные Конвертеры',
+          subtitle: 'Быстрый доступ к нашим наиболее используемым инструментам конвертации',
+          button_full: 'Просмотреть Все 300+ Конвертеров',
+          button_mobile: 'Просмотреть Все Конвертеры',
+          converters: {
+            csv_to_json: 'CSV в JSON',
+            csv_to_ndjson: 'CSV в NDJSON',
+            dng_to_webp: 'DNG в WebP',
+            cr2_to_webp: 'CR2 в WebP',
+            epub_to_pdf: 'EPUB в PDF',
+            epub_to_mobi: 'EPUB в MOBI',
+            csv_to_xlsx: 'CSV в XLSX',
+            docx_to_pdf: 'DOCX в PDF'
+          }
+        },
+        features: {
+          title: 'Почему Выбрать MorphyHub?',
+          subtitle: 'Создано для профессионалов и обычных пользователей',
+          items: [
+            {
+              title: 'Молниеносно Быстро',
+              description: 'Обрабатывайте файлы за секунды с нашим оптимизированным движком конвертации'
+            },
+            {
+              title: 'Безопасно и Приватно',
+              description: 'Безопасность корпоративного уровня. Файлы автоматически удаляются после обработки'
+            },
+            {
+              title: 'Универсальная Поддержка',
+              description: 'Конвертируйте между 300+ комбинациями форматов для всех типов файлов'
+            },
+            {
+              title: 'Пакетная Обработка',
+              description: 'Конвертируйте до 20 файлов одновременно с нашим мощным пакетным движком'
+            },
+            {
+              title: 'Просмотрщик Файлов',
+              description: 'Просматривайте и просматривайте файлы прямо в браузере'
+            },
+            {
+              title: 'Профессиональное Качество',
+              description: 'Конвертация промышленного стандарта с настраиваемыми параметрами'
+            }
+          ]
+        }
+      },
       
       // CR2 to ICO - Русский
       'cr2_to_ico.title': 'Конвертер CR2 в ICO',
@@ -21858,6 +23128,133 @@ const resources = {
       'features.no_registration': 'بدون تسجيل',
       'features.secure': '100% آمن',
       
+      // Home Page - العربية
+      home: {
+        meta: {
+          title: 'محول الملفات المجاني عبر الإنترنت - MorphyHub | حول 300+ تنسيق فورًا',
+          description: 'حول الملفات بين 300+ تنسيق فورًا. خدمة تحويل الملفات السريعة والآمنة والمجانية. دعم الصور والمستندات والكتب الإلكترونية وملفات البيانات.',
+          keywords: 'محول الملفات, محول عبر الإنترنت, محول الصور, محول المستندات, محول الكتب الإلكترونية, التحويل المجمع, محول مجاني'
+        },
+        schema: {
+          website_name: 'MorphyHub - محول الملفات المجاني عبر الإنترنت',
+          website_description: 'حول الملفات بين 300+ تنسيق فورًا. خدمة تحويل الملفات السريعة والآمنة والمجانية.',
+          webpage_name: 'محول الملفات المجاني عبر الإنترنت - MorphyHub',
+          webpage_description: 'حول أي تنسيق ملف فورًا. دعم 300+ تنسيق بما في ذلك الصور والمستندات والكتب الإلكترونية وملفات البيانات.'
+        },
+        hero: {
+          badge: 'مجاني إلى الأبد • بدون تسجيل',
+          title: 'حول الملفات',
+          highlight: 'فورًا',
+          subtitle: 'حول بين <bold>{{count}} تنسيق</bold> بسرعة البرق. آمن ومجاني ولا يتطلب تسجيلًا.',
+          cta_primary: 'ابدأ التحويل',
+          cta_secondary: 'عرض الملفات',
+          trust: [
+            '100% مجاني',
+            'بدون تسجيل',
+            'آمن وخاص',
+            'المعالجة المجمعة'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'التنسيقات المدعومة' },
+          data_processed: { label: 'البيانات المعالجة' },
+          batch_processing: { value: '20 ملف', label: 'المعالجة المجمعة' }
+        },
+        explore: {
+          title: 'استكشف أدواتنا',
+          subtitle: 'كل ما تحتاجه لتحويل الملفات وعرضها وضغطها والمزيد',
+          cards: {
+            converters: {
+              title: 'المحولات',
+              description: 'حول بين 300+ تنسيق ملف فورًا. الصور والمستندات والكتب الإلكترونية وملفات البيانات.',
+              cta: 'استكشف'
+            },
+            viewers: {
+              title: 'العارضات',
+              description: 'معاينة وعرض الملفات مباشرة في متصفحك. لا حاجة للتنزيل.',
+              cta: 'استكشف'
+            },
+            compress: {
+              title: 'ضغط',
+              description: 'قلل أحجام الملفات دون فقدان الجودة. ضغط JPG و PNG و PDF.',
+              cta: 'استكشف'
+            },
+            samples: {
+              title: 'العينات',
+              description: 'تصفح ملفات العينة لجميع التنسيقات المدعومة. اختبر قبل التحويل.',
+              cta: 'استكشف'
+            }
+          }
+        },
+        how: {
+          title: 'كيف تعمل محولاتنا؟',
+          subtitle: 'ثلاث خطوات بسيطة لتحويل أي تنسيق ملف',
+          steps: [
+            {
+              badge: 'الخطوة 1',
+              title: 'رفع الملف',
+              description: 'اسحب وأفلت أو تصفح لتحديد ملفك. يدعم حتى 100 ميجابايت لكل ملف.'
+            },
+            {
+              badge: 'الخطوة 2',
+              title: 'اختر التنسيق',
+              description: 'اختر تنسيق الإخراج المطلوب من بين 300+ تنسيق مدعوم.'
+            },
+            {
+              badge: 'الخطوة 3',
+              title: 'تنزيل',
+              description: 'انقر تحويل وقم بتنزيل ملفك فورًا. لا انتظار، لا طوابير.'
+            }
+          ]
+        },
+        popular: {
+          title: 'المحولات الشائعة',
+          subtitle: 'وصول سريع إلى أدوات التحويل الأكثر استخدامًا لدينا',
+          button_full: 'عرض جميع 300+ محول',
+          button_mobile: 'عرض جميع المحولات',
+          converters: {
+            csv_to_json: 'CSV إلى JSON',
+            csv_to_ndjson: 'CSV إلى NDJSON',
+            dng_to_webp: 'DNG إلى WebP',
+            cr2_to_webp: 'CR2 إلى WebP',
+            epub_to_pdf: 'EPUB إلى PDF',
+            epub_to_mobi: 'EPUB إلى MOBI',
+            csv_to_xlsx: 'CSV إلى XLSX',
+            docx_to_pdf: 'DOCX إلى PDF'
+          }
+        },
+        features: {
+          title: 'لماذا تختار MorphyHub؟',
+          subtitle: 'مصمم للمحترفين والمستخدمين اليوميين',
+          items: [
+            {
+              title: 'سريع جدًا',
+              description: 'معالجة الملفات في ثوانٍ مع محرك التحويل المحسّن لدينا'
+            },
+            {
+              title: 'آمن وخاص',
+              description: 'أمان على مستوى المؤسسات. يتم حذف الملفات تلقائيًا بعد المعالجة'
+            },
+            {
+              title: 'دعم شامل',
+              description: 'حول بين 300+ مجموعة تنسيق عبر جميع أنواع الملفات'
+            },
+            {
+              title: 'المعالجة المجمعة',
+              description: 'حول حتى 20 ملفًا في وقت واحد مع محرك المجموعة القوي لدينا'
+            },
+            {
+              title: 'عارض الملفات',
+              description: 'معاينة وعرض ملفاتك مباشرة في المتصفح'
+            },
+            {
+              title: 'جودة احترافية',
+              description: 'تحويل بمعايير الصناعة مع إعدادات قابلة للتخصيص'
+            }
+          ]
+        }
+      },
+      
       // CR2 to ICO - العربية
       'cr2_to_ico.title': 'محول CR2 إلى ICO',
       'cr2_to_ico.meta_title': 'محول CR2 إلى ICO مجاني - تحويل Canon RAW إلى أيقونات Windows',
@@ -22465,6 +23862,133 @@ const resources = {
       'features.100_free': '100% ฟรี',
       'features.no_registration': 'ไม่ต้องลงทะเบียน',
       'features.secure': '100% ปลอดภัย',
+      
+      // Home Page - ไทย
+      home: {
+        meta: {
+          title: 'ตัวแปลงไฟล์ออนไลน์ฟรี - MorphyHub | แปลง 300+ รูปแบบทันที',
+          description: 'แปลงไฟล์ระหว่าง 300+ รูปแบบทันที บริการแปลงไฟล์ที่รวดเร็ว ปลอดภัย และฟรี รองรับรูปภาพ เอกสาร หนังสืออิเล็กทรอนิกส์ และไฟล์ข้อมูล',
+          keywords: 'ตัวแปลงไฟล์, ตัวแปลงออนไลน์, ตัวแปลงรูปภาพ, ตัวแปลงเอกสาร, ตัวแปลงหนังสืออิเล็กทรอนิกส์, การแปลงแบบกลุ่ม, ตัวแปลงฟรี'
+        },
+        schema: {
+          website_name: 'MorphyHub - ตัวแปลงไฟล์ออนไลน์ฟรี',
+          website_description: 'แปลงไฟล์ระหว่าง 300+ รูปแบบทันที บริการแปลงไฟล์ที่รวดเร็ว ปลอดภัย และฟรี',
+          webpage_name: 'ตัวแปลงไฟล์ออนไลน์ฟรี - MorphyHub',
+          webpage_description: 'แปลงรูปแบบไฟล์ใดก็ได้ทันที รองรับ 300+ รูปแบบรวมถึงรูปภาพ เอกสาร หนังสืออิเล็กทรอนิกส์ และไฟล์ข้อมูล'
+        },
+        hero: {
+          badge: 'ฟรีตลอดไป • ไม่ต้องลงทะเบียน',
+          title: 'แปลงไฟล์',
+          highlight: 'ทันที',
+          subtitle: 'แปลงระหว่าง <bold>{{count}} รูปแบบ</bold> ด้วยความเร็วสูง ปลอดภัย ฟรี และไม่ต้องลงทะเบียน',
+          cta_primary: 'เริ่มแปลง',
+          cta_secondary: 'ดูไฟล์',
+          trust: [
+            '100% ฟรี',
+            'ไม่ต้องลงทะเบียน',
+            'ปลอดภัยและเป็นส่วนตัว',
+            'การประมวลผลแบบกลุ่ม'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'รูปแบบที่รองรับ' },
+          data_processed: { label: 'ข้อมูลที่ประมวลผล' },
+          batch_processing: { value: '20 ไฟล์', label: 'การประมวลผลแบบกลุ่ม' }
+        },
+        explore: {
+          title: 'สำรวจเครื่องมือของเรา',
+          subtitle: 'ทุกสิ่งที่คุณต้องการสำหรับการแปลงไฟล์ การดู การบีบอัด และอื่นๆ',
+          cards: {
+            converters: {
+              title: 'ตัวแปลง',
+              description: 'แปลงระหว่าง 300+ รูปแบบไฟล์ทันที รูปภาพ เอกสาร หนังสืออิเล็กทรอนิกส์ และไฟล์ข้อมูล',
+              cta: 'สำรวจ'
+            },
+            viewers: {
+              title: 'ตัวดู',
+              description: 'ดูตัวอย่างและดูไฟล์โดยตรงในเบราว์เซอร์ของคุณ ไม่ต้องดาวน์โหลด',
+              cta: 'สำรวจ'
+            },
+            compress: {
+              title: 'บีบอัด',
+              description: 'ลดขนาดไฟล์โดยไม่สูญเสียคุณภาพ การบีบอัด JPG, PNG และ PDF',
+              cta: 'สำรวจ'
+            },
+            samples: {
+              title: 'ตัวอย่าง',
+              description: 'เรียกดูไฟล์ตัวอย่างสำหรับทุกรูปแบบที่รองรับ ทดสอบก่อนแปลง',
+              cta: 'สำรวจ'
+            }
+          }
+        },
+        how: {
+          title: 'ตัวแปลงของเราทำงานอย่างไร?',
+          subtitle: 'สามขั้นตอนง่ายๆ ในการแปลงรูปแบบไฟล์ใดก็ได้',
+          steps: [
+            {
+              badge: 'ขั้นตอนที่ 1',
+              title: 'อัปโหลดไฟล์',
+              description: 'ลากและวางหรือเรียกดูเพื่อเลือกไฟล์ของคุณ รองรับสูงสุด 100MB ต่อไฟล์'
+            },
+            {
+              badge: 'ขั้นตอนที่ 2',
+              title: 'เลือกรูปแบบ',
+              description: 'เลือกรูปแบบเอาต์พุตที่ต้องการจาก 300+ รูปแบบที่รองรับ'
+            },
+            {
+              badge: 'ขั้นตอนที่ 3',
+              title: 'ดาวน์โหลด',
+              description: 'คลิกแปลงและดาวน์โหลดไฟล์ของคุณทันที ไม่ต้องรอ ไม่มีคิว'
+            }
+          ]
+        },
+        popular: {
+          title: 'ตัวแปลงยอดนิยม',
+          subtitle: 'เข้าถึงเครื่องมือแปลงที่ใช้มากที่สุดของเราอย่างรวดเร็ว',
+          button_full: 'ดูตัวแปลงทั้งหมด 300+',
+          button_mobile: 'ดูตัวแปลงทั้งหมด',
+          converters: {
+            csv_to_json: 'CSV เป็น JSON',
+            csv_to_ndjson: 'CSV เป็น NDJSON',
+            dng_to_webp: 'DNG เป็น WebP',
+            cr2_to_webp: 'CR2 เป็น WebP',
+            epub_to_pdf: 'EPUB เป็น PDF',
+            epub_to_mobi: 'EPUB เป็น MOBI',
+            csv_to_xlsx: 'CSV เป็น XLSX',
+            docx_to_pdf: 'DOCX เป็น PDF'
+          }
+        },
+        features: {
+          title: 'ทำไมต้องเลือก MorphyHub?',
+          subtitle: 'สร้างขึ้นสำหรับผู้เชี่ยวชาญและผู้ใช้ทั่วไป',
+          items: [
+            {
+              title: 'เร็วมาก',
+              description: 'ประมวลผลไฟล์ในไม่กี่วินาทีด้วยเครื่องมือแปลงที่ปรับปรุงแล้วของเรา'
+            },
+            {
+              title: 'ปลอดภัยและเป็นส่วนตัว',
+              description: 'ความปลอดภัยระดับองค์กร ไฟล์จะถูกลบอัตโนมัติหลังการประมวลผล'
+            },
+            {
+              title: 'การสนับสนุนสากล',
+              description: 'แปลงระหว่าง 300+ ชุดรูปแบบในไฟล์ทุกประเภท'
+            },
+            {
+              title: 'การประมวลผลแบบกลุ่ม',
+              description: 'แปลงไฟล์ได้สูงสุด 20 ไฟล์พร้อมกันด้วยเครื่องมือแบบกลุ่มที่ทรงพลังของเรา'
+            },
+            {
+              title: 'ตัวดูไฟล์',
+              description: 'ดูตัวอย่างและดูไฟล์ของคุณโดยตรงในเบราว์เซอร์'
+            },
+            {
+              title: 'คุณภาพระดับมืออาชีพ',
+              description: 'การแปลงตามมาตรฐานอุตสาหกรรมพร้อมการตั้งค่าที่ปรับแต่งได้'
+            }
+          ]
+        }
+      },
       
       // CR2 to ICO - ไทย
       'cr2_to_ico.title': 'ตัวแปลง CR2 เป็น ICO',
@@ -23074,6 +24598,133 @@ const resources = {
       'features.no_registration': '登録不要',
       'features.secure': '100%安全',
       
+      // Home Page - 日本語
+      home: {
+        meta: {
+          title: '無料オンラインファイルコンバーター - MorphyHub | 300+形式を即座に変換',
+          description: '300+形式間でファイルを即座に変換。高速、安全、無料のファイル変換サービス。画像、文書、電子書籍、データファイルをサポート。',
+          keywords: 'ファイルコンバーター, オンラインコンバーター, 画像コンバーター, 文書コンバーター, 電子書籍コンバーター, バッチ変換, 無料コンバーター'
+        },
+        schema: {
+          website_name: 'MorphyHub - 無料オンラインファイルコンバーター',
+          website_description: '300+形式間でファイルを即座に変換。高速、安全、無料のファイル変換サービス。',
+          webpage_name: '無料オンラインファイルコンバーター - MorphyHub',
+          webpage_description: 'あらゆるファイル形式を即座に変換。画像、文書、電子書籍、データファイルを含む300+形式をサポート。'
+        },
+        hero: {
+          badge: '永久無料 • 登録不要',
+          title: 'ファイルを変換',
+          highlight: '即座に',
+          subtitle: '<bold>{{count}}形式</bold>間を超高速で変換。安全、無料、登録不要。',
+          cta_primary: '変換を開始',
+          cta_secondary: 'ファイルを表示',
+          trust: [
+            '100%無料',
+            '登録不要',
+            '安全でプライベート',
+            'バッチ処理'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: 'サポート形式' },
+          data_processed: { label: '処理済みデータ' },
+          batch_processing: { value: '20ファイル', label: 'バッチ処理' }
+        },
+        explore: {
+          title: 'ツールを探索',
+          subtitle: 'ファイル変換、表示、圧縮などに必要なすべて',
+          cards: {
+            converters: {
+              title: 'コンバーター',
+              description: '300+ファイル形式間を即座に変換。画像、文書、電子書籍、データファイル。',
+              cta: '探索'
+            },
+            viewers: {
+              title: 'ビューアー',
+              description: 'ブラウザで直接ファイルをプレビューおよび表示。ダウンロード不要。',
+              cta: '探索'
+            },
+            compress: {
+              title: '圧縮',
+              description: '品質を損なうことなくファイルサイズを削減。JPG、PNG、PDF圧縮。',
+              cta: '探索'
+            },
+            samples: {
+              title: 'サンプル',
+              description: 'すべてのサポート形式のサンプルファイルを閲覧。変換前にテスト。',
+              cta: '探索'
+            }
+          }
+        },
+        how: {
+          title: 'コンバーターの仕組みは？',
+          subtitle: 'あらゆるファイル形式を変換する3つの簡単なステップ',
+          steps: [
+            {
+              badge: 'ステップ1',
+              title: 'ファイルをアップロード',
+              description: 'ドラッグ&ドロップまたは参照してファイルを選択。ファイルあたり最大100MBをサポート。'
+            },
+            {
+              badge: 'ステップ2',
+              title: '形式を選択',
+              description: '300+サポート形式から希望の出力形式を選択。'
+            },
+            {
+              badge: 'ステップ3',
+              title: 'ダウンロード',
+              description: '変換をクリックしてファイルを即座にダウンロード。待機なし、キューなし。'
+            }
+          ]
+        },
+        popular: {
+          title: '人気のコンバーター',
+          subtitle: '最も使用されている変換ツールへのクイックアクセス',
+          button_full: 'すべての300+コンバーターを表示',
+          button_mobile: 'すべてのコンバーターを表示',
+          converters: {
+            csv_to_json: 'CSVからJSONへ',
+            csv_to_ndjson: 'CSVからNDJSONへ',
+            dng_to_webp: 'DNGからWebPへ',
+            cr2_to_webp: 'CR2からWebPへ',
+            epub_to_pdf: 'EPUBからPDFへ',
+            epub_to_mobi: 'EPUBからMOBIへ',
+            csv_to_xlsx: 'CSVからXLSXへ',
+            docx_to_pdf: 'DOCXからPDFへ'
+          }
+        },
+        features: {
+          title: 'MorphyHubを選ぶ理由は？',
+          subtitle: 'プロフェッショナルと日常ユーザーのために構築',
+          items: [
+            {
+              title: '超高速',
+              description: '最適化された変換エンジンで数秒でファイルを処理'
+            },
+            {
+              title: '安全でプライベート',
+              description: 'エンタープライズレベルのセキュリティ。処理後、ファイルは自動的に削除されます'
+            },
+            {
+              title: 'ユニバーサルサポート',
+              description: 'すべてのファイルタイプで300+形式の組み合わせ間を変換'
+            },
+            {
+              title: 'バッチ処理',
+              description: '強力なバッチエンジンで最大20ファイルを同時に変換'
+            },
+            {
+              title: 'ファイルビューアー',
+              description: 'ブラウザで直接ファイルをプレビューおよび表示'
+            },
+            {
+              title: 'プロフェッショナル品質',
+              description: 'カスタマイズ可能な設定で業界標準の変換'
+            }
+          ]
+        }
+      },
+      
       // CR2 to ICO - 日本語
       'cr2_to_ico.title': 'CR2からICOへのコンバーター',
       'cr2_to_ico.meta_title': '無料CR2からICOへのコンバーター - Canon RAWをWindowsアイコンに変換',
@@ -23681,6 +25332,133 @@ const resources = {
       'features.100_free': '100%免费',
       'features.no_registration': '无需注册',
       'features.secure': '100%安全',
+      
+      // Home Page - 简体中文
+      home: {
+        meta: {
+          title: '免费在线文件转换器 - MorphyHub | 即时转换300+格式',
+          description: '在300+格式之间即时转换文件。快速、安全、免费的文件转换服务。支持图像、文档、电子书和数据文件。',
+          keywords: '文件转换器, 在线转换器, 图像转换器, 文档转换器, 电子书转换器, 批量转换, 免费转换器'
+        },
+        schema: {
+          website_name: 'MorphyHub - 免费在线文件转换器',
+          website_description: '在300+格式之间即时转换文件。快速、安全、免费的文件转换服务。',
+          webpage_name: '免费在线文件转换器 - MorphyHub',
+          webpage_description: '即时转换任何文件格式。支持300+格式，包括图像、文档、电子书和数据文件。'
+        },
+        hero: {
+          badge: '永久免费 • 无需注册',
+          title: '转换文件',
+          highlight: '即时',
+          subtitle: '在<bold>{{count}}格式</bold>之间以闪电般的速度转换。安全、免费、无需注册。',
+          cta_primary: '开始转换',
+          cta_secondary: '查看文件',
+          trust: [
+            '100%免费',
+            '无需注册',
+            '安全私密',
+            '批量处理'
+          ]
+        },
+        stats: {
+          supported_formats: { value: '300+', label: '支持的格式' },
+          data_processed: { label: '已处理数据' },
+          batch_processing: { value: '20个文件', label: '批量处理' }
+        },
+        explore: {
+          title: '探索我们的工具',
+          subtitle: '文件转换、查看、压缩等所需的一切',
+          cards: {
+            converters: {
+              title: '转换器',
+              description: '在300+文件格式之间即时转换。图像、文档、电子书和数据文件。',
+              cta: '探索'
+            },
+            viewers: {
+              title: '查看器',
+              description: '直接在浏览器中预览和查看文件。无需下载。',
+              cta: '探索'
+            },
+            compress: {
+              title: '压缩',
+              description: '在不损失质量的情况下减小文件大小。JPG、PNG和PDF压缩。',
+              cta: '探索'
+            },
+            samples: {
+              title: '示例',
+              description: '浏览所有支持格式的示例文件。转换前进行测试。',
+              cta: '探索'
+            }
+          }
+        },
+        how: {
+          title: '我们的转换器如何工作？',
+          subtitle: '转换任何文件格式的三个简单步骤',
+          steps: [
+            {
+              badge: '步骤1',
+              title: '上传文件',
+              description: '拖放或浏览以选择您的文件。每个文件最多支持100MB。'
+            },
+            {
+              badge: '步骤2',
+              title: '选择格式',
+              description: '从300+支持的格式中选择所需的输出格式。'
+            },
+            {
+              badge: '步骤3',
+              title: '下载',
+              description: '点击转换并立即下载您的文件。无需等待，无需排队。'
+            }
+          ]
+        },
+        popular: {
+          title: '热门转换器',
+          subtitle: '快速访问我们最常用的转换工具',
+          button_full: '查看所有300+转换器',
+          button_mobile: '查看所有转换器',
+          converters: {
+            csv_to_json: 'CSV转JSON',
+            csv_to_ndjson: 'CSV转NDJSON',
+            dng_to_webp: 'DNG转WebP',
+            cr2_to_webp: 'CR2转WebP',
+            epub_to_pdf: 'EPUB转PDF',
+            epub_to_mobi: 'EPUB转MOBI',
+            csv_to_xlsx: 'CSV转XLSX',
+            docx_to_pdf: 'DOCX转PDF'
+          }
+        },
+        features: {
+          title: '为什么选择MorphyHub？',
+          subtitle: '为专业人士和日常用户打造',
+          items: [
+            {
+              title: '超快',
+              description: '使用我们优化的转换引擎在几秒钟内处理文件'
+            },
+            {
+              title: '安全私密',
+              description: '企业级安全性。处理完成后文件会自动删除'
+            },
+            {
+              title: '通用支持',
+              description: '在所有文件类型中转换300+格式组合'
+            },
+            {
+              title: '批量处理',
+              description: '使用我们强大的批量引擎一次转换最多20个文件'
+            },
+            {
+              title: '文件查看器',
+              description: '直接在浏览器中预览和查看您的文件'
+            },
+            {
+              title: '专业质量',
+              description: '具有可自定义设置的行业标准转换'
+            }
+          ]
+        }
+      },
       
       // CR2 to ICO - 简体中文
       'cr2_to_ico.title': 'CR2转ICO转换器',
