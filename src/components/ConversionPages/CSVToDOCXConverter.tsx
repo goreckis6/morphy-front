@@ -324,7 +324,7 @@ export const CSVToDOCXConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-blue-600" />
-                DOCX Settings
+                {t('csv_to_docx.docx_settings')}
               </h3>
               
               <div className="mb-6">
@@ -335,7 +335,7 @@ export const CSVToDOCXConverter: React.FC = () => {
                     onChange={(e) => setIncludeHeaders(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include column headers</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('csv_to_docx.include_headers')}</span>
                 </label>
               </div>
 
@@ -347,7 +347,7 @@ export const CSVToDOCXConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve table formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('csv_to_docx.preserve_formatting')}</span>
                 </label>
               </div>
             </div>
@@ -377,16 +377,16 @@ export const CSVToDOCXConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-blue-600" />
-                Perfect For
+                {t('csv_to_docx.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Microsoft Word documents",
-                  "Business reports",
-                  "Professional documents",
-                  "Data presentation",
-                  "Office productivity",
-                  "Document sharing"
+                  t('csv_to_docx.perfect_for_1'),
+                  t('csv_to_docx.perfect_for_2'),
+                  t('csv_to_docx.perfect_for_3'),
+                  t('csv_to_docx.perfect_for_4'),
+                  t('csv_to_docx.perfect_for_5'),
+                  t('csv_to_docx.perfect_for_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
