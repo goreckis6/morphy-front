@@ -582,6 +582,22 @@ function App() {
         <Route path="/ja/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
         <Route path="/zh/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
 
+        {/* New Languages Converter Routes - HEIC to PDF */}
+        <Route path="/id/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/sv/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/es/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/fr/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/it/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/nl/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/pt/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/vi/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/tr/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/ru/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/ar/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/th/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/ja/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+        <Route path="/zh/convert/heic-to-pdf" element={<HEICtoPDFConverter />} />
+
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
