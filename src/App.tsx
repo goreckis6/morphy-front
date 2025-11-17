@@ -495,6 +495,20 @@ function App() {
         <Route path="/ja/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
         <Route path="/zh/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
         <Route path="/de/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/id/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/sv/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/es/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/fr/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/it/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/nl/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/pt/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/vi/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/tr/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/ru/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/ar/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/th/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/ja/convert/csv-to-html" element={<CSVToHTMLConverter />} />
+        <Route path="/zh/convert/csv-to-html" element={<CSVToHTMLConverter />} />
         <Route path="/de/convert/csv-to-json" element={<CSVToJSONConverter />} />
         <Route path="/de/convert/csv-to-md" element={<CSVToMDConverter />} />
         <Route path="/de/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
