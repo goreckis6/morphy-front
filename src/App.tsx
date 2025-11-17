@@ -630,6 +630,22 @@ function App() {
         <Route path="/ja/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
         <Route path="/zh/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
 
+        {/* New Languages Converter Routes - HEIC to WebP */}
+        <Route path="/id/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/sv/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/es/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/fr/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/it/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/nl/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/pt/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/vi/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/tr/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/ru/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/ar/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/th/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/ja/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+        <Route path="/zh/convert/heic-to-webp" element={<HEICtoWEBPConventer />} />
+
         {/* New Languages Converter Routes - HEIF to WebP */}
         <Route path="/id/convert/heif-to-webp" element={<HEIFtoWEBPConventer />} />
         <Route path="/sv/convert/heif-to-webp" element={<HEIFtoWEBPConventer />} />

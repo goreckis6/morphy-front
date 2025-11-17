@@ -2293,6 +2293,59 @@ const resources = {
       'heic_to_webp.seo.use_case_2_title': 'Cross-Platform Sharing',
       'heic_to_webp.seo.use_case_2_text': 'Convert native iPhone HEIF photos into a widely supported WEBP format for browsers, PWAs, and Android/iOS apps, simplifying cross‑platform workflows and asset delivery.',
 
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'HEIF to WEBP Converter',
+      'heif_to_webp.meta_title': 'Free HEIF to WEBP Converter Online',
+      'heif_to_webp.meta_description': 'Convert HEIF images (iPhone photos) to modern WEBP format online for free. Fast, secure HEIF to WEBP converter with batch support and adjustable quality.',
+      'heif_to_webp.subtitle': 'Convert Apple HEIF photos to efficient WEBP images for web and apps. Fast, secure, and free with batch processing.',
+      'heif_to_webp.upload_single': 'Upload HEIF File',
+      'heif_to_webp.upload_batch': 'Upload Multiple HEIF Files',
+      'heif_to_webp.upload_text_single': 'Drag and drop your HEIF file here or click to browse',
+      'heif_to_webp.upload_text_batch': 'Select multiple HEIF files to convert them all at once',
+      'heif_to_webp.file_limits_single': 'Single file limit: 100.00 MB per file.',
+      'heif_to_webp.file_limits_batch': 'Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.',
+      'heif_to_webp.batch_size_warning': 'Total file size is approaching the limit. Some files may not be processed.',
+      'heif_to_webp.file_info': 'File Information',
+      'heif_to_webp.selected_files': 'Selected Files',
+      'heif_to_webp.convert_to_webp': 'Convert to WEBP',
+      'heif_to_webp.convert_files': 'Convert {{count}} Files',
+      'heif_to_webp.conversion_complete': 'Conversion Complete!',
+      'heif_to_webp.batch_conversion_complete': 'Batch Conversion Complete!',
+      'heif_to_webp.success_message': 'Your HEIC file has been successfully converted to WEBP format.',
+      'heif_to_webp.batch_success_message': 'Successfully converted {{count}} files to WEBP format.',
+      'heif_to_webp.download_webp': 'Download WEBP File',
+      'heif_to_webp.webp_settings': 'WEBP Settings',
+      'heif_to_webp.quality_label': 'Quality',
+      'heif_to_webp.quality_desc': 'Adjust WEBP compression quality (higher = better quality and larger file).',
+      'heif_to_webp.lossless': 'Lossless WEBP',
+      'heif_to_webp.lossless_desc': 'Create a lossless WEBP (larger file, perfect quality).',
+      'heif_to_webp.max_dimension': 'Max Dimension (px)',
+      'heif_to_webp.max_dimension_desc': 'Downscale large images for faster processing and smaller files.',
+      'heif_to_webp.sidebar_title': 'Why Choose Our Converter?',
+      'heif_to_webp.feature_1': 'Fast conversion with quality control',
+      'heif_to_webp.feature_2': 'Preserves transparency when available',
+      'heif_to_webp.feature_3': 'Great for web and mobile apps',
+      'heif_to_webp.feature_4': 'Batch processing up to 20 files',
+      'heif_to_webp.perfect_for_title': 'Perfect For',
+      'heif_to_webp.use_case_1': 'Optimizing images for websites',
+      'heif_to_webp.use_case_2': 'Sharing iPhone photos cross-platform',
+      'heif_to_webp.use_case_3': 'Reducing storage while keeping quality',
+      'heif_to_webp.use_case_4': 'Preparing assets for apps and PWAs',
+      'heif_to_webp.ready_title': 'Ready to Convert Your HEIF Files?',
+      'heif_to_webp.ready_text': 'Use our free online HEIF to WEBP converter to transform your iPhone photos into efficient WEBP images. Start converting now — no registration required.',
+      'heif_to_webp.seo.title': 'Convert HEIF to WEBP Online Free',
+      'heif_to_webp.seo.description': 'Convert HEIF (iPhone) photos to WEBP with studio‑grade control. Fine‑tune quality (or use lossless), preserve transparency, and auto‑downscale oversized images for blazing‑fast, SEO‑friendly delivery. Batch up to 20 files with consistent color, metadata safety, and predictable output sizes for production pipelines.',
+      'heif_to_webp.seo.features_title': 'Professional HEIF to WEBP Conversion Features',
+      'heif_to_webp.seo.feature_1_title': 'High-Quality Output',
+      'heif_to_webp.seo.feature_1_text': 'Precisely balance quality and size for every use case. Choose lossy quality levels for lightweight assets or lossless WEBP for pixel‑perfect fidelity. Ideal for design handoffs, app assets, and automated CI/CD image pipelines.',
+      'heif_to_webp.seo.feature_2_title': 'Web-Ready Optimization',
+      'heif_to_webp.seo.feature_2_text': 'Automatically resize ultra‑high‑resolution photos to sensible dimensions to reduce payloads without visible artifacts. Produce compact WEBP images that load instantly, boost Core Web Vitals, and improve real‑world page speed.',
+      'heif_to_webp.seo.use_cases_title': 'When To Use HEIF to WEBP Conversion',
+      'heif_to_webp.seo.use_case_1_title': 'Web Performance',
+      'heif_to_webp.seo.use_case_1_text': 'Serve modern WEBP instead of legacy JPEG/PNG to reduce bytes by 25–60% on average, improving LCP and CLS stability. Great for hero banners, galleries, product listings, and editorial content.',
+      'heif_to_webp.seo.use_case_2_title': 'Cross-Platform Sharing',
+      'heif_to_webp.seo.use_case_2_text': 'Convert native iPhone HEIF photos into a widely supported WEBP format for browsers, PWAs, and Android/iOS apps, simplifying cross‑platform workflows and asset delivery.',
+
       // DOC to EPUB
       'doc_to_epub.title': 'DOC to EPUB Converter',
       'doc_to_epub.meta_title': 'Free DOC to EPUB Converter Online - Convert Word Documents to eBook Format ',
@@ -15886,6 +15939,59 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Sajikan WEBP modern alih-alih JPEG/PNG lama untuk mengurangi byte rata-rata 25–60%, meningkatkan stabilitas LCP dan CLS. Sempurna untuk banner hero, galeri, daftar produk, dan konten editorial.',
       'heic_to_webp.seo.use_case_2_title': 'Berbagi Lintas Platform',
       'heic_to_webp.seo.use_case_2_text': 'Konversi foto HEIF iPhone asli ke format WEBP yang didukung luas untuk browser, PWA, dan aplikasi Android/iOS, menyederhanakan alur kerja lintas platform dan pengiriman aset.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'Konverter HEIF ke WEBP',
+      'heif_to_webp.meta_title': 'Konverter HEIF ke WEBP Gratis Online',
+      'heif_to_webp.meta_description': 'Konversi gambar HEIF (foto iPhone) ke format WEBP modern online gratis. Konverter HEIF ke WEBP cepat dan aman dengan dukungan batch dan kualitas yang dapat disesuaikan.',
+      'heif_to_webp.subtitle': 'Konversi foto HEIF Apple menjadi gambar WEBP yang efisien untuk web dan aplikasi. Cepat, aman, dan gratis dengan pemrosesan batch.',
+      'heif_to_webp.upload_single': 'Unggah File HEIF',
+      'heif_to_webp.upload_batch': 'Unggah Beberapa File HEIF',
+      'heif_to_webp.upload_text_single': 'Seret dan lepas file HEIF Anda di sini atau klik untuk menjelajah',
+      'heif_to_webp.upload_text_batch': 'Pilih beberapa file HEIF untuk mengonversi semuanya sekaligus',
+      'heif_to_webp.file_limits_single': 'Limit file tunggal: 100.00 MB per file.',
+      'heif_to_webp.file_limits_batch': 'Konversi batch mendukung hingga 20 file, 100.00 MB per file, 100.00 MB total.',
+      'heif_to_webp.batch_size_warning': 'Ukuran total file mendekati batas. Beberapa file mungkin tidak diproses.',
+      'heif_to_webp.file_info': 'Informasi File',
+      'heif_to_webp.selected_files': 'File yang Dipilih',
+      'heif_to_webp.convert_to_webp': 'Konversi ke WEBP',
+      'heif_to_webp.convert_files': 'Konversi {{count}} File',
+      'heif_to_webp.conversion_complete': 'Konversi Selesai!',
+      'heif_to_webp.batch_conversion_complete': 'Konversi Batch Selesai!',
+      'heif_to_webp.success_message': 'File HEIC Anda telah berhasil dikonversi ke format WEBP.',
+      'heif_to_webp.batch_success_message': 'Berhasil mengonversi {{count}} file ke format WEBP.',
+      'heif_to_webp.download_webp': 'Unduh File WEBP',
+      'heif_to_webp.webp_settings': 'Pengaturan WEBP',
+      'heif_to_webp.quality_label': 'Kualitas',
+      'heif_to_webp.quality_desc': 'Sesuaikan kualitas kompresi WEBP (lebih tinggi = kualitas lebih baik dan file lebih besar).',
+      'heif_to_webp.lossless': 'WEBP Lossless',
+      'heif_to_webp.lossless_desc': 'Buat WEBP lossless (file lebih besar, kualitas sempurna).',
+      'heif_to_webp.max_dimension': 'Dimensi Maks (px)',
+      'heif_to_webp.max_dimension_desc': 'Perkecil gambar besar untuk pemrosesan yang lebih cepat dan file yang lebih kecil.',
+      'heif_to_webp.sidebar_title': 'Mengapa Memilih Konverter Kami?',
+      'heif_to_webp.feature_1': 'Konversi cepat dengan kontrol kualitas',
+      'heif_to_webp.feature_2': 'Mempertahankan transparansi jika tersedia',
+      'heif_to_webp.feature_3': 'Sempurna untuk web dan aplikasi seluler',
+      'heif_to_webp.feature_4': 'Pemrosesan batch hingga 20 file',
+      'heif_to_webp.perfect_for_title': 'Sempurna Untuk',
+      'heif_to_webp.use_case_1': 'Mengoptimalkan gambar untuk situs web',
+      'heif_to_webp.use_case_2': 'Berbagi foto iPhone lintas platform',
+      'heif_to_webp.use_case_3': 'Mengurangi penyimpanan sambil menjaga kualitas',
+      'heif_to_webp.use_case_4': 'Mempersiapkan aset untuk aplikasi dan PWA',
+      'heif_to_webp.ready_title': 'Siap Mengonversi File HEIF Anda?',
+      'heif_to_webp.ready_text': 'Gunakan konverter HEIF ke WEBP online gratis kami untuk mengubah foto iPhone Anda menjadi gambar WEBP yang efisien. Mulai mengonversi sekarang—tidak perlu registrasi.',
+      'heif_to_webp.seo.title': 'Konversi HEIF ke WEBP Online Gratis',
+      'heif_to_webp.seo.description': 'Konversi foto HEIF (iPhone) ke WEBP dengan kontrol tingkat studio. Sesuaikan kualitas (atau gunakan lossless), pertahankan transparansi, dan perkecil gambar yang terlalu besar secara otomatis untuk pengiriman yang sangat cepat dan ramah SEO. Batch hingga 20 file dengan warna konsisten, keamanan metadata, dan ukuran output yang dapat diprediksi untuk pipeline produksi.',
+      'heif_to_webp.seo.features_title': 'Fitur Konversi HEIF ke WEBP Profesional',
+      'heif_to_webp.seo.feature_1_title': 'Output Berkualitas Tinggi',
+      'heif_to_webp.seo.feature_1_text': 'Seimbangkan kualitas dan ukuran dengan tepat untuk setiap kasus penggunaan. Pilih tingkat kualitas lossy untuk aset ringan atau WEBP lossless untuk ketelitian sempurna piksel. Ideal untuk handoff desain, aset aplikasi, dan pipeline gambar CI/CD otomatis.',
+      'heif_to_webp.seo.feature_2_title': 'Optimasi Siap Web',
+      'heif_to_webp.seo.feature_2_text': 'Ubah ukuran foto resolusi sangat tinggi secara otomatis ke dimensi yang masuk akal untuk mengurangi payload tanpa artefak yang terlihat. Hasilkan gambar WEBP kompak yang dimuat secara instan, meningkatkan Core Web Vitals, dan meningkatkan kecepatan halaman di dunia nyata.',
+      'heif_to_webp.seo.use_cases_title': 'Kapan Menggunakan Konversi HEIF ke WEBP',
+      'heif_to_webp.seo.use_case_1_title': 'Kinerja Web',
+      'heif_to_webp.seo.use_case_1_text': 'Sajikan WEBP modern alih-alih JPEG/PNG lama untuk mengurangi byte rata-rata 25–60%, meningkatkan stabilitas LCP dan CLS. Sempurna untuk banner hero, galeri, daftar produk, dan konten editorial.',
+      'heif_to_webp.seo.use_case_2_title': 'Berbagi Lintas Platform',
+      'heif_to_webp.seo.use_case_2_text': 'Konversi foto HEIF iPhone asli ke format WEBP yang didukung luas untuk browser, PWA, dan aplikasi Android/iOS, menyederhanakan alur kerja lintas platform dan pengiriman aset.',
     }
   },
   sv: {
@@ -16390,6 +16496,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Servera modern WEBP istället för äldre JPEG/PNG för att minska byte med i genomsnitt 25–60%, vilket förbättrar LCP- och CLS-stabilitet. Perfekt för hero-banners, gallerier, produktlistor och redaktionellt innehåll.',
       'heic_to_webp.seo.use_case_2_title': 'Plattformsoberoende Delning',
       'heic_to_webp.seo.use_case_2_text': 'Konvertera inbyggda iPhone HEIF-foton till ett brett stött WEBP-format för webbläsare, PWAs och Android/iOS-appar, vilket förenklar plattformsoberoende arbetsflöden och tillgångsleverans.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'HEIF till WEBP Konverterare',
+      'heif_to_webp.meta_title': 'Gratis HEIF till WEBP Konverterare Online',
+      'heif_to_webp.meta_description': 'Konvertera HEIF-bilder (iPhone-foton) till modernt WEBP-format online gratis. Snabb, säker HEIF till WEBP-konverterare med batchstöd och justerbar kvalitet.',
+      'heif_to_webp.subtitle': 'Konvertera Apple HEIF-foton till effektiva WEBP-bilder för webb och appar. Snabb, säker och gratis med batchbearbetning.',
     }
   },
   es: {
@@ -16894,6 +17006,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Sirve WEBP moderno en lugar de JPEG/PNG antiguos para reducir bytes en promedio 25–60%, mejorando la estabilidad de LCP y CLS. Excelente para banners hero, galerías, listados de productos y contenido editorial.',
       'heic_to_webp.seo.use_case_2_title': 'Compartir Multiplataforma',
       'heic_to_webp.seo.use_case_2_text': 'Convierte fotos HEIF nativas de iPhone a un formato WEBP ampliamente compatible para navegadores, PWAs y aplicaciones Android/iOS, simplificando flujos de trabajo multiplataforma y entrega de activos.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'Convertidor HEIF a WEBP',
+      'heif_to_webp.meta_title': 'Convertidor HEIF a WEBP Gratis Online',
+      'heif_to_webp.meta_description': 'Convierte imágenes HEIF (fotos de iPhone) al formato WEBP moderno online gratis. Convertidor HEIF a WEBP rápido y seguro con soporte por lotes y calidad ajustable.',
+      'heif_to_webp.subtitle': 'Convierte fotos HEIF de Apple en imágenes WEBP eficientes para web y aplicaciones. Rápido, seguro y gratis con procesamiento por lotes.',
     }
   },
   fr: {
@@ -17398,6 +17516,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Servez WEBP moderne au lieu de JPEG/PNG anciens pour réduire les octets de 25 à 60% en moyenne, améliorant la stabilité LCP et CLS. Excellent pour les bannières hero, galeries, listes de produits et contenu éditorial.',
       'heic_to_webp.seo.use_case_2_title': 'Partage Multiplateforme',
       'heic_to_webp.seo.use_case_2_text': 'Convertissez les photos HEIF natives iPhone en un format WEBP largement pris en charge pour les navigateurs, PWAs et applications Android/iOS, simplifiant les flux de travail multiplateformes et la livraison d\'actifs.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'Convertisseur HEIF vers WEBP',
+      'heif_to_webp.meta_title': 'Convertisseur HEIF vers WEBP Gratuit En Ligne',
+      'heif_to_webp.meta_description': 'Convertissez les images HEIF (photos iPhone) au format WEBP moderne en ligne gratuitement. Convertisseur HEIF vers WEBP rapide et sécurisé avec support par lots et qualité ajustable.',
+      'heif_to_webp.subtitle': 'Convertissez les photos HEIF Apple en images WEBP efficaces pour le web et les applications. Rapide, sécurisé et gratuit avec traitement par lots.',
     }
   },
   it: {
@@ -17902,6 +18026,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Servi WEBP moderno invece di JPEG/PNG legacy per ridurre i byte in media del 25–60%, migliorando la stabilità LCP e CLS. Ottimo per banner hero, gallerie, elenchi prodotti e contenuti editoriali.',
       'heic_to_webp.seo.use_case_2_title': 'Condivisione Multipiattaforma',
       'heic_to_webp.seo.use_case_2_text': 'Converti foto HEIF native iPhone in un formato WEBP ampiamente supportato per browser, PWAs e app Android/iOS, semplificando flussi di lavoro multipiattaforma e consegna delle risorse.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'Convertitore HEIF in WEBP',
+      'heif_to_webp.meta_title': 'Convertitore HEIF in WEBP Gratuito Online',
+      'heif_to_webp.meta_description': 'Converti immagini HEIF (foto iPhone) al formato WEBP moderno online gratuitamente. Convertitore HEIF in WEBP veloce e sicuro con supporto batch e qualità regolabile.',
+      'heif_to_webp.subtitle': 'Converti foto HEIF Apple in immagini WEBP efficienti per web e app. Veloce, sicuro e gratuito con elaborazione batch.',
     }
   },
   nl: {
@@ -18406,6 +18536,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Serveer modern WEBP in plaats van verouderde JPEG/PNG om bytes met gemiddeld 25–60% te verminderen, wat LCP- en CLS-stabiliteit verbetert. Geweldig voor hero-banners, galerijen, productlijsten en redactionele inhoud.',
       'heic_to_webp.seo.use_case_2_title': 'Platformonafhankelijk Delen',
       'heic_to_webp.seo.use_case_2_text': 'Converteer native iPhone HEIF-foto\'s naar een breed ondersteund WEBP-formaat voor browsers, PWAs en Android/iOS-apps, wat platformonafhankelijke workflows en activalevering vereenvoudigt.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'HEIF naar WEBP Converter',
+      'heif_to_webp.meta_title': 'Gratis HEIF naar WEBP Converter Online',
+      'heif_to_webp.meta_description': 'Converteer HEIF-afbeeldingen (iPhone-foto\'s) naar modern WEBP-formaat online gratis. Snelle, veilige HEIF naar WEBP converter met batchondersteuning en instelbare kwaliteit.',
+      'heif_to_webp.subtitle': 'Converteer Apple HEIF-foto\'s naar efficiënte WEBP-afbeeldingen voor web en apps. Snel, veilig en gratis met batchverwerking.',
     }
   },
   pt: {
@@ -18910,6 +19046,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Sirva WEBP moderno em vez de JPEG/PNG legados para reduzir bytes em média 25–60%, melhorando a estabilidade LCP e CLS. Ótimo para banners hero, galerias, listagens de produtos e conteúdo editorial.',
       'heic_to_webp.seo.use_case_2_title': 'Compartilhamento Multiplataforma',
       'heic_to_webp.seo.use_case_2_text': 'Converta fotos HEIF nativas iPhone em um formato WEBP amplamente suportado para navegadores, PWAs e aplicativos Android/iOS, simplificando fluxos de trabalho multiplataforma e entrega de ativos.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'Conversor HEIF para WEBP',
+      'heif_to_webp.meta_title': 'Conversor HEIF para WEBP Gratuito Online',
+      'heif_to_webp.meta_description': 'Converta imagens HEIF (fotos iPhone) para o formato WEBP moderno online gratuitamente. Conversor HEIF para WEBP rápido e seguro com suporte em lote e qualidade ajustável.',
+      'heif_to_webp.subtitle': 'Converta fotos HEIF Apple em imagens WEBP eficientes para web e aplicativos. Rápido, seguro e gratuito com processamento em lote.',
     }
   },
   vi: {
@@ -19414,6 +19556,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Phục vụ WEBP hiện đại thay vì JPEG/PNG cũ để giảm byte trung bình 25–60%, cải thiện tính ổn định LCP và CLS. Tuyệt vời cho banner hero, thư viện, danh sách sản phẩm và nội dung biên tập.',
       'heic_to_webp.seo.use_case_2_title': 'Chia Sẻ Đa Nền Tảng',
       'heic_to_webp.seo.use_case_2_text': 'Chuyển đổi ảnh HEIF iPhone gốc sang định dạng WEBP được hỗ trợ rộng rãi cho trình duyệt, PWA và ứng dụng Android/iOS, đơn giản hóa quy trình làm việc đa nền tảng và giao hàng tài sản.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'Bộ Chuyển Đổi HEIF sang WEBP',
+      'heif_to_webp.meta_title': 'Bộ Chuyển Đổi HEIF sang WEBP Miễn Phí Trực Tuyến',
+      'heif_to_webp.meta_description': 'Chuyển đổi hình ảnh HEIF (ảnh iPhone) sang định dạng WEBP hiện đại trực tuyến miễn phí. Bộ chuyển đổi HEIF sang WEBP nhanh và an toàn với hỗ trợ hàng loạt và chất lượng có thể điều chỉnh.',
+      'heif_to_webp.subtitle': 'Chuyển đổi ảnh HEIF Apple thành hình ảnh WEBP hiệu quả cho web và ứng dụng. Nhanh, an toàn và miễn phí với xử lý hàng loạt.',
     }
   },
   tr: {
@@ -19918,6 +20066,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Ortalama %25–60 byte azaltmak, LCP ve CLS kararlılığını iyileştirmek için eski JPEG/PNG yerine modern WEBP sunun. Hero banner\'lar, galeriler, ürün listeleri ve editoryal içerik için harika.',
       'heic_to_webp.seo.use_case_2_title': 'Platformlar Arası Paylaşım',
       'heic_to_webp.seo.use_case_2_text': 'Yerel iPhone HEIF fotoğraflarını tarayıcılar, PWAs ve Android/iOS uygulamaları için yaygın olarak desteklenen bir WEBP formatına dönüştürün, platformlar arası iş akışlarını ve varlık teslimatını basitleştirin.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'HEIF\'den WEBP\'ye Dönüştürücü',
+      'heif_to_webp.meta_title': 'Ücretsiz HEIF\'den WEBP\'ye Dönüştürücü Online',
+      'heif_to_webp.meta_description': 'HEIF görüntülerini (iPhone fotoğrafları) modern WEBP formatına ücretsiz olarak online çevirin. Hızlı, güvenli HEIF\'den WEBP\'ye dönüştürücü toplu destek ve ayarlanabilir kalite ile.',
+      'heif_to_webp.subtitle': 'Apple HEIF fotoğraflarını web ve uygulamalar için verimli WEBP görüntülerine dönüştürün. Toplu işleme ile hızlı, güvenli ve ücretsiz.',
     }
   },
   ru: {
@@ -20422,6 +20576,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'Подавайте современный WEBP вместо устаревших JPEG/PNG, чтобы уменьшить байты в среднем на 25–60%, улучшая стабильность LCP и CLS. Отлично для hero-баннеров, галерей, списков продуктов и редакционного контента.',
       'heic_to_webp.seo.use_case_2_title': 'Кроссплатформенный Обмен',
       'heic_to_webp.seo.use_case_2_text': 'Конвертируйте нативные фото HEIF iPhone в широко поддерживаемый формат WEBP для браузеров, PWAs и приложений Android/iOS, упрощая кроссплатформенные рабочие процессы и доставку активов.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'Конвертер HEIF в WEBP',
+      'heif_to_webp.meta_title': 'Бесплатный Конвертер HEIF в WEBP Онлайн',
+      'heif_to_webp.meta_description': 'Конвертируйте изображения HEIF (фото iPhone) в современный формат WEBP онлайн бесплатно. Быстрый, безопасный конвертер HEIF в WEBP с поддержкой пакетной конвертации и настраиваемым качеством.',
+      'heif_to_webp.subtitle': 'Конвертируйте фото HEIF Apple в эффективные изображения WEBP для веб и приложений. Быстро, безопасно и бесплатно с пакетной обработкой.',
     }
   },
   ar: {
@@ -20926,6 +21086,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'قدم WEBP الحديث بدلاً من JPEG/PNG القديم لتقليل البايتات بمتوسط 25–60%، مما يحسن استقرار LCP وCLS. رائع للبانرات الرئيسية والمعارض وقوائم المنتجات والمحتوى التحريري.',
       'heic_to_webp.seo.use_case_2_title': 'المشاركة عبر المنصات',
       'heic_to_webp.seo.use_case_2_text': 'قم بتحويل صور HEIF الأصلية من iPhone إلى تنسيق WEBP مدعوم على نطاق واسع للمتصفحات وPWAs وتطبيقات Android/iOS، مما يبسط سير العمل عبر المنصات وتسليم الأصول.',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'محول HEIF إلى WEBP',
+      'heif_to_webp.meta_title': 'محول HEIF إلى WEBP مجاني عبر الإنترنت',
+      'heif_to_webp.meta_description': 'قم بتحويل صور HEIF (صور iPhone) إلى تنسيق WEBP الحديث عبر الإنترنت مجانًا. محول HEIF إلى WEBP سريع وآمن مع دعم المجموعات وجودة قابلة للتعديل.',
+      'heif_to_webp.subtitle': 'قم بتحويل صور HEIF من Apple إلى صور WEBP فعالة للويب والتطبيقات. سريع وآمن ومجاني مع المعالجة المجمعة.',
     }
   },
   th: {
@@ -21430,6 +21596,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': 'ให้บริการ WEBP สมัยใหม่แทน JPEG/PNG แบบเก่าเพื่อลดไบต์โดยเฉลี่ย 25–60% ปรับปรุงความเสถียรของ LCP และ CLS เหมาะสำหรับแบนเนอร์ hero แกลเลอรี รายการผลิตภัณฑ์ และเนื้อหาบรรณาธิการ',
       'heic_to_webp.seo.use_case_2_title': 'การแชร์ข้ามแพลตฟอร์ม',
       'heic_to_webp.seo.use_case_2_text': 'แปลงรูปภาพ HEIF iPhone ดั้งเดิมเป็นรูปแบบ WEBP ที่รองรับอย่างกว้างขวางสำหรับเบราว์เซอร์ PWAs และแอป Android/iOS ทำให้เวิร์กโฟลว์ข้ามแพลตฟอร์มและการส่งมอบทรัพย์สินง่ายขึ้น',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'ตัวแปลง HEIF เป็น WEBP',
+      'heif_to_webp.meta_title': 'ตัวแปลง HEIF เป็น WEBP ฟรีออนไลน์',
+      'heif_to_webp.meta_description': 'แปลงรูปภาพ HEIF (รูปภาพ iPhone) เป็นรูปแบบ WEBP สมัยใหม่ออนไลน์ฟรี ตัวแปลง HEIF เป็น WEBP ที่รวดเร็วและปลอดภัยพร้อมการสนับสนุนแบบกลุ่มและคุณภาพที่ปรับได้',
+      'heif_to_webp.subtitle': 'แปลงรูปภาพ HEIF ของ Apple เป็นรูปภาพ WEBP ที่มีประสิทธิภาพสำหรับเว็บและแอป รวดเร็ว ปลอดภัย และฟรีพร้อมการประมวลผลแบบกลุ่ม',
     }
   },
   ja: {
@@ -21934,6 +22106,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': '平均25–60%のバイトを削減し、LCPとCLSの安定性を向上させるために、レガシーJPEG/PNGの代わりにモダンWEBPを提供します。ヒーローバナー、ギャラリー、製品リスト、編集コンテンツに最適です。',
       'heic_to_webp.seo.use_case_2_title': 'クロスプラットフォーム共有',
       'heic_to_webp.seo.use_case_2_text': 'ネイティブiPhone HEIF写真を、ブラウザ、PWAs、Android/iOSアプリ用の広くサポートされているWEBP形式に変換し、クロスプラットフォームワークフローとアセット配信を簡素化します。',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'HEIFからWEBPへのコンバーター',
+      'heif_to_webp.meta_title': '無料のHEIFからWEBPへのコンバーターオンライン',
+      'heif_to_webp.meta_description': 'HEIF画像（iPhone写真）を無料でオンラインで現代的なWEBP形式に変換します。バッチサポートと調整可能な品質を備えた高速で安全なHEIFからWEBPへのコンバーター。',
+      'heif_to_webp.subtitle': 'Apple HEIF写真をウェブとアプリ用の効率的なWEBP画像に変換します。バッチ処理で高速、安全、無料。',
     }
   },
   zh: {
@@ -22438,6 +22616,12 @@ const resources = {
       'heic_to_webp.seo.use_case_1_text': '提供现代WEBP而不是传统JPEG/PNG，平均减少25–60%的字节，提高LCP和CLS稳定性。非常适合hero横幅、图库、产品列表和编辑内容。',
       'heic_to_webp.seo.use_case_2_title': '跨平台共享',
       'heic_to_webp.seo.use_case_2_text': '将原生iPhone HEIF照片转换为广泛支持的WEBP格式，适用于浏览器、PWAs和Android/iOS应用程序，简化跨平台工作流程和资产交付。',
+      
+      // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
+      'heif_to_webp.title': 'HEIF转WEBP转换器',
+      'heif_to_webp.meta_title': '免费HEIF转WEBP转换器在线',
+      'heif_to_webp.meta_description': '免费在线将HEIF图像（iPhone照片）转换为现代WEBP格式。快速、安全的HEIF转WEBP转换器，支持批量转换和可调质量。',
+      'heif_to_webp.subtitle': '将Apple HEIF照片转换为高效的WEBP图像，用于Web和应用程序。快速、安全、免费，支持批量处理。',
     }
   }
 };
