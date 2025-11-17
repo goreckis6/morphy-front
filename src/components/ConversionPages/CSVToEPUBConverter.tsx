@@ -414,9 +414,9 @@ export const CSVToEPUBConverter: React.FC = () => {
                     <div className="flex items-start">
                       <span className="text-blue-600 mr-2 flex-shrink-0">ℹ️</span>
                       <div className="text-sm text-blue-800">
-                        <p className="font-medium mb-1">EPUB File Ready!</p>
-                        <p>Your EPUB file has been generated successfully. You can download it and open it with any EPUB reader (like Adobe Digital Editions, Calibre, or your e-reader).</p>
-                        <p className="mt-1 text-xs">Note: Some browsers may show an error when trying to preview EPUB files - this is normal. Just download the file to open it properly.</p>
+                        <p className="font-medium mb-1">{t('csv_to_epub.epub_file_ready_title')}</p>
+                        <p>{t('csv_to_epub.epub_file_ready_text')}</p>
+                        <p className="mt-1 text-xs">{t('csv_to_epub.epub_file_ready_note')}</p>
                       </div>
                     </div>
                   </div>
@@ -448,15 +448,18 @@ export const CSVToEPUBConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">{t('csv_to_epub.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('csv_to_epub.batch_success_message', { 
+                      successCount: batchResults.filter(r => r.success).length, 
+                      totalCount: batchResults.length 
+                    })}
                   </p>
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
                     <div className="flex items-start">
                       <span className="text-blue-600 mr-2 flex-shrink-0">ℹ️</span>
                       <div className="text-sm text-blue-800">
-                        <p className="font-medium mb-1">EPUB Files Ready!</p>
-                        <p>Your EPUB files have been generated successfully. You can download them and open them with any EPUB reader (like Adobe Digital Editions, Calibre, or your e-reader).</p>
-                        <p className="mt-1 text-xs">Note: Some browsers may show an error when trying to preview EPUB files - this is normal. Just download the files to open them properly.</p>
+                        <p className="font-medium mb-1">{t('csv_to_epub.epub_files_ready_title')}</p>
+                        <p>{t('csv_to_epub.epub_files_ready_text')}</p>
+                        <p className="mt-1 text-xs">{t('csv_to_epub.epub_files_ready_note')}</p>
                       </div>
                     </div>
                   </div>
@@ -589,16 +592,16 @@ export const CSVToEPUBConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
-                Perfect For
+                {t('csv_to_epub.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "E-book creation",
-                  "Data publication",
-                  "Educational materials",
-                  "Research documentation",
-                  "Digital publishing",
-                  "Content distribution"
+                  t('csv_to_epub.perfect_for_1'),
+                  t('csv_to_epub.perfect_for_2'),
+                  t('csv_to_epub.perfect_for_3'),
+                  t('csv_to_epub.perfect_for_4'),
+                  t('csv_to_epub.perfect_for_5'),
+                  t('csv_to_epub.perfect_for_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>

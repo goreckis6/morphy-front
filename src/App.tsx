@@ -480,6 +480,20 @@ function App() {
         <Route path="/de/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
         <Route path="/de/convert/csv-to-docx" element={<CSVToDOCXConverter />} />
         <Route path="/de/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/id/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/sv/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/es/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/fr/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/it/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/nl/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/pt/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/vi/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/tr/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/ru/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/ar/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/th/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/ja/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
+        <Route path="/zh/convert/csv-to-epub" element={<CSVToEPUBConverter />} />
         <Route path="/de/convert/csv-to-html" element={<CSVToHTMLConverter />} />
         <Route path="/de/convert/csv-to-json" element={<CSVToJSONConverter />} />
         <Route path="/de/convert/csv-to-md" element={<CSVToMDConverter />} />
