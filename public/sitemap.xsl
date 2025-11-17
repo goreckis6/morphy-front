@@ -177,8 +177,35 @@
           </div>
           <div class="stat-box">
             <h3>Languages</h3>
-            <div class="number">3</div>
-            <p style="margin: 5px 0 0 0; font-size: 12px; color: #6b7280;">English, Polish, German</p>
+            <div class="number">
+              <xsl:value-of select="count(sitemap:urlset/sitemap:url[1]/xhtml:link)"/>
+            </div>
+            <p style="margin: 5px 0 0 0; font-size: 12px; color: #6b7280;">
+              <xsl:for-each select="sitemap:urlset/sitemap:url[1]/xhtml:link">
+                <xsl:sort select="@hreflang"/>
+                <xsl:choose>
+                  <xsl:when test="@hreflang = 'en'">English</xsl:when>
+                  <xsl:when test="@hreflang = 'pl'">Polish</xsl:when>
+                  <xsl:when test="@hreflang = 'de'">German</xsl:when>
+                  <xsl:when test="@hreflang = 'id'">Indonesian</xsl:when>
+                  <xsl:when test="@hreflang = 'sv'">Swedish</xsl:when>
+                  <xsl:when test="@hreflang = 'es'">Spanish</xsl:when>
+                  <xsl:when test="@hreflang = 'fr'">French</xsl:when>
+                  <xsl:when test="@hreflang = 'it'">Italian</xsl:when>
+                  <xsl:when test="@hreflang = 'nl'">Dutch</xsl:when>
+                  <xsl:when test="@hreflang = 'pt'">Portuguese</xsl:when>
+                  <xsl:when test="@hreflang = 'vi'">Vietnamese</xsl:when>
+                  <xsl:when test="@hreflang = 'tr'">Turkish</xsl:when>
+                  <xsl:when test="@hreflang = 'ru'">Russian</xsl:when>
+                  <xsl:when test="@hreflang = 'ar'">Arabic</xsl:when>
+                  <xsl:when test="@hreflang = 'th'">Thai</xsl:when>
+                  <xsl:when test="@hreflang = 'ja'">Japanese</xsl:when>
+                  <xsl:when test="@hreflang = 'zh'">Chinese</xsl:when>
+                  <xsl:otherwise><xsl:value-of select="@hreflang"/></xsl:otherwise>
+                </xsl:choose>
+                <xsl:if test="position() != last()">, </xsl:if>
+              </xsl:for-each>
+            </p>
           </div>
         </div>
 
