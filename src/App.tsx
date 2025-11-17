@@ -566,6 +566,22 @@ function App() {
         <Route path="/ja/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
         <Route path="/zh/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
 
+        {/* New Languages Converter Routes - HEIC to SVG */}
+        <Route path="/id/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/sv/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/es/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/fr/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/it/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/nl/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/pt/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/vi/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/tr/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/ru/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/ar/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/th/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/ja/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+        <Route path="/zh/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
+
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
