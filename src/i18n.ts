@@ -15996,6 +15996,7 @@ const resources = {
       // HEIF to PNG
       'heif_to_png.title': 'Konverter HEIF ke PNG',
       'heif_to_png.meta_title': 'Konverter HEIF ke PNG Gratis Online - Konversi Foto iPhone ke PNG',
+      'heif_to_png.meta_description': 'Konversi gambar HEIF (foto iPhone) ke format PNG online gratis. Konverter HEIF ke PNG cepat dan aman dengan dukungan batch, kontrol kualitas, dan preservasi transparansi.',
       'heif_to_png.subtitle': 'Konversi gambar HEIF menjadi PNG berkualitas tinggi untuk grafik transparan, pengeditan, dan arsip. Cepat, aman, dan gratis dengan dukungan batch.',
       'heif_to_png.upload_single': 'Unggah File HEIF',
       'heif_to_png.upload_batch': 'Unggah Beberapa File HEIF',
