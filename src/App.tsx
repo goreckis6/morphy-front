@@ -614,6 +614,22 @@ function App() {
         <Route path="/ja/convert/heic-to-png" element={<HEICtoPNGConventer />} />
         <Route path="/zh/convert/heic-to-png" element={<HEICtoPNGConventer />} />
 
+        {/* New Languages Converter Routes - HEIC to EPS */}
+        <Route path="/id/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/sv/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/es/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/fr/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/it/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/nl/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/pt/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/vi/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/tr/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/ru/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/ar/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/th/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/ja/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+        <Route path="/zh/convert/heic-to-eps" element={<HEICtoEPSConventer />} />
+
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
