@@ -5590,7 +5590,6 @@ const resources = {
     }
   },
   pl: {
-  pl: {
     translation: {
       // Common
       'common.free': 'Darmowy',
