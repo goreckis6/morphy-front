@@ -13578,8 +13578,6 @@ const resources = {
       'heic_to_svg.seo.use_case_3_text': 'Konvertieren Sie HEIC-Bilder zu SVG fÃ¼r Logo- und Icon-Erstellung, was Vektorgrafiken bietet, die von kleinen Favicons bis zu groÃŸen Bannern ohne QualitÃ¤tsverlust skaliert werden kÃ¶nnen.',
       'heic_to_svg.seo.use_case_4_title': 'PlattformÃ¼bergreifende KompatibilitÃ¤t',
       'heic_to_svg.seo.use_case_4_text': 'Stellen Sie sicher, dass Ihre HEIC-Bilder auf allen Plattformen zugÃ¤nglich sind, indem Sie sie in das SVG-Format konvertieren, das auf Windows, macOS, Linux und allen Webbrowsern funktioniert.',
-      'heic_to_svg.ready_title': 'Bereit, Ihre HEIC-Dateien zu konvertieren?',
-      'heic_to_svg.ready_text': 'Verwenden Sie unseren kostenlosen Online-HEIC-zu-SVG-Konverter, um Ihre Apple iPhone Fotos in skalierbare Vektorgrafiken fÃ¼r Web, Design und universelle KompatibilitÃ¤t zu transformieren.',
       
       // CSV to DOCX
       'csv_to_docx.title': 'CSV zu DOCX Konverter',
