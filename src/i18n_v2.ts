@@ -1,6 +1,5 @@
 ﻿// Additional language translations
 export const additionalTranslations = {
-  },
   id: {
     translation: {
       // Common

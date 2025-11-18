@@ -4256,11 +4256,6 @@ const resources = {
       'csv_to_ppt.use_case_client': 'Client presentations',
       'csv_to_ppt.use_case_meetings': 'Meeting materials',
       'csv_to_ppt.use_case_training': 'Training materials',
-      'csv_to_ppt.batch_conversion_complete': 'Batch Conversion Complete',
-      'csv_to_ppt.download_ppt': 'Download PPT File',
-      'csv_to_ppt.conversion_success': 'Your CSV file has been successfully converted to PPT format.',
-      'csv_to_ppt.single_info': 'Upload a single CSV file to convert to PPT format',
-      'csv_to_ppt.batch_info': 'Upload multiple CSV files to convert them all to PPT format',
       'csv_to_ppt.convert_files': 'Convert to PPT',
       'csv_to_ppt.seo_title': 'Convert CSV to PPT - Professional Presentation Creation',
       'csv_to_ppt.seo_description': 'Transform your CSV data into professional PowerPoint presentations with our free online converter. Create business presentations, financial reports, and data visualizations with formatted tables and charts. No registration required, fast conversion, and high-quality output.',
@@ -4290,10 +4285,6 @@ const resources = {
       'csv_to_ppt.table_chart': 'Table + Chart',
       'csv_to_ppt.include_charts': 'Include Charts',
       'csv_to_ppt.include_charts_desc': 'Generate charts and graphs from your data',
-      'csv_to_ppt.batch_conversion_complete': 'Batch Conversion Complete',
-      'csv_to_ppt.download_ppt': 'Download PPT File',
-      'csv_to_ppt.conversion_success': 'Your CSV file has been successfully converted to PPT format.',
-      'csv_to_ppt.batch_success': 'Successfully converted {count} files to PPT format.',
       
       // CSV to PPTX
       'csv_to_pptx.title': 'CSV to PPTX Converter',
@@ -14103,10 +14094,6 @@ const resources = {
       'csv_to_ppt.table_chart': 'Tabelle + Diagramm',
       'csv_to_ppt.include_charts': 'Diagramme einbeziehen',
       'csv_to_ppt.include_charts_desc': 'Generieren Sie Diagramme und Grafiken aus Ihren Daten',
-      'csv_to_ppt.batch_conversion_complete': 'Batch-Konvertierung Abgeschlossen',
-      'csv_to_ppt.download_ppt': 'PPT-Datei Herunterladen',
-      'csv_to_ppt.conversion_success': 'Ihre CSV-Datei wurde erfolgreich in PPT-Format konvertiert.',
-      'csv_to_ppt.batch_success': 'Erfolgreich {count} Dateien in PPT-Format konvertiert.',
       
       // CSV to PPTX
       'csv_to_pptx.title': 'CSV zu PPTX Konverter',
