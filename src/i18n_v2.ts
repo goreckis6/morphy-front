@@ -19945,4 +19945,5 @@ export const additionalTranslations = {
       'docx_to_txt.title': 'DOCX转TXT转换器',
       'docx_to_txt.subtitle': '将Word DOCX文档文件转换为纯文本TXT格式。',
     }
+  }
 };
