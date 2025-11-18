@@ -15493,9 +15493,11 @@ const resources = {
       'compress_pdf.ready_title': 'Bereit, Ihre PDF Dateien zu Komprimieren?',
       'compress_pdf.ready_text': 'Verwenden Sie unseren kostenlosen Online-PDF-Kompressor, um Dateigrößen zu reduzieren, während die ausgezeichnete Dokumentqualität erhalten bleibt. Jetzt komprimieren — keine Registrierung erforderlich.',
     }
-  },
-  ...additionalTranslations
+  }
 };
+
+// Merge additional translations
+Object.assign(resources, additionalTranslations);
 
 export const resolveLanguageFromPath = (path: string): string => {
   // English (default, no prefix)
