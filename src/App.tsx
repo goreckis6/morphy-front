@@ -572,6 +572,20 @@ function App() {
         <Route path="/th/convert/csv-to-odt" element={<CSVToODTConverter />} />
         <Route path="/ja/convert/csv-to-odt" element={<CSVToODTConverter />} />
         <Route path="/zh/convert/csv-to-odt" element={<CSVToODTConverter />} />
+        <Route path="/id/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/sv/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/es/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/fr/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/it/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/nl/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/pt/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/vi/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/tr/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/ru/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/ar/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/th/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/ja/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/zh/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
         <Route path="/de/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
         <Route path="/de/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
         <Route path="/de/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
