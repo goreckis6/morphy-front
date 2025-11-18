@@ -526,6 +526,20 @@ function App() {
         <Route path="/ja/convert/csv-to-md" element={<CSVToMDConverter />} />
         <Route path="/zh/convert/csv-to-md" element={<CSVToMDConverter />} />
         <Route path="/de/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/id/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/sv/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/es/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/fr/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/it/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/nl/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/pt/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/vi/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/tr/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/ru/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/ar/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/th/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/ja/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
+        <Route path="/zh/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
         <Route path="/de/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
         <Route path="/de/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
         <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
