@@ -4675,8 +4675,8 @@ const resources = {
       
       // CSV to NDJSON
       'csv_to_ndjson.title': 'CSV to NDJSON Converter',
-      'csv_to_ndjson.meta_title': 'Free CSV to NDJSON Converter - Convert CSV to Newline Delimited JSON Online',
-      'csv_to_ndjson.meta_description': 'Convert CSV files to NDJSON format online for free. Transform tabular data into newline-delimited JSON for streaming data processing and big data analytics. Fast, secure, and no registration required.',
+      'csv_to_ndjson.meta_title': 'Free CSV to NDJSON Converter Online - Convert CSV to Newline Delimited JSON Instantly | Best CSV to NDJSON Tool',
+      'csv_to_ndjson.meta_description': 'Convert CSV files to NDJSON (Newline Delimited JSON) format online for free. Transform tabular data into streaming-ready JSONL format for big data processing, data pipelines, ETL workflows, Apache Spark, Hadoop, Elasticsearch, Logstash, Kafka, and real-time analytics. Fast, secure, batch conversion support. Perfect for data streaming, log processing, event streaming, data lake ingestion, machine learning pipelines, and distributed systems. Supports line-by-line processing, memory-efficient conversion, and large file handling. No registration required.',
       'csv_to_ndjson.subtitle': 'Convert CSV files to NDJSON format for streaming data. Transform tabular data into newline-delimited JSON format for big data processing and streaming applications.',
       'csv_to_ndjson.upload_single': 'Upload CSV File',
       'csv_to_ndjson.upload_multiple': 'Upload Multiple CSV Files',
@@ -9307,8 +9307,8 @@ const resources = {
       
       // CSV to NDJSON
       'csv_to_ndjson.title': 'Konwerter CSV na NDJSON',
-      'csv_to_ndjson.meta_title': 'Darmowy konwerter CSV na NDJSON - Konwertuj CSV na format Newline Delimited JSON online',
-      'csv_to_ndjson.meta_description': 'Konwertuj pliki CSV na format NDJSON online za darmo. Przekształć dane tabelaryczne w newline-delimited JSON dla przetwarzania danych strumieniowych i analityki big data. Szybko, bezpiecznie i bez rejestracji.',
+      'csv_to_ndjson.meta_title': 'Darmowy Konwerter CSV na NDJSON Online - Konwertuj CSV na Newline Delimited JSON Natychmiast | Najlepsze Narzędzie CSV na NDJSON',
+      'csv_to_ndjson.meta_description': 'Konwertuj pliki CSV na format NDJSON (Newline Delimited JSON) online za darmo. Przekształć dane tabelaryczne w format JSONL gotowy do strumieniowania dla przetwarzania big data, potoków danych, przepływów pracy ETL, Apache Spark, Hadoop, Elasticsearch, Logstash, Kafka i analityki w czasie rzeczywistym. Szybko, bezpiecznie, obsługa konwersji wsadowej. Idealne do strumieniowania danych, przetwarzania logów, strumieniowania zdarzeń, pozyskiwania data lake, potoków uczenia maszynowego i systemów rozproszonych. Obsługuje przetwarzanie linia po linii, konwersję wydajną pamięciowo i obsługę dużych plików. Bez rejestracji.',
       'csv_to_ndjson.subtitle': 'Konwertuj pliki CSV na format NDJSON dla przetwarzania danych strumieniowych. Przekształć dane tabelaryczne w format newline-delimited JSON dla przetwarzania big data i aplikacji strumieniowych.',
       'csv_to_ndjson.upload_single': 'Prześlij plik CSV',
       'csv_to_ndjson.upload_multiple': 'Prześlij wiele plików CSV',
@@ -14283,8 +14283,8 @@ const resources = {
       
       // CSV to NDJSON
       'csv_to_ndjson.title': 'CSV zu NDJSON Konverter',
-      'csv_to_ndjson.meta_title': 'Kostenloser CSV zu NDJSON Konverter - Konvertieren Sie CSV zu Newline Delimited JSON online',
-      'csv_to_ndjson.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in NDJSON-Format. Transformieren Sie Tabellendaten in Newline-Delimited JSON für Streaming-Datenverarbeitung und Big-Data-Analyse. Schnell, sicher und ohne Registrierung.',
+      'csv_to_ndjson.meta_title': 'Kostenloser CSV zu NDJSON Konverter Online - Konvertieren Sie CSV in Newline Delimited JSON Sofort | Bestes CSV zu NDJSON Tool',
+      'csv_to_ndjson.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in NDJSON (Newline Delimited JSON) Format. Transformieren Sie Tabellendaten in Streaming-fähiges JSONL-Format für Big-Data-Verarbeitung, Datenpipelines, ETL-Workflows, Apache Spark, Hadoop, Elasticsearch, Logstash, Kafka und Echtzeit-Analyse. Schnell, sicher, Stapelkonvertierung unterstützt. Perfekt für Datenstreaming, Log-Verarbeitung, Event-Streaming, Data-Lake-Erfassung, Machine-Learning-Pipelines und verteilte Systeme. Unterstützt zeilenweise Verarbeitung, speichereffiziente Konvertierung und große Dateien. Keine Registrierung erforderlich.',
       'csv_to_ndjson.subtitle': 'Konvertieren Sie CSV-Dateien in NDJSON-Format für Streaming-Datenverarbeitung. Transformieren Sie Tabellendaten in Newline-Delimited JSON-Format für Big-Data-Verarbeitung und Streaming-Anwendungen.',
       'csv_to_ndjson.upload_single': 'CSV-Datei hochladen',
       'csv_to_ndjson.upload_multiple': 'Mehrere CSV-Dateien hochladen',
