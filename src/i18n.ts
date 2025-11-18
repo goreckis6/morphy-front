@@ -4620,8 +4620,8 @@ const resources = {
       
       // CSV to JSON
       'csv_to_json.title': 'CSV to JSON Converter',
-      'csv_to_json.meta_title': 'Free CSV to JSON Converter - Convert CSV Files to JSON Format Online',
-      'csv_to_json.meta_description': 'Convert CSV files to JSON format online for free. Transform tabular data into web-ready JSON for APIs, mobile apps, and web development. Fast, secure, and no registration required.',
+      'csv_to_json.meta_title': 'Free CSV to JSON Converter Online - Convert CSV to JSON Format Instantly | Best CSV to JSON Tool',
+      'csv_to_json.meta_description': 'Convert CSV files to JSON format online for free. Transform tabular data into web-ready JSON for APIs, REST APIs, mobile apps, web development, Node.js, React, Vue.js, Angular, and JavaScript applications. Fast, secure, batch conversion support. Perfect for data exchange, API integration, database migration, data processing, frontend development, backend services, and modern web technologies. Supports pretty print, array/object formats, nested JSON, and custom headers. No registration required.',
       'csv_to_json.subtitle': 'Convert CSV files to JSON format for web applications and APIs. Perfect for data exchange and processing with modern web technologies.',
       'csv_to_json.upload_single': 'Upload CSV File',
       'csv_to_json.upload_multiple': 'Upload Multiple CSV Files',
@@ -9252,8 +9252,8 @@ const resources = {
       
       // CSV to JSON
       'csv_to_json.title': 'Konwerter CSV na JSON',
-      'csv_to_json.meta_title': 'Darmowy konwerter CSV na JSON - Konwertuj pliki CSV na format JSON online',
-      'csv_to_json.meta_description': 'Konwertuj pliki CSV na format JSON online za darmo. Przekształć dane tabelaryczne w gotowy do użycia w sieci JSON dla API, aplikacji mobilnych i programowania internetowego. Szybko, bezpiecznie i bez rejestracji.',
+      'csv_to_json.meta_title': 'Darmowy Konwerter CSV na JSON Online - Konwertuj CSV na Format JSON Natychmiast | Najlepsze Narzędzie CSV na JSON',
+      'csv_to_json.meta_description': 'Konwertuj pliki CSV na format JSON online za darmo. Przekształć dane tabelaryczne w gotowy do użycia w sieci JSON dla API, REST API, aplikacji mobilnych, programowania internetowego, Node.js, React, Vue.js, Angular i aplikacji JavaScript. Szybko, bezpiecznie, obsługa konwersji wsadowej. Idealne do wymiany danych, integracji API, migracji baz danych, przetwarzania danych, rozwoju frontend, usług backend i nowoczesnych technologii internetowych. Obsługuje pretty print, formaty array/object, zagnieżdżony JSON i niestandardowe nagłówki. Bez rejestracji.',
       'csv_to_json.subtitle': 'Konwertuj pliki CSV na format JSON dla aplikacji internetowych i API. Idealne do wymiany danych i przetwarzania z nowoczesnymi technologiami internetowymi.',
       'csv_to_json.upload_single': 'Prześlij plik CSV',
       'csv_to_json.upload_multiple': 'Prześlij wiele plików CSV',
@@ -14228,8 +14228,8 @@ const resources = {
       
       // CSV to JSON
       'csv_to_json.title': 'CSV zu JSON Konverter',
-      'csv_to_json.meta_title': 'Kostenloser CSV zu JSON Konverter - Konvertieren Sie CSV-Dateien zu JSON-Format online',
-      'csv_to_json.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in JSON-Format. Transformieren Sie Tabellendaten in web-ready JSON für APIs, mobile Apps und Webentwicklung. Schnell, sicher und ohne Registrierung.',
+      'csv_to_json.meta_title': 'Kostenloser CSV zu JSON Konverter Online - Konvertieren Sie CSV in JSON-Format Sofort | Bestes CSV zu JSON Tool',
+      'csv_to_json.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in JSON-Format. Transformieren Sie Tabellendaten in web-ready JSON für APIs, REST APIs, mobile Apps, Webentwicklung, Node.js, React, Vue.js, Angular und JavaScript-Anwendungen. Schnell, sicher, Stapelkonvertierung unterstützt. Perfekt für Datenaustausch, API-Integration, Datenbankmigration, Datenverarbeitung, Frontend-Entwicklung, Backend-Services und moderne Web-Technologien. Unterstützt Pretty Print, Array/Object-Formate, verschachteltes JSON und benutzerdefinierte Header. Keine Registrierung erforderlich.',
       'csv_to_json.subtitle': 'Konvertieren Sie CSV-Dateien in JSON-Format für Webanwendungen und APIs. Ideal für Datenaustausch und Verarbeitung mit modernen Web-Technologien.',
       'csv_to_json.upload_single': 'CSV-Datei hochladen',
       'csv_to_json.upload_multiple': 'Mehrere CSV-Dateien hochladen',

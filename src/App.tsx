@@ -678,6 +678,22 @@ function App() {
         <Route path="/th/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
         <Route path="/ja/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
         <Route path="/zh/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+
+        {/* New Languages Converter Routes - CSV to JSON */}
+        <Route path="/id/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/sv/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/es/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/fr/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/it/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/nl/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/pt/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/vi/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/tr/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/ru/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/ar/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/th/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/ja/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/zh/convert/csv-to-json" element={<CSVToJSONConverter />} />
         <Route path="/de/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
         <Route path="/de/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
         <Route path="/de/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
