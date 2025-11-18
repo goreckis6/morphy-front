@@ -357,7 +357,7 @@ export const CSVToMOBIConverter: React.FC = () => {
                   value={bookTitle}
                   onChange={(e) => setBookTitle(e.target.value)}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
-                  placeholder="Enter book title"
+                  placeholder={t('csv_to_mobi.book_title_placeholder')}
                 />
               </div>
 

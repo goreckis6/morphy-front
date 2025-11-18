@@ -543,6 +543,20 @@ function App() {
         <Route path="/de/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
         <Route path="/de/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
         <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/id/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/sv/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/es/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/fr/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/it/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/nl/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/pt/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/vi/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/tr/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/ru/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/ar/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/th/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/ja/convert/csv-to-odp" element={<CSVToODPConverter />} />
+        <Route path="/zh/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/de/convert/csv-to-odt" element={<CSVToODTConverter />} />
         <Route path="/de/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
         <Route path="/de/convert/csv-to-ppt" element={<CSVToPPTConverter />} />

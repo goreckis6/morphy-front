@@ -300,7 +300,10 @@ export const CSVToODPConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">{t('csv_to_odp.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('csv_to_odp.batch_success_message', {
+                      successCount: batchResults.filter(r => r.success).length,
+                      totalCount: batchResults.length
+                    })}
                   </p>
                   <div className="space-y-3 max-h-60 overflow-y-auto mb-4">
                     {batchResults.map((result, index) => {
@@ -536,13 +539,13 @@ export const CSVToODPConverter: React.FC = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-lime-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('csv_to_odp.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-lime-600 transition-colors"
                 >
-                  Back to Home
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
