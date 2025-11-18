@@ -4719,8 +4719,8 @@ const resources = {
       
       // CSV to XLS
       'csv_to_xls.title': 'CSV to XLS Converter',
-      'csv_to_xls.meta_title': 'Free CSV to XLS Converter - Convert CSV Files to Excel Spreadsheets Online',
-      'csv_to_xls.meta_description': 'Convert CSV files to XLS format online for free. Transform spreadsheet data into Excel workbooks with formatting and formulas. Fast, secure, and no registration required.',
+      'csv_to_xls.meta_title': 'Free CSV to XLS Converter Online - Convert CSV to Excel Spreadsheet Format Instantly | Best CSV to XLS Tool',
+      'csv_to_xls.meta_description': 'Convert CSV files to XLS format online for free. Transform spreadsheet data into Excel workbooks with formatting, formulas, and multiple sheets. Fast, secure, batch conversion support. Perfect for business reports, financial analysis, data archiving, legacy Excel compatibility, accounting, and spreadsheet sharing. Microsoft Excel, LibreOffice Calc, and all major spreadsheet applications supported. No registration required.',
       'csv_to_xls.subtitle': 'Convert CSV files to XLS format. Transform tabular data into Excel workbooks with formatting and formulas.',
       'csv_to_xls.upload_single': 'Upload CSV File',
       'csv_to_xls.upload_multiple': 'Upload Multiple CSV Files',
@@ -9351,8 +9351,8 @@ const resources = {
       
       // CSV to XLS
       'csv_to_xls.title': 'Konwerter CSV na XLS',
-      'csv_to_xls.meta_title': 'Darmowy konwerter CSV na XLS - Konwertuj pliki CSV na arkusze Excel online',
-      'csv_to_xls.meta_description': 'Konwertuj pliki CSV na format XLS online za darmo. Przekształć dane arkusza kalkulacyjnego w skoroszyty Excel z formatowaniem i formułami. Szybko, bezpiecznie i bez rejestracji.',
+      'csv_to_xls.meta_title': 'Darmowy Konwerter CSV na XLS Online - Konwertuj CSV na Format Arkusza Excel Natychmiast | Najlepsze Narzędzie CSV na XLS',
+      'csv_to_xls.meta_description': 'Konwertuj pliki CSV na format XLS online za darmo. Przekształć dane arkusza kalkulacyjnego w skoroszyty Excel z formatowaniem, formułami i wieloma arkuszami. Szybko, bezpiecznie, obsługa konwersji wsadowej. Idealne do raportów biznesowych, analizy finansowej, archiwizacji danych, kompatybilności z starszymi wersjami Excel, księgowości i udostępniania arkuszy. Microsoft Excel, LibreOffice Calc i wszystkie główne aplikacje arkuszy kalkulacyjnych obsługiwane. Bez rejestracji.',
       'csv_to_xls.subtitle': 'Konwertuj pliki CSV na format XLS. Przekształć dane tabelaryczne w skoroszyty Excel z formatowaniem i formułami.',
       'csv_to_xls.upload_single': 'Prześlij plik CSV',
       'csv_to_xls.upload_multiple': 'Prześlij wiele plików CSV',
@@ -14327,8 +14327,8 @@ const resources = {
       
       // CSV to XLS
       'csv_to_xls.title': 'CSV zu XLS Konverter',
-      'csv_to_xls.meta_title': 'Kostenloser CSV zu XLS Konverter - Konvertieren Sie CSV-Dateien zu Excel-Tabellen online',
-      'csv_to_xls.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in XLS-Format. Transformieren Sie Tabellendaten in Excel-Arbeitsmappen mit Formatierung und Formeln. Schnell, sicher und ohne Registrierung.',
+      'csv_to_xls.meta_title': 'Kostenloser CSV zu XLS Konverter Online - Konvertieren Sie CSV in Excel-Tabellenformat Sofort | Bestes CSV zu XLS Tool',
+      'csv_to_xls.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in XLS-Format. Transformieren Sie Tabellendaten in Excel-Arbeitsmappen mit Formatierung, Formeln und mehreren Blättern. Schnell, sicher, Stapelkonvertierung unterstützt. Perfekt für Geschäftsberichte, Finanzanalyse, Datenarchivierung, Legacy-Excel-Kompatibilität, Buchhaltung und Tabellenfreigabe. Microsoft Excel, LibreOffice Calc und alle wichtigen Tabellenkalkulationsanwendungen unterstützt. Keine Registrierung erforderlich.',
       'csv_to_xls.subtitle': 'Konvertieren Sie CSV-Dateien in XLS-Format. Transformieren Sie Tabellendaten in Excel-Arbeitsmappen mit Formatierung und Formeln.',
       'csv_to_xls.upload_single': 'CSV-Datei hochladen',
       'csv_to_xls.upload_multiple': 'Mehrere CSV-Dateien hochladen',
