@@ -662,6 +662,22 @@ function App() {
         <Route path="/th/convert/csv-to-xls" element={<CSVToXLSConverter />} />
         <Route path="/ja/convert/csv-to-xls" element={<CSVToXLSConverter />} />
         <Route path="/zh/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+
+        {/* New Languages Converter Routes - CSV to XLSX */}
+        <Route path="/id/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/sv/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/es/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/fr/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/it/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/nl/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/pt/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/vi/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/tr/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/ru/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/ar/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/th/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/ja/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/zh/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
         <Route path="/de/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
         <Route path="/de/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
         <Route path="/de/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />

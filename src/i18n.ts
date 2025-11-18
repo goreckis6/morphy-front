@@ -4823,8 +4823,8 @@ const resources = {
       
       // CSV to XLSX
       'csv_to_xlsx.title': 'CSV to XLSX Converter',
-      'csv_to_xlsx.meta_title': 'Free CSV to XLSX Converter - Convert CSV Files to Excel Spreadsheets Online',
-      'csv_to_xlsx.meta_description': 'Convert CSV files to XLSX format online for free. Transform spreadsheet data into modern Excel workbooks with advanced formatting and features. Fast, secure, and no registration required.',
+      'csv_to_xlsx.meta_title': 'Free CSV to XLSX Converter Online - Convert CSV to Modern Excel Format Instantly | Best CSV to XLSX Tool',
+      'csv_to_xlsx.meta_description': 'Convert CSV files to XLSX format online for free. Transform spreadsheet data into modern Excel workbooks with advanced formatting, formulas, charts, pivot tables, and multiple sheets. Fast, secure, batch conversion support. Perfect for business intelligence, data analysis, financial modeling, reporting, Excel 2007+ compatibility, Office 365, and professional spreadsheet creation. Microsoft Excel, Google Sheets, LibreOffice Calc, and all modern spreadsheet applications supported. No registration required.',
       'csv_to_xlsx.subtitle': 'Convert CSV files to XLSX format. Transform tabular data into modern Excel workbooks with advanced formatting and features.',
       'csv_to_xlsx.upload_single': 'Upload CSV File',
       'csv_to_xlsx.upload_multiple': 'Upload Multiple CSV Files',
@@ -9386,8 +9386,8 @@ const resources = {
       
       // CSV to XLSX
       'csv_to_xlsx.title': 'Konwerter CSV na XLSX',
-      'csv_to_xlsx.meta_title': 'Darmowy konwerter CSV na XLSX - Konwertuj pliki CSV na arkusze Excel online',
-      'csv_to_xlsx.meta_description': 'Konwertuj pliki CSV na format XLSX online za darmo. Przekształć dane arkusza kalkulacyjnego w nowoczesne skoroszyty Excel z zaawansowanym formatowaniem i funkcjami. Szybko, bezpiecznie i bez rejestracji.',
+      'csv_to_xlsx.meta_title': 'Darmowy Konwerter CSV na XLSX Online - Konwertuj CSV na Nowoczesny Format Excel Natychmiast | Najlepsze Narzędzie CSV na XLSX',
+      'csv_to_xlsx.meta_description': 'Konwertuj pliki CSV na format XLSX online za darmo. Przekształć dane arkusza kalkulacyjnego w nowoczesne skoroszyty Excel z zaawansowanym formatowaniem, formułami, wykresami, tabelami przestawnymi i wieloma arkuszami. Szybko, bezpiecznie, obsługa konwersji wsadowej. Idealne do analizy biznesowej, analizy danych, modelowania finansowego, raportowania, kompatybilności z Excel 2007+, Office 365 i tworzenia profesjonalnych arkuszy. Microsoft Excel, Google Sheets, LibreOffice Calc i wszystkie nowoczesne aplikacje arkuszy kalkulacyjnych obsługiwane. Bez rejestracji.',
       'csv_to_xlsx.subtitle': 'Konwertuj pliki CSV na format XLSX. Przekształć dane tabelaryczne w nowoczesne skoroszyty Excel z zaawansowanym formatowaniem i funkcjami.',
       'csv_to_xlsx.upload_single': 'Prześlij plik CSV',
       'csv_to_xlsx.upload_multiple': 'Prześlij wiele plików CSV',
@@ -14362,8 +14362,8 @@ const resources = {
       
       // CSV to XLSX
       'csv_to_xlsx.title': 'CSV zu XLSX Konverter',
-      'csv_to_xlsx.meta_title': 'Kostenloser CSV zu XLSX Konverter - Konvertieren Sie CSV-Dateien zu Excel-Tabellen online',
-      'csv_to_xlsx.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in XLSX-Format. Transformieren Sie Tabellendaten in moderne Excel-Arbeitsmappen mit erweiterten Formatierungs- und Funktionen. Schnell, sicher und ohne Registrierung.',
+      'csv_to_xlsx.meta_title': 'Kostenloser CSV zu XLSX Konverter Online - Konvertieren Sie CSV in Modernes Excel-Format Sofort | Bestes CSV zu XLSX Tool',
+      'csv_to_xlsx.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in XLSX-Format. Transformieren Sie Tabellendaten in moderne Excel-Arbeitsmappen mit erweiterten Formatierungen, Formeln, Diagrammen, Pivot-Tabellen und mehreren Blättern. Schnell, sicher, Stapelkonvertierung unterstützt. Perfekt für Business Intelligence, Datenanalyse, Finanzmodellierung, Berichterstellung, Excel 2007+ Kompatibilität, Office 365 und professionelle Tabellenerstellung. Microsoft Excel, Google Sheets, LibreOffice Calc und alle modernen Tabellenkalkulationsanwendungen unterstützt. Keine Registrierung erforderlich.',
       'csv_to_xlsx.subtitle': 'Konvertieren Sie CSV-Dateien in XLSX-Format. Transformieren Sie Tabellendaten in moderne Excel-Arbeitsmappen mit erweiterten Formatierungs- und Funktionen.',
       'csv_to_xlsx.upload_single': 'CSV-Datei hochladen',
       'csv_to_xlsx.upload_multiple': 'Mehrere CSV-Dateien hochladen',
