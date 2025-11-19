@@ -60,17 +60,17 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
   en: {
     samples_page: {
       meta: {
-        title: 'Free Sample Files – Download Test Files | MorphyHub',
-        description: 'Get free sample images, documents, and archives to test MorphyHub converters, compressors, and viewers.',
-        keywords: 'sample files, test files, download samples, free test files, DOCX samples, file samples, test files for conversion'
+        title: 'Free Sample Files - Download Test Files for All Formats | MorphyHub',
+        description: 'Download free sample files for testing - images, documents, archives, code, and more. Multiple sizes (100 KB to 100 MB) available. Perfect for testing converters, compressors, viewers, and development tools. Instant download, no registration required.',
+        keywords: 'sample files, test files, download samples, free test files, DOCX samples, file samples, test files for conversion, sample images, sample documents, sample archives, free file samples'
       },
       schema: {
         name: 'Free Sample Files for Download and Testing',
         description: 'Download free sample files of various types — images, documents, audio, video, and archives. Use them for testing, demos, or software validation on any platform.'
       },
       hero: {
-        title: 'Sample Files',
-        description: 'Download free sample files for testing. Multiple file sizes available for various formats to test your conversion and processing tools.'
+        title: 'Free Sample Files',
+        description: 'Download free sample files for testing across all formats. Multiple file sizes available (100 KB, 1 MB, 5 MB, 50 MB, 100 MB) for comprehensive testing of converters, compressors, viewers, and development tools. Instant download, no registration required.'
       },
       back_button: 'Back to Home',
       search: {
@@ -101,15 +101,23 @@ const samplesPageResources: Record<string, SamplesPageTranslations> = {
         items: [
           {
             title: 'Free & Easy Access',
-            description: 'Download sample files instantly without registration or payment.'
+            description: 'Download sample files instantly without registration or payment. No limits, no hidden fees, completely free.'
           },
           {
             title: 'Multiple Sizes',
-            description: 'Choose from various file sizes (100 KB, 1 MB, 5 MB, 50 MB, 100 MB) for comprehensive testing.'
+            description: 'Choose from various file sizes (100 KB, 1 MB, 5 MB, 50 MB, 100 MB) for comprehensive testing of all file processing scenarios.'
           },
           {
             title: 'Wide Variety',
-            description: 'Access samples across multiple categories: documents, images, audio, video, archives, and more.'
+            description: 'Access samples across multiple categories: documents, images, audio, video, archives, code files, and more. Perfect for developers and testers.'
+          },
+          {
+            title: 'Instant Download',
+            description: 'Download files immediately. No waiting, no queues. Get your test files right away.'
+          },
+          {
+            title: 'Perfect for Testing',
+            description: 'Ideal for testing converters, compressors, viewers, parsers, and development tools. Comprehensive file format coverage.'
           }
         ]
       },
