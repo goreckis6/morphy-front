@@ -358,7 +358,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': '¿Listo para Convertir Tus Archivos CSV?',
       'csv_to_yaml.cta_description': 'Usa nuestro convertidor gratuito en línea de CSV a YAML para transformar tus datos en formato de configuración estructurado.',
       'csv_to_yaml.start_converting': 'Comenzar a Convertir Ahora'
-    },
+    }
+  },
   fr: {
     translation: {
       // CSV to YAML
@@ -417,7 +418,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Prêt à Convertir Vos Fichiers CSV?',
       'csv_to_yaml.cta_description': 'Utilisez notre convertisseur gratuit en ligne CSV vers YAML pour transformer vos données en format de configuration structuré.',
       'csv_to_yaml.start_converting': 'Commencer à Convertir Maintenant'
-    },
+    }
+  },
   it: {
     translation: {
       // CSV to YAML
@@ -476,7 +478,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Pronto a Convertire i Tuoi File CSV?',
       'csv_to_yaml.cta_description': 'Usa il nostro convertitore gratuito online CSV a YAML per trasformare i tuoi dati in formato di configurazione strutturato.',
       'csv_to_yaml.start_converting': 'Inizia a Convertire Ora'
-    },
+    }
+  },
   nl: {
     translation: {
       // CSV to YAML
@@ -535,7 +538,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Klaar om Uw CSV-bestanden te Converteren?',
       'csv_to_yaml.cta_description': 'Gebruik onze gratis online CSV naar YAML-converter om uw gegevens te transformeren naar gestructureerd configuratieformaat.',
       'csv_to_yaml.start_converting': 'Begin Nu met Converteren'
-    },
+    }
+  },
   pt: {
     translation: {
       // CSV to YAML
@@ -594,7 +598,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Pronto para Converter Seus Arquivos CSV?',
       'csv_to_yaml.cta_description': 'Use nosso conversor gratuito online CSV para YAML para transformar seus dados em formato de configuração estruturado.',
       'csv_to_yaml.start_converting': 'Começar a Converter Agora'
-    },
+    }
+  },
   vi: {
     translation: {
       // CSV to YAML
@@ -653,7 +658,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Sẵn Sàng Chuyển Đổi File CSV Của Bạn?',
       'csv_to_yaml.cta_description': 'Sử dụng công cụ chuyển đổi CSV sang YAML trực tuyến miễn phí của chúng tôi để chuyển đổi dữ liệu của bạn sang định dạng cấu hình có cấu trúc.',
       'csv_to_yaml.start_converting': 'Bắt Đầu Chuyển Đổi Ngay'
-    },
+    }
+  },
   tr: {
     translation: {
       // CSV to YAML
@@ -712,7 +718,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'CSV Dosyalarınızı Dönüştürmeye Hazır mısınız?',
       'csv_to_yaml.cta_description': 'CSV verilerinizi anında YAML formatına dönüştürün. Ücretsiz online CSV\'den YAML\'e dönüştürücümüz toplu işleme, özelleştirilebilir girinti, flow style seçenekleri destekler ve Docker Compose, Kubernetes, Ansible, CI/CD pipeline\'ları ve kod olarak altyapı için geçerli YAML üretir.',
       'csv_to_yaml.start_converting': 'Şimdi Dönüştürmeye Başla'
-    },
+    }
+  },
   ru: {
     translation: {
       // CSV to YAML
@@ -771,7 +778,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Готовы Конвертировать Ваши Файлы CSV?',
       'csv_to_yaml.cta_description': 'Используйте наш бесплатный онлайн-конвертер CSV в YAML для преобразования ваших данных в структурированный формат конфигурации.',
       'csv_to_yaml.start_converting': 'Начать Конвертацию Сейчас'
-    },
+    }
+  },
   ar: {
     translation: {
       // CSV to YAML
@@ -830,7 +838,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'جاهز لتحويل ملفات CSV الخاصة بك؟',
       'csv_to_yaml.cta_description': 'استخدم محول CSV إلى YAML المجاني عبر الإنترنت لتحويل بياناتك إلى تنسيق تكوين منظم.',
       'csv_to_yaml.start_converting': 'ابدأ التحويل الآن'
-    },
+    }
+  },
   th: {
     translation: {
       // CSV to YAML
@@ -889,7 +898,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'พร้อมแปลงไฟล์ CSV ของคุณแล้วหรือยัง?',
       'csv_to_yaml.cta_description': 'ใช้ตัวแปลง CSV เป็น YAML ออนไลน์ฟรีของเราเพื่อแปลงข้อมูลของคุณเป็นรูปแบบการกำหนดค่าที่มีโครงสร้าง',
       'csv_to_yaml.start_converting': 'เริ่มแปลงตอนนี้'
-    },
+    }
+  },
   ja: {
     translation: {
       // CSV to YAML
@@ -948,7 +958,7 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'CSVファイルの変換準備はできましたか？',
       'csv_to_yaml.cta_description': '無料のオンラインCSVからYAMLへのコンバーターを使用して、データを構造化された設定形式に変換します。',
       'csv_to_yaml.start_converting': '今すぐ変換を開始'
-    },
+    }
   },
   zh: {
     translation: {
