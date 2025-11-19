@@ -10847,16 +10847,6 @@ const resources = {
       'bmp_to_webp.ready_title': 'Bereit, Ihre BMP-Dateien zu Konvertieren?',
       'bmp_to_webp.ready_text': 'Verwenden Sie unseren kostenlosen Online-BMP-zu-WebP-Konverter, um Ihre Bitmap-Bilder in web-optimierte Bilder zu transformieren.',
 
-      // DNG to WebP (German)
-      'dng_to_webp.title': 'Kostenloser DNG zu WebP Konverter - Adobe Digital Negative zu WebP-Format',
-      'dng_to_webp.meta_title': 'Kostenloser DNG zu WebP Konverter - Adobe Digital Negative zu WebP-Format',
-      'dng_to_webp.meta_keywords': 'DNG zu WebP, Adobe Digital Negative, WebP-Konverter, Kamera RAW, Web-Optimierung, Bild-Konverter, Batch-Konvertierung, kostenloser Konverter',
-      'dng_to_webp.meta_description': 'Kostenloser Online DNG zu WebP Konverter. Konvertieren Sie Adobe Digital Negative DNG Raw-Bilder zu WebP-Format mit Qualitätseinstellungen (hoch, mittel, niedrig) und verlustfreiem Modus. Professionelle Raw-Bildkonvertierung, keine Registrierung erforderlich.',
-      'dng_to_webp.subtitle': 'Konvertieren Sie Adobe DNG Raw-Bilder zu WebP-Format für Web-Optimierung. Transformieren Sie professionelle Kamera-Dateien in moderne, web-freundliche Bilder mit überlegener Komprimierung.',
-      'dng_to_webp.upload_single': 'DNG Datei hochladen',
-      'dng_to_webp.upload_batch': 'Mehrere DNG Dateien hochladen',
-      'dng_to_webp.upload_text_single': 'Ziehen Sie Ihre DNG Datei hierher oder klicken Sie zum Durchsuchen',
-      'dng_to_webp.upload_text_batch': 'Wählen Sie mehrere DNG Dateien aus, um sie alle auf einmal zu konvertieren',
       // EPS to WebP (German)
       'eps_to_webp.title': 'EPS zu WebP Konverter - Konvertiere Encapsulated PostScript zu WebP',
       'eps_to_webp.meta_title': 'Kostenloser EPS zu WebP Konverter Online - PostScript zu WebP Kostenlos',
