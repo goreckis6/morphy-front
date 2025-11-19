@@ -29,16 +29,6 @@ export const additionalTranslations = {
       'common.preview': 'Pratinjau',
       'common.total_size': 'Ukuran total: {{current}} dari {{max}} yang diizinkan.',
       
-      // Validation messages
-      'validation.single_file_limit': 'Limit file tunggal: 100,00 MB per file.',
-      'validation.batch_info': 'Konversi batch mendukung hingga 20 file, 100,00 MB per file, 100,00 MB total.',
-      'validation.total_size': 'Ukuran total: {{current}} dari {{max}} yang diizinkan.',
-      'validation.file_too_large': 'File "{{filename}}" terlalu besar ({{fileSize}}). Ukuran maksimum yang diizinkan adalah {{maxSize}}.',
-      'validation.too_many_files': 'Terlalu banyak file yang dipilih ({{count}}). Maksimum yang diizinkan adalah {{max}}.',
-      'validation.batch_too_large': 'Ukuran total batch {{totalSize}} melebihi batas {{maxSize}}.',
-      'validation.batch_size_warning': 'Ukuran batch mendekati batas 100MB. Pertimbangkan untuk memproses lebih sedikit file untuk performa yang lebih baik.',
-
-      
       // Features
       'features.lightning_fast': 'Sangat Cepat',
       'features.100_free': '100% Gratis',
@@ -1945,7 +1935,18 @@ export const additionalTranslations = {
       'csv_to_parquet.start_converting': 'Mulai Mengonversi Sekarang',
       'csv_to_parquet.batch_conversion_complete': 'Konversi Batch Selesai',
 
+      // CSV to TOML
+      'csv_to_toml.title': 'Konverter CSV ke TOML',
+      'csv_to_toml.subtitle': 'Konversi file CSV ke format TOML untuk file konfigurasi.',
+      // CSV to XML
+      'csv_to_xml.title': 'Konverter CSV ke XML',
+      'csv_to_xml.subtitle': 'Konversi file CSV ke format XML untuk pertukaran data terstruktur.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Konverter CSV ke YAML',
+      'csv_to_yaml.subtitle': 'Konversi file CSV ke format YAML untuk konfigurasi dan data terstruktur.',
       // DNG to WebP
+      'dng_to_webp.title': 'Konverter DNG ke WebP',
+      'dng_to_webp.subtitle': 'Konversi file gambar mentah DNG ke format WebP yang dioptimalkan untuk web.',
       // EPS to WebP
       'eps_to_webp.title': 'Konverter EPS ke WebP',
       'eps_to_webp.subtitle': 'Konversi file grafik vektor EPS ke format WebP untuk web dan aplikasi.',
@@ -2051,16 +2052,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Ingen registrering krävs',
       'common.preview': 'Förhandsvisning',
       'common.total_size': 'Total storlek: {{current}} av {{max}} tillåten.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Enskild filgräns: 100,00 MB per fil.',
-      'validation.batch_info': 'Batchkonvertering stöder upp till 20 filer, 100,00 MB per fil, 100,00 MB totalt.',
-      'validation.total_size': 'Total storlek: {{current}} av {{max}} tillåten.',
-      'validation.file_too_large': 'Filen "{{filename}}" är för stor ({{fileSize}}). Maximal tillåten storlek är {{maxSize}}.',
-      'validation.too_many_files': 'För många filer valda ({{count}}). Maximalt tillåtet är {{max}}.',
-      'validation.batch_too_large': 'Total batchstorlek {{totalSize}} överskrider gränsen på {{maxSize}}.',
-      'validation.batch_size_warning': 'Batchstorleken närmar sig 100MB-gränsen. Överväg att bearbeta färre filer för bättre prestanda.',
-
       
       // Features
       'features.lightning_fast': 'Blixtsnabb',
@@ -3971,7 +3962,15 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV till SQL Konverterare',
       'csv_to_sql.subtitle': 'Konvertera CSV-filer till SQL-uttryck för databasimporrationsfiler.',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV till XML Konverterare',
+      'csv_to_xml.subtitle': 'Konvertera CSV-filer till XML-format för strukturerad datautbyte.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV till YAML Konverterare',
+      'csv_to_yaml.subtitle': 'Konvertera CSV-filer till YAML-format för konfiguration och strukturerad data.',
       // DNG to WebP
+      'dng_to_webp.title': 'DNG till WebP Konverterare',
+      'dng_to_webp.subtitle': 'Konvertera DNG-rawbildfiler till webboptimerat WebP-format.',
       // EPS to WebP
       'eps_to_webp.title': 'EPS till WebP Konverterare',
       'eps_to_webp.subtitle': 'Konvertera EPS-vektorgrafikfiler till WebP-format för webb och appar.',
@@ -4077,16 +4076,6 @@ export const additionalTranslations = {
       'common.no_registration': 'No Se Requiere Registro',
       'common.preview': 'Vista Previa',
       'common.total_size': 'Tamaño total: {{current}} de {{max}} permitidos.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Límite de archivo único: 100,00 MB por archivo.',
-      'validation.batch_info': 'La conversión por lotes admite hasta 20 archivos, 100,00 MB por archivo, 100,00 MB en total.',
-      'validation.total_size': 'Tamaño total: {{current}} de {{max}} permitidos.',
-      'validation.file_too_large': 'El archivo "{{filename}}" es demasiado grande ({{fileSize}}). El tamaño máximo permitido es {{maxSize}}.',
-      'validation.too_many_files': 'Demasiados archivos seleccionados ({{count}}). El máximo permitido es {{max}}.',
-      'validation.batch_too_large': 'El tamaño total del lote {{totalSize}} excede el límite de {{maxSize}}.',
-      'validation.batch_size_warning': 'El tamaño del lote se está acercando al límite de 100MB. Considere procesar menos archivos para un mejor rendimiento.',
-
       
       // Features
       'features.lightning_fast': 'Súper Rápido',
@@ -5997,7 +5986,15 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertidor CSV a SQL',
       'csv_to_sql.subtitle': 'Convierte archivos CSV a declaraciones SQL para importación de bases de datos.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Convertidor CSV a TOML',
+      'csv_to_toml.subtitle': 'Convierte archivos CSV al formato T intercambio de datos estructurados.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Convertidor CSV a YAML',
+      'csv_to_yaml.subtitle': 'Convierte archivos CSV al formato YAML para configuración y datos estructurados.',
       // DNG to WebP
+      'dng_to_webp.title': 'Convertidor DNG a WebP',
+      'dng_to_webp.subtitle': 'Convierte archivos de imagen RAW DNG al formato WebP optimizado para web.',
       // EPS to WebP
       'eps_to_webp.title': 'Convertidor EPS a WebP',
       'eps_to_webp.subtitle': 'Convierte archivos de gráficos vectoriales EPS al formato WebP para web y aplicaciones.',
@@ -6103,16 +6100,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Aucune Inscription Requise',
       'common.preview': 'Aperçu',
       'common.total_size': 'Taille totale : {{current}} sur {{max}} autorisés.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Limite de fichier unique: 100,00 Mo par fichier.',
-      'validation.batch_info': 'La conversion par lots prend en charge jusqu\'à 20 fichiers, 100,00 Mo par fichier, 100,00 Mo au total.',
-      'validation.total_size': 'Taille totale: {{current}} sur {{max}} autorisés.',
-      'validation.file_too_large': 'Le fichier "{{filename}}" est trop volumineux ({{fileSize}}). La taille maximale autorisée est {{maxSize}}.',
-      'validation.too_many_files': 'Trop de fichiers sélectionnés ({{count}}). Le maximum autorisé est {{max}}.',
-      'validation.batch_too_large': 'La taille totale du lot {{totalSize}} dépasse la limite de {{maxSize}}.',
-      'validation.batch_size_warning': 'La taille du lot approche de la limite de 100 Mo. Envisagez de traiter moins de fichiers pour de meilleures performances.',
-
       
       // Features
       'features.lightning_fast': 'Ultra Rapide',
@@ -8023,6 +8010,15 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertisseur CSV vers SQL',
       'csv_to_sql.subtitle': 'Convertissez les fichiers CSV en instructions SQL pour l\'importation de bases de données.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Convertisseur CSV vers TOML',
+      'csv_to_toml.subtitle': 'Convertissez les fichiers CSV au format TOML pour les fichiers de configuration.',
+      // CSV to XML
+      'csv_to_xml.title': 'Convertisseur CSV vers XML',
+      'csv_to_xml.subtitle': 'Conveissez les fichiers CSV au format YAML pour la configuration et les données structurées.',
+      // DNG to WebP
+      'dng_to_webp.title': 'Convertisseur DNG vers WebP',
+      'dng_to_webp.subtitle': 'Convertissez les fichiers d\'image RAW DNG au format WebP optimisé pour le web.',
       // EPS to WebP
       'eps_to_webp.title': 'Convertisseur EPS vers WebP',
       'eps_to_webp.subtitle': 'Convertissez les fichiers de graphiques vectoriels EPS au format WebP pour le web et les applications.',
@@ -8128,16 +8124,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Nessuna Registrazione Richiesta',
       'common.preview': 'Anteprima',
       'common.total_size': 'Dimensione totale: {{current}} di {{max}} consentiti.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Limite file singolo: 100,00 MB per file.',
-      'validation.batch_info': 'La conversione batch supporta fino a 20 file, 100,00 MB per file, 100,00 MB totali.',
-      'validation.total_size': 'Dimensione totale: {{current}} di {{max}} consentiti.',
-      'validation.file_too_large': 'Il file "{{filename}}" è troppo grande ({{fileSize}}). La dimensione massima consentita è {{maxSize}}.',
-      'validation.too_many_files': 'Troppi file selezionati ({{count}}). Il massimo consentito è {{max}}.',
-      'validation.batch_too_large': 'La dimensione totale del batch {{totalSize}} supera il limite di {{maxSize}}.',
-      'validation.batch_size_warning': 'La dimensione del batch si sta avvicinando al limite di 100MB. Considera di elaborare meno file per prestazioni migliori.',
-
       
       // Features
       'features.lightning_fast': 'Ultra Veloce',
@@ -10048,6 +10034,15 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertitore CSV in SQL',
       'csv_to_sql.subtitle': 'Converti file CSV in istruzioni SQL per importazione database.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Convertitore CSV in TOML',
+      'csv_to_toml.subtitle': 'Converti file CSV nel formato TOML per file di configurazione.',
+      // CSV to XML
+      'csv_to_xml.title': 'Convertitore CSV in XML',
+      'csv_to_xml.subtitle': 'Converti file CSV nel formato XML per scambio dati strutturati.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Convertitore CSV in YAML',
+      'csv_to_yaml.subtitle': 'Converti file CSV nel formato YAML per configurazione e dati strutturati.',
       // ,
       // EPS to WebP
       'eps_to_webp.title': 'Convertitore EPS in WebP',
@@ -10154,16 +10149,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Geen Registratie Vereist',
       'common.preview': 'Voorvertoning',
       'common.total_size': 'Totale grootte: {{current}} van {{max}} toegestaan.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Enkel bestandslimiet: 100,00 MB per bestand.',
-      'validation.batch_info': 'Batchconversie ondersteunt tot 20 bestanden, 100,00 MB per bestand, 100,00 MB totaal.',
-      'validation.total_size': 'Totale grootte: {{current}} van {{max}} toegestaan.',
-      'validation.file_too_large': 'Bestand "{{filename}}" is te groot ({{fileSize}}). Maximale toegestane grootte is {{maxSize}}.',
-      'validation.too_many_files': 'Te veel bestanden geselecteerd ({{count}}). Maximum toegestaan is {{max}}.',
-      'validation.batch_too_large': 'Totale batchgrootte {{totalSize}} overschrijdt de limiet van {{maxSize}}.',
-      'validation.batch_size_warning': 'Batchgrootte nadert de 100MB-limiet. Overweeg minder bestanden te verwerken voor betere prestaties.',
-
       
       // Features
       'features.lightning_fast': 'Bliksemsnel',
@@ -12074,7 +12059,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV naar SQL Converter',
       'csv_to_sql.subtitle': 'Converteer CSV-bestanden naar SQL-statements voor database-import.',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSV naar TOML Converter',
+      'csv_to_toml.subtitle': 'Converteer CSV-bestanden naar TOML-formaat voor configuratiebestanden.',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV naar XML Converter',
+      'csv_to_xml.subtitle': 'Converteer CSV-bestanden naar XML-formaat voor gestructureerde gegevensuitwisseling.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV naar YAML Converter',
+      'csv_to_yaml.subtitle': 'Converteer CSV-bestanden naar YAML-formaat voor configuratie en gestructureerde gegevens.',
       // DNG to WebP
+      'dng_to_webp.title': 'DNG naar WebP Converter',
+      'dng_to_webp.subtitle': 'Converteer DNG RAW-afbeeler EPS-vectorgrafiekbestanden naar WebP-formaat voor web en apps.',
       // EPUB to CSV
       'epub_to_csv.title': 'EPUB naar CSV Converter',
       'epub_to_csv.subtitle': 'Converteer EPUB e-boekbestanden naar CSV-formaat voor data-analyse.',
@@ -12177,16 +12173,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Nenhum Registro Necessário',
       'common.preview': 'Pré-visualização',
       'common.total_size': 'Tamanho total: {{current}} de {{max}} permitidos.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Limite de arquivo único: 100,00 MB por arquivo.',
-      'validation.batch_info': 'A conversão em lote suporta até 20 arquivos, 100,00 MB por arquivo, 100,00 MB no total.',
-      'validation.total_size': 'Tamanho total: {{current}} de {{max}} permitidos.',
-      'validation.file_too_large': 'O arquivo "{{filename}}" é muito grande ({{fileSize}}). O tamanho máximo permitido é {{maxSize}}.',
-      'validation.too_many_files': 'Muitos arquivos selecionados ({{count}}). O máximo permitido é {{max}}.',
-      'validation.batch_too_large': 'O tamanho total do lote {{totalSize}} excede o limite de {{maxSize}}.',
-      'validation.batch_size_warning': 'O tamanho do lote está se aproximando do limite de 100MB. Considere processar menos arquivos para melhor desempenho.',
-
       
       // Features
       'features.lightning_fast': 'Ultra Rápido',
@@ -14046,7 +14032,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Conversor CSV para SQL',
       'csv_to_sql.subtitle': 'Converta arquivos CSV em instruções SQL para importação de banco de dados.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Conversor CSV para TOML',
+      'csv_to_toml.subtitle': 'Converta arquivos CSV para o formato TOML para arquivos de configuração.',
+      // CSV to XML
+      'csv_to_xml.title': 'Conversor CSV para XML',
+      'csv_to_xml.subtitle': 'Converta arquivos CSV para o formato XML para troca de dados estruturados.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Conversor CSV para YAML',
+      'csv_to_yaml.subtitle': 'Converta arquivos CSV para o formato YAML para configuração e dados estruturados.',
       // DNG to WebP
+      'dng_to_webp.title': 'Conversor DNG para WebP',
+      'dng_to_webp.subtitle': 'Converta arquivos de imagem RAW DNG para o formato WebP otimizado para web.',
       // EPS to WebP
       'eps_to_webp.title': 'Conversor EPS para WebP',
       'eps_to_webp.subtitle': 'Converta arquivos donverta arquivos de ebook EPUB para o formato CSV para análise de dados.',
@@ -14149,16 +14146,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Không Cần Đăng Ký',
       'common.preview': 'Xem Trước',
       'common.total_size': 'Tổng kích thước: {{current}} trong số {{max}} được phép.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Giới hạn file đơn: 100,00 MB mỗi file.',
-      'validation.batch_info': 'Chuyển đổi hàng loạt hỗ trợ tối đa 20 file, 100,00 MB mỗi file, 100,00 MB tổng cộng.',
-      'validation.total_size': 'Kích thước tổng: {{current}} trong số {{max}} được phép.',
-      'validation.file_too_large': 'File "{{filename}}" quá lớn ({{fileSize}}). Kích thước tối đa được phép là {{maxSize}}.',
-      'validation.too_many_files': 'Quá nhiều file được chọn ({{count}}). Tối đa được phép là {{max}}.',
-      'validation.batch_too_large': 'Kích thước tổng của batch {{totalSize}} vượt quá giới hạn {{maxSize}}.',
-      'validation.batch_size_warning': 'Kích thước batch đang gần đạt giới hạn 100MB. Hãy cân nhắc xử lý ít file hơn để có hiệu suất tốt hơn.',
-
       
       // Features
       'features.lightning_fast': 'Cực Nhanh',
@@ -15965,7 +15952,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Chuyển Đổi CSV sang SQL',
       'csv_to_sql.subtitle': 'Chuyển đổi tệp CSV sang câu lệnh SQL để nhập cơ sở dữ liệu.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Chuyển Đổi CSV sang TOML',
+      'csv_to_toml.subtitle': 'Chuyển đổi tệp CSV sang định dạng TOML cho tệp cấu hình.',
+      // CSV to XML
+      'csv_to_xml.title': 'Chuyển Đổi CSV sang XML',
+      'csv_to_xml.subtitle': 'Chuyển đổi tệp CSV sang định dạng XML để trao đổi dữ liệu có cấu trúc.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'Chuyển Đổi CSV sang YAML',
+      'csv_to_yaml.subtitle': 'Chuyển đổi tệp CSV sang định dạng YAML để cấu hình và dữ liệu có cấu trúc.',
       // DNG to WebP
+      'dng_to_webp.title': 'Chuyển Đổi DNG sang WebP',
+      'dng_to_webp.subtitle': 'Chuyển đổi tệp hình ảnh RAW DNG sang định dạng WebP tối ưu cho web.',
       // EPS to WebP
       'eps_to_webp.title': 'Chuyển Đổi EPS sang WebP',
       'eps_to_webp.subtitle': 'Chuyển đổi tệp đồ họa vector EPS sang định dạng WebP cho web và ứng dụng.',
@@ -16068,16 +16066,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Kayıt Gerekmez',
       'common.preview': 'Önizleme',
       'common.total_size': 'Toplam boyut: {{current}} / {{max}} izin verilen.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Tek dosya limiti: Dosya başına 100,00 MB.',
-      'validation.batch_info': 'Toplu dönüştürme 20 dosyaya kadar destekler, dosya başına 100,00 MB, toplam 100,00 MB.',
-      'validation.total_size': 'Toplam boyut: {{max}} izin verilen {{current}}.',
-      'validation.file_too_large': 'Dosya "{{filename}}" çok büyük ({{fileSize}}). İzin verilen maksimum boyut {{maxSize}}.',
-      'validation.too_many_files': 'Çok fazla dosya seçildi ({{count}}). İzin verilen maksimum {{max}}.',
-      'validation.batch_too_large': 'Toplam batch boyutu {{totalSize}}, {{maxSize}} limitini aşıyor.',
-      'validation.batch_size_warning': 'Batch boyutu 100MB limitine yaklaşıyor. Daha iyi performans için daha az dosya işlemeyi düşünün.',
-
       
       // Features
       'features.lightning_fast': 'Çok Hızlı',
@@ -17958,6 +17946,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV\'den SQL\'e Dönüştürücü',
       'csv_to_sql.subtitle': 'CSV dosyalarını veritabanı içe aktarma için SQL ifadelerine dönüştürün.',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSV\'den TOML\'ye Dönüştürücü',
+      'csv_to_toml.subtitle': 'CSV dosyalarını yapılandırma dosyaları için TOML formatına dönüştürün.',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV\'den XML\'e Dönüştürücü',
+      'csv_to_xml.subtitle': 'CSV dosyalarını yapılandırılmış veri değişimi için XML formatına dönüştürün.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV\'den YAML\'e Dönüştürücü',
+      'csv_to_yaml.subtitle': 'CSV dosyalarını yapılandırma ve yapılandırılmış veriler için YAML formatına dönüştürün.',
+      // DNG to WebP
+      'dng_to_webp.title': 'DNG\'den WebP\'ye Dönüştürücü',
+      'dng_to_webp.subtitle': 'DNG RAW görüntü dosyalarını web için optimize edilmiş WebP formatına dönüştürün.',
       // EPS to WebP
       'eps_to_webp.title': 'EPS\'den WebP\'ye Dönüştürücü',
       'eps_to_webp.subtitle': 'EPS vektör grafik dosyalarını web ve uygulamalar için WebP formatına dönüştürün.',
@@ -18060,16 +18060,6 @@ export const additionalTranslations = {
       'common.no_registration': 'Регистрация Не Требуется',
       'common.preview': 'Предпросмотр',
       'common.total_size': 'Общий размер: {{current}} из {{max}} разрешено.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'Лимит одного файла: 100,00 МБ на файл.',
-      'validation.batch_info': 'Пакетное преобразование поддерживает до 20 файлов, 100,00 МБ на файл, 100,00 МБ всего.',
-      'validation.total_size': 'Общий размер: {{current}} из {{max}} разрешено.',
-      'validation.file_too_large': 'Файл "{{filename}}" слишком большой ({{fileSize}}). Максимально разрешенный размер {{maxSize}}.',
-      'validation.too_many_files': 'Выбрано слишком много файлов ({{count}}). Максимально разрешено {{max}}.',
-      'validation.batch_too_large': 'Общий размер пакета {{totalSize}} превышает лимит {{maxSize}}.',
-      'validation.batch_size_warning': 'Размер пакета приближается к лимиту 100 МБ. Рассмотрите обработку меньшего количества файлов для лучшей производительности.',
-
       
       // Features
       'features.lightning_fast': 'Молниеносно Быстро',
@@ -19929,7 +19919,17 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Конвертер CSV в SQL',
       'csv_to_sql.subtitle': 'Конвертируйте файлы CSV в SQL-запросы для импорта базы данных.',
+      // CSV to TOML
+      'csv_to_toml.title': 'Конвертер CSV в TOML',
+      'csv_to_toml.subtitle': 'Конвертируйте файлы CSV в формат TOML для файлов конфигурации.',
+      // CSV to XML
+      'csv_to_xml.title': 'Конвертер CSV в XML',
+      'csv_to_xml.subtitle': 'Конвертируйте файлы CSV в формат XML для обмена структурированными данными.',
+      'csv_to_yaml.title': 'Конвертер CSV в YAML',
+      'csv_to_yaml.subtitle': 'Конвертируйте файлы CSV в формат YAML для конфигурации и структурированных данных.',
       // DNG to WebP
+      'dng_to_webp.title': 'Конвертер DNG в WebP',
+      'dng_to_webp.subtitle': 'Конвертируйте файлы изображений RAW DNG в оптимизированный для веб формат WebP.',
       // EPS to WebP
       'eps_to_webp.title': 'Конвертер EPS в WebP',
       'eps_to_webp.subtitle': 'Конвертируйте файлы векторной графики EPS в формат WebP для веб и приложений.',
@@ -20032,16 +20032,6 @@ export const additionalTranslations = {
       'common.no_registration': 'لا حاجة للتسجيل',
       'common.preview': 'معاينة',
       'common.total_size': 'الحجم الإجمالي: {{current}} من {{max}} مسموح.',
-      
-      // Validation messages
-      'validation.single_file_limit': 'حد الملف الواحد: 100,00 ميجابايت لكل ملف.',
-      'validation.batch_info': 'التحويل المجمع يدعم حتى 20 ملفًا، 100,00 ميجابايت لكل ملف، 100,00 ميجابايت إجمالي.',
-      'validation.total_size': 'الحجم الإجمالي: {{current}} من {{max}} مسموح.',
-      'validation.file_too_large': 'الملف "{{filename}}" كبير جدًا ({{fileSize}}). الحد الأقصى المسموح به هو {{maxSize}}.',
-      'validation.too_many_files': 'تم تحديد ملفات كثيرة جدًا ({{count}}). الحد الأقصى المسموح به هو {{max}}.',
-      'validation.batch_too_large': 'الحجم الإجمالي للمجموعة {{totalSize}} يتجاوز الحد {{maxSize}}.',
-      'validation.batch_size_warning': 'حجم المجموعة يقترب من حد 100 ميجابايت. فكر في معالجة ملفات أقل لأداء أفضل.',
-
       
       // Features
       'features.lightning_fast': 'سريع جدًا',
@@ -21904,7 +21894,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'محول CSV إلى SQL',
       'csv_to_sql.subtitle': 'قم بتحويل ملفات CSV إلى عبارات SQL لاستيراد قاعدة البيانات.',
+      // CSV to TOML
+      'csv_to_toml.title': 'محول CSV إلى TOML',
+      'csv_to_toml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق TOML لملفات التكوين.',
+      // CSV to XML
+      'csv_to_xml.title': 'محول CSV إلى XML',
+      'csv_to_xml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق XML لتبادل البيانات المهيكلة.',
+      // CSV to YAML
+      'csv_to_yaml.title': 'محول CSV إلى YAML',
+      'csv_to_yaml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق YAML للتكوين والبيانات المهيكلة.',
       // DNG to WebP
+      'dng_to_webp.title': 'محول DNG إلى WebP',
+      'dng_to_webp.subtitle': 'قم بتحويل ملفات صور RAW DNG إلى تنسيق WebP المحسّن للويب.',
       // EPS to WebP
       'eps_to_webp.title': 'محول EPS إلى WebP',
       'eps_to_webp.subtitle': 'قم بتحويل ملفات الرسوم المتجهة EPS إلى تنسيق WebP للويب والتطبيقات.',
@@ -21922,9 +21923,7 @@ export const additionalTranslations = {
       'epub_to_html.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق HTML للويب.',
       // EPUB to MD
       'epub_to_md.title': 'محول EPUB إلى MD',
-      'epub_to_md.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق Markdown للتوثيق.',
-      // EPUB to MOBI
-      'epub_to_mobi.title': 'محول EPUB إلى MOBI',
+      'eOBI',
       'epub_to_mobi.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق MOBI لأجهزة Kindle.',
       // EPUB to ODP
       'epub_to_odp.title': 'محول EPUB إلى ODP',
@@ -22010,16 +22009,6 @@ export const additionalTranslations = {
       'common.no_registration': 'ไม่ต้องลงทะเบียน',
       'common.preview': 'ตัวอย่าง',
       'common.total_size': 'ขนาดรวม: {{current}} จาก {{max}} ที่อนุญาต',
-      
-      // Validation messages
-      'validation.single_file_limit': 'ขีดจำกัดไฟล์เดียว: 100.00 MB ต่อไฟล์',
-      'validation.batch_info': 'การแปลงแบบกลุ่มรองรับไฟล์ได้สูงสุด 20 ไฟล์ 100.00 MB ต่อไฟล์ รวม 100.00 MB',
-      'validation.total_size': 'ขนาดรวม: {{current}} จาก {{max}} ที่อนุญาต',
-      'validation.file_too_large': 'ไฟล์ "{{filename}}" ใหญ่เกินไป ({{fileSize}}) ขนาดสูงสุดที่อนุญาตคือ {{maxSize}}',
-      'validation.too_many_files': 'เลือกไฟล์มากเกินไป ({{count}}) สูงสุดที่อนุญาตคือ {{max}}',
-      'validation.batch_too_large': 'ขนาดรวมของกลุ่ม {{totalSize}} เกินขีดจำกัด {{maxSize}}',
-      'validation.batch_size_warning': 'ขนาดกลุ่มกำลังใกล้ถึงขีดจำกัด 100MB พิจารณาประมวลผลไฟล์น้อยลงเพื่อประสิทธิภาพที่ดีขึ้น',
-
       
       // Features
       'features.lightning_fast': 'เร็วมาก',
@@ -23879,7 +23868,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'ตัวแปลง CSV เป็น SQL',
       'csv_to_sql.subtitle': 'แปลงไฟล์ CSV เป็นคำสั่ง SQL สำหรับการนำเข้าฐานข้อมูล',
+      // CSV to TOML
+      'csv_to_toml.title': 'ตัวแปลง CSV เป็น TOML',
+      'csv_to_toml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ TOML สำหรับไฟล์การกำหนดค่า',
+      // CSV to XML
+      'csv_to_xml.title': 'ตัวแปลง CSV เป็น XML',
+      'csv_to_xml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ XML สำหรับการแลกเปลี่ยนข้อมูลที่มีโครงสร้าง',
+      // CSV to YAML
+      'csv_to_yaml.title': 'ตัวแปลง CSV เป็น YAML',
+      'csv_to_yaml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ YAML สำหรับการกำหนดค่าและข้อมูลที่มีโครงสร้าง',
       // DNG to WebP
+      'dng_to_webp.title': 'ตัวแปลง DNG เป็น WebP',
+      'dng_to_webp.subtitle': 'แปลงไฟล์ภาพ RAW DNG เป็นรูปแบบ WebP ที่ปรับให้เหมาะกับเว็บ',
       // EPS to WebP
       'eps_to_webp.title': 'ตัวแปลง EPS เป็น WebP',
       'eps_to_webp.subtitle': 'แปลงไฟล์กราฟิกเวกเตอร์ EPS เป็นรูปแบบ WebP สำหรับเว็บและแอป',
@@ -23983,16 +23983,6 @@ export const additionalTranslations = {
       'common.no_registration': '登録不要',
       'common.preview': 'プレビュー',
       'common.total_size': '合計サイズ: {{current}} / {{max}} 許可されています。',
-      
-      // Validation messages
-      'validation.single_file_limit': '単一ファイル制限: ファイルあたり100.00 MB。',
-      'validation.batch_info': 'バッチ変換は最大20ファイル、ファイルあたり100.00 MB、合計100.00 MBをサポートします。',
-      'validation.total_size': '合計サイズ: {{max}}のうち{{current}}が許可されています。',
-      'validation.file_too_large': 'ファイル "{{filename}}" が大きすぎます ({{fileSize}})。最大許可サイズは{{maxSize}}です。',
-      'validation.too_many_files': '選択されたファイルが多すぎます ({{count}})。最大許可数は{{max}}です。',
-      'validation.batch_too_large': 'バッチの合計サイズ{{totalSize}}が{{maxSize}}の制限を超えています。',
-      'validation.batch_size_warning': 'バッチサイズが100MBの制限に近づいています。パフォーマンス向上のため、処理するファイル数を減らすことを検討してください。',
-
       
       // Features
       'features.lightning_fast': '超高速',
@@ -25852,7 +25842,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSVからSQLへのコンバーター',
       'csv_to_sql.subtitle': 'CSVファイルをデータベースインポート用のSQLステートメントに変換。',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSVからTOMLへのコンバーター',
+      'csv_to_toml.subtitle': 'CSVファイルを設定ファイル用のTOML形式に変換。',
+      // CSV to XML
+      'csv_to_xml.title': 'CSVからXMLへのコンバーター',
+      'csv_to_xml.subtitle': 'CSVファイルを構造化データ交換用のXML形式に変換。',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSVからYAMLへのコンバーター',
+      'csv_to_yaml.subtitle': 'CSVファイルを設定と構造化データ用のYAML形式に変換。',
       // DNG to WebP
+      'dng_to_webp.title': 'DNGからWebPへのコンバーター',
+      'dng_to_webp.subtitle': 'DNG RAW画像ファイルをWeb用に最適化されたWebP形式に変換。',
       // EPS to WebP
       'eps_to_webp.title': 'EPSからWebPへのコンバーター',
       'eps_to_webp.subtitle': 'EPSベクターグラフィックファイルをWebとアプリ用のWebP形式に変換。',
@@ -25955,16 +25956,6 @@ export const additionalTranslations = {
       'common.no_registration': '无需注册',
       'common.preview': '预览',
       'common.total_size': '总大小：{{current}} / {{max}} 允许。',
-      
-      // Validation messages
-      'validation.single_file_limit': '单文件限制: 每个文件100.00 MB。',
-      'validation.batch_info': '批量转换支持最多20个文件，每个文件100.00 MB，总计100.00 MB。',
-      'validation.total_size': '总大小: {{max}}中允许{{current}}。',
-      'validation.file_too_large': '文件 "{{filename}}" 太大 ({{fileSize}})。最大允许大小为{{maxSize}}。',
-      'validation.too_many_files': '选择的文件太多 ({{count}})。最大允许数为{{max}}。',
-      'validation.batch_too_large': '批次总大小{{totalSize}}超过{{maxSize}}的限制。',
-      'validation.batch_size_warning': '批次大小接近100MB限制。考虑处理更少的文件以获得更好的性能。',
-
       
       // Features
       'features.lightning_fast': '超快',
@@ -27824,7 +27815,18 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV转SQL转换器',
       'csv_to_sql.subtitle': '将CSV文件转换为SQL语句，用于数据库导入。',
+      // CSV to TOML
+      'csv_to_toml.title': 'CSV转TOML转换器',
+      'csv_to_toml.subtitle': '将CSV文件转换为TOML格式，用于配置文件。',
+      // CSV to XML
+      'csv_to_xml.title': 'CSV转XML转换器',
+      'csv_to_xml.subtitle': '将CSV文件转换为XML格式，用于结构化数据交换。',
+      // CSV to YAML
+      'csv_to_yaml.title': 'CSV转YAML转换器',
+      'csv_to_yaml.subtitle': '将CSV文件转换为YAML格式，用于配置和结构化数据。',
       // DNG to WebP
+      'dng_to_webp.title': 'DNG转WebP转换器',
+      'dng_to_webp.subtitle': '将DNG RAW图像文件转换为针对Web优化的WebP格式。',
       // EPS to WebP
       'eps_to_webp.title': 'EPS转WebP转换器',
       'eps_to_webp.subtitle': '将EPS矢量图形文件转换为Web和应用程序的WebP格式。',
