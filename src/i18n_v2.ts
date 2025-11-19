@@ -1945,9 +1945,6 @@ export const additionalTranslations = {
       'csv_to_parquet.start_converting': 'Mulai Mengonversi Sekarang',
       'csv_to_parquet.batch_conversion_complete': 'Konversi Batch Selesai',
 
-      // CSV to XML
-      'csv_to_xml.title': 'Konverter CSV ke XML',
-      'csv_to_xml.subtitle': 'Konversi file CSV ke format XML untuk pertukaran data terstruktur.',
       // CSV to YAML
       'csv_to_yaml.title': 'Konverter CSV ke YAML',
       'csv_to_yaml.subtitle': 'Konversi file CSV ke format YAML untuk konfigurasi dan data terstruktur.',
@@ -3979,9 +3976,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV till SQL Konverterare',
       'csv_to_sql.subtitle': 'Konvertera CSV-filer till SQL-uttryck för databasimporrationsfiler.',
-      // CSV to XML
-      'csv_to_xml.title': 'CSV till XML Konverterare',
-      'csv_to_xml.subtitle': 'Konvertera CSV-filer till XML-format för strukturerad datautbyte.',
       // CSV to YAML
       'csv_to_yaml.title': 'CSV till YAML Konverterare',
       'csv_to_yaml.subtitle': 'Konvertera CSV-filer till YAML-format för konfiguration och strukturerad data.',
@@ -8044,9 +8038,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertisseur CSV vers SQL',
       'csv_to_sql.subtitle': 'Convertissez les fichiers CSV en instructions SQL pour l\'importation de bases de données.',
-      // CSV to XML
-      'csv_to_xml.title': 'Convertisseur CSV vers XML',
-      'csv_to_xml.subtitle': 'Conveissez les fichiers CSV au format YAML pour la configuration et les données structurées.',
       // DNG to WebP
       'dng_to_webp.title': 'Convertisseur DNG vers WebP',
       'dng_to_webp.subtitle': 'Convertissez les fichiers d\'image RAW DNG au format WebP optimisé pour le web.',
@@ -10075,9 +10066,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertitore CSV in SQL',
       'csv_to_sql.subtitle': 'Converti file CSV in istruzioni SQL per importazione database.',
-      // CSV to XML
-      'csv_to_xml.title': 'Convertitore CSV in XML',
-      'csv_to_xml.subtitle': 'Converti file CSV nel formato XML per scambio dati strutturati.',
       // CSV to YAML
       'csv_to_yaml.title': 'Convertitore CSV in YAML',
       'csv_to_yaml.subtitle': 'Converti file CSV nel formato YAML per configurazione e dati strutturati.',
@@ -12107,9 +12095,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV naar SQL Converter',
       'csv_to_sql.subtitle': 'Converteer CSV-bestanden naar SQL-statements voor database-import.',
-      // CSV to XML
-      'csv_to_xml.title': 'CSV naar XML Converter',
-      'csv_to_xml.subtitle': 'Converteer CSV-bestanden naar XML-formaat voor gestructureerde gegevensuitwisseling.',
       // CSV to YAML
       'csv_to_yaml.title': 'CSV naar YAML Converter',
       'csv_to_yaml.subtitle': 'Converteer CSV-bestanden naar YAML-formaat voor configuratie en gestructureerde gegevens.',
@@ -14087,9 +14072,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Conversor CSV para SQL',
       'csv_to_sql.subtitle': 'Converta arquivos CSV em instruções SQL para importação de banco de dados.',
-      // CSV to XML
-      'csv_to_xml.title': 'Conversor CSV para XML',
-      'csv_to_xml.subtitle': 'Converta arquivos CSV para o formato XML para troca de dados estruturados.',
       // CSV to YAML
       'csv_to_yaml.title': 'Conversor CSV para YAML',
       'csv_to_yaml.subtitle': 'Converta arquivos CSV para o formato YAML para configuração e dados estruturados.',
@@ -16014,9 +15996,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Chuyển Đổi CSV sang SQL',
       'csv_to_sql.subtitle': 'Chuyển đổi tệp CSV sang câu lệnh SQL để nhập cơ sở dữ liệu.',
-      // CSV to XML
-      'csv_to_xml.title': 'Chuyển Đổi CSV sang XML',
-      'csv_to_xml.subtitle': 'Chuyển đổi tệp CSV sang định dạng XML để trao đổi dữ liệu có cấu trúc.',
       // CSV to YAML
       'csv_to_yaml.title': 'Chuyển Đổi CSV sang YAML',
       'csv_to_yaml.subtitle': 'Chuyển đổi tệp CSV sang định dạng YAML để cấu hình và dữ liệu có cấu trúc.',
@@ -18015,9 +17994,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV\'den SQL\'e Dönüştürücü',
       'csv_to_sql.subtitle': 'CSV dosyalarını veritabanı içe aktarma için SQL ifadelerine dönüştürün.',
-      // CSV to XML
-      'csv_to_xml.title': 'CSV\'den XML\'e Dönüştürücü',
-      'csv_to_xml.subtitle': 'CSV dosyalarını yapılandırılmış veri değişimi için XML formatına dönüştürün.',
       // CSV to YAML
       'csv_to_yaml.title': 'CSV\'den YAML\'e Dönüştürücü',
       'csv_to_yaml.subtitle': 'CSV dosyalarını yapılandırma ve yapılandırılmış veriler için YAML formatına dönüştürün.',
@@ -19995,9 +19971,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Конвертер CSV в SQL',
       'csv_to_sql.subtitle': 'Конвертируйте файлы CSV в SQL-запросы для импорта базы данных.',
-      // CSV to XML
-      'csv_to_xml.title': 'Конвертер CSV в XML',
-      'csv_to_xml.subtitle': 'Конвертируйте файлы CSV в формат XML для обмена структурированными данными.',
       'csv_to_yaml.title': 'Конвертер CSV в YAML',
       'csv_to_yaml.subtitle': 'Конвертируйте файлы CSV в формат YAML для конфигурации и структурированных данных.',
       // DNG to WebP
@@ -21977,9 +21950,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'محول CSV إلى SQL',
       'csv_to_sql.subtitle': 'قم بتحويل ملفات CSV إلى عبارات SQL لاستيراد قاعدة البيانات.',
-      // CSV to XML
-      'csv_to_xml.title': 'محول CSV إلى XML',
-      'csv_to_xml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق XML لتبادل البيانات المهيكلة.',
       // CSV to YAML
       'csv_to_yaml.title': 'محول CSV إلى YAML',
       'csv_to_yaml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق YAML للتكوين والبيانات المهيكلة.',
@@ -23960,9 +23930,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'ตัวแปลง CSV เป็น SQL',
       'csv_to_sql.subtitle': 'แปลงไฟล์ CSV เป็นคำสั่ง SQL สำหรับการนำเข้าฐานข้อมูล',
-      // CSV to XML
-      'csv_to_xml.title': 'ตัวแปลง CSV เป็น XML',
-      'csv_to_xml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ XML สำหรับการแลกเปลี่ยนข้อมูลที่มีโครงสร้าง',
       // CSV to YAML
       'csv_to_yaml.title': 'ตัวแปลง CSV เป็น YAML',
       'csv_to_yaml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ YAML สำหรับการกำหนดค่าและข้อมูลที่มีโครงสร้าง',
@@ -25941,9 +25908,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSVからSQLへのコンバーター',
       'csv_to_sql.subtitle': 'CSVファイルをデータベースインポート用のSQLステートメントに変換。',
-      // CSV to XML
-      'csv_to_xml.title': 'CSVからXMLへのコンバーター',
-      'csv_to_xml.subtitle': 'CSVファイルを構造化データ交換用のXML形式に変換。',
       // CSV to YAML
       'csv_to_yaml.title': 'CSVからYAMLへのコンバーター',
       'csv_to_yaml.subtitle': 'CSVファイルを設定と構造化データ用のYAML形式に変換。',
@@ -27921,9 +27885,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV转SQL转换器',
       'csv_to_sql.subtitle': '将CSV文件转换为SQL语句，用于数据库导入。',
-      // CSV to XML
-      'csv_to_xml.title': 'CSV转XML转换器',
-      'csv_to_xml.subtitle': '将CSV文件转换为XML格式，用于结构化数据交换。',
       // CSV to YAML
       'csv_to_yaml.title': 'CSV转YAML转换器',
       'csv_to_yaml.subtitle': '将CSV文件转换为YAML格式，用于配置和结构化数据。',

@@ -599,6 +599,20 @@ function App() {
         <Route path="/th/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
         <Route path="/ja/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
         <Route path="/zh/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/id/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/sv/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/es/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/fr/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/it/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/nl/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/pt/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/vi/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/tr/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/ru/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/ar/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/th/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/ja/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/zh/convert/csv-to-xml" element={<CSVToXMLConverter />} />
         <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/id/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/sv/convert/csv-to-odp" element={<CSVToODPConverter />} />
