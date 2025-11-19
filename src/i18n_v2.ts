@@ -21923,7 +21923,9 @@ export const additionalTranslations = {
       'epub_to_html.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق HTML للويب.',
       // EPUB to MD
       'epub_to_md.title': 'محول EPUB إلى MD',
-      'eOBI',
+      'epub_to_md.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق Markdown للتوثيق.',
+      // EPUB to MOBI
+      'epub_to_mobi.title': 'محول EPUB إلى MOBI',
       'epub_to_mobi.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق MOBI لأجهزة Kindle.',
       // EPUB to ODP
       'epub_to_odp.title': 'محول EPUB إلى ODP',
