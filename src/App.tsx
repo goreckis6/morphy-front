@@ -613,6 +613,20 @@ function App() {
         <Route path="/th/convert/csv-to-xml" element={<CSVToXMLConverter />} />
         <Route path="/ja/convert/csv-to-xml" element={<CSVToXMLConverter />} />
         <Route path="/zh/convert/csv-to-xml" element={<CSVToXMLConverter />} />
+        <Route path="/id/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/sv/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/es/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/fr/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/it/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/nl/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/pt/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/vi/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/tr/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/ru/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/ar/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/th/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/ja/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
+        <Route path="/zh/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
         <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/id/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/sv/convert/csv-to-odp" element={<CSVToODPConverter />} />

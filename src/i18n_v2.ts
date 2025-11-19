@@ -1945,9 +1945,6 @@ export const additionalTranslations = {
       'csv_to_parquet.start_converting': 'Mulai Mengonversi Sekarang',
       'csv_to_parquet.batch_conversion_complete': 'Konversi Batch Selesai',
 
-      // CSV to YAML
-      'csv_to_yaml.title': 'Konverter CSV ke YAML',
-      'csv_to_yaml.subtitle': 'Konversi file CSV ke format YAML untuk konfigurasi dan data terstruktur.',
       // DNG to WebP
       'dng_to_webp.title': 'Konverter DNG ke WebP',
       'dng_to_webp.subtitle': 'Konversi file gambar mentah DNG ke format WebP yang dioptimalkan untuk web.',
@@ -3976,9 +3973,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV till SQL Konverterare',
       'csv_to_sql.subtitle': 'Konvertera CSV-filer till SQL-uttryck för databasimporrationsfiler.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'CSV till YAML Konverterare',
-      'csv_to_yaml.subtitle': 'Konvertera CSV-filer till YAML-format för konfiguration och strukturerad data.',
       // DNG to WebP
       'dng_to_webp.title': 'DNG till WebP Konverterare',
       'dng_to_webp.subtitle': 'Konvertera DNG-rawbildfiler till webboptimerat WebP-format.',
@@ -6007,9 +6001,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertidor CSV a SQL',
       'csv_to_sql.subtitle': 'Convierte archivos CSV a declaraciones SQL para importación de bases de datos.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'Convertidor CSV a YAML',
-      'csv_to_yaml.subtitle': 'Convierte archivos CSV al formato YAML para configuración y datos estructurados.',
       // DNG to WebP
       'dng_to_webp.title': 'Convertidor DNG a WebP',
       'dng_to_webp.subtitle': 'Convierte archivos de imagen RAW DNG al formato WebP optimizado para web.',
@@ -10066,9 +10057,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertitore CSV in SQL',
       'csv_to_sql.subtitle': 'Converti file CSV in istruzioni SQL per importazione database.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'Convertitore CSV in YAML',
-      'csv_to_yaml.subtitle': 'Converti file CSV nel formato YAML per configurazione e dati strutturati.',
       // ,
       // EPS to WebP
       'eps_to_webp.title': 'Convertitore EPS in WebP',
@@ -12095,9 +12083,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV naar SQL Converter',
       'csv_to_sql.subtitle': 'Converteer CSV-bestanden naar SQL-statements voor database-import.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'CSV naar YAML Converter',
-      'csv_to_yaml.subtitle': 'Converteer CSV-bestanden naar YAML-formaat voor configuratie en gestructureerde gegevens.',
       // DNG to WebP
       'dng_to_webp.title': 'DNG naar WebP Converter',
       'dng_to_webp.subtitle': 'Converteer DNG RAW-afbeeler EPS-vectorgrafiekbestanden naar WebP-formaat voor web en apps.',
@@ -14072,9 +14057,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Conversor CSV para SQL',
       'csv_to_sql.subtitle': 'Converta arquivos CSV em instruções SQL para importação de banco de dados.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'Conversor CSV para YAML',
-      'csv_to_yaml.subtitle': 'Converta arquivos CSV para o formato YAML para configuração e dados estruturados.',
       // DNG to WebP
       'dng_to_webp.title': 'Conversor DNG para WebP',
       'dng_to_webp.subtitle': 'Converta arquivos de imagem RAW DNG para o formato WebP otimizado para web.',
@@ -15996,9 +15978,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Chuyển Đổi CSV sang SQL',
       'csv_to_sql.subtitle': 'Chuyển đổi tệp CSV sang câu lệnh SQL để nhập cơ sở dữ liệu.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'Chuyển Đổi CSV sang YAML',
-      'csv_to_yaml.subtitle': 'Chuyển đổi tệp CSV sang định dạng YAML để cấu hình và dữ liệu có cấu trúc.',
       // DNG to WebP
       'dng_to_webp.title': 'Chuyển Đổi DNG sang WebP',
       'dng_to_webp.subtitle': 'Chuyển đổi tệp hình ảnh RAW DNG sang định dạng WebP tối ưu cho web.',
@@ -17994,9 +17973,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV\'den SQL\'e Dönüştürücü',
       'csv_to_sql.subtitle': 'CSV dosyalarını veritabanı içe aktarma için SQL ifadelerine dönüştürün.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'CSV\'den YAML\'e Dönüştürücü',
-      'csv_to_yaml.subtitle': 'CSV dosyalarını yapılandırma ve yapılandırılmış veriler için YAML formatına dönüştürün.',
       // DNG to WebP
       'dng_to_webp.title': 'DNG\'den WebP\'ye Dönüştürücü',
       'dng_to_webp.subtitle': 'DNG RAW görüntü dosyalarını web için optimize edilmiş WebP formatına dönüştürün.',
@@ -19971,8 +19947,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Конвертер CSV в SQL',
       'csv_to_sql.subtitle': 'Конвертируйте файлы CSV в SQL-запросы для импорта базы данных.',
-      'csv_to_yaml.title': 'Конвертер CSV в YAML',
-      'csv_to_yaml.subtitle': 'Конвертируйте файлы CSV в формат YAML для конфигурации и структурированных данных.',
       // DNG to WebP
       'dng_to_webp.title': 'Конвертер DNG в WebP',
       'dng_to_webp.subtitle': 'Конвертируйте файлы изображений RAW DNG в оптимизированный для веб формат WebP.',
@@ -21950,9 +21924,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'محول CSV إلى SQL',
       'csv_to_sql.subtitle': 'قم بتحويل ملفات CSV إلى عبارات SQL لاستيراد قاعدة البيانات.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'محول CSV إلى YAML',
-      'csv_to_yaml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق YAML للتكوين والبيانات المهيكلة.',
       // DNG to WebP
       'dng_to_webp.title': 'محول DNG إلى WebP',
       'dng_to_webp.subtitle': 'قم بتحويل ملفات صور RAW DNG إلى تنسيق WebP المحسّن للويب.',
@@ -23930,9 +23901,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'ตัวแปลง CSV เป็น SQL',
       'csv_to_sql.subtitle': 'แปลงไฟล์ CSV เป็นคำสั่ง SQL สำหรับการนำเข้าฐานข้อมูล',
-      // CSV to YAML
-      'csv_to_yaml.title': 'ตัวแปลง CSV เป็น YAML',
-      'csv_to_yaml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ YAML สำหรับการกำหนดค่าและข้อมูลที่มีโครงสร้าง',
       // DNG to WebP
       'dng_to_webp.title': 'ตัวแปลง DNG เป็น WebP',
       'dng_to_webp.subtitle': 'แปลงไฟล์ภาพ RAW DNG เป็นรูปแบบ WebP ที่ปรับให้เหมาะกับเว็บ',
@@ -25908,9 +25876,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSVからSQLへのコンバーター',
       'csv_to_sql.subtitle': 'CSVファイルをデータベースインポート用のSQLステートメントに変換。',
-      // CSV to YAML
-      'csv_to_yaml.title': 'CSVからYAMLへのコンバーター',
-      'csv_to_yaml.subtitle': 'CSVファイルを設定と構造化データ用のYAML形式に変換。',
       // DNG to WebP
       'dng_to_webp.title': 'DNGからWebPへのコンバーター',
       'dng_to_webp.subtitle': 'DNG RAW画像ファイルをWeb用に最適化されたWebP形式に変換。',
@@ -27885,9 +27850,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV转SQL转换器',
       'csv_to_sql.subtitle': '将CSV文件转换为SQL语句，用于数据库导入。',
-      // CSV to YAML
-      'csv_to_yaml.title': 'CSV转YAML转换器',
-      'csv_to_yaml.subtitle': '将CSV文件转换为YAML格式，用于配置和结构化数据。',
       // DNG to WebP
       'dng_to_webp.title': 'DNG转WebP转换器',
       'dng_to_webp.subtitle': '将DNG RAW图像文件转换为针对Web优化的WebP格式。',
