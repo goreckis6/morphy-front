@@ -29,6 +29,16 @@ export const additionalTranslations = {
       'common.preview': 'Pratinjau',
       'common.total_size': 'Ukuran total: {{current}} dari {{max}} yang diizinkan.',
       
+      // Validation messages
+      'validation.single_file_limit': 'Limit file tunggal: 100,00 MB per file.',
+      'validation.batch_info': 'Konversi batch mendukung hingga 20 file, 100,00 MB per file, 100,00 MB total.',
+      'validation.total_size': 'Ukuran total: {{current}} dari {{max}} yang diizinkan.',
+      'validation.file_too_large': 'File "{{filename}}" terlalu besar ({{fileSize}}). Ukuran maksimum yang diizinkan adalah {{maxSize}}.',
+      'validation.too_many_files': 'Terlalu banyak file yang dipilih ({{count}}). Maksimum yang diizinkan adalah {{max}}.',
+      'validation.batch_too_large': 'Ukuran total batch {{totalSize}} melebihi batas {{maxSize}}.',
+      'validation.batch_size_warning': 'Ukuran batch mendekati batas 100MB. Pertimbangkan untuk memproses lebih sedikit file untuk performa yang lebih baik.',
+
+      
       // Features
       'features.lightning_fast': 'Sangat Cepat',
       'features.100_free': '100% Gratis',
@@ -2052,6 +2062,16 @@ export const additionalTranslations = {
       'common.no_registration': 'Ingen registrering krävs',
       'common.preview': 'Förhandsvisning',
       'common.total_size': 'Total storlek: {{current}} av {{max}} tillåten.',
+      
+      // Validation messages
+      'validation.single_file_limit': 'Enskild filgräns: 100,00 MB per fil.',
+      'validation.batch_info': 'Batchkonvertering stöder upp till 20 filer, 100,00 MB per fil, 100,00 MB totalt.',
+      'validation.total_size': 'Total storlek: {{current}} av {{max}} tillåten.',
+      'validation.file_too_large': 'Filen "{{filename}}" är för stor ({{fileSize}}). Maximal tillåten storlek är {{maxSize}}.',
+      'validation.too_many_files': 'För många filer valda ({{count}}). Maximalt tillåtet är {{max}}.',
+      'validation.batch_too_large': 'Total batchstorlek {{totalSize}} överskrider gränsen på {{maxSize}}.',
+      'validation.batch_size_warning': 'Batchstorleken närmar sig 100MB-gränsen. Överväg att bearbeta färre filer för bättre prestanda.',
+
       
       // Features
       'features.lightning_fast': 'Blixtsnabb',
@@ -4077,6 +4097,16 @@ export const additionalTranslations = {
       'common.preview': 'Vista Previa',
       'common.total_size': 'Tamaño total: {{current}} de {{max}} permitidos.',
       
+      // Validation messages
+      'validation.single_file_limit': 'Límite de archivo único: 100,00 MB por archivo.',
+      'validation.batch_info': 'La conversión por lotes admite hasta 20 archivos, 100,00 MB por archivo, 100,00 MB en total.',
+      'validation.total_size': 'Tamaño total: {{current}} de {{max}} permitidos.',
+      'validation.file_too_large': 'El archivo "{{filename}}" es demasiado grande ({{fileSize}}). El tamaño máximo permitido es {{maxSize}}.',
+      'validation.too_many_files': 'Demasiados archivos seleccionados ({{count}}). El máximo permitido es {{max}}.',
+      'validation.batch_too_large': 'El tamaño total del lote {{totalSize}} excede el límite de {{maxSize}}.',
+      'validation.batch_size_warning': 'El tamaño del lote se está acercando al límite de 100MB. Considere procesar menos archivos para un mejor rendimiento.',
+
+      
       // Features
       'features.lightning_fast': 'Súper Rápido',
       'features.100_free': '100% Gratis',
@@ -6101,6 +6131,16 @@ export const additionalTranslations = {
       'common.preview': 'Aperçu',
       'common.total_size': 'Taille totale : {{current}} sur {{max}} autorisés.',
       
+      // Validation messages
+      'validation.single_file_limit': 'Limite de fichier unique: 100,00 Mo par fichier.',
+      'validation.batch_info': 'La conversion par lots prend en charge jusqu\'à 20 fichiers, 100,00 Mo par fichier, 100,00 Mo au total.',
+      'validation.total_size': 'Taille totale: {{current}} sur {{max}} autorisés.',
+      'validation.file_too_large': 'Le fichier "{{filename}}" est trop volumineux ({{fileSize}}). La taille maximale autorisée est {{maxSize}}.',
+      'validation.too_many_files': 'Trop de fichiers sélectionnés ({{count}}). Le maximum autorisé est {{max}}.',
+      'validation.batch_too_large': 'La taille totale du lot {{totalSize}} dépasse la limite de {{maxSize}}.',
+      'validation.batch_size_warning': 'La taille du lot approche de la limite de 100 Mo. Envisagez de traiter moins de fichiers pour de meilleures performances.',
+
+      
       // Features
       'features.lightning_fast': 'Ultra Rapide',
       'features.100_free': '100% Gratuit',
@@ -8124,6 +8164,16 @@ export const additionalTranslations = {
       'common.no_registration': 'Nessuna Registrazione Richiesta',
       'common.preview': 'Anteprima',
       'common.total_size': 'Dimensione totale: {{current}} di {{max}} consentiti.',
+      
+      // Validation messages
+      'validation.single_file_limit': 'Limite file singolo: 100,00 MB per file.',
+      'validation.batch_info': 'La conversione batch supporta fino a 20 file, 100,00 MB per file, 100,00 MB totali.',
+      'validation.total_size': 'Dimensione totale: {{current}} di {{max}} consentiti.',
+      'validation.file_too_large': 'Il file "{{filename}}" è troppo grande ({{fileSize}}). La dimensione massima consentita è {{maxSize}}.',
+      'validation.too_many_files': 'Troppi file selezionati ({{count}}). Il massimo consentito è {{max}}.',
+      'validation.batch_too_large': 'La dimensione totale del batch {{totalSize}} supera il limite di {{maxSize}}.',
+      'validation.batch_size_warning': 'La dimensione del batch si sta avvicinando al limite di 100MB. Considera di elaborare meno file per prestazioni migliori.',
+
       
       // Features
       'features.lightning_fast': 'Ultra Veloce',
@@ -10150,6 +10200,16 @@ export const additionalTranslations = {
       'common.preview': 'Voorvertoning',
       'common.total_size': 'Totale grootte: {{current}} van {{max}} toegestaan.',
       
+      // Validation messages
+      'validation.single_file_limit': 'Enkel bestandslimiet: 100,00 MB per bestand.',
+      'validation.batch_info': 'Batchconversie ondersteunt tot 20 bestanden, 100,00 MB per bestand, 100,00 MB totaal.',
+      'validation.total_size': 'Totale grootte: {{current}} van {{max}} toegestaan.',
+      'validation.file_too_large': 'Bestand "{{filename}}" is te groot ({{fileSize}}). Maximale toegestane grootte is {{maxSize}}.',
+      'validation.too_many_files': 'Te veel bestanden geselecteerd ({{count}}). Maximum toegestaan is {{max}}.',
+      'validation.batch_too_large': 'Totale batchgrootte {{totalSize}} overschrijdt de limiet van {{maxSize}}.',
+      'validation.batch_size_warning': 'Batchgrootte nadert de 100MB-limiet. Overweeg minder bestanden te verwerken voor betere prestaties.',
+
+      
       // Features
       'features.lightning_fast': 'Bliksemsnel',
       'features.100_free': '100% Gratis',
@@ -12174,6 +12234,16 @@ export const additionalTranslations = {
       'common.preview': 'Pré-visualização',
       'common.total_size': 'Tamanho total: {{current}} de {{max}} permitidos.',
       
+      // Validation messages
+      'validation.single_file_limit': 'Limite de arquivo único: 100,00 MB por arquivo.',
+      'validation.batch_info': 'A conversão em lote suporta até 20 arquivos, 100,00 MB por arquivo, 100,00 MB no total.',
+      'validation.total_size': 'Tamanho total: {{current}} de {{max}} permitidos.',
+      'validation.file_too_large': 'O arquivo "{{filename}}" é muito grande ({{fileSize}}). O tamanho máximo permitido é {{maxSize}}.',
+      'validation.too_many_files': 'Muitos arquivos selecionados ({{count}}). O máximo permitido é {{max}}.',
+      'validation.batch_too_large': 'O tamanho total do lote {{totalSize}} excede o limite de {{maxSize}}.',
+      'validation.batch_size_warning': 'O tamanho do lote está se aproximando do limite de 100MB. Considere processar menos arquivos para melhor desempenho.',
+
+      
       // Features
       'features.lightning_fast': 'Ultra Rápido',
       'features.100_free': '100% Gratuito',
@@ -14147,6 +14217,16 @@ export const additionalTranslations = {
       'common.preview': 'Xem Trước',
       'common.total_size': 'Tổng kích thước: {{current}} trong số {{max}} được phép.',
       
+      // Validation messages
+      'validation.single_file_limit': 'Giới hạn file đơn: 100,00 MB mỗi file.',
+      'validation.batch_info': 'Chuyển đổi hàng loạt hỗ trợ tối đa 20 file, 100,00 MB mỗi file, 100,00 MB tổng cộng.',
+      'validation.total_size': 'Kích thước tổng: {{current}} trong số {{max}} được phép.',
+      'validation.file_too_large': 'File "{{filename}}" quá lớn ({{fileSize}}). Kích thước tối đa được phép là {{maxSize}}.',
+      'validation.too_many_files': 'Quá nhiều file được chọn ({{count}}). Tối đa được phép là {{max}}.',
+      'validation.batch_too_large': 'Kích thước tổng của batch {{totalSize}} vượt quá giới hạn {{maxSize}}.',
+      'validation.batch_size_warning': 'Kích thước batch đang gần đạt giới hạn 100MB. Hãy cân nhắc xử lý ít file hơn để có hiệu suất tốt hơn.',
+
+      
       // Features
       'features.lightning_fast': 'Cực Nhanh',
       'features.100_free': '100% Miễn Phí',
@@ -16066,6 +16146,16 @@ export const additionalTranslations = {
       'common.no_registration': 'Kayıt Gerekmez',
       'common.preview': 'Önizleme',
       'common.total_size': 'Toplam boyut: {{current}} / {{max}} izin verilen.',
+      
+      // Validation messages
+      'validation.single_file_limit': 'Tek dosya limiti: Dosya başına 100,00 MB.',
+      'validation.batch_info': 'Toplu dönüştürme 20 dosyaya kadar destekler, dosya başına 100,00 MB, toplam 100,00 MB.',
+      'validation.total_size': 'Toplam boyut: {{max}} izin verilen {{current}}.',
+      'validation.file_too_large': 'Dosya "{{filename}}" çok büyük ({{fileSize}}). İzin verilen maksimum boyut {{maxSize}}.',
+      'validation.too_many_files': 'Çok fazla dosya seçildi ({{count}}). İzin verilen maksimum {{max}}.',
+      'validation.batch_too_large': 'Toplam batch boyutu {{totalSize}}, {{maxSize}} limitini aşıyor.',
+      'validation.batch_size_warning': 'Batch boyutu 100MB limitine yaklaşıyor. Daha iyi performans için daha az dosya işlemeyi düşünün.',
+
       
       // Features
       'features.lightning_fast': 'Çok Hızlı',
@@ -18061,6 +18151,16 @@ export const additionalTranslations = {
       'common.preview': 'Предпросмотр',
       'common.total_size': 'Общий размер: {{current}} из {{max}} разрешено.',
       
+      // Validation messages
+      'validation.single_file_limit': 'Лимит одного файла: 100,00 МБ на файл.',
+      'validation.batch_info': 'Пакетное преобразование поддерживает до 20 файлов, 100,00 МБ на файл, 100,00 МБ всего.',
+      'validation.total_size': 'Общий размер: {{current}} из {{max}} разрешено.',
+      'validation.file_too_large': 'Файл "{{filename}}" слишком большой ({{fileSize}}). Максимально разрешенный размер {{maxSize}}.',
+      'validation.too_many_files': 'Выбрано слишком много файлов ({{count}}). Максимально разрешено {{max}}.',
+      'validation.batch_too_large': 'Общий размер пакета {{totalSize}} превышает лимит {{maxSize}}.',
+      'validation.batch_size_warning': 'Размер пакета приближается к лимиту 100 МБ. Рассмотрите обработку меньшего количества файлов для лучшей производительности.',
+
+      
       // Features
       'features.lightning_fast': 'Молниеносно Быстро',
       'features.100_free': '100% Бесплатно',
@@ -20032,6 +20132,16 @@ export const additionalTranslations = {
       'common.no_registration': 'لا حاجة للتسجيل',
       'common.preview': 'معاينة',
       'common.total_size': 'الحجم الإجمالي: {{current}} من {{max}} مسموح.',
+      
+      // Validation messages
+      'validation.single_file_limit': 'حد الملف الواحد: 100,00 ميجابايت لكل ملف.',
+      'validation.batch_info': 'التحويل المجمع يدعم حتى 20 ملفًا، 100,00 ميجابايت لكل ملف، 100,00 ميجابايت إجمالي.',
+      'validation.total_size': 'الحجم الإجمالي: {{current}} من {{max}} مسموح.',
+      'validation.file_too_large': 'الملف "{{filename}}" كبير جدًا ({{fileSize}}). الحد الأقصى المسموح به هو {{maxSize}}.',
+      'validation.too_many_files': 'تم تحديد ملفات كثيرة جدًا ({{count}}). الحد الأقصى المسموح به هو {{max}}.',
+      'validation.batch_too_large': 'الحجم الإجمالي للمجموعة {{totalSize}} يتجاوز الحد {{maxSize}}.',
+      'validation.batch_size_warning': 'حجم المجموعة يقترب من حد 100 ميجابايت. فكر في معالجة ملفات أقل لأداء أفضل.',
+
       
       // Features
       'features.lightning_fast': 'سريع جدًا',
@@ -22012,6 +22122,16 @@ export const additionalTranslations = {
       'common.preview': 'ตัวอย่าง',
       'common.total_size': 'ขนาดรวม: {{current}} จาก {{max}} ที่อนุญาต',
       
+      // Validation messages
+      'validation.single_file_limit': 'ขีดจำกัดไฟล์เดียว: 100.00 MB ต่อไฟล์',
+      'validation.batch_info': 'การแปลงแบบกลุ่มรองรับไฟล์ได้สูงสุด 20 ไฟล์ 100.00 MB ต่อไฟล์ รวม 100.00 MB',
+      'validation.total_size': 'ขนาดรวม: {{current}} จาก {{max}} ที่อนุญาต',
+      'validation.file_too_large': 'ไฟล์ "{{filename}}" ใหญ่เกินไป ({{fileSize}}) ขนาดสูงสุดที่อนุญาตคือ {{maxSize}}',
+      'validation.too_many_files': 'เลือกไฟล์มากเกินไป ({{count}}) สูงสุดที่อนุญาตคือ {{max}}',
+      'validation.batch_too_large': 'ขนาดรวมของกลุ่ม {{totalSize}} เกินขีดจำกัด {{maxSize}}',
+      'validation.batch_size_warning': 'ขนาดกลุ่มกำลังใกล้ถึงขีดจำกัด 100MB พิจารณาประมวลผลไฟล์น้อยลงเพื่อประสิทธิภาพที่ดีขึ้น',
+
+      
       // Features
       'features.lightning_fast': 'เร็วมาก',
       'features.100_free': '100% ฟรี',
@@ -23986,6 +24106,16 @@ export const additionalTranslations = {
       'common.preview': 'プレビュー',
       'common.total_size': '合計サイズ: {{current}} / {{max}} 許可されています。',
       
+      // Validation messages
+      'validation.single_file_limit': '単一ファイル制限: ファイルあたり100.00 MB。',
+      'validation.batch_info': 'バッチ変換は最大20ファイル、ファイルあたり100.00 MB、合計100.00 MBをサポートします。',
+      'validation.total_size': '合計サイズ: {{max}}のうち{{current}}が許可されています。',
+      'validation.file_too_large': 'ファイル "{{filename}}" が大きすぎます ({{fileSize}})。最大許可サイズは{{maxSize}}です。',
+      'validation.too_many_files': '選択されたファイルが多すぎます ({{count}})。最大許可数は{{max}}です。',
+      'validation.batch_too_large': 'バッチの合計サイズ{{totalSize}}が{{maxSize}}の制限を超えています。',
+      'validation.batch_size_warning': 'バッチサイズが100MBの制限に近づいています。パフォーマンス向上のため、処理するファイル数を減らすことを検討してください。',
+
+      
       // Features
       'features.lightning_fast': '超高速',
       'features.100_free': '100%無料',
@@ -25958,6 +26088,16 @@ export const additionalTranslations = {
       'common.no_registration': '无需注册',
       'common.preview': '预览',
       'common.total_size': '总大小：{{current}} / {{max}} 允许。',
+      
+      // Validation messages
+      'validation.single_file_limit': '单文件限制: 每个文件100.00 MB。',
+      'validation.batch_info': '批量转换支持最多20个文件，每个文件100.00 MB，总计100.00 MB。',
+      'validation.total_size': '总大小: {{max}}中允许{{current}}。',
+      'validation.file_too_large': '文件 "{{filename}}" 太大 ({{fileSize}})。最大允许大小为{{maxSize}}。',
+      'validation.too_many_files': '选择的文件太多 ({{count}})。最大允许数为{{max}}。',
+      'validation.batch_too_large': '批次总大小{{totalSize}}超过{{maxSize}}的限制。',
+      'validation.batch_size_warning': '批次大小接近100MB限制。考虑处理更少的文件以获得更好的性能。',
+
       
       // Features
       'features.lightning_fast': '超快',

@@ -15502,9 +15502,53 @@ const resources = {
   },
 };
 
-// Merge additional translations
-Object.assign(resources, additionalTranslations);
-Object.assign(resources, additionalTranslationsV3);
+// Merge additional translations (deep merge to preserve existing translations)
+function deepMerge(target: any, source: any): any {
+  if (!target) return source;
+  if (!source) return target;
+  
+  const output = { ...target };
+  
+  if (isObject(target) && isObject(source)) {
+    Object.keys(source).forEach(key => {
+      if (key === 'translation' && isObject(target[key]) && isObject(source[key])) {
+        // Special handling for translation object - merge all keys
+        output[key] = { ...target[key], ...source[key] };
+      } else if (isObject(source[key]) && !Array.isArray(source[key])) {
+        if (!(key in target)) {
+          output[key] = source[key];
+        } else {
+          output[key] = deepMerge(target[key], source[key]);
+        }
+      } else {
+        // For arrays or primitives, source takes precedence
+        output[key] = source[key];
+      }
+    });
+  }
+  return output;
+}
+
+function isObject(item: any): boolean {
+  return item && typeof item === 'object' && !Array.isArray(item);
+}
+
+// Merge additional translations with deep merge
+Object.keys(additionalTranslations).forEach(lang => {
+  if (resources[lang]) {
+    resources[lang] = deepMerge(resources[lang], additionalTranslations[lang]);
+  } else {
+    resources[lang] = additionalTranslations[lang];
+  }
+});
+
+Object.keys(additionalTranslationsV3).forEach(lang => {
+  if (resources[lang]) {
+    resources[lang] = deepMerge(resources[lang], additionalTranslationsV3[lang]);
+  } else {
+    resources[lang] = additionalTranslationsV3[lang];
+  }
+});
 
 export const resolveLanguageFromPath = (path: string): string => {
   // English (default, no prefix)
