@@ -236,7 +236,6 @@ export const additionalTranslations = {
       'csv_to_sql.why_choose': 'Mengapa Memilih Konverter Kami?',
     }
   },
-  },
   sv: {
     translation: {
       // CSV to SQL
@@ -295,7 +294,6 @@ export const additionalTranslations = {
       'csv_to_sql.use_cases_title': 'Vanliga Användningsfall',
       'csv_to_sql.why_choose': 'Varför välja vår konverterare?',
     }
-  },
   },
   es: {
     translation: {
@@ -356,7 +354,6 @@ export const additionalTranslations = {
       'csv_to_sql.why_choose': '¿Por Qué Elegir Nuestro Convertidor?',
     }
   },
-  },
   fr: {
     translation: {
       // CSV to SQL
@@ -415,7 +412,6 @@ export const additionalTranslations = {
       'csv_to_sql.use_cases_title': 'Cas d\'Utilisation Courants',
       'csv_to_sql.why_choose': 'Pourquoi Choisir Notre Convertisseur?',
     }
-  },
   },
   it: {
     translation: {
@@ -476,7 +472,6 @@ export const additionalTranslations = {
       'csv_to_sql.why_choose': 'Perché Scegliere il Nostro Convertitore?',
     }
   },
-  },
   nl: {
     translation: {
       // CSV to SQL
@@ -535,7 +530,6 @@ export const additionalTranslations = {
       'csv_to_sql.use_cases_title': 'Veelvoorkomende Gebruikssituaties',
       'csv_to_sql.why_choose': 'Waarom Onze Converter Kiezen?',
     }
-  },
   },
   pt: {
     translation: {
@@ -596,7 +590,6 @@ export const additionalTranslations = {
       'csv_to_sql.why_choose': 'Por Que Escolher Nosso Conversor?',
     }
   },
-  },
   vi: {
     translation: {
       // CSV to SQL
@@ -655,7 +648,6 @@ export const additionalTranslations = {
       'csv_to_sql.use_cases_title': 'Trường Hợp Sử Dụng Phổ Biến',
       'csv_to_sql.why_choose': 'Tại Sao Chọn Công Cụ Chuyển Đổi Của Chúng Tôi?',
     }
-  },
   },
   tr: {
     translation: {
@@ -716,7 +708,6 @@ export const additionalTranslations = {
       'csv_to_sql.why_choose': 'Neden Dönüştürücümüzü Seçmelisiniz?',
     }
   },
-  },
   ru: {
     translation: {
       // CSV to SQL
@@ -775,7 +766,6 @@ export const additionalTranslations = {
       'csv_to_sql.use_cases_title': 'Распространенные Случаи Использования',
       'csv_to_sql.why_choose': 'Почему Выбрать Наш Конвертер?',
     }
-  },
   },
   ar: {
     translation: {
@@ -836,7 +826,6 @@ export const additionalTranslations = {
       'csv_to_sql.why_choose': 'لماذا تختار محولنا؟',
     }
   },
-  },
   th: {
     translation: {
       // CSV to SQL
@@ -895,7 +884,6 @@ export const additionalTranslations = {
       'csv_to_sql.use_cases_title': 'กรณีการใช้งานทั่วไป',
       'csv_to_sql.why_choose': 'ทำไมต้องเลือกตัวแปลงของเรา?',
     }
-  },
   },
   ja: {
     translation: {
@@ -956,7 +944,6 @@ export const additionalTranslations = {
       'csv_to_sql.why_choose': 'なぜ当社のコンバーターを選ぶのか？',
     }
   },
-  },
   zh: {
     translation: {
       // CSV to SQL
@@ -1015,6 +1002,5 @@ export const additionalTranslations = {
       'csv_to_sql.use_cases_title': '常见用例',
       'csv_to_sql.why_choose': '为什么选择我们的转换器？',
     }
-  },
-  },
+  }
 };
