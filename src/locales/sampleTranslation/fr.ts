@@ -479,6 +479,534 @@ export const fr: SamplePageTranslations = {
           description: 'Téléchargez des fichiers d\'exemple HPP header C++ gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos outils de compilation de code C++, logiciels de traitement de fichiers header et applications de développement C++.'
         },
         about_description: 'Ce sont des fichiers de test HPP (C++ header) de différentes tailles à des fins de test'
+      },
+      hex: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple HEX gratuits - Fichiers de test hexadécimaux pour développement firmware et systèmes embarqués | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple HEX hexadécimaux gratuits pour tester la programmation de firmware, le développement de systèmes embarqués et l\'analyse de données binaires. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les éditeurs hex, les chargeurs de firmware, la programmation de microcontrôleurs et les outils de développement embarqué.',
+          keywords: 'fichiers d\'exemple HEX, fichiers de test HEX, télécharger exemples HEX, fichiers de test HEX gratuits, fichiers hexadécimaux, fichiers hex firmware, fichiers de test .hex, fichiers hex embarqués, fichiers hex microcontrôleurs, fichiers de test éditeur hex, exemples programmation firmware, fichiers binaires hex'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple HEX gratuits - Télécharger fichiers de test hexadécimaux pour développement firmware et systèmes embarqués',
+          description: 'Téléchargez des fichiers d\'exemple HEX hexadécimaux gratuits pour tester la programmation de firmware, le développement de systèmes embarqués et l\'analyse de données binaires. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les éditeurs hex, les chargeurs de firmware, la programmation de microcontrôleurs et les outils de développement embarqué.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple HEX',
+          description: 'Téléchargez des fichiers d\'exemple HEX hexadécimaux gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos éditeurs hex, outils de programmation de firmware et applications de développement embarqué.'
+        },
+        about_description: 'Ce sont des fichiers de test HEX (hexadécimal) de différentes tailles à des fins de test'
+      },
+      cs: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple CS gratuits - Fichiers de test code source C# pour développement .NET | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple CS code source C# gratuits pour tester la compilation C#, le développement .NET et les outils Visual Studio. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs C#, les frameworks .NET, l\'IDE Visual Studio, les outils d\'analyse de code et les environnements de développement C#.',
+          keywords: 'fichiers d\'exemple CS, fichiers de test CS, télécharger exemples CS, fichiers de test CS gratuits, exemples code source C#, fichiers code .NET, fichiers de test .cs, fichiers programmation C#, fichiers de test Visual Studio, exemples développement .NET, fichiers de test compilation C#'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple CS gratuits - Télécharger fichiers de test code source C# pour développement .NET',
+          description: 'Téléchargez des fichiers d\'exemple CS code source C# gratuits pour tester la compilation C#, le développement .NET et les outils Visual Studio. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs C#, les frameworks .NET, l\'IDE Visual Studio, les outils d\'analyse de code et les environnements de développement C#.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple CS',
+          description: 'Téléchargez des fichiers d\'exemple CS code source C# gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre compilation C#, développement .NET et outils Visual Studio.'
+        },
+        about_description: 'Ce sont des fichiers de test CS (C#) code source de différentes tailles à des fins de test'
+      },
+      css: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple CSS gratuits - Fichiers de test feuilles de style pour développement web | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple CSS feuilles de style gratuits pour tester les styles web, le parsing CSS et les outils front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les validateurs CSS, les préprocesseurs (SASS, LESS), les minificateurs CSS, les navigateurs web et les frameworks de développement front-end.',
+          keywords: 'fichiers d\'exemple CSS, fichiers de test CSS, télécharger exemples CSS, fichiers de test CSS gratuits, exemples feuilles de style, fichiers feuilles CSS, fichiers de test .css, fichiers styles web, fichiers de test parser CSS, exemples développement front-end, fichiers de test frameworks CSS'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple CSS gratuits - Télécharger fichiers de test feuilles de style pour développement web',
+          description: 'Téléchargez des fichiers d\'exemple CSS feuilles de style gratuits pour tester les styles web, le parsing CSS et les outils front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les validateurs CSS, les préprocesseurs (SASS, LESS), les minificateurs CSS, les navigateurs web et les frameworks de développement front-end.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple CSS',
+          description: 'Téléchargez des fichiers d\'exemple CSS feuilles de style gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos validateurs CSS, préprocesseurs et outils de développement web.'
+        },
+        about_description: 'Ce sont des fichiers de test CSS (Cascading Style Sheets) de différentes tailles à des fins de test'
+      },
+      csr: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple CSR gratuits - Fichiers de test demandes de signature de certificat pour SSL/TLS | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple CSR demandes de signature de certificat gratuits pour tester la génération de certificats SSL/TLS, la gestion PKI et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les autorités de certification, OpenSSL, la génération de certificats SSL, l\'infrastructure PKI et les outils de gestion de certificats de sécurité.',
+          keywords: 'fichiers d\'exemple CSR, fichiers de test CSR, télécharger exemples CSR, fichiers de test CSR gratuits, exemples demandes de signature de certificat, fichiers certificats SSL, fichiers de test .csr, fichiers certificats PKI, fichiers de test OpenSSL, exemples certificats SSL/TLS, fichiers de test autorités de certification'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple CSR gratuits - Télécharger fichiers de test demandes de signature de certificat pour SSL/TLS',
+          description: 'Téléchargez des fichiers d\'exemple CSR demandes de signature de certificat gratuits pour tester la génération de certificats SSL/TLS, la gestion PKI et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les autorités de certification, OpenSSL, la génération de certificats SSL, l\'infrastructure PKI et les outils de gestion de certificats de sécurité.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple CSR',
+          description: 'Téléchargez des fichiers d\'exemple CSR demandes de signature de certificat gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre génération de certificats SSL/TLS et outils de gestion PKI.'
+        },
+        about_description: 'Ce sont des fichiers de test CSR (Certificate Signing Request) de différentes tailles à des fins de test'
+      },
+      'customer-database-sql': {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple Customer Database SQL gratuits - Fichiers de test base de données SQL | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple Customer Database SQL gratuits pour tester les opérations de base de données SQL, l\'exécution de requêtes et les outils de gestion de bases de données. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers SQL, les outils d\'importation de bases de données, SQLite, MySQL, PostgreSQL et les systèmes de gestion de bases de données.',
+          keywords: 'fichiers d\'exemple Customer Database SQL, fichiers de test base de données SQL, télécharger exemples SQL, fichiers de test SQL gratuits, fichiers base de données SQL, fichiers de test .sql, fichiers requêtes SQL, exemples importation de bases de données, fichiers de test SQLite, exemples MySQL, fichiers de test PostgreSQL'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple Customer Database SQL gratuits - Télécharger fichiers de test base de données SQL',
+          description: 'Téléchargez des fichiers d\'exemple Customer Database SQL gratuits pour tester les opérations de base de données SQL, l\'exécution de requêtes et les outils de gestion de bases de données. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers SQL, les outils d\'importation de bases de données, SQLite, MySQL, PostgreSQL et les systèmes de gestion de bases de données.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple Customer Database SQL',
+          description: 'Téléchargez des fichiers d\'exemple Customer Database SQL gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers SQL, outils d\'importation de bases de données et systèmes de gestion de bases de données.'
+        },
+        about_description: 'Ce sont des fichiers de test Customer Database SQL de différentes tailles à des fins de test'
+      },
+      dbf: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple DBF gratuits - Fichiers de test base de données dBASE pour gestion de données | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple DBF base de données dBASE gratuits pour tester les opérations de base de données, l\'importation/exportation de données et les formats de base de données legacy. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la compatibilité dBASE, les convertisseurs de bases de données, les outils de migration de données, les applications de feuilles de calcul et les systèmes de gestion de bases de données.',
+          keywords: 'fichiers d\'exemple DBF, fichiers de test DBF, télécharger exemples DBF, fichiers de test DBF gratuits, fichiers base de données dBASE, fichiers de test .dbf, fichiers format base de données, exemples bases de données legacy, fichiers de test compatibilité dBASE, exemples importation de données'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple DBF gratuits - Télécharger fichiers de test base de données dBASE pour gestion de données',
+          description: 'Téléchargez des fichiers d\'exemple DBF base de données dBASE gratuits pour tester les opérations de base de données, l\'importation/exportation de données et les formats de base de données legacy. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la compatibilité dBASE, les convertisseurs de bases de données, les outils de migration de données, les applications de feuilles de calcul et les systèmes de gestion de bases de données.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple DBF',
+          description: 'Téléchargez des fichiers d\'exemple DBF base de données dBASE gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos convertisseurs de bases de données, outils de migration de données et systèmes de gestion de bases de données.'
+        },
+        about_description: 'Ce sont des fichiers de test DBF (base de données dBASE) de différentes tailles à des fins de test'
+      },
+      dem: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple DEM gratuits - Fichiers de test modèles d\'élévation numérique pour GIS et cartographie | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple DEM modèles d\'élévation numérique gratuits pour tester les applications GIS, la cartographie de terrain et les outils d\'analyse géospatiale. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les logiciels GIS, la visualisation de terrain, le traitement de données d\'élévation, les applications de cartographie et les outils d\'analyse géospatiale.',
+          keywords: 'fichiers d\'exemple DEM, fichiers de test DEM, télécharger exemples DEM, fichiers de test DEM gratuits, fichiers modèles d\'élévation numérique, fichiers de test .dem, fichiers élévation GIS, exemples données de terrain, fichiers données géospatiales, fichiers de test cartographie, exemples modèles d\'élévation'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple DEM gratuits - Télécharger fichiers de test modèles d\'élévation numérique pour GIS et cartographie',
+          description: 'Téléchargez des fichiers d\'exemple DEM modèles d\'élévation numérique gratuits pour tester les applications GIS, la cartographie de terrain et les outils d\'analyse géospatiale. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les logiciels GIS, la visualisation de terrain, le traitement de données d\'élévation, les applications de cartographie et les outils d\'analyse géospatiale.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple DEM',
+          description: 'Téléchargez des fichiers d\'exemple DEM modèles d\'élévation numérique gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre logiciel GIS, visualisation de terrain et outils d\'analyse géospatiale.'
+        },
+        about_description: 'Ce sont des fichiers de test DEM (Digital Elevation Model) de différentes tailles à des fins de test'
+      },
+      der: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple DER gratuits - Fichiers de test certificats Distinguished Encoding Rules | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple DER certificats Distinguished Encoding Rules gratuits pour tester les certificats SSL/TLS, la gestion PKI et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le parsing de certificats, OpenSSL, l\'infrastructure PKI, la validation de certificats SSL et les outils de gestion de certificats de sécurité.',
+          keywords: 'fichiers d\'exemple DER, fichiers de test DER, télécharger exemples DER, fichiers de test DER gratuits, fichiers Distinguished Encoding Rules, fichiers de test .der, fichiers certificats, exemples certificats SSL, fichiers certificats PKI, fichiers de test OpenSSL, exemples parsing de certificats'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple DER gratuits - Télécharger fichiers de test certificats Distinguished Encoding Rules',
+          description: 'Téléchargez des fichiers d\'exemple DER certificats Distinguished Encoding Rules gratuits pour tester les certificats SSL/TLS, la gestion PKI et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le parsing de certificats, OpenSSL, l\'infrastructure PKI, la validation de certificats SSL et les outils de gestion de certificats de sécurité.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple DER',
+          description: 'Téléchargez des fichiers d\'exemple DER certificats Distinguished Encoding Rules gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre parsing de certificats, OpenSSL et outils de gestion PKI.'
+        },
+        about_description: 'Ce sont des fichiers de test DER (Distinguished Encoding Rules) certificats de différentes tailles à des fins de test'
+      },
+      dmp: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple DMP gratuits - Fichiers de test vidage mémoire pour débogage et analyse | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple DMP vidage mémoire gratuits pour tester l\'analyse de crash, les outils de débogage et le diagnostic système. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les débogueurs, les outils d\'analyse de crash, les analyseurs de mémoire, les outils de diagnostic système et les applications d\'analyse forensique.',
+          keywords: 'fichiers d\'exemple DMP, fichiers de test DMP, télécharger exemples DMP, fichiers de test DMP gratuits, fichiers vidage mémoire, fichiers de test .dmp, fichiers vidage crash, fichiers débogage, exemples vidage système, fichiers analyse mémoire, fichiers de test analyse de crash'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple DMP gratuits - Télécharger fichiers de test vidage mémoire pour débogage et analyse',
+          description: 'Téléchargez des fichiers d\'exemple DMP vidage mémoire gratuits pour tester l\'analyse de crash, les outils de débogage et le diagnostic système. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les débogueurs, les outils d\'analyse de crash, les analyseurs de mémoire, les outils de diagnostic système et les applications d\'analyse forensique.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple DMP',
+          description: 'Téléchargez des fichiers d\'exemple DMP vidage mémoire gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre analyse de crash, débogage et outils de diagnostic système.'
+        },
+        about_description: 'Ce sont des fichiers de test DMP (vidage mémoire) de différentes tailles à des fins de test'
+      },
+      'docker-compose-yml': {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple Docker Compose YML gratuits - Fichiers de test configuration Docker Compose | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple Docker Compose YML configuration gratuits pour tester l\'orchestration de conteneurs Docker, les applications multi-conteneurs et les outils DevOps. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Docker Compose, l\'orchestration de conteneurs, le parsing YAML, l\'automatisation DevOps et les outils de déploiement d\'applications containerisées.',
+          keywords: 'fichiers d\'exemple Docker Compose YML, fichiers de test docker-compose, télécharger exemples docker-compose, fichiers de test docker-compose gratuits, fichiers YAML Docker Compose, fichiers de test .yml, fichiers orchestration de conteneurs, exemples configuration DevOps, fichiers de test Docker Compose, exemples configuration multi-conteneurs'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple Docker Compose YML gratuits - Télécharger fichiers de test configuration Docker Compose',
+          description: 'Téléchargez des fichiers d\'exemple Docker Compose YML configuration gratuits pour tester l\'orchestration de conteneurs Docker, les applications multi-conteneurs et les outils DevOps. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Docker Compose, l\'orchestration de conteneurs, le parsing YAML, l\'automatisation DevOps et les outils de déploiement d\'applications containerisées.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple Docker Compose YML',
+          description: 'Téléchargez des fichiers d\'exemple Docker Compose YML configuration gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester Docker Compose, l\'orchestration de conteneurs et les outils d\'automatisation DevOps.'
+        },
+        about_description: 'Ce sont des fichiers de test configuration Docker Compose YML de différentes tailles à des fins de test'
+      },
+      dockerfile: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple Dockerfile gratuits - Fichiers de test build de conteneurs Docker | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple Dockerfile build de conteneurs Docker gratuits pour tester la containerisation, le build Docker et les outils DevOps. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le build Docker, la création d\'images de conteneurs, le parsing de Dockerfile, les outils de containerisation et les plateformes d\'automatisation DevOps.',
+          keywords: 'fichiers d\'exemple Dockerfile, fichiers de test Dockerfile, télécharger exemples Dockerfile, fichiers de test Dockerfile gratuits, fichiers conteneurs Docker, fichiers de test Dockerfile, fichiers build de conteneurs, exemples build de Docker, fichiers de test containerisation, exemples DevOps Docker'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple Dockerfile gratuits - Télécharger fichiers de test build de conteneurs Docker',
+          description: 'Téléchargez des fichiers d\'exemple Dockerfile build de conteneurs Docker gratuits pour tester la containerisation, le build Docker et les outils DevOps. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le build Docker, la création d\'images de conteneurs, le parsing de Dockerfile, les outils de containerisation et les plateformes d\'automatisation DevOps.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple Dockerfile',
+          description: 'Téléchargez des fichiers d\'exemple Dockerfile build de conteneurs Docker gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos builds Docker, création d\'images de conteneurs et outils de containerisation.'
+        },
+        about_description: 'Ce sont des fichiers de test Dockerfile (build de conteneurs Docker) de différentes tailles à des fins de test'
+      },
+      editorconfig: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple EditorConfig gratuits - Fichiers de test configuration d\'éditeur | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple EditorConfig configuration d\'éditeur gratuits pour tester les configurations d\'éditeur de code, la cohérence de format et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers EditorConfig, les plugins d\'éditeur de code, les outils de format, la configuration d\'IDE et les outils de configuration d\'environnement de développement.',
+          keywords: 'fichiers d\'exemple EditorConfig, fichiers de test EditorConfig, télécharger exemples EditorConfig, fichiers de test EditorConfig gratuits, fichiers configuration d\'éditeur, fichiers de test .editorconfig, fichiers configurations d\'éditeur de code, exemples configuration d\'IDE, fichiers configuration de format, fichiers de test configurations d\'éditeur'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple EditorConfig gratuits - Télécharger fichiers de test configuration d\'éditeur',
+          description: 'Téléchargez des fichiers d\'exemple EditorConfig configuration d\'éditeur gratuits pour tester les configurations d\'éditeur de code, la cohérence de format et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers EditorConfig, les plugins d\'éditeur de code, les outils de format, la configuration d\'IDE et les outils de configuration d\'environnement de développement.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple EditorConfig',
+          description: 'Téléchargez des fichiers d\'exemple EditorConfig configuration d\'éditeur gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers EditorConfig, plugins d\'éditeur de code et outils de format.'
+        },
+        about_description: 'Ce sont des fichiers de test EditorConfig (configuration d\'éditeur) de différentes tailles à des fins de test'
+      },
+      ini: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple INI gratuits - Fichiers de test configuration INI pour applications | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple INI configuration gratuits pour tester les configurations d\'applications, le parsing de fichiers INI et les outils de gestion de configuration. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers INI, la configuration d\'applications, la gestion de configurations, les fichiers INI Windows et les utilitaires de configuration de logiciels.',
+          keywords: 'fichiers d\'exemple INI, fichiers de test INI, télécharger exemples INI, fichiers de test INI gratuits, fichiers configuration INI, fichiers de test .ini, fichiers configurations d\'applications, exemples configuration INI, fichiers INI Windows, exemples fichiers de configuration, fichiers de test parsing INI'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple INI gratuits - Télécharger fichiers de test configuration INI pour applications',
+          description: 'Téléchargez des fichiers d\'exemple INI configuration gratuits pour tester les configurations d\'applications, le parsing de fichiers INI et les outils de gestion de configuration. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers INI, la configuration d\'applications, la gestion de configurations, les fichiers INI Windows et les utilitaires de configuration de logiciels.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple INI',
+          description: 'Téléchargez des fichiers d\'exemple INI configuration gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers INI, configuration d\'applications et outils de gestion de configurations.'
+        },
+        about_description: 'Ce sont des fichiers de test INI (configuration) de différentes tailles à des fins de test'
+      },
+      intelhex: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple IntelHex gratuits - Fichiers de test hexadécimaux Intel pour développement firmware | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple IntelHex hexadécimaux Intel gratuits pour tester la programmation de firmware, le développement de systèmes embarqués et les outils de microcontrôleurs. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers IntelHex, les chargeurs de firmware, la programmation de microcontrôleurs, les outils de développement embarqué et les applications de traitement de fichiers hex.',
+          keywords: 'fichiers d\'exemple IntelHex, fichiers de test IntelHex, télécharger exemples IntelHex, fichiers de test IntelHex gratuits, fichiers hexadécimaux Intel, fichiers de test .intelhex, fichiers hex firmware, fichiers hex embarqués, fichiers hex microcontrôleurs, fichiers de test parser IntelHex, exemples programmation de firmware'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple IntelHex gratuits - Télécharger fichiers de test hexadécimaux Intel pour développement firmware',
+          description: 'Téléchargez des fichiers d\'exemple IntelHex hexadécimaux Intel gratuits pour tester la programmation de firmware, le développement de systèmes embarqués et les outils de microcontrôleurs. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers IntelHex, les chargeurs de firmware, la programmation de microcontrôleurs, les outils de développement embarqué et les applications de traitement de fichiers hex.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple IntelHex',
+          description: 'Téléchargez des fichiers d\'exemple IntelHex hexadécimaux Intel gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers IntelHex, chargeurs de firmware et outils de développement embarqué.'
+        },
+        about_description: 'Ce sont des fichiers de test IntelHex (hexadécimal Intel) de différentes tailles à des fins de test'
+      },
+      ipynb: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple IPYNB gratuits - Fichiers de test Jupyter Notebook pour science des données | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple IPYNB Jupyter Notebook gratuits pour tester les workflows de science des données, l\'exécution Python et les outils d\'analyse de notebooks. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Jupyter Notebook, les outils de science des données Python, les visualiseurs de notebooks, les applications d\'analyse de données et les plateformes de calcul scientifique.',
+          keywords: 'fichiers d\'exemple IPYNB, fichiers de test IPYNB, télécharger exemples IPYNB, fichiers de test IPYNB gratuits, fichiers Jupyter Notebook, fichiers de test .ipynb, fichiers notebook Python, exemples notebook science des données, fichiers de test Jupyter, fichiers analyse de notebooks, exemples workflows de science des données'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple IPYNB gratuits - Télécharger fichiers de test Jupyter Notebook pour science des données',
+          description: 'Téléchargez des fichiers d\'exemple IPYNB Jupyter Notebook gratuits pour tester les workflows de science des données, l\'exécution Python et les outils d\'analyse de notebooks. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Jupyter Notebook, les outils de science des données Python, les visualiseurs de notebooks, les applications d\'analyse de données et les plateformes de calcul scientifique.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple IPYNB',
+          description: 'Téléchargez des fichiers d\'exemple IPYNB Jupyter Notebook gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester Jupyter Notebook, les outils de science des données Python et les applications d\'analyse de notebooks.'
+        },
+        about_description: 'Ce sont des fichiers de test IPYNB (Jupyter Notebook) de différentes tailles à des fins de test'
+      },
+      java: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple Java gratuits - Fichiers de test code source Java pour développement | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple Java code source Java gratuits pour tester la compilation Java, les applications JVM et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs Java, JVM, le support IDE (Eclipse, IntelliJ), les outils de build Java (Maven, Gradle) et les environnements de développement Java.',
+          keywords: 'fichiers d\'exemple Java, fichiers de test Java, télécharger exemples Java, fichiers de test Java gratuits, fichiers code source Java, fichiers de test .java, fichiers programmation Java, fichiers de test JVM, exemples compilation Java, fichiers de test IDE Java, exemples développement Java'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple Java gratuits - Télécharger fichiers de test code source Java pour développement',
+          description: 'Téléchargez des fichiers d\'exemple Java code source Java gratuits pour tester la compilation Java, les applications JVM et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs Java, JVM, le support IDE (Eclipse, IntelliJ), les outils de build Java (Maven, Gradle) et les environnements de développement Java.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple Java',
+          description: 'Téléchargez des fichiers d\'exemple Java code source Java gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos compilateurs Java, JVM et outils de développement Java.'
+        },
+        about_description: 'Ce sont des fichiers de test code source Java de différentes tailles à des fins de test'
+      },
+      jks: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JKS gratuits - Fichiers de test Java KeyStore pour sécurité SSL/TLS | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JKS Java KeyStore gratuits pour tester le stockage de certificats SSL/TLS, la sécurité Java et les outils de gestion PKI. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la gestion de Java KeyStore, le parsing de JKS, le stockage de certificats SSL, les outils de sécurité Java et l\'infrastructure PKI.',
+          keywords: 'fichiers d\'exemple JKS, fichiers de test JKS, télécharger exemples JKS, fichiers de test JKS gratuits, fichiers Java KeyStore, fichiers de test .jks, fichiers certificats SSL, fichiers sécurité Java, fichiers de test keystore, exemples certificats PKI, fichiers de test gestion de Java KeyStore'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JKS gratuits - Télécharger fichiers de test Java KeyStore pour sécurité SSL/TLS',
+          description: 'Téléchargez des fichiers d\'exemple JKS Java KeyStore gratuits pour tester le stockage de certificats SSL/TLS, la sécurité Java et les outils de gestion PKI. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la gestion de Java KeyStore, le parsing de JKS, le stockage de certificats SSL, les outils de sécurité Java et l\'infrastructure PKI.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JKS',
+          description: 'Téléchargez des fichiers d\'exemple JKS Java KeyStore gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre gestion de Java KeyStore, parsing de JKS et outils de stockage de certificats SSL.'
+        },
+        about_description: 'Ce sont des fichiers de test JKS (Java KeyStore) de différentes tailles à des fins de test'
+      },
+      json: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JSON gratuits - Fichiers de test données JSON pour développement web | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JSON données JSON gratuits pour tester le parsing JSON, l\'intégration API et les outils de développement web. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JSON, les réponses API, les formats d\'échange de données, les applications web et les outils de validation JSON.',
+          keywords: 'fichiers d\'exemple JSON, fichiers de test JSON, télécharger exemples JSON, fichiers de test JSON gratuits, fichiers données JSON, fichiers de test .json, fichiers JSON API, fichiers de test parser JSON, exemples échange de données, fichiers JSON web, fichiers de test validation JSON'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JSON gratuits - Télécharger fichiers de test données JSON pour développement web',
+          description: 'Téléchargez des fichiers d\'exemple JSON données JSON gratuits pour tester le parsing JSON, l\'intégration API et les outils de développement web. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JSON, les réponses API, les formats d\'échange de données, les applications web et les outils de validation JSON.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JSON',
+          description: 'Téléchargez des fichiers d\'exemple JSON données JSON gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers JSON, intégration API et outils de développement web.'
+        },
+        about_description: 'Ce sont des fichiers de test JSON (JavaScript Object Notation) de différentes tailles à des fins de test'
+      },
+      jsonl: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JSONL gratuits - Fichiers de test JSON Lines pour traitement de données | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JSONL JSON Lines gratuits pour tester le traitement de données, le streaming JSON et les outils big data. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JSONL, les applications de streaming de données, les outils ETL, le traitement big data et les outils d\'analyse de fichiers de log.',
+          keywords: 'fichiers d\'exemple JSONL, fichiers de test JSONL, télécharger exemples JSONL, fichiers de test JSONL gratuits, fichiers JSON Lines, fichiers de test .jsonl, fichiers streaming JSON, exemples traitement de données, fichiers JSON ETL, exemples JSON big data, fichiers analyse de log JSON'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JSONL gratuits - Télécharger fichiers de test JSON Lines pour traitement de données',
+          description: 'Téléchargez des fichiers d\'exemple JSONL JSON Lines gratuits pour tester le traitement de données, le streaming JSON et les outils big data. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JSONL, les applications de streaming de données, les outils ETL, le traitement big data et les outils d\'analyse de fichiers de log.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JSONL',
+          description: 'Téléchargez des fichiers d\'exemple JSONL JSON Lines gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers JSONL, applications de streaming de données et outils de traitement big data.'
+        },
+        about_description: 'Ce sont des fichiers de test JSONL (JSON Lines) de différentes tailles à des fins de test'
+      },
+      js: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JS gratuits - Fichiers de test code source JavaScript pour développement web | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JS code source JavaScript gratuits pour tester l\'exécution JavaScript, le développement web et les outils front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les moteurs JavaScript, Node.js, les navigateurs web, les minificateurs JavaScript, les outils d\'analyse de code et les frameworks de développement front-end.',
+          keywords: 'fichiers d\'exemple JS, fichiers de test JS, télécharger exemples JS, fichiers de test JS gratuits, fichiers code source JavaScript, fichiers de test .js, fichiers programmation JavaScript, fichiers de test Node.js, fichiers JavaScript web, fichiers de test minificateur JS, exemples développement front-end'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JS gratuits - Télécharger fichiers de test code source JavaScript pour développement web',
+          description: 'Téléchargez des fichiers d\'exemple JS code source JavaScript gratuits pour tester l\'exécution JavaScript, le développement web et les outils front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les moteurs JavaScript, Node.js, les navigateurs web, les minificateurs JavaScript, les outils d\'analyse de code et les frameworks de développement front-end.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JS',
+          description: 'Téléchargez des fichiers d\'exemple JS code source JavaScript gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos moteurs JavaScript, Node.js et outils de développement web.'
+        },
+        about_description: 'Ce sont des fichiers de test JS (JavaScript) code source de différentes tailles à des fins de test'
+      },
+      jsx: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JSX gratuits - Fichiers de test React JSX pour développement front-end | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JSX React JSX gratuits pour tester le développement React, la compilation JSX et les frameworks front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester React, les transpileurs JSX (Babel), les outils de build front-end, les environnements de développement React et les frameworks JavaScript modernes.',
+          keywords: 'fichiers d\'exemple JSX, fichiers de test JSX, télécharger exemples JSX, fichiers de test JSX gratuits, fichiers React JSX, fichiers de test .jsx, fichiers composants React, fichiers de test transpileur JSX, fichiers JSX front-end, exemples développement React, fichiers de test Babel JSX'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JSX gratuits - Télécharger fichiers de test React JSX pour développement front-end',
+          description: 'Téléchargez des fichiers d\'exemple JSX React JSX gratuits pour tester le développement React, la compilation JSX et les frameworks front-end. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester React, les transpileurs JSX (Babel), les outils de build front-end, les environnements de développement React et les frameworks JavaScript modernes.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JSX',
+          description: 'Téléchargez des fichiers d\'exemple JSX React JSX gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester React, les transpileurs JSX et les outils de développement front-end.'
+        },
+        about_description: 'Ce sont des fichiers de test JSX (React JSX) de différentes tailles à des fins de test'
+      },
+      jwt: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JWT gratuits - Fichiers de test JSON Web Token pour sécurité API | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JWT JSON Web Token gratuits pour tester l\'authentification API, le parsing de tokens JWT et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JWT, l\'authentification API, la validation de tokens, OAuth 2.0 et les outils de test de sécurité.',
+          keywords: 'fichiers d\'exemple JWT, fichiers de test JWT, télécharger exemples JWT, fichiers de test JWT gratuits, fichiers JSON Web Token, fichiers de test .jwt, fichiers tokens d\'authentification, fichiers sécurité API, fichiers de test parser JWT, exemples tokens OAuth, fichiers test de sécurité'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JWT gratuits - Télécharger fichiers de test JSON Web Token pour sécurité API',
+          description: 'Téléchargez des fichiers d\'exemple JWT JSON Web Token gratuits pour tester l\'authentification API, le parsing de tokens JWT et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers JWT, l\'authentification API, la validation de tokens, OAuth 2.0 et les outils de test de sécurité.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JWT',
+          description: 'Téléchargez des fichiers d\'exemple JWT JSON Web Token gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers JWT, authentification API et outils de sécurité.'
+        },
+        about_description: 'Ce sont des fichiers de test JWT (JSON Web Token) de différentes tailles à des fins de test'
+      },
+      key: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple KEY gratuits - Fichiers de test clés privées pour sécurité SSL/TLS | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple KEY clés privées gratuits pour tester les certificats SSL/TLS, les opérations cryptographiques et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le parsing de clés privées, OpenSSL, la génération de certificats SSL, les bibliothèques cryptographiques et les outils de gestion de certificats de sécurité.',
+          keywords: 'fichiers d\'exemple KEY, fichiers de test KEY, télécharger exemples KEY, fichiers de test KEY gratuits, fichiers clés privées, fichiers de test .key, fichiers clés SSL, fichiers clés cryptographiques, fichiers de test OpenSSL, exemples clés de sécurité, fichiers de test clés de certificats'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple KEY gratuits - Télécharger fichiers de test clés privées pour sécurité SSL/TLS',
+          description: 'Téléchargez des fichiers d\'exemple KEY clés privées gratuits pour tester les certificats SSL/TLS, les opérations cryptographiques et les outils de sécurité. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le parsing de clés privées, OpenSSL, la génération de certificats SSL, les bibliothèques cryptographiques et les outils de gestion de certificats de sécurité.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple KEY',
+          description: 'Téléchargez des fichiers d\'exemple KEY clés privées gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre parsing de clés privées, OpenSSL et outils de gestion de certificats de sécurité.'
+        },
+        about_description: 'Ce sont des fichiers de test KEY (clé privée) de différentes tailles à des fins de test'
+      },
+      kml: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple KML gratuits - Fichiers de test Keyhole Markup Language pour GIS et cartographie | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple KML Keyhole Markup Language données géographiques gratuits pour tester les applications GIS, la visualisation de cartes et les outils géospatiaux. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Google Earth, les logiciels GIS, le rendu de cartes, le traitement de données géographiques et les outils d\'analyse géospatiale.',
+          keywords: 'fichiers d\'exemple KML, fichiers de test KML, télécharger exemples KML, fichiers de test KML gratuits, fichiers Keyhole Markup Language, fichiers de test .kml, fichiers données géographiques, exemples données de cartes, fichiers KML GIS, fichiers de test Google Earth, exemples données géospatiales'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple KML gratuits - Télécharger fichiers de test Keyhole Markup Language pour GIS et cartographie',
+          description: 'Téléchargez des fichiers d\'exemple KML Keyhole Markup Language données géographiques gratuits pour tester les applications GIS, la visualisation de cartes et les outils géospatiaux. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester Google Earth, les logiciels GIS, le rendu de cartes, le traitement de données géographiques et les outils d\'analyse géospatiale.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple KML',
+          description: 'Téléchargez des fichiers d\'exemple KML Keyhole Markup Language données géographiques gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre logiciel GIS, visualisation de cartes et outils d\'analyse géospatiale.'
+        },
+        about_description: 'Ce sont des fichiers de test KML (Keyhole Markup Language) données géographiques de différentes tailles à des fins de test'
+      },
+      kt: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple KT gratuits - Fichiers de test code source Kotlin pour développement Android | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple KT code source Kotlin gratuits pour tester la compilation Kotlin, le développement Android et les applications JVM. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs Kotlin, Android Studio, Kotlin/JVM, le support IDE et les environnements de développement Kotlin.',
+          keywords: 'fichiers d\'exemple KT, fichiers de test KT, télécharger exemples KT, fichiers de test KT gratuits, fichiers code source Kotlin, fichiers de test .kt, fichiers programmation Kotlin, fichiers Android Kotlin, fichiers de test compilateur Kotlin, exemples Kotlin JVM, fichiers de test développement Kotlin'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple KT gratuits - Télécharger fichiers de test code source Kotlin pour développement Android',
+          description: 'Téléchargez des fichiers d\'exemple KT code source Kotlin gratuits pour tester la compilation Kotlin, le développement Android et les applications JVM. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les compilateurs Kotlin, Android Studio, Kotlin/JVM, le support IDE et les environnements de développement Kotlin.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple KT',
+          description: 'Téléchargez des fichiers d\'exemple KT code source Kotlin gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos compilateurs Kotlin, Android Studio et outils de développement Kotlin.'
+        },
+        about_description: 'Ce sont des fichiers de test KT (Kotlin) code source de différentes tailles à des fins de test'
+      },
+      log: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple LOG gratuits - Fichiers de test logs pour débogage et analyse système | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple LOG logs gratuits pour tester le parsing de logs, l\'analyse système et les outils de débogage. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les analyseurs de logs, les outils de surveillance système, les applications de débogage, les systèmes d\'agrégation de logs et les outils de diagnostic système.',
+          keywords: 'fichiers d\'exemple LOG, fichiers de test LOG, télécharger exemples LOG, fichiers de test LOG gratuits, fichiers logs, fichiers de test .log, fichiers logs système, exemples logs d\'applications, fichiers de test parser de logs, fichiers débogage de logs, exemples analyse de logs système'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple LOG gratuits - Télécharger fichiers de test logs pour débogage et analyse système',
+          description: 'Téléchargez des fichiers d\'exemple LOG logs gratuits pour tester le parsing de logs, l\'analyse système et les outils de débogage. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les analyseurs de logs, les outils de surveillance système, les applications de débogage, les systèmes d\'agrégation de logs et les outils de diagnostic système.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple LOG',
+          description: 'Téléchargez des fichiers d\'exemple LOG logs gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos analyseurs de logs, surveillance système et outils de débogage.'
+        },
+        about_description: 'Ce sont des fichiers de test LOG de différentes tailles à des fins de test'
+      },
+      lua: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple LUA gratuits - Fichiers de test scripts Lua pour développement jeux et automatisation | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple LUA scripts Lua gratuits pour tester l\'exécution Lua, le développement de jeux et les outils d\'automatisation. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les interprètes Lua, les moteurs de jeux, les environnements de scripting, les outils d\'automatisation et les applications embarquées Lua.',
+          keywords: 'fichiers d\'exemple LUA, fichiers de test LUA, télécharger exemples LUA, fichiers de test LUA gratuits, fichiers scripts Lua, fichiers de test .lua, fichiers programmation Lua, fichiers scripts de jeux, fichiers de test interprète Lua, exemples scripts d\'automatisation, fichiers de test embarqués Lua'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple LUA gratuits - Télécharger fichiers de test scripts Lua pour développement jeux et automatisation',
+          description: 'Téléchargez des fichiers d\'exemple LUA scripts Lua gratuits pour tester l\'exécution Lua, le développement de jeux et les outils d\'automatisation. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les interprètes Lua, les moteurs de jeux, les environnements de scripting, les outils d\'automatisation et les applications embarquées Lua.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple LUA',
+          description: 'Téléchargez des fichiers d\'exemple LUA scripts Lua gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos interprètes Lua, moteurs de jeux et outils d\'automatisation.'
+        },
+        about_description: 'Ce sont des fichiers de test LUA (scripts Lua) de différentes tailles à des fins de test'
+      },
+      m3u: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple M3U gratuits - Fichiers de test playlist M3U pour lecteurs multimédias | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple M3U playlist M3U gratuits pour tester les lecteurs multimédias, le parsing de playlists et les outils de streaming audio/vidéo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs multimédias, les gestionnaires de playlists, les applications de streaming, les lecteurs audio et les logiciels de lecteurs vidéo.',
+          keywords: 'fichiers d\'exemple M3U, fichiers de test M3U, télécharger exemples M3U, fichiers de test M3U gratuits, fichiers playlist M3U, fichiers de test .m3u, fichiers playlists multimédias, exemples playlists audio, fichiers playlists vidéo, fichiers de test lecteurs multimédias, exemples playlists streaming'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple M3U gratuits - Télécharger fichiers de test playlist M3U pour lecteurs multimédias',
+          description: 'Téléchargez des fichiers d\'exemple M3U playlist M3U gratuits pour tester les lecteurs multimédias, le parsing de playlists et les outils de streaming audio/vidéo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs multimédias, les gestionnaires de playlists, les applications de streaming, les lecteurs audio et les logiciels de lecteurs vidéo.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple M3U',
+          description: 'Téléchargez des fichiers d\'exemple M3U playlist M3U gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos lecteurs multimédias, gestionnaires de playlists et applications de streaming.'
+        },
+        about_description: 'Ce sont des fichiers de test M3U (playlist) de différentes tailles à des fins de test'
+      },
+      m3u8: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple M3U8 gratuits - Fichiers de test playlist M3U8 HLS pour streaming vidéo | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple M3U8 playlist M3U8 HLS (HTTP Live Streaming) gratuits pour tester le streaming vidéo, les lecteurs HLS et les outils de livraison multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs HLS, les plateformes de streaming vidéo, le streaming de bitrate adaptatif, les serveurs multimédias et les systèmes de livraison vidéo.',
+          keywords: 'fichiers d\'exemple M3U8, fichiers de test M3U8, télécharger exemples M3U8, fichiers de test M3U8 gratuits, fichiers playlist M3U8 HLS, fichiers de test .m3u8, fichiers HTTP Live Streaming, exemples playlists streaming vidéo, fichiers de test lecteur HLS, exemples streaming adaptatif, fichiers playlists serveurs multimédias'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple M3U8 gratuits - Télécharger fichiers de test playlist M3U8 HLS pour streaming vidéo',
+          description: 'Téléchargez des fichiers d\'exemple M3U8 playlist M3U8 HLS (HTTP Live Streaming) gratuits pour tester le streaming vidéo, les lecteurs HLS et les outils de livraison multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les lecteurs HLS, les plateformes de streaming vidéo, le streaming de bitrate adaptatif, les serveurs multimédias et les systèmes de livraison vidéo.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple M3U8',
+          description: 'Téléchargez des fichiers d\'exemple M3U8 playlist M3U8 HLS gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos lecteurs HLS, plateformes de streaming vidéo et systèmes de livraison multimédias.'
+        },
+        about_description: 'Ce sont des fichiers de test M3U8 (playlist HLS) de différentes tailles à des fins de test'
+      },
+      makefile: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple Makefile gratuits - Fichiers de test configuration build Makefile | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple Makefile configuration build gratuits pour tester l\'automatisation de build, le système de build Make et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le système de build Make, les outils d\'automatisation de build, la compilation C/C++, les scripts de build et les environnements de build de développement.',
+          keywords: 'fichiers d\'exemple Makefile, fichiers de test Makefile, télécharger exemples Makefile, fichiers de test Makefile gratuits, fichiers build Makefile, fichiers de test Makefile, fichiers configuration build, exemples système de build Make, fichiers build C/C++, fichiers de test automatisation de build, exemples compilation Makefile'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple Makefile gratuits - Télécharger fichiers de test configuration build Makefile',
+          description: 'Téléchargez des fichiers d\'exemple Makefile configuration build gratuits pour tester l\'automatisation de build, le système de build Make et les outils de développement. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le système de build Make, les outils d\'automatisation de build, la compilation C/C++, les scripts de build et les environnements de build de développement.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple Makefile',
+          description: 'Téléchargez des fichiers d\'exemple Makefile configuration build gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester votre système de build Make, outils d\'automatisation de build et environnements de build de développement.'
+        },
+        about_description: 'Ce sont des fichiers de test Makefile (configuration build) de différentes tailles à des fins de test'
+      },
+      mbtiles: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple MBTiles gratuits - Fichiers de test base de données tiles de cartes MBTiles | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple MBTiles base de données tiles de cartes gratuits pour tester le rendu de cartes, les applications GIS et les outils de cartographie. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les serveurs de tiles de cartes, les logiciels GIS, les moteurs de rendu de cartes, les applications de cartographie mobile et les outils de cartes hors ligne.',
+          keywords: 'fichiers d\'exemple MBTiles, fichiers de test MBTiles, télécharger exemples MBTiles, fichiers de test MBTiles gratuits, fichiers tiles de cartes MBTiles, fichiers de test .mbtiles, fichiers base de données de cartes, exemples tiles GIS, fichiers rendu de cartes, fichiers de test cartes mobiles, exemples tiles de cartes hors ligne'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple MBTiles gratuits - Télécharger fichiers de test base de données tiles de cartes MBTiles',
+          description: 'Téléchargez des fichiers d\'exemple MBTiles base de données tiles de cartes gratuits pour tester le rendu de cartes, les applications GIS et les outils de cartographie. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les serveurs de tiles de cartes, les logiciels GIS, les moteurs de rendu de cartes, les applications de cartographie mobile et les outils de cartes hors ligne.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple MBTiles',
+          description: 'Téléchargez des fichiers d\'exemple MBTiles base de données tiles de cartes gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos serveurs de tiles de cartes, logiciels GIS et moteurs de rendu de cartes.'
+        },
+        about_description: 'Ce sont des fichiers de test MBTiles (base de données tiles de cartes) de différentes tailles à des fins de test'
+      },
+      md: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple MD gratuits - Fichiers de test documentation Markdown | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple MD documentation Markdown gratuits pour tester le parsing Markdown, les outils de documentation et les systèmes de gestion de contenu. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers Markdown, les générateurs de documentation, les générateurs de sites statiques, GitHub Markdown et les plateformes de gestion de contenu.',
+          keywords: 'fichiers d\'exemple MD, fichiers de test MD, télécharger exemples MD, fichiers de test MD gratuits, fichiers Markdown, fichiers de test .md, fichiers documentation Markdown, fichiers de test parser Markdown, exemples GitHub Markdown, fichiers générateurs de sites statiques, fichiers de test générateurs de documentation'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple MD gratuits - Télécharger fichiers de test documentation Markdown',
+          description: 'Téléchargez des fichiers d\'exemple MD documentation Markdown gratuits pour tester le parsing Markdown, les outils de documentation et les systèmes de gestion de contenu. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers Markdown, les générateurs de documentation, les générateurs de sites statiques, GitHub Markdown et les plateformes de gestion de contenu.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple MD',
+          description: 'Téléchargez des fichiers d\'exemple MD documentation Markdown gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers Markdown, générateurs de documentation et systèmes de gestion de contenu.'
+        },
+        about_description: 'Ce sont des fichiers de test MD (Markdown) de différentes tailles à des fins de test'
+      },
+      mdx: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple MDX gratuits - Fichiers de test MDX React Markdown pour documentación | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple MDX MDX (Markdown + JSX) gratuits pour tester la documentation React, les générateurs de sites statiques et les systèmes de gestion de contenu. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers MDX, les outils de documentation React, Next.js, Gatsby, les générateurs de sites statiques et les plateformes de documentation modernes.',
+          keywords: 'fichiers d\'exemple MDX, fichiers de test MDX, télécharger exemples MDX, fichiers de test MDX gratuits, fichiers MDX React Markdown, fichiers de test .mdx, fichiers documentation React, fichiers de test parser MDX, exemples MDX Next.js, fichiers MDX Gatsby, fichiers de test générateurs de sites statiques MDX'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple MDX gratuits - Télécharger fichiers de test MDX React Markdown pour documentación',
+          description: 'Téléchargez des fichiers d\'exemple MDX MDX (Markdown + JSX) gratuits pour tester la documentation React, les générateurs de sites statiques et les systèmes de gestion de contenu. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les parsers MDX, les outils de documentation React, Next.js, Gatsby, les générateurs de sites statiques et les plateformes de documentation modernes.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple MDX',
+          description: 'Téléchargez des fichiers d\'exemple MDX MDX (Markdown + JSX) gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester vos parsers MDX, outils de documentation React et générateurs de sites statiques.'
+        },
+        about_description: 'Ce sont des fichiers de test MDX (Markdown + JSX) de différentes tailles à des fins de test'
       }
     }
   }

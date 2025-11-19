@@ -479,6 +479,534 @@ export const en: SamplePageTranslations = {
           description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available to test your C++ code compilation tools, header file processing software, and C++ development applications.'
         },
         about_description: 'These are test HPP (C++ header) files in various sizes for testing purposes'
+      },
+      hex: {
+        meta: {
+          title: 'Free HEX Sample Files Download - Test Hexadecimal Files for Firmware & Embedded Development | MorphyHub',
+          description: 'Download free HEX sample hexadecimal files for testing firmware programming, embedded systems development, and binary data analysis. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing hex editors, firmware loaders, microcontroller programming, and embedded development tools.',
+          keywords: 'HEX sample files, test HEX files, download HEX samples, free HEX test files, hexadecimal files, firmware hex files, .hex test files, embedded hex files, microcontroller hex files, hex editor test files, firmware programming samples, binary hex files'
+        },
+        schema: {
+          name: 'Free HEX Sample Files - Download Test Hexadecimal Files for Firmware & Embedded Development',
+          description: 'Download free HEX sample hexadecimal files for testing firmware programming, embedded systems development, and binary data analysis. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing hex editors, firmware loaders, microcontroller programming, and embedded development tools.'
+        },
+        hero: {
+          title: 'HEX Sample Files',
+          description: 'Download free HEX sample hexadecimal files for testing. Multiple file sizes available to test your hex editors, firmware programming tools, and embedded development applications.'
+        },
+        about_description: 'These are test HEX (hexadecimal) files in various sizes for testing purposes'
+      },
+      cs: {
+        meta: {
+          title: 'Free CS Sample Files Download - Test C# Source Code Files for .NET Development | MorphyHub',
+          description: 'Download free CS sample C# source code files for testing C# compilation, .NET development, and Visual Studio tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C# compilers, .NET framework, Visual Studio IDE, code analysis tools, and C# development environments.',
+          keywords: 'CS sample files, test CS files, download CS samples, free CS test files, C# source code samples, .NET code files, .cs test files, C# programming files, Visual Studio test files, .NET development samples, C# compilation test files'
+        },
+        schema: {
+          name: 'Free CS Sample Files - Download Test C# Source Code Files for .NET Development',
+          description: 'Download free CS sample C# source code files for testing C# compilation, .NET development, and Visual Studio tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C# compilers, .NET framework, Visual Studio IDE, code analysis tools, and C# development environments.'
+        },
+        hero: {
+          title: 'CS Sample Files',
+          description: 'Download free CS sample C# source code files for testing. Multiple file sizes available to test your C# compilation, .NET development, and Visual Studio tools.'
+        },
+        about_description: 'These are test CS (C#) source code files in various sizes for testing purposes'
+      },
+      css: {
+        meta: {
+          title: 'Free CSS Sample Files Download - Test Cascading Style Sheets for Web Development | MorphyHub',
+          description: 'Download free CSS sample Cascading Style Sheets files for testing web styling, CSS parsing, and front-end development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSS validators, preprocessors (SASS, LESS), CSS minifiers, web browsers, and front-end development frameworks.',
+          keywords: 'CSS sample files, test CSS files, download CSS samples, free CSS test files, Cascading Style Sheets samples, CSS stylesheet files, .css test files, web styling files, CSS parser test files, front-end development samples, CSS framework test files'
+        },
+        schema: {
+          name: 'Free CSS Sample Files - Download Test Cascading Style Sheets for Web Development',
+          description: 'Download free CSS sample Cascading Style Sheets files for testing web styling, CSS parsing, and front-end development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CSS validators, preprocessors (SASS, LESS), CSS minifiers, web browsers, and front-end development frameworks.'
+        },
+        hero: {
+          title: 'CSS Sample Files',
+          description: 'Download free CSS sample Cascading Style Sheets files for testing. Multiple file sizes available to test your CSS validators, preprocessors, and web development tools.'
+        },
+        about_description: 'These are test CSS (Cascading Style Sheets) files in various sizes for testing purposes'
+      },
+      csr: {
+        meta: {
+          title: 'Free CSR Sample Files Download - Test Certificate Signing Request Files for SSL/TLS | MorphyHub',
+          description: 'Download free CSR sample Certificate Signing Request files for testing SSL/TLS certificate generation, PKI management, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing certificate authorities, OpenSSL, SSL certificate generation, PKI infrastructure, and security certificate management tools.',
+          keywords: 'CSR sample files, test CSR files, download CSR samples, free CSR test files, Certificate Signing Request samples, SSL certificate files, .csr test files, PKI certificate files, OpenSSL test files, SSL/TLS certificate samples, certificate authority test files'
+        },
+        schema: {
+          name: 'Free CSR Sample Files - Download Test Certificate Signing Request Files for SSL/TLS',
+          description: 'Download free CSR sample Certificate Signing Request files for testing SSL/TLS certificate generation, PKI management, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing certificate authorities, OpenSSL, SSL certificate generation, PKI infrastructure, and security certificate management tools.'
+        },
+        hero: {
+          title: 'CSR Sample Files',
+          description: 'Download free CSR sample Certificate Signing Request files for testing. Multiple file sizes available to test your SSL/TLS certificate generation and PKI management tools.'
+        },
+        about_description: 'These are test CSR (Certificate Signing Request) files in various sizes for testing purposes'
+      },
+      'customer-database-sql': {
+        meta: {
+          title: 'Free Customer Database SQL Sample Files Download - Test SQL Database Files | MorphyHub',
+          description: 'Download free Customer Database SQL sample files for testing SQL database operations, query execution, and database management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL parsers, database import tools, SQLite, MySQL, PostgreSQL, and database management systems.',
+          keywords: 'Customer Database SQL sample files, test SQL database files, download SQL samples, free SQL test files, database SQL files, .sql test files, SQL query files, database import samples, SQLite test files, MySQL samples, PostgreSQL test files'
+        },
+        schema: {
+          name: 'Free Customer Database SQL Sample Files - Download Test SQL Database Files',
+          description: 'Download free Customer Database SQL sample files for testing SQL database operations, query execution, and database management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing SQL parsers, database import tools, SQLite, MySQL, PostgreSQL, and database management systems.'
+        },
+        hero: {
+          title: 'Customer Database SQL Sample Files',
+          description: 'Download free Customer Database SQL sample files for testing. Multiple file sizes available to test your SQL parsers, database import tools, and database management systems.'
+        },
+        about_description: 'These are test Customer Database SQL files in various sizes for testing purposes'
+      },
+      dbf: {
+        meta: {
+          title: 'Free DBF Sample Files Download - Test dBASE Database Files for Data Management | MorphyHub',
+          description: 'Download free DBF sample dBASE database files for testing database operations, data import/export, and legacy database formats. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing dBASE compatibility, database converters, data migration tools, spreadsheet applications, and database management systems.',
+          keywords: 'DBF sample files, test DBF files, download DBF samples, free DBF test files, dBASE database files, .dbf test files, database format files, legacy database samples, dBASE compatibility test files, data import samples'
+        },
+        schema: {
+          name: 'Free DBF Sample Files - Download Test dBASE Database Files for Data Management',
+          description: 'Download free DBF sample dBASE database files for testing database operations, data import/export, and legacy database formats. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing dBASE compatibility, database converters, data migration tools, spreadsheet applications, and database management systems.'
+        },
+        hero: {
+          title: 'DBF Sample Files',
+          description: 'Download free DBF sample dBASE database files for testing. Multiple file sizes available to test your database converters, data migration tools, and database management systems.'
+        },
+        about_description: 'These are test DBF (dBASE database) files in various sizes for testing purposes'
+      },
+      dem: {
+        meta: {
+          title: 'Free DEM Sample Files Download - Test Digital Elevation Model Files for GIS & Mapping | MorphyHub',
+          description: 'Download free DEM sample Digital Elevation Model files for testing GIS applications, terrain mapping, and geospatial analysis tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS software, terrain visualization, elevation data processing, mapping applications, and geospatial analysis tools.',
+          keywords: 'DEM sample files, test DEM files, download DEM samples, free DEM test files, Digital Elevation Model files, .dem test files, GIS elevation files, terrain data samples, geospatial data files, mapping test files, elevation model samples'
+        },
+        schema: {
+          name: 'Free DEM Sample Files - Download Test Digital Elevation Model Files for GIS & Mapping',
+          description: 'Download free DEM sample Digital Elevation Model files for testing GIS applications, terrain mapping, and geospatial analysis tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GIS software, terrain visualization, elevation data processing, mapping applications, and geospatial analysis tools.'
+        },
+        hero: {
+          title: 'DEM Sample Files',
+          description: 'Download free DEM sample Digital Elevation Model files for testing. Multiple file sizes available to test your GIS software, terrain visualization, and geospatial analysis tools.'
+        },
+        about_description: 'These are test DEM (Digital Elevation Model) files in various sizes for testing purposes'
+      },
+      der: {
+        meta: {
+          title: 'Free DER Sample Files Download - Test Distinguished Encoding Rules Certificate Files | MorphyHub',
+          description: 'Download free DER sample Distinguished Encoding Rules certificate files for testing SSL/TLS certificates, PKI management, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing certificate parsing, OpenSSL, PKI infrastructure, SSL certificate validation, and security certificate management tools.',
+          keywords: 'DER sample files, test DER files, download DER samples, free DER test files, Distinguished Encoding Rules files, .der test files, certificate files, SSL certificate samples, PKI certificate files, OpenSSL test files, certificate parsing samples'
+        },
+        schema: {
+          name: 'Free DER Sample Files - Download Test Distinguished Encoding Rules Certificate Files',
+          description: 'Download free DER sample Distinguished Encoding Rules certificate files for testing SSL/TLS certificates, PKI management, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing certificate parsing, OpenSSL, PKI infrastructure, SSL certificate validation, and security certificate management tools.'
+        },
+        hero: {
+          title: 'DER Sample Files',
+          description: 'Download free DER sample Distinguished Encoding Rules certificate files for testing. Multiple file sizes available to test your certificate parsing, OpenSSL, and PKI management tools.'
+        },
+        about_description: 'These are test DER (Distinguished Encoding Rules) certificate files in various sizes for testing purposes'
+      },
+      dmp: {
+        meta: {
+          title: 'Free DMP Sample Files Download - Test Memory Dump Files for Debugging & Analysis | MorphyHub',
+          description: 'Download free DMP sample memory dump files for testing crash analysis, debugging tools, and system diagnostics. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing debuggers, crash analysis tools, memory analyzers, system diagnostic tools, and forensic analysis applications.',
+          keywords: 'DMP sample files, test DMP files, download DMP samples, free DMP test files, memory dump files, .dmp test files, crash dump files, debugging files, system dump samples, memory analysis files, crash analysis test files'
+        },
+        schema: {
+          name: 'Free DMP Sample Files - Download Test Memory Dump Files for Debugging & Analysis',
+          description: 'Download free DMP sample memory dump files for testing crash analysis, debugging tools, and system diagnostics. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing debuggers, crash analysis tools, memory analyzers, system diagnostic tools, and forensic analysis applications.'
+        },
+        hero: {
+          title: 'DMP Sample Files',
+          description: 'Download free DMP sample memory dump files for testing. Multiple file sizes available to test your crash analysis, debugging, and system diagnostic tools.'
+        },
+        about_description: 'These are test DMP (memory dump) files in various sizes for testing purposes'
+      },
+      'docker-compose-yml': {
+        meta: {
+          title: 'Free Docker Compose YML Sample Files Download - Test Docker Compose Configuration Files | MorphyHub',
+          description: 'Download free Docker Compose YML sample configuration files for testing Docker container orchestration, multi-container applications, and DevOps tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose, container orchestration, YAML parsing, DevOps automation, and containerized application deployment tools.',
+          keywords: 'Docker Compose YML sample files, test docker-compose files, download docker-compose samples, free docker-compose test files, Docker Compose YAML files, .yml test files, container orchestration files, DevOps configuration samples, Docker Compose test files, multi-container configuration samples'
+        },
+        schema: {
+          name: 'Free Docker Compose YML Sample Files - Download Test Docker Compose Configuration Files',
+          description: 'Download free Docker Compose YML sample configuration files for testing Docker container orchestration, multi-container applications, and DevOps tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker Compose, container orchestration, YAML parsing, DevOps automation, and containerized application deployment tools.'
+        },
+        hero: {
+          title: 'Docker Compose YML Sample Files',
+          description: 'Download free Docker Compose YML sample configuration files for testing. Multiple file sizes available to test your Docker Compose, container orchestration, and DevOps automation tools.'
+        },
+        about_description: 'These are test Docker Compose YML configuration files in various sizes for testing purposes'
+      },
+      dockerfile: {
+        meta: {
+          title: 'Free Dockerfile Sample Files Download - Test Docker Container Build Files | MorphyHub',
+          description: 'Download free Dockerfile sample Docker container build files for testing containerization, Docker builds, and DevOps tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker builds, container image creation, Dockerfile parsing, containerization tools, and DevOps automation platforms.',
+          keywords: 'Dockerfile sample files, test Dockerfile files, download Dockerfile samples, free Dockerfile test files, Docker container files, Dockerfile test files, container build files, Docker build samples, containerization test files, DevOps Docker samples'
+        },
+        schema: {
+          name: 'Free Dockerfile Sample Files - Download Test Docker Container Build Files',
+          description: 'Download free Dockerfile sample Docker container build files for testing containerization, Docker builds, and DevOps tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Docker builds, container image creation, Dockerfile parsing, containerization tools, and DevOps automation platforms.'
+        },
+        hero: {
+          title: 'Dockerfile Sample Files',
+          description: 'Download free Dockerfile sample Docker container build files for testing. Multiple file sizes available to test your Docker builds, container image creation, and containerization tools.'
+        },
+        about_description: 'These are test Dockerfile (Docker container build) files in various sizes for testing purposes'
+      },
+      editorconfig: {
+        meta: {
+          title: 'Free EditorConfig Sample Files Download - Test Editor Configuration Files | MorphyHub',
+          description: 'Download free EditorConfig sample editor configuration files for testing code editor settings, formatting consistency, and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EditorConfig parsers, code editor plugins, formatting tools, IDE configuration, and development environment setup tools.',
+          keywords: 'EditorConfig sample files, test EditorConfig files, download EditorConfig samples, free EditorConfig test files, editor configuration files, .editorconfig test files, code editor settings files, IDE configuration samples, formatting configuration files, editor settings test files'
+        },
+        schema: {
+          name: 'Free EditorConfig Sample Files - Download Test Editor Configuration Files',
+          description: 'Download free EditorConfig sample editor configuration files for testing code editor settings, formatting consistency, and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EditorConfig parsers, code editor plugins, formatting tools, IDE configuration, and development environment setup tools.'
+        },
+        hero: {
+          title: 'EditorConfig Sample Files',
+          description: 'Download free EditorConfig sample editor configuration files for testing. Multiple file sizes available to test your EditorConfig parsers, code editor plugins, and formatting tools.'
+        },
+        about_description: 'These are test EditorConfig (editor configuration) files in various sizes for testing purposes'
+      },
+      ini: {
+        meta: {
+          title: 'Free INI Sample Files Download - Test Configuration INI Files for Applications | MorphyHub',
+          description: 'Download free INI sample configuration files for testing application settings, INI file parsing, and configuration management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI parsers, application configuration, settings management, Windows INI files, and software configuration utilities.',
+          keywords: 'INI sample files, test INI files, download INI samples, free INI test files, configuration INI files, .ini test files, application settings files, INI config samples, Windows INI files, configuration file samples, INI parsing test files'
+        },
+        schema: {
+          name: 'Free INI Sample Files - Download Test Configuration INI Files for Applications',
+          description: 'Download free INI sample configuration files for testing application settings, INI file parsing, and configuration management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI parsers, application configuration, settings management, Windows INI files, and software configuration utilities.'
+        },
+        hero: {
+          title: 'INI Sample Files',
+          description: 'Download free INI sample configuration files for testing. Multiple file sizes available to test your INI parsers, application configuration, and settings management tools.'
+        },
+        about_description: 'These are test INI (configuration) files in various sizes for testing purposes'
+      },
+      intelhex: {
+        meta: {
+          title: 'Free IntelHex Sample Files Download - Test Intel Hexadecimal Files for Firmware Development | MorphyHub',
+          description: 'Download free IntelHex sample Intel hexadecimal files for testing firmware programming, embedded systems development, and microcontroller tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing IntelHex parsers, firmware loaders, microcontroller programming, embedded development tools, and hex file processing applications.',
+          keywords: 'IntelHex sample files, test IntelHex files, download IntelHex samples, free IntelHex test files, Intel hexadecimal files, .intelhex test files, firmware hex files, embedded hex files, microcontroller hex files, IntelHex parser test files, firmware programming samples'
+        },
+        schema: {
+          name: 'Free IntelHex Sample Files - Download Test Intel Hexadecimal Files for Firmware Development',
+          description: 'Download free IntelHex sample Intel hexadecimal files for testing firmware programming, embedded systems development, and microcontroller tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing IntelHex parsers, firmware loaders, microcontroller programming, embedded development tools, and hex file processing applications.'
+        },
+        hero: {
+          title: 'IntelHex Sample Files',
+          description: 'Download free IntelHex sample Intel hexadecimal files for testing. Multiple file sizes available to test your IntelHex parsers, firmware loaders, and embedded development tools.'
+        },
+        about_description: 'These are test IntelHex (Intel hexadecimal) files in various sizes for testing purposes'
+      },
+      ipynb: {
+        meta: {
+          title: 'Free IPYNB Sample Files Download - Test Jupyter Notebook Files for Data Science | MorphyHub',
+          description: 'Download free IPYNB sample Jupyter Notebook files for testing data science workflows, Python execution, and notebook analysis tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Jupyter Notebook, Python data science tools, notebook viewers, data analysis applications, and scientific computing platforms.',
+          keywords: 'IPYNB sample files, test IPYNB files, download IPYNB samples, free IPYNB test files, Jupyter Notebook files, .ipynb test files, Python notebook files, data science notebook samples, Jupyter test files, notebook analysis files, data science workflow samples'
+        },
+        schema: {
+          name: 'Free IPYNB Sample Files - Download Test Jupyter Notebook Files for Data Science',
+          description: 'Download free IPYNB sample Jupyter Notebook files for testing data science workflows, Python execution, and notebook analysis tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Jupyter Notebook, Python data science tools, notebook viewers, data analysis applications, and scientific computing platforms.'
+        },
+        hero: {
+          title: 'IPYNB Sample Files',
+          description: 'Download free IPYNB sample Jupyter Notebook files for testing. Multiple file sizes available to test your Jupyter Notebook, Python data science tools, and notebook analysis applications.'
+        },
+        about_description: 'These are test IPYNB (Jupyter Notebook) files in various sizes for testing purposes'
+      },
+      java: {
+        meta: {
+          title: 'Free Java Sample Files Download - Test Java Source Code Files for Development | MorphyHub',
+          description: 'Download free Java sample Java source code files for testing Java compilation, JVM applications, and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java compilers, JVM, IDE support (Eclipse, IntelliJ), Java build tools (Maven, Gradle), and Java development environments.',
+          keywords: 'Java sample files, test Java files, download Java samples, free Java test files, Java source code files, .java test files, Java programming files, JVM test files, Java compilation samples, Java IDE test files, Java development samples'
+        },
+        schema: {
+          name: 'Free Java Sample Files - Download Test Java Source Code Files for Development',
+          description: 'Download free Java sample Java source code files for testing Java compilation, JVM applications, and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java compilers, JVM, IDE support (Eclipse, IntelliJ), Java build tools (Maven, Gradle), and Java development environments.'
+        },
+        hero: {
+          title: 'Java Sample Files',
+          description: 'Download free Java sample Java source code files for testing. Multiple file sizes available to test your Java compilers, JVM, and Java development tools.'
+        },
+        about_description: 'These are test Java source code files in various sizes for testing purposes'
+      },
+      jks: {
+        meta: {
+          title: 'Free JKS Sample Files Download - Test Java KeyStore Files for SSL/TLS Security | MorphyHub',
+          description: 'Download free JKS sample Java KeyStore files for testing SSL/TLS certificate storage, Java security, and PKI management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java KeyStore management, JKS parsing, SSL certificate storage, Java security tools, and PKI infrastructure.',
+          keywords: 'JKS sample files, test JKS files, download JKS samples, free JKS test files, Java KeyStore files, .jks test files, SSL certificate files, Java security files, keystore test files, PKI certificate samples, Java KeyStore management test files'
+        },
+        schema: {
+          name: 'Free JKS Sample Files - Download Test Java KeyStore Files for SSL/TLS Security',
+          description: 'Download free JKS sample Java KeyStore files for testing SSL/TLS certificate storage, Java security, and PKI management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Java KeyStore management, JKS parsing, SSL certificate storage, Java security tools, and PKI infrastructure.'
+        },
+        hero: {
+          title: 'JKS Sample Files',
+          description: 'Download free JKS sample Java KeyStore files for testing. Multiple file sizes available to test your Java KeyStore management, JKS parsing, and SSL certificate storage tools.'
+        },
+        about_description: 'These are test JKS (Java KeyStore) files in various sizes for testing purposes'
+      },
+      json: {
+        meta: {
+          title: 'Free JSON Sample Files Download - Test JSON Data Files for Web Development | MorphyHub',
+          description: 'Download free JSON sample JSON data files for testing JSON parsing, API integration, and web development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsers, API responses, data exchange formats, web applications, and JSON validation tools.',
+          keywords: 'JSON sample files, test JSON files, download JSON samples, free JSON test files, JSON data files, .json test files, API JSON files, JSON parser test files, data exchange samples, web JSON files, JSON validation test files'
+        },
+        schema: {
+          name: 'Free JSON Sample Files - Download Test JSON Data Files for Web Development',
+          description: 'Download free JSON sample JSON data files for testing JSON parsing, API integration, and web development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSON parsers, API responses, data exchange formats, web applications, and JSON validation tools.'
+        },
+        hero: {
+          title: 'JSON Sample Files',
+          description: 'Download free JSON sample JSON data files for testing. Multiple file sizes available to test your JSON parsers, API integration, and web development tools.'
+        },
+        about_description: 'These are test JSON (JavaScript Object Notation) files in various sizes for testing purposes'
+      },
+      jsonl: {
+        meta: {
+          title: 'Free JSONL Sample Files Download - Test JSON Lines Files for Data Processing | MorphyHub',
+          description: 'Download free JSONL sample JSON Lines files for testing data processing, streaming JSON, and big data tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSONL parsers, data streaming applications, ETL tools, big data processing, and log file analysis tools.',
+          keywords: 'JSONL sample files, test JSONL files, download JSONL samples, free JSONL test files, JSON Lines files, .jsonl test files, streaming JSON files, data processing samples, ETL JSON files, big data JSON samples, log analysis JSON files'
+        },
+        schema: {
+          name: 'Free JSONL Sample Files - Download Test JSON Lines Files for Data Processing',
+          description: 'Download free JSONL sample JSON Lines files for testing data processing, streaming JSON, and big data tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JSONL parsers, data streaming applications, ETL tools, big data processing, and log file analysis tools.'
+        },
+        hero: {
+          title: 'JSONL Sample Files',
+          description: 'Download free JSONL sample JSON Lines files for testing. Multiple file sizes available to test your JSONL parsers, data streaming applications, and big data processing tools.'
+        },
+        about_description: 'These are test JSONL (JSON Lines) files in various sizes for testing purposes'
+      },
+      js: {
+        meta: {
+          title: 'Free JS Sample Files Download - Test JavaScript Source Code Files for Web Development | MorphyHub',
+          description: 'Download free JS sample JavaScript source code files for testing JavaScript execution, web development, and front-end tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JavaScript engines, Node.js, web browsers, JavaScript minifiers, code analysis tools, and front-end development frameworks.',
+          keywords: 'JS sample files, test JS files, download JS samples, free JS test files, JavaScript source code files, .js test files, JavaScript programming files, Node.js test files, web JavaScript files, JS minifier test files, front-end development samples'
+        },
+        schema: {
+          name: 'Free JS Sample Files - Download Test JavaScript Source Code Files for Web Development',
+          description: 'Download free JS sample JavaScript source code files for testing JavaScript execution, web development, and front-end tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JavaScript engines, Node.js, web browsers, JavaScript minifiers, code analysis tools, and front-end development frameworks.'
+        },
+        hero: {
+          title: 'JS Sample Files',
+          description: 'Download free JS sample JavaScript source code files for testing. Multiple file sizes available to test your JavaScript engines, Node.js, and web development tools.'
+        },
+        about_description: 'These are test JS (JavaScript) source code files in various sizes for testing purposes'
+      },
+      jsx: {
+        meta: {
+          title: 'Free JSX Sample Files Download - Test React JSX Files for Front-End Development | MorphyHub',
+          description: 'Download free JSX sample React JSX files for testing React development, JSX compilation, and front-end frameworks. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing React, JSX transpilers (Babel), front-end build tools, React development environments, and modern JavaScript frameworks.',
+          keywords: 'JSX sample files, test JSX files, download JSX samples, free JSX test files, React JSX files, .jsx test files, React component files, JSX transpiler test files, front-end JSX files, React development samples, Babel JSX test files'
+        },
+        schema: {
+          name: 'Free JSX Sample Files - Download Test React JSX Files for Front-End Development',
+          description: 'Download free JSX sample React JSX files for testing React development, JSX compilation, and front-end frameworks. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing React, JSX transpilers (Babel), front-end build tools, React development environments, and modern JavaScript frameworks.'
+        },
+        hero: {
+          title: 'JSX Sample Files',
+          description: 'Download free JSX sample React JSX files for testing. Multiple file sizes available to test your React, JSX transpilers, and front-end development tools.'
+        },
+        about_description: 'These are test JSX (React JSX) files in various sizes for testing purposes'
+      },
+      jwt: {
+        meta: {
+          title: 'Free JWT Sample Files Download - Test JSON Web Token Files for API Security | MorphyHub',
+          description: 'Download free JWT sample JSON Web Token files for testing API authentication, JWT token parsing, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JWT parsers, API authentication, token validation, OAuth 2.0, and security testing tools.',
+          keywords: 'JWT sample files, test JWT files, download JWT samples, free JWT test files, JSON Web Token files, .jwt test files, authentication token files, API security files, JWT parser test files, OAuth token samples, security testing files'
+        },
+        schema: {
+          name: 'Free JWT Sample Files - Download Test JSON Web Token Files for API Security',
+          description: 'Download free JWT sample JSON Web Token files for testing API authentication, JWT token parsing, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JWT parsers, API authentication, token validation, OAuth 2.0, and security testing tools.'
+        },
+        hero: {
+          title: 'JWT Sample Files',
+          description: 'Download free JWT sample JSON Web Token files for testing. Multiple file sizes available to test your JWT parsers, API authentication, and security tools.'
+        },
+        about_description: 'These are test JWT (JSON Web Token) files in various sizes for testing purposes'
+      },
+      key: {
+        meta: {
+          title: 'Free KEY Sample Files Download - Test Private Key Files for SSL/TLS Security | MorphyHub',
+          description: 'Download free KEY sample private key files for testing SSL/TLS certificates, cryptographic operations, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing private key parsing, OpenSSL, SSL certificate generation, cryptographic libraries, and security certificate management tools.',
+          keywords: 'KEY sample files, test KEY files, download KEY samples, free KEY test files, private key files, .key test files, SSL key files, cryptographic key files, OpenSSL key files, security key samples, certificate key test files'
+        },
+        schema: {
+          name: 'Free KEY Sample Files - Download Test Private Key Files for SSL/TLS Security',
+          description: 'Download free KEY sample private key files for testing SSL/TLS certificates, cryptographic operations, and security tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing private key parsing, OpenSSL, SSL certificate generation, cryptographic libraries, and security certificate management tools.'
+        },
+        hero: {
+          title: 'KEY Sample Files',
+          description: 'Download free KEY sample private key files for testing. Multiple file sizes available to test your private key parsing, OpenSSL, and security certificate management tools.'
+        },
+        about_description: 'These are test KEY (private key) files in various sizes for testing purposes'
+      },
+      kml: {
+        meta: {
+          title: 'Free KML Sample Files Download - Test Keyhole Markup Language Files for GIS & Mapping | MorphyHub',
+          description: 'Download free KML sample Keyhole Markup Language geographic data files for testing GIS applications, map visualization, and geospatial tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Google Earth, GIS software, map rendering, geographic data processing, and geospatial analysis tools.',
+          keywords: 'KML sample files, test KML files, download KML samples, free KML test files, Keyhole Markup Language files, .kml test files, geographic data files, map data samples, GIS KML files, Google Earth test files, geospatial data samples'
+        },
+        schema: {
+          name: 'Free KML Sample Files - Download Test Keyhole Markup Language Files for GIS & Mapping',
+          description: 'Download free KML sample Keyhole Markup Language geographic data files for testing GIS applications, map visualization, and geospatial tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Google Earth, GIS software, map rendering, geographic data processing, and geospatial analysis tools.'
+        },
+        hero: {
+          title: 'KML Sample Files',
+          description: 'Download free KML sample Keyhole Markup Language geographic data files for testing. Multiple file sizes available to test your GIS software, map visualization, and geospatial analysis tools.'
+        },
+        about_description: 'These are test KML (Keyhole Markup Language) geographic data files in various sizes for testing purposes'
+      },
+      kt: {
+        meta: {
+          title: 'Free KT Sample Files Download - Test Kotlin Source Code Files for Android Development | MorphyHub',
+          description: 'Download free KT sample Kotlin source code files for testing Kotlin compilation, Android development, and JVM applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Kotlin compilers, Android Studio, Kotlin/JVM, IDE support, and Kotlin development environments.',
+          keywords: 'KT sample files, test KT files, download KT samples, free KT test files, Kotlin source code files, .kt test files, Kotlin programming files, Android Kotlin files, Kotlin compiler test files, JVM Kotlin samples, Kotlin development test files'
+        },
+        schema: {
+          name: 'Free KT Sample Files - Download Test Kotlin Source Code Files for Android Development',
+          description: 'Download free KT sample Kotlin source code files for testing Kotlin compilation, Android development, and JVM applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Kotlin compilers, Android Studio, Kotlin/JVM, IDE support, and Kotlin development environments.'
+        },
+        hero: {
+          title: 'KT Sample Files',
+          description: 'Download free KT sample Kotlin source code files for testing. Multiple file sizes available to test your Kotlin compilers, Android Studio, and Kotlin development tools.'
+        },
+        about_description: 'These are test KT (Kotlin) source code files in various sizes for testing purposes'
+      },
+      log: {
+        meta: {
+          title: 'Free LOG Sample Files Download - Test Log Files for Debugging & System Analysis | MorphyHub',
+          description: 'Download free LOG sample log files for testing log parsing, system analysis, and debugging tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing log analyzers, system monitoring tools, debugging applications, log aggregation systems, and system diagnostic tools.',
+          keywords: 'LOG sample files, test LOG files, download LOG samples, free LOG test files, log files, .log test files, system log files, application log samples, log parser test files, debugging log files, system analysis log samples'
+        },
+        schema: {
+          name: 'Free LOG Sample Files - Download Test Log Files for Debugging & System Analysis',
+          description: 'Download free LOG sample log files for testing log parsing, system analysis, and debugging tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing log analyzers, system monitoring tools, debugging applications, log aggregation systems, and system diagnostic tools.'
+        },
+        hero: {
+          title: 'LOG Sample Files',
+          description: 'Download free LOG sample log files for testing. Multiple file sizes available to test your log analyzers, system monitoring, and debugging tools.'
+        },
+        about_description: 'These are test LOG files in various sizes for testing purposes'
+      },
+      lua: {
+        meta: {
+          title: 'Free LUA Sample Files Download - Test Lua Script Files for Game Development & Automation | MorphyHub',
+          description: 'Download free LUA sample Lua script files for testing Lua execution, game development, and automation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Lua interpreters, game engines, scripting environments, automation tools, and embedded Lua applications.',
+          keywords: 'LUA sample files, test LUA files, download LUA samples, free LUA test files, Lua script files, .lua test files, Lua programming files, game scripting files, Lua interpreter test files, automation script samples, embedded Lua test files'
+        },
+        schema: {
+          name: 'Free LUA Sample Files - Download Test Lua Script Files for Game Development & Automation',
+          description: 'Download free LUA sample Lua script files for testing Lua execution, game development, and automation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Lua interpreters, game engines, scripting environments, automation tools, and embedded Lua applications.'
+        },
+        hero: {
+          title: 'LUA Sample Files',
+          description: 'Download free LUA sample Lua script files for testing. Multiple file sizes available to test your Lua interpreters, game engines, and automation tools.'
+        },
+        about_description: 'These are test LUA (Lua script) files in various sizes for testing purposes'
+      },
+      m3u: {
+        meta: {
+          title: 'Free M3U Sample Files Download - Test M3U Playlist Files for Media Players | MorphyHub',
+          description: 'Download free M3U sample M3U playlist files for testing media players, playlist parsing, and audio/video streaming tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing media players, playlist managers, streaming applications, audio players, and video player software.',
+          keywords: 'M3U sample files, test M3U files, download M3U samples, free M3U test files, M3U playlist files, .m3u test files, media playlist files, audio playlist samples, video playlist files, media player test files, streaming playlist samples'
+        },
+        schema: {
+          name: 'Free M3U Sample Files - Download Test M3U Playlist Files for Media Players',
+          description: 'Download free M3U sample M3U playlist files for testing media players, playlist parsing, and audio/video streaming tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing media players, playlist managers, streaming applications, audio players, and video player software.'
+        },
+        hero: {
+          title: 'M3U Sample Files',
+          description: 'Download free M3U sample M3U playlist files for testing. Multiple file sizes available to test your media players, playlist managers, and streaming applications.'
+        },
+        about_description: 'These are test M3U (playlist) files in various sizes for testing purposes'
+      },
+      m3u8: {
+        meta: {
+          title: 'Free M3U8 Sample Files Download - Test M3U8 HLS Playlist Files for Video Streaming | MorphyHub',
+          description: 'Download free M3U8 sample M3U8 HLS (HTTP Live Streaming) playlist files for testing video streaming, HLS players, and media delivery tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HLS players, video streaming platforms, adaptive bitrate streaming, media servers, and video delivery systems.',
+          keywords: 'M3U8 sample files, test M3U8 files, download M3U8 samples, free M3U8 test files, M3U8 HLS playlist files, .m3u8 test files, HTTP Live Streaming files, video streaming playlist samples, HLS player test files, adaptive streaming samples, media server playlist files'
+        },
+        schema: {
+          name: 'Free M3U8 Sample Files - Download Test M3U8 HLS Playlist Files for Video Streaming',
+          description: 'Download free M3U8 sample M3U8 HLS (HTTP Live Streaming) playlist files for testing video streaming, HLS players, and media delivery tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HLS players, video streaming platforms, adaptive bitrate streaming, media servers, and video delivery systems.'
+        },
+        hero: {
+          title: 'M3U8 Sample Files',
+          description: 'Download free M3U8 sample M3U8 HLS playlist files for testing. Multiple file sizes available to test your HLS players, video streaming platforms, and media delivery systems.'
+        },
+        about_description: 'These are test M3U8 (HLS playlist) files in various sizes for testing purposes'
+      },
+      makefile: {
+        meta: {
+          title: 'Free Makefile Sample Files Download - Test Makefile Build Configuration Files | MorphyHub',
+          description: 'Download free Makefile sample build configuration files for testing build automation, Make build system, and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Make build system, build automation tools, C/C++ compilation, build scripts, and development build environments.',
+          keywords: 'Makefile sample files, test Makefile files, download Makefile samples, free Makefile test files, Makefile build files, Makefile test files, build configuration files, Make build system samples, C/C++ build files, build automation test files, compilation Makefile samples'
+        },
+        schema: {
+          name: 'Free Makefile Sample Files - Download Test Makefile Build Configuration Files',
+          description: 'Download free Makefile sample build configuration files for testing build automation, Make build system, and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Make build system, build automation tools, C/C++ compilation, build scripts, and development build environments.'
+        },
+        hero: {
+          title: 'Makefile Sample Files',
+          description: 'Download free Makefile sample build configuration files for testing. Multiple file sizes available to test your Make build system, build automation tools, and development build environments.'
+        },
+        about_description: 'These are test Makefile (build configuration) files in various sizes for testing purposes'
+      },
+      mbtiles: {
+        meta: {
+          title: 'Free MBTiles Sample Files Download - Test MBTiles Map Tile Database Files | MorphyHub',
+          description: 'Download free MBTiles sample map tile database files for testing map rendering, GIS applications, and mapping tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing map tile servers, GIS software, map rendering engines, mobile mapping applications, and offline map tools.',
+          keywords: 'MBTiles sample files, test MBTiles files, download MBTiles samples, free MBTiles test files, MBTiles map tile files, .mbtiles test files, map database files, GIS tile samples, map rendering files, mobile map test files, offline map tile samples'
+        },
+        schema: {
+          name: 'Free MBTiles Sample Files - Download Test MBTiles Map Tile Database Files',
+          description: 'Download free MBTiles sample map tile database files for testing map rendering, GIS applications, and mapping tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing map tile servers, GIS software, map rendering engines, mobile mapping applications, and offline map tools.'
+        },
+        hero: {
+          title: 'MBTiles Sample Files',
+          description: 'Download free MBTiles sample map tile database files for testing. Multiple file sizes available to test your map tile servers, GIS software, and map rendering engines.'
+        },
+        about_description: 'These are test MBTiles (map tile database) files in various sizes for testing purposes'
+      },
+      md: {
+        meta: {
+          title: 'Free MD Sample Files Download - Test Markdown Documentation Files | MorphyHub',
+          description: 'Download free MD sample Markdown documentation files for testing Markdown parsing, documentation tools, and content management systems. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Markdown parsers, documentation generators, static site generators, GitHub Markdown, and content management platforms.',
+          keywords: 'MD sample files, test MD files, download MD samples, free MD test files, Markdown files, .md test files, documentation Markdown files, Markdown parser test files, GitHub Markdown samples, static site generator files, documentation generator test files'
+        },
+        schema: {
+          name: 'Free MD Sample Files - Download Test Markdown Documentation Files',
+          description: 'Download free MD sample Markdown documentation files for testing Markdown parsing, documentation tools, and content management systems. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Markdown parsers, documentation generators, static site generators, GitHub Markdown, and content management platforms.'
+        },
+        hero: {
+          title: 'MD Sample Files',
+          description: 'Download free MD sample Markdown documentation files for testing. Multiple file sizes available to test your Markdown parsers, documentation generators, and content management systems.'
+        },
+        about_description: 'These are test MD (Markdown) files in various sizes for testing purposes'
+      },
+      mdx: {
+        meta: {
+          title: 'Free MDX Sample Files Download - Test MDX React Markdown Files for Documentation | MorphyHub',
+          description: 'Download free MDX sample MDX (Markdown + JSX) files for testing React documentation, static site generators, and content management systems. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MDX parsers, React documentation tools, Next.js, Gatsby, static site generators, and modern documentation platforms.',
+          keywords: 'MDX sample files, test MDX files, download MDX samples, free MDX test files, MDX React Markdown files, .mdx test files, React documentation files, MDX parser test files, Next.js MDX samples, Gatsby MDX files, static site generator MDX test files'
+        },
+        schema: {
+          name: 'Free MDX Sample Files - Download Test MDX React Markdown Files for Documentation',
+          description: 'Download free MDX sample MDX (Markdown + JSX) files for testing React documentation, static site generators, and content management systems. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MDX parsers, React documentation tools, Next.js, Gatsby, static site generators, and modern documentation platforms.'
+        },
+        hero: {
+          title: 'MDX Sample Files',
+          description: 'Download free MDX sample MDX (Markdown + JSX) files for testing. Multiple file sizes available to test your MDX parsers, React documentation tools, and static site generators.'
+        },
+        about_description: 'These are test MDX (Markdown + JSX) files in various sizes for testing purposes'
       }
     }
   }

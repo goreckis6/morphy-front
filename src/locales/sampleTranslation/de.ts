@@ -479,6 +479,534 @@ export const de: SamplePageTranslations = {
           description: 'Laden Sie kostenlose HPP C++ Header-Datei Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C++-Code-Kompilierungstools, Header-Datei-Verarbeitungssoftware und C++-Entwicklungsanwendungen zu testen.'
         },
         about_description: 'Dies sind HPP (C++ header) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      hex: {
+        meta: {
+          title: 'Kostenlose HEX-Beispieldateien herunterladen - Test-Hexadezimaldateien für Firmware & Embedded-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose HEX-Beispieldateien im Hexadezimalformat herunter, um Firmware-Programmierung, Embedded-Systementwicklung und Binärdatenanalyse zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Hex-Editoren, Firmware-Ladeprogrammen, Mikrocontroller-Programmierung und Embedded-Entwicklungstools.',
+          keywords: 'HEX-Beispieldateien, HEX-Testdateien, HEX-Beispiele herunterladen, kostenlose HEX-Testdateien, Hexadezimaldateien, Firmware-Hex-Dateien, .hex Testdateien, Embedded-Hex-Dateien, Mikrocontroller-Hex-Dateien, Hex-Editor-Testdateien, Firmware-Programmierung Beispiele, Binär-Hex-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose HEX-Beispieldateien - Test-Hexadezimaldateien für Firmware & Embedded-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose HEX-Beispieldateien im Hexadezimalformat herunter, um Firmware-Programmierung, Embedded-Systementwicklung und Binärdatenanalyse zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Hex-Editoren, Firmware-Ladeprogrammen, Mikrocontroller-Programmierung und Embedded-Entwicklungstools.'
+        },
+        hero: {
+          title: 'HEX-Beispieldateien',
+          description: 'Laden Sie kostenlose HEX-Beispieldateien im Hexadezimalformat zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Hex-Editoren, Firmware-Programmierungs-Tools und Embedded-Entwicklungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind HEX (Hexadezimal) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      cs: {
+        meta: {
+          title: 'Kostenlose CS-Beispieldateien herunterladen - Test-C#-Quellcodedateien für .NET-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose CS-Beispieldateien mit C#-Quellcode herunter, um C#-Kompilierung, .NET-Entwicklung und Visual Studio-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C#-Compilern, .NET Framework, Visual Studio IDE, Code-Analyse-Tools und C#-Entwicklungsumgebungen.',
+          keywords: 'CS-Beispieldateien, CS-Testdateien, CS-Beispiele herunterladen, kostenlose CS-Testdateien, C#-Quellcode Beispiele, .NET-Code-Dateien, .cs Testdateien, C#-Programmierungsdateien, Visual Studio Testdateien, .NET-Entwicklung Beispiele, C#-Kompilierung Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose CS-Beispieldateien - Test-C#-Quellcodedateien für .NET-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose CS-Beispieldateien mit C#-Quellcode herunter, um C#-Kompilierung, .NET-Entwicklung und Visual Studio-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C#-Compilern, .NET Framework, Visual Studio IDE, Code-Analyse-Tools und C#-Entwicklungsumgebungen.'
+        },
+        hero: {
+          title: 'CS-Beispieldateien',
+          description: 'Laden Sie kostenlose CS-Beispieldateien mit C#-Quellcode zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre C#-Kompilierung, .NET-Entwicklung und Visual Studio-Tools zu testen.'
+        },
+        about_description: 'Dies sind CS (C#) Quellcodedateien in verschiedenen Größen für Testzwecke'
+      },
+      css: {
+        meta: {
+          title: 'Kostenlose CSS-Beispieldateien herunterladen - Test-Cascading Style Sheets für Webentwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose CSS-Beispieldateien mit Cascading Style Sheets herunter, um Web-Styling, CSS-Parsing und Front-End-Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CSS-Validatoren, Preprozessoren (SASS, LESS), CSS-Minifizierern, Webbrowsern und Front-End-Entwicklungsframeworks.',
+          keywords: 'CSS-Beispieldateien, CSS-Testdateien, CSS-Beispiele herunterladen, kostenlose CSS-Testdateien, Cascading Style Sheets Beispiele, CSS-Stylesheet-Dateien, .css Testdateien, Web-Styling-Dateien, CSS-Parser-Testdateien, Front-End-Entwicklung Beispiele, CSS-Framework-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose CSS-Beispieldateien - Test-Cascading Style Sheets für Webentwicklung herunterladen',
+          description: 'Laden Sie kostenlose CSS-Beispieldateien mit Cascading Style Sheets herunter, um Web-Styling, CSS-Parsing und Front-End-Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CSS-Validatoren, Preprozessoren (SASS, LESS), CSS-Minifizierern, Webbrowsern und Front-End-Entwicklungsframeworks.'
+        },
+        hero: {
+          title: 'CSS-Beispieldateien',
+          description: 'Laden Sie kostenlose CSS-Beispieldateien mit Cascading Style Sheets zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre CSS-Validatoren, Preprozessoren und Webentwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind CSS (Cascading Style Sheets) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      csr: {
+        meta: {
+          title: 'Kostenlose CSR-Beispieldateien herunterladen - Test-Zertifikatsignaturanfrage-Dateien für SSL/TLS | MorphyHub',
+          description: 'Laden Sie kostenlose CSR-Beispieldateien mit Zertifikatsignaturanfragen herunter, um SSL/TLS-Zertifikatsgenerierung, PKI-Verwaltung und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Zertifizierungsstellen, OpenSSL, SSL-Zertifikatsgenerierung, PKI-Infrastruktur und Sicherheitszertifikatsverwaltungstools.',
+          keywords: 'CSR-Beispieldateien, CSR-Testdateien, CSR-Beispiele herunterladen, kostenlose CSR-Testdateien, Zertifikatsignaturanfrage Beispiele, SSL-Zertifikatsdateien, .csr Testdateien, PKI-Zertifikatsdateien, OpenSSL Testdateien, SSL/TLS-Zertifikat Beispiele, Zertifizierungsstellen-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose CSR-Beispieldateien - Test-Zertifikatsignaturanfrage-Dateien für SSL/TLS herunterladen',
+          description: 'Laden Sie kostenlose CSR-Beispieldateien mit Zertifikatsignaturanfragen herunter, um SSL/TLS-Zertifikatsgenerierung, PKI-Verwaltung und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Zertifizierungsstellen, OpenSSL, SSL-Zertifikatsgenerierung, PKI-Infrastruktur und Sicherheitszertifikatsverwaltungstools.'
+        },
+        hero: {
+          title: 'CSR-Beispieldateien',
+          description: 'Laden Sie kostenlose CSR-Beispieldateien mit Zertifikatsignaturanfragen zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre SSL/TLS-Zertifikatsgenerierung und PKI-Verwaltungstools zu testen.'
+        },
+        about_description: 'Dies sind CSR (Certificate Signing Request) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      'customer-database-sql': {
+        meta: {
+          title: 'Kostenlose Customer Database SQL-Beispieldateien herunterladen - Test-SQL-Datenbankdateien | MorphyHub',
+          description: 'Laden Sie kostenlose Customer Database SQL-Beispieldateien herunter, um SQL-Datenbankoperationen, Abfrageausführung und Datenbankverwaltungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SQL-Parsern, Datenbankimport-Tools, SQLite, MySQL, PostgreSQL und Datenbankverwaltungssystemen.',
+          keywords: 'Customer Database SQL-Beispieldateien, SQL-Datenbank-Testdateien, SQL-Beispiele herunterladen, kostenlose SQL-Testdateien, SQL-Datenbankdateien, .sql Testdateien, SQL-Abfragedateien, Datenbankimport Beispiele, SQLite Testdateien, MySQL Beispiele, PostgreSQL Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose Customer Database SQL-Beispieldateien - Test-SQL-Datenbankdateien herunterladen',
+          description: 'Laden Sie kostenlose Customer Database SQL-Beispieldateien herunter, um SQL-Datenbankoperationen, Abfrageausführung und Datenbankverwaltungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von SQL-Parsern, Datenbankimport-Tools, SQLite, MySQL, PostgreSQL und Datenbankverwaltungssystemen.'
+        },
+        hero: {
+          title: 'Customer Database SQL-Beispieldateien',
+          description: 'Laden Sie kostenlose Customer Database SQL-Beispieldateien zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre SQL-Parser, Datenbankimport-Tools und Datenbankverwaltungssysteme zu testen.'
+        },
+        about_description: 'Dies sind Customer Database SQL-Dateien in verschiedenen Größen für Testzwecke'
+      },
+      dbf: {
+        meta: {
+          title: 'Kostenlose DBF-Beispieldateien herunterladen - Test-dBASE-Datenbankdateien für Datenverwaltung | MorphyHub',
+          description: 'Laden Sie kostenlose DBF-Beispieldateien mit dBASE-Datenbanken herunter, um Datenbankoperationen, Datenimport/export und Legacy-Datenbankformate zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von dBASE-Kompatibilität, Datenbankkonvertern, Datenmigrations-Tools, Tabellenkalkulationsanwendungen und Datenbankverwaltungssystemen.',
+          keywords: 'DBF-Beispieldateien, DBF-Testdateien, DBF-Beispiele herunterladen, kostenlose DBF-Testdateien, dBASE-Datenbankdateien, .dbf Testdateien, Datenbankformat-Dateien, Legacy-Datenbank Beispiele, dBASE-Kompatibilität Testdateien, Datenimport Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose DBF-Beispieldateien - Test-dBASE-Datenbankdateien für Datenverwaltung herunterladen',
+          description: 'Laden Sie kostenlose DBF-Beispieldateien mit dBASE-Datenbanken herunter, um Datenbankoperationen, Datenimport/export und Legacy-Datenbankformate zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von dBASE-Kompatibilität, Datenbankkonvertern, Datenmigrations-Tools, Tabellenkalkulationsanwendungen und Datenbankverwaltungssystemen.'
+        },
+        hero: {
+          title: 'DBF-Beispieldateien',
+          description: 'Laden Sie kostenlose DBF-Beispieldateien mit dBASE-Datenbanken zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Datenbankkonverter, Datenmigrations-Tools und Datenbankverwaltungssysteme zu testen.'
+        },
+        about_description: 'Dies sind DBF (dBASE-Datenbank) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      dem: {
+        meta: {
+          title: 'Kostenlose DEM-Beispieldateien herunterladen - Test-Digital Elevation Model-Dateien für GIS & Kartierung | MorphyHub',
+          description: 'Laden Sie kostenlose DEM-Beispieldateien mit Digital Elevation Models herunter, um GIS-Anwendungen, Geländekartierung und Geodatenanalyse-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIS-Software, Geländevisualisierung, Höhendatenverarbeitung, Kartierungsanwendungen und Geodatenanalyse-Tools.',
+          keywords: 'DEM-Beispieldateien, DEM-Testdateien, DEM-Beispiele herunterladen, kostenlose DEM-Testdateien, Digital Elevation Model Dateien, .dem Testdateien, GIS-Höhendateien, Geländedaten Beispiele, Geodaten-Dateien, Kartierungs-Testdateien, Höhenmodell Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose DEM-Beispieldateien - Test-Digital Elevation Model-Dateien für GIS & Kartierung herunterladen',
+          description: 'Laden Sie kostenlose DEM-Beispieldateien mit Digital Elevation Models herunter, um GIS-Anwendungen, Geländekartierung und Geodatenanalyse-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIS-Software, Geländevisualisierung, Höhendatenverarbeitung, Kartierungsanwendungen und Geodatenanalyse-Tools.'
+        },
+        hero: {
+          title: 'DEM-Beispieldateien',
+          description: 'Laden Sie kostenlose DEM-Beispieldateien mit Digital Elevation Models zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre GIS-Software, Geländevisualisierung und Geodatenanalyse-Tools zu testen.'
+        },
+        about_description: 'Dies sind DEM (Digital Elevation Model) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      der: {
+        meta: {
+          title: 'Kostenlose DER-Beispieldateien herunterladen - Test-Distinguished Encoding Rules-Zertifikatsdateien | MorphyHub',
+          description: 'Laden Sie kostenlose DER-Beispieldateien mit Distinguished Encoding Rules-Zertifikaten herunter, um SSL/TLS-Zertifikate, PKI-Verwaltung und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Zertifikatsparsing, OpenSSL, PKI-Infrastruktur, SSL-Zertifikatsvalidierung und Sicherheitszertifikatsverwaltungstools.',
+          keywords: 'DER-Beispieldateien, DER-Testdateien, DER-Beispiele herunterladen, kostenlose DER-Testdateien, Distinguished Encoding Rules Dateien, .der Testdateien, Zertifikatsdateien, SSL-Zertifikat Beispiele, PKI-Zertifikatsdateien, OpenSSL Testdateien, Zertifikatsparsing Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose DER-Beispieldateien - Test-Distinguished Encoding Rules-Zertifikatsdateien herunterladen',
+          description: 'Laden Sie kostenlose DER-Beispieldateien mit Distinguished Encoding Rules-Zertifikaten herunter, um SSL/TLS-Zertifikate, PKI-Verwaltung und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Zertifikatsparsing, OpenSSL, PKI-Infrastruktur, SSL-Zertifikatsvalidierung und Sicherheitszertifikatsverwaltungstools.'
+        },
+        hero: {
+          title: 'DER-Beispieldateien',
+          description: 'Laden Sie kostenlose DER-Beispieldateien mit Distinguished Encoding Rules-Zertifikaten zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihr Zertifikatsparsing, OpenSSL und PKI-Verwaltungstools zu testen.'
+        },
+        about_description: 'Dies sind DER (Distinguished Encoding Rules) Zertifikatsdateien in verschiedenen Größen für Testzwecke'
+      },
+      dmp: {
+        meta: {
+          title: 'Kostenlose DMP-Beispieldateien herunterladen - Test-Speicherabbilddateien für Debugging & Analyse | MorphyHub',
+          description: 'Laden Sie kostenlose DMP-Beispieldateien mit Speicherabbildern herunter, um Absturzanalyse, Debugging-Tools und Systemdiagnostik zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Debuggern, Absturzanalyse-Tools, Speicheranalysatoren, Systemdiagnose-Tools und forensischen Analyseanwendungen.',
+          keywords: 'DMP-Beispieldateien, DMP-Testdateien, DMP-Beispiele herunterladen, kostenlose DMP-Testdateien, Speicherabbilddateien, .dmp Testdateien, Absturzabbilddateien, Debugging-Dateien, Systemabbild Beispiele, Speicheranalyse-Dateien, Absturzanalyse-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose DMP-Beispieldateien - Test-Speicherabbilddateien für Debugging & Analyse herunterladen',
+          description: 'Laden Sie kostenlose DMP-Beispieldateien mit Speicherabbildern herunter, um Absturzanalyse, Debugging-Tools und Systemdiagnostik zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Debuggern, Absturzanalyse-Tools, Speicheranalysatoren, Systemdiagnose-Tools und forensischen Analyseanwendungen.'
+        },
+        hero: {
+          title: 'DMP-Beispieldateien',
+          description: 'Laden Sie kostenlose DMP-Beispieldateien mit Speicherabbildern zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Absturzanalyse, Debugging- und Systemdiagnose-Tools zu testen.'
+        },
+        about_description: 'Dies sind DMP (Speicherabbild) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      'docker-compose-yml': {
+        meta: {
+          title: 'Kostenlose Docker Compose YML-Beispieldateien herunterladen - Test-Docker Compose-Konfigurationsdateien | MorphyHub',
+          description: 'Laden Sie kostenlose Docker Compose YML-Beispieldateien mit Konfigurationen herunter, um Docker-Container-Orchestrierung, Multi-Container-Anwendungen und DevOps-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker Compose, Container-Orchestrierung, YAML-Parsing, DevOps-Automatisierung und containerisierten Anwendungsbereitstellungstools.',
+          keywords: 'Docker Compose YML-Beispieldateien, docker-compose Testdateien, docker-compose Beispiele herunterladen, kostenlose docker-compose Testdateien, Docker Compose YAML-Dateien, .yml Testdateien, Container-Orchestrierung Dateien, DevOps-Konfiguration Beispiele, Docker Compose Testdateien, Multi-Container-Konfiguration Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose Docker Compose YML-Beispieldateien - Test-Docker Compose-Konfigurationsdateien herunterladen',
+          description: 'Laden Sie kostenlose Docker Compose YML-Beispieldateien mit Konfigurationen herunter, um Docker-Container-Orchestrierung, Multi-Container-Anwendungen und DevOps-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker Compose, Container-Orchestrierung, YAML-Parsing, DevOps-Automatisierung und containerisierten Anwendungsbereitstellungstools.'
+        },
+        hero: {
+          title: 'Docker Compose YML-Beispieldateien',
+          description: 'Laden Sie kostenlose Docker Compose YML-Beispieldateien mit Konfigurationen zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Docker Compose, Container-Orchestrierung und DevOps-Automatisierungstools zu testen.'
+        },
+        about_description: 'Dies sind Docker Compose YML-Konfigurationsdateien in verschiedenen Größen für Testzwecke'
+      },
+      dockerfile: {
+        meta: {
+          title: 'Kostenlose Dockerfile-Beispieldateien herunterladen - Test-Docker-Container-Build-Dateien | MorphyHub',
+          description: 'Laden Sie kostenlose Dockerfile-Beispieldateien mit Docker-Container-Build-Dateien herunter, um Containerisierung, Docker-Builds und DevOps-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker-Builds, Container-Image-Erstellung, Dockerfile-Parsing, Containerisierungstools und DevOps-Automatisierungsplattformen.',
+          keywords: 'Dockerfile-Beispieldateien, Dockerfile Testdateien, Dockerfile Beispiele herunterladen, kostenlose Dockerfile Testdateien, Docker-Container-Dateien, Dockerfile Testdateien, Container-Build-Dateien, Docker-Build Beispiele, Containerisierung Testdateien, DevOps Docker Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose Dockerfile-Beispieldateien - Test-Docker-Container-Build-Dateien herunterladen',
+          description: 'Laden Sie kostenlose Dockerfile-Beispieldateien mit Docker-Container-Build-Dateien herunter, um Containerisierung, Docker-Builds und DevOps-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Docker-Builds, Container-Image-Erstellung, Dockerfile-Parsing, Containerisierungstools und DevOps-Automatisierungsplattformen.'
+        },
+        hero: {
+          title: 'Dockerfile-Beispieldateien',
+          description: 'Laden Sie kostenlose Dockerfile-Beispieldateien mit Docker-Container-Build-Dateien zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Docker-Builds, Container-Image-Erstellung und Containerisierungstools zu testen.'
+        },
+        about_description: 'Dies sind Dockerfile (Docker-Container-Build) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      editorconfig: {
+        meta: {
+          title: 'Kostenlose EditorConfig-Beispieldateien herunterladen - Test-Editor-Konfigurationsdateien | MorphyHub',
+          description: 'Laden Sie kostenlose EditorConfig-Beispieldateien mit Editor-Konfigurationen herunter, um Code-Editor-Einstellungen, Formatierungskonsistenz und Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von EditorConfig-Parsern, Code-Editor-Plugins, Formatierungstools, IDE-Konfiguration und Entwicklungsumgebungssetup-Tools.',
+          keywords: 'EditorConfig-Beispieldateien, EditorConfig Testdateien, EditorConfig Beispiele herunterladen, kostenlose EditorConfig Testdateien, Editor-Konfigurationsdateien, .editorconfig Testdateien, Code-Editor-Einstellungsdateien, IDE-Konfiguration Beispiele, Formatierungskonfigurationsdateien, Editor-Einstellungs-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose EditorConfig-Beispieldateien - Test-Editor-Konfigurationsdateien herunterladen',
+          description: 'Laden Sie kostenlose EditorConfig-Beispieldateien mit Editor-Konfigurationen herunter, um Code-Editor-Einstellungen, Formatierungskonsistenz und Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von EditorConfig-Parsern, Code-Editor-Plugins, Formatierungstools, IDE-Konfiguration und Entwicklungsumgebungssetup-Tools.'
+        },
+        hero: {
+          title: 'EditorConfig-Beispieldateien',
+          description: 'Laden Sie kostenlose EditorConfig-Beispieldateien mit Editor-Konfigurationen zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre EditorConfig-Parser, Code-Editor-Plugins und Formatierungstools zu testen.'
+        },
+        about_description: 'Dies sind EditorConfig (Editor-Konfiguration) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      ini: {
+        meta: {
+          title: 'Kostenlose INI-Beispieldateien herunterladen - Test-Konfigurations-INI-Dateien für Anwendungen | MorphyHub',
+          description: 'Laden Sie kostenlose INI-Beispieldateien mit Konfigurationen herunter, um Anwendungseinstellungen, INI-Dateiparsing und Konfigurationsverwaltungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Parsern, Anwendungskonfiguration, Einstellungsverwaltung, Windows-INI-Dateien und Software-Konfigurationsutilities.',
+          keywords: 'INI-Beispieldateien, INI-Testdateien, INI-Beispiele herunterladen, kostenlose INI-Testdateien, Konfigurations-INI-Dateien, .ini Testdateien, Anwendungseinstellungsdateien, INI-Konfiguration Beispiele, Windows-INI-Dateien, Konfigurationsdatei Beispiele, INI-Parsing-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose INI-Beispieldateien - Test-Konfigurations-INI-Dateien für Anwendungen herunterladen',
+          description: 'Laden Sie kostenlose INI-Beispieldateien mit Konfigurationen herunter, um Anwendungseinstellungen, INI-Dateiparsing und Konfigurationsverwaltungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Parsern, Anwendungskonfiguration, Einstellungsverwaltung, Windows-INI-Dateien und Software-Konfigurationsutilities.'
+        },
+        hero: {
+          title: 'INI-Beispieldateien',
+          description: 'Laden Sie kostenlose INI-Beispieldateien mit Konfigurationen zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre INI-Parser, Anwendungskonfiguration und Einstellungsverwaltungstools zu testen.'
+        },
+        about_description: 'Dies sind INI (Konfiguration) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      intelhex: {
+        meta: {
+          title: 'Kostenlose IntelHex-Beispieldateien herunterladen - Test-Intel-Hexadezimaldateien für Firmware-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose IntelHex-Beispieldateien mit Intel-Hexadezimaldateien herunter, um Firmware-Programmierung, Embedded-Systementwicklung und Mikrocontroller-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von IntelHex-Parsern, Firmware-Ladeprogrammen, Mikrocontroller-Programmierung, Embedded-Entwicklungstools und Hex-Dateiverarbeitungsanwendungen.',
+          keywords: 'IntelHex-Beispieldateien, IntelHex-Testdateien, IntelHex-Beispiele herunterladen, kostenlose IntelHex-Testdateien, Intel-Hexadezimaldateien, .intelhex Testdateien, Firmware-Hex-Dateien, Embedded-Hex-Dateien, Mikrocontroller-Hex-Dateien, IntelHex-Parser-Testdateien, Firmware-Programmierung Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose IntelHex-Beispieldateien - Test-Intel-Hexadezimaldateien für Firmware-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose IntelHex-Beispieldateien mit Intel-Hexadezimaldateien herunter, um Firmware-Programmierung, Embedded-Systementwicklung und Mikrocontroller-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von IntelHex-Parsern, Firmware-Ladeprogrammen, Mikrocontroller-Programmierung, Embedded-Entwicklungstools und Hex-Dateiverarbeitungsanwendungen.'
+        },
+        hero: {
+          title: 'IntelHex-Beispieldateien',
+          description: 'Laden Sie kostenlose IntelHex-Beispieldateien mit Intel-Hexadezimaldateien zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre IntelHex-Parser, Firmware-Ladeprogramme und Embedded-Entwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind IntelHex (Intel-Hexadezimal) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      ipynb: {
+        meta: {
+          title: 'Kostenlose IPYNB-Beispieldateien herunterladen - Test-Jupyter Notebook-Dateien für Data Science | MorphyHub',
+          description: 'Laden Sie kostenlose IPYNB-Beispieldateien mit Jupyter Notebooks herunter, um Data-Science-Workflows, Python-Ausführung und Notebook-Analyse-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Jupyter Notebook, Python-Data-Science-Tools, Notebook-Viewern, Datenanalyseanwendungen und wissenschaftlichen Computing-Plattformen.',
+          keywords: 'IPYNB-Beispieldateien, IPYNB-Testdateien, IPYNB-Beispiele herunterladen, kostenlose IPYNB-Testdateien, Jupyter Notebook-Dateien, .ipynb Testdateien, Python-Notebook-Dateien, Data-Science-Notebook Beispiele, Jupyter Testdateien, Notebook-Analyse-Dateien, Data-Science-Workflow Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose IPYNB-Beispieldateien - Test-Jupyter Notebook-Dateien für Data Science herunterladen',
+          description: 'Laden Sie kostenlose IPYNB-Beispieldateien mit Jupyter Notebooks herunter, um Data-Science-Workflows, Python-Ausführung und Notebook-Analyse-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Jupyter Notebook, Python-Data-Science-Tools, Notebook-Viewern, Datenanalyseanwendungen und wissenschaftlichen Computing-Plattformen.'
+        },
+        hero: {
+          title: 'IPYNB-Beispieldateien',
+          description: 'Laden Sie kostenlose IPYNB-Beispieldateien mit Jupyter Notebooks zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Jupyter Notebook, Python-Data-Science-Tools und Notebook-Analyseanwendungen zu testen.'
+        },
+        about_description: 'Dies sind IPYNB (Jupyter Notebook) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      java: {
+        meta: {
+          title: 'Kostenlose Java-Beispieldateien herunterladen - Test-Java-Quellcodedateien für Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose Java-Beispieldateien mit Java-Quellcode herunter, um Java-Kompilierung, JVM-Anwendungen und Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java-Compilern, JVM, IDE-Unterstützung (Eclipse, IntelliJ), Java-Build-Tools (Maven, Gradle) und Java-Entwicklungsumgebungen.',
+          keywords: 'Java-Beispieldateien, Java-Testdateien, Java-Beispiele herunterladen, kostenlose Java-Testdateien, Java-Quellcodedateien, .java Testdateien, Java-Programmierungsdateien, JVM Testdateien, Java-Kompilierung Beispiele, Java-IDE-Testdateien, Java-Entwicklung Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose Java-Beispieldateien - Test-Java-Quellcodedateien für Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose Java-Beispieldateien mit Java-Quellcode herunter, um Java-Kompilierung, JVM-Anwendungen und Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java-Compilern, JVM, IDE-Unterstützung (Eclipse, IntelliJ), Java-Build-Tools (Maven, Gradle) und Java-Entwicklungsumgebungen.'
+        },
+        hero: {
+          title: 'Java-Beispieldateien',
+          description: 'Laden Sie kostenlose Java-Beispieldateien mit Java-Quellcode zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Java-Compiler, JVM und Java-Entwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind Java-Quellcodedateien in verschiedenen Größen für Testzwecke'
+      },
+      jks: {
+        meta: {
+          title: 'Kostenlose JKS-Beispieldateien herunterladen - Test-Java KeyStore-Dateien für SSL/TLS-Sicherheit | MorphyHub',
+          description: 'Laden Sie kostenlose JKS-Beispieldateien mit Java KeyStores herunter, um SSL/TLS-Zertifikatsspeicherung, Java-Sicherheit und PKI-Verwaltungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java KeyStore-Verwaltung, JKS-Parsing, SSL-Zertifikatsspeicherung, Java-Sicherheitstools und PKI-Infrastruktur.',
+          keywords: 'JKS-Beispieldateien, JKS-Testdateien, JKS-Beispiele herunterladen, kostenlose JKS-Testdateien, Java KeyStore-Dateien, .jks Testdateien, SSL-Zertifikatsdateien, Java-Sicherheitsdateien, Keystore-Testdateien, PKI-Zertifikat Beispiele, Java KeyStore-Verwaltung-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose JKS-Beispieldateien - Test-Java KeyStore-Dateien für SSL/TLS-Sicherheit herunterladen',
+          description: 'Laden Sie kostenlose JKS-Beispieldateien mit Java KeyStores herunter, um SSL/TLS-Zertifikatsspeicherung, Java-Sicherheit und PKI-Verwaltungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Java KeyStore-Verwaltung, JKS-Parsing, SSL-Zertifikatsspeicherung, Java-Sicherheitstools und PKI-Infrastruktur.'
+        },
+        hero: {
+          title: 'JKS-Beispieldateien',
+          description: 'Laden Sie kostenlose JKS-Beispieldateien mit Java KeyStores zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Java KeyStore-Verwaltung, JKS-Parsing und SSL-Zertifikatsspeicherungstools zu testen.'
+        },
+        about_description: 'Dies sind JKS (Java KeyStore) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      json: {
+        meta: {
+          title: 'Kostenlose JSON-Beispieldateien herunterladen - Test-JSON-Datendateien für Webentwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose JSON-Beispieldateien mit JSON-Daten herunter, um JSON-Parsing, API-Integration und Webentwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSON-Parsern, API-Antworten, Datenaustauschformaten, Webanwendungen und JSON-Validierungstools.',
+          keywords: 'JSON-Beispieldateien, JSON-Testdateien, JSON-Beispiele herunterladen, kostenlose JSON-Testdateien, JSON-Datendateien, .json Testdateien, API-JSON-Dateien, JSON-Parser-Testdateien, Datenaustausch Beispiele, Web-JSON-Dateien, JSON-Validierung-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose JSON-Beispieldateien - Test-JSON-Datendateien für Webentwicklung herunterladen',
+          description: 'Laden Sie kostenlose JSON-Beispieldateien mit JSON-Daten herunter, um JSON-Parsing, API-Integration und Webentwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSON-Parsern, API-Antworten, Datenaustauschformaten, Webanwendungen und JSON-Validierungstools.'
+        },
+        hero: {
+          title: 'JSON-Beispieldateien',
+          description: 'Laden Sie kostenlose JSON-Beispieldateien mit JSON-Daten zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre JSON-Parser, API-Integration und Webentwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind JSON (JavaScript Object Notation) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      jsonl: {
+        meta: {
+          title: 'Kostenlose JSONL-Beispieldateien herunterladen - Test-JSON Lines-Dateien für Datenverarbeitung | MorphyHub',
+          description: 'Laden Sie kostenlose JSONL-Beispieldateien mit JSON Lines herunter, um Datenverarbeitung, Streaming-JSON und Big-Data-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSONL-Parsern, Datenstreaming-Anwendungen, ETL-Tools, Big-Data-Verarbeitung und Logdateianalyse-Tools.',
+          keywords: 'JSONL-Beispieldateien, JSONL-Testdateien, JSONL-Beispiele herunterladen, kostenlose JSONL-Testdateien, JSON Lines-Dateien, .jsonl Testdateien, Streaming-JSON-Dateien, Datenverarbeitung Beispiele, ETL-JSON-Dateien, Big-Data-JSON Beispiele, Log-Analyse-JSON-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose JSONL-Beispieldateien - Test-JSON Lines-Dateien für Datenverarbeitung herunterladen',
+          description: 'Laden Sie kostenlose JSONL-Beispieldateien mit JSON Lines herunter, um Datenverarbeitung, Streaming-JSON und Big-Data-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JSONL-Parsern, Datenstreaming-Anwendungen, ETL-Tools, Big-Data-Verarbeitung und Logdateianalyse-Tools.'
+        },
+        hero: {
+          title: 'JSONL-Beispieldateien',
+          description: 'Laden Sie kostenlose JSONL-Beispieldateien mit JSON Lines zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre JSONL-Parser, Datenstreaming-Anwendungen und Big-Data-Verarbeitungstools zu testen.'
+        },
+        about_description: 'Dies sind JSONL (JSON Lines) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      js: {
+        meta: {
+          title: 'Kostenlose JS-Beispieldateien herunterladen - Test-JavaScript-Quellcodedateien für Webentwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose JS-Beispieldateien mit JavaScript-Quellcode herunter, um JavaScript-Ausführung, Webentwicklung und Front-End-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JavaScript-Engines, Node.js, Webbrowsern, JavaScript-Minifizierern, Code-Analyse-Tools und Front-End-Entwicklungsframeworks.',
+          keywords: 'JS-Beispieldateien, JS-Testdateien, JS-Beispiele herunterladen, kostenlose JS-Testdateien, JavaScript-Quellcodedateien, .js Testdateien, JavaScript-Programmierungsdateien, Node.js Testdateien, Web-JavaScript-Dateien, JS-Minifizierer-Testdateien, Front-End-Entwicklung Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose JS-Beispieldateien - Test-JavaScript-Quellcodedateien für Webentwicklung herunterladen',
+          description: 'Laden Sie kostenlose JS-Beispieldateien mit JavaScript-Quellcode herunter, um JavaScript-Ausführung, Webentwicklung und Front-End-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JavaScript-Engines, Node.js, Webbrowsern, JavaScript-Minifizierern, Code-Analyse-Tools und Front-End-Entwicklungsframeworks.'
+        },
+        hero: {
+          title: 'JS-Beispieldateien',
+          description: 'Laden Sie kostenlose JS-Beispieldateien mit JavaScript-Quellcode zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre JavaScript-Engines, Node.js und Webentwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind JS (JavaScript) Quellcodedateien in verschiedenen Größen für Testzwecke'
+      },
+      jsx: {
+        meta: {
+          title: 'Kostenlose JSX-Beispieldateien herunterladen - Test-React JSX-Dateien für Front-End-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose JSX-Beispieldateien mit React JSX herunter, um React-Entwicklung, JSX-Kompilierung und Front-End-Frameworks zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von React, JSX-Transpilern (Babel), Front-End-Build-Tools, React-Entwicklungsumgebungen und modernen JavaScript-Frameworks.',
+          keywords: 'JSX-Beispieldateien, JSX-Testdateien, JSX-Beispiele herunterladen, kostenlose JSX-Testdateien, React JSX-Dateien, .jsx Testdateien, React-Komponentendateien, JSX-Transpiler-Testdateien, Front-End-JSX-Dateien, React-Entwicklung Beispiele, Babel-JSX-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose JSX-Beispieldateien - Test-React JSX-Dateien für Front-End-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose JSX-Beispieldateien mit React JSX herunter, um React-Entwicklung, JSX-Kompilierung und Front-End-Frameworks zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von React, JSX-Transpilern (Babel), Front-End-Build-Tools, React-Entwicklungsumgebungen und modernen JavaScript-Frameworks.'
+        },
+        hero: {
+          title: 'JSX-Beispieldateien',
+          description: 'Laden Sie kostenlose JSX-Beispieldateien mit React JSX zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre React, JSX-Transpiler und Front-End-Entwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind JSX (React JSX) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      jwt: {
+        meta: {
+          title: 'Kostenlose JWT-Beispieldateien herunterladen - Test-JSON Web Token-Dateien für API-Sicherheit | MorphyHub',
+          description: 'Laden Sie kostenlose JWT-Beispieldateien mit JSON Web Tokens herunter, um API-Authentifizierung, JWT-Token-Parsing und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JWT-Parsern, API-Authentifizierung, Token-Validierung, OAuth 2.0 und Sicherheitstest-Tools.',
+          keywords: 'JWT-Beispieldateien, JWT-Testdateien, JWT-Beispiele herunterladen, kostenlose JWT-Testdateien, JSON Web Token-Dateien, .jwt Testdateien, Authentifizierungs-Token-Dateien, API-Sicherheitsdateien, JWT-Parser-Testdateien, OAuth-Token Beispiele, Sicherheitstest-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose JWT-Beispieldateien - Test-JSON Web Token-Dateien für API-Sicherheit herunterladen',
+          description: 'Laden Sie kostenlose JWT-Beispieldateien mit JSON Web Tokens herunter, um API-Authentifizierung, JWT-Token-Parsing und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JWT-Parsern, API-Authentifizierung, Token-Validierung, OAuth 2.0 und Sicherheitstest-Tools.'
+        },
+        hero: {
+          title: 'JWT-Beispieldateien',
+          description: 'Laden Sie kostenlose JWT-Beispieldateien mit JSON Web Tokens zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre JWT-Parser, API-Authentifizierung und Sicherheitstools zu testen.'
+        },
+        about_description: 'Dies sind JWT (JSON Web Token) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      key: {
+        meta: {
+          title: 'Kostenlose KEY-Beispieldateien herunterladen - Test-Private-Key-Dateien für SSL/TLS-Sicherheit | MorphyHub',
+          description: 'Laden Sie kostenlose KEY-Beispieldateien mit privaten Schlüsseln herunter, um SSL/TLS-Zertifikate, kryptografische Operationen und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Private-Key-Parsing, OpenSSL, SSL-Zertifikatsgenerierung, kryptografischen Bibliotheken und Sicherheitszertifikatsverwaltungstools.',
+          keywords: 'KEY-Beispieldateien, KEY-Testdateien, KEY-Beispiele herunterladen, kostenlose KEY-Testdateien, Private-Key-Dateien, .key Testdateien, SSL-Key-Dateien, kryptografische Key-Dateien, OpenSSL-Key-Dateien, Sicherheits-Key Beispiele, Zertifikats-Key-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose KEY-Beispieldateien - Test-Private-Key-Dateien für SSL/TLS-Sicherheit herunterladen',
+          description: 'Laden Sie kostenlose KEY-Beispieldateien mit privaten Schlüsseln herunter, um SSL/TLS-Zertifikate, kryptografische Operationen und Sicherheitstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Private-Key-Parsing, OpenSSL, SSL-Zertifikatsgenerierung, kryptografischen Bibliotheken und Sicherheitszertifikatsverwaltungstools.'
+        },
+        hero: {
+          title: 'KEY-Beispieldateien',
+          description: 'Laden Sie kostenlose KEY-Beispieldateien mit privaten Schlüsseln zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihr Private-Key-Parsing, OpenSSL und Sicherheitszertifikatsverwaltungstools zu testen.'
+        },
+        about_description: 'Dies sind KEY (Private Key) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      kml: {
+        meta: {
+          title: 'Kostenlose KML-Beispieldateien herunterladen - Test-Keyhole Markup Language-Dateien für GIS & Kartierung | MorphyHub',
+          description: 'Laden Sie kostenlose KML-Beispieldateien mit Keyhole Markup Language-Geodaten herunter, um GIS-Anwendungen, Kartenvisualisierung und Geodaten-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Google Earth, GIS-Software, Kartenrendering, Geodatenverarbeitung und Geodatenanalyse-Tools.',
+          keywords: 'KML-Beispieldateien, KML-Testdateien, KML-Beispiele herunterladen, kostenlose KML-Testdateien, Keyhole Markup Language-Dateien, .kml Testdateien, Geodaten-Dateien, Kartendaten Beispiele, GIS-KML-Dateien, Google Earth Testdateien, Geodaten Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose KML-Beispieldateien - Test-Keyhole Markup Language-Dateien für GIS & Kartierung herunterladen',
+          description: 'Laden Sie kostenlose KML-Beispieldateien mit Keyhole Markup Language-Geodaten herunter, um GIS-Anwendungen, Kartenvisualisierung und Geodaten-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Google Earth, GIS-Software, Kartenrendering, Geodatenverarbeitung und Geodatenanalyse-Tools.'
+        },
+        hero: {
+          title: 'KML-Beispieldateien',
+          description: 'Laden Sie kostenlose KML-Beispieldateien mit Keyhole Markup Language-Geodaten zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre GIS-Software, Kartenvisualisierung und Geodatenanalyse-Tools zu testen.'
+        },
+        about_description: 'Dies sind KML (Keyhole Markup Language) Geodaten-Dateien in verschiedenen Größen für Testzwecke'
+      },
+      kt: {
+        meta: {
+          title: 'Kostenlose KT-Beispieldateien herunterladen - Test-Kotlin-Quellcodedateien für Android-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose KT-Beispieldateien mit Kotlin-Quellcode herunter, um Kotlin-Kompilierung, Android-Entwicklung und JVM-Anwendungen zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Kotlin-Compilern, Android Studio, Kotlin/JVM, IDE-Unterstützung und Kotlin-Entwicklungsumgebungen.',
+          keywords: 'KT-Beispieldateien, KT-Testdateien, KT-Beispiele herunterladen, kostenlose KT-Testdateien, Kotlin-Quellcodedateien, .kt Testdateien, Kotlin-Programmierungsdateien, Android-Kotlin-Dateien, Kotlin-Compiler-Testdateien, JVM-Kotlin Beispiele, Kotlin-Entwicklung-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose KT-Beispieldateien - Test-Kotlin-Quellcodedateien für Android-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose KT-Beispieldateien mit Kotlin-Quellcode herunter, um Kotlin-Kompilierung, Android-Entwicklung und JVM-Anwendungen zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Kotlin-Compilern, Android Studio, Kotlin/JVM, IDE-Unterstützung und Kotlin-Entwicklungsumgebungen.'
+        },
+        hero: {
+          title: 'KT-Beispieldateien',
+          description: 'Laden Sie kostenlose KT-Beispieldateien mit Kotlin-Quellcode zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Kotlin-Compiler, Android Studio und Kotlin-Entwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind KT (Kotlin) Quellcodedateien in verschiedenen Größen für Testzwecke'
+      },
+      log: {
+        meta: {
+          title: 'Kostenlose LOG-Beispieldateien herunterladen - Test-Logdateien für Debugging & Systemanalyse | MorphyHub',
+          description: 'Laden Sie kostenlose LOG-Beispieldateien mit Logs herunter, um Log-Parsing, Systemanalyse und Debugging-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Log-Analysatoren, Systemmonitoring-Tools, Debugging-Anwendungen, Log-Aggregationssystemen und Systemdiagnose-Tools.',
+          keywords: 'LOG-Beispieldateien, LOG-Testdateien, LOG-Beispiele herunterladen, kostenlose LOG-Testdateien, Logdateien, .log Testdateien, System-Logdateien, Anwendungs-Log Beispiele, Log-Parser-Testdateien, Debugging-Logdateien, Systemanalyse-Log Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose LOG-Beispieldateien - Test-Logdateien für Debugging & Systemanalyse herunterladen',
+          description: 'Laden Sie kostenlose LOG-Beispieldateien mit Logs herunter, um Log-Parsing, Systemanalyse und Debugging-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Log-Analysatoren, Systemmonitoring-Tools, Debugging-Anwendungen, Log-Aggregationssystemen und Systemdiagnose-Tools.'
+        },
+        hero: {
+          title: 'LOG-Beispieldateien',
+          description: 'Laden Sie kostenlose LOG-Beispieldateien mit Logs zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Log-Analysatoren, Systemmonitoring und Debugging-Tools zu testen.'
+        },
+        about_description: 'Dies sind LOG-Dateien in verschiedenen Größen für Testzwecke'
+      },
+      lua: {
+        meta: {
+          title: 'Kostenlose LUA-Beispieldateien herunterladen - Test-Lua-Skriptdateien für Spieleentwicklung & Automatisierung | MorphyHub',
+          description: 'Laden Sie kostenlose LUA-Beispieldateien mit Lua-Skripten herunter, um Lua-Ausführung, Spieleentwicklung und Automatisierungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Lua-Interpretern, Spiel-Engines, Skriptumgebungen, Automatisierungstools und Embedded-Lua-Anwendungen.',
+          keywords: 'LUA-Beispieldateien, LUA-Testdateien, LUA-Beispiele herunterladen, kostenlose LUA-Testdateien, Lua-Skriptdateien, .lua Testdateien, Lua-Programmierungsdateien, Spiel-Skriptdateien, Lua-Interpreter-Testdateien, Automatisierungs-Skript Beispiele, Embedded-Lua-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose LUA-Beispieldateien - Test-Lua-Skriptdateien für Spieleentwicklung & Automatisierung herunterladen',
+          description: 'Laden Sie kostenlose LUA-Beispieldateien mit Lua-Skripten herunter, um Lua-Ausführung, Spieleentwicklung und Automatisierungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Lua-Interpretern, Spiel-Engines, Skriptumgebungen, Automatisierungstools und Embedded-Lua-Anwendungen.'
+        },
+        hero: {
+          title: 'LUA-Beispieldateien',
+          description: 'Laden Sie kostenlose LUA-Beispieldateien mit Lua-Skripten zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Lua-Interpreter, Spiel-Engines und Automatisierungstools zu testen.'
+        },
+        about_description: 'Dies sind LUA (Lua-Skript) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      m3u: {
+        meta: {
+          title: 'Kostenlose M3U-Beispieldateien herunterladen - Test-M3U-Playlistdateien für Mediaplayer | MorphyHub',
+          description: 'Laden Sie kostenlose M3U-Beispieldateien mit M3U-Playlists herunter, um Mediaplayer, Playlist-Parsing und Audio/Video-Streaming-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Mediaplayern, Playlist-Managern, Streaming-Anwendungen, Audio-Playern und Video-Player-Software.',
+          keywords: 'M3U-Beispieldateien, M3U-Testdateien, M3U-Beispiele herunterladen, kostenlose M3U-Testdateien, M3U-Playlistdateien, .m3u Testdateien, Media-Playlistdateien, Audio-Playlist Beispiele, Video-Playlistdateien, Media-Player-Testdateien, Streaming-Playlist Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose M3U-Beispieldateien - Test-M3U-Playlistdateien für Mediaplayer herunterladen',
+          description: 'Laden Sie kostenlose M3U-Beispieldateien mit M3U-Playlists herunter, um Mediaplayer, Playlist-Parsing und Audio/Video-Streaming-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Mediaplayern, Playlist-Managern, Streaming-Anwendungen, Audio-Playern und Video-Player-Software.'
+        },
+        hero: {
+          title: 'M3U-Beispieldateien',
+          description: 'Laden Sie kostenlose M3U-Beispieldateien mit M3U-Playlists zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Mediaplayer, Playlist-Manager und Streaming-Anwendungen zu testen.'
+        },
+        about_description: 'Dies sind M3U (Playlist) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      m3u8: {
+        meta: {
+          title: 'Kostenlose M3U8-Beispieldateien herunterladen - Test-M3U8 HLS-Playlistdateien für Video-Streaming | MorphyHub',
+          description: 'Laden Sie kostenlose M3U8-Beispieldateien mit M3U8 HLS (HTTP Live Streaming) Playlists herunter, um Video-Streaming, HLS-Player und Media-Delivery-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HLS-Playern, Video-Streaming-Plattformen, adaptivem Bitrate-Streaming, Media-Servern und Video-Delivery-Systemen.',
+          keywords: 'M3U8-Beispieldateien, M3U8-Testdateien, M3U8-Beispiele herunterladen, kostenlose M3U8-Testdateien, M3U8 HLS-Playlistdateien, .m3u8 Testdateien, HTTP Live Streaming-Dateien, Video-Streaming-Playlist Beispiele, HLS-Player-Testdateien, adaptives Streaming Beispiele, Media-Server-Playlistdateien'
+        },
+        schema: {
+          name: 'Kostenlose M3U8-Beispieldateien - Test-M3U8 HLS-Playlistdateien für Video-Streaming herunterladen',
+          description: 'Laden Sie kostenlose M3U8-Beispieldateien mit M3U8 HLS (HTTP Live Streaming) Playlists herunter, um Video-Streaming, HLS-Player und Media-Delivery-Tools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HLS-Playern, Video-Streaming-Plattformen, adaptivem Bitrate-Streaming, Media-Servern und Video-Delivery-Systemen.'
+        },
+        hero: {
+          title: 'M3U8-Beispieldateien',
+          description: 'Laden Sie kostenlose M3U8-Beispieldateien mit M3U8 HLS-Playlists zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre HLS-Player, Video-Streaming-Plattformen und Media-Delivery-Systeme zu testen.'
+        },
+        about_description: 'Dies sind M3U8 (HLS-Playlist) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      makefile: {
+        meta: {
+          title: 'Kostenlose Makefile-Beispieldateien herunterladen - Test-Makefile-Build-Konfigurationsdateien | MorphyHub',
+          description: 'Laden Sie kostenlose Makefile-Beispieldateien mit Build-Konfigurationen herunter, um Build-Automatisierung, Make-Build-System und Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Make-Build-System, Build-Automatisierungstools, C/C++-Kompilierung, Build-Skripten und Entwicklungs-Build-Umgebungen.',
+          keywords: 'Makefile-Beispieldateien, Makefile Testdateien, Makefile Beispiele herunterladen, kostenlose Makefile Testdateien, Makefile Build-Dateien, Makefile Testdateien, Build-Konfigurationsdateien, Make-Build-System Beispiele, C/C++-Build-Dateien, Build-Automatisierung Testdateien, Kompilierung Makefile Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose Makefile-Beispieldateien - Test-Makefile-Build-Konfigurationsdateien herunterladen',
+          description: 'Laden Sie kostenlose Makefile-Beispieldateien mit Build-Konfigurationen herunter, um Build-Automatisierung, Make-Build-System und Entwicklungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Make-Build-System, Build-Automatisierungstools, C/C++-Kompilierung, Build-Skripten und Entwicklungs-Build-Umgebungen.'
+        },
+        hero: {
+          title: 'Makefile-Beispieldateien',
+          description: 'Laden Sie kostenlose Makefile-Beispieldateien mit Build-Konfigurationen zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihr Make-Build-System, Build-Automatisierungstools und Entwicklungs-Build-Umgebungen zu testen.'
+        },
+        about_description: 'Dies sind Makefile (Build-Konfiguration) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      mbtiles: {
+        meta: {
+          title: 'Kostenlose MBTiles-Beispieldateien herunterladen - Test-MBTiles-Kartentile-Datenbankdateien | MorphyHub',
+          description: 'Laden Sie kostenlose MBTiles-Beispieldateien mit Kartentile-Datenbanken herunter, um Kartenrendering, GIS-Anwendungen und Kartierungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Kartentile-Servern, GIS-Software, Kartenrendering-Engines, mobilen Kartierungsanwendungen und Offline-Karten-Tools.',
+          keywords: 'MBTiles-Beispieldateien, MBTiles-Testdateien, MBTiles-Beispiele herunterladen, kostenlose MBTiles-Testdateien, MBTiles-Kartentile-Dateien, .mbtiles Testdateien, Karten-Datenbankdateien, GIS-Tile Beispiele, Kartenrendering-Dateien, mobile Karten-Testdateien, Offline-Karten-Tile Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose MBTiles-Beispieldateien - Test-MBTiles-Kartentile-Datenbankdateien herunterladen',
+          description: 'Laden Sie kostenlose MBTiles-Beispieldateien mit Kartentile-Datenbanken herunter, um Kartenrendering, GIS-Anwendungen und Kartierungstools zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Kartentile-Servern, GIS-Software, Kartenrendering-Engines, mobilen Kartierungsanwendungen und Offline-Karten-Tools.'
+        },
+        hero: {
+          title: 'MBTiles-Beispieldateien',
+          description: 'Laden Sie kostenlose MBTiles-Beispieldateien mit Kartentile-Datenbanken zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Kartentile-Server, GIS-Software und Kartenrendering-Engines zu testen.'
+        },
+        about_description: 'Dies sind MBTiles (Kartentile-Datenbank) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      md: {
+        meta: {
+          title: 'Kostenlose MD-Beispieldateien herunterladen - Test-Markdown-Dokumentationsdateien | MorphyHub',
+          description: 'Laden Sie kostenlose MD-Beispieldateien mit Markdown-Dokumentationen herunter, um Markdown-Parsing, Dokumentationstools und Content-Management-Systeme zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Markdown-Parsern, Dokumentationsgeneratoren, Static-Site-Generatoren, GitHub Markdown und Content-Management-Plattformen.',
+          keywords: 'MD-Beispieldateien, MD-Testdateien, MD-Beispiele herunterladen, kostenlose MD-Testdateien, Markdown-Dateien, .md Testdateien, Markdown-Dokumentationsdateien, Markdown-Parser-Testdateien, GitHub Markdown Beispiele, Static-Site-Generator-Dateien, Dokumentationsgenerator-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose MD-Beispieldateien - Test-Markdown-Dokumentationsdateien herunterladen',
+          description: 'Laden Sie kostenlose MD-Beispieldateien mit Markdown-Dokumentationen herunter, um Markdown-Parsing, Dokumentationstools und Content-Management-Systeme zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Markdown-Parsern, Dokumentationsgeneratoren, Static-Site-Generatoren, GitHub Markdown und Content-Management-Plattformen.'
+        },
+        hero: {
+          title: 'MD-Beispieldateien',
+          description: 'Laden Sie kostenlose MD-Beispieldateien mit Markdown-Dokumentationen zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre Markdown-Parser, Dokumentationsgeneratoren und Content-Management-Systeme zu testen.'
+        },
+        about_description: 'Dies sind MD (Markdown) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      mdx: {
+        meta: {
+          title: 'Kostenlose MDX-Beispieldateien herunterladen - Test-MDX React Markdown-Dateien für Dokumentation | MorphyHub',
+          description: 'Laden Sie kostenlose MDX-Beispieldateien mit MDX (Markdown + JSX) herunter, um React-Dokumentation, Static-Site-Generatoren und Content-Management-Systeme zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MDX-Parsern, React-Dokumentationstools, Next.js, Gatsby, Static-Site-Generatoren und modernen Dokumentationsplattformen.',
+          keywords: 'MDX-Beispieldateien, MDX-Testdateien, MDX-Beispiele herunterladen, kostenlose MDX-Testdateien, MDX React Markdown-Dateien, .mdx Testdateien, React-Dokumentationsdateien, MDX-Parser-Testdateien, Next.js MDX Beispiele, Gatsby MDX-Dateien, Static-Site-Generator MDX-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose MDX-Beispieldateien - Test-MDX React Markdown-Dateien für Dokumentation herunterladen',
+          description: 'Laden Sie kostenlose MDX-Beispieldateien mit MDX (Markdown + JSX) herunter, um React-Dokumentation, Static-Site-Generatoren und Content-Management-Systeme zu testen. Mehrere Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MDX-Parsern, React-Dokumentationstools, Next.js, Gatsby, Static-Site-Generatoren und modernen Dokumentationsplattformen.'
+        },
+        hero: {
+          title: 'MDX-Beispieldateien',
+          description: 'Laden Sie kostenlose MDX-Beispieldateien mit MDX (Markdown + JSX) zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre MDX-Parser, React-Dokumentationstools und Static-Site-Generatoren zu testen.'
+        },
+        about_description: 'Dies sind MDX (Markdown + JSX) Dateien in verschiedenen Größen für Testzwecke'
       }
     }
   }

@@ -479,6 +479,534 @@ export const it: SamplePageTranslations = {
           description: 'Scarica file di esempio HPP header C++ gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di compilazione codice C++, software elaborazione file header e applicazioni di sviluppo C++.'
         },
         about_description: 'Questi sono file di test HPP (C++ header) di varie dimensioni per scopi di test'
+      },
+      hex: {
+        meta: {
+          title: 'Scarica file di esempio HEX gratuiti - File di test esadecimali per sviluppo firmware e embedded | MorphyHub',
+          description: 'Scarica file di esempio HEX esadecimali gratuiti per testare programmazione firmware, sviluppo sistemi embedded e analisi dati binari. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare editor hex, loader firmware, programmazione microcontrollori e strumenti sviluppo embedded.',
+          keywords: 'file di esempio HEX, file di test HEX, scarica esempi HEX, file di test HEX gratuiti, file esadecimali, file hex firmware, file di test .hex, file hex embedded, file hex microcontrollori, file di test editor hex, esempi programmazione firmware, file binari hex'
+        },
+        schema: {
+          name: 'File di esempio HEX gratuiti - Scarica file di test esadecimali per sviluppo firmware e embedded',
+          description: 'Scarica file di esempio HEX esadecimali gratuiti per testare programmazione firmware, sviluppo sistemi embedded e analisi dati binari. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare editor hex, loader firmware, programmazione microcontrollori e strumenti sviluppo embedded.'
+        },
+        hero: {
+          title: 'File di esempio HEX',
+          description: 'Scarica file di esempio HEX esadecimali gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi editor hex, strumenti programmazione firmware e applicazioni sviluppo embedded.'
+        },
+        about_description: 'Questi sono file di test HEX (esadecimale) di varie dimensioni per scopi di test'
+      },
+      cs: {
+        meta: {
+          title: 'Scarica file di esempio CS gratuiti - File di test codice sorgente C# per sviluppo .NET | MorphyHub',
+          description: 'Scarica file di esempio CS codice sorgente C# gratuiti per testare compilazione C#, sviluppo .NET e strumenti Visual Studio. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C#, framework .NET, IDE Visual Studio, strumenti analisi codice e ambienti sviluppo C#.',
+          keywords: 'file di esempio CS, file di test CS, scarica esempi CS, file di test CS gratuiti, esempi codice sorgente C#, file codice .NET, file di test .cs, file programmazione C#, file di test Visual Studio, esempi sviluppo .NET, file di test compilazione C#'
+        },
+        schema: {
+          name: 'File di esempio CS gratuiti - Scarica file di test codice sorgente C# per sviluppo .NET',
+          description: 'Scarica file di esempio CS codice sorgente C# gratuiti per testare compilazione C#, sviluppo .NET e strumenti Visual Studio. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C#, framework .NET, IDE Visual Studio, strumenti analisi codice e ambienti sviluppo C#.'
+        },
+        hero: {
+          title: 'File di esempio CS',
+          description: 'Scarica file di esempio CS codice sorgente C# gratuiti per test. Dimensioni file multiple disponibili per testare la tua compilazione C#, sviluppo .NET e strumenti Visual Studio.'
+        },
+        about_description: 'Questi sono file di test CS (C#) codice sorgente di varie dimensioni per scopi di test'
+      },
+      css: {
+        meta: {
+          title: 'Scarica file di esempio CSS gratuiti - File di test fogli di stile per sviluppo web | MorphyHub',
+          description: 'Scarica file di esempio CSS fogli di stile gratuiti per testare styling web, parsing CSS e strumenti front-end. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare validatori CSS, preprocessori (SASS, LESS), minificatori CSS, browser web e framework sviluppo front-end.',
+          keywords: 'file di esempio CSS, file di test CSS, scarica esempi CSS, file di test CSS gratuiti, esempi fogli di stile, file fogli CSS, file di test .css, file styling web, file di test parser CSS, esempi sviluppo front-end, file di test framework CSS'
+        },
+        schema: {
+          name: 'File di esempio CSS gratuiti - Scarica file di test fogli di stile per sviluppo web',
+          description: 'Scarica file di esempio CSS fogli di stile gratuiti per testare styling web, parsing CSS e strumenti front-end. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare validatori CSS, preprocessori (SASS, LESS), minificatori CSS, browser web e framework sviluppo front-end.'
+        },
+        hero: {
+          title: 'File di esempio CSS',
+          description: 'Scarica file di esempio CSS fogli di stile gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi validatori CSS, preprocessori e strumenti sviluppo web.'
+        },
+        about_description: 'Questi sono file di test CSS (Cascading Style Sheets) di varie dimensioni per scopi di test'
+      },
+      csr: {
+        meta: {
+          title: 'Scarica file di esempio CSR gratuiti - File di test richieste firma certificato per SSL/TLS | MorphyHub',
+          description: 'Scarica file di esempio CSR richieste firma certificato gratuiti per testare generazione certificati SSL/TLS, gestione PKI e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare autorità certificazione, OpenSSL, generazione certificati SSL, infrastruttura PKI e strumenti gestione certificati sicurezza.',
+          keywords: 'file di esempio CSR, file di test CSR, scarica esempi CSR, file di test CSR gratuiti, esempi richieste firma certificato, file certificati SSL, file di test .csr, file certificati PKI, file di test OpenSSL, esempi certificati SSL/TLS, file di test autorità certificazione'
+        },
+        schema: {
+          name: 'File di esempio CSR gratuiti - Scarica file di test richieste firma certificato per SSL/TLS',
+          description: 'Scarica file di esempio CSR richieste firma certificato gratuiti per testare generazione certificati SSL/TLS, gestione PKI e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare autorità certificazione, OpenSSL, generazione certificati SSL, infrastruttura PKI e strumenti gestione certificati sicurezza.'
+        },
+        hero: {
+          title: 'File di esempio CSR',
+          description: 'Scarica file di esempio CSR richieste firma certificato gratuiti per test. Dimensioni file multiple disponibili per testare la tua generazione certificati SSL/TLS e strumenti gestione PKI.'
+        },
+        about_description: 'Questi sono file di test CSR (Certificate Signing Request) di varie dimensioni per scopi di test'
+      },
+      'customer-database-sql': {
+        meta: {
+          title: 'Scarica file di esempio Customer Database SQL gratuiti - File di test database SQL | MorphyHub',
+          description: 'Scarica file di esempio Customer Database SQL gratuiti per testare operazioni database SQL, esecuzione query e strumenti gestione database. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser SQL, strumenti import database, SQLite, MySQL, PostgreSQL e sistemi gestione database.',
+          keywords: 'file di esempio Customer Database SQL, file di test database SQL, scarica esempi SQL, file di test SQL gratuiti, file database SQL, file di test .sql, file query SQL, esempi import database, file di test SQLite, esempi MySQL, file di test PostgreSQL'
+        },
+        schema: {
+          name: 'File di esempio Customer Database SQL gratuiti - Scarica file di test database SQL',
+          description: 'Scarica file di esempio Customer Database SQL gratuiti per testare operazioni database SQL, esecuzione query e strumenti gestione database. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser SQL, strumenti import database, SQLite, MySQL, PostgreSQL e sistemi gestione database.'
+        },
+        hero: {
+          title: 'File di esempio Customer Database SQL',
+          description: 'Scarica file di esempio Customer Database SQL gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser SQL, strumenti import database e sistemi gestione database.'
+        },
+        about_description: 'Questi sono file di test Customer Database SQL di varie dimensioni per scopi di test'
+      },
+      dbf: {
+        meta: {
+          title: 'Scarica file di esempio DBF gratuiti - File di test database dBASE per gestione dati | MorphyHub',
+          description: 'Scarica file di esempio DBF database dBASE gratuiti per testare operazioni database, import/export dati e formati database legacy. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compatibilità dBASE, convertitori database, strumenti migrazione dati, applicazioni fogli di calcolo e sistemi gestione database.',
+          keywords: 'file di esempio DBF, file di test DBF, scarica esempi DBF, file di test DBF gratuiti, file database dBASE, file di test .dbf, file formato database, esempi database legacy, file di test compatibilità dBASE, esempi import dati'
+        },
+        schema: {
+          name: 'File di esempio DBF gratuiti - Scarica file di test database dBASE per gestione dati',
+          description: 'Scarica file di esempio DBF database dBASE gratuiti per testare operazioni database, import/export dati e formati database legacy. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compatibilità dBASE, convertitori database, strumenti migrazione dati, applicazioni fogli di calcolo e sistemi gestione database.'
+        },
+        hero: {
+          title: 'File di esempio DBF',
+          description: 'Scarica file di esempio DBF database dBASE gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi convertitori database, strumenti migrazione dati e sistemi gestione database.'
+        },
+        about_description: 'Questi sono file di test DBF (database dBASE) di varie dimensioni per scopi di test'
+      },
+      dem: {
+        meta: {
+          title: 'Scarica file di esempio DEM gratuiti - File di test modelli elevazione digitale per GIS e mappatura | MorphyHub',
+          description: 'Scarica file di esempio DEM modelli elevazione digitale gratuiti per testare applicazioni GIS, mappatura terreno e strumenti analisi geospaziale. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare software GIS, visualizzazione terreno, elaborazione dati elevazione, applicazioni mappatura e strumenti analisi geospaziale.',
+          keywords: 'file di esempio DEM, file di test DEM, scarica esempi DEM, file di test DEM gratuiti, file modelli elevazione digitale, file di test .dem, file elevazione GIS, esempi dati terreno, file dati geospaziali, file di test mappatura, esempi modelli elevazione'
+        },
+        schema: {
+          name: 'File di esempio DEM gratuiti - Scarica file di test modelli elevazione digitale per GIS e mappatura',
+          description: 'Scarica file di esempio DEM modelli elevazione digitale gratuiti per testare applicazioni GIS, mappatura terreno e strumenti analisi geospaziale. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare software GIS, visualizzazione terreno, elaborazione dati elevazione, applicazioni mappatura e strumenti analisi geospaziale.'
+        },
+        hero: {
+          title: 'File di esempio DEM',
+          description: 'Scarica file di esempio DEM modelli elevazione digitale gratuiti per test. Dimensioni file multiple disponibili per testare il tuo software GIS, visualizzazione terreno e strumenti analisi geospaziale.'
+        },
+        about_description: 'Questi sono file di test DEM (Digital Elevation Model) di varie dimensioni per scopi di test'
+      },
+      der: {
+        meta: {
+          title: 'Scarica file di esempio DER gratuiti - File di test certificati Distinguished Encoding Rules | MorphyHub',
+          description: 'Scarica file di esempio DER certificati Distinguished Encoding Rules gratuiti per testare certificati SSL/TLS, gestione PKI e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parsing certificati, OpenSSL, infrastruttura PKI, validazione certificati SSL e strumenti gestione certificati sicurezza.',
+          keywords: 'file di esempio DER, file di test DER, scarica esempi DER, file di test DER gratuiti, file Distinguished Encoding Rules, file di test .der, file certificati, esempi certificati SSL, file certificati PKI, file di test OpenSSL, esempi parsing certificati'
+        },
+        schema: {
+          name: 'File di esempio DER gratuiti - Scarica file di test certificati Distinguished Encoding Rules',
+          description: 'Scarica file di esempio DER certificati Distinguished Encoding Rules gratuiti per testare certificati SSL/TLS, gestione PKI e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parsing certificati, OpenSSL, infrastruttura PKI, validazione certificati SSL e strumenti gestione certificati sicurezza.'
+        },
+        hero: {
+          title: 'File di esempio DER',
+          description: 'Scarica file di esempio DER certificati Distinguished Encoding Rules gratuiti per test. Dimensioni file multiple disponibili per testare il tuo parsing certificati, OpenSSL e strumenti gestione PKI.'
+        },
+        about_description: 'Questi sono file di test DER (Distinguished Encoding Rules) certificati di varie dimensioni per scopi di test'
+      },
+      dmp: {
+        meta: {
+          title: 'Scarica file di esempio DMP gratuiti - File di test dump memoria per debugging e analisi | MorphyHub',
+          description: 'Scarica file di esempio DMP dump memoria gratuiti per testare analisi crash, strumenti debugging e diagnostica sistema. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare debugger, strumenti analisi crash, analizzatori memoria, strumenti diagnostica sistema e applicazioni analisi forense.',
+          keywords: 'file di esempio DMP, file di test DMP, scarica esempi DMP, file di test DMP gratuiti, file dump memoria, file di test .dmp, file dump crash, file debugging, esempi dump sistema, file analisi memoria, file di test analisi crash'
+        },
+        schema: {
+          name: 'File di esempio DMP gratuiti - Scarica file di test dump memoria per debugging e analisi',
+          description: 'Scarica file di esempio DMP dump memoria gratuiti per testare analisi crash, strumenti debugging e diagnostica sistema. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare debugger, strumenti analisi crash, analizzatori memoria, strumenti diagnostica sistema e applicazioni analisi forense.'
+        },
+        hero: {
+          title: 'File di esempio DMP',
+          description: 'Scarica file di esempio DMP dump memoria gratuiti per test. Dimensioni file multiple disponibili per testare la tua analisi crash, debugging e strumenti diagnostica sistema.'
+        },
+        about_description: 'Questi sono file di test DMP (dump memoria) di varie dimensioni per scopi di test'
+      },
+      'docker-compose-yml': {
+        meta: {
+          title: 'Scarica file di esempio Docker Compose YML gratuiti - File di test configurazione Docker Compose | MorphyHub',
+          description: 'Scarica file di esempio Docker Compose YML configurazione gratuiti per testare orchestrazione container Docker, applicazioni multi-container e strumenti DevOps. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Docker Compose, orchestrazione container, parsing YAML, automazione DevOps e strumenti deployment applicazioni containerizzate.',
+          keywords: 'file di esempio Docker Compose YML, file di test docker-compose, scarica esempi docker-compose, file di test docker-compose gratuiti, file YAML Docker Compose, file di test .yml, file orchestrazione container, esempi configurazione DevOps, file di test Docker Compose, esempi configurazione multi-container'
+        },
+        schema: {
+          name: 'File di esempio Docker Compose YML gratuiti - Scarica file di test configurazione Docker Compose',
+          description: 'Scarica file di esempio Docker Compose YML configurazione gratuiti per testare orchestrazione container Docker, applicazioni multi-container e strumenti DevOps. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Docker Compose, orchestrazione container, parsing YAML, automazione DevOps e strumenti deployment applicazioni containerizzate.'
+        },
+        hero: {
+          title: 'File di esempio Docker Compose YML',
+          description: 'Scarica file di esempio Docker Compose YML configurazione gratuiti per test. Dimensioni file multiple disponibili per testare Docker Compose, orchestrazione container e strumenti automazione DevOps.'
+        },
+        about_description: 'Questi sono file di test configurazione Docker Compose YML di varie dimensioni per scopi di test'
+      },
+      dockerfile: {
+        meta: {
+          title: 'Scarica file di esempio Dockerfile gratuiti - File di test build container Docker | MorphyHub',
+          description: 'Scarica file di esempio Dockerfile build container Docker gratuiti per testare containerizzazione, build Docker e strumenti DevOps. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare build Docker, creazione immagini container, parsing Dockerfile, strumenti containerizzazione e piattaforme automazione DevOps.',
+          keywords: 'file di esempio Dockerfile, file di test Dockerfile, scarica esempi Dockerfile, file di test Dockerfile gratuiti, file container Docker, file di test Dockerfile, file build container, esempi build Docker, file di test containerizzazione, esempi DevOps Docker'
+        },
+        schema: {
+          name: 'File di esempio Dockerfile gratuiti - Scarica file di test build container Docker',
+          description: 'Scarica file di esempio Dockerfile build container Docker gratuiti per testare containerizzazione, build Docker e strumenti DevOps. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare build Docker, creazione immagini container, parsing Dockerfile, strumenti containerizzazione e piattaforme automazione DevOps.'
+        },
+        hero: {
+          title: 'File di esempio Dockerfile',
+          description: 'Scarica file di esempio Dockerfile build container Docker gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi build Docker, creazione immagini container e strumenti containerizzazione.'
+        },
+        about_description: 'Questi sono file di test Dockerfile (build container Docker) di varie dimensioni per scopi di test'
+      },
+      editorconfig: {
+        meta: {
+          title: 'Scarica file di esempio EditorConfig gratuiti - File di test configurazione editor | MorphyHub',
+          description: 'Scarica file di esempio EditorConfig configurazione editor gratuiti per testare impostazioni editor codice, consistenza formattazione e strumenti sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser EditorConfig, plugin editor codice, strumenti formattazione, configurazione IDE e strumenti setup ambiente sviluppo.',
+          keywords: 'file di esempio EditorConfig, file di test EditorConfig, scarica esempi EditorConfig, file di test EditorConfig gratuiti, file configurazione editor, file di test .editorconfig, file impostazioni editor codice, esempi configurazione IDE, file configurazione formattazione, file di test impostazioni editor'
+        },
+        schema: {
+          name: 'File di esempio EditorConfig gratuiti - Scarica file di test configurazione editor',
+          description: 'Scarica file di esempio EditorConfig configurazione editor gratuiti per testare impostazioni editor codice, consistenza formattazione e strumenti sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser EditorConfig, plugin editor codice, strumenti formattazione, configurazione IDE e strumenti setup ambiente sviluppo.'
+        },
+        hero: {
+          title: 'File di esempio EditorConfig',
+          description: 'Scarica file di esempio EditorConfig configurazione editor gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser EditorConfig, plugin editor codice e strumenti formattazione.'
+        },
+        about_description: 'Questi sono file di test EditorConfig (configurazione editor) di varie dimensioni per scopi di test'
+      },
+      ini: {
+        meta: {
+          title: 'Scarica file di esempio INI gratuiti - File di test configurazione INI per applicazioni | MorphyHub',
+          description: 'Scarica file di esempio INI configurazione gratuiti per testare impostazioni applicazioni, parsing file INI e strumenti gestione configurazione. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser INI, configurazione applicazioni, gestione impostazioni, file INI Windows e utility configurazione software.',
+          keywords: 'file di esempio INI, file di test INI, scarica esempi INI, file di test INI gratuiti, file configurazione INI, file di test .ini, file impostazioni applicazioni, esempi configurazione INI, file INI Windows, esempi file configurazione, file di test parsing INI'
+        },
+        schema: {
+          name: 'File di esempio INI gratuiti - Scarica file di test configurazione INI per applicazioni',
+          description: 'Scarica file di esempio INI configurazione gratuiti per testare impostazioni applicazioni, parsing file INI e strumenti gestione configurazione. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser INI, configurazione applicazioni, gestione impostazioni, file INI Windows e utility configurazione software.'
+        },
+        hero: {
+          title: 'File di esempio INI',
+          description: 'Scarica file di esempio INI configurazione gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser INI, configurazione applicazioni e strumenti gestione impostazioni.'
+        },
+        about_description: 'Questi sono file di test INI (configurazione) di varie dimensioni per scopi di test'
+      },
+      intelhex: {
+        meta: {
+          title: 'Scarica file di esempio IntelHex gratuiti - File di test esadecimali Intel per sviluppo firmware | MorphyHub',
+          description: 'Scarica file di esempio IntelHex esadecimali Intel gratuiti per testare programmazione firmware, sviluppo sistemi embedded e strumenti microcontrollori. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser IntelHex, loader firmware, programmazione microcontrollori, strumenti sviluppo embedded e applicazioni elaborazione file hex.',
+          keywords: 'file di esempio IntelHex, file di test IntelHex, scarica esempi IntelHex, file di test IntelHex gratuiti, file esadecimali Intel, file di test .intelhex, file hex firmware, file hex embedded, file hex microcontrollori, file di test parser IntelHex, esempi programmazione firmware'
+        },
+        schema: {
+          name: 'File di esempio IntelHex gratuiti - Scarica file di test esadecimali Intel per sviluppo firmware',
+          description: 'Scarica file di esempio IntelHex esadecimali Intel gratuiti per testare programmazione firmware, sviluppo sistemi embedded e strumenti microcontrollori. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser IntelHex, loader firmware, programmazione microcontrollori, strumenti sviluppo embedded e applicazioni elaborazione file hex.'
+        },
+        hero: {
+          title: 'File di esempio IntelHex',
+          description: 'Scarica file di esempio IntelHex esadecimali Intel gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser IntelHex, loader firmware e strumenti sviluppo embedded.'
+        },
+        about_description: 'Questi sono file di test IntelHex (esadecimale Intel) di varie dimensioni per scopi di test'
+      },
+      ipynb: {
+        meta: {
+          title: 'Scarica file di esempio IPYNB gratuiti - File di test Jupyter Notebook per data science | MorphyHub',
+          description: 'Scarica file di esempio IPYNB Jupyter Notebook gratuiti per testare workflow data science, esecuzione Python e strumenti analisi notebook. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Jupyter Notebook, strumenti data science Python, visualizzatori notebook, applicazioni analisi dati e piattaforme computing scientifico.',
+          keywords: 'file di esempio IPYNB, file di test IPYNB, scarica esempi IPYNB, file di test IPYNB gratuiti, file Jupyter Notebook, file di test .ipynb, file notebook Python, esempi notebook data science, file di test Jupyter, file analisi notebook, esempi workflow data science'
+        },
+        schema: {
+          name: 'File di esempio IPYNB gratuiti - Scarica file di test Jupyter Notebook per data science',
+          description: 'Scarica file di esempio IPYNB Jupyter Notebook gratuiti per testare workflow data science, esecuzione Python e strumenti analisi notebook. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Jupyter Notebook, strumenti data science Python, visualizzatori notebook, applicazioni analisi dati e piattaforme computing scientifico.'
+        },
+        hero: {
+          title: 'File di esempio IPYNB',
+          description: 'Scarica file di esempio IPYNB Jupyter Notebook gratuiti per test. Dimensioni file multiple disponibili per testare Jupyter Notebook, strumenti data science Python e applicazioni analisi notebook.'
+        },
+        about_description: 'Questi sono file di test IPYNB (Jupyter Notebook) di varie dimensioni per scopi di test'
+      },
+      java: {
+        meta: {
+          title: 'Scarica file di esempio Java gratuiti - File di test codice sorgente Java per sviluppo | MorphyHub',
+          description: 'Scarica file di esempio Java codice sorgente Java gratuiti per testare compilazione Java, applicazioni JVM e strumenti sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori Java, JVM, supporto IDE (Eclipse, IntelliJ), strumenti build Java (Maven, Gradle) e ambienti sviluppo Java.',
+          keywords: 'file di esempio Java, file di test Java, scarica esempi Java, file di test Java gratuiti, file codice sorgente Java, file di test .java, file programmazione Java, file di test JVM, esempi compilazione Java, file di test IDE Java, esempi sviluppo Java'
+        },
+        schema: {
+          name: 'File di esempio Java gratuiti - Scarica file di test codice sorgente Java per sviluppo',
+          description: 'Scarica file di esempio Java codice sorgente Java gratuiti per testare compilazione Java, applicazioni JVM e strumenti sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori Java, JVM, supporto IDE (Eclipse, IntelliJ), strumenti build Java (Maven, Gradle) e ambienti sviluppo Java.'
+        },
+        hero: {
+          title: 'File di esempio Java',
+          description: 'Scarica file di esempio Java codice sorgente Java gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi compilatori Java, JVM e strumenti sviluppo Java.'
+        },
+        about_description: 'Questi sono file di test codice sorgente Java di varie dimensioni per scopi di test'
+      },
+      jks: {
+        meta: {
+          title: 'Scarica file di esempio JKS gratuiti - File di test Java KeyStore per sicurezza SSL/TLS | MorphyHub',
+          description: 'Scarica file di esempio JKS Java KeyStore gratuiti per testare archiviazione certificati SSL/TLS, sicurezza Java e strumenti gestione PKI. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare gestione Java KeyStore, parsing JKS, archiviazione certificati SSL, strumenti sicurezza Java e infrastruttura PKI.',
+          keywords: 'file di esempio JKS, file di test JKS, scarica esempi JKS, file di test JKS gratuiti, file Java KeyStore, file di test .jks, file certificati SSL, file sicurezza Java, file di test keystore, esempi certificati PKI, file di test gestione Java KeyStore'
+        },
+        schema: {
+          name: 'File di esempio JKS gratuiti - Scarica file di test Java KeyStore per sicurezza SSL/TLS',
+          description: 'Scarica file di esempio JKS Java KeyStore gratuiti per testare archiviazione certificati SSL/TLS, sicurezza Java e strumenti gestione PKI. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare gestione Java KeyStore, parsing JKS, archiviazione certificati SSL, strumenti sicurezza Java e infrastruttura PKI.'
+        },
+        hero: {
+          title: 'File di esempio JKS',
+          description: 'Scarica file di esempio JKS Java KeyStore gratuiti per test. Dimensioni file multiple disponibili per testare la tua gestione Java KeyStore, parsing JKS e strumenti archiviazione certificati SSL.'
+        },
+        about_description: 'Questi sono file di test JKS (Java KeyStore) di varie dimensioni per scopi di test'
+      },
+      json: {
+        meta: {
+          title: 'Scarica file di esempio JSON gratuiti - File di test dati JSON per sviluppo web | MorphyHub',
+          description: 'Scarica file di esempio JSON dati JSON gratuiti per testare parsing JSON, integrazione API e strumenti sviluppo web. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser JSON, risposte API, formati scambio dati, applicazioni web e strumenti validazione JSON.',
+          keywords: 'file di esempio JSON, file di test JSON, scarica esempi JSON, file di test JSON gratuiti, file dati JSON, file di test .json, file JSON API, file di test parser JSON, esempi scambio dati, file JSON web, file di test validazione JSON'
+        },
+        schema: {
+          name: 'File di esempio JSON gratuiti - Scarica file di test dati JSON per sviluppo web',
+          description: 'Scarica file di esempio JSON dati JSON gratuiti per testare parsing JSON, integrazione API e strumenti sviluppo web. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser JSON, risposte API, formati scambio dati, applicazioni web e strumenti validazione JSON.'
+        },
+        hero: {
+          title: 'File di esempio JSON',
+          description: 'Scarica file di esempio JSON dati JSON gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser JSON, integrazione API e strumenti sviluppo web.'
+        },
+        about_description: 'Questi sono file di test JSON (JavaScript Object Notation) di varie dimensioni per scopi di test'
+      },
+      jsonl: {
+        meta: {
+          title: 'Scarica file di esempio JSONL gratuiti - File di test JSON Lines per elaborazione dati | MorphyHub',
+          description: 'Scarica file di esempio JSONL JSON Lines gratuiti per testare elaborazione dati, streaming JSON e strumenti big data. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser JSONL, applicazioni streaming dati, strumenti ETL, elaborazione big data e strumenti analisi file log.',
+          keywords: 'file di esempio JSONL, file di test JSONL, scarica esempi JSONL, file di test JSONL gratuiti, file JSON Lines, file di test .jsonl, file streaming JSON, esempi elaborazione dati, file JSON ETL, esempi JSON big data, file analisi log JSON'
+        },
+        schema: {
+          name: 'File di esempio JSONL gratuiti - Scarica file di test JSON Lines per elaborazione dati',
+          description: 'Scarica file di esempio JSONL JSON Lines gratuiti per testare elaborazione dati, streaming JSON e strumenti big data. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser JSONL, applicazioni streaming dati, strumenti ETL, elaborazione big data e strumenti analisi file log.'
+        },
+        hero: {
+          title: 'File di esempio JSONL',
+          description: 'Scarica file di esempio JSONL JSON Lines gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser JSONL, applicazioni streaming dati e strumenti elaborazione big data.'
+        },
+        about_description: 'Questi sono file di test JSONL (JSON Lines) di varie dimensioni per scopi di test'
+      },
+      js: {
+        meta: {
+          title: 'Scarica file di esempio JS gratuiti - File di test codice sorgente JavaScript per sviluppo web | MorphyHub',
+          description: 'Scarica file di esempio JS codice sorgente JavaScript gratuiti per testare esecuzione JavaScript, sviluppo web e strumenti front-end. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare engine JavaScript, Node.js, browser web, minificatori JavaScript, strumenti analisi codice e framework sviluppo front-end.',
+          keywords: 'file di esempio JS, file di test JS, scarica esempi JS, file di test JS gratuiti, file codice sorgente JavaScript, file di test .js, file programmazione JavaScript, file di test Node.js, file JavaScript web, file di test minificatore JS, esempi sviluppo front-end'
+        },
+        schema: {
+          name: 'File di esempio JS gratuiti - Scarica file di test codice sorgente JavaScript per sviluppo web',
+          description: 'Scarica file di esempio JS codice sorgente JavaScript gratuiti per testare esecuzione JavaScript, sviluppo web e strumenti front-end. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare engine JavaScript, Node.js, browser web, minificatori JavaScript, strumenti analisi codice e framework sviluppo front-end.'
+        },
+        hero: {
+          title: 'File di esempio JS',
+          description: 'Scarica file di esempio JS codice sorgente JavaScript gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi engine JavaScript, Node.js e strumenti sviluppo web.'
+        },
+        about_description: 'Questi sono file di test JS (JavaScript) codice sorgente di varie dimensioni per scopi di test'
+      },
+      jsx: {
+        meta: {
+          title: 'Scarica file di esempio JSX gratuiti - File di test React JSX per sviluppo front-end | MorphyHub',
+          description: 'Scarica file di esempio JSX React JSX gratuiti per testare sviluppo React, compilazione JSX e framework front-end. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare React, transpiler JSX (Babel), strumenti build front-end, ambienti sviluppo React e framework JavaScript moderni.',
+          keywords: 'file di esempio JSX, file di test JSX, scarica esempi JSX, file di test JSX gratuiti, file React JSX, file di test .jsx, file componenti React, file di test transpiler JSX, file JSX front-end, esempi sviluppo React, file di test Babel JSX'
+        },
+        schema: {
+          name: 'File di esempio JSX gratuiti - Scarica file di test React JSX per sviluppo front-end',
+          description: 'Scarica file di esempio JSX React JSX gratuiti per testare sviluppo React, compilazione JSX e framework front-end. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare React, transpiler JSX (Babel), strumenti build front-end, ambienti sviluppo React e framework JavaScript moderni.'
+        },
+        hero: {
+          title: 'File di esempio JSX',
+          description: 'Scarica file di esempio JSX React JSX gratuiti per test. Dimensioni file multiple disponibili per testare React, transpiler JSX e strumenti sviluppo front-end.'
+        },
+        about_description: 'Questi sono file di test JSX (React JSX) di varie dimensioni per scopi di test'
+      },
+      jwt: {
+        meta: {
+          title: 'Scarica file di esempio JWT gratuiti - File di test JSON Web Token per sicurezza API | MorphyHub',
+          description: 'Scarica file di esempio JWT JSON Web Token gratuiti per testare autenticazione API, parsing token JWT e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser JWT, autenticazione API, validazione token, OAuth 2.0 e strumenti test sicurezza.',
+          keywords: 'file di esempio JWT, file di test JWT, scarica esempi JWT, file di test JWT gratuiti, file JSON Web Token, file di test .jwt, file token autenticazione, file sicurezza API, file di test parser JWT, esempi token OAuth, file test sicurezza'
+        },
+        schema: {
+          name: 'File di esempio JWT gratuiti - Scarica file di test JSON Web Token per sicurezza API',
+          description: 'Scarica file di esempio JWT JSON Web Token gratuiti per testare autenticazione API, parsing token JWT e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser JWT, autenticazione API, validazione token, OAuth 2.0 e strumenti test sicurezza.'
+        },
+        hero: {
+          title: 'File di esempio JWT',
+          description: 'Scarica file di esempio JWT JSON Web Token gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser JWT, autenticazione API e strumenti sicurezza.'
+        },
+        about_description: 'Questi sono file di test JWT (JSON Web Token) di varie dimensioni per scopi di test'
+      },
+      key: {
+        meta: {
+          title: 'Scarica file di esempio KEY gratuiti - File di test chiavi private per sicurezza SSL/TLS | MorphyHub',
+          description: 'Scarica file di esempio KEY chiavi private gratuiti per testare certificati SSL/TLS, operazioni crittografiche e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parsing chiavi private, OpenSSL, generazione certificati SSL, librerie crittografiche e strumenti gestione certificati sicurezza.',
+          keywords: 'file di esempio KEY, file di test KEY, scarica esempi KEY, file di test KEY gratuiti, file chiavi private, file di test .key, file chiavi SSL, file chiavi crittografiche, file di test OpenSSL, esempi chiavi sicurezza, file di test chiavi certificati'
+        },
+        schema: {
+          name: 'File di esempio KEY gratuiti - Scarica file di test chiavi private per sicurezza SSL/TLS',
+          description: 'Scarica file di esempio KEY chiavi private gratuiti per testare certificati SSL/TLS, operazioni crittografiche e strumenti sicurezza. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parsing chiavi private, OpenSSL, generazione certificati SSL, librerie crittografiche e strumenti gestione certificati sicurezza.'
+        },
+        hero: {
+          title: 'File di esempio KEY',
+          description: 'Scarica file di esempio KEY chiavi private gratuiti per test. Dimensioni file multiple disponibili per testare il tuo parsing chiavi private, OpenSSL e strumenti gestione certificati sicurezza.'
+        },
+        about_description: 'Questi sono file di test KEY (chiave privata) di varie dimensioni per scopi di test'
+      },
+      kml: {
+        meta: {
+          title: 'Scarica file di esempio KML gratuiti - File di test Keyhole Markup Language per GIS e mappatura | MorphyHub',
+          description: 'Scarica file di esempio KML Keyhole Markup Language dati geografici gratuiti per testare applicazioni GIS, visualizzazione mappe e strumenti geospaziali. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Google Earth, software GIS, rendering mappe, elaborazione dati geografici e strumenti analisi geospaziale.',
+          keywords: 'file di esempio KML, file di test KML, scarica esempi KML, file di test KML gratuiti, file Keyhole Markup Language, file di test .kml, file dati geografici, esempi dati mappe, file KML GIS, file di test Google Earth, esempi dati geospaziali'
+        },
+        schema: {
+          name: 'File di esempio KML gratuiti - Scarica file di test Keyhole Markup Language per GIS e mappatura',
+          description: 'Scarica file di esempio KML Keyhole Markup Language dati geografici gratuiti per testare applicazioni GIS, visualizzazione mappe e strumenti geospaziali. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Google Earth, software GIS, rendering mappe, elaborazione dati geografici e strumenti analisi geospaziale.'
+        },
+        hero: {
+          title: 'File di esempio KML',
+          description: 'Scarica file di esempio KML Keyhole Markup Language dati geografici gratuiti per test. Dimensioni file multiple disponibili per testare il tuo software GIS, visualizzazione mappe e strumenti analisi geospaziale.'
+        },
+        about_description: 'Questi sono file di test KML (Keyhole Markup Language) dati geografici di varie dimensioni per scopi di test'
+      },
+      kt: {
+        meta: {
+          title: 'Scarica file di esempio KT gratuiti - File di test codice sorgente Kotlin per sviluppo Android | MorphyHub',
+          description: 'Scarica file di esempio KT codice sorgente Kotlin gratuiti per testare compilazione Kotlin, sviluppo Android e applicazioni JVM. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori Kotlin, Android Studio, Kotlin/JVM, supporto IDE e ambienti sviluppo Kotlin.',
+          keywords: 'file di esempio KT, file di test KT, scarica esempi KT, file di test KT gratuiti, file codice sorgente Kotlin, file di test .kt, file programmazione Kotlin, file Android Kotlin, file di test compilatore Kotlin, esempi Kotlin JVM, file di test sviluppo Kotlin'
+        },
+        schema: {
+          name: 'File di esempio KT gratuiti - Scarica file di test codice sorgente Kotlin per sviluppo Android',
+          description: 'Scarica file di esempio KT codice sorgente Kotlin gratuiti per testare compilazione Kotlin, sviluppo Android e applicazioni JVM. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori Kotlin, Android Studio, Kotlin/JVM, supporto IDE e ambienti sviluppo Kotlin.'
+        },
+        hero: {
+          title: 'File di esempio KT',
+          description: 'Scarica file di esempio KT codice sorgente Kotlin gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi compilatori Kotlin, Android Studio e strumenti sviluppo Kotlin.'
+        },
+        about_description: 'Questi sono file di test KT (Kotlin) codice sorgente di varie dimensioni per scopi di test'
+      },
+      log: {
+        meta: {
+          title: 'Scarica file di esempio LOG gratuiti - File di test log per debugging e analisi sistema | MorphyHub',
+          description: 'Scarica file di esempio LOG log gratuiti per testare parsing log, analisi sistema e strumenti debugging. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare analizzatori log, strumenti monitoraggio sistema, applicazioni debugging, sistemi aggregazione log e strumenti diagnostica sistema.',
+          keywords: 'file di esempio LOG, file di test LOG, scarica esempi LOG, file di test LOG gratuiti, file log, file di test .log, file log sistema, esempi log applicazioni, file di test parser log, file debugging log, esempi analisi log sistema'
+        },
+        schema: {
+          name: 'File di esempio LOG gratuiti - Scarica file di test log per debugging e analisi sistema',
+          description: 'Scarica file di esempio LOG log gratuiti per testare parsing log, analisi sistema e strumenti debugging. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare analizzatori log, strumenti monitoraggio sistema, applicazioni debugging, sistemi aggregazione log e strumenti diagnostica sistema.'
+        },
+        hero: {
+          title: 'File di esempio LOG',
+          description: 'Scarica file di esempio LOG log gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi analizzatori log, monitoraggio sistema e strumenti debugging.'
+        },
+        about_description: 'Questi sono file di test LOG di varie dimensioni per scopi di test'
+      },
+      lua: {
+        meta: {
+          title: 'Scarica file di esempio LUA gratuiti - File di test script Lua per sviluppo giochi e automazione | MorphyHub',
+          description: 'Scarica file di esempio LUA script Lua gratuiti per testare esecuzione Lua, sviluppo giochi e strumenti automazione. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare interpreti Lua, engine giochi, ambienti scripting, strumenti automazione e applicazioni embedded Lua.',
+          keywords: 'file di esempio LUA, file di test LUA, scarica esempi LUA, file di test LUA gratuiti, file script Lua, file di test .lua, file programmazione Lua, file script giochi, file di test interprete Lua, esempi script automazione, file di test embedded Lua'
+        },
+        schema: {
+          name: 'File di esempio LUA gratuiti - Scarica file di test script Lua per sviluppo giochi e automazione',
+          description: 'Scarica file di esempio LUA script Lua gratuiti per testare esecuzione Lua, sviluppo giochi e strumenti automazione. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare interpreti Lua, engine giochi, ambienti scripting, strumenti automazione e applicazioni embedded Lua.'
+        },
+        hero: {
+          title: 'File di esempio LUA',
+          description: 'Scarica file di esempio LUA script Lua gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi interpreti Lua, engine giochi e strumenti automazione.'
+        },
+        about_description: 'Questi sono file di test LUA (script Lua) di varie dimensioni per scopi di test'
+      },
+      m3u: {
+        meta: {
+          title: 'Scarica file di esempio M3U gratuiti - File di test playlist M3U per lettori multimediali | MorphyHub',
+          description: 'Scarica file di esempio M3U playlist M3U gratuiti per testare lettori multimediali, parsing playlist e strumenti streaming audio/video. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori multimediali, gestori playlist, applicazioni streaming, lettori audio e software lettori video.',
+          keywords: 'file di esempio M3U, file di test M3U, scarica esempi M3U, file di test M3U gratuiti, file playlist M3U, file di test .m3u, file playlist multimediali, esempi playlist audio, file playlist video, file di test lettori multimediali, esempi playlist streaming'
+        },
+        schema: {
+          name: 'File di esempio M3U gratuiti - Scarica file di test playlist M3U per lettori multimediali',
+          description: 'Scarica file di esempio M3U playlist M3U gratuiti per testare lettori multimediali, parsing playlist e strumenti streaming audio/video. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori multimediali, gestori playlist, applicazioni streaming, lettori audio e software lettori video.'
+        },
+        hero: {
+          title: 'File di esempio M3U',
+          description: 'Scarica file di esempio M3U playlist M3U gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi lettori multimediali, gestori playlist e applicazioni streaming.'
+        },
+        about_description: 'Questi sono file di test M3U (playlist) di varie dimensioni per scopi di test'
+      },
+      m3u8: {
+        meta: {
+          title: 'Scarica file di esempio M3U8 gratuiti - File di test playlist M3U8 HLS per streaming video | MorphyHub',
+          description: 'Scarica file di esempio M3U8 playlist M3U8 HLS (HTTP Live Streaming) gratuiti per testare streaming video, lettori HLS e strumenti delivery multimediali. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori HLS, piattaforme streaming video, streaming bitrate adattivo, server multimediali e sistemi delivery video.',
+          keywords: 'file di esempio M3U8, file di test M3U8, scarica esempi M3U8, file di test M3U8 gratuiti, file playlist M3U8 HLS, file di test .m3u8, file HTTP Live Streaming, esempi playlist streaming video, file di test lettore HLS, esempi streaming adattivo, file playlist server multimediali'
+        },
+        schema: {
+          name: 'File di esempio M3U8 gratuiti - Scarica file di test playlist M3U8 HLS per streaming video',
+          description: 'Scarica file di esempio M3U8 playlist M3U8 HLS (HTTP Live Streaming) gratuiti per testare streaming video, lettori HLS e strumenti delivery multimediali. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori HLS, piattaforme streaming video, streaming bitrate adattivo, server multimediali e sistemi delivery video.'
+        },
+        hero: {
+          title: 'File di esempio M3U8',
+          description: 'Scarica file di esempio M3U8 playlist M3U8 HLS gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi lettori HLS, piattaforme streaming video e sistemi delivery multimediali.'
+        },
+        about_description: 'Questi sono file di test M3U8 (playlist HLS) di varie dimensioni per scopi di test'
+      },
+      makefile: {
+        meta: {
+          title: 'Scarica file di esempio Makefile gratuiti - File di test configurazione build Makefile | MorphyHub',
+          description: 'Scarica file di esempio Makefile configurazione build gratuiti per testare automazione build, sistema build Make e strumenti sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare sistema build Make, strumenti automazione build, compilazione C/C++, script build e ambienti build sviluppo.',
+          keywords: 'file di esempio Makefile, file di test Makefile, scarica esempi Makefile, file di test Makefile gratuiti, file build Makefile, file di test Makefile, file configurazione build, esempi sistema build Make, file build C/C++, file di test automazione build, esempi compilazione Makefile'
+        },
+        schema: {
+          name: 'File di esempio Makefile gratuiti - Scarica file di test configurazione build Makefile',
+          description: 'Scarica file di esempio Makefile configurazione build gratuiti per testare automazione build, sistema build Make e strumenti sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare sistema build Make, strumenti automazione build, compilazione C/C++, script build e ambienti build sviluppo.'
+        },
+        hero: {
+          title: 'File di esempio Makefile',
+          description: 'Scarica file di esempio Makefile configurazione build gratuiti per test. Dimensioni file multiple disponibili per testare il tuo sistema build Make, strumenti automazione build e ambienti build sviluppo.'
+        },
+        about_description: 'Questi sono file di test Makefile (configurazione build) di varie dimensioni per scopi di test'
+      },
+      mbtiles: {
+        meta: {
+          title: 'Scarica file di esempio MBTiles gratuiti - File di test database tile mappe MBTiles | MorphyHub',
+          description: 'Scarica file di esempio MBTiles database tile mappe gratuiti per testare rendering mappe, applicazioni GIS e strumenti mappatura. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare server tile mappe, software GIS, engine rendering mappe, applicazioni mappatura mobile e strumenti mappe offline.',
+          keywords: 'file di esempio MBTiles, file di test MBTiles, scarica esempi MBTiles, file di test MBTiles gratuiti, file tile mappe MBTiles, file di test .mbtiles, file database mappe, esempi tile GIS, file rendering mappe, file di test mappe mobile, esempi tile mappe offline'
+        },
+        schema: {
+          name: 'File di esempio MBTiles gratuiti - Scarica file di test database tile mappe MBTiles',
+          description: 'Scarica file di esempio MBTiles database tile mappe gratuiti per testare rendering mappe, applicazioni GIS e strumenti mappatura. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare server tile mappe, software GIS, engine rendering mappe, applicazioni mappatura mobile e strumenti mappe offline.'
+        },
+        hero: {
+          title: 'File di esempio MBTiles',
+          description: 'Scarica file di esempio MBTiles database tile mappe gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi server tile mappe, software GIS e engine rendering mappe.'
+        },
+        about_description: 'Questi sono file di test MBTiles (database tile mappe) di varie dimensioni per scopi di test'
+      },
+      md: {
+        meta: {
+          title: 'Scarica file di esempio MD gratuiti - File di test documentazione Markdown | MorphyHub',
+          description: 'Scarica file di esempio MD documentazione Markdown gratuiti per testare parsing Markdown, strumenti documentazione e sistemi gestione contenuti. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser Markdown, generatori documentazione, generatori siti statici, GitHub Markdown e piattaforme gestione contenuti.',
+          keywords: 'file di esempio MD, file di test MD, scarica esempi MD, file di test MD gratuiti, file Markdown, file di test .md, file documentazione Markdown, file di test parser Markdown, esempi GitHub Markdown, file generatori siti statici, file di test generatori documentazione'
+        },
+        schema: {
+          name: 'File di esempio MD gratuiti - Scarica file di test documentazione Markdown',
+          description: 'Scarica file di esempio MD documentazione Markdown gratuiti per testare parsing Markdown, strumenti documentazione e sistemi gestione contenuti. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser Markdown, generatori documentazione, generatori siti statici, GitHub Markdown e piattaforme gestione contenuti.'
+        },
+        hero: {
+          title: 'File di esempio MD',
+          description: 'Scarica file di esempio MD documentazione Markdown gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser Markdown, generatori documentazione e sistemi gestione contenuti.'
+        },
+        about_description: 'Questi sono file di test MD (Markdown) di varie dimensioni per scopi di test'
+      },
+      mdx: {
+        meta: {
+          title: 'Scarica file di esempio MDX gratuiti - File di test MDX React Markdown per documentazione | MorphyHub',
+          description: 'Scarica file di esempio MDX MDX (Markdown + JSX) gratuiti per testare documentazione React, generatori siti statici e sistemi gestione contenuti. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser MDX, strumenti documentazione React, Next.js, Gatsby, generatori siti statici e piattaforme documentazione moderne.',
+          keywords: 'file di esempio MDX, file di test MDX, scarica esempi MDX, file di test MDX gratuiti, file MDX React Markdown, file di test .mdx, file documentazione React, file di test parser MDX, esempi MDX Next.js, file MDX Gatsby, file di test generatori siti statici MDX'
+        },
+        schema: {
+          name: 'File di esempio MDX gratuiti - Scarica file di test MDX React Markdown per documentazione',
+          description: 'Scarica file di esempio MDX MDX (Markdown + JSX) gratuiti per testare documentazione React, generatori siti statici e sistemi gestione contenuti. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser MDX, strumenti documentazione React, Next.js, Gatsby, generatori siti statici e piattaforme documentazione moderne.'
+        },
+        hero: {
+          title: 'File di esempio MDX',
+          description: 'Scarica file di esempio MDX MDX (Markdown + JSX) gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi parser MDX, strumenti documentazione React e generatori siti statici.'
+        },
+        about_description: 'Questi sono file di test MDX (Markdown + JSX) di varie dimensioni per scopi di test'
       }
     }
   }
