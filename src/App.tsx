@@ -1384,6 +1384,48 @@ function App() {
         <Route path="/de/samples/sample-mobi" element={<SampleMobi />} />
         <Route path="/de/samples/sample-7z" element={<Sample7z />} />
 
+        {/* Bahasa Indonesia (ID) Sample Files Routes */}
+        <Route path="/id/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Svenska (SV) Sample Files Routes */}
+        <Route path="/sv/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Español (ES) Sample Files Routes */}
+        <Route path="/es/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Français (FR) Sample Files Routes */}
+        <Route path="/fr/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Italiano (IT) Sample Files Routes */}
+        <Route path="/it/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Nederlands (NL) Sample Files Routes */}
+        <Route path="/nl/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Português (PT) Sample Files Routes */}
+        <Route path="/pt/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Tiếng Việt (VI) Sample Files Routes */}
+        <Route path="/vi/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Türkçe (TR) Sample Files Routes */}
+        <Route path="/tr/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* Русский (RU) Sample Files Routes */}
+        <Route path="/ru/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* العربية (AR) Sample Files Routes */}
+        <Route path="/ar/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* ไทย (TH) Sample Files Routes */}
+        <Route path="/th/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* 日本語 (JA) Sample Files Routes */}
+        <Route path="/ja/samples/sample-docx" element={<SampleDocx />} />
+
+        {/* 简体中文 (ZH) Sample Files Routes */}
+        <Route path="/zh/samples/sample-docx" element={<SampleDocx />} />
+
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />
       </Routes>

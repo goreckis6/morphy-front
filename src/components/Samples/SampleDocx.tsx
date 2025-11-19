@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { getLocalizedUrl } from '../../i18n';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { useNavigate } from 'react-router-dom';
-import '../../locales/samplePages';
+import '../../locales/sampleTranslation';
 
 interface SampleFile {
   size: string;
