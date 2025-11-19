@@ -7,6 +7,7 @@ import { additionalTranslations as additionalTranslationsV4 } from './i18n_v4';
 import { additionalTranslations as additionalTranslationsCSVToXML } from './i18n_csv_to_xml';
 import { additionalTranslations as additionalTranslationsCSVToYAML } from './i18n_csv_to_yaml';
 import { additionalTranslations as additionalTranslationsDNGToWebP } from './i18n_dng_to_webp';
+import { additionalTranslations as additionalTranslationsEPSToWebP } from './i18n_eps_to_webp';
 
 // Translation resources
 const resources = {
@@ -5057,33 +5058,6 @@ const resources = {
       'bmp_to_webp.ready_text': 'Use our free online BMP to WebP converter to transform your bitmap images into web-optimized images.',
 
       // DNG to WebP
-      // EPS to WebP
-      'eps_to_webp.title': 'Free EPS to WebP Converter',
-      'eps_to_webp.meta_title': 'Free EPS to WebP Converter Online - Convert PostScript to WebP For Free',
-      'eps_to_webp.meta_description': 'Free online EPS to WebP converter. Convert Encapsulated PostScript EPS files to WebP format with quality settings (high, medium, low) and lossless mode. Professional vector graphics conversion, no registration required.',
-      'eps_to_webp.subtitle': 'Convert EPS (Encapsulated PostScript) files to WebP format for web optimization. Transform vector graphics into modern web-friendly images with superior compression.',
-      'eps_to_webp.upload_single': 'Upload EPS File',
-      'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
-      'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
-      'eps_to_webp.upload_text_batch': 'Select multiple EPS files to convert them all at once',
-      'eps_to_webp.file_limits_single': 'Single file limit: 100.00 MB per file.',
-      'eps_to_webp.file_limits_batch': 'Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.',
-      'eps_to_webp.batch_info': 'Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.',
-      'eps_to_webp.choose_files': 'Choose Files',
-      'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
-      'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
-      'eps_to_webp.download_webp': 'Download WebP File',
-      'eps_to_webp.download': 'Download',
-      'eps_to_webp.back_to_home': 'Back to Home',
-      'eps_to_webp.convert_more_files': 'Convert More Files',
-      'eps_to_webp.perfect_for': 'Perfect For',
-      'eps_to_webp.key_benefits': 'Key Benefits of WebP Format',
-      'eps_to_webp.common_use_cases': 'Common Use Cases',
-      'eps_to_webp.ready_to_convert': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_description': 'Use our free online EPS to WebP converter to transform your vector graphics into modern, web-optimized images.',
-      'eps_to_webp.start_converting': 'Start Converting Now',
-
       // CSV to YAML
       'csv_to_docx.title': 'Konwerter CSV na DOCX',
       'csv_to_docx.meta_title': 'Darmowy konwerter CSV na DOCX - Konwertuj CSV na dokumenty Word',
@@ -6017,33 +5991,6 @@ const resources = {
       'bmp_to_webp.ready_text': 'Użyj naszego darmowego konwertera BMP do WebP online, aby przekształcić swoje obrazy bitmapowe w zoptymalizowane obrazy internetowe.',
 
       // DNG to WebP (Polish)
-      // EPS to WebP (Polish)
-      'eps_to_webp.title': 'Konwerter EPS do WebP',
-      'eps_to_webp.meta_title': 'Darmowy Konwerter EPS do WebP Online - Konwertuj PostScript do WebP Za Darmo',
-      'eps_to_webp.meta_description': 'Darmowy online konwerter EPS do WebP. Konwertuj pliki Encapsulated PostScript EPS do formatu WebP z ustawieniami jakości (wysoka, średnia, niska) i trybem bezstratnym. Profesjonalna konwersja grafiki wektorowej, bez rejestracji.',
-      'eps_to_webp.subtitle': 'Konwertuj pliki EPS (Encapsulated PostScript) do formatu WebP dla optymalizacji internetowej. Przekształć grafikę wektorową w nowoczesne, przyjazne dla sieci obrazy z doskonałą kompresją.',
-      'eps_to_webp.upload_single': 'Prześlij plik EPS',
-      'eps_to_webp.upload_batch': 'Prześlij wiele plików EPS',
-      'eps_to_webp.upload_text_single': 'Przeciągnij i upuść plik EPS tutaj lub kliknij, aby przeglądać',
-      'eps_to_webp.upload_text_batch': 'Wybierz wiele plików EPS, aby przekonwertować je wszystkie naraz',
-      'eps_to_webp.file_limits_single': 'Limit pojedynczego pliku: 100,00 MB na plik.',
-      'eps_to_webp.file_limits_batch': 'Konwersja wsadowa obsługuje do 20 plików, 100,00 MB na plik, 100,00 MB łącznie.',
-      'eps_to_webp.batch_info': 'Konwersja wsadowa obsługuje do 20 plików, 100,00 MB na plik, 100,00 MB łącznie.',
-      'eps_to_webp.choose_files': 'Wybierz Pliki',
-      'eps_to_webp.convert_to_webp': 'Konwertuj do WebP',
-      'eps_to_webp.convert_files': 'Konwertuj {{count}} plików',
-      'eps_to_webp.batch_conversion_complete': 'Konwersja partii zakończona',
-      'eps_to_webp.download_webp': 'Pobierz Plik WebP',
-      'eps_to_webp.download': 'Pobierz',
-      'eps_to_webp.back_to_home': 'Powrót do Strony Głównej',
-      'eps_to_webp.convert_more_files': 'Konwertuj Więcej Plików',
-      'eps_to_webp.perfect_for': 'Idealne dla',
-      'eps_to_webp.key_benefits': 'Kluczowe Korzyści Formatu WebP',
-      'eps_to_webp.common_use_cases': 'Typowe Przypadki Użycia',
-      'eps_to_webp.ready_to_convert': 'Gotowy do Konwersji Plików EPS?',
-      'eps_to_webp.ready_description': 'Użyj naszego darmowego konwertera EPS do WebP online, aby przekształcić swoje pliki wektorowe w nowoczesne, zoptymalizowane obrazy internetowe.',
-      'eps_to_webp.start_converting': 'Rozpocznij Konwersję Teraz',
-
       // EPUB to CSV - Polish
       'epub_to_csv.title': 'Darmowy Konwerter EPUB do CSV',
       'epub_to_csv.meta_title': 'Darmowy Konwerter EPUB do CSV Online - Wyodrębnij Treść eBook w Formacie CSV ',
@@ -10847,33 +10794,6 @@ const resources = {
       'bmp_to_webp.ready_title': 'Bereit, Ihre BMP-Dateien zu Konvertieren?',
       'bmp_to_webp.ready_text': 'Verwenden Sie unseren kostenlosen Online-BMP-zu-WebP-Konverter, um Ihre Bitmap-Bilder in web-optimierte Bilder zu transformieren.',
 
-      // EPS to WebP (German)
-      'eps_to_webp.title': 'EPS zu WebP Konverter - Konvertiere Encapsulated PostScript zu WebP',
-      'eps_to_webp.meta_title': 'Kostenloser EPS zu WebP Konverter Online - PostScript zu WebP Kostenlos',
-      'eps_to_webp.meta_description': 'Kostenloser Online-Konverter EPS zu WebP. Konvertieren Sie Encapsulated PostScript EPS-Dateien zu WebP-Format mit Qualitätseinstellungen (hoch, mittel, niedrig) und verlustfreiem Modus. Professionelle Vektorgrafik-Konvertierung, keine Registrierung erforderlich.',
-      'eps_to_webp.subtitle': 'Konvertieren Sie EPS-Dateien (Encapsulated PostScript) zu WebP-Format für Web-Optimierung. Transformieren Sie Vektorgrafiken in moderne, webfreundliche Bilder mit überlegener Kompression.',
-      'eps_to_webp.upload_single': 'EPS-Datei hochladen',
-      'eps_to_webp.upload_batch': 'Mehrere EPS-Dateien hochladen',
-      'eps_to_webp.upload_text_single': 'Ziehen Sie Ihre EPS-Datei hierher oder klicken Sie zum Durchsuchen',
-      'eps_to_webp.upload_text_batch': 'Wählen Sie mehrere EPS-Dateien aus, um sie alle auf einmal zu konvertieren',
-      'eps_to_webp.file_limits_single': 'Einzeldatei-Beschränkung: 100,00 MB pro Datei.',
-      'eps_to_webp.file_limits_batch': 'Stapelkonvertierung unterstützt bis zu 20 Dateien, 100,00 MB pro Datei, 100,00 MB insgesamt.',
-      'eps_to_webp.batch_info': 'Stapelkonvertierung unterstützt bis zu 20 Dateien, 100,00 MB pro Datei, 100,00 MB insgesamt.',
-      'eps_to_webp.choose_files': 'Dateien auswählen',
-      'eps_to_webp.convert_to_webp': 'Zu WebP konvertieren',
-      'eps_to_webp.convert_files': '{{count}} Dateien konvertieren',
-      'eps_to_webp.batch_conversion_complete': 'Stapelkonvertierung abgeschlossen',
-      'eps_to_webp.download_webp': 'WebP-Datei herunterladen',
-      'eps_to_webp.download': 'Herunterladen',
-      'eps_to_webp.back_to_home': 'Zurück zur Startseite',
-      'eps_to_webp.convert_more_files': 'Weitere Dateien konvertieren',
-      'eps_to_webp.perfect_for': 'Perfekt für',
-      'eps_to_webp.key_benefits': 'Hauptvorteile des WebP-Formats',
-      'eps_to_webp.common_use_cases': 'Häufige Anwendungsfälle',
-      'eps_to_webp.ready_to_convert': 'Bereit, Ihre EPS-Dateien zu konvertieren?',
-      'eps_to_webp.ready_description': 'Verwenden Sie unseren kostenlosen Online-Konverter EPS zu WebP, um Ihre Vektorgrafiken in moderne, web-optimierte Bilder zu transformieren.',
-      'eps_to_webp.start_converting': 'Jetzt konvertieren',
-      
       // EPUB to CSV - German
       'epub_to_csv.title': 'Kostenloser EPUB zu CSV Konverter',
       'epub_to_csv.meta_title': 'Kostenloser EPUB zu CSV Konverter Online - eBook-Inhalte in CSV-Format extrahieren ',
@@ -11980,6 +11900,15 @@ Object.keys(additionalTranslationsDNGToWebP).forEach(lang => {
     resources[lang] = deepMerge(resources[lang], additionalTranslationsDNGToWebP[lang]);
   } else {
     resources[lang] = additionalTranslationsDNGToWebP[lang];
+  }
+});
+
+// Merge EPS to WebP translations
+Object.keys(additionalTranslationsEPSToWebP).forEach(lang => {
+  if (resources[lang]) {
+    resources[lang] = deepMerge(resources[lang], additionalTranslationsEPSToWebP[lang]);
+  } else {
+    resources[lang] = additionalTranslationsEPSToWebP[lang];
   }
 });
 
