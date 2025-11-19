@@ -1346,6 +1346,6 @@ export const additionalTranslations = {
       'dng_to_webp.ready_text': 'Transform your professional camera DNG files into web-optimized WebP images instantly. Our free online DNG to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.',
       'dng_to_webp.why_convert_title': 'Why Convert DNG to WebP?'
     },
-  }
+  },
 };
 
