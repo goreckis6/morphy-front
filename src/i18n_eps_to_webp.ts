@@ -64,12 +64,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -77,7 +77,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.',
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.',
       'eps_to_webp.why_convert_title': 'Why Convert EPS to WebP?'
     },
   },
@@ -254,8 +254,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'Konverter EPS ke WebP',
       'eps_to_webp.meta_title': 'Konverter EPS ke WebP Online Gratis - Konversi Encapsulated PostScript ke WebP Instan | Tool EPS WebP Terbaik',
       'eps_to_webp.meta_description': 'Konversi EPS ke WebP online gratis instan. Transformasikan gambar vector Encapsulated PostScript EPS ke format WebP untuk optimisasi web, loading lebih cepat, performa SEO. Konversi gambar vector profesional dengan pengaturan kualitas (tinggi/sedang/rendah), mode lossless, pemrosesan batch. Tidak perlu registrasi.',
-      'eps_to_webp.meta_keywords': 'EPS ke WebP, konverter Encapsulated PostScript, konverter WebP online, vector kamera ke WebP, gambar vector EPS, optimisasi gambar web, fotografi profesional, konversi batch EPS, konverter EPS gratis, kompresi WebP, Adobe PostScript, manajemen aset digital',
-      'eps_to_webp.subtitle': 'Konversi gambar vector Adobe EPS ke format WebP instan. Sempurna untuk optimisasi web, loading halaman lebih cepat, performa SEO, workflow fotografi profesional, dan pengembangan web modern dengan kompresi superior.',
+      'eps_to_webp.meta_keywords': 'EPS ke WebP, konverter Encapsulated PostScript, konverter WebP online, vektorgrafik ke WebP, gambar vector EPS, optimisasi gambar web, fotografi profesional, konversi batch EPS, konverter EPS gratis, kompresi WebP, Adobe PostScript, manajemen aset digital',
+      'eps_to_webp.subtitle': 'Konversi file Encapsulated PostScript EPS ke format WebP instan. Sempurna untuk optimisasi web, loading halaman lebih cepat, performa SEO, workflow fotografi profesional, dan pengembangan web modern dengan kompresi superior.',
       'eps_to_webp.upload_single': 'Unggah File EPS',
       'eps_to_webp.upload_batch': 'Unggah Beberapa File EPS',
       'eps_to_webp.upload_text_single': 'Seret dan lepas file EPS Anda di sini atau klik untuk menjelajah',
@@ -265,7 +265,7 @@ export const additionalTranslations = {
       'eps_to_webp.image_preview': 'Pratinjau Gambar EPS',
       'eps_to_webp.file_info': 'Info File EPS',
       'eps_to_webp.will_convert_to': 'Akan dikonversi ke',
-      'eps_to_webp.adobe_dng_file': 'File kamera Encapsulated PostScript (EPS)',
+      'eps_to_webp.adobe_dng_file': 'File vektorgrafik Encapsulated PostScript (EPS)',
       'eps_to_webp.no_preview_found': 'Pratinjau tidak tersedia - konversi akan menggunakan mesin dekode vector',
       'eps_to_webp.selected_files': 'File yang Dipilih',
       'eps_to_webp.convert_to_webp': 'Konversi ke WebP',
@@ -285,7 +285,7 @@ export const additionalTranslations = {
       'eps_to_webp.feature_1': 'Dukungan Encapsulated PostScript',
       'eps_to_webp.feature_2': 'Kompresi yang dioptimalkan untuk web',
       'eps_to_webp.feature_3': 'Output gambar berkualitas tinggi',
-      'eps_to_webp.feature_4': 'Pemrosesan file kamera profesional',
+      'eps_to_webp.feature_4': 'Pemrosesan vektorgrafik profesional',
       'eps_to_webp.feature_5': 'Kompatibilitas format web modern',
       'eps_to_webp.feature_6': 'Dukungan pemrosesan batch',
       'eps_to_webp.batch_size_warning': 'Ukuran batch mendekati batas 100MB. Pertimbangkan untuk memproses lebih sedikit file untuk performa yang lebih baik.',
@@ -304,7 +304,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_4': 'Manajemen aset digital',
       'eps_to_webp.use_case_5': 'Optimisasi performa website',
       'eps_to_webp.use_case_6': 'Pengembangan web modern',
-      'eps_to_webp.seo_intro': 'Mengonversi gambar vector Adobe EPS ke format WebP sangat penting untuk pengembangan web modern, manajemen aset digital, dan optimisasi performa website. Sementara file EPS mengandung data gambar vector berkualitas tinggi dari kamera profesional, WebP menyediakan kompresi superior (25-35% lebih baik daripada JPEG/PNG), waktu loading lebih cepat, ranking SEO yang lebih baik, dan performa web yang ditingkatkan tanpa mengorbankan kualitas gambar.',
+      'eps_to_webp.seo_intro': 'Mengonversi file Encapsulated PostScript EPS ke format WebP sangat penting untuk pengembangan web modern, manajemen aset digital, dan optimisasi performa website. Sementara file EPS mengandung vektorgrafik berkualitas tinggi, WebP menyediakan kompresi superior (25-35% lebih baik daripada JPEG/PNG), waktu loading lebih cepat, ranking SEO yang lebih baik, dan performa web yang ditingkatkan tanpa mengorbankan kualitas gambar.',
       'eps_to_webp.benefits_title': 'Manfaat Utama Format WebP',
       'eps_to_webp.benefit_compression_title': 'Kompresi Superior',
       'eps_to_webp.benefit_compression_text': 'WebP menyediakan kompresi 25-35% lebih baik daripada JPEG dan PNG, secara signifikan mengurangi ukuran file sambil mempertahankan kualitas gambar tinggi dari file vector EPS Anda. Ini berarti loading halaman lebih cepat, biaya bandwidth berkurang, dan pengalaman pengguna yang lebih baik.',
@@ -316,7 +316,7 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_standard_text': 'WebP didukung oleh semua browser modern (Chrome, Firefox, Safari, Edge) dan merupakan format yang direkomendasikan untuk gambar web oleh Google, meningkatkan Core Web Vitals dan ranking mesin pencari website Anda.',
       'eps_to_webp.use_cases_title': 'Kasus Penggunaan Umum',
       'eps_to_webp.use_case_graphics_title': 'Workflow Fotografi Profesional',
-      'eps_to_webp.use_case_graphics_text': 'Konversi gambar EPS berkualitas tinggi dari kamera profesional (Canon, Nikon, Sony, Fujifilm) ke WebP untuk digunakan dalam portfolio fotografi, galeri klien, presentasi digital, dan pameran online.',
+      'eps_to_webp.use_case_graphics_text': 'Konversi vektorgrafik EPS berkualitas tinggi ke WebP untuk digunakan dalam portfolio fotografi, galeri klien, presentasi digital, dan pameran online.',
       'eps_to_webp.use_case_portfolio_title': 'Optimisasi Gambar Web',
       'eps_to_webp.use_case_portfolio_text': 'Optimalkan gambar EPS Anda untuk penggunaan web dengan mengonversinya ke WebP, memastikan waktu loading cepat, kualitas visual yang sangat baik, dan performa SEO yang ditingkatkan untuk website dan portfolio fotografi.',
       'eps_to_webp.use_case_ecommerce_title': 'Integrasi Adobe PostScript',
@@ -324,7 +324,42 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Optimisasi Performa Website',
       'eps_to_webp.use_case_marketing_text': 'Tingkatkan metrik performa website Anda (PageSpeed Insights, Core Web Vitals) dengan mengonversi gambar EPS ke WebP, mengurangi penggunaan bandwidth, meningkatkan pengalaman pengguna, dan meningkatkan ranking mesin pencari.',
       'eps_to_webp.ready_title': 'Siap Mengonversi File EPS Anda?',
-      'eps_to_webp.ready_text': 'Transformasikan file EPS kamera profesional Anda menjadi gambar WebP yang dioptimalkan untuk web instan. Konverter online gratis kami EPS ke WebP mendukung pemrosesan batch, pengaturan kualitas (tinggi/sedang/rendah), kompresi lossless, dan menghasilkan gambar yang dioptimalkan untuk website yang lebih cepat dan performa SEO yang lebih baik.'
+      'eps_to_webp.ready_text': 'Transformasikan file Encapsulated PostScript EPS Anda menjadi gambar WebP yang dioptimalkan untuk web instan. Konverter online gratis kami EPS ke WebP mendukung pemrosesan batch, pengaturan kualitas (tinggi/sedang/rendah), kompresi lossless, dan menghasilkan gambar yang dioptimalkan untuk website yang lebih cepat dan performa SEO yang lebih baik.',
+      'eps_to_webp.choose_files': 'Pilih File',
+
+        'eps_to_webp.perfect_for': 'Sempurna Untuk',
+
+        'eps_to_webp.convert_more_files': 'Konversi Lebih Banyak File',
+
+        'eps_to_webp.back_to_home': 'Kembali ke Beranda',
+
+        'eps_to_webp.key_benefits': 'Manfaat Utama Format WebP',
+
+        'eps_to_webp.common_use_cases': 'Kasus Penggunaan Umum',
+
+        'eps_to_webp.ready_to_convert': 'Siap Mengonversi File EPS Anda?',
+
+        'eps_to_webp.ready_description': 'Gunakan konverter online gratis kami EPS ke WebP untuk mengubah grafik vektor Anda menjadi gambar yang dioptimalkan untuk web modern.',
+
+        'eps_to_webp.start_converting': 'Mulai Mengonversi Sekarang',
+
+        'eps_to_webp.batch_info': 'Konversi batch mendukung hingga 20 file, 100,00 MB per file, 100,00 MB total.',
+
+        'eps_to_webp.use_case_web_title': 'Optimisasi Gambar Web',
+
+        'eps_to_webp.use_case_web_text': 'Optimalkan grafik vektor EPS Anda untuk penggunaan web dengan mengonversinya ke WebP, memastikan waktu loading cepat, kualitas visual yang sangat baik, dan performa SEO yang ditingkatkan untuk website dan portfolio.',
+
+        'eps_to_webp.use_case_vector_title': 'Grafik Vektor untuk Web',
+
+        'eps_to_webp.use_case_vector_text': 'Konversi grafik vektor EPS ke WebP untuk digunakan dalam aplikasi web modern, memastikan tampilan yang tajam di semua perangkat dan ukuran layar sambil mempertahankan kualitas profesional.',
+
+        'eps_to_webp.use_case_dev_title': 'Pengembangan Web Modern',
+
+        'eps_to_webp.use_case_dev_text': 'Integrasikan grafik vektor EPS ke dalam workflow pengembangan web modern dengan mengonversinya ke format WebP untuk performa optimal, loading halaman lebih cepat, dan pengalaman pengguna yang lebih baik.',
+
+        'eps_to_webp.use_case_marketing_title': 'Materi Pemasaran Digital',
+
+        'eps_to_webp.use_case_marketing_text': 'Buat materi pemasaran digital yang dioptimalkan dengan mengonversi grafik EPS ke WebP, memastikan loading cepat, penampilan profesional, dan metrik performa kampanye yang ditingkatkan.'
     },
   },
   sv: {
@@ -332,9 +367,88 @@ export const additionalTranslations = {
       // EPS to WebP
       'eps_to_webp.title': 'EPS till WebP Konverterare',
       'eps_to_webp.meta_title': 'EPS till WebP Konverterare Online Gratis - Konvertera Encapsulated PostScript till WebP Omedelbart | Bästa EPS WebP-verktyget',
-      'eps_to_webp.meta_description': 'Konvertera EPS till WebP online gratis omedelbart. Transformera Encapsulated PostScript EPS vector-kamerabilder till WebP-format för webboptimering, snabbare laddning, SEO-prestanda. Professionell vector-bildkonvertering med kvalitetsinställningar (hög/medium/låg), förlustfri läge, batchbearbetning. Ingen registrering krävs.',
-      'eps_to_webp.meta_keywords': 'EPS till WebP, Encapsulated PostScript konverterare, WebP konverterare online, kamera vector till WebP, EPS vector-bilder, webbbildoptimering, professionell fotografi, batch EPS-konvertering, gratis EPS konverterare, WebP-komprimering, Adobe PostScript, digitalt tillgångshantering',
-      'eps_to_webp.subtitle': 'Konvertera Adobe EPS vector-kamerabilder till WebP-format omedelbart. Perfekt för webboptimering, snabbare sidladdningar, SEO-prestanda, professionella fotografi-arbetsflöden och modern webbutveckling med överlägsen komprimering.',
+      'eps_to_webp.meta_description': 'Konvertera EPS till WebP online gratis omedelbart. Transformera Encapsulated PostScript EPS-vektorgrafiker till WebP-format för webboptimering, snabbare laddning, SEO-prestanda. Professionell vektorgrafik-konvertering med kvalitetsinställningar (hög/medium/låg), förlustfri läge, batchbearbetning. Ingen registrering krävs.',
+      'eps_to_webp.meta_keywords': 'EPS till WebP, Encapsulated PostScript konverterare, WebP konverterare online, vektorgrafiker till WebP, EPS-vektorgrafiker, webbbildoptimering, professionell grafik, batch EPS-konvertering, gratis EPS konverterare, WebP-komprimering, PostScript-konvertering, digital grafik',
+      'eps_to_webp.subtitle': 'Konvertera Encapsulated PostScript EPS-filer till WebP-format omedelbart. Perfekt för webboptimering, snabbare sidladdningar, SEO-prestanda, moderna grafik-arbetsflöden och modern webbutveckling med överlägsen komprimering.',
+      'eps_to_webp.upload_single': 'Ladda upp EPS-fil',
+      'eps_to_webp.upload_batch': 'Ladda upp flera EPS-filer',
+      'eps_to_webp.upload_text_single': 'Dra och släpp din EPS-fil här eller klicka för att bläddra',
+      'eps_to_webp.upload_text_batch': 'Välj flera EPS-filer för att konvertera dem alla på en gång',
+      'eps_to_webp.file_limits_single': 'Enskild filgräns: 100,00 MB per fil.',
+      'eps_to_webp.file_limits_batch': 'Batchkonvertering stöder upp till 20 filer, 100,00 MB per fil, 100,00 MB totalt.',
+      'eps_to_webp.image_preview': 'EPS Bildförhandsvisning',
+      'eps_to_webp.file_info': 'EPS Filinformation',
+      'eps_to_webp.will_convert_to': 'Kommer att konvertera till',
+      'eps_to_webp.adobe_dng_file': 'Encapsulated PostScript (EPS) vektorgrafikfil',
+      'eps_to_webp.no_preview_found': 'Förhandsvisning inte tillgänglig - konvertering kommer att använda vektorgrafik-motor',
+      'eps_to_webp.selected_files': 'Valda Filer',
+      'eps_to_webp.convert_to_webp': 'Konvertera till WebP',
+      'eps_to_webp.convert_files': 'Konvertera {{count}} filer',
+      'eps_to_webp.conversion_complete': 'Konvertering slutförd!',
+      'eps_to_webp.batch_conversion_complete': 'Konversi Batch Selesai!',
+      'eps_to_webp.success_message': 'File EPS Anda telah berhasil dikonversi ke format WebP.',
+      'eps_to_webp.batch_success_message': 'Semua {{count}} file EPS telah berhasil dikonversi ke format WebP.',
+      'eps_to_webp.download_webp': 'Unduh File WebP',
+      'eps_to_webp.webp_settings': 'Pengaturan WebP',
+      'eps_to_webp.quality': 'Kualitas',
+      'eps_to_webp.quality_high_option': 'Kualitas Tinggi (90-100%)',
+      'eps_to_webp.quality_medium_option': 'Kualitas Sedang (70-89%)',
+      'eps_to_webp.quality_low_option': 'Kualitas Rendah (50-69%)',
+      'eps_to_webp.lossless_compression': 'Kompresi lossless',
+      'eps_to_webp.sidebar_title': 'Mengapa Memilih Konverter Kami?',
+      'eps_to_webp.feature_1': 'Dukungan Encapsulated PostScript',
+      'eps_to_webp.feature_2': 'Kompresi yang dioptimalkan untuk web',
+      'eps_to_webp.feature_3': 'Output gambar berkualitas tinggi',
+      'eps_to_webp.feature_4': 'Pemrosesan vektorgrafik profesional',
+      'eps_to_webp.feature_5': 'Kompatibilitas format web modern',
+      'eps_to_webp.feature_6': 'Dukungan pemrosesan batch',
+      'eps_to_webp.batch_size_warning': 'Ukuran batch mendekati batas 100MB. Pertimbangkan untuk memproses lebih sedikit file untuk performa yang lebih baik.',
+      'eps_to_webp.extracted_preview': 'Pratinjau yang diekstrak',
+      'eps_to_webp.webp_format': 'Format WebP',
+      'eps_to_webp.quality_high': 'kualitas tinggi',
+      'eps_to_webp.quality_medium': 'kualitas sedang',
+      'eps_to_webp.quality_low': 'kualitas rendah',
+      'eps_to_webp.lossless': 'lossless',
+      'eps_to_webp.lossy': 'lossy',
+      'eps_to_webp.metadata_preserved': 'Metadata dipertahankan',
+      'eps_to_webp.perfect_for_title': 'Sempurna Untuk',
+      'eps_to_webp.use_case_1': 'Workflow fotografi profesional',
+      'eps_to_webp.use_case_2': 'Optimisasi gambar web',
+      'eps_to_webp.use_case_3': 'Integrasi Adobe PostScript',
+      'eps_to_webp.use_case_4': 'Manajemen aset digital',
+      'eps_to_webp.use_case_5': 'Optimisasi performa website',
+      'eps_to_webp.use_case_6': 'Pengembangan web modern',
+      'eps_to_webp.seo_intro': 'Mengonversi file Encapsulated PostScript EPS ke format WebP sangat penting untuk pengembangan web modern, manajemen aset digital, dan optimisasi performa website. Sementara file EPS mengandung vektorgrafik berkualitas tinggi, WebP menyediakan kompresi superior (25-35% lebih baik daripada JPEG/PNG), waktu loading lebih cepat, ranking SEO yang lebih baik, dan performa web yang ditingkatkan tanpa mengorbankan kualitas gambar.',
+      'eps_to_webp.benefits_title': 'Manfaat Utama Format WebP',
+      'eps_to_webp.benefit_compression_title': 'Kompresi Superior',
+      'eps_to_webp.benefit_compression_text': 'WebP menyediakan kompresi 25-35% lebih baik daripada JPEG dan PNG, secara signifikan mengurangi ukuran file sambil mempertahankan kualitas gambar tinggi dari file vector EPS Anda. Ini berarti loading halaman lebih cepat, biaya bandwidth berkurang, dan pengalaman pengguna yang lebih baik.',
+      'eps_to_webp.benefit_loading_title': 'Waktu Loading Lebih Cepat',
+      'eps_to_webp.benefit_loading_text': 'Ukuran file yang lebih kecil berarti waktu loading halaman lebih cepat, pengalaman pengguna yang ditingkatkan, ranking SEO yang lebih baik (Google PageSpeed Insights), dan tingkat bounce yang berkurang untuk website Anda.',
+      'eps_to_webp.benefit_quality_title': 'Kualitas Profesional',
+      'eps_to_webp.benefit_quality_text': 'WebP mempertahankan kualitas tinggi gambar vector EPS Anda sambil menyediakan kompresi yang efisien, menjadikannya ideal untuk galeri web profesional, portfolio fotografi, dan gambar produk e-commerce.',
+      'eps_to_webp.benefit_standard_title': 'Standar Web Modern',
+      'eps_to_webp.benefit_standard_text': 'WebP didukung oleh semua browser modern (Chrome, Firefox, Safari, Edge) dan merupakan format yang direkomendasikan untuk gambar web oleh Google, meningkatkan Core Web Vitals dan ranking mesin pencari website Anda.',
+      'eps_to_webp.use_cases_title': 'Kasus Penggunaan Umum',
+      'eps_to_webp.use_case_graphics_title': 'Workflow Fotografi Profesional',
+      'eps_to_webp.use_case_graphics_text': 'Konversi vektorgrafik EPS berkualitas tinggi ke WebP untuk digunakan dalam portfolio fotografi, galeri klien, presentasi digital, dan pameran online.',
+      'eps_to_webp.use_case_portfolio_title': 'Optimisasi Gambar Web',
+      'eps_to_webp.use_case_portfolio_text': 'Optimalkan gambar EPS Anda untuk penggunaan web dengan mengonversinya ke WebP, memastikan waktu loading cepat, kualitas visual yang sangat baik, dan performa SEO yang ditingkatkan untuk website dan portfolio fotografi.',
+      'eps_to_webp.use_case_ecommerce_title': 'Integrasi Adobe PostScript',
+      'eps_to_webp.use_case_ecommerce_text': 'Integrasikan dengan mulus dengan workflow Adobe PostScript dengan mengonversi file EPS ke WebP untuk digunakan dalam sistem manajemen aset digital, sistem manajemen konten (CMS), dan platform penerbitan web.',
+      'eps_to_webp.use_case_marketing_title': 'Optimisasi Performa Website',
+      'eps_to_webp.use_case_marketing_text': 'Tingkatkan metrik performa website Anda (PageSpeed Insights, Core Web Vitals) dengan mengonversi gambar EPS ke WebP, mengurangi penggunaan bandwidth, meningkatkan pengalaman pengguna, dan meningkatkan ranking mesin pencari.',
+      'eps_to_webp.ready_title': 'Siap Mengonversi File EPS Anda?',
+      'eps_to_webp.ready_text': 'Transformasikan file Encapsulated PostScript EPS Anda menjadi gambar WebP yang dioptimalkan untuk web instan. Konverter online gratis kami EPS ke WebP mendukung pemrosesan batch, pengaturan kualitas (tinggi/sedang/rendah), kompresi lossless, dan menghasilkan gambar yang dioptimalkan untuk website yang lebih cepat dan performa SEO yang lebih baik.'
+    },
+  },
+  sv: {
+    translation: {
+      // EPS to WebP
+      'eps_to_webp.title': 'EPS till WebP Konverterare',
+      'eps_to_webp.meta_title': 'EPS till WebP Konverterare Online Gratis - Konvertera Encapsulated PostScript till WebP Omedelbart | Bästa EPS WebP-verktyget',
+      'eps_to_webp.meta_description': 'Konvertera EPS till WebP online gratis omedelbart. Transformera Encapsulated PostScript EPS vektorgrafiker till WebP-format för webboptimering, snabbare laddning, SEO-prestanda. Professionell vector-bildkonvertering med kvalitetsinställningar (hög/medium/låg), förlustfri läge, batchbearbetning. Ingen registrering krävs.',
+      'eps_to_webp.meta_keywords': 'EPS till WebP, Encapsulated PostScript konverterare, WebP konverterare online, vektorgrafiker till WebP, EPS vector-bilder, webbbildoptimering, professionell fotografi, batch EPS-konvertering, gratis EPS konverterare, WebP-komprimering, Adobe PostScript, digitalt tillgångshantering',
+      'eps_to_webp.subtitle': 'Konvertera Adobe EPS vektorgrafiker till WebP-format omedelbart. Perfekt för webboptimering, snabbare sidladdningar, SEO-prestanda, professionella grafik-arbetsflöden och modern webbutveckling med överlägsen komprimering.',
       'eps_to_webp.upload_single': 'Ladda upp EPS-fil',
       'eps_to_webp.upload_batch': 'Ladda upp flera EPS-filer',
       'eps_to_webp.upload_text_single': 'Dra och släpp din EPS-fil här eller klicka för att bläddra',
@@ -344,12 +458,107 @@ export const additionalTranslations = {
       'eps_to_webp.image_preview': 'EPS Bildförhandsvisning',
       'eps_to_webp.file_info': 'EPS Filinformation',
       'eps_to_webp.will_convert_to': 'Kommer att konvertera till',
-      'eps_to_webp.adobe_dng_file': 'Encapsulated PostScript (EPS) kamerafil',
+      'eps_to_webp.adobe_dng_file': 'Encapsulated PostScript (EPS) vektorgrafikfil',
       'eps_to_webp.no_preview_found': 'Förhandsvisning inte tillgänglig - konvertering kommer att använda vector-dekodningsmotor',
       'eps_to_webp.selected_files': 'Valda Filer',
       'eps_to_webp.convert_to_webp': 'Konvertera till WebP',
       'eps_to_webp.convert_files': 'Konvertera {{count}} filer',
       'eps_to_webp.conversion_complete': 'Konvertering slutförd!',
+      'eps_to_webp.batch_conversion_complete': 'Stapelkonvertering slutförd',
+      'eps_to_webp.success_message': 'Din EPS-fil har framgångsrikt konverterats till WebP-format.',
+      'eps_to_webp.batch_success_message': 'Alla {{count}} EPS-filer har framgångsrikt konverterats till WebP-format.',
+      'eps_to_webp.download_webp': 'Ladda ner WebP-fil',
+      'eps_to_webp.webp_settings': 'WebP-inställningar',
+      'eps_to_webp.quality': 'Kvalitet',
+      'eps_to_webp.quality_high_option': 'Hög kvalitet (90-100%)',
+      'eps_to_webp.quality_medium_option': 'Medelkvalitet (70-89%)',
+      'eps_to_webp.quality_low_option': 'Låg kvalitet (50-69%)',
+      'eps_to_webp.lossless_compression': 'Förlustfri komprimering',
+      'eps_to_webp.sidebar_title': 'Varför välja vår konverterare?',
+      'eps_to_webp.feature_1': 'Vektorgrafik-stöd',
+      'eps_to_webp.feature_2': 'Webboptimerad komprimering',
+      'eps_to_webp.feature_3': 'Modern webbformatkompatibilitet',
+      'eps_to_webp.feature_4': 'Högkvalitativ bildutdata',
+      'eps_to_webp.feature_5': 'Överlägsen filstorleksreduktion',
+      'eps_to_webp.feature_6': 'Batchbearbetningsstöd',
+      'eps_to_webp.batch_size_warning': 'Batchstorleken närmar sig 100MB-gränsen. Överväg att bearbeta färre filer för bättre prestanda.',
+      'eps_to_webp.extracted_preview': 'Extraherad förhandsvisning',
+      'eps_to_webp.webp_format': 'WebP-format',
+      'eps_to_webp.quality_high': 'hög kvalitet',
+      'eps_to_webp.quality_medium': 'medelkvalitet',
+      'eps_to_webp.quality_low': 'låg kvalitet',
+      'eps_to_webp.lossless': 'förlustfri',
+      'eps_to_webp.lossy': 'förlustbehaftad',
+      'eps_to_webp.metadata_preserved': 'Metadata bevarad',
+      'eps_to_webp.perfect_for_title': 'Perfekt För',
+      'eps_to_webp.use_case_1': 'Professionella grafik-arbetsflöden',
+      'eps_to_webp.use_case_2': 'Webbbildoptimering',
+      'eps_to_webp.use_case_3': 'Vektorgrafiker för Web',
+      'eps_to_webp.use_case_4': 'Digitalt tillgångshantering',
+      'eps_to_webp.use_case_5': 'Webbplatsprestandaoptimering',
+      'eps_to_webp.use_case_6': 'Modern webbutveckling',
+      'eps_to_webp.seo_intro': 'Att konvertera Encapsulated PostScript EPS-filer till WebP-format är viktigt för modern webbutveckling, digitalt marknadsföring och online-grafikoptimering. Medan EPS-filer innehåller högkvalitativa vektorgrafiker, erbjuder WebP överlägsen komprimering (25-35% bättre än JPEG/PNG), snabbare laddningstider, bättre SEO-rankningar och förbättrad webbprestanda utan att offra bildkvalitet.',
+      'eps_to_webp.benefits_title': 'Nyckelfördelar med WebP-format',
+      'eps_to_webp.benefit_compression_title': 'Överlägsen Komprimering',
+      'eps_to_webp.benefit_compression_text': 'WebP ger 25-35% bättre komprimering än JPEG och PNG, vilket avsevärt minskar filstorlekarna samtidigt som hög bildkvalitet från dina EPS-vektorgrafiker bibehålls. Detta betyder snabbare sidladdningar, minskade bandbreddskostnader och bättre användarupplevelse.',
+      'eps_to_webp.benefit_loading_title': 'Snabbare Laddningstider',
+      'eps_to_webp.benefit_loading_text': 'Mindre filstorlekar betyder snabbare sidladdningstider, förbättrad användarupplevelse, bättre SEO-rankningar (Google PageSpeed Insights) och minskade avvisningsfrekvenser för din webbplats.',
+      'eps_to_webp.benefit_quality_title': 'Professionell Kvalitet',
+      'eps_to_webp.benefit_quality_text': 'WebP bevarar den höga kvaliteten på dina EPS-vektorgrafiker samtidigt som effektiv komprimering tillhandahålls, vilket gör det idealiskt för professionella webbgalerier, digitala portföljer och e-handelsproduktbilder.',
+      'eps_to_webp.benefit_standard_title': 'Modern Webbstandard',
+      'eps_to_webp.benefit_standard_text': 'WebP stöds av alla moderna webbläsare (Chrome, Firefox, Safari, Edge) och är det rekommenderade formatet för webbbilder av Google, vilket förbättrar din webbplatss Core Web Vitals och sökmotorrankningar.',
+      'eps_to_webp.use_cases_title': 'Vanliga Användningsfall',
+      'eps_to_webp.use_case_web_title': 'Webbbildoptimering',
+      'eps_to_webp.use_case_web_text': 'Optimera dina EPS-vektorgrafiker för webbanvändning genom att konvertera dem till WebP, vilket säkerställer snabba laddningstider, utmärkt visuell kvalitet och förbättrad SEO-prestanda för webbplatser och portföljer.',
+      'eps_to_webp.use_case_vector_title': 'Vektorgrafiker för Web',
+      'eps_to_webp.use_case_vector_text': 'Konvertera EPS-vektorgrafiker till WebP för användning i moderna webbapplikationer, vilket säkerställer skarp visning på alla enheter och skärmstorlekar samtidigt som professionell kvalitet bibehålls.',
+      'eps_to_webp.use_case_dev_title': 'Modern Webbutveckling',
+      'eps_to_webp.use_case_dev_text': 'Integrera EPS-vektorgrafiker i moderna webbutvecklingsarbetsflöden genom att konvertera dem till WebP-format för optimal prestanda, snabbare sidladdningar och bättre användarupplevelse.',
+      'eps_to_webp.use_case_marketing_title': 'Digitala Marknadsföringsmaterial',
+      'eps_to_webp.use_case_marketing_text': 'Skapa optimerade digitala marknadsföringsmaterial genom att konvertera EPS-grafiker till WebP, vilket säkerställer snabb laddning, professionellt utseende och förbättrade kampanjprestandamätvärden.',
+      'eps_to_webp.ready_title': 'Redo att Konvertera Dina EPS-filer?',
+      'eps_to_webp.ready_text': 'Transformera dina Encapsulated PostScript EPS-filer till webboptimerade WebP-bilder omedelbart. Vår gratis online EPS till WebP-konverterare stöder batchbearbetning, kvalitetsinställningar (hög/medium/låg), förlustfri komprimering och genererar optimerade bilder för snabbare webbplatser och bättre SEO-prestanda.',
+      'eps_to_webp.choose_files': 'Välj Filer',
+
+        'eps_to_webp.perfect_for': 'Perfekt För',
+
+        'eps_to_webp.convert_more_files': 'Konvertera Fler Filer',
+
+        'eps_to_webp.back_to_home': 'Tillbaka till Startsidan',
+
+        'eps_to_webp.key_benefits': 'Nyckelfördelar med WebP-format',
+
+        'eps_to_webp.common_use_cases': 'Vanliga Användningsfall',
+
+        'eps_to_webp.ready_to_convert': 'Redo att Konvertera Dina EPS-filer?',
+
+        'eps_to_webp.ready_description': 'Använd vår gratis online EPS till WebP-konverterare för att transformera dina vektorgrafiker till moderna, webboptimerade bilder.',
+
+        'eps_to_webp.start_converting': 'Börja Konvertera Nu',
+
+        'eps_to_webp.batch_info': 'Batchkonvertering stöder upp till 20 filer, 100,00 MB per fil, 100,00 MB totalt.',
+
+        'eps_to_webp.use_case_web_title': 'Webbbildoptimering',
+
+        'eps_to_webp.use_case_web_text': 'Optimera dina EPS-vektorgrafiker för webbanvändning genom att konvertera dem till WebP, vilket säkerställer snabba laddningstider, utmärkt visuell kvalitet och förbättrad SEO-prestanda för webbplatser och portföljer.',
+
+        'eps_to_webp.use_case_vector_title': 'Vektorgrafiker för Web',
+
+        'eps_to_webp.use_case_vector_text': 'Konvertera EPS-vektorgrafiker till WebP för användning i moderna webbapplikationer, vilket säkerställer skarp visning på alla enheter och skärmstorlekar samtidigt som professionell kvalitet bibehålls.',
+
+        'eps_to_webp.use_case_dev_title': 'Modern Webbutveckling',
+
+        'eps_to_webp.use_case_dev_text': 'Integrera EPS-vektorgrafiker i moderna webbutvecklingsarbetsflöden genom att konvertera dem till WebP-format för optimal prestanda, snabbare sidladdningar och bättre användarupplevelse.',
+
+        'eps_to_webp.use_case_marketing_title': 'Digitala Marknadsföringsmaterial',
+
+        'eps_to_webp.use_case_marketing_text': 'Skapa optimerade digitala marknadsföringsmaterial genom att konvertera EPS-grafiker till WebP, vilket säkerställer snabb laddning, professionellt utseende och förbättrade kampanjprestandamätvärden.'
+    },
+  },
+  es: {
+    translation: {
+      // EPS to WebP
+      'eps_to_webp.title': 'Convertidor EPS a WebP',
       'eps_to_webp.batch_conversion_complete': 'Batchkonvertering slutförd!',
       'eps_to_webp.success_message': 'Din EPS-fil har framgångsrikt konverterats till WebP-format.',
       'eps_to_webp.batch_success_message': 'Alla {{count}} EPS-filer har framgångsrikt konverterats till WebP-format.',
@@ -364,7 +573,7 @@ export const additionalTranslations = {
       'eps_to_webp.feature_1': 'Encapsulated PostScript-stöd',
       'eps_to_webp.feature_2': 'Webboptimerad komprimering',
       'eps_to_webp.feature_3': 'Högkvalitativ bildutdata',
-      'eps_to_webp.feature_4': 'Professionell kamerafilbearbetning',
+      'eps_to_webp.feature_4': 'Professionell vektorgrafikbearbetning',
       'eps_to_webp.feature_5': 'Modern webbformatkompatibilitet',
       'eps_to_webp.feature_6': 'Batchbearbetningsstöd',
       'eps_to_webp.batch_size_warning': 'Batchstorleken närmar sig 100MB-gränsen. Överväg att bearbeta färre filer för bättre prestanda.',
@@ -383,7 +592,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_4': 'Digitalt tillgångshantering',
       'eps_to_webp.use_case_5': 'Webbplatsprestandaoptimering',
       'eps_to_webp.use_case_6': 'Modern webbutveckling',
-      'eps_to_webp.seo_intro': 'Att konvertera Adobe EPS vector-bilder till WebP-format är viktigt för modern webbutveckling, digitalt tillgångshantering och webbplatsprestandaoptimering. Medan EPS-filer innehåller högkvalitativa vector-bilddata från professionella kameror, erbjuder WebP överlägsen komprimering (25-35% bättre än JPEG/PNG), snabbare laddningstider, bättre SEO-rankningar och förbättrad webbprestanda utan att offra bildkvalitet.',
+      'eps_to_webp.seo_intro': 'Att konvertera Adobe EPS vector-bilder till WebP-format är viktigt för modern webbutveckling, digitalt tillgångshantering och webbplatsprestandaoptimering. Medan EPS-filer innehåller högkvalitativa vektorgrafikdata, erbjuder WebP överlägsen komprimering (25-35% bättre än JPEG/PNG), snabbare laddningstider, bättre SEO-rankningar och förbättrad webbprestanda utan att offra bildkvalitet.',
       'eps_to_webp.benefits_title': 'Nyckelfördelar med WebP-format',
       'eps_to_webp.benefit_compression_title': 'Överlägsen Komprimering',
       'eps_to_webp.benefit_compression_text': 'WebP ger 25-35% bättre komprimering än JPEG och PNG, vilket avsevärt minskar filstorlekarna samtidigt som hög bildkvalitet från dina EPS vector-filer bibehålls. Detta betyder snabbare sidladdningar, minskade bandbreddskostnader och bättre användarupplevelse.',
@@ -395,7 +604,7 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_standard_text': 'WebP stöds av alla moderna webbläsare (Chrome, Firefox, Safari, Edge) och är det rekommenderade formatet för webbbilder av Google, vilket förbättrar din webbplatss Core Web Vitals och sökmotorrankningar.',
       'eps_to_webp.use_cases_title': 'Vanliga Användningsfall',
       'eps_to_webp.use_case_graphics_title': 'Professionella Fotografi-Arbetsflöden',
-      'eps_to_webp.use_case_graphics_text': 'Konvertera högkvalitativa EPS-bilder från professionella kameror (Canon, Nikon, Sony, Fujifilm) till WebP för användning i fotografi-portföljer, kundgalerier, digitala presentationer och onlineutställningar.',
+      'eps_to_webp.use_case_graphics_text': 'Konvertera högkvalitativa EPS-vektorgrafiker till WebP för användning i fotografi-portföljer, kundgalerier, digitala presentationer och onlineutställningar.',
       'eps_to_webp.use_case_portfolio_title': 'Webbbildoptimering',
       'eps_to_webp.use_case_portfolio_text': 'Optimera dina EPS-bilder för webbanvändning genom att konvertera dem till WebP, vilket säkerställer snabba laddningstider, utmärkt visuell kvalitet och förbättrad SEO-prestanda för fotografi-webbplatser och portföljer.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -403,7 +612,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Webbplatsprestandaoptimering',
       'eps_to_webp.use_case_marketing_text': 'Förbättra din webbplatss prestandamätvärden (PageSpeed Insights, Core Web Vitals) genom att konvertera EPS-bilder till WebP, minska bandbreddsanvändningen, förbättra användarupplevelsen och öka sökmotorrankningarna.',
       'eps_to_webp.ready_title': 'Redo att Konvertera Dina EPS-filer?',
-      'eps_to_webp.ready_text': 'Transformera dina professionella kameradng-filer till webboptimerade WebP-bilder omedelbart. Vår gratis online EPS till WebP-konverterare stöder batchbearbetning, kvalitetsinställningar (hög/medium/låg), förlustfri komprimering och genererar optimerade bilder för snabbare webbplatser och bättre SEO-prestanda.'
+      'eps_to_webp.ready_text': 'Transformera dina Encapsulated PostScript EPS-filer till webboptimerade WebP-bilder omedelbart. Vår gratis online EPS till WebP-konverterare stöder batchbearbetning, kvalitetsinställningar (hög/medium/låg), förlustfri komprimering och genererar optimerade bilder för snabbare webbplatser och bättre SEO-prestanda.'
     },
   },
   es: {
@@ -412,8 +621,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -427,7 +636,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Elegir Archivos',
+
+        'eps_to_webp.perfect_for': 'Perfecto Para',
+
+        'eps_to_webp.convert_more_files': 'Convertir Más Archivos',
+
+        'eps_to_webp.back_to_home': 'Volver al Inicio',
+
+        'eps_to_webp.key_benefits': 'Beneficios Clave del Formato WebP',
+
+        'eps_to_webp.common_use_cases': 'Casos de Uso Comunes',
+
+        'eps_to_webp.ready_to_convert': '¿Listo para Convertir Tus Archivos EPS?',
+
+        'eps_to_webp.ready_description': 'Usa nuestro convertidor online gratuito EPS a WebP para transformar tus gráficos vectoriales en imágenes modernas y optimizadas para web.',
+
+        'eps_to_webp.start_converting': 'Comenzar a Convertir Ahora',
+
+        'eps_to_webp.batch_info': 'La conversión por lotes admite hasta 20 archivos, 100,00 MB por archivo, 100,00 MB en total.',
+
+        'eps_to_webp.use_case_web_title': 'Optimización de Imágenes Web',
+
+        'eps_to_webp.use_case_web_text': 'Optimiza tus gráficos vectoriales EPS para uso web convirtiéndolos a WebP, asegurando tiempos de carga rápidos, excelente calidad visual y mejor rendimiento SEO para sitios web y portafolios.',
+
+        'eps_to_webp.use_case_vector_title': 'Gráficos Vectoriales para Web',
+
+        'eps_to_webp.use_case_vector_text': 'Convierte gráficos vectoriales EPS a WebP para usar en aplicaciones web modernas, asegurando una visualización nítida en todos los dispositivos y tamaños de pantalla mientras mantienes calidad profesional.',
+
+        'eps_to_webp.use_case_dev_title': 'Desarrollo Web Moderno',
+
+        'eps_to_webp.use_case_dev_text': 'Integra gráficos vectoriales EPS en flujos de trabajo de desarrollo web moderno convirtiéndolos a formato WebP para rendimiento óptimo, cargas de página más rápidas y mejor experiencia de usuario.',
+
+        'eps_to_webp.use_case_marketing_title': 'Materiales de Marketing Digital',
+
+        'eps_to_webp.use_case_marketing_text': 'Crea materiales de marketing digital optimizados convirtiendo gráficos EPS a WebP, asegurando carga rápida, apariencia profesional y métricas de rendimiento de campaña mejoradas.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -469,12 +715,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -482,7 +728,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   fr: {
@@ -491,8 +737,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -506,7 +752,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Choisir les Fichiers',
+
+        'eps_to_webp.perfect_for': 'Parfait Pour',
+
+        'eps_to_webp.convert_more_files': 'Convertir Plus de Fichiers',
+
+        'eps_to_webp.back_to_home': 'Retour à l\'Accueil',
+
+        'eps_to_webp.key_benefits': 'Avantages Clés du Format WebP',
+
+        'eps_to_webp.common_use_cases': 'Cas d\'Utilisation Courants',
+
+        'eps_to_webp.ready_to_convert': 'Prêt à Convertir Vos Fichiers EPS?',
+
+        'eps_to_webp.ready_description': 'Utilisez notre convertisseur en ligne gratuit EPS vers WebP pour transformer vos graphiques vectoriels en images modernes et optimisées pour le web.',
+
+        'eps_to_webp.start_converting': 'Commencer à Convertir Maintenant',
+
+        'eps_to_webp.batch_info': 'La conversion par lots prend en charge jusqu\'à 20 fichiers, 100,00 Mo par fichier, 100,00 Mo au total.',
+
+        'eps_to_webp.use_case_web_title': 'Optimisation d\'Images Web',
+
+        'eps_to_webp.use_case_web_text': 'Optimisez vos graphiques vectoriels EPS pour une utilisation web en les convertissant en WebP, garantissant des temps de chargement rapides, une excellente qualité visuelle et de meilleures performances SEO pour les sites web et portfolios.',
+
+        'eps_to_webp.use_case_vector_title': 'Graphiques Vectoriels pour Web',
+
+        'eps_to_webp.use_case_vector_text': 'Convertissez les graphiques vectoriels EPS en WebP pour une utilisation dans des applications web modernes, garantissant un affichage net sur tous les appareils et tailles d\'écran tout en maintenant une qualité professionnelle.',
+
+        'eps_to_webp.use_case_dev_title': 'Développement Web Moderne',
+
+        'eps_to_webp.use_case_dev_text': 'Intégrez les graphiques vectoriels EPS dans les flux de travail de développement web modernes en les convertissant au format WebP pour des performances optimales, des chargements de page plus rapides et une meilleure expérience utilisateur.',
+
+        'eps_to_webp.use_case_marketing_title': 'Matériaux de Marketing Numérique',
+
+        'eps_to_webp.use_case_marketing_text': 'Créez des matériaux de marketing numérique optimisés en convertissant les graphiques EPS en WebP, garantissant un chargement rapide, une apparence professionnelle et des métriques de performance de campagne améliorées.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -548,12 +831,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -561,7 +844,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   it: {
@@ -570,8 +853,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -585,7 +868,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Scegli File',
+
+        'eps_to_webp.perfect_for': 'Perfetto Per',
+
+        'eps_to_webp.convert_more_files': 'Converti Altri File',
+
+        'eps_to_webp.back_to_home': 'Torna alla Home',
+
+        'eps_to_webp.key_benefits': 'Vantaggi Chiave del Formato WebP',
+
+        'eps_to_webp.common_use_cases': 'Casi d\'Uso Comuni',
+
+        'eps_to_webp.ready_to_convert': 'Pronto a Convertire i Tuoi File EPS?',
+
+        'eps_to_webp.ready_description': 'Usa il nostro convertitore online gratuito EPS in WebP per trasformare le tue grafiche vettoriali in immagini moderne e ottimizzate per il web.',
+
+        'eps_to_webp.start_converting': 'Inizia a Convertire Ora',
+
+        'eps_to_webp.batch_info': 'La conversione batch supporta fino a 20 file, 100,00 MB per file, 100,00 MB totali.',
+
+        'eps_to_webp.use_case_web_title': 'Ottimizzazione Immagini Web',
+
+        'eps_to_webp.use_case_web_text': 'Ottimizza le tue grafiche vettoriali EPS per l\'uso web convertendole in WebP, garantendo tempi di caricamento rapidi, eccellente qualità visiva e migliori prestazioni SEO per siti web e portfolio.',
+
+        'eps_to_webp.use_case_vector_title': 'Grafiche Vettoriali per Web',
+
+        'eps_to_webp.use_case_vector_text': 'Converti grafiche vettoriali EPS in WebP per l\'uso in applicazioni web moderne, garantendo una visualizzazione nitida su tutti i dispositivi e dimensioni dello schermo mantenendo la qualità professionale.',
+
+        'eps_to_webp.use_case_dev_title': 'Sviluppo Web Moderno',
+
+        'eps_to_webp.use_case_dev_text': 'Integra grafiche vettoriali EPS nei flussi di lavoro di sviluppo web moderni convertendole in formato WebP per prestazioni ottimali, caricamenti di pagina più rapidi e migliore esperienza utente.',
+
+        'eps_to_webp.use_case_marketing_title': 'Materiali di Marketing Digitale',
+
+        'eps_to_webp.use_case_marketing_text': 'Crea materiali di marketing digitale ottimizzati convertendo grafiche EPS in WebP, garantendo caricamento rapido, aspetto professionale e metriche di performance della campagna migliorate.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -627,12 +947,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -640,7 +960,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   nl: {
@@ -649,8 +969,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -664,7 +984,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Bestanden Kiezen',
+
+        'eps_to_webp.perfect_for': 'Perfect Voor',
+
+        'eps_to_webp.convert_more_files': 'Meer Bestanden Converteren',
+
+        'eps_to_webp.back_to_home': 'Terug naar Home',
+
+        'eps_to_webp.key_benefits': 'Belangrijkste Voordelen van WebP-formaat',
+
+        'eps_to_webp.common_use_cases': 'Veelvoorkomende Gebruikssituaties',
+
+        'eps_to_webp.ready_to_convert': 'Klaar om Uw EPS-bestanden te Converteren?',
+
+        'eps_to_webp.ready_description': 'Gebruik onze gratis online EPS naar WebP-converter om uw vectorafbeeldingen te transformeren in moderne, web-geoptimaliseerde afbeeldingen.',
+
+        'eps_to_webp.start_converting': 'Begin Nu met Converteren',
+
+        'eps_to_webp.batch_info': 'Batchconversie ondersteunt tot 20 bestanden, 100,00 MB per bestand, 100,00 MB totaal.',
+
+        'eps_to_webp.use_case_web_title': 'Webafbeelding Optimalisatie',
+
+        'eps_to_webp.use_case_web_text': 'Optimaliseer uw EPS-vectorafbeeldingen voor webgebruik door ze naar WebP te converteren, waardoor snelle laadtijden, uitstekende visuele kwaliteit en verbeterde SEO-prestaties voor websites en portfolio\'s worden gegarandeerd.',
+
+        'eps_to_webp.use_case_vector_title': 'Vectorafbeeldingen voor Web',
+
+        'eps_to_webp.use_case_vector_text': 'Converteer EPS-vectorafbeeldingen naar WebP voor gebruik in moderne webapplicaties, waardoor een scherpe weergave op alle apparaten en schermformaten wordt gegarandeerd terwijl de professionele kwaliteit behouden blijft.',
+
+        'eps_to_webp.use_case_dev_title': 'Moderne Webontwikkeling',
+
+        'eps_to_webp.use_case_dev_text': 'Integreer EPS-vectorafbeeldingen in moderne webontwikkelingsworkflows door ze naar WebP-formaat te converteren voor optimale prestaties, snellere paginalaadtijden en betere gebruikerservaring.',
+
+        'eps_to_webp.use_case_marketing_title': 'Digitale Marketingmaterialen',
+
+        'eps_to_webp.use_case_marketing_text': 'Maak geoptimaliseerde digitale marketingmaterialen door EPS-afbeeldingen naar WebP te converteren, waardoor snelle laadtijden, professioneel uiterlijk en verbeterde campagneprestatiemetrics worden gegarandeerd.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -706,12 +1063,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -719,7 +1076,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   pt: {
@@ -728,8 +1085,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -743,7 +1100,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Escolher Arquivos',
+
+        'eps_to_webp.perfect_for': 'Perfeito Para',
+
+        'eps_to_webp.convert_more_files': 'Converter Mais Arquivos',
+
+        'eps_to_webp.back_to_home': 'Voltar ao Início',
+
+        'eps_to_webp.key_benefits': 'Principais Benefícios do Formato WebP',
+
+        'eps_to_webp.common_use_cases': 'Casos de Uso Comuns',
+
+        'eps_to_webp.ready_to_convert': 'Pronto para Converter Seus Arquivos EPS?',
+
+        'eps_to_webp.ready_description': 'Use nosso conversor online gratuito EPS para WebP para transformar seus gráficos vetoriais em imagens modernas e otimizadas para web.',
+
+        'eps_to_webp.start_converting': 'Começar a Converter Agora',
+
+        'eps_to_webp.batch_info': 'A conversão em lote suporta até 20 arquivos, 100,00 MB por arquivo, 100,00 MB no total.',
+
+        'eps_to_webp.use_case_web_title': 'Otimização de Imagens Web',
+
+        'eps_to_webp.use_case_web_text': 'Otimize seus gráficos vetoriais EPS para uso na web convertendo-os para WebP, garantindo tempos de carregamento rápidos, excelente qualidade visual e melhor desempenho de SEO para sites e portfólios.',
+
+        'eps_to_webp.use_case_vector_title': 'Gráficos Vetoriais para Web',
+
+        'eps_to_webp.use_case_vector_text': 'Converta gráficos vetoriais EPS para WebP para uso em aplicações web modernas, garantindo exibição nítida em todos os dispositivos e tamanhos de tela mantendo qualidade profissional.',
+
+        'eps_to_webp.use_case_dev_title': 'Desenvolvimento Web Moderno',
+
+        'eps_to_webp.use_case_dev_text': 'Integre gráficos vetoriais EPS em fluxos de trabalho de desenvolvimento web modernos convertendo-os para formato WebP para desempenho ideal, carregamentos de página mais rápidos e melhor experiência do usuário.',
+
+        'eps_to_webp.use_case_marketing_title': 'Materiais de Marketing Digital',
+
+        'eps_to_webp.use_case_marketing_text': 'Crie materiais de marketing digital otimizados convertendo gráficos EPS para WebP, garantindo carregamento rápido, aparência profissional e métricas de desempenho de campanha melhoradas.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -785,12 +1179,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -798,7 +1192,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   vi: {
@@ -807,8 +1201,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -822,7 +1216,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Chọn Tệp',
+
+        'eps_to_webp.perfect_for': 'Hoàn Hảo Cho',
+
+        'eps_to_webp.convert_more_files': 'Chuyển Đổi Thêm Tệp',
+
+        'eps_to_webp.back_to_home': 'Về Trang Chủ',
+
+        'eps_to_webp.key_benefits': 'Lợi Ích Chính của Định Dạng WebP',
+
+        'eps_to_webp.common_use_cases': 'Trường Hợp Sử Dụng Phổ Biến',
+
+        'eps_to_webp.ready_to_convert': 'Sẵn Sàng Chuyển Đổi Tệp EPS của Bạn?',
+
+        'eps_to_webp.ready_description': 'Sử dụng công cụ chuyển đổi trực tuyến miễn phí EPS sang WebP của chúng tôi để chuyển đổi đồ họa vector của bạn thành hình ảnh hiện đại, tối ưu cho web.',
+
+        'eps_to_webp.start_converting': 'Bắt Đầu Chuyển Đổi Ngay',
+
+        'eps_to_webp.batch_info': 'Chuyển đổi hàng loạt hỗ trợ tối đa 20 tệp, 100,00 MB mỗi tệp, 100,00 MB tổng cộng.',
+
+        'eps_to_webp.use_case_web_title': 'Tối Ưu Hóa Hình Ảnh Web',
+
+        'eps_to_webp.use_case_web_text': 'Tối ưu hóa đồ họa vector EPS của bạn cho việc sử dụng web bằng cách chuyển đổi chúng sang WebP, đảm bảo thời gian tải nhanh, chất lượng hình ảnh tuyệt vời và hiệu suất SEO được cải thiện cho trang web và portfolio.',
+
+        'eps_to_webp.use_case_vector_title': 'Đồ Họa Vector cho Web',
+
+        'eps_to_webp.use_case_vector_text': 'Chuyển đổi đồ họa vector EPS sang WebP để sử dụng trong các ứng dụng web hiện đại, đảm bảo hiển thị sắc nét trên tất cả các thiết bị và kích thước màn hình trong khi duy trì chất lượng chuyên nghiệp.',
+
+        'eps_to_webp.use_case_dev_title': 'Phát Triển Web Hiện Đại',
+
+        'eps_to_webp.use_case_dev_text': 'Tích hợp đồ họa vector EPS vào quy trình phát triển web hiện đại bằng cách chuyển đổi chúng sang định dạng WebP để có hiệu suất tối ưu, tải trang nhanh hơn và trải nghiệm người dùng tốt hơn.',
+
+        'eps_to_webp.use_case_marketing_title': 'Tài Liệu Tiếp Thị Kỹ Thuật Số',
+
+        'eps_to_webp.use_case_marketing_text': 'Tạo tài liệu tiếp thị kỹ thuật số được tối ưu hóa bằng cách chuyển đổi đồ họa EPS sang WebP, đảm bảo tải nhanh, giao diện chuyên nghiệp và số liệu hiệu suất chiến dịch được cải thiện.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -864,12 +1295,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -877,7 +1308,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   tr: {
@@ -886,8 +1317,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -901,7 +1332,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Dosyaları Seç',
+
+        'eps_to_webp.perfect_for': 'İçin Mükemmel',
+
+        'eps_to_webp.convert_more_files': 'Daha Fazla Dosya Dönüştür',
+
+        'eps_to_webp.back_to_home': 'Ana Sayfaya Dön',
+
+        'eps_to_webp.key_benefits': 'WebP Formatının Temel Avantajları',
+
+        'eps_to_webp.common_use_cases': 'Yaygın Kullanım Durumları',
+
+        'eps_to_webp.ready_to_convert': 'EPS Dosyalarınızı Dönüştürmeye Hazır mısınız?',
+
+        'eps_to_webp.ready_description': 'Vektör grafiklerinizi modern, web için optimize edilmiş görüntülere dönüştürmek için ücretsiz online EPS\'den WebP\'ye dönüştürücümüzü kullanın.',
+
+        'eps_to_webp.start_converting': 'Şimdi Dönüştürmeye Başla',
+
+        'eps_to_webp.batch_info': 'Toplu dönüştürme 20 dosyaya kadar destekler, dosya başına 100,00 MB, toplam 100,00 MB.',
+
+        'eps_to_webp.use_case_web_title': 'Web Görüntü Optimizasyonu',
+
+        'eps_to_webp.use_case_web_text': 'EPS vektör grafiklerinizi WebP\'ye dönüştürerek web kullanımı için optimize edin, hızlı yükleme süreleri, mükemmel görsel kalite ve web siteleri ve portföyler için geliştirilmiş SEO performansı sağlayın.',
+
+        'eps_to_webp.use_case_vector_title': 'Web için Vektör Grafikler',
+
+        'eps_to_webp.use_case_vector_text': 'EPS vektör grafiklerini modern web uygulamalarında kullanım için WebP\'ye dönüştürün, profesyonel kaliteyi korurken tüm cihazlarda ve ekran boyutlarında net görüntüleme sağlayın.',
+
+        'eps_to_webp.use_case_dev_title': 'Modern Web Geliştirme',
+
+        'eps_to_webp.use_case_dev_text': 'EPS vektör grafiklerini optimal performans, daha hızlı sayfa yüklemeleri ve daha iyi kullanıcı deneyimi için WebP formatına dönüştürerek modern web geliştirme iş akışlarına entegre edin.',
+
+        'eps_to_webp.use_case_marketing_title': 'Dijital Pazarlama Materyalleri',
+
+        'eps_to_webp.use_case_marketing_text': 'EPS grafiklerini WebP\'ye dönüştürerek optimize edilmiş dijital pazarlama materyalleri oluşturun, hızlı yükleme, profesyonel görünüm ve geliştirilmiş kampanya performans metrikleri sağlayın.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -943,12 +1411,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -956,7 +1424,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   ru: {
@@ -965,8 +1433,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -980,7 +1448,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'Выбрать Файлы',
+
+        'eps_to_webp.perfect_for': 'Идеально Для',
+
+        'eps_to_webp.convert_more_files': 'Конвертировать Больше Файлов',
+
+        'eps_to_webp.back_to_home': 'Вернуться на Главную',
+
+        'eps_to_webp.key_benefits': 'Ключевые Преимущества Формата WebP',
+
+        'eps_to_webp.common_use_cases': 'Распространенные Случаи Использования',
+
+        'eps_to_webp.ready_to_convert': 'Готовы Конвертировать Ваши Файлы EPS?',
+
+        'eps_to_webp.ready_description': 'Используйте наш бесплатный онлайн-конвертер EPS в WebP для преобразования ваших векторных графиков в современные, оптимизированные для веб изображения.',
+
+        'eps_to_webp.start_converting': 'Начать Конвертацию Сейчас',
+
+        'eps_to_webp.batch_info': 'Пакетная конвертация поддерживает до 20 файлов, 100,00 МБ на файл, 100,00 МБ всего.',
+
+        'eps_to_webp.use_case_web_title': 'Оптимизация Веб-Изображений',
+
+        'eps_to_webp.use_case_web_text': 'Оптимизируйте ваши векторные графики EPS для веб-использования, конвертируя их в WebP, обеспечивая быстрое время загрузки, отличное визуальное качество и улучшенную производительность SEO для веб-сайтов и портфолио.',
+
+        'eps_to_webp.use_case_vector_title': 'Векторная Графика для Веб',
+
+        'eps_to_webp.use_case_vector_text': 'Конвертируйте векторные графики EPS в WebP для использования в современных веб-приложениях, обеспечивая четкое отображение на всех устройствах и размерах экрана при сохранении профессионального качества.',
+
+        'eps_to_webp.use_case_dev_title': 'Современная Веб-Разработка',
+
+        'eps_to_webp.use_case_dev_text': 'Интегрируйте векторные графики EPS в современные рабочие процессы веб-разработки, конвертируя их в формат WebP для оптимальной производительности, более быстрой загрузки страниц и лучшего пользовательского опыта.',
+
+        'eps_to_webp.use_case_marketing_title': 'Цифровые Маркетинговые Материалы',
+
+        'eps_to_webp.use_case_marketing_text': 'Создавайте оптимизированные цифровые маркетинговые материалы, конвертируя графики EPS в WebP, обеспечивая быструю загрузку, профессиональный внешний вид и улучшенные метрики производительности кампании.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -1022,12 +1527,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -1035,7 +1540,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   ar: {
@@ -1044,8 +1549,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -1059,7 +1564,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'اختر الملفات',
+
+        'eps_to_webp.perfect_for': 'مثالي لـ',
+
+        'eps_to_webp.convert_more_files': 'تحويل المزيد من الملفات',
+
+        'eps_to_webp.back_to_home': 'العودة إلى الصفحة الرئيسية',
+
+        'eps_to_webp.key_benefits': 'الفوائد الرئيسية لتنسيق WebP',
+
+        'eps_to_webp.common_use_cases': 'حالات الاستخدام الشائعة',
+
+        'eps_to_webp.ready_to_convert': 'جاهز لتحويل ملفات EPS الخاصة بك؟',
+
+        'eps_to_webp.ready_description': 'استخدم محول EPS إلى WebP المجاني عبر الإنترنت لتحويل رسومك المتجهة إلى صور حديثة ومحسّنة للويب.',
+
+        'eps_to_webp.start_converting': 'ابدأ التحويل الآن',
+
+        'eps_to_webp.batch_info': 'يدعم التحويل المجمع ما يصل إلى 20 ملفًا، 100.00 ميجابايت لكل ملف، 100.00 ميجابايت إجمالي.',
+
+        'eps_to_webp.use_case_web_title': 'تحسين صور الويب',
+
+        'eps_to_webp.use_case_web_text': 'قم بتحسين رسومك المتجهة EPS للاستخدام على الويب عن طريق تحويلها إلى WebP، مما يضمن أوقات تحميل سريعة وجودة بصرية ممتازة وأداء SEO محسّن للمواقع والمحافظ.',
+
+        'eps_to_webp.use_case_vector_title': 'الرسوم المتجهة للويب',
+
+        'eps_to_webp.use_case_vector_text': 'قم بتحويل الرسوم المتجهة EPS إلى WebP للاستخدام في تطبيقات الويب الحديثة، مما يضمن عرضًا واضحًا على جميع الأجهزة وأحجام الشاشات مع الحفاظ على الجودة الاحترافية.',
+
+        'eps_to_webp.use_case_dev_title': 'تطوير الويب الحديث',
+
+        'eps_to_webp.use_case_dev_text': 'قم بدمج الرسوم المتجهة EPS في سير عمل تطوير الويب الحديث عن طريق تحويلها إلى تنسيق WebP للأداء الأمثل وتحميل الصفحات بشكل أسرع وتجربة مستخدم أفضل.',
+
+        'eps_to_webp.use_case_marketing_title': 'مواد التسويق الرقمي',
+
+        'eps_to_webp.use_case_marketing_text': 'قم بإنشاء مواد تسويق رقمي محسّنة عن طريق تحويل رسوم EPS إلى WebP، مما يضمن التحميل السريع والمظهر الاحترافي ومقاييس أداء الحملة المحسّنة.'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -1101,12 +1643,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -1114,7 +1656,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   th: {
@@ -1123,8 +1665,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -1138,7 +1680,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'เลือกไฟล์',
+
+        'eps_to_webp.perfect_for': 'เหมาะสำหรับ',
+
+        'eps_to_webp.convert_more_files': 'แปลงไฟล์เพิ่มเติม',
+
+        'eps_to_webp.back_to_home': 'กลับไปที่หน้าแรก',
+
+        'eps_to_webp.key_benefits': 'ประโยชน์หลักของรูปแบบ WebP',
+
+        'eps_to_webp.common_use_cases': 'กรณีการใช้งานทั่วไป',
+
+        'eps_to_webp.ready_to_convert': 'พร้อมแปลงไฟล์ EPS ของคุณแล้วหรือยัง?',
+
+        'eps_to_webp.ready_description': 'ใช้ตัวแปลงออนไลน์ฟรี EPS เป็น WebP ของเราเพื่อแปลงกราฟิกเวกเตอร์ของคุณเป็นภาพที่ทันสมัยและปรับให้เหมาะกับเว็บ',
+
+        'eps_to_webp.start_converting': 'เริ่มแปลงตอนนี้',
+
+        'eps_to_webp.batch_info': 'การแปลงแบบกลุ่มรองรับไฟล์ได้สูงสุด 20 ไฟล์ 100.00 MB ต่อไฟล์ รวม 100.00 MB',
+
+        'eps_to_webp.use_case_web_title': 'การปรับแต่งภาพเว็บ',
+
+        'eps_to_webp.use_case_web_text': 'ปรับแต่งกราฟิกเวกเตอร์ EPS ของคุณสำหรับการใช้งานบนเว็บโดยแปลงเป็น WebP เพื่อให้แน่ใจว่ามีเวลาโหลดเร็ว คุณภาพภาพที่ยอดเยี่ยม และประสิทธิภาพ SEO ที่ดีขึ้นสำหรับเว็บไซต์และพอร์ตโฟลิโอ',
+
+        'eps_to_webp.use_case_vector_title': 'กราฟิกเวกเตอร์สำหรับเว็บ',
+
+        'eps_to_webp.use_case_vector_text': 'แปลงกราฟิกเวกเตอร์ EPS เป็น WebP สำหรับใช้ในแอปพลิเคชันเว็บสมัยใหม่ เพื่อให้แน่ใจว่ามีการแสดงผลที่คมชัดบนอุปกรณ์และขนาดหน้าจอทั้งหมดในขณะที่รักษาคุณภาพระดับมืออาชีพ',
+
+        'eps_to_webp.use_case_dev_title': 'การพัฒนาเว็บสมัยใหม่',
+
+        'eps_to_webp.use_case_dev_text': 'รวมกราฟิกเวกเตอร์ EPS เข้ากับเวิร์กโฟลว์การพัฒนาเว็บสมัยใหม่โดยแปลงเป็นรูปแบบ WebP เพื่อประสิทธิภาพที่เหมาะสม การโหลดหน้าที่เร็วขึ้น และประสบการณ์ผู้ใช้ที่ดีขึ้น',
+
+        'eps_to_webp.use_case_marketing_title': 'วัสดุการตลาดดิจิทัล',
+
+        'eps_to_webp.use_case_marketing_text': 'สร้างวัสดุการตลาดดิจิทัลที่ปรับให้เหมาะสมโดยแปลงกราฟิก EPS เป็น WebP เพื่อให้แน่ใจว่ามีการโหลดที่รวดเร็ว รูปลักษณ์ที่เป็นมืออาชีพ และเมตริกประสิทธิภาพแคมเปญที่ปรับปรุงแล้ว'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -1180,12 +1759,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -1193,7 +1772,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   ja: {
@@ -1202,8 +1781,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -1217,7 +1796,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': 'ファイルを選択',
+
+        'eps_to_webp.perfect_for': 'に最適',
+
+        'eps_to_webp.convert_more_files': 'さらにファイルを変換',
+
+        'eps_to_webp.back_to_home': 'ホームに戻る',
+
+        'eps_to_webp.key_benefits': 'WebP形式の主な利点',
+
+        'eps_to_webp.common_use_cases': '一般的な使用例',
+
+        'eps_to_webp.ready_to_convert': 'EPSファイルを変換する準備はできましたか？',
+
+        'eps_to_webp.ready_description': '無料のオンラインEPSからWebPへのコンバーターを使用して、ベクターグラフィックを最新のWeb最適化画像に変換します。',
+
+        'eps_to_webp.start_converting': '今すぐ変換を開始',
+
+        'eps_to_webp.batch_info': 'バッチ変換は最大20ファイル、ファイルあたり100.00 MB、合計100.00 MBをサポートします。',
+
+        'eps_to_webp.use_case_web_title': 'Web画像の最適化',
+
+        'eps_to_webp.use_case_web_text': 'EPSベクターグラフィックをWebPに変換してWeb使用に最適化し、高速な読み込み時間、優れた視覚品質、Webサイトとポートフォリオの改善されたSEOパフォーマンスを確保します。',
+
+        'eps_to_webp.use_case_vector_title': 'Web用ベクターグラフィック',
+
+        'eps_to_webp.use_case_vector_text': 'EPSベクターグラフィックをWebPに変換して最新のWebアプリケーションで使用し、プロフェッショナルな品質を維持しながら、すべてのデバイスと画面サイズで鮮明な表示を確保します。',
+
+        'eps_to_webp.use_case_dev_title': 'モダンなWeb開発',
+
+        'eps_to_webp.use_case_dev_text': 'EPSベクターグラフィックをWebP形式に変換してモダンなWeb開発ワークフローに統合し、最適なパフォーマンス、より高速なページ読み込み、より良いユーザーエクスペリエンスを実現します。',
+
+        'eps_to_webp.use_case_marketing_title': 'デジタルマーケティング資料',
+
+        'eps_to_webp.use_case_marketing_text': 'EPSグラフィックをWebPに変換して最適化されたデジタルマーケティング資料を作成し、高速な読み込み、プロフェッショナルな外観、改善されたキャンペーンパフォーマンスメトリクスを確保します。'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -1259,12 +1875,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -1272,7 +1888,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.'
     },
   },
   zh: {
@@ -1281,8 +1897,8 @@ export const additionalTranslations = {
       'eps_to_webp.title': 'EPS to WebP Converter',
       'eps_to_webp.meta_title': 'EPS to WebP Converter Online Free - Convert Encapsulated PostScript to WebP Instantly | Best EPS WebP Tool',
       'eps_to_webp.meta_description': 'Convert EPS to WebP online free instantly. Transform Encapsulated PostScript EPS vector graphics to WebP format for web optimization, faster loading, SEO performance. Professional vector image conversion with quality settings (high/medium/low), lossless mode, batch processing. No registration required.',
-      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS raw images, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
-      'eps_to_webp.subtitle': 'Convert Adobe EPS vector graphics to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
+      'eps_to_webp.meta_keywords': 'EPS to WebP, Encapsulated PostScript converter, WebP converter online, camera vector to WebP, EPS vector graphics, web image optimization, professional graphics, batch EPS conversion, free EPS converter, WebP compression, Adobe PostScript, digital asset management',
+      'eps_to_webp.subtitle': 'Convert Encapsulated PostScript EPS to WebP format instantly. Perfect for web optimization, faster page loads, SEO performance, professional graphics workflows, and modern web development with superior compression.',
       'eps_to_webp.upload_single': 'Upload EPS File',
       'eps_to_webp.upload_batch': 'Upload Multiple EPS Files',
       'eps_to_webp.upload_text_single': 'Drag and drop your EPS file here or click to browse',
@@ -1296,7 +1912,44 @@ export const additionalTranslations = {
       'eps_to_webp.no_preview_found': 'Preview unavailable - conversion will use vector graphics engine',
       'eps_to_webp.selected_files': 'Selected Files',
       'eps_to_webp.convert_to_webp': 'Convert to WebP',
-      'eps_to_webp.convert_files': 'Convert {{count}} Files',
+      'eps_to_webp.convert_files': 'Convert {{count,
+
+        'eps_to_webp.choose_files': '选择文件',
+
+        'eps_to_webp.perfect_for': '完美适用于',
+
+        'eps_to_webp.convert_more_files': '转换更多文件',
+
+        'eps_to_webp.back_to_home': '返回首页',
+
+        'eps_to_webp.key_benefits': 'WebP格式的主要优势',
+
+        'eps_to_webp.common_use_cases': '常见用例',
+
+        'eps_to_webp.ready_to_convert': '准备好转换您的EPS文件了吗？',
+
+        'eps_to_webp.ready_description': '使用我们免费的在线EPS到WebP转换器，将您的矢量图形转换为现代化的、针对网络优化的图像。',
+
+        'eps_to_webp.start_converting': '立即开始转换',
+
+        'eps_to_webp.batch_info': '批量转换支持最多20个文件，每个文件100.00 MB，总计100.00 MB。',
+
+        'eps_to_webp.use_case_web_title': 'Web图像优化',
+
+        'eps_to_webp.use_case_web_text': '通过将EPS矢量图形转换为WebP来优化其网络使用，确保快速加载时间、出色的视觉质量以及改进的网站和作品集的SEO性能。',
+
+        'eps_to_webp.use_case_vector_title': 'Web矢量图形',
+
+        'eps_to_webp.use_case_vector_text': '将EPS矢量图形转换为WebP以用于现代Web应用程序，确保在所有设备和屏幕尺寸上清晰显示，同时保持专业质量。',
+
+        'eps_to_webp.use_case_dev_title': '现代Web开发',
+
+        'eps_to_webp.use_case_dev_text': '通过将EPS矢量图形转换为WebP格式，将其集成到现代Web开发工作流程中，以实现最佳性能、更快的页面加载和更好的用户体验。',
+
+        'eps_to_webp.use_case_marketing_title': '数字营销材料',
+
+        'eps_to_webp.use_case_marketing_text': '通过将EPS图形转换为WebP来创建优化的数字营销材料，确保快速加载、专业外观和改进的广告系列性能指标。'
+}} Files',
       'eps_to_webp.conversion_complete': 'Conversion Complete!',
       'eps_to_webp.batch_conversion_complete': 'Batch Conversion Complete',
       'eps_to_webp.success_message': 'Your EPS file has been successfully converted to WebP format.',
@@ -1338,12 +1991,12 @@ export const additionalTranslations = {
       'eps_to_webp.benefit_loading_title': 'Faster Loading Times',
       'eps_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, better SEO rankings (Google PageSpeed Insights), and reduced bounce rates for your website.',
       'eps_to_webp.benefit_quality_title': 'Professional Quality',
-      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS raw images while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
+      'eps_to_webp.benefit_quality_text': 'WebP preserves the high quality of your EPS vector graphics while providing efficient compression, making it ideal for professional web galleries, graphics portfolios, and e-commerce product images.',
       'eps_to_webp.benefit_standard_title': 'Modern Web Standard',
       'eps_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers (Chrome, Firefox, Safari, Edge) and is the recommended format for web images by Google, improving your website\'s Core Web Vitals and search engine rankings.',
       'eps_to_webp.use_cases_title': 'Common Use Cases',
-      'eps_to_webp.use_case_graphics_title': 'Professional Photography Workflows',
-      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images from vector graphics (Canon, Nikon, Sony, Fujifilm) to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
+      'eps_to_webp.use_case_graphics_title': 'Professional Graphics Workflows',
+      'eps_to_webp.use_case_graphics_text': 'Convert high-quality EPS images vector graphics to WebP for use in graphics portfolios, client galleries, digital presentations, and online exhibitions.',
       'eps_to_webp.use_case_portfolio_title': 'Web Image Optimization',
       'eps_to_webp.use_case_portfolio_text': 'Optimize your EPS images for web use by converting them to WebP, ensuring fast loading times, excellent visual quality, and improved SEO performance for graphics websites and portfolios.',
       'eps_to_webp.use_case_ecommerce_title': 'Adobe PostScript Integration',
@@ -1351,7 +2004,7 @@ export const additionalTranslations = {
       'eps_to_webp.use_case_marketing_title': 'Website Performance Optimization',
       'eps_to_webp.use_case_marketing_text': 'Improve your website\'s performance metrics (PageSpeed Insights, Core Web Vitals) by converting EPS images to WebP, reducing bandwidth usage, improving user experience, and boosting search engine rankings.',
       'eps_to_webp.ready_title': 'Ready to Convert Your EPS Files?',
-      'eps_to_webp.ready_text': 'Transform your professional camera EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.',
+      'eps_to_webp.ready_text': 'Transform your Encapsulated PostScript EPS files into web-optimized WebP images instantly. Our free online EPS to WebP converter supports batch processing, quality settings (high/medium/low), lossless compression, and generates optimized images for faster websites and better SEO performance.',
       'eps_to_webp.why_convert_title': 'Why Convert EPS to WebP?'
     }
   }
