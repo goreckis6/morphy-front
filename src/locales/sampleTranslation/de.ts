@@ -271,6 +271,214 @@ export const de: SamplePageTranslations = {
           description: 'Laden Sie kostenlose Ansible YML Konfigurations-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre YAML-Parsing-Tools, Ansible Playbook-Validatoren, Konfigurationsverwaltungssysteme und DevOps-Automatisierungsanwendungen zu testen.'
         },
         about_description: 'Dies sind Ansible YML Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Kostenlose API Response JSON Beispieldateien – JSON-Testdateien für API-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose API Response JSON Beispieldateien zum Testen von JSON-Parsing, API-Integration und Webentwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von REST-API-Antworten, JSON-Validatoren, API-Mocking, Webhook-Tests und Datenaustauschformat-Verarbeitung.',
+          keywords: 'API Response JSON Beispieldateien, JSON-Testdateien, JSON-Beispiele herunterladen, kostenlose JSON-Testdateien, API-Antwort-Beispiele, JSON-Parsing-Beispiele, REST-API-Testdateien, JSON-Validator-Test, API-Mocking-Beispiele, Webhook-Testdateien, .json Testdateien, Web-API-Beispiele, Datenaustauschformat-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose API Response JSON Beispieldateien – JSON-Testdateien für API-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose API Response JSON Beispieldateien zum Testen von JSON-Parsing, API-Integration und Webentwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von REST-API-Antworten, JSON-Validatoren, API-Mocking, Webhook-Tests und Datenaustauschformat-Verarbeitung.'
+        },
+        hero: {
+          title: 'API Response JSON Beispieldateien',
+          description: 'Laden Sie kostenlose API Response JSON Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JSON-Parsing-Tools, API-Antwort-Handler, REST-API-Validatoren und Webentwicklungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind API Response JSON Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Kostenlose Arduino INO Beispieldateien – Arduino Sketch Testdateien für Embedded-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose Arduino INO Beispieldateien zum Testen von Arduino Sketch-Kompilierung und Embedded-Programmiertools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Arduino IDE, Sketch-Validierung, Mikrocontroller-Programmierung, Embedded-System-Entwicklung und IoT-Gerätetests.',
+          keywords: 'Arduino INO Beispieldateien, Arduino INO Testdateien, Arduino INO Beispiele herunterladen, kostenlose Arduino INO Testdateien, Arduino Sketch-Beispiele, Embedded-Code-Beispiele, Arduino IDE Testdateien, .ino Testdateien, Mikrocontroller-Beispiele, IoT-Entwicklungsbeispiele, Embedded-Programmierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose Arduino INO Beispieldateien – Arduino Sketch Testdateien für Embedded-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose Arduino INO Beispieldateien zum Testen von Arduino Sketch-Kompilierung und Embedded-Programmiertools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Arduino IDE, Sketch-Validierung, Mikrocontroller-Programmierung, Embedded-System-Entwicklung und IoT-Gerätetests.'
+        },
+        hero: {
+          title: 'Arduino INO Beispieldateien',
+          description: 'Laden Sie kostenlose Arduino INO Arduino Sketch-Quellcodedateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Arduino-Entwicklungstools, Sketch-Kompilierungssoftware und Embedded-Programmierungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind Arduino INO (Arduino Sketch) Quellcodedateien in verschiedenen Größen für Testzwecke'
+      },
+      bat: {
+        meta: {
+          title: 'Kostenlose BAT Beispieldateien – Batch-Skript Testdateien für Windows-Automatisierung | MorphyHub',
+          description: 'Laden Sie kostenlose BAT Batch-Skript Beispieldateien zum Testen von Windows-Automatisierung und Befehlszeilen-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Batch-Skript-Ausführung, Windows-Task-Automatisierung, Befehlszeilen-Tools, Skript-Validatoren und Systemadministrations-Utilities.',
+          keywords: 'BAT Beispieldateien, BAT Testdateien, BAT Beispiele herunterladen, kostenlose BAT Testdateien, Batch-Skript-Beispiele, Windows Batch-Dateien, Automatisierungsskript-Beispiele, .bat Testdateien, Befehlszeilen-Skript-Beispiele, Windows-Automatisierungsbeispiele, Skript-Ausführungs-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose BAT Beispieldateien – Batch-Skript Testdateien für Windows-Automatisierung herunterladen',
+          description: 'Laden Sie kostenlose BAT Batch-Skript Beispieldateien zum Testen von Windows-Automatisierung und Befehlszeilen-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Batch-Skript-Ausführung, Windows-Task-Automatisierung, Befehlszeilen-Tools, Skript-Validatoren und Systemadministrations-Utilities.'
+        },
+        hero: {
+          title: 'BAT Beispieldateien',
+          description: 'Laden Sie kostenlose BAT Batch-Skript Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Batch-Skript-Ausführungstools, Windows-Automatisierungssoftware und Befehlszeilen-Verarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind BAT (Batch) Skriptdateien in verschiedenen Größen für Testzwecke'
+      },
+      asc: {
+        meta: {
+          title: 'Kostenlose ASC Beispieldateien – ASCII-Text Testdateien für Textverarbeitung | MorphyHub',
+          description: 'Laden Sie kostenlose ASC ASCII-Text Beispieldateien zum Testen von Textverarbeitungs- und Kodierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ASCII-Kodierung, Textdatei-Parsing, Plain-Text-Editoren, Zeichenkodierungs-Validierung und Textformat-Konvertierungstools.',
+          keywords: 'ASC Beispieldateien, ASC Testdateien, ASC Beispiele herunterladen, kostenlose ASC Testdateien, ASCII-Text-Beispiele, Plain-Text-Beispiele, .asc Testdateien, Textformat-Beispiele, ASCII-Kodierungs-Testdateien, Textverarbeitungsbeispiele, Zeichenkodierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose ASC Beispieldateien – ASCII-Text Testdateien für Textverarbeitung herunterladen',
+          description: 'Laden Sie kostenlose ASC ASCII-Text Beispieldateien zum Testen von Textverarbeitungs- und Kodierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ASCII-Kodierung, Textdatei-Parsing, Plain-Text-Editoren, Zeichenkodierungs-Validierung und Textformat-Konvertierungstools.'
+        },
+        hero: {
+          title: 'ASC Beispieldateien',
+          description: 'Laden Sie kostenlose ASC ASCII-Text Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Textverarbeitungstools, ASCII-Kodierungssoftware und Plain-Text-Dateiverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind ASC (ASCII Text) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      bib: {
+        meta: {
+          title: 'Kostenlose BIB Beispieldateien – Bibliographie Testdateien für akademische Forschung | MorphyHub',
+          description: 'Laden Sie kostenlose BIB Bibliographie Beispieldateien zum Testen von Bibliographieverwaltung und Zitationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BibTeX-Format-Verarbeitung, Referenzmanagern, Zitationsgeneratoren, akademischen Schreib-Tools und LaTeX-Bibliographie-Integration.',
+          keywords: 'BIB Beispieldateien, BIB Testdateien, BIB Beispiele herunterladen, kostenlose BIB Testdateien, Bibliographie-Beispiele, BibTeX-Dateien, Zitationsbeispiele, .bib Testdateien, Referenzverwaltungsbeispiele, akademische Zitationsbeispiele, LaTeX-Bibliographie-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose BIB Beispieldateien – Bibliographie Testdateien für akademische Forschung herunterladen',
+          description: 'Laden Sie kostenlose BIB Bibliographie Beispieldateien zum Testen von Bibliographieverwaltung und Zitationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BibTeX-Format-Verarbeitung, Referenzmanagern, Zitationsgeneratoren, akademischen Schreib-Tools und LaTeX-Bibliographie-Integration.'
+        },
+        hero: {
+          title: 'BIB Beispieldateien',
+          description: 'Laden Sie kostenlose BIB Bibliographie Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Bibliographieverwaltungstools, BibTeX-Prozessoren und Zitationsverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind BIB (Bibliography) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      c: {
+        meta: {
+          title: 'Kostenlose C Beispieldateien – C-Programmiersprache Testdateien für Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose C Quellcode Beispieldateien zum Testen von C-Code-Kompilierung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C-Compilern, Syntax-Checkern, Code-Analysatoren, GCC-Toolchain, Embedded-C-Entwicklung und Systemprogrammierungs-Tools.',
+          keywords: 'C Beispieldateien, C Testdateien, C Beispiele herunterladen, kostenlose C Testdateien, C Quellcode-Beispiele, C Programmierungsdateien, .c Testdateien, C Kompilierungs-Testdateien, GCC Testdateien, Embedded-C-Beispiele, Systemprogrammierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose C Beispieldateien – C-Programmiersprache Testdateien für Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose C Quellcode Beispieldateien zum Testen von C-Code-Kompilierung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C-Compilern, Syntax-Checkern, Code-Analysatoren, GCC-Toolchain, Embedded-C-Entwicklung und Systemprogrammierungs-Tools.'
+        },
+        hero: {
+          title: 'C Beispieldateien',
+          description: 'Laden Sie kostenlose C C-Quellcode Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C-Code-Kompilierungstools, C-Syntax-Checker und C-Entwicklungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind C Quellcodedateien in verschiedenen Größen für Testzwecke'
+      },
+      'can-log': {
+        meta: {
+          title: 'Kostenlose CAN Log Beispieldateien – Controller Area Network Testdateien für Automobil | MorphyHub',
+          description: 'Laden Sie kostenlose CAN Log Beispieldateien zum Testen von CAN-Bus-Analyse und Automobildiagnose-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAN-Bus-Analysatoren, Automobildiagnose-Tools, Fahrzeugnetzwerkprotokollen, OBD-II-Tests und Embedded-Automobilsystemen.',
+          keywords: 'CAN Log Beispieldateien, CAN Log Testdateien, CAN Log Beispiele herunterladen, kostenlose CAN Log Testdateien, Controller Area Network Beispiele, CAN-Bus-Beispiele, .log Testdateien, Automobildiagnose-Beispiele, OBD-II Testdateien, Fahrzeugnetzwerk-Beispiele, CAN-Bus-Analysator-Test'
+        },
+        schema: {
+          name: 'Kostenlose CAN Log Beispieldateien – Controller Area Network Testdateien für Automobil herunterladen',
+          description: 'Laden Sie kostenlose CAN Log Beispieldateien zum Testen von CAN-Bus-Analyse und Automobildiagnose-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAN-Bus-Analysatoren, Automobildiagnose-Tools, Fahrzeugnetzwerkprotokollen, OBD-II-Tests und Embedded-Automobilsystemen.'
+        },
+        hero: {
+          title: 'CAN Log Beispieldateien',
+          description: 'Laden Sie kostenlose CAN Log Controller Area Network Logdateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAN-Bus-Analysetools, Automobildiagnose-Software und Netzwerkprotokoll-Anwendungen zu testen.'
+        },
+        about_description: 'Dies sind CAN Log (Controller Area Network) Logdateien in verschiedenen Größen für Testzwecke'
+      },
+      cmd: {
+        meta: {
+          title: 'Kostenlose CMD Beispieldateien – Windows-Befehlsskript Testdateien für Automatisierung | MorphyHub',
+          description: 'Laden Sie kostenlose CMD Windows-Befehlsskript Beispieldateien zum Testen von Batch-Skript-Ausführung und Windows-Automatisierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Windows-Eingabeaufforderung, Batch-Datei-Ausführung, Skript-Automatisierung, Systemadministration und Windows-Task-Planungs-Tools.',
+          keywords: 'CMD Beispieldateien, CMD Testdateien, CMD Beispiele herunterladen, kostenlose CMD Testdateien, Windows-Befehlsskript-Beispiele, Batch-Skript-Beispiele, .cmd Testdateien, Befehlsskript-Beispiele, Windows-Automatisierungsbeispiele, Systemadministrationsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose CMD Beispieldateien – Windows-Befehlsskript Testdateien für Automatisierung herunterladen',
+          description: 'Laden Sie kostenlose CMD Windows-Befehlsskript Beispieldateien zum Testen von Batch-Skript-Ausführung und Windows-Automatisierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Windows-Eingabeaufforderung, Batch-Datei-Ausführung, Skript-Automatisierung, Systemadministration und Windows-Task-Planungs-Tools.'
+        },
+        hero: {
+          title: 'CMD Beispieldateien',
+          description: 'Laden Sie kostenlose CMD Windows-Befehlsskript Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Batch-Skript-Ausführungstools, Windows-Befehl-Verarbeitungssoftware und Automatisierungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind CMD (Windows Command Script) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      conf: {
+        meta: {
+          title: 'Kostenlose CONF Beispieldateien – Konfigurationsdatei Testdateien für Systemeinrichtung | MorphyHub',
+          description: 'Laden Sie kostenlose CONF Konfigurationsdatei Beispieldateien zum Testen von Konfigurationsdatei-Parsing und Systemeinrichtungs-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Serverkonfiguration, Anwendungseinstellungen, Konfigurationsdatei-Validatoren, Systemadministrations-Tools und Software-Bereitstellungs-Utilities.',
+          keywords: 'CONF Beispieldateien, CONF Testdateien, CONF Beispiele herunterladen, kostenlose CONF Testdateien, Konfigurationsdatei-Beispiele, Server-Konfigurationsbeispiele, .conf Testdateien, Konfigurationsdatei-Beispiele, Systemkonfigurationsbeispiele, Anwendungseinstellungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose CONF Beispieldateien – Konfigurationsdatei Testdateien für Systemeinrichtung herunterladen',
+          description: 'Laden Sie kostenlose CONF Konfigurationsdatei Beispieldateien zum Testen von Konfigurationsdatei-Parsing und Systemeinrichtungs-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Serverkonfiguration, Anwendungseinstellungen, Konfigurationsdatei-Validatoren, Systemadministrations-Tools und Software-Bereitstellungs-Utilities.'
+        },
+        hero: {
+          title: 'CONF Beispieldateien',
+          description: 'Laden Sie kostenlose CONF Konfigurationsdatei Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Konfigurationsdatei-Parsing-Tools, Serverkonfigurations-Software und Anwendungseinstellungs-Anwendungen zu testen.'
+        },
+        about_description: 'Dies sind CONF Konfigurationsdateien in verschiedenen Größen für Testzwecke'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Kostenlose Config INI Beispieldateien – INI-Konfiguration Testdateien für Anwendungen | MorphyHub',
+          description: 'Laden Sie kostenlose Config INI INI-Konfigurationsdatei Beispieldateien zum Testen von INI-Datei-Parsing und Konfigurationsverwaltungs-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Parsern, Anwendungskonfiguration, Einstellungsverwaltung, Windows-INI-Dateien und Software-Konfigurations-Utilities.',
+          keywords: 'Config INI Beispieldateien, INI Testdateien, INI Beispiele herunterladen, kostenlose INI Testdateien, INI-Konfigurationsbeispiele, INI-Konfigurationsbeispiele, .ini Testdateien, Konfigurationsdatei-Beispiele, Windows-INI-Beispiele, Anwendungseinstellungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose Config INI Beispieldateien – INI-Konfiguration Testdateien für Anwendungen herunterladen',
+          description: 'Laden Sie kostenlose Config INI INI-Konfigurationsdatei Beispieldateien zum Testen von INI-Datei-Parsing und Konfigurationsverwaltungs-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von INI-Parsern, Anwendungskonfiguration, Einstellungsverwaltung, Windows-INI-Dateien und Software-Konfigurations-Utilities.'
+        },
+        hero: {
+          title: 'Config INI Beispieldateien',
+          description: 'Laden Sie kostenlose Config INI INI-Konfigurationsdatei Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre INI-Datei-Parsing-Tools, Konfigurationsverwaltungs-Software und Anwendungseinstellungs-Anwendungen zu testen.'
+        },
+        about_description: 'Dies sind Config INI Konfigurationsdateien in verschiedenen Größen für Testzwecke'
+      },
+      cpp: {
+        meta: {
+          title: 'Kostenlose CPP Beispieldateien – C++ Programmiersprache Testdateien für Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose CPP C++ Quellcode Beispieldateien zum Testen von C++-Code-Kompilierung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Compilern, Syntax-Checkern, Code-Analysatoren, GCC/G++-Toolchain, modernen C++-Features und objektorientierten Programmierungs-Tools.',
+          keywords: 'CPP Beispieldateien, CPP Testdateien, CPP Beispiele herunterladen, kostenlose CPP Testdateien, C++ Quellcode-Beispiele, C++ Code-Dateien, .cpp Testdateien, C++ Programmierungsdateien, C++ Kompilierungs-Testdateien, GCC Testdateien, moderne C++-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose CPP Beispieldateien – C++ Programmiersprache Testdateien für Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose CPP C++ Quellcode Beispieldateien zum Testen von C++-Code-Kompilierung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Compilern, Syntax-Checkern, Code-Analysatoren, GCC/G++-Toolchain, modernen C++-Features und objektorientierten Programmierungs-Tools.'
+        },
+        hero: {
+          title: 'CPP Beispieldateien',
+          description: 'Laden Sie kostenlose CPP C++ Quellcode Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C++-Code-Kompilierungstools, C++-Syntax-Checker und C++-Entwicklungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind C++ Quellcodedateien in verschiedenen Größen für Testzwecke'
+      },
+      h: {
+        meta: {
+          title: 'Kostenlose H Beispieldateien – C/C++ Header-Datei Testdateien für Programmierung | MorphyHub',
+          description: 'Laden Sie kostenlose H C/C++ Header-Datei Beispieldateien zum Testen von Header-Datei-Verarbeitung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C/C++-Compilern, Header-Datei-Einbindung, Preprocessor-Tools, Code-Organisation und plattformübergreifenden Entwicklungs-Utilities.',
+          keywords: 'H Beispieldateien, H Testdateien, H Beispiele herunterladen, kostenlose H Testdateien, C Header-Beispiele, C++ Header-Beispiele, Header-Datei-Beispiele, .h Testdateien, C/C++ Header-Dateien, Programmierungs-Header-Beispiele, Code-Header-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose H Beispieldateien – C/C++ Header-Datei Testdateien für Programmierung herunterladen',
+          description: 'Laden Sie kostenlose H C/C++ Header-Datei Beispieldateien zum Testen von Header-Datei-Verarbeitung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C/C++-Compilern, Header-Datei-Einbindung, Preprocessor-Tools, Code-Organisation und plattformübergreifenden Entwicklungs-Utilities.'
+        },
+        hero: {
+          title: 'H Beispieldateien',
+          description: 'Laden Sie kostenlose H C/C++ Header-Datei Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C/C++-Code-Kompilierungstools, Header-Datei-Verarbeitungssoftware und Entwicklungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind H (C/C++ header) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      hpp: {
+        meta: {
+          title: 'Kostenlose HPP Beispieldateien – C++ Header-Datei Testdateien für moderne C++-Entwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose HPP C++ Header-Datei Beispieldateien zum Testen von C++ Header-Datei-Verarbeitung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Compilern, Header-Only-Bibliotheken, Template-Metaprogrammierung, modernen C++-Features und fortgeschrittenen C++-Entwicklungs-Utilities.',
+          keywords: 'HPP Beispieldateien, HPP Testdateien, HPP Beispiele herunterladen, kostenlose HPP Testdateien, C++ Header-Beispiele, Header-Datei-Beispiele, .hpp Testdateien, C++ Header-Dateien, Programmierungs-Header-Beispiele, Code-Header-Dateien, C++ Entwicklungsdateien, moderne C++ Header-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose HPP Beispieldateien – C++ Header-Datei Testdateien für moderne C++-Entwicklung herunterladen',
+          description: 'Laden Sie kostenlose HPP C++ Header-Datei Beispieldateien zum Testen von C++ Header-Datei-Verarbeitung und Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von C++-Compilern, Header-Only-Bibliotheken, Template-Metaprogrammierung, modernen C++-Features und fortgeschrittenen C++-Entwicklungs-Utilities.'
+        },
+        hero: {
+          title: 'HPP Beispieldateien',
+          description: 'Laden Sie kostenlose HPP C++ Header-Datei Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre C++-Code-Kompilierungstools, Header-Datei-Verarbeitungssoftware und C++-Entwicklungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind HPP (C++ header) Dateien in verschiedenen Größen für Testzwecke'
       }
     }
   }

@@ -271,6 +271,214 @@ export const it: SamplePageTranslations = {
           description: 'Scarica file di esempio Ansible YML gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di parsing YAML, validatori playbook Ansible, sistemi di gestione configurazione e applicazioni automazione DevOps.'
         },
         about_description: 'Questi sono file di test Ansible YML di varie dimensioni per scopi di test'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Scarica file di esempio API Response JSON gratuiti - File di test JSON per sviluppo API | MorphyHub',
+          description: 'Scarica file di esempio API Response JSON gratuiti per testare parsing JSON, integrazione API e strumenti di sviluppo web. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare risposte REST API, validatori JSON, mocking API, test webhook e elaborazione formati di scambio dati.',
+          keywords: 'file di esempio API Response JSON, file di test JSON, scarica esempi JSON, file di test JSON gratuiti, esempi risposta API, esempi parsing JSON, file di test REST API, test validatore JSON, esempi mocking API, file di test webhook, file di test .json, esempi web API, esempi formati scambio dati'
+        },
+        schema: {
+          name: 'File di esempio API Response JSON gratuiti - Scarica file di test JSON per sviluppo API',
+          description: 'Scarica file di esempio API Response JSON gratuiti per testare parsing JSON, integrazione API e strumenti di sviluppo web. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare risposte REST API, validatori JSON, mocking API, test webhook e elaborazione formati di scambio dati.'
+        },
+        hero: {
+          title: 'File di esempio API Response JSON',
+          description: 'Scarica file di esempio API Response JSON gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di parsing JSON, gestori risposta API, validatori REST API e applicazioni di sviluppo web.'
+        },
+        about_description: 'Questi sono file di test API Response JSON di varie dimensioni per scopi di test'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Scarica file di esempio Arduino INO gratuiti - File di test sketch Arduino per sviluppo embedded | MorphyHub',
+          description: 'Scarica file di esempio Arduino INO gratuiti per testare compilazione sketch Arduino e strumenti di programmazione embedded. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Arduino IDE, validazione sketch, programmazione microcontrollori, sviluppo sistemi embedded e test dispositivi IoT.',
+          keywords: 'file di esempio Arduino INO, file di test Arduino INO, scarica esempi Arduino INO, file di test Arduino INO gratuiti, esempi sketch Arduino, esempi codice embedded, file di test Arduino IDE, file di test .ino, esempi microcontrollori, esempi sviluppo IoT, esempi programmazione embedded'
+        },
+        schema: {
+          name: 'File di esempio Arduino INO gratuiti - Scarica file di test sketch Arduino per sviluppo embedded',
+          description: 'Scarica file di esempio Arduino INO gratuiti per testare compilazione sketch Arduino e strumenti di programmazione embedded. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Arduino IDE, validazione sketch, programmazione microcontrollori, sviluppo sistemi embedded e test dispositivi IoT.'
+        },
+        hero: {
+          title: 'File di esempio Arduino INO',
+          description: 'Scarica file di esempio Arduino INO sketch Arduino gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di sviluppo Arduino, software di compilazione sketch e applicazioni di programmazione embedded.'
+        },
+        about_description: 'Questi sono file di test Arduino INO (Arduino Sketch) codice sorgente di varie dimensioni per scopi di test'
+      },
+      bat: {
+        meta: {
+          title: 'Scarica file di esempio BAT gratuiti - File di test script batch per automazione Windows | MorphyHub',
+          description: 'Scarica file di esempio BAT script batch gratuiti per testare automazione Windows e strumenti di elaborazione riga di comando. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare esecuzione script batch, automazione attività Windows, strumenti riga di comando, validatori script e utility amministrazione sistema.',
+          keywords: 'file di esempio BAT, file di test BAT, scarica esempi BAT, file di test BAT gratuiti, esempi script batch, esempi file batch Windows, esempi script automazione, file di test .bat, esempi script riga di comando, esempi automazione Windows, esempi esecuzione script'
+        },
+        schema: {
+          name: 'File di esempio BAT gratuiti - Scarica file di test script batch per automazione Windows',
+          description: 'Scarica file di esempio BAT script batch gratuiti per testare automazione Windows e strumenti di elaborazione riga di comando. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare esecuzione script batch, automazione attività Windows, strumenti riga di comando, validatori script e utility amministrazione sistema.'
+        },
+        hero: {
+          title: 'File di esempio BAT',
+          description: 'Scarica file di esempio BAT script batch gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di esecuzione script batch, software di automazione Windows e applicazioni di elaborazione riga di comando.'
+        },
+        about_description: 'Questi sono file di test BAT (Batch) di varie dimensioni per scopi di test'
+      },
+      asc: {
+        meta: {
+          title: 'Scarica file di esempio ASC gratuiti - File di test testo ASCII per elaborazione testo | MorphyHub',
+          description: 'Scarica file di esempio ASC testo ASCII gratuiti per testare strumenti di elaborazione testo e codifica. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare codifica ASCII, parsing file di testo, editor testo semplice, validazione codifica caratteri e strumenti conversione formato testo.',
+          keywords: 'file di esempio ASC, file di test ASC, scarica esempi ASC, file di test ASC gratuiti, esempi testo ASCII, esempi testo semplice, file di test .asc, esempi formato testo, file di test codifica ASCII, esempi elaborazione testo, esempi codifica caratteri'
+        },
+        schema: {
+          name: 'File di esempio ASC gratuiti - Scarica file di test testo ASCII per elaborazione testo',
+          description: 'Scarica file di esempio ASC testo ASCII gratuiti per testare strumenti di elaborazione testo e codifica. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare codifica ASCII, parsing file di testo, editor testo semplice, validazione codifica caratteri e strumenti conversione formato testo.'
+        },
+        hero: {
+          title: 'File di esempio ASC',
+          description: 'Scarica file di esempio ASC testo ASCII gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di elaborazione testo, software di codifica ASCII e applicazioni di gestione file testo semplice.'
+        },
+        about_description: 'Questi sono file di test ASC (ASCII Text) di varie dimensioni per scopi di test'
+      },
+      bib: {
+        meta: {
+          title: 'Scarica file di esempio BIB gratuiti - File di test bibliografia per ricerca accademica | MorphyHub',
+          description: 'Scarica file di esempio BIB bibliografia gratuiti per testare strumenti di gestione bibliografia e citazioni. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare elaborazione formato BibTeX, gestori riferimenti, generatori citazioni, strumenti scrittura accademica e integrazione bibliografia LaTeX.',
+          keywords: 'file di esempio BIB, file di test BIB, scarica esempi BIB, file di test BIB gratuiti, esempi bibliografia, esempi file BibTeX, esempi citazioni, file di test .bib, esempi gestione riferimenti, esempi citazioni accademiche, esempi bibliografia LaTeX'
+        },
+        schema: {
+          name: 'File di esempio BIB gratuiti - Scarica file di test bibliografia per ricerca accademica',
+          description: 'Scarica file di esempio BIB bibliografia gratuiti per testare strumenti di gestione bibliografia e citazioni. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare elaborazione formato BibTeX, gestori riferimenti, generatori citazioni, strumenti scrittura accademica e integrazione bibliografia LaTeX.'
+        },
+        hero: {
+          title: 'File di esempio BIB',
+          description: 'Scarica file di esempio BIB bibliografia gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di gestione bibliografia, processori BibTeX e applicazioni di gestione citazioni.'
+        },
+        about_description: 'Questi sono file di test BIB (Bibliography) di varie dimensioni per scopi di test'
+      },
+      c: {
+        meta: {
+          title: 'Scarica file di esempio C gratuiti - File di test linguaggio programmazione C per sviluppo | MorphyHub',
+          description: 'Scarica file di esempio C codice sorgente gratuiti per testare compilazione codice C e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C, controllori sintassi, analizzatori codice, toolchain GCC, sviluppo C embedded e strumenti programmazione sistema.',
+          keywords: 'file di esempio C, file di test C, scarica esempi C, file di test C gratuiti, esempi codice sorgente C, esempi file programmazione C, file di test .c, file di test compilazione C, file di test GCC, esempi C embedded, esempi programmazione sistema'
+        },
+        schema: {
+          name: 'File di esempio C gratuiti - Scarica file di test linguaggio programmazione C per sviluppo',
+          description: 'Scarica file di esempio C codice sorgente gratuiti per testare compilazione codice C e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C, controllori sintassi, analizzatori codice, toolchain GCC, sviluppo C embedded e strumenti programmazione sistema.'
+        },
+        hero: {
+          title: 'File di esempio C',
+          description: 'Scarica file di esempio C codice sorgente C gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di compilazione codice C, controllori sintassi C e applicazioni di sviluppo C.'
+        },
+        about_description: 'Questi sono file di test codice sorgente C di varie dimensioni per scopi di test'
+      },
+      'can-log': {
+        meta: {
+          title: 'Scarica file di esempio CAN Log gratuiti - File di test Controller Area Network per automobilistico | MorphyHub',
+          description: 'Scarica file di esempio CAN Log gratuiti per testare analisi bus CAN e strumenti diagnostica automobilistica. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare analizzatori bus CAN, strumenti diagnostica automobilistica, protocolli rete veicoli, test OBD-II e sistemi embedded automobilistici.',
+          keywords: 'file di esempio CAN Log, file di test log CAN, scarica esempi log CAN, file di test log CAN gratuiti, esempi Controller Area Network, esempi bus CAN, file di test .log, esempi diagnostica automobilistica, file di test OBD-II, esempi rete veicoli, test analizzatore bus CAN'
+        },
+        schema: {
+          name: 'File di esempio CAN Log gratuiti - Scarica file di test Controller Area Network per automobilistico',
+          description: 'Scarica file di esempio CAN Log gratuiti per testare analisi bus CAN e strumenti diagnostica automobilistica. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare analizzatori bus CAN, strumenti diagnostica automobilistica, protocolli rete veicoli, test OBD-II e sistemi embedded automobilistici.'
+        },
+        hero: {
+          title: 'File di esempio CAN Log',
+          description: 'Scarica file di esempio CAN Log Controller Area Network gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di analisi bus CAN, software diagnostica automobilistica e applicazioni protocolli rete.'
+        },
+        about_description: 'Questi sono file di test CAN Log (Controller Area Network) di varie dimensioni per scopi di test'
+      },
+      cmd: {
+        meta: {
+          title: 'Scarica file di esempio CMD gratuiti - File di test script comando Windows per automazione | MorphyHub',
+          description: 'Scarica file di esempio CMD script comando Windows gratuiti per testare esecuzione script batch e strumenti automazione Windows. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare prompt comandi Windows, esecuzione file batch, automazione script, amministrazione sistema e strumenti pianificazione attività Windows.',
+          keywords: 'file di esempio CMD, file di test CMD, scarica esempi CMD, file di test CMD gratuiti, esempi script comando Windows, esempi script batch, file di test .cmd, esempi script comando, esempi automazione Windows, esempi amministrazione sistema'
+        },
+        schema: {
+          name: 'File di esempio CMD gratuiti - Scarica file di test script comando Windows per automazione',
+          description: 'Scarica file di esempio CMD script comando Windows gratuiti per testare esecuzione script batch e strumenti automazione Windows. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare prompt comandi Windows, esecuzione file batch, automazione script, amministrazione sistema e strumenti pianificazione attività Windows.'
+        },
+        hero: {
+          title: 'File di esempio CMD',
+          description: 'Scarica file di esempio CMD script comando Windows gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di esecuzione script batch, software elaborazione comandi Windows e applicazioni automazione.'
+        },
+        about_description: 'Questi sono file di test CMD (Windows Command Script) di varie dimensioni per scopi di test'
+      },
+      conf: {
+        meta: {
+          title: 'Scarica file di esempio CONF gratuiti - File di test configurazione per configurazione sistema | MorphyHub',
+          description: 'Scarica file di esempio CONF configurazione gratuiti per testare parsing file configurazione e strumenti configurazione sistema. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare configurazione server, impostazioni applicazione, validatori file configurazione, strumenti amministrazione sistema e utility distribuzione software.',
+          keywords: 'file di esempio CONF, file di test CONF, scarica esempi CONF, file di test CONF gratuiti, esempi file configurazione, esempi configurazione server, file di test .conf, esempi file configurazione, esempi configurazione sistema, esempi impostazioni applicazione'
+        },
+        schema: {
+          name: 'File di esempio CONF gratuiti - Scarica file di test configurazione per configurazione sistema',
+          description: 'Scarica file di esempio CONF configurazione gratuiti per testare parsing file configurazione e strumenti configurazione sistema. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare configurazione server, impostazioni applicazione, validatori file configurazione, strumenti amministrazione sistema e utility distribuzione software.'
+        },
+        hero: {
+          title: 'File di esempio CONF',
+          description: 'Scarica file di esempio CONF configurazione gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di parsing file configurazione, software configurazione server e applicazioni impostazioni applicazione.'
+        },
+        about_description: 'Questi sono file di test CONF configurazione di varie dimensioni per scopi di test'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Scarica file di esempio Config INI gratuiti - File di test configurazione INI per applicazioni | MorphyHub',
+          description: 'Scarica file di esempio Config INI configurazione INI gratuiti per testare parsing file INI e strumenti gestione configurazione. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser INI, configurazione applicazione, gestione impostazioni, file INI Windows e utility configurazione software.',
+          keywords: 'file di esempio Config INI, file di test INI, scarica esempi INI, file di test INI gratuiti, esempi configurazione INI, esempi configurazione INI, file di test .ini, esempi file configurazione, esempi INI Windows, esempi impostazioni applicazione'
+        },
+        schema: {
+          name: 'File di esempio Config INI gratuiti - Scarica file di test configurazione INI per applicazioni',
+          description: 'Scarica file di esempio Config INI configurazione INI gratuiti per testare parsing file INI e strumenti gestione configurazione. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser INI, configurazione applicazione, gestione impostazioni, file INI Windows e utility configurazione software.'
+        },
+        hero: {
+          title: 'File di esempio Config INI',
+          description: 'Scarica file di esempio Config INI configurazione INI gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di parsing file INI, software gestione configurazione e applicazioni impostazioni applicazione.'
+        },
+        about_description: 'Questi sono file di test Config INI configurazione di varie dimensioni per scopi di test'
+      },
+      cpp: {
+        meta: {
+          title: 'Scarica file di esempio CPP gratuiti - File di test linguaggio programmazione C++ per sviluppo | MorphyHub',
+          description: 'Scarica file di esempio CPP codice sorgente C++ gratuiti per testare compilazione codice C++ e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C++, controllori sintassi, analizzatori codice, toolchain GCC/G++, funzionalità C++ moderne e strumenti programmazione orientata agli oggetti.',
+          keywords: 'file di esempio CPP, file di test CPP, scarica esempi CPP, file di test CPP gratuiti, esempi codice sorgente C++, esempi file codice C++, file di test .cpp, esempi file programmazione C++, file di test compilazione C++, file di test GCC, esempi C++ moderno'
+        },
+        schema: {
+          name: 'File di esempio CPP gratuiti - Scarica file di test linguaggio programmazione C++ per sviluppo',
+          description: 'Scarica file di esempio CPP codice sorgente C++ gratuiti per testare compilazione codice C++ e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C++, controllori sintassi, analizzatori codice, toolchain GCC/G++, funzionalità C++ moderne e strumenti programmazione orientata agli oggetti.'
+        },
+        hero: {
+          title: 'File di esempio CPP',
+          description: 'Scarica file di esempio CPP codice sorgente C++ gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di compilazione codice C++, controllori sintassi C++ e applicazioni di sviluppo C++.'
+        },
+        about_description: 'Questi sono file di test codice sorgente C++ di varie dimensioni per scopi di test'
+      },
+      h: {
+        meta: {
+          title: 'Scarica file di esempio H gratuiti - File di test header C/C++ per programmazione | MorphyHub',
+          description: 'Scarica file di esempio H header C/C++ gratuiti per testare elaborazione file header e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C/C++, inclusione file header, strumenti preprocessore, organizzazione codice e utility sviluppo cross-platform.',
+          keywords: 'file di esempio H, file di test H, scarica esempi H, file di test H gratuiti, esempi header C, esempi header C++, esempi file header, file di test .h, file header C/C++, esempi header programmazione, esempi file header codice'
+        },
+        schema: {
+          name: 'File di esempio H gratuiti - Scarica file di test header C/C++ per programmazione',
+          description: 'Scarica file di esempio H header C/C++ gratuiti per testare elaborazione file header e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C/C++, inclusione file header, strumenti preprocessore, organizzazione codice e utility sviluppo cross-platform.'
+        },
+        hero: {
+          title: 'File di esempio H',
+          description: 'Scarica file di esempio H header C/C++ gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di compilazione codice C/C++, software elaborazione file header e applicazioni di sviluppo.'
+        },
+        about_description: 'Questi sono file di test H (C/C++ header) di varie dimensioni per scopi di test'
+      },
+      hpp: {
+        meta: {
+          title: 'Scarica file di esempio HPP gratuiti - File di test header C++ per sviluppo C++ moderno | MorphyHub',
+          description: 'Scarica file di esempio HPP header C++ gratuiti per testare elaborazione file header C++ e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C++, librerie header-only, metaprogrammazione template, funzionalità C++ moderne e utility sviluppo C++ avanzate.',
+          keywords: 'file di esempio HPP, file di test HPP, scarica esempi HPP, file di test HPP gratuiti, esempi header C++, esempi file header, file di test .hpp, file header C++, esempi header programmazione, esempi file header codice, esempi file sviluppo C++, esempi header C++ moderno'
+        },
+        schema: {
+          name: 'File di esempio HPP gratuiti - Scarica file di test header C++ per sviluppo C++ moderno',
+          description: 'Scarica file di esempio HPP header C++ gratuiti per testare elaborazione file header C++ e strumenti di sviluppo. Dimensioni multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare compilatori C++, librerie header-only, metaprogrammazione template, funzionalità C++ moderne e utility sviluppo C++ avanzate.'
+        },
+        hero: {
+          title: 'File di esempio HPP',
+          description: 'Scarica file di esempio HPP header C++ gratuiti per il test. Dimensioni multiple disponibili per testare i tuoi strumenti di compilazione codice C++, software elaborazione file header e applicazioni di sviluppo C++.'
+        },
+        about_description: 'Questi sono file di test HPP (C++ header) di varie dimensioni per scopi di test'
       }
     }
   }

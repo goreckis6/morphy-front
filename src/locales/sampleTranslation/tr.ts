@@ -271,6 +271,214 @@ export const tr: SamplePageTranslations = {
           description: 'Test için ücretsiz Ansible YML yapılandırma örnek dosyalarını indirin. YAML ayrıştırma araçlarınızı, Ansible playbook doğrulayıcılarınızı, yapılandırma yönetimi sistemlerinizi ve DevOps otomasyonu uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
         },
         about_description: 'Bunlar test amaçlı çeşitli boyutlarda Ansible YML test dosyalarıdır'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Ücretsiz API Response JSON örnek dosyaları indir - API geliştirme için JSON test dosyaları | MorphyHub',
+          description: 'JSON ayrıştırma, API entegrasyonu ve web geliştirme araçlarını test etmek için ücretsiz API Response JSON örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. REST API yanıtları, JSON doğrulayıcıları, API mocking, webhook testleri ve veri değişim formatı işleme testleri için mükemmel.',
+          keywords: 'API Response JSON örnek dosyaları, JSON test dosyaları, JSON örnekleri indir, ücretsiz JSON test dosyaları, API yanıt örnekleri, JSON ayrıştırma örnekleri, REST API test dosyaları, JSON doğrulayıcı testi, API mocking örnekleri, webhook test dosyaları, .json test dosyaları, web API örnekleri, veri değişim formatı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz API Response JSON örnek dosyaları - API geliştirme için JSON test dosyalarını indir',
+          description: 'JSON ayrıştırma, API entegrasyonu ve web geliştirme araçlarını test etmek için ücretsiz API Response JSON örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. REST API yanıtları, JSON doğrulayıcıları, API mocking, webhook testleri ve veri değişim formatı işleme testleri için mükemmel.'
+        },
+        hero: {
+          title: 'API Response JSON örnek dosyaları',
+          description: 'Test için ücretsiz API Response JSON örnek dosyalarını indirin. JSON ayrıştırma araçlarınızı, API yanıt işleyicilerinizi, REST API doğrulayıcılarınızı ve web geliştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda API Response JSON test dosyalarıdır'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Ücretsiz Arduino INO örnek dosyaları indir - Gömülü geliştirme için Arduino Sketch test dosyaları | MorphyHub',
+          description: 'Arduino sketch derleme ve gömülü programlama araçlarını test etmek için ücretsiz Arduino INO örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Arduino IDE, sketch doğrulama, mikrodenetleyici programlama, gömülü sistem geliştirme ve IoT cihaz testleri için mükemmel.',
+          keywords: 'Arduino INO örnek dosyaları, Arduino INO test dosyaları, Arduino INO örnekleri indir, ücretsiz Arduino INO test dosyaları, Arduino sketch örnekleri, gömülü kod örnekleri, Arduino IDE test dosyaları, .ino test dosyaları, mikrodenetleyici örnekleri, IoT geliştirme örnekleri, gömülü programlama örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Arduino INO örnek dosyaları - Gömülü geliştirme için Arduino Sketch test dosyalarını indir',
+          description: 'Arduino sketch derleme ve gömülü programlama araçlarını test etmek için ücretsiz Arduino INO örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Arduino IDE, sketch doğrulama, mikrodenetleyici programlama, gömülü sistem geliştirme ve IoT cihaz testleri için mükemmel.'
+        },
+        hero: {
+          title: 'Arduino INO örnek dosyaları',
+          description: 'Test için ücretsiz Arduino INO Arduino sketch kaynak kodu dosyalarını indirin. Arduino geliştirme araçlarınızı, sketch derleme yazılımınızı ve gömülü programlama uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Arduino INO (Arduino Sketch) kaynak kodu dosyalarıdır'
+      },
+      bat: {
+        meta: {
+          title: 'Ücretsiz BAT örnek dosyaları indir - Windows otomasyonu için toplu işlem betiği test dosyaları | MorphyHub',
+          description: 'Windows otomasyonu ve komut satırı işleme araçlarını test etmek için ücretsiz BAT toplu işlem betiği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Toplu işlem betiği yürütme, Windows görev otomasyonu, komut satırı araçları, betik doğrulayıcıları ve sistem yönetimi yardımcı programları testleri için mükemmel.',
+          keywords: 'BAT örnek dosyaları, BAT test dosyaları, BAT örnekleri indir, ücretsiz BAT test dosyaları, toplu işlem betiği örnekleri, Windows toplu işlem dosyaları, otomasyon betiği örnekleri, .bat test dosyaları, komut satırı betiği örnekleri, Windows otomasyon örnekleri, betik yürütme test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz BAT örnek dosyaları - Windows otomasyonu için toplu işlem betiği test dosyalarını indir',
+          description: 'Windows otomasyonu ve komut satırı işleme araçlarını test etmek için ücretsiz BAT toplu işlem betiği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Toplu işlem betiği yürütme, Windows görev otomasyonu, komut satırı araçları, betik doğrulayıcıları ve sistem yönetimi yardımcı programları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'BAT örnek dosyaları',
+          description: 'Test için ücretsiz BAT toplu işlem betiği örnek dosyalarını indirin. Toplu işlem betiği yürütme araçlarınızı, Windows otomasyon yazılımınızı ve komut satırı işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda BAT (Batch) betik dosyalarıdır'
+      },
+      asc: {
+        meta: {
+          title: 'Ücretsiz ASC örnek dosyaları indir - Metin işleme için ASCII metin test dosyaları | MorphyHub',
+          description: 'Metin işleme ve kodlama araçlarını test etmek için ücretsiz ASC ASCII metin örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ASCII kodlama, metin dosyası ayrıştırma, düz metin düzenleyicileri, karakter kodlama doğrulama ve metin formatı dönüştürme araçları testleri için mükemmel.',
+          keywords: 'ASC örnek dosyaları, ASC test dosyaları, ASC örnekleri indir, ücretsiz ASC test dosyaları, ASCII metin örnekleri, düz metin örnekleri, .asc test dosyaları, metin formatı örnekleri, ASCII kodlama test dosyaları, metin işleme örnekleri, karakter kodlama örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz ASC örnek dosyaları - Metin işleme için ASCII metin test dosyalarını indir',
+          description: 'Metin işleme ve kodlama araçlarını test etmek için ücretsiz ASC ASCII metin örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ASCII kodlama, metin dosyası ayrıştırma, düz metin düzenleyicileri, karakter kodlama doğrulama ve metin formatı dönüştürme araçları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'ASC örnek dosyaları',
+          description: 'Test için ücretsiz ASC ASCII metin örnek dosyalarını indirin. Metin işleme araçlarınızı, ASCII kodlama yazılımınızı ve düz metin dosyası işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ASC (ASCII Text) dosyalarıdır'
+      },
+      bib: {
+        meta: {
+          title: 'Ücretsiz BIB örnek dosyaları indir - Akademik araştırma için bibliyografya test dosyaları | MorphyHub',
+          description: 'Bibliyografya yönetimi ve alıntı araçlarını test etmek için ücretsiz BIB bibliyografya örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BibTeX format işleme, referans yöneticileri, alıntı oluşturucular, akademik yazma araçları ve LaTeX bibliyografya entegrasyonu testleri için mükemmel.',
+          keywords: 'BIB örnek dosyaları, BIB test dosyaları, BIB örnekleri indir, ücretsiz BIB test dosyaları, bibliyografya örnekleri, BibTeX dosyaları, alıntı örnekleri, .bib test dosyaları, referans yönetimi örnekleri, akademik alıntı örnekleri, LaTeX bibliyografya örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz BIB örnek dosyaları - Akademik araştırma için bibliyografya test dosyalarını indir',
+          description: 'Bibliyografya yönetimi ve alıntı araçlarını test etmek için ücretsiz BIB bibliyografya örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BibTeX format işleme, referans yöneticileri, alıntı oluşturucular, akademik yazma araçları ve LaTeX bibliyografya entegrasyonu testleri için mükemmel.'
+        },
+        hero: {
+          title: 'BIB örnek dosyaları',
+          description: 'Test için ücretsiz BIB bibliyografya örnek dosyalarını indirin. Bibliyografya yönetim araçlarınızı, BibTeX işlemcilerinizi ve alıntı işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda BIB (Bibliography) dosyalarıdır'
+      },
+      c: {
+        meta: {
+          title: 'Ücretsiz C örnek dosyaları indir - Geliştirme için C programlama dili test dosyaları | MorphyHub',
+          description: 'C kodu derleme ve geliştirme araçlarını test etmek için ücretsiz C kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C derleyicileri, sözdizimi kontrol araçları, kod analizörleri, GCC araç zinciri, gömülü C geliştirme ve sistem programlama araçları testleri için mükemmel.',
+          keywords: 'C örnek dosyaları, C test dosyaları, C örnekleri indir, ücretsiz C test dosyaları, C kaynak kodu örnekleri, C programlama dosyaları, .c test dosyaları, C derleme test dosyaları, GCC test dosyaları, gömülü C örnekleri, sistem programlama örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz C örnek dosyaları - Geliştirme için C programlama dili test dosyalarını indir',
+          description: 'C kodu derleme ve geliştirme araçlarını test etmek için ücretsiz C kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C derleyicileri, sözdizimi kontrol araçları, kod analizörleri, GCC araç zinciri, gömülü C geliştirme ve sistem programlama araçları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'C örnek dosyaları',
+          description: 'Test için ücretsiz C C kaynak kodu örnek dosyalarını indirin. C kodu derleme araçlarınızı, C sözdizimi kontrol araçlarınızı ve C geliştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda C kaynak kodu dosyalarıdır'
+      },
+      'can-log': {
+        meta: {
+          title: 'Ücretsiz CAN Log örnek dosyaları indir - Otomotiv için Controller Area Network test dosyaları | MorphyHub',
+          description: 'CAN veri yolu analizi ve otomotiv tanılama araçlarını test etmek için ücretsiz CAN Log örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAN veri yolu analizörleri, otomotiv tanılama araçları, araç ağ protokolleri, OBD-II testleri ve gömülü otomotiv sistemleri testleri için mükemmel.',
+          keywords: 'CAN Log örnek dosyaları, CAN Log test dosyaları, CAN Log örnekleri indir, ücretsiz CAN Log test dosyaları, Controller Area Network örnekleri, CAN veri yolu örnekleri, .log test dosyaları, otomotiv tanılama örnekleri, OBD-II test dosyaları, araç ağ örnekleri, CAN veri yolu analizör testi'
+        },
+        schema: {
+          name: 'Ücretsiz CAN Log örnek dosyaları - Otomotiv için Controller Area Network test dosyalarını indir',
+          description: 'CAN veri yolu analizi ve otomotiv tanılama araçlarını test etmek için ücretsiz CAN Log örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAN veri yolu analizörleri, otomotiv tanılama araçları, araç ağ protokolleri, OBD-II testleri ve gömülü otomotiv sistemleri testleri için mükemmel.'
+        },
+        hero: {
+          title: 'CAN Log örnek dosyaları',
+          description: 'Test için ücretsiz CAN Log Controller Area Network günlük dosyalarını indirin. CAN veri yolu analiz araçlarınızı, otomotiv tanılama yazılımınızı ve ağ protokol uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CAN Log (Controller Area Network) günlük dosyalarıdır'
+      },
+      cmd: {
+        meta: {
+          title: 'Ücretsiz CMD örnek dosyaları indir - Otomasyon için Windows komut betiği test dosyaları | MorphyHub',
+          description: 'Toplu işlem betiği yürütme ve Windows otomasyon araçlarını test etmek için ücretsiz CMD Windows komut betiği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Windows komut istemi, toplu işlem dosyası yürütme, betik otomasyonu, sistem yönetimi ve Windows görev zamanlama araçları testleri için mükemmel.',
+          keywords: 'CMD örnek dosyaları, CMD test dosyaları, CMD örnekleri indir, ücretsiz CMD test dosyaları, Windows komut betiği örnekleri, toplu işlem betiği örnekleri, .cmd test dosyaları, komut betiği örnekleri, Windows otomasyon örnekleri, sistem yönetimi örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz CMD örnek dosyaları - Otomasyon için Windows komut betiği test dosyalarını indir',
+          description: 'Toplu işlem betiği yürütme ve Windows otomasyon araçlarını test etmek için ücretsiz CMD Windows komut betiği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Windows komut istemi, toplu işlem dosyası yürütme, betik otomasyonu, sistem yönetimi ve Windows görev zamanlama araçları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'CMD örnek dosyaları',
+          description: 'Test için ücretsiz CMD Windows komut betiği örnek dosyalarını indirin. Toplu işlem betiği yürütme araçlarınızı, Windows komut işleme yazılımınızı ve otomasyon uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CMD (Windows Command Script) dosyalarıdır'
+      },
+      conf: {
+        meta: {
+          title: 'Ücretsiz CONF örnek dosyaları indir - Sistem yapılandırması için yapılandırma test dosyaları | MorphyHub',
+          description: 'Yapılandırma dosyası ayrıştırma ve sistem yapılandırma araçlarını test etmek için ücretsiz CONF yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sunucu yapılandırması, uygulama ayarları, yapılandırma dosyası doğrulayıcıları, sistem yönetimi araçları ve yazılım dağıtım yardımcı programları testleri için mükemmel.',
+          keywords: 'CONF örnek dosyaları, CONF test dosyaları, CONF örnekleri indir, ücretsiz CONF test dosyaları, yapılandırma dosyası örnekleri, sunucu yapılandırması örnekleri, .conf test dosyaları, yapılandırma dosyası örnekleri, sistem yapılandırması örnekleri, uygulama ayarları örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz CONF örnek dosyaları - Sistem yapılandırması için yapılandırma test dosyalarını indir',
+          description: 'Yapılandırma dosyası ayrıştırma ve sistem yapılandırma araçlarını test etmek için ücretsiz CONF yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sunucu yapılandırması, uygulama ayarları, yapılandırma dosyası doğrulayıcıları, sistem yönetimi araçları ve yazılım dağıtım yardımcı programları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'CONF örnek dosyaları',
+          description: 'Test için ücretsiz CONF yapılandırma örnek dosyalarını indirin. Yapılandırma dosyası ayrıştırma araçlarınızı, sunucu yapılandırma yazılımınızı ve uygulama ayarları uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CONF yapılandırma dosyalarıdır'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Ücretsiz Config INI örnek dosyaları indir - Uygulamalar için INI yapılandırma test dosyaları | MorphyHub',
+          description: 'INI dosyası ayrıştırma ve yapılandırma yönetimi araçlarını test etmek için ücretsiz Config INI INI yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. INI ayrıştırıcıları, uygulama yapılandırması, ayar yönetimi, Windows INI dosyaları ve yazılım yapılandırma yardımcı programları testleri için mükemmel.',
+          keywords: 'Config INI örnek dosyaları, INI test dosyaları, INI örnekleri indir, ücretsiz INI test dosyaları, INI yapılandırma örnekleri, INI yapılandırma örnekleri, .ini test dosyaları, yapılandırma dosyası örnekleri, Windows INI örnekleri, uygulama ayarları örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Config INI örnek dosyaları - Uygulamalar için INI yapılandırma test dosyalarını indir',
+          description: 'INI dosyası ayrıştırma ve yapılandırma yönetimi araçlarını test etmek için ücretsiz Config INI INI yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. INI ayrıştırıcıları, uygulama yapılandırması, ayar yönetimi, Windows INI dosyaları ve yazılım yapılandırma yardımcı programları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'Config INI örnek dosyaları',
+          description: 'Test için ücretsiz Config INI INI yapılandırma örnek dosyalarını indirin. INI dosyası ayrıştırma araçlarınızı, yapılandırma yönetimi yazılımınızı ve uygulama ayarları uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Config INI yapılandırma dosyalarıdır'
+      },
+      cpp: {
+        meta: {
+          title: 'Ücretsiz CPP örnek dosyaları indir - Geliştirme için C++ programlama dili test dosyaları | MorphyHub',
+          description: 'C++ kodu derleme ve geliştirme araçlarını test etmek için ücretsiz CPP C++ kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C++ derleyicileri, sözdizimi kontrol araçları, kod analizörleri, GCC/G++ araç zinciri, modern C++ özellikleri ve nesne yönelimli programlama araçları testleri için mükemmel.',
+          keywords: 'CPP örnek dosyaları, CPP test dosyaları, CPP örnekleri indir, ücretsiz CPP test dosyaları, C++ kaynak kodu örnekleri, C++ kod dosyaları, .cpp test dosyaları, C++ programlama dosyaları, C++ derleme test dosyaları, GCC test dosyaları, modern C++ örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz CPP örnek dosyaları - Geliştirme için C++ programlama dili test dosyalarını indir',
+          description: 'C++ kodu derleme ve geliştirme araçlarını test etmek için ücretsiz CPP C++ kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C++ derleyicileri, sözdizimi kontrol araçları, kod analizörleri, GCC/G++ araç zinciri, modern C++ özellikleri ve nesne yönelimli programlama araçları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'CPP örnek dosyaları',
+          description: 'Test için ücretsiz CPP C++ kaynak kodu örnek dosyalarını indirin. C++ kodu derleme araçlarınızı, C++ sözdizimi kontrol araçlarınızı ve C++ geliştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda C++ kaynak kodu dosyalarıdır'
+      },
+      h: {
+        meta: {
+          title: 'Ücretsiz H örnek dosyaları indir - Programlama için C/C++ başlık dosyası test dosyaları | MorphyHub',
+          description: 'Başlık dosyası işleme ve geliştirme araçlarını test etmek için ücretsiz H C/C++ başlık dosyası örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C/C++ derleyicileri, başlık dosyası dahil etme, ön işlemci araçları, kod organizasyonu ve çapraz platform geliştirme yardımcı programları testleri için mükemmel.',
+          keywords: 'H örnek dosyaları, H test dosyaları, H örnekleri indir, ücretsiz H test dosyaları, C başlık örnekleri, C++ başlık örnekleri, başlık dosyası örnekleri, .h test dosyaları, C/C++ başlık dosyaları, programlama başlık örnekleri, kod başlık dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz H örnek dosyaları - Programlama için C/C++ başlık dosyası test dosyalarını indir',
+          description: 'Başlık dosyası işleme ve geliştirme araçlarını test etmek için ücretsiz H C/C++ başlık dosyası örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C/C++ derleyicileri, başlık dosyası dahil etme, ön işlemci araçları, kod organizasyonu ve çapraz platform geliştirme yardımcı programları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'H örnek dosyaları',
+          description: 'Test için ücretsiz H C/C++ başlık dosyası örnek dosyalarını indirin. C/C++ kodu derleme araçlarınızı, başlık dosyası işleme yazılımınızı ve geliştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda H (C/C++ header) dosyalarıdır'
+      },
+      hpp: {
+        meta: {
+          title: 'Ücretsiz HPP örnek dosyaları indir - Modern C++ geliştirme için C++ başlık dosyası test dosyaları | MorphyHub',
+          description: 'C++ başlık dosyası işleme ve geliştirme araçlarını test etmek için ücretsiz HPP C++ başlık dosyası örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C++ derleyicileri, yalnızca başlık kitaplıkları, şablon metaprogramlama, modern C++ özellikleri ve gelişmiş C++ geliştirme yardımcı programları testleri için mükemmel.',
+          keywords: 'HPP örnek dosyaları, HPP test dosyaları, HPP örnekleri indir, ücretsiz HPP test dosyaları, C++ başlık örnekleri, başlık dosyası örnekleri, .hpp test dosyaları, C++ başlık dosyaları, programlama başlık örnekleri, kod başlık dosyaları, C++ geliştirme dosyaları, modern C++ başlık örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz HPP örnek dosyaları - Modern C++ geliştirme için C++ başlık dosyası test dosyalarını indir',
+          description: 'C++ başlık dosyası işleme ve geliştirme araçlarını test etmek için ücretsiz HPP C++ başlık dosyası örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C++ derleyicileri, yalnızca başlık kitaplıkları, şablon metaprogramlama, modern C++ özellikleri ve gelişmiş C++ geliştirme yardımcı programları testleri için mükemmel.'
+        },
+        hero: {
+          title: 'HPP örnek dosyaları',
+          description: 'Test için ücretsiz HPP C++ başlık dosyası örnek dosyalarını indirin. C++ kodu derleme araçlarınızı, başlık dosyası işleme yazılımınızı ve C++ geliştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda HPP (C++ header) dosyalarıdır'
       }
     }
   }

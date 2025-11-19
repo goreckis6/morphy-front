@@ -271,6 +271,214 @@ export const id: SamplePageTranslations = {
           description: 'Unduh file sampel Ansible YML gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat parsing YAML Anda, validator playbook Ansible, sistem manajemen konfigurasi, dan aplikasi otomatisasi DevOps.'
         },
         about_description: 'Ini adalah file uji Ansible YML dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Unduh File Sampel API Response JSON Gratis - File Uji JSON untuk Pengembangan API | MorphyHub',
+          description: 'Unduh file sampel API Response JSON gratis untuk menguji parsing JSON, integrasi API, dan alat pengembangan web. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji respons REST API, validator JSON, mocking API, pengujian webhook, dan pemrosesan format pertukaran data.',
+          keywords: 'file sampel API Response JSON, file uji JSON, unduh contoh JSON, file uji JSON gratis, contoh respons API, contoh parsing JSON, file uji REST API, uji validator JSON, contoh mocking API, file uji webhook, file uji .json, contoh web API, contoh format pertukaran data'
+        },
+        schema: {
+          name: 'File Sampel API Response JSON Gratis - Unduh File Uji JSON untuk Pengembangan API',
+          description: 'Unduh file sampel API Response JSON gratis untuk menguji parsing JSON, integrasi API, dan alat pengembangan web. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji respons REST API, validator JSON, mocking API, pengujian webhook, dan pemrosesan format pertukaran data.'
+        },
+        hero: {
+          title: 'File Sampel API Response JSON',
+          description: 'Unduh file sampel API Response JSON gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat parsing JSON Anda, penangan respons API, validator REST API, dan aplikasi pengembangan web.'
+        },
+        about_description: 'Ini adalah file uji API Response JSON dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Unduh File Sampel Arduino INO Gratis - File Uji Sketch Arduino untuk Pengembangan Embedded | MorphyHub',
+          description: 'Unduh file sampel Arduino INO gratis untuk menguji kompilasi sketch Arduino dan alat pemrograman embedded. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Arduino IDE, validasi sketch, pemrograman mikrokontroler, pengembangan sistem embedded, dan pengujian perangkat IoT.',
+          keywords: 'file sampel Arduino INO, file uji Arduino INO, unduh contoh Arduino INO, file uji Arduino INO gratis, contoh sketch Arduino, contoh kode embedded, file uji Arduino IDE, file uji .ino, contoh mikrokontroler, contoh pengembangan IoT, contoh pemrograman embedded'
+        },
+        schema: {
+          name: 'File Sampel Arduino INO Gratis - Unduh File Uji Sketch Arduino untuk Pengembangan Embedded',
+          description: 'Unduh file sampel Arduino INO gratis untuk menguji kompilasi sketch Arduino dan alat pemrograman embedded. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Arduino IDE, validasi sketch, pemrograman mikrokontroler, pengembangan sistem embedded, dan pengujian perangkat IoT.'
+        },
+        hero: {
+          title: 'File Sampel Arduino INO',
+          description: 'Unduh file sampel Arduino INO sketch Arduino gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pengembangan Arduino Anda, perangkat lunak kompilasi sketch, dan aplikasi pemrograman embedded.'
+        },
+        about_description: 'Ini adalah file uji Arduino INO (Arduino Sketch) kode sumber dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      bat: {
+        meta: {
+          title: 'Unduh File Sampel BAT Gratis - File Uji Script Batch untuk Otomatisasi Windows | MorphyHub',
+          description: 'Unduh file sampel BAT script batch gratis untuk menguji otomatisasi Windows dan alat pemrosesan baris perintah. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script batch, otomatisasi tugas Windows, alat baris perintah, validator script, dan utilitas administrasi sistem.',
+          keywords: 'file sampel BAT, file uji BAT, unduh contoh BAT, file uji BAT gratis, contoh script batch, contoh file batch Windows, contoh script otomatisasi, file uji .bat, contoh script baris perintah, contoh otomatisasi Windows, contoh eksekusi script'
+        },
+        schema: {
+          name: 'File Sampel BAT Gratis - Unduh File Uji Script Batch untuk Otomatisasi Windows',
+          description: 'Unduh file sampel BAT script batch gratis untuk menguji otomatisasi Windows dan alat pemrosesan baris perintah. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script batch, otomatisasi tugas Windows, alat baris perintah, validator script, dan utilitas administrasi sistem.'
+        },
+        hero: {
+          title: 'File Sampel BAT',
+          description: 'Unduh file sampel BAT script batch gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat eksekusi script batch Anda, perangkat lunak otomatisasi Windows, dan aplikasi pemrosesan baris perintah.'
+        },
+        about_description: 'Ini adalah file uji BAT (Batch) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      asc: {
+        meta: {
+          title: 'Unduh File Sampel ASC Gratis - File Uji Teks ASCII untuk Pemrosesan Teks | MorphyHub',
+          description: 'Unduh file sampel ASC teks ASCII gratis untuk menguji alat pemrosesan teks dan pengkodean. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pengkodean ASCII, parsing file teks, editor teks biasa, validasi pengkodean karakter, dan alat konversi format teks.',
+          keywords: 'file sampel ASC, file uji ASC, unduh contoh ASC, file uji ASC gratis, contoh teks ASCII, contoh teks biasa, file uji .asc, contoh format teks, file uji pengkodean ASCII, contoh pemrosesan teks, contoh pengkodean karakter'
+        },
+        schema: {
+          name: 'File Sampel ASC Gratis - Unduh File Uji Teks ASCII untuk Pemrosesan Teks',
+          description: 'Unduh file sampel ASC teks ASCII gratis untuk menguji alat pemrosesan teks dan pengkodean. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pengkodean ASCII, parsing file teks, editor teks biasa, validasi pengkodean karakter, dan alat konversi format teks.'
+        },
+        hero: {
+          title: 'File Sampel ASC',
+          description: 'Unduh file sampel ASC teks ASCII gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pemrosesan teks Anda, perangkat lunak pengkodean ASCII, dan aplikasi penanganan file teks biasa.'
+        },
+        about_description: 'Ini adalah file uji ASC (ASCII Text) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      bib: {
+        meta: {
+          title: 'Unduh File Sampel BIB Gratis - File Uji Bibliografi untuk Penelitian Akademik | MorphyHub',
+          description: 'Unduh file sampel BIB bibliografi gratis untuk menguji alat manajemen bibliografi dan kutipan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan format BibTeX, manajer referensi, generator kutipan, alat penulisan akademik, dan integrasi bibliografi LaTeX.',
+          keywords: 'file sampel BIB, file uji BIB, unduh contoh BIB, file uji BIB gratis, contoh bibliografi, contoh file BibTeX, contoh kutipan, file uji .bib, contoh manajemen referensi, contoh kutipan akademik, contoh bibliografi LaTeX'
+        },
+        schema: {
+          name: 'File Sampel BIB Gratis - Unduh File Uji Bibliografi untuk Penelitian Akademik',
+          description: 'Unduh file sampel BIB bibliografi gratis untuk menguji alat manajemen bibliografi dan kutipan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan format BibTeX, manajer referensi, generator kutipan, alat penulisan akademik, dan integrasi bibliografi LaTeX.'
+        },
+        hero: {
+          title: 'File Sampel BIB',
+          description: 'Unduh file sampel BIB bibliografi gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat manajemen bibliografi Anda, prosesor BibTeX, dan aplikasi penanganan kutipan.'
+        },
+        about_description: 'Ini adalah file uji BIB (Bibliography) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      c: {
+        meta: {
+          title: 'Unduh File Sampel C Gratis - File Uji Bahasa Pemrograman C untuk Pengembangan | MorphyHub',
+          description: 'Unduh file sampel C kode sumber gratis untuk menguji kompilasi kode C dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C, pemeriksa sintaks, analisator kode, toolchain GCC, pengembangan C embedded, dan alat pemrograman sistem.',
+          keywords: 'file sampel C, file uji C, unduh contoh C, file uji C gratis, contoh kode sumber C, contoh file pemrograman C, file uji .c, file uji kompilasi C, file uji GCC, contoh C embedded, contoh pemrograman sistem'
+        },
+        schema: {
+          name: 'File Sampel C Gratis - Unduh File Uji Bahasa Pemrograman C untuk Pengembangan',
+          description: 'Unduh file sampel C kode sumber gratis untuk menguji kompilasi kode C dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C, pemeriksa sintaks, analisator kode, toolchain GCC, pengembangan C embedded, dan alat pemrograman sistem.'
+        },
+        hero: {
+          title: 'File Sampel C',
+          description: 'Unduh file sampel C kode sumber C gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat kompilasi kode C Anda, pemeriksa sintaks C, dan aplikasi pengembangan C.'
+        },
+        about_description: 'Ini adalah file uji kode sumber C dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      'can-log': {
+        meta: {
+          title: 'Unduh File Sampel CAN Log Gratis - File Uji Controller Area Network untuk Otomotif | MorphyHub',
+          description: 'Unduh file sampel CAN Log gratis untuk menguji analisis bus CAN dan alat diagnostik otomotif. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator bus CAN, alat diagnostik otomotif, protokol jaringan kendaraan, pengujian OBD-II, dan sistem embedded otomotif.',
+          keywords: 'file sampel CAN Log, file uji log CAN, unduh contoh log CAN, file uji log CAN gratis, contoh Controller Area Network, contoh bus CAN, file uji .log, contoh diagnostik otomotif, file uji OBD-II, contoh jaringan kendaraan, uji analisator bus CAN'
+        },
+        schema: {
+          name: 'File Sampel CAN Log Gratis - Unduh File Uji Controller Area Network untuk Otomotif',
+          description: 'Unduh file sampel CAN Log gratis untuk menguji analisis bus CAN dan alat diagnostik otomotif. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator bus CAN, alat diagnostik otomotif, protokol jaringan kendaraan, pengujian OBD-II, dan sistem embedded otomotif.'
+        },
+        hero: {
+          title: 'File Sampel CAN Log',
+          description: 'Unduh file sampel CAN Log Controller Area Network gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat analisis bus CAN Anda, perangkat lunak diagnostik otomotif, dan aplikasi protokol jaringan.'
+        },
+        about_description: 'Ini adalah file uji CAN Log (Controller Area Network) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      cmd: {
+        meta: {
+          title: 'Unduh File Sampel CMD Gratis - File Uji Script Perintah Windows untuk Otomatisasi | MorphyHub',
+          description: 'Unduh file sampel CMD script perintah Windows gratis untuk menguji eksekusi script batch dan alat otomatisasi Windows. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji prompt perintah Windows, eksekusi file batch, otomatisasi script, administrasi sistem, dan alat penjadwalan tugas Windows.',
+          keywords: 'file sampel CMD, file uji CMD, unduh contoh CMD, file uji CMD gratis, contoh script perintah Windows, contoh script batch, file uji .cmd, contoh script perintah, contoh otomatisasi Windows, contoh administrasi sistem'
+        },
+        schema: {
+          name: 'File Sampel CMD Gratis - Unduh File Uji Script Perintah Windows untuk Otomatisasi',
+          description: 'Unduh file sampel CMD script perintah Windows gratis untuk menguji eksekusi script batch dan alat otomatisasi Windows. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji prompt perintah Windows, eksekusi file batch, otomatisasi script, administrasi sistem, dan alat penjadwalan tugas Windows.'
+        },
+        hero: {
+          title: 'File Sampel CMD',
+          description: 'Unduh file sampel CMD script perintah Windows gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat eksekusi script batch Anda, perangkat lunak pemrosesan perintah Windows, dan aplikasi otomatisasi.'
+        },
+        about_description: 'Ini adalah file uji CMD (Windows Command Script) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      conf: {
+        meta: {
+          title: 'Unduh File Sampel CONF Gratis - File Uji Konfigurasi untuk Konfigurasi Sistem | MorphyHub',
+          description: 'Unduh file sampel CONF konfigurasi gratis untuk menguji parsing file konfigurasi dan alat konfigurasi sistem. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konfigurasi server, pengaturan aplikasi, validator file konfigurasi, alat administrasi sistem, dan utilitas penyebaran perangkat lunak.',
+          keywords: 'file sampel CONF, file uji CONF, unduh contoh CONF, file uji CONF gratis, contoh file konfigurasi, contoh konfigurasi server, file uji .conf, contoh file konfigurasi, contoh konfigurasi sistem, contoh pengaturan aplikasi'
+        },
+        schema: {
+          name: 'File Sampel CONF Gratis - Unduh File Uji Konfigurasi untuk Konfigurasi Sistem',
+          description: 'Unduh file sampel CONF konfigurasi gratis untuk menguji parsing file konfigurasi dan alat konfigurasi sistem. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji konfigurasi server, pengaturan aplikasi, validator file konfigurasi, alat administrasi sistem, dan utilitas penyebaran perangkat lunak.'
+        },
+        hero: {
+          title: 'File Sampel CONF',
+          description: 'Unduh file sampel CONF konfigurasi gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat parsing file konfigurasi Anda, perangkat lunak konfigurasi server, dan aplikasi pengaturan aplikasi.'
+        },
+        about_description: 'Ini adalah file uji CONF konfigurasi dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Unduh File Sampel Config INI Gratis - File Uji Konfigurasi INI untuk Aplikasi | MorphyHub',
+          description: 'Unduh file sampel Config INI konfigurasi INI gratis untuk menguji parsing file INI dan alat manajemen konfigurasi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parser INI, konfigurasi aplikasi, manajemen pengaturan, file INI Windows, dan utilitas konfigurasi perangkat lunak.',
+          keywords: 'file sampel Config INI, file uji INI, unduh contoh INI, file uji INI gratis, contoh konfigurasi INI, contoh konfigurasi INI, file uji .ini, contoh file konfigurasi, contoh INI Windows, contoh pengaturan aplikasi'
+        },
+        schema: {
+          name: 'File Sampel Config INI Gratis - Unduh File Uji Konfigurasi INI untuk Aplikasi',
+          description: 'Unduh file sampel Config INI konfigurasi INI gratis untuk menguji parsing file INI dan alat manajemen konfigurasi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji parser INI, konfigurasi aplikasi, manajemen pengaturan, file INI Windows, dan utilitas konfigurasi perangkat lunak.'
+        },
+        hero: {
+          title: 'File Sampel Config INI',
+          description: 'Unduh file sampel Config INI konfigurasi INI gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat parsing file INI Anda, perangkat lunak manajemen konfigurasi, dan aplikasi pengaturan aplikasi.'
+        },
+        about_description: 'Ini adalah file uji Config INI konfigurasi dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      cpp: {
+        meta: {
+          title: 'Unduh File Sampel CPP Gratis - File Uji Bahasa Pemrograman C++ untuk Pengembangan | MorphyHub',
+          description: 'Unduh file sampel CPP kode sumber C++ gratis untuk menguji kompilasi kode C++ dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C++, pemeriksa sintaks, analisator kode, toolchain GCC/G++, fitur C++ modern, dan alat pemrograman berorientasi objek.',
+          keywords: 'file sampel CPP, file uji CPP, unduh contoh CPP, file uji CPP gratis, contoh kode sumber C++, contoh file kode C++, file uji .cpp, contoh file pemrograman C++, file uji kompilasi C++, file uji GCC, contoh C++ modern'
+        },
+        schema: {
+          name: 'File Sampel CPP Gratis - Unduh File Uji Bahasa Pemrograman C++ untuk Pengembangan',
+          description: 'Unduh file sampel CPP kode sumber C++ gratis untuk menguji kompilasi kode C++ dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C++, pemeriksa sintaks, analisator kode, toolchain GCC/G++, fitur C++ modern, dan alat pemrograman berorientasi objek.'
+        },
+        hero: {
+          title: 'File Sampel CPP',
+          description: 'Unduh file sampel CPP kode sumber C++ gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat kompilasi kode C++ Anda, pemeriksa sintaks C++, dan aplikasi pengembangan C++.'
+        },
+        about_description: 'Ini adalah file uji kode sumber C++ dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      h: {
+        meta: {
+          title: 'Unduh File Sampel H Gratis - File Uji Header C/C++ untuk Pemrograman | MorphyHub',
+          description: 'Unduh file sampel H header C/C++ gratis untuk menguji pemrosesan file header dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C/C++, inklusi file header, alat preprosesor, organisasi kode, dan utilitas pengembangan lintas platform.',
+          keywords: 'file sampel H, file uji H, unduh contoh H, file uji H gratis, contoh header C, contoh header C++, contoh file header, file uji .h, file header C/C++, contoh header pemrograman, contoh file header kode'
+        },
+        schema: {
+          name: 'File Sampel H Gratis - Unduh File Uji Header C/C++ untuk Pemrograman',
+          description: 'Unduh file sampel H header C/C++ gratis untuk menguji pemrosesan file header dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C/C++, inklusi file header, alat preprosesor, organisasi kode, dan utilitas pengembangan lintas platform.'
+        },
+        hero: {
+          title: 'File Sampel H',
+          description: 'Unduh file sampel H header C/C++ gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat kompilasi kode C/C++ Anda, perangkat lunak pemrosesan file header, dan aplikasi pengembangan.'
+        },
+        about_description: 'Ini adalah file uji H (C/C++ header) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      hpp: {
+        meta: {
+          title: 'Unduh File Sampel HPP Gratis - File Uji Header C++ untuk Pengembangan C++ Modern | MorphyHub',
+          description: 'Unduh file sampel HPP header C++ gratis untuk menguji pemrosesan file header C++ dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C++, pustaka header-only, metaprogramming template, fitur C++ modern, dan utilitas pengembangan C++ lanjutan.',
+          keywords: 'file sampel HPP, file uji HPP, unduh contoh HPP, file uji HPP gratis, contoh header C++, contoh file header, file uji .hpp, file header C++, contoh header pemrograman, contoh file header kode, contoh file pengembangan C++, contoh header C++ modern'
+        },
+        schema: {
+          name: 'File Sampel HPP Gratis - Unduh File Uji Header C++ untuk Pengembangan C++ Modern',
+          description: 'Unduh file sampel HPP header C++ gratis untuk menguji pemrosesan file header C++ dan alat pengembangan. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompiler C++, pustaka header-only, metaprogramming template, fitur C++ modern, dan utilitas pengembangan C++ lanjutan.'
+        },
+        hero: {
+          title: 'File Sampel HPP',
+          description: 'Unduh file sampel HPP header C++ gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat kompilasi kode C++ Anda, perangkat lunak pemrosesan file header, dan aplikasi pengembangan C++.'
+        },
+        about_description: 'Ini adalah file uji HPP (C++ header) dalam berbagai ukuran untuk keperluan pengujian'
       }
     }
   }

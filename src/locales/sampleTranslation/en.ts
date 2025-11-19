@@ -271,6 +271,214 @@ export const en: SamplePageTranslations = {
           description: 'Download free Ansible YML sample configuration files for testing. Multiple file sizes available to test your YAML parsing tools, Ansible playbook validators, configuration management systems, and DevOps automation applications.'
         },
         about_description: 'These are test Ansible YML files in various sizes for testing purposes'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Free API Response JSON Sample Files Download - JSON Test Files for API Development | MorphyHub',
+          description: 'Download free API response JSON sample files for testing JSON parsing, API integration, and web development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing REST API responses, JSON validators, API mocking, webhook testing, and data exchange format processing.',
+          keywords: 'API response JSON sample files, test JSON files, download JSON samples, free JSON test files, API response samples, JSON parsing samples, REST API test files, JSON validator test, API mocking samples, webhook test files, .json test files, web API samples, data exchange format samples'
+        },
+        schema: {
+          name: 'Free API Response JSON Sample Files - Download JSON Test Files for API Development',
+          description: 'Download free API response JSON sample files for testing JSON parsing, API integration, and web development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing REST API responses, JSON validators, API mocking, webhook testing, and data exchange format processing.'
+        },
+        hero: {
+          title: 'API Response JSON Sample Files',
+          description: 'Download free API response JSON sample files for testing. Multiple file sizes available to test your JSON parsing tools, API response handlers, REST API validators, and web development applications.'
+        },
+        about_description: 'These are test API response JSON files in various sizes for testing purposes'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Free Arduino INO Sample Files Download - Arduino Sketch Test Files for Embedded Development | MorphyHub',
+          description: 'Download free Arduino INO sample files for testing Arduino sketch compilation and embedded programming tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Arduino IDE, sketch validation, microcontroller programming, embedded systems development, and IoT device testing.',
+          keywords: 'Arduino INO sample files, test Arduino INO files, download Arduino INO samples, free Arduino INO test files, Arduino sketch samples, embedded code samples, Arduino IDE test files, .ino test files, microcontroller samples, IoT development samples, embedded programming samples'
+        },
+        schema: {
+          name: 'Free Arduino INO Sample Files - Download Arduino Sketch Test Files for Embedded Development',
+          description: 'Download free Arduino INO sample files for testing Arduino sketch compilation and embedded programming tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Arduino IDE, sketch validation, microcontroller programming, embedded systems development, and IoT device testing.'
+        },
+        hero: {
+          title: 'Arduino INO Sample Files',
+          description: 'Download free Arduino INO sample Arduino sketch source code files for testing. Multiple file sizes available to test your Arduino development tools, sketch compilation software, and embedded programming applications.'
+        },
+        about_description: 'These are test Arduino INO (Arduino Sketch) source code files in various sizes for testing purposes'
+      },
+      bat: {
+        meta: {
+          title: 'Free BAT Sample Files Download - Batch Script Test Files for Windows Automation | MorphyHub',
+          description: 'Download free BAT sample batch script files for testing Windows automation and command-line processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution, Windows task automation, command-line tools, script validators, and system administration utilities.',
+          keywords: 'BAT sample files, test BAT files, download BAT samples, free BAT test files, batch script samples, Windows batch files, automation script samples, .bat test files, command-line script samples, Windows automation samples, script execution test files'
+        },
+        schema: {
+          name: 'Free BAT Sample Files - Download Batch Script Test Files for Windows Automation',
+          description: 'Download free BAT sample batch script files for testing Windows automation and command-line processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing batch script execution, Windows task automation, command-line tools, script validators, and system administration utilities.'
+        },
+        hero: {
+          title: 'BAT Sample Files',
+          description: 'Download free BAT sample batch script files for testing. Multiple file sizes available to test your batch script execution tools, Windows automation software, and command-line processing applications.'
+        },
+        about_description: 'These are test BAT (Batch) script files in various sizes for testing purposes'
+      },
+      asc: {
+        meta: {
+          title: 'Free ASC Sample Files Download - ASCII Text Test Files for Text Processing | MorphyHub',
+          description: 'Download free ASC sample ASCII text files for testing text processing and encoding tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ASCII encoding, text file parsing, plain text editors, character encoding validation, and text format conversion tools.',
+          keywords: 'ASC sample files, test ASC files, download ASC samples, free ASC test files, ASCII text samples, plain text samples, .asc test files, text format samples, ASCII encoding test files, text processing samples, character encoding samples'
+        },
+        schema: {
+          name: 'Free ASC Sample Files - Download ASCII Text Test Files for Text Processing',
+          description: 'Download free ASC sample ASCII text files for testing text processing and encoding tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ASCII encoding, text file parsing, plain text editors, character encoding validation, and text format conversion tools.'
+        },
+        hero: {
+          title: 'ASC Sample Files',
+          description: 'Download free ASC sample ASCII text files for testing. Multiple file sizes available to test your text processing tools, ASCII encoding software, and plain text file handling applications.'
+        },
+        about_description: 'These are test ASC (ASCII Text) files in various sizes for testing purposes'
+      },
+      bib: {
+        meta: {
+          title: 'Free BIB Sample Files Download - Bibliography Test Files for Academic Research | MorphyHub',
+          description: 'Download free BIB sample bibliography files for testing bibliography management and citation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BibTeX format processing, reference managers, citation generators, academic writing tools, and LaTeX bibliography integration.',
+          keywords: 'BIB sample files, test BIB files, download BIB samples, free BIB test files, bibliography samples, BibTeX files, citation samples, .bib test files, reference management samples, academic citation samples, LaTeX bibliography samples'
+        },
+        schema: {
+          name: 'Free BIB Sample Files - Download Bibliography Test Files for Academic Research',
+          description: 'Download free BIB sample bibliography files for testing bibliography management and citation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BibTeX format processing, reference managers, citation generators, academic writing tools, and LaTeX bibliography integration.'
+        },
+        hero: {
+          title: 'BIB Sample Files',
+          description: 'Download free BIB sample bibliography files for testing. Multiple file sizes available to test your bibliography management tools, BibTeX processors, and citation handling applications.'
+        },
+        about_description: 'These are test BIB (Bibliography) files in various sizes for testing purposes'
+      },
+      c: {
+        meta: {
+          title: 'Free C Sample Files Download - C Programming Language Test Files for Development | MorphyHub',
+          description: 'Download free C sample source code files for testing C code compilation and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C compilers, syntax checkers, code analyzers, GCC toolchain, embedded C development, and system programming tools.',
+          keywords: 'C sample files, test C files, download C samples, free C test files, C source code samples, C programming files, .c test files, C compilation test files, GCC test files, embedded C samples, system programming samples'
+        },
+        schema: {
+          name: 'Free C Sample Files - Download C Programming Language Test Files for Development',
+          description: 'Download free C sample source code files for testing C code compilation and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C compilers, syntax checkers, code analyzers, GCC toolchain, embedded C development, and system programming tools.'
+        },
+        hero: {
+          title: 'C Sample Files',
+          description: 'Download free C sample C source code files for testing. Multiple file sizes available to test your C code compilation tools, C syntax checkers, and C development applications.'
+        },
+        about_description: 'These are test C source code files in various sizes for testing purposes'
+      },
+      'can-log': {
+        meta: {
+          title: 'Free CAN Log Sample Files Download - Controller Area Network Test Files for Automotive | MorphyHub',
+          description: 'Download free CAN Log sample files for testing CAN bus analysis and automotive diagnostics tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAN bus analyzers, automotive diagnostic tools, vehicle network protocols, OBD-II testing, and embedded automotive systems.',
+          keywords: 'CAN Log sample files, test CAN log files, download CAN log samples, free CAN log test files, Controller Area Network samples, CAN bus samples, .log test files, automotive diagnostic samples, OBD-II test files, vehicle network samples, CAN bus analyzer test'
+        },
+        schema: {
+          name: 'Free CAN Log Sample Files - Download Controller Area Network Test Files for Automotive',
+          description: 'Download free CAN Log sample files for testing CAN bus analysis and automotive diagnostics tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAN bus analyzers, automotive diagnostic tools, vehicle network protocols, OBD-II testing, and embedded automotive systems.'
+        },
+        hero: {
+          title: 'CAN Log Sample Files',
+          description: 'Download free CAN Log sample Controller Area Network log files for testing. Multiple file sizes available to test your CAN bus analysis tools, automotive diagnostic software, and network protocol applications.'
+        },
+        about_description: 'These are test CAN Log (Controller Area Network) log files in various sizes for testing purposes'
+      },
+      cmd: {
+        meta: {
+          title: 'Free CMD Sample Files Download - Windows Command Script Test Files for Automation | MorphyHub',
+          description: 'Download free CMD sample Windows command script files for testing batch script execution and Windows automation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows command prompt, batch file execution, script automation, system administration, and Windows task scheduling tools.',
+          keywords: 'CMD sample files, test CMD files, download CMD samples, free CMD test files, Windows command script samples, batch script samples, .cmd test files, command script samples, Windows automation samples, system administration samples'
+        },
+        schema: {
+          name: 'Free CMD Sample Files - Download Windows Command Script Test Files for Automation',
+          description: 'Download free CMD sample Windows command script files for testing batch script execution and Windows automation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows command prompt, batch file execution, script automation, system administration, and Windows task scheduling tools.'
+        },
+        hero: {
+          title: 'CMD Sample Files',
+          description: 'Download free CMD sample Windows command script files for testing. Multiple file sizes available to test your batch script execution tools, Windows command processing software, and automation applications.'
+        },
+        about_description: 'These are test CMD (Windows Command Script) files in various sizes for testing purposes'
+      },
+      conf: {
+        meta: {
+          title: 'Free CONF Sample Files Download - Configuration File Test Files for System Setup | MorphyHub',
+          description: 'Download free CONF sample configuration files for testing configuration file parsing and system setup tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing server configuration, application settings, config file validators, system administration tools, and software deployment utilities.',
+          keywords: 'CONF sample files, test CONF files, download CONF samples, free CONF test files, configuration file samples, server config samples, .conf test files, config file samples, system configuration samples, application settings samples'
+        },
+        schema: {
+          name: 'Free CONF Sample Files - Download Configuration File Test Files for System Setup',
+          description: 'Download free CONF sample configuration files for testing configuration file parsing and system setup tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing server configuration, application settings, config file validators, system administration tools, and software deployment utilities.'
+        },
+        hero: {
+          title: 'CONF Sample Files',
+          description: 'Download free CONF sample configuration files for testing. Multiple file sizes available to test your configuration file parsing tools, server configuration software, and application settings applications.'
+        },
+        about_description: 'These are test CONF configuration files in various sizes for testing purposes'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Free Config INI Sample Files Download - INI Configuration Test Files for Applications | MorphyHub',
+          description: 'Download free Config INI sample INI configuration files for testing INI file parsing and configuration management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI parsers, application configuration, settings management, Windows INI files, and software configuration utilities.',
+          keywords: 'Config INI sample files, test INI files, download INI samples, free INI test files, configuration INI samples, INI config samples, .ini test files, configuration file samples, Windows INI samples, application settings samples'
+        },
+        schema: {
+          name: 'Free Config INI Sample Files - Download INI Configuration Test Files for Applications',
+          description: 'Download free Config INI sample INI configuration files for testing INI file parsing and configuration management tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing INI parsers, application configuration, settings management, Windows INI files, and software configuration utilities.'
+        },
+        hero: {
+          title: 'Config INI Sample Files',
+          description: 'Download free Config INI sample configuration INI files for testing. Multiple file sizes available to test your INI file parsing tools, configuration management software, and application settings applications.'
+        },
+        about_description: 'These are test Config INI configuration files in various sizes for testing purposes'
+      },
+      cpp: {
+        meta: {
+          title: 'Free CPP Sample Files Download - C++ Programming Language Test Files for Development | MorphyHub',
+          description: 'Download free CPP sample C++ source code files for testing C++ code compilation and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ compilers, syntax checkers, code analyzers, GCC/G++ toolchain, modern C++ features, and object-oriented programming tools.',
+          keywords: 'CPP sample files, test CPP files, download CPP samples, free CPP test files, C++ source code samples, C++ code files, .cpp test files, C++ programming files, C++ compilation test files, GCC test files, modern C++ samples'
+        },
+        schema: {
+          name: 'Free CPP Sample Files - Download C++ Programming Language Test Files for Development',
+          description: 'Download free CPP sample C++ source code files for testing C++ code compilation and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ compilers, syntax checkers, code analyzers, GCC/G++ toolchain, modern C++ features, and object-oriented programming tools.'
+        },
+        hero: {
+          title: 'CPP Sample Files',
+          description: 'Download free CPP sample C++ source code files for testing. Multiple file sizes available to test your C++ code compilation tools, C++ syntax checkers, and C++ development applications.'
+        },
+        about_description: 'These are test C++ source code files in various sizes for testing purposes'
+      },
+      h: {
+        meta: {
+          title: 'Free H Sample Files Download - C/C++ Header File Test Files for Programming | MorphyHub',
+          description: 'Download free H sample C/C++ header files for testing header file processing and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C/C++ compilers, header file inclusion, preprocessor tools, code organization, and cross-platform development utilities.',
+          keywords: 'H sample files, test H files, download H samples, free H test files, C header samples, C++ header samples, header file samples, .h test files, C/C++ header files, programming header samples, code header files'
+        },
+        schema: {
+          name: 'Free H Sample Files - Download C/C++ Header File Test Files for Programming',
+          description: 'Download free H sample C/C++ header files for testing header file processing and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C/C++ compilers, header file inclusion, preprocessor tools, code organization, and cross-platform development utilities.'
+        },
+        hero: {
+          title: 'H Sample Files',
+          description: 'Download free H sample C/C++ header files for testing. Multiple file sizes available to test your C/C++ code compilation tools, header file processing software, and development applications.'
+        },
+        about_description: 'These are test H (C/C++ header) files in various sizes for testing purposes'
+      },
+      hpp: {
+        meta: {
+          title: 'Free HPP Sample Files Download - C++ Header File Test Files for Modern C++ Development | MorphyHub',
+          description: 'Download free HPP sample C++ header files for testing C++ header file processing and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ compilers, header-only libraries, template metaprogramming, modern C++ features, and advanced C++ development utilities.',
+          keywords: 'HPP sample files, test HPP files, download HPP samples, free HPP test files, C++ header samples, header file samples, .hpp test files, C++ header files, programming header samples, code header files, C++ development files, modern C++ header samples'
+        },
+        schema: {
+          name: 'Free HPP Sample Files - Download C++ Header File Test Files for Modern C++ Development',
+          description: 'Download free HPP sample C++ header files for testing C++ header file processing and development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing C++ compilers, header-only libraries, template metaprogramming, modern C++ features, and advanced C++ development utilities.'
+        },
+        hero: {
+          title: 'HPP Sample Files',
+          description: 'Download free HPP sample C++ header files for testing. Multiple file sizes available to test your C++ code compilation tools, header file processing software, and C++ development applications.'
+        },
+        about_description: 'These are test HPP (C++ header) files in various sizes for testing purposes'
       }
     }
   }

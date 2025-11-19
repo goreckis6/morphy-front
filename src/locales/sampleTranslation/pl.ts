@@ -271,6 +271,214 @@ export const pl: SamplePageTranslations = {
           description: 'Pobierz darmowe przykładowe pliki Ansible YML do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia parsowania YAML, walidatory playbooków Ansible, systemy zarządzania konfiguracją i aplikacje automatyzacji DevOps.'
         },
         about_description: 'To są testowe pliki Ansible YML w różnych rozmiarach do celów testowych'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Darmowe przykładowe pliki API Response JSON – Pobierz pliki testowe JSON do rozwoju API | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki API Response JSON do testowania parsowania JSON, integracji API i narzędzi tworzenia stron internetowych. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odpowiedzi REST API, walidatorów JSON, mockowania API, testowania webhooków i przetwarzania formatów wymiany danych.',
+          keywords: 'przykładowe pliki API Response JSON, testowe pliki JSON, pobierz przykłady JSON, darmowe testowe pliki JSON, przykłady odpowiedzi API, przykłady parsowania JSON, testowe pliki REST API, test walidatora JSON, przykłady mockowania API, testowe pliki webhooków, testowe pliki .json, przykłady web API, przykłady formatów wymiany danych'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki API Response JSON – Pobierz pliki testowe JSON do rozwoju API',
+          description: 'Pobierz darmowe przykładowe pliki API Response JSON do testowania parsowania JSON, integracji API i narzędzi tworzenia stron internetowych. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odpowiedzi REST API, walidatorów JSON, mockowania API, testowania webhooków i przetwarzania formatów wymiany danych.'
+        },
+        hero: {
+          title: 'Przykładowe pliki API Response JSON',
+          description: 'Pobierz darmowe przykładowe pliki API Response JSON do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia parsowania JSON, obsługi odpowiedzi API, walidatorów REST API i aplikacje tworzenia stron internetowych.'
+        },
+        about_description: 'To są testowe pliki API Response JSON w różnych rozmiarach do celów testowych'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Darmowe przykładowe pliki Arduino INO – Pobierz pliki testowe szkiców Arduino do programowania wbudowanego | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki Arduino INO do testowania kompilacji szkiców Arduino i narzędzi programowania wbudowanego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Arduino IDE, walidacji szkiców, programowania mikrokontrolerów, rozwoju systemów wbudowanych i testowania urządzeń IoT.',
+          keywords: 'przykładowe pliki Arduino INO, testowe pliki Arduino INO, pobierz przykłady Arduino INO, darmowe testowe pliki Arduino INO, przykłady szkiców Arduino, przykłady kodu wbudowanego, testowe pliki Arduino IDE, testowe pliki .ino, przykłady mikrokontrolerów, przykłady rozwoju IoT, przykłady programowania wbudowanego'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki Arduino INO – Pobierz pliki testowe szkiców Arduino do programowania wbudowanego',
+          description: 'Pobierz darmowe przykładowe pliki Arduino INO do testowania kompilacji szkiców Arduino i narzędzi programowania wbudowanego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Arduino IDE, walidacji szkiców, programowania mikrokontrolerów, rozwoju systemów wbudowanych i testowania urządzeń IoT.'
+        },
+        hero: {
+          title: 'Przykładowe pliki Arduino INO',
+          description: 'Pobierz darmowe przykładowe pliki Arduino INO szkiców Arduino do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia rozwoju Arduino, oprogramowanie kompilacji szkiców i aplikacje programowania wbudowanego.'
+        },
+        about_description: 'To są testowe pliki Arduino INO (Arduino Sketch) kodu źródłowego w różnych rozmiarach do celów testowych'
+      },
+      bat: {
+        meta: {
+          title: 'Darmowe przykładowe pliki BAT – Pobierz pliki testowe skryptów wsadowych do automatyzacji Windows | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki BAT skryptów wsadowych do testowania automatyzacji Windows i narzędzi przetwarzania wiersza poleceń. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów wsadowych, automatyzacji zadań Windows, narzędzi wiersza poleceń, walidatorów skryptów i narzędzi administracji systemem.',
+          keywords: 'przykładowe pliki BAT, testowe pliki BAT, pobierz przykłady BAT, darmowe testowe pliki BAT, przykłady skryptów wsadowych, przykłady plików wsadowych Windows, przykłady skryptów automatyzacji, testowe pliki .bat, przykłady skryptów wiersza poleceń, przykłady automatyzacji Windows, przykłady wykonywania skryptów'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki BAT – Pobierz pliki testowe skryptów wsadowych do automatyzacji Windows',
+          description: 'Pobierz darmowe przykładowe pliki BAT skryptów wsadowych do testowania automatyzacji Windows i narzędzi przetwarzania wiersza poleceń. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wykonywania skryptów wsadowych, automatyzacji zadań Windows, narzędzi wiersza poleceń, walidatorów skryptów i narzędzi administracji systemem.'
+        },
+        hero: {
+          title: 'Przykładowe pliki BAT',
+          description: 'Pobierz darmowe przykładowe pliki BAT skryptów wsadowych do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia wykonywania skryptów wsadowych, oprogramowanie automatyzacji Windows i aplikacje przetwarzania wiersza poleceń.'
+        },
+        about_description: 'To są testowe pliki BAT (Batch) w różnych rozmiarach do celów testowych'
+      },
+      asc: {
+        meta: {
+          title: 'Darmowe przykładowe pliki ASC – Pobierz pliki testowe tekstu ASCII do przetwarzania tekstu | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki ASC tekstu ASCII do testowania narzędzi przetwarzania tekstu i kodowania. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kodowania ASCII, parsowania plików tekstowych, edytorów zwykłego tekstu, walidacji kodowania znaków i narzędzi konwersji formatów tekstowych.',
+          keywords: 'przykładowe pliki ASC, testowe pliki ASC, pobierz przykłady ASC, darmowe testowe pliki ASC, przykłady tekstu ASCII, przykłady zwykłego tekstu, testowe pliki .asc, przykłady formatów tekstowych, testowe pliki kodowania ASCII, przykłady przetwarzania tekstu, przykłady kodowania znaków'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki ASC – Pobierz pliki testowe tekstu ASCII do przetwarzania tekstu',
+          description: 'Pobierz darmowe przykładowe pliki ASC tekstu ASCII do testowania narzędzi przetwarzania tekstu i kodowania. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kodowania ASCII, parsowania plików tekstowych, edytorów zwykłego tekstu, walidacji kodowania znaków i narzędzi konwersji formatów tekstowych.'
+        },
+        hero: {
+          title: 'Przykładowe pliki ASC',
+          description: 'Pobierz darmowe przykładowe pliki ASC tekstu ASCII do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia przetwarzania tekstu, oprogramowanie kodowania ASCII i aplikacje obsługi plików zwykłego tekstu.'
+        },
+        about_description: 'To są testowe pliki ASC (ASCII Text) w różnych rozmiarach do celów testowych'
+      },
+      bib: {
+        meta: {
+          title: 'Darmowe przykładowe pliki BIB – Pobierz pliki testowe bibliografii do badań naukowych | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki BIB bibliografii do testowania narzędzi zarządzania bibliografią i cytatami. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania formatów BibTeX, menedżerów referencji, generatorów cytatów, narzędzi pisania akademickiego i integracji bibliografii LaTeX.',
+          keywords: 'przykładowe pliki BIB, testowe pliki BIB, pobierz przykłady BIB, darmowe testowe pliki BIB, przykłady bibliografii, przykłady plików BibTeX, przykłady cytatów, testowe pliki .bib, przykłady zarządzania referencjami, przykłady cytatów akademickich, przykłady bibliografii LaTeX'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki BIB – Pobierz pliki testowe bibliografii do badań naukowych',
+          description: 'Pobierz darmowe przykładowe pliki BIB bibliografii do testowania narzędzi zarządzania bibliografią i cytatami. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przetwarzania formatów BibTeX, menedżerów referencji, generatorów cytatów, narzędzi pisania akademickiego i integracji bibliografii LaTeX.'
+        },
+        hero: {
+          title: 'Przykładowe pliki BIB',
+          description: 'Pobierz darmowe przykładowe pliki BIB bibliografii do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia zarządzania bibliografią, procesory BibTeX i aplikacje obsługi cytatów.'
+        },
+        about_description: 'To są testowe pliki BIB (Bibliography) w różnych rozmiarach do celów testowych'
+      },
+      c: {
+        meta: {
+          title: 'Darmowe przykładowe pliki C – Pobierz pliki testowe języka programowania C do rozwoju | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki C kodu źródłowego do testowania kompilacji kodu C i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C, sprawdzania składni, analizatorów kodu, łańcucha narzędzi GCC, rozwoju C wbudowanego i narzędzi programowania systemowego.',
+          keywords: 'przykładowe pliki C, testowe pliki C, pobierz przykłady C, darmowe testowe pliki C, przykłady kodu źródłowego C, przykłady plików programowania C, testowe pliki .c, testowe pliki kompilacji C, testowe pliki GCC, przykłady C wbudowanego, przykłady programowania systemowego'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki C – Pobierz pliki testowe języka programowania C do rozwoju',
+          description: 'Pobierz darmowe przykładowe pliki C kodu źródłowego do testowania kompilacji kodu C i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C, sprawdzania składni, analizatorów kodu, łańcucha narzędzi GCC, rozwoju C wbudowanego i narzędzi programowania systemowego.'
+        },
+        hero: {
+          title: 'Przykładowe pliki C',
+          description: 'Pobierz darmowe przykładowe pliki C kodu źródłowego C do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia kompilacji kodu C, sprawdzanie składni C i aplikacje rozwoju C.'
+        },
+        about_description: 'To są testowe pliki kodu źródłowego C w różnych rozmiarach do celów testowych'
+      },
+      'can-log': {
+        meta: {
+          title: 'Darmowe przykładowe pliki CAN Log – Pobierz pliki testowe Controller Area Network do motoryzacji | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki CAN Log do testowania analizy magistrali CAN i narzędzi diagnostyki motoryzacyjnej. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizatorów magistrali CAN, narzędzi diagnostyki motoryzacyjnej, protokołów sieci pojazdów, testowania OBD-II i systemów wbudowanych motoryzacyjnych.',
+          keywords: 'przykładowe pliki CAN Log, testowe pliki logów CAN, pobierz przykłady logów CAN, darmowe testowe pliki logów CAN, przykłady Controller Area Network, przykłady magistrali CAN, testowe pliki .log, przykłady diagnostyki motoryzacyjnej, testowe pliki OBD-II, przykłady sieci pojazdów, test analizatora magistrali CAN'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki CAN Log – Pobierz pliki testowe Controller Area Network do motoryzacji',
+          description: 'Pobierz darmowe przykładowe pliki CAN Log do testowania analizy magistrali CAN i narzędzi diagnostyki motoryzacyjnej. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizatorów magistrali CAN, narzędzi diagnostyki motoryzacyjnej, protokołów sieci pojazdów, testowania OBD-II i systemów wbudowanych motoryzacyjnych.'
+        },
+        hero: {
+          title: 'Przykładowe pliki CAN Log',
+          description: 'Pobierz darmowe przykładowe pliki CAN Log Controller Area Network do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia analizy magistrali CAN, oprogramowanie diagnostyki motoryzacyjnej i aplikacje protokołów sieciowych.'
+        },
+        about_description: 'To są testowe pliki CAN Log (Controller Area Network) w różnych rozmiarach do celów testowych'
+      },
+      cmd: {
+        meta: {
+          title: 'Darmowe przykładowe pliki CMD – Pobierz pliki testowe skryptów poleceń Windows do automatyzacji | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki CMD skryptów poleceń Windows do testowania wykonywania skryptów wsadowych i narzędzi automatyzacji Windows. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wiersza poleceń Windows, wykonywania plików wsadowych, automatyzacji skryptów, administracji systemem i narzędzi planowania zadań Windows.',
+          keywords: 'przykładowe pliki CMD, testowe pliki CMD, pobierz przykłady CMD, darmowe testowe pliki CMD, przykłady skryptów poleceń Windows, przykłady skryptów wsadowych, testowe pliki .cmd, przykłady skryptów poleceń, przykłady automatyzacji Windows, przykłady administracji systemem'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki CMD – Pobierz pliki testowe skryptów poleceń Windows do automatyzacji',
+          description: 'Pobierz darmowe przykładowe pliki CMD skryptów poleceń Windows do testowania wykonywania skryptów wsadowych i narzędzi automatyzacji Windows. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania wiersza poleceń Windows, wykonywania plików wsadowych, automatyzacji skryptów, administracji systemem i narzędzi planowania zadań Windows.'
+        },
+        hero: {
+          title: 'Przykładowe pliki CMD',
+          description: 'Pobierz darmowe przykładowe pliki CMD skryptów poleceń Windows do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia wykonywania skryptów wsadowych, oprogramowanie przetwarzania poleceń Windows i aplikacje automatyzacji.'
+        },
+        about_description: 'To są testowe pliki CMD (Windows Command Script) w różnych rozmiarach do celów testowych'
+      },
+      conf: {
+        meta: {
+          title: 'Darmowe przykładowe pliki CONF – Pobierz pliki testowe konfiguracyjne do konfiguracji systemu | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki CONF konfiguracyjne do testowania parsowania plików konfiguracyjnych i narzędzi konfiguracji systemu. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konfiguracji serwerów, ustawień aplikacji, walidatorów plików konfiguracyjnych, narzędzi administracji systemem i narzędzi wdrażania oprogramowania.',
+          keywords: 'przykładowe pliki CONF, testowe pliki CONF, pobierz przykłady CONF, darmowe testowe pliki CONF, przykłady plików konfiguracyjnych, przykłady konfiguracji serwerów, testowe pliki .conf, przykłady plików konfiguracyjnych, przykłady konfiguracji systemu, przykłady ustawień aplikacji'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki CONF – Pobierz pliki testowe konfiguracyjne do konfiguracji systemu',
+          description: 'Pobierz darmowe przykładowe pliki CONF konfiguracyjne do testowania parsowania plików konfiguracyjnych i narzędzi konfiguracji systemu. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konfiguracji serwerów, ustawień aplikacji, walidatorów plików konfiguracyjnych, narzędzi administracji systemem i narzędzi wdrażania oprogramowania.'
+        },
+        hero: {
+          title: 'Przykładowe pliki CONF',
+          description: 'Pobierz darmowe przykładowe pliki CONF konfiguracyjne do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia parsowania plików konfiguracyjnych, oprogramowanie konfiguracji serwerów i aplikacje ustawień aplikacji.'
+        },
+        about_description: 'To są testowe pliki CONF konfiguracyjne w różnych rozmiarach do celów testowych'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Darmowe przykładowe pliki Config INI – Pobierz pliki testowe konfiguracji INI do aplikacji | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki Config INI konfiguracji INI do testowania parsowania plików INI i narzędzi zarządzania konfiguracją. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parserów INI, konfiguracji aplikacji, zarządzania ustawieniami, plików INI Windows i narzędzi konfiguracji oprogramowania.',
+          keywords: 'przykładowe pliki Config INI, testowe pliki INI, pobierz przykłady INI, darmowe testowe pliki INI, przykłady konfiguracyjne INI, przykłady konfiguracji INI, testowe pliki .ini, przykłady plików konfiguracyjnych, przykłady INI Windows, przykłady ustawień aplikacji'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki Config INI – Pobierz pliki testowe konfiguracji INI do aplikacji',
+          description: 'Pobierz darmowe przykładowe pliki Config INI konfiguracji INI do testowania parsowania plików INI i narzędzi zarządzania konfiguracją. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parserów INI, konfiguracji aplikacji, zarządzania ustawieniami, plików INI Windows i narzędzi konfiguracji oprogramowania.'
+        },
+        hero: {
+          title: 'Przykładowe pliki Config INI',
+          description: 'Pobierz darmowe przykładowe pliki Config INI konfiguracji INI do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia parsowania plików INI, oprogramowanie zarządzania konfiguracją i aplikacje ustawień aplikacji.'
+        },
+        about_description: 'To są testowe pliki konfiguracyjne Config INI w różnych rozmiarach do celów testowych'
+      },
+      cpp: {
+        meta: {
+          title: 'Darmowe przykładowe pliki CPP – Pobierz pliki testowe języka programowania C++ do rozwoju | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki CPP kodu źródłowego C++ do testowania kompilacji kodu C++ i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C++, sprawdzania składni, analizatorów kodu, łańcucha narzędzi GCC/G++, funkcji nowoczesnego C++ i narzędzi programowania obiektowego.',
+          keywords: 'przykładowe pliki CPP, testowe pliki CPP, pobierz przykłady CPP, darmowe testowe pliki CPP, przykłady kodu źródłowego C++, przykłady plików kodu C++, testowe pliki .cpp, przykłady plików programowania C++, testowe pliki kompilacji C++, testowe pliki GCC, przykłady nowoczesnego C++'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki CPP – Pobierz pliki testowe języka programowania C++ do rozwoju',
+          description: 'Pobierz darmowe przykładowe pliki CPP kodu źródłowego C++ do testowania kompilacji kodu C++ i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C++, sprawdzania składni, analizatorów kodu, łańcucha narzędzi GCC/G++, funkcji nowoczesnego C++ i narzędzi programowania obiektowego.'
+        },
+        hero: {
+          title: 'Przykładowe pliki CPP',
+          description: 'Pobierz darmowe przykładowe pliki CPP kodu źródłowego C++ do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia kompilacji kodu C++, sprawdzanie składni C++ i aplikacje rozwoju C++.'
+        },
+        about_description: 'To są testowe pliki kodu źródłowego C++ w różnych rozmiarach do celów testowych'
+      },
+      h: {
+        meta: {
+          title: 'Darmowe przykładowe pliki H – Pobierz pliki testowe nagłówków C/C++ do programowania | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki H nagłówków C/C++ do testowania przetwarzania plików nagłówkowych i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C/C++, dołączania plików nagłówkowych, narzędzi preprocesora, organizacji kodu i narzędzi rozwoju cross-platform.',
+          keywords: 'przykładowe pliki H, testowe pliki H, pobierz przykłady H, darmowe testowe pliki H, przykłady nagłówków C, przykłady nagłówków C++, przykłady plików nagłówkowych, testowe pliki .h, pliki nagłówkowe C/C++, przykłady nagłówków programowania, przykłady plików nagłówkowych kodu'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki H – Pobierz pliki testowe nagłówków C/C++ do programowania',
+          description: 'Pobierz darmowe przykładowe pliki H nagłówków C/C++ do testowania przetwarzania plików nagłówkowych i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C/C++, dołączania plików nagłówkowych, narzędzi preprocesora, organizacji kodu i narzędzi rozwoju cross-platform.'
+        },
+        hero: {
+          title: 'Przykładowe pliki H',
+          description: 'Pobierz darmowe przykładowe pliki H nagłówków C/C++ do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia kompilacji kodu C/C++, oprogramowanie przetwarzania plików nagłówkowych i aplikacje rozwoju.'
+        },
+        about_description: 'To są testowe pliki H (C/C++ header) w różnych rozmiarach do celów testowych'
+      },
+      hpp: {
+        meta: {
+          title: 'Darmowe przykładowe pliki HPP – Pobierz pliki testowe nagłówków C++ do nowoczesnego rozwoju C++ | MorphyHub',
+          description: 'Pobierz darmowe przykładowe pliki HPP nagłówków C++ do testowania przetwarzania plików nagłówkowych C++ i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C++, bibliotek header-only, metaprogramowania szablonów, funkcji nowoczesnego C++ i zaawansowanych narzędzi rozwoju C++.',
+          keywords: 'przykładowe pliki HPP, testowe pliki HPP, pobierz przykłady HPP, darmowe testowe pliki HPP, przykłady nagłówków C++, przykłady plików nagłówkowych, testowe pliki .hpp, pliki nagłówkowe C++, przykłady nagłówków programowania, przykłady plików nagłówkowych kodu, przykłady plików rozwoju C++, przykłady nagłówków nowoczesnego C++'
+        },
+        schema: {
+          name: 'Darmowe przykładowe pliki HPP – Pobierz pliki testowe nagłówków C++ do nowoczesnego rozwoju C++',
+          description: 'Pobierz darmowe przykładowe pliki HPP nagłówków C++ do testowania przetwarzania plików nagłówkowych C++ i narzędzi rozwoju. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania kompilatorów C++, bibliotek header-only, metaprogramowania szablonów, funkcji nowoczesnego C++ i zaawansowanych narzędzi rozwoju C++.'
+        },
+        hero: {
+          title: 'Przykładowe pliki HPP',
+          description: 'Pobierz darmowe przykładowe pliki HPP nagłówków C++ do testowania. Różne rozmiary plików dostępne, aby przetestować Twoje narzędzia kompilacji kodu C++, oprogramowanie przetwarzania plików nagłówkowych i aplikacje rozwoju C++.'
+        },
+        about_description: 'To są testowe pliki HPP (C++ header) w różnych rozmiarach do celów testowych'
       }
     }
   }

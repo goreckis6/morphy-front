@@ -271,6 +271,214 @@ export const es: SamplePageTranslations = {
           description: 'Descarga archivos de muestra Ansible YML gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis YAML, validadores de playbooks Ansible, sistemas de gestión de configuración y aplicaciones de automatización DevOps.'
         },
         about_description: 'Estos son archivos de prueba Ansible YML en varios tamaños para fines de prueba'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Descarga archivos de muestra API Response JSON gratis - Archivos de prueba JSON para desarrollo API | MorphyHub',
+          description: 'Descarga archivos de muestra API Response JSON gratis para probar análisis JSON, integración API y herramientas de desarrollo web. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar respuestas REST API, validadores JSON, mocking API, pruebas webhook y procesamiento de formatos de intercambio de datos.',
+          keywords: 'archivos de muestra API Response JSON, archivos de prueba JSON, descarga ejemplos JSON, archivos de prueba JSON gratis, ejemplos respuesta API, ejemplos análisis JSON, archivos de prueba REST API, prueba validador JSON, ejemplos mocking API, archivos de prueba webhook, archivos de prueba .json, ejemplos web API, ejemplos formatos intercambio datos'
+        },
+        schema: {
+          name: 'Archivos de muestra API Response JSON gratis - Descarga archivos de prueba JSON para desarrollo API',
+          description: 'Descarga archivos de muestra API Response JSON gratis para probar análisis JSON, integración API y herramientas de desarrollo web. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar respuestas REST API, validadores JSON, mocking API, pruebas webhook y procesamiento de formatos de intercambio de datos.'
+        },
+        hero: {
+          title: 'Archivos de muestra API Response JSON',
+          description: 'Descarga archivos de muestra API Response JSON gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis JSON, manejadores de respuesta API, validadores REST API y aplicaciones de desarrollo web.'
+        },
+        about_description: 'Estos son archivos de prueba API Response JSON en varios tamaños para fines de prueba'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Descarga archivos de muestra Arduino INO gratis - Archivos de prueba sketch Arduino para desarrollo embedded | MorphyHub',
+          description: 'Descarga archivos de muestra Arduino INO gratis para probar compilación de sketch Arduino y herramientas de programación embedded. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar Arduino IDE, validación de sketch, programación de microcontroladores, desarrollo de sistemas embedded y pruebas de dispositivos IoT.',
+          keywords: 'archivos de muestra Arduino INO, archivos de prueba Arduino INO, descarga ejemplos Arduino INO, archivos de prueba Arduino INO gratis, ejemplos sketch Arduino, ejemplos código embedded, archivos de prueba Arduino IDE, archivos de prueba .ino, ejemplos microcontroladores, ejemplos desarrollo IoT, ejemplos programación embedded'
+        },
+        schema: {
+          name: 'Archivos de muestra Arduino INO gratis - Descarga archivos de prueba sketch Arduino para desarrollo embedded',
+          description: 'Descarga archivos de muestra Arduino INO gratis para probar compilación de sketch Arduino y herramientas de programación embedded. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar Arduino IDE, validación de sketch, programación de microcontroladores, desarrollo de sistemas embedded y pruebas de dispositivos IoT.'
+        },
+        hero: {
+          title: 'Archivos de muestra Arduino INO',
+          description: 'Descarga archivos de muestra Arduino INO sketch Arduino gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de desarrollo Arduino, software de compilación de sketch y aplicaciones de programación embedded.'
+        },
+        about_description: 'Estos son archivos de prueba Arduino INO (Arduino Sketch) código fuente en varios tamaños para fines de prueba'
+      },
+      bat: {
+        meta: {
+          title: 'Descarga archivos de muestra BAT gratis - Archivos de prueba script batch para automatización Windows | MorphyHub',
+          description: 'Descarga archivos de muestra BAT script batch gratis para probar automatización Windows y herramientas de procesamiento de línea de comandos. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar ejecución de script batch, automatización de tareas Windows, herramientas de línea de comandos, validadores de script y utilidades de administración del sistema.',
+          keywords: 'archivos de muestra BAT, archivos de prueba BAT, descarga ejemplos BAT, archivos de prueba BAT gratis, ejemplos script batch, ejemplos archivos batch Windows, ejemplos script automatización, archivos de prueba .bat, ejemplos script línea comandos, ejemplos automatización Windows, ejemplos ejecución script'
+        },
+        schema: {
+          name: 'Archivos de muestra BAT gratis - Descarga archivos de prueba script batch para automatización Windows',
+          description: 'Descarga archivos de muestra BAT script batch gratis para probar automatización Windows y herramientas de procesamiento de línea de comandos. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar ejecución de script batch, automatización de tareas Windows, herramientas de línea de comandos, validadores de script y utilidades de administración del sistema.'
+        },
+        hero: {
+          title: 'Archivos de muestra BAT',
+          description: 'Descarga archivos de muestra BAT script batch gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de script batch, software de automatización Windows y aplicaciones de procesamiento de línea de comandos.'
+        },
+        about_description: 'Estos son archivos de prueba BAT (Batch) en varios tamaños para fines de prueba'
+      },
+      asc: {
+        meta: {
+          title: 'Descarga archivos de muestra ASC gratis - Archivos de prueba texto ASCII para procesamiento de texto | MorphyHub',
+          description: 'Descarga archivos de muestra ASC texto ASCII gratis para probar herramientas de procesamiento de texto y codificación. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar codificación ASCII, análisis de archivos de texto, editores de texto plano, validación de codificación de caracteres y herramientas de conversión de formato de texto.',
+          keywords: 'archivos de muestra ASC, archivos de prueba ASC, descarga ejemplos ASC, archivos de prueba ASC gratis, ejemplos texto ASCII, ejemplos texto plano, archivos de prueba .asc, ejemplos formato texto, archivos de prueba codificación ASCII, ejemplos procesamiento texto, ejemplos codificación caracteres'
+        },
+        schema: {
+          name: 'Archivos de muestra ASC gratis - Descarga archivos de prueba texto ASCII para procesamiento de texto',
+          description: 'Descarga archivos de muestra ASC texto ASCII gratis para probar herramientas de procesamiento de texto y codificación. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar codificación ASCII, análisis de archivos de texto, editores de texto plano, validación de codificación de caracteres y herramientas de conversión de formato de texto.'
+        },
+        hero: {
+          title: 'Archivos de muestra ASC',
+          description: 'Descarga archivos de muestra ASC texto ASCII gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de texto, software de codificación ASCII y aplicaciones de manejo de archivos de texto plano.'
+        },
+        about_description: 'Estos son archivos de prueba ASC (ASCII Text) en varios tamaños para fines de prueba'
+      },
+      bib: {
+        meta: {
+          title: 'Descarga archivos de muestra BIB gratis - Archivos de prueba bibliografía para investigación académica | MorphyHub',
+          description: 'Descarga archivos de muestra BIB bibliografía gratis para probar herramientas de gestión de bibliografía y citas. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar procesamiento de formato BibTeX, gestores de referencias, generadores de citas, herramientas de escritura académica e integración de bibliografía LaTeX.',
+          keywords: 'archivos de muestra BIB, archivos de prueba BIB, descarga ejemplos BIB, archivos de prueba BIB gratis, ejemplos bibliografía, ejemplos archivos BibTeX, ejemplos citas, archivos de prueba .bib, ejemplos gestión referencias, ejemplos citas académicas, ejemplos bibliografía LaTeX'
+        },
+        schema: {
+          name: 'Archivos de muestra BIB gratis - Descarga archivos de prueba bibliografía para investigación académica',
+          description: 'Descarga archivos de muestra BIB bibliografía gratis para probar herramientas de gestión de bibliografía y citas. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar procesamiento de formato BibTeX, gestores de referencias, generadores de citas, herramientas de escritura académica e integración de bibliografía LaTeX.'
+        },
+        hero: {
+          title: 'Archivos de muestra BIB',
+          description: 'Descarga archivos de muestra BIB bibliografía gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de gestión de bibliografía, procesadores BibTeX y aplicaciones de manejo de citas.'
+        },
+        about_description: 'Estos son archivos de prueba BIB (Bibliography) en varios tamaños para fines de prueba'
+      },
+      c: {
+        meta: {
+          title: 'Descarga archivos de muestra C gratis - Archivos de prueba lenguaje programación C para desarrollo | MorphyHub',
+          description: 'Descarga archivos de muestra C código fuente gratis para probar compilación de código C y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C, verificadores de sintaxis, analizadores de código, toolchain GCC, desarrollo C embedded y herramientas de programación de sistemas.',
+          keywords: 'archivos de muestra C, archivos de prueba C, descarga ejemplos C, archivos de prueba C gratis, ejemplos código fuente C, ejemplos archivos programación C, archivos de prueba .c, archivos de prueba compilación C, archivos de prueba GCC, ejemplos C embedded, ejemplos programación sistemas'
+        },
+        schema: {
+          name: 'Archivos de muestra C gratis - Descarga archivos de prueba lenguaje programación C para desarrollo',
+          description: 'Descarga archivos de muestra C código fuente gratis para probar compilación de código C y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C, verificadores de sintaxis, analizadores de código, toolchain GCC, desarrollo C embedded y herramientas de programación de sistemas.'
+        },
+        hero: {
+          title: 'Archivos de muestra C',
+          description: 'Descarga archivos de muestra C código fuente C gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C, verificadores de sintaxis C y aplicaciones de desarrollo C.'
+        },
+        about_description: 'Estos son archivos de prueba código fuente C en varios tamaños para fines de prueba'
+      },
+      'can-log': {
+        meta: {
+          title: 'Descarga archivos de muestra CAN Log gratis - Archivos de prueba Controller Area Network para automoción | MorphyHub',
+          description: 'Descarga archivos de muestra CAN Log gratis para probar análisis de bus CAN y herramientas de diagnóstico automotriz. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores de bus CAN, herramientas de diagnóstico automotriz, protocolos de red de vehículos, pruebas OBD-II y sistemas embedded automotrices.',
+          keywords: 'archivos de muestra CAN Log, archivos de prueba log CAN, descarga ejemplos log CAN, archivos de prueba log CAN gratis, ejemplos Controller Area Network, ejemplos bus CAN, archivos de prueba .log, ejemplos diagnóstico automotriz, archivos de prueba OBD-II, ejemplos red vehículos, prueba analizador bus CAN'
+        },
+        schema: {
+          name: 'Archivos de muestra CAN Log gratis - Descarga archivos de prueba Controller Area Network para automoción',
+          description: 'Descarga archivos de muestra CAN Log gratis para probar análisis de bus CAN y herramientas de diagnóstico automotriz. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores de bus CAN, herramientas de diagnóstico automotriz, protocolos de red de vehículos, pruebas OBD-II y sistemas embedded automotrices.'
+        },
+        hero: {
+          title: 'Archivos de muestra CAN Log',
+          description: 'Descarga archivos de muestra CAN Log Controller Area Network gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de bus CAN, software de diagnóstico automotriz y aplicaciones de protocolos de red.'
+        },
+        about_description: 'Estos son archivos de prueba CAN Log (Controller Area Network) en varios tamaños para fines de prueba'
+      },
+      cmd: {
+        meta: {
+          title: 'Descarga archivos de muestra CMD gratis - Archivos de prueba script comando Windows para automatización | MorphyHub',
+          description: 'Descarga archivos de muestra CMD script comando Windows gratis para probar ejecución de script batch y herramientas de automatización Windows. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar símbolo del sistema Windows, ejecución de archivos batch, automatización de scripts, administración del sistema y herramientas de programación de tareas Windows.',
+          keywords: 'archivos de muestra CMD, archivos de prueba CMD, descarga ejemplos CMD, archivos de prueba CMD gratis, ejemplos script comando Windows, ejemplos script batch, archivos de prueba .cmd, ejemplos script comando, ejemplos automatización Windows, ejemplos administración sistema'
+        },
+        schema: {
+          name: 'Archivos de muestra CMD gratis - Descarga archivos de prueba script comando Windows para automatización',
+          description: 'Descarga archivos de muestra CMD script comando Windows gratis para probar ejecución de script batch y herramientas de automatización Windows. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar símbolo del sistema Windows, ejecución de archivos batch, automatización de scripts, administración del sistema y herramientas de programación de tareas Windows.'
+        },
+        hero: {
+          title: 'Archivos de muestra CMD',
+          description: 'Descarga archivos de muestra CMD script comando Windows gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de script batch, software de procesamiento de comando Windows y aplicaciones de automatización.'
+        },
+        about_description: 'Estos son archivos de prueba CMD (Windows Command Script) en varios tamaños para fines de prueba'
+      },
+      conf: {
+        meta: {
+          title: 'Descarga archivos de muestra CONF gratis - Archivos de prueba configuración para configuración sistema | MorphyHub',
+          description: 'Descarga archivos de muestra CONF configuración gratis para probar análisis de archivos de configuración y herramientas de configuración del sistema. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar configuración de servidores, configuraciones de aplicaciones, validadores de archivos de configuración, herramientas de administración del sistema y utilidades de implementación de software.',
+          keywords: 'archivos de muestra CONF, archivos de prueba CONF, descarga ejemplos CONF, archivos de prueba CONF gratis, ejemplos archivos configuración, ejemplos configuración servidores, archivos de prueba .conf, ejemplos archivos configuración, ejemplos configuración sistema, ejemplos configuraciones aplicación'
+        },
+        schema: {
+          name: 'Archivos de muestra CONF gratis - Descarga archivos de prueba configuración para configuración sistema',
+          description: 'Descarga archivos de muestra CONF configuración gratis para probar análisis de archivos de configuración y herramientas de configuración del sistema. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar configuración de servidores, configuraciones de aplicaciones, validadores de archivos de configuración, herramientas de administración del sistema y utilidades de implementación de software.'
+        },
+        hero: {
+          title: 'Archivos de muestra CONF',
+          description: 'Descarga archivos de muestra CONF configuración gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de archivos de configuración, software de configuración de servidores y aplicaciones de configuraciones de aplicaciones.'
+        },
+        about_description: 'Estos son archivos de prueba CONF configuración en varios tamaños para fines de prueba'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Descarga archivos de muestra Config INI gratis - Archivos de prueba configuración INI para aplicaciones | MorphyHub',
+          description: 'Descarga archivos de muestra Config INI configuración INI gratis para probar análisis de archivos INI y herramientas de gestión de configuración. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores INI, configuración de aplicaciones, gestión de configuraciones, archivos INI Windows y utilidades de configuración de software.',
+          keywords: 'archivos de muestra Config INI, archivos de prueba INI, descarga ejemplos INI, archivos de prueba INI gratis, ejemplos configuración INI, ejemplos configuración INI, archivos de prueba .ini, ejemplos archivos configuración, ejemplos INI Windows, ejemplos configuraciones aplicación'
+        },
+        schema: {
+          name: 'Archivos de muestra Config INI gratis - Descarga archivos de prueba configuración INI para aplicaciones',
+          description: 'Descarga archivos de muestra Config INI configuración INI gratis para probar análisis de archivos INI y herramientas de gestión de configuración. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores INI, configuración de aplicaciones, gestión de configuraciones, archivos INI Windows y utilidades de configuración de software.'
+        },
+        hero: {
+          title: 'Archivos de muestra Config INI',
+          description: 'Descarga archivos de muestra Config INI configuración INI gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de archivos INI, software de gestión de configuración y aplicaciones de configuraciones de aplicaciones.'
+        },
+        about_description: 'Estos son archivos de prueba Config INI configuración en varios tamaños para fines de prueba'
+      },
+      cpp: {
+        meta: {
+          title: 'Descarga archivos de muestra CPP gratis - Archivos de prueba lenguaje programación C++ para desarrollo | MorphyHub',
+          description: 'Descarga archivos de muestra CPP código fuente C++ gratis para probar compilación de código C++ y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C++, verificadores de sintaxis, analizadores de código, toolchain GCC/G++, características C++ modernas y herramientas de programación orientada a objetos.',
+          keywords: 'archivos de muestra CPP, archivos de prueba CPP, descarga ejemplos CPP, archivos de prueba CPP gratis, ejemplos código fuente C++, ejemplos archivos código C++, archivos de prueba .cpp, ejemplos archivos programación C++, archivos de prueba compilación C++, archivos de prueba GCC, ejemplos C++ moderno'
+        },
+        schema: {
+          name: 'Archivos de muestra CPP gratis - Descarga archivos de prueba lenguaje programación C++ para desarrollo',
+          description: 'Descarga archivos de muestra CPP código fuente C++ gratis para probar compilación de código C++ y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C++, verificadores de sintaxis, analizadores de código, toolchain GCC/G++, características C++ modernas y herramientas de programación orientada a objetos.'
+        },
+        hero: {
+          title: 'Archivos de muestra CPP',
+          description: 'Descarga archivos de muestra CPP código fuente C++ gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C++, verificadores de sintaxis C++ y aplicaciones de desarrollo C++.'
+        },
+        about_description: 'Estos son archivos de prueba código fuente C++ en varios tamaños para fines de prueba'
+      },
+      h: {
+        meta: {
+          title: 'Descarga archivos de muestra H gratis - Archivos de prueba header C/C++ para programación | MorphyHub',
+          description: 'Descarga archivos de muestra H header C/C++ gratis para probar procesamiento de archivos header y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C/C++, inclusión de archivos header, herramientas de preprocesador, organización de código y utilidades de desarrollo multiplataforma.',
+          keywords: 'archivos de muestra H, archivos de prueba H, descarga ejemplos H, archivos de prueba H gratis, ejemplos header C, ejemplos header C++, ejemplos archivos header, archivos de prueba .h, archivos header C/C++, ejemplos header programación, ejemplos archivos header código'
+        },
+        schema: {
+          name: 'Archivos de muestra H gratis - Descarga archivos de prueba header C/C++ para programación',
+          description: 'Descarga archivos de muestra H header C/C++ gratis para probar procesamiento de archivos header y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C/C++, inclusión de archivos header, herramientas de preprocesador, organización de código y utilidades de desarrollo multiplataforma.'
+        },
+        hero: {
+          title: 'Archivos de muestra H',
+          description: 'Descarga archivos de muestra H header C/C++ gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C/C++, software de procesamiento de archivos header y aplicaciones de desarrollo.'
+        },
+        about_description: 'Estos son archivos de prueba H (C/C++ header) en varios tamaños para fines de prueba'
+      },
+      hpp: {
+        meta: {
+          title: 'Descarga archivos de muestra HPP gratis - Archivos de prueba header C++ para desarrollo C++ moderno | MorphyHub',
+          description: 'Descarga archivos de muestra HPP header C++ gratis para probar procesamiento de archivos header C++ y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C++, bibliotecas header-only, metaprogramación de plantillas, características C++ modernas y utilidades de desarrollo C++ avanzadas.',
+          keywords: 'archivos de muestra HPP, archivos de prueba HPP, descarga ejemplos HPP, archivos de prueba HPP gratis, ejemplos header C++, ejemplos archivos header, archivos de prueba .hpp, archivos header C++, ejemplos header programación, ejemplos archivos header código, ejemplos archivos desarrollo C++, ejemplos header C++ moderno'
+        },
+        schema: {
+          name: 'Archivos de muestra HPP gratis - Descarga archivos de prueba header C++ para desarrollo C++ moderno',
+          description: 'Descarga archivos de muestra HPP header C++ gratis para probar procesamiento de archivos header C++ y herramientas de desarrollo. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar compiladores C++, bibliotecas header-only, metaprogramación de plantillas, características C++ modernas y utilidades de desarrollo C++ avanzadas.'
+        },
+        hero: {
+          title: 'Archivos de muestra HPP',
+          description: 'Descarga archivos de muestra HPP header C++ gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C++, software de procesamiento de archivos header y aplicaciones de desarrollo C++.'
+        },
+        about_description: 'Estos son archivos de prueba HPP (C++ header) en varios tamaños para fines de prueba'
       }
     }
   }

@@ -271,6 +271,214 @@ export const vi: SamplePageTranslations = {
           description: 'Tải xuống tệp mẫu Ansible YML miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ phân tích cú pháp YAML của bạn, trình xác thực playbook Ansible, hệ thống quản lý cấu hình và ứng dụng tự động hóa DevOps.'
         },
         about_description: 'Đây là các tệp thử nghiệm Ansible YML với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Tải xuống tệp mẫu API Response JSON miễn phí - Tệp thử nghiệm JSON cho phát triển API | MorphyHub',
+          description: 'Tải xuống tệp mẫu API Response JSON miễn phí để kiểm tra phân tích cú pháp JSON, tích hợp API và công cụ phát triển web. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phản hồi REST API, trình xác thực JSON, mocking API, kiểm tra webhook và xử lý định dạng trao đổi dữ liệu.',
+          keywords: 'tệp mẫu API Response JSON, tệp thử nghiệm JSON, tải xuống ví dụ JSON, tệp thử nghiệm JSON miễn phí, ví dụ phản hồi API, ví dụ phân tích cú pháp JSON, tệp thử nghiệm REST API, kiểm tra trình xác thực JSON, ví dụ mocking API, tệp thử nghiệm webhook, tệp thử nghiệm .json, ví dụ web API, ví dụ định dạng trao đổi dữ liệu'
+        },
+        schema: {
+          name: 'Tệp mẫu API Response JSON miễn phí - Tải xuống tệp thử nghiệm JSON cho phát triển API',
+          description: 'Tải xuống tệp mẫu API Response JSON miễn phí để kiểm tra phân tích cú pháp JSON, tích hợp API và công cụ phát triển web. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phản hồi REST API, trình xác thực JSON, mocking API, kiểm tra webhook và xử lý định dạng trao đổi dữ liệu.'
+        },
+        hero: {
+          title: 'Tệp mẫu API Response JSON',
+          description: 'Tải xuống tệp mẫu API Response JSON miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ phân tích cú pháp JSON của bạn, trình xử lý phản hồi API, trình xác thực REST API và ứng dụng phát triển web.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm API Response JSON với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Tải xuống tệp mẫu Arduino INO miễn phí - Tệp thử nghiệm sketch Arduino cho phát triển embedded | MorphyHub',
+          description: 'Tải xuống tệp mẫu Arduino INO miễn phí để kiểm tra biên dịch sketch Arduino và công cụ lập trình embedded. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Arduino IDE, xác thực sketch, lập trình vi điều khiển, phát triển hệ thống embedded và kiểm tra thiết bị IoT.',
+          keywords: 'tệp mẫu Arduino INO, tệp thử nghiệm Arduino INO, tải xuống ví dụ Arduino INO, tệp thử nghiệm Arduino INO miễn phí, ví dụ sketch Arduino, ví dụ mã embedded, tệp thử nghiệm Arduino IDE, tệp thử nghiệm .ino, ví dụ vi điều khiển, ví dụ phát triển IoT, ví dụ lập trình embedded'
+        },
+        schema: {
+          name: 'Tệp mẫu Arduino INO miễn phí - Tải xuống tệp thử nghiệm sketch Arduino cho phát triển embedded',
+          description: 'Tải xuống tệp mẫu Arduino INO miễn phí để kiểm tra biên dịch sketch Arduino và công cụ lập trình embedded. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Arduino IDE, xác thực sketch, lập trình vi điều khiển, phát triển hệ thống embedded và kiểm tra thiết bị IoT.'
+        },
+        hero: {
+          title: 'Tệp mẫu Arduino INO',
+          description: 'Tải xuống tệp mẫu Arduino INO sketch Arduino miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ phát triển Arduino của bạn, phần mềm biên dịch sketch và ứng dụng lập trình embedded.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm Arduino INO (Arduino Sketch) mã nguồn với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      bat: {
+        meta: {
+          title: 'Tải xuống tệp mẫu BAT miễn phí - Tệp thử nghiệm script batch cho tự động hóa Windows | MorphyHub',
+          description: 'Tải xuống tệp mẫu BAT script batch miễn phí để kiểm tra tự động hóa Windows và công cụ xử lý dòng lệnh. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra thực thi script batch, tự động hóa tác vụ Windows, công cụ dòng lệnh, trình xác thực script và tiện ích quản trị hệ thống.',
+          keywords: 'tệp mẫu BAT, tệp thử nghiệm BAT, tải xuống ví dụ BAT, tệp thử nghiệm BAT miễn phí, ví dụ script batch, ví dụ tệp batch Windows, ví dụ script tự động hóa, tệp thử nghiệm .bat, ví dụ script dòng lệnh, ví dụ tự động hóa Windows, ví dụ thực thi script'
+        },
+        schema: {
+          name: 'Tệp mẫu BAT miễn phí - Tải xuống tệp thử nghiệm script batch cho tự động hóa Windows',
+          description: 'Tải xuống tệp mẫu BAT script batch miễn phí để kiểm tra tự động hóa Windows và công cụ xử lý dòng lệnh. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra thực thi script batch, tự động hóa tác vụ Windows, công cụ dòng lệnh, trình xác thực script và tiện ích quản trị hệ thống.'
+        },
+        hero: {
+          title: 'Tệp mẫu BAT',
+          description: 'Tải xuống tệp mẫu BAT script batch miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ thực thi script batch của bạn, phần mềm tự động hóa Windows và ứng dụng xử lý dòng lệnh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm BAT (Batch) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      asc: {
+        meta: {
+          title: 'Tải xuống tệp mẫu ASC miễn phí - Tệp thử nghiệm văn bản ASCII cho xử lý văn bản | MorphyHub',
+          description: 'Tải xuống tệp mẫu ASC văn bản ASCII miễn phí để kiểm tra công cụ xử lý văn bản và mã hóa. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra mã hóa ASCII, phân tích cú pháp tệp văn bản, trình chỉnh sửa văn bản thuần, xác thực mã hóa ký tự và công cụ chuyển đổi định dạng văn bản.',
+          keywords: 'tệp mẫu ASC, tệp thử nghiệm ASC, tải xuống ví dụ ASC, tệp thử nghiệm ASC miễn phí, ví dụ văn bản ASCII, ví dụ văn bản thuần, tệp thử nghiệm .asc, ví dụ định dạng văn bản, tệp thử nghiệm mã hóa ASCII, ví dụ xử lý văn bản, ví dụ mã hóa ký tự'
+        },
+        schema: {
+          name: 'Tệp mẫu ASC miễn phí - Tải xuống tệp thử nghiệm văn bản ASCII cho xử lý văn bản',
+          description: 'Tải xuống tệp mẫu ASC văn bản ASCII miễn phí để kiểm tra công cụ xử lý văn bản và mã hóa. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra mã hóa ASCII, phân tích cú pháp tệp văn bản, trình chỉnh sửa văn bản thuần, xác thực mã hóa ký tự và công cụ chuyển đổi định dạng văn bản.'
+        },
+        hero: {
+          title: 'Tệp mẫu ASC',
+          description: 'Tải xuống tệp mẫu ASC văn bản ASCII miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ xử lý văn bản của bạn, phần mềm mã hóa ASCII và ứng dụng xử lý tệp văn bản thuần.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm ASC (ASCII Text) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      bib: {
+        meta: {
+          title: 'Tải xuống tệp mẫu BIB miễn phí - Tệp thử nghiệm thư mục tham khảo cho nghiên cứu học thuật | MorphyHub',
+          description: 'Tải xuống tệp mẫu BIB thư mục tham khảo miễn phí để kiểm tra công cụ quản lý thư mục tham khảo và trích dẫn. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra xử lý định dạng BibTeX, trình quản lý tham chiếu, trình tạo trích dẫn, công cụ viết học thuật và tích hợp thư mục tham khảo LaTeX.',
+          keywords: 'tệp mẫu BIB, tệp thử nghiệm BIB, tải xuống ví dụ BIB, tệp thử nghiệm BIB miễn phí, ví dụ thư mục tham khảo, ví dụ tệp BibTeX, ví dụ trích dẫn, tệp thử nghiệm .bib, ví dụ quản lý tham chiếu, ví dụ trích dẫn học thuật, ví dụ thư mục tham khảo LaTeX'
+        },
+        schema: {
+          name: 'Tệp mẫu BIB miễn phí - Tải xuống tệp thử nghiệm thư mục tham khảo cho nghiên cứu học thuật',
+          description: 'Tải xuống tệp mẫu BIB thư mục tham khảo miễn phí để kiểm tra công cụ quản lý thư mục tham khảo và trích dẫn. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra xử lý định dạng BibTeX, trình quản lý tham chiếu, trình tạo trích dẫn, công cụ viết học thuật và tích hợp thư mục tham khảo LaTeX.'
+        },
+        hero: {
+          title: 'Tệp mẫu BIB',
+          description: 'Tải xuống tệp mẫu BIB thư mục tham khảo miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ quản lý thư mục tham khảo của bạn, trình xử lý BibTeX và ứng dụng xử lý trích dẫn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm BIB (Bibliography) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      c: {
+        meta: {
+          title: 'Tải xuống tệp mẫu C miễn phí - Tệp thử nghiệm ngôn ngữ lập trình C cho phát triển | MorphyHub',
+          description: 'Tải xuống tệp mẫu C mã nguồn miễn phí để kiểm tra biên dịch mã C và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C, trình kiểm tra cú pháp, trình phân tích mã, toolchain GCC, phát triển C embedded và công cụ lập trình hệ thống.',
+          keywords: 'tệp mẫu C, tệp thử nghiệm C, tải xuống ví dụ C, tệp thử nghiệm C miễn phí, ví dụ mã nguồn C, ví dụ tệp lập trình C, tệp thử nghiệm .c, tệp thử nghiệm biên dịch C, tệp thử nghiệm GCC, ví dụ C embedded, ví dụ lập trình hệ thống'
+        },
+        schema: {
+          name: 'Tệp mẫu C miễn phí - Tải xuống tệp thử nghiệm ngôn ngữ lập trình C cho phát triển',
+          description: 'Tải xuống tệp mẫu C mã nguồn miễn phí để kiểm tra biên dịch mã C và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C, trình kiểm tra cú pháp, trình phân tích mã, toolchain GCC, phát triển C embedded và công cụ lập trình hệ thống.'
+        },
+        hero: {
+          title: 'Tệp mẫu C',
+          description: 'Tải xuống tệp mẫu C mã nguồn C miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ biên dịch mã C của bạn, trình kiểm tra cú pháp C và ứng dụng phát triển C.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm mã nguồn C với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      'can-log': {
+        meta: {
+          title: 'Tải xuống tệp mẫu CAN Log miễn phí - Tệp thử nghiệm Controller Area Network cho ô tô | MorphyHub',
+          description: 'Tải xuống tệp mẫu CAN Log miễn phí để kiểm tra phân tích bus CAN và công cụ chẩn đoán ô tô. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích bus CAN, công cụ chẩn đoán ô tô, giao thức mạng xe, kiểm tra OBD-II và hệ thống embedded ô tô.',
+          keywords: 'tệp mẫu CAN Log, tệp thử nghiệm log CAN, tải xuống ví dụ log CAN, tệp thử nghiệm log CAN miễn phí, ví dụ Controller Area Network, ví dụ bus CAN, tệp thử nghiệm .log, ví dụ chẩn đoán ô tô, tệp thử nghiệm OBD-II, ví dụ mạng xe, kiểm tra trình phân tích bus CAN'
+        },
+        schema: {
+          name: 'Tệp mẫu CAN Log miễn phí - Tải xuống tệp thử nghiệm Controller Area Network cho ô tô',
+          description: 'Tải xuống tệp mẫu CAN Log miễn phí để kiểm tra phân tích bus CAN và công cụ chẩn đoán ô tô. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích bus CAN, công cụ chẩn đoán ô tô, giao thức mạng xe, kiểm tra OBD-II và hệ thống embedded ô tô.'
+        },
+        hero: {
+          title: 'Tệp mẫu CAN Log',
+          description: 'Tải xuống tệp mẫu CAN Log Controller Area Network miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ phân tích bus CAN của bạn, phần mềm chẩn đoán ô tô và ứng dụng giao thức mạng.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm CAN Log (Controller Area Network) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      cmd: {
+        meta: {
+          title: 'Tải xuống tệp mẫu CMD miễn phí - Tệp thử nghiệm script lệnh Windows cho tự động hóa | MorphyHub',
+          description: 'Tải xuống tệp mẫu CMD script lệnh Windows miễn phí để kiểm tra thực thi script batch và công cụ tự động hóa Windows. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra dấu nhắc lệnh Windows, thực thi tệp batch, tự động hóa script, quản trị hệ thống và công cụ lập lịch tác vụ Windows.',
+          keywords: 'tệp mẫu CMD, tệp thử nghiệm CMD, tải xuống ví dụ CMD, tệp thử nghiệm CMD miễn phí, ví dụ script lệnh Windows, ví dụ script batch, tệp thử nghiệm .cmd, ví dụ script lệnh, ví dụ tự động hóa Windows, ví dụ quản trị hệ thống'
+        },
+        schema: {
+          name: 'Tệp mẫu CMD miễn phí - Tải xuống tệp thử nghiệm script lệnh Windows cho tự động hóa',
+          description: 'Tải xuống tệp mẫu CMD script lệnh Windows miễn phí để kiểm tra thực thi script batch và công cụ tự động hóa Windows. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra dấu nhắc lệnh Windows, thực thi tệp batch, tự động hóa script, quản trị hệ thống và công cụ lập lịch tác vụ Windows.'
+        },
+        hero: {
+          title: 'Tệp mẫu CMD',
+          description: 'Tải xuống tệp mẫu CMD script lệnh Windows miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ thực thi script batch của bạn, phần mềm xử lý lệnh Windows và ứng dụng tự động hóa.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm CMD (Windows Command Script) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      conf: {
+        meta: {
+          title: 'Tải xuống tệp mẫu CONF miễn phí - Tệp thử nghiệm cấu hình cho cấu hình hệ thống | MorphyHub',
+          description: 'Tải xuống tệp mẫu CONF cấu hình miễn phí để kiểm tra phân tích cú pháp tệp cấu hình và công cụ cấu hình hệ thống. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra cấu hình máy chủ, cài đặt ứng dụng, trình xác thực tệp cấu hình, công cụ quản trị hệ thống và tiện ích triển khai phần mềm.',
+          keywords: 'tệp mẫu CONF, tệp thử nghiệm CONF, tải xuống ví dụ CONF, tệp thử nghiệm CONF miễn phí, ví dụ tệp cấu hình, ví dụ cấu hình máy chủ, tệp thử nghiệm .conf, ví dụ tệp cấu hình, ví dụ cấu hình hệ thống, ví dụ cài đặt ứng dụng'
+        },
+        schema: {
+          name: 'Tệp mẫu CONF miễn phí - Tải xuống tệp thử nghiệm cấu hình cho cấu hình hệ thống',
+          description: 'Tải xuống tệp mẫu CONF cấu hình miễn phí để kiểm tra phân tích cú pháp tệp cấu hình và công cụ cấu hình hệ thống. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra cấu hình máy chủ, cài đặt ứng dụng, trình xác thực tệp cấu hình, công cụ quản trị hệ thống và tiện ích triển khai phần mềm.'
+        },
+        hero: {
+          title: 'Tệp mẫu CONF',
+          description: 'Tải xuống tệp mẫu CONF cấu hình miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ phân tích cú pháp tệp cấu hình của bạn, phần mềm cấu hình máy chủ và ứng dụng cài đặt ứng dụng.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm CONF cấu hình với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Tải xuống tệp mẫu Config INI miễn phí - Tệp thử nghiệm cấu hình INI cho ứng dụng | MorphyHub',
+          description: 'Tải xuống tệp mẫu Config INI cấu hình INI miễn phí để kiểm tra phân tích cú pháp tệp INI và công cụ quản lý cấu hình. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích cú pháp INI, cấu hình ứng dụng, quản lý cài đặt, tệp INI Windows và tiện ích cấu hình phần mềm.',
+          keywords: 'tệp mẫu Config INI, tệp thử nghiệm INI, tải xuống ví dụ INI, tệp thử nghiệm INI miễn phí, ví dụ cấu hình INI, ví dụ cấu hình INI, tệp thử nghiệm .ini, ví dụ tệp cấu hình, ví dụ INI Windows, ví dụ cài đặt ứng dụng'
+        },
+        schema: {
+          name: 'Tệp mẫu Config INI miễn phí - Tải xuống tệp thử nghiệm cấu hình INI cho ứng dụng',
+          description: 'Tải xuống tệp mẫu Config INI cấu hình INI miễn phí để kiểm tra phân tích cú pháp tệp INI và công cụ quản lý cấu hình. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích cú pháp INI, cấu hình ứng dụng, quản lý cài đặt, tệp INI Windows và tiện ích cấu hình phần mềm.'
+        },
+        hero: {
+          title: 'Tệp mẫu Config INI',
+          description: 'Tải xuống tệp mẫu Config INI cấu hình INI miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ phân tích cú pháp tệp INI của bạn, phần mềm quản lý cấu hình và ứng dụng cài đặt ứng dụng.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm Config INI cấu hình với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      cpp: {
+        meta: {
+          title: 'Tải xuống tệp mẫu CPP miễn phí - Tệp thử nghiệm ngôn ngữ lập trình C++ cho phát triển | MorphyHub',
+          description: 'Tải xuống tệp mẫu CPP mã nguồn C++ miễn phí để kiểm tra biên dịch mã C++ và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C++, trình kiểm tra cú pháp, trình phân tích mã, toolchain GCC/G++, tính năng C++ hiện đại và công cụ lập trình hướng đối tượng.',
+          keywords: 'tệp mẫu CPP, tệp thử nghiệm CPP, tải xuống ví dụ CPP, tệp thử nghiệm CPP miễn phí, ví dụ mã nguồn C++, ví dụ tệp mã C++, tệp thử nghiệm .cpp, ví dụ tệp lập trình C++, tệp thử nghiệm biên dịch C++, tệp thử nghiệm GCC, ví dụ C++ hiện đại'
+        },
+        schema: {
+          name: 'Tệp mẫu CPP miễn phí - Tải xuống tệp thử nghiệm ngôn ngữ lập trình C++ cho phát triển',
+          description: 'Tải xuống tệp mẫu CPP mã nguồn C++ miễn phí để kiểm tra biên dịch mã C++ và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C++, trình kiểm tra cú pháp, trình phân tích mã, toolchain GCC/G++, tính năng C++ hiện đại và công cụ lập trình hướng đối tượng.'
+        },
+        hero: {
+          title: 'Tệp mẫu CPP',
+          description: 'Tải xuống tệp mẫu CPP mã nguồn C++ miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ biên dịch mã C++ của bạn, trình kiểm tra cú pháp C++ và ứng dụng phát triển C++.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm mã nguồn C++ với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      h: {
+        meta: {
+          title: 'Tải xuống tệp mẫu H miễn phí - Tệp thử nghiệm header C/C++ cho lập trình | MorphyHub',
+          description: 'Tải xuống tệp mẫu H header C/C++ miễn phí để kiểm tra xử lý tệp header và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C/C++, bao gồm tệp header, công cụ tiền xử lý, tổ chức mã và tiện ích phát triển đa nền tảng.',
+          keywords: 'tệp mẫu H, tệp thử nghiệm H, tải xuống ví dụ H, tệp thử nghiệm H miễn phí, ví dụ header C, ví dụ header C++, ví dụ tệp header, tệp thử nghiệm .h, tệp header C/C++, ví dụ header lập trình, ví dụ tệp header mã'
+        },
+        schema: {
+          name: 'Tệp mẫu H miễn phí - Tải xuống tệp thử nghiệm header C/C++ cho lập trình',
+          description: 'Tải xuống tệp mẫu H header C/C++ miễn phí để kiểm tra xử lý tệp header và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C/C++, bao gồm tệp header, công cụ tiền xử lý, tổ chức mã và tiện ích phát triển đa nền tảng.'
+        },
+        hero: {
+          title: 'Tệp mẫu H',
+          description: 'Tải xuống tệp mẫu H header C/C++ miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ biên dịch mã C/C++ của bạn, phần mềm xử lý tệp header và ứng dụng phát triển.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm H (C/C++ header) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      hpp: {
+        meta: {
+          title: 'Tải xuống tệp mẫu HPP miễn phí - Tệp thử nghiệm header C++ cho phát triển C++ hiện đại | MorphyHub',
+          description: 'Tải xuống tệp mẫu HPP header C++ miễn phí để kiểm tra xử lý tệp header C++ và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C++, thư viện header-only, metaprogramming template, tính năng C++ hiện đại và tiện ích phát triển C++ nâng cao.',
+          keywords: 'tệp mẫu HPP, tệp thử nghiệm HPP, tải xuống ví dụ HPP, tệp thử nghiệm HPP miễn phí, ví dụ header C++, ví dụ tệp header, tệp thử nghiệm .hpp, tệp header C++, ví dụ header lập trình, ví dụ tệp header mã, ví dụ tệp phát triển C++, ví dụ header C++ hiện đại'
+        },
+        schema: {
+          name: 'Tệp mẫu HPP miễn phí - Tải xuống tệp thử nghiệm header C++ cho phát triển C++ hiện đại',
+          description: 'Tải xuống tệp mẫu HPP header C++ miễn phí để kiểm tra xử lý tệp header C++ và công cụ phát triển. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình biên dịch C++, thư viện header-only, metaprogramming template, tính năng C++ hiện đại và tiện ích phát triển C++ nâng cao.'
+        },
+        hero: {
+          title: 'Tệp mẫu HPP',
+          description: 'Tải xuống tệp mẫu HPP header C++ miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ biên dịch mã C++ của bạn, phần mềm xử lý tệp header và ứng dụng phát triển C++.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm HPP (C++ header) với nhiều kích thước khác nhau cho mục đích kiểm tra'
       }
     }
   }

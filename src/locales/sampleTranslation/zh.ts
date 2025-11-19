@@ -271,6 +271,214 @@ export const zh: SamplePageTranslations = {
           description: '下载免费Ansible YML配置示例文件用于测试。提供多种文件大小，用于测试您的YAML解析工具、Ansible playbook验证器、配置管理系统和DevOps自动化应用程序。'
         },
         about_description: '这些是用于测试目的的各种大小的Ansible YML测试文件'
+      },
+      'api-response-json': {
+        meta: {
+          title: '下载免费API Response JSON示例文件 - 用于API开发的JSON测试文件 | MorphyHub',
+          description: '下载免费API Response JSON示例文件用于测试JSON解析、API集成和Web开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试REST API响应、JSON验证器、API模拟、webhook测试和数据交换格式处理。',
+          keywords: 'API Response JSON示例文件、JSON测试文件、下载JSON示例、免费JSON测试文件、API响应示例、JSON解析示例、REST API测试文件、JSON验证器测试、API模拟示例、webhook测试文件、.json测试文件、Web API示例、数据交换格式示例'
+        },
+        schema: {
+          name: '免费API Response JSON示例文件 - 下载用于API开发的JSON测试文件',
+          description: '下载免费API Response JSON示例文件用于测试JSON解析、API集成和Web开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试REST API响应、JSON验证器、API模拟、webhook测试和数据交换格式处理。'
+        },
+        hero: {
+          title: 'API Response JSON示例文件',
+          description: '下载免费API Response JSON示例文件用于测试。提供多种文件大小，用于测试您的JSON解析工具、API响应处理器、REST API验证器和Web开发应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的API Response JSON测试文件'
+      },
+      'arduino-ino': {
+        meta: {
+          title: '下载免费Arduino INO示例文件 - 用于嵌入式开发的Arduino Sketch测试文件 | MorphyHub',
+          description: '下载免费Arduino INO示例文件用于测试Arduino sketch编译和嵌入式编程工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Arduino IDE、sketch验证、微控制器编程、嵌入式系统开发和IoT设备测试。',
+          keywords: 'Arduino INO示例文件、Arduino INO测试文件、下载Arduino INO示例、免费Arduino INO测试文件、Arduino sketch示例、嵌入式代码示例、Arduino IDE测试文件、.ino测试文件、微控制器示例、IoT开发示例、嵌入式编程示例'
+        },
+        schema: {
+          name: '免费Arduino INO示例文件 - 下载用于嵌入式开发的Arduino Sketch测试文件',
+          description: '下载免费Arduino INO示例文件用于测试Arduino sketch编译和嵌入式编程工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Arduino IDE、sketch验证、微控制器编程、嵌入式系统开发和IoT设备测试。'
+        },
+        hero: {
+          title: 'Arduino INO示例文件',
+          description: '下载免费Arduino INO Arduino sketch源代码文件用于测试。提供多种文件大小，用于测试您的Arduino开发工具、sketch编译软件和嵌入式编程应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Arduino INO (Arduino Sketch)源代码文件'
+      },
+      bat: {
+        meta: {
+          title: '下载免费BAT示例文件 - 用于Windows自动化的批处理脚本测试文件 | MorphyHub',
+          description: '下载免费BAT批处理脚本示例文件用于测试Windows自动化和命令行处理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试批处理脚本执行、Windows任务自动化、命令行工具、脚本验证器和系统管理实用程序。',
+          keywords: 'BAT示例文件、BAT测试文件、下载BAT示例、免费BAT测试文件、批处理脚本示例、Windows批处理文件、自动化脚本示例、.bat测试文件、命令行脚本示例、Windows自动化示例、脚本执行测试文件'
+        },
+        schema: {
+          name: '免费BAT示例文件 - 下载用于Windows自动化的批处理脚本测试文件',
+          description: '下载免费BAT批处理脚本示例文件用于测试Windows自动化和命令行处理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试批处理脚本执行、Windows任务自动化、命令行工具、脚本验证器和系统管理实用程序。'
+        },
+        hero: {
+          title: 'BAT示例文件',
+          description: '下载免费BAT批处理脚本示例文件用于测试。提供多种文件大小，用于测试您的批处理脚本执行工具、Windows自动化软件和命令行处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的BAT (Batch)脚本文件'
+      },
+      asc: {
+        meta: {
+          title: '下载免费ASC示例文件 - 用于文本处理的ASCII文本测试文件 | MorphyHub',
+          description: '下载免费ASC ASCII文本示例文件用于测试文本处理和编码工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试ASCII编码、文本文件解析、纯文本编辑器、字符编码验证和文本格式转换工具。',
+          keywords: 'ASC示例文件、ASC测试文件、下载ASC示例、免费ASC测试文件、ASCII文本示例、纯文本示例、.asc测试文件、文本格式示例、ASCII编码测试文件、文本处理示例、字符编码示例'
+        },
+        schema: {
+          name: '免费ASC示例文件 - 下载用于文本处理的ASCII文本测试文件',
+          description: '下载免费ASC ASCII文本示例文件用于测试文本处理和编码工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试ASCII编码、文本文件解析、纯文本编辑器、字符编码验证和文本格式转换工具。'
+        },
+        hero: {
+          title: 'ASC示例文件',
+          description: '下载免费ASC ASCII文本示例文件用于测试。提供多种文件大小，用于测试您的文本处理工具、ASCII编码软件和纯文本文件处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ASC (ASCII Text)文件'
+      },
+      bib: {
+        meta: {
+          title: '下载免费BIB示例文件 - 用于学术研究的参考文献测试文件 | MorphyHub',
+          description: '下载免费BIB参考文献示例文件用于测试参考文献管理和引用工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试BibTeX格式处理、参考文献管理器、引用生成器、学术写作工具和LaTeX参考文献集成。',
+          keywords: 'BIB示例文件、BIB测试文件、下载BIB示例、免费BIB测试文件、参考文献示例、BibTeX文件、引用示例、.bib测试文件、参考文献管理示例、学术引用示例、LaTeX参考文献示例'
+        },
+        schema: {
+          name: '免费BIB示例文件 - 下载用于学术研究的参考文献测试文件',
+          description: '下载免费BIB参考文献示例文件用于测试参考文献管理和引用工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试BibTeX格式处理、参考文献管理器、引用生成器、学术写作工具和LaTeX参考文献集成。'
+        },
+        hero: {
+          title: 'BIB示例文件',
+          description: '下载免费BIB参考文献示例文件用于测试。提供多种文件大小，用于测试您的参考文献管理工具、BibTeX处理器和引用处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的BIB (Bibliography)文件'
+      },
+      c: {
+        meta: {
+          title: '下载免费C示例文件 - 用于开发的C编程语言测试文件 | MorphyHub',
+          description: '下载免费C源代码示例文件用于测试C代码编译和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C编译器、语法检查器、代码分析器、GCC工具链、嵌入式C开发和系统编程工具。',
+          keywords: 'C示例文件、C测试文件、下载C示例、免费C测试文件、C源代码示例、C编程文件、.c测试文件、C编译测试文件、GCC测试文件、嵌入式C示例、系统编程示例'
+        },
+        schema: {
+          name: '免费C示例文件 - 下载用于开发的C编程语言测试文件',
+          description: '下载免费C源代码示例文件用于测试C代码编译和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C编译器、语法检查器、代码分析器、GCC工具链、嵌入式C开发和系统编程工具。'
+        },
+        hero: {
+          title: 'C示例文件',
+          description: '下载免费C C源代码示例文件用于测试。提供多种文件大小，用于测试您的C代码编译工具、C语法检查器和C开发应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的C源代码文件'
+      },
+      'can-log': {
+        meta: {
+          title: '下载免费CAN Log示例文件 - 用于汽车的Controller Area Network测试文件 | MorphyHub',
+          description: '下载免费CAN Log示例文件用于测试CAN总线分析和汽车诊断工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试CAN总线分析器、汽车诊断工具、车辆网络协议、OBD-II测试和嵌入式汽车系统。',
+          keywords: 'CAN Log示例文件、CAN Log测试文件、下载CAN Log示例、免费CAN Log测试文件、Controller Area Network示例、CAN总线示例、.log测试文件、汽车诊断示例、OBD-II测试文件、车辆网络示例、CAN总线分析器测试'
+        },
+        schema: {
+          name: '免费CAN Log示例文件 - 下载用于汽车的Controller Area Network测试文件',
+          description: '下载免费CAN Log示例文件用于测试CAN总线分析和汽车诊断工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试CAN总线分析器、汽车诊断工具、车辆网络协议、OBD-II测试和嵌入式汽车系统。'
+        },
+        hero: {
+          title: 'CAN Log示例文件',
+          description: '下载免费CAN Log Controller Area Network日志文件用于测试。提供多种文件大小，用于测试您的CAN总线分析工具、汽车诊断软件和网络协议应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CAN Log (Controller Area Network)日志文件'
+      },
+      cmd: {
+        meta: {
+          title: '下载免费CMD示例文件 - 用于自动化的Windows命令脚本测试文件 | MorphyHub',
+          description: '下载免费CMD Windows命令脚本示例文件用于测试批处理脚本执行和Windows自动化工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Windows命令提示符、批处理文件执行、脚本自动化、系统管理和Windows任务调度工具。',
+          keywords: 'CMD示例文件、CMD测试文件、下载CMD示例、免费CMD测试文件、Windows命令脚本示例、批处理脚本示例、.cmd测试文件、命令脚本示例、Windows自动化示例、系统管理示例'
+        },
+        schema: {
+          name: '免费CMD示例文件 - 下载用于自动化的Windows命令脚本测试文件',
+          description: '下载免费CMD Windows命令脚本示例文件用于测试批处理脚本执行和Windows自动化工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Windows命令提示符、批处理文件执行、脚本自动化、系统管理和Windows任务调度工具。'
+        },
+        hero: {
+          title: 'CMD示例文件',
+          description: '下载免费CMD Windows命令脚本示例文件用于测试。提供多种文件大小，用于测试您的批处理脚本执行工具、Windows命令处理软件和自动化应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CMD (Windows Command Script)文件'
+      },
+      conf: {
+        meta: {
+          title: '下载免费CONF示例文件 - 用于系统配置的配置文件测试文件 | MorphyHub',
+          description: '下载免费CONF配置示例文件用于测试配置文件解析和系统配置工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试服务器配置、应用程序设置、配置文件验证器、系统管理工具和软件部署实用程序。',
+          keywords: 'CONF示例文件、CONF测试文件、下载CONF示例、免费CONF测试文件、配置文件示例、服务器配置示例、.conf测试文件、配置文件示例、系统配置示例、应用程序设置示例'
+        },
+        schema: {
+          name: '免费CONF示例文件 - 下载用于系统配置的配置文件测试文件',
+          description: '下载免费CONF配置示例文件用于测试配置文件解析和系统配置工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试服务器配置、应用程序设置、配置文件验证器、系统管理工具和软件部署实用程序。'
+        },
+        hero: {
+          title: 'CONF示例文件',
+          description: '下载免费CONF配置示例文件用于测试。提供多种文件大小，用于测试您的配置文件解析工具、服务器配置软件和应用程序设置应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CONF配置文件'
+      },
+      'config-ini': {
+        meta: {
+          title: '下载免费Config INI示例文件 - 用于应用程序的INI配置测试文件 | MorphyHub',
+          description: '下载免费Config INI INI配置示例文件用于测试INI文件解析和配置管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试INI解析器、应用程序配置、设置管理、Windows INI文件和软件配置实用程序。',
+          keywords: 'Config INI示例文件、INI测试文件、下载INI示例、免费INI测试文件、INI配置示例、INI配置示例、.ini测试文件、配置文件示例、Windows INI示例、应用程序设置示例'
+        },
+        schema: {
+          name: '免费Config INI示例文件 - 下载用于应用程序的INI配置测试文件',
+          description: '下载免费Config INI INI配置示例文件用于测试INI文件解析和配置管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试INI解析器、应用程序配置、设置管理、Windows INI文件和软件配置实用程序。'
+        },
+        hero: {
+          title: 'Config INI示例文件',
+          description: '下载免费Config INI INI配置示例文件用于测试。提供多种文件大小，用于测试您的INI文件解析工具、配置管理软件和应用程序设置应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Config INI配置文件'
+      },
+      cpp: {
+        meta: {
+          title: '下载免费CPP示例文件 - 用于开发的C++编程语言测试文件 | MorphyHub',
+          description: '下载免费CPP C++源代码示例文件用于测试C++代码编译和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C++编译器、语法检查器、代码分析器、GCC/G++工具链、现代C++功能和面向对象编程工具。',
+          keywords: 'CPP示例文件、CPP测试文件、下载CPP示例、免费CPP测试文件、C++源代码示例、C++代码文件、.cpp测试文件、C++编程文件、C++编译测试文件、GCC测试文件、现代C++示例'
+        },
+        schema: {
+          name: '免费CPP示例文件 - 下载用于开发的C++编程语言测试文件',
+          description: '下载免费CPP C++源代码示例文件用于测试C++代码编译和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C++编译器、语法检查器、代码分析器、GCC/G++工具链、现代C++功能和面向对象编程工具。'
+        },
+        hero: {
+          title: 'CPP示例文件',
+          description: '下载免费CPP C++源代码示例文件用于测试。提供多种文件大小，用于测试您的C++代码编译工具、C++语法检查器和C++开发应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的C++源代码文件'
+      },
+      h: {
+        meta: {
+          title: '下载免费H示例文件 - 用于编程的C/C++头文件测试文件 | MorphyHub',
+          description: '下载免费H C/C++头文件示例文件用于测试头文件处理和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C/C++编译器、头文件包含、预处理器工具、代码组织和跨平台开发实用程序。',
+          keywords: 'H示例文件、H测试文件、下载H示例、免费H测试文件、C头文件示例、C++头文件示例、头文件示例、.h测试文件、C/C++头文件、编程头文件示例、代码头文件'
+        },
+        schema: {
+          name: '免费H示例文件 - 下载用于编程的C/C++头文件测试文件',
+          description: '下载免费H C/C++头文件示例文件用于测试头文件处理和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C/C++编译器、头文件包含、预处理器工具、代码组织和跨平台开发实用程序。'
+        },
+        hero: {
+          title: 'H示例文件',
+          description: '下载免费H C/C++头文件示例文件用于测试。提供多种文件大小，用于测试您的C/C++代码编译工具、头文件处理软件和开发应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的H (C/C++ header)文件'
+      },
+      hpp: {
+        meta: {
+          title: '下载免费HPP示例文件 - 用于现代C++开发的C++头文件测试文件 | MorphyHub',
+          description: '下载免费HPP C++头文件示例文件用于测试C++头文件处理和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C++编译器、header-only库、模板元编程、现代C++功能和高级C++开发实用程序。',
+          keywords: 'HPP示例文件、HPP测试文件、下载HPP示例、免费HPP测试文件、C++头文件示例、头文件示例、.hpp测试文件、C++头文件、编程头文件示例、代码头文件、C++开发文件、现代C++头文件示例'
+        },
+        schema: {
+          name: '免费HPP示例文件 - 下载用于现代C++开发的C++头文件测试文件',
+          description: '下载免费HPP C++头文件示例文件用于测试C++头文件处理和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C++编译器、header-only库、模板元编程、现代C++功能和高级C++开发实用程序。'
+        },
+        hero: {
+          title: 'HPP示例文件',
+          description: '下载免费HPP C++头文件示例文件用于测试。提供多种文件大小，用于测试您的C++代码编译工具、头文件处理软件和C++开发应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的HPP (C++ header)文件'
       }
     }
   }

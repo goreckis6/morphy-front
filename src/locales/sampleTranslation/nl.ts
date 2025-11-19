@@ -271,6 +271,214 @@ export const nl: SamplePageTranslations = {
           description: 'Download gratis Ansible YML configuratie voorbeeldbestanden voor testen. Meerdere bestandsformaten beschikbaar om uw YAML parsing tools, Ansible playbook validators, configuratiebeheersystemen en DevOps automatisering applicaties te testen.'
         },
         about_description: 'Dit zijn Ansible YML testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Gratis API Response JSON voorbeeldbestanden downloaden - JSON testbestanden voor API ontwikkeling | MorphyHub',
+          description: 'Download gratis API Response JSON voorbeeldbestanden om JSON parsing, API integratie en webontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van REST API antwoorden, JSON validators, API mocking, webhook tests en gegevensuitwisselingsformaat verwerking.',
+          keywords: 'API Response JSON voorbeeldbestanden, JSON testbestanden, JSON voorbeelden downloaden, gratis JSON testbestanden, API antwoord voorbeelden, JSON parsing voorbeelden, REST API testbestanden, JSON validator test, API mocking voorbeelden, webhook testbestanden, .json testbestanden, web API voorbeelden, gegevensuitwisselingsformaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis API Response JSON voorbeeldbestanden - Download JSON testbestanden voor API ontwikkeling',
+          description: 'Download gratis API Response JSON voorbeeldbestanden om JSON parsing, API integratie en webontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van REST API antwoorden, JSON validators, API mocking, webhook tests en gegevensuitwisselingsformaat verwerking.'
+        },
+        hero: {
+          title: 'API Response JSON voorbeeldbestanden',
+          description: 'Download gratis API Response JSON voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw JSON parsing tools, API antwoord handlers, REST API validators en webontwikkeling applicaties te testen.'
+        },
+        about_description: 'Dit zijn API Response JSON testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Gratis Arduino INO voorbeeldbestanden downloaden - Arduino Sketch testbestanden voor embedded ontwikkeling | MorphyHub',
+          description: 'Download gratis Arduino INO voorbeeldbestanden om Arduino sketch compilatie en embedded programmeertools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Arduino IDE, sketch validatie, microcontroller programmering, embedded systemen ontwikkeling en IoT apparaat tests.',
+          keywords: 'Arduino INO voorbeeldbestanden, Arduino INO testbestanden, Arduino INO voorbeelden downloaden, gratis Arduino INO testbestanden, Arduino sketch voorbeelden, embedded code voorbeelden, Arduino IDE testbestanden, .ino testbestanden, microcontroller voorbeelden, IoT ontwikkeling voorbeelden, embedded programmering voorbeelden'
+        },
+        schema: {
+          name: 'Gratis Arduino INO voorbeeldbestanden - Download Arduino Sketch testbestanden voor embedded ontwikkeling',
+          description: 'Download gratis Arduino INO voorbeeldbestanden om Arduino sketch compilatie en embedded programmeertools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Arduino IDE, sketch validatie, microcontroller programmering, embedded systemen ontwikkeling en IoT apparaat tests.'
+        },
+        hero: {
+          title: 'Arduino INO voorbeeldbestanden',
+          description: 'Download gratis Arduino INO Arduino sketch broncode bestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw Arduino ontwikkelingstools, sketch compilatie software en embedded programmering applicaties te testen.'
+        },
+        about_description: 'Dit zijn Arduino INO (Arduino Sketch) broncode bestanden in verschillende formaten voor testdoeleinden'
+      },
+      bat: {
+        meta: {
+          title: 'Gratis BAT voorbeeldbestanden downloaden - Batch script testbestanden voor Windows automatisering | MorphyHub',
+          description: 'Download gratis BAT batch script voorbeeldbestanden om Windows automatisering en opdrachtregel verwerkingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van batch script uitvoering, Windows taak automatisering, opdrachtregel tools, script validators en systeembeheer utilities.',
+          keywords: 'BAT voorbeeldbestanden, BAT testbestanden, BAT voorbeelden downloaden, gratis BAT testbestanden, batch script voorbeelden, Windows batch bestanden, automatisering script voorbeelden, .bat testbestanden, opdrachtregel script voorbeelden, Windows automatisering voorbeelden, script uitvoering testbestanden'
+        },
+        schema: {
+          name: 'Gratis BAT voorbeeldbestanden - Download batch script testbestanden voor Windows automatisering',
+          description: 'Download gratis BAT batch script voorbeeldbestanden om Windows automatisering en opdrachtregel verwerkingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van batch script uitvoering, Windows taak automatisering, opdrachtregel tools, script validators en systeembeheer utilities.'
+        },
+        hero: {
+          title: 'BAT voorbeeldbestanden',
+          description: 'Download gratis BAT batch script voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw batch script uitvoeringstools, Windows automatisering software en opdrachtregel verwerking applicaties te testen.'
+        },
+        about_description: 'Dit zijn BAT (Batch) script bestanden in verschillende formaten voor testdoeleinden'
+      },
+      asc: {
+        meta: {
+          title: 'Gratis ASC voorbeeldbestanden downloaden - ASCII tekst testbestanden voor tekstverwerking | MorphyHub',
+          description: 'Download gratis ASC ASCII tekst voorbeeldbestanden om tekstverwerking en coderings tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ASCII codering, tekstbestand parsing, tekst editors, teken codering validatie en tekstformaat conversie tools.',
+          keywords: 'ASC voorbeeldbestanden, ASC testbestanden, ASC voorbeelden downloaden, gratis ASC testbestanden, ASCII tekst voorbeelden, platte tekst voorbeelden, .asc testbestanden, tekstformaat voorbeelden, ASCII codering testbestanden, tekstverwerking voorbeelden, teken codering voorbeelden'
+        },
+        schema: {
+          name: 'Gratis ASC voorbeeldbestanden - Download ASCII tekst testbestanden voor tekstverwerking',
+          description: 'Download gratis ASC ASCII tekst voorbeeldbestanden om tekstverwerking en coderings tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ASCII codering, tekstbestand parsing, tekst editors, teken codering validatie en tekstformaat conversie tools.'
+        },
+        hero: {
+          title: 'ASC voorbeeldbestanden',
+          description: 'Download gratis ASC ASCII tekst voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw tekstverwerkingstools, ASCII codering software en platte tekstbestand verwerking applicaties te testen.'
+        },
+        about_description: 'Dit zijn ASC (ASCII Text) bestanden in verschillende formaten voor testdoeleinden'
+      },
+      bib: {
+        meta: {
+          title: 'Gratis BIB voorbeeldbestanden downloaden - Bibliografie testbestanden voor academisch onderzoek | MorphyHub',
+          description: 'Download gratis BIB bibliografie voorbeeldbestanden om bibliografie beheer en citatie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BibTeX formaat verwerking, referentie managers, citatie generators, academisch schrijven tools en LaTeX bibliografie integratie.',
+          keywords: 'BIB voorbeeldbestanden, BIB testbestanden, BIB voorbeelden downloaden, gratis BIB testbestanden, bibliografie voorbeelden, BibTeX bestanden, citatie voorbeelden, .bib testbestanden, referentie beheer voorbeelden, academische citatie voorbeelden, LaTeX bibliografie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis BIB voorbeeldbestanden - Download bibliografie testbestanden voor academisch onderzoek',
+          description: 'Download gratis BIB bibliografie voorbeeldbestanden om bibliografie beheer en citatie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BibTeX formaat verwerking, referentie managers, citatie generators, academisch schrijven tools en LaTeX bibliografie integratie.'
+        },
+        hero: {
+          title: 'BIB voorbeeldbestanden',
+          description: 'Download gratis BIB bibliografie voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw bibliografie beheertools, BibTeX processors en citatie verwerking applicaties te testen.'
+        },
+        about_description: 'Dit zijn BIB (Bibliography) bestanden in verschillende formaten voor testdoeleinden'
+      },
+      c: {
+        meta: {
+          title: 'Gratis C voorbeeldbestanden downloaden - C programmeertaal testbestanden voor ontwikkeling | MorphyHub',
+          description: 'Download gratis C broncode voorbeeldbestanden om C code compilatie en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C compilers, syntax checkers, code analyzers, GCC toolchain, embedded C ontwikkeling en systeem programmeertools.',
+          keywords: 'C voorbeeldbestanden, C testbestanden, C voorbeelden downloaden, gratis C testbestanden, C broncode voorbeelden, C programmeer bestanden, .c testbestanden, C compilatie testbestanden, GCC testbestanden, embedded C voorbeelden, systeem programmering voorbeelden'
+        },
+        schema: {
+          name: 'Gratis C voorbeeldbestanden - Download C programmeertaal testbestanden voor ontwikkeling',
+          description: 'Download gratis C broncode voorbeeldbestanden om C code compilatie en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C compilers, syntax checkers, code analyzers, GCC toolchain, embedded C ontwikkeling en systeem programmeertools.'
+        },
+        hero: {
+          title: 'C voorbeeldbestanden',
+          description: 'Download gratis C C broncode voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw C code compilatie tools, C syntax checkers en C ontwikkeling applicaties te testen.'
+        },
+        about_description: 'Dit zijn C broncode bestanden in verschillende formaten voor testdoeleinden'
+      },
+      'can-log': {
+        meta: {
+          title: 'Gratis CAN Log voorbeeldbestanden downloaden - Controller Area Network testbestanden voor automobiel | MorphyHub',
+          description: 'Download gratis CAN Log voorbeeldbestanden om CAN bus analyse en automobiel diagnostiek tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAN bus analyzers, automobiel diagnostiek tools, voertuig netwerk protocollen, OBD-II tests en embedded automobiel systemen.',
+          keywords: 'CAN Log voorbeeldbestanden, CAN Log testbestanden, CAN Log voorbeelden downloaden, gratis CAN Log testbestanden, Controller Area Network voorbeelden, CAN bus voorbeelden, .log testbestanden, automobiel diagnostiek voorbeelden, OBD-II testbestanden, voertuig netwerk voorbeelden, CAN bus analyzer test'
+        },
+        schema: {
+          name: 'Gratis CAN Log voorbeeldbestanden - Download Controller Area Network testbestanden voor automobiel',
+          description: 'Download gratis CAN Log voorbeeldbestanden om CAN bus analyse en automobiel diagnostiek tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAN bus analyzers, automobiel diagnostiek tools, voertuig netwerk protocollen, OBD-II tests en embedded automobiel systemen.'
+        },
+        hero: {
+          title: 'CAN Log voorbeeldbestanden',
+          description: 'Download gratis CAN Log Controller Area Network log bestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw CAN bus analyse tools, automobiel diagnostiek software en netwerk protocol applicaties te testen.'
+        },
+        about_description: 'Dit zijn CAN Log (Controller Area Network) log bestanden in verschillende formaten voor testdoeleinden'
+      },
+      cmd: {
+        meta: {
+          title: 'Gratis CMD voorbeeldbestanden downloaden - Windows opdracht script testbestanden voor automatisering | MorphyHub',
+          description: 'Download gratis CMD Windows opdracht script voorbeeldbestanden om batch script uitvoering en Windows automatisering tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Windows opdrachtprompt, batch bestand uitvoering, script automatisering, systeembeheer en Windows taak planning tools.',
+          keywords: 'CMD voorbeeldbestanden, CMD testbestanden, CMD voorbeelden downloaden, gratis CMD testbestanden, Windows opdracht script voorbeelden, batch script voorbeelden, .cmd testbestanden, opdracht script voorbeelden, Windows automatisering voorbeelden, systeembeheer voorbeelden'
+        },
+        schema: {
+          name: 'Gratis CMD voorbeeldbestanden - Download Windows opdracht script testbestanden voor automatisering',
+          description: 'Download gratis CMD Windows opdracht script voorbeeldbestanden om batch script uitvoering en Windows automatisering tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Windows opdrachtprompt, batch bestand uitvoering, script automatisering, systeembeheer en Windows taak planning tools.'
+        },
+        hero: {
+          title: 'CMD voorbeeldbestanden',
+          description: 'Download gratis CMD Windows opdracht script voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw batch script uitvoeringstools, Windows opdracht verwerking software en automatisering applicaties te testen.'
+        },
+        about_description: 'Dit zijn CMD (Windows Command Script) bestanden in verschillende formaten voor testdoeleinden'
+      },
+      conf: {
+        meta: {
+          title: 'Gratis CONF voorbeeldbestanden downloaden - Configuratie testbestanden voor systeem configuratie | MorphyHub',
+          description: 'Download gratis CONF configuratie voorbeeldbestanden om configuratiebestand parsing en systeem configuratie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van server configuratie, applicatie instellingen, configuratiebestand validators, systeembeheer tools en software implementatie utilities.',
+          keywords: 'CONF voorbeeldbestanden, CONF testbestanden, CONF voorbeelden downloaden, gratis CONF testbestanden, configuratiebestand voorbeelden, server configuratie voorbeelden, .conf testbestanden, configuratiebestand voorbeelden, systeem configuratie voorbeelden, applicatie instellingen voorbeelden'
+        },
+        schema: {
+          name: 'Gratis CONF voorbeeldbestanden - Download configuratie testbestanden voor systeem configuratie',
+          description: 'Download gratis CONF configuratie voorbeeldbestanden om configuratiebestand parsing en systeem configuratie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van server configuratie, applicatie instellingen, configuratiebestand validators, systeembeheer tools en software implementatie utilities.'
+        },
+        hero: {
+          title: 'CONF voorbeeldbestanden',
+          description: 'Download gratis CONF configuratie voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw configuratiebestand parsing tools, server configuratie software en applicatie instellingen applicaties te testen.'
+        },
+        about_description: 'Dit zijn CONF configuratie bestanden in verschillende formaten voor testdoeleinden'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Gratis Config INI voorbeeldbestanden downloaden - INI configuratie testbestanden voor applicaties | MorphyHub',
+          description: 'Download gratis Config INI INI configuratie voorbeeldbestanden om INI bestand parsing en configuratie beheer tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van INI parsers, applicatie configuratie, instellingen beheer, Windows INI bestanden en software configuratie utilities.',
+          keywords: 'Config INI voorbeeldbestanden, INI testbestanden, INI voorbeelden downloaden, gratis INI testbestanden, INI configuratie voorbeelden, INI configuratie voorbeelden, .ini testbestanden, configuratiebestand voorbeelden, Windows INI voorbeelden, applicatie instellingen voorbeelden'
+        },
+        schema: {
+          name: 'Gratis Config INI voorbeeldbestanden - Download INI configuratie testbestanden voor applicaties',
+          description: 'Download gratis Config INI INI configuratie voorbeeldbestanden om INI bestand parsing en configuratie beheer tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van INI parsers, applicatie configuratie, instellingen beheer, Windows INI bestanden en software configuratie utilities.'
+        },
+        hero: {
+          title: 'Config INI voorbeeldbestanden',
+          description: 'Download gratis Config INI INI configuratie voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw INI bestand parsing tools, configuratie beheer software en applicatie instellingen applicaties te testen.'
+        },
+        about_description: 'Dit zijn Config INI configuratie bestanden in verschillende formaten voor testdoeleinden'
+      },
+      cpp: {
+        meta: {
+          title: 'Gratis CPP voorbeeldbestanden downloaden - C++ programmeertaal testbestanden voor ontwikkeling | MorphyHub',
+          description: 'Download gratis CPP C++ broncode voorbeeldbestanden om C++ code compilatie en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C++ compilers, syntax checkers, code analyzers, GCC/G++ toolchain, moderne C++ functies en objectgeoriënteerde programmeertools.',
+          keywords: 'CPP voorbeeldbestanden, CPP testbestanden, CPP voorbeelden downloaden, gratis CPP testbestanden, C++ broncode voorbeelden, C++ code bestanden, .cpp testbestanden, C++ programmeer bestanden, C++ compilatie testbestanden, GCC testbestanden, moderne C++ voorbeelden'
+        },
+        schema: {
+          name: 'Gratis CPP voorbeeldbestanden - Download C++ programmeertaal testbestanden voor ontwikkeling',
+          description: 'Download gratis CPP C++ broncode voorbeeldbestanden om C++ code compilatie en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C++ compilers, syntax checkers, code analyzers, GCC/G++ toolchain, moderne C++ functies en objectgeoriënteerde programmeertools.'
+        },
+        hero: {
+          title: 'CPP voorbeeldbestanden',
+          description: 'Download gratis CPP C++ broncode voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw C++ code compilatie tools, C++ syntax checkers en C++ ontwikkeling applicaties te testen.'
+        },
+        about_description: 'Dit zijn C++ broncode bestanden in verschillende formaten voor testdoeleinden'
+      },
+      h: {
+        meta: {
+          title: 'Gratis H voorbeeldbestanden downloaden - C/C++ header bestand testbestanden voor programmering | MorphyHub',
+          description: 'Download gratis H C/C++ header bestand voorbeeldbestanden om header bestand verwerking en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C/C++ compilers, header bestand inclusie, preprocessor tools, code organisatie en cross-platform ontwikkeling utilities.',
+          keywords: 'H voorbeeldbestanden, H testbestanden, H voorbeelden downloaden, gratis H testbestanden, C header voorbeelden, C++ header voorbeelden, header bestand voorbeelden, .h testbestanden, C/C++ header bestanden, programmeer header voorbeelden, code header bestanden'
+        },
+        schema: {
+          name: 'Gratis H voorbeeldbestanden - Download C/C++ header bestand testbestanden voor programmering',
+          description: 'Download gratis H C/C++ header bestand voorbeeldbestanden om header bestand verwerking en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C/C++ compilers, header bestand inclusie, preprocessor tools, code organisatie en cross-platform ontwikkeling utilities.'
+        },
+        hero: {
+          title: 'H voorbeeldbestanden',
+          description: 'Download gratis H C/C++ header bestand voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw C/C++ code compilatie tools, header bestand verwerking software en ontwikkeling applicaties te testen.'
+        },
+        about_description: 'Dit zijn H (C/C++ header) bestanden in verschillende formaten voor testdoeleinden'
+      },
+      hpp: {
+        meta: {
+          title: 'Gratis HPP voorbeeldbestanden downloaden - C++ header bestand testbestanden voor moderne C++ ontwikkeling | MorphyHub',
+          description: 'Download gratis HPP C++ header bestand voorbeeldbestanden om C++ header bestand verwerking en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C++ compilers, header-only bibliotheken, template metaprogrammering, moderne C++ functies en geavanceerde C++ ontwikkeling utilities.',
+          keywords: 'HPP voorbeeldbestanden, HPP testbestanden, HPP voorbeelden downloaden, gratis HPP testbestanden, C++ header voorbeelden, header bestand voorbeelden, .hpp testbestanden, C++ header bestanden, programmeer header voorbeelden, code header bestanden, C++ ontwikkeling bestanden, moderne C++ header voorbeelden'
+        },
+        schema: {
+          name: 'Gratis HPP voorbeeldbestanden - Download C++ header bestand testbestanden voor moderne C++ ontwikkeling',
+          description: 'Download gratis HPP C++ header bestand voorbeeldbestanden om C++ header bestand verwerking en ontwikkelingstools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van C++ compilers, header-only bibliotheken, template metaprogrammering, moderne C++ functies en geavanceerde C++ ontwikkeling utilities.'
+        },
+        hero: {
+          title: 'HPP voorbeeldbestanden',
+          description: 'Download gratis HPP C++ header bestand voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw C++ code compilatie tools, header bestand verwerking software en C++ ontwikkeling applicaties te testen.'
+        },
+        about_description: 'Dit zijn HPP (C++ header) bestanden in verschillende formaten voor testdoeleinden'
       }
     }
   }

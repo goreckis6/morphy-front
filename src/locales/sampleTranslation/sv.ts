@@ -271,6 +271,214 @@ export const sv: SamplePageTranslations = {
           description: 'Ladda ner gratis Ansible YML-konfigurationsexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina YAML-parsingverktyg, Ansible playbook-validadorer, konfigurationshanteringssystem och DevOps-automatiseringsapplikationer.'
         },
         about_description: 'Detta är Ansible YML-testfiler i olika storlekar för teständamål'
+      },
+      'api-response-json': {
+        meta: {
+          title: 'Ladda ner gratis API Response JSON-exempelfiler - JSON-testfiler för API-utveckling | MorphyHub',
+          description: 'Ladda ner gratis API Response JSON-exempelfiler för att testa JSON-parsing, API-integration och webbutvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa REST API-svar, JSON-validadorer, API-mocking, webhook-tester och bearbetning av datautbytesformat.',
+          keywords: 'API Response JSON-exempelfiler, JSON-testfiler, ladda ner JSON-exempel, gratis JSON-testfiler, API-svarsexempel, JSON-parsing-exempel, REST API-testfiler, JSON-validadortest, API-mocking-exempel, webhook-testfiler, .json testfiler, webb-API-exempel, datautbytesformatexempel'
+        },
+        schema: {
+          name: 'Gratis API Response JSON-exempelfiler - Ladda ner JSON-testfiler för API-utveckling',
+          description: 'Ladda ner gratis API Response JSON-exempelfiler för att testa JSON-parsing, API-integration och webbutvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa REST API-svar, JSON-validadorer, API-mocking, webhook-tester och bearbetning av datautbytesformat.'
+        },
+        hero: {
+          title: 'API Response JSON-exempelfiler',
+          description: 'Ladda ner gratis API Response JSON-exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina JSON-parsingverktyg, API-svarhanterare, REST API-validadorer och webbutvecklingsapplikationer.'
+        },
+        about_description: 'Detta är API Response JSON-testfiler i olika storlekar för teständamål'
+      },
+      'arduino-ino': {
+        meta: {
+          title: 'Ladda ner gratis Arduino INO-exempelfiler - Arduino Sketch-testfiler för embedded-utveckling | MorphyHub',
+          description: 'Ladda ner gratis Arduino INO-exempelfiler för att testa Arduino sketch-kompilering och embedded-programmeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Arduino IDE, sketch-validering, mikrokontrollerprogrammering, embedded-systemutveckling och IoT-enhetstester.',
+          keywords: 'Arduino INO-exempelfiler, Arduino INO-testfiler, ladda ner Arduino INO-exempel, gratis Arduino INO-testfiler, Arduino sketch-exempel, embedded-kod-exempel, Arduino IDE-testfiler, .ino testfiler, mikrokontroller-exempel, IoT-utvecklingsexempel, embedded-programmeringsexempel'
+        },
+        schema: {
+          name: 'Gratis Arduino INO-exempelfiler - Ladda ner Arduino Sketch-testfiler för embedded-utveckling',
+          description: 'Ladda ner gratis Arduino INO-exempelfiler för att testa Arduino sketch-kompilering och embedded-programmeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Arduino IDE, sketch-validering, mikrokontrollerprogrammering, embedded-systemutveckling och IoT-enhetstester.'
+        },
+        hero: {
+          title: 'Arduino INO-exempelfiler',
+          description: 'Ladda ner gratis Arduino INO Arduino sketch-källkodsfiler för testning. Flera filstorlekar tillgängliga för att testa dina Arduino-utvecklingsverktyg, sketch-kompileringsprogram och embedded-programmeringsapplikationer.'
+        },
+        about_description: 'Detta är Arduino INO (Arduino Sketch) källkodsfiler i olika storlekar för teständamål'
+      },
+      bat: {
+        meta: {
+          title: 'Ladda ner gratis BAT-exempelfiler - Batch-skript-testfiler för Windows-automatisering | MorphyHub',
+          description: 'Ladda ner gratis BAT batch-skript-exempelfiler för att testa Windows-automatisering och kommandoradbearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa batch-skriptkörning, Windows-uppgiftsautomatisering, kommandoradverktyg, skriptvalidadorer och systemadministrationsverktyg.',
+          keywords: 'BAT-exempelfiler, BAT-testfiler, ladda ner BAT-exempel, gratis BAT-testfiler, batch-skript-exempel, Windows batch-filer, automationsskript-exempel, .bat testfiler, kommandoradskript-exempel, Windows-automatiseringsexempel, skriptkörningstestfiler'
+        },
+        schema: {
+          name: 'Gratis BAT-exempelfiler - Ladda ner batch-skript-testfiler för Windows-automatisering',
+          description: 'Ladda ner gratis BAT batch-skript-exempelfiler för att testa Windows-automatisering och kommandoradbearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa batch-skriptkörning, Windows-uppgiftsautomatisering, kommandoradverktyg, skriptvalidadorer och systemadministrationsverktyg.'
+        },
+        hero: {
+          title: 'BAT-exempelfiler',
+          description: 'Ladda ner gratis BAT batch-skript-exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina batch-skriptkörningsverktyg, Windows-automatiseringsprogram och kommandoradbearbetningsapplikationer.'
+        },
+        about_description: 'Detta är BAT (Batch) skriptfiler i olika storlekar för teständamål'
+      },
+      asc: {
+        meta: {
+          title: 'Ladda ner gratis ASC-exempelfiler - ASCII-text-testfiler för textbearbetning | MorphyHub',
+          description: 'Ladda ner gratis ASC ASCII-text-exempelfiler för att testa textbearbetnings- och kodningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ASCII-kodning, textfilparsing, textredigerare, teckenkodningsvalidering och textformatskonverteringsverktyg.',
+          keywords: 'ASC-exempelfiler, ASC-testfiler, ladda ner ASC-exempel, gratis ASC-testfiler, ASCII-text-exempel, ren text-exempel, .asc testfiler, textformatexempel, ASCII-kodningstestfiler, textbearbetningsexempel, teckenkodningsexempel'
+        },
+        schema: {
+          name: 'Gratis ASC-exempelfiler - Ladda ner ASCII-text-testfiler för textbearbetning',
+          description: 'Ladda ner gratis ASC ASCII-text-exempelfiler för att testa textbearbetnings- och kodningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ASCII-kodning, textfilparsing, textredigerare, teckenkodningsvalidering och textformatskonverteringsverktyg.'
+        },
+        hero: {
+          title: 'ASC-exempelfiler',
+          description: 'Ladda ner gratis ASC ASCII-text-exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina textbearbetningsverktyg, ASCII-kodningsprogram och ren textfilhanteringsapplikationer.'
+        },
+        about_description: 'Detta är ASC (ASCII Text) filer i olika storlekar för teständamål'
+      },
+      bib: {
+        meta: {
+          title: 'Ladda ner gratis BIB-exempelfiler - Bibliografitestfiler för akademisk forskning | MorphyHub',
+          description: 'Ladda ner gratis BIB-bibliografiexempelfiler för att testa bibliografihanterings- och citeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BibTeX-formatsbearbetning, referenshanterare, citatgeneratorer, akademiska skrivverktyg och LaTeX-bibliografiintegration.',
+          keywords: 'BIB-exempelfiler, BIB-testfiler, ladda ner BIB-exempel, gratis BIB-testfiler, bibliografiexempel, BibTeX-filer, citatexempel, .bib testfiler, referenshanteringsexempel, akademiska citatexempel, LaTeX-bibliografiexempel'
+        },
+        schema: {
+          name: 'Gratis BIB-exempelfiler - Ladda ner bibliografitestfiler för akademisk forskning',
+          description: 'Ladda ner gratis BIB-bibliografiexempelfiler för att testa bibliografihanterings- och citeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BibTeX-formatsbearbetning, referenshanterare, citatgeneratorer, akademiska skrivverktyg och LaTeX-bibliografiintegration.'
+        },
+        hero: {
+          title: 'BIB-exempelfiler',
+          description: 'Ladda ner gratis BIB-bibliografiexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina bibliografihanteringsverktyg, BibTeX-processorer och citathanteringsapplikationer.'
+        },
+        about_description: 'Detta är BIB (Bibliography) filer i olika storlekar för teständamål'
+      },
+      c: {
+        meta: {
+          title: 'Ladda ner gratis C-exempelfiler - C-programmeringsspråkstestfiler för utveckling | MorphyHub',
+          description: 'Ladda ner gratis C-källkodsexempelfiler för att testa C-kodkompilering och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C-kompilatorer, syntaxkontrollverktyg, kodanalysatorer, GCC-verktygskedja, embedded C-utveckling och systemprogrammeringsverktyg.',
+          keywords: 'C-exempelfiler, C-testfiler, ladda ner C-exempel, gratis C-testfiler, C-källkodsexempel, C-programmeringsfiler, .c testfiler, C-kompileringstestfiler, GCC-testfiler, embedded C-exempel, systemprogrammeringsexempel'
+        },
+        schema: {
+          name: 'Gratis C-exempelfiler - Ladda ner C-programmeringsspråkstestfiler för utveckling',
+          description: 'Ladda ner gratis C-källkodsexempelfiler för att testa C-kodkompilering och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C-kompilatorer, syntaxkontrollverktyg, kodanalysatorer, GCC-verktygskedja, embedded C-utveckling och systemprogrammeringsverktyg.'
+        },
+        hero: {
+          title: 'C-exempelfiler',
+          description: 'Ladda ner gratis C C-källkodsexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina C-kodkompileringsverktyg, C-syntaxkontrollverktyg och C-utvecklingsapplikationer.'
+        },
+        about_description: 'Detta är C-källkodsfiler i olika storlekar för teständamål'
+      },
+      'can-log': {
+        meta: {
+          title: 'Ladda ner gratis CAN Log-exempelfiler - Controller Area Network-testfiler för bilindustri | MorphyHub',
+          description: 'Ladda ner gratis CAN Log-exempelfiler för att testa CAN-bussanalys och bilindustridiagnostikverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAN-bussanalysatorer, bilindustridiagnostikverktyg, fordonets nätverksprotokoll, OBD-II-tester och embedded bilindustrisystem.',
+          keywords: 'CAN Log-exempelfiler, CAN Log-testfiler, ladda ner CAN Log-exempel, gratis CAN Log-testfiler, Controller Area Network-exempel, CAN-bussexempel, .log testfiler, bilindustridiagnostikexempel, OBD-II-testfiler, fordonets nätverksexempel, CAN-bussanalysatortest'
+        },
+        schema: {
+          name: 'Gratis CAN Log-exempelfiler - Ladda ner Controller Area Network-testfiler för bilindustri',
+          description: 'Ladda ner gratis CAN Log-exempelfiler för att testa CAN-bussanalys och bilindustridiagnostikverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAN-bussanalysatorer, bilindustridiagnostikverktyg, fordonets nätverksprotokoll, OBD-II-tester och embedded bilindustrisystem.'
+        },
+        hero: {
+          title: 'CAN Log-exempelfiler',
+          description: 'Ladda ner gratis CAN Log Controller Area Network-loggfiler för testning. Flera filstorlekar tillgängliga för att testa dina CAN-bussanalysverktyg, bilindustridiagnostikprogram och nätverksprotokollapplikationer.'
+        },
+        about_description: 'Detta är CAN Log (Controller Area Network) loggfiler i olika storlekar för teständamål'
+      },
+      cmd: {
+        meta: {
+          title: 'Ladda ner gratis CMD-exempelfiler - Windows-kommandoskript-testfiler för automatisering | MorphyHub',
+          description: 'Ladda ner gratis CMD Windows-kommandoskript-exempelfiler för att testa batch-skriptkörning och Windows-automatiseringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Windows-kommandotolken, batch-filkörning, skriptautomatisering, systemadministration och Windows-uppgiftsplaneringsverktyg.',
+          keywords: 'CMD-exempelfiler, CMD-testfiler, ladda ner CMD-exempel, gratis CMD-testfiler, Windows-kommandoskript-exempel, batch-skript-exempel, .cmd testfiler, kommandoskript-exempel, Windows-automatiseringsexempel, systemadministrationsexempel'
+        },
+        schema: {
+          name: 'Gratis CMD-exempelfiler - Ladda ner Windows-kommandoskript-testfiler för automatisering',
+          description: 'Ladda ner gratis CMD Windows-kommandoskript-exempelfiler för att testa batch-skriptkörning och Windows-automatiseringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Windows-kommandotolken, batch-filkörning, skriptautomatisering, systemadministration och Windows-uppgiftsplaneringsverktyg.'
+        },
+        hero: {
+          title: 'CMD-exempelfiler',
+          description: 'Ladda ner gratis CMD Windows-kommandoskript-exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina batch-skriptkörningsverktyg, Windows-kommandobearbetningsprogram och automatiseringsapplikationer.'
+        },
+        about_description: 'Detta är CMD (Windows Command Script) filer i olika storlekar för teständamål'
+      },
+      conf: {
+        meta: {
+          title: 'Ladda ner gratis CONF-exempelfiler - Konfigurationsfil-testfiler för systemkonfiguration | MorphyHub',
+          description: 'Ladda ner gratis CONF-konfigurationsexempelfiler för att testa konfigurationsfilparsing och systemkonfigurationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa serverkonfiguration, applikationsinställningar, konfigurationsfilvalidadorer, systemadministrationsverktyg och programvarudistributionsverktyg.',
+          keywords: 'CONF-exempelfiler, CONF-testfiler, ladda ner CONF-exempel, gratis CONF-testfiler, konfigurationsfilexempel, serverkonfigurationsexempel, .conf testfiler, konfigurationsfilexempel, systemkonfigurationsexempel, applikationsinställningsexempel'
+        },
+        schema: {
+          name: 'Gratis CONF-exempelfiler - Ladda ner konfigurationsfil-testfiler för systemkonfiguration',
+          description: 'Ladda ner gratis CONF-konfigurationsexempelfiler för att testa konfigurationsfilparsing och systemkonfigurationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa serverkonfiguration, applikationsinställningar, konfigurationsfilvalidadorer, systemadministrationsverktyg och programvarudistributionsverktyg.'
+        },
+        hero: {
+          title: 'CONF-exempelfiler',
+          description: 'Ladda ner gratis CONF-konfigurationsexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina konfigurationsfilparsingverktyg, serverkonfigurationsprogram och applikationsinställningsapplikationer.'
+        },
+        about_description: 'Detta är CONF-konfigurationsfiler i olika storlekar för teständamål'
+      },
+      'config-ini': {
+        meta: {
+          title: 'Ladda ner gratis Config INI-exempelfiler - INI-konfigurationstestfiler för applikationer | MorphyHub',
+          description: 'Ladda ner gratis Config INI INI-konfigurationsexempelfiler för att testa INI-filparsing och konfigurationshanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa INI-parsers, applikationskonfiguration, inställningshantering, Windows INI-filer och programvarukonfigurationsverktyg.',
+          keywords: 'Config INI-exempelfiler, INI-testfiler, ladda ner INI-exempel, gratis INI-testfiler, INI-konfigurationsexempel, INI-konfigurationsexempel, .ini testfiler, konfigurationsfilexempel, Windows INI-exempel, applikationsinställningsexempel'
+        },
+        schema: {
+          name: 'Gratis Config INI-exempelfiler - Ladda ner INI-konfigurationstestfiler för applikationer',
+          description: 'Ladda ner gratis Config INI INI-konfigurationsexempelfiler för att testa INI-filparsing och konfigurationshanteringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa INI-parsers, applikationskonfiguration, inställningshantering, Windows INI-filer och programvarukonfigurationsverktyg.'
+        },
+        hero: {
+          title: 'Config INI-exempelfiler',
+          description: 'Ladda ner gratis Config INI INI-konfigurationsexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina INI-filparsingverktyg, konfigurationshanteringsprogram och applikationsinställningsapplikationer.'
+        },
+        about_description: 'Detta är Config INI-konfigurationsfiler i olika storlekar för teständamål'
+      },
+      cpp: {
+        meta: {
+          title: 'Ladda ner gratis CPP-exempelfiler - C++-programmeringsspråkstestfiler för utveckling | MorphyHub',
+          description: 'Ladda ner gratis CPP C++-källkodsexempelfiler för att testa C++-kodkompilering och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C++-kompilatorer, syntaxkontrollverktyg, kodanalysatorer, GCC/G++-verktygskedja, moderna C++-funktioner och objektorienterade programmeringsverktyg.',
+          keywords: 'CPP-exempelfiler, CPP-testfiler, ladda ner CPP-exempel, gratis CPP-testfiler, C++-källkodsexempel, C++-kodfiler, .cpp testfiler, C++-programmeringsfiler, C++-kompileringsstestfiler, GCC-testfiler, moderna C++-exempel'
+        },
+        schema: {
+          name: 'Gratis CPP-exempelfiler - Ladda ner C++-programmeringsspråkstestfiler för utveckling',
+          description: 'Ladda ner gratis CPP C++-källkodsexempelfiler för att testa C++-kodkompilering och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C++-kompilatorer, syntaxkontrollverktyg, kodanalysatorer, GCC/G++-verktygskedja, moderna C++-funktioner och objektorienterade programmeringsverktyg.'
+        },
+        hero: {
+          title: 'CPP-exempelfiler',
+          description: 'Ladda ner gratis CPP C++-källkodsexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina C++-kodkompileringsverktyg, C++-syntaxkontrollverktyg och C++-utvecklingsapplikationer.'
+        },
+        about_description: 'Detta är C++-källkodsfiler i olika storlekar för teständamål'
+      },
+      h: {
+        meta: {
+          title: 'Ladda ner gratis H-exempelfiler - C/C++-headerfil-testfiler för programmering | MorphyHub',
+          description: 'Ladda ner gratis H C/C++-headerfilexempelfiler för att testa headerfilbearbetning och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C/C++-kompilatorer, headerfilinkludering, preprocesserverktyg, kodorganisation och plattformsoberoende utvecklingsverktyg.',
+          keywords: 'H-exempelfiler, H-testfiler, ladda ner H-exempel, gratis H-testfiler, C-header-exempel, C++-header-exempel, headerfilexempel, .h testfiler, C/C++-headerfiler, programmeringsheader-exempel, kodheaderfiler'
+        },
+        schema: {
+          name: 'Gratis H-exempelfiler - Ladda ner C/C++-headerfil-testfiler för programmering',
+          description: 'Ladda ner gratis H C/C++-headerfilexempelfiler för att testa headerfilbearbetning och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C/C++-kompilatorer, headerfilinkludering, preprocesserverktyg, kodorganisation och plattformsoberoende utvecklingsverktyg.'
+        },
+        hero: {
+          title: 'H-exempelfiler',
+          description: 'Ladda ner gratis H C/C++-headerfilexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina C/C++-kodkompileringsverktyg, headerfilbearbetningsprogram och utvecklingsapplikationer.'
+        },
+        about_description: 'Detta är H (C/C++ header) filer i olika storlekar för teständamål'
+      },
+      hpp: {
+        meta: {
+          title: 'Ladda ner gratis HPP-exempelfiler - C++-headerfil-testfiler för modern C++-utveckling | MorphyHub',
+          description: 'Ladda ner gratis HPP C++-headerfilexempelfiler för att testa C++-headerfilbearbetning och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C++-kompilatorer, header-only-bibliotek, mallmetaprogrammering, moderna C++-funktioner och avancerade C++-utvecklingsverktyg.',
+          keywords: 'HPP-exempelfiler, HPP-testfiler, ladda ner HPP-exempel, gratis HPP-testfiler, C++-header-exempel, headerfilexempel, .hpp testfiler, C++-headerfiler, programmeringsheader-exempel, kodheaderfiler, C++-utvecklingsfiler, moderna C++-header-exempel'
+        },
+        schema: {
+          name: 'Gratis HPP-exempelfiler - Ladda ner C++-headerfil-testfiler för modern C++-utveckling',
+          description: 'Ladda ner gratis HPP C++-headerfilexempelfiler för att testa C++-headerfilbearbetning och utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa C++-kompilatorer, header-only-bibliotek, mallmetaprogrammering, moderna C++-funktioner och avancerade C++-utvecklingsverktyg.'
+        },
+        hero: {
+          title: 'HPP-exempelfiler',
+          description: 'Ladda ner gratis HPP C++-headerfilexempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina C++-kodkompileringsverktyg, headerfilbearbetningsprogram och C++-utvecklingsapplikationer.'
+        },
+        about_description: 'Detta är HPP (C++ header) filer i olika storlekar för teständamål'
       }
     }
   }

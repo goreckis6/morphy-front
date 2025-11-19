@@ -1400,6 +1400,19 @@ function App() {
         <Route path="/id/samples/sample-html" element={<SampleHtml />} />
         <Route path="/id/samples/sample-ods" element={<SampleOds />} />
         <Route path="/id/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/id/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/id/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/id/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/id/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/id/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/id/samples/sample-c" element={<SampleC />} />
+        <Route path="/id/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/id/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/id/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/id/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/id/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/id/samples/sample-h" element={<SampleH />} />
+        <Route path="/id/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Svenska (SV) Sample Files Routes */}
         <Route path="/sv/samples/sample-docx" element={<SampleDocx />} />
@@ -1417,6 +1430,19 @@ function App() {
         <Route path="/sv/samples/sample-html" element={<SampleHtml />} />
         <Route path="/sv/samples/sample-ods" element={<SampleOds />} />
         <Route path="/sv/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/sv/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/sv/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/sv/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/sv/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/sv/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/sv/samples/sample-c" element={<SampleC />} />
+        <Route path="/sv/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/sv/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/sv/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/sv/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/sv/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/sv/samples/sample-h" element={<SampleH />} />
+        <Route path="/sv/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Español (ES) Sample Files Routes */}
         <Route path="/es/samples/sample-docx" element={<SampleDocx />} />
@@ -1434,6 +1460,19 @@ function App() {
         <Route path="/es/samples/sample-html" element={<SampleHtml />} />
         <Route path="/es/samples/sample-ods" element={<SampleOds />} />
         <Route path="/es/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/es/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/es/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/es/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/es/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/es/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/es/samples/sample-c" element={<SampleC />} />
+        <Route path="/es/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/es/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/es/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/es/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/es/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/es/samples/sample-h" element={<SampleH />} />
+        <Route path="/es/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Français (FR) Sample Files Routes */}
         <Route path="/fr/samples/sample-docx" element={<SampleDocx />} />
@@ -1451,6 +1490,19 @@ function App() {
         <Route path="/fr/samples/sample-html" element={<SampleHtml />} />
         <Route path="/fr/samples/sample-ods" element={<SampleOds />} />
         <Route path="/fr/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/fr/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/fr/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/fr/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/fr/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/fr/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/fr/samples/sample-c" element={<SampleC />} />
+        <Route path="/fr/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/fr/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/fr/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/fr/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/fr/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/fr/samples/sample-h" element={<SampleH />} />
+        <Route path="/fr/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Italiano (IT) Sample Files Routes */}
         <Route path="/it/samples/sample-docx" element={<SampleDocx />} />
@@ -1468,6 +1520,19 @@ function App() {
         <Route path="/it/samples/sample-html" element={<SampleHtml />} />
         <Route path="/it/samples/sample-ods" element={<SampleOds />} />
         <Route path="/it/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/it/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/it/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/it/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/it/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/it/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/it/samples/sample-c" element={<SampleC />} />
+        <Route path="/it/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/it/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/it/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/it/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/it/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/it/samples/sample-h" element={<SampleH />} />
+        <Route path="/it/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Nederlands (NL) Sample Files Routes */}
         <Route path="/nl/samples/sample-docx" element={<SampleDocx />} />
@@ -1485,6 +1550,19 @@ function App() {
         <Route path="/nl/samples/sample-html" element={<SampleHtml />} />
         <Route path="/nl/samples/sample-ods" element={<SampleOds />} />
         <Route path="/nl/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/nl/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/nl/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/nl/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/nl/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/nl/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/nl/samples/sample-c" element={<SampleC />} />
+        <Route path="/nl/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/nl/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/nl/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/nl/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/nl/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/nl/samples/sample-h" element={<SampleH />} />
+        <Route path="/nl/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Português (PT) Sample Files Routes */}
         <Route path="/pt/samples/sample-docx" element={<SampleDocx />} />
@@ -1502,6 +1580,19 @@ function App() {
         <Route path="/pt/samples/sample-html" element={<SampleHtml />} />
         <Route path="/pt/samples/sample-ods" element={<SampleOds />} />
         <Route path="/pt/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/pt/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/pt/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/pt/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/pt/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/pt/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/pt/samples/sample-c" element={<SampleC />} />
+        <Route path="/pt/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/pt/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/pt/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/pt/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/pt/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/pt/samples/sample-h" element={<SampleH />} />
+        <Route path="/pt/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Tiếng Việt (VI) Sample Files Routes */}
         <Route path="/vi/samples/sample-docx" element={<SampleDocx />} />
@@ -1519,6 +1610,19 @@ function App() {
         <Route path="/vi/samples/sample-html" element={<SampleHtml />} />
         <Route path="/vi/samples/sample-ods" element={<SampleOds />} />
         <Route path="/vi/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/vi/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/vi/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/vi/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/vi/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/vi/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/vi/samples/sample-c" element={<SampleC />} />
+        <Route path="/vi/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/vi/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/vi/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/vi/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/vi/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/vi/samples/sample-h" element={<SampleH />} />
+        <Route path="/vi/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Türkçe (TR) Sample Files Routes */}
         <Route path="/tr/samples/sample-docx" element={<SampleDocx />} />
@@ -1536,6 +1640,19 @@ function App() {
         <Route path="/tr/samples/sample-html" element={<SampleHtml />} />
         <Route path="/tr/samples/sample-ods" element={<SampleOds />} />
         <Route path="/tr/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/tr/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/tr/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/tr/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/tr/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/tr/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/tr/samples/sample-c" element={<SampleC />} />
+        <Route path="/tr/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/tr/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/tr/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/tr/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/tr/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/tr/samples/sample-h" element={<SampleH />} />
+        <Route path="/tr/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* Русский (RU) Sample Files Routes */}
         <Route path="/ru/samples/sample-docx" element={<SampleDocx />} />
@@ -1553,6 +1670,19 @@ function App() {
         <Route path="/ru/samples/sample-html" element={<SampleHtml />} />
         <Route path="/ru/samples/sample-ods" element={<SampleOds />} />
         <Route path="/ru/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/ru/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/ru/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/ru/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/ru/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/ru/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/ru/samples/sample-c" element={<SampleC />} />
+        <Route path="/ru/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/ru/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/ru/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/ru/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/ru/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/ru/samples/sample-h" element={<SampleH />} />
+        <Route path="/ru/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* العربية (AR) Sample Files Routes */}
         <Route path="/ar/samples/sample-docx" element={<SampleDocx />} />
@@ -1570,6 +1700,19 @@ function App() {
         <Route path="/ar/samples/sample-html" element={<SampleHtml />} />
         <Route path="/ar/samples/sample-ods" element={<SampleOds />} />
         <Route path="/ar/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/ar/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/ar/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/ar/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/ar/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/ar/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/ar/samples/sample-c" element={<SampleC />} />
+        <Route path="/ar/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/ar/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/ar/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/ar/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/ar/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/ar/samples/sample-h" element={<SampleH />} />
+        <Route path="/ar/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* ไทย (TH) Sample Files Routes */}
         <Route path="/th/samples/sample-docx" element={<SampleDocx />} />
@@ -1587,6 +1730,19 @@ function App() {
         <Route path="/th/samples/sample-html" element={<SampleHtml />} />
         <Route path="/th/samples/sample-ods" element={<SampleOds />} />
         <Route path="/th/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/th/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/th/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/th/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/th/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/th/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/th/samples/sample-c" element={<SampleC />} />
+        <Route path="/th/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/th/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/th/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/th/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/th/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/th/samples/sample-h" element={<SampleH />} />
+        <Route path="/th/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* 日本語 (JA) Sample Files Routes */}
         <Route path="/ja/samples/sample-docx" element={<SampleDocx />} />
@@ -1604,6 +1760,19 @@ function App() {
         <Route path="/ja/samples/sample-html" element={<SampleHtml />} />
         <Route path="/ja/samples/sample-ods" element={<SampleOds />} />
         <Route path="/ja/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/ja/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/ja/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/ja/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/ja/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/ja/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/ja/samples/sample-c" element={<SampleC />} />
+        <Route path="/ja/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/ja/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/ja/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/ja/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/ja/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/ja/samples/sample-h" element={<SampleH />} />
+        <Route path="/ja/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* 简体中文 (ZH) Sample Files Routes */}
         <Route path="/zh/samples/sample-docx" element={<SampleDocx />} />
@@ -1621,6 +1790,19 @@ function App() {
         <Route path="/zh/samples/sample-html" element={<SampleHtml />} />
         <Route path="/zh/samples/sample-ods" element={<SampleOds />} />
         <Route path="/zh/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
+        <Route path="/zh/samples/sample-api-response-json" element={<SampleApiResponseJson />} />
+        <Route path="/zh/samples/sample-arduino-ino" element={<SampleArduinoIno />} />
+        <Route path="/zh/samples/sample-bat" element={<SampleBat />} />
+        <Route path="/zh/samples/sample-asc" element={<SampleAsc />} />
+        <Route path="/zh/samples/sample-bib" element={<SampleBib />} />
+        <Route path="/zh/samples/sample-c" element={<SampleC />} />
+        <Route path="/zh/samples/sample-can-log" element={<SampleCanLog />} />
+        <Route path="/zh/samples/sample-cmd" element={<SampleCmd />} />
+        <Route path="/zh/samples/sample-conf" element={<SampleConf />} />
+        <Route path="/zh/samples/sample-config-ini" element={<SampleConfigIni />} />
+        <Route path="/zh/samples/sample-cpp" element={<SampleCpp />} />
+        <Route path="/zh/samples/sample-h" element={<SampleH />} />
+        <Route path="/zh/samples/sample-hpp" element={<SampleHpp />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />
