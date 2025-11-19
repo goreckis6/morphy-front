@@ -1945,9 +1945,6 @@ export const additionalTranslations = {
       'csv_to_parquet.start_converting': 'Mulai Mengonversi Sekarang',
       'csv_to_parquet.batch_conversion_complete': 'Konversi Batch Selesai',
 
-      // CSV to TOML
-      'csv_to_toml.title': 'Konverter CSV ke TOML',
-      'csv_to_toml.subtitle': 'Konversi file CSV ke format TOML untuk file konfigurasi.',
       // CSV to XML
       'csv_to_xml.title': 'Konverter CSV ke XML',
       'csv_to_xml.subtitle': 'Konversi file CSV ke format XML untuk pertukaran data terstruktur.',
@@ -6016,9 +6013,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertidor CSV a SQL',
       'csv_to_sql.subtitle': 'Convierte archivos CSV a declaraciones SQL para importación de bases de datos.',
-      // CSV to TOML
-      'csv_to_toml.title': 'Convertidor CSV a TOML',
-      'csv_to_toml.subtitle': 'Convierte archivos CSV al formato T intercambio de datos estructurados.',
       // CSV to YAML
       'csv_to_yaml.title': 'Convertidor CSV a YAML',
       'csv_to_yaml.subtitle': 'Convierte archivos CSV al formato YAML para configuración y datos estructurados.',
@@ -8050,9 +8044,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertisseur CSV vers SQL',
       'csv_to_sql.subtitle': 'Convertissez les fichiers CSV en instructions SQL pour l\'importation de bases de données.',
-      // CSV to TOML
-      'csv_to_toml.title': 'Convertisseur CSV vers TOML',
-      'csv_to_toml.subtitle': 'Convertissez les fichiers CSV au format TOML pour les fichiers de configuration.',
       // CSV to XML
       'csv_to_xml.title': 'Convertisseur CSV vers XML',
       'csv_to_xml.subtitle': 'Conveissez les fichiers CSV au format YAML pour la configuration et les données structurées.',
@@ -10084,9 +10075,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertitore CSV in SQL',
       'csv_to_sql.subtitle': 'Converti file CSV in istruzioni SQL per importazione database.',
-      // CSV to TOML
-      'csv_to_toml.title': 'Convertitore CSV in TOML',
-      'csv_to_toml.subtitle': 'Converti file CSV nel formato TOML per file di configurazione.',
       // CSV to XML
       'csv_to_xml.title': 'Convertitore CSV in XML',
       'csv_to_xml.subtitle': 'Converti file CSV nel formato XML per scambio dati strutturati.',
@@ -12119,9 +12107,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV naar SQL Converter',
       'csv_to_sql.subtitle': 'Converteer CSV-bestanden naar SQL-statements voor database-import.',
-      // CSV to TOML
-      'csv_to_toml.title': 'CSV naar TOML Converter',
-      'csv_to_toml.subtitle': 'Converteer CSV-bestanden naar TOML-formaat voor configuratiebestanden.',
       // CSV to XML
       'csv_to_xml.title': 'CSV naar XML Converter',
       'csv_to_xml.subtitle': 'Converteer CSV-bestanden naar XML-formaat voor gestructureerde gegevensuitwisseling.',
@@ -14102,9 +14087,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Conversor CSV para SQL',
       'csv_to_sql.subtitle': 'Converta arquivos CSV em instruções SQL para importação de banco de dados.',
-      // CSV to TOML
-      'csv_to_toml.title': 'Conversor CSV para TOML',
-      'csv_to_toml.subtitle': 'Converta arquivos CSV para o formato TOML para arquivos de configuração.',
       // CSV to XML
       'csv_to_xml.title': 'Conversor CSV para XML',
       'csv_to_xml.subtitle': 'Converta arquivos CSV para o formato XML para troca de dados estruturados.',
@@ -16032,9 +16014,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Chuyển Đổi CSV sang SQL',
       'csv_to_sql.subtitle': 'Chuyển đổi tệp CSV sang câu lệnh SQL để nhập cơ sở dữ liệu.',
-      // CSV to TOML
-      'csv_to_toml.title': 'Chuyển Đổi CSV sang TOML',
-      'csv_to_toml.subtitle': 'Chuyển đổi tệp CSV sang định dạng TOML cho tệp cấu hình.',
       // CSV to XML
       'csv_to_xml.title': 'Chuyển Đổi CSV sang XML',
       'csv_to_xml.subtitle': 'Chuyển đổi tệp CSV sang định dạng XML để trao đổi dữ liệu có cấu trúc.',
@@ -18036,9 +18015,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV\'den SQL\'e Dönüştürücü',
       'csv_to_sql.subtitle': 'CSV dosyalarını veritabanı içe aktarma için SQL ifadelerine dönüştürün.',
-      // CSV to TOML
-      'csv_to_toml.title': 'CSV\'den TOML\'ye Dönüştürücü',
-      'csv_to_toml.subtitle': 'CSV dosyalarını yapılandırma dosyaları için TOML formatına dönüştürün.',
       // CSV to XML
       'csv_to_xml.title': 'CSV\'den XML\'e Dönüştürücü',
       'csv_to_xml.subtitle': 'CSV dosyalarını yapılandırılmış veri değişimi için XML formatına dönüştürün.',
@@ -20019,9 +19995,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Конвертер CSV в SQL',
       'csv_to_sql.subtitle': 'Конвертируйте файлы CSV в SQL-запросы для импорта базы данных.',
-      // CSV to TOML
-      'csv_to_toml.title': 'Конвертер CSV в TOML',
-      'csv_to_toml.subtitle': 'Конвертируйте файлы CSV в формат TOML для файлов конфигурации.',
       // CSV to XML
       'csv_to_xml.title': 'Конвертер CSV в XML',
       'csv_to_xml.subtitle': 'Конвертируйте файлы CSV в формат XML для обмена структурированными данными.',
@@ -22004,9 +21977,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'محول CSV إلى SQL',
       'csv_to_sql.subtitle': 'قم بتحويل ملفات CSV إلى عبارات SQL لاستيراد قاعدة البيانات.',
-      // CSV to TOML
-      'csv_to_toml.title': 'محول CSV إلى TOML',
-      'csv_to_toml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق TOML لملفات التكوين.',
       // CSV to XML
       'csv_to_xml.title': 'محول CSV إلى XML',
       'csv_to_xml.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق XML لتبادل البيانات المهيكلة.',
@@ -23990,9 +23960,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'ตัวแปลง CSV เป็น SQL',
       'csv_to_sql.subtitle': 'แปลงไฟล์ CSV เป็นคำสั่ง SQL สำหรับการนำเข้าฐานข้อมูล',
-      // CSV to TOML
-      'csv_to_toml.title': 'ตัวแปลง CSV เป็น TOML',
-      'csv_to_toml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ TOML สำหรับไฟล์การกำหนดค่า',
       // CSV to XML
       'csv_to_xml.title': 'ตัวแปลง CSV เป็น XML',
       'csv_to_xml.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ XML สำหรับการแลกเปลี่ยนข้อมูลที่มีโครงสร้าง',
@@ -25974,9 +25941,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSVからSQLへのコンバーター',
       'csv_to_sql.subtitle': 'CSVファイルをデータベースインポート用のSQLステートメントに変換。',
-      // CSV to TOML
-      'csv_to_toml.title': 'CSVからTOMLへのコンバーター',
-      'csv_to_toml.subtitle': 'CSVファイルを設定ファイル用のTOML形式に変換。',
       // CSV to XML
       'csv_to_xml.title': 'CSVからXMLへのコンバーター',
       'csv_to_xml.subtitle': 'CSVファイルを構造化データ交換用のXML形式に変換。',
@@ -27957,9 +27921,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV转SQL转换器',
       'csv_to_sql.subtitle': '将CSV文件转换为SQL语句，用于数据库导入。',
-      // CSV to TOML
-      'csv_to_toml.title': 'CSV转TOML转换器',
-      'csv_to_toml.subtitle': '将CSV文件转换为TOML格式，用于配置文件。',
       // CSV to XML
       'csv_to_xml.title': 'CSV转XML转换器',
       'csv_to_xml.subtitle': '将CSV文件转换为XML格式，用于结构化数据交换。',
