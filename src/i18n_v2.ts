@@ -8023,8 +8023,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'Convertisseur CSV vers SQL',
       'csv_to_sql.subtitle': 'Convertissez les fichiers CSV en instructions SQL pour l\'importation de bases de données.',
-      // DNG to WebP
-      image RAW DNG au format WebP optimisé pour le web.',
       // EPS to WebP
       'eps_to_webp.title': 'Convertisseur EPS vers WebP',
       'eps_to_webp.subtitle': 'Convertissez les fichiers de graphiques vectoriels EPS au format WebP pour le web et les applications.',
