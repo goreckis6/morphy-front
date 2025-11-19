@@ -3,8 +3,7 @@ $ErrorActionPreference = 'Stop'
 $baseUrl = 'https://morphyhub.com'
 $today = Get-Date -Format 'yyyy-MM-dd'
 
-# All supported language codes (16 languages with prefixes + English as default = 17 total)
-# English (en) is the default language and doesn't use a prefix in URLs
+# All supported language codes
 $languages = @('pl', 'de', 'id', 'sv', 'es', 'fr', 'it', 'nl', 'pt', 'vi', 'tr', 'ru', 'ar', 'th', 'ja', 'zh')
 $languagePattern = '(' + ($languages -join '|') + ')'
 

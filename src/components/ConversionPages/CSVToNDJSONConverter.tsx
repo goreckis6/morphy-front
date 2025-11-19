@@ -203,24 +203,6 @@ export const CSVToNDJSONConverter: React.FC = () => {
         <title>{t('csv_to_ndjson.meta_title')}</title>
         <meta name="description" content={t('csv_to_ndjson.meta_description')} />
         <meta name="keywords" content="CSV to NDJSON, newline delimited JSON, streaming data, data processing, batch conversion" />
-        <link rel="canonical" href={`${window.location.origin}/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/csv-to-ndjson`} />
-        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/csv-to-ndjson`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <Header />

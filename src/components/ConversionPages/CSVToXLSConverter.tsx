@@ -68,24 +68,6 @@ export const CSVToXLSConverter: React.FC = () => {
         <title>{t('csv_to_xls.meta_title')}</title>
         <meta name="description" content={t('csv_to_xls.meta_description')} />
         <meta name="keywords" content="CSV to XLS, Excel converter, legacy Excel, spreadsheet conversion" />
-        <link rel="canonical" href={`${window.location.origin}/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="en" href={`${window.location.origin}/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="pl" href={`${window.location.origin}/pl/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="de" href={`${window.location.origin}/de/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="id" href={`${window.location.origin}/id/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="sv" href={`${window.location.origin}/sv/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="es" href={`${window.location.origin}/es/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="fr" href={`${window.location.origin}/fr/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="it" href={`${window.location.origin}/it/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="nl" href={`${window.location.origin}/nl/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="pt" href={`${window.location.origin}/pt/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="vi" href={`${window.location.origin}/vi/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="tr" href={`${window.location.origin}/tr/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="ru" href={`${window.location.origin}/ru/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="ar" href={`${window.location.origin}/ar/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="th" href={`${window.location.origin}/th/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="ja" href={`${window.location.origin}/ja/convert/csv-to-xls`} />
-        <link rel="alternate" hrefLang="zh" href={`${window.location.origin}/zh/convert/csv-to-xls`} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
       <Header />
