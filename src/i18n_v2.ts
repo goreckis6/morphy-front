@@ -17958,8 +17958,6 @@ export const additionalTranslations = {
       // CSV to SQL
       'csv_to_sql.title': 'CSV\'den SQL\'e Dönüştürücü',
       'csv_to_sql.subtitle': 'CSV dosyalarını veritabanı içe aktarma için SQL ifadelerine dönüştürün.',
-      // DNG to WebP
-      den WebP\'ye Dönüştürücü',
       // EPS to WebP
       'eps_to_webp.title': 'EPS\'den WebP\'ye Dönüştürücü',
       'eps_to_webp.subtitle': 'EPS vektör grafik dosyalarını web ve uygulamalar için WebP formatına dönüştürün.',
