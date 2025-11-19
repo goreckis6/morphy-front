@@ -4,6 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { additionalTranslations } from './i18n_v2';
 import { additionalTranslations as additionalTranslationsV3 } from './i18n_v3';
 import { additionalTranslations as additionalTranslationsV4 } from './i18n_v4';
+import { additionalTranslations as additionalTranslationsCSVToXML } from './i18n_csv_to_xml';
 
 // Translation resources
 const resources = {
@@ -5157,59 +5158,6 @@ const resources = {
       'eps_to_webp.ready_description': 'Use our free online EPS to WebP converter to transform your vector graphics into modern, web-optimized images.',
       'eps_to_webp.start_converting': 'Start Converting Now',
 
-      // CSV to XML
-      'csv_to_xml.title': 'CSV to XML Converter',
-      'csv_to_xml.meta_title': 'Free CSV to XML Converter - Convert CSV to XML Format Online',
-      'csv_to_xml.meta_description': 'Convert CSV files to XML format online for free. Transform tabular data into XML format for data exchange, API integration, and web services. Fast, secure, and no registration required.',
-      'csv_to_xml.subtitle': 'Convert CSV files to XML format. Perfect for data exchange, API integration, and web services with structured data.',
-      'csv_to_xml.upload_single': 'Upload CSV File',
-      'csv_to_xml.upload_multiple': 'Upload Multiple CSV Files',
-      'csv_to_xml.upload_single_desc': 'Drag and drop your CSV file here or click to browse',
-      'csv_to_xml.upload_multiple_desc': 'Select multiple CSV files to convert them all at once',
-      'csv_to_xml.convert_to_xml': 'Convert to XML',
-      'csv_to_xml.convert_files': 'Convert {{count}} Files',
-      'csv_to_xml.conversion_success': 'Your CSV file has been successfully converted to XML format.',
-      'csv_to_xml.download_xml': 'Download XML File',
-      'csv_to_xml.settings_title': 'XML Settings',
-      'csv_to_xml.root_element': 'Root Element',
-      'csv_to_xml.row_element': 'Row Element',
-      'csv_to_xml.pretty_print': 'Pretty Print',
-      'csv_to_xml.pretty_print_label': 'Format XML with indentation',
-      'csv_to_xml.why_choose': 'Why Choose Our Converter?',
-      'csv_to_xml.feature_structured': 'Structured data format',
-      'csv_to_xml.feature_readable': 'Human-readable',
-      'csv_to_xml.feature_batch': 'Batch conversion support',
-      'csv_to_xml.feature_valid': 'Valid XML generation',
-      'csv_to_xml.feature_secure': 'Secure processing',
-      'csv_to_xml.perfect_for': 'Perfect For',
-      'csv_to_xml.use_case_api': 'API integration',
-      'csv_to_xml.use_case_data': 'Data exchange',
-      'csv_to_xml.use_case_web': 'Web services',
-      'csv_to_xml.use_case_config': 'Configuration files',
-      'csv_to_xml.use_case_exchange': 'Data import/export',
-      'csv_to_xml.use_case_xml': 'XML-based systems',
-      'csv_to_xml.seo_title': 'Why Convert CSV to XML?',
-      'csv_to_xml.seo_description': 'Converting CSV files to XML format is essential for data exchange, API integration, and web services. While CSV files are excellent for tabular data, XML provides hierarchical structure, self-describing data, and universal compatibility with SOAP/REST APIs, making it the standard format for data interchange.',
-      'csv_to_xml.benefits_title': 'Key Benefits of XML Format',
-      'csv_to_xml.benefit_standard': 'Industry Standard',
-      'csv_to_xml.benefit_standard_desc': 'XML is supported by virtually all programming languages, databases, and web services, ensuring maximum interoperability.',
-      'csv_to_xml.benefit_structured': 'Self-Describing Data',
-      'csv_to_xml.benefit_structured_desc': 'XML tags describe the data they contain, making files self-documenting and easy to understand without external documentation.',
-      'csv_to_xml.benefit_valid': 'Valid Format',
-      'csv_to_xml.benefit_valid_desc': 'XML supports validation through schemas (XSD, DTD) ensuring data integrity and compliance with defined structures.',
-      'csv_to_xml.benefit_human': 'Human-Readable',
-      'csv_to_xml.benefit_human_desc': 'XML files are text-based and can be read and edited with any text editor, making debugging and manual inspection easy.',
-      'csv_to_xml.use_cases_title': 'Common Use Cases',
-      'csv_to_xml.use_case_api_title': 'API Integration',
-      'csv_to_xml.use_case_api_desc': 'Convert CSV data to XML format for integration with SOAP and REST APIs, web services, and third-party systems.',
-      'csv_to_xml.use_case_data_title': 'Data Exchange',
-      'csv_to_xml.use_case_data_desc': 'Generate XML files from CSV data for import into databases, CMS systems, and enterprise applications.',
-      'csv_to_xml.use_case_exchange_title': 'Enterprise Integration',
-      'csv_to_xml.use_case_exchange_desc': 'Integrate CSV data with enterprise systems, ERP platforms, and legacy applications that use XML as their primary data format.',
-      'csv_to_xml.cta_title': 'Ready to Convert Your CSV Files?',
-      'csv_to_xml.cta_description': 'Use our free online CSV to XML converter to transform your data into XML format for APIs and web services.',
-      'csv_to_xml.start_converting': 'Start Converting Now',
-      
       // CSV to YAML
       'csv_to_yaml.title': 'CSV to YAML Converter',
       'csv_to_yaml.meta_title': 'Free CSV to YAML Converter - Convert CSV to YAML Format Online',
@@ -15452,6 +15400,14 @@ Object.keys(additionalTranslationsV4).forEach(lang => {
     resources[lang] = deepMerge(resources[lang], additionalTranslationsV4[lang]);
   } else {
     resources[lang] = additionalTranslationsV4[lang];
+  }
+});
+
+Object.keys(additionalTranslationsCSVToXML).forEach(lang => {
+  if (resources[lang]) {
+    resources[lang] = deepMerge(resources[lang], additionalTranslationsCSVToXML[lang]);
+  } else {
+    resources[lang] = additionalTranslationsCSVToXML[lang];
   }
 });
 
