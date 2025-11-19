@@ -299,7 +299,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Redo att konvertera dina CSV-filer?',
       'csv_to_yaml.cta_description': 'Använd vår gratis online CSV till YAML-konverterare för att transformera dina data till strukturerat konfigurationsformat.',
       'csv_to_yaml.start_converting': 'Börja konvertera nu'
-    },
+    }
+  },
   es: {
     translation: {
       // CSV to YAML

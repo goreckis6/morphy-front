@@ -6,6 +6,7 @@ import { additionalTranslations as additionalTranslationsV3 } from './i18n_v3';
 import { additionalTranslations as additionalTranslationsV4 } from './i18n_v4';
 import { additionalTranslations as additionalTranslationsCSVToXML } from './i18n_csv_to_xml';
 import { additionalTranslations as additionalTranslationsCSVToYAML } from './i18n_csv_to_yaml';
+import { additionalTranslations as additionalTranslationsDNGToWebP } from './i18n_dng_to_webp';
 
 // Translation resources
 const resources = {
@@ -5056,82 +5057,6 @@ const resources = {
       'bmp_to_webp.ready_text': 'Use our free online BMP to WebP converter to transform your bitmap images into web-optimized images.',
 
       // DNG to WebP
-      'dng_to_webp.title': 'DNG to WebP Converter',
-      'dng_to_webp.meta_title': 'Free DNG to WebP Converter - Convert Adobe Digital Negative to WebP Format',
-      'dng_to_webp.meta_description': 'Free online DNG to WebP converter. Convert Adobe Digital Negative DNG raw images to WebP format with quality settings (high, medium, low) and lossless mode. Professional raw image conversion, no registration required.',
-      'dng_to_webp.meta_keywords': 'DNG to WebP, Adobe Digital Negative, WebP converter, camera RAW, web optimization, image converter, batch conversion, free converter',
-      'dng_to_webp.subtitle': 'Convert Adobe DNG raw images to WebP format for web optimization. Transform professional camera files into modern web-friendly images with superior compression.',
-      'dng_to_webp.upload_single': 'Upload DNG File',
-      'dng_to_webp.upload_batch': 'Upload Multiple DNG Files',
-      'dng_to_webp.upload_text_single': 'Drag and drop your DNG file here or click to browse',
-      'dng_to_webp.upload_text_batch': 'Select multiple DNG files to convert them all at once',
-      'dng_to_webp.file_limits_single': 'Max file size: 100MB',
-      'dng_to_webp.file_limits_batch': 'Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.',
-      'dng_to_webp.image_preview': 'DNG Image Preview',
-      'dng_to_webp.file_info': 'DNG File Info',
-      'dng_to_webp.will_convert_to': 'Will convert to',
-      'dng_to_webp.adobe_dng_file': 'Adobe Digital Negative (DNG) camera file',
-      'dng_to_webp.no_preview_found': 'Preview unavailable - conversion will use raw decoding engine',
-      'dng_to_webp.selected_files': 'Selected Files',
-      'dng_to_webp.convert_to_webp': 'Convert to WebP',
-      'dng_to_webp.convert_files': 'Convert {{count}} Files',
-      'dng_to_webp.conversion_complete': 'Conversion Complete!',
-      'dng_to_webp.batch_conversion_complete': 'Batch Conversion Complete!',
-      'dng_to_webp.success_message': 'Your DNG file has been successfully converted to WebP format.',
-      'dng_to_webp.batch_success_message': 'All {{count}} DNG files have been successfully converted to WebP format.',
-      'dng_to_webp.download_webp': 'Download WebP File',
-      'dng_to_webp.webp_settings': 'WebP Settings',
-      'dng_to_webp.quality': 'Quality',
-      'dng_to_webp.quality_high_option': 'High Quality (90-100%)',
-      'dng_to_webp.quality_medium_option': 'Medium Quality (70-89%)',
-      'dng_to_webp.quality_low_option': 'Low Quality (50-69%)',
-      'dng_to_webp.lossless_compression': 'Lossless compression',
-      'dng_to_webp.sidebar_title': 'Why Choose Our Converter?',
-      'dng_to_webp.feature_1': 'Adobe Digital Negative support',
-      'dng_to_webp.feature_2': 'Web-optimized compression',
-      'dng_to_webp.feature_3': 'High-quality image output',
-      'dng_to_webp.feature_4': 'Professional camera file processing',
-      'dng_to_webp.feature_5': 'Modern web format compatibility',
-      'dng_to_webp.feature_6': 'Batch processing support',
-      'dng_to_webp.batch_size_warning': 'Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.',
-      'dng_to_webp.extracted_preview': 'Extracted preview',
-      'dng_to_webp.webp_format': 'WebP format',
-      'dng_to_webp.quality_high': 'high quality',
-      'dng_to_webp.quality_medium': 'medium quality',
-      'dng_to_webp.quality_low': 'low quality',
-      'dng_to_webp.lossless': 'lossless',
-      'dng_to_webp.lossy': 'lossy',
-      'dng_to_webp.metadata_preserved': 'Metadata preserved',
-      'dng_to_webp.perfect_for_title': 'Perfect For',
-      'dng_to_webp.use_case_1': 'Professional photography workflows',
-      'dng_to_webp.use_case_2': 'Web image optimization',
-      'dng_to_webp.use_case_3': 'Adobe Lightroom integration',
-      'dng_to_webp.use_case_4': 'Digital asset management',
-      'dng_to_webp.use_case_5': 'Website performance optimization',
-      'dng_to_webp.use_case_6': 'Modern web development',
-      'dng_to_webp.seo_intro': 'Converting Adobe DNG raw images to WebP format is essential for modern web development, digital asset management, and website performance optimization. While DNG files contain high-quality raw image data from professional cameras, WebP provides superior compression, faster loading times, and better web performance without sacrificing image quality.',
-      'dng_to_webp.benefits_title': 'Key Benefits of WebP Format',
-      'dng_to_webp.benefit_compression_title': 'Superior Compression',
-      'dng_to_webp.benefit_compression_text': 'WebP provides 25-35% better compression than JPEG and PNG, significantly reducing file sizes while maintaining high image quality from your DNG raw files.',
-      'dng_to_webp.benefit_loading_title': 'Faster Loading Times',
-      'dng_to_webp.benefit_loading_text': 'Smaller file sizes mean faster page load times, improved user experience, and better SEO rankings for your website.',
-      'dng_to_webp.benefit_quality_title': 'Professional Quality',
-      'dng_to_webp.benefit_quality_text': 'WebP preserves the high quality of your DNG raw images while providing efficient compression, making it ideal for professional web galleries.',
-      'dng_to_webp.benefit_standard_title': 'Modern Web Standard',
-      'dng_to_webp.benefit_standard_text': 'WebP is supported by all modern browsers and is the recommended format for web images by Google and other major platforms.',
-      'dng_to_webp.use_cases_title': 'Common Use Cases',
-      'dng_to_webp.use_case_photography_title': 'Professional Photography Workflows',
-      'dng_to_webp.use_case_photography_text': 'Convert high-quality DNG images to WebP for use in professional photography portfolios, client galleries, and digital presentations.',
-      'dng_to_webp.use_case_portfolio_title': 'Web Image Optimization',
-      'dng_to_webp.use_case_portfolio_text': 'Optimize your DNG images for web use by converting them to WebP, ensuring fast loading times and excellent visual quality.',
-      'dng_to_webp.use_case_ecommerce_title': 'Adobe Lightroom Integration',
-      'dng_to_webp.use_case_ecommerce_text': 'Seamlessly integrate with Adobe Lightroom workflows by converting DNG files to WebP for use in digital asset management systems.',
-      'dng_to_webp.use_case_marketing_title': 'Website Performance Optimization',
-      'dng_to_webp.use_case_marketing_text': 'Improve your website\'s performance by converting DNG images to WebP, reducing bandwidth usage and improving user experience.',
-      'dng_to_webp.ready_title': 'Ready to Convert Your DNG Files?',
-      'dng_to_webp.ready_text': 'Use our free online DNG to WebP converter to transform your professional camera files into web-optimized images.',
-      'dng_to_webp.why_convert_title': 'Why Convert DNG to WebP?',
-
       // EPS to WebP
       'eps_to_webp.title': 'Free EPS to WebP Converter',
       'eps_to_webp.meta_title': 'Free EPS to WebP Converter Online - Convert PostScript to WebP For Free',
@@ -6092,44 +6017,6 @@ const resources = {
       'bmp_to_webp.ready_text': 'Użyj naszego darmowego konwertera BMP do WebP online, aby przekształcić swoje obrazy bitmapowe w zoptymalizowane obrazy internetowe.',
 
       // DNG to WebP (Polish)
-      'dng_to_webp.title': 'Darmowy Konwerter DNG do WebP',
-      'dng_to_webp.meta_title': 'Darmowy Konwerter DNG do WebP - Konwertuj Adobe Digital Negative do formatu WebP',
-      'dng_to_webp.meta_keywords': 'DNG do WebP, Adobe Digital Negative, konwerter WebP, obrazy RAW, optymalizacja internetowa, konwerter obrazów, konwersja partii, darmowy konwerter',
-      'dng_to_webp.meta_description': 'Darmowy online konwerter DNG do WebP. Konwertuj obrazy RAW Adobe Digital Negative DNG do formatu WebP z ustawieniami jakości (wysoka, średnia, niska) i trybem bezstratnym. Profesjonalna konwersja obrazów RAW, bez rejestracji.',
-      'dng_to_webp.subtitle': 'Konwertuj obrazy RAW Adobe DNG do formatu WebP dla optymalizacji internetowej. Przekształć profesjonalne pliki aparatu w nowoczesne, przyjazne dla sieci obrazy z doskonałą kompresją.',
-      'dng_to_webp.upload_single': 'Prześlij plik DNG',
-      'dng_to_webp.upload_batch': 'Prześlij wiele plików DNG',
-      'dng_to_webp.upload_text_single': 'Przeciągnij i upuść plik DNG tutaj lub kliknij, aby przeglądać',
-      'dng_to_webp.upload_text_batch': 'Wybierz wiele plików DNG, aby przekonwertować je wszystkie naraz',
-      'dng_to_webp.file_limits_single': 'Maksymalny rozmiar pliku: 100MB',
-      'dng_to_webp.file_limits_batch': 'Konwersja partii obsługuje do 20 plików, 100,00 MB na plik, 100,00 MB łącznie.',
-      'dng_to_webp.image_preview': 'Podgląd obrazu DNG',
-      'dng_to_webp.file_info': 'Informacje o pliku DNG',
-      'dng_to_webp.will_convert_to': 'Zostanie przekonwertowane na',
-      'dng_to_webp.adobe_dng_file': 'Adobe Digital Negative (DNG) plik aparatu',
-      'dng_to_webp.no_preview_found': 'Podgląd niedostępny - konwersja będzie używać silnika dekodowania RAW',
-      'dng_to_webp.selected_files': 'Wybrane pliki',
-      'dng_to_webp.convert_to_webp': 'Konwertuj do WebP',
-      'dng_to_webp.convert_files': 'Konwertuj {{count}} plików',
-      'dng_to_webp.conversion_complete': 'Konwersja zakończona!',
-      'dng_to_webp.batch_conversion_complete': 'Konwersja partii zakończona!',
-      'dng_to_webp.success_message': 'Twój plik DNG został pomyślnie przekonwertowany do formatu WebP.',
-      'dng_to_webp.batch_success_message': 'Wszystkie {{count}} pliki DNG zostały pomyślnie przekonwertowane do formatu WebP.',
-      'dng_to_webp.download_webp': 'Pobierz plik WebP',
-      'dng_to_webp.webp_settings': 'Ustawienia WebP',
-      'dng_to_webp.quality': 'Jakość',
-      'dng_to_webp.quality_high_option': 'Wysoka jakość (90-100%)',
-      'dng_to_webp.quality_medium_option': 'Średnia jakość (70-89%)',
-      'dng_to_webp.quality_low_option': 'Niska jakość (50-69%)',
-      'dng_to_webp.lossless_compression': 'Kompresja bezstratna',
-      'dng_to_webp.sidebar_title': 'Dlaczego wybrać nasz konwerter?',
-      'dng_to_webp.feature_1': 'Obsługa Adobe Digital Negative',
-      'dng_to_webp.feature_2': 'Zoptymalizowana dla sieci kompresja',
-      'dng_to_webp.feature_3': 'Wysokiej jakości obraz wyjściowy',
-      'dng_to_webp.feature_4': 'Przetwarzanie profesjonalnych plików aparatu',
-      'dng_to_webp.feature_5': 'Kompatybilność z nowoczesnym formatem internetowym',
-      'dng_to_webp.feature_6': 'Obsługa przetwarzania partii',
-
       // EPS to WebP (Polish)
       'eps_to_webp.title': 'Konwerter EPS do WebP',
       'eps_to_webp.meta_title': 'Darmowy Konwerter EPS do WebP Online - Konwertuj PostScript do WebP Za Darmo',
@@ -10604,8 +10491,6 @@ const resources = {
       'csv_to_pptx.use_case_financial': 'Finanzberichte',
       'csv_to_pptx.use_case_data': 'Datenvisualisierung',
       'csv_to_pptx.use_case_client': 'Kundenpräsentationen',
-      'csv_to_pptx.use_case_meetings': 'Meeting-Materialien',
-      'csv_to_pptx.use_case_training': 'Schulungsmaterialien',
       
       // CSV to RTF
       'csv_to_rtf.title': 'CSV zu RTF Konverter',
@@ -10972,35 +10857,6 @@ const resources = {
       'dng_to_webp.upload_batch': 'Mehrere DNG Dateien hochladen',
       'dng_to_webp.upload_text_single': 'Ziehen Sie Ihre DNG Datei hierher oder klicken Sie zum Durchsuchen',
       'dng_to_webp.upload_text_batch': 'Wählen Sie mehrere DNG Dateien aus, um sie alle auf einmal zu konvertieren',
-      'dng_to_webp.file_limits_single': 'Max. Dateigröße: 100MB',
-      'dng_to_webp.file_limits_batch': 'Stapelkonvertierung unterstützt bis zu 20 Dateien, 100,00 MB pro Datei, 100,00 MB insgesamt.',
-      'dng_to_webp.image_preview': 'DNG Bildvorschau',
-      'dng_to_webp.file_info': 'DNG Datei-Info',
-      'dng_to_webp.will_convert_to': 'Wird konvertiert zu',
-      'dng_to_webp.adobe_dng_file': 'Adobe Digital Negative (DNG) Kamera-Datei',
-      'dng_to_webp.no_preview_found': 'Vorschau nicht verfügbar - Konvertierung verwendet Raw-Dekodierungs-Engine',
-      'dng_to_webp.selected_files': 'Ausgewählte Dateien',
-      'dng_to_webp.convert_to_webp': 'Zu WebP konvertieren',
-      'dng_to_webp.convert_files': '{{count}} Dateien konvertieren',
-      'dng_to_webp.conversion_complete': 'Konvertierung abgeschlossen!',
-      'dng_to_webp.batch_conversion_complete': 'Batch-Konvertierung abgeschlossen!',
-      'dng_to_webp.success_message': 'Ihre DNG Datei wurde erfolgreich zu WebP Format konvertiert.',
-      'dng_to_webp.batch_success_message': 'Alle {{count}} DNG Dateien wurden erfolgreich zu WebP Format konvertiert.',
-      'dng_to_webp.download_webp': 'WebP Datei herunterladen',
-      'dng_to_webp.webp_settings': 'WebP Einstellungen',
-      'dng_to_webp.quality': 'Qualität',
-      'dng_to_webp.quality_high_option': 'Hohe Qualität (90-100%)',
-      'dng_to_webp.quality_medium_option': 'Mittlere Qualität (70-89%)',
-      'dng_to_webp.quality_low_option': 'Niedrige Qualität (50-69%)',
-      'dng_to_webp.lossless_compression': 'Verlustfreie Komprimierung',
-      'dng_to_webp.sidebar_title': 'Warum unseren Konverter wählen?',
-      'dng_to_webp.feature_1': 'Adobe Digital Negative Unterstützung',
-      'dng_to_webp.feature_2': 'Web-optimierte Komprimierung',
-      'dng_to_webp.feature_3': 'Hochwertige Ausgabe',
-      'dng_to_webp.feature_4': 'Professionelle Kamera-Datei-Verarbeitung',
-      'dng_to_webp.feature_5': 'Moderne Web-Format-Kompatibilität',
-      'dng_to_webp.feature_6': 'Batch-Verarbeitungsunterstützung',
-
       // EPS to WebP (German)
       'eps_to_webp.title': 'EPS zu WebP Konverter - Konvertiere Encapsulated PostScript zu WebP',
       'eps_to_webp.meta_title': 'Kostenloser EPS zu WebP Konverter Online - PostScript zu WebP Kostenlos',
@@ -12125,6 +11981,15 @@ Object.keys(additionalTranslationsCSVToYAML).forEach(lang => {
     resources[lang] = deepMerge(resources[lang], additionalTranslationsCSVToYAML[lang]);
   } else {
     resources[lang] = additionalTranslationsCSVToYAML[lang];
+  }
+});
+
+// Merge DNG to WebP translations
+Object.keys(additionalTranslationsDNGToWebP).forEach(lang => {
+  if (resources[lang]) {
+    resources[lang] = deepMerge(resources[lang], additionalTranslationsDNGToWebP[lang]);
+  } else {
+    resources[lang] = additionalTranslationsDNGToWebP[lang];
   }
 });
 

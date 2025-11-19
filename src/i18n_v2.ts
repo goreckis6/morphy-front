@@ -1946,8 +1946,6 @@ export const additionalTranslations = {
       'csv_to_parquet.batch_conversion_complete': 'Konversi Batch Selesai',
 
       // DNG to WebP
-      'dng_to_webp.title': 'Konverter DNG ke WebP',
-      'dng_to_webp.subtitle': 'Konversi file gambar mentah DNG ke format WebP yang dioptimalkan untuk web.',
       // EPS to WebP
       'eps_to_webp.title': 'Konverter EPS ke WebP',
       'eps_to_webp.subtitle': 'Konversi file grafik vektor EPS ke format WebP untuk web dan aplikasi.',
@@ -3974,8 +3972,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'CSV till SQL Konverterare',
       'csv_to_sql.subtitle': 'Konvertera CSV-filer till SQL-uttryck för databasimporrationsfiler.',
       // DNG to WebP
-      'dng_to_webp.title': 'DNG till WebP Konverterare',
-      'dng_to_webp.subtitle': 'Konvertera DNG-rawbildfiler till webboptimerat WebP-format.',
       // EPS to WebP
       'eps_to_webp.title': 'EPS till WebP Konverterare',
       'eps_to_webp.subtitle': 'Konvertera EPS-vektorgrafikfiler till WebP-format för webb och appar.',
@@ -6002,8 +5998,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'Convertidor CSV a SQL',
       'csv_to_sql.subtitle': 'Convierte archivos CSV a declaraciones SQL para importación de bases de datos.',
       // DNG to WebP
-      'dng_to_webp.title': 'Convertidor DNG a WebP',
-      'dng_to_webp.subtitle': 'Convierte archivos de imagen RAW DNG al formato WebP optimizado para web.',
       // EPS to WebP
       'eps_to_webp.title': 'Convertidor EPS a WebP',
       'eps_to_webp.subtitle': 'Convierte archivos de gráficos vectoriales EPS al formato WebP para web y aplicaciones.',
@@ -8030,8 +8024,7 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'Convertisseur CSV vers SQL',
       'csv_to_sql.subtitle': 'Convertissez les fichiers CSV en instructions SQL pour l\'importation de bases de données.',
       // DNG to WebP
-      'dng_to_webp.title': 'Convertisseur DNG vers WebP',
-      'dng_to_webp.subtitle': 'Convertissez les fichiers d\'image RAW DNG au format WebP optimisé pour le web.',
+      image RAW DNG au format WebP optimisé pour le web.',
       // EPS to WebP
       'eps_to_webp.title': 'Convertisseur EPS vers WebP',
       'eps_to_webp.subtitle': 'Convertissez les fichiers de graphiques vectoriels EPS au format WebP pour le web et les applications.',
@@ -12084,8 +12077,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'CSV naar SQL Converter',
       'csv_to_sql.subtitle': 'Converteer CSV-bestanden naar SQL-statements voor database-import.',
       // DNG to WebP
-      'dng_to_webp.title': 'DNG naar WebP Converter',
-      'dng_to_webp.subtitle': 'Converteer DNG RAW-afbeeler EPS-vectorgrafiekbestanden naar WebP-formaat voor web en apps.',
       // EPUB to CSV
       'epub_to_csv.title': 'EPUB naar CSV Converter',
       'epub_to_csv.subtitle': 'Converteer EPUB e-boekbestanden naar CSV-formaat voor data-analyse.',
@@ -14058,8 +14049,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'Conversor CSV para SQL',
       'csv_to_sql.subtitle': 'Converta arquivos CSV em instruções SQL para importação de banco de dados.',
       // DNG to WebP
-      'dng_to_webp.title': 'Conversor DNG para WebP',
-      'dng_to_webp.subtitle': 'Converta arquivos de imagem RAW DNG para o formato WebP otimizado para web.',
       // EPS to WebP
       'eps_to_webp.title': 'Conversor EPS para WebP',
       'eps_to_webp.subtitle': 'Converta arquivos donverta arquivos de ebook EPUB para o formato CSV para análise de dados.',
@@ -15979,8 +15968,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'Chuyển Đổi CSV sang SQL',
       'csv_to_sql.subtitle': 'Chuyển đổi tệp CSV sang câu lệnh SQL để nhập cơ sở dữ liệu.',
       // DNG to WebP
-      'dng_to_webp.title': 'Chuyển Đổi DNG sang WebP',
-      'dng_to_webp.subtitle': 'Chuyển đổi tệp hình ảnh RAW DNG sang định dạng WebP tối ưu cho web.',
       // EPS to WebP
       'eps_to_webp.title': 'Chuyển Đổi EPS sang WebP',
       'eps_to_webp.subtitle': 'Chuyển đổi tệp đồ họa vector EPS sang định dạng WebP cho web và ứng dụng.',
@@ -17974,8 +17961,7 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'CSV\'den SQL\'e Dönüştürücü',
       'csv_to_sql.subtitle': 'CSV dosyalarını veritabanı içe aktarma için SQL ifadelerine dönüştürün.',
       // DNG to WebP
-      'dng_to_webp.title': 'DNG\'den WebP\'ye Dönüştürücü',
-      'dng_to_webp.subtitle': 'DNG RAW görüntü dosyalarını web için optimize edilmiş WebP formatına dönüştürün.',
+      den WebP\'ye Dönüştürücü',
       // EPS to WebP
       'eps_to_webp.title': 'EPS\'den WebP\'ye Dönüştürücü',
       'eps_to_webp.subtitle': 'EPS vektör grafik dosyalarını web ve uygulamalar için WebP formatına dönüştürün.',
@@ -19948,8 +19934,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'Конвертер CSV в SQL',
       'csv_to_sql.subtitle': 'Конвертируйте файлы CSV в SQL-запросы для импорта базы данных.',
       // DNG to WebP
-      'dng_to_webp.title': 'Конвертер DNG в WebP',
-      'dng_to_webp.subtitle': 'Конвертируйте файлы изображений RAW DNG в оптимизированный для веб формат WebP.',
       // EPS to WebP
       'eps_to_webp.title': 'Конвертер EPS в WebP',
       'eps_to_webp.subtitle': 'Конвертируйте файлы векторной графики EPS в формат WebP для веб и приложений.',
@@ -21925,8 +21909,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'محول CSV إلى SQL',
       'csv_to_sql.subtitle': 'قم بتحويل ملفات CSV إلى عبارات SQL لاستيراد قاعدة البيانات.',
       // DNG to WebP
-      'dng_to_webp.title': 'محول DNG إلى WebP',
-      'dng_to_webp.subtitle': 'قم بتحويل ملفات صور RAW DNG إلى تنسيق WebP المحسّن للويب.',
       // EPS to WebP
       'eps_to_webp.title': 'محول EPS إلى WebP',
       'eps_to_webp.subtitle': 'قم بتحويل ملفات الرسوم المتجهة EPS إلى تنسيق WebP للويب والتطبيقات.',
@@ -23902,8 +23884,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'ตัวแปลง CSV เป็น SQL',
       'csv_to_sql.subtitle': 'แปลงไฟล์ CSV เป็นคำสั่ง SQL สำหรับการนำเข้าฐานข้อมูล',
       // DNG to WebP
-      'dng_to_webp.title': 'ตัวแปลง DNG เป็น WebP',
-      'dng_to_webp.subtitle': 'แปลงไฟล์ภาพ RAW DNG เป็นรูปแบบ WebP ที่ปรับให้เหมาะกับเว็บ',
       // EPS to WebP
       'eps_to_webp.title': 'ตัวแปลง EPS เป็น WebP',
       'eps_to_webp.subtitle': 'แปลงไฟล์กราฟิกเวกเตอร์ EPS เป็นรูปแบบ WebP สำหรับเว็บและแอป',
@@ -25877,8 +25857,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'CSVからSQLへのコンバーター',
       'csv_to_sql.subtitle': 'CSVファイルをデータベースインポート用のSQLステートメントに変換。',
       // DNG to WebP
-      'dng_to_webp.title': 'DNGからWebPへのコンバーター',
-      'dng_to_webp.subtitle': 'DNG RAW画像ファイルをWeb用に最適化されたWebP形式に変換。',
       // EPS to WebP
       'eps_to_webp.title': 'EPSからWebPへのコンバーター',
       'eps_to_webp.subtitle': 'EPSベクターグラフィックファイルをWebとアプリ用のWebP形式に変換。',
@@ -27851,8 +27829,6 @@ export const additionalTranslations = {
       'csv_to_sql.title': 'CSV转SQL转换器',
       'csv_to_sql.subtitle': '将CSV文件转换为SQL语句，用于数据库导入。',
       // DNG to WebP
-      'dng_to_webp.title': 'DNG转WebP转换器',
-      'dng_to_webp.subtitle': '将DNG RAW图像文件转换为针对Web优化的WebP格式。',
       // EPS to WebP
       'eps_to_webp.title': 'EPS转WebP转换器',
       'eps_to_webp.subtitle': '将EPS矢量图形文件转换为Web和应用程序的WebP格式。',
