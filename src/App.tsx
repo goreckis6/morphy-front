@@ -1386,45 +1386,241 @@ function App() {
 
         {/* Bahasa Indonesia (ID) Sample Files Routes */}
         <Route path="/id/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/id/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/id/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/id/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/id/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/id/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/id/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/id/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/id/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/id/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/id/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/id/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/id/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/id/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/id/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Svenska (SV) Sample Files Routes */}
         <Route path="/sv/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/sv/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/sv/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/sv/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/sv/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/sv/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/sv/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/sv/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/sv/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/sv/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/sv/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/sv/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/sv/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/sv/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/sv/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Español (ES) Sample Files Routes */}
         <Route path="/es/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/es/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/es/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/es/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/es/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/es/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/es/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/es/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/es/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/es/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/es/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/es/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/es/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/es/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/es/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Français (FR) Sample Files Routes */}
         <Route path="/fr/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/fr/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/fr/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/fr/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/fr/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/fr/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/fr/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/fr/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/fr/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/fr/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/fr/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/fr/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/fr/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/fr/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/fr/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Italiano (IT) Sample Files Routes */}
         <Route path="/it/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/it/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/it/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/it/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/it/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/it/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/it/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/it/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/it/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/it/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/it/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/it/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/it/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/it/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/it/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Nederlands (NL) Sample Files Routes */}
         <Route path="/nl/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/nl/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/nl/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/nl/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/nl/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/nl/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/nl/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/nl/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/nl/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/nl/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/nl/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/nl/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/nl/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/nl/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/nl/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Português (PT) Sample Files Routes */}
         <Route path="/pt/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/pt/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/pt/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/pt/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/pt/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/pt/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/pt/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/pt/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/pt/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/pt/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/pt/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/pt/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/pt/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/pt/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/pt/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Tiếng Việt (VI) Sample Files Routes */}
         <Route path="/vi/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/vi/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/vi/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/vi/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/vi/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/vi/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/vi/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/vi/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/vi/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/vi/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/vi/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/vi/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/vi/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/vi/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/vi/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Türkçe (TR) Sample Files Routes */}
         <Route path="/tr/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/tr/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/tr/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/tr/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/tr/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/tr/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/tr/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/tr/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/tr/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/tr/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/tr/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/tr/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/tr/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/tr/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/tr/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* Русский (RU) Sample Files Routes */}
         <Route path="/ru/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/ru/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/ru/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/ru/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/ru/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/ru/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/ru/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/ru/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/ru/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/ru/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/ru/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/ru/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/ru/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/ru/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/ru/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* العربية (AR) Sample Files Routes */}
         <Route path="/ar/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/ar/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/ar/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/ar/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/ar/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/ar/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/ar/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/ar/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/ar/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/ar/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/ar/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/ar/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/ar/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/ar/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/ar/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* ไทย (TH) Sample Files Routes */}
         <Route path="/th/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/th/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/th/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/th/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/th/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/th/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/th/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/th/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/th/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/th/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/th/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/th/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/th/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/th/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/th/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* 日本語 (JA) Sample Files Routes */}
         <Route path="/ja/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/ja/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/ja/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/ja/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/ja/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/ja/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/ja/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/ja/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/ja/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/ja/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/ja/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/ja/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/ja/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/ja/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/ja/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* 简体中文 (ZH) Sample Files Routes */}
         <Route path="/zh/samples/sample-docx" element={<SampleDocx />} />
+        <Route path="/zh/samples/sample-doc" element={<SampleDoc />} />
+        <Route path="/zh/samples/sample-pdf" element={<SamplePdf />} />
+        <Route path="/zh/samples/sample-odp" element={<SampleOdp />} />
+        <Route path="/zh/samples/sample-rtf" element={<SampleRtf />} />
+        <Route path="/zh/samples/sample-epub" element={<SampleEpub />} />
+        <Route path="/zh/samples/sample-invoice-pdf" element={<SampleInvoicePdf />} />
+        <Route path="/zh/samples/sample-mobi" element={<SampleMobi />} />
+        <Route path="/zh/samples/sample-csv" element={<SampleCsv />} />
+        <Route path="/zh/samples/sample-xls" element={<SampleXls />} />
+        <Route path="/zh/samples/sample-xlsx" element={<SampleXlsx />} />
+        <Route path="/zh/samples/sample-xml" element={<SampleXml />} />
+        <Route path="/zh/samples/sample-html" element={<SampleHtml />} />
+        <Route path="/zh/samples/sample-ods" element={<SampleOds />} />
+        <Route path="/zh/samples/sample-ansible-yml" element={<SampleAnsibleYml />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />
