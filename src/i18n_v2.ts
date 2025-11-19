@@ -1934,9 +1934,7 @@ export const additionalTranslations = {
       'csv_to_parquet.cta_description': 'Gunakan konverter CSV ke Parquet online gratis kami untuk mengubah data Anda menjadi format kolom yang efisien.',
       'csv_to_parquet.start_converting': 'Mulai Mengonversi Sekarang',
       'csv_to_parquet.batch_conversion_complete': 'Konversi Batch Selesai',
-      // CSV to SQL
-      'csv_to_sql.title': 'Konverter CSV ke SQL',
-      'csv_to_sql.subtitle': 'Konversi file CSV ke pernyataan SQL untuk impor database.',
+
       // CSV to TOML
       'csv_to_toml.title': 'Konverter CSV ke TOML',
       'csv_to_toml.subtitle': 'Konversi file CSV ke format TOML untuk file konfigurasi.',
@@ -3963,10 +3961,7 @@ export const additionalTranslations = {
       'csv_to_parquet.batch_conversion_complete': 'Batchkonvertering Slutförd',
       // CSV to SQL
       'csv_to_sql.title': 'CSV till SQL Konverterare',
-      'csv_to_sql.subtitle': 'Konvertera CSV-filer till SQL-uttryck för databasimport.',
-      // CSV to TOML
-      'csv_to_toml.title': 'CSV till TOML Konverterare',
-      'csv_to_toml.subtitle': 'Konvertera CSV-filer till TOML-format för konfigurationsfiler.',
+      'csv_to_sql.subtitle': 'Konvertera CSV-filer till SQL-uttryck för databasimporrationsfiler.',
       // CSV to XML
       'csv_to_xml.title': 'CSV till XML Konverterare',
       'csv_to_xml.subtitle': 'Konvertera CSV-filer till XML-format för strukturerad datautbyte.',
@@ -5993,10 +5988,7 @@ export const additionalTranslations = {
       'csv_to_sql.subtitle': 'Convierte archivos CSV a declaraciones SQL para importación de bases de datos.',
       // CSV to TOML
       'csv_to_toml.title': 'Convertidor CSV a TOML',
-      'csv_to_toml.subtitle': 'Convierte archivos CSV al formato TOML para archivos de configuración.',
-      // CSV to XML
-      'csv_to_xml.title': 'Convertidor CSV a XML',
-      'csv_to_xml.subtitle': 'Convierte archivos CSV al formato XML para intercambio de datos estructurados.',
+      'csv_to_toml.subtitle': 'Convierte archivos CSV al formato T intercambio de datos estructurados.',
       // CSV to YAML
       'csv_to_yaml.title': 'Convertidor CSV a YAML',
       'csv_to_yaml.subtitle': 'Convierte archivos CSV al formato YAML para configuración y datos estructurados.',
@@ -8023,10 +8015,7 @@ export const additionalTranslations = {
       'csv_to_toml.subtitle': 'Convertissez les fichiers CSV au format TOML pour les fichiers de configuration.',
       // CSV to XML
       'csv_to_xml.title': 'Convertisseur CSV vers XML',
-      'csv_to_xml.subtitle': 'Convertissez les fichiers CSV au format XML pour l\'échange de données structurées.',
-      // CSV to YAML
-      'csv_to_yaml.title': 'Convertisseur CSV vers YAML',
-      'csv_to_yaml.subtitle': 'Convertissez les fichiers CSV au format YAML pour la configuration et les données structurées.',
+      'csv_to_xml.subtitle': 'Conveissez les fichiers CSV au format YAML pour la configuration et les données structurées.',
       // DNG to WebP
       'dng_to_webp.title': 'Convertisseur DNG vers WebP',
       'dng_to_webp.subtitle': 'Convertissez les fichiers d\'image RAW DNG au format WebP optimisé pour le web.',
@@ -10054,9 +10043,7 @@ export const additionalTranslations = {
       // CSV to YAML
       'csv_to_yaml.title': 'Convertitore CSV in YAML',
       'csv_to_yaml.subtitle': 'Converti file CSV nel formato YAML per configurazione e dati strutturati.',
-      // DNG to WebP
-      'dng_to_webp.title': 'Convertitore DNG in WebP',
-      'dng_to_webp.subtitle': 'Converti file immagine RAW DNG nel formato WebP ottimizzato per web.',
+      // ,
       // EPS to WebP
       'eps_to_webp.title': 'Convertitore EPS in WebP',
       'eps_to_webp.subtitle': 'Converti file grafica vettoriale EPS nel formato WebP per web e applicazioni.',
@@ -12083,10 +12070,7 @@ export const additionalTranslations = {
       'csv_to_yaml.subtitle': 'Converteer CSV-bestanden naar YAML-formaat voor configuratie en gestructureerde gegevens.',
       // DNG to WebP
       'dng_to_webp.title': 'DNG naar WebP Converter',
-      'dng_to_webp.subtitle': 'Converteer DNG RAW-afbeeldingsbestanden naar web-geoptimaliseerd WebP-formaat.',
-      // EPS to WebP
-      'eps_to_webp.title': 'EPS naar WebP Converter',
-      'eps_to_webp.subtitle': 'Converteer EPS-vectorgrafiekbestanden naar WebP-formaat voor web en apps.',
+      'dng_to_webp.subtitle': 'Converteer DNG RAW-afbeeler EPS-vectorgrafiekbestanden naar WebP-formaat voor web en apps.',
       // EPUB to CSV
       'epub_to_csv.title': 'EPUB naar CSV Converter',
       'epub_to_csv.subtitle': 'Converteer EPUB e-boekbestanden naar CSV-formaat voor data-analyse.',
@@ -14062,10 +14046,7 @@ export const additionalTranslations = {
       'dng_to_webp.subtitle': 'Converta arquivos de imagem RAW DNG para o formato WebP otimizado para web.',
       // EPS to WebP
       'eps_to_webp.title': 'Conversor EPS para WebP',
-      'eps_to_webp.subtitle': 'Converta arquivos de gráficos vetoriais EPS para o formato WebP para web e aplicativos.',
-      // EPUB to CSV
-      'epub_to_csv.title': 'Conversor EPUB para CSV',
-      'epub_to_csv.subtitle': 'Converta arquivos de ebook EPUB para o formato CSV para análise de dados.',
+      'eps_to_webp.subtitle': 'Converta arquivos donverta arquivos de ebook EPUB para o formato CSV para análise de dados.',
       // EPUB to DOC
       'epub_to_doc.title': 'Conversor EPUB para DOC',
       'epub_to_doc.subtitle': 'Converta arquivos de ebook EPUB para o formato de documento Word DOC.',
@@ -15988,10 +15969,7 @@ export const additionalTranslations = {
       'eps_to_webp.subtitle': 'Chuyển đổi tệp đồ họa vector EPS sang định dạng WebP cho web và ứng dụng.',
       // EPUB to CSV
       'epub_to_csv.title': 'Chuyển Đổi EPUB sang CSV',
-      'epub_to_csv.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng CSV để phân tích dữ liệu.',
-      // EPUB to DOC
-      'epub_to_doc.title': 'Chuyển Đổi EPUB sang DOC',
-      'epub_to_doc.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng tài liệu Word DOC.',
+      'epub_to_csv.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng CSV để phâịnh dạng tài liệu Word DOC.',
       // EPUB to DOCX
       'epub_to_docx.title': 'Chuyển Đổi EPUB sang DOCX',
       'epub_to_docx.subtitle': 'Chuyển đổi tệp sách điện tử EPUB sang định dạng tài liệu Word DOCX hiện đại.',
@@ -17987,10 +17965,7 @@ export const additionalTranslations = {
       'epub_to_csv.title': 'EPUB\'dan CSV\'ye Dönüştürücü',
       'epub_to_csv.subtitle': 'EPUB e-kitap dosyalarını veri analizi için CSV formatına dönüştürün.',
       // EPUB to DOC
-      'epub_to_doc.title': 'EPUB\'dan DOC\'a Dönüştürücü',
-      'epub_to_doc.subtitle': 'EPUB e-kitap dosyalarını Word DOC belge formatına dönüştürün.',
-      // EPUB to DOCX
-      'epub_to_docx.title': 'EPUB\'dan DOCX\'e Dönüştürücü',
+      'epub_to_doc.title': 'EPUB\n DOCX\'e Dönüştürücü',
       'epub_to_docx.subtitle': 'EPUB e-kitap dosyalarını modern Word DOCX belge formatına dönüştürün.',
       // EPUB to HTML
       'epub_to_html.title': 'EPUB\'dan HTML\'e Dönüştürücü',
@@ -19966,10 +19941,7 @@ export const additionalTranslations = {
       'epub_to_doc.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат документа Word DOC.',
       // EPUB to DOCX
       'epub_to_docx.title': 'Конвертер EPUB в DOCX',
-      'epub_to_docx.subtitle': 'Конвертируйте файлы электронных книг EPUB в современный формат документа Word DOCX.',
-      // EPUB to HTML
-      'epub_to_html.title': 'Конвертер EPUB в HTML',
-      'epub_to_html.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат HTML для веб.',
+      'epub_to_docx.subtitle': 'Конвертируйте файлы электронных книг EPUB в современнктронных книг EPUB в формат HTML для веб.',
       // EPUB to MD
       'epub_to_md.title': 'Конвертер EPUB в MD',
       'epub_to_md.subtitle': 'Конвертируйте файлы электронных книг EPUB в формат Markdown для документации.',
@@ -21951,9 +21923,7 @@ export const additionalTranslations = {
       'epub_to_html.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق HTML للويب.',
       // EPUB to MD
       'epub_to_md.title': 'محول EPUB إلى MD',
-      'epub_to_md.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق Markdown للتوثيق.',
-      // EPUB to MOBI
-      'epub_to_mobi.title': 'محول EPUB إلى MOBI',
+      'eOBI',
       'epub_to_mobi.subtitle': 'قم بتحويل ملفات الكتب الإلكترونية EPUB إلى تنسيق MOBI لأجهزة Kindle.',
       // EPUB to ODP
       'epub_to_odp.title': 'محول EPUB إلى ODP',
@@ -23928,9 +23898,7 @@ export const additionalTranslations = {
       // EPUB to MD
       'epub_to_md.title': 'ตัวแปลง EPUB เป็น MD',
       'epub_to_md.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบ Markdown สำหรับเอกสาร',
-      // EPUB to MOBI
-      'epub_to_mobi.title': 'ตัวแปลง EPUB เป็น MOBI',
-      'epub_to_mobi.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบ MOBI สำหรับอุปกรณ์ Kindle',
+      // EPUB to M Kindle',
       // EPUB to ODP
       'epub_to_odp.title': 'ตัวแปลง EPUB เป็น ODP',
       'epub_to_odp.subtitle': 'แปลงไฟล์หนังสืออิเล็กทรอนิกส์ EPUB เป็นรูปแบบการนำเสนอ OpenDocument ODP',
@@ -25915,10 +25883,7 @@ export const additionalTranslations = {
       'epub_to_odt.subtitle': 'EPUB電子書籍ファイルをOpenDocument ODT文書形式に変換。',
       // EPUB to PDF
       'epub_to_pdf.title': 'EPUBからPDFへのコンバーター',
-      'epub_to_pdf.subtitle': 'EPUB電子書籍ファイルをユニバーサル共有と印刷用のPDF形式に変換。',
-      // EPUB to PPT
-      'epub_to_ppt.title': 'EPUBからPPTへのコンバーター',
-      'epub_to_ppt.subtitle': 'EPUB電子書籍ファイルをPowerPoint PPTプレゼンテーション形式に変換。',
+      'epub_to_pdf.subtitle': 'EPUB電子書籍ファイルをユニバーサル共有と印刷用のPDF形式に変レゼンテーション形式に変換。',
       // EPUB to PPTX
       'epub_to_pptx.title': 'EPUBからPPTXへのコンバーター',
       'epub_to_pptx.subtitle': 'EPUB電子書籍ファイルを最新のPowerPoint PPTXプレゼンテーション形式に変換。',
@@ -27899,9 +27864,7 @@ export const additionalTranslations = {
       'epub_to_pptx.title': 'EPUB转PPTX转换器',
       'epub_to_pptx.subtitle': '将EPUB电子书文件转换为现代PowerPoint PPTX演示格式。',
       // EPUB to RTF
-      'epub_to_rtf.title': 'EPUB转RTF转换器',
-      'epub_to_rtf.subtitle': '将EPUB电子书文件转换为Rich Text Format RTF文档格式。',
-      // EPUB to TXT
+     // EPUB to TXT
       'epub_to_txt.title': 'EPUB转TXT转换器',
       'epub_to_txt.subtitle': '将EPUB电子书文件转换为纯文本TXT格式。',
       // EPUB to XLSX
