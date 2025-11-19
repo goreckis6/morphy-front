@@ -1839,5 +1839,14 @@ Object.entries(samplesPageResources).forEach(([locale, resources]) => {
   i18n.addResourceBundle(locale, 'translation', resources, true, true);
 });
 
-export default samplesPageResources;
+// Import and register additional language translations
+import additionalLanguagesResources from './samplesPageAdditional';
+Object.entries(additionalLanguagesResources).forEach(([locale, resources]) => {
+  i18n.addResourceBundle(locale, 'translation', resources, true, true);
+});
+
+// Merge all translations
+const allSamplesPageResources = { ...samplesPageResources, ...additionalLanguagesResources };
+
+export default allSamplesPageResources;
 
