@@ -466,7 +466,7 @@ export const additionalTranslations = {
       'csv_to_yaml.benefit_types_desc': 'YAML supports strings, numbers, booleans, arrays, and dictionaries with proper type preservation from your CSV data.',
       'csv_to_yaml.benefit_standard': 'Standard del Settore',
       'csv_to_yaml.benefit_standard_desc': 'YAML è utilizzato da progetti importanti come Rust Cargo, Python pip e molti strumenti DevOps come formato di configurazione standard.',
-      'csv_to_yaml.use_cases_title': 'Casi d\',
+      'csv_to_yaml.use_cases_title': 'Casi d\'Utilizzo',
       'csv_to_yaml.use_case_config_title': 'Configurazione Applicazione',
       'csv_to_yaml.use_case_config_desc': 'Converti dati CSV in formato YAML per file di configurazione applicazione, consentendo facile modifica sia da sviluppatori che da team operativi.',
       'csv_to_yaml.use_case_api_title': 'API Integration',
@@ -657,15 +657,15 @@ export const additionalTranslations = {
   tr: {
     translation: {
       // CSV to YAML
-      'csv_to_yaml.title': 'CSV\',
-      'csv_to_yaml.meta_title': 'Ücretsiz CSV\',
+      'csv_to_yaml.title': 'CSV\'den YAML\'e Dönüştürücü',
+      'csv_to_yaml.meta_title': 'Ücretsiz CSV\'den YAML\'e Dönüştürücü Online - CSV Dosyalarını YAML Formatına Anında Dönüştür | En İyi CSV YAML Aracı',
       'csv_to_yaml.meta_description': 'CSV dosyalarını YAML formatına ücretsiz online dönüştürün. Tablo verilerini uygulamalar, DevOps ve yapılandırma yönetimi için YAML yapılandırma formatına dönüştürün. Hızlı, güvenli ve kayıt gerekmez.',
       'csv_to_yaml.subtitle': 'CSV dosyalarını YAML yapılandırma formatına dönüştürün. Yapılandırılmış verilerle uygulamalar, DevOps iş akışları ve yapılandırma yönetimi için mükemmel.',
       'csv_to_yaml.upload_single': 'CSV Dosyası Yükle',
       'csv_to_yaml.upload_multiple': 'Birden Fazla CSV Dosyası Yükle',
       'csv_to_yaml.upload_single_desc': 'CSV dosyanızı buraya sürükleyip bırakın veya göz atmak için tıklayın',
       'csv_to_yaml.upload_multiple_desc': 'Hepsini bir kerede dönüştürmek için birden fazla CSV dosyası seçin',
-      'csv_to_yaml.convert_to_yaml': 'YAML\',
+      'csv_to_yaml.convert_to_yaml': 'YAML\'e Dönüştür',
       'csv_to_yaml.convert_files': '{{count}} Dosya Dönüştür',
       'csv_to_yaml.conversion_success': 'CSV dosyanız başarıyla YAML formatına dönüştürüldü.',
       'csv_to_yaml.download_yaml': 'YAML Dosyası İndir',
@@ -691,7 +691,7 @@ export const additionalTranslations = {
       'csv_to_yaml.use_case_docker': 'Docker ortamları',
       'csv_to_yaml.use_case_k8s': 'Kubernetes configs',
       'csv_to_yaml.use_case_ansible': 'Ansible playbooks',
-      'csv_to_yaml.seo_title': 'Neden CSV\',
+      'csv_to_yaml.seo_title': 'Neden CSV\'den YAML\'e Dönüştürmelisiniz?',
       'csv_to_yaml.seo_description': 'CSV dosyalarını YAML formatına dönüştürmek, yapılandırma yönetimi, DevOps iş akışları ve uygulama kurulumu için gereklidir. CSV dosyaları veri değişimi ve elektronik tablo analizi için mükemmel olsa da, YAML formatı modern uygulamalarda, geliştirme araçlarında ve kod olarak altyapıda yaygın olarak kullanılan insan tarafından okunabilir bir yapılandırma formatı sağlar. Ücretsiz online dönüştürücümüz, CSV verilerinizi yapılandırılmış YAML yapılandırma dosyalarına dönüştürmeyi kolaylaştırır.',
       'csv_to_yaml.benefits_title': 'YAML Formatının Temel Avantajları',
       'csv_to_yaml.benefit_human': 'İnsan Tarafından Okunabilir',
@@ -708,9 +708,9 @@ export const additionalTranslations = {
       'csv_to_yaml.use_case_api_title': 'API Integration',
       'csv_to_yaml.use_case_api_desc': 'Generate YAML configuration files from CSV data for REST API settings, service configurations, and microservices deployment.',
       'csv_to_yaml.use_case_devops_title': 'DevOps İş Akışları',
-      'csv_to_yaml.use_case_devops_desc': 'CI/CD pipeline\',
+      'csv_to_yaml.use_case_devops_desc': 'CSV verilerini CI/CD pipeline\'ları, kod olarak altyapı ve otomatik dağıtım scriptleri için YAML yapılandırmasına dönüştürün.',
       'csv_to_yaml.cta_title': 'CSV Dosyalarınızı Dönüştürmeye Hazır mısınız?',
-      'csv_to_yaml.cta_description': 'Verilerinizi yapılandırılmış yapılandırma formatına dönüştürmek için ücretsiz online CSV\',
+      'csv_to_yaml.cta_description': 'CSV verilerinizi anında YAML formatına dönüştürün. Ücretsiz online CSV\'den YAML\'e dönüştürücümüz toplu işleme, özelleştirilebilir girinti, flow style seçenekleri destekler ve Docker Compose, Kubernetes, Ansible, CI/CD pipeline\'ları ve kod olarak altyapı için geçerli YAML üretir.',
       'csv_to_yaml.start_converting': 'Şimdi Dönüştürmeye Başla'
     },
   ru: {
