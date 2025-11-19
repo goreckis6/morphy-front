@@ -585,6 +585,20 @@ function App() {
         <Route path="/th/convert/csv-to-sql" element={<CSVToSQLConverter />} />
         <Route path="/ja/convert/csv-to-sql" element={<CSVToSQLConverter />} />
         <Route path="/zh/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/id/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/sv/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/es/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/fr/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/it/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/nl/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/pt/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/vi/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/tr/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/ru/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/ar/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/th/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/ja/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
+        <Route path="/zh/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
         <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/id/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/sv/convert/csv-to-odp" element={<CSVToODPConverter />} />
