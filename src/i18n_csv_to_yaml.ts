@@ -239,6 +239,8 @@ export const additionalTranslations = {
       'csv_to_yaml.cta_title': 'Siap Mengonversi File CSV Anda?',
       'csv_to_yaml.cta_description': 'Transformasikan data CSV Anda ke format YAML instan. Konverter online gratis kami CSV ke YAML mendukung pemrosesan batch, indentasi yang dapat disesuaikan, opsi flow style, dan menghasilkan YAML yang valid untuk Docker Compose, Kubernetes, Ansible, pipeline CI/CD, dan infrastruktur sebagai kode.',
       'csv_to_yaml.start_converting': 'Mulai Mengonversi Sekarang'
+    },
+  },
   sv: {
     translation: {
       // CSV to YAML
