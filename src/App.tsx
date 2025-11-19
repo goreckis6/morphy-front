@@ -661,6 +661,23 @@ function App() {
         <Route path="/th/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
         <Route path="/ja/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
         <Route path="/zh/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+
+        {/* New Languages Converter Routes - CSV to SQL */}
+        <Route path="/id/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/sv/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/es/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/fr/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/it/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/nl/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/pt/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/vi/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/tr/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/ru/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/ar/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/th/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/ja/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+        <Route path="/zh/convert/csv-to-sql" element={<CSVToSQLConverter />} />
+
         <Route path="/id/convert/csv-to-txt" element={<CSVToTXTConverter />} />
         <Route path="/sv/convert/csv-to-txt" element={<CSVToTXTConverter />} />
         <Route path="/es/convert/csv-to-txt" element={<CSVToTXTConverter />} />
