@@ -1,7 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { additionalTranslations } from './i18n_v2';
 
 // Translation resources
 const resources = {
@@ -36537,8 +36536,8 @@ const resources = {
       'csv_to_ppt.table_chart': '表格 + 图表',
       'csv_to_ppt.include_charts': '包含图表',
       'csv_to_ppt.include_charts_desc': '从您的数据生成图表和图形',
-
-  }
+    },
+  },
 };
 
 export const resolveLanguageFromPath = (path: string): string => {
