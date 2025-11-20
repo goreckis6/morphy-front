@@ -1519,6 +1519,326 @@ export const nl: SamplePageTranslations = {
           description: 'Download gratis 3GP 3GPP mobile video voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om mobiele videospelers, 3GP-converters en multimedi software te testen.'
         },
         about_description: 'Dit zijn 3GP (3GPP mobile video) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      dav: {
+        meta: {
+          title: 'Gratis DAV Voorbeeldbestanden Downloaden - DAV Video Testbestanden voor Beveiligingscamera\'s | MorphyHub',
+          description: 'Download gratis DAV voorbeeldbestanden om DAV-videospelers, videoverwerking van beveiligingscamera\'s, DAV-converters en video-bewakingsanalysehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DAV-afspelen, DAV-naar-MP4-converters, beveiligingscamera-software, video-bewakingshulpmiddelen en DAV-formaatcompatibiliteit.',
+          keywords: 'DAV voorbeeldbestanden, DAV testbestanden, DAV voorbeelden downloaden, gratis DAV testbestanden, DAV videobestanden, beveiligingscamera videobestanden, DAV naar MP4 converter, DAV-speler test, video-bewaking voorbeelden, DAV-formaat testbestanden, video-bewaking testbestanden'
+        },
+        schema: {
+          name: 'Gratis DAV Voorbeeldbestanden - DAV Video Testbestanden voor Beveiligingscamera\'s Downloaden',
+          description: 'Download gratis DAV voorbeeldbestanden om DAV-videospelers, videoverwerking van beveiligingscamera\'s, DAV-converters en video-bewakingsanalysehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DAV-afspelen, DAV-naar-MP4-converters, beveiligingscamera-software, video-bewakingshulpmiddelen en DAV-formaatcompatibiliteit.'
+        },
+        hero: {
+          title: 'DAV Voorbeeldbestanden',
+          description: 'Download gratis DAV voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om DAV-videospelers, videoverwerkingshulpmiddelen van beveiligingscamera\'s en DAV-converters te testen.'
+        },
+        about_description: 'Dit zijn DAV-video testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      dds: {
+        meta: {
+          title: 'Gratis DDS Voorbeeldbestanden Downloaden - DirectDraw Surface Textuur Testbestanden | MorphyHub',
+          description: 'Download gratis DDS DirectDraw Surface voorbeeldbestanden om textuurafbeeldingsconversie, DDS-weergave, spelontwikkelingshulpmiddelen en grafische verwerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DDS-textuurladen, DDS-naar-PNG-converters, spel-engine-compatibiliteit, textuurcompressiehulpmiddelen en DirectDraw Surface-formaatondersteuning.',
+          keywords: 'DDS voorbeeldbestanden, DDS testbestanden, DDS voorbeelden downloaden, gratis DDS testbestanden, DirectDraw Surface bestanden, DDS textuurbestanden, DDS naar PNG converter, textuurafbeelding voorbeelden, spelontwikkeling testbestanden, DDS-formaat test, grafische textuur voorbeelden'
+        },
+        schema: {
+          name: 'Gratis DDS Voorbeeldbestanden - DirectDraw Surface Textuur Testbestanden Downloaden',
+          description: 'Download gratis DDS DirectDraw Surface voorbeeldbestanden om textuurafbeeldingsconversie, DDS-weergave, spelontwikkelingshulpmiddelen en grafische verwerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DDS-textuurladen, DDS-naar-PNG-converters, spel-engine-compatibiliteit, textuurcompressiehulpmiddelen en DirectDraw Surface-formaatondersteuning.'
+        },
+        hero: {
+          title: 'DDS Voorbeeldbestanden',
+          description: 'Download gratis DDS DirectDraw Surface voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om textuurafbeeldingsconversiehulpmiddelen, DDS-viewers en spelontwikkelingssoftware te testen.'
+        },
+        about_description: 'Dit zijn DDS (DirectDraw Surface) textuurafbeelding testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      dng: {
+        meta: {
+          title: 'Gratis DNG Voorbeeldbestanden Downloaden - Digital Negative Raw Afbeelding Testbestanden | MorphyHub',
+          description: 'Download gratis DNG Digital Negative raw afbeeldingsvoorbeeldbestanden om raw afbeeldingsverwerking, DNG-conversie, fotosoftware en professionele afbeeldingsbewerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DNG-naar-JPEG-converters, raw afbeeldingseditors, DNG-weergave, camera raw-verwerking en Adobe Digital Negative-formaatondersteuning.',
+          keywords: 'DNG voorbeeldbestanden, DNG testbestanden, DNG voorbeelden downloaden, gratis DNG testbestanden, Digital Negative bestanden, DNG raw afbeeldingsbestanden, DNG naar JPEG converter, raw afbeeldingsverwerking, fotografie testbestanden, DNG-formaat test, camera raw voorbeelden, Adobe DNG testbestanden'
+        },
+        schema: {
+          name: 'Gratis DNG Voorbeeldbestanden - Digital Negative Raw Afbeelding Testbestanden Downloaden',
+          description: 'Download gratis DNG Digital Negative raw afbeeldingsvoorbeeldbestanden om raw afbeeldingsverwerking, DNG-conversie, fotosoftware en professionele afbeeldingsbewerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DNG-naar-JPEG-converters, raw afbeeldingseditors, DNG-weergave, camera raw-verwerking en Adobe Digital Negative-formaatondersteuning.'
+        },
+        hero: {
+          title: 'DNG Voorbeeldbestanden',
+          description: 'Download gratis DNG Digital Negative raw afbeeldingsvoorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om raw afbeeldingsverwerkingshulpmiddelen, DNG-converters en fotosoftware te testen.'
+        },
+        about_description: 'Dit zijn DNG (Digital Negative) raw afbeeldings testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      eps: {
+        meta: {
+          title: 'Gratis EPS Voorbeeldbestanden Downloaden - Encapsulated PostScript Vectorafbeelding Testbestanden | MorphyHub',
+          description: 'Download gratis EPS Encapsulated PostScript voorbeeldbestanden om vectorafbeeldingsconversie, EPS-weergave, PostScript-verwerking en professionele designsoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EPS-naar-PDF-converters, EPS-naar-SVG-converters, vectorafbeeldingseditors, PostScript-viewers en Encapsulated PostScript-formaatcompatibiliteit.',
+          keywords: 'EPS voorbeeldbestanden, EPS testbestanden, EPS voorbeelden downloaden, gratis EPS testbestanden, Encapsulated PostScript bestanden, EPS vectorafbeeldingen, EPS naar PDF converter, EPS naar SVG converter, vectorafbeelding voorbeelden, PostScript testbestanden, designsoftware testbestanden, EPS-formaat test'
+        },
+        schema: {
+          name: 'Gratis EPS Voorbeeldbestanden - Encapsulated PostScript Vectorafbeelding Testbestanden Downloaden',
+          description: 'Download gratis EPS Encapsulated PostScript voorbeeldbestanden om vectorafbeeldingsconversie, EPS-weergave, PostScript-verwerking en professionele designsoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EPS-naar-PDF-converters, EPS-naar-SVG-converters, vectorafbeeldingseditors, PostScript-viewers en Encapsulated PostScript-formaatcompatibiliteit.'
+        },
+        hero: {
+          title: 'EPS Voorbeeldbestanden',
+          description: 'Download gratis EPS Encapsulated PostScript voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om vectorafbeeldingsconversiehulpmiddelen, EPS-viewers en PostScript-verwerkingssoftware te testen.'
+        },
+        about_description: 'Dit zijn EPS (Encapsulated PostScript) vectorafbeelding testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      exr: {
+        meta: {
+          title: 'Gratis EXR Voorbeeldbestanden Downloaden - OpenEXR High Dynamic Range Afbeelding Testbestanden | MorphyHub',
+          description: 'Download gratis EXR OpenEXR High Dynamic Range afbeeldingsvoorbeeldbestanden om HDR-afbeeldingsverwerking, EXR-conversie, professionele fotosoftware en visuele effectenhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EXR-naar-JPEG-converters, HDR-afbeeldingseditors, EXR-weergave, High Dynamic Range-verwerking en OpenEXR-formaatondersteuning.',
+          keywords: 'EXR voorbeeldbestanden, EXR testbestanden, EXR voorbeelden downloaden, gratis EXR testbestanden, OpenEXR bestanden, EXR HDR-afbeeldingen, EXR naar JPEG converter, HDR-afbeeldingsverwerking, High Dynamic Range voorbeelden, visuele effecten testbestanden, EXR-formaat test, professionele fotografie testbestanden'
+        },
+        schema: {
+          name: 'Gratis EXR Voorbeeldbestanden - OpenEXR High Dynamic Range Afbeelding Testbestanden Downloaden',
+          description: 'Download gratis EXR OpenEXR High Dynamic Range afbeeldingsvoorbeeldbestanden om HDR-afbeeldingsverwerking, EXR-conversie, professionele fotosoftware en visuele effectenhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van EXR-naar-JPEG-converters, HDR-afbeeldingseditors, EXR-weergave, High Dynamic Range-verwerking en OpenEXR-formaatondersteuning.'
+        },
+        hero: {
+          title: 'EXR Voorbeeldbestanden',
+          description: 'Download gratis EXR OpenEXR High Dynamic Range afbeeldingsvoorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om HDR-afbeeldingsverwerkingshulpmiddelen, EXR-converters en visuele effectensoftware te testen.'
+        },
+        about_description: 'Dit zijn EXR (OpenEXR High Dynamic Range) afbeeldings testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      hdr: {
+        meta: {
+          title: 'Gratis HDR Voorbeeldbestanden Downloaden - High Dynamic Range Afbeelding Testbestanden | MorphyHub',
+          description: 'Download gratis HDR High Dynamic Range afbeeldingsvoorbeeldbestanden om HDR-afbeeldingsverwerking, HDR-conversie, fotosoftware en afbeeldingsbewerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HDR-naar-JPEG-converters, HDR-afbeeldingseditors, HDR-weergave, tone mapping-hulpmiddelen en High Dynamic Range-formaatondersteuning.',
+          keywords: 'HDR voorbeeldbestanden, HDR testbestanden, HDR voorbeelden downloaden, gratis HDR testbestanden, High Dynamic Range bestanden, HDR-afbeeldingen, HDR naar JPEG converter, HDR-afbeeldingsverwerking, tone mapping testbestanden, fotografie testbestanden, HDR-formaat test, High Dynamic Range voorbeelden'
+        },
+        schema: {
+          name: 'Gratis HDR Voorbeeldbestanden - High Dynamic Range Afbeelding Testbestanden Downloaden',
+          description: 'Download gratis HDR High Dynamic Range afbeeldingsvoorbeeldbestanden om HDR-afbeeldingsverwerking, HDR-conversie, fotosoftware en afbeeldingsbewerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HDR-naar-JPEG-converters, HDR-afbeeldingseditors, HDR-weergave, tone mapping-hulpmiddelen en High Dynamic Range-formaatondersteuning.'
+        },
+        hero: {
+          title: 'HDR Voorbeeldbestanden',
+          description: 'Download gratis HDR High Dynamic Range afbeeldingsvoorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om HDR-afbeeldingsverwerkingshulpmiddelen, HDR-converters en fotosoftware te testen.'
+        },
+        about_description: 'Dit zijn HDR (High Dynamic Range) afbeeldings testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      heic: {
+        meta: {
+          title: 'Gratis HEIC Voorbeeldbestanden Downloaden - High Efficiency Image Container Testbestanden | MorphyHub',
+          description: 'Download gratis HEIC High Efficiency Image Container voorbeeldbestanden om HEIC-afbeeldingsconversie, HEIC-weergave, moderne afbeeldingsformaatverwerking en mobiele fotografiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HEIC-naar-JPEG-converters, HEIC-naar-PNG-converters, iOS-afbeeldingsverwerking, HEIC-weergavesoftware en High Efficiency Image Container-formaatondersteuning.',
+          keywords: 'HEIC voorbeeldbestanden, HEIC testbestanden, HEIC voorbeelden downloaden, gratis HEIC testbestanden, High Efficiency Image Container bestanden, HEIC-afbeeldingen, HEIC naar JPEG converter, HEIC naar PNG converter, iOS-afbeelding voorbeelden, mobiele fotografie testbestanden, HEIC-formaat test, moderne afbeeldingsformaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis HEIC Voorbeeldbestanden - High Efficiency Image Container Testbestanden Downloaden',
+          description: 'Download gratis HEIC High Efficiency Image Container voorbeeldbestanden om HEIC-afbeeldingsconversie, HEIC-weergave, moderne afbeeldingsformaatverwerking en mobiele fotografiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HEIC-naar-JPEG-converters, HEIC-naar-PNG-converters, iOS-afbeeldingsverwerking, HEIC-weergavesoftware en High Efficiency Image Container-formaatondersteuning.'
+        },
+        hero: {
+          title: 'HEIC Voorbeeldbestanden',
+          description: 'Download gratis HEIC High Efficiency Image Container voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om HEIC-afbeeldingsconversiehulpmiddelen, HEIC-viewers en moderne afbeeldingsformaatverwerkingssoftware te testen.'
+        },
+        about_description: 'Dit zijn HEIC (High Efficiency Image Container) afbeeldings testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      heif: {
+        meta: {
+          title: 'Gratis HEIF Voorbeeldbestanden Downloaden - High Efficiency Image Format Testbestanden | MorphyHub',
+          description: 'Download gratis HEIF High Efficiency Image Format voorbeeldbestanden om HEIF-afbeeldingsconversie, HEIF-weergave, moderne afbeeldingsformaatverwerking en mobiele fotografiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HEIF-naar-JPEG-converters, HEIF-naar-PNG-converters, mobiele afbeeldingsverwerking, HEIF-weergavesoftware en High Efficiency Image Format-ondersteuning.',
+          keywords: 'HEIF voorbeeldbestanden, HEIF testbestanden, HEIF voorbeelden downloaden, gratis HEIF testbestanden, High Efficiency Image Format bestanden, HEIF-afbeeldingen, HEIF naar JPEG converter, HEIF naar PNG converter, mobiele afbeelding voorbeelden, moderne afbeeldingsformaat testbestanden, HEIF-formaat test, afbeeldingscompressie testbestanden'
+        },
+        schema: {
+          name: 'Gratis HEIF Voorbeeldbestanden - High Efficiency Image Format Testbestanden Downloaden',
+          description: 'Download gratis HEIF High Efficiency Image Format voorbeeldbestanden om HEIF-afbeeldingsconversie, HEIF-weergave, moderne afbeeldingsformaatverwerking en mobiele fotografiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van HEIF-naar-JPEG-converters, HEIF-naar-PNG-converters, mobiele afbeeldingsverwerking, HEIF-weergavesoftware en High Efficiency Image Format-ondersteuning.'
+        },
+        hero: {
+          title: 'HEIF Voorbeeldbestanden',
+          description: 'Download gratis HEIF High Efficiency Image Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om HEIF-afbeeldingsconversiehulpmiddelen, HEIF-viewers en moderne afbeeldingsformaatverwerkingssoftware te testen.'
+        },
+        about_description: 'Dit zijn HEIF (High Efficiency Image Format) afbeeldings testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      icns: {
+        meta: {
+          title: 'Gratis ICNS Voorbeeldbestanden Downloaden - macOS Pictogram Testbestanden | MorphyHub',
+          description: 'Download gratis ICNS macOS-pictogramvoorbeeldbestanden om macOS-pictogramconversie, ICNS-weergave, pictogramontwerphulpmiddelen en macOS-applicatieontwikkeling te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ICNS-naar-PNG-converters, ICNS-naar-ICO-converters, macOS-pictogrameditors, pictogramontwerpsoftware en macOS-pictogramformaatondersteuning.',
+          keywords: 'ICNS voorbeeldbestanden, ICNS testbestanden, ICNS voorbeelden downloaden, gratis ICNS testbestanden, macOS pictogram bestanden, ICNS-pictogrammen, ICNS naar PNG converter, ICNS naar ICO converter, macOS pictogramontwerp, pictogrameditor testbestanden, ICNS-formaat test, Apple-pictogram voorbeelden'
+        },
+        schema: {
+          name: 'Gratis ICNS Voorbeeldbestanden - macOS Pictogram Testbestanden Downloaden',
+          description: 'Download gratis ICNS macOS-pictogramvoorbeeldbestanden om macOS-pictogramconversie, ICNS-weergave, pictogramontwerphulpmiddelen en macOS-applicatieontwikkeling te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ICNS-naar-PNG-converters, ICNS-naar-ICO-converters, macOS-pictogrameditors, pictogramontwerpsoftware en macOS-pictogramformaatondersteuning.'
+        },
+        hero: {
+          title: 'ICNS Voorbeeldbestanden',
+          description: 'Download gratis ICNS macOS-pictogramvoorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om macOS-pictogramconversiehulpmiddelen, ICNS-viewers en pictogramontwerpsoftware te testen.'
+        },
+        about_description: 'Dit zijn ICNS (macOS-pictogram) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ico: {
+        meta: {
+          title: 'Gratis ICO Voorbeeldbestanden Downloaden - Windows Pictogram Testbestanden | MorphyHub',
+          description: 'Download gratis ICO Windows-pictogramvoorbeeldbestanden om Windows-pictogramconversie, ICO-weergave, pictogramontwerphulpmiddelen en Windows-applicatieontwikkeling te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ICO-naar-PNG-converters, ICO-naar-ICNS-converters, Windows-pictogrameditors, pictogramontwerpsoftware en Windows-pictogramformaatondersteuning.',
+          keywords: 'ICO voorbeeldbestanden, ICO testbestanden, ICO voorbeelden downloaden, gratis ICO testbestanden, Windows pictogram bestanden, ICO-pictogrammen, ICO naar PNG converter, ICO naar ICNS converter, Windows pictogramontwerp, pictogrameditor testbestanden, ICO-formaat test, Windows-pictogram voorbeelden'
+        },
+        schema: {
+          name: 'Gratis ICO Voorbeeldbestanden - Windows Pictogram Testbestanden Downloaden',
+          description: 'Download gratis ICO Windows-pictogramvoorbeeldbestanden om Windows-pictogramconversie, ICO-weergave, pictogramontwerphulpmiddelen en Windows-applicatieontwikkeling te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ICO-naar-PNG-converters, ICO-naar-ICNS-converters, Windows-pictogrameditors, pictogramontwerpsoftware en Windows-pictogramformaatondersteuning.'
+        },
+        hero: {
+          title: 'ICO Voorbeeldbestanden',
+          description: 'Download gratis ICO Windows-pictogramvoorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om Windows-pictogramconversiehulpmiddelen, ICO-viewers en pictogramontwerpsoftware te testen.'
+        },
+        about_description: 'Dit zijn ICO (Windows-pictogram) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      jpeg: {
+        meta: {
+          title: 'Gratis JPEG Voorbeeldbestanden Downloaden - JPEG Afbeelding Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          description: 'Download gratis JPEG voorbeeldbestanden om JPEG-afbeeldingsconversie, JPEG-compressie, afbeeldingsverwerkingshulpmiddelen en foto-bewerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JPEG-naar-PNG-converters, JPEG-naar-PDF-converters, afbeeldingscompressiehulpmiddelen, JPEG-optimalisatie en Joint Photographic Experts Group-formaatondersteuning.',
+          keywords: 'JPEG voorbeeldbestanden, JPEG testbestanden, JPEG voorbeelden downloaden, gratis JPEG testbestanden, JPEG afbeeldingsbestanden, JPEG naar PNG converter, JPEG naar PDF converter, afbeeldingscompressie testbestanden, foto-bewerking testbestanden, JPEG-formaat test, afbeeldingsverwerking voorbeelden'
+        },
+        schema: {
+          name: 'Gratis JPEG Voorbeeldbestanden - JPEG Afbeelding Testbestanden voor Conversiehulpmiddelen Downloaden',
+          description: 'Download gratis JPEG voorbeeldbestanden om JPEG-afbeeldingsconversie, JPEG-compressie, afbeeldingsverwerkingshulpmiddelen en foto-bewerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JPEG-naar-PNG-converters, JPEG-naar-PDF-converters, afbeeldingscompressiehulpmiddelen, JPEG-optimalisatie en Joint Photographic Experts Group-formaatondersteuning.'
+        },
+        hero: {
+          title: 'JPEG Voorbeeldbestanden',
+          description: 'Download gratis JPEG voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om JPEG-afbeeldingsconversiehulpmiddelen, JPEG-compressiesoftware en afbeeldingsverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn JPEG-afbeeldings testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      jpg: {
+        meta: {
+          title: 'Gratis JPG Voorbeeldbestanden Downloaden - JPG Afbeelding Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          description: 'Download gratis JPG voorbeeldbestanden om JPG-afbeeldingsconversie, JPG-compressie, afbeeldingsverwerkingshulpmiddelen en foto-bewerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JPG-naar-PNG-converters, JPG-naar-PDF-converters, afbeeldingscompressiehulpmiddelen, JPG-optimalisatie en Joint Photographic Experts Group-formaatondersteuning.',
+          keywords: 'JPG voorbeeldbestanden, JPG testbestanden, JPG voorbeelden downloaden, gratis JPG testbestanden, JPG afbeeldingsbestanden, JPG naar PNG converter, JPG naar PDF converter, afbeeldingscompressie testbestanden, foto-bewerking testbestanden, JPG-formaat test, afbeeldingsverwerking voorbeelden'
+        },
+        schema: {
+          name: 'Gratis JPG Voorbeeldbestanden - JPG Afbeelding Testbestanden voor Conversiehulpmiddelen Downloaden',
+          description: 'Download gratis JPG voorbeeldbestanden om JPG-afbeeldingsconversie, JPG-compressie, afbeeldingsverwerkingshulpmiddelen en foto-bewerkingssoftware te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JPG-naar-PNG-converters, JPG-naar-PDF-converters, afbeeldingscompressiehulpmiddelen, JPG-optimalisatie en Joint Photographic Experts Group-formaatondersteuning.'
+        },
+        hero: {
+          title: 'JPG Voorbeeldbestanden',
+          description: 'Download gratis JPG voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om JPG-afbeeldingsconversiehulpmiddelen, JPG-compressiesoftware en afbeeldingsverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn JPG-afbeeldings testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      m4v: {
+        meta: {
+          title: 'Gratis M4V Voorbeeldbestanden Downloaden - M4V Video Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          description: 'Download gratis M4V voorbeeldbestanden om M4V-videoconversie, M4V-afspelen, videoverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van M4V-naar-MP4-converters, M4V-naar-AVI-converters, videospelers, M4V-afspeelcompatibiliteit en MPEG-4-videoformaatondersteuning.',
+          keywords: 'M4V voorbeeldbestanden, M4V testbestanden, M4V voorbeelden downloaden, gratis M4V testbestanden, M4V videobestanden, M4V naar MP4 converter, M4V naar AVI converter, videospeler testbestanden, M4V-afspelen test, videoconversie voorbeelden, MPEG-4 videoformaat test'
+        },
+        schema: {
+          name: 'Gratis M4V Voorbeeldbestanden - M4V Video Testbestanden voor Conversiehulpmiddelen Downloaden',
+          description: 'Download gratis M4V voorbeeldbestanden om M4V-videoconversie, M4V-afspelen, videoverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van M4V-naar-MP4-converters, M4V-naar-AVI-converters, videospelers, M4V-afspeelcompatibiliteit en MPEG-4-videoformaatondersteuning.'
+        },
+        hero: {
+          title: 'M4V Voorbeeldbestanden',
+          description: 'Download gratis M4V voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om M4V-videoconversiehulpmiddelen, M4V-afspeelsoftware en videoverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn M4V-video testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      mkv: {
+        meta: {
+          title: 'Gratis MKV Voorbeeldbestanden Downloaden - Matroska Video Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          description: 'Download gratis MKV Matroska voorbeeldbestanden om MKV-videoconversie, MKV-afspelen, videoverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van MKV-naar-MP4-converters, MKV-naar-AVI-converters, videospelers, MKV-afspeelcompatibiliteit en Matroska-videoformaatondersteuning.',
+          keywords: 'MKV voorbeeldbestanden, MKV testbestanden, MKV voorbeelden downloaden, gratis MKV testbestanden, Matroska videobestanden, MKV naar MP4 converter, MKV naar AVI converter, videospeler testbestanden, MKV-afspelen test, videoconversie voorbeelden, Matroska-formaat test'
+        },
+        schema: {
+          name: 'Gratis MKV Voorbeeldbestanden - Matroska Video Testbestanden voor Conversiehulpmiddelen Downloaden',
+          description: 'Download gratis MKV Matroska voorbeeldbestanden om MKV-videoconversie, MKV-afspelen, videoverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van MKV-naar-MP4-converters, MKV-naar-AVI-converters, videospelers, MKV-afspeelcompatibiliteit en Matroska-videoformaatondersteuning.'
+        },
+        hero: {
+          title: 'MKV Voorbeeldbestanden',
+          description: 'Download gratis MKV Matroska voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om MKV-videoconversiehulpmiddelen, MKV-afspeelsoftware en videoverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn MKV (Matroska) video testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      aac: {
+        meta: {
+          title: 'Gratis AAC Voorbeeldbestanden Downloaden - Advanced Audio Coding Testbestanden | MorphyHub',
+          description: 'Download gratis AAC Advanced Audio Coding voorbeeldbestanden om audioconversie, AAC-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AAC-naar-MP3-converters, AAC-naar-WAV-converters, audioplayers, AAC-afspeelcompatibiliteit en Advanced Audio Coding-formaatondersteuning.',
+          keywords: 'AAC voorbeeldbestanden, AAC testbestanden, AAC voorbeelden downloaden, gratis AAC testbestanden, Advanced Audio Coding bestanden, AAC naar MP3 converter, AAC naar WAV converter, audioplayer testbestanden, AAC-afspelen test, audioconversie voorbeelden, Advanced Audio Coding-formaat test'
+        },
+        schema: {
+          name: 'Gratis AAC Voorbeeldbestanden - Advanced Audio Coding Testbestanden Downloaden',
+          description: 'Download gratis AAC Advanced Audio Coding voorbeeldbestanden om audioconversie, AAC-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AAC-naar-MP3-converters, AAC-naar-WAV-converters, audioplayers, AAC-afspeelcompatibiliteit en Advanced Audio Coding-formaatondersteuning.'
+        },
+        hero: {
+          title: 'AAC Voorbeeldbestanden',
+          description: 'Download gratis AAC Advanced Audio Coding voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audioconversiehulpmiddelen, AAC-afspeelsoftware en audioverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn AAC (Advanced Audio Coding) audio testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ac3: {
+        meta: {
+          title: 'Gratis AC3 Voorbeeldbestanden Downloaden - Dolby Digital Audio Testbestanden | MorphyHub',
+          description: 'Download gratis AC3 Dolby Digital voorbeeldbestanden om audioconversie, AC3-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AC3-naar-MP3-converters, AC3-naar-WAV-converters, audioplayers, AC3-afspeelcompatibiliteit en Dolby Digital-formaatondersteuning.',
+          keywords: 'AC3 voorbeeldbestanden, AC3 testbestanden, AC3 voorbeelden downloaden, gratis AC3 testbestanden, Dolby Digital bestanden, AC3 naar MP3 converter, AC3 naar WAV converter, audioplayer testbestanden, AC3-afspelen test, audioconversie voorbeelden, Dolby Digital-formaat test'
+        },
+        schema: {
+          name: 'Gratis AC3 Voorbeeldbestanden - Dolby Digital Audio Testbestanden Downloaden',
+          description: 'Download gratis AC3 Dolby Digital voorbeeldbestanden om audioconversie, AC3-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AC3-naar-MP3-converters, AC3-naar-WAV-converters, audioplayers, AC3-afspeelcompatibiliteit en Dolby Digital-formaatondersteuning.'
+        },
+        hero: {
+          title: 'AC3 Voorbeeldbestanden',
+          description: 'Download gratis AC3 Dolby Digital voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audioconversiehulpmiddelen, AC3-afspeelsoftware en audioverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn AC3 (Dolby Digital) audio testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      aif: {
+        meta: {
+          title: 'Gratis AIF Voorbeeldbestanden Downloaden - Audio Interchange File Format Testbestanden | MorphyHub',
+          description: 'Download gratis AIF Audio Interchange File Format voorbeeldbestanden om audioconversie, AIF-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AIF-naar-MP3-converters, AIF-naar-WAV-converters, audioplayers, AIF-afspeelcompatibiliteit en Audio Interchange File Format-ondersteuning.',
+          keywords: 'AIF voorbeeldbestanden, AIF testbestanden, AIF voorbeelden downloaden, gratis AIF testbestanden, Audio Interchange File Format bestanden, AIF naar MP3 converter, AIF naar WAV converter, audioplayer testbestanden, AIF-afspelen test, audioconversie voorbeelden, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Gratis AIF Voorbeeldbestanden - Audio Interchange File Format Testbestanden Downloaden',
+          description: 'Download gratis AIF Audio Interchange File Format voorbeeldbestanden om audioconversie, AIF-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AIF-naar-MP3-converters, AIF-naar-WAV-converters, audioplayers, AIF-afspeelcompatibiliteit en Audio Interchange File Format-ondersteuning.'
+        },
+        hero: {
+          title: 'AIF Voorbeeldbestanden',
+          description: 'Download gratis AIF Audio Interchange File Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audioconversiehulpmiddelen, AIF-afspeelsoftware en audioverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn AIF (Audio Interchange File Format) audio testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      aiff: {
+        meta: {
+          title: 'Gratis AIFF Voorbeeldbestanden Downloaden - Audio Interchange File Format Testbestanden | MorphyHub',
+          description: 'Download gratis AIFF Audio Interchange File Format voorbeeldbestanden om audioconversie, AIFF-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AIFF-naar-MP3-converters, AIFF-naar-WAV-converters, audioplayers, AIFF-afspeelcompatibiliteit en Audio Interchange File Format-ondersteuning.',
+          keywords: 'AIFF voorbeeldbestanden, AIFF testbestanden, AIFF voorbeelden downloaden, gratis AIFF testbestanden, Audio Interchange File Format bestanden, AIFF naar MP3 converter, AIFF naar WAV converter, audioplayer testbestanden, AIFF-afspelen test, audioconversie voorbeelden, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Gratis AIFF Voorbeeldbestanden - Audio Interchange File Format Testbestanden Downloaden',
+          description: 'Download gratis AIFF Audio Interchange File Format voorbeeldbestanden om audioconversie, AIFF-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AIFF-naar-MP3-converters, AIFF-naar-WAV-converters, audioplayers, AIFF-afspeelcompatibiliteit en Audio Interchange File Format-ondersteuning.'
+        },
+        hero: {
+          title: 'AIFF Voorbeeldbestanden',
+          description: 'Download gratis AIFF Audio Interchange File Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audioconversiehulpmiddelen, AIFF-afspeelsoftware en audioverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn AIFF (Audio Interchange File Format) audio testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      amr: {
+        meta: {
+          title: 'Gratis AMR Voorbeeldbestanden Downloaden - Adaptive Multi-Rate Audio Testbestanden | MorphyHub',
+          description: 'Download gratis AMR Adaptive Multi-Rate voorbeeldbestanden om audioconversie, AMR-afspelen, audioverwerkingshulpmiddelen en mobiele multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AMR-naar-MP3-converters, AMR-naar-WAV-converters, audioplayers, AMR-afspeelcompatibiliteit en Adaptive Multi-Rate-formaatondersteuning.',
+          keywords: 'AMR voorbeeldbestanden, AMR testbestanden, AMR voorbeelden downloaden, gratis AMR testbestanden, Adaptive Multi-Rate bestanden, AMR naar MP3 converter, AMR naar WAV converter, audioplayer testbestanden, AMR-afspelen test, audioconversie voorbeelden, Adaptive Multi-Rate-formaat test'
+        },
+        schema: {
+          name: 'Gratis AMR Voorbeeldbestanden - Adaptive Multi-Rate Audio Testbestanden Downloaden',
+          description: 'Download gratis AMR Adaptive Multi-Rate voorbeeldbestanden om audioconversie, AMR-afspelen, audioverwerkingshulpmiddelen en mobiele multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AMR-naar-MP3-converters, AMR-naar-WAV-converters, audioplayers, AMR-afspeelcompatibiliteit en Adaptive Multi-Rate-formaatondersteuning.'
+        },
+        hero: {
+          title: 'AMR Voorbeeldbestanden',
+          description: 'Download gratis AMR Adaptive Multi-Rate voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audioconversiehulpmiddelen, AMR-afspeelsoftware en audioverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn AMR (Adaptive Multi-Rate) audio testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      caf: {
+        meta: {
+          title: 'Gratis CAF Voorbeeldbestanden Downloaden - Core Audio Format Testbestanden | MorphyHub',
+          description: 'Download gratis CAF Core Audio Format voorbeeldbestanden om audioconversie, CAF-afspelen, audioverwerkingshulpmiddelen en macOS multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAF-naar-MP3-converters, CAF-naar-WAV-converters, audioplayers, CAF-afspeelcompatibiliteit en Core Audio Format-ondersteuning.',
+          keywords: 'CAF voorbeeldbestanden, CAF testbestanden, CAF voorbeelden downloaden, gratis CAF testbestanden, Core Audio Format bestanden, CAF naar MP3 converter, CAF naar WAV converter, audioplayer testbestanden, CAF-afspelen test, audioconversie voorbeelden, Core Audio Format test'
+        },
+        schema: {
+          name: 'Gratis CAF Voorbeeldbestanden - Core Audio Format Testbestanden Downloaden',
+          description: 'Download gratis CAF Core Audio Format voorbeeldbestanden om audioconversie, CAF-afspelen, audioverwerkingshulpmiddelen en macOS multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAF-naar-MP3-converters, CAF-naar-WAV-converters, audioplayers, CAF-afspeelcompatibiliteit en Core Audio Format-ondersteuning.'
+        },
+        hero: {
+          title: 'CAF Voorbeeldbestanden',
+          description: 'Download gratis CAF Core Audio Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audioconversiehulpmiddelen, CAF-afspeelsoftware en audioverwerkingsapplicaties te testen.'
+        },
+        about_description: 'Dit zijn CAF (Core Audio Format) audio testbestanden in verschillende formaten voor testdoeleinden'
       }
     }
   }

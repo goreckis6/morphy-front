@@ -1519,6 +1519,326 @@ export const de: SamplePageTranslations = {
           description: 'Laden Sie kostenlose 3GP 3GPP Mobile Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Mobile Video-Player, 3GP-Konverter und Multimedia-Software zu testen.'
         },
         about_description: 'Dies sind 3GP (3GPP Mobile Video) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      dav: {
+        meta: {
+          title: 'Kostenlose DAV-Beispieldateien herunterladen - DAV-Video-Testdateien für Sicherheitskameras | MorphyHub',
+          description: 'Laden Sie kostenlose DAV-Beispieldateien zum Testen von DAV-Video-Playern, Sicherheitskamera-Videoverarbeitung, DAV-Konvertern und Videoüberwachungsanalyse-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DAV-Wiedergabe, DAV-zu-MP4-Konvertern, Sicherheitskamera-Software, Videoüberwachungstools und DAV-Format-Kompatibilität.',
+          keywords: 'DAV-Beispieldateien, DAV-Testdateien, DAV-Beispiele herunterladen, kostenlose DAV-Testdateien, DAV-Videodateien, Sicherheitskamera-Videodateien, DAV-zu-MP4-Konverter, DAV-Player-Test, Videoüberwachungsbeispiele, DAV-Format-Testdateien, Videoüberwachungs-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose DAV-Beispieldateien - DAV-Video-Testdateien für Sicherheitskameras herunterladen',
+          description: 'Laden Sie kostenlose DAV-Beispieldateien zum Testen von DAV-Video-Playern, Sicherheitskamera-Videoverarbeitung, DAV-Konvertern und Videoüberwachungsanalyse-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DAV-Wiedergabe, DAV-zu-MP4-Konvertern, Sicherheitskamera-Software, Videoüberwachungstools und DAV-Format-Kompatibilität.'
+        },
+        hero: {
+          title: 'DAV-Beispieldateien',
+          description: 'Laden Sie kostenlose DAV-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre DAV-Video-Player, Sicherheitskamera-Videoverarbeitungstools und DAV-Konverter zu testen.'
+        },
+        about_description: 'Dies sind DAV-Video-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      dds: {
+        meta: {
+          title: 'Kostenlose DDS-Beispieldateien herunterladen - DirectDraw Surface-Textur-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose DDS DirectDraw Surface-Beispieldateien zum Testen von Texturbildkonvertierung, DDS-Anzeige, Spieleentwicklungstools und Grafikverarbeitungssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DDS-Texturladung, DDS-zu-PNG-Konvertern, Spiel-Engine-Kompatibilität, Texturkomprimierungstools und DirectDraw Surface-Format-Support.',
+          keywords: 'DDS-Beispieldateien, DDS-Testdateien, DDS-Beispiele herunterladen, kostenlose DDS-Testdateien, DirectDraw Surface-Dateien, DDS-Texturdateien, DDS-zu-PNG-Konverter, Texturbildbeispiele, Spieleentwicklungs-Testdateien, DDS-Format-Test, Grafiktexturbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose DDS-Beispieldateien - DirectDraw Surface-Textur-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose DDS DirectDraw Surface-Beispieldateien zum Testen von Texturbildkonvertierung, DDS-Anzeige, Spieleentwicklungstools und Grafikverarbeitungssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DDS-Texturladung, DDS-zu-PNG-Konvertern, Spiel-Engine-Kompatibilität, Texturkomprimierungstools und DirectDraw Surface-Format-Support.'
+        },
+        hero: {
+          title: 'DDS-Beispieldateien',
+          description: 'Laden Sie kostenlose DDS DirectDraw Surface-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Texturbildkonvertierungstools, DDS-Viewer und Spieleentwicklungssoftware zu testen.'
+        },
+        about_description: 'Dies sind DDS (DirectDraw Surface) Texturbild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      dng: {
+        meta: {
+          title: 'Kostenlose DNG-Beispieldateien herunterladen - Digital Negative-Rohbild-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose DNG Digital Negative-Rohbild-Beispieldateien zum Testen von Rohbildverarbeitung, DNG-Konvertierung, Fotosoftware und professionellen Bildbearbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DNG-zu-JPEG-Konvertern, Rohbild-Editoren, DNG-Anzeige, Kamera-Rohverarbeitung und Adobe Digital Negative-Format-Support.',
+          keywords: 'DNG-Beispieldateien, DNG-Testdateien, DNG-Beispiele herunterladen, kostenlose DNG-Testdateien, Digital Negative-Dateien, DNG-Rohbilddateien, DNG-zu-JPEG-Konverter, Rohbildverarbeitung, Fotografie-Testdateien, DNG-Format-Test, Kamera-Rohbeispiele, Adobe-DNG-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose DNG-Beispieldateien - Digital Negative-Rohbild-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose DNG Digital Negative-Rohbild-Beispieldateien zum Testen von Rohbildverarbeitung, DNG-Konvertierung, Fotosoftware und professionellen Bildbearbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DNG-zu-JPEG-Konvertern, Rohbild-Editoren, DNG-Anzeige, Kamera-Rohverarbeitung und Adobe Digital Negative-Format-Support.'
+        },
+        hero: {
+          title: 'DNG-Beispieldateien',
+          description: 'Laden Sie kostenlose DNG Digital Negative-Rohbild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Rohbildverarbeitungstools, DNG-Konverter und Fotosoftware zu testen.'
+        },
+        about_description: 'Dies sind DNG (Digital Negative) Rohbild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      eps: {
+        meta: {
+          title: 'Kostenlose EPS-Beispieldateien herunterladen - Encapsulated PostScript-Vektorgrafik-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose EPS Encapsulated PostScript-Beispieldateien zum Testen von Vektorgrafikkonvertierung, EPS-Anzeige, PostScript-Verarbeitung und professioneller Design-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von EPS-zu-PDF-Konvertern, EPS-zu-SVG-Konvertern, Vektorgrafik-Editoren, PostScript-Viewer und Encapsulated PostScript-Format-Kompatibilität.',
+          keywords: 'EPS-Beispieldateien, EPS-Testdateien, EPS-Beispiele herunterladen, kostenlose EPS-Testdateien, Encapsulated PostScript-Dateien, EPS-Vektorgrafik, EPS-zu-PDF-Konverter, EPS-zu-SVG-Konverter, Vektorgrafikbeispiele, PostScript-Testdateien, Design-Software-Testdateien, EPS-Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose EPS-Beispieldateien - Encapsulated PostScript-Vektorgrafik-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose EPS Encapsulated PostScript-Beispieldateien zum Testen von Vektorgrafikkonvertierung, EPS-Anzeige, PostScript-Verarbeitung und professioneller Design-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von EPS-zu-PDF-Konvertern, EPS-zu-SVG-Konvertern, Vektorgrafik-Editoren, PostScript-Viewer und Encapsulated PostScript-Format-Kompatibilität.'
+        },
+        hero: {
+          title: 'EPS-Beispieldateien',
+          description: 'Laden Sie kostenlose EPS Encapsulated PostScript-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Vektorgrafikkonvertierungstools, EPS-Viewer und PostScript-Verarbeitungssoftware zu testen.'
+        },
+        about_description: 'Dies sind EPS (Encapsulated PostScript) Vektorgrafik-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      exr: {
+        meta: {
+          title: 'Kostenlose EXR-Beispieldateien herunterladen - OpenEXR High Dynamic Range-Bild-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose EXR OpenEXR High Dynamic Range-Bild-Beispieldateien zum Testen von HDR-Bildverarbeitung, EXR-Konvertierung, professioneller Fotosoftware und visueller Effekttools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von EXR-zu-JPEG-Konvertern, HDR-Bild-Editoren, EXR-Anzeige, High Dynamic Range-Verarbeitung und OpenEXR-Format-Support.',
+          keywords: 'EXR-Beispieldateien, EXR-Testdateien, EXR-Beispiele herunterladen, kostenlose EXR-Testdateien, OpenEXR-Dateien, EXR-HDR-Bilder, EXR-zu-JPEG-Konverter, HDR-Bildverarbeitung, High Dynamic Range-Beispiele, visuelle Effekte-Testdateien, EXR-Format-Test, professionelle Fotografie-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose EXR-Beispieldateien - OpenEXR High Dynamic Range-Bild-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose EXR OpenEXR High Dynamic Range-Bild-Beispieldateien zum Testen von HDR-Bildverarbeitung, EXR-Konvertierung, professioneller Fotosoftware und visueller Effekttools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von EXR-zu-JPEG-Konvertern, HDR-Bild-Editoren, EXR-Anzeige, High Dynamic Range-Verarbeitung und OpenEXR-Format-Support.'
+        },
+        hero: {
+          title: 'EXR-Beispieldateien',
+          description: 'Laden Sie kostenlose EXR OpenEXR High Dynamic Range-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre HDR-Bildverarbeitungstools, EXR-Konverter und visuelle Effekte-Software zu testen.'
+        },
+        about_description: 'Dies sind EXR (OpenEXR High Dynamic Range) Bild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      hdr: {
+        meta: {
+          title: 'Kostenlose HDR-Beispieldateien herunterladen - High Dynamic Range-Bild-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose HDR High Dynamic Range-Bild-Beispieldateien zum Testen von HDR-Bildverarbeitung, HDR-Konvertierung, Fotosoftware und Bildbearbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HDR-zu-JPEG-Konvertern, HDR-Bild-Editoren, HDR-Anzeige, Tonmapping-Tools und High Dynamic Range-Format-Support.',
+          keywords: 'HDR-Beispieldateien, HDR-Testdateien, HDR-Beispiele herunterladen, kostenlose HDR-Testdateien, High Dynamic Range-Dateien, HDR-Bilder, HDR-zu-JPEG-Konverter, HDR-Bildverarbeitung, Tonmapping-Testdateien, Fotografie-Testdateien, HDR-Format-Test, High Dynamic Range-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose HDR-Beispieldateien - High Dynamic Range-Bild-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose HDR High Dynamic Range-Bild-Beispieldateien zum Testen von HDR-Bildverarbeitung, HDR-Konvertierung, Fotosoftware und Bildbearbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HDR-zu-JPEG-Konvertern, HDR-Bild-Editoren, HDR-Anzeige, Tonmapping-Tools und High Dynamic Range-Format-Support.'
+        },
+        hero: {
+          title: 'HDR-Beispieldateien',
+          description: 'Laden Sie kostenlose HDR High Dynamic Range-Bild-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre HDR-Bildverarbeitungstools, HDR-Konverter und Fotosoftware zu testen.'
+        },
+        about_description: 'Dies sind HDR (High Dynamic Range) Bild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      heic: {
+        meta: {
+          title: 'Kostenlose HEIC-Beispieldateien herunterladen - High Efficiency Image Container-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose HEIC High Efficiency Image Container-Beispieldateien zum Testen von HEIC-Bildkonvertierung, HEIC-Anzeige, moderner Bildformat-Verarbeitung und mobiler Fotografie-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HEIC-zu-JPEG-Konvertern, HEIC-zu-PNG-Konvertern, iOS-Bildverarbeitung, HEIC-Anzeige-Software und High Efficiency Image Container-Format-Support.',
+          keywords: 'HEIC-Beispieldateien, HEIC-Testdateien, HEIC-Beispiele herunterladen, kostenlose HEIC-Testdateien, High Efficiency Image Container-Dateien, HEIC-Bilder, HEIC-zu-JPEG-Konverter, HEIC-zu-PNG-Konverter, iOS-Bildbeispiele, mobile Fotografie-Testdateien, HEIC-Format-Test, moderne Bildformat-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose HEIC-Beispieldateien - High Efficiency Image Container-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose HEIC High Efficiency Image Container-Beispieldateien zum Testen von HEIC-Bildkonvertierung, HEIC-Anzeige, moderner Bildformat-Verarbeitung und mobiler Fotografie-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HEIC-zu-JPEG-Konvertern, HEIC-zu-PNG-Konvertern, iOS-Bildverarbeitung, HEIC-Anzeige-Software und High Efficiency Image Container-Format-Support.'
+        },
+        hero: {
+          title: 'HEIC-Beispieldateien',
+          description: 'Laden Sie kostenlose HEIC High Efficiency Image Container-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre HEIC-Bildkonvertierungstools, HEIC-Viewer und moderne Bildformat-Verarbeitungssoftware zu testen.'
+        },
+        about_description: 'Dies sind HEIC (High Efficiency Image Container) Bild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      heif: {
+        meta: {
+          title: 'Kostenlose HEIF-Beispieldateien herunterladen - High Efficiency Image Format-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose HEIF High Efficiency Image Format-Beispieldateien zum Testen von HEIF-Bildkonvertierung, HEIF-Anzeige, moderner Bildformat-Verarbeitung und mobiler Fotografie-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HEIF-zu-JPEG-Konvertern, HEIF-zu-PNG-Konvertern, mobiler Bildverarbeitung, HEIF-Anzeige-Software und High Efficiency Image Format-Support.',
+          keywords: 'HEIF-Beispieldateien, HEIF-Testdateien, HEIF-Beispiele herunterladen, kostenlose HEIF-Testdateien, High Efficiency Image Format-Dateien, HEIF-Bilder, HEIF-zu-JPEG-Konverter, HEIF-zu-PNG-Konverter, mobile Bildbeispiele, moderne Bildformat-Testdateien, HEIF-Format-Test, Bildkomprimierungs-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose HEIF-Beispieldateien - High Efficiency Image Format-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose HEIF High Efficiency Image Format-Beispieldateien zum Testen von HEIF-Bildkonvertierung, HEIF-Anzeige, moderner Bildformat-Verarbeitung und mobiler Fotografie-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von HEIF-zu-JPEG-Konvertern, HEIF-zu-PNG-Konvertern, mobiler Bildverarbeitung, HEIF-Anzeige-Software und High Efficiency Image Format-Support.'
+        },
+        hero: {
+          title: 'HEIF-Beispieldateien',
+          description: 'Laden Sie kostenlose HEIF High Efficiency Image Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre HEIF-Bildkonvertierungstools, HEIF-Viewer und moderne Bildformat-Verarbeitungssoftware zu testen.'
+        },
+        about_description: 'Dies sind HEIF (High Efficiency Image Format) Bild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      icns: {
+        meta: {
+          title: 'Kostenlose ICNS-Beispieldateien herunterladen - macOS-Icon-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose ICNS macOS-Icon-Beispieldateien zum Testen von macOS-Icon-Konvertierung, ICNS-Anzeige, Icon-Design-Tools und macOS-Anwendungsentwicklung herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ICNS-zu-PNG-Konvertern, ICNS-zu-ICO-Konvertern, macOS-Icon-Editoren, Icon-Design-Software und macOS-Icon-Format-Support.',
+          keywords: 'ICNS-Beispieldateien, ICNS-Testdateien, ICNS-Beispiele herunterladen, kostenlose ICNS-Testdateien, macOS-Icon-Dateien, ICNS-Icons, ICNS-zu-PNG-Konverter, ICNS-zu-ICO-Konverter, macOS-Icon-Design, Icon-Editor-Testdateien, ICNS-Format-Test, Apple-Icon-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose ICNS-Beispieldateien - macOS-Icon-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose ICNS macOS-Icon-Beispieldateien zum Testen von macOS-Icon-Konvertierung, ICNS-Anzeige, Icon-Design-Tools und macOS-Anwendungsentwicklung herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ICNS-zu-PNG-Konvertern, ICNS-zu-ICO-Konvertern, macOS-Icon-Editoren, Icon-Design-Software und macOS-Icon-Format-Support.'
+        },
+        hero: {
+          title: 'ICNS-Beispieldateien',
+          description: 'Laden Sie kostenlose ICNS macOS-Icon-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre macOS-Icon-Konvertierungstools, ICNS-Viewer und Icon-Design-Software zu testen.'
+        },
+        about_description: 'Dies sind ICNS (macOS-Icon) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      ico: {
+        meta: {
+          title: 'Kostenlose ICO-Beispieldateien herunterladen - Windows-Icon-Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose ICO Windows-Icon-Beispieldateien zum Testen von Windows-Icon-Konvertierung, ICO-Anzeige, Icon-Design-Tools und Windows-Anwendungsentwicklung herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ICO-zu-PNG-Konvertern, ICO-zu-ICNS-Konvertern, Windows-Icon-Editoren, Icon-Design-Software und Windows-Icon-Format-Support.',
+          keywords: 'ICO-Beispieldateien, ICO-Testdateien, ICO-Beispiele herunterladen, kostenlose ICO-Testdateien, Windows-Icon-Dateien, ICO-Icons, ICO-zu-PNG-Konverter, ICO-zu-ICNS-Konverter, Windows-Icon-Design, Icon-Editor-Testdateien, ICO-Format-Test, Windows-Icon-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose ICO-Beispieldateien - Windows-Icon-Testdateien herunterladen',
+          description: 'Laden Sie kostenlose ICO Windows-Icon-Beispieldateien zum Testen von Windows-Icon-Konvertierung, ICO-Anzeige, Icon-Design-Tools und Windows-Anwendungsentwicklung herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ICO-zu-PNG-Konvertern, ICO-zu-ICNS-Konvertern, Windows-Icon-Editoren, Icon-Design-Software und Windows-Icon-Format-Support.'
+        },
+        hero: {
+          title: 'ICO-Beispieldateien',
+          description: 'Laden Sie kostenlose ICO Windows-Icon-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Windows-Icon-Konvertierungstools, ICO-Viewer und Icon-Design-Software zu testen.'
+        },
+        about_description: 'Dies sind ICO (Windows-Icon) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      jpeg: {
+        meta: {
+          title: 'Kostenlose JPEG-Beispieldateien herunterladen - JPEG-Bild-Testdateien für Konvertierungstools | MorphyHub',
+          description: 'Laden Sie kostenlose JPEG-Beispieldateien zum Testen von JPEG-Bildkonvertierung, JPEG-Komprimierung, Bildverarbeitungstools und Foto-Bearbeitungssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPEG-zu-PNG-Konvertern, JPEG-zu-PDF-Konvertern, Bildkomprimierungstools, JPEG-Optimierung und Joint Photographic Experts Group-Format-Support.',
+          keywords: 'JPEG-Beispieldateien, JPEG-Testdateien, JPEG-Beispiele herunterladen, kostenlose JPEG-Testdateien, JPEG-Bilddateien, JPEG-zu-PNG-Konverter, JPEG-zu-PDF-Konverter, Bildkomprimierungs-Testdateien, Foto-Bearbeitungs-Testdateien, JPEG-Format-Test, Bildverarbeitungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose JPEG-Beispieldateien - JPEG-Bild-Testdateien für Konvertierungstools herunterladen',
+          description: 'Laden Sie kostenlose JPEG-Beispieldateien zum Testen von JPEG-Bildkonvertierung, JPEG-Komprimierung, Bildverarbeitungstools und Foto-Bearbeitungssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPEG-zu-PNG-Konvertern, JPEG-zu-PDF-Konvertern, Bildkomprimierungstools, JPEG-Optimierung und Joint Photographic Experts Group-Format-Support.'
+        },
+        hero: {
+          title: 'JPEG-Beispieldateien',
+          description: 'Laden Sie kostenlose JPEG-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JPEG-Bildkonvertierungstools, JPEG-Komprimierungssoftware und Bildverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind JPEG-Bild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      jpg: {
+        meta: {
+          title: 'Kostenlose JPG-Beispieldateien herunterladen - JPG-Bild-Testdateien für Konvertierungstools | MorphyHub',
+          description: 'Laden Sie kostenlose JPG-Beispieldateien zum Testen von JPG-Bildkonvertierung, JPG-Komprimierung, Bildverarbeitungstools und Foto-Bearbeitungssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPG-zu-PNG-Konvertern, JPG-zu-PDF-Konvertern, Bildkomprimierungstools, JPG-Optimierung und Joint Photographic Experts Group-Format-Support.',
+          keywords: 'JPG-Beispieldateien, JPG-Testdateien, JPG-Beispiele herunterladen, kostenlose JPG-Testdateien, JPG-Bilddateien, JPG-zu-PNG-Konverter, JPG-zu-PDF-Konverter, Bildkomprimierungs-Testdateien, Foto-Bearbeitungs-Testdateien, JPG-Format-Test, Bildverarbeitungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose JPG-Beispieldateien - JPG-Bild-Testdateien für Konvertierungstools herunterladen',
+          description: 'Laden Sie kostenlose JPG-Beispieldateien zum Testen von JPG-Bildkonvertierung, JPG-Komprimierung, Bildverarbeitungstools und Foto-Bearbeitungssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JPG-zu-PNG-Konvertern, JPG-zu-PDF-Konvertern, Bildkomprimierungstools, JPG-Optimierung und Joint Photographic Experts Group-Format-Support.'
+        },
+        hero: {
+          title: 'JPG-Beispieldateien',
+          description: 'Laden Sie kostenlose JPG-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JPG-Bildkonvertierungstools, JPG-Komprimierungssoftware und Bildverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind JPG-Bild-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      m4v: {
+        meta: {
+          title: 'Kostenlose M4V-Beispieldateien herunterladen - M4V-Video-Testdateien für Konvertierungstools | MorphyHub',
+          description: 'Laden Sie kostenlose M4V-Beispieldateien zum Testen von M4V-Videokonvertierung, M4V-Wiedergabe, Videoverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4V-zu-MP4-Konvertern, M4V-zu-AVI-Konvertern, Videoplayern, M4V-Wiedergabekompatibilität und MPEG-4-Video-Format-Support.',
+          keywords: 'M4V-Beispieldateien, M4V-Testdateien, M4V-Beispiele herunterladen, kostenlose M4V-Testdateien, M4V-Videodateien, M4V-zu-MP4-Konverter, M4V-zu-AVI-Konverter, Video-Player-Testdateien, M4V-Wiedergabe-Test, Video-Konvertierungsbeispiele, MPEG-4-Video-Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose M4V-Beispieldateien - M4V-Video-Testdateien für Konvertierungstools herunterladen',
+          description: 'Laden Sie kostenlose M4V-Beispieldateien zum Testen von M4V-Videokonvertierung, M4V-Wiedergabe, Videoverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4V-zu-MP4-Konvertern, M4V-zu-AVI-Konvertern, Videoplayern, M4V-Wiedergabekompatibilität und MPEG-4-Video-Format-Support.'
+        },
+        hero: {
+          title: 'M4V-Beispieldateien',
+          description: 'Laden Sie kostenlose M4V-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre M4V-Videokonvertierungstools, M4V-Wiedergabesoftware und Videoverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind M4V-Video-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      mkv: {
+        meta: {
+          title: 'Kostenlose MKV-Beispieldateien herunterladen - Matroska-Video-Testdateien für Konvertierungstools | MorphyHub',
+          description: 'Laden Sie kostenlose MKV Matroska-Beispieldateien zum Testen von MKV-Videokonvertierung, MKV-Wiedergabe, Videoverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MKV-zu-MP4-Konvertern, MKV-zu-AVI-Konvertern, Videoplayern, MKV-Wiedergabekompatibilität und Matroska-Video-Format-Support.',
+          keywords: 'MKV-Beispieldateien, MKV-Testdateien, MKV-Beispiele herunterladen, kostenlose MKV-Testdateien, Matroska-Videodateien, MKV-zu-MP4-Konverter, MKV-zu-AVI-Konverter, Video-Player-Testdateien, MKV-Wiedergabe-Test, Video-Konvertierungsbeispiele, Matroska-Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose MKV-Beispieldateien - Matroska-Video-Testdateien für Konvertierungstools herunterladen',
+          description: 'Laden Sie kostenlose MKV Matroska-Beispieldateien zum Testen von MKV-Videokonvertierung, MKV-Wiedergabe, Videoverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MKV-zu-MP4-Konvertern, MKV-zu-AVI-Konvertern, Videoplayern, MKV-Wiedergabekompatibilität und Matroska-Video-Format-Support.'
+        },
+        hero: {
+          title: 'MKV-Beispieldateien',
+          description: 'Laden Sie kostenlose MKV Matroska-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre MKV-Videokonvertierungstools, MKV-Wiedergabesoftware und Videoverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind MKV (Matroska) Video-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      aac: {
+        meta: {
+          title: 'Kostenlose AAC-Beispieldateien herunterladen - Advanced Audio Coding Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose AAC Advanced Audio Coding-Beispieldateien zum Testen von Audiokonvertierung, AAC-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AAC-zu-MP3-Konvertern, AAC-zu-WAV-Konvertern, Audioplayern, AAC-Wiedergabekompatibilität und Advanced Audio Coding-Format-Support.',
+          keywords: 'AAC-Beispieldateien, AAC-Testdateien, AAC-Beispiele herunterladen, kostenlose AAC-Testdateien, Advanced Audio Coding-Dateien, AAC-zu-MP3-Konverter, AAC-zu-WAV-Konverter, Audio-Player-Testdateien, AAC-Wiedergabe-Test, Audio-Konvertierungsbeispiele, Advanced Audio Coding-Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose AAC-Beispieldateien - Advanced Audio Coding Testdateien herunterladen',
+          description: 'Laden Sie kostenlose AAC Advanced Audio Coding-Beispieldateien zum Testen von Audiokonvertierung, AAC-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AAC-zu-MP3-Konvertern, AAC-zu-WAV-Konvertern, Audioplayern, AAC-Wiedergabekompatibilität und Advanced Audio Coding-Format-Support.'
+        },
+        hero: {
+          title: 'AAC-Beispieldateien',
+          description: 'Laden Sie kostenlose AAC Advanced Audio Coding-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiokonvertierungstools, AAC-Wiedergabesoftware und Audioverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind AAC (Advanced Audio Coding) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      ac3: {
+        meta: {
+          title: 'Kostenlose AC3-Beispieldateien herunterladen - Dolby Digital Audio Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose AC3 Dolby Digital-Beispieldateien zum Testen von Audiokonvertierung, AC3-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AC3-zu-MP3-Konvertern, AC3-zu-WAV-Konvertern, Audioplayern, AC3-Wiedergabekompatibilität und Dolby Digital-Format-Support.',
+          keywords: 'AC3-Beispieldateien, AC3-Testdateien, AC3-Beispiele herunterladen, kostenlose AC3-Testdateien, Dolby Digital-Dateien, AC3-zu-MP3-Konverter, AC3-zu-WAV-Konverter, Audio-Player-Testdateien, AC3-Wiedergabe-Test, Audio-Konvertierungsbeispiele, Dolby Digital-Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose AC3-Beispieldateien - Dolby Digital Audio Testdateien herunterladen',
+          description: 'Laden Sie kostenlose AC3 Dolby Digital-Beispieldateien zum Testen von Audiokonvertierung, AC3-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AC3-zu-MP3-Konvertern, AC3-zu-WAV-Konvertern, Audioplayern, AC3-Wiedergabekompatibilität und Dolby Digital-Format-Support.'
+        },
+        hero: {
+          title: 'AC3-Beispieldateien',
+          description: 'Laden Sie kostenlose AC3 Dolby Digital-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiokonvertierungstools, AC3-Wiedergabesoftware und Audioverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind AC3 (Dolby Digital) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      aif: {
+        meta: {
+          title: 'Kostenlose AIF-Beispieldateien herunterladen - Audio Interchange File Format Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose AIF Audio Interchange File Format-Beispieldateien zum Testen von Audiokonvertierung, AIF-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AIF-zu-MP3-Konvertern, AIF-zu-WAV-Konvertern, Audioplayern, AIF-Wiedergabekompatibilität und Audio Interchange File Format-Support.',
+          keywords: 'AIF-Beispieldateien, AIF-Testdateien, AIF-Beispiele herunterladen, kostenlose AIF-Testdateien, Audio Interchange File Format-Dateien, AIF-zu-MP3-Konverter, AIF-zu-WAV-Konverter, Audio-Player-Testdateien, AIF-Wiedergabe-Test, Audio-Konvertierungsbeispiele, Audio Interchange File Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose AIF-Beispieldateien - Audio Interchange File Format Testdateien herunterladen',
+          description: 'Laden Sie kostenlose AIF Audio Interchange File Format-Beispieldateien zum Testen von Audiokonvertierung, AIF-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AIF-zu-MP3-Konvertern, AIF-zu-WAV-Konvertern, Audioplayern, AIF-Wiedergabekompatibilität und Audio Interchange File Format-Support.'
+        },
+        hero: {
+          title: 'AIF-Beispieldateien',
+          description: 'Laden Sie kostenlose AIF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiokonvertierungstools, AIF-Wiedergabesoftware und Audioverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind AIF (Audio Interchange File Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      aiff: {
+        meta: {
+          title: 'Kostenlose AIFF-Beispieldateien herunterladen - Audio Interchange File Format Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose AIFF Audio Interchange File Format-Beispieldateien zum Testen von Audiokonvertierung, AIFF-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AIFF-zu-MP3-Konvertern, AIFF-zu-WAV-Konvertern, Audioplayern, AIFF-Wiedergabekompatibilität und Audio Interchange File Format-Support.',
+          keywords: 'AIFF-Beispieldateien, AIFF-Testdateien, AIFF-Beispiele herunterladen, kostenlose AIFF-Testdateien, Audio Interchange File Format-Dateien, AIFF-zu-MP3-Konverter, AIFF-zu-WAV-Konverter, Audio-Player-Testdateien, AIFF-Wiedergabe-Test, Audio-Konvertierungsbeispiele, Audio Interchange File Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose AIFF-Beispieldateien - Audio Interchange File Format Testdateien herunterladen',
+          description: 'Laden Sie kostenlose AIFF Audio Interchange File Format-Beispieldateien zum Testen von Audiokonvertierung, AIFF-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AIFF-zu-MP3-Konvertern, AIFF-zu-WAV-Konvertern, Audioplayern, AIFF-Wiedergabekompatibilität und Audio Interchange File Format-Support.'
+        },
+        hero: {
+          title: 'AIFF-Beispieldateien',
+          description: 'Laden Sie kostenlose AIFF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiokonvertierungstools, AIFF-Wiedergabesoftware und Audioverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind AIFF (Audio Interchange File Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      amr: {
+        meta: {
+          title: 'Kostenlose AMR-Beispieldateien herunterladen - Adaptive Multi-Rate Audio Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose AMR Adaptive Multi-Rate-Beispieldateien zum Testen von Audiokonvertierung, AMR-Wiedergabe, Audioverarbeitungstools und mobiler Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AMR-zu-MP3-Konvertern, AMR-zu-WAV-Konvertern, Audioplayern, AMR-Wiedergabekompatibilität und Adaptive Multi-Rate-Format-Support.',
+          keywords: 'AMR-Beispieldateien, AMR-Testdateien, AMR-Beispiele herunterladen, kostenlose AMR-Testdateien, Adaptive Multi-Rate-Dateien, AMR-zu-MP3-Konverter, AMR-zu-WAV-Konverter, Audio-Player-Testdateien, AMR-Wiedergabe-Test, Audio-Konvertierungsbeispiele, Adaptive Multi-Rate-Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose AMR-Beispieldateien - Adaptive Multi-Rate Audio Testdateien herunterladen',
+          description: 'Laden Sie kostenlose AMR Adaptive Multi-Rate-Beispieldateien zum Testen von Audiokonvertierung, AMR-Wiedergabe, Audioverarbeitungstools und mobiler Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AMR-zu-MP3-Konvertern, AMR-zu-WAV-Konvertern, Audioplayern, AMR-Wiedergabekompatibilität und Adaptive Multi-Rate-Format-Support.'
+        },
+        hero: {
+          title: 'AMR-Beispieldateien',
+          description: 'Laden Sie kostenlose AMR Adaptive Multi-Rate-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiokonvertierungstools, AMR-Wiedergabesoftware und Audioverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind AMR (Adaptive Multi-Rate) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      caf: {
+        meta: {
+          title: 'Kostenlose CAF-Beispieldateien herunterladen - Core Audio Format Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose CAF Core Audio Format-Beispieldateien zum Testen von Audiokonvertierung, CAF-Wiedergabe, Audioverarbeitungstools und macOS Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAF-zu-MP3-Konvertern, CAF-zu-WAV-Konvertern, Audioplayern, CAF-Wiedergabekompatibilität und Core Audio Format-Support.',
+          keywords: 'CAF-Beispieldateien, CAF-Testdateien, CAF-Beispiele herunterladen, kostenlose CAF-Testdateien, Core Audio Format-Dateien, CAF-zu-MP3-Konverter, CAF-zu-WAV-Konverter, Audio-Player-Testdateien, CAF-Wiedergabe-Test, Audio-Konvertierungsbeispiele, Core Audio Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose CAF-Beispieldateien - Core Audio Format Testdateien herunterladen',
+          description: 'Laden Sie kostenlose CAF Core Audio Format-Beispieldateien zum Testen von Audiokonvertierung, CAF-Wiedergabe, Audioverarbeitungstools und macOS Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAF-zu-MP3-Konvertern, CAF-zu-WAV-Konvertern, Audioplayern, CAF-Wiedergabekompatibilität und Core Audio Format-Support.'
+        },
+        hero: {
+          title: 'CAF-Beispieldateien',
+          description: 'Laden Sie kostenlose CAF Core Audio Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiokonvertierungstools, CAF-Wiedergabesoftware und Audioverarbeitungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind CAF (Core Audio Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
       }
     }
   }

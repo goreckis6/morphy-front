@@ -1519,6 +1519,326 @@ export const fr: SamplePageTranslations = {
           description: 'Téléchargez des fichiers d\'exemple 3GP vidéo mobile 3GPP gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les lecteurs vidéo mobiles, les convertisseurs 3GP et les logiciels multimédias.'
         },
         about_description: 'Ce sont des fichiers de test 3GP (vidéo mobile 3GPP) de différentes tailles à des fins de test'
+      },
+      dav: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple DAV gratuits - Fichiers de test vidéo DAV pour caméras de sécurité | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple DAV gratuits pour tester les lecteurs vidéo DAV, le traitement vidéo des caméras de sécurité, les convertisseurs DAV et les outils d\'analyse vidéo de surveillance. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la lecture DAV, les convertisseurs DAV vers MP4, les logiciels de caméras de sécurité, les outils de surveillance vidéo et la compatibilité du format DAV.',
+          keywords: 'fichiers d\'exemple DAV, fichiers de test DAV, télécharger exemples DAV, fichiers de test DAV gratuits, fichiers vidéo DAV, fichiers vidéo caméras sécurité, convertisseur DAV vers MP4, test lecteur DAV, exemples vidéo surveillance, fichiers de test format DAV, fichiers de test surveillance vidéo'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple DAV gratuits - Télécharger fichiers de test vidéo DAV pour caméras de sécurité',
+          description: 'Téléchargez des fichiers d\'exemple DAV gratuits pour tester les lecteurs vidéo DAV, le traitement vidéo des caméras de sécurité, les convertisseurs DAV et les outils d\'analyse vidéo de surveillance. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester la lecture DAV, les convertisseurs DAV vers MP4, les logiciels de caméras de sécurité, les outils de surveillance vidéo et la compatibilité du format DAV.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple DAV',
+          description: 'Téléchargez des fichiers d\'exemple DAV gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les lecteurs vidéo DAV, les outils de traitement vidéo des caméras de sécurité et les convertisseurs DAV.'
+        },
+        about_description: 'Ce sont des fichiers de test vidéo DAV de différentes tailles à des fins de test'
+      },
+      dds: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple DDS gratuits - Fichiers de test texture DirectDraw Surface | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple DDS DirectDraw Surface gratuits pour tester la conversion d\'images de texture, la visualisation DDS, les outils de développement de jeux et les logiciels de traitement graphique. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le chargement de textures DDS, les convertisseurs DDS vers PNG, la compatibilité des moteurs de jeux, les outils de compression de textures et le support du format DirectDraw Surface.',
+          keywords: 'fichiers d\'exemple DDS, fichiers de test DDS, télécharger exemples DDS, fichiers de test DDS gratuits, fichiers DirectDraw Surface, fichiers texture DDS, convertisseur DDS vers PNG, exemples images texture, fichiers de test développement jeux, test format DDS, exemples textures graphiques'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple DDS gratuits - Télécharger fichiers de test texture DirectDraw Surface',
+          description: 'Téléchargez des fichiers d\'exemple DDS DirectDraw Surface gratuits pour tester la conversion d\'images de texture, la visualisation DDS, les outils de développement de jeux et les logiciels de traitement graphique. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester le chargement de textures DDS, les convertisseurs DDS vers PNG, la compatibilité des moteurs de jeux, les outils de compression de textures et le support du format DirectDraw Surface.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple DDS',
+          description: 'Téléchargez des fichiers d\'exemple DDS DirectDraw Surface gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion d\'images de texture, les visualiseurs DDS et les logiciels de développement de jeux.'
+        },
+        about_description: 'Ce sont des fichiers de test DDS (DirectDraw Surface) d\'images de texture de différentes tailles à des fins de test'
+      },
+      dng: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple DNG gratuits - Fichiers de test images raw Digital Negative | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple DNG Digital Negative d\'images raw gratuits pour tester le traitement d\'images raw, la conversion DNG, les logiciels photo et les outils d\'édition d\'images professionnels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs DNG vers JPEG, les éditeurs d\'images raw, la visualisation DNG, le traitement raw des appareils photo et le support du format Adobe Digital Negative.',
+          keywords: 'fichiers d\'exemple DNG, fichiers de test DNG, télécharger exemples DNG, fichiers de test DNG gratuits, fichiers Digital Negative, fichiers images raw DNG, convertisseur DNG vers JPEG, traitement images raw, fichiers de test photographie, test format DNG, exemples raw appareil photo, fichiers de test Adobe DNG'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple DNG gratuits - Télécharger fichiers de test images raw Digital Negative',
+          description: 'Téléchargez des fichiers d\'exemple DNG Digital Negative d\'images raw gratuits pour tester le traitement d\'images raw, la conversion DNG, les logiciels photo et les outils d\'édition d\'images professionnels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs DNG vers JPEG, les éditeurs d\'images raw, la visualisation DNG, le traitement raw des appareils photo et le support du format Adobe Digital Negative.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple DNG',
+          description: 'Téléchargez des fichiers d\'exemple DNG Digital Negative d\'images raw gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de traitement d\'images raw, les convertisseurs DNG et les logiciels photo.'
+        },
+        about_description: 'Ce sont des fichiers de test DNG (Digital Negative) d\'images raw de différentes tailles à des fins de test'
+      },
+      eps: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple EPS gratuits - Fichiers de test graphiques vectoriels Encapsulated PostScript | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple EPS Encapsulated PostScript gratuits pour tester la conversion de graphiques vectoriels, la visualisation EPS, le traitement PostScript et les logiciels de design professionnels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs EPS vers PDF, les convertisseurs EPS vers SVG, les éditeurs de graphiques vectoriels, les visualiseurs PostScript et la compatibilité du format Encapsulated PostScript.',
+          keywords: 'fichiers d\'exemple EPS, fichiers de test EPS, télécharger exemples EPS, fichiers de test EPS gratuits, fichiers Encapsulated PostScript, graphiques vectoriels EPS, convertisseur EPS vers PDF, convertisseur EPS vers SVG, exemples graphiques vectoriels, fichiers de test PostScript, fichiers de test logiciels design, test format EPS'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple EPS gratuits - Télécharger fichiers de test graphiques vectoriels Encapsulated PostScript',
+          description: 'Téléchargez des fichiers d\'exemple EPS Encapsulated PostScript gratuits pour tester la conversion de graphiques vectoriels, la visualisation EPS, le traitement PostScript et les logiciels de design professionnels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs EPS vers PDF, les convertisseurs EPS vers SVG, les éditeurs de graphiques vectoriels, les visualiseurs PostScript et la compatibilité du format Encapsulated PostScript.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple EPS',
+          description: 'Téléchargez des fichiers d\'exemple EPS Encapsulated PostScript gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion de graphiques vectoriels, les visualiseurs EPS et les logiciels de traitement PostScript.'
+        },
+        about_description: 'Ce sont des fichiers de test EPS (Encapsulated PostScript) de graphiques vectoriels de différentes tailles à des fins de test'
+      },
+      exr: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple EXR gratuits - Fichiers de test images High Dynamic Range OpenEXR | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple EXR OpenEXR d\'images High Dynamic Range gratuits pour tester le traitement d\'images HDR, la conversion EXR, les logiciels photo professionnels et les outils d\'effets visuels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs EXR vers JPEG, les éditeurs d\'images HDR, la visualisation EXR, le traitement High Dynamic Range et le support du format OpenEXR.',
+          keywords: 'fichiers d\'exemple EXR, fichiers de test EXR, télécharger exemples EXR, fichiers de test EXR gratuits, fichiers OpenEXR, images HDR EXR, convertisseur EXR vers JPEG, traitement images HDR, exemples High Dynamic Range, fichiers de test effets visuels, test format EXR, fichiers de test photographie professionnelle'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple EXR gratuits - Télécharger fichiers de test images High Dynamic Range OpenEXR',
+          description: 'Téléchargez des fichiers d\'exemple EXR OpenEXR d\'images High Dynamic Range gratuits pour tester le traitement d\'images HDR, la conversion EXR, les logiciels photo professionnels et les outils d\'effets visuels. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs EXR vers JPEG, les éditeurs d\'images HDR, la visualisation EXR, le traitement High Dynamic Range et le support du format OpenEXR.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple EXR',
+          description: 'Téléchargez des fichiers d\'exemple EXR OpenEXR d\'images High Dynamic Range gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de traitement d\'images HDR, les convertisseurs EXR et les logiciels d\'effets visuels.'
+        },
+        about_description: 'Ce sont des fichiers de test EXR (OpenEXR High Dynamic Range) d\'images de différentes tailles à des fins de test'
+      },
+      hdr: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple HDR gratuits - Fichiers de test images High Dynamic Range | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple HDR d\'images High Dynamic Range gratuits pour tester le traitement d\'images HDR, la conversion HDR, les logiciels photo et les outils d\'édition d\'images. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HDR vers JPEG, les éditeurs d\'images HDR, la visualisation HDR, les outils de mappage de tons et le support du format High Dynamic Range.',
+          keywords: 'fichiers d\'exemple HDR, fichiers de test HDR, télécharger exemples HDR, fichiers de test HDR gratuits, fichiers High Dynamic Range, images HDR, convertisseur HDR vers JPEG, traitement images HDR, fichiers de test mappage tons, fichiers de test photographie, test format HDR, exemples High Dynamic Range'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple HDR gratuits - Télécharger fichiers de test images High Dynamic Range',
+          description: 'Téléchargez des fichiers d\'exemple HDR d\'images High Dynamic Range gratuits pour tester le traitement d\'images HDR, la conversion HDR, les logiciels photo et les outils d\'édition d\'images. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HDR vers JPEG, les éditeurs d\'images HDR, la visualisation HDR, les outils de mappage de tons et le support du format High Dynamic Range.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple HDR',
+          description: 'Téléchargez des fichiers d\'exemple HDR d\'images High Dynamic Range gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de traitement d\'images HDR, les convertisseurs HDR et les logiciels photo.'
+        },
+        about_description: 'Ce sont des fichiers de test HDR (High Dynamic Range) d\'images de différentes tailles à des fins de test'
+      },
+      heic: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple HEIC gratuits - Fichiers de test High Efficiency Image Container | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple HEIC High Efficiency Image Container gratuits pour tester la conversion d\'images HEIC, la visualisation HEIC, le traitement de formats d\'image modernes et les outils de photographie mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HEIC vers JPEG, les convertisseurs HEIC vers PNG, le traitement d\'images iOS, les logiciels de visualisation HEIC et le support du format High Efficiency Image Container.',
+          keywords: 'fichiers d\'exemple HEIC, fichiers de test HEIC, télécharger exemples HEIC, fichiers de test HEIC gratuits, fichiers High Efficiency Image Container, images HEIC, convertisseur HEIC vers JPEG, convertisseur HEIC vers PNG, exemples images iOS, fichiers de test photographie mobile, test format HEIC, exemples formats image modernes'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple HEIC gratuits - Télécharger fichiers de test High Efficiency Image Container',
+          description: 'Téléchargez des fichiers d\'exemple HEIC High Efficiency Image Container gratuits pour tester la conversion d\'images HEIC, la visualisation HEIC, le traitement de formats d\'image modernes et les outils de photographie mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HEIC vers JPEG, les convertisseurs HEIC vers PNG, le traitement d\'images iOS, les logiciels de visualisation HEIC et le support du format High Efficiency Image Container.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple HEIC',
+          description: 'Téléchargez des fichiers d\'exemple HEIC High Efficiency Image Container gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion d\'images HEIC, les visualiseurs HEIC et les logiciels de traitement de formats d\'image modernes.'
+        },
+        about_description: 'Ce sont des fichiers de test HEIC (High Efficiency Image Container) d\'images de différentes tailles à des fins de test'
+      },
+      heif: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple HEIF gratuits - Fichiers de test High Efficiency Image Format | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple HEIF High Efficiency Image Format gratuits pour tester la conversion d\'images HEIF, la visualisation HEIF, le traitement de formats d\'image modernes et les outils de photographie mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HEIF vers JPEG, les convertisseurs HEIF vers PNG, le traitement d\'images mobiles, les logiciels de visualisation HEIF et le support du format High Efficiency Image Format.',
+          keywords: 'fichiers d\'exemple HEIF, fichiers de test HEIF, télécharger exemples HEIF, fichiers de test HEIF gratuits, fichiers High Efficiency Image Format, images HEIF, convertisseur HEIF vers JPEG, convertisseur HEIF vers PNG, exemples images mobiles, fichiers de test formats image modernes, test format HEIF, fichiers de test compression images'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple HEIF gratuits - Télécharger fichiers de test High Efficiency Image Format',
+          description: 'Téléchargez des fichiers d\'exemple HEIF High Efficiency Image Format gratuits pour tester la conversion d\'images HEIF, la visualisation HEIF, le traitement de formats d\'image modernes et les outils de photographie mobile. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs HEIF vers JPEG, les convertisseurs HEIF vers PNG, le traitement d\'images mobiles, les logiciels de visualisation HEIF et le support du format High Efficiency Image Format.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple HEIF',
+          description: 'Téléchargez des fichiers d\'exemple HEIF High Efficiency Image Format gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion d\'images HEIF, les visualiseurs HEIF et les logiciels de traitement de formats d\'image modernes.'
+        },
+        about_description: 'Ce sont des fichiers de test HEIF (High Efficiency Image Format) d\'images de différentes tailles à des fins de test'
+      },
+      icns: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple ICNS gratuits - Fichiers de test icônes macOS | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple ICNS d\'icônes macOS gratuits pour tester la conversion d\'icônes macOS, la visualisation ICNS, les outils de design d\'icônes et le développement d\'applications macOS. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ICNS vers PNG, les convertisseurs ICNS vers ICO, les éditeurs d\'icônes macOS, les logiciels de design d\'icônes et le support du format d\'icônes macOS.',
+          keywords: 'fichiers d\'exemple ICNS, fichiers de test ICNS, télécharger exemples ICNS, fichiers de test ICNS gratuits, fichiers icônes macOS, icônes ICNS, convertisseur ICNS vers PNG, convertisseur ICNS vers ICO, design icônes macOS, fichiers de test éditeur icônes, test format ICNS, exemples icônes Apple'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple ICNS gratuits - Télécharger fichiers de test icônes macOS',
+          description: 'Téléchargez des fichiers d\'exemple ICNS d\'icônes macOS gratuits pour tester la conversion d\'icônes macOS, la visualisation ICNS, les outils de design d\'icônes et le développement d\'applications macOS. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ICNS vers PNG, les convertisseurs ICNS vers ICO, les éditeurs d\'icônes macOS, les logiciels de design d\'icônes et le support du format d\'icônes macOS.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple ICNS',
+          description: 'Téléchargez des fichiers d\'exemple ICNS d\'icônes macOS gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion d\'icônes macOS, les visualiseurs ICNS et les logiciels de design d\'icônes.'
+        },
+        about_description: 'Ce sont des fichiers de test ICNS (icônes macOS) de différentes tailles à des fins de test'
+      },
+      ico: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple ICO gratuits - Fichiers de test icônes Windows | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple ICO d\'icônes Windows gratuits pour tester la conversion d\'icônes Windows, la visualisation ICO, les outils de design d\'icônes et le développement d\'applications Windows. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ICO vers PNG, les convertisseurs ICO vers ICNS, les éditeurs d\'icônes Windows, les logiciels de design d\'icônes et le support du format d\'icônes Windows.',
+          keywords: 'fichiers d\'exemple ICO, fichiers de test ICO, télécharger exemples ICO, fichiers de test ICO gratuits, fichiers icônes Windows, icônes ICO, convertisseur ICO vers PNG, convertisseur ICO vers ICNS, design icônes Windows, fichiers de test éditeur icônes, test format ICO, exemples icônes Windows'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple ICO gratuits - Télécharger fichiers de test icônes Windows',
+          description: 'Téléchargez des fichiers d\'exemple ICO d\'icônes Windows gratuits pour tester la conversion d\'icônes Windows, la visualisation ICO, les outils de design d\'icônes et le développement d\'applications Windows. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs ICO vers PNG, les convertisseurs ICO vers ICNS, les éditeurs d\'icônes Windows, les logiciels de design d\'icônes et le support du format d\'icônes Windows.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple ICO',
+          description: 'Téléchargez des fichiers d\'exemple ICO d\'icônes Windows gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion d\'icônes Windows, les visualiseurs ICO et les logiciels de design d\'icônes.'
+        },
+        about_description: 'Ce sont des fichiers de test ICO (icônes Windows) de différentes tailles à des fins de test'
+      },
+      jpeg: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JPEG gratuits - Fichiers de test images JPEG pour outils de conversion | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JPEG gratuits pour tester la conversion d\'images JPEG, la compression JPEG, les outils de traitement d\'images et les logiciels d\'édition photo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs JPEG vers PNG, les convertisseurs JPEG vers PDF, les outils de compression d\'images, l\'optimisation JPEG et le support du format Joint Photographic Experts Group.',
+          keywords: 'fichiers d\'exemple JPEG, fichiers de test JPEG, télécharger exemples JPEG, fichiers de test JPEG gratuits, fichiers images JPEG, convertisseur JPEG vers PNG, convertisseur JPEG vers PDF, fichiers de test compression images, fichiers de test édition photo, test format JPEG, exemples traitement images'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JPEG gratuits - Télécharger fichiers de test images JPEG pour outils de conversion',
+          description: 'Téléchargez des fichiers d\'exemple JPEG gratuits pour tester la conversion d\'images JPEG, la compression JPEG, les outils de traitement d\'images et les logiciels d\'édition photo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs JPEG vers PNG, les convertisseurs JPEG vers PDF, les outils de compression d\'images, l\'optimisation JPEG et le support du format Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JPEG',
+          description: 'Téléchargez des fichiers d\'exemple JPEG gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion d\'images JPEG, les logiciels de compression JPEG et les applications de traitement d\'images.'
+        },
+        about_description: 'Ce sont des fichiers de test d\'images JPEG de différentes tailles à des fins de test'
+      },
+      jpg: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple JPG gratuits - Fichiers de test images JPG pour outils de conversion | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple JPG gratuits pour tester la conversion d\'images JPG, la compression JPG, les outils de traitement d\'images et les logiciels d\'édition photo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs JPG vers PNG, les convertisseurs JPG vers PDF, les outils de compression d\'images, l\'optimisation JPG et le support du format Joint Photographic Experts Group.',
+          keywords: 'fichiers d\'exemple JPG, fichiers de test JPG, télécharger exemples JPG, fichiers de test JPG gratuits, fichiers images JPG, convertisseur JPG vers PNG, convertisseur JPG vers PDF, fichiers de test compression images, fichiers de test édition photo, test format JPG, exemples traitement images'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple JPG gratuits - Télécharger fichiers de test images JPG pour outils de conversion',
+          description: 'Téléchargez des fichiers d\'exemple JPG gratuits pour tester la conversion d\'images JPG, la compression JPG, les outils de traitement d\'images et les logiciels d\'édition photo. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs JPG vers PNG, les convertisseurs JPG vers PDF, les outils de compression d\'images, l\'optimisation JPG et le support du format Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple JPG',
+          description: 'Téléchargez des fichiers d\'exemple JPG gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion d\'images JPG, les logiciels de compression JPG et les applications de traitement d\'images.'
+        },
+        about_description: 'Ce sont des fichiers de test d\'images JPG de différentes tailles à des fins de test'
+      },
+      m4v: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple M4V gratuits - Fichiers de test vidéo M4V pour outils de conversion | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple M4V gratuits pour tester la conversion vidéo M4V, la lecture M4V, les outils de traitement vidéo et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs M4V vers MP4, les convertisseurs M4V vers AVI, les lecteurs vidéo, la compatibilité de lecture M4V et le support du format vidéo MPEG-4.',
+          keywords: 'fichiers d\'exemple M4V, fichiers de test M4V, télécharger exemples M4V, fichiers de test M4V gratuits, fichiers vidéo M4V, convertisseur M4V vers MP4, convertisseur M4V vers AVI, fichiers de test lecteur vidéo, test lecture M4V, exemples conversion vidéo, test format vidéo MPEG-4'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple M4V gratuits - Télécharger fichiers de test vidéo M4V pour outils de conversion',
+          description: 'Téléchargez des fichiers d\'exemple M4V gratuits pour tester la conversion vidéo M4V, la lecture M4V, les outils de traitement vidéo et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs M4V vers MP4, les convertisseurs M4V vers AVI, les lecteurs vidéo, la compatibilité de lecture M4V et le support du format vidéo MPEG-4.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple M4V',
+          description: 'Téléchargez des fichiers d\'exemple M4V gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion vidéo M4V, les logiciels de lecture M4V et les applications de traitement vidéo.'
+        },
+        about_description: 'Ce sont des fichiers de test vidéo M4V de différentes tailles à des fins de test'
+      },
+      mkv: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple MKV gratuits - Fichiers de test vidéo Matroska pour outils de conversion | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple MKV Matroska gratuits pour tester la conversion vidéo MKV, la lecture MKV, les outils de traitement vidéo et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs MKV vers MP4, les convertisseurs MKV vers AVI, les lecteurs vidéo, la compatibilité de lecture MKV et le support du format vidéo Matroska.',
+          keywords: 'fichiers d\'exemple MKV, fichiers de test MKV, télécharger exemples MKV, fichiers de test MKV gratuits, fichiers vidéo Matroska, convertisseur MKV vers MP4, convertisseur MKV vers AVI, fichiers de test lecteur vidéo, test lecture MKV, exemples conversion vidéo, test format Matroska'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple MKV gratuits - Télécharger fichiers de test vidéo Matroska pour outils de conversion',
+          description: 'Téléchargez des fichiers d\'exemple MKV Matroska gratuits pour tester la conversion vidéo MKV, la lecture MKV, les outils de traitement vidéo et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs MKV vers MP4, les convertisseurs MKV vers AVI, les lecteurs vidéo, la compatibilité de lecture MKV et le support du format vidéo Matroska.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple MKV',
+          description: 'Téléchargez des fichiers d\'exemple MKV Matroska gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion vidéo MKV, les logiciels de lecture MKV et les applications de traitement vidéo.'
+        },
+        about_description: 'Ce sont des fichiers de test vidéo MKV (Matroska) de différentes tailles à des fins de test'
+      },
+      aac: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple AAC gratuits - Fichiers de test Advanced Audio Coding | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple AAC Advanced Audio Coding gratuits pour tester la conversion audio, la lecture AAC, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AAC vers MP3, les convertisseurs AAC vers WAV, les lecteurs audio, la compatibilité de lecture AAC et le support du format Advanced Audio Coding.',
+          keywords: 'fichiers d\'exemple AAC, fichiers de test AAC, télécharger exemples AAC, fichiers de test AAC gratuits, fichiers Advanced Audio Coding, convertisseur AAC vers MP3, convertisseur AAC vers WAV, fichiers de test lecteur audio, test lecture AAC, exemples conversion audio, test format Advanced Audio Coding'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple AAC gratuits - Télécharger fichiers de test Advanced Audio Coding',
+          description: 'Téléchargez des fichiers d\'exemple AAC Advanced Audio Coding gratuits pour tester la conversion audio, la lecture AAC, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AAC vers MP3, les convertisseurs AAC vers WAV, les lecteurs audio, la compatibilité de lecture AAC et le support du format Advanced Audio Coding.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple AAC',
+          description: 'Téléchargez des fichiers d\'exemple AAC Advanced Audio Coding gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion audio, les logiciels de lecture AAC et les applications de traitement audio.'
+        },
+        about_description: 'Ce sont des fichiers de test AAC (Advanced Audio Coding) audio de différentes tailles à des fins de test'
+      },
+      ac3: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple AC3 gratuits - Fichiers de test audio Dolby Digital | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple AC3 Dolby Digital gratuits pour tester la conversion audio, la lecture AC3, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AC3 vers MP3, les convertisseurs AC3 vers WAV, les lecteurs audio, la compatibilité de lecture AC3 et le support du format Dolby Digital.',
+          keywords: 'fichiers d\'exemple AC3, fichiers de test AC3, télécharger exemples AC3, fichiers de test AC3 gratuits, fichiers Dolby Digital, convertisseur AC3 vers MP3, convertisseur AC3 vers WAV, fichiers de test lecteur audio, test lecture AC3, exemples conversion audio, test format Dolby Digital'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple AC3 gratuits - Télécharger fichiers de test audio Dolby Digital',
+          description: 'Téléchargez des fichiers d\'exemple AC3 Dolby Digital gratuits pour tester la conversion audio, la lecture AC3, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AC3 vers MP3, les convertisseurs AC3 vers WAV, les lecteurs audio, la compatibilité de lecture AC3 et le support du format Dolby Digital.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple AC3',
+          description: 'Téléchargez des fichiers d\'exemple AC3 Dolby Digital gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion audio, les logiciels de lecture AC3 et les applications de traitement audio.'
+        },
+        about_description: 'Ce sont des fichiers de test AC3 (Dolby Digital) audio de différentes tailles à des fins de test'
+      },
+      aif: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple AIF gratuits - Fichiers de test Audio Interchange File Format | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple AIF Audio Interchange File Format gratuits pour tester la conversion audio, la lecture AIF, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AIF vers MP3, les convertisseurs AIF vers WAV, les lecteurs audio, la compatibilité de lecture AIF et le support du format Audio Interchange File Format.',
+          keywords: 'fichiers d\'exemple AIF, fichiers de test AIF, télécharger exemples AIF, fichiers de test AIF gratuits, fichiers Audio Interchange File Format, convertisseur AIF vers MP3, convertisseur AIF vers WAV, fichiers de test lecteur audio, test lecture AIF, exemples conversion audio, test format Audio Interchange File Format'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple AIF gratuits - Télécharger fichiers de test Audio Interchange File Format',
+          description: 'Téléchargez des fichiers d\'exemple AIF Audio Interchange File Format gratuits pour tester la conversion audio, la lecture AIF, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AIF vers MP3, les convertisseurs AIF vers WAV, les lecteurs audio, la compatibilité de lecture AIF et le support du format Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple AIF',
+          description: 'Téléchargez des fichiers d\'exemple AIF Audio Interchange File Format gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion audio, les logiciels de lecture AIF et les applications de traitement audio.'
+        },
+        about_description: 'Ce sont des fichiers de test AIF (Audio Interchange File Format) audio de différentes tailles à des fins de test'
+      },
+      aiff: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple AIFF gratuits - Fichiers de test Audio Interchange File Format | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple AIFF Audio Interchange File Format gratuits pour tester la conversion audio, la lecture AIFF, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AIFF vers MP3, les convertisseurs AIFF vers WAV, les lecteurs audio, la compatibilité de lecture AIFF et le support du format Audio Interchange File Format.',
+          keywords: 'fichiers d\'exemple AIFF, fichiers de test AIFF, télécharger exemples AIFF, fichiers de test AIFF gratuits, fichiers Audio Interchange File Format, convertisseur AIFF vers MP3, convertisseur AIFF vers WAV, fichiers de test lecteur audio, test lecture AIFF, exemples conversion audio, test format Audio Interchange File Format'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple AIFF gratuits - Télécharger fichiers de test Audio Interchange File Format',
+          description: 'Téléchargez des fichiers d\'exemple AIFF Audio Interchange File Format gratuits pour tester la conversion audio, la lecture AIFF, les outils de traitement audio et les logiciels multimédias. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AIFF vers MP3, les convertisseurs AIFF vers WAV, les lecteurs audio, la compatibilité de lecture AIFF et le support du format Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple AIFF',
+          description: 'Téléchargez des fichiers d\'exemple AIFF Audio Interchange File Format gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion audio, les logiciels de lecture AIFF et les applications de traitement audio.'
+        },
+        about_description: 'Ce sont des fichiers de test AIFF (Audio Interchange File Format) audio de différentes tailles à des fins de test'
+      },
+      amr: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple AMR gratuits - Fichiers de test Adaptive Multi-Rate Audio | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple AMR Adaptive Multi-Rate gratuits pour tester la conversion audio, la lecture AMR, les outils de traitement audio et les logiciels multimédias mobiles. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AMR vers MP3, les convertisseurs AMR vers WAV, les lecteurs audio, la compatibilité de lecture AMR et le support du format Adaptive Multi-Rate.',
+          keywords: 'fichiers d\'exemple AMR, fichiers de test AMR, télécharger exemples AMR, fichiers de test AMR gratuits, fichiers Adaptive Multi-Rate, convertisseur AMR vers MP3, convertisseur AMR vers WAV, fichiers de test lecteur audio, test lecture AMR, exemples conversion audio, test format Adaptive Multi-Rate'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple AMR gratuits - Télécharger fichiers de test Adaptive Multi-Rate Audio',
+          description: 'Téléchargez des fichiers d\'exemple AMR Adaptive Multi-Rate gratuits pour tester la conversion audio, la lecture AMR, les outils de traitement audio et les logiciels multimédias mobiles. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs AMR vers MP3, les convertisseurs AMR vers WAV, les lecteurs audio, la compatibilité de lecture AMR et le support du format Adaptive Multi-Rate.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple AMR',
+          description: 'Téléchargez des fichiers d\'exemple AMR Adaptive Multi-Rate gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion audio, les logiciels de lecture AMR et les applications de traitement audio.'
+        },
+        about_description: 'Ce sont des fichiers de test AMR (Adaptive Multi-Rate) audio de différentes tailles à des fins de test'
+      },
+      caf: {
+        meta: {
+          title: 'Télécharger des fichiers d\'exemple CAF gratuits - Fichiers de test Core Audio Format | MorphyHub',
+          description: 'Téléchargez des fichiers d\'exemple CAF Core Audio Format gratuits pour tester la conversion audio, la lecture CAF, les outils de traitement audio et les logiciels multimédias macOS. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs CAF vers MP3, les convertisseurs CAF vers WAV, les lecteurs audio, la compatibilité de lecture CAF et le support du format Core Audio Format.',
+          keywords: 'fichiers d\'exemple CAF, fichiers de test CAF, télécharger exemples CAF, fichiers de test CAF gratuits, fichiers Core Audio Format, convertisseur CAF vers MP3, convertisseur CAF vers WAV, fichiers de test lecteur audio, test lecture CAF, exemples conversion audio, test format Core Audio Format'
+        },
+        schema: {
+          name: 'Fichiers d\'exemple CAF gratuits - Télécharger fichiers de test Core Audio Format',
+          description: 'Téléchargez des fichiers d\'exemple CAF Core Audio Format gratuits pour tester la conversion audio, la lecture CAF, les outils de traitement audio et les logiciels multimédias macOS. Plusieurs tailles: 100 KB, 1 MB, 5 MB, 50 MB et 100 MB. Parfait pour tester les convertisseurs CAF vers MP3, les convertisseurs CAF vers WAV, les lecteurs audio, la compatibilité de lecture CAF et le support du format Core Audio Format.'
+        },
+        hero: {
+          title: 'Fichiers d\'exemple CAF',
+          description: 'Téléchargez des fichiers d\'exemple CAF Core Audio Format gratuits pour les tests. Plusieurs tailles de fichiers disponibles pour tester les outils de conversion audio, les logiciels de lecture CAF et les applications de traitement audio.'
+        },
+        about_description: 'Ce sont des fichiers de test CAF (Core Audio Format) audio de différentes tailles à des fins de test'
       }
     }
   }

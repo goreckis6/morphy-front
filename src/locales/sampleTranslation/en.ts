@@ -1519,6 +1519,326 @@ export const en: SamplePageTranslations = {
           description: 'Download free 3GP 3GPP mobile video sample files for testing. Multiple file sizes available to test your mobile video players, 3GP converters, and multimedia software.'
         },
         about_description: 'These are test 3GP (3GPP mobile video) files in various sizes for testing purposes'
+      },
+      dav: {
+        meta: {
+          title: 'Free DAV Sample Files Download - DAV Video Test Files for Security Cameras | MorphyHub',
+          description: 'Download free DAV sample video files for testing DAV video players, security camera video processing, DAV converters, and surveillance video analysis tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DAV playback, DAV to MP4 converters, security camera software, video surveillance tools, and DAV format compatibility.',
+          keywords: 'DAV sample files, DAV test files, download DAV examples, free DAV test files, DAV video files, security camera video files, DAV to MP4 converter, DAV player test, surveillance video samples, DAV format test files, video surveillance test files'
+        },
+        schema: {
+          name: 'Free DAV Sample Files - Download DAV Video Test Files for Security Cameras',
+          description: 'Download free DAV sample video files for testing DAV video players, security camera video processing, DAV converters, and surveillance video analysis tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DAV playback, DAV to MP4 converters, security camera software, video surveillance tools, and DAV format compatibility.'
+        },
+        hero: {
+          title: 'DAV Sample Files',
+          description: 'Download free DAV sample video files for testing. Multiple file sizes available to test your DAV video players, security camera video processing tools, and DAV converters.'
+        },
+        about_description: 'These are test DAV video files in various sizes for testing purposes'
+      },
+      dds: {
+        meta: {
+          title: 'Free DDS Sample Files Download - DirectDraw Surface Texture Test Files | MorphyHub',
+          description: 'Download free DDS sample DirectDraw Surface image files for testing texture image conversion, DDS viewing, game development tools, and graphics processing software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DDS texture loading, DDS to PNG converters, game engine compatibility, texture compression tools, and DirectDraw Surface format support.',
+          keywords: 'DDS sample files, DDS test files, download DDS examples, free DDS test files, DirectDraw Surface files, DDS texture files, DDS to PNG converter, texture image samples, game development test files, DDS format test, graphics texture samples'
+        },
+        schema: {
+          name: 'Free DDS Sample Files - Download DirectDraw Surface Texture Test Files',
+          description: 'Download free DDS sample DirectDraw Surface image files for testing texture image conversion, DDS viewing, game development tools, and graphics processing software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DDS texture loading, DDS to PNG converters, game engine compatibility, texture compression tools, and DirectDraw Surface format support.'
+        },
+        hero: {
+          title: 'DDS Sample Files',
+          description: 'Download free DDS sample DirectDraw Surface image files for testing. Multiple file sizes available to test your texture image conversion tools, DDS viewers, and game development software.'
+        },
+        about_description: 'These are test DDS (DirectDraw Surface) texture image files in various sizes for testing purposes'
+      },
+      dng: {
+        meta: {
+          title: 'Free DNG Sample Files Download - Digital Negative Raw Image Test Files | MorphyHub',
+          description: 'Download free DNG sample Digital Negative raw image files for testing raw image processing, DNG conversion, photography software, and professional image editing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DNG to JPEG converters, raw image editors, DNG viewing, camera raw processing, and Adobe Digital Negative format support.',
+          keywords: 'DNG sample files, DNG test files, download DNG examples, free DNG test files, Digital Negative files, DNG raw image files, DNG to JPEG converter, raw image processing, photography test files, DNG format test, camera raw samples, Adobe DNG test files'
+        },
+        schema: {
+          name: 'Free DNG Sample Files - Download Digital Negative Raw Image Test Files',
+          description: 'Download free DNG sample Digital Negative raw image files for testing raw image processing, DNG conversion, photography software, and professional image editing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DNG to JPEG converters, raw image editors, DNG viewing, camera raw processing, and Adobe Digital Negative format support.'
+        },
+        hero: {
+          title: 'DNG Sample Files',
+          description: 'Download free DNG sample Digital Negative raw image files for testing. Multiple file sizes available to test your raw image processing tools, DNG converters, and photography software.'
+        },
+        about_description: 'These are test DNG (Digital Negative) raw image files in various sizes for testing purposes'
+      },
+      eps: {
+        meta: {
+          title: 'Free EPS Sample Files Download - Encapsulated PostScript Vector Graphics Test Files | MorphyHub',
+          description: 'Download free EPS sample Encapsulated PostScript files for testing vector graphics conversion, EPS viewing, PostScript processing, and professional design software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EPS to PDF converters, EPS to SVG converters, vector graphics editors, PostScript viewers, and Encapsulated PostScript format compatibility.',
+          keywords: 'EPS sample files, EPS test files, download EPS examples, free EPS test files, Encapsulated PostScript files, EPS vector graphics, EPS to PDF converter, EPS to SVG converter, vector graphics samples, PostScript test files, design software test files, EPS format test'
+        },
+        schema: {
+          name: 'Free EPS Sample Files - Download Encapsulated PostScript Vector Graphics Test Files',
+          description: 'Download free EPS sample Encapsulated PostScript files for testing vector graphics conversion, EPS viewing, PostScript processing, and professional design software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EPS to PDF converters, EPS to SVG converters, vector graphics editors, PostScript viewers, and Encapsulated PostScript format compatibility.'
+        },
+        hero: {
+          title: 'EPS Sample Files',
+          description: 'Download free EPS sample Encapsulated PostScript files for testing. Multiple file sizes available to test your vector graphics conversion tools, EPS viewers, and PostScript processing software.'
+        },
+        about_description: 'These are test EPS (Encapsulated PostScript) vector graphics files in various sizes for testing purposes'
+      },
+      exr: {
+        meta: {
+          title: 'Free EXR Sample Files Download - OpenEXR High Dynamic Range Image Test Files | MorphyHub',
+          description: 'Download free EXR sample OpenEXR high dynamic range image files for testing HDR image processing, EXR conversion, professional photography software, and visual effects tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EXR to JPEG converters, HDR image editors, EXR viewing, high dynamic range processing, and OpenEXR format support.',
+          keywords: 'EXR sample files, EXR test files, download EXR examples, free EXR test files, OpenEXR files, EXR HDR images, EXR to JPEG converter, HDR image processing, high dynamic range samples, visual effects test files, EXR format test, professional photography test files'
+        },
+        schema: {
+          name: 'Free EXR Sample Files - Download OpenEXR High Dynamic Range Image Test Files',
+          description: 'Download free EXR sample OpenEXR high dynamic range image files for testing HDR image processing, EXR conversion, professional photography software, and visual effects tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing EXR to JPEG converters, HDR image editors, EXR viewing, high dynamic range processing, and OpenEXR format support.'
+        },
+        hero: {
+          title: 'EXR Sample Files',
+          description: 'Download free EXR sample OpenEXR high dynamic range image files for testing. Multiple file sizes available to test your HDR image processing tools, EXR converters, and visual effects software.'
+        },
+        about_description: 'These are test EXR (OpenEXR high dynamic range) image files in various sizes for testing purposes'
+      },
+      hdr: {
+        meta: {
+          title: 'Free HDR Sample Files Download - High Dynamic Range Image Test Files | MorphyHub',
+          description: 'Download free HDR sample High Dynamic Range image files for testing HDR image processing, HDR conversion, photography software, and image editing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR to JPEG converters, HDR image editors, HDR viewing, tone mapping tools, and High Dynamic Range format support.',
+          keywords: 'HDR sample files, HDR test files, download HDR examples, free HDR test files, High Dynamic Range files, HDR images, HDR to JPEG converter, HDR image processing, tone mapping test files, photography test files, HDR format test, high dynamic range samples'
+        },
+        schema: {
+          name: 'Free HDR Sample Files - Download High Dynamic Range Image Test Files',
+          description: 'Download free HDR sample High Dynamic Range image files for testing HDR image processing, HDR conversion, photography software, and image editing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HDR to JPEG converters, HDR image editors, HDR viewing, tone mapping tools, and High Dynamic Range format support.'
+        },
+        hero: {
+          title: 'HDR Sample Files',
+          description: 'Download free HDR sample High Dynamic Range image files for testing. Multiple file sizes available to test your HDR image processing tools, HDR converters, and photography software.'
+        },
+        about_description: 'These are test HDR (High Dynamic Range) image files in various sizes for testing purposes'
+      },
+      heic: {
+        meta: {
+          title: 'Free HEIC Sample Files Download - High Efficiency Image Container Test Files | MorphyHub',
+          description: 'Download free HEIC sample High Efficiency Image Container files for testing HEIC image conversion, HEIC viewing, modern image format processing, and mobile photography tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIC to JPEG converters, HEIC to PNG converters, iOS image processing, HEIC viewing software, and High Efficiency Image Container format support.',
+          keywords: 'HEIC sample files, HEIC test files, download HEIC examples, free HEIC test files, High Efficiency Image Container files, HEIC images, HEIC to JPEG converter, HEIC to PNG converter, iOS image samples, mobile photography test files, HEIC format test, modern image format samples'
+        },
+        schema: {
+          name: 'Free HEIC Sample Files - Download High Efficiency Image Container Test Files',
+          description: 'Download free HEIC sample High Efficiency Image Container files for testing HEIC image conversion, HEIC viewing, modern image format processing, and mobile photography tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIC to JPEG converters, HEIC to PNG converters, iOS image processing, HEIC viewing software, and High Efficiency Image Container format support.'
+        },
+        hero: {
+          title: 'HEIC Sample Files',
+          description: 'Download free HEIC sample High Efficiency Image Container files for testing. Multiple file sizes available to test your HEIC image conversion tools, HEIC viewers, and modern image format processing software.'
+        },
+        about_description: 'These are test HEIC (High Efficiency Image Container) image files in various sizes for testing purposes'
+      },
+      heif: {
+        meta: {
+          title: 'Free HEIF Sample Files Download - High Efficiency Image Format Test Files | MorphyHub',
+          description: 'Download free HEIF sample High Efficiency Image Format files for testing HEIF image conversion, HEIF viewing, modern image format processing, and mobile photography tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIF to JPEG converters, HEIF to PNG converters, mobile image processing, HEIF viewing software, and High Efficiency Image Format support.',
+          keywords: 'HEIF sample files, HEIF test files, download HEIF examples, free HEIF test files, High Efficiency Image Format files, HEIF images, HEIF to JPEG converter, HEIF to PNG converter, mobile image samples, modern image format test files, HEIF format test, image compression test files'
+        },
+        schema: {
+          name: 'Free HEIF Sample Files - Download High Efficiency Image Format Test Files',
+          description: 'Download free HEIF sample High Efficiency Image Format files for testing HEIF image conversion, HEIF viewing, modern image format processing, and mobile photography tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing HEIF to JPEG converters, HEIF to PNG converters, mobile image processing, HEIF viewing software, and High Efficiency Image Format support.'
+        },
+        hero: {
+          title: 'HEIF Sample Files',
+          description: 'Download free HEIF sample High Efficiency Image Format files for testing. Multiple file sizes available to test your HEIF image conversion tools, HEIF viewers, and modern image format processing software.'
+        },
+        about_description: 'These are test HEIF (High Efficiency Image Format) image files in various sizes for testing purposes'
+      },
+      icns: {
+        meta: {
+          title: 'Free ICNS Sample Files Download - macOS Icon Test Files | MorphyHub',
+          description: 'Download free ICNS sample macOS icon files for testing macOS icon conversion, ICNS viewing, icon design tools, and macOS application development. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ICNS to PNG converters, ICNS to ICO converters, macOS icon editors, icon design software, and macOS icon format support.',
+          keywords: 'ICNS sample files, ICNS test files, download ICNS examples, free ICNS test files, macOS icon files, ICNS icons, ICNS to PNG converter, ICNS to ICO converter, macOS icon design, icon editor test files, ICNS format test, Apple icon samples'
+        },
+        schema: {
+          name: 'Free ICNS Sample Files - Download macOS Icon Test Files',
+          description: 'Download free ICNS sample macOS icon files for testing macOS icon conversion, ICNS viewing, icon design tools, and macOS application development. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ICNS to PNG converters, ICNS to ICO converters, macOS icon editors, icon design software, and macOS icon format support.'
+        },
+        hero: {
+          title: 'ICNS Sample Files',
+          description: 'Download free ICNS sample macOS icon files for testing. Multiple file sizes available to test your macOS icon conversion tools, ICNS viewers, and icon design software.'
+        },
+        about_description: 'These are test ICNS (macOS icon) files in various sizes for testing purposes'
+      },
+      ico: {
+        meta: {
+          title: 'Free ICO Sample Files Download - Windows Icon Test Files | MorphyHub',
+          description: 'Download free ICO sample Windows icon files for testing Windows icon conversion, ICO viewing, icon design tools, and Windows application development. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ICO to PNG converters, ICO to ICNS converters, Windows icon editors, icon design software, and Windows icon format support.',
+          keywords: 'ICO sample files, ICO test files, download ICO examples, free ICO test files, Windows icon files, ICO icons, ICO to PNG converter, ICO to ICNS converter, Windows icon design, icon editor test files, ICO format test, Windows icon samples'
+        },
+        schema: {
+          name: 'Free ICO Sample Files - Download Windows Icon Test Files',
+          description: 'Download free ICO sample Windows icon files for testing Windows icon conversion, ICO viewing, icon design tools, and Windows application development. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ICO to PNG converters, ICO to ICNS converters, Windows icon editors, icon design software, and Windows icon format support.'
+        },
+        hero: {
+          title: 'ICO Sample Files',
+          description: 'Download free ICO sample Windows icon files for testing. Multiple file sizes available to test your Windows icon conversion tools, ICO viewers, and icon design software.'
+        },
+        about_description: 'These are test ICO (Windows icon) files in various sizes for testing purposes'
+      },
+      jpeg: {
+        meta: {
+          title: 'Free JPEG Sample Files Download - JPEG Image Test Files for Conversion Tools | MorphyHub',
+          description: 'Download free JPEG sample image files for testing JPEG image conversion, JPEG compression, image processing tools, and photo editing software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPEG to PNG converters, JPEG to PDF converters, image compression tools, JPEG optimization, and Joint Photographic Experts Group format support.',
+          keywords: 'JPEG sample files, JPEG test files, download JPEG examples, free JPEG test files, JPEG image files, JPEG to PNG converter, JPEG to PDF converter, image compression test files, photo editing test files, JPEG format test, image processing samples'
+        },
+        schema: {
+          name: 'Free JPEG Sample Files - Download JPEG Image Test Files for Conversion Tools',
+          description: 'Download free JPEG sample image files for testing JPEG image conversion, JPEG compression, image processing tools, and photo editing software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPEG to PNG converters, JPEG to PDF converters, image compression tools, JPEG optimization, and Joint Photographic Experts Group format support.'
+        },
+        hero: {
+          title: 'JPEG Sample Files',
+          description: 'Download free JPEG sample JPEG image files for testing. Multiple file sizes available to test your JPEG image conversion tools, JPEG compression software, and image processing applications.'
+        },
+        about_description: 'These are test JPEG image files in various sizes for testing purposes'
+      },
+      jpg: {
+        meta: {
+          title: 'Free JPG Sample Files Download - JPG Image Test Files for Conversion Tools | MorphyHub',
+          description: 'Download free JPG sample image files for testing JPG image conversion, JPG compression, image processing tools, and photo editing software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPG to PNG converters, JPG to PDF converters, image compression tools, JPG optimization, and Joint Photographic Experts Group format support.',
+          keywords: 'JPG sample files, JPG test files, download JPG examples, free JPG test files, JPG image files, JPG to PNG converter, JPG to PDF converter, image compression test files, photo editing test files, JPG format test, image processing samples'
+        },
+        schema: {
+          name: 'Free JPG Sample Files - Download JPG Image Test Files for Conversion Tools',
+          description: 'Download free JPG sample image files for testing JPG image conversion, JPG compression, image processing tools, and photo editing software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JPG to PNG converters, JPG to PDF converters, image compression tools, JPG optimization, and Joint Photographic Experts Group format support.'
+        },
+        hero: {
+          title: 'JPG Sample Files',
+          description: 'Download free JPG sample JPG image files for testing. Multiple file sizes available to test your JPG image conversion tools, JPG compression software, and image processing applications.'
+        },
+        about_description: 'These are test JPG image files in various sizes for testing purposes'
+      },
+      m4v: {
+        meta: {
+          title: 'Free M4V Sample Files Download - M4V Video Test Files for Conversion Tools | MorphyHub',
+          description: 'Download free M4V sample video files for testing M4V video conversion, M4V playback, video processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4V to MP4 converters, M4V to AVI converters, video players, M4V playback compatibility, and MPEG-4 video format support.',
+          keywords: 'M4V sample files, M4V test files, download M4V examples, free M4V test files, M4V video files, M4V to MP4 converter, M4V to AVI converter, video player test files, M4V playback test, video conversion samples, MPEG-4 video format test'
+        },
+        schema: {
+          name: 'Free M4V Sample Files - Download M4V Video Test Files for Conversion Tools',
+          description: 'Download free M4V sample video files for testing M4V video conversion, M4V playback, video processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4V to MP4 converters, M4V to AVI converters, video players, M4V playback compatibility, and MPEG-4 video format support.'
+        },
+        hero: {
+          title: 'M4V Sample Files',
+          description: 'Download free M4V sample M4V video files for testing. Multiple file sizes available to test your M4V video conversion tools, M4V playback software, and video processing applications.'
+        },
+        about_description: 'These are test M4V video files in various sizes for testing purposes'
+      },
+      mkv: {
+        meta: {
+          title: 'Free MKV Sample Files Download - Matroska Video Test Files for Conversion Tools | MorphyHub',
+          description: 'Download free MKV sample Matroska video files for testing MKV video conversion, MKV playback, video processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MKV to MP4 converters, MKV to AVI converters, video players, MKV playback compatibility, and Matroska video format support.',
+          keywords: 'MKV sample files, MKV test files, download MKV examples, free MKV test files, Matroska video files, MKV to MP4 converter, MKV to AVI converter, video player test files, MKV playback test, video conversion samples, Matroska format test'
+        },
+        schema: {
+          name: 'Free MKV Sample Files - Download Matroska Video Test Files for Conversion Tools',
+          description: 'Download free MKV sample Matroska video files for testing MKV video conversion, MKV playback, video processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MKV to MP4 converters, MKV to AVI converters, video players, MKV playback compatibility, and Matroska video format support.'
+        },
+        hero: {
+          title: 'MKV Sample Files',
+          description: 'Download free MKV sample Matroska video files for testing. Multiple file sizes available to test your MKV video conversion tools, MKV playback software, and video processing applications.'
+        },
+        about_description: 'These are test MKV (Matroska) video files in various sizes for testing purposes'
+      },
+      aac: {
+        meta: {
+          title: 'Free AAC Sample Files Download - Advanced Audio Coding Test Files | MorphyHub',
+          description: 'Download free AAC sample Advanced Audio Coding files for testing audio conversion, AAC playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AAC to MP3 converters, AAC to WAV converters, audio players, AAC playback compatibility, and Advanced Audio Coding format support.',
+          keywords: 'AAC sample files, AAC test files, download AAC examples, free AAC test files, Advanced Audio Coding files, AAC to MP3 converter, AAC to WAV converter, audio player test files, AAC playback test, audio conversion samples, Advanced Audio Coding format test'
+        },
+        schema: {
+          name: 'Free AAC Sample Files - Download Advanced Audio Coding Test Files',
+          description: 'Download free AAC sample Advanced Audio Coding files for testing audio conversion, AAC playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AAC to MP3 converters, AAC to WAV converters, audio players, AAC playback compatibility, and Advanced Audio Coding format support.'
+        },
+        hero: {
+          title: 'AAC Sample Files',
+          description: 'Download free AAC sample Advanced Audio Coding files for testing. Multiple file sizes available to test your audio conversion tools, AAC playback software, and audio processing applications.'
+        },
+        about_description: 'These are test AAC (Advanced Audio Coding) audio files in various sizes for testing purposes'
+      },
+      ac3: {
+        meta: {
+          title: 'Free AC3 Sample Files Download - Dolby Digital Audio Test Files | MorphyHub',
+          description: 'Download free AC3 sample Dolby Digital audio files for testing audio conversion, AC3 playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AC3 to MP3 converters, AC3 to WAV converters, audio players, AC3 playback compatibility, and Dolby Digital format support.',
+          keywords: 'AC3 sample files, AC3 test files, download AC3 examples, free AC3 test files, Dolby Digital files, AC3 to MP3 converter, AC3 to WAV converter, audio player test files, AC3 playback test, audio conversion samples, Dolby Digital format test'
+        },
+        schema: {
+          name: 'Free AC3 Sample Files - Download Dolby Digital Audio Test Files',
+          description: 'Download free AC3 sample Dolby Digital audio files for testing audio conversion, AC3 playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AC3 to MP3 converters, AC3 to WAV converters, audio players, AC3 playback compatibility, and Dolby Digital format support.'
+        },
+        hero: {
+          title: 'AC3 Sample Files',
+          description: 'Download free AC3 sample Dolby Digital audio files for testing. Multiple file sizes available to test your audio conversion tools, AC3 playback software, and audio processing applications.'
+        },
+        about_description: 'These are test AC3 (Dolby Digital) audio files in various sizes for testing purposes'
+      },
+      aif: {
+        meta: {
+          title: 'Free AIF Sample Files Download - Audio Interchange File Format Test Files | MorphyHub',
+          description: 'Download free AIF sample Audio Interchange File Format files for testing audio conversion, AIF playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AIF to MP3 converters, AIF to WAV converters, audio players, AIF playback compatibility, and Audio Interchange File Format support.',
+          keywords: 'AIF sample files, AIF test files, download AIF examples, free AIF test files, Audio Interchange File Format files, AIF to MP3 converter, AIF to WAV converter, audio player test files, AIF playback test, audio conversion samples, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Free AIF Sample Files - Download Audio Interchange File Format Test Files',
+          description: 'Download free AIF sample Audio Interchange File Format files for testing audio conversion, AIF playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AIF to MP3 converters, AIF to WAV converters, audio players, AIF playback compatibility, and Audio Interchange File Format support.'
+        },
+        hero: {
+          title: 'AIF Sample Files',
+          description: 'Download free AIF sample Audio Interchange File Format files for testing. Multiple file sizes available to test your audio conversion tools, AIF playback software, and audio processing applications.'
+        },
+        about_description: 'These are test AIF (Audio Interchange File Format) audio files in various sizes for testing purposes'
+      },
+      aiff: {
+        meta: {
+          title: 'Free AIFF Sample Files Download - Audio Interchange File Format Test Files | MorphyHub',
+          description: 'Download free AIFF sample Audio Interchange File Format files for testing audio conversion, AIFF playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AIFF to MP3 converters, AIFF to WAV converters, audio players, AIFF playback compatibility, and Audio Interchange File Format support.',
+          keywords: 'AIFF sample files, AIFF test files, download AIFF examples, free AIFF test files, Audio Interchange File Format files, AIFF to MP3 converter, AIFF to WAV converter, audio player test files, AIFF playback test, audio conversion samples, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Free AIFF Sample Files - Download Audio Interchange File Format Test Files',
+          description: 'Download free AIFF sample Audio Interchange File Format files for testing audio conversion, AIFF playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AIFF to MP3 converters, AIFF to WAV converters, audio players, AIFF playback compatibility, and Audio Interchange File Format support.'
+        },
+        hero: {
+          title: 'AIFF Sample Files',
+          description: 'Download free AIFF sample Audio Interchange File Format files for testing. Multiple file sizes available to test your audio conversion tools, AIFF playback software, and audio processing applications.'
+        },
+        about_description: 'These are test AIFF (Audio Interchange File Format) audio files in various sizes for testing purposes'
+      },
+      amr: {
+        meta: {
+          title: 'Free AMR Sample Files Download - Adaptive Multi-Rate Audio Test Files | MorphyHub',
+          description: 'Download free AMR sample Adaptive Multi-Rate audio files for testing audio conversion, AMR playback, audio processing tools, and mobile multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AMR to MP3 converters, AMR to WAV converters, audio players, AMR playback compatibility, and Adaptive Multi-Rate format support.',
+          keywords: 'AMR sample files, AMR test files, download AMR examples, free AMR test files, Adaptive Multi-Rate files, AMR to MP3 converter, AMR to WAV converter, audio player test files, AMR playback test, audio conversion samples, Adaptive Multi-Rate format test'
+        },
+        schema: {
+          name: 'Free AMR Sample Files - Download Adaptive Multi-Rate Audio Test Files',
+          description: 'Download free AMR sample Adaptive Multi-Rate audio files for testing audio conversion, AMR playback, audio processing tools, and mobile multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AMR to MP3 converters, AMR to WAV converters, audio players, AMR playback compatibility, and Adaptive Multi-Rate format support.'
+        },
+        hero: {
+          title: 'AMR Sample Files',
+          description: 'Download free AMR sample Adaptive Multi-Rate audio files for testing. Multiple file sizes available to test your audio conversion tools, AMR playback software, and audio processing applications.'
+        },
+        about_description: 'These are test AMR (Adaptive Multi-Rate) audio files in various sizes for testing purposes'
+      },
+      caf: {
+        meta: {
+          title: 'Free CAF Sample Files Download - Core Audio Format Test Files | MorphyHub',
+          description: 'Download free CAF sample Core Audio Format files for testing audio conversion, CAF playback, audio processing tools, and macOS multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAF to MP3 converters, CAF to WAV converters, audio players, CAF playback compatibility, and Core Audio Format support.',
+          keywords: 'CAF sample files, CAF test files, download CAF examples, free CAF test files, Core Audio Format files, CAF to MP3 converter, CAF to WAV converter, audio player test files, CAF playback test, audio conversion samples, Core Audio Format test'
+        },
+        schema: {
+          name: 'Free CAF Sample Files - Download Core Audio Format Test Files',
+          description: 'Download free CAF sample Core Audio Format files for testing audio conversion, CAF playback, audio processing tools, and macOS multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAF to MP3 converters, CAF to WAV converters, audio players, CAF playback compatibility, and Core Audio Format support.'
+        },
+        hero: {
+          title: 'CAF Sample Files',
+          description: 'Download free CAF sample Core Audio Format files for testing. Multiple file sizes available to test your audio conversion tools, CAF playback software, and audio processing applications.'
+        },
+        about_description: 'These are test CAF (Core Audio Format) audio files in various sizes for testing purposes'
       }
     }
   }
