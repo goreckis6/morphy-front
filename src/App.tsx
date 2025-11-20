@@ -313,6 +313,22 @@ function App() {
 
         {/* Podglądy / viewery */}
         <Route path="/viewers" element={<Viewers />} />
+        <Route path="/pl/viewers" element={<Viewers />} />
+        <Route path="/de/viewers" element={<Viewers />} />
+        <Route path="/id/viewers" element={<Viewers />} />
+        <Route path="/sv/viewers" element={<Viewers />} />
+        <Route path="/es/viewers" element={<Viewers />} />
+        <Route path="/fr/viewers" element={<Viewers />} />
+        <Route path="/it/viewers" element={<Viewers />} />
+        <Route path="/nl/viewers" element={<Viewers />} />
+        <Route path="/pt/viewers" element={<Viewers />} />
+        <Route path="/vi/viewers" element={<Viewers />} />
+        <Route path="/tr/viewers" element={<Viewers />} />
+        <Route path="/ru/viewers" element={<Viewers />} />
+        <Route path="/ar/viewers" element={<Viewers />} />
+        <Route path="/th/viewers" element={<Viewers />} />
+        <Route path="/ja/viewers" element={<Viewers />} />
+        <Route path="/zh/viewers" element={<Viewers />} />
 
         {/* Compression Hub */}
         <Route path="/compress" element={<Compress />} />
