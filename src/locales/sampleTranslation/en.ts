@@ -1839,6 +1839,310 @@ export const en: SamplePageTranslations = {
           description: 'Download free CAF sample Core Audio Format files for testing. Multiple file sizes available to test your audio conversion tools, CAF playback software, and audio processing applications.'
         },
         about_description: 'These are test CAF (Core Audio Format) audio files in various sizes for testing purposes'
+      },
+      cue: {
+        meta: {
+          title: 'Free CUE Sample Files Download - CUE Sheet Test Files for Audio CD Burning | MorphyHub',
+          description: 'Download free CUE sample CUE sheet files for testing audio CD burning and CUE sheet parsing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CUE sheet parsing, audio CD burning software, CUE file validation, and CD authoring tools.',
+          keywords: 'CUE sample files, CUE test files, download CUE examples, free CUE test files, CUE sheet files, audio CD burning test, CUE sheet parser, CD authoring test files, CUE file validation, audio disc image test'
+        },
+        schema: {
+          name: 'Free CUE Sample Files - Download CUE Sheet Test Files for Audio CD Burning',
+          description: 'Download free CUE sample CUE sheet files for testing audio CD burning and CUE sheet parsing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CUE sheet parsing, audio CD burning software, CUE file validation, and CD authoring tools.'
+        },
+        hero: {
+          title: 'CUE Sample Files',
+          description: 'Download free CUE sample CUE sheet files for testing. Multiple file sizes available to test your audio CD burning and CUE sheet parsing tools.'
+        },
+        about_description: 'These are test CUE sheet files in various sizes for testing purposes'
+      },
+      m4a: {
+        meta: {
+          title: 'Free M4A Sample Files Download - M4A Audio Test Files for Conversion Tools | MorphyHub',
+          description: 'Download free M4A sample M4A audio files for testing M4A audio conversion, M4A playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4A to MP3 converters, M4A to WAV converters, audio players, M4A playback compatibility, and MPEG-4 audio format support.',
+          keywords: 'M4A sample files, M4A test files, download M4A examples, free M4A test files, M4A audio files, M4A to MP3 converter, M4A to WAV converter, audio player test files, M4A playback test, audio conversion samples, MPEG-4 audio format test'
+        },
+        schema: {
+          name: 'Free M4A Sample Files - Download M4A Audio Test Files for Conversion Tools',
+          description: 'Download free M4A sample M4A audio files for testing M4A audio conversion, M4A playback, audio processing tools, and multimedia software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing M4A to MP3 converters, M4A to WAV converters, audio players, M4A playback compatibility, and MPEG-4 audio format support.'
+        },
+        hero: {
+          title: 'M4A Sample Files',
+          description: 'Download free M4A sample M4A audio files for testing. Multiple file sizes available to test your M4A audio conversion, M4A playback, and audio processing tools.'
+        },
+        about_description: 'These are test M4A audio files in various sizes for testing purposes'
+      },
+      midi: {
+        meta: {
+          title: 'Free MIDI Sample Files Download - MIDI Music Test Files for Music Sequencing | MorphyHub',
+          description: 'Download free MIDI sample MIDI music files for testing MIDI playback, MIDI conversion, music sequencing tools, and digital audio workstations. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MIDI to MP3 converters, MIDI to WAV converters, MIDI sequencers, music production software, and Musical Instrument Digital Interface format support.',
+          keywords: 'MIDI sample files, MIDI test files, download MIDI examples, free MIDI test files, MIDI music files, MIDI to MP3 converter, MIDI to WAV converter, MIDI sequencer test, music production test files, MIDI playback test, music sequencing samples'
+        },
+        schema: {
+          name: 'Free MIDI Sample Files - Download MIDI Music Test Files for Music Sequencing',
+          description: 'Download free MIDI sample MIDI music files for testing MIDI playback, MIDI conversion, music sequencing tools, and digital audio workstations. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing MIDI to MP3 converters, MIDI to WAV converters, MIDI sequencers, music production software, and Musical Instrument Digital Interface format support.'
+        },
+        hero: {
+          title: 'MIDI Sample Files',
+          description: 'Download free MIDI sample MIDI music files for testing. Multiple file sizes available to test your MIDI playback, MIDI conversion, and music sequencing tools.'
+        },
+        about_description: 'These are test MIDI music files in various sizes for testing purposes'
+      },
+      ace: {
+        meta: {
+          title: 'Free ACE Sample Files Download - ACE Archive Test Files for Extraction Tools | MorphyHub',
+          description: 'Download free ACE sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ACE archive extraction, ACE file decompression, archive management tools, and file compression software.',
+          keywords: 'ACE sample files, ACE test files, download ACE examples, free ACE test files, ACE archive files, ACE extraction test, ACE decompression test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free ACE Sample Files - Download ACE Archive Test Files for Extraction Tools',
+          description: 'Download free ACE sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ACE archive extraction, ACE file decompression, archive management tools, and file compression software.'
+        },
+        hero: {
+          title: 'ACE Sample Files',
+          description: 'Download free ACE sample archive files for testing. Multiple file sizes available to test your archive extraction and compression tools.'
+        },
+        about_description: 'These are test ACE archive files in various sizes for testing purposes'
+      },
+      arj: {
+        meta: {
+          title: 'Free ARJ Sample Files Download - ARJ Archive Test Files for Extraction Tools | MorphyHub',
+          description: 'Download free ARJ sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ARJ archive extraction, ARJ file decompression, archive management tools, and file compression software.',
+          keywords: 'ARJ sample files, ARJ test files, download ARJ examples, free ARJ test files, ARJ archive files, ARJ extraction test, ARJ decompression test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free ARJ Sample Files - Download ARJ Archive Test Files for Extraction Tools',
+          description: 'Download free ARJ sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ARJ archive extraction, ARJ file decompression, archive management tools, and file compression software.'
+        },
+        hero: {
+          title: 'ARJ Sample Files',
+          description: 'Download free ARJ sample archive files for testing. Multiple file sizes available to test your archive extraction and compression tools.'
+        },
+        about_description: 'These are test ARJ archive files in various sizes for testing purposes'
+      },
+      bz2: {
+        meta: {
+          title: 'Free BZ2 Sample Files Download - BZ2 Compressed Archive Test Files | MorphyHub',
+          description: 'Download free BZ2 sample bzip2 compressed archive files for testing archive decompression and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BZ2 archive decompression, BZ2 file extraction, bzip2 compression tools, and archive management software.',
+          keywords: 'BZ2 sample files, BZ2 test files, download BZ2 examples, free BZ2 test files, BZ2 compressed files, BZ2 decompression test, bzip2 compression test, archive extraction test files, file compression samples'
+        },
+        schema: {
+          name: 'Free BZ2 Sample Files - Download BZ2 Compressed Archive Test Files',
+          description: 'Download free BZ2 sample bzip2 compressed archive files for testing archive decompression and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing BZ2 archive decompression, BZ2 file extraction, bzip2 compression tools, and archive management software.'
+        },
+        hero: {
+          title: 'BZ2 Sample Files',
+          description: 'Download free BZ2 sample bzip2 compressed archive files for testing. Multiple file sizes available to test your archive decompression and compression tools.'
+        },
+        about_description: 'These are test BZ2 compressed archive files in various sizes for testing purposes'
+      },
+      gz: {
+        meta: {
+          title: 'Free GZ Sample Files Download - GZ Gzip Compressed Archive Test Files | MorphyHub',
+          description: 'Download free GZ sample gzip compressed archive files for testing gzip decompression, archive extraction, and file compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GZ archive decompression, GZ file extraction, gzip compression tools, and archive management software.',
+          keywords: 'GZ sample files, GZ test files, download GZ examples, free GZ test files, GZ compressed files, GZ decompression test, gzip compression test, archive extraction test files, file compression samples'
+        },
+        schema: {
+          name: 'Free GZ Sample Files - Download GZ Gzip Compressed Archive Test Files',
+          description: 'Download free GZ sample gzip compressed archive files for testing gzip decompression, archive extraction, and file compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing GZ archive decompression, GZ file extraction, gzip compression tools, and archive management software.'
+        },
+        hero: {
+          title: 'GZ Sample Files',
+          description: 'Download free GZ sample gzip compressed archive files for testing. Multiple file sizes available to test your gzip decompression, archive extraction, and file compression tools.'
+        },
+        about_description: 'These are test GZ gzip compressed archive files in various sizes for testing purposes'
+      },
+      cab: {
+        meta: {
+          title: 'Free CAB Sample Files Download - CAB Windows Cabinet Archive Test Files | MorphyHub',
+          description: 'Download free CAB sample Windows cabinet archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAB archive extraction, CAB file decompression, Windows cabinet archive tools, and archive management software.',
+          keywords: 'CAB sample files, CAB test files, download CAB examples, free CAB test files, CAB archive files, CAB extraction test, Windows cabinet archive test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free CAB Sample Files - Download CAB Windows Cabinet Archive Test Files',
+          description: 'Download free CAB sample Windows cabinet archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CAB archive extraction, CAB file decompression, Windows cabinet archive tools, and archive management software.'
+        },
+        hero: {
+          title: 'CAB Sample Files',
+          description: 'Download free CAB sample Windows cabinet archive files for testing. Multiple file sizes available to test your archive extraction and compression tools.'
+        },
+        about_description: 'These are test CAB Windows cabinet archive files in various sizes for testing purposes'
+      },
+      cpio: {
+        meta: {
+          title: 'Free CPIO Sample Files Download - CPIO Archive Test Files for Extraction Tools | MorphyHub',
+          description: 'Download free CPIO sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CPIO archive extraction, CPIO file decompression, archive management tools, and file compression software.',
+          keywords: 'CPIO sample files, CPIO test files, download CPIO examples, free CPIO test files, CPIO archive files, CPIO extraction test, CPIO decompression test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free CPIO Sample Files - Download CPIO Archive Test Files for Extraction Tools',
+          description: 'Download free CPIO sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CPIO archive extraction, CPIO file decompression, archive management tools, and file compression software.'
+        },
+        hero: {
+          title: 'CPIO Sample Files',
+          description: 'Download free CPIO sample archive files for testing. Multiple file sizes available to test your archive extraction and compression tools.'
+        },
+        about_description: 'These are test CPIO archive files in various sizes for testing purposes'
+      },
+      zip: {
+        meta: {
+          title: 'Free ZIP Sample Files Download - ZIP Archive Test Files for Extraction Tools | MorphyHub',
+          description: 'Download free ZIP sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ZIP archive extraction, ZIP file decompression, archive management tools, and file compression software.',
+          keywords: 'ZIP sample files, ZIP test files, download ZIP examples, free ZIP test files, ZIP archive files, ZIP extraction test, ZIP decompression test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free ZIP Sample Files - Download ZIP Archive Test Files for Extraction Tools',
+          description: 'Download free ZIP sample archive files for testing archive extraction and compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ZIP archive extraction, ZIP file decompression, archive management tools, and file compression software.'
+        },
+        hero: {
+          title: 'ZIP Sample Files',
+          description: 'Download free ZIP sample archive files for testing. Multiple file sizes available to test your archive extraction and compression tools.'
+        },
+        about_description: 'These are test ZIP archive files in various sizes for testing purposes'
+      },
+      dmg: {
+        meta: {
+          title: 'Free DMG Sample Files Download - DMG macOS Disk Image Test Files | MorphyHub',
+          description: 'Download free DMG sample macOS disk image files for testing disk image mounting and DMG extraction tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DMG disk image mounting, DMG file extraction, macOS disk image tools, and disk image processing software.',
+          keywords: 'DMG sample files, DMG test files, download DMG examples, free DMG test files, DMG disk image files, DMG mounting test, macOS disk image test, disk image extraction test files, disk image processing samples'
+        },
+        schema: {
+          name: 'Free DMG Sample Files - Download DMG macOS Disk Image Test Files',
+          description: 'Download free DMG sample macOS disk image files for testing disk image mounting and DMG extraction tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing DMG disk image mounting, DMG file extraction, macOS disk image tools, and disk image processing software.'
+        },
+        hero: {
+          title: 'DMG Sample Files',
+          description: 'Download free DMG sample macOS disk image files for testing. Multiple file sizes available to test your disk image mounting and DMG extraction tools.'
+        },
+        about_description: 'These are test DMG macOS disk image files in various sizes for testing purposes'
+      },
+      img: {
+        meta: {
+          title: 'Free IMG Sample Files Download - IMG Disk Image Test Files | MorphyHub',
+          description: 'Download free IMG sample disk image files for testing disk image mounting, IMG extraction, and disk image processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing IMG disk image mounting, IMG file extraction, disk image tools, and disk image processing software.',
+          keywords: 'IMG sample files, IMG test files, download IMG examples, free IMG test files, IMG disk image files, IMG mounting test, disk image extraction test, disk image processing test files, disk image samples'
+        },
+        schema: {
+          name: 'Free IMG Sample Files - Download IMG Disk Image Test Files',
+          description: 'Download free IMG sample disk image files for testing disk image mounting, IMG extraction, and disk image processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing IMG disk image mounting, IMG file extraction, disk image tools, and disk image processing software.'
+        },
+        hero: {
+          title: 'IMG Sample Files',
+          description: 'Download free IMG sample disk image files for testing. Multiple file sizes available to test your disk image mounting, IMG extraction, and disk image processing tools.'
+        },
+        about_description: 'These are test IMG disk image files in various sizes for testing purposes'
+      },
+      iso: {
+        meta: {
+          title: 'Free ISO Sample Files Download - ISO Disk Image Test Files | MorphyHub',
+          description: 'Download free ISO sample ISO disk image files for testing ISO disk image mounting, ISO extraction, and disk image processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ISO disk image mounting, ISO file extraction, disk image tools, and disk image processing software.',
+          keywords: 'ISO sample files, ISO test files, download ISO examples, free ISO test files, ISO disk image files, ISO mounting test, ISO extraction test, disk image processing test files, disk image samples'
+        },
+        schema: {
+          name: 'Free ISO Sample Files - Download ISO Disk Image Test Files',
+          description: 'Download free ISO sample ISO disk image files for testing ISO disk image mounting, ISO extraction, and disk image processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ISO disk image mounting, ISO file extraction, disk image tools, and disk image processing software.'
+        },
+        hero: {
+          title: 'ISO Sample Files',
+          description: 'Download free ISO sample ISO disk image files for testing. Multiple file sizes available to test your ISO disk image mounting, ISO extraction, and disk image processing tools.'
+        },
+        about_description: 'These are test ISO disk image files in various sizes for testing purposes'
+      },
+      kmz: {
+        meta: {
+          title: 'Free KMZ Sample Files Download - KMZ Compressed KML Test Files | MorphyHub',
+          description: 'Download free KMZ sample compressed Keyhole Markup Language files for testing KMZ extraction, geographic data processing, and Google Earth integration tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KMZ file extraction, KMZ to KML conversion, Google Earth compatibility, geographic data processing, and mapping software.',
+          keywords: 'KMZ sample files, KMZ test files, download KMZ examples, free KMZ test files, KMZ compressed files, KMZ extraction test, Google Earth test files, geographic data processing test, mapping software samples'
+        },
+        schema: {
+          name: 'Free KMZ Sample Files - Download KMZ Compressed KML Test Files',
+          description: 'Download free KMZ sample compressed Keyhole Markup Language files for testing KMZ extraction, geographic data processing, and Google Earth integration tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing KMZ file extraction, KMZ to KML conversion, Google Earth compatibility, geographic data processing, and mapping software.'
+        },
+        hero: {
+          title: 'KMZ Sample Files',
+          description: 'Download free KMZ sample compressed Keyhole Markup Language files for testing. Multiple file sizes available to test your KMZ extraction, geographic data processing, and Google Earth integration tools.'
+        },
+        about_description: 'These are test KMZ compressed Keyhole Markup Language files in various sizes for testing purposes'
+      },
+      laz: {
+        meta: {
+          title: 'Free LAZ Sample Files Download - LAZ Compressed LiDAR Test Files | MorphyHub',
+          description: 'Download free LAZ sample compressed LiDAR point cloud data files for testing LAZ extraction, point cloud processing, and 3D mapping tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LAZ file extraction, LAZ to LAS conversion, LiDAR point cloud processing, 3D mapping software, and geographic data analysis tools.',
+          keywords: 'LAZ sample files, LAZ test files, download LAZ examples, free LAZ test files, LAZ compressed files, LAZ extraction test, LiDAR point cloud test, 3D mapping test files, geographic data analysis samples'
+        },
+        schema: {
+          name: 'Free LAZ Sample Files - Download LAZ Compressed LiDAR Test Files',
+          description: 'Download free LAZ sample compressed LiDAR point cloud data files for testing LAZ extraction, point cloud processing, and 3D mapping tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LAZ file extraction, LAZ to LAS conversion, LiDAR point cloud processing, 3D mapping software, and geographic data analysis tools.'
+        },
+        hero: {
+          title: 'LAZ Sample Files',
+          description: 'Download free LAZ sample compressed LiDAR point cloud data files for testing. Multiple file sizes available to test your LAZ extraction, point cloud processing, and 3D mapping tools.'
+        },
+        about_description: 'These are test LAZ compressed LiDAR point cloud data files in various sizes for testing purposes'
+      },
+      lha: {
+        meta: {
+          title: 'Free LHA Sample Files Download - LHA Archive Test Files for Extraction Tools | MorphyHub',
+          description: 'Download free LHA sample LHA archive files for testing LHA extraction, archive decompression, and file archiving tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LHA archive extraction, LHA file decompression, archive management tools, and file compression software.',
+          keywords: 'LHA sample files, LHA test files, download LHA examples, free LHA test files, LHA archive files, LHA extraction test, LHA decompression test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free LHA Sample Files - Download LHA Archive Test Files for Extraction Tools',
+          description: 'Download free LHA sample LHA archive files for testing LHA extraction, archive decompression, and file archiving tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LHA archive extraction, LHA file decompression, archive management tools, and file compression software.'
+        },
+        hero: {
+          title: 'LHA Sample Files',
+          description: 'Download free LHA sample LHA archive files for testing. Multiple file sizes available to test your LHA extraction, archive decompression, and file archiving tools.'
+        },
+        about_description: 'These are test LHA archive files in various sizes for testing purposes'
+      },
+      lzh: {
+        meta: {
+          title: 'Free LZH Sample Files Download - LZH Archive Test Files for Extraction Tools | MorphyHub',
+          description: 'Download free LZH sample LZH archive files for testing LZH extraction, archive decompression, and file archiving tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH archive extraction, LZH file decompression, archive management tools, and file compression software.',
+          keywords: 'LZH sample files, LZH test files, download LZH examples, free LZH test files, LZH archive files, LZH extraction test, LZH decompression test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free LZH Sample Files - Download LZH Archive Test Files for Extraction Tools',
+          description: 'Download free LZH sample LZH archive files for testing LZH extraction, archive decompression, and file archiving tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZH archive extraction, LZH file decompression, archive management tools, and file compression software.'
+        },
+        hero: {
+          title: 'LZH Sample Files',
+          description: 'Download free LZH sample LZH archive files for testing. Multiple file sizes available to test your LZH extraction, archive decompression, and file archiving tools.'
+        },
+        about_description: 'These are test LZH archive files in various sizes for testing purposes'
+      },
+      lzma: {
+        meta: {
+          title: 'Free LZMA Sample Files Download - LZMA Compressed Archive Test Files | MorphyHub',
+          description: 'Download free LZMA sample LZMA compressed files for testing LZMA decompression, archive extraction, and file compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZMA archive decompression, LZMA file extraction, LZMA compression tools, and archive management software.',
+          keywords: 'LZMA sample files, LZMA test files, download LZMA examples, free LZMA test files, LZMA compressed files, LZMA decompression test, LZMA compression test, archive extraction test files, file compression samples'
+        },
+        schema: {
+          name: 'Free LZMA Sample Files - Download LZMA Compressed Archive Test Files',
+          description: 'Download free LZMA sample LZMA compressed files for testing LZMA decompression, archive extraction, and file compression tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing LZMA archive decompression, LZMA file extraction, LZMA compression tools, and archive management software.'
+        },
+        hero: {
+          title: 'LZMA Sample Files',
+          description: 'Download free LZMA sample LZMA compressed files for testing. Multiple file sizes available to test your LZMA decompression, archive extraction, and file compression tools.'
+        },
+        about_description: 'These are test LZMA compressed files in various sizes for testing purposes'
+      },
+      '7z': {
+        meta: {
+          title: 'Free 7Z Sample Files Download - 7Z Archive Test Files for Extraction Tools | MorphyHub',
+          description: 'Download free 7Z sample archive files for testing archive conversion and extraction tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 7Z archive extraction, 7Z file decompression, archive management tools, and file compression software.',
+          keywords: '7Z sample files, 7Z test files, download 7Z examples, free 7Z test files, 7Z archive files, 7Z extraction test, 7Z decompression test, archive management test files, file compression samples'
+        },
+        schema: {
+          name: 'Free 7Z Sample Files - Download 7Z Archive Test Files for Extraction Tools',
+          description: 'Download free 7Z sample archive files for testing archive conversion and extraction tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 7Z archive extraction, 7Z file decompression, archive management tools, and file compression software.'
+        },
+        hero: {
+          title: '7Z Sample Files',
+          description: 'Download free 7Z sample archive files for testing. Multiple file sizes available to test your archive conversion and extraction tools.'
+        },
+        about_description: 'These are test 7Z archive files in various sizes for testing purposes'
       }
     }
   }

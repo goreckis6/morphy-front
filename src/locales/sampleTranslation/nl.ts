@@ -1839,6 +1839,310 @@ export const nl: SamplePageTranslations = {
           description: 'Download gratis CAF Core Audio Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audioconversiehulpmiddelen, CAF-afspeelsoftware en audioverwerkingsapplicaties te testen.'
         },
         about_description: 'Dit zijn CAF (Core Audio Format) audio testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      cue: {
+        meta: {
+          title: 'Gratis CUE Voorbeeldbestanden Downloaden - CUE Sheet Testbestanden voor Audio CD Branden | MorphyHub',
+          description: 'Download gratis CUE CUE sheet voorbeeldbestanden om audio CD-brandhulpmiddelen en CUE sheet-parsinghulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CUE sheet-parsing, audio CD-brandsoftware, CUE-bestandsvalidatie en CD-authoringhulpmiddelen.',
+          keywords: 'CUE voorbeeldbestanden, CUE testbestanden, CUE voorbeelden downloaden, gratis CUE testbestanden, CUE sheet bestanden, audio CD branden test, CUE sheet parser, CD authoring testbestanden, CUE-bestandsvalidatie, audio disc image test'
+        },
+        schema: {
+          name: 'Gratis CUE Voorbeeldbestanden - CUE Sheet Testbestanden voor Audio CD Branden Downloaden',
+          description: 'Download gratis CUE CUE sheet voorbeeldbestanden om audio CD-brandhulpmiddelen en CUE sheet-parsinghulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CUE sheet-parsing, audio CD-brandsoftware, CUE-bestandsvalidatie en CD-authoringhulpmiddelen.'
+        },
+        hero: {
+          title: 'CUE Voorbeeldbestanden',
+          description: 'Download gratis CUE CUE sheet voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om audio CD-brandhulpmiddelen en CUE sheet-parsinghulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn CUE sheet testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      m4a: {
+        meta: {
+          title: 'Gratis M4A Voorbeeldbestanden Downloaden - M4A Audio Testbestanden voor Conversiehulpmiddelen | MorphyHub',
+          description: 'Download gratis M4A M4A audio voorbeeldbestanden om M4A-audioconversie, M4A-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van M4A-naar-MP3-converters, M4A-naar-WAV-converters, audioplayers, M4A-afspeelcompatibiliteit en MPEG-4 audioformaat-ondersteuning.',
+          keywords: 'M4A voorbeeldbestanden, M4A testbestanden, M4A voorbeelden downloaden, gratis M4A testbestanden, M4A audiobestanden, M4A naar MP3 converter, M4A naar WAV converter, audioplayer testbestanden, M4A-afspelen test, audioconversie voorbeelden, MPEG-4 audioformaat test'
+        },
+        schema: {
+          name: 'Gratis M4A Voorbeeldbestanden - M4A Audio Testbestanden voor Conversiehulpmiddelen Downloaden',
+          description: 'Download gratis M4A M4A audio voorbeeldbestanden om M4A-audioconversie, M4A-afspelen, audioverwerkingshulpmiddelen en multimedi software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van M4A-naar-MP3-converters, M4A-naar-WAV-converters, audioplayers, M4A-afspeelcompatibiliteit en MPEG-4 audioformaat-ondersteuning.'
+        },
+        hero: {
+          title: 'M4A Voorbeeldbestanden',
+          description: 'Download gratis M4A M4A audio voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om M4A-audioconversie, M4A-afspelen en audioverwerkingshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn M4A audio testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      midi: {
+        meta: {
+          title: 'Gratis MIDI Voorbeeldbestanden Downloaden - MIDI Music Testbestanden voor Muzieksequencing | MorphyHub',
+          description: 'Download gratis MIDI MIDI music voorbeeldbestanden om MIDI-afspelen, MIDI-conversie, muzieksequencinghulpmiddelen en digitale audio-werkstations te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van MIDI-naar-MP3-converters, MIDI-naar-WAV-converters, MIDI-sequencers, muziekproductiesoftware en Musical Instrument Digital Interface-formaatondersteuning.',
+          keywords: 'MIDI voorbeeldbestanden, MIDI testbestanden, MIDI voorbeelden downloaden, gratis MIDI testbestanden, MIDI music bestanden, MIDI naar MP3 converter, MIDI naar WAV converter, MIDI sequencer test, muziekproductie testbestanden, MIDI-afspelen test, muzieksequencing voorbeelden'
+        },
+        schema: {
+          name: 'Gratis MIDI Voorbeeldbestanden - MIDI Music Testbestanden voor Muzieksequencing Downloaden',
+          description: 'Download gratis MIDI MIDI music voorbeeldbestanden om MIDI-afspelen, MIDI-conversie, muzieksequencinghulpmiddelen en digitale audio-werkstations te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van MIDI-naar-MP3-converters, MIDI-naar-WAV-converters, MIDI-sequencers, muziekproductiesoftware en Musical Instrument Digital Interface-formaatondersteuning.'
+        },
+        hero: {
+          title: 'MIDI Voorbeeldbestanden',
+          description: 'Download gratis MIDI MIDI music voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om MIDI-afspelen, MIDI-conversie en muzieksequencinghulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn MIDI music testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ace: {
+        meta: {
+          title: 'Gratis ACE Voorbeeldbestanden Downloaden - ACE Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          description: 'Download gratis ACE archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ACE-archiefextractie, ACE-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
+          keywords: 'ACE voorbeeldbestanden, ACE testbestanden, ACE voorbeelden downloaden, gratis ACE testbestanden, ACE archiefbestanden, ACE extractie test, ACE decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis ACE Voorbeeldbestanden - ACE Archief Testbestanden voor Extractiehulpmiddelen Downloaden',
+          description: 'Download gratis ACE archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ACE-archiefextractie, ACE-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.'
+        },
+        hero: {
+          title: 'ACE Voorbeeldbestanden',
+          description: 'Download gratis ACE archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om archiefextractie- en compressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn ACE archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      arj: {
+        meta: {
+          title: 'Gratis ARJ Voorbeeldbestanden Downloaden - ARJ Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          description: 'Download gratis ARJ archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ARJ-archiefextractie, ARJ-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
+          keywords: 'ARJ voorbeeldbestanden, ARJ testbestanden, ARJ voorbeelden downloaden, gratis ARJ testbestanden, ARJ archiefbestanden, ARJ extractie test, ARJ decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis ARJ Voorbeeldbestanden - ARJ Archief Testbestanden voor Extractiehulpmiddelen Downloaden',
+          description: 'Download gratis ARJ archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ARJ-archiefextractie, ARJ-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.'
+        },
+        hero: {
+          title: 'ARJ Voorbeeldbestanden',
+          description: 'Download gratis ARJ archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om archiefextractie- en compressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn ARJ archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      bz2: {
+        meta: {
+          title: 'Gratis BZ2 Voorbeeldbestanden Downloaden - BZ2 Gecomprimeerd Archief Testbestanden | MorphyHub',
+          description: 'Download gratis BZ2 bzip2 gecomprimeerd archief voorbeeldbestanden om archiefdecompressie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BZ2-archiefdecompressie, BZ2-bestandsextractie, bzip2-compressiehulpmiddelen en archiefbeheersoftware.',
+          keywords: 'BZ2 voorbeeldbestanden, BZ2 testbestanden, BZ2 voorbeelden downloaden, gratis BZ2 testbestanden, BZ2 gecomprimeerde bestanden, BZ2 decompressie test, bzip2 compressie test, archiefextractie testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis BZ2 Voorbeeldbestanden - BZ2 Gecomprimeerd Archief Testbestanden Downloaden',
+          description: 'Download gratis BZ2 bzip2 gecomprimeerd archief voorbeeldbestanden om archiefdecompressie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BZ2-archiefdecompressie, BZ2-bestandsextractie, bzip2-compressiehulpmiddelen en archiefbeheersoftware.'
+        },
+        hero: {
+          title: 'BZ2 Voorbeeldbestanden',
+          description: 'Download gratis BZ2 bzip2 gecomprimeerd archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om archiefdecompressie- en compressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn BZ2 gecomprimeerd archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      gz: {
+        meta: {
+          title: 'Gratis GZ Voorbeeldbestanden Downloaden - GZ Gzip Gecomprimeerd Archief Testbestanden | MorphyHub',
+          description: 'Download gratis GZ gzip gecomprimeerd archief voorbeeldbestanden om gzip-decompressie, archiefextractie en bestandscompressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van GZ-archiefdecompressie, GZ-bestandsextractie, gzip-compressiehulpmiddelen en archiefbeheersoftware.',
+          keywords: 'GZ voorbeeldbestanden, GZ testbestanden, GZ voorbeelden downloaden, gratis GZ testbestanden, GZ gecomprimeerde bestanden, GZ decompressie test, gzip compressie test, archiefextractie testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis GZ Voorbeeldbestanden - GZ Gzip Gecomprimeerd Archief Testbestanden Downloaden',
+          description: 'Download gratis GZ gzip gecomprimeerd archief voorbeeldbestanden om gzip-decompressie, archiefextractie en bestandscompressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van GZ-archiefdecompressie, GZ-bestandsextractie, gzip-compressiehulpmiddelen en archiefbeheersoftware.'
+        },
+        hero: {
+          title: 'GZ Voorbeeldbestanden',
+          description: 'Download gratis GZ gzip gecomprimeerd archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om gzip-decompressie, archiefextractie en bestandscompressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn GZ gzip gecomprimeerd archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      cab: {
+        meta: {
+          title: 'Gratis CAB Voorbeeldbestanden Downloaden - CAB Windows Cabinet Archief Testbestanden | MorphyHub',
+          description: 'Download gratis CAB Windows cabinet archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAB-archiefextractie, CAB-bestandsdecompressie, Windows cabinet archiefhulpmiddelen en archiefbeheersoftware.',
+          keywords: 'CAB voorbeeldbestanden, CAB testbestanden, CAB voorbeelden downloaden, gratis CAB testbestanden, CAB archiefbestanden, CAB extractie test, Windows cabinet archief test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis CAB Voorbeeldbestanden - CAB Windows Cabinet Archief Testbestanden Downloaden',
+          description: 'Download gratis CAB Windows cabinet archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAB-archiefextractie, CAB-bestandsdecompressie, Windows cabinet archiefhulpmiddelen en archiefbeheersoftware.'
+        },
+        hero: {
+          title: 'CAB Voorbeeldbestanden',
+          description: 'Download gratis CAB Windows cabinet archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om archiefextractie- en compressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn CAB Windows cabinet archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      cpio: {
+        meta: {
+          title: 'Gratis CPIO Voorbeeldbestanden Downloaden - CPIO Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          description: 'Download gratis CPIO archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CPIO-archiefextractie, CPIO-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
+          keywords: 'CPIO voorbeeldbestanden, CPIO testbestanden, CPIO voorbeelden downloaden, gratis CPIO testbestanden, CPIO archiefbestanden, CPIO extractie test, CPIO decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis CPIO Voorbeeldbestanden - CPIO Archief Testbestanden voor Extractiehulpmiddelen Downloaden',
+          description: 'Download gratis CPIO archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CPIO-archiefextractie, CPIO-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.'
+        },
+        hero: {
+          title: 'CPIO Voorbeeldbestanden',
+          description: 'Download gratis CPIO archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om archiefextractie- en compressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn CPIO archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      zip: {
+        meta: {
+          title: 'Gratis ZIP Voorbeeldbestanden Downloaden - ZIP Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          description: 'Download gratis ZIP archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ZIP-archiefextractie, ZIP-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
+          keywords: 'ZIP voorbeeldbestanden, ZIP testbestanden, ZIP voorbeelden downloaden, gratis ZIP testbestanden, ZIP archiefbestanden, ZIP extractie test, ZIP decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis ZIP Voorbeeldbestanden - ZIP Archief Testbestanden voor Extractiehulpmiddelen Downloaden',
+          description: 'Download gratis ZIP archief voorbeeldbestanden om archiefextractie- en compressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ZIP-archiefextractie, ZIP-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.'
+        },
+        hero: {
+          title: 'ZIP Voorbeeldbestanden',
+          description: 'Download gratis ZIP archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om archiefextractie- en compressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn ZIP archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      dmg: {
+        meta: {
+          title: 'Gratis DMG Voorbeeldbestanden Downloaden - DMG macOS Disk Image Testbestanden | MorphyHub',
+          description: 'Download gratis DMG macOS disk image voorbeeldbestanden om disk image-mounting- en DMG-extractiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DMG-disk image-mounting, DMG-bestandsextractie, macOS disk image-hulpmiddelen en disk image-verwerkingssoftware.',
+          keywords: 'DMG voorbeeldbestanden, DMG testbestanden, DMG voorbeelden downloaden, gratis DMG testbestanden, DMG disk image bestanden, DMG mounting test, macOS disk image test, disk image extractie testbestanden, disk image verwerking voorbeelden'
+        },
+        schema: {
+          name: 'Gratis DMG Voorbeeldbestanden - DMG macOS Disk Image Testbestanden Downloaden',
+          description: 'Download gratis DMG macOS disk image voorbeeldbestanden om disk image-mounting- en DMG-extractiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van DMG-disk image-mounting, DMG-bestandsextractie, macOS disk image-hulpmiddelen en disk image-verwerkingssoftware.'
+        },
+        hero: {
+          title: 'DMG Voorbeeldbestanden',
+          description: 'Download gratis DMG macOS disk image voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om disk image-mounting- en DMG-extractiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn DMG macOS disk image testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      img: {
+        meta: {
+          title: 'Gratis IMG Voorbeeldbestanden Downloaden - IMG Disk Image Testbestanden | MorphyHub',
+          description: 'Download gratis IMG disk image voorbeeldbestanden om disk image-mounting, IMG-extractie en disk image-verwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van IMG-disk image-mounting, IMG-bestandsextractie, disk image-hulpmiddelen en disk image-verwerkingssoftware.',
+          keywords: 'IMG voorbeeldbestanden, IMG testbestanden, IMG voorbeelden downloaden, gratis IMG testbestanden, IMG disk image bestanden, IMG mounting test, disk image extractie test, disk image verwerking testbestanden, disk image voorbeelden'
+        },
+        schema: {
+          name: 'Gratis IMG Voorbeeldbestanden - IMG Disk Image Testbestanden Downloaden',
+          description: 'Download gratis IMG disk image voorbeeldbestanden om disk image-mounting, IMG-extractie en disk image-verwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van IMG-disk image-mounting, IMG-bestandsextractie, disk image-hulpmiddelen en disk image-verwerkingssoftware.'
+        },
+        hero: {
+          title: 'IMG Voorbeeldbestanden',
+          description: 'Download gratis IMG disk image voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om disk image-mounting-, IMG-extractie- en disk image-verwerkingshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn IMG disk image testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      iso: {
+        meta: {
+          title: 'Gratis ISO Voorbeeldbestanden Downloaden - ISO Disk Image Testbestanden | MorphyHub',
+          description: 'Download gratis ISO ISO disk image voorbeeldbestanden om ISO disk image-mounting, ISO-extractie en disk image-verwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ISO disk image-mounting, ISO-bestandsextractie, disk image-hulpmiddelen en disk image-verwerkingssoftware.',
+          keywords: 'ISO voorbeeldbestanden, ISO testbestanden, ISO voorbeelden downloaden, gratis ISO testbestanden, ISO disk image bestanden, ISO mounting test, ISO extractie test, disk image verwerking testbestanden, disk image voorbeelden'
+        },
+        schema: {
+          name: 'Gratis ISO Voorbeeldbestanden - ISO Disk Image Testbestanden Downloaden',
+          description: 'Download gratis ISO ISO disk image voorbeeldbestanden om ISO disk image-mounting, ISO-extractie en disk image-verwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ISO disk image-mounting, ISO-bestandsextractie, disk image-hulpmiddelen en disk image-verwerkingssoftware.'
+        },
+        hero: {
+          title: 'ISO Voorbeeldbestanden',
+          description: 'Download gratis ISO ISO disk image voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om ISO disk image-mounting-, ISO-extractie- en disk image-verwerkingshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn ISO disk image testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      kmz: {
+        meta: {
+          title: 'Gratis KMZ Voorbeeldbestanden Downloaden - KMZ Gecomprimeerd KML Testbestanden | MorphyHub',
+          description: 'Download gratis KMZ gecomprimeerd Keyhole Markup Language voorbeeldbestanden om KMZ-extractiehulpmiddelen, geografische gegevensverwerking en Google Earth-integratiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van KMZ-bestandsextractie, KMZ-naar-KML-conversie, Google Earth-compatibiliteit, geografische gegevensverwerking en mappingsoftware.',
+          keywords: 'KMZ voorbeeldbestanden, KMZ testbestanden, KMZ voorbeelden downloaden, gratis KMZ testbestanden, KMZ gecomprimeerde bestanden, KMZ extractie test, Google Earth testbestanden, geografische gegevensverwerking test, mappingsoftware voorbeelden'
+        },
+        schema: {
+          name: 'Gratis KMZ Voorbeeldbestanden - KMZ Gecomprimeerd KML Testbestanden Downloaden',
+          description: 'Download gratis KMZ gecomprimeerd Keyhole Markup Language voorbeeldbestanden om KMZ-extractiehulpmiddelen, geografische gegevensverwerking en Google Earth-integratiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van KMZ-bestandsextractie, KMZ-naar-KML-conversie, Google Earth-compatibiliteit, geografische gegevensverwerking en mappingsoftware.'
+        },
+        hero: {
+          title: 'KMZ Voorbeeldbestanden',
+          description: 'Download gratis KMZ gecomprimeerd Keyhole Markup Language voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om KMZ-extractiehulpmiddelen, geografische gegevensverwerking en Google Earth-integratiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn KMZ gecomprimeerd Keyhole Markup Language testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      laz: {
+        meta: {
+          title: 'Gratis LAZ Voorbeeldbestanden Downloaden - LAZ Gecomprimeerd LiDAR Testbestanden | MorphyHub',
+          description: 'Download gratis LAZ gecomprimeerd LiDAR point cloud data voorbeeldbestanden om LAZ-extractiehulpmiddelen, point cloud-verwerking en 3D-mappinghulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LAZ-bestandsextractie, LAZ-naar-LAS-conversie, LiDAR point cloud-verwerking, 3D-mappingsoftware en geografische gegevensanalysetools.',
+          keywords: 'LAZ voorbeeldbestanden, LAZ testbestanden, LAZ voorbeelden downloaden, gratis LAZ testbestanden, LAZ gecomprimeerde bestanden, LAZ extractie test, LiDAR point cloud test, 3D-mapping testbestanden, geografische gegevensanalyse voorbeelden'
+        },
+        schema: {
+          name: 'Gratis LAZ Voorbeeldbestanden - LAZ Gecomprimeerd LiDAR Testbestanden Downloaden',
+          description: 'Download gratis LAZ gecomprimeerd LiDAR point cloud data voorbeeldbestanden om LAZ-extractiehulpmiddelen, point cloud-verwerking en 3D-mappinghulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LAZ-bestandsextractie, LAZ-naar-LAS-conversie, LiDAR point cloud-verwerking, 3D-mappingsoftware en geografische gegevensanalysetools.'
+        },
+        hero: {
+          title: 'LAZ Voorbeeldbestanden',
+          description: 'Download gratis LAZ gecomprimeerd LiDAR point cloud data voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om LAZ-extractiehulpmiddelen, point cloud-verwerking en 3D-mappinghulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn LAZ gecomprimeerd LiDAR point cloud data testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      lha: {
+        meta: {
+          title: 'Gratis LHA Voorbeeldbestanden Downloaden - LHA Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          description: 'Download gratis LHA LHA archief voorbeeldbestanden om LHA-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LHA-archiefextractie, LHA-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
+          keywords: 'LHA voorbeeldbestanden, LHA testbestanden, LHA voorbeelden downloaden, gratis LHA testbestanden, LHA archiefbestanden, LHA extractie test, LHA decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis LHA Voorbeeldbestanden - LHA Archief Testbestanden voor Extractiehulpmiddelen Downloaden',
+          description: 'Download gratis LHA LHA archief voorbeeldbestanden om LHA-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LHA-archiefextractie, LHA-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.'
+        },
+        hero: {
+          title: 'LHA Voorbeeldbestanden',
+          description: 'Download gratis LHA LHA archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om LHA-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn LHA archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      lzh: {
+        meta: {
+          title: 'Gratis LZH Voorbeeldbestanden Downloaden - LZH Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          description: 'Download gratis LZH LZH archief voorbeeldbestanden om LZH-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LZH-archiefextractie, LZH-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
+          keywords: 'LZH voorbeeldbestanden, LZH testbestanden, LZH voorbeelden downloaden, gratis LZH testbestanden, LZH archiefbestanden, LZH extractie test, LZH decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis LZH Voorbeeldbestanden - LZH Archief Testbestanden voor Extractiehulpmiddelen Downloaden',
+          description: 'Download gratis LZH LZH archief voorbeeldbestanden om LZH-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LZH-archiefextractie, LZH-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.'
+        },
+        hero: {
+          title: 'LZH Voorbeeldbestanden',
+          description: 'Download gratis LZH LZH archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om LZH-extractiehulpmiddelen, archiefdecompressie en bestandsarchiveringshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn LZH archief testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      lzma: {
+        meta: {
+          title: 'Gratis LZMA Voorbeeldbestanden Downloaden - LZMA Gecomprimeerd Archief Testbestanden | MorphyHub',
+          description: 'Download gratis LZMA LZMA gecomprimeerd voorbeeldbestanden om LZMA-decompressiehulpmiddelen, archiefextractie en bestandscompressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LZMA-archiefdecompressie, LZMA-bestandsextractie, LZMA-compressiehulpmiddelen en archiefbeheersoftware.',
+          keywords: 'LZMA voorbeeldbestanden, LZMA testbestanden, LZMA voorbeelden downloaden, gratis LZMA testbestanden, LZMA gecomprimeerde bestanden, LZMA decompressie test, LZMA compressie test, archiefextractie testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis LZMA Voorbeeldbestanden - LZMA Gecomprimeerd Archief Testbestanden Downloaden',
+          description: 'Download gratis LZMA LZMA gecomprimeerd voorbeeldbestanden om LZMA-decompressiehulpmiddelen, archiefextractie en bestandscompressiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LZMA-archiefdecompressie, LZMA-bestandsextractie, LZMA-compressiehulpmiddelen en archiefbeheersoftware.'
+        },
+        hero: {
+          title: 'LZMA Voorbeeldbestanden',
+          description: 'Download gratis LZMA LZMA gecomprimeerd voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om LZMA-decompressiehulpmiddelen, archiefextractie en bestandscompressiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn LZMA gecomprimeerd testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      '7z': {
+        meta: {
+          title: 'Gratis 7Z Voorbeeldbestanden Downloaden - 7Z Archief Testbestanden voor Extractiehulpmiddelen | MorphyHub',
+          description: 'Download gratis 7Z archief voorbeeldbestanden om conversie- en extractiehulpmiddelen voor archieven te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 7Z-archiefextractie, 7Z-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.',
+          keywords: '7Z voorbeeldbestanden, 7Z testbestanden, 7Z voorbeelden downloaden, gratis 7Z testbestanden, 7Z archiefbestanden, 7Z extractie test, 7Z decompressie test, archiefbeheer testbestanden, bestandscompressie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis 7Z Voorbeeldbestanden - 7Z Archief Testbestanden voor Extractiehulpmiddelen Downloaden',
+          description: 'Download gratis 7Z archief voorbeeldbestanden om conversie- en extractiehulpmiddelen voor archieven te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 7Z-archiefextractie, 7Z-bestandsdecompressie, archiefbeheerhulpmiddelen en bestandscompressiesoftware.'
+        },
+        hero: {
+          title: '7Z Voorbeeldbestanden',
+          description: 'Download gratis 7Z archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om conversie- en extractiehulpmiddelen voor archieven te testen.'
+        },
+        about_description: 'Dit zijn 7Z archief testbestanden in verschillende formaten voor testdoeleinden'
       }
     }
   }

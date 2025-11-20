@@ -1839,6 +1839,310 @@ export const sv: SamplePageTranslations = {
           description: 'Ladda ner gratis CAF Core Audio Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audiokonverteringsverktyg, CAF-uppspelningsprogram och audiobearbetningsapplikationer.'
         },
         about_description: 'Detta är CAF (Core Audio Format) audio testfiler i olika storlekar för teständamål'
+      },
+      cue: {
+        meta: {
+          title: 'Ladda ner Gratis CUE Exempelfiler - CUE Sheet Testfiler för Audio CD-bränning | MorphyHub',
+          description: 'Ladda ner gratis CUE CUE sheet exempelfiler för att testa audio CD-bränningsverktyg och CUE sheet-parsingverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CUE sheet-parsing, audio CD-bränningsprogram, CUE-filvalidering och CD-författarverktyg.',
+          keywords: 'CUE exempelfiler, CUE testfiler, ladda ner CUE-exempel, gratis CUE testfiler, CUE sheet-filer, audio CD-bränningstest, CUE sheet-parser, CD-författarstestfiler, CUE-filvalidering, audio disk image-test'
+        },
+        schema: {
+          name: 'Gratis CUE Exempelfiler - Ladda ner CUE Sheet Testfiler för Audio CD-bränning',
+          description: 'Ladda ner gratis CUE CUE sheet exempelfiler för att testa audio CD-bränningsverktyg och CUE sheet-parsingverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CUE sheet-parsing, audio CD-bränningsprogram, CUE-filvalidering och CD-författarverktyg.'
+        },
+        hero: {
+          title: 'CUE Exempelfiler',
+          description: 'Ladda ner gratis CUE CUE sheet exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audio CD-bränningsverktyg och CUE sheet-parsingverktyg.'
+        },
+        about_description: 'Detta är CUE sheet testfiler i olika storlekar för teständamål'
+      },
+      m4a: {
+        meta: {
+          title: 'Ladda ner Gratis M4A Exempelfiler - M4A Audio Testfiler för Konverteringsverktyg | MorphyHub',
+          description: 'Ladda ner gratis M4A M4A audio exempelfiler för att testa M4A-audiokonvertering, M4A-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa M4A-till-MP3-konverterare, M4A-till-WAV-konverterare, audiospelare, M4A-uppspelningskompatibilitet och MPEG-4 audio format-stöd.',
+          keywords: 'M4A exempelfiler, M4A testfiler, ladda ner M4A-exempel, gratis M4A testfiler, M4A audiofiler, M4A-till-MP3-konverterare, M4A-till-WAV-konverterare, audiospelartestfiler, M4A-uppspelningstest, audiokonverteringsexempel, MPEG-4 audio format-test'
+        },
+        schema: {
+          name: 'Gratis M4A Exempelfiler - Ladda ner M4A Audio Testfiler för Konverteringsverktyg',
+          description: 'Ladda ner gratis M4A M4A audio exempelfiler för att testa M4A-audiokonvertering, M4A-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa M4A-till-MP3-konverterare, M4A-till-WAV-konverterare, audiospelare, M4A-uppspelningskompatibilitet och MPEG-4 audio format-stöd.'
+        },
+        hero: {
+          title: 'M4A Exempelfiler',
+          description: 'Ladda ner gratis M4A M4A audio exempelfiler för testning. Flera filstorlekar tillgängliga för att testa M4A-audiokonvertering, M4A-uppspelning och audiobearbetningsverktyg.'
+        },
+        about_description: 'Detta är M4A audio testfiler i olika storlekar för teständamål'
+      },
+      midi: {
+        meta: {
+          title: 'Ladda ner Gratis MIDI Exempelfiler - MIDI Music Testfiler för Musiksekvensering | MorphyHub',
+          description: 'Ladda ner gratis MIDI MIDI music exempelfiler för att testa MIDI-uppspelning, MIDI-konvertering, musiksekvenseringsverktyg och digitala audiostationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa MIDI-till-MP3-konverterare, MIDI-till-WAV-konverterare, MIDI-sekvenserare, musikproduktionsprogram och Musical Instrument Digital Interface format-stöd.',
+          keywords: 'MIDI exempelfiler, MIDI testfiler, ladda ner MIDI-exempel, gratis MIDI testfiler, MIDI music-filer, MIDI-till-MP3-konverterare, MIDI-till-WAV-konverterare, MIDI-sekvenserartest, musikproduktionstestfiler, MIDI-uppspelningstest, musiksekvenseringsexempel'
+        },
+        schema: {
+          name: 'Gratis MIDI Exempelfiler - Ladda ner MIDI Music Testfiler för Musiksekvensering',
+          description: 'Ladda ner gratis MIDI MIDI music exempelfiler för att testa MIDI-uppspelning, MIDI-konvertering, musiksekvenseringsverktyg och digitala audiostationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa MIDI-till-MP3-konverterare, MIDI-till-WAV-konverterare, MIDI-sekvenserare, musikproduktionsprogram och Musical Instrument Digital Interface format-stöd.'
+        },
+        hero: {
+          title: 'MIDI Exempelfiler',
+          description: 'Ladda ner gratis MIDI MIDI music exempelfiler för testning. Flera filstorlekar tillgängliga för att testa MIDI-uppspelning, MIDI-konvertering och musiksekvenseringsverktyg.'
+        },
+        about_description: 'Detta är MIDI music testfiler i olika storlekar för teständamål'
+      },
+      ace: {
+        meta: {
+          title: 'Ladda ner Gratis ACE Exempelfiler - ACE Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          description: 'Ladda ner gratis ACE archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ACE-arkivextraktion, ACE-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
+          keywords: 'ACE exempelfiler, ACE testfiler, ladda ner ACE-exempel, gratis ACE testfiler, ACE archive-filer, ACE-extraktionstest, ACE-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis ACE Exempelfiler - Ladda ner ACE Archive Testfiler för Extraktionsverktyg',
+          description: 'Ladda ner gratis ACE archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ACE-arkivextraktion, ACE-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.'
+        },
+        hero: {
+          title: 'ACE Exempelfiler',
+          description: 'Ladda ner gratis ACE archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa arkivextraktions- och komprimeringsverktyg.'
+        },
+        about_description: 'Detta är ACE archive testfiler i olika storlekar för teständamål'
+      },
+      arj: {
+        meta: {
+          title: 'Ladda ner Gratis ARJ Exempelfiler - ARJ Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          description: 'Ladda ner gratis ARJ archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ARJ-arkivextraktion, ARJ-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
+          keywords: 'ARJ exempelfiler, ARJ testfiler, ladda ner ARJ-exempel, gratis ARJ testfiler, ARJ archive-filer, ARJ-extraktionstest, ARJ-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis ARJ Exempelfiler - Ladda ner ARJ Archive Testfiler för Extraktionsverktyg',
+          description: 'Ladda ner gratis ARJ archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ARJ-arkivextraktion, ARJ-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.'
+        },
+        hero: {
+          title: 'ARJ Exempelfiler',
+          description: 'Ladda ner gratis ARJ archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa arkivextraktions- och komprimeringsverktyg.'
+        },
+        about_description: 'Detta är ARJ archive testfiler i olika storlekar för teständamål'
+      },
+      bz2: {
+        meta: {
+          title: 'Ladda ner Gratis BZ2 Exempelfiler - BZ2 Compressed Archive Testfiler | MorphyHub',
+          description: 'Ladda ner gratis BZ2 bzip2 compressed archive exempelfiler för att testa arkivdekomprimerings- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BZ2-arkivdekomprimering, BZ2-filextraktion, bzip2-komprimeringsverktyg och arkivhanteringsprogram.',
+          keywords: 'BZ2 exempelfiler, BZ2 testfiler, ladda ner BZ2-exempel, gratis BZ2 testfiler, BZ2 komprimerade filer, BZ2-dekomprimeringstest, bzip2-komprimeringsstest, arkivextraktionstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis BZ2 Exempelfiler - Ladda ner BZ2 Compressed Archive Testfiler',
+          description: 'Ladda ner gratis BZ2 bzip2 compressed archive exempelfiler för att testa arkivdekomprimerings- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BZ2-arkivdekomprimering, BZ2-filextraktion, bzip2-komprimeringsverktyg och arkivhanteringsprogram.'
+        },
+        hero: {
+          title: 'BZ2 Exempelfiler',
+          description: 'Ladda ner gratis BZ2 bzip2 compressed archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa arkivdekomprimerings- och komprimeringsverktyg.'
+        },
+        about_description: 'Detta är BZ2 compressed archive testfiler i olika storlekar för teständamål'
+      },
+      gz: {
+        meta: {
+          title: 'Ladda ner Gratis GZ Exempelfiler - GZ Gzip Compressed Archive Testfiler | MorphyHub',
+          description: 'Ladda ner gratis GZ gzip compressed archive exempelfiler för att testa gzip-dekomprimerings-, arkivextraktions- och filkomprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa GZ-arkivdekomprimering, GZ-filextraktion, gzip-komprimeringsverktyg och arkivhanteringsprogram.',
+          keywords: 'GZ exempelfiler, GZ testfiler, ladda ner GZ-exempel, gratis GZ testfiler, GZ komprimerade filer, GZ-dekomprimeringstest, gzip-komprimeringsstest, arkivextraktionstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis GZ Exempelfiler - Ladda ner GZ Gzip Compressed Archive Testfiler',
+          description: 'Ladda ner gratis GZ gzip compressed archive exempelfiler för att testa gzip-dekomprimerings-, arkivextraktions- och filkomprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa GZ-arkivdekomprimering, GZ-filextraktion, gzip-komprimeringsverktyg och arkivhanteringsprogram.'
+        },
+        hero: {
+          title: 'GZ Exempelfiler',
+          description: 'Ladda ner gratis GZ gzip compressed archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa gzip-dekomprimering, arkivextraktion och filkomprimeringsverktyg.'
+        },
+        about_description: 'Detta är GZ gzip compressed archive testfiler i olika storlekar för teständamål'
+      },
+      cab: {
+        meta: {
+          title: 'Ladda ner Gratis CAB Exempelfiler - CAB Windows Cabinet Archive Testfiler | MorphyHub',
+          description: 'Ladda ner gratis CAB Windows cabinet archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAB-arkivextraktion, CAB-fildekomprimering, Windows cabinet archive-verktyg och arkivhanteringsprogram.',
+          keywords: 'CAB exempelfiler, CAB testfiler, ladda ner CAB-exempel, gratis CAB testfiler, CAB archive-filer, CAB-extraktionstest, Windows cabinet archive-test, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis CAB Exempelfiler - Ladda ner CAB Windows Cabinet Archive Testfiler',
+          description: 'Ladda ner gratis CAB Windows cabinet archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAB-arkivextraktion, CAB-fildekomprimering, Windows cabinet archive-verktyg och arkivhanteringsprogram.'
+        },
+        hero: {
+          title: 'CAB Exempelfiler',
+          description: 'Ladda ner gratis CAB Windows cabinet archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa arkivextraktions- och komprimeringsverktyg.'
+        },
+        about_description: 'Detta är CAB Windows cabinet archive testfiler i olika storlekar för teständamål'
+      },
+      cpio: {
+        meta: {
+          title: 'Ladda ner Gratis CPIO Exempelfiler - CPIO Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          description: 'Ladda ner gratis CPIO archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CPIO-arkivextraktion, CPIO-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
+          keywords: 'CPIO exempelfiler, CPIO testfiler, ladda ner CPIO-exempel, gratis CPIO testfiler, CPIO archive-filer, CPIO-extraktionstest, CPIO-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis CPIO Exempelfiler - Ladda ner CPIO Archive Testfiler för Extraktionsverktyg',
+          description: 'Ladda ner gratis CPIO archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CPIO-arkivextraktion, CPIO-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.'
+        },
+        hero: {
+          title: 'CPIO Exempelfiler',
+          description: 'Ladda ner gratis CPIO archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa arkivextraktions- och komprimeringsverktyg.'
+        },
+        about_description: 'Detta är CPIO archive testfiler i olika storlekar för teständamål'
+      },
+      zip: {
+        meta: {
+          title: 'Ladda ner Gratis ZIP Exempelfiler - ZIP Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          description: 'Ladda ner gratis ZIP archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ZIP-arkivextraktion, ZIP-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
+          keywords: 'ZIP exempelfiler, ZIP testfiler, ladda ner ZIP-exempel, gratis ZIP testfiler, ZIP archive-filer, ZIP-extraktionstest, ZIP-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis ZIP Exempelfiler - Ladda ner ZIP Archive Testfiler för Extraktionsverktyg',
+          description: 'Ladda ner gratis ZIP archive exempelfiler för att testa arkivextraktions- och komprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ZIP-arkivextraktion, ZIP-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.'
+        },
+        hero: {
+          title: 'ZIP Exempelfiler',
+          description: 'Ladda ner gratis ZIP archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa arkivextraktions- och komprimeringsverktyg.'
+        },
+        about_description: 'Detta är ZIP archive testfiler i olika storlekar för teständamål'
+      },
+      dmg: {
+        meta: {
+          title: 'Ladda ner Gratis DMG Exempelfiler - DMG macOS Disk Image Testfiler | MorphyHub',
+          description: 'Ladda ner gratis DMG macOS disk image exempelfiler för att testa disk image-monterings- och DMG-extraktionsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DMG disk image-montering, DMG-filextraktion, macOS disk image-verktyg och disk image-bearbetningsprogram.',
+          keywords: 'DMG exempelfiler, DMG testfiler, ladda ner DMG-exempel, gratis DMG testfiler, DMG disk image-filer, DMG-monteringstest, macOS disk image-test, disk image-extraktionstestfiler, disk image-bearbetningsprover'
+        },
+        schema: {
+          name: 'Gratis DMG Exempelfiler - Ladda ner DMG macOS Disk Image Testfiler',
+          description: 'Ladda ner gratis DMG macOS disk image exempelfiler för att testa disk image-monterings- och DMG-extraktionsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DMG disk image-montering, DMG-filextraktion, macOS disk image-verktyg och disk image-bearbetningsprogram.'
+        },
+        hero: {
+          title: 'DMG Exempelfiler',
+          description: 'Ladda ner gratis DMG macOS disk image exempelfiler för testning. Flera filstorlekar tillgängliga för att testa disk image-monterings- och DMG-extraktionsverktyg.'
+        },
+        about_description: 'Detta är DMG macOS disk image testfiler i olika storlekar för teständamål'
+      },
+      img: {
+        meta: {
+          title: 'Ladda ner Gratis IMG Exempelfiler - IMG Disk Image Testfiler | MorphyHub',
+          description: 'Ladda ner gratis IMG disk image exempelfiler för att testa disk image-montering, IMG-extraktion och disk image-bearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa IMG disk image-montering, IMG-filextraktion, disk image-verktyg och disk image-bearbetningsprogram.',
+          keywords: 'IMG exempelfiler, IMG testfiler, ladda ner IMG-exempel, gratis IMG testfiler, IMG disk image-filer, IMG-monteringstest, disk image-extraktionstest, disk image-bearbetningstestfiler, disk image-prover'
+        },
+        schema: {
+          name: 'Gratis IMG Exempelfiler - Ladda ner IMG Disk Image Testfiler',
+          description: 'Ladda ner gratis IMG disk image exempelfiler för att testa disk image-montering, IMG-extraktion och disk image-bearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa IMG disk image-montering, IMG-filextraktion, disk image-verktyg och disk image-bearbetningsprogram.'
+        },
+        hero: {
+          title: 'IMG Exempelfiler',
+          description: 'Ladda ner gratis IMG disk image exempelfiler för testning. Flera filstorlekar tillgängliga för att testa disk image-montering, IMG-extraktion och disk image-bearbetningsverktyg.'
+        },
+        about_description: 'Detta är IMG disk image testfiler i olika storlekar för teständamål'
+      },
+      iso: {
+        meta: {
+          title: 'Ladda ner Gratis ISO Exempelfiler - ISO Disk Image Testfiler | MorphyHub',
+          description: 'Ladda ner gratis ISO ISO disk image exempelfiler för att testa ISO disk image-montering, ISO-extraktion och disk image-bearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ISO disk image-montering, ISO-filextraktion, disk image-verktyg och disk image-bearbetningsprogram.',
+          keywords: 'ISO exempelfiler, ISO testfiler, ladda ner ISO-exempel, gratis ISO testfiler, ISO disk image-filer, ISO-monteringstest, ISO-extraktionstest, disk image-bearbetningstestfiler, disk image-prover'
+        },
+        schema: {
+          name: 'Gratis ISO Exempelfiler - Ladda ner ISO Disk Image Testfiler',
+          description: 'Ladda ner gratis ISO ISO disk image exempelfiler för att testa ISO disk image-montering, ISO-extraktion och disk image-bearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ISO disk image-montering, ISO-filextraktion, disk image-verktyg och disk image-bearbetningsprogram.'
+        },
+        hero: {
+          title: 'ISO Exempelfiler',
+          description: 'Ladda ner gratis ISO ISO disk image exempelfiler för testning. Flera filstorlekar tillgängliga för att testa ISO disk image-montering, ISO-extraktion och disk image-bearbetningsverktyg.'
+        },
+        about_description: 'Detta är ISO disk image testfiler i olika storlekar för teständamål'
+      },
+      kmz: {
+        meta: {
+          title: 'Ladda ner Gratis KMZ Exempelfiler - KMZ Compressed KML Testfiler | MorphyHub',
+          description: 'Ladda ner gratis KMZ compressed Keyhole Markup Language exempelfiler för att testa KMZ-extraktionsverktyg, geografisk databearbetning och Google Earth-integrationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa KMZ-filextraktion, KMZ-till-KML-konvertering, Google Earth-kompatibilitet, geografisk databearbetning och kartläggningsprogram.',
+          keywords: 'KMZ exempelfiler, KMZ testfiler, ladda ner KMZ-exempel, gratis KMZ testfiler, KMZ komprimerade filer, KMZ-extraktionstest, Google Earth-testfiler, geografisk databearbetningstest, kartläggningsprogramprover'
+        },
+        schema: {
+          name: 'Gratis KMZ Exempelfiler - Ladda ner KMZ Compressed KML Testfiler',
+          description: 'Ladda ner gratis KMZ compressed Keyhole Markup Language exempelfiler för att testa KMZ-extraktionsverktyg, geografisk databearbetning och Google Earth-integrationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa KMZ-filextraktion, KMZ-till-KML-konvertering, Google Earth-kompatibilitet, geografisk databearbetning och kartläggningsprogram.'
+        },
+        hero: {
+          title: 'KMZ Exempelfiler',
+          description: 'Ladda ner gratis KMZ compressed Keyhole Markup Language exempelfiler för testning. Flera filstorlekar tillgängliga för att testa KMZ-extraktionsverktyg, geografisk databearbetning och Google Earth-integrationsverktyg.'
+        },
+        about_description: 'Detta är KMZ compressed Keyhole Markup Language testfiler i olika storlekar för teständamål'
+      },
+      laz: {
+        meta: {
+          title: 'Ladda ner Gratis LAZ Exempelfiler - LAZ Compressed LiDAR Testfiler | MorphyHub',
+          description: 'Ladda ner gratis LAZ compressed LiDAR point cloud data exempelfiler för att testa LAZ-extraktionsverktyg, point cloud-bearbetning och 3D-kartläggningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LAZ-filextraktion, LAZ-till-LAS-konvertering, LiDAR point cloud-bearbetning, 3D-kartläggningsprogram och geografisk dataanalysverktyg.',
+          keywords: 'LAZ exempelfiler, LAZ testfiler, ladda ner LAZ-exempel, gratis LAZ testfiler, LAZ komprimerade filer, LAZ-extraktionstest, LiDAR point cloud-test, 3D-kartläggningstestfiler, geografisk dataanalysprover'
+        },
+        schema: {
+          name: 'Gratis LAZ Exempelfiler - Ladda ner LAZ Compressed LiDAR Testfiler',
+          description: 'Ladda ner gratis LAZ compressed LiDAR point cloud data exempelfiler för att testa LAZ-extraktionsverktyg, point cloud-bearbetning och 3D-kartläggningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LAZ-filextraktion, LAZ-till-LAS-konvertering, LiDAR point cloud-bearbetning, 3D-kartläggningsprogram och geografisk dataanalysverktyg.'
+        },
+        hero: {
+          title: 'LAZ Exempelfiler',
+          description: 'Ladda ner gratis LAZ compressed LiDAR point cloud data exempelfiler för testning. Flera filstorlekar tillgängliga för att testa LAZ-extraktionsverktyg, point cloud-bearbetning och 3D-kartläggningsverktyg.'
+        },
+        about_description: 'Detta är LAZ compressed LiDAR point cloud data testfiler i olika storlekar för teständamål'
+      },
+      lha: {
+        meta: {
+          title: 'Ladda ner Gratis LHA Exempelfiler - LHA Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          description: 'Ladda ner gratis LHA LHA archive exempelfiler för att testa LHA-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LHA-arkivextraktion, LHA-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
+          keywords: 'LHA exempelfiler, LHA testfiler, ladda ner LHA-exempel, gratis LHA testfiler, LHA archive-filer, LHA-extraktionstest, LHA-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis LHA Exempelfiler - Ladda ner LHA Archive Testfiler för Extraktionsverktyg',
+          description: 'Ladda ner gratis LHA LHA archive exempelfiler för att testa LHA-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LHA-arkivextraktion, LHA-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.'
+        },
+        hero: {
+          title: 'LHA Exempelfiler',
+          description: 'Ladda ner gratis LHA LHA archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa LHA-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg.'
+        },
+        about_description: 'Detta är LHA archive testfiler i olika storlekar för teständamål'
+      },
+      lzh: {
+        meta: {
+          title: 'Ladda ner Gratis LZH Exempelfiler - LZH Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          description: 'Ladda ner gratis LZH LZH archive exempelfiler för att testa LZH-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LZH-arkivextraktion, LZH-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
+          keywords: 'LZH exempelfiler, LZH testfiler, ladda ner LZH-exempel, gratis LZH testfiler, LZH archive-filer, LZH-extraktionstest, LZH-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis LZH Exempelfiler - Ladda ner LZH Archive Testfiler för Extraktionsverktyg',
+          description: 'Ladda ner gratis LZH LZH archive exempelfiler för att testa LZH-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LZH-arkivextraktion, LZH-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.'
+        },
+        hero: {
+          title: 'LZH Exempelfiler',
+          description: 'Ladda ner gratis LZH LZH archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa LZH-extraktionsverktyg, arkivdekomprimering och filarkiveringsverktyg.'
+        },
+        about_description: 'Detta är LZH archive testfiler i olika storlekar för teständamål'
+      },
+      lzma: {
+        meta: {
+          title: 'Ladda ner Gratis LZMA Exempelfiler - LZMA Compressed Archive Testfiler | MorphyHub',
+          description: 'Ladda ner gratis LZMA LZMA compressed exempelfiler för att testa LZMA-dekomprimerings-, arkivextraktions- och filkomprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LZMA-arkivdekomprimering, LZMA-filextraktion, LZMA-komprimeringsverktyg och arkivhanteringsprogram.',
+          keywords: 'LZMA exempelfiler, LZMA testfiler, ladda ner LZMA-exempel, gratis LZMA testfiler, LZMA komprimerade filer, LZMA-dekomprimeringstest, LZMA-komprimeringsstest, arkivextraktionstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis LZMA Exempelfiler - Ladda ner LZMA Compressed Archive Testfiler',
+          description: 'Ladda ner gratis LZMA LZMA compressed exempelfiler för att testa LZMA-dekomprimerings-, arkivextraktions- och filkomprimeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LZMA-arkivdekomprimering, LZMA-filextraktion, LZMA-komprimeringsverktyg och arkivhanteringsprogram.'
+        },
+        hero: {
+          title: 'LZMA Exempelfiler',
+          description: 'Ladda ner gratis LZMA LZMA compressed exempelfiler för testning. Flera filstorlekar tillgängliga för att testa LZMA-dekomprimering, arkivextraktion och filkomprimeringsverktyg.'
+        },
+        about_description: 'Detta är LZMA compressed testfiler i olika storlekar för teständamål'
+      },
+      '7z': {
+        meta: {
+          title: 'Ladda ner Gratis 7Z Exempelfiler - 7Z Archive Testfiler för Extraktionsverktyg | MorphyHub',
+          description: 'Ladda ner gratis 7Z archive exempelfiler för att testa arkivkonverterings- och extraktionsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 7Z-arkivextraktion, 7Z-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.',
+          keywords: '7Z exempelfiler, 7Z testfiler, ladda ner 7Z-exempel, gratis 7Z testfiler, 7Z archive-filer, 7Z-extraktionstest, 7Z-dekomprimeringstest, arkivhanteringstestfiler, filkomprimeringsprover'
+        },
+        schema: {
+          name: 'Gratis 7Z Exempelfiler - Ladda ner 7Z Archive Testfiler för Extraktionsverktyg',
+          description: 'Ladda ner gratis 7Z archive exempelfiler för att testa arkivkonverterings- och extraktionsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 7Z-arkivextraktion, 7Z-fildekomprimering, arkivhanteringsverktyg och filkomprimeringsprogram.'
+        },
+        hero: {
+          title: '7Z Exempelfiler',
+          description: 'Ladda ner gratis 7Z archive exempelfiler för testning. Flera filstorlekar tillgängliga för att testa arkivkonverterings- och extraktionsverktyg.'
+        },
+        about_description: 'Detta är 7Z archive testfiler i olika storlekar för teständamål'
       }
     }
   }

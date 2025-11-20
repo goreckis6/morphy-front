@@ -1839,6 +1839,310 @@ export const pt: SamplePageTranslations = {
           description: 'Baixe arquivos de exemplo CAF Core Audio Format grátis para testes. Múltiplos tamanhos disponíveis para testar ferramentas de conversão de áudio, softwares de reprodução CAF e aplicações de processamento de áudio.'
         },
         about_description: 'Estes são arquivos de teste CAF (Core Audio Format) de áudio em vários tamanhos para fins de teste'
+      },
+      cue: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo CUE Gratuitos - Arquivos de Teste CUE Sheet para Gravação de CD de Áudio | MorphyHub',
+          description: 'Baixe arquivos de exemplo CUE CUE sheet gratuitos para testar ferramentas de gravação de CD de áudio e análise de CUE sheet. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar análise de CUE sheet, software de gravação de CD de áudio, validação de arquivos CUE e ferramentas de autoria de CD.',
+          keywords: 'arquivos de exemplo CUE, arquivos de teste CUE, baixar exemplos CUE, arquivos de teste CUE gratuitos, arquivos CUE sheet, teste de gravação de CD de áudio, analisador de CUE sheet, arquivos de teste de autoria de CD, validação de arquivos CUE, teste de imagem de disco de áudio'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo CUE Gratuitos - Baixar Arquivos de Teste CUE Sheet para Gravação de CD de Áudio',
+          description: 'Baixe arquivos de exemplo CUE CUE sheet gratuitos para testar ferramentas de gravação de CD de áudio e análise de CUE sheet. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar análise de CUE sheet, software de gravação de CD de áudio, validação de arquivos CUE e ferramentas de autoria de CD.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo CUE',
+          description: 'Baixe arquivos de exemplo CUE CUE sheet gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de gravação de CD de áudio e análise de CUE sheet.'
+        },
+        about_description: 'Estes são arquivos de teste CUE sheet em vários tamanhos para fins de teste'
+      },
+      m4a: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo M4A Gratuitos - Arquivos de Teste M4A Audio para Ferramentas de Conversão | MorphyHub',
+          description: 'Baixe arquivos de exemplo M4A M4A audio gratuitos para testar conversão de áudio M4A, reprodução M4A, ferramentas de processamento de áudio e software multimídia. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores M4A para MP3, conversores M4A para WAV, players de áudio, compatibilidade de reprodução M4A e suporte de formato de áudio MPEG-4.',
+          keywords: 'arquivos de exemplo M4A, arquivos de teste M4A, baixar exemplos M4A, arquivos de teste M4A gratuitos, arquivos de áudio M4A, conversor M4A para MP3, conversor M4A para WAV, arquivos de teste de player de áudio, teste de reprodução M4A, exemplos de conversão de áudio, teste de formato de áudio MPEG-4'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo M4A Gratuitos - Baixar Arquivos de Teste M4A Audio para Ferramentas de Conversão',
+          description: 'Baixe arquivos de exemplo M4A M4A audio gratuitos para testar conversão de áudio M4A, reprodução M4A, ferramentas de processamento de áudio e software multimídia. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores M4A para MP3, conversores M4A para WAV, players de áudio, compatibilidade de reprodução M4A e suporte de formato de áudio MPEG-4.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo M4A',
+          description: 'Baixe arquivos de exemplo M4A M4A audio gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar sua conversão de áudio M4A, reprodução M4A e ferramentas de processamento de áudio.'
+        },
+        about_description: 'Estes são arquivos de teste de áudio M4A em vários tamanhos para fins de teste'
+      },
+      midi: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo MIDI Gratuitos - Arquivos de Teste MIDI Music para Sequenciamento Musical | MorphyHub',
+          description: 'Baixe arquivos de exemplo MIDI MIDI music gratuitos para testar reprodução MIDI, conversão MIDI, ferramentas de sequenciamento musical e estações de trabalho de áudio digital. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores MIDI para MP3, conversores MIDI para WAV, sequenciadores MIDI, software de produção musical e suporte de formato Musical Instrument Digital Interface.',
+          keywords: 'arquivos de exemplo MIDI, arquivos de teste MIDI, baixar exemplos MIDI, arquivos de teste MIDI gratuitos, arquivos de música MIDI, conversor MIDI para MP3, conversor MIDI para WAV, teste de sequenciador MIDI, arquivos de teste de produção musical, teste de reprodução MIDI, exemplos de sequenciamento musical'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo MIDI Gratuitos - Baixar Arquivos de Teste MIDI Music para Sequenciamento Musical',
+          description: 'Baixe arquivos de exemplo MIDI MIDI music gratuitos para testar reprodução MIDI, conversão MIDI, ferramentas de sequenciamento musical e estações de trabalho de áudio digital. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar conversores MIDI para MP3, conversores MIDI para WAV, sequenciadores MIDI, software de produção musical e suporte de formato Musical Instrument Digital Interface.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo MIDI',
+          description: 'Baixe arquivos de exemplo MIDI MIDI music gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar sua reprodução MIDI, conversão MIDI e ferramentas de sequenciamento musical.'
+        },
+        about_description: 'Estes são arquivos de teste de música MIDI em vários tamanhos para fins de teste'
+      },
+      ace: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo ACE Gratuitos - Arquivos de Teste ACE Archive para Ferramentas de Extração | MorphyHub',
+          description: 'Baixe arquivos de exemplo ACE archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ACE, descompactação de arquivos ACE, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
+          keywords: 'arquivos de exemplo ACE, arquivos de teste ACE, baixar exemplos ACE, arquivos de teste ACE gratuitos, arquivos archive ACE, teste de extração ACE, teste de descompactação ACE, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo ACE Gratuitos - Baixar Arquivos de Teste ACE Archive para Ferramentas de Extração',
+          description: 'Baixe arquivos de exemplo ACE archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ACE, descompactação de arquivos ACE, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo ACE',
+          description: 'Baixe arquivos de exemplo ACE archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste archive ACE em vários tamanhos para fins de teste'
+      },
+      arj: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo ARJ Gratuitos - Arquivos de Teste ARJ Archive para Ferramentas de Extração | MorphyHub',
+          description: 'Baixe arquivos de exemplo ARJ archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ARJ, descompactação de arquivos ARJ, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
+          keywords: 'arquivos de exemplo ARJ, arquivos de teste ARJ, baixar exemplos ARJ, arquivos de teste ARJ gratuitos, arquivos archive ARJ, teste de extração ARJ, teste de descompactação ARJ, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo ARJ Gratuitos - Baixar Arquivos de Teste ARJ Archive para Ferramentas de Extração',
+          description: 'Baixe arquivos de exemplo ARJ archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ARJ, descompactação de arquivos ARJ, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo ARJ',
+          description: 'Baixe arquivos de exemplo ARJ archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste archive ARJ em vários tamanhos para fins de teste'
+      },
+      bz2: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo BZ2 Gratuitos - Arquivos de Teste BZ2 Compressed Archive | MorphyHub',
+          description: 'Baixe arquivos de exemplo BZ2 bzip2 compressed archive gratuitos para testar ferramentas de descompactação e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos BZ2, extração de arquivos BZ2, ferramentas de compactação bzip2 e software de gerenciamento de arquivos.',
+          keywords: 'arquivos de exemplo BZ2, arquivos de teste BZ2, baixar exemplos BZ2, arquivos de teste BZ2 gratuitos, arquivos compactados BZ2, teste de descompactação BZ2, teste de compactação bzip2, arquivos de teste de extração de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo BZ2 Gratuitos - Baixar Arquivos de Teste BZ2 Compressed Archive',
+          description: 'Baixe arquivos de exemplo BZ2 bzip2 compressed archive gratuitos para testar ferramentas de descompactação e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos BZ2, extração de arquivos BZ2, ferramentas de compactação bzip2 e software de gerenciamento de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo BZ2',
+          description: 'Baixe arquivos de exemplo BZ2 bzip2 compressed archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de descompactação e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste compressed archive BZ2 em vários tamanhos para fins de teste'
+      },
+      gz: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo GZ Gratuitos - Arquivos de Teste GZ Gzip Compressed Archive | MorphyHub',
+          description: 'Baixe arquivos de exemplo GZ gzip compressed archive gratuitos para testar ferramentas de descompactação gzip, extração de arquivos e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos GZ, extração de arquivos GZ, ferramentas de compactação gzip e software de gerenciamento de arquivos.',
+          keywords: 'arquivos de exemplo GZ, arquivos de teste GZ, baixar exemplos GZ, arquivos de teste GZ gratuitos, arquivos compactados GZ, teste de descompactação GZ, teste de compactação gzip, arquivos de teste de extração de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo GZ Gratuitos - Baixar Arquivos de Teste GZ Gzip Compressed Archive',
+          description: 'Baixe arquivos de exemplo GZ gzip compressed archive gratuitos para testar ferramentas de descompactação gzip, extração de arquivos e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos GZ, extração de arquivos GZ, ferramentas de compactação gzip e software de gerenciamento de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo GZ',
+          description: 'Baixe arquivos de exemplo GZ gzip compressed archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de descompactação gzip, extração de arquivos e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste gzip compressed archive GZ em vários tamanhos para fins de teste'
+      },
+      cab: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo CAB Gratuitos - Arquivos de Teste CAB Windows Cabinet Archive | MorphyHub',
+          description: 'Baixe arquivos de exemplo CAB Windows cabinet archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos CAB, descompactação de arquivos CAB, ferramentas Windows cabinet archive e software de gerenciamento de arquivos.',
+          keywords: 'arquivos de exemplo CAB, arquivos de teste CAB, baixar exemplos CAB, arquivos de teste CAB gratuitos, arquivos archive CAB, teste de extração CAB, teste Windows cabinet archive, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo CAB Gratuitos - Baixar Arquivos de Teste CAB Windows Cabinet Archive',
+          description: 'Baixe arquivos de exemplo CAB Windows cabinet archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos CAB, descompactação de arquivos CAB, ferramentas Windows cabinet archive e software de gerenciamento de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo CAB',
+          description: 'Baixe arquivos de exemplo CAB Windows cabinet archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste Windows cabinet archive CAB em vários tamanhos para fins de teste'
+      },
+      cpio: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo CPIO Gratuitos - Arquivos de Teste CPIO Archive para Ferramentas de Extração | MorphyHub',
+          description: 'Baixe arquivos de exemplo CPIO archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos CPIO, descompactação de arquivos CPIO, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
+          keywords: 'arquivos de exemplo CPIO, arquivos de teste CPIO, baixar exemplos CPIO, arquivos de teste CPIO gratuitos, arquivos archive CPIO, teste de extração CPIO, teste de descompactação CPIO, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo CPIO Gratuitos - Baixar Arquivos de Teste CPIO Archive para Ferramentas de Extração',
+          description: 'Baixe arquivos de exemplo CPIO archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos CPIO, descompactação de arquivos CPIO, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo CPIO',
+          description: 'Baixe arquivos de exemplo CPIO archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste archive CPIO em vários tamanhos para fins de teste'
+      },
+      zip: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo ZIP Gratuitos - Arquivos de Teste ZIP Archive para Ferramentas de Extração | MorphyHub',
+          description: 'Baixe arquivos de exemplo ZIP archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ZIP, descompactação de arquivos ZIP, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
+          keywords: 'arquivos de exemplo ZIP, arquivos de teste ZIP, baixar exemplos ZIP, arquivos de teste ZIP gratuitos, arquivos archive ZIP, teste de extração ZIP, teste de descompactação ZIP, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo ZIP Gratuitos - Baixar Arquivos de Teste ZIP Archive para Ferramentas de Extração',
+          description: 'Baixe arquivos de exemplo ZIP archive gratuitos para testar ferramentas de extração e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos ZIP, descompactação de arquivos ZIP, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo ZIP',
+          description: 'Baixe arquivos de exemplo ZIP archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste archive ZIP em vários tamanhos para fins de teste'
+      },
+      dmg: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo DMG Gratuitos - Arquivos de Teste DMG macOS Disk Image | MorphyHub',
+          description: 'Baixe arquivos de exemplo DMG macOS disk image gratuitos para testar ferramentas de montagem de disk image e extração DMG. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image DMG, extração de arquivos DMG, ferramentas disk image macOS e software de processamento de disk image.',
+          keywords: 'arquivos de exemplo DMG, arquivos de teste DMG, baixar exemplos DMG, arquivos de teste DMG gratuitos, arquivos disk image DMG, teste de montagem DMG, teste disk image macOS, arquivos de teste de extração de disk image, exemplos de processamento de disk image'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo DMG Gratuitos - Baixar Arquivos de Teste DMG macOS Disk Image',
+          description: 'Baixe arquivos de exemplo DMG macOS disk image gratuitos para testar ferramentas de montagem de disk image e extração DMG. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image DMG, extração de arquivos DMG, ferramentas disk image macOS e software de processamento de disk image.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo DMG',
+          description: 'Baixe arquivos de exemplo DMG macOS disk image gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de montagem de disk image e extração DMG.'
+        },
+        about_description: 'Estes são arquivos de teste disk image macOS DMG em vários tamanhos para fins de teste'
+      },
+      img: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo IMG Gratuitos - Arquivos de Teste IMG Disk Image | MorphyHub',
+          description: 'Baixe arquivos de exemplo IMG disk image gratuitos para testar ferramentas de montagem de disk image, extração IMG e processamento de disk image. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image IMG, extração de arquivos IMG, ferramentas disk image e software de processamento de disk image.',
+          keywords: 'arquivos de exemplo IMG, arquivos de teste IMG, baixar exemplos IMG, arquivos de teste IMG gratuitos, arquivos disk image IMG, teste de montagem IMG, teste de extração de disk image, arquivos de teste de processamento de disk image, exemplos de disk image'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo IMG Gratuitos - Baixar Arquivos de Teste IMG Disk Image',
+          description: 'Baixe arquivos de exemplo IMG disk image gratuitos para testar ferramentas de montagem de disk image, extração IMG e processamento de disk image. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image IMG, extração de arquivos IMG, ferramentas disk image e software de processamento de disk image.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo IMG',
+          description: 'Baixe arquivos de exemplo IMG disk image gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de montagem de disk image, extração IMG e processamento de disk image.'
+        },
+        about_description: 'Estes são arquivos de teste disk image IMG em vários tamanhos para fins de teste'
+      },
+      iso: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo ISO Gratuitos - Arquivos de Teste ISO Disk Image | MorphyHub',
+          description: 'Baixe arquivos de exemplo ISO ISO disk image gratuitos para testar ferramentas de montagem de disk image ISO, extração ISO e processamento de disk image. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image ISO, extração de arquivos ISO, ferramentas disk image e software de processamento de disk image.',
+          keywords: 'arquivos de exemplo ISO, arquivos de teste ISO, baixar exemplos ISO, arquivos de teste ISO gratuitos, arquivos disk image ISO, teste de montagem ISO, teste de extração ISO, arquivos de teste de processamento de disk image, exemplos de disk image'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo ISO Gratuitos - Baixar Arquivos de Teste ISO Disk Image',
+          description: 'Baixe arquivos de exemplo ISO ISO disk image gratuitos para testar ferramentas de montagem de disk image ISO, extração ISO e processamento de disk image. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar montagem de disk image ISO, extração de arquivos ISO, ferramentas disk image e software de processamento de disk image.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo ISO',
+          description: 'Baixe arquivos de exemplo ISO ISO disk image gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de montagem de disk image ISO, extração ISO e processamento de disk image.'
+        },
+        about_description: 'Estes são arquivos de teste disk image ISO em vários tamanhos para fins de teste'
+      },
+      kmz: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo KMZ Gratuitos - Arquivos de Teste KMZ Compressed KML | MorphyHub',
+          description: 'Baixe arquivos de exemplo KMZ compressed Keyhole Markup Language gratuitos para testar ferramentas de extração KMZ, processamento de dados geográficos e integração Google Earth. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos KMZ, conversão KMZ para KML, compatibilidade Google Earth, processamento de dados geográficos e software de mapeamento.',
+          keywords: 'arquivos de exemplo KMZ, arquivos de teste KMZ, baixar exemplos KMZ, arquivos de teste KMZ gratuitos, arquivos compactados KMZ, teste de extração KMZ, arquivos de teste Google Earth, teste de processamento de dados geográficos, exemplos de software de mapeamento'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo KMZ Gratuitos - Baixar Arquivos de Teste KMZ Compressed KML',
+          description: 'Baixe arquivos de exemplo KMZ compressed Keyhole Markup Language gratuitos para testar ferramentas de extração KMZ, processamento de dados geográficos e integração Google Earth. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos KMZ, conversão KMZ para KML, compatibilidade Google Earth, processamento de dados geográficos e software de mapeamento.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo KMZ',
+          description: 'Baixe arquivos de exemplo KMZ compressed Keyhole Markup Language gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração KMZ, processamento de dados geográficos e integração Google Earth.'
+        },
+        about_description: 'Estes são arquivos de teste compressed Keyhole Markup Language KMZ em vários tamanhos para fins de teste'
+      },
+      laz: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo LAZ Gratuitos - Arquivos de Teste LAZ Compressed LiDAR | MorphyHub',
+          description: 'Baixe arquivos de exemplo LAZ compressed LiDAR point cloud data gratuitos para testar ferramentas de extração LAZ, processamento de point cloud e mapeamento 3D. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LAZ, conversão LAZ para LAS, processamento de point cloud LiDAR, software de mapeamento 3D e ferramentas de análise de dados geográficos.',
+          keywords: 'arquivos de exemplo LAZ, arquivos de teste LAZ, baixar exemplos LAZ, arquivos de teste LAZ gratuitos, arquivos compactados LAZ, teste de extração LAZ, teste point cloud LiDAR, arquivos de teste de mapeamento 3D, exemplos de análise de dados geográficos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo LAZ Gratuitos - Baixar Arquivos de Teste LAZ Compressed LiDAR',
+          description: 'Baixe arquivos de exemplo LAZ compressed LiDAR point cloud data gratuitos para testar ferramentas de extração LAZ, processamento de point cloud e mapeamento 3D. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LAZ, conversão LAZ para LAS, processamento de point cloud LiDAR, software de mapeamento 3D e ferramentas de análise de dados geográficos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo LAZ',
+          description: 'Baixe arquivos de exemplo LAZ compressed LiDAR point cloud data gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração LAZ, processamento de point cloud e mapeamento 3D.'
+        },
+        about_description: 'Estes são arquivos de teste compressed LiDAR point cloud data LAZ em vários tamanhos para fins de teste'
+      },
+      lha: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo LHA Gratuitos - Arquivos de Teste LHA Archive para Ferramentas de Extração | MorphyHub',
+          description: 'Baixe arquivos de exemplo LHA LHA archive gratuitos para testar ferramentas de extração LHA, descompactação de arquivos e arquivamento de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LHA, descompactação de arquivos LHA, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
+          keywords: 'arquivos de exemplo LHA, arquivos de teste LHA, baixar exemplos LHA, arquivos de teste LHA gratuitos, arquivos archive LHA, teste de extração LHA, teste de descompactação LHA, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo LHA Gratuitos - Baixar Arquivos de Teste LHA Archive para Ferramentas de Extração',
+          description: 'Baixe arquivos de exemplo LHA LHA archive gratuitos para testar ferramentas de extração LHA, descompactação de arquivos e arquivamento de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LHA, descompactação de arquivos LHA, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo LHA',
+          description: 'Baixe arquivos de exemplo LHA LHA archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração LHA, descompactação de arquivos e arquivamento de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste archive LHA em vários tamanhos para fins de teste'
+      },
+      lzh: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo LZH Gratuitos - Arquivos de Teste LZH Archive para Ferramentas de Extração | MorphyHub',
+          description: 'Baixe arquivos de exemplo LZH LZH archive gratuitos para testar ferramentas de extração LZH, descompactação de arquivos e arquivamento de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LZH, descompactação de arquivos LZH, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
+          keywords: 'arquivos de exemplo LZH, arquivos de teste LZH, baixar exemplos LZH, arquivos de teste LZH gratuitos, arquivos archive LZH, teste de extração LZH, teste de descompactação LZH, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo LZH Gratuitos - Baixar Arquivos de Teste LZH Archive para Ferramentas de Extração',
+          description: 'Baixe arquivos de exemplo LZH LZH archive gratuitos para testar ferramentas de extração LZH, descompactação de arquivos e arquivamento de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos LZH, descompactação de arquivos LZH, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo LZH',
+          description: 'Baixe arquivos de exemplo LZH LZH archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de extração LZH, descompactação de arquivos e arquivamento de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste archive LZH em vários tamanhos para fins de teste'
+      },
+      lzma: {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo LZMA Gratuitos - Arquivos de Teste LZMA Compressed Archive | MorphyHub',
+          description: 'Baixe arquivos de exemplo LZMA LZMA compressed gratuitos para testar ferramentas de descompactação LZMA, extração de arquivos e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos LZMA, extração de arquivos LZMA, ferramentas de compactação LZMA e software de gerenciamento de arquivos.',
+          keywords: 'arquivos de exemplo LZMA, arquivos de teste LZMA, baixar exemplos LZMA, arquivos de teste LZMA gratuitos, arquivos compactados LZMA, teste de descompactação LZMA, teste de compactação LZMA, arquivos de teste de extração de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo LZMA Gratuitos - Baixar Arquivos de Teste LZMA Compressed Archive',
+          description: 'Baixe arquivos de exemplo LZMA LZMA compressed gratuitos para testar ferramentas de descompactação LZMA, extração de arquivos e compactação de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar descompactação de arquivos LZMA, extração de arquivos LZMA, ferramentas de compactação LZMA e software de gerenciamento de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo LZMA',
+          description: 'Baixe arquivos de exemplo LZMA LZMA compressed gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de descompactação LZMA, extração de arquivos e compactação de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste compressed LZMA em vários tamanhos para fins de teste'
+      },
+      '7z': {
+        meta: {
+          title: 'Baixar Arquivos de Exemplo 7Z Gratuitos - Arquivos de Teste 7Z Archive para Ferramentas de Extração | MorphyHub',
+          description: 'Baixe arquivos de exemplo 7Z archive gratuitos para testar ferramentas de conversão e extração de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos 7Z, descompactação de arquivos 7Z, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.',
+          keywords: 'arquivos de exemplo 7Z, arquivos de teste 7Z, baixar exemplos 7Z, arquivos de teste 7Z gratuitos, arquivos archive 7Z, teste de extração 7Z, teste de descompactação 7Z, arquivos de teste de gerenciamento de arquivos, exemplos de compactação de arquivos'
+        },
+        schema: {
+          name: 'Arquivos de Exemplo 7Z Gratuitos - Baixar Arquivos de Teste 7Z Archive para Ferramentas de Extração',
+          description: 'Baixe arquivos de exemplo 7Z archive gratuitos para testar ferramentas de conversão e extração de arquivos. Vários tamanhos de arquivo: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extração de arquivos 7Z, descompactação de arquivos 7Z, ferramentas de gerenciamento de arquivos e software de compactação de arquivos.'
+        },
+        hero: {
+          title: 'Arquivos de Exemplo 7Z',
+          description: 'Baixe arquivos de exemplo 7Z archive gratuitos para testes. Vários tamanhos de arquivo disponíveis para testar suas ferramentas de conversão e extração de arquivos.'
+        },
+        about_description: 'Estes são arquivos de teste archive 7Z em vários tamanhos para fins de teste'
       }
     }
   }

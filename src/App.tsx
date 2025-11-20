@@ -510,6 +510,20 @@ function App() {
         <Route path="/ja/convert/csv-to-html" element={<CSVToHTMLConverter />} />
         <Route path="/zh/convert/csv-to-html" element={<CSVToHTMLConverter />} />
         <Route path="/de/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/id/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/sv/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/es/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/fr/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/it/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/nl/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/pt/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/vi/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/tr/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/ru/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/ar/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/th/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/ja/convert/csv-to-json" element={<CSVToJSONConverter />} />
+        <Route path="/zh/convert/csv-to-json" element={<CSVToJSONConverter />} />
         <Route path="/de/convert/csv-to-md" element={<CSVToMDConverter />} />
         <Route path="/id/convert/csv-to-md" element={<CSVToMDConverter />} />
         <Route path="/sv/convert/csv-to-md" element={<CSVToMDConverter />} />
@@ -635,8 +649,50 @@ function App() {
         <Route path="/de/convert/csv-to-sql" element={<CSVToSQLConverter />} />
         <Route path="/de/convert/csv-to-toml" element={<CSVToTOMLConverter />} />
         <Route path="/de/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/id/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/sv/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/es/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/fr/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/it/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/nl/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/pt/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/vi/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/tr/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/ru/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/ar/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/th/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/ja/convert/csv-to-txt" element={<CSVToTXTConverter />} />
+        <Route path="/zh/convert/csv-to-txt" element={<CSVToTXTConverter />} />
         <Route path="/de/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/id/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/sv/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/es/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/fr/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/it/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/nl/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/pt/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/vi/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/tr/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/ru/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/ar/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/th/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/ja/convert/csv-to-xls" element={<CSVToXLSConverter />} />
+        <Route path="/zh/convert/csv-to-xls" element={<CSVToXLSConverter />} />
         <Route path="/de/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/id/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/sv/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/es/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/fr/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/it/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/nl/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/pt/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/vi/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/tr/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/ru/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/ar/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/th/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/ja/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
+        <Route path="/zh/convert/csv-to-xlsx" element={<CSVToXLSXConverter />} />
         <Route path="/de/convert/csv-to-xml" element={<CSVToXMLConverter />} />
         <Route path="/de/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
         <Route path="/de/convert/dng-to-webp" element={<DNGToWebPConverter />} />

@@ -1839,6 +1839,310 @@ export const pl: SamplePageTranslations = {
           description: 'Pobierz darmowe pliki przykładowe CAF Core Audio Format do testowania. Różne rozmiary plików dostępne do testowania narzędzi konwersji audio, oprogramowania odtwarzania CAF i aplikacji przetwarzania audio.'
         },
         about_description: 'To są testowe pliki CAF (Core Audio Format) audio w różnych rozmiarach do celów testowych'
+      },
+      cue: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe CUE - Pliki testowe CUE Sheet do nagrywania CD audio | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe CUE CUE sheet do testowania narzędzi nagrywania CD audio i analizy CUE sheet. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy CUE sheet, oprogramowania nagrywania CD audio, walidacji plików CUE i narzędzi autorskich CD.',
+          keywords: 'pliki przykładowe CUE, pliki testowe CUE, pobierz przykłady CUE, darmowe pliki testowe CUE, pliki CUE sheet, test nagrywania CD audio, analizator CUE sheet, pliki testowe autorskie CD, walidacja plików CUE, test obrazu dysku audio'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe CUE - Pobierz pliki testowe CUE Sheet do nagrywania CD audio',
+          description: 'Pobierz darmowe pliki przykładowe CUE CUE sheet do testowania narzędzi nagrywania CD audio i analizy CUE sheet. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizy CUE sheet, oprogramowania nagrywania CD audio, walidacji plików CUE i narzędzi autorskich CD.'
+        },
+        hero: {
+          title: 'Pliki przykładowe CUE',
+          description: 'Pobierz darmowe pliki przykładowe CUE CUE sheet do testowania. Różne rozmiary plików dostępne do testowania narzędzi nagrywania CD audio i analizy CUE sheet.'
+        },
+        about_description: 'To są testowe pliki CUE sheet w różnych rozmiarach do celów testowych'
+      },
+      m4a: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe M4A - Pliki testowe M4A Audio do narzędzi konwersji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe M4A M4A audio do testowania konwersji audio M4A, odtwarzania M4A, narzędzi przetwarzania audio i oprogramowania multimedialnego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwerterów M4A do MP3, konwerterów M4A do WAV, odtwarzaczy audio, kompatybilności odtwarzania M4A i wsparcia formatu audio MPEG-4.',
+          keywords: 'pliki przykładowe M4A, pliki testowe M4A, pobierz przykłady M4A, darmowe pliki testowe M4A, pliki audio M4A, konwerter M4A do MP3, konwerter M4A do WAV, pliki testowe odtwarzacza audio, test odtwarzania M4A, przykłady konwersji audio, test formatu audio MPEG-4'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe M4A - Pobierz pliki testowe M4A Audio do narzędzi konwersji',
+          description: 'Pobierz darmowe pliki przykładowe M4A M4A audio do testowania konwersji audio M4A, odtwarzania M4A, narzędzi przetwarzania audio i oprogramowania multimedialnego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwerterów M4A do MP3, konwerterów M4A do WAV, odtwarzaczy audio, kompatybilności odtwarzania M4A i wsparcia formatu audio MPEG-4.'
+        },
+        hero: {
+          title: 'Pliki przykładowe M4A',
+          description: 'Pobierz darmowe pliki przykładowe M4A M4A audio do testowania. Różne rozmiary plików dostępne do testowania konwersji audio M4A, odtwarzania M4A i narzędzi przetwarzania audio.'
+        },
+        about_description: 'To są testowe pliki audio M4A w różnych rozmiarach do celów testowych'
+      },
+      midi: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe MIDI - Pliki testowe MIDI Music do sekwencjonowania muzyki | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe MIDI MIDI music do testowania odtwarzania MIDI, konwersji MIDI, narzędzi sekwencjonowania muzyki i stacji roboczych audio cyfrowego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwerterów MIDI do MP3, konwerterów MIDI do WAV, sekwencerów MIDI, oprogramowania produkcji muzycznej i wsparcia formatu Musical Instrument Digital Interface.',
+          keywords: 'pliki przykładowe MIDI, pliki testowe MIDI, pobierz przykłady MIDI, darmowe pliki testowe MIDI, pliki music MIDI, konwerter MIDI do MP3, konwerter MIDI do WAV, test sekwencera MIDI, pliki testowe produkcji muzycznej, test odtwarzania MIDI, przykłady sekwencjonowania muzyki'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe MIDI - Pobierz pliki testowe MIDI Music do sekwencjonowania muzyki',
+          description: 'Pobierz darmowe pliki przykładowe MIDI MIDI music do testowania odtwarzania MIDI, konwersji MIDI, narzędzi sekwencjonowania muzyki i stacji roboczych audio cyfrowego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania konwerterów MIDI do MP3, konwerterów MIDI do WAV, sekwencerów MIDI, oprogramowania produkcji muzycznej i wsparcia formatu Musical Instrument Digital Interface.'
+        },
+        hero: {
+          title: 'Pliki przykładowe MIDI',
+          description: 'Pobierz darmowe pliki przykładowe MIDI MIDI music do testowania. Różne rozmiary plików dostępne do testowania odtwarzania MIDI, konwersji MIDI i narzędzi sekwencjonowania muzyki.'
+        },
+        about_description: 'To są testowe pliki music MIDI w różnych rozmiarach do celów testowych'
+      },
+      ace: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe ACE - Pliki testowe ACE Archive do narzędzi ekstrakcji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe ACE archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów ACE, dekompresji plików ACE, narzędzi zarządzania archiwami i oprogramowania kompresji plików.',
+          keywords: 'pliki przykładowe ACE, pliki testowe ACE, pobierz przykłady ACE, darmowe pliki testowe ACE, pliki archive ACE, test ekstrakcji ACE, test dekompresji ACE, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe ACE - Pobierz pliki testowe ACE Archive do narzędzi ekstrakcji',
+          description: 'Pobierz darmowe pliki przykładowe ACE archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów ACE, dekompresji plików ACE, narzędzi zarządzania archiwami i oprogramowania kompresji plików.'
+        },
+        hero: {
+          title: 'Pliki przykładowe ACE',
+          description: 'Pobierz darmowe pliki przykładowe ACE archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji i kompresji archiwów.'
+        },
+        about_description: 'To są testowe pliki archive ACE w różnych rozmiarach do celów testowych'
+      },
+      arj: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe ARJ - Pliki testowe ARJ Archive do narzędzi ekstrakcji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe ARJ archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów ARJ, dekompresji plików ARJ, narzędzi zarządzania archiwami i oprogramowania kompresji plików.',
+          keywords: 'pliki przykładowe ARJ, pliki testowe ARJ, pobierz przykłady ARJ, darmowe pliki testowe ARJ, pliki archive ARJ, test ekstrakcji ARJ, test dekompresji ARJ, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe ARJ - Pobierz pliki testowe ARJ Archive do narzędzi ekstrakcji',
+          description: 'Pobierz darmowe pliki przykładowe ARJ archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów ARJ, dekompresji plików ARJ, narzędzi zarządzania archiwami i oprogramowania kompresji plików.'
+        },
+        hero: {
+          title: 'Pliki przykładowe ARJ',
+          description: 'Pobierz darmowe pliki przykładowe ARJ archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji i kompresji archiwów.'
+        },
+        about_description: 'To są testowe pliki archive ARJ w różnych rozmiarach do celów testowych'
+      },
+      bz2: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe BZ2 - Pliki testowe BZ2 Compressed Archive | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe BZ2 bzip2 compressed archive do testowania narzędzi dekompresji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji archiwów BZ2, ekstrakcji plików BZ2, narzędzi kompresji bzip2 i oprogramowania zarządzania archiwami.',
+          keywords: 'pliki przykładowe BZ2, pliki testowe BZ2, pobierz przykłady BZ2, darmowe pliki testowe BZ2, pliki skompresowane BZ2, test dekompresji BZ2, test kompresji bzip2, pliki testowe ekstrakcji archiwów, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe BZ2 - Pobierz pliki testowe BZ2 Compressed Archive',
+          description: 'Pobierz darmowe pliki przykładowe BZ2 bzip2 compressed archive do testowania narzędzi dekompresji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji archiwów BZ2, ekstrakcji plików BZ2, narzędzi kompresji bzip2 i oprogramowania zarządzania archiwami.'
+        },
+        hero: {
+          title: 'Pliki przykładowe BZ2',
+          description: 'Pobierz darmowe pliki przykładowe BZ2 bzip2 compressed archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi dekompresji i kompresji archiwów.'
+        },
+        about_description: 'To są testowe pliki compressed archive BZ2 w różnych rozmiarach do celów testowych'
+      },
+      gz: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe GZ - Pliki testowe GZ Gzip Compressed Archive | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe GZ gzip compressed archive do testowania narzędzi dekompresji gzip, ekstrakcji archiwów i kompresji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji archiwów GZ, ekstrakcji plików GZ, narzędzi kompresji gzip i oprogramowania zarządzania archiwami.',
+          keywords: 'pliki przykładowe GZ, pliki testowe GZ, pobierz przykłady GZ, darmowe pliki testowe GZ, pliki skompresowane GZ, test dekompresji GZ, test kompresji gzip, pliki testowe ekstrakcji archiwów, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe GZ - Pobierz pliki testowe GZ Gzip Compressed Archive',
+          description: 'Pobierz darmowe pliki przykładowe GZ gzip compressed archive do testowania narzędzi dekompresji gzip, ekstrakcji archiwów i kompresji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji archiwów GZ, ekstrakcji plików GZ, narzędzi kompresji gzip i oprogramowania zarządzania archiwami.'
+        },
+        hero: {
+          title: 'Pliki przykładowe GZ',
+          description: 'Pobierz darmowe pliki przykładowe GZ gzip compressed archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi dekompresji gzip, ekstrakcji archiwów i kompresji plików.'
+        },
+        about_description: 'To są testowe pliki gzip compressed archive GZ w różnych rozmiarach do celów testowych'
+      },
+      cab: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe CAB - Pliki testowe CAB Windows Cabinet Archive | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe CAB Windows cabinet archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów CAB, dekompresji plików CAB, narzędzi Windows cabinet archive i oprogramowania zarządzania archiwami.',
+          keywords: 'pliki przykładowe CAB, pliki testowe CAB, pobierz przykłady CAB, darmowe pliki testowe CAB, pliki archive CAB, test ekstrakcji CAB, test Windows cabinet archive, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe CAB - Pobierz pliki testowe CAB Windows Cabinet Archive',
+          description: 'Pobierz darmowe pliki przykładowe CAB Windows cabinet archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów CAB, dekompresji plików CAB, narzędzi Windows cabinet archive i oprogramowania zarządzania archiwami.'
+        },
+        hero: {
+          title: 'Pliki przykładowe CAB',
+          description: 'Pobierz darmowe pliki przykładowe CAB Windows cabinet archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji i kompresji archiwów.'
+        },
+        about_description: 'To są testowe pliki Windows cabinet archive CAB w różnych rozmiarach do celów testowych'
+      },
+      cpio: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe CPIO - Pliki testowe CPIO Archive do narzędzi ekstrakcji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe CPIO archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów CPIO, dekompresji plików CPIO, narzędzi zarządzania archiwami i oprogramowania kompresji plików.',
+          keywords: 'pliki przykładowe CPIO, pliki testowe CPIO, pobierz przykłady CPIO, darmowe pliki testowe CPIO, pliki archive CPIO, test ekstrakcji CPIO, test dekompresji CPIO, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe CPIO - Pobierz pliki testowe CPIO Archive do narzędzi ekstrakcji',
+          description: 'Pobierz darmowe pliki przykładowe CPIO archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów CPIO, dekompresji plików CPIO, narzędzi zarządzania archiwami i oprogramowania kompresji plików.'
+        },
+        hero: {
+          title: 'Pliki przykładowe CPIO',
+          description: 'Pobierz darmowe pliki przykładowe CPIO archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji i kompresji archiwów.'
+        },
+        about_description: 'To są testowe pliki archive CPIO w różnych rozmiarach do celów testowych'
+      },
+      zip: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe ZIP - Pliki testowe ZIP Archive do narzędzi ekstrakcji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe ZIP archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów ZIP, dekompresji plików ZIP, narzędzi zarządzania archiwami i oprogramowania kompresji plików.',
+          keywords: 'pliki przykładowe ZIP, pliki testowe ZIP, pobierz przykłady ZIP, darmowe pliki testowe ZIP, pliki archive ZIP, test ekstrakcji ZIP, test dekompresji ZIP, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe ZIP - Pobierz pliki testowe ZIP Archive do narzędzi ekstrakcji',
+          description: 'Pobierz darmowe pliki przykładowe ZIP archive do testowania narzędzi ekstrakcji i kompresji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów ZIP, dekompresji plików ZIP, narzędzi zarządzania archiwami i oprogramowania kompresji plików.'
+        },
+        hero: {
+          title: 'Pliki przykładowe ZIP',
+          description: 'Pobierz darmowe pliki przykładowe ZIP archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji i kompresji archiwów.'
+        },
+        about_description: 'To są testowe pliki archive ZIP w różnych rozmiarach do celów testowych'
+      },
+      dmg: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe DMG - Pliki testowe DMG macOS Disk Image | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe DMG macOS disk image do testowania narzędzi montowania disk image i ekstrakcji DMG. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania disk image DMG, ekstrakcji plików DMG, narzędzi disk image macOS i oprogramowania przetwarzania disk image.',
+          keywords: 'pliki przykładowe DMG, pliki testowe DMG, pobierz przykłady DMG, darmowe pliki testowe DMG, pliki disk image DMG, test montowania DMG, test disk image macOS, pliki testowe ekstrakcji disk image, przykłady przetwarzania disk image'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe DMG - Pobierz pliki testowe DMG macOS Disk Image',
+          description: 'Pobierz darmowe pliki przykładowe DMG macOS disk image do testowania narzędzi montowania disk image i ekstrakcji DMG. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania disk image DMG, ekstrakcji plików DMG, narzędzi disk image macOS i oprogramowania przetwarzania disk image.'
+        },
+        hero: {
+          title: 'Pliki przykładowe DMG',
+          description: 'Pobierz darmowe pliki przykładowe DMG macOS disk image do testowania. Różne rozmiary plików dostępne do testowania narzędzi montowania disk image i ekstrakcji DMG.'
+        },
+        about_description: 'To są testowe pliki disk image macOS DMG w różnych rozmiarach do celów testowych'
+      },
+      img: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe IMG - Pliki testowe IMG Disk Image | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe IMG disk image do testowania narzędzi montowania disk image, ekstrakcji IMG i przetwarzania disk image. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania disk image IMG, ekstrakcji plików IMG, narzędzi disk image i oprogramowania przetwarzania disk image.',
+          keywords: 'pliki przykładowe IMG, pliki testowe IMG, pobierz przykłady IMG, darmowe pliki testowe IMG, pliki disk image IMG, test montowania IMG, test ekstrakcji disk image, pliki testowe przetwarzania disk image, przykłady disk image'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe IMG - Pobierz pliki testowe IMG Disk Image',
+          description: 'Pobierz darmowe pliki przykładowe IMG disk image do testowania narzędzi montowania disk image, ekstrakcji IMG i przetwarzania disk image. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania disk image IMG, ekstrakcji plików IMG, narzędzi disk image i oprogramowania przetwarzania disk image.'
+        },
+        hero: {
+          title: 'Pliki przykładowe IMG',
+          description: 'Pobierz darmowe pliki przykładowe IMG disk image do testowania. Różne rozmiary plików dostępne do testowania narzędzi montowania disk image, ekstrakcji IMG i przetwarzania disk image.'
+        },
+        about_description: 'To są testowe pliki disk image IMG w różnych rozmiarach do celów testowych'
+      },
+      iso: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe ISO - Pliki testowe ISO Disk Image | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe ISO ISO disk image do testowania narzędzi montowania disk image ISO, ekstrakcji ISO i przetwarzania disk image. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania disk image ISO, ekstrakcji plików ISO, narzędzi disk image i oprogramowania przetwarzania disk image.',
+          keywords: 'pliki przykładowe ISO, pliki testowe ISO, pobierz przykłady ISO, darmowe pliki testowe ISO, pliki disk image ISO, test montowania ISO, test ekstrakcji ISO, pliki testowe przetwarzania disk image, przykłady disk image'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe ISO - Pobierz pliki testowe ISO Disk Image',
+          description: 'Pobierz darmowe pliki przykładowe ISO ISO disk image do testowania narzędzi montowania disk image ISO, ekstrakcji ISO i przetwarzania disk image. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania montowania disk image ISO, ekstrakcji plików ISO, narzędzi disk image i oprogramowania przetwarzania disk image.'
+        },
+        hero: {
+          title: 'Pliki przykładowe ISO',
+          description: 'Pobierz darmowe pliki przykładowe ISO ISO disk image do testowania. Różne rozmiary plików dostępne do testowania narzędzi montowania disk image ISO, ekstrakcji ISO i przetwarzania disk image.'
+        },
+        about_description: 'To są testowe pliki disk image ISO w różnych rozmiarach do celów testowych'
+      },
+      kmz: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe KMZ - Pliki testowe KMZ Compressed KML | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe KMZ compressed Keyhole Markup Language do testowania narzędzi ekstrakcji KMZ, przetwarzania danych geograficznych i integracji Google Earth. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji plików KMZ, konwersji KMZ do KML, kompatybilności Google Earth, przetwarzania danych geograficznych i oprogramowania mapowania.',
+          keywords: 'pliki przykładowe KMZ, pliki testowe KMZ, pobierz przykłady KMZ, darmowe pliki testowe KMZ, pliki skompresowane KMZ, test ekstrakcji KMZ, pliki testowe Google Earth, test przetwarzania danych geograficznych, przykłady oprogramowania mapowania'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe KMZ - Pobierz pliki testowe KMZ Compressed KML',
+          description: 'Pobierz darmowe pliki przykładowe KMZ compressed Keyhole Markup Language do testowania narzędzi ekstrakcji KMZ, przetwarzania danych geograficznych i integracji Google Earth. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji plików KMZ, konwersji KMZ do KML, kompatybilności Google Earth, przetwarzania danych geograficznych i oprogramowania mapowania.'
+        },
+        hero: {
+          title: 'Pliki przykładowe KMZ',
+          description: 'Pobierz darmowe pliki przykładowe KMZ compressed Keyhole Markup Language do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji KMZ, przetwarzania danych geograficznych i integracji Google Earth.'
+        },
+        about_description: 'To są testowe pliki compressed Keyhole Markup Language KMZ w różnych rozmiarach do celów testowych'
+      },
+      laz: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe LAZ - Pliki testowe LAZ Compressed LiDAR | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe LAZ compressed LiDAR point cloud data do testowania narzędzi ekstrakcji LAZ, przetwarzania point cloud i mapowania 3D. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji plików LAZ, konwersji LAZ do LAS, przetwarzania point cloud LiDAR, oprogramowania mapowania 3D i narzędzi analizy danych geograficznych.',
+          keywords: 'pliki przykładowe LAZ, pliki testowe LAZ, pobierz przykłady LAZ, darmowe pliki testowe LAZ, pliki skompresowane LAZ, test ekstrakcji LAZ, test point cloud LiDAR, pliki testowe mapowania 3D, przykłady analizy danych geograficznych'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe LAZ - Pobierz pliki testowe LAZ Compressed LiDAR',
+          description: 'Pobierz darmowe pliki przykładowe LAZ compressed LiDAR point cloud data do testowania narzędzi ekstrakcji LAZ, przetwarzania point cloud i mapowania 3D. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji plików LAZ, konwersji LAZ do LAS, przetwarzania point cloud LiDAR, oprogramowania mapowania 3D i narzędzi analizy danych geograficznych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe LAZ',
+          description: 'Pobierz darmowe pliki przykładowe LAZ compressed LiDAR point cloud data do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji LAZ, przetwarzania point cloud i mapowania 3D.'
+        },
+        about_description: 'To są testowe pliki compressed LiDAR point cloud data LAZ w różnych rozmiarach do celów testowych'
+      },
+      lha: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe LHA - Pliki testowe LHA Archive do narzędzi ekstrakcji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe LHA LHA archive do testowania narzędzi ekstrakcji LHA, dekompresji archiwów i archiwizacji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LHA, dekompresji plików LHA, narzędzi zarządzania archiwami i oprogramowania kompresji plików.',
+          keywords: 'pliki przykładowe LHA, pliki testowe LHA, pobierz przykłady LHA, darmowe pliki testowe LHA, pliki archive LHA, test ekstrakcji LHA, test dekompresji LHA, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe LHA - Pobierz pliki testowe LHA Archive do narzędzi ekstrakcji',
+          description: 'Pobierz darmowe pliki przykładowe LHA LHA archive do testowania narzędzi ekstrakcji LHA, dekompresji archiwów i archiwizacji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LHA, dekompresji plików LHA, narzędzi zarządzania archiwami i oprogramowania kompresji plików.'
+        },
+        hero: {
+          title: 'Pliki przykładowe LHA',
+          description: 'Pobierz darmowe pliki przykładowe LHA LHA archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji LHA, dekompresji archiwów i archiwizacji plików.'
+        },
+        about_description: 'To są testowe pliki archive LHA w różnych rozmiarach do celów testowych'
+      },
+      lzh: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe LZH - Pliki testowe LZH Archive do narzędzi ekstrakcji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe LZH LZH archive do testowania narzędzi ekstrakcji LZH, dekompresji archiwów i archiwizacji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LZH, dekompresji plików LZH, narzędzi zarządzania archiwami i oprogramowania kompresji plików.',
+          keywords: 'pliki przykładowe LZH, pliki testowe LZH, pobierz przykłady LZH, darmowe pliki testowe LZH, pliki archive LZH, test ekstrakcji LZH, test dekompresji LZH, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe LZH - Pobierz pliki testowe LZH Archive do narzędzi ekstrakcji',
+          description: 'Pobierz darmowe pliki przykładowe LZH LZH archive do testowania narzędzi ekstrakcji LZH, dekompresji archiwów i archiwizacji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów LZH, dekompresji plików LZH, narzędzi zarządzania archiwami i oprogramowania kompresji plików.'
+        },
+        hero: {
+          title: 'Pliki przykładowe LZH',
+          description: 'Pobierz darmowe pliki przykładowe LZH LZH archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi ekstrakcji LZH, dekompresji archiwów i archiwizacji plików.'
+        },
+        about_description: 'To są testowe pliki archive LZH w różnych rozmiarach do celów testowych'
+      },
+      lzma: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe LZMA - Pliki testowe LZMA Compressed Archive | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe LZMA LZMA compressed do testowania narzędzi dekompresji LZMA, ekstrakcji archiwów i kompresji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji archiwów LZMA, ekstrakcji plików LZMA, narzędzi kompresji LZMA i oprogramowania zarządzania archiwami.',
+          keywords: 'pliki przykładowe LZMA, pliki testowe LZMA, pobierz przykłady LZMA, darmowe pliki testowe LZMA, pliki skompresowane LZMA, test dekompresji LZMA, test kompresji LZMA, pliki testowe ekstrakcji archiwów, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe LZMA - Pobierz pliki testowe LZMA Compressed Archive',
+          description: 'Pobierz darmowe pliki przykładowe LZMA LZMA compressed do testowania narzędzi dekompresji LZMA, ekstrakcji archiwów i kompresji plików. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania dekompresji archiwów LZMA, ekstrakcji plików LZMA, narzędzi kompresji LZMA i oprogramowania zarządzania archiwami.'
+        },
+        hero: {
+          title: 'Pliki przykładowe LZMA',
+          description: 'Pobierz darmowe pliki przykładowe LZMA LZMA compressed do testowania. Różne rozmiary plików dostępne do testowania narzędzi dekompresji LZMA, ekstrakcji archiwów i kompresji plików.'
+        },
+        about_description: 'To są testowe pliki compressed LZMA w różnych rozmiarach do celów testowych'
+      },
+      '7z': {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe 7Z - Pliki testowe 7Z Archive do narzędzi ekstrakcji | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe 7Z archive do testowania narzędzi konwersji i ekstrakcji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów 7Z, dekompresji plików 7Z, narzędzi zarządzania archiwami i oprogramowania kompresji plików.',
+          keywords: 'pliki przykładowe 7Z, pliki testowe 7Z, pobierz przykłady 7Z, darmowe pliki testowe 7Z, pliki archive 7Z, test ekstrakcji 7Z, test dekompresji 7Z, pliki testowe zarządzania archiwami, przykłady kompresji plików'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe 7Z - Pobierz pliki testowe 7Z Archive do narzędzi ekstrakcji',
+          description: 'Pobierz darmowe pliki przykładowe 7Z archive do testowania narzędzi konwersji i ekstrakcji archiwów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstrakcji archiwów 7Z, dekompresji plików 7Z, narzędzi zarządzania archiwami i oprogramowania kompresji plików.'
+        },
+        hero: {
+          title: 'Pliki przykładowe 7Z',
+          description: 'Pobierz darmowe pliki przykładowe 7Z archive do testowania. Różne rozmiary plików dostępne do testowania narzędzi konwersji i ekstrakcji archiwów.'
+        },
+        about_description: 'To są testowe pliki archive 7Z w różnych rozmiarach do celów testowych'
       }
     }
   }

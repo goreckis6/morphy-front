@@ -1839,6 +1839,310 @@ export const de: SamplePageTranslations = {
           description: 'Laden Sie kostenlose CAF Core Audio Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiokonvertierungstools, CAF-Wiedergabesoftware und Audioverarbeitungsanwendungen zu testen.'
         },
         about_description: 'Dies sind CAF (Core Audio Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      cue: {
+        meta: {
+          title: 'Kostenlose CUE-Beispieldateien herunterladen - CUE Sheet Testdateien für Audio-CD-Brennen | MorphyHub',
+          description: 'Laden Sie kostenlose CUE CUE Sheet-Beispieldateien zum Testen von Audio-CD-Brenntools und CUE Sheet-Parsing-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CUE Sheet-Parsing, Audio-CD-Brennsoftware, CUE-Dateivalidierung und CD-Authoring-Tools.',
+          keywords: 'CUE-Beispieldateien, CUE-Testdateien, CUE-Beispiele herunterladen, kostenlose CUE-Testdateien, CUE Sheet-Dateien, Audio-CD-Brenntest, CUE Sheet-Parser, CD-Authoring-Testdateien, CUE-Dateivalidierung, Audio-Disc-Image-Test'
+        },
+        schema: {
+          name: 'Kostenlose CUE-Beispieldateien - CUE Sheet Testdateien für Audio-CD-Brennen herunterladen',
+          description: 'Laden Sie kostenlose CUE CUE Sheet-Beispieldateien zum Testen von Audio-CD-Brenntools und CUE Sheet-Parsing-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CUE Sheet-Parsing, Audio-CD-Brennsoftware, CUE-Dateivalidierung und CD-Authoring-Tools.'
+        },
+        hero: {
+          title: 'CUE-Beispieldateien',
+          description: 'Laden Sie kostenlose CUE CUE Sheet-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audio-CD-Brenntools und CUE Sheet-Parsing-Tools zu testen.'
+        },
+        about_description: 'Dies sind CUE Sheet-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      m4a: {
+        meta: {
+          title: 'Kostenlose M4A-Beispieldateien herunterladen - M4A Audio Testdateien für Konvertierungstools | MorphyHub',
+          description: 'Laden Sie kostenlose M4A M4A Audio-Beispieldateien zum Testen von M4A-Audiokonvertierung, M4A-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4A-zu-MP3-Konvertern, M4A-zu-WAV-Konvertern, Audioplayern, M4A-Wiedergabekompatibilität und MPEG-4 Audio-Format-Support.',
+          keywords: 'M4A-Beispieldateien, M4A-Testdateien, M4A-Beispiele herunterladen, kostenlose M4A-Testdateien, M4A-Audiodateien, M4A-zu-MP3-Konverter, M4A-zu-WAV-Konverter, Audioplayer-Testdateien, M4A-Wiedergabetest, Audiokonvertierungsbeispiele, MPEG-4 Audio-Format-Test'
+        },
+        schema: {
+          name: 'Kostenlose M4A-Beispieldateien - M4A Audio Testdateien für Konvertierungstools herunterladen',
+          description: 'Laden Sie kostenlose M4A M4A Audio-Beispieldateien zum Testen von M4A-Audiokonvertierung, M4A-Wiedergabe, Audioverarbeitungstools und Multimedia-Software herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von M4A-zu-MP3-Konvertern, M4A-zu-WAV-Konvertern, Audioplayern, M4A-Wiedergabekompatibilität und MPEG-4 Audio-Format-Support.'
+        },
+        hero: {
+          title: 'M4A-Beispieldateien',
+          description: 'Laden Sie kostenlose M4A M4A Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre M4A-Audiokonvertierung, M4A-Wiedergabe und Audioverarbeitungstools zu testen.'
+        },
+        about_description: 'Dies sind M4A-Audio-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      midi: {
+        meta: {
+          title: 'Kostenlose MIDI-Beispieldateien herunterladen - MIDI Music Testdateien für Musiksequenzierung | MorphyHub',
+          description: 'Laden Sie kostenlose MIDI MIDI Music-Beispieldateien zum Testen von MIDI-Wiedergabe, MIDI-Konvertierung, Musiksequenzierungstools und digitalen Audio-Workstations herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MIDI-zu-MP3-Konvertern, MIDI-zu-WAV-Konvertern, MIDI-Sequenzern, Musikproduktionssoftware und Musical Instrument Digital Interface Format-Support.',
+          keywords: 'MIDI-Beispieldateien, MIDI-Testdateien, MIDI-Beispiele herunterladen, kostenlose MIDI-Testdateien, MIDI-Musikdateien, MIDI-zu-MP3-Konverter, MIDI-zu-WAV-Konverter, MIDI-Sequenzer-Test, Musikproduktions-Testdateien, MIDI-Wiedergabetest, Musiksequenzierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose MIDI-Beispieldateien - MIDI Music Testdateien für Musiksequenzierung herunterladen',
+          description: 'Laden Sie kostenlose MIDI MIDI Music-Beispieldateien zum Testen von MIDI-Wiedergabe, MIDI-Konvertierung, Musiksequenzierungstools und digitalen Audio-Workstations herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von MIDI-zu-MP3-Konvertern, MIDI-zu-WAV-Konvertern, MIDI-Sequenzern, Musikproduktionssoftware und Musical Instrument Digital Interface Format-Support.'
+        },
+        hero: {
+          title: 'MIDI-Beispieldateien',
+          description: 'Laden Sie kostenlose MIDI MIDI Music-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre MIDI-Wiedergabe, MIDI-Konvertierung und Musiksequenzierungstools zu testen.'
+        },
+        about_description: 'Dies sind MIDI-Musik-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      ace: {
+        meta: {
+          title: 'Kostenlose ACE-Beispieldateien herunterladen - ACE Archiv Testdateien für Extraktionstools | MorphyHub',
+          description: 'Laden Sie kostenlose ACE-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ACE-Archivextraktion, ACE-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.',
+          keywords: 'ACE-Beispieldateien, ACE-Testdateien, ACE-Beispiele herunterladen, kostenlose ACE-Testdateien, ACE-Archivdateien, ACE-Extraktionstest, ACE-Dekomprimierungstest, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose ACE-Beispieldateien - ACE Archiv Testdateien für Extraktionstools herunterladen',
+          description: 'Laden Sie kostenlose ACE-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ACE-Archivextraktion, ACE-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.'
+        },
+        hero: {
+          title: 'ACE-Beispieldateien',
+          description: 'Laden Sie kostenlose ACE-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archivextraktions- und Komprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind ACE-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      arj: {
+        meta: {
+          title: 'Kostenlose ARJ-Beispieldateien herunterladen - ARJ Archiv Testdateien für Extraktionstools | MorphyHub',
+          description: 'Laden Sie kostenlose ARJ-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ARJ-Archivextraktion, ARJ-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.',
+          keywords: 'ARJ-Beispieldateien, ARJ-Testdateien, ARJ-Beispiele herunterladen, kostenlose ARJ-Testdateien, ARJ-Archivdateien, ARJ-Extraktionstest, ARJ-Dekomprimierungstest, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose ARJ-Beispieldateien - ARJ Archiv Testdateien für Extraktionstools herunterladen',
+          description: 'Laden Sie kostenlose ARJ-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ARJ-Archivextraktion, ARJ-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.'
+        },
+        hero: {
+          title: 'ARJ-Beispieldateien',
+          description: 'Laden Sie kostenlose ARJ-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archivextraktions- und Komprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind ARJ-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      bz2: {
+        meta: {
+          title: 'Kostenlose BZ2-Beispieldateien herunterladen - BZ2 Komprimierte Archiv Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose BZ2 bzip2-komprimierte Archiv-Beispieldateien zum Testen von Archivdekomprimierungs- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BZ2-Archivdekompression, BZ2-Dateiextraktion, bzip2-Komprimierungstools und Archivverwaltungssoftware.',
+          keywords: 'BZ2-Beispieldateien, BZ2-Testdateien, BZ2-Beispiele herunterladen, kostenlose BZ2-Testdateien, BZ2-komprimierte Dateien, BZ2-Dekomprimierungstest, bzip2-Komprimierungstest, Archivextraktions-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose BZ2-Beispieldateien - BZ2 Komprimierte Archiv Testdateien herunterladen',
+          description: 'Laden Sie kostenlose BZ2 bzip2-komprimierte Archiv-Beispieldateien zum Testen von Archivdekomprimierungs- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BZ2-Archivdekompression, BZ2-Dateiextraktion, bzip2-Komprimierungstools und Archivverwaltungssoftware.'
+        },
+        hero: {
+          title: 'BZ2-Beispieldateien',
+          description: 'Laden Sie kostenlose BZ2 bzip2-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archivdekomprimierungs- und Komprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind BZ2-komprimierte Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      gz: {
+        meta: {
+          title: 'Kostenlose GZ-Beispieldateien herunterladen - GZ Gzip Komprimierte Archiv Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose GZ gzip-komprimierte Archiv-Beispieldateien zum Testen von gzip-Dekomprimierung, Archivextraktion und Dateikomprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GZ-Archivdekompression, GZ-Dateiextraktion, gzip-Komprimierungstools und Archivverwaltungssoftware.',
+          keywords: 'GZ-Beispieldateien, GZ-Testdateien, GZ-Beispiele herunterladen, kostenlose GZ-Testdateien, GZ-komprimierte Dateien, GZ-Dekomprimierungstest, gzip-Komprimierungstest, Archivextraktions-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose GZ-Beispieldateien - GZ Gzip Komprimierte Archiv Testdateien herunterladen',
+          description: 'Laden Sie kostenlose GZ gzip-komprimierte Archiv-Beispieldateien zum Testen von gzip-Dekomprimierung, Archivextraktion und Dateikomprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GZ-Archivdekompression, GZ-Dateiextraktion, gzip-Komprimierungstools und Archivverwaltungssoftware.'
+        },
+        hero: {
+          title: 'GZ-Beispieldateien',
+          description: 'Laden Sie kostenlose GZ gzip-komprimierte Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre gzip-Dekomprimierung, Archivextraktion und Dateikomprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind GZ gzip-komprimierte Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      cab: {
+        meta: {
+          title: 'Kostenlose CAB-Beispieldateien herunterladen - CAB Windows Cabinet Archiv Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose CAB Windows Cabinet-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAB-Archivextraktion, CAB-Dateidekompression, Windows Cabinet-Archiv-Tools und Archivverwaltungssoftware.',
+          keywords: 'CAB-Beispieldateien, CAB-Testdateien, CAB-Beispiele herunterladen, kostenlose CAB-Testdateien, CAB-Archivdateien, CAB-Extraktionstest, Windows Cabinet-Archiv-Test, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose CAB-Beispieldateien - CAB Windows Cabinet Archiv Testdateien herunterladen',
+          description: 'Laden Sie kostenlose CAB Windows Cabinet-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAB-Archivextraktion, CAB-Dateidekompression, Windows Cabinet-Archiv-Tools und Archivverwaltungssoftware.'
+        },
+        hero: {
+          title: 'CAB-Beispieldateien',
+          description: 'Laden Sie kostenlose CAB Windows Cabinet-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archivextraktions- und Komprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind CAB Windows Cabinet-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      cpio: {
+        meta: {
+          title: 'Kostenlose CPIO-Beispieldateien herunterladen - CPIO Archiv Testdateien für Extraktionstools | MorphyHub',
+          description: 'Laden Sie kostenlose CPIO-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CPIO-Archivextraktion, CPIO-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.',
+          keywords: 'CPIO-Beispieldateien, CPIO-Testdateien, CPIO-Beispiele herunterladen, kostenlose CPIO-Testdateien, CPIO-Archivdateien, CPIO-Extraktionstest, CPIO-Dekomprimierungstest, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose CPIO-Beispieldateien - CPIO Archiv Testdateien für Extraktionstools herunterladen',
+          description: 'Laden Sie kostenlose CPIO-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CPIO-Archivextraktion, CPIO-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.'
+        },
+        hero: {
+          title: 'CPIO-Beispieldateien',
+          description: 'Laden Sie kostenlose CPIO-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archivextraktions- und Komprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind CPIO-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      zip: {
+        meta: {
+          title: 'Kostenlose ZIP-Beispieldateien herunterladen - ZIP Archiv Testdateien für Extraktionstools | MorphyHub',
+          description: 'Laden Sie kostenlose ZIP-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ZIP-Archivextraktion, ZIP-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.',
+          keywords: 'ZIP-Beispieldateien, ZIP-Testdateien, ZIP-Beispiele herunterladen, kostenlose ZIP-Testdateien, ZIP-Archivdateien, ZIP-Extraktionstest, ZIP-Dekomprimierungstest, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose ZIP-Beispieldateien - ZIP Archiv Testdateien für Extraktionstools herunterladen',
+          description: 'Laden Sie kostenlose ZIP-Archiv-Beispieldateien zum Testen von Archivextraktions- und Komprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ZIP-Archivextraktion, ZIP-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.'
+        },
+        hero: {
+          title: 'ZIP-Beispieldateien',
+          description: 'Laden Sie kostenlose ZIP-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Archivextraktions- und Komprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind ZIP-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      dmg: {
+        meta: {
+          title: 'Kostenlose DMG-Beispieldateien herunterladen - DMG macOS Disk Image Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose DMG macOS Disk Image-Beispieldateien zum Testen von Disk Image-Mounting- und DMG-Extraktionstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DMG-Disk Image-Mounting, DMG-Dateiextraktion, macOS Disk Image-Tools und Disk Image-Verarbeitungssoftware.',
+          keywords: 'DMG-Beispieldateien, DMG-Testdateien, DMG-Beispiele herunterladen, kostenlose DMG-Testdateien, DMG-Disk Image-Dateien, DMG-Mounting-Test, macOS Disk Image-Test, Disk Image-Extraktions-Testdateien, Disk Image-Verarbeitungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose DMG-Beispieldateien - DMG macOS Disk Image Testdateien herunterladen',
+          description: 'Laden Sie kostenlose DMG macOS Disk Image-Beispieldateien zum Testen von Disk Image-Mounting- und DMG-Extraktionstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von DMG-Disk Image-Mounting, DMG-Dateiextraktion, macOS Disk Image-Tools und Disk Image-Verarbeitungssoftware.'
+        },
+        hero: {
+          title: 'DMG-Beispieldateien',
+          description: 'Laden Sie kostenlose DMG macOS Disk Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Disk Image-Mounting- und DMG-Extraktionstools zu testen.'
+        },
+        about_description: 'Dies sind DMG macOS Disk Image-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      img: {
+        meta: {
+          title: 'Kostenlose IMG-Beispieldateien herunterladen - IMG Disk Image Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose IMG Disk Image-Beispieldateien zum Testen von Disk Image-Mounting, IMG-Extraktion und Disk Image-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von IMG-Disk Image-Mounting, IMG-Dateiextraktion, Disk Image-Tools und Disk Image-Verarbeitungssoftware.',
+          keywords: 'IMG-Beispieldateien, IMG-Testdateien, IMG-Beispiele herunterladen, kostenlose IMG-Testdateien, IMG-Disk Image-Dateien, IMG-Mounting-Test, Disk Image-Extraktions-Test, Disk Image-Verarbeitungs-Testdateien, Disk Image-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose IMG-Beispieldateien - IMG Disk Image Testdateien herunterladen',
+          description: 'Laden Sie kostenlose IMG Disk Image-Beispieldateien zum Testen von Disk Image-Mounting, IMG-Extraktion und Disk Image-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von IMG-Disk Image-Mounting, IMG-Dateiextraktion, Disk Image-Tools und Disk Image-Verarbeitungssoftware.'
+        },
+        hero: {
+          title: 'IMG-Beispieldateien',
+          description: 'Laden Sie kostenlose IMG Disk Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Disk Image-Mounting-, IMG-Extraktions- und Disk Image-Verarbeitungstools zu testen.'
+        },
+        about_description: 'Dies sind IMG Disk Image-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      iso: {
+        meta: {
+          title: 'Kostenlose ISO-Beispieldateien herunterladen - ISO Disk Image Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose ISO ISO Disk Image-Beispieldateien zum Testen von ISO Disk Image-Mounting, ISO-Extraktion und Disk Image-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ISO Disk Image-Mounting, ISO-Dateiextraktion, Disk Image-Tools und Disk Image-Verarbeitungssoftware.',
+          keywords: 'ISO-Beispieldateien, ISO-Testdateien, ISO-Beispiele herunterladen, kostenlose ISO-Testdateien, ISO-Disk Image-Dateien, ISO-Mounting-Test, ISO-Extraktions-Test, Disk Image-Verarbeitungs-Testdateien, Disk Image-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose ISO-Beispieldateien - ISO Disk Image Testdateien herunterladen',
+          description: 'Laden Sie kostenlose ISO ISO Disk Image-Beispieldateien zum Testen von ISO Disk Image-Mounting, ISO-Extraktion und Disk Image-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ISO Disk Image-Mounting, ISO-Dateiextraktion, Disk Image-Tools und Disk Image-Verarbeitungssoftware.'
+        },
+        hero: {
+          title: 'ISO-Beispieldateien',
+          description: 'Laden Sie kostenlose ISO ISO Disk Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre ISO Disk Image-Mounting-, ISO-Extraktions- und Disk Image-Verarbeitungstools zu testen.'
+        },
+        about_description: 'Dies sind ISO Disk Image-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      kmz: {
+        meta: {
+          title: 'Kostenlose KMZ-Beispieldateien herunterladen - KMZ Komprimierte KML Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose KMZ komprimierte Keyhole Markup Language-Beispieldateien zum Testen von KMZ-Extraktionstools, geografischer Datenverarbeitung und Google Earth-Integrationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von KMZ-Dateiextraktion, KMZ-zu-KML-Konvertierung, Google Earth-Kompatibilität, geografischer Datenverarbeitung und Kartierungssoftware.',
+          keywords: 'KMZ-Beispieldateien, KMZ-Testdateien, KMZ-Beispiele herunterladen, kostenlose KMZ-Testdateien, KMZ-komprimierte Dateien, KMZ-Extraktionstest, Google Earth-Testdateien, geografische Datenverarbeitungs-Test, Kartierungssoftware-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose KMZ-Beispieldateien - KMZ Komprimierte KML Testdateien herunterladen',
+          description: 'Laden Sie kostenlose KMZ komprimierte Keyhole Markup Language-Beispieldateien zum Testen von KMZ-Extraktionstools, geografischer Datenverarbeitung und Google Earth-Integrationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von KMZ-Dateiextraktion, KMZ-zu-KML-Konvertierung, Google Earth-Kompatibilität, geografischer Datenverarbeitung und Kartierungssoftware.'
+        },
+        hero: {
+          title: 'KMZ-Beispieldateien',
+          description: 'Laden Sie kostenlose KMZ komprimierte Keyhole Markup Language-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre KMZ-Extraktionstools, geografische Datenverarbeitung und Google Earth-Integrationstools zu testen.'
+        },
+        about_description: 'Dies sind KMZ komprimierte Keyhole Markup Language-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      laz: {
+        meta: {
+          title: 'Kostenlose LAZ-Beispieldateien herunterladen - LAZ Komprimierte LiDAR Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose LAZ komprimierte LiDAR Point Cloud Data-Beispieldateien zum Testen von LAZ-Extraktionstools, Point Cloud-Verarbeitung und 3D-Kartierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LAZ-Dateiextraktion, LAZ-zu-LAS-Konvertierung, LiDAR Point Cloud-Verarbeitung, 3D-Kartierungssoftware und geografische Datenanalysetools.',
+          keywords: 'LAZ-Beispieldateien, LAZ-Testdateien, LAZ-Beispiele herunterladen, kostenlose LAZ-Testdateien, LAZ-komprimierte Dateien, LAZ-Extraktionstest, LiDAR Point Cloud-Test, 3D-Kartierungs-Testdateien, geografische Datenanalyse-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose LAZ-Beispieldateien - LAZ Komprimierte LiDAR Testdateien herunterladen',
+          description: 'Laden Sie kostenlose LAZ komprimierte LiDAR Point Cloud Data-Beispieldateien zum Testen von LAZ-Extraktionstools, Point Cloud-Verarbeitung und 3D-Kartierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LAZ-Dateiextraktion, LAZ-zu-LAS-Konvertierung, LiDAR Point Cloud-Verarbeitung, 3D-Kartierungssoftware und geografische Datenanalysetools.'
+        },
+        hero: {
+          title: 'LAZ-Beispieldateien',
+          description: 'Laden Sie kostenlose LAZ komprimierte LiDAR Point Cloud Data-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LAZ-Extraktionstools, Point Cloud-Verarbeitung und 3D-Kartierungstools zu testen.'
+        },
+        about_description: 'Dies sind LAZ komprimierte LiDAR Point Cloud Data-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      lha: {
+        meta: {
+          title: 'Kostenlose LHA-Beispieldateien herunterladen - LHA Archiv Testdateien für Extraktionstools | MorphyHub',
+          description: 'Laden Sie kostenlose LHA LHA-Archiv-Beispieldateien zum Testen von LHA-Extraktionstools, Archivdekompression und Dateiarchivierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LHA-Archivextraktion, LHA-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.',
+          keywords: 'LHA-Beispieldateien, LHA-Testdateien, LHA-Beispiele herunterladen, kostenlose LHA-Testdateien, LHA-Archivdateien, LHA-Extraktionstest, LHA-Dekomprimierungstest, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose LHA-Beispieldateien - LHA Archiv Testdateien für Extraktionstools herunterladen',
+          description: 'Laden Sie kostenlose LHA LHA-Archiv-Beispieldateien zum Testen von LHA-Extraktionstools, Archivdekompression und Dateiarchivierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LHA-Archivextraktion, LHA-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.'
+        },
+        hero: {
+          title: 'LHA-Beispieldateien',
+          description: 'Laden Sie kostenlose LHA LHA-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LHA-Extraktionstools, Archivdekompression und Dateiarchivierungstools zu testen.'
+        },
+        about_description: 'Dies sind LHA-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      lzh: {
+        meta: {
+          title: 'Kostenlose LZH-Beispieldateien herunterladen - LZH Archiv Testdateien für Extraktionstools | MorphyHub',
+          description: 'Laden Sie kostenlose LZH LZH-Archiv-Beispieldateien zum Testen von LZH-Extraktionstools, Archivdekompression und Dateiarchivierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZH-Archivextraktion, LZH-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.',
+          keywords: 'LZH-Beispieldateien, LZH-Testdateien, LZH-Beispiele herunterladen, kostenlose LZH-Testdateien, LZH-Archivdateien, LZH-Extraktionstest, LZH-Dekomprimierungstest, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose LZH-Beispieldateien - LZH Archiv Testdateien für Extraktionstools herunterladen',
+          description: 'Laden Sie kostenlose LZH LZH-Archiv-Beispieldateien zum Testen von LZH-Extraktionstools, Archivdekompression und Dateiarchivierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZH-Archivextraktion, LZH-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.'
+        },
+        hero: {
+          title: 'LZH-Beispieldateien',
+          description: 'Laden Sie kostenlose LZH LZH-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LZH-Extraktionstools, Archivdekompression und Dateiarchivierungstools zu testen.'
+        },
+        about_description: 'Dies sind LZH-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      lzma: {
+        meta: {
+          title: 'Kostenlose LZMA-Beispieldateien herunterladen - LZMA Komprimierte Archiv Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose LZMA LZMA-komprimierte Beispieldateien zum Testen von LZMA-Dekomprimierungstools, Archivextraktion und Dateikomprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZMA-Archivdekompression, LZMA-Dateiextraktion, LZMA-Komprimierungstools und Archivverwaltungssoftware.',
+          keywords: 'LZMA-Beispieldateien, LZMA-Testdateien, LZMA-Beispiele herunterladen, kostenlose LZMA-Testdateien, LZMA-komprimierte Dateien, LZMA-Dekomprimierungstest, LZMA-Komprimierungstest, Archivextraktions-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose LZMA-Beispieldateien - LZMA Komprimierte Archiv Testdateien herunterladen',
+          description: 'Laden Sie kostenlose LZMA LZMA-komprimierte Beispieldateien zum Testen von LZMA-Dekomprimierungstools, Archivextraktion und Dateikomprimierungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LZMA-Archivdekompression, LZMA-Dateiextraktion, LZMA-Komprimierungstools und Archivverwaltungssoftware.'
+        },
+        hero: {
+          title: 'LZMA-Beispieldateien',
+          description: 'Laden Sie kostenlose LZMA LZMA-komprimierte Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre LZMA-Dekomprimierungstools, Archivextraktion und Dateikomprimierungstools zu testen.'
+        },
+        about_description: 'Dies sind LZMA-komprimierte Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      '7z': {
+        meta: {
+          title: 'Kostenlose 7Z-Beispieldateien herunterladen - 7Z Archiv Testdateien für Extraktionstools | MorphyHub',
+          description: 'Laden Sie kostenlose 7Z-Archiv-Beispieldateien zum Testen von Konvertierungs- und Extraktionstools für Archive herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 7Z-Archivextraktion, 7Z-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.',
+          keywords: '7Z-Beispieldateien, 7Z-Testdateien, 7Z-Beispiele herunterladen, kostenlose 7Z-Testdateien, 7Z-Archivdateien, 7Z-Extraktionstest, 7Z-Dekomprimierungstest, Archivverwaltungs-Testdateien, Dateikomprimierungsbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose 7Z-Beispieldateien - 7Z Archiv Testdateien für Extraktionstools herunterladen',
+          description: 'Laden Sie kostenlose 7Z-Archiv-Beispieldateien zum Testen von Konvertierungs- und Extraktionstools für Archive herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 7Z-Archivextraktion, 7Z-Dateidekompression, Archivverwaltungstools und Dateikomprimierungssoftware.'
+        },
+        hero: {
+          title: '7Z-Beispieldateien',
+          description: 'Laden Sie kostenlose 7Z-Archiv-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Konvertierungs- und Extraktionstools für Archive zu testen.'
+        },
+        about_description: 'Dies sind 7Z-Archiv-Testdateien in verschiedenen Größen für Testzwecke'
       }
     }
   }

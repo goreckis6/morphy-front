@@ -1839,6 +1839,310 @@ export const id: SamplePageTranslations = {
           description: 'Unduh file sampel CAF Core Audio Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi audio, perangkat lunak pemutaran CAF, dan aplikasi pemrosesan audio.'
         },
         about_description: 'Ini adalah file uji CAF (Core Audio Format) audio dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      cue: {
+        meta: {
+          title: 'Unduh File Sampel CUE Gratis - File Uji CUE Sheet untuk Pembakaran CD Audio | MorphyHub',
+          description: 'Unduh file sampel CUE CUE sheet gratis untuk menguji alat pembakaran CD audio dan alat parsing CUE sheet. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji parsing CUE sheet, perangkat lunak pembakaran CD audio, validasi file CUE, dan alat pembuatan CD.',
+          keywords: 'file sampel CUE, file uji CUE, unduh contoh CUE, file uji CUE gratis, file CUE sheet, uji pembakaran CD audio, parser CUE sheet, file uji pembuatan CD, validasi file CUE, uji gambar disk audio'
+        },
+        schema: {
+          name: 'File Sampel CUE Gratis - Unduh File Uji CUE Sheet untuk Pembakaran CD Audio',
+          description: 'Unduh file sampel CUE CUE sheet gratis untuk menguji alat pembakaran CD audio dan alat parsing CUE sheet. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji parsing CUE sheet, perangkat lunak pembakaran CD audio, validasi file CUE, dan alat pembuatan CD.'
+        },
+        hero: {
+          title: 'File Sampel CUE',
+          description: 'Unduh file sampel CUE CUE sheet gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pembakaran CD audio dan alat parsing CUE sheet.'
+        },
+        about_description: 'Ini adalah file uji CUE sheet dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      m4a: {
+        meta: {
+          title: 'Unduh File Sampel M4A Gratis - File Uji M4A Audio untuk Alat Konversi | MorphyHub',
+          description: 'Unduh file sampel M4A M4A audio gratis untuk menguji konversi audio M4A, pemutaran M4A, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter M4A ke MP3, konverter M4A ke WAV, pemutar audio, kompatibilitas pemutaran M4A, dan dukungan format audio MPEG-4.',
+          keywords: 'file sampel M4A, file uji M4A, unduh contoh M4A, file uji M4A gratis, file audio M4A, konverter M4A ke MP3, konverter M4A ke WAV, file uji pemutar audio, uji pemutaran M4A, contoh konversi audio, uji format audio MPEG-4'
+        },
+        schema: {
+          name: 'File Sampel M4A Gratis - Unduh File Uji M4A Audio untuk Alat Konversi',
+          description: 'Unduh file sampel M4A M4A audio gratis untuk menguji konversi audio M4A, pemutaran M4A, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter M4A ke MP3, konverter M4A ke WAV, pemutar audio, kompatibilitas pemutaran M4A, dan dukungan format audio MPEG-4.'
+        },
+        hero: {
+          title: 'File Sampel M4A',
+          description: 'Unduh file sampel M4A M4A audio gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji konversi audio M4A, pemutaran M4A, dan alat pemrosesan audio.'
+        },
+        about_description: 'Ini adalah file uji audio M4A dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      midi: {
+        meta: {
+          title: 'Unduh File Sampel MIDI Gratis - File Uji MIDI Music untuk Sequencing Musik | MorphyHub',
+          description: 'Unduh file sampel MIDI MIDI music gratis untuk menguji pemutaran MIDI, konversi MIDI, alat sequencing musik, dan stasiun kerja audio digital. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter MIDI ke MP3, konverter MIDI ke WAV, sequencer MIDI, perangkat lunak produksi musik, dan dukungan format Musical Instrument Digital Interface.',
+          keywords: 'file sampel MIDI, file uji MIDI, unduh contoh MIDI, file uji MIDI gratis, file music MIDI, konverter MIDI ke MP3, konverter MIDI ke WAV, uji sequencer MIDI, file uji produksi musik, uji pemutaran MIDI, contoh sequencing musik'
+        },
+        schema: {
+          name: 'File Sampel MIDI Gratis - Unduh File Uji MIDI Music untuk Sequencing Musik',
+          description: 'Unduh file sampel MIDI MIDI music gratis untuk menguji pemutaran MIDI, konversi MIDI, alat sequencing musik, dan stasiun kerja audio digital. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter MIDI ke MP3, konverter MIDI ke WAV, sequencer MIDI, perangkat lunak produksi musik, dan dukungan format Musical Instrument Digital Interface.'
+        },
+        hero: {
+          title: 'File Sampel MIDI',
+          description: 'Unduh file sampel MIDI MIDI music gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran MIDI, konversi MIDI, dan alat sequencing musik.'
+        },
+        about_description: 'Ini adalah file uji music MIDI dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ace: {
+        meta: {
+          title: 'Unduh File Sampel ACE Gratis - File Uji ACE Archive untuk Alat Ekstraksi | MorphyHub',
+          description: 'Unduh file sampel ACE archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ACE, dekompresi file ACE, alat manajemen arsip, dan perangkat lunak kompresi file.',
+          keywords: 'file sampel ACE, file uji ACE, unduh contoh ACE, file uji ACE gratis, file archive ACE, uji ekstraksi ACE, uji dekompresi ACE, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel ACE Gratis - Unduh File Uji ACE Archive untuk Alat Ekstraksi',
+          description: 'Unduh file sampel ACE archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ACE, dekompresi file ACE, alat manajemen arsip, dan perangkat lunak kompresi file.'
+        },
+        hero: {
+          title: 'File Sampel ACE',
+          description: 'Unduh file sampel ACE archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi dan kompresi arsip.'
+        },
+        about_description: 'Ini adalah file uji archive ACE dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      arj: {
+        meta: {
+          title: 'Unduh File Sampel ARJ Gratis - File Uji ARJ Archive untuk Alat Ekstraksi | MorphyHub',
+          description: 'Unduh file sampel ARJ archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ARJ, dekompresi file ARJ, alat manajemen arsip, dan perangkat lunak kompresi file.',
+          keywords: 'file sampel ARJ, file uji ARJ, unduh contoh ARJ, file uji ARJ gratis, file archive ARJ, uji ekstraksi ARJ, uji dekompresi ARJ, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel ARJ Gratis - Unduh File Uji ARJ Archive untuk Alat Ekstraksi',
+          description: 'Unduh file sampel ARJ archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ARJ, dekompresi file ARJ, alat manajemen arsip, dan perangkat lunak kompresi file.'
+        },
+        hero: {
+          title: 'File Sampel ARJ',
+          description: 'Unduh file sampel ARJ archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi dan kompresi arsip.'
+        },
+        about_description: 'Ini adalah file uji archive ARJ dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      bz2: {
+        meta: {
+          title: 'Unduh File Sampel BZ2 Gratis - File Uji BZ2 Compressed Archive | MorphyHub',
+          description: 'Unduh file sampel BZ2 bzip2 compressed archive gratis untuk menguji alat dekompresi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip BZ2, ekstraksi file BZ2, alat kompresi bzip2, dan perangkat lunak manajemen arsip.',
+          keywords: 'file sampel BZ2, file uji BZ2, unduh contoh BZ2, file uji BZ2 gratis, file terkompresi BZ2, uji dekompresi BZ2, uji kompresi bzip2, file uji ekstraksi arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel BZ2 Gratis - Unduh File Uji BZ2 Compressed Archive',
+          description: 'Unduh file sampel BZ2 bzip2 compressed archive gratis untuk menguji alat dekompresi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip BZ2, ekstraksi file BZ2, alat kompresi bzip2, dan perangkat lunak manajemen arsip.'
+        },
+        hero: {
+          title: 'File Sampel BZ2',
+          description: 'Unduh file sampel BZ2 bzip2 compressed archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat dekompresi dan kompresi arsip.'
+        },
+        about_description: 'Ini adalah file uji compressed archive BZ2 dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      gz: {
+        meta: {
+          title: 'Unduh File Sampel GZ Gratis - File Uji GZ Gzip Compressed Archive | MorphyHub',
+          description: 'Unduh file sampel GZ gzip compressed archive gratis untuk menguji alat dekompresi gzip, ekstraksi arsip, dan kompresi file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip GZ, ekstraksi file GZ, alat kompresi gzip, dan perangkat lunak manajemen arsip.',
+          keywords: 'file sampel GZ, file uji GZ, unduh contoh GZ, file uji GZ gratis, file terkompresi GZ, uji dekompresi GZ, uji kompresi gzip, file uji ekstraksi arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel GZ Gratis - Unduh File Uji GZ Gzip Compressed Archive',
+          description: 'Unduh file sampel GZ gzip compressed archive gratis untuk menguji alat dekompresi gzip, ekstraksi arsip, dan kompresi file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip GZ, ekstraksi file GZ, alat kompresi gzip, dan perangkat lunak manajemen arsip.'
+        },
+        hero: {
+          title: 'File Sampel GZ',
+          description: 'Unduh file sampel GZ gzip compressed archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat dekompresi gzip, ekstraksi arsip, dan kompresi file.'
+        },
+        about_description: 'Ini adalah file uji gzip compressed archive GZ dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      cab: {
+        meta: {
+          title: 'Unduh File Sampel CAB Gratis - File Uji CAB Windows Cabinet Archive | MorphyHub',
+          description: 'Unduh file sampel CAB Windows cabinet archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip CAB, dekompresi file CAB, alat Windows cabinet archive, dan perangkat lunak manajemen arsip.',
+          keywords: 'file sampel CAB, file uji CAB, unduh contoh CAB, file uji CAB gratis, file archive CAB, uji ekstraksi CAB, uji Windows cabinet archive, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel CAB Gratis - Unduh File Uji CAB Windows Cabinet Archive',
+          description: 'Unduh file sampel CAB Windows cabinet archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip CAB, dekompresi file CAB, alat Windows cabinet archive, dan perangkat lunak manajemen arsip.'
+        },
+        hero: {
+          title: 'File Sampel CAB',
+          description: 'Unduh file sampel CAB Windows cabinet archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi dan kompresi arsip.'
+        },
+        about_description: 'Ini adalah file uji Windows cabinet archive CAB dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      cpio: {
+        meta: {
+          title: 'Unduh File Sampel CPIO Gratis - File Uji CPIO Archive untuk Alat Ekstraksi | MorphyHub',
+          description: 'Unduh file sampel CPIO archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip CPIO, dekompresi file CPIO, alat manajemen arsip, dan perangkat lunak kompresi file.',
+          keywords: 'file sampel CPIO, file uji CPIO, unduh contoh CPIO, file uji CPIO gratis, file archive CPIO, uji ekstraksi CPIO, uji dekompresi CPIO, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel CPIO Gratis - Unduh File Uji CPIO Archive untuk Alat Ekstraksi',
+          description: 'Unduh file sampel CPIO archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip CPIO, dekompresi file CPIO, alat manajemen arsip, dan perangkat lunak kompresi file.'
+        },
+        hero: {
+          title: 'File Sampel CPIO',
+          description: 'Unduh file sampel CPIO archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi dan kompresi arsip.'
+        },
+        about_description: 'Ini adalah file uji archive CPIO dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      zip: {
+        meta: {
+          title: 'Unduh File Sampel ZIP Gratis - File Uji ZIP Archive untuk Alat Ekstraksi | MorphyHub',
+          description: 'Unduh file sampel ZIP archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ZIP, dekompresi file ZIP, alat manajemen arsip, dan perangkat lunak kompresi file.',
+          keywords: 'file sampel ZIP, file uji ZIP, unduh contoh ZIP, file uji ZIP gratis, file archive ZIP, uji ekstraksi ZIP, uji dekompresi ZIP, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel ZIP Gratis - Unduh File Uji ZIP Archive untuk Alat Ekstraksi',
+          description: 'Unduh file sampel ZIP archive gratis untuk menguji alat ekstraksi dan kompresi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip ZIP, dekompresi file ZIP, alat manajemen arsip, dan perangkat lunak kompresi file.'
+        },
+        hero: {
+          title: 'File Sampel ZIP',
+          description: 'Unduh file sampel ZIP archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi dan kompresi arsip.'
+        },
+        about_description: 'Ini adalah file uji archive ZIP dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      dmg: {
+        meta: {
+          title: 'Unduh File Sampel DMG Gratis - File Uji DMG macOS Disk Image | MorphyHub',
+          description: 'Unduh file sampel DMG macOS disk image gratis untuk menguji alat mounting disk image dan ekstraksi DMG. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image DMG, ekstraksi file DMG, alat disk image macOS, dan perangkat lunak pemrosesan disk image.',
+          keywords: 'file sampel DMG, file uji DMG, unduh contoh DMG, file uji DMG gratis, file disk image DMG, uji mounting DMG, uji disk image macOS, file uji ekstraksi disk image, contoh pemrosesan disk image'
+        },
+        schema: {
+          name: 'File Sampel DMG Gratis - Unduh File Uji DMG macOS Disk Image',
+          description: 'Unduh file sampel DMG macOS disk image gratis untuk menguji alat mounting disk image dan ekstraksi DMG. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image DMG, ekstraksi file DMG, alat disk image macOS, dan perangkat lunak pemrosesan disk image.'
+        },
+        hero: {
+          title: 'File Sampel DMG',
+          description: 'Unduh file sampel DMG macOS disk image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat mounting disk image dan ekstraksi DMG.'
+        },
+        about_description: 'Ini adalah file uji disk image macOS DMG dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      img: {
+        meta: {
+          title: 'Unduh File Sampel IMG Gratis - File Uji IMG Disk Image | MorphyHub',
+          description: 'Unduh file sampel IMG disk image gratis untuk menguji alat mounting disk image, ekstraksi IMG, dan pemrosesan disk image. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image IMG, ekstraksi file IMG, alat disk image, dan perangkat lunak pemrosesan disk image.',
+          keywords: 'file sampel IMG, file uji IMG, unduh contoh IMG, file uji IMG gratis, file disk image IMG, uji mounting IMG, uji ekstraksi disk image, file uji pemrosesan disk image, contoh disk image'
+        },
+        schema: {
+          name: 'File Sampel IMG Gratis - Unduh File Uji IMG Disk Image',
+          description: 'Unduh file sampel IMG disk image gratis untuk menguji alat mounting disk image, ekstraksi IMG, dan pemrosesan disk image. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image IMG, ekstraksi file IMG, alat disk image, dan perangkat lunak pemrosesan disk image.'
+        },
+        hero: {
+          title: 'File Sampel IMG',
+          description: 'Unduh file sampel IMG disk image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat mounting disk image, ekstraksi IMG, dan pemrosesan disk image.'
+        },
+        about_description: 'Ini adalah file uji disk image IMG dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      iso: {
+        meta: {
+          title: 'Unduh File Sampel ISO Gratis - File Uji ISO Disk Image | MorphyHub',
+          description: 'Unduh file sampel ISO ISO disk image gratis untuk menguji alat mounting disk image ISO, ekstraksi ISO, dan pemrosesan disk image. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image ISO, ekstraksi file ISO, alat disk image, dan perangkat lunak pemrosesan disk image.',
+          keywords: 'file sampel ISO, file uji ISO, unduh contoh ISO, file uji ISO gratis, file disk image ISO, uji mounting ISO, uji ekstraksi ISO, file uji pemrosesan disk image, contoh disk image'
+        },
+        schema: {
+          name: 'File Sampel ISO Gratis - Unduh File Uji ISO Disk Image',
+          description: 'Unduh file sampel ISO ISO disk image gratis untuk menguji alat mounting disk image ISO, ekstraksi ISO, dan pemrosesan disk image. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji mounting disk image ISO, ekstraksi file ISO, alat disk image, dan perangkat lunak pemrosesan disk image.'
+        },
+        hero: {
+          title: 'File Sampel ISO',
+          description: 'Unduh file sampel ISO ISO disk image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat mounting disk image ISO, ekstraksi ISO, dan pemrosesan disk image.'
+        },
+        about_description: 'Ini adalah file uji disk image ISO dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      kmz: {
+        meta: {
+          title: 'Unduh File Sampel KMZ Gratis - File Uji KMZ Compressed KML | MorphyHub',
+          description: 'Unduh file sampel KMZ compressed Keyhole Markup Language gratis untuk menguji alat ekstraksi KMZ, pemrosesan data geografis, dan alat integrasi Google Earth. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi file KMZ, konversi KMZ ke KML, kompatibilitas Google Earth, pemrosesan data geografis, dan perangkat lunak pemetaan.',
+          keywords: 'file sampel KMZ, file uji KMZ, unduh contoh KMZ, file uji KMZ gratis, file terkompresi KMZ, uji ekstraksi KMZ, file uji Google Earth, uji pemrosesan data geografis, contoh perangkat lunak pemetaan'
+        },
+        schema: {
+          name: 'File Sampel KMZ Gratis - Unduh File Uji KMZ Compressed KML',
+          description: 'Unduh file sampel KMZ compressed Keyhole Markup Language gratis untuk menguji alat ekstraksi KMZ, pemrosesan data geografis, dan alat integrasi Google Earth. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi file KMZ, konversi KMZ ke KML, kompatibilitas Google Earth, pemrosesan data geografis, dan perangkat lunak pemetaan.'
+        },
+        hero: {
+          title: 'File Sampel KMZ',
+          description: 'Unduh file sampel KMZ compressed Keyhole Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi KMZ, pemrosesan data geografis, dan alat integrasi Google Earth.'
+        },
+        about_description: 'Ini adalah file uji compressed Keyhole Markup Language KMZ dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      laz: {
+        meta: {
+          title: 'Unduh File Sampel LAZ Gratis - File Uji LAZ Compressed LiDAR | MorphyHub',
+          description: 'Unduh file sampel LAZ compressed LiDAR point cloud data gratis untuk menguji alat ekstraksi LAZ, pemrosesan point cloud, dan alat pemetaan 3D. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi file LAZ, konversi LAZ ke LAS, pemrosesan point cloud LiDAR, perangkat lunak pemetaan 3D, dan alat analisis data geografis.',
+          keywords: 'file sampel LAZ, file uji LAZ, unduh contoh LAZ, file uji LAZ gratis, file terkompresi LAZ, uji ekstraksi LAZ, uji point cloud LiDAR, file uji pemetaan 3D, contoh analisis data geografis'
+        },
+        schema: {
+          name: 'File Sampel LAZ Gratis - Unduh File Uji LAZ Compressed LiDAR',
+          description: 'Unduh file sampel LAZ compressed LiDAR point cloud data gratis untuk menguji alat ekstraksi LAZ, pemrosesan point cloud, dan alat pemetaan 3D. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi file LAZ, konversi LAZ ke LAS, pemrosesan point cloud LiDAR, perangkat lunak pemetaan 3D, dan alat analisis data geografis.'
+        },
+        hero: {
+          title: 'File Sampel LAZ',
+          description: 'Unduh file sampel LAZ compressed LiDAR point cloud data gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi LAZ, pemrosesan point cloud, dan alat pemetaan 3D.'
+        },
+        about_description: 'Ini adalah file uji compressed LiDAR point cloud data LAZ dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      lha: {
+        meta: {
+          title: 'Unduh File Sampel LHA Gratis - File Uji LHA Archive untuk Alat Ekstraksi | MorphyHub',
+          description: 'Unduh file sampel LHA LHA archive gratis untuk menguji alat ekstraksi LHA, dekompresi arsip, dan alat pengarsipan file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip LHA, dekompresi file LHA, alat manajemen arsip, dan perangkat lunak kompresi file.',
+          keywords: 'file sampel LHA, file uji LHA, unduh contoh LHA, file uji LHA gratis, file archive LHA, uji ekstraksi LHA, uji dekompresi LHA, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel LHA Gratis - Unduh File Uji LHA Archive untuk Alat Ekstraksi',
+          description: 'Unduh file sampel LHA LHA archive gratis untuk menguji alat ekstraksi LHA, dekompresi arsip, dan alat pengarsipan file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip LHA, dekompresi file LHA, alat manajemen arsip, dan perangkat lunak kompresi file.'
+        },
+        hero: {
+          title: 'File Sampel LHA',
+          description: 'Unduh file sampel LHA LHA archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi LHA, dekompresi arsip, dan alat pengarsipan file.'
+        },
+        about_description: 'Ini adalah file uji archive LHA dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      lzh: {
+        meta: {
+          title: 'Unduh File Sampel LZH Gratis - File Uji LZH Archive untuk Alat Ekstraksi | MorphyHub',
+          description: 'Unduh file sampel LZH LZH archive gratis untuk menguji alat ekstraksi LZH, dekompresi arsip, dan alat pengarsipan file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip LZH, dekompresi file LZH, alat manajemen arsip, dan perangkat lunak kompresi file.',
+          keywords: 'file sampel LZH, file uji LZH, unduh contoh LZH, file uji LZH gratis, file archive LZH, uji ekstraksi LZH, uji dekompresi LZH, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel LZH Gratis - Unduh File Uji LZH Archive untuk Alat Ekstraksi',
+          description: 'Unduh file sampel LZH LZH archive gratis untuk menguji alat ekstraksi LZH, dekompresi arsip, dan alat pengarsipan file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip LZH, dekompresi file LZH, alat manajemen arsip, dan perangkat lunak kompresi file.'
+        },
+        hero: {
+          title: 'File Sampel LZH',
+          description: 'Unduh file sampel LZH LZH archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat ekstraksi LZH, dekompresi arsip, dan alat pengarsipan file.'
+        },
+        about_description: 'Ini adalah file uji archive LZH dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      lzma: {
+        meta: {
+          title: 'Unduh File Sampel LZMA Gratis - File Uji LZMA Compressed Archive | MorphyHub',
+          description: 'Unduh file sampel LZMA LZMA compressed gratis untuk menguji alat dekompresi LZMA, ekstraksi arsip, dan kompresi file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip LZMA, ekstraksi file LZMA, alat kompresi LZMA, dan perangkat lunak manajemen arsip.',
+          keywords: 'file sampel LZMA, file uji LZMA, unduh contoh LZMA, file uji LZMA gratis, file terkompresi LZMA, uji dekompresi LZMA, uji kompresi LZMA, file uji ekstraksi arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel LZMA Gratis - Unduh File Uji LZMA Compressed Archive',
+          description: 'Unduh file sampel LZMA LZMA compressed gratis untuk menguji alat dekompresi LZMA, ekstraksi arsip, dan kompresi file. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji dekompresi arsip LZMA, ekstraksi file LZMA, alat kompresi LZMA, dan perangkat lunak manajemen arsip.'
+        },
+        hero: {
+          title: 'File Sampel LZMA',
+          description: 'Unduh file sampel LZMA LZMA compressed gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat dekompresi LZMA, ekstraksi arsip, dan kompresi file.'
+        },
+        about_description: 'Ini adalah file uji compressed LZMA dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      '7z': {
+        meta: {
+          title: 'Unduh File Sampel 7Z Gratis - File Uji 7Z Archive untuk Alat Ekstraksi | MorphyHub',
+          description: 'Unduh file sampel 7Z archive gratis untuk menguji alat konversi dan ekstraksi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip 7Z, dekompresi file 7Z, alat manajemen arsip, dan perangkat lunak kompresi file.',
+          keywords: 'file sampel 7Z, file uji 7Z, unduh contoh 7Z, file uji 7Z gratis, file archive 7Z, uji ekstraksi 7Z, uji dekompresi 7Z, file uji manajemen arsip, contoh kompresi file'
+        },
+        schema: {
+          name: 'File Sampel 7Z Gratis - Unduh File Uji 7Z Archive untuk Alat Ekstraksi',
+          description: 'Unduh file sampel 7Z archive gratis untuk menguji alat konversi dan ekstraksi arsip. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji ekstraksi arsip 7Z, dekompresi file 7Z, alat manajemen arsip, dan perangkat lunak kompresi file.'
+        },
+        hero: {
+          title: 'File Sampel 7Z',
+          description: 'Unduh file sampel 7Z archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi dan ekstraksi arsip.'
+        },
+        about_description: 'Ini adalah file uji archive 7Z dalam berbagai ukuran untuk keperluan pengujian'
       }
     }
   }

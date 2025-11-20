@@ -1839,6 +1839,310 @@ export const vi: SamplePageTranslations = {
           description: 'Tải xuống tệp mẫu CAF Core Audio Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi âm thanh, phần mềm phát lại CAF và ứng dụng xử lý âm thanh.'
         },
         about_description: 'Đây là các tệp thử nghiệm CAF (Core Audio Format) âm thanh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      cue: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu CUE Miễn Phí - Tệp Kiểm Tra CUE Sheet cho Ghi CD Âm Thanh | MorphyHub',
+          description: 'Tải xuống tệp mẫu CUE CUE sheet miễn phí để kiểm tra công cụ ghi CD âm thanh và phân tích CUE sheet. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phân tích CUE sheet, phần mềm ghi CD âm thanh, xác thực tệp CUE và công cụ tạo CD.',
+          keywords: 'tệp mẫu CUE, tệp kiểm tra CUE, tải xuống ví dụ CUE, tệp kiểm tra CUE miễn phí, tệp CUE sheet, kiểm tra ghi CD âm thanh, trình phân tích CUE sheet, tệp kiểm tra tạo CD, xác thực tệp CUE, kiểm tra hình ảnh đĩa âm thanh'
+        },
+        schema: {
+          name: 'Tệp Mẫu CUE Miễn Phí - Tải Xuống Tệp Kiểm Tra CUE Sheet cho Ghi CD Âm Thanh',
+          description: 'Tải xuống tệp mẫu CUE CUE sheet miễn phí để kiểm tra công cụ ghi CD âm thanh và phân tích CUE sheet. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phân tích CUE sheet, phần mềm ghi CD âm thanh, xác thực tệp CUE và công cụ tạo CD.'
+        },
+        hero: {
+          title: 'Tệp Mẫu CUE',
+          description: 'Tải xuống tệp mẫu CUE CUE sheet miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ ghi CD âm thanh và phân tích CUE sheet.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm CUE sheet với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      m4a: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu M4A Miễn Phí - Tệp Kiểm Tra M4A Audio cho Công Cụ Chuyển Đổi | MorphyHub',
+          description: 'Tải xuống tệp mẫu M4A M4A audio miễn phí để kiểm tra chuyển đổi âm thanh M4A, phát lại M4A, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi M4A sang MP3, bộ chuyển đổi M4A sang WAV, trình phát âm thanh, tương thích phát lại M4A và hỗ trợ định dạng âm thanh MPEG-4.',
+          keywords: 'tệp mẫu M4A, tệp kiểm tra M4A, tải xuống ví dụ M4A, tệp kiểm tra M4A miễn phí, tệp âm thanh M4A, bộ chuyển đổi M4A sang MP3, bộ chuyển đổi M4A sang WAV, tệp kiểm tra trình phát âm thanh, kiểm tra phát lại M4A, ví dụ chuyển đổi âm thanh, kiểm tra định dạng âm thanh MPEG-4'
+        },
+        schema: {
+          name: 'Tệp Mẫu M4A Miễn Phí - Tải Xuống Tệp Kiểm Tra M4A Audio cho Công Cụ Chuyển Đổi',
+          description: 'Tải xuống tệp mẫu M4A M4A audio miễn phí để kiểm tra chuyển đổi âm thanh M4A, phát lại M4A, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi M4A sang MP3, bộ chuyển đổi M4A sang WAV, trình phát âm thanh, tương thích phát lại M4A và hỗ trợ định dạng âm thanh MPEG-4.'
+        },
+        hero: {
+          title: 'Tệp Mẫu M4A',
+          description: 'Tải xuống tệp mẫu M4A M4A audio miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra chuyển đổi âm thanh M4A, phát lại M4A và công cụ xử lý âm thanh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm âm thanh M4A với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      midi: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu MIDI Miễn Phí - Tệp Kiểm Tra MIDI Music cho Sắp Xếp Nhạc | MorphyHub',
+          description: 'Tải xuống tệp mẫu MIDI MIDI music miễn phí để kiểm tra phát lại MIDI, chuyển đổi MIDI, công cụ sắp xếp nhạc và trạm làm việc âm thanh kỹ thuật số. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi MIDI sang MP3, bộ chuyển đổi MIDI sang WAV, trình sắp xếp MIDI, phần mềm sản xuất nhạc và hỗ trợ định dạng Musical Instrument Digital Interface.',
+          keywords: 'tệp mẫu MIDI, tệp kiểm tra MIDI, tải xuống ví dụ MIDI, tệp kiểm tra MIDI miễn phí, tệp nhạc MIDI, bộ chuyển đổi MIDI sang MP3, bộ chuyển đổi MIDI sang WAV, kiểm tra trình sắp xếp MIDI, tệp kiểm tra sản xuất nhạc, kiểm tra phát lại MIDI, ví dụ sắp xếp nhạc'
+        },
+        schema: {
+          name: 'Tệp Mẫu MIDI Miễn Phí - Tải Xuống Tệp Kiểm Tra MIDI Music cho Sắp Xếp Nhạc',
+          description: 'Tải xuống tệp mẫu MIDI MIDI music miễn phí để kiểm tra phát lại MIDI, chuyển đổi MIDI, công cụ sắp xếp nhạc và trạm làm việc âm thanh kỹ thuật số. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi MIDI sang MP3, bộ chuyển đổi MIDI sang WAV, trình sắp xếp MIDI, phần mềm sản xuất nhạc và hỗ trợ định dạng Musical Instrument Digital Interface.'
+        },
+        hero: {
+          title: 'Tệp Mẫu MIDI',
+          description: 'Tải xuống tệp mẫu MIDI MIDI music miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phát lại MIDI, chuyển đổi MIDI và công cụ sắp xếp nhạc.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm nhạc MIDI với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ace: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu ACE Miễn Phí - Tệp Kiểm Tra ACE Archive cho Công Cụ Giải Nén | MorphyHub',
+          description: 'Tải xuống tệp mẫu ACE archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ ACE, giải nén tệp ACE, công cụ quản lý lưu trữ và phần mềm nén tệp.',
+          keywords: 'tệp mẫu ACE, tệp kiểm tra ACE, tải xuống ví dụ ACE, tệp kiểm tra ACE miễn phí, tệp archive ACE, kiểm tra giải nén ACE, kiểm tra giải nén ACE, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu ACE Miễn Phí - Tải Xuống Tệp Kiểm Tra ACE Archive cho Công Cụ Giải Nén',
+          description: 'Tải xuống tệp mẫu ACE archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ ACE, giải nén tệp ACE, công cụ quản lý lưu trữ và phần mềm nén tệp.'
+        },
+        hero: {
+          title: 'Tệp Mẫu ACE',
+          description: 'Tải xuống tệp mẫu ACE archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén và nén lưu trữ.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm archive ACE với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      arj: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu ARJ Miễn Phí - Tệp Kiểm Tra ARJ Archive cho Công Cụ Giải Nén | MorphyHub',
+          description: 'Tải xuống tệp mẫu ARJ archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ ARJ, giải nén tệp ARJ, công cụ quản lý lưu trữ và phần mềm nén tệp.',
+          keywords: 'tệp mẫu ARJ, tệp kiểm tra ARJ, tải xuống ví dụ ARJ, tệp kiểm tra ARJ miễn phí, tệp archive ARJ, kiểm tra giải nén ARJ, kiểm tra giải nén ARJ, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu ARJ Miễn Phí - Tải Xuống Tệp Kiểm Tra ARJ Archive cho Công Cụ Giải Nén',
+          description: 'Tải xuống tệp mẫu ARJ archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ ARJ, giải nén tệp ARJ, công cụ quản lý lưu trữ và phần mềm nén tệp.'
+        },
+        hero: {
+          title: 'Tệp Mẫu ARJ',
+          description: 'Tải xuống tệp mẫu ARJ archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén và nén lưu trữ.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm archive ARJ với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      bz2: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu BZ2 Miễn Phí - Tệp Kiểm Tra BZ2 Compressed Archive | MorphyHub',
+          description: 'Tải xuống tệp mẫu BZ2 bzip2 compressed archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ BZ2, giải nén tệp BZ2, công cụ nén bzip2 và phần mềm quản lý lưu trữ.',
+          keywords: 'tệp mẫu BZ2, tệp kiểm tra BZ2, tải xuống ví dụ BZ2, tệp kiểm tra BZ2 miễn phí, tệp nén BZ2, kiểm tra giải nén BZ2, kiểm tra nén bzip2, tệp kiểm tra giải nén lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu BZ2 Miễn Phí - Tải Xuống Tệp Kiểm Tra BZ2 Compressed Archive',
+          description: 'Tải xuống tệp mẫu BZ2 bzip2 compressed archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ BZ2, giải nén tệp BZ2, công cụ nén bzip2 và phần mềm quản lý lưu trữ.'
+        },
+        hero: {
+          title: 'Tệp Mẫu BZ2',
+          description: 'Tải xuống tệp mẫu BZ2 bzip2 compressed archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén và nén lưu trữ.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm compressed archive BZ2 với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      gz: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu GZ Miễn Phí - Tệp Kiểm Tra GZ Gzip Compressed Archive | MorphyHub',
+          description: 'Tải xuống tệp mẫu GZ gzip compressed archive miễn phí để kiểm tra công cụ giải nén gzip, giải nén lưu trữ và nén tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ GZ, giải nén tệp GZ, công cụ nén gzip và phần mềm quản lý lưu trữ.',
+          keywords: 'tệp mẫu GZ, tệp kiểm tra GZ, tải xuống ví dụ GZ, tệp kiểm tra GZ miễn phí, tệp nén GZ, kiểm tra giải nén GZ, kiểm tra nén gzip, tệp kiểm tra giải nén lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu GZ Miễn Phí - Tải Xuống Tệp Kiểm Tra GZ Gzip Compressed Archive',
+          description: 'Tải xuống tệp mẫu GZ gzip compressed archive miễn phí để kiểm tra công cụ giải nén gzip, giải nén lưu trữ và nén tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ GZ, giải nén tệp GZ, công cụ nén gzip và phần mềm quản lý lưu trữ.'
+        },
+        hero: {
+          title: 'Tệp Mẫu GZ',
+          description: 'Tải xuống tệp mẫu GZ gzip compressed archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén gzip, giải nén lưu trữ và nén tệp.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm gzip compressed archive GZ với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      cab: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu CAB Miễn Phí - Tệp Kiểm Tra CAB Windows Cabinet Archive | MorphyHub',
+          description: 'Tải xuống tệp mẫu CAB Windows cabinet archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ CAB, giải nén tệp CAB, công cụ Windows cabinet archive và phần mềm quản lý lưu trữ.',
+          keywords: 'tệp mẫu CAB, tệp kiểm tra CAB, tải xuống ví dụ CAB, tệp kiểm tra CAB miễn phí, tệp archive CAB, kiểm tra giải nén CAB, kiểm tra Windows cabinet archive, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu CAB Miễn Phí - Tải Xuống Tệp Kiểm Tra CAB Windows Cabinet Archive',
+          description: 'Tải xuống tệp mẫu CAB Windows cabinet archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ CAB, giải nén tệp CAB, công cụ Windows cabinet archive và phần mềm quản lý lưu trữ.'
+        },
+        hero: {
+          title: 'Tệp Mẫu CAB',
+          description: 'Tải xuống tệp mẫu CAB Windows cabinet archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén và nén lưu trữ.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm Windows cabinet archive CAB với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      cpio: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu CPIO Miễn Phí - Tệp Kiểm Tra CPIO Archive cho Công Cụ Giải Nén | MorphyHub',
+          description: 'Tải xuống tệp mẫu CPIO archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ CPIO, giải nén tệp CPIO, công cụ quản lý lưu trữ và phần mềm nén tệp.',
+          keywords: 'tệp mẫu CPIO, tệp kiểm tra CPIO, tải xuống ví dụ CPIO, tệp kiểm tra CPIO miễn phí, tệp archive CPIO, kiểm tra giải nén CPIO, kiểm tra giải nén CPIO, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu CPIO Miễn Phí - Tải Xuống Tệp Kiểm Tra CPIO Archive cho Công Cụ Giải Nén',
+          description: 'Tải xuống tệp mẫu CPIO archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ CPIO, giải nén tệp CPIO, công cụ quản lý lưu trữ và phần mềm nén tệp.'
+        },
+        hero: {
+          title: 'Tệp Mẫu CPIO',
+          description: 'Tải xuống tệp mẫu CPIO archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén và nén lưu trữ.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm archive CPIO với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      zip: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu ZIP Miễn Phí - Tệp Kiểm Tra ZIP Archive cho Công Cụ Giải Nén | MorphyHub',
+          description: 'Tải xuống tệp mẫu ZIP archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ ZIP, giải nén tệp ZIP, công cụ quản lý lưu trữ và phần mềm nén tệp.',
+          keywords: 'tệp mẫu ZIP, tệp kiểm tra ZIP, tải xuống ví dụ ZIP, tệp kiểm tra ZIP miễn phí, tệp archive ZIP, kiểm tra giải nén ZIP, kiểm tra giải nén ZIP, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu ZIP Miễn Phí - Tải Xuống Tệp Kiểm Tra ZIP Archive cho Công Cụ Giải Nén',
+          description: 'Tải xuống tệp mẫu ZIP archive miễn phí để kiểm tra công cụ giải nén và nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ ZIP, giải nén tệp ZIP, công cụ quản lý lưu trữ và phần mềm nén tệp.'
+        },
+        hero: {
+          title: 'Tệp Mẫu ZIP',
+          description: 'Tải xuống tệp mẫu ZIP archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén và nén lưu trữ.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm archive ZIP với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      dmg: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu DMG Miễn Phí - Tệp Kiểm Tra DMG macOS Disk Image | MorphyHub',
+          description: 'Tải xuống tệp mẫu DMG macOS disk image miễn phí để kiểm tra công cụ gắn disk image và giải nén DMG. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra gắn disk image DMG, giải nén tệp DMG, công cụ disk image macOS và phần mềm xử lý disk image.',
+          keywords: 'tệp mẫu DMG, tệp kiểm tra DMG, tải xuống ví dụ DMG, tệp kiểm tra DMG miễn phí, tệp disk image DMG, kiểm tra gắn DMG, kiểm tra disk image macOS, tệp kiểm tra giải nén disk image, ví dụ xử lý disk image'
+        },
+        schema: {
+          name: 'Tệp Mẫu DMG Miễn Phí - Tải Xuống Tệp Kiểm Tra DMG macOS Disk Image',
+          description: 'Tải xuống tệp mẫu DMG macOS disk image miễn phí để kiểm tra công cụ gắn disk image và giải nén DMG. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra gắn disk image DMG, giải nén tệp DMG, công cụ disk image macOS và phần mềm xử lý disk image.'
+        },
+        hero: {
+          title: 'Tệp Mẫu DMG',
+          description: 'Tải xuống tệp mẫu DMG macOS disk image miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ gắn disk image và giải nén DMG.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm disk image macOS DMG với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      img: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu IMG Miễn Phí - Tệp Kiểm Tra IMG Disk Image | MorphyHub',
+          description: 'Tải xuống tệp mẫu IMG disk image miễn phí để kiểm tra công cụ gắn disk image, giải nén IMG và xử lý disk image. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra gắn disk image IMG, giải nén tệp IMG, công cụ disk image và phần mềm xử lý disk image.',
+          keywords: 'tệp mẫu IMG, tệp kiểm tra IMG, tải xuống ví dụ IMG, tệp kiểm tra IMG miễn phí, tệp disk image IMG, kiểm tra gắn IMG, kiểm tra giải nén disk image, tệp kiểm tra xử lý disk image, ví dụ disk image'
+        },
+        schema: {
+          name: 'Tệp Mẫu IMG Miễn Phí - Tải Xuống Tệp Kiểm Tra IMG Disk Image',
+          description: 'Tải xuống tệp mẫu IMG disk image miễn phí để kiểm tra công cụ gắn disk image, giải nén IMG và xử lý disk image. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra gắn disk image IMG, giải nén tệp IMG, công cụ disk image và phần mềm xử lý disk image.'
+        },
+        hero: {
+          title: 'Tệp Mẫu IMG',
+          description: 'Tải xuống tệp mẫu IMG disk image miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ gắn disk image, giải nén IMG và xử lý disk image.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm disk image IMG với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      iso: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu ISO Miễn Phí - Tệp Kiểm Tra ISO Disk Image | MorphyHub',
+          description: 'Tải xuống tệp mẫu ISO ISO disk image miễn phí để kiểm tra công cụ gắn disk image ISO, giải nén ISO và xử lý disk image. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra gắn disk image ISO, giải nén tệp ISO, công cụ disk image và phần mềm xử lý disk image.',
+          keywords: 'tệp mẫu ISO, tệp kiểm tra ISO, tải xuống ví dụ ISO, tệp kiểm tra ISO miễn phí, tệp disk image ISO, kiểm tra gắn ISO, kiểm tra giải nén ISO, tệp kiểm tra xử lý disk image, ví dụ disk image'
+        },
+        schema: {
+          name: 'Tệp Mẫu ISO Miễn Phí - Tải Xuống Tệp Kiểm Tra ISO Disk Image',
+          description: 'Tải xuống tệp mẫu ISO ISO disk image miễn phí để kiểm tra công cụ gắn disk image ISO, giải nén ISO và xử lý disk image. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra gắn disk image ISO, giải nén tệp ISO, công cụ disk image và phần mềm xử lý disk image.'
+        },
+        hero: {
+          title: 'Tệp Mẫu ISO',
+          description: 'Tải xuống tệp mẫu ISO ISO disk image miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ gắn disk image ISO, giải nén ISO và xử lý disk image.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm disk image ISO với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      kmz: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu KMZ Miễn Phí - Tệp Kiểm Tra KMZ Compressed KML | MorphyHub',
+          description: 'Tải xuống tệp mẫu KMZ compressed Keyhole Markup Language miễn phí để kiểm tra công cụ giải nén KMZ, xử lý dữ liệu địa lý và tích hợp Google Earth. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén tệp KMZ, chuyển đổi KMZ sang KML, tương thích Google Earth, xử lý dữ liệu địa lý và phần mềm lập bản đồ.',
+          keywords: 'tệp mẫu KMZ, tệp kiểm tra KMZ, tải xuống ví dụ KMZ, tệp kiểm tra KMZ miễn phí, tệp nén KMZ, kiểm tra giải nén KMZ, tệp kiểm tra Google Earth, kiểm tra xử lý dữ liệu địa lý, ví dụ phần mềm lập bản đồ'
+        },
+        schema: {
+          name: 'Tệp Mẫu KMZ Miễn Phí - Tải Xuống Tệp Kiểm Tra KMZ Compressed KML',
+          description: 'Tải xuống tệp mẫu KMZ compressed Keyhole Markup Language miễn phí để kiểm tra công cụ giải nén KMZ, xử lý dữ liệu địa lý và tích hợp Google Earth. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén tệp KMZ, chuyển đổi KMZ sang KML, tương thích Google Earth, xử lý dữ liệu địa lý và phần mềm lập bản đồ.'
+        },
+        hero: {
+          title: 'Tệp Mẫu KMZ',
+          description: 'Tải xuống tệp mẫu KMZ compressed Keyhole Markup Language miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén KMZ, xử lý dữ liệu địa lý và tích hợp Google Earth.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm compressed Keyhole Markup Language KMZ với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      laz: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu LAZ Miễn Phí - Tệp Kiểm Tra LAZ Compressed LiDAR | MorphyHub',
+          description: 'Tải xuống tệp mẫu LAZ compressed LiDAR point cloud data miễn phí để kiểm tra công cụ giải nén LAZ, xử lý point cloud và lập bản đồ 3D. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén tệp LAZ, chuyển đổi LAZ sang LAS, xử lý point cloud LiDAR, phần mềm lập bản đồ 3D và công cụ phân tích dữ liệu địa lý.',
+          keywords: 'tệp mẫu LAZ, tệp kiểm tra LAZ, tải xuống ví dụ LAZ, tệp kiểm tra LAZ miễn phí, tệp nén LAZ, kiểm tra giải nén LAZ, kiểm tra point cloud LiDAR, tệp kiểm tra lập bản đồ 3D, ví dụ phân tích dữ liệu địa lý'
+        },
+        schema: {
+          name: 'Tệp Mẫu LAZ Miễn Phí - Tải Xuống Tệp Kiểm Tra LAZ Compressed LiDAR',
+          description: 'Tải xuống tệp mẫu LAZ compressed LiDAR point cloud data miễn phí để kiểm tra công cụ giải nén LAZ, xử lý point cloud và lập bản đồ 3D. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén tệp LAZ, chuyển đổi LAZ sang LAS, xử lý point cloud LiDAR, phần mềm lập bản đồ 3D và công cụ phân tích dữ liệu địa lý.'
+        },
+        hero: {
+          title: 'Tệp Mẫu LAZ',
+          description: 'Tải xuống tệp mẫu LAZ compressed LiDAR point cloud data miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén LAZ, xử lý point cloud và lập bản đồ 3D.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm compressed LiDAR point cloud data LAZ với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      lha: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu LHA Miễn Phí - Tệp Kiểm Tra LHA Archive cho Công Cụ Giải Nén | MorphyHub',
+          description: 'Tải xuống tệp mẫu LHA LHA archive miễn phí để kiểm tra công cụ giải nén LHA, giải nén lưu trữ và lưu trữ tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ LHA, giải nén tệp LHA, công cụ quản lý lưu trữ và phần mềm nén tệp.',
+          keywords: 'tệp mẫu LHA, tệp kiểm tra LHA, tải xuống ví dụ LHA, tệp kiểm tra LHA miễn phí, tệp archive LHA, kiểm tra giải nén LHA, kiểm tra giải nén LHA, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu LHA Miễn Phí - Tải Xuống Tệp Kiểm Tra LHA Archive cho Công Cụ Giải Nén',
+          description: 'Tải xuống tệp mẫu LHA LHA archive miễn phí để kiểm tra công cụ giải nén LHA, giải nén lưu trữ và lưu trữ tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ LHA, giải nén tệp LHA, công cụ quản lý lưu trữ và phần mềm nén tệp.'
+        },
+        hero: {
+          title: 'Tệp Mẫu LHA',
+          description: 'Tải xuống tệp mẫu LHA LHA archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén LHA, giải nén lưu trữ và lưu trữ tệp.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm archive LHA với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      lzh: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu LZH Miễn Phí - Tệp Kiểm Tra LZH Archive cho Công Cụ Giải Nén | MorphyHub',
+          description: 'Tải xuống tệp mẫu LZH LZH archive miễn phí để kiểm tra công cụ giải nén LZH, giải nén lưu trữ và lưu trữ tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ LZH, giải nén tệp LZH, công cụ quản lý lưu trữ và phần mềm nén tệp.',
+          keywords: 'tệp mẫu LZH, tệp kiểm tra LZH, tải xuống ví dụ LZH, tệp kiểm tra LZH miễn phí, tệp archive LZH, kiểm tra giải nén LZH, kiểm tra giải nén LZH, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu LZH Miễn Phí - Tải Xuống Tệp Kiểm Tra LZH Archive cho Công Cụ Giải Nén',
+          description: 'Tải xuống tệp mẫu LZH LZH archive miễn phí để kiểm tra công cụ giải nén LZH, giải nén lưu trữ và lưu trữ tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ LZH, giải nén tệp LZH, công cụ quản lý lưu trữ và phần mềm nén tệp.'
+        },
+        hero: {
+          title: 'Tệp Mẫu LZH',
+          description: 'Tải xuống tệp mẫu LZH LZH archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén LZH, giải nén lưu trữ và lưu trữ tệp.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm archive LZH với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      lzma: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu LZMA Miễn Phí - Tệp Kiểm Tra LZMA Compressed Archive | MorphyHub',
+          description: 'Tải xuống tệp mẫu LZMA LZMA compressed miễn phí để kiểm tra công cụ giải nén LZMA, giải nén lưu trữ và nén tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ LZMA, giải nén tệp LZMA, công cụ nén LZMA và phần mềm quản lý lưu trữ.',
+          keywords: 'tệp mẫu LZMA, tệp kiểm tra LZMA, tải xuống ví dụ LZMA, tệp kiểm tra LZMA miễn phí, tệp nén LZMA, kiểm tra giải nén LZMA, kiểm tra nén LZMA, tệp kiểm tra giải nén lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu LZMA Miễn Phí - Tải Xuống Tệp Kiểm Tra LZMA Compressed Archive',
+          description: 'Tải xuống tệp mẫu LZMA LZMA compressed miễn phí để kiểm tra công cụ giải nén LZMA, giải nén lưu trữ và nén tệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ LZMA, giải nén tệp LZMA, công cụ nén LZMA và phần mềm quản lý lưu trữ.'
+        },
+        hero: {
+          title: 'Tệp Mẫu LZMA',
+          description: 'Tải xuống tệp mẫu LZMA LZMA compressed miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ giải nén LZMA, giải nén lưu trữ và nén tệp.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm compressed LZMA với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      '7z': {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu 7Z Miễn Phí - Tệp Kiểm Tra 7Z Archive cho Công Cụ Giải Nén | MorphyHub',
+          description: 'Tải xuống tệp mẫu 7Z archive miễn phí để kiểm tra công cụ chuyển đổi và giải nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ 7Z, giải nén tệp 7Z, công cụ quản lý lưu trữ và phần mềm nén tệp.',
+          keywords: 'tệp mẫu 7Z, tệp kiểm tra 7Z, tải xuống ví dụ 7Z, tệp kiểm tra 7Z miễn phí, tệp archive 7Z, kiểm tra giải nén 7Z, kiểm tra giải nén 7Z, tệp kiểm tra quản lý lưu trữ, ví dụ nén tệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu 7Z Miễn Phí - Tải Xuống Tệp Kiểm Tra 7Z Archive cho Công Cụ Giải Nén',
+          description: 'Tải xuống tệp mẫu 7Z archive miễn phí để kiểm tra công cụ chuyển đổi và giải nén lưu trữ. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra giải nén lưu trữ 7Z, giải nén tệp 7Z, công cụ quản lý lưu trữ và phần mềm nén tệp.'
+        },
+        hero: {
+          title: 'Tệp Mẫu 7Z',
+          description: 'Tải xuống tệp mẫu 7Z archive miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi và giải nén lưu trữ.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm archive 7Z với nhiều kích thước khác nhau cho mục đích kiểm tra'
       }
     }
   }

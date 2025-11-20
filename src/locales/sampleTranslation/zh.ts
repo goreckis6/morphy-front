@@ -1839,6 +1839,310 @@ export const zh: SamplePageTranslations = {
           description: '下载免费CAF核心音频格式示例文件用于测试。提供多种文件大小，用于测试音频转换工具、CAF播放软件和音频处理应用程序。'
         },
         about_description: '这些是用于测试目的的各种大小的CAF (核心音频格式)音频文件'
+      },
+      cue: {
+        meta: {
+          title: '下载免费CUE示例文件 - 用于音频CD刻录的CUE Sheet测试文件 | MorphyHub',
+          description: '下载免费CUE CUE sheet示例文件，用于测试音频CD刻录工具和CUE sheet解析工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CUE sheet解析、音频CD刻录软件、CUE文件验证和CD创作工具。',
+          keywords: 'CUE示例文件、CUE测试文件、下载CUE示例、免费CUE测试文件、CUE sheet文件、音频CD刻录测试、CUE sheet解析器、CD创作测试文件、CUE文件验证、音频光盘映像测试'
+        },
+        schema: {
+          name: '免费CUE示例文件 - 下载用于音频CD刻录的CUE Sheet测试文件',
+          description: '下载免费CUE CUE sheet示例文件，用于测试音频CD刻录工具和CUE sheet解析工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CUE sheet解析、音频CD刻录软件、CUE文件验证和CD创作工具。'
+        },
+        hero: {
+          title: 'CUE示例文件',
+          description: '下载免费CUE CUE sheet示例文件用于测试。提供多种文件大小，用于测试音频CD刻录工具和CUE sheet解析工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CUE sheet测试文件'
+      },
+      m4a: {
+        meta: {
+          title: '下载免费M4A示例文件 - 用于转换工具的M4A音频测试文件 | MorphyHub',
+          description: '下载免费M4A M4A音频示例文件，用于测试M4A音频转换、M4A播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试M4A到MP3转换器、M4A到WAV转换器、音频播放器、M4A播放兼容性和MPEG-4音频格式支持。',
+          keywords: 'M4A示例文件、M4A测试文件、下载M4A示例、免费M4A测试文件、M4A音频文件、M4A到MP3转换器、M4A到WAV转换器、音频播放器测试文件、M4A播放测试、音频转换示例、MPEG-4音频格式测试'
+        },
+        schema: {
+          name: '免费M4A示例文件 - 下载用于转换工具的M4A音频测试文件',
+          description: '下载免费M4A M4A音频示例文件，用于测试M4A音频转换、M4A播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试M4A到MP3转换器、M4A到WAV转换器、音频播放器、M4A播放兼容性和MPEG-4音频格式支持。'
+        },
+        hero: {
+          title: 'M4A示例文件',
+          description: '下载免费M4A M4A音频示例文件用于测试。提供多种文件大小，用于测试M4A音频转换、M4A播放和音频处理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的M4A音频测试文件'
+      },
+      midi: {
+        meta: {
+          title: '下载免费MIDI示例文件 - 用于音乐排序的MIDI Music测试文件 | MorphyHub',
+          description: '下载免费MIDI MIDI music示例文件，用于测试MIDI播放、MIDI转换、音乐排序工具和数字音频工作站。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试MIDI到MP3转换器、MIDI到WAV转换器、MIDI音序器、音乐制作软件和乐器数字接口格式支持。',
+          keywords: 'MIDI示例文件、MIDI测试文件、下载MIDI示例、免费MIDI测试文件、MIDI music文件、MIDI到MP3转换器、MIDI到WAV转换器、MIDI音序器测试、音乐制作测试文件、MIDI播放测试、音乐排序示例'
+        },
+        schema: {
+          name: '免费MIDI示例文件 - 下载用于音乐排序的MIDI Music测试文件',
+          description: '下载免费MIDI MIDI music示例文件，用于测试MIDI播放、MIDI转换、音乐排序工具和数字音频工作站。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试MIDI到MP3转换器、MIDI到WAV转换器、MIDI音序器、音乐制作软件和乐器数字接口格式支持。'
+        },
+        hero: {
+          title: 'MIDI示例文件',
+          description: '下载免费MIDI MIDI music示例文件用于测试。提供多种文件大小，用于测试MIDI播放、MIDI转换和音乐排序工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MIDI music测试文件'
+      },
+      ace: {
+        meta: {
+          title: '下载免费ACE示例文件 - 用于提取工具的ACE Archive测试文件 | MorphyHub',
+          description: '下载免费ACE archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ACE存档提取、ACE文件解压缩、存档管理工具和文件压缩软件。',
+          keywords: 'ACE示例文件、ACE测试文件、下载ACE示例、免费ACE测试文件、ACE archive文件、ACE提取测试、ACE解压缩测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费ACE示例文件 - 下载用于提取工具的ACE Archive测试文件',
+          description: '下载免费ACE archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ACE存档提取、ACE文件解压缩、存档管理工具和文件压缩软件。'
+        },
+        hero: {
+          title: 'ACE示例文件',
+          description: '下载免费ACE archive示例文件用于测试。提供多种文件大小，用于测试存档提取和压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ACE archive测试文件'
+      },
+      arj: {
+        meta: {
+          title: '下载免费ARJ示例文件 - 用于提取工具的ARJ Archive测试文件 | MorphyHub',
+          description: '下载免费ARJ archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ARJ存档提取、ARJ文件解压缩、存档管理工具和文件压缩软件。',
+          keywords: 'ARJ示例文件、ARJ测试文件、下载ARJ示例、免费ARJ测试文件、ARJ archive文件、ARJ提取测试、ARJ解压缩测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费ARJ示例文件 - 下载用于提取工具的ARJ Archive测试文件',
+          description: '下载免费ARJ archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ARJ存档提取、ARJ文件解压缩、存档管理工具和文件压缩软件。'
+        },
+        hero: {
+          title: 'ARJ示例文件',
+          description: '下载免费ARJ archive示例文件用于测试。提供多种文件大小，用于测试存档提取和压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ARJ archive测试文件'
+      },
+      bz2: {
+        meta: {
+          title: '下载免费BZ2示例文件 - BZ2 Compressed Archive测试文件 | MorphyHub',
+          description: '下载免费BZ2 bzip2 compressed archive示例文件，用于测试存档解压缩和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试BZ2存档解压缩、BZ2文件提取、bzip2压缩工具和存档管理软件。',
+          keywords: 'BZ2示例文件、BZ2测试文件、下载BZ2示例、免费BZ2测试文件、BZ2压缩文件、BZ2解压缩测试、bzip2压缩测试、存档提取测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费BZ2示例文件 - 下载BZ2 Compressed Archive测试文件',
+          description: '下载免费BZ2 bzip2 compressed archive示例文件，用于测试存档解压缩和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试BZ2存档解压缩、BZ2文件提取、bzip2压缩工具和存档管理软件。'
+        },
+        hero: {
+          title: 'BZ2示例文件',
+          description: '下载免费BZ2 bzip2 compressed archive示例文件用于测试。提供多种文件大小，用于测试存档解压缩和压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的BZ2 compressed archive测试文件'
+      },
+      gz: {
+        meta: {
+          title: '下载免费GZ示例文件 - GZ Gzip Compressed Archive测试文件 | MorphyHub',
+          description: '下载免费GZ gzip compressed archive示例文件，用于测试gzip解压缩、存档提取和文件压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试GZ存档解压缩、GZ文件提取、gzip压缩工具和存档管理软件。',
+          keywords: 'GZ示例文件、GZ测试文件、下载GZ示例、免费GZ测试文件、GZ压缩文件、GZ解压缩测试、gzip压缩测试、存档提取测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费GZ示例文件 - 下载GZ Gzip Compressed Archive测试文件',
+          description: '下载免费GZ gzip compressed archive示例文件，用于测试gzip解压缩、存档提取和文件压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试GZ存档解压缩、GZ文件提取、gzip压缩工具和存档管理软件。'
+        },
+        hero: {
+          title: 'GZ示例文件',
+          description: '下载免费GZ gzip compressed archive示例文件用于测试。提供多种文件大小，用于测试gzip解压缩、存档提取和文件压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的GZ gzip compressed archive测试文件'
+      },
+      cab: {
+        meta: {
+          title: '下载免费CAB示例文件 - CAB Windows Cabinet Archive测试文件 | MorphyHub',
+          description: '下载免费CAB Windows cabinet archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAB存档提取、CAB文件解压缩、Windows cabinet archive工具和存档管理软件。',
+          keywords: 'CAB示例文件、CAB测试文件、下载CAB示例、免费CAB测试文件、CAB archive文件、CAB提取测试、Windows cabinet archive测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费CAB示例文件 - 下载CAB Windows Cabinet Archive测试文件',
+          description: '下载免费CAB Windows cabinet archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAB存档提取、CAB文件解压缩、Windows cabinet archive工具和存档管理软件。'
+        },
+        hero: {
+          title: 'CAB示例文件',
+          description: '下载免费CAB Windows cabinet archive示例文件用于测试。提供多种文件大小，用于测试存档提取和压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CAB Windows cabinet archive测试文件'
+      },
+      cpio: {
+        meta: {
+          title: '下载免费CPIO示例文件 - 用于提取工具的CPIO Archive测试文件 | MorphyHub',
+          description: '下载免费CPIO archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CPIO存档提取、CPIO文件解压缩、存档管理工具和文件压缩软件。',
+          keywords: 'CPIO示例文件、CPIO测试文件、下载CPIO示例、免费CPIO测试文件、CPIO archive文件、CPIO提取测试、CPIO解压缩测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费CPIO示例文件 - 下载用于提取工具的CPIO Archive测试文件',
+          description: '下载免费CPIO archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CPIO存档提取、CPIO文件解压缩、存档管理工具和文件压缩软件。'
+        },
+        hero: {
+          title: 'CPIO示例文件',
+          description: '下载免费CPIO archive示例文件用于测试。提供多种文件大小，用于测试存档提取和压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CPIO archive测试文件'
+      },
+      zip: {
+        meta: {
+          title: '下载免费ZIP示例文件 - 用于提取工具的ZIP Archive测试文件 | MorphyHub',
+          description: '下载免费ZIP archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ZIP存档提取、ZIP文件解压缩、存档管理工具和文件压缩软件。',
+          keywords: 'ZIP示例文件、ZIP测试文件、下载ZIP示例、免费ZIP测试文件、ZIP archive文件、ZIP提取测试、ZIP解压缩测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费ZIP示例文件 - 下载用于提取工具的ZIP Archive测试文件',
+          description: '下载免费ZIP archive示例文件，用于测试存档提取和压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ZIP存档提取、ZIP文件解压缩、存档管理工具和文件压缩软件。'
+        },
+        hero: {
+          title: 'ZIP示例文件',
+          description: '下载免费ZIP archive示例文件用于测试。提供多种文件大小，用于测试存档提取和压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ZIP archive测试文件'
+      },
+      dmg: {
+        meta: {
+          title: '下载免费DMG示例文件 - DMG macOS Disk Image测试文件 | MorphyHub',
+          description: '下载免费DMG macOS disk image示例文件，用于测试磁盘映像挂载和DMG提取工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DMG磁盘映像挂载、DMG文件提取、macOS disk image工具和磁盘映像处理软件。',
+          keywords: 'DMG示例文件、DMG测试文件、下载DMG示例、免费DMG测试文件、DMG disk image文件、DMG挂载测试、macOS disk image测试、磁盘映像提取测试文件、磁盘映像处理示例'
+        },
+        schema: {
+          name: '免费DMG示例文件 - 下载DMG macOS Disk Image测试文件',
+          description: '下载免费DMG macOS disk image示例文件，用于测试磁盘映像挂载和DMG提取工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DMG磁盘映像挂载、DMG文件提取、macOS disk image工具和磁盘映像处理软件。'
+        },
+        hero: {
+          title: 'DMG示例文件',
+          description: '下载免费DMG macOS disk image示例文件用于测试。提供多种文件大小，用于测试磁盘映像挂载和DMG提取工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DMG macOS disk image测试文件'
+      },
+      img: {
+        meta: {
+          title: '下载免费IMG示例文件 - IMG Disk Image测试文件 | MorphyHub',
+          description: '下载免费IMG disk image示例文件，用于测试磁盘映像挂载、IMG提取和磁盘映像处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试IMG磁盘映像挂载、IMG文件提取、disk image工具和磁盘映像处理软件。',
+          keywords: 'IMG示例文件、IMG测试文件、下载IMG示例、免费IMG测试文件、IMG disk image文件、IMG挂载测试、磁盘映像提取测试、磁盘映像处理测试文件、磁盘映像示例'
+        },
+        schema: {
+          name: '免费IMG示例文件 - 下载IMG Disk Image测试文件',
+          description: '下载免费IMG disk image示例文件，用于测试磁盘映像挂载、IMG提取和磁盘映像处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试IMG磁盘映像挂载、IMG文件提取、disk image工具和磁盘映像处理软件。'
+        },
+        hero: {
+          title: 'IMG示例文件',
+          description: '下载免费IMG disk image示例文件用于测试。提供多种文件大小，用于测试磁盘映像挂载、IMG提取和磁盘映像处理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的IMG disk image测试文件'
+      },
+      iso: {
+        meta: {
+          title: '下载免费ISO示例文件 - ISO Disk Image测试文件 | MorphyHub',
+          description: '下载免费ISO ISO disk image示例文件，用于测试ISO磁盘映像挂载、ISO提取和磁盘映像处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ISO磁盘映像挂载、ISO文件提取、disk image工具和磁盘映像处理软件。',
+          keywords: 'ISO示例文件、ISO测试文件、下载ISO示例、免费ISO测试文件、ISO disk image文件、ISO挂载测试、ISO提取测试、磁盘映像处理测试文件、磁盘映像示例'
+        },
+        schema: {
+          name: '免费ISO示例文件 - 下载ISO Disk Image测试文件',
+          description: '下载免费ISO ISO disk image示例文件，用于测试ISO磁盘映像挂载、ISO提取和磁盘映像处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ISO磁盘映像挂载、ISO文件提取、disk image工具和磁盘映像处理软件。'
+        },
+        hero: {
+          title: 'ISO示例文件',
+          description: '下载免费ISO ISO disk image示例文件用于测试。提供多种文件大小，用于测试ISO磁盘映像挂载、ISO提取和磁盘映像处理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ISO disk image测试文件'
+      },
+      kmz: {
+        meta: {
+          title: '下载免费KMZ示例文件 - KMZ Compressed KML测试文件 | MorphyHub',
+          description: '下载免费KMZ compressed Keyhole Markup Language示例文件，用于测试KMZ提取、地理数据处理和Google Earth集成工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试KMZ文件提取、KMZ到KML转换、Google Earth兼容性、地理数据处理和地图绘制软件。',
+          keywords: 'KMZ示例文件、KMZ测试文件、下载KMZ示例、免费KMZ测试文件、KMZ压缩文件、KMZ提取测试、Google Earth测试文件、地理数据处理测试、地图绘制软件示例'
+        },
+        schema: {
+          name: '免费KMZ示例文件 - 下载KMZ Compressed KML测试文件',
+          description: '下载免费KMZ compressed Keyhole Markup Language示例文件，用于测试KMZ提取、地理数据处理和Google Earth集成工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试KMZ文件提取、KMZ到KML转换、Google Earth兼容性、地理数据处理和地图绘制软件。'
+        },
+        hero: {
+          title: 'KMZ示例文件',
+          description: '下载免费KMZ compressed Keyhole Markup Language示例文件用于测试。提供多种文件大小，用于测试KMZ提取、地理数据处理和Google Earth集成工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的KMZ compressed Keyhole Markup Language测试文件'
+      },
+      laz: {
+        meta: {
+          title: '下载免费LAZ示例文件 - LAZ Compressed LiDAR测试文件 | MorphyHub',
+          description: '下载免费LAZ compressed LiDAR point cloud data示例文件，用于测试LAZ提取、点云处理和3D地图绘制工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LAZ文件提取、LAZ到LAS转换、LiDAR点云处理、3D地图绘制软件和地理数据分析工具。',
+          keywords: 'LAZ示例文件、LAZ测试文件、下载LAZ示例、免费LAZ测试文件、LAZ压缩文件、LAZ提取测试、LiDAR点云测试、3D地图绘制测试文件、地理数据分析示例'
+        },
+        schema: {
+          name: '免费LAZ示例文件 - 下载LAZ Compressed LiDAR测试文件',
+          description: '下载免费LAZ compressed LiDAR point cloud data示例文件，用于测试LAZ提取、点云处理和3D地图绘制工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LAZ文件提取、LAZ到LAS转换、LiDAR点云处理、3D地图绘制软件和地理数据分析工具。'
+        },
+        hero: {
+          title: 'LAZ示例文件',
+          description: '下载免费LAZ compressed LiDAR point cloud data示例文件用于测试。提供多种文件大小，用于测试LAZ提取、点云处理和3D地图绘制工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的LAZ compressed LiDAR point cloud data测试文件'
+      },
+      lha: {
+        meta: {
+          title: '下载免费LHA示例文件 - 用于提取工具的LHA Archive测试文件 | MorphyHub',
+          description: '下载免费LHA LHA archive示例文件，用于测试LHA提取、存档解压缩和文件归档工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LHA存档提取、LHA文件解压缩、存档管理工具和文件压缩软件。',
+          keywords: 'LHA示例文件、LHA测试文件、下载LHA示例、免费LHA测试文件、LHA archive文件、LHA提取测试、LHA解压缩测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费LHA示例文件 - 下载用于提取工具的LHA Archive测试文件',
+          description: '下载免费LHA LHA archive示例文件，用于测试LHA提取、存档解压缩和文件归档工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LHA存档提取、LHA文件解压缩、存档管理工具和文件压缩软件。'
+        },
+        hero: {
+          title: 'LHA示例文件',
+          description: '下载免费LHA LHA archive示例文件用于测试。提供多种文件大小，用于测试LHA提取、存档解压缩和文件归档工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的LHA archive测试文件'
+      },
+      lzh: {
+        meta: {
+          title: '下载免费LZH示例文件 - 用于提取工具的LZH Archive测试文件 | MorphyHub',
+          description: '下载免费LZH LZH archive示例文件，用于测试LZH提取、存档解压缩和文件归档工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LZH存档提取、LZH文件解压缩、存档管理工具和文件压缩软件。',
+          keywords: 'LZH示例文件、LZH测试文件、下载LZH示例、免费LZH测试文件、LZH archive文件、LZH提取测试、LZH解压缩测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费LZH示例文件 - 下载用于提取工具的LZH Archive测试文件',
+          description: '下载免费LZH LZH archive示例文件，用于测试LZH提取、存档解压缩和文件归档工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LZH存档提取、LZH文件解压缩、存档管理工具和文件压缩软件。'
+        },
+        hero: {
+          title: 'LZH示例文件',
+          description: '下载免费LZH LZH archive示例文件用于测试。提供多种文件大小，用于测试LZH提取、存档解压缩和文件归档工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的LZH archive测试文件'
+      },
+      lzma: {
+        meta: {
+          title: '下载免费LZMA示例文件 - LZMA Compressed Archive测试文件 | MorphyHub',
+          description: '下载免费LZMA LZMA compressed示例文件，用于测试LZMA解压缩、存档提取和文件压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LZMA存档解压缩、LZMA文件提取、LZMA压缩工具和存档管理软件。',
+          keywords: 'LZMA示例文件、LZMA测试文件、下载LZMA示例、免费LZMA测试文件、LZMA压缩文件、LZMA解压缩测试、LZMA压缩测试、存档提取测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费LZMA示例文件 - 下载LZMA Compressed Archive测试文件',
+          description: '下载免费LZMA LZMA compressed示例文件，用于测试LZMA解压缩、存档提取和文件压缩工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LZMA存档解压缩、LZMA文件提取、LZMA压缩工具和存档管理软件。'
+        },
+        hero: {
+          title: 'LZMA示例文件',
+          description: '下载免费LZMA LZMA compressed示例文件用于测试。提供多种文件大小，用于测试LZMA解压缩、存档提取和文件压缩工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的LZMA compressed测试文件'
+      },
+      '7z': {
+        meta: {
+          title: '下载免费7Z示例文件 - 用于提取工具的7Z Archive测试文件 | MorphyHub',
+          description: '下载免费7Z archive示例文件，用于测试存档转换和提取工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试7Z存档提取、7Z文件解压缩、存档管理工具和文件压缩软件。',
+          keywords: '7Z示例文件、7Z测试文件、下载7Z示例、免费7Z测试文件、7Z archive文件、7Z提取测试、7Z解压缩测试、存档管理测试文件、文件压缩示例'
+        },
+        schema: {
+          name: '免费7Z示例文件 - 下载用于提取工具的7Z Archive测试文件',
+          description: '下载免费7Z archive示例文件，用于测试存档转换和提取工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试7Z存档提取、7Z文件解压缩、存档管理工具和文件压缩软件。'
+        },
+        hero: {
+          title: '7Z示例文件',
+          description: '下载免费7Z archive示例文件用于测试。提供多种文件大小，用于测试存档转换和提取工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的7Z archive测试文件'
       }
     }
   }

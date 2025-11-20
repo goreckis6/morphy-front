@@ -1839,6 +1839,310 @@ export const tr: SamplePageTranslations = {
           description: 'Test için ücretsiz CAF Core Audio Format örnek dosyalarını indirin. Ses dönüşüm araçlarınızı, CAF oynatma yazılımlarınızı ve ses işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
         },
         about_description: 'Bunlar test amaçlı çeşitli boyutlarda CAF (Core Audio Format) ses dosyalarıdır'
+      },
+      cue: {
+        meta: {
+          title: 'Ücretsiz CUE Örnek Dosyaları İndir - Ses CD Yakma için CUE Sheet Test Dosyaları | MorphyHub',
+          description: 'Ses CD yakma araçlarını ve CUE sheet ayrıştırma araçlarını test etmek için ücretsiz CUE CUE sheet örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CUE sheet ayrıştırmayı, ses CD yakma yazılımlarını, CUE dosya doğrulamayı ve CD yazma araçlarını test etmek için mükemmel.',
+          keywords: 'CUE örnek dosyaları, CUE test dosyaları, CUE örnekleri indir, ücretsiz CUE test dosyaları, CUE sheet dosyaları, ses CD yakma test, CUE sheet ayrıştırıcı, CD yazma test dosyaları, CUE dosya doğrulama, ses disk görüntü test'
+        },
+        schema: {
+          name: 'Ücretsiz CUE Örnek Dosyaları - Ses CD Yakma için CUE Sheet Test Dosyaları İndir',
+          description: 'Ses CD yakma araçlarını ve CUE sheet ayrıştırma araçlarını test etmek için ücretsiz CUE CUE sheet örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CUE sheet ayrıştırmayı, ses CD yakma yazılımlarını, CUE dosya doğrulamayı ve CD yazma araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CUE Örnek Dosyaları',
+          description: 'Test için ücretsiz CUE CUE sheet örnek dosyalarını indirin. Ses CD yakma araçlarınızı ve CUE sheet ayrıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CUE sheet dosyalarıdır'
+      },
+      m4a: {
+        meta: {
+          title: 'Ücretsiz M4A Örnek Dosyaları İndir - Dönüştürme Araçları için M4A Ses Test Dosyaları | MorphyHub',
+          description: 'M4A ses dönüşümünü, M4A oynatmayı, ses işleme araçlarını ve multimedya yazılımlarını test etmek için ücretsiz M4A M4A ses örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. M4A\'dan MP3\'e dönüştürücüler, M4A\'dan WAV\'a dönüştürücüler, ses oynatıcıları, M4A oynatma uyumluluğu ve MPEG-4 ses formatı desteğini test etmek için mükemmel.',
+          keywords: 'M4A örnek dosyaları, M4A test dosyaları, M4A örnekleri indir, ücretsiz M4A test dosyaları, M4A ses dosyaları, M4A\'dan MP3\'e dönüştürücü, M4A\'dan WAV\'a dönüştürücü, ses oynatıcı test dosyaları, M4A oynatma test, ses dönüşüm örnekleri, MPEG-4 ses formatı test'
+        },
+        schema: {
+          name: 'Ücretsiz M4A Örnek Dosyaları - Dönüştürme Araçları için M4A Ses Test Dosyaları İndir',
+          description: 'M4A ses dönüşümünü, M4A oynatmayı, ses işleme araçlarını ve multimedya yazılımlarını test etmek için ücretsiz M4A M4A ses örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. M4A\'dan MP3\'e dönüştürücüler, M4A\'dan WAV\'a dönüştürücüler, ses oynatıcıları, M4A oynatma uyumluluğu ve MPEG-4 ses formatı desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'M4A Örnek Dosyaları',
+          description: 'Test için ücretsiz M4A M4A ses örnek dosyalarını indirin. M4A ses dönüşümünüzü, M4A oynatmanızı ve ses işleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda M4A ses dosyalarıdır'
+      },
+      midi: {
+        meta: {
+          title: 'Ücretsiz MIDI Örnek Dosyaları İndir - Müzik Sıralama için MIDI Music Test Dosyaları | MorphyHub',
+          description: 'MIDI oynatmayı, MIDI dönüşümünü, müzik sıralama araçlarını ve dijital ses iş istasyonlarını test etmek için ücretsiz MIDI MIDI music örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MIDI\'den MP3\'e dönüştürücüler, MIDI\'den WAV\'a dönüştürücüler, MIDI sıralayıcıları, müzik üretim yazılımlarını ve Musical Instrument Digital Interface format desteğini test etmek için mükemmel.',
+          keywords: 'MIDI örnek dosyaları, MIDI test dosyaları, MIDI örnekleri indir, ücretsiz MIDI test dosyaları, MIDI music dosyaları, MIDI\'den MP3\'e dönüştürücü, MIDI\'den WAV\'a dönüştürücü, MIDI sıralayıcı test, müzik üretim test dosyaları, MIDI oynatma test, müzik sıralama örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz MIDI Örnek Dosyaları - Müzik Sıralama için MIDI Music Test Dosyaları İndir',
+          description: 'MIDI oynatmayı, MIDI dönüşümünü, müzik sıralama araçlarını ve dijital ses iş istasyonlarını test etmek için ücretsiz MIDI MIDI music örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MIDI\'den MP3\'e dönüştürücüler, MIDI\'den WAV\'a dönüştürücüler, MIDI sıralayıcıları, müzik üretim yazılımlarını ve Musical Instrument Digital Interface format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MIDI Örnek Dosyaları',
+          description: 'Test için ücretsiz MIDI MIDI music örnek dosyalarını indirin. MIDI oynatmanızı, MIDI dönüşümünüzü ve müzik sıralama araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MIDI music dosyalarıdır'
+      },
+      ace: {
+        meta: {
+          title: 'Ücretsiz ACE Örnek Dosyaları İndir - Çıkarma Araçları için ACE Arşiv Test Dosyaları | MorphyHub',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ACE arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ACE arşiv çıkarmayı, ACE dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
+          keywords: 'ACE örnek dosyaları, ACE test dosyaları, ACE örnekleri indir, ücretsiz ACE test dosyaları, ACE arşiv dosyaları, ACE çıkarma test, ACE açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz ACE Örnek Dosyaları - Çıkarma Araçları için ACE Arşiv Test Dosyaları İndir',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ACE arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ACE arşiv çıkarmayı, ACE dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ACE Örnek Dosyaları',
+          description: 'Test için ücretsiz ACE arşiv örnek dosyalarını indirin. Arşiv çıkarma ve sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ACE arşiv dosyalarıdır'
+      },
+      arj: {
+        meta: {
+          title: 'Ücretsiz ARJ Örnek Dosyaları İndir - Çıkarma Araçları için ARJ Arşiv Test Dosyaları | MorphyHub',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ARJ arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ARJ arşiv çıkarmayı, ARJ dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
+          keywords: 'ARJ örnek dosyaları, ARJ test dosyaları, ARJ örnekleri indir, ücretsiz ARJ test dosyaları, ARJ arşiv dosyaları, ARJ çıkarma test, ARJ açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz ARJ Örnek Dosyaları - Çıkarma Araçları için ARJ Arşiv Test Dosyaları İndir',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ARJ arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ARJ arşiv çıkarmayı, ARJ dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ARJ Örnek Dosyaları',
+          description: 'Test için ücretsiz ARJ arşiv örnek dosyalarını indirin. Arşiv çıkarma ve sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ARJ arşiv dosyalarıdır'
+      },
+      bz2: {
+        meta: {
+          title: 'Ücretsiz BZ2 Örnek Dosyaları İndir - BZ2 Sıkıştırılmış Arşiv Test Dosyaları | MorphyHub',
+          description: 'Arşiv açma ve sıkıştırma araçlarını test etmek için ücretsiz BZ2 bzip2 sıkıştırılmış arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BZ2 arşiv açmayı, BZ2 dosya çıkarmayı, bzip2 sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
+          keywords: 'BZ2 örnek dosyaları, BZ2 test dosyaları, BZ2 örnekleri indir, ücretsiz BZ2 test dosyaları, BZ2 sıkıştırılmış dosyalar, BZ2 açma test, bzip2 sıkıştırma test, arşiv çıkarma test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz BZ2 Örnek Dosyaları - BZ2 Sıkıştırılmış Arşiv Test Dosyaları İndir',
+          description: 'Arşiv açma ve sıkıştırma araçlarını test etmek için ücretsiz BZ2 bzip2 sıkıştırılmış arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BZ2 arşiv açmayı, BZ2 dosya çıkarmayı, bzip2 sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'BZ2 Örnek Dosyaları',
+          description: 'Test için ücretsiz BZ2 bzip2 sıkıştırılmış arşiv örnek dosyalarını indirin. Arşiv açma ve sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda BZ2 sıkıştırılmış arşiv dosyalarıdır'
+      },
+      gz: {
+        meta: {
+          title: 'Ücretsiz GZ Örnek Dosyaları İndir - GZ Gzip Sıkıştırılmış Arşiv Test Dosyaları | MorphyHub',
+          description: 'gzip açma, arşiv çıkarma ve dosya sıkıştırma araçlarını test etmek için ücretsiz GZ gzip sıkıştırılmış arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GZ arşiv açmayı, GZ dosya çıkarmayı, gzip sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
+          keywords: 'GZ örnek dosyaları, GZ test dosyaları, GZ örnekleri indir, ücretsiz GZ test dosyaları, GZ sıkıştırılmış dosyalar, GZ açma test, gzip sıkıştırma test, arşiv çıkarma test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz GZ Örnek Dosyaları - GZ Gzip Sıkıştırılmış Arşiv Test Dosyaları İndir',
+          description: 'gzip açma, arşiv çıkarma ve dosya sıkıştırma araçlarını test etmek için ücretsiz GZ gzip sıkıştırılmış arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GZ arşiv açmayı, GZ dosya çıkarmayı, gzip sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'GZ Örnek Dosyaları',
+          description: 'Test için ücretsiz GZ gzip sıkıştırılmış arşiv örnek dosyalarını indirin. gzip açmanızı, arşiv çıkarmanızı ve dosya sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda GZ gzip sıkıştırılmış arşiv dosyalarıdır'
+      },
+      cab: {
+        meta: {
+          title: 'Ücretsiz CAB Örnek Dosyaları İndir - CAB Windows Cabinet Arşiv Test Dosyaları | MorphyHub',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz CAB Windows cabinet arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAB arşiv çıkarmayı, CAB dosya açmayı, Windows cabinet arşiv araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
+          keywords: 'CAB örnek dosyaları, CAB test dosyaları, CAB örnekleri indir, ücretsiz CAB test dosyaları, CAB arşiv dosyaları, CAB çıkarma test, Windows cabinet arşiv test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz CAB Örnek Dosyaları - CAB Windows Cabinet Arşiv Test Dosyaları İndir',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz CAB Windows cabinet arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAB arşiv çıkarmayı, CAB dosya açmayı, Windows cabinet arşiv araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CAB Örnek Dosyaları',
+          description: 'Test için ücretsiz CAB Windows cabinet arşiv örnek dosyalarını indirin. Arşiv çıkarma ve sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CAB Windows cabinet arşiv dosyalarıdır'
+      },
+      cpio: {
+        meta: {
+          title: 'Ücretsiz CPIO Örnek Dosyaları İndir - Çıkarma Araçları için CPIO Arşiv Test Dosyaları | MorphyHub',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz CPIO arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CPIO arşiv çıkarmayı, CPIO dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
+          keywords: 'CPIO örnek dosyaları, CPIO test dosyaları, CPIO örnekleri indir, ücretsiz CPIO test dosyaları, CPIO arşiv dosyaları, CPIO çıkarma test, CPIO açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz CPIO Örnek Dosyaları - Çıkarma Araçları için CPIO Arşiv Test Dosyaları İndir',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz CPIO arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CPIO arşiv çıkarmayı, CPIO dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CPIO Örnek Dosyaları',
+          description: 'Test için ücretsiz CPIO arşiv örnek dosyalarını indirin. Arşiv çıkarma ve sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CPIO arşiv dosyalarıdır'
+      },
+      zip: {
+        meta: {
+          title: 'Ücretsiz ZIP Örnek Dosyaları İndir - Çıkarma Araçları için ZIP Arşiv Test Dosyaları | MorphyHub',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ZIP arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ZIP arşiv çıkarmayı, ZIP dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
+          keywords: 'ZIP örnek dosyaları, ZIP test dosyaları, ZIP örnekleri indir, ücretsiz ZIP test dosyaları, ZIP arşiv dosyaları, ZIP çıkarma test, ZIP açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz ZIP Örnek Dosyaları - Çıkarma Araçları için ZIP Arşiv Test Dosyaları İndir',
+          description: 'Arşiv çıkarma ve sıkıştırma araçlarını test etmek için ücretsiz ZIP arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ZIP arşiv çıkarmayı, ZIP dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ZIP Örnek Dosyaları',
+          description: 'Test için ücretsiz ZIP arşiv örnek dosyalarını indirin. Arşiv çıkarma ve sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ZIP arşiv dosyalarıdır'
+      },
+      dmg: {
+        meta: {
+          title: 'Ücretsiz DMG Örnek Dosyaları İndir - DMG macOS Disk Image Test Dosyaları | MorphyHub',
+          description: 'Disk image bağlama ve DMG çıkarma araçlarını test etmek için ücretsiz DMG macOS disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DMG disk image bağlamayı, DMG dosya çıkarmayı, macOS disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.',
+          keywords: 'DMG örnek dosyaları, DMG test dosyaları, DMG örnekleri indir, ücretsiz DMG test dosyaları, DMG disk image dosyaları, DMG bağlama test, macOS disk image test, disk image çıkarma test dosyaları, disk image işleme örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz DMG Örnek Dosyaları - DMG macOS Disk Image Test Dosyaları İndir',
+          description: 'Disk image bağlama ve DMG çıkarma araçlarını test etmek için ücretsiz DMG macOS disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DMG disk image bağlamayı, DMG dosya çıkarmayı, macOS disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DMG Örnek Dosyaları',
+          description: 'Test için ücretsiz DMG macOS disk image örnek dosyalarını indirin. Disk image bağlama ve DMG çıkarma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DMG macOS disk image dosyalarıdır'
+      },
+      img: {
+        meta: {
+          title: 'Ücretsiz IMG Örnek Dosyaları İndir - IMG Disk Image Test Dosyaları | MorphyHub',
+          description: 'Disk image bağlama, IMG çıkarma ve disk image işleme araçlarını test etmek için ücretsiz IMG disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IMG disk image bağlamayı, IMG dosya çıkarmayı, disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.',
+          keywords: 'IMG örnek dosyaları, IMG test dosyaları, IMG örnekleri indir, ücretsiz IMG test dosyaları, IMG disk image dosyaları, IMG bağlama test, disk image çıkarma test, disk image işleme test dosyaları, disk image örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz IMG Örnek Dosyaları - IMG Disk Image Test Dosyaları İndir',
+          description: 'Disk image bağlama, IMG çıkarma ve disk image işleme araçlarını test etmek için ücretsiz IMG disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IMG disk image bağlamayı, IMG dosya çıkarmayı, disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'IMG Örnek Dosyaları',
+          description: 'Test için ücretsiz IMG disk image örnek dosyalarını indirin. Disk image bağlama, IMG çıkarma ve disk image işleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda IMG disk image dosyalarıdır'
+      },
+      iso: {
+        meta: {
+          title: 'Ücretsiz ISO Örnek Dosyaları İndir - ISO Disk Image Test Dosyaları | MorphyHub',
+          description: 'ISO disk image bağlama, ISO çıkarma ve disk image işleme araçlarını test etmek için ücretsiz ISO ISO disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ISO disk image bağlamayı, ISO dosya çıkarmayı, disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.',
+          keywords: 'ISO örnek dosyaları, ISO test dosyaları, ISO örnekleri indir, ücretsiz ISO test dosyaları, ISO disk image dosyaları, ISO bağlama test, ISO çıkarma test, disk image işleme test dosyaları, disk image örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz ISO Örnek Dosyaları - ISO Disk Image Test Dosyaları İndir',
+          description: 'ISO disk image bağlama, ISO çıkarma ve disk image işleme araçlarını test etmek için ücretsiz ISO ISO disk image örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ISO disk image bağlamayı, ISO dosya çıkarmayı, disk image araçlarını ve disk image işleme yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ISO Örnek Dosyaları',
+          description: 'Test için ücretsiz ISO ISO disk image örnek dosyalarını indirin. ISO disk image bağlama, ISO çıkarma ve disk image işleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ISO disk image dosyalarıdır'
+      },
+      kmz: {
+        meta: {
+          title: 'Ücretsiz KMZ Örnek Dosyaları İndir - KMZ Sıkıştırılmış KML Test Dosyaları | MorphyHub',
+          description: 'KMZ çıkarma, coğrafi veri işleme ve Google Earth entegrasyon araçlarını test etmek için ücretsiz KMZ sıkıştırılmış Keyhole Markup Language örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. KMZ dosya çıkarmayı, KMZ\'den KML\'e dönüştürmeyi, Google Earth uyumluluğunu, coğrafi veri işlemeyi ve haritalama yazılımlarını test etmek için mükemmel.',
+          keywords: 'KMZ örnek dosyaları, KMZ test dosyaları, KMZ örnekleri indir, ücretsiz KMZ test dosyaları, KMZ sıkıştırılmış dosyalar, KMZ çıkarma test, Google Earth test dosyaları, coğrafi veri işleme test, haritalama yazılım örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz KMZ Örnek Dosyaları - KMZ Sıkıştırılmış KML Test Dosyaları İndir',
+          description: 'KMZ çıkarma, coğrafi veri işleme ve Google Earth entegrasyon araçlarını test etmek için ücretsiz KMZ sıkıştırılmış Keyhole Markup Language örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. KMZ dosya çıkarmayı, KMZ\'den KML\'e dönüştürmeyi, Google Earth uyumluluğunu, coğrafi veri işlemeyi ve haritalama yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'KMZ Örnek Dosyaları',
+          description: 'Test için ücretsiz KMZ sıkıştırılmış Keyhole Markup Language örnek dosyalarını indirin. KMZ çıkarma, coğrafi veri işleme ve Google Earth entegrasyon araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda KMZ sıkıştırılmış Keyhole Markup Language dosyalarıdır'
+      },
+      laz: {
+        meta: {
+          title: 'Ücretsiz LAZ Örnek Dosyaları İndir - LAZ Sıkıştırılmış LiDAR Test Dosyaları | MorphyHub',
+          description: 'LAZ çıkarma, point cloud işleme ve 3D haritalama araçlarını test etmek için ücretsiz LAZ sıkıştırılmış LiDAR point cloud data örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LAZ dosya çıkarmayı, LAZ\'dan LAS\'a dönüştürmeyi, LiDAR point cloud işlemeyi, 3D haritalama yazılımlarını ve coğrafi veri analiz araçlarını test etmek için mükemmel.',
+          keywords: 'LAZ örnek dosyaları, LAZ test dosyaları, LAZ örnekleri indir, ücretsiz LAZ test dosyaları, LAZ sıkıştırılmış dosyalar, LAZ çıkarma test, LiDAR point cloud test, 3D haritalama test dosyaları, coğrafi veri analiz örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz LAZ Örnek Dosyaları - LAZ Sıkıştırılmış LiDAR Test Dosyaları İndir',
+          description: 'LAZ çıkarma, point cloud işleme ve 3D haritalama araçlarını test etmek için ücretsiz LAZ sıkıştırılmış LiDAR point cloud data örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LAZ dosya çıkarmayı, LAZ\'dan LAS\'a dönüştürmeyi, LiDAR point cloud işlemeyi, 3D haritalama yazılımlarını ve coğrafi veri analiz araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'LAZ Örnek Dosyaları',
+          description: 'Test için ücretsiz LAZ sıkıştırılmış LiDAR point cloud data örnek dosyalarını indirin. LAZ çıkarma, point cloud işleme ve 3D haritalama araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda LAZ sıkıştırılmış LiDAR point cloud data dosyalarıdır'
+      },
+      lha: {
+        meta: {
+          title: 'Ücretsiz LHA Örnek Dosyaları İndir - Çıkarma Araçları için LHA Arşiv Test Dosyaları | MorphyHub',
+          description: 'LHA çıkarma, arşiv açma ve dosya arşivleme araçlarını test etmek için ücretsiz LHA LHA arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LHA arşiv çıkarmayı, LHA dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
+          keywords: 'LHA örnek dosyaları, LHA test dosyaları, LHA örnekleri indir, ücretsiz LHA test dosyaları, LHA arşiv dosyaları, LHA çıkarma test, LHA açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz LHA Örnek Dosyaları - Çıkarma Araçları için LHA Arşiv Test Dosyaları İndir',
+          description: 'LHA çıkarma, arşiv açma ve dosya arşivleme araçlarını test etmek için ücretsiz LHA LHA arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LHA arşiv çıkarmayı, LHA dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'LHA Örnek Dosyaları',
+          description: 'Test için ücretsiz LHA LHA arşiv örnek dosyalarını indirin. LHA çıkarma, arşiv açma ve dosya arşivleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda LHA arşiv dosyalarıdır'
+      },
+      lzh: {
+        meta: {
+          title: 'Ücretsiz LZH Örnek Dosyaları İndir - Çıkarma Araçları için LZH Arşiv Test Dosyaları | MorphyHub',
+          description: 'LZH çıkarma, arşiv açma ve dosya arşivleme araçlarını test etmek için ücretsiz LZH LZH arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LZH arşiv çıkarmayı, LZH dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
+          keywords: 'LZH örnek dosyaları, LZH test dosyaları, LZH örnekleri indir, ücretsiz LZH test dosyaları, LZH arşiv dosyaları, LZH çıkarma test, LZH açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz LZH Örnek Dosyaları - Çıkarma Araçları için LZH Arşiv Test Dosyaları İndir',
+          description: 'LZH çıkarma, arşiv açma ve dosya arşivleme araçlarını test etmek için ücretsiz LZH LZH arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LZH arşiv çıkarmayı, LZH dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'LZH Örnek Dosyaları',
+          description: 'Test için ücretsiz LZH LZH arşiv örnek dosyalarını indirin. LZH çıkarma, arşiv açma ve dosya arşivleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda LZH arşiv dosyalarıdır'
+      },
+      lzma: {
+        meta: {
+          title: 'Ücretsiz LZMA Örnek Dosyaları İndir - LZMA Sıkıştırılmış Arşiv Test Dosyaları | MorphyHub',
+          description: 'LZMA açma, arşiv çıkarma ve dosya sıkıştırma araçlarını test etmek için ücretsiz LZMA LZMA sıkıştırılmış örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LZMA arşiv açmayı, LZMA dosya çıkarmayı, LZMA sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.',
+          keywords: 'LZMA örnek dosyaları, LZMA test dosyaları, LZMA örnekleri indir, ücretsiz LZMA test dosyaları, LZMA sıkıştırılmış dosyalar, LZMA açma test, LZMA sıkıştırma test, arşiv çıkarma test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz LZMA Örnek Dosyaları - LZMA Sıkıştırılmış Arşiv Test Dosyaları İndir',
+          description: 'LZMA açma, arşiv çıkarma ve dosya sıkıştırma araçlarını test etmek için ücretsiz LZMA LZMA sıkıştırılmış örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LZMA arşiv açmayı, LZMA dosya çıkarmayı, LZMA sıkıştırma araçlarını ve arşiv yönetim yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'LZMA Örnek Dosyaları',
+          description: 'Test için ücretsiz LZMA LZMA sıkıştırılmış örnek dosyalarını indirin. LZMA açmanızı, arşiv çıkarmanızı ve dosya sıkıştırma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda LZMA sıkıştırılmış dosyalardır'
+      },
+      '7z': {
+        meta: {
+          title: 'Ücretsiz 7Z Örnek Dosyaları İndir - Çıkarma Araçları için 7Z Arşiv Test Dosyaları | MorphyHub',
+          description: 'Arşiv dönüştürme ve çıkarma araçlarını test etmek için ücretsiz 7Z arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 7Z arşiv çıkarmayı, 7Z dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.',
+          keywords: '7Z örnek dosyaları, 7Z test dosyaları, 7Z örnekleri indir, ücretsiz 7Z test dosyaları, 7Z arşiv dosyaları, 7Z çıkarma test, 7Z açma test, arşiv yönetim test dosyaları, dosya sıkıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz 7Z Örnek Dosyaları - Çıkarma Araçları için 7Z Arşiv Test Dosyaları İndir',
+          description: 'Arşiv dönüştürme ve çıkarma araçlarını test etmek için ücretsiz 7Z arşiv örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 7Z arşiv çıkarmayı, 7Z dosya açmayı, arşiv yönetim araçlarını ve dosya sıkıştırma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: '7Z Örnek Dosyaları',
+          description: 'Test için ücretsiz 7Z arşiv örnek dosyalarını indirin. Arşiv dönüştürme ve çıkarma araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda 7Z arşiv dosyalarıdır'
       }
     }
   }

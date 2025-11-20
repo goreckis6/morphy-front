@@ -1839,6 +1839,310 @@ export const ja: SamplePageTranslations = {
           description: 'テスト用の無料CAF Core Audio Formatサンプルファイルをダウンロード。オーディオ変換ツール、CAF再生ソフトウェア、オーディオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
         },
         about_description: 'これらはテスト目的のさまざまなサイズのCAF (Core Audio Format)オーディオファイルです'
+      },
+      cue: {
+        meta: {
+          title: '無料CUEサンプルファイルをダウンロード - オーディオCD書き込み用CUE Sheetテストファイル | MorphyHub',
+          description: 'オーディオCD書き込みツールとCUE sheet解析ツールをテストするための無料CUE CUE sheetサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CUE sheet解析、オーディオCD書き込みソフトウェア、CUEファイル検証、CD作成ツールのテストに最適。',
+          keywords: 'CUEサンプルファイル、CUEテストファイル、CUE例をダウンロード、無料CUEテストファイル、CUE sheetファイル、オーディオCD書き込みテスト、CUE sheetパーサー、CD作成テストファイル、CUEファイル検証、オーディオディスクイメージテスト'
+        },
+        schema: {
+          name: '無料CUEサンプルファイル - オーディオCD書き込み用CUE Sheetテストファイルをダウンロード',
+          description: 'オーディオCD書き込みツールとCUE sheet解析ツールをテストするための無料CUE CUE sheetサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CUE sheet解析、オーディオCD書き込みソフトウェア、CUEファイル検証、CD作成ツールのテストに最適。'
+        },
+        hero: {
+          title: 'CUEサンプルファイル',
+          description: 'テスト用の無料CUE CUE sheetサンプルファイルをダウンロード。オーディオCD書き込みツールとCUE sheet解析ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのCUE sheetファイルです'
+      },
+      m4a: {
+        meta: {
+          title: '無料M4Aサンプルファイルをダウンロード - 変換ツール用M4Aオーディオテストファイル | MorphyHub',
+          description: 'M4Aオーディオ変換、M4A再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料M4A M4Aオーディオサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。M4AからMP3へのコンバーター、M4AからWAVへのコンバーター、オーディオプレーヤー、M4A再生互換性、MPEG-4オーディオフォーマットサポートのテストに最適。',
+          keywords: 'M4Aサンプルファイル、M4Aテストファイル、M4A例をダウンロード、無料M4Aテストファイル、M4Aオーディオファイル、M4AからMP3へのコンバーター、M4AからWAVへのコンバーター、オーディオプレーヤーテストファイル、M4A再生テスト、オーディオ変換サンプル、MPEG-4オーディオフォーマットテスト'
+        },
+        schema: {
+          name: '無料M4Aサンプルファイル - 変換ツール用M4Aオーディオテストファイルをダウンロード',
+          description: 'M4Aオーディオ変換、M4A再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料M4A M4Aオーディオサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。M4AからMP3へのコンバーター、M4AからWAVへのコンバーター、オーディオプレーヤー、M4A再生互換性、MPEG-4オーディオフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'M4Aサンプルファイル',
+          description: 'テスト用の無料M4A M4Aオーディオサンプルファイルをダウンロード。M4Aオーディオ変換、M4A再生、オーディオ処理ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのM4Aオーディオファイルです'
+      },
+      midi: {
+        meta: {
+          title: '無料MIDIサンプルファイルをダウンロード - 音楽シーケンシング用MIDI Musicテストファイル | MorphyHub',
+          description: 'MIDI再生、MIDI変換、音楽シーケンシングツール、デジタルオーディオワークステーションをテストするための無料MIDI MIDI musicサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。MIDIからMP3へのコンバーター、MIDIからWAVへのコンバーター、MIDIシーケンサー、音楽制作ソフトウェア、Musical Instrument Digital Interfaceフォーマットサポートのテストに最適。',
+          keywords: 'MIDIサンプルファイル、MIDIテストファイル、MIDI例をダウンロード、無料MIDIテストファイル、MIDI musicファイル、MIDIからMP3へのコンバーター、MIDIからWAVへのコンバーター、MIDIシーケンサーテスト、音楽制作テストファイル、MIDI再生テスト、音楽シーケンシングサンプル'
+        },
+        schema: {
+          name: '無料MIDIサンプルファイル - 音楽シーケンシング用MIDI Musicテストファイルをダウンロード',
+          description: 'MIDI再生、MIDI変換、音楽シーケンシングツール、デジタルオーディオワークステーションをテストするための無料MIDI MIDI musicサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。MIDIからMP3へのコンバーター、MIDIからWAVへのコンバーター、MIDIシーケンサー、音楽制作ソフトウェア、Musical Instrument Digital Interfaceフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'MIDIサンプルファイル',
+          description: 'テスト用の無料MIDI MIDI musicサンプルファイルをダウンロード。MIDI再生、MIDI変換、音楽シーケンシングツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのMIDI musicファイルです'
+      },
+      ace: {
+        meta: {
+          title: '無料ACEサンプルファイルをダウンロード - 抽出ツール用ACE Archiveテストファイル | MorphyHub',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料ACE archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ACEアーカイブ抽出、ACEファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
+          keywords: 'ACEサンプルファイル、ACEテストファイル、ACE例をダウンロード、無料ACEテストファイル、ACE archiveファイル、ACE抽出テスト、ACE解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料ACEサンプルファイル - 抽出ツール用ACE Archiveテストファイルをダウンロード',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料ACE archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ACEアーカイブ抽出、ACEファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'ACEサンプルファイル',
+          description: 'テスト用の無料ACE archiveサンプルファイルをダウンロード。アーカイブ抽出と圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのACE archiveファイルです'
+      },
+      arj: {
+        meta: {
+          title: '無料ARJサンプルファイルをダウンロード - 抽出ツール用ARJ Archiveテストファイル | MorphyHub',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料ARJ archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ARJアーカイブ抽出、ARJファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
+          keywords: 'ARJサンプルファイル、ARJテストファイル、ARJ例をダウンロード、無料ARJテストファイル、ARJ archiveファイル、ARJ抽出テスト、ARJ解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料ARJサンプルファイル - 抽出ツール用ARJ Archiveテストファイルをダウンロード',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料ARJ archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ARJアーカイブ抽出、ARJファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'ARJサンプルファイル',
+          description: 'テスト用の無料ARJ archiveサンプルファイルをダウンロード。アーカイブ抽出と圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのARJ archiveファイルです'
+      },
+      bz2: {
+        meta: {
+          title: '無料BZ2サンプルファイルをダウンロード - BZ2 Compressed Archiveテストファイル | MorphyHub',
+          description: 'アーカイブ解凍と圧縮ツールをテストするための無料BZ2 bzip2 compressed archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。BZ2アーカイブ解凍、BZ2ファイル抽出、bzip2圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。',
+          keywords: 'BZ2サンプルファイル、BZ2テストファイル、BZ2例をダウンロード、無料BZ2テストファイル、BZ2圧縮ファイル、BZ2解凍テスト、bzip2圧縮テスト、アーカイブ抽出テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料BZ2サンプルファイル - BZ2 Compressed Archiveテストファイルをダウンロード',
+          description: 'アーカイブ解凍と圧縮ツールをテストするための無料BZ2 bzip2 compressed archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。BZ2アーカイブ解凍、BZ2ファイル抽出、bzip2圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'BZ2サンプルファイル',
+          description: 'テスト用の無料BZ2 bzip2 compressed archiveサンプルファイルをダウンロード。アーカイブ解凍と圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのBZ2 compressed archiveファイルです'
+      },
+      gz: {
+        meta: {
+          title: '無料GZサンプルファイルをダウンロード - GZ Gzip Compressed Archiveテストファイル | MorphyHub',
+          description: 'gzip解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための無料GZ gzip compressed archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。GZアーカイブ解凍、GZファイル抽出、gzip圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。',
+          keywords: 'GZサンプルファイル、GZテストファイル、GZ例をダウンロード、無料GZテストファイル、GZ圧縮ファイル、GZ解凍テスト、gzip圧縮テスト、アーカイブ抽出テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料GZサンプルファイル - GZ Gzip Compressed Archiveテストファイルをダウンロード',
+          description: 'gzip解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための無料GZ gzip compressed archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。GZアーカイブ解凍、GZファイル抽出、gzip圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'GZサンプルファイル',
+          description: 'テスト用の無料GZ gzip compressed archiveサンプルファイルをダウンロード。gzip解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのGZ gzip compressed archiveファイルです'
+      },
+      cab: {
+        meta: {
+          title: '無料CABサンプルファイルをダウンロード - CAB Windows Cabinet Archiveテストファイル | MorphyHub',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料CAB Windows cabinet archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CABアーカイブ抽出、CABファイル解凍、Windows cabinet archiveツール、アーカイブ管理ソフトウェアのテストに最適。',
+          keywords: 'CABサンプルファイル、CABテストファイル、CAB例をダウンロード、無料CABテストファイル、CAB archiveファイル、CAB抽出テスト、Windows cabinet archiveテスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料CABサンプルファイル - CAB Windows Cabinet Archiveテストファイルをダウンロード',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料CAB Windows cabinet archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CABアーカイブ抽出、CABファイル解凍、Windows cabinet archiveツール、アーカイブ管理ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'CABサンプルファイル',
+          description: 'テスト用の無料CAB Windows cabinet archiveサンプルファイルをダウンロード。アーカイブ抽出と圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのCAB Windows cabinet archiveファイルです'
+      },
+      cpio: {
+        meta: {
+          title: '無料CPIOサンプルファイルをダウンロード - 抽出ツール用CPIO Archiveテストファイル | MorphyHub',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料CPIO archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CPIOアーカイブ抽出、CPIOファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
+          keywords: 'CPIOサンプルファイル、CPIOテストファイル、CPIO例をダウンロード、無料CPIOテストファイル、CPIO archiveファイル、CPIO抽出テスト、CPIO解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料CPIOサンプルファイル - 抽出ツール用CPIO Archiveテストファイルをダウンロード',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料CPIO archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CPIOアーカイブ抽出、CPIOファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'CPIOサンプルファイル',
+          description: 'テスト用の無料CPIO archiveサンプルファイルをダウンロード。アーカイブ抽出と圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのCPIO archiveファイルです'
+      },
+      zip: {
+        meta: {
+          title: '無料ZIPサンプルファイルをダウンロード - 抽出ツール用ZIP Archiveテストファイル | MorphyHub',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料ZIP archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ZIPアーカイブ抽出、ZIPファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
+          keywords: 'ZIPサンプルファイル、ZIPテストファイル、ZIP例をダウンロード、無料ZIPテストファイル、ZIP archiveファイル、ZIP抽出テスト、ZIP解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料ZIPサンプルファイル - 抽出ツール用ZIP Archiveテストファイルをダウンロード',
+          description: 'アーカイブ抽出と圧縮ツールをテストするための無料ZIP archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ZIPアーカイブ抽出、ZIPファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'ZIPサンプルファイル',
+          description: 'テスト用の無料ZIP archiveサンプルファイルをダウンロード。アーカイブ抽出と圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのZIP archiveファイルです'
+      },
+      dmg: {
+        meta: {
+          title: '無料DMGサンプルファイルをダウンロード - DMG macOS Disk Imageテストファイル | MorphyHub',
+          description: 'ディスクイメージマウントとDMG抽出ツールをテストするための無料DMG macOS disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DMGディスクイメージマウント、DMGファイル抽出、macOS disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。',
+          keywords: 'DMGサンプルファイル、DMGテストファイル、DMG例をダウンロード、無料DMGテストファイル、DMG disk imageファイル、DMGマウントテスト、macOS disk imageテスト、ディスクイメージ抽出テストファイル、ディスクイメージ処理サンプル'
+        },
+        schema: {
+          name: '無料DMGサンプルファイル - DMG macOS Disk Imageテストファイルをダウンロード',
+          description: 'ディスクイメージマウントとDMG抽出ツールをテストするための無料DMG macOS disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DMGディスクイメージマウント、DMGファイル抽出、macOS disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'DMGサンプルファイル',
+          description: 'テスト用の無料DMG macOS disk imageサンプルファイルをダウンロード。ディスクイメージマウントとDMG抽出ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのDMG macOS disk imageファイルです'
+      },
+      img: {
+        meta: {
+          title: '無料IMGサンプルファイルをダウンロード - IMG Disk Imageテストファイル | MorphyHub',
+          description: 'ディスクイメージマウント、IMG抽出、ディスクイメージ処理ツールをテストするための無料IMG disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。IMGディスクイメージマウント、IMGファイル抽出、disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。',
+          keywords: 'IMGサンプルファイル、IMGテストファイル、IMG例をダウンロード、無料IMGテストファイル、IMG disk imageファイル、IMGマウントテスト、ディスクイメージ抽出テスト、ディスクイメージ処理テストファイル、ディスクイメージサンプル'
+        },
+        schema: {
+          name: '無料IMGサンプルファイル - IMG Disk Imageテストファイルをダウンロード',
+          description: 'ディスクイメージマウント、IMG抽出、ディスクイメージ処理ツールをテストするための無料IMG disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。IMGディスクイメージマウント、IMGファイル抽出、disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'IMGサンプルファイル',
+          description: 'テスト用の無料IMG disk imageサンプルファイルをダウンロード。ディスクイメージマウント、IMG抽出、ディスクイメージ処理ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのIMG disk imageファイルです'
+      },
+      iso: {
+        meta: {
+          title: '無料ISOサンプルファイルをダウンロード - ISO Disk Imageテストファイル | MorphyHub',
+          description: 'ISOディスクイメージマウント、ISO抽出、ディスクイメージ処理ツールをテストするための無料ISO ISO disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ISOディスクイメージマウント、ISOファイル抽出、disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。',
+          keywords: 'ISOサンプルファイル、ISOテストファイル、ISO例をダウンロード、無料ISOテストファイル、ISO disk imageファイル、ISOマウントテスト、ISO抽出テスト、ディスクイメージ処理テストファイル、ディスクイメージサンプル'
+        },
+        schema: {
+          name: '無料ISOサンプルファイル - ISO Disk Imageテストファイルをダウンロード',
+          description: 'ISOディスクイメージマウント、ISO抽出、ディスクイメージ処理ツールをテストするための無料ISO ISO disk imageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ISOディスクイメージマウント、ISOファイル抽出、disk imageツール、ディスクイメージ処理ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'ISOサンプルファイル',
+          description: 'テスト用の無料ISO ISO disk imageサンプルファイルをダウンロード。ISOディスクイメージマウント、ISO抽出、ディスクイメージ処理ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのISO disk imageファイルです'
+      },
+      kmz: {
+        meta: {
+          title: '無料KMZサンプルファイルをダウンロード - KMZ Compressed KMLテストファイル | MorphyHub',
+          description: 'KMZ抽出、地理データ処理、Google Earth統合ツールをテストするための無料KMZ compressed Keyhole Markup Languageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。KMZファイル抽出、KMZからKMLへの変換、Google Earth互換性、地理データ処理、マッピングソフトウェアのテストに最適。',
+          keywords: 'KMZサンプルファイル、KMZテストファイル、KMZ例をダウンロード、無料KMZテストファイル、KMZ圧縮ファイル、KMZ抽出テスト、Google Earthテストファイル、地理データ処理テスト、マッピングソフトウェアサンプル'
+        },
+        schema: {
+          name: '無料KMZサンプルファイル - KMZ Compressed KMLテストファイルをダウンロード',
+          description: 'KMZ抽出、地理データ処理、Google Earth統合ツールをテストするための無料KMZ compressed Keyhole Markup Languageサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。KMZファイル抽出、KMZからKMLへの変換、Google Earth互換性、地理データ処理、マッピングソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'KMZサンプルファイル',
+          description: 'テスト用の無料KMZ compressed Keyhole Markup Languageサンプルファイルをダウンロード。KMZ抽出、地理データ処理、Google Earth統合ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのKMZ compressed Keyhole Markup Languageファイルです'
+      },
+      laz: {
+        meta: {
+          title: '無料LAZサンプルファイルをダウンロード - LAZ Compressed LiDARテストファイル | MorphyHub',
+          description: 'LAZ抽出、ポイントクラウド処理、3Dマッピングツールをテストするための無料LAZ compressed LiDAR point cloud dataサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LAZファイル抽出、LAZからLASへの変換、LiDARポイントクラウド処理、3Dマッピングソフトウェア、地理データ分析ツールのテストに最適。',
+          keywords: 'LAZサンプルファイル、LAZテストファイル、LAZ例をダウンロード、無料LAZテストファイル、LAZ圧縮ファイル、LAZ抽出テスト、LiDARポイントクラウドテスト、3Dマッピングテストファイル、地理データ分析サンプル'
+        },
+        schema: {
+          name: '無料LAZサンプルファイル - LAZ Compressed LiDARテストファイルをダウンロード',
+          description: 'LAZ抽出、ポイントクラウド処理、3Dマッピングツールをテストするための無料LAZ compressed LiDAR point cloud dataサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LAZファイル抽出、LAZからLASへの変換、LiDARポイントクラウド処理、3Dマッピングソフトウェア、地理データ分析ツールのテストに最適。'
+        },
+        hero: {
+          title: 'LAZサンプルファイル',
+          description: 'テスト用の無料LAZ compressed LiDAR point cloud dataサンプルファイルをダウンロード。LAZ抽出、ポイントクラウド処理、3Dマッピングツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのLAZ compressed LiDAR point cloud dataファイルです'
+      },
+      lha: {
+        meta: {
+          title: '無料LHAサンプルファイルをダウンロード - 抽出ツール用LHA Archiveテストファイル | MorphyHub',
+          description: 'LHA抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための無料LHA LHA archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LHAアーカイブ抽出、LHAファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
+          keywords: 'LHAサンプルファイル、LHAテストファイル、LHA例をダウンロード、無料LHAテストファイル、LHA archiveファイル、LHA抽出テスト、LHA解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料LHAサンプルファイル - 抽出ツール用LHA Archiveテストファイルをダウンロード',
+          description: 'LHA抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための無料LHA LHA archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LHAアーカイブ抽出、LHAファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'LHAサンプルファイル',
+          description: 'テスト用の無料LHA LHA archiveサンプルファイルをダウンロード。LHA抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのLHA archiveファイルです'
+      },
+      lzh: {
+        meta: {
+          title: '無料LZHサンプルファイルをダウンロード - 抽出ツール用LZH Archiveテストファイル | MorphyHub',
+          description: 'LZH抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための無料LZH LZH archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LZHアーカイブ抽出、LZHファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
+          keywords: 'LZHサンプルファイル、LZHテストファイル、LZH例をダウンロード、無料LZHテストファイル、LZH archiveファイル、LZH抽出テスト、LZH解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料LZHサンプルファイル - 抽出ツール用LZH Archiveテストファイルをダウンロード',
+          description: 'LZH抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための無料LZH LZH archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LZHアーカイブ抽出、LZHファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'LZHサンプルファイル',
+          description: 'テスト用の無料LZH LZH archiveサンプルファイルをダウンロード。LZH抽出、アーカイブ解凍、ファイルアーカイブツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのLZH archiveファイルです'
+      },
+      lzma: {
+        meta: {
+          title: '無料LZMAサンプルファイルをダウンロード - LZMA Compressed Archiveテストファイル | MorphyHub',
+          description: 'LZMA解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための無料LZMA LZMA compressedサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LZMAアーカイブ解凍、LZMAファイル抽出、LZMA圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。',
+          keywords: 'LZMAサンプルファイル、LZMAテストファイル、LZMA例をダウンロード、無料LZMAテストファイル、LZMA圧縮ファイル、LZMA解凍テスト、LZMA圧縮テスト、アーカイブ抽出テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料LZMAサンプルファイル - LZMA Compressed Archiveテストファイルをダウンロード',
+          description: 'LZMA解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための無料LZMA LZMA compressedサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LZMAアーカイブ解凍、LZMAファイル抽出、LZMA圧縮ツール、アーカイブ管理ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'LZMAサンプルファイル',
+          description: 'テスト用の無料LZMA LZMA compressedサンプルファイルをダウンロード。LZMA解凍、アーカイブ抽出、ファイル圧縮ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのLZMA compressedファイルです'
+      },
+      '7z': {
+        meta: {
+          title: '無料7Zサンプルファイルをダウンロード - 抽出ツール用7Z Archiveテストファイル | MorphyHub',
+          description: 'アーカイブ変換と抽出ツールをテストするための無料7Z archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。7Zアーカイブ抽出、7Zファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。',
+          keywords: '7Zサンプルファイル、7Zテストファイル、7Z例をダウンロード、無料7Zテストファイル、7Z archiveファイル、7Z抽出テスト、7Z解凍テスト、アーカイブ管理テストファイル、ファイル圧縮サンプル'
+        },
+        schema: {
+          name: '無料7Zサンプルファイル - 抽出ツール用7Z Archiveテストファイルをダウンロード',
+          description: 'アーカイブ変換と抽出ツールをテストするための無料7Z archiveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。7Zアーカイブ抽出、7Zファイル解凍、アーカイブ管理ツール、ファイル圧縮ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: '7Zサンプルファイル',
+          description: 'テスト用の無料7Z archiveサンプルファイルをダウンロード。アーカイブ変換と抽出ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズの7Z archiveファイルです'
       }
     }
   }
