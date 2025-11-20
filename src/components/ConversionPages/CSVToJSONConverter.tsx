@@ -24,7 +24,7 @@ import { useFileValidation } from '../../hooks/useFileValidation';
 
 export const CSVToJSONConverter: React.FC = () => {
   const { t, i18n } = useTranslation();
-  
+   
   useEffect(() => {
     // Sync language with localStorage if needed
     const savedLanguage = localStorage.getItem('language');
