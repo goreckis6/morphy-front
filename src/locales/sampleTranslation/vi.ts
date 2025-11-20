@@ -1519,6 +1519,326 @@ export const vi: SamplePageTranslations = {
           description: 'Tải xuống tệp mẫu 3GP video mobile 3GPP miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình phát video mobile, bộ chuyển đổi 3GP và phần mềm đa phương tiện của bạn.'
         },
         about_description: 'Đây là các tệp thử nghiệm 3GP (video mobile 3GPP) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      dav: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu DAV Miễn Phí - Tệp Kiểm Tra Video DAV cho Camera An Ninh | MorphyHub',
+          description: 'Tải xuống tệp mẫu DAV miễn phí để kiểm tra trình phát video DAV, xử lý video camera an ninh, bộ chuyển đổi DAV và công cụ phân tích video giám sát. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phát lại DAV, bộ chuyển đổi DAV sang MP4, phần mềm camera an ninh, công cụ giám sát video và tương thích định dạng DAV.',
+          keywords: 'tệp mẫu DAV, tệp kiểm tra DAV, tải xuống ví dụ DAV, tệp kiểm tra DAV miễn phí, tệp video DAV, tệp video camera an ninh, bộ chuyển đổi DAV sang MP4, kiểm tra trình phát DAV, ví dụ video giám sát, tệp kiểm tra định dạng DAV, tệp kiểm tra giám sát video'
+        },
+        schema: {
+          name: 'Tệp Mẫu DAV Miễn Phí - Tải Xuống Tệp Kiểm Tra Video DAV cho Camera An Ninh',
+          description: 'Tải xuống tệp mẫu DAV miễn phí để kiểm tra trình phát video DAV, xử lý video camera an ninh, bộ chuyển đổi DAV và công cụ phân tích video giám sát. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phát lại DAV, bộ chuyển đổi DAV sang MP4, phần mềm camera an ninh, công cụ giám sát video và tương thích định dạng DAV.'
+        },
+        hero: {
+          title: 'Tệp Mẫu DAV',
+          description: 'Tải xuống tệp mẫu DAV miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình phát video DAV, công cụ xử lý video camera an ninh và bộ chuyển đổi DAV.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm video DAV với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      dds: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu DDS Miễn Phí - Tệp Kiểm Tra Kết Cấu DirectDraw Surface | MorphyHub',
+          description: 'Tải xuống tệp mẫu DDS DirectDraw Surface miễn phí để kiểm tra chuyển đổi hình ảnh kết cấu, xem DDS, công cụ phát triển trò chơi và phần mềm xử lý đồ họa. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra tải kết cấu DDS, bộ chuyển đổi DDS sang PNG, tương thích động cơ trò chơi, công cụ nén kết cấu và hỗ trợ định dạng DirectDraw Surface.',
+          keywords: 'tệp mẫu DDS, tệp kiểm tra DDS, tải xuống ví dụ DDS, tệp kiểm tra DDS miễn phí, tệp DirectDraw Surface, tệp kết cấu DDS, bộ chuyển đổi DDS sang PNG, ví dụ hình ảnh kết cấu, tệp kiểm tra phát triển trò chơi, kiểm tra định dạng DDS, ví dụ kết cấu đồ họa'
+        },
+        schema: {
+          name: 'Tệp Mẫu DDS Miễn Phí - Tải Xuống Tệp Kiểm Tra Kết Cấu DirectDraw Surface',
+          description: 'Tải xuống tệp mẫu DDS DirectDraw Surface miễn phí để kiểm tra chuyển đổi hình ảnh kết cấu, xem DDS, công cụ phát triển trò chơi và phần mềm xử lý đồ họa. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra tải kết cấu DDS, bộ chuyển đổi DDS sang PNG, tương thích động cơ trò chơi, công cụ nén kết cấu và hỗ trợ định dạng DirectDraw Surface.'
+        },
+        hero: {
+          title: 'Tệp Mẫu DDS',
+          description: 'Tải xuống tệp mẫu DDS DirectDraw Surface miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi hình ảnh kết cấu, trình xem DDS và phần mềm phát triển trò chơi.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm DDS (DirectDraw Surface) hình ảnh kết cấu với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      dng: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu DNG Miễn Phí - Tệp Kiểm Tra Hình Ảnh Raw Digital Negative | MorphyHub',
+          description: 'Tải xuống tệp mẫu DNG Digital Negative hình ảnh raw miễn phí để kiểm tra xử lý hình ảnh raw, chuyển đổi DNG, phần mềm nhiếp ảnh và công cụ chỉnh sửa hình ảnh chuyên nghiệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi DNG sang JPEG, trình chỉnh sửa hình ảnh raw, xem DNG, xử lý raw camera và hỗ trợ định dạng Adobe Digital Negative.',
+          keywords: 'tệp mẫu DNG, tệp kiểm tra DNG, tải xuống ví dụ DNG, tệp kiểm tra DNG miễn phí, tệp Digital Negative, tệp hình ảnh raw DNG, bộ chuyển đổi DNG sang JPEG, xử lý hình ảnh raw, tệp kiểm tra nhiếp ảnh, kiểm tra định dạng DNG, ví dụ raw camera, tệp kiểm tra Adobe DNG'
+        },
+        schema: {
+          name: 'Tệp Mẫu DNG Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh Raw Digital Negative',
+          description: 'Tải xuống tệp mẫu DNG Digital Negative hình ảnh raw miễn phí để kiểm tra xử lý hình ảnh raw, chuyển đổi DNG, phần mềm nhiếp ảnh và công cụ chỉnh sửa hình ảnh chuyên nghiệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi DNG sang JPEG, trình chỉnh sửa hình ảnh raw, xem DNG, xử lý raw camera và hỗ trợ định dạng Adobe Digital Negative.'
+        },
+        hero: {
+          title: 'Tệp Mẫu DNG',
+          description: 'Tải xuống tệp mẫu DNG Digital Negative hình ảnh raw miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ xử lý hình ảnh raw, bộ chuyển đổi DNG và phần mềm nhiếp ảnh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm DNG (Digital Negative) hình ảnh raw với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      eps: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu EPS Miễn Phí - Tệp Kiểm Tra Đồ Họa Vector Encapsulated PostScript | MorphyHub',
+          description: 'Tải xuống tệp mẫu EPS Encapsulated PostScript miễn phí để kiểm tra chuyển đổi đồ họa vector, xem EPS, xử lý PostScript và phần mềm thiết kế chuyên nghiệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi EPS sang PDF, bộ chuyển đổi EPS sang SVG, trình chỉnh sửa đồ họa vector, trình xem PostScript và tương thích định dạng Encapsulated PostScript.',
+          keywords: 'tệp mẫu EPS, tệp kiểm tra EPS, tải xuống ví dụ EPS, tệp kiểm tra EPS miễn phí, tệp Encapsulated PostScript, đồ họa vector EPS, bộ chuyển đổi EPS sang PDF, bộ chuyển đổi EPS sang SVG, ví dụ đồ họa vector, tệp kiểm tra PostScript, tệp kiểm tra phần mềm thiết kế, kiểm tra định dạng EPS'
+        },
+        schema: {
+          name: 'Tệp Mẫu EPS Miễn Phí - Tải Xuống Tệp Kiểm Tra Đồ Họa Vector Encapsulated PostScript',
+          description: 'Tải xuống tệp mẫu EPS Encapsulated PostScript miễn phí để kiểm tra chuyển đổi đồ họa vector, xem EPS, xử lý PostScript và phần mềm thiết kế chuyên nghiệp. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi EPS sang PDF, bộ chuyển đổi EPS sang SVG, trình chỉnh sửa đồ họa vector, trình xem PostScript và tương thích định dạng Encapsulated PostScript.'
+        },
+        hero: {
+          title: 'Tệp Mẫu EPS',
+          description: 'Tải xuống tệp mẫu EPS Encapsulated PostScript miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi đồ họa vector, trình xem EPS và phần mềm xử lý PostScript.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm EPS (Encapsulated PostScript) đồ họa vector với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      exr: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu EXR Miễn Phí - Tệp Kiểm Tra Hình Ảnh High Dynamic Range OpenEXR | MorphyHub',
+          description: 'Tải xuống tệp mẫu EXR OpenEXR hình ảnh High Dynamic Range miễn phí để kiểm tra xử lý hình ảnh HDR, chuyển đổi EXR, phần mềm nhiếp ảnh chuyên nghiệp và công cụ hiệu ứng hình ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi EXR sang JPEG, trình chỉnh sửa hình ảnh HDR, xem EXR, xử lý High Dynamic Range và hỗ trợ định dạng OpenEXR.',
+          keywords: 'tệp mẫu EXR, tệp kiểm tra EXR, tải xuống ví dụ EXR, tệp kiểm tra EXR miễn phí, tệp OpenEXR, hình ảnh HDR EXR, bộ chuyển đổi EXR sang JPEG, xử lý hình ảnh HDR, ví dụ High Dynamic Range, tệp kiểm tra hiệu ứng hình ảnh, kiểm tra định dạng EXR, tệp kiểm tra nhiếp ảnh chuyên nghiệp'
+        },
+        schema: {
+          name: 'Tệp Mẫu EXR Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh High Dynamic Range OpenEXR',
+          description: 'Tải xuống tệp mẫu EXR OpenEXR hình ảnh High Dynamic Range miễn phí để kiểm tra xử lý hình ảnh HDR, chuyển đổi EXR, phần mềm nhiếp ảnh chuyên nghiệp và công cụ hiệu ứng hình ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi EXR sang JPEG, trình chỉnh sửa hình ảnh HDR, xem EXR, xử lý High Dynamic Range và hỗ trợ định dạng OpenEXR.'
+        },
+        hero: {
+          title: 'Tệp Mẫu EXR',
+          description: 'Tải xuống tệp mẫu EXR OpenEXR hình ảnh High Dynamic Range miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ xử lý hình ảnh HDR, bộ chuyển đổi EXR và phần mềm hiệu ứng hình ảnh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm EXR (OpenEXR High Dynamic Range) hình ảnh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      hdr: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu HDR Miễn Phí - Tệp Kiểm Tra Hình Ảnh High Dynamic Range | MorphyHub',
+          description: 'Tải xuống tệp mẫu HDR hình ảnh High Dynamic Range miễn phí để kiểm tra xử lý hình ảnh HDR, chuyển đổi HDR, phần mềm nhiếp ảnh và công cụ chỉnh sửa hình ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi HDR sang JPEG, trình chỉnh sửa hình ảnh HDR, xem HDR, công cụ ánh xạ tông màu và hỗ trợ định dạng High Dynamic Range.',
+          keywords: 'tệp mẫu HDR, tệp kiểm tra HDR, tải xuống ví dụ HDR, tệp kiểm tra HDR miễn phí, tệp High Dynamic Range, hình ảnh HDR, bộ chuyển đổi HDR sang JPEG, xử lý hình ảnh HDR, tệp kiểm tra ánh xạ tông màu, tệp kiểm tra nhiếp ảnh, kiểm tra định dạng HDR, ví dụ High Dynamic Range'
+        },
+        schema: {
+          name: 'Tệp Mẫu HDR Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh High Dynamic Range',
+          description: 'Tải xuống tệp mẫu HDR hình ảnh High Dynamic Range miễn phí để kiểm tra xử lý hình ảnh HDR, chuyển đổi HDR, phần mềm nhiếp ảnh và công cụ chỉnh sửa hình ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi HDR sang JPEG, trình chỉnh sửa hình ảnh HDR, xem HDR, công cụ ánh xạ tông màu và hỗ trợ định dạng High Dynamic Range.'
+        },
+        hero: {
+          title: 'Tệp Mẫu HDR',
+          description: 'Tải xuống tệp mẫu HDR hình ảnh High Dynamic Range miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ xử lý hình ảnh HDR, bộ chuyển đổi HDR và phần mềm nhiếp ảnh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm HDR (High Dynamic Range) hình ảnh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      heic: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu HEIC Miễn Phí - Tệp Kiểm Tra High Efficiency Image Container | MorphyHub',
+          description: 'Tải xuống tệp mẫu HEIC High Efficiency Image Container miễn phí để kiểm tra chuyển đổi hình ảnh HEIC, xem HEIC, xử lý định dạng hình ảnh hiện đại và công cụ nhiếp ảnh di động. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi HEIC sang JPEG, bộ chuyển đổi HEIC sang PNG, xử lý hình ảnh iOS, phần mềm xem HEIC và hỗ trợ định dạng High Efficiency Image Container.',
+          keywords: 'tệp mẫu HEIC, tệp kiểm tra HEIC, tải xuống ví dụ HEIC, tệp kiểm tra HEIC miễn phí, tệp High Efficiency Image Container, hình ảnh HEIC, bộ chuyển đổi HEIC sang JPEG, bộ chuyển đổi HEIC sang PNG, ví dụ hình ảnh iOS, tệp kiểm tra nhiếp ảnh di động, kiểm tra định dạng HEIC, ví dụ định dạng hình ảnh hiện đại'
+        },
+        schema: {
+          name: 'Tệp Mẫu HEIC Miễn Phí - Tải Xuống Tệp Kiểm Tra High Efficiency Image Container',
+          description: 'Tải xuống tệp mẫu HEIC High Efficiency Image Container miễn phí để kiểm tra chuyển đổi hình ảnh HEIC, xem HEIC, xử lý định dạng hình ảnh hiện đại và công cụ nhiếp ảnh di động. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi HEIC sang JPEG, bộ chuyển đổi HEIC sang PNG, xử lý hình ảnh iOS, phần mềm xem HEIC và hỗ trợ định dạng High Efficiency Image Container.'
+        },
+        hero: {
+          title: 'Tệp Mẫu HEIC',
+          description: 'Tải xuống tệp mẫu HEIC High Efficiency Image Container miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi hình ảnh HEIC, trình xem HEIC và phần mềm xử lý định dạng hình ảnh hiện đại.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm HEIC (High Efficiency Image Container) hình ảnh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      heif: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu HEIF Miễn Phí - Tệp Kiểm Tra High Efficiency Image Format | MorphyHub',
+          description: 'Tải xuống tệp mẫu HEIF High Efficiency Image Format miễn phí để kiểm tra chuyển đổi hình ảnh HEIF, xem HEIF, xử lý định dạng hình ảnh hiện đại và công cụ nhiếp ảnh di động. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi HEIF sang JPEG, bộ chuyển đổi HEIF sang PNG, xử lý hình ảnh di động, phần mềm xem HEIF và hỗ trợ định dạng High Efficiency Image Format.',
+          keywords: 'tệp mẫu HEIF, tệp kiểm tra HEIF, tải xuống ví dụ HEIF, tệp kiểm tra HEIF miễn phí, tệp High Efficiency Image Format, hình ảnh HEIF, bộ chuyển đổi HEIF sang JPEG, bộ chuyển đổi HEIF sang PNG, ví dụ hình ảnh di động, tệp kiểm tra định dạng hình ảnh hiện đại, kiểm tra định dạng HEIF, tệp kiểm tra nén hình ảnh'
+        },
+        schema: {
+          name: 'Tệp Mẫu HEIF Miễn Phí - Tải Xuống Tệp Kiểm Tra High Efficiency Image Format',
+          description: 'Tải xuống tệp mẫu HEIF High Efficiency Image Format miễn phí để kiểm tra chuyển đổi hình ảnh HEIF, xem HEIF, xử lý định dạng hình ảnh hiện đại và công cụ nhiếp ảnh di động. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi HEIF sang JPEG, bộ chuyển đổi HEIF sang PNG, xử lý hình ảnh di động, phần mềm xem HEIF và hỗ trợ định dạng High Efficiency Image Format.'
+        },
+        hero: {
+          title: 'Tệp Mẫu HEIF',
+          description: 'Tải xuống tệp mẫu HEIF High Efficiency Image Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi hình ảnh HEIF, trình xem HEIF và phần mềm xử lý định dạng hình ảnh hiện đại.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm HEIF (High Efficiency Image Format) hình ảnh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      icns: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu ICNS Miễn Phí - Tệp Kiểm Tra Biểu Tượng macOS | MorphyHub',
+          description: 'Tải xuống tệp mẫu ICNS biểu tượng macOS miễn phí để kiểm tra chuyển đổi biểu tượng macOS, xem ICNS, công cụ thiết kế biểu tượng và phát triển ứng dụng macOS. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi ICNS sang PNG, bộ chuyển đổi ICNS sang ICO, trình chỉnh sửa biểu tượng macOS, phần mềm thiết kế biểu tượng và hỗ trợ định dạng biểu tượng macOS.',
+          keywords: 'tệp mẫu ICNS, tệp kiểm tra ICNS, tải xuống ví dụ ICNS, tệp kiểm tra ICNS miễn phí, tệp biểu tượng macOS, biểu tượng ICNS, bộ chuyển đổi ICNS sang PNG, bộ chuyển đổi ICNS sang ICO, thiết kế biểu tượng macOS, tệp kiểm tra trình chỉnh sửa biểu tượng, kiểm tra định dạng ICNS, ví dụ biểu tượng Apple'
+        },
+        schema: {
+          name: 'Tệp Mẫu ICNS Miễn Phí - Tải Xuống Tệp Kiểm Tra Biểu Tượng macOS',
+          description: 'Tải xuống tệp mẫu ICNS biểu tượng macOS miễn phí để kiểm tra chuyển đổi biểu tượng macOS, xem ICNS, công cụ thiết kế biểu tượng và phát triển ứng dụng macOS. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi ICNS sang PNG, bộ chuyển đổi ICNS sang ICO, trình chỉnh sửa biểu tượng macOS, phần mềm thiết kế biểu tượng và hỗ trợ định dạng biểu tượng macOS.'
+        },
+        hero: {
+          title: 'Tệp Mẫu ICNS',
+          description: 'Tải xuống tệp mẫu ICNS biểu tượng macOS miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi biểu tượng macOS, trình xem ICNS và phần mềm thiết kế biểu tượng.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm ICNS (biểu tượng macOS) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ico: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu ICO Miễn Phí - Tệp Kiểm Tra Biểu Tượng Windows | MorphyHub',
+          description: 'Tải xuống tệp mẫu ICO biểu tượng Windows miễn phí để kiểm tra chuyển đổi biểu tượng Windows, xem ICO, công cụ thiết kế biểu tượng và phát triển ứng dụng Windows. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi ICO sang PNG, bộ chuyển đổi ICO sang ICNS, trình chỉnh sửa biểu tượng Windows, phần mềm thiết kế biểu tượng và hỗ trợ định dạng biểu tượng Windows.',
+          keywords: 'tệp mẫu ICO, tệp kiểm tra ICO, tải xuống ví dụ ICO, tệp kiểm tra ICO miễn phí, tệp biểu tượng Windows, biểu tượng ICO, bộ chuyển đổi ICO sang PNG, bộ chuyển đổi ICO sang ICNS, thiết kế biểu tượng Windows, tệp kiểm tra trình chỉnh sửa biểu tượng, kiểm tra định dạng ICO, ví dụ biểu tượng Windows'
+        },
+        schema: {
+          name: 'Tệp Mẫu ICO Miễn Phí - Tải Xuống Tệp Kiểm Tra Biểu Tượng Windows',
+          description: 'Tải xuống tệp mẫu ICO biểu tượng Windows miễn phí để kiểm tra chuyển đổi biểu tượng Windows, xem ICO, công cụ thiết kế biểu tượng và phát triển ứng dụng Windows. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi ICO sang PNG, bộ chuyển đổi ICO sang ICNS, trình chỉnh sửa biểu tượng Windows, phần mềm thiết kế biểu tượng và hỗ trợ định dạng biểu tượng Windows.'
+        },
+        hero: {
+          title: 'Tệp Mẫu ICO',
+          description: 'Tải xuống tệp mẫu ICO biểu tượng Windows miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi biểu tượng Windows, trình xem ICO và phần mềm thiết kế biểu tượng.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm ICO (biểu tượng Windows) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      jpeg: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu JPEG Miễn Phí - Tệp Kiểm Tra Hình Ảnh JPEG cho Công Cụ Chuyển Đổi | MorphyHub',
+          description: 'Tải xuống tệp mẫu JPEG miễn phí để kiểm tra chuyển đổi hình ảnh JPEG, nén JPEG, công cụ xử lý hình ảnh và phần mềm chỉnh sửa ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi JPEG sang PNG, bộ chuyển đổi JPEG sang PDF, công cụ nén hình ảnh, tối ưu hóa JPEG và hỗ trợ định dạng Joint Photographic Experts Group.',
+          keywords: 'tệp mẫu JPEG, tệp kiểm tra JPEG, tải xuống ví dụ JPEG, tệp kiểm tra JPEG miễn phí, tệp hình ảnh JPEG, bộ chuyển đổi JPEG sang PNG, bộ chuyển đổi JPEG sang PDF, tệp kiểm tra nén hình ảnh, tệp kiểm tra chỉnh sửa ảnh, kiểm tra định dạng JPEG, ví dụ xử lý hình ảnh'
+        },
+        schema: {
+          name: 'Tệp Mẫu JPEG Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh JPEG cho Công Cụ Chuyển Đổi',
+          description: 'Tải xuống tệp mẫu JPEG miễn phí để kiểm tra chuyển đổi hình ảnh JPEG, nén JPEG, công cụ xử lý hình ảnh và phần mềm chỉnh sửa ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi JPEG sang PNG, bộ chuyển đổi JPEG sang PDF, công cụ nén hình ảnh, tối ưu hóa JPEG và hỗ trợ định dạng Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'Tệp Mẫu JPEG',
+          description: 'Tải xuống tệp mẫu JPEG miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi hình ảnh JPEG, phần mềm nén JPEG và ứng dụng xử lý hình ảnh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm hình ảnh JPEG với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      jpg: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu JPG Miễn Phí - Tệp Kiểm Tra Hình Ảnh JPG cho Công Cụ Chuyển Đổi | MorphyHub',
+          description: 'Tải xuống tệp mẫu JPG miễn phí để kiểm tra chuyển đổi hình ảnh JPG, nén JPG, công cụ xử lý hình ảnh và phần mềm chỉnh sửa ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi JPG sang PNG, bộ chuyển đổi JPG sang PDF, công cụ nén hình ảnh, tối ưu hóa JPG và hỗ trợ định dạng Joint Photographic Experts Group.',
+          keywords: 'tệp mẫu JPG, tệp kiểm tra JPG, tải xuống ví dụ JPG, tệp kiểm tra JPG miễn phí, tệp hình ảnh JPG, bộ chuyển đổi JPG sang PNG, bộ chuyển đổi JPG sang PDF, tệp kiểm tra nén hình ảnh, tệp kiểm tra chỉnh sửa ảnh, kiểm tra định dạng JPG, ví dụ xử lý hình ảnh'
+        },
+        schema: {
+          name: 'Tệp Mẫu JPG Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh JPG cho Công Cụ Chuyển Đổi',
+          description: 'Tải xuống tệp mẫu JPG miễn phí để kiểm tra chuyển đổi hình ảnh JPG, nén JPG, công cụ xử lý hình ảnh và phần mềm chỉnh sửa ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi JPG sang PNG, bộ chuyển đổi JPG sang PDF, công cụ nén hình ảnh, tối ưu hóa JPG và hỗ trợ định dạng Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'Tệp Mẫu JPG',
+          description: 'Tải xuống tệp mẫu JPG miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi hình ảnh JPG, phần mềm nén JPG và ứng dụng xử lý hình ảnh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm hình ảnh JPG với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      m4v: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu M4V Miễn Phí - Tệp Kiểm Tra Video M4V cho Công Cụ Chuyển Đổi | MorphyHub',
+          description: 'Tải xuống tệp mẫu M4V miễn phí để kiểm tra chuyển đổi video M4V, phát lại M4V, công cụ xử lý video và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi M4V sang MP4, bộ chuyển đổi M4V sang AVI, trình phát video, tương thích phát lại M4V và hỗ trợ định dạng video MPEG-4.',
+          keywords: 'tệp mẫu M4V, tệp kiểm tra M4V, tải xuống ví dụ M4V, tệp kiểm tra M4V miễn phí, tệp video M4V, bộ chuyển đổi M4V sang MP4, bộ chuyển đổi M4V sang AVI, tệp kiểm tra trình phát video, kiểm tra phát lại M4V, ví dụ chuyển đổi video, kiểm tra định dạng video MPEG-4'
+        },
+        schema: {
+          name: 'Tệp Mẫu M4V Miễn Phí - Tải Xuống Tệp Kiểm Tra Video M4V cho Công Cụ Chuyển Đổi',
+          description: 'Tải xuống tệp mẫu M4V miễn phí để kiểm tra chuyển đổi video M4V, phát lại M4V, công cụ xử lý video và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi M4V sang MP4, bộ chuyển đổi M4V sang AVI, trình phát video, tương thích phát lại M4V và hỗ trợ định dạng video MPEG-4.'
+        },
+        hero: {
+          title: 'Tệp Mẫu M4V',
+          description: 'Tải xuống tệp mẫu M4V miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi video M4V, phần mềm phát lại M4V và ứng dụng xử lý video.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm video M4V với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      mkv: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu MKV Miễn Phí - Tệp Kiểm Tra Video Matroska cho Công Cụ Chuyển Đổi | MorphyHub',
+          description: 'Tải xuống tệp mẫu MKV Matroska miễn phí để kiểm tra chuyển đổi video MKV, phát lại MKV, công cụ xử lý video và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi MKV sang MP4, bộ chuyển đổi MKV sang AVI, trình phát video, tương thích phát lại MKV và hỗ trợ định dạng video Matroska.',
+          keywords: 'tệp mẫu MKV, tệp kiểm tra MKV, tải xuống ví dụ MKV, tệp kiểm tra MKV miễn phí, tệp video Matroska, bộ chuyển đổi MKV sang MP4, bộ chuyển đổi MKV sang AVI, tệp kiểm tra trình phát video, kiểm tra phát lại MKV, ví dụ chuyển đổi video, kiểm tra định dạng Matroska'
+        },
+        schema: {
+          name: 'Tệp Mẫu MKV Miễn Phí - Tải Xuống Tệp Kiểm Tra Video Matroska cho Công Cụ Chuyển Đổi',
+          description: 'Tải xuống tệp mẫu MKV Matroska miễn phí để kiểm tra chuyển đổi video MKV, phát lại MKV, công cụ xử lý video và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi MKV sang MP4, bộ chuyển đổi MKV sang AVI, trình phát video, tương thích phát lại MKV và hỗ trợ định dạng video Matroska.'
+        },
+        hero: {
+          title: 'Tệp Mẫu MKV',
+          description: 'Tải xuống tệp mẫu MKV Matroska miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi video MKV, phần mềm phát lại MKV và ứng dụng xử lý video.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm video MKV (Matroska) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      aac: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu AAC Miễn Phí - Tệp Kiểm Tra Advanced Audio Coding | MorphyHub',
+          description: 'Tải xuống tệp mẫu AAC Advanced Audio Coding miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AAC, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AAC sang MP3, bộ chuyển đổi AAC sang WAV, trình phát âm thanh, tương thích phát lại AAC và hỗ trợ định dạng Advanced Audio Coding.',
+          keywords: 'tệp mẫu AAC, tệp kiểm tra AAC, tải xuống ví dụ AAC, tệp kiểm tra AAC miễn phí, tệp Advanced Audio Coding, bộ chuyển đổi AAC sang MP3, bộ chuyển đổi AAC sang WAV, tệp kiểm tra trình phát âm thanh, kiểm tra phát lại AAC, ví dụ chuyển đổi âm thanh, kiểm tra định dạng Advanced Audio Coding'
+        },
+        schema: {
+          name: 'Tệp Mẫu AAC Miễn Phí - Tải Xuống Tệp Kiểm Tra Advanced Audio Coding',
+          description: 'Tải xuống tệp mẫu AAC Advanced Audio Coding miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AAC, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AAC sang MP3, bộ chuyển đổi AAC sang WAV, trình phát âm thanh, tương thích phát lại AAC và hỗ trợ định dạng Advanced Audio Coding.'
+        },
+        hero: {
+          title: 'Tệp Mẫu AAC',
+          description: 'Tải xuống tệp mẫu AAC Advanced Audio Coding miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi âm thanh, phần mềm phát lại AAC và ứng dụng xử lý âm thanh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AAC (Advanced Audio Coding) âm thanh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ac3: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu AC3 Miễn Phí - Tệp Kiểm Tra Âm Thanh Dolby Digital | MorphyHub',
+          description: 'Tải xuống tệp mẫu AC3 Dolby Digital miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AC3, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AC3 sang MP3, bộ chuyển đổi AC3 sang WAV, trình phát âm thanh, tương thích phát lại AC3 và hỗ trợ định dạng Dolby Digital.',
+          keywords: 'tệp mẫu AC3, tệp kiểm tra AC3, tải xuống ví dụ AC3, tệp kiểm tra AC3 miễn phí, tệp Dolby Digital, bộ chuyển đổi AC3 sang MP3, bộ chuyển đổi AC3 sang WAV, tệp kiểm tra trình phát âm thanh, kiểm tra phát lại AC3, ví dụ chuyển đổi âm thanh, kiểm tra định dạng Dolby Digital'
+        },
+        schema: {
+          name: 'Tệp Mẫu AC3 Miễn Phí - Tải Xuống Tệp Kiểm Tra Âm Thanh Dolby Digital',
+          description: 'Tải xuống tệp mẫu AC3 Dolby Digital miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AC3, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AC3 sang MP3, bộ chuyển đổi AC3 sang WAV, trình phát âm thanh, tương thích phát lại AC3 và hỗ trợ định dạng Dolby Digital.'
+        },
+        hero: {
+          title: 'Tệp Mẫu AC3',
+          description: 'Tải xuống tệp mẫu AC3 Dolby Digital miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi âm thanh, phần mềm phát lại AC3 và ứng dụng xử lý âm thanh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AC3 (Dolby Digital) âm thanh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      aif: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu AIF Miễn Phí - Tệp Kiểm Tra Audio Interchange File Format | MorphyHub',
+          description: 'Tải xuống tệp mẫu AIF Audio Interchange File Format miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AIF, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AIF sang MP3, bộ chuyển đổi AIF sang WAV, trình phát âm thanh, tương thích phát lại AIF và hỗ trợ định dạng Audio Interchange File Format.',
+          keywords: 'tệp mẫu AIF, tệp kiểm tra AIF, tải xuống ví dụ AIF, tệp kiểm tra AIF miễn phí, tệp Audio Interchange File Format, bộ chuyển đổi AIF sang MP3, bộ chuyển đổi AIF sang WAV, tệp kiểm tra trình phát âm thanh, kiểm tra phát lại AIF, ví dụ chuyển đổi âm thanh, kiểm tra định dạng Audio Interchange File Format'
+        },
+        schema: {
+          name: 'Tệp Mẫu AIF Miễn Phí - Tải Xuống Tệp Kiểm Tra Audio Interchange File Format',
+          description: 'Tải xuống tệp mẫu AIF Audio Interchange File Format miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AIF, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AIF sang MP3, bộ chuyển đổi AIF sang WAV, trình phát âm thanh, tương thích phát lại AIF và hỗ trợ định dạng Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'Tệp Mẫu AIF',
+          description: 'Tải xuống tệp mẫu AIF Audio Interchange File Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi âm thanh, phần mềm phát lại AIF và ứng dụng xử lý âm thanh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AIF (Audio Interchange File Format) âm thanh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      aiff: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu AIFF Miễn Phí - Tệp Kiểm Tra Audio Interchange File Format | MorphyHub',
+          description: 'Tải xuống tệp mẫu AIFF Audio Interchange File Format miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AIFF, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AIFF sang MP3, bộ chuyển đổi AIFF sang WAV, trình phát âm thanh, tương thích phát lại AIFF và hỗ trợ định dạng Audio Interchange File Format.',
+          keywords: 'tệp mẫu AIFF, tệp kiểm tra AIFF, tải xuống ví dụ AIFF, tệp kiểm tra AIFF miễn phí, tệp Audio Interchange File Format, bộ chuyển đổi AIFF sang MP3, bộ chuyển đổi AIFF sang WAV, tệp kiểm tra trình phát âm thanh, kiểm tra phát lại AIFF, ví dụ chuyển đổi âm thanh, kiểm tra định dạng Audio Interchange File Format'
+        },
+        schema: {
+          name: 'Tệp Mẫu AIFF Miễn Phí - Tải Xuống Tệp Kiểm Tra Audio Interchange File Format',
+          description: 'Tải xuống tệp mẫu AIFF Audio Interchange File Format miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AIFF, công cụ xử lý âm thanh và phần mềm đa phương tiện. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AIFF sang MP3, bộ chuyển đổi AIFF sang WAV, trình phát âm thanh, tương thích phát lại AIFF và hỗ trợ định dạng Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'Tệp Mẫu AIFF',
+          description: 'Tải xuống tệp mẫu AIFF Audio Interchange File Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi âm thanh, phần mềm phát lại AIFF và ứng dụng xử lý âm thanh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AIFF (Audio Interchange File Format) âm thanh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      amr: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu AMR Miễn Phí - Tệp Kiểm Tra Adaptive Multi-Rate Audio | MorphyHub',
+          description: 'Tải xuống tệp mẫu AMR Adaptive Multi-Rate miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AMR, công cụ xử lý âm thanh và phần mềm đa phương tiện di động. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AMR sang MP3, bộ chuyển đổi AMR sang WAV, trình phát âm thanh, tương thích phát lại AMR và hỗ trợ định dạng Adaptive Multi-Rate.',
+          keywords: 'tệp mẫu AMR, tệp kiểm tra AMR, tải xuống ví dụ AMR, tệp kiểm tra AMR miễn phí, tệp Adaptive Multi-Rate, bộ chuyển đổi AMR sang MP3, bộ chuyển đổi AMR sang WAV, tệp kiểm tra trình phát âm thanh, kiểm tra phát lại AMR, ví dụ chuyển đổi âm thanh, kiểm tra định dạng Adaptive Multi-Rate'
+        },
+        schema: {
+          name: 'Tệp Mẫu AMR Miễn Phí - Tải Xuống Tệp Kiểm Tra Adaptive Multi-Rate Audio',
+          description: 'Tải xuống tệp mẫu AMR Adaptive Multi-Rate miễn phí để kiểm tra chuyển đổi âm thanh, phát lại AMR, công cụ xử lý âm thanh và phần mềm đa phương tiện di động. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi AMR sang MP3, bộ chuyển đổi AMR sang WAV, trình phát âm thanh, tương thích phát lại AMR và hỗ trợ định dạng Adaptive Multi-Rate.'
+        },
+        hero: {
+          title: 'Tệp Mẫu AMR',
+          description: 'Tải xuống tệp mẫu AMR Adaptive Multi-Rate miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi âm thanh, phần mềm phát lại AMR và ứng dụng xử lý âm thanh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AMR (Adaptive Multi-Rate) âm thanh với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      caf: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu CAF Miễn Phí - Tệp Kiểm Tra Core Audio Format | MorphyHub',
+          description: 'Tải xuống tệp mẫu CAF Core Audio Format miễn phí để kiểm tra chuyển đổi âm thanh, phát lại CAF, công cụ xử lý âm thanh và phần mềm đa phương tiện macOS. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi CAF sang MP3, bộ chuyển đổi CAF sang WAV, trình phát âm thanh, tương thích phát lại CAF và hỗ trợ định dạng Core Audio Format.',
+          keywords: 'tệp mẫu CAF, tệp kiểm tra CAF, tải xuống ví dụ CAF, tệp kiểm tra CAF miễn phí, tệp Core Audio Format, bộ chuyển đổi CAF sang MP3, bộ chuyển đổi CAF sang WAV, tệp kiểm tra trình phát âm thanh, kiểm tra phát lại CAF, ví dụ chuyển đổi âm thanh, kiểm tra định dạng Core Audio Format'
+        },
+        schema: {
+          name: 'Tệp Mẫu CAF Miễn Phí - Tải Xuống Tệp Kiểm Tra Core Audio Format',
+          description: 'Tải xuống tệp mẫu CAF Core Audio Format miễn phí để kiểm tra chuyển đổi âm thanh, phát lại CAF, công cụ xử lý âm thanh và phần mềm đa phương tiện macOS. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra bộ chuyển đổi CAF sang MP3, bộ chuyển đổi CAF sang WAV, trình phát âm thanh, tương thích phát lại CAF và hỗ trợ định dạng Core Audio Format.'
+        },
+        hero: {
+          title: 'Tệp Mẫu CAF',
+          description: 'Tải xuống tệp mẫu CAF Core Audio Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ chuyển đổi âm thanh, phần mềm phát lại CAF và ứng dụng xử lý âm thanh.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm CAF (Core Audio Format) âm thanh với nhiều kích thước khác nhau cho mục đích kiểm tra'
       }
     }
   }

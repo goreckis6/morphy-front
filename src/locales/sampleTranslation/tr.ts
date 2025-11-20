@@ -1519,6 +1519,326 @@ export const tr: SamplePageTranslations = {
           description: 'Test için ücretsiz 3GP 3GPP mobile video örnek dosyalarını indirin. Mobil video oynatıcılarınızı, 3GP dönüştürücülerinizi ve multimedya yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
         },
         about_description: 'Bunlar test amaçlı çeşitli boyutlarda 3GP (3GPP mobile video) dosyalarıdır'
+      },
+      dav: {
+        meta: {
+          title: 'Ücretsiz DAV Örnek Dosyaları İndir - Güvenlik Kameraları için DAV Video Test Dosyaları | MorphyHub',
+          description: 'DAV video oynatıcıları, güvenlik kamerası video işleme, DAV dönüştürücüleri ve video gözetim analiz araçlarını test etmek için ücretsiz DAV örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DAV oynatma, DAV\'dan MP4\'e dönüştürücüler, güvenlik kamerası yazılımları, video gözetim araçları ve DAV format uyumluluğunu test etmek için mükemmel.',
+          keywords: 'DAV örnek dosyaları, DAV test dosyaları, DAV örnekleri indir, ücretsiz DAV test dosyaları, DAV video dosyaları, güvenlik kamerası video dosyaları, DAV\'dan MP4\'e dönüştürücü, DAV oynatıcı test, video gözetim örnekleri, DAV format test dosyaları, video gözetim test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz DAV Örnek Dosyaları - Güvenlik Kameraları için DAV Video Test Dosyaları İndir',
+          description: 'DAV video oynatıcıları, güvenlik kamerası video işleme, DAV dönüştürücüleri ve video gözetim analiz araçlarını test etmek için ücretsiz DAV örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DAV oynatma, DAV\'dan MP4\'e dönüştürücüler, güvenlik kamerası yazılımları, video gözetim araçları ve DAV format uyumluluğunu test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DAV Örnek Dosyaları',
+          description: 'Test için ücretsiz DAV örnek dosyalarını indirin. DAV video oynatıcılarınızı, güvenlik kamerası video işleme araçlarınızı ve DAV dönüştürücülerinizi test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DAV video dosyalarıdır'
+      },
+      dds: {
+        meta: {
+          title: 'Ücretsiz DDS Örnek Dosyaları İndir - DirectDraw Surface Doku Test Dosyaları | MorphyHub',
+          description: 'Doku görüntü dönüşümü, DDS görselleştirme, oyun geliştirme araçları ve grafik işleme yazılımlarını test etmek için ücretsiz DDS DirectDraw Surface örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DDS doku yükleme, DDS\'den PNG\'ye dönüştürücüler, oyun motoru uyumluluğu, doku sıkıştırma araçları ve DirectDraw Surface format desteğini test etmek için mükemmel.',
+          keywords: 'DDS örnek dosyaları, DDS test dosyaları, DDS örnekleri indir, ücretsiz DDS test dosyaları, DirectDraw Surface dosyaları, DDS doku dosyaları, DDS\'den PNG\'ye dönüştürücü, doku görüntü örnekleri, oyun geliştirme test dosyaları, DDS format test, grafik doku örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz DDS Örnek Dosyaları - DirectDraw Surface Doku Test Dosyaları İndir',
+          description: 'Doku görüntü dönüşümü, DDS görselleştirme, oyun geliştirme araçları ve grafik işleme yazılımlarını test etmek için ücretsiz DDS DirectDraw Surface örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DDS doku yükleme, DDS\'den PNG\'ye dönüştürücüler, oyun motoru uyumluluğu, doku sıkıştırma araçları ve DirectDraw Surface format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DDS Örnek Dosyaları',
+          description: 'Test için ücretsiz DDS DirectDraw Surface örnek dosyalarını indirin. Doku görüntü dönüşüm araçlarınızı, DDS görüntüleyicilerinizi ve oyun geliştirme yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DDS (DirectDraw Surface) doku görüntü dosyalarıdır'
+      },
+      dng: {
+        meta: {
+          title: 'Ücretsiz DNG Örnek Dosyaları İndir - Digital Negative Raw Görüntü Test Dosyaları | MorphyHub',
+          description: 'Raw görüntü işleme, DNG dönüşümü, fotoğraf yazılımları ve profesyonel görüntü düzenleme araçlarını test etmek için ücretsiz DNG Digital Negative raw görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DNG\'den JPEG\'e dönüştürücüler, raw görüntü düzenleyicileri, DNG görselleştirme, kamera raw işleme ve Adobe Digital Negative format desteğini test etmek için mükemmel.',
+          keywords: 'DNG örnek dosyaları, DNG test dosyaları, DNG örnekleri indir, ücretsiz DNG test dosyaları, Digital Negative dosyaları, DNG raw görüntü dosyaları, DNG\'den JPEG\'e dönüştürücü, raw görüntü işleme, fotoğraf test dosyaları, DNG format test, kamera raw örnekleri, Adobe DNG test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz DNG Örnek Dosyaları - Digital Negative Raw Görüntü Test Dosyaları İndir',
+          description: 'Raw görüntü işleme, DNG dönüşümü, fotoğraf yazılımları ve profesyonel görüntü düzenleme araçlarını test etmek için ücretsiz DNG Digital Negative raw görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. DNG\'den JPEG\'e dönüştürücüler, raw görüntü düzenleyicileri, DNG görselleştirme, kamera raw işleme ve Adobe Digital Negative format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DNG Örnek Dosyaları',
+          description: 'Test için ücretsiz DNG Digital Negative raw görüntü örnek dosyalarını indirin. Raw görüntü işleme araçlarınızı, DNG dönüştürücülerinizi ve fotoğraf yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DNG (Digital Negative) raw görüntü dosyalarıdır'
+      },
+      eps: {
+        meta: {
+          title: 'Ücretsiz EPS Örnek Dosyaları İndir - Encapsulated PostScript Vektör Grafik Test Dosyaları | MorphyHub',
+          description: 'Vektör grafik dönüşümü, EPS görselleştirme, PostScript işleme ve profesyonel tasarım yazılımlarını test etmek için ücretsiz EPS Encapsulated PostScript örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EPS\'den PDF\'e dönüştürücüler, EPS\'den SVG\'ye dönüştürücüler, vektör grafik düzenleyicileri, PostScript görüntüleyicileri ve Encapsulated PostScript format uyumluluğunu test etmek için mükemmel.',
+          keywords: 'EPS örnek dosyaları, EPS test dosyaları, EPS örnekleri indir, ücretsiz EPS test dosyaları, Encapsulated PostScript dosyaları, EPS vektör grafikleri, EPS\'den PDF\'e dönüştürücü, EPS\'den SVG\'ye dönüştürücü, vektör grafik örnekleri, PostScript test dosyaları, tasarım yazılımı test dosyaları, EPS format test'
+        },
+        schema: {
+          name: 'Ücretsiz EPS Örnek Dosyaları - Encapsulated PostScript Vektör Grafik Test Dosyaları İndir',
+          description: 'Vektör grafik dönüşümü, EPS görselleştirme, PostScript işleme ve profesyonel tasarım yazılımlarını test etmek için ücretsiz EPS Encapsulated PostScript örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EPS\'den PDF\'e dönüştürücüler, EPS\'den SVG\'ye dönüştürücüler, vektör grafik düzenleyicileri, PostScript görüntüleyicileri ve Encapsulated PostScript format uyumluluğunu test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'EPS Örnek Dosyaları',
+          description: 'Test için ücretsiz EPS Encapsulated PostScript örnek dosyalarını indirin. Vektör grafik dönüşüm araçlarınızı, EPS görüntüleyicilerinizi ve PostScript işleme yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda EPS (Encapsulated PostScript) vektör grafik dosyalarıdır'
+      },
+      exr: {
+        meta: {
+          title: 'Ücretsiz EXR Örnek Dosyaları İndir - OpenEXR High Dynamic Range Görüntü Test Dosyaları | MorphyHub',
+          description: 'HDR görüntü işleme, EXR dönüşümü, profesyonel fotoğraf yazılımları ve görsel efekt araçlarını test etmek için ücretsiz EXR OpenEXR High Dynamic Range görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EXR\'den JPEG\'e dönüştürücüler, HDR görüntü düzenleyicileri, EXR görselleştirme, High Dynamic Range işleme ve OpenEXR format desteğini test etmek için mükemmel.',
+          keywords: 'EXR örnek dosyaları, EXR test dosyaları, EXR örnekleri indir, ücretsiz EXR test dosyaları, OpenEXR dosyaları, EXR HDR görüntüleri, EXR\'den JPEG\'e dönüştürücü, HDR görüntü işleme, High Dynamic Range örnekleri, görsel efekt test dosyaları, EXR format test, profesyonel fotoğraf test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz EXR Örnek Dosyaları - OpenEXR High Dynamic Range Görüntü Test Dosyaları İndir',
+          description: 'HDR görüntü işleme, EXR dönüşümü, profesyonel fotoğraf yazılımları ve görsel efekt araçlarını test etmek için ücretsiz EXR OpenEXR High Dynamic Range görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EXR\'den JPEG\'e dönüştürücüler, HDR görüntü düzenleyicileri, EXR görselleştirme, High Dynamic Range işleme ve OpenEXR format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'EXR Örnek Dosyaları',
+          description: 'Test için ücretsiz EXR OpenEXR High Dynamic Range görüntü örnek dosyalarını indirin. HDR görüntü işleme araçlarınızı, EXR dönüştürücülerinizi ve görsel efekt yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda EXR (OpenEXR High Dynamic Range) görüntü dosyalarıdır'
+      },
+      hdr: {
+        meta: {
+          title: 'Ücretsiz HDR Örnek Dosyaları İndir - High Dynamic Range Görüntü Test Dosyaları | MorphyHub',
+          description: 'HDR görüntü işleme, HDR dönüşümü, fotoğraf yazılımları ve görüntü düzenleme araçlarını test etmek için ücretsiz HDR High Dynamic Range görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HDR\'den JPEG\'e dönüştürücüler, HDR görüntü düzenleyicileri, HDR görselleştirme, ton eşleme araçları ve High Dynamic Range format desteğini test etmek için mükemmel.',
+          keywords: 'HDR örnek dosyaları, HDR test dosyaları, HDR örnekleri indir, ücretsiz HDR test dosyaları, High Dynamic Range dosyaları, HDR görüntüleri, HDR\'den JPEG\'e dönüştürücü, HDR görüntü işleme, ton eşleme test dosyaları, fotoğraf test dosyaları, HDR format test, High Dynamic Range örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz HDR Örnek Dosyaları - High Dynamic Range Görüntü Test Dosyaları İndir',
+          description: 'HDR görüntü işleme, HDR dönüşümü, fotoğraf yazılımları ve görüntü düzenleme araçlarını test etmek için ücretsiz HDR High Dynamic Range görüntü örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HDR\'den JPEG\'e dönüştürücüler, HDR görüntü düzenleyicileri, HDR görselleştirme, ton eşleme araçları ve High Dynamic Range format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'HDR Örnek Dosyaları',
+          description: 'Test için ücretsiz HDR High Dynamic Range görüntü örnek dosyalarını indirin. HDR görüntü işleme araçlarınızı, HDR dönüştürücülerinizi ve fotoğraf yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda HDR (High Dynamic Range) görüntü dosyalarıdır'
+      },
+      heic: {
+        meta: {
+          title: 'Ücretsiz HEIC Örnek Dosyaları İndir - High Efficiency Image Container Test Dosyaları | MorphyHub',
+          description: 'HEIC görüntü dönüşümü, HEIC görselleştirme, modern görüntü formatı işleme ve mobil fotoğraf araçlarını test etmek için ücretsiz HEIC High Efficiency Image Container örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HEIC\'den JPEG\'e dönüştürücüler, HEIC\'den PNG\'ye dönüştürücüler, iOS görüntü işleme, HEIC görselleştirme yazılımları ve High Efficiency Image Container format desteğini test etmek için mükemmel.',
+          keywords: 'HEIC örnek dosyaları, HEIC test dosyaları, HEIC örnekleri indir, ücretsiz HEIC test dosyaları, High Efficiency Image Container dosyaları, HEIC görüntüleri, HEIC\'den JPEG\'e dönüştürücü, HEIC\'den PNG\'ye dönüştürücü, iOS görüntü örnekleri, mobil fotoğraf test dosyaları, HEIC format test, modern görüntü formatı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz HEIC Örnek Dosyaları - High Efficiency Image Container Test Dosyaları İndir',
+          description: 'HEIC görüntü dönüşümü, HEIC görselleştirme, modern görüntü formatı işleme ve mobil fotoğraf araçlarını test etmek için ücretsiz HEIC High Efficiency Image Container örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HEIC\'den JPEG\'e dönüştürücüler, HEIC\'den PNG\'ye dönüştürücüler, iOS görüntü işleme, HEIC görselleştirme yazılımları ve High Efficiency Image Container format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'HEIC Örnek Dosyaları',
+          description: 'Test için ücretsiz HEIC High Efficiency Image Container örnek dosyalarını indirin. HEIC görüntü dönüşüm araçlarınızı, HEIC görüntüleyicilerinizi ve modern görüntü formatı işleme yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda HEIC (High Efficiency Image Container) görüntü dosyalarıdır'
+      },
+      heif: {
+        meta: {
+          title: 'Ücretsiz HEIF Örnek Dosyaları İndir - High Efficiency Image Format Test Dosyaları | MorphyHub',
+          description: 'HEIF görüntü dönüşümü, HEIF görselleştirme, modern görüntü formatı işleme ve mobil fotoğraf araçlarını test etmek için ücretsiz HEIF High Efficiency Image Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HEIF\'den JPEG\'e dönüştürücüler, HEIF\'den PNG\'ye dönüştürücüler, mobil görüntü işleme, HEIF görselleştirme yazılımları ve High Efficiency Image Format desteğini test etmek için mükemmel.',
+          keywords: 'HEIF örnek dosyaları, HEIF test dosyaları, HEIF örnekleri indir, ücretsiz HEIF test dosyaları, High Efficiency Image Format dosyaları, HEIF görüntüleri, HEIF\'den JPEG\'e dönüştürücü, HEIF\'den PNG\'ye dönüştürücü, mobil görüntü örnekleri, modern görüntü formatı test dosyaları, HEIF format test, görüntü sıkıştırma test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz HEIF Örnek Dosyaları - High Efficiency Image Format Test Dosyaları İndir',
+          description: 'HEIF görüntü dönüşümü, HEIF görselleştirme, modern görüntü formatı işleme ve mobil fotoğraf araçlarını test etmek için ücretsiz HEIF High Efficiency Image Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HEIF\'den JPEG\'e dönüştürücüler, HEIF\'den PNG\'ye dönüştürücüler, mobil görüntü işleme, HEIF görselleştirme yazılımları ve High Efficiency Image Format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'HEIF Örnek Dosyaları',
+          description: 'Test için ücretsiz HEIF High Efficiency Image Format örnek dosyalarını indirin. HEIF görüntü dönüşüm araçlarınızı, HEIF görüntüleyicilerinizi ve modern görüntü formatı işleme yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda HEIF (High Efficiency Image Format) görüntü dosyalarıdır'
+      },
+      icns: {
+        meta: {
+          title: 'Ücretsiz ICNS Örnek Dosyaları İndir - macOS İkon Test Dosyaları | MorphyHub',
+          description: 'macOS ikon dönüşümü, ICNS görselleştirme, ikon tasarım araçları ve macOS uygulama geliştirmeyi test etmek için ücretsiz ICNS macOS ikon örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ICNS\'den PNG\'ye dönüştürücüler, ICNS\'den ICO\'ya dönüştürücüler, macOS ikon düzenleyicileri, ikon tasarım yazılımları ve macOS ikon format desteğini test etmek için mükemmel.',
+          keywords: 'ICNS örnek dosyaları, ICNS test dosyaları, ICNS örnekleri indir, ücretsiz ICNS test dosyaları, macOS ikon dosyaları, ICNS ikonları, ICNS\'den PNG\'ye dönüştürücü, ICNS\'den ICO\'ya dönüştürücü, macOS ikon tasarımı, ikon düzenleyici test dosyaları, ICNS format test, Apple ikon örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz ICNS Örnek Dosyaları - macOS İkon Test Dosyaları İndir',
+          description: 'macOS ikon dönüşümü, ICNS görselleştirme, ikon tasarım araçları ve macOS uygulama geliştirmeyi test etmek için ücretsiz ICNS macOS ikon örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ICNS\'den PNG\'ye dönüştürücüler, ICNS\'den ICO\'ya dönüştürücüler, macOS ikon düzenleyicileri, ikon tasarım yazılımları ve macOS ikon format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ICNS Örnek Dosyaları',
+          description: 'Test için ücretsiz ICNS macOS ikon örnek dosyalarını indirin. macOS ikon dönüşüm araçlarınızı, ICNS görüntüleyicilerinizi ve ikon tasarım yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ICNS (macOS ikon) dosyalarıdır'
+      },
+      ico: {
+        meta: {
+          title: 'Ücretsiz ICO Örnek Dosyaları İndir - Windows İkon Test Dosyaları | MorphyHub',
+          description: 'Windows ikon dönüşümü, ICO görselleştirme, ikon tasarım araçları ve Windows uygulama geliştirmeyi test etmek için ücretsiz ICO Windows ikon örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ICO\'dan PNG\'ye dönüştürücüler, ICO\'dan ICNS\'ye dönüştürücüler, Windows ikon düzenleyicileri, ikon tasarım yazılımları ve Windows ikon format desteğini test etmek için mükemmel.',
+          keywords: 'ICO örnek dosyaları, ICO test dosyaları, ICO örnekleri indir, ücretsiz ICO test dosyaları, Windows ikon dosyaları, ICO ikonları, ICO\'dan PNG\'ye dönüştürücü, ICO\'dan ICNS\'ye dönüştürücü, Windows ikon tasarımı, ikon düzenleyici test dosyaları, ICO format test, Windows ikon örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz ICO Örnek Dosyaları - Windows İkon Test Dosyaları İndir',
+          description: 'Windows ikon dönüşümü, ICO görselleştirme, ikon tasarım araçları ve Windows uygulama geliştirmeyi test etmek için ücretsiz ICO Windows ikon örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ICO\'dan PNG\'ye dönüştürücüler, ICO\'dan ICNS\'ye dönüştürücüler, Windows ikon düzenleyicileri, ikon tasarım yazılımları ve Windows ikon format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ICO Örnek Dosyaları',
+          description: 'Test için ücretsiz ICO Windows ikon örnek dosyalarını indirin. Windows ikon dönüşüm araçlarınızı, ICO görüntüleyicilerinizi ve ikon tasarım yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ICO (Windows ikon) dosyalarıdır'
+      },
+      jpeg: {
+        meta: {
+          title: 'Ücretsiz JPEG Örnek Dosyaları İndir - Dönüştürme Araçları için JPEG Görüntü Test Dosyaları | MorphyHub',
+          description: 'JPEG görüntü dönüşümü, JPEG sıkıştırma, görüntü işleme araçları ve fotoğraf düzenleme yazılımlarını test etmek için ücretsiz JPEG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JPEG\'den PNG\'ye dönüştürücüler, JPEG\'den PDF\'e dönüştürücüler, görüntü sıkıştırma araçları, JPEG optimizasyonu ve Joint Photographic Experts Group format desteğini test etmek için mükemmel.',
+          keywords: 'JPEG örnek dosyaları, JPEG test dosyaları, JPEG örnekleri indir, ücretsiz JPEG test dosyaları, JPEG görüntü dosyaları, JPEG\'den PNG\'ye dönüştürücü, JPEG\'den PDF\'e dönüştürücü, görüntü sıkıştırma test dosyaları, fotoğraf düzenleme test dosyaları, JPEG format test, görüntü işleme örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz JPEG Örnek Dosyaları - Dönüştürme Araçları için JPEG Görüntü Test Dosyaları İndir',
+          description: 'JPEG görüntü dönüşümü, JPEG sıkıştırma, görüntü işleme araçları ve fotoğraf düzenleme yazılımlarını test etmek için ücretsiz JPEG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JPEG\'den PNG\'ye dönüştürücüler, JPEG\'den PDF\'e dönüştürücüler, görüntü sıkıştırma araçları, JPEG optimizasyonu ve Joint Photographic Experts Group format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JPEG Örnek Dosyaları',
+          description: 'Test için ücretsiz JPEG örnek dosyalarını indirin. JPEG görüntü dönüşüm araçlarınızı, JPEG sıkıştırma yazılımlarınızı ve görüntü işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JPEG görüntü dosyalarıdır'
+      },
+      jpg: {
+        meta: {
+          title: 'Ücretsiz JPG Örnek Dosyaları İndir - Dönüştürme Araçları için JPG Görüntü Test Dosyaları | MorphyHub',
+          description: 'JPG görüntü dönüşümü, JPG sıkıştırma, görüntü işleme araçları ve fotoğraf düzenleme yazılımlarını test etmek için ücretsiz JPG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JPG\'den PNG\'ye dönüştürücüler, JPG\'den PDF\'e dönüştürücüler, görüntü sıkıştırma araçları, JPG optimizasyonu ve Joint Photographic Experts Group format desteğini test etmek için mükemmel.',
+          keywords: 'JPG örnek dosyaları, JPG test dosyaları, JPG örnekleri indir, ücretsiz JPG test dosyaları, JPG görüntü dosyaları, JPG\'den PNG\'ye dönüştürücü, JPG\'den PDF\'e dönüştürücü, görüntü sıkıştırma test dosyaları, fotoğraf düzenleme test dosyaları, JPG format test, görüntü işleme örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz JPG Örnek Dosyaları - Dönüştürme Araçları için JPG Görüntü Test Dosyaları İndir',
+          description: 'JPG görüntü dönüşümü, JPG sıkıştırma, görüntü işleme araçları ve fotoğraf düzenleme yazılımlarını test etmek için ücretsiz JPG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JPG\'den PNG\'ye dönüştürücüler, JPG\'den PDF\'e dönüştürücüler, görüntü sıkıştırma araçları, JPG optimizasyonu ve Joint Photographic Experts Group format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JPG Örnek Dosyaları',
+          description: 'Test için ücretsiz JPG örnek dosyalarını indirin. JPG görüntü dönüşüm araçlarınızı, JPG sıkıştırma yazılımlarınızı ve görüntü işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JPG görüntü dosyalarıdır'
+      },
+      m4v: {
+        meta: {
+          title: 'Ücretsiz M4V Örnek Dosyaları İndir - Dönüştürme Araçları için M4V Video Test Dosyaları | MorphyHub',
+          description: 'M4V video dönüşümü, M4V oynatma, video işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz M4V örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. M4V\'den MP4\'e dönüştürücüler, M4V\'den AVI\'ye dönüştürücüler, video oynatıcıları, M4V oynatma uyumluluğu ve MPEG-4 video format desteğini test etmek için mükemmel.',
+          keywords: 'M4V örnek dosyaları, M4V test dosyaları, M4V örnekleri indir, ücretsiz M4V test dosyaları, M4V video dosyaları, M4V\'den MP4\'e dönüştürücü, M4V\'den AVI\'ye dönüştürücü, video oynatıcı test dosyaları, M4V oynatma test, video dönüşüm örnekleri, MPEG-4 video format test'
+        },
+        schema: {
+          name: 'Ücretsiz M4V Örnek Dosyaları - Dönüştürme Araçları için M4V Video Test Dosyaları İndir',
+          description: 'M4V video dönüşümü, M4V oynatma, video işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz M4V örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. M4V\'den MP4\'e dönüştürücüler, M4V\'den AVI\'ye dönüştürücüler, video oynatıcıları, M4V oynatma uyumluluğu ve MPEG-4 video format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'M4V Örnek Dosyaları',
+          description: 'Test için ücretsiz M4V örnek dosyalarını indirin. M4V video dönüşüm araçlarınızı, M4V oynatma yazılımlarınızı ve video işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda M4V video dosyalarıdır'
+      },
+      mkv: {
+        meta: {
+          title: 'Ücretsiz MKV Örnek Dosyaları İndir - Dönüştürme Araçları için Matroska Video Test Dosyaları | MorphyHub',
+          description: 'MKV video dönüşümü, MKV oynatma, video işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz MKV Matroska örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MKV\'den MP4\'e dönüştürücüler, MKV\'den AVI\'ye dönüştürücüler, video oynatıcıları, MKV oynatma uyumluluğu ve Matroska video format desteğini test etmek için mükemmel.',
+          keywords: 'MKV örnek dosyaları, MKV test dosyaları, MKV örnekleri indir, ücretsiz MKV test dosyaları, Matroska video dosyaları, MKV\'den MP4\'e dönüştürücü, MKV\'den AVI\'ye dönüştürücü, video oynatıcı test dosyaları, MKV oynatma test, video dönüşüm örnekleri, Matroska format test'
+        },
+        schema: {
+          name: 'Ücretsiz MKV Örnek Dosyaları - Dönüştürme Araçları için Matroska Video Test Dosyaları İndir',
+          description: 'MKV video dönüşümü, MKV oynatma, video işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz MKV Matroska örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MKV\'den MP4\'e dönüştürücüler, MKV\'den AVI\'ye dönüştürücüler, video oynatıcıları, MKV oynatma uyumluluğu ve Matroska video format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MKV Örnek Dosyaları',
+          description: 'Test için ücretsiz MKV Matroska örnek dosyalarını indirin. MKV video dönüşüm araçlarınızı, MKV oynatma yazılımlarınızı ve video işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MKV (Matroska) video dosyalarıdır'
+      },
+      aac: {
+        meta: {
+          title: 'Ücretsiz AAC Örnek Dosyaları İndir - Advanced Audio Coding Test Dosyaları | MorphyHub',
+          description: 'Ses dönüşümü, AAC oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AAC Advanced Audio Coding örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AAC\'den MP3\'e dönüştürücüler, AAC\'den WAV\'a dönüştürücüler, ses oynatıcıları, AAC oynatma uyumluluğu ve Advanced Audio Coding format desteğini test etmek için mükemmel.',
+          keywords: 'AAC örnek dosyaları, AAC test dosyaları, AAC örnekleri indir, ücretsiz AAC test dosyaları, Advanced Audio Coding dosyaları, AAC\'den MP3\'e dönüştürücü, AAC\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AAC oynatma test, ses dönüşüm örnekleri, Advanced Audio Coding format test'
+        },
+        schema: {
+          name: 'Ücretsiz AAC Örnek Dosyaları - Advanced Audio Coding Test Dosyaları İndir',
+          description: 'Ses dönüşümü, AAC oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AAC Advanced Audio Coding örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AAC\'den MP3\'e dönüştürücüler, AAC\'den WAV\'a dönüştürücüler, ses oynatıcıları, AAC oynatma uyumluluğu ve Advanced Audio Coding format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AAC Örnek Dosyaları',
+          description: 'Test için ücretsiz AAC Advanced Audio Coding örnek dosyalarını indirin. Ses dönüşüm araçlarınızı, AAC oynatma yazılımlarınızı ve ses işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AAC (Advanced Audio Coding) ses dosyalarıdır'
+      },
+      ac3: {
+        meta: {
+          title: 'Ücretsiz AC3 Örnek Dosyaları İndir - Dolby Digital Ses Test Dosyaları | MorphyHub',
+          description: 'Ses dönüşümü, AC3 oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AC3 Dolby Digital örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AC3\'den MP3\'e dönüştürücüler, AC3\'den WAV\'a dönüştürücüler, ses oynatıcıları, AC3 oynatma uyumluluğu ve Dolby Digital format desteğini test etmek için mükemmel.',
+          keywords: 'AC3 örnek dosyaları, AC3 test dosyaları, AC3 örnekleri indir, ücretsiz AC3 test dosyaları, Dolby Digital dosyaları, AC3\'den MP3\'e dönüştürücü, AC3\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AC3 oynatma test, ses dönüşüm örnekleri, Dolby Digital format test'
+        },
+        schema: {
+          name: 'Ücretsiz AC3 Örnek Dosyaları - Dolby Digital Ses Test Dosyaları İndir',
+          description: 'Ses dönüşümü, AC3 oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AC3 Dolby Digital örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AC3\'den MP3\'e dönüştürücüler, AC3\'den WAV\'a dönüştürücüler, ses oynatıcıları, AC3 oynatma uyumluluğu ve Dolby Digital format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AC3 Örnek Dosyaları',
+          description: 'Test için ücretsiz AC3 Dolby Digital örnek dosyalarını indirin. Ses dönüşüm araçlarınızı, AC3 oynatma yazılımlarınızı ve ses işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AC3 (Dolby Digital) ses dosyalarıdır'
+      },
+      aif: {
+        meta: {
+          title: 'Ücretsiz AIF Örnek Dosyaları İndir - Audio Interchange File Format Test Dosyaları | MorphyHub',
+          description: 'Ses dönüşümü, AIF oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AIF Audio Interchange File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AIF\'den MP3\'e dönüştürücüler, AIF\'den WAV\'a dönüştürücüler, ses oynatıcıları, AIF oynatma uyumluluğu ve Audio Interchange File Format desteğini test etmek için mükemmel.',
+          keywords: 'AIF örnek dosyaları, AIF test dosyaları, AIF örnekleri indir, ücretsiz AIF test dosyaları, Audio Interchange File Format dosyaları, AIF\'den MP3\'e dönüştürücü, AIF\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AIF oynatma test, ses dönüşüm örnekleri, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Ücretsiz AIF Örnek Dosyaları - Audio Interchange File Format Test Dosyaları İndir',
+          description: 'Ses dönüşümü, AIF oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AIF Audio Interchange File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AIF\'den MP3\'e dönüştürücüler, AIF\'den WAV\'a dönüştürücüler, ses oynatıcıları, AIF oynatma uyumluluğu ve Audio Interchange File Format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AIF Örnek Dosyaları',
+          description: 'Test için ücretsiz AIF Audio Interchange File Format örnek dosyalarını indirin. Ses dönüşüm araçlarınızı, AIF oynatma yazılımlarınızı ve ses işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AIF (Audio Interchange File Format) ses dosyalarıdır'
+      },
+      aiff: {
+        meta: {
+          title: 'Ücretsiz AIFF Örnek Dosyaları İndir - Audio Interchange File Format Test Dosyaları | MorphyHub',
+          description: 'Ses dönüşümü, AIFF oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AIFF Audio Interchange File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AIFF\'den MP3\'e dönüştürücüler, AIFF\'den WAV\'a dönüştürücüler, ses oynatıcıları, AIFF oynatma uyumluluğu ve Audio Interchange File Format desteğini test etmek için mükemmel.',
+          keywords: 'AIFF örnek dosyaları, AIFF test dosyaları, AIFF örnekleri indir, ücretsiz AIFF test dosyaları, Audio Interchange File Format dosyaları, AIFF\'den MP3\'e dönüştürücü, AIFF\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AIFF oynatma test, ses dönüşüm örnekleri, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Ücretsiz AIFF Örnek Dosyaları - Audio Interchange File Format Test Dosyaları İndir',
+          description: 'Ses dönüşümü, AIFF oynatma, ses işleme araçları ve multimedya yazılımlarını test etmek için ücretsiz AIFF Audio Interchange File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AIFF\'den MP3\'e dönüştürücüler, AIFF\'den WAV\'a dönüştürücüler, ses oynatıcıları, AIFF oynatma uyumluluğu ve Audio Interchange File Format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AIFF Örnek Dosyaları',
+          description: 'Test için ücretsiz AIFF Audio Interchange File Format örnek dosyalarını indirin. Ses dönüşüm araçlarınızı, AIFF oynatma yazılımlarınızı ve ses işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AIFF (Audio Interchange File Format) ses dosyalarıdır'
+      },
+      amr: {
+        meta: {
+          title: 'Ücretsiz AMR Örnek Dosyaları İndir - Adaptive Multi-Rate Audio Test Dosyaları | MorphyHub',
+          description: 'Ses dönüşümü, AMR oynatma, ses işleme araçları ve mobil multimedya yazılımlarını test etmek için ücretsiz AMR Adaptive Multi-Rate örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AMR\'den MP3\'e dönüştürücüler, AMR\'den WAV\'a dönüştürücüler, ses oynatıcıları, AMR oynatma uyumluluğu ve Adaptive Multi-Rate format desteğini test etmek için mükemmel.',
+          keywords: 'AMR örnek dosyaları, AMR test dosyaları, AMR örnekleri indir, ücretsiz AMR test dosyaları, Adaptive Multi-Rate dosyaları, AMR\'den MP3\'e dönüştürücü, AMR\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, AMR oynatma test, ses dönüşüm örnekleri, Adaptive Multi-Rate format test'
+        },
+        schema: {
+          name: 'Ücretsiz AMR Örnek Dosyaları - Adaptive Multi-Rate Audio Test Dosyaları İndir',
+          description: 'Ses dönüşümü, AMR oynatma, ses işleme araçları ve mobil multimedya yazılımlarını test etmek için ücretsiz AMR Adaptive Multi-Rate örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AMR\'den MP3\'e dönüştürücüler, AMR\'den WAV\'a dönüştürücüler, ses oynatıcıları, AMR oynatma uyumluluğu ve Adaptive Multi-Rate format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AMR Örnek Dosyaları',
+          description: 'Test için ücretsiz AMR Adaptive Multi-Rate örnek dosyalarını indirin. Ses dönüşüm araçlarınızı, AMR oynatma yazılımlarınızı ve ses işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AMR (Adaptive Multi-Rate) ses dosyalarıdır'
+      },
+      caf: {
+        meta: {
+          title: 'Ücretsiz CAF Örnek Dosyaları İndir - Core Audio Format Test Dosyaları | MorphyHub',
+          description: 'Ses dönüşümü, CAF oynatma, ses işleme araçları ve macOS multimedya yazılımlarını test etmek için ücretsiz CAF Core Audio Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAF\'den MP3\'e dönüştürücüler, CAF\'den WAV\'a dönüştürücüler, ses oynatıcıları, CAF oynatma uyumluluğu ve Core Audio Format desteğini test etmek için mükemmel.',
+          keywords: 'CAF örnek dosyaları, CAF test dosyaları, CAF örnekleri indir, ücretsiz CAF test dosyaları, Core Audio Format dosyaları, CAF\'den MP3\'e dönüştürücü, CAF\'den WAV\'a dönüştürücü, ses oynatıcı test dosyaları, CAF oynatma test, ses dönüşüm örnekleri, Core Audio Format test'
+        },
+        schema: {
+          name: 'Ücretsiz CAF Örnek Dosyaları - Core Audio Format Test Dosyaları İndir',
+          description: 'Ses dönüşümü, CAF oynatma, ses işleme araçları ve macOS multimedya yazılımlarını test etmek için ücretsiz CAF Core Audio Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAF\'den MP3\'e dönüştürücüler, CAF\'den WAV\'a dönüştürücüler, ses oynatıcıları, CAF oynatma uyumluluğu ve Core Audio Format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CAF Örnek Dosyaları',
+          description: 'Test için ücretsiz CAF Core Audio Format örnek dosyalarını indirin. Ses dönüşüm araçlarınızı, CAF oynatma yazılımlarınızı ve ses işleme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CAF (Core Audio Format) ses dosyalarıdır'
       }
     }
   }

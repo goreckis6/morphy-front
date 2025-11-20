@@ -617,6 +617,20 @@ function App() {
         <Route path="/ja/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
         <Route path="/zh/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
         <Route path="/de/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
+        <Route path="/id/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/sv/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/es/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/fr/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/it/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/nl/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/pt/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/vi/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/tr/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/ru/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/ar/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/th/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/ja/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
+        <Route path="/zh/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
         <Route path="/de/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
         <Route path="/de/convert/csv-to-sql" element={<CSVToSQLConverter />} />
         <Route path="/de/convert/csv-to-toml" element={<CSVToTOMLConverter />} />

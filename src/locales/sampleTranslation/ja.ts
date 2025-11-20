@@ -1519,6 +1519,326 @@ export const ja: SamplePageTranslations = {
           description: 'テスト用の無料3GP 3GPPモバイルビデオサンプルファイルをダウンロード。モバイルビデオプレーヤー、3GPコンバーター、マルチメディアソフトウェアをテストするための複数のファイルサイズを利用できます。'
         },
         about_description: 'これらはテスト目的のさまざまなサイズの3GP (3GPPモバイルビデオ)ファイルです'
+      },
+      dav: {
+        meta: {
+          title: '無料DAVサンプルファイルをダウンロード - セキュリティカメラ用DAVビデオテストファイル | MorphyHub',
+          description: 'DAVビデオプレーヤー、セキュリティカメラビデオ処理、DAVコンバーター、監視ビデオ分析ツールをテストするための無料DAVサンプルビデオファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DAV再生、DAVからMP4へのコンバーター、セキュリティカメラソフトウェア、ビデオ監視ツール、DAVフォーマット互換性のテストに最適。',
+          keywords: 'DAVサンプルファイル、DAVテストファイル、DAVサンプルをダウンロード、無料DAVテストファイル、DAVビデオファイル、セキュリティカメラビデオファイル、DAVからMP4へのコンバーター、DAVプレーヤーテスト、監視ビデオサンプル、DAVフォーマットテストファイル、ビデオ監視テストファイル'
+        },
+        schema: {
+          name: '無料DAVサンプルファイル - セキュリティカメラ用DAVビデオテストファイルをダウンロード',
+          description: 'DAVビデオプレーヤー、セキュリティカメラビデオ処理、DAVコンバーター、監視ビデオ分析ツールをテストするための無料DAVサンプルビデオファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DAV再生、DAVからMP4へのコンバーター、セキュリティカメラソフトウェア、ビデオ監視ツール、DAVフォーマット互換性のテストに最適。'
+        },
+        hero: {
+          title: 'DAVサンプルファイル',
+          description: 'テスト用の無料DAVサンプルビデオファイルをダウンロード。DAVビデオプレーヤー、セキュリティカメラビデオ処理ツール、DAVコンバーターをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのDAVビデオファイルです'
+      },
+      dds: {
+        meta: {
+          title: '無料DDSサンプルファイルをダウンロード - DirectDraw Surfaceテクスチャテストファイル | MorphyHub',
+          description: 'テクスチャ画像変換、DDS表示、ゲーム開発ツール、グラフィック処理ソフトウェアをテストするための無料DDS DirectDraw Surfaceサンプル画像ファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DDSテクスチャ読み込み、DDSからPNGへのコンバーター、ゲームエンジン互換性、テクスチャ圧縮ツール、DirectDraw Surfaceフォーマットサポートのテストに最適。',
+          keywords: 'DDSサンプルファイル、DDSテストファイル、DDSサンプルをダウンロード、無料DDSテストファイル、DirectDraw Surfaceファイル、DDSテクスチャファイル、DDSからPNGへのコンバーター、テクスチャ画像サンプル、ゲーム開発テストファイル、DDSフォーマットテスト、グラフィックテクスチャサンプル'
+        },
+        schema: {
+          name: '無料DDSサンプルファイル - DirectDraw Surfaceテクスチャテストファイルをダウンロード',
+          description: 'テクスチャ画像変換、DDS表示、ゲーム開発ツール、グラフィック処理ソフトウェアをテストするための無料DDS DirectDraw Surfaceサンプル画像ファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DDSテクスチャ読み込み、DDSからPNGへのコンバーター、ゲームエンジン互換性、テクスチャ圧縮ツール、DirectDraw Surfaceフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'DDSサンプルファイル',
+          description: 'テスト用の無料DDS DirectDraw Surfaceサンプル画像ファイルをダウンロード。テクスチャ画像変換ツール、DDSビューアー、ゲーム開発ソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのDDS (DirectDraw Surface)テクスチャ画像ファイルです'
+      },
+      dng: {
+        meta: {
+          title: '無料DNGサンプルファイルをダウンロード - Digital Negative Raw画像テストファイル | MorphyHub',
+          description: 'Raw画像処理、DNG変換、写真ソフトウェア、プロフェッショナル画像編集ツールをテストするための無料DNG Digital Negative raw画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DNGからJPEGへのコンバーター、raw画像エディター、DNG表示、カメラraw処理、Adobe Digital Negativeフォーマットサポートのテストに最適。',
+          keywords: 'DNGサンプルファイル、DNGテストファイル、DNGサンプルをダウンロード、無料DNGテストファイル、Digital Negativeファイル、DNG raw画像ファイル、DNGからJPEGへのコンバーター、raw画像処理、写真テストファイル、DNGフォーマットテスト、カメラrawサンプル、Adobe DNGテストファイル'
+        },
+        schema: {
+          name: '無料DNGサンプルファイル - Digital Negative Raw画像テストファイルをダウンロード',
+          description: 'Raw画像処理、DNG変換、写真ソフトウェア、プロフェッショナル画像編集ツールをテストするための無料DNG Digital Negative raw画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。DNGからJPEGへのコンバーター、raw画像エディター、DNG表示、カメラraw処理、Adobe Digital Negativeフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'DNGサンプルファイル',
+          description: 'テスト用の無料DNG Digital Negative raw画像サンプルファイルをダウンロード。raw画像処理ツール、DNGコンバーター、写真ソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのDNG (Digital Negative) raw画像ファイルです'
+      },
+      eps: {
+        meta: {
+          title: '無料EPSサンプルファイルをダウンロード - Encapsulated PostScriptベクターグラフィックテストファイル | MorphyHub',
+          description: 'ベクターグラフィック変換、EPS表示、PostScript処理、プロフェッショナルデザインソフトウェアをテストするための無料EPS Encapsulated PostScriptサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。EPSからPDFへのコンバーター、EPSからSVGへのコンバーター、ベクターグラフィックエディター、PostScriptビューアー、Encapsulated PostScriptフォーマット互換性のテストに最適。',
+          keywords: 'EPSサンプルファイル、EPSテストファイル、EPSサンプルをダウンロード、無料EPSテストファイル、Encapsulated PostScriptファイル、EPSベクターグラフィック、EPSからPDFへのコンバーター、EPSからSVGへのコンバーター、ベクターグラフィックサンプル、PostScriptテストファイル、デザインソフトウェアテストファイル、EPSフォーマットテスト'
+        },
+        schema: {
+          name: '無料EPSサンプルファイル - Encapsulated PostScriptベクターグラフィックテストファイルをダウンロード',
+          description: 'ベクターグラフィック変換、EPS表示、PostScript処理、プロフェッショナルデザインソフトウェアをテストするための無料EPS Encapsulated PostScriptサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。EPSからPDFへのコンバーター、EPSからSVGへのコンバーター、ベクターグラフィックエディター、PostScriptビューアー、Encapsulated PostScriptフォーマット互換性のテストに最適。'
+        },
+        hero: {
+          title: 'EPSサンプルファイル',
+          description: 'テスト用の無料EPS Encapsulated PostScriptサンプルファイルをダウンロード。ベクターグラフィック変換ツール、EPSビューアー、PostScript処理ソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのEPS (Encapsulated PostScript)ベクターグラフィックファイルです'
+      },
+      exr: {
+        meta: {
+          title: '無料EXRサンプルファイルをダウンロード - OpenEXR High Dynamic Range画像テストファイル | MorphyHub',
+          description: 'HDR画像処理、EXR変換、プロフェッショナル写真ソフトウェア、視覚効果ツールをテストするための無料EXR OpenEXR High Dynamic Range画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。EXRからJPEGへのコンバーター、HDR画像エディター、EXR表示、High Dynamic Range処理、OpenEXRフォーマットサポートのテストに最適。',
+          keywords: 'EXRサンプルファイル、EXRテストファイル、EXRサンプルをダウンロード、無料EXRテストファイル、OpenEXRファイル、EXR HDR画像、EXRからJPEGへのコンバーター、HDR画像処理、High Dynamic Rangeサンプル、視覚効果テストファイル、EXRフォーマットテスト、プロフェッショナル写真テストファイル'
+        },
+        schema: {
+          name: '無料EXRサンプルファイル - OpenEXR High Dynamic Range画像テストファイルをダウンロード',
+          description: 'HDR画像処理、EXR変換、プロフェッショナル写真ソフトウェア、視覚効果ツールをテストするための無料EXR OpenEXR High Dynamic Range画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。EXRからJPEGへのコンバーター、HDR画像エディター、EXR表示、High Dynamic Range処理、OpenEXRフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'EXRサンプルファイル',
+          description: 'テスト用の無料EXR OpenEXR High Dynamic Range画像サンプルファイルをダウンロード。HDR画像処理ツール、EXRコンバーター、視覚効果ソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのEXR (OpenEXR High Dynamic Range)画像ファイルです'
+      },
+      hdr: {
+        meta: {
+          title: '無料HDRサンプルファイルをダウンロード - High Dynamic Range画像テストファイル | MorphyHub',
+          description: 'HDR画像処理、HDR変換、写真ソフトウェア、画像編集ツールをテストするための無料HDR High Dynamic Range画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HDRからJPEGへのコンバーター、HDR画像エディター、HDR表示、トーンマッピングツール、High Dynamic Rangeフォーマットサポートのテストに最適。',
+          keywords: 'HDRサンプルファイル、HDRテストファイル、HDRサンプルをダウンロード、無料HDRテストファイル、High Dynamic Rangeファイル、HDR画像、HDRからJPEGへのコンバーター、HDR画像処理、トーンマッピングテストファイル、写真テストファイル、HDRフォーマットテスト、High Dynamic Rangeサンプル'
+        },
+        schema: {
+          name: '無料HDRサンプルファイル - High Dynamic Range画像テストファイルをダウンロード',
+          description: 'HDR画像処理、HDR変換、写真ソフトウェア、画像編集ツールをテストするための無料HDR High Dynamic Range画像サンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HDRからJPEGへのコンバーター、HDR画像エディター、HDR表示、トーンマッピングツール、High Dynamic Rangeフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'HDRサンプルファイル',
+          description: 'テスト用の無料HDR High Dynamic Range画像サンプルファイルをダウンロード。HDR画像処理ツール、HDRコンバーター、写真ソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのHDR (High Dynamic Range)画像ファイルです'
+      },
+      heic: {
+        meta: {
+          title: '無料HEICサンプルファイルをダウンロード - High Efficiency Image Containerテストファイル | MorphyHub',
+          description: 'HEIC画像変換、HEIC表示、モダン画像フォーマット処理、モバイル写真ツールをテストするための無料HEIC High Efficiency Image Containerサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HEICからJPEGへのコンバーター、HEICからPNGへのコンバーター、iOS画像処理、HEIC表示ソフトウェア、High Efficiency Image Containerフォーマットサポートのテストに最適。',
+          keywords: 'HEICサンプルファイル、HEICテストファイル、HEICサンプルをダウンロード、無料HEICテストファイル、High Efficiency Image Containerファイル、HEIC画像、HEICからJPEGへのコンバーター、HEICからPNGへのコンバーター、iOS画像サンプル、モバイル写真テストファイル、HEICフォーマットテスト、モダン画像フォーマットサンプル'
+        },
+        schema: {
+          name: '無料HEICサンプルファイル - High Efficiency Image Containerテストファイルをダウンロード',
+          description: 'HEIC画像変換、HEIC表示、モダン画像フォーマット処理、モバイル写真ツールをテストするための無料HEIC High Efficiency Image Containerサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HEICからJPEGへのコンバーター、HEICからPNGへのコンバーター、iOS画像処理、HEIC表示ソフトウェア、High Efficiency Image Containerフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'HEICサンプルファイル',
+          description: 'テスト用の無料HEIC High Efficiency Image Containerサンプルファイルをダウンロード。HEIC画像変換ツール、HEICビューアー、モダン画像フォーマット処理ソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのHEIC (High Efficiency Image Container)画像ファイルです'
+      },
+      heif: {
+        meta: {
+          title: '無料HEIFサンプルファイルをダウンロード - High Efficiency Image Formatテストファイル | MorphyHub',
+          description: 'HEIF画像変換、HEIF表示、モダン画像フォーマット処理、モバイル写真ツールをテストするための無料HEIF High Efficiency Image Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HEIFからJPEGへのコンバーター、HEIFからPNGへのコンバーター、モバイル画像処理、HEIF表示ソフトウェア、High Efficiency Image Formatサポートのテストに最適。',
+          keywords: 'HEIFサンプルファイル、HEIFテストファイル、HEIFサンプルをダウンロード、無料HEIFテストファイル、High Efficiency Image Formatファイル、HEIF画像、HEIFからJPEGへのコンバーター、HEIFからPNGへのコンバーター、モバイル画像サンプル、モダン画像フォーマットテストファイル、HEIFフォーマットテスト、画像圧縮テストファイル'
+        },
+        schema: {
+          name: '無料HEIFサンプルファイル - High Efficiency Image Formatテストファイルをダウンロード',
+          description: 'HEIF画像変換、HEIF表示、モダン画像フォーマット処理、モバイル写真ツールをテストするための無料HEIF High Efficiency Image Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。HEIFからJPEGへのコンバーター、HEIFからPNGへのコンバーター、モバイル画像処理、HEIF表示ソフトウェア、High Efficiency Image Formatサポートのテストに最適。'
+        },
+        hero: {
+          title: 'HEIFサンプルファイル',
+          description: 'テスト用の無料HEIF High Efficiency Image Formatサンプルファイルをダウンロード。HEIF画像変換ツール、HEIFビューアー、モダン画像フォーマット処理ソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのHEIF (High Efficiency Image Format)画像ファイルです'
+      },
+      icns: {
+        meta: {
+          title: '無料ICNSサンプルファイルをダウンロード - macOSアイコンテストファイル | MorphyHub',
+          description: 'macOSアイコン変換、ICNS表示、アイコンデザインツール、macOSアプリ開発をテストするための無料ICNS macOSアイコンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ICNSからPNGへのコンバーター、ICNSからICOへのコンバーター、macOSアイコンエディター、アイコンデザインソフトウェア、macOSアイコンフォーマットサポートのテストに最適。',
+          keywords: 'ICNSサンプルファイル、ICNSテストファイル、ICNSサンプルをダウンロード、無料ICNSテストファイル、macOSアイコンファイル、ICNSアイコン、ICNSからPNGへのコンバーター、ICNSからICOへのコンバーター、macOSアイコンデザイン、アイコンエディターテストファイル、ICNSフォーマットテスト、Appleアイコンサンプル'
+        },
+        schema: {
+          name: '無料ICNSサンプルファイル - macOSアイコンテストファイルをダウンロード',
+          description: 'macOSアイコン変換、ICNS表示、アイコンデザインツール、macOSアプリ開発をテストするための無料ICNS macOSアイコンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ICNSからPNGへのコンバーター、ICNSからICOへのコンバーター、macOSアイコンエディター、アイコンデザインソフトウェア、macOSアイコンフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'ICNSサンプルファイル',
+          description: 'テスト用の無料ICNS macOSアイコンサンプルファイルをダウンロード。macOSアイコン変換ツール、ICNSビューアー、アイコンデザインソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのICNS (macOSアイコン)ファイルです'
+      },
+      ico: {
+        meta: {
+          title: '無料ICOサンプルファイルをダウンロード - Windowsアイコンテストファイル | MorphyHub',
+          description: 'Windowsアイコン変換、ICO表示、アイコンデザインツール、Windowsアプリ開発をテストするための無料ICO Windowsアイコンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ICOからPNGへのコンバーター、ICOからICNSへのコンバーター、Windowsアイコンエディター、アイコンデザインソフトウェア、Windowsアイコンフォーマットサポートのテストに最適。',
+          keywords: 'ICOサンプルファイル、ICOテストファイル、ICOサンプルをダウンロード、無料ICOテストファイル、Windowsアイコンファイル、ICOアイコン、ICOからPNGへのコンバーター、ICOからICNSへのコンバーター、Windowsアイコンデザイン、アイコンエディターテストファイル、ICOフォーマットテスト、Windowsアイコンサンプル'
+        },
+        schema: {
+          name: '無料ICOサンプルファイル - Windowsアイコンテストファイルをダウンロード',
+          description: 'Windowsアイコン変換、ICO表示、アイコンデザインツール、Windowsアプリ開発をテストするための無料ICO Windowsアイコンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。ICOからPNGへのコンバーター、ICOからICNSへのコンバーター、Windowsアイコンエディター、アイコンデザインソフトウェア、Windowsアイコンフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'ICOサンプルファイル',
+          description: 'テスト用の無料ICO Windowsアイコンサンプルファイルをダウンロード。Windowsアイコン変換ツール、ICOビューアー、アイコンデザインソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのICO (Windowsアイコン)ファイルです'
+      },
+      jpeg: {
+        meta: {
+          title: '無料JPEGサンプルファイルをダウンロード - 変換ツール用JPEG画像テストファイル | MorphyHub',
+          description: 'JPEG画像変換、JPEG圧縮、画像処理ツール、写真編集ソフトウェアをテストするための無料JPEGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JPEGからPNGへのコンバーター、JPEGからPDFへのコンバーター、画像圧縮ツール、JPEG最適化、Joint Photographic Experts Groupフォーマットサポートのテストに最適。',
+          keywords: 'JPEGサンプルファイル、JPEGテストファイル、JPEGサンプルをダウンロード、無料JPEGテストファイル、JPEG画像ファイル、JPEGからPNGへのコンバーター、JPEGからPDFへのコンバーター、画像圧縮テストファイル、写真編集テストファイル、JPEGフォーマットテスト、画像処理サンプル'
+        },
+        schema: {
+          name: '無料JPEGサンプルファイル - 変換ツール用JPEG画像テストファイルをダウンロード',
+          description: 'JPEG画像変換、JPEG圧縮、画像処理ツール、写真編集ソフトウェアをテストするための無料JPEGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JPEGからPNGへのコンバーター、JPEGからPDFへのコンバーター、画像圧縮ツール、JPEG最適化、Joint Photographic Experts Groupフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'JPEGサンプルファイル',
+          description: 'テスト用の無料JPEGサンプルファイルをダウンロード。JPEG画像変換ツール、JPEG圧縮ソフトウェア、画像処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのJPEG画像ファイルです'
+      },
+      jpg: {
+        meta: {
+          title: '無料JPGサンプルファイルをダウンロード - 変換ツール用JPG画像テストファイル | MorphyHub',
+          description: 'JPG画像変換、JPG圧縮、画像処理ツール、写真編集ソフトウェアをテストするための無料JPGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JPGからPNGへのコンバーター、JPGからPDFへのコンバーター、画像圧縮ツール、JPG最適化、Joint Photographic Experts Groupフォーマットサポートのテストに最適。',
+          keywords: 'JPGサンプルファイル、JPGテストファイル、JPGサンプルをダウンロード、無料JPGテストファイル、JPG画像ファイル、JPGからPNGへのコンバーター、JPGからPDFへのコンバーター、画像圧縮テストファイル、写真編集テストファイル、JPGフォーマットテスト、画像処理サンプル'
+        },
+        schema: {
+          name: '無料JPGサンプルファイル - 変換ツール用JPG画像テストファイルをダウンロード',
+          description: 'JPG画像変換、JPG圧縮、画像処理ツール、写真編集ソフトウェアをテストするための無料JPGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。JPGからPNGへのコンバーター、JPGからPDFへのコンバーター、画像圧縮ツール、JPG最適化、Joint Photographic Experts Groupフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'JPGサンプルファイル',
+          description: 'テスト用の無料JPGサンプルファイルをダウンロード。JPG画像変換ツール、JPG圧縮ソフトウェア、画像処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのJPG画像ファイルです'
+      },
+      m4v: {
+        meta: {
+          title: '無料M4Vサンプルファイルをダウンロード - 変換ツール用M4Vビデオテストファイル | MorphyHub',
+          description: 'M4Vビデオ変換、M4V再生、ビデオ処理ツール、マルチメディアソフトウェアをテストするための無料M4Vサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。M4VからMP4へのコンバーター、M4VからAVIへのコンバーター、ビデオプレーヤー、M4V再生互換性、MPEG-4ビデオフォーマットサポートのテストに最適。',
+          keywords: 'M4Vサンプルファイル、M4Vテストファイル、M4Vサンプルをダウンロード、無料M4Vテストファイル、M4Vビデオファイル、M4VからMP4へのコンバーター、M4VからAVIへのコンバーター、ビデオプレーヤーテストファイル、M4V再生テスト、ビデオ変換サンプル、MPEG-4ビデオフォーマットテスト'
+        },
+        schema: {
+          name: '無料M4Vサンプルファイル - 変換ツール用M4Vビデオテストファイルをダウンロード',
+          description: 'M4Vビデオ変換、M4V再生、ビデオ処理ツール、マルチメディアソフトウェアをテストするための無料M4Vサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。M4VからMP4へのコンバーター、M4VからAVIへのコンバーター、ビデオプレーヤー、M4V再生互換性、MPEG-4ビデオフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'M4Vサンプルファイル',
+          description: 'テスト用の無料M4Vサンプルファイルをダウンロード。M4Vビデオ変換ツール、M4V再生ソフトウェア、ビデオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのM4Vビデオファイルです'
+      },
+      mkv: {
+        meta: {
+          title: '無料MKVサンプルファイルをダウンロード - 変換ツール用Matroskaビデオテストファイル | MorphyHub',
+          description: 'MKVビデオ変換、MKV再生、ビデオ処理ツール、マルチメディアソフトウェアをテストするための無料MKV Matroskaサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。MKVからMP4へのコンバーター、MKVからAVIへのコンバーター、ビデオプレーヤー、MKV再生互換性、Matroskaビデオフォーマットサポートのテストに最適。',
+          keywords: 'MKVサンプルファイル、MKVテストファイル、MKVサンプルをダウンロード、無料MKVテストファイル、Matroskaビデオファイル、MKVからMP4へのコンバーター、MKVからAVIへのコンバーター、ビデオプレーヤーテストファイル、MKV再生テスト、ビデオ変換サンプル、Matroskaフォーマットテスト'
+        },
+        schema: {
+          name: '無料MKVサンプルファイル - 変換ツール用Matroskaビデオテストファイルをダウンロード',
+          description: 'MKVビデオ変換、MKV再生、ビデオ処理ツール、マルチメディアソフトウェアをテストするための無料MKV Matroskaサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。MKVからMP4へのコンバーター、MKVからAVIへのコンバーター、ビデオプレーヤー、MKV再生互換性、Matroskaビデオフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'MKVサンプルファイル',
+          description: 'テスト用の無料MKV Matroskaサンプルファイルをダウンロード。MKVビデオ変換ツール、MKV再生ソフトウェア、ビデオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのMKV (Matroska)ビデオファイルです'
+      },
+      aac: {
+        meta: {
+          title: '無料AACサンプルファイルをダウンロード - Advanced Audio Codingテストファイル | MorphyHub',
+          description: 'オーディオ変換、AAC再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AAC Advanced Audio Codingサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AACからMP3へのコンバーター、AACからWAVへのコンバーター、オーディオプレーヤー、AAC再生互換性、Advanced Audio Codingフォーマットサポートのテストに最適。',
+          keywords: 'AACサンプルファイル、AACテストファイル、AACサンプルをダウンロード、無料AACテストファイル、Advanced Audio Codingファイル、AACからMP3へのコンバーター、AACからWAVへのコンバーター、オーディオプレーヤーテストファイル、AAC再生テスト、オーディオ変換サンプル、Advanced Audio Codingフォーマットテスト'
+        },
+        schema: {
+          name: '無料AACサンプルファイル - Advanced Audio Codingテストファイルをダウンロード',
+          description: 'オーディオ変換、AAC再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AAC Advanced Audio Codingサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AACからMP3へのコンバーター、AACからWAVへのコンバーター、オーディオプレーヤー、AAC再生互換性、Advanced Audio Codingフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'AACサンプルファイル',
+          description: 'テスト用の無料AAC Advanced Audio Codingサンプルファイルをダウンロード。オーディオ変換ツール、AAC再生ソフトウェア、オーディオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAAC (Advanced Audio Coding)オーディオファイルです'
+      },
+      ac3: {
+        meta: {
+          title: '無料AC3サンプルファイルをダウンロード - Dolby Digitalオーディオテストファイル | MorphyHub',
+          description: 'オーディオ変換、AC3再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AC3 Dolby Digitalサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AC3からMP3へのコンバーター、AC3からWAVへのコンバーター、オーディオプレーヤー、AC3再生互換性、Dolby Digitalフォーマットサポートのテストに最適。',
+          keywords: 'AC3サンプルファイル、AC3テストファイル、AC3サンプルをダウンロード、無料AC3テストファイル、Dolby Digitalファイル、AC3からMP3へのコンバーター、AC3からWAVへのコンバーター、オーディオプレーヤーテストファイル、AC3再生テスト、オーディオ変換サンプル、Dolby Digitalフォーマットテスト'
+        },
+        schema: {
+          name: '無料AC3サンプルファイル - Dolby Digitalオーディオテストファイルをダウンロード',
+          description: 'オーディオ変換、AC3再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AC3 Dolby Digitalサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AC3からMP3へのコンバーター、AC3からWAVへのコンバーター、オーディオプレーヤー、AC3再生互換性、Dolby Digitalフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'AC3サンプルファイル',
+          description: 'テスト用の無料AC3 Dolby Digitalサンプルファイルをダウンロード。オーディオ変換ツール、AC3再生ソフトウェア、オーディオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAC3 (Dolby Digital)オーディオファイルです'
+      },
+      aif: {
+        meta: {
+          title: '無料AIFサンプルファイルをダウンロード - Audio Interchange File Formatテストファイル | MorphyHub',
+          description: 'オーディオ変換、AIF再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AIF Audio Interchange File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AIFからMP3へのコンバーター、AIFからWAVへのコンバーター、オーディオプレーヤー、AIF再生互換性、Audio Interchange File Formatサポートのテストに最適。',
+          keywords: 'AIFサンプルファイル、AIFテストファイル、AIFサンプルをダウンロード、無料AIFテストファイル、Audio Interchange File Formatファイル、AIFからMP3へのコンバーター、AIFからWAVへのコンバーター、オーディオプレーヤーテストファイル、AIF再生テスト、オーディオ変換サンプル、Audio Interchange File Formatテスト'
+        },
+        schema: {
+          name: '無料AIFサンプルファイル - Audio Interchange File Formatテストファイルをダウンロード',
+          description: 'オーディオ変換、AIF再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AIF Audio Interchange File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AIFからMP3へのコンバーター、AIFからWAVへのコンバーター、オーディオプレーヤー、AIF再生互換性、Audio Interchange File Formatサポートのテストに最適。'
+        },
+        hero: {
+          title: 'AIFサンプルファイル',
+          description: 'テスト用の無料AIF Audio Interchange File Formatサンプルファイルをダウンロード。オーディオ変換ツール、AIF再生ソフトウェア、オーディオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAIF (Audio Interchange File Format)オーディオファイルです'
+      },
+      aiff: {
+        meta: {
+          title: '無料AIFFサンプルファイルをダウンロード - Audio Interchange File Formatテストファイル | MorphyHub',
+          description: 'オーディオ変換、AIFF再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AIFF Audio Interchange File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AIFFからMP3へのコンバーター、AIFFからWAVへのコンバーター、オーディオプレーヤー、AIFF再生互換性、Audio Interchange File Formatサポートのテストに最適。',
+          keywords: 'AIFFサンプルファイル、AIFFテストファイル、AIFFサンプルをダウンロード、無料AIFFテストファイル、Audio Interchange File Formatファイル、AIFFからMP3へのコンバーター、AIFFからWAVへのコンバーター、オーディオプレーヤーテストファイル、AIFF再生テスト、オーディオ変換サンプル、Audio Interchange File Formatテスト'
+        },
+        schema: {
+          name: '無料AIFFサンプルファイル - Audio Interchange File Formatテストファイルをダウンロード',
+          description: 'オーディオ変換、AIFF再生、オーディオ処理ツール、マルチメディアソフトウェアをテストするための無料AIFF Audio Interchange File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AIFFからMP3へのコンバーター、AIFFからWAVへのコンバーター、オーディオプレーヤー、AIFF再生互換性、Audio Interchange File Formatサポートのテストに最適。'
+        },
+        hero: {
+          title: 'AIFFサンプルファイル',
+          description: 'テスト用の無料AIFF Audio Interchange File Formatサンプルファイルをダウンロード。オーディオ変換ツール、AIFF再生ソフトウェア、オーディオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAIFF (Audio Interchange File Format)オーディオファイルです'
+      },
+      amr: {
+        meta: {
+          title: '無料AMRサンプルファイルをダウンロード - Adaptive Multi-Rate Audioテストファイル | MorphyHub',
+          description: 'オーディオ変換、AMR再生、オーディオ処理ツール、モバイルマルチメディアソフトウェアをテストするための無料AMR Adaptive Multi-Rateサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AMRからMP3へのコンバーター、AMRからWAVへのコンバーター、オーディオプレーヤー、AMR再生互換性、Adaptive Multi-Rateフォーマットサポートのテストに最適。',
+          keywords: 'AMRサンプルファイル、AMRテストファイル、AMRサンプルをダウンロード、無料AMRテストファイル、Adaptive Multi-Rateファイル、AMRからMP3へのコンバーター、AMRからWAVへのコンバーター、オーディオプレーヤーテストファイル、AMR再生テスト、オーディオ変換サンプル、Adaptive Multi-Rateフォーマットテスト'
+        },
+        schema: {
+          name: '無料AMRサンプルファイル - Adaptive Multi-Rate Audioテストファイルをダウンロード',
+          description: 'オーディオ変換、AMR再生、オーディオ処理ツール、モバイルマルチメディアソフトウェアをテストするための無料AMR Adaptive Multi-Rateサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AMRからMP3へのコンバーター、AMRからWAVへのコンバーター、オーディオプレーヤー、AMR再生互換性、Adaptive Multi-Rateフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'AMRサンプルファイル',
+          description: 'テスト用の無料AMR Adaptive Multi-Rateサンプルファイルをダウンロード。オーディオ変換ツール、AMR再生ソフトウェア、オーディオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAMR (Adaptive Multi-Rate)オーディオファイルです'
+      },
+      caf: {
+        meta: {
+          title: '無料CAFサンプルファイルをダウンロード - Core Audio Formatテストファイル | MorphyHub',
+          description: 'オーディオ変換、CAF再生、オーディオ処理ツール、macOSマルチメディアソフトウェアをテストするための無料CAF Core Audio Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CAFからMP3へのコンバーター、CAFからWAVへのコンバーター、オーディオプレーヤー、CAF再生互換性、Core Audio Formatサポートのテストに最適。',
+          keywords: 'CAFサンプルファイル、CAFテストファイル、CAFサンプルをダウンロード、無料CAFテストファイル、Core Audio Formatファイル、CAFからMP3へのコンバーター、CAFからWAVへのコンバーター、オーディオプレーヤーテストファイル、CAF再生テスト、オーディオ変換サンプル、Core Audio Formatテスト'
+        },
+        schema: {
+          name: '無料CAFサンプルファイル - Core Audio Formatテストファイルをダウンロード',
+          description: 'オーディオ変換、CAF再生、オーディオ処理ツール、macOSマルチメディアソフトウェアをテストするための無料CAF Core Audio Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CAFからMP3へのコンバーター、CAFからWAVへのコンバーター、オーディオプレーヤー、CAF再生互換性、Core Audio Formatサポートのテストに最適。'
+        },
+        hero: {
+          title: 'CAFサンプルファイル',
+          description: 'テスト用の無料CAF Core Audio Formatサンプルファイルをダウンロード。オーディオ変換ツール、CAF再生ソフトウェア、オーディオ処理アプリケーションをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのCAF (Core Audio Format)オーディオファイルです'
       }
     }
   }

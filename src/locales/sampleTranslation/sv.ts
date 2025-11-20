@@ -1519,6 +1519,326 @@ export const sv: SamplePageTranslations = {
           description: 'Ladda ner gratis 3GP 3GPP mobile video exempelfiler för testning. Flera filstorlekar tillgängliga för att testa mobila videospelare, 3GP-konverterare och multimediaprogram.'
         },
         about_description: 'Detta är 3GP (3GPP mobile video) testfiler i olika storlekar för teständamål'
+      },
+      dav: {
+        meta: {
+          title: 'Ladda ner Gratis DAV Exempelfiler - DAV Video Testfiler för Säkerhetskameror | MorphyHub',
+          description: 'Ladda ner gratis DAV exempelfiler för att testa DAV-videospelare, videobearbetning av säkerhetskameror, DAV-konverterare och videoövervakningsanalysverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DAV-uppspelning, DAV-till-MP4-konverterare, säkerhetskamerorprogram, videoövervakningsverktyg och DAV-formatkompatibilitet.',
+          keywords: 'DAV exempelfiler, DAV testfiler, ladda ner DAV exempel, gratis DAV testfiler, DAV videofiler, säkerhetskamera videofiler, DAV till MP4 konverterare, DAV-spelare test, videoövervakning exempel, DAV-format testfiler, videoövervakning testfiler'
+        },
+        schema: {
+          name: 'Gratis DAV Exempelfiler - Ladda ner DAV Video Testfiler för Säkerhetskameror',
+          description: 'Ladda ner gratis DAV exempelfiler för att testa DAV-videospelare, videobearbetning av säkerhetskameror, DAV-konverterare och videoövervakningsanalysverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DAV-uppspelning, DAV-till-MP4-konverterare, säkerhetskamerorprogram, videoövervakningsverktyg och DAV-formatkompatibilitet.'
+        },
+        hero: {
+          title: 'DAV Exempelfiler',
+          description: 'Ladda ner gratis DAV exempelfiler för testning. Flera filstorlekar tillgängliga för att testa DAV-videospelare, videobearbetningsverktyg för säkerhetskameror och DAV-konverterare.'
+        },
+        about_description: 'Detta är DAV-video testfiler i olika storlekar för teständamål'
+      },
+      dds: {
+        meta: {
+          title: 'Ladda ner Gratis DDS Exempelfiler - DirectDraw Surface Textur Testfiler | MorphyHub',
+          description: 'Ladda ner gratis DDS DirectDraw Surface exempelfiler för att testa texturbildkonvertering, DDS-visualisering, spelutvecklingsverktyg och grafikbearbetningsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DDS-texturladdning, DDS-till-PNG-konverterare, spelmotor kompatibilitet, texturkomprimeringsverktyg och DirectDraw Surface-formatstöd.',
+          keywords: 'DDS exempelfiler, DDS testfiler, ladda ner DDS exempel, gratis DDS testfiler, DirectDraw Surface filer, DDS texturfiler, DDS till PNG konverterare, texturbild exempel, spelutveckling testfiler, DDS-format test, grafiktextur exempel'
+        },
+        schema: {
+          name: 'Gratis DDS Exempelfiler - Ladda ner DirectDraw Surface Textur Testfiler',
+          description: 'Ladda ner gratis DDS DirectDraw Surface exempelfiler för att testa texturbildkonvertering, DDS-visualisering, spelutvecklingsverktyg och grafikbearbetningsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DDS-texturladdning, DDS-till-PNG-konverterare, spelmotor kompatibilitet, texturkomprimeringsverktyg och DirectDraw Surface-formatstöd.'
+        },
+        hero: {
+          title: 'DDS Exempelfiler',
+          description: 'Ladda ner gratis DDS DirectDraw Surface exempelfiler för testning. Flera filstorlekar tillgängliga för att testa texturbildkonverteringsverktyg, DDS-visualiseringar och spelutvecklingsprogram.'
+        },
+        about_description: 'Detta är DDS (DirectDraw Surface) texturbild testfiler i olika storlekar för teständamål'
+      },
+      dng: {
+        meta: {
+          title: 'Ladda ner Gratis DNG Exempelfiler - Digital Negative Raw Bild Testfiler | MorphyHub',
+          description: 'Ladda ner gratis DNG Digital Negative raw bildexempelfiler för att testa raw bildbearbetning, DNG-konvertering, fotoprogram och professionella bildredigeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DNG-till-JPEG-konverterare, raw bildredigerare, DNG-visualisering, kameraraw-bearbetning och Adobe Digital Negative-formatstöd.',
+          keywords: 'DNG exempelfiler, DNG testfiler, ladda ner DNG exempel, gratis DNG testfiler, Digital Negative filer, DNG raw bildefiler, DNG till JPEG konverterare, raw bildbearbetning, fotografi testfiler, DNG-format test, kameraraw exempel, Adobe DNG testfiler'
+        },
+        schema: {
+          name: 'Gratis DNG Exempelfiler - Ladda ner Digital Negative Raw Bild Testfiler',
+          description: 'Ladda ner gratis DNG Digital Negative raw bildexempelfiler för att testa raw bildbearbetning, DNG-konvertering, fotoprogram och professionella bildredigeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa DNG-till-JPEG-konverterare, raw bildredigerare, DNG-visualisering, kameraraw-bearbetning och Adobe Digital Negative-formatstöd.'
+        },
+        hero: {
+          title: 'DNG Exempelfiler',
+          description: 'Ladda ner gratis DNG Digital Negative raw bildexempelfiler för testning. Flera filstorlekar tillgängliga för att testa raw bildbearbetningsverktyg, DNG-konverterare och fotoprogram.'
+        },
+        about_description: 'Detta är DNG (Digital Negative) raw bild testfiler i olika storlekar för teständamål'
+      },
+      eps: {
+        meta: {
+          title: 'Ladda ner Gratis EPS Exempelfiler - Encapsulated PostScript Vektorgrafik Testfiler | MorphyHub',
+          description: 'Ladda ner gratis EPS Encapsulated PostScript exempelfiler för att testa vektorgrafikkonvertering, EPS-visualisering, PostScript-bearbetning och professionella designprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EPS-till-PDF-konverterare, EPS-till-SVG-konverterare, vektorgrafikredigerare, PostScript-visualiseringar och Encapsulated PostScript-formatkompatibilitet.',
+          keywords: 'EPS exempelfiler, EPS testfiler, ladda ner EPS exempel, gratis EPS testfiler, Encapsulated PostScript filer, EPS vektorgrafik, EPS till PDF konverterare, EPS till SVG konverterare, vektorgrafik exempel, PostScript testfiler, designprogram testfiler, EPS-format test'
+        },
+        schema: {
+          name: 'Gratis EPS Exempelfiler - Ladda ner Encapsulated PostScript Vektorgrafik Testfiler',
+          description: 'Ladda ner gratis EPS Encapsulated PostScript exempelfiler för att testa vektorgrafikkonvertering, EPS-visualisering, PostScript-bearbetning och professionella designprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EPS-till-PDF-konverterare, EPS-till-SVG-konverterare, vektorgrafikredigerare, PostScript-visualiseringar och Encapsulated PostScript-formatkompatibilitet.'
+        },
+        hero: {
+          title: 'EPS Exempelfiler',
+          description: 'Ladda ner gratis EPS Encapsulated PostScript exempelfiler för testning. Flera filstorlekar tillgängliga för att testa vektorgrafikkonverteringsverktyg, EPS-visualiseringar och PostScript-bearbetningsprogram.'
+        },
+        about_description: 'Detta är EPS (Encapsulated PostScript) vektorgrafik testfiler i olika storlekar för teständamål'
+      },
+      exr: {
+        meta: {
+          title: 'Ladda ner Gratis EXR Exempelfiler - OpenEXR High Dynamic Range Bild Testfiler | MorphyHub',
+          description: 'Ladda ner gratis EXR OpenEXR High Dynamic Range bildexempelfiler för att testa HDR-bildbearbetning, EXR-konvertering, professionella fotoprogram och visuella effektverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EXR-till-JPEG-konverterare, HDR-bildredigerare, EXR-visualisering, High Dynamic Range-bearbetning och OpenEXR-formatstöd.',
+          keywords: 'EXR exempelfiler, EXR testfiler, ladda ner EXR exempel, gratis EXR testfiler, OpenEXR filer, EXR HDR-bilder, EXR till JPEG konverterare, HDR-bildbearbetning, High Dynamic Range exempel, visuella effekter testfiler, EXR-format test, professionell fotografi testfiler'
+        },
+        schema: {
+          name: 'Gratis EXR Exempelfiler - Ladda ner OpenEXR High Dynamic Range Bild Testfiler',
+          description: 'Ladda ner gratis EXR OpenEXR High Dynamic Range bildexempelfiler för att testa HDR-bildbearbetning, EXR-konvertering, professionella fotoprogram och visuella effektverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa EXR-till-JPEG-konverterare, HDR-bildredigerare, EXR-visualisering, High Dynamic Range-bearbetning och OpenEXR-formatstöd.'
+        },
+        hero: {
+          title: 'EXR Exempelfiler',
+          description: 'Ladda ner gratis EXR OpenEXR High Dynamic Range bildexempelfiler för testning. Flera filstorlekar tillgängliga för att testa HDR-bildbearbetningsverktyg, EXR-konverterare och visuella effektprogram.'
+        },
+        about_description: 'Detta är EXR (OpenEXR High Dynamic Range) bild testfiler i olika storlekar för teständamål'
+      },
+      hdr: {
+        meta: {
+          title: 'Ladda ner Gratis HDR Exempelfiler - High Dynamic Range Bild Testfiler | MorphyHub',
+          description: 'Ladda ner gratis HDR High Dynamic Range bildexempelfiler för att testa HDR-bildbearbetning, HDR-konvertering, fotoprogram och bildredigeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HDR-till-JPEG-konverterare, HDR-bildredigerare, HDR-visualisering, tonmappningsverktyg och High Dynamic Range-formatstöd.',
+          keywords: 'HDR exempelfiler, HDR testfiler, ladda ner HDR exempel, gratis HDR testfiler, High Dynamic Range filer, HDR-bilder, HDR till JPEG konverterare, HDR-bildbearbetning, tonmappning testfiler, fotografi testfiler, HDR-format test, High Dynamic Range exempel'
+        },
+        schema: {
+          name: 'Gratis HDR Exempelfiler - Ladda ner High Dynamic Range Bild Testfiler',
+          description: 'Ladda ner gratis HDR High Dynamic Range bildexempelfiler för att testa HDR-bildbearbetning, HDR-konvertering, fotoprogram och bildredigeringsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HDR-till-JPEG-konverterare, HDR-bildredigerare, HDR-visualisering, tonmappningsverktyg och High Dynamic Range-formatstöd.'
+        },
+        hero: {
+          title: 'HDR Exempelfiler',
+          description: 'Ladda ner gratis HDR High Dynamic Range bildexempelfiler för testning. Flera filstorlekar tillgängliga för att testa HDR-bildbearbetningsverktyg, HDR-konverterare och fotoprogram.'
+        },
+        about_description: 'Detta är HDR (High Dynamic Range) bild testfiler i olika storlekar för teständamål'
+      },
+      heic: {
+        meta: {
+          title: 'Ladda ner Gratis HEIC Exempelfiler - High Efficiency Image Container Testfiler | MorphyHub',
+          description: 'Ladda ner gratis HEIC High Efficiency Image Container exempelfiler för att testa HEIC-bildkonvertering, HEIC-visualisering, modern bildformatbearbetning och mobilfotoverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HEIC-till-JPEG-konverterare, HEIC-till-PNG-konverterare, iOS-bildbearbetning, HEIC-visualiseringsprogram och High Efficiency Image Container-formatstöd.',
+          keywords: 'HEIC exempelfiler, HEIC testfiler, ladda ner HEIC exempel, gratis HEIC testfiler, High Efficiency Image Container filer, HEIC-bilder, HEIC till JPEG konverterare, HEIC till PNG konverterare, iOS-bild exempel, mobilfotografi testfiler, HEIC-format test, moderna bildformat exempel'
+        },
+        schema: {
+          name: 'Gratis HEIC Exempelfiler - Ladda ner High Efficiency Image Container Testfiler',
+          description: 'Ladda ner gratis HEIC High Efficiency Image Container exempelfiler för att testa HEIC-bildkonvertering, HEIC-visualisering, modern bildformatbearbetning och mobilfotoverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HEIC-till-JPEG-konverterare, HEIC-till-PNG-konverterare, iOS-bildbearbetning, HEIC-visualiseringsprogram och High Efficiency Image Container-formatstöd.'
+        },
+        hero: {
+          title: 'HEIC Exempelfiler',
+          description: 'Ladda ner gratis HEIC High Efficiency Image Container exempelfiler för testning. Flera filstorlekar tillgängliga för att testa HEIC-bildkonverteringsverktyg, HEIC-visualiseringar och modern bildformatbearbetningsprogram.'
+        },
+        about_description: 'Detta är HEIC (High Efficiency Image Container) bild testfiler i olika storlekar för teständamål'
+      },
+      heif: {
+        meta: {
+          title: 'Ladda ner Gratis HEIF Exempelfiler - High Efficiency Image Format Testfiler | MorphyHub',
+          description: 'Ladda ner gratis HEIF High Efficiency Image Format exempelfiler för att testa HEIF-bildkonvertering, HEIF-visualisering, modern bildformatbearbetning och mobilfotoverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HEIF-till-JPEG-konverterare, HEIF-till-PNG-konverterare, mobilbildbearbetning, HEIF-visualiseringsprogram och High Efficiency Image Format-stöd.',
+          keywords: 'HEIF exempelfiler, HEIF testfiler, ladda ner HEIF exempel, gratis HEIF testfiler, High Efficiency Image Format filer, HEIF-bilder, HEIF till JPEG konverterare, HEIF till PNG konverterare, mobilbild exempel, moderna bildformat testfiler, HEIF-format test, bildkomprimering testfiler'
+        },
+        schema: {
+          name: 'Gratis HEIF Exempelfiler - Ladda ner High Efficiency Image Format Testfiler',
+          description: 'Ladda ner gratis HEIF High Efficiency Image Format exempelfiler för att testa HEIF-bildkonvertering, HEIF-visualisering, modern bildformatbearbetning och mobilfotoverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa HEIF-till-JPEG-konverterare, HEIF-till-PNG-konverterare, mobilbildbearbetning, HEIF-visualiseringsprogram och High Efficiency Image Format-stöd.'
+        },
+        hero: {
+          title: 'HEIF Exempelfiler',
+          description: 'Ladda ner gratis HEIF High Efficiency Image Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa HEIF-bildkonverteringsverktyg, HEIF-visualiseringar och modern bildformatbearbetningsprogram.'
+        },
+        about_description: 'Detta är HEIF (High Efficiency Image Format) bild testfiler i olika storlekar för teständamål'
+      },
+      icns: {
+        meta: {
+          title: 'Ladda ner Gratis ICNS Exempelfiler - macOS Ikon Testfiler | MorphyHub',
+          description: 'Ladda ner gratis ICNS macOS-ikon exempelfiler för att testa macOS-ikonkonvertering, ICNS-visualisering, ikondesignverktyg och macOS-applikationsutveckling. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ICNS-till-PNG-konverterare, ICNS-till-ICO-konverterare, macOS-ikonredigerare, ikondesignprogram och macOS-ikonformatstöd.',
+          keywords: 'ICNS exempelfiler, ICNS testfiler, ladda ner ICNS exempel, gratis ICNS testfiler, macOS ikon filer, ICNS-ikoner, ICNS till PNG konverterare, ICNS till ICO konverterare, macOS ikondesign, ikonredigerare testfiler, ICNS-format test, Apple-ikon exempel'
+        },
+        schema: {
+          name: 'Gratis ICNS Exempelfiler - Ladda ner macOS Ikon Testfiler',
+          description: 'Ladda ner gratis ICNS macOS-ikon exempelfiler för att testa macOS-ikonkonvertering, ICNS-visualisering, ikondesignverktyg och macOS-applikationsutveckling. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ICNS-till-PNG-konverterare, ICNS-till-ICO-konverterare, macOS-ikonredigerare, ikondesignprogram och macOS-ikonformatstöd.'
+        },
+        hero: {
+          title: 'ICNS Exempelfiler',
+          description: 'Ladda ner gratis ICNS macOS-ikon exempelfiler för testning. Flera filstorlekar tillgängliga för att testa macOS-ikonkonverteringsverktyg, ICNS-visualiseringar och ikondesignprogram.'
+        },
+        about_description: 'Detta är ICNS (macOS-ikon) testfiler i olika storlekar för teständamål'
+      },
+      ico: {
+        meta: {
+          title: 'Ladda ner Gratis ICO Exempelfiler - Windows Ikon Testfiler | MorphyHub',
+          description: 'Ladda ner gratis ICO Windows-ikon exempelfiler för att testa Windows-ikonkonvertering, ICO-visualisering, ikondesignverktyg och Windows-applikationsutveckling. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ICO-till-PNG-konverterare, ICO-till-ICNS-konverterare, Windows-ikonredigerare, ikondesignprogram och Windows-ikonformatstöd.',
+          keywords: 'ICO exempelfiler, ICO testfiler, ladda ner ICO exempel, gratis ICO testfiler, Windows ikon filer, ICO-ikoner, ICO till PNG konverterare, ICO till ICNS konverterare, Windows ikondesign, ikonredigerare testfiler, ICO-format test, Windows-ikon exempel'
+        },
+        schema: {
+          name: 'Gratis ICO Exempelfiler - Ladda ner Windows Ikon Testfiler',
+          description: 'Ladda ner gratis ICO Windows-ikon exempelfiler för att testa Windows-ikonkonvertering, ICO-visualisering, ikondesignverktyg och Windows-applikationsutveckling. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ICO-till-PNG-konverterare, ICO-till-ICNS-konverterare, Windows-ikonredigerare, ikondesignprogram och Windows-ikonformatstöd.'
+        },
+        hero: {
+          title: 'ICO Exempelfiler',
+          description: 'Ladda ner gratis ICO Windows-ikon exempelfiler för testning. Flera filstorlekar tillgängliga för att testa Windows-ikonkonverteringsverktyg, ICO-visualiseringar och ikondesignprogram.'
+        },
+        about_description: 'Detta är ICO (Windows-ikon) testfiler i olika storlekar för teständamål'
+      },
+      jpeg: {
+        meta: {
+          title: 'Ladda ner Gratis JPEG Exempelfiler - JPEG Bild Testfiler för Konverteringsverktyg | MorphyHub',
+          description: 'Ladda ner gratis JPEG exempelfiler för att testa JPEG-bildkonvertering, JPEG-komprimering, bildbearbetningsverktyg och fotoredigeringsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JPEG-till-PNG-konverterare, JPEG-till-PDF-konverterare, bildkomprimeringsverktyg, JPEG-optimering och Joint Photographic Experts Group-formatstöd.',
+          keywords: 'JPEG exempelfiler, JPEG testfiler, ladda ner JPEG exempel, gratis JPEG testfiler, JPEG bildefiler, JPEG till PNG konverterare, JPEG till PDF konverterare, bildkomprimering testfiler, fotoredigering testfiler, JPEG-format test, bildbearbetning exempel'
+        },
+        schema: {
+          name: 'Gratis JPEG Exempelfiler - Ladda ner JPEG Bild Testfiler för Konverteringsverktyg',
+          description: 'Ladda ner gratis JPEG exempelfiler för att testa JPEG-bildkonvertering, JPEG-komprimering, bildbearbetningsverktyg och fotoredigeringsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JPEG-till-PNG-konverterare, JPEG-till-PDF-konverterare, bildkomprimeringsverktyg, JPEG-optimering och Joint Photographic Experts Group-formatstöd.'
+        },
+        hero: {
+          title: 'JPEG Exempelfiler',
+          description: 'Ladda ner gratis JPEG exempelfiler för testning. Flera filstorlekar tillgängliga för att testa JPEG-bildkonverteringsverktyg, JPEG-komprimeringsprogram och bildbearbetningsapplikationer.'
+        },
+        about_description: 'Detta är JPEG-bild testfiler i olika storlekar för teständamål'
+      },
+      jpg: {
+        meta: {
+          title: 'Ladda ner Gratis JPG Exempelfiler - JPG Bild Testfiler för Konverteringsverktyg | MorphyHub',
+          description: 'Ladda ner gratis JPG exempelfiler för att testa JPG-bildkonvertering, JPG-komprimering, bildbearbetningsverktyg och fotoredigeringsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JPG-till-PNG-konverterare, JPG-till-PDF-konverterare, bildkomprimeringsverktyg, JPG-optimering och Joint Photographic Experts Group-formatstöd.',
+          keywords: 'JPG exempelfiler, JPG testfiler, ladda ner JPG exempel, gratis JPG testfiler, JPG bildefiler, JPG till PNG konverterare, JPG till PDF konverterare, bildkomprimering testfiler, fotoredigering testfiler, JPG-format test, bildbearbetning exempel'
+        },
+        schema: {
+          name: 'Gratis JPG Exempelfiler - Ladda ner JPG Bild Testfiler för Konverteringsverktyg',
+          description: 'Ladda ner gratis JPG exempelfiler för att testa JPG-bildkonvertering, JPG-komprimering, bildbearbetningsverktyg och fotoredigeringsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JPG-till-PNG-konverterare, JPG-till-PDF-konverterare, bildkomprimeringsverktyg, JPG-optimering och Joint Photographic Experts Group-formatstöd.'
+        },
+        hero: {
+          title: 'JPG Exempelfiler',
+          description: 'Ladda ner gratis JPG exempelfiler för testning. Flera filstorlekar tillgängliga för att testa JPG-bildkonverteringsverktyg, JPG-komprimeringsprogram och bildbearbetningsapplikationer.'
+        },
+        about_description: 'Detta är JPG-bild testfiler i olika storlekar för teständamål'
+      },
+      m4v: {
+        meta: {
+          title: 'Ladda ner Gratis M4V Exempelfiler - M4V Video Testfiler för Konverteringsverktyg | MorphyHub',
+          description: 'Ladda ner gratis M4V exempelfiler för att testa M4V-videokonvertering, M4V-uppspelning, videobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa M4V-till-MP4-konverterare, M4V-till-AVI-konverterare, videospelare, M4V-uppspelningskompatibilitet och MPEG-4-videoformatstöd.',
+          keywords: 'M4V exempelfiler, M4V testfiler, ladda ner M4V exempel, gratis M4V testfiler, M4V videofiler, M4V till MP4 konverterare, M4V till AVI konverterare, videospelare testfiler, M4V-uppspelning test, videokonvertering exempel, MPEG-4 videoformat test'
+        },
+        schema: {
+          name: 'Gratis M4V Exempelfiler - Ladda ner M4V Video Testfiler för Konverteringsverktyg',
+          description: 'Ladda ner gratis M4V exempelfiler för att testa M4V-videokonvertering, M4V-uppspelning, videobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa M4V-till-MP4-konverterare, M4V-till-AVI-konverterare, videospelare, M4V-uppspelningskompatibilitet och MPEG-4-videoformatstöd.'
+        },
+        hero: {
+          title: 'M4V Exempelfiler',
+          description: 'Ladda ner gratis M4V exempelfiler för testning. Flera filstorlekar tillgängliga för att testa M4V-videokonverteringsverktyg, M4V-uppspelningsprogram och videobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är M4V-video testfiler i olika storlekar för teständamål'
+      },
+      mkv: {
+        meta: {
+          title: 'Ladda ner Gratis MKV Exempelfiler - Matroska Video Testfiler för Konverteringsverktyg | MorphyHub',
+          description: 'Ladda ner gratis MKV Matroska exempelfiler för att testa MKV-videokonvertering, MKV-uppspelning, videobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa MKV-till-MP4-konverterare, MKV-till-AVI-konverterare, videospelare, MKV-uppspelningskompatibilitet och Matroska-videoformatstöd.',
+          keywords: 'MKV exempelfiler, MKV testfiler, ladda ner MKV exempel, gratis MKV testfiler, Matroska videofiler, MKV till MP4 konverterare, MKV till AVI konverterare, videospelare testfiler, MKV-uppspelning test, videokonvertering exempel, Matroska-format test'
+        },
+        schema: {
+          name: 'Gratis MKV Exempelfiler - Ladda ner Matroska Video Testfiler för Konverteringsverktyg',
+          description: 'Ladda ner gratis MKV Matroska exempelfiler för att testa MKV-videokonvertering, MKV-uppspelning, videobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa MKV-till-MP4-konverterare, MKV-till-AVI-konverterare, videospelare, MKV-uppspelningskompatibilitet och Matroska-videoformatstöd.'
+        },
+        hero: {
+          title: 'MKV Exempelfiler',
+          description: 'Ladda ner gratis MKV Matroska exempelfiler för testning. Flera filstorlekar tillgängliga för att testa MKV-videokonverteringsverktyg, MKV-uppspelningsprogram och videobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är MKV (Matroska) video testfiler i olika storlekar för teständamål'
+      },
+      aac: {
+        meta: {
+          title: 'Ladda ner Gratis AAC Exempelfiler - Advanced Audio Coding Testfiler | MorphyHub',
+          description: 'Ladda ner gratis AAC Advanced Audio Coding exempelfiler för att testa audiokonvertering, AAC-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AAC-till-MP3-konverterare, AAC-till-WAV-konverterare, audiospelare, AAC-uppspelningskompatibilitet och Advanced Audio Coding-formatstöd.',
+          keywords: 'AAC exempelfiler, AAC testfiler, ladda ner AAC exempel, gratis AAC testfiler, Advanced Audio Coding filer, AAC till MP3 konverterare, AAC till WAV konverterare, audiospelare testfiler, AAC-uppspelning test, audiokonvertering exempel, Advanced Audio Coding-format test'
+        },
+        schema: {
+          name: 'Gratis AAC Exempelfiler - Ladda ner Advanced Audio Coding Testfiler',
+          description: 'Ladda ner gratis AAC Advanced Audio Coding exempelfiler för att testa audiokonvertering, AAC-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AAC-till-MP3-konverterare, AAC-till-WAV-konverterare, audiospelare, AAC-uppspelningskompatibilitet och Advanced Audio Coding-formatstöd.'
+        },
+        hero: {
+          title: 'AAC Exempelfiler',
+          description: 'Ladda ner gratis AAC Advanced Audio Coding exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audiokonverteringsverktyg, AAC-uppspelningsprogram och audiobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är AAC (Advanced Audio Coding) audio testfiler i olika storlekar för teständamål'
+      },
+      ac3: {
+        meta: {
+          title: 'Ladda ner Gratis AC3 Exempelfiler - Dolby Digital Audio Testfiler | MorphyHub',
+          description: 'Ladda ner gratis AC3 Dolby Digital exempelfiler för att testa audiokonvertering, AC3-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AC3-till-MP3-konverterare, AC3-till-WAV-konverterare, audiospelare, AC3-uppspelningskompatibilitet och Dolby Digital-formatstöd.',
+          keywords: 'AC3 exempelfiler, AC3 testfiler, ladda ner AC3 exempel, gratis AC3 testfiler, Dolby Digital filer, AC3 till MP3 konverterare, AC3 till WAV konverterare, audiospelare testfiler, AC3-uppspelning test, audiokonvertering exempel, Dolby Digital-format test'
+        },
+        schema: {
+          name: 'Gratis AC3 Exempelfiler - Ladda ner Dolby Digital Audio Testfiler',
+          description: 'Ladda ner gratis AC3 Dolby Digital exempelfiler för att testa audiokonvertering, AC3-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AC3-till-MP3-konverterare, AC3-till-WAV-konverterare, audiospelare, AC3-uppspelningskompatibilitet och Dolby Digital-formatstöd.'
+        },
+        hero: {
+          title: 'AC3 Exempelfiler',
+          description: 'Ladda ner gratis AC3 Dolby Digital exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audiokonverteringsverktyg, AC3-uppspelningsprogram och audiobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är AC3 (Dolby Digital) audio testfiler i olika storlekar för teständamål'
+      },
+      aif: {
+        meta: {
+          title: 'Ladda ner Gratis AIF Exempelfiler - Audio Interchange File Format Testfiler | MorphyHub',
+          description: 'Ladda ner gratis AIF Audio Interchange File Format exempelfiler för att testa audiokonvertering, AIF-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AIF-till-MP3-konverterare, AIF-till-WAV-konverterare, audiospelare, AIF-uppspelningskompatibilitet och Audio Interchange File Format-stöd.',
+          keywords: 'AIF exempelfiler, AIF testfiler, ladda ner AIF exempel, gratis AIF testfiler, Audio Interchange File Format filer, AIF till MP3 konverterare, AIF till WAV konverterare, audiospelare testfiler, AIF-uppspelning test, audiokonvertering exempel, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Gratis AIF Exempelfiler - Ladda ner Audio Interchange File Format Testfiler',
+          description: 'Ladda ner gratis AIF Audio Interchange File Format exempelfiler för att testa audiokonvertering, AIF-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AIF-till-MP3-konverterare, AIF-till-WAV-konverterare, audiospelare, AIF-uppspelningskompatibilitet och Audio Interchange File Format-stöd.'
+        },
+        hero: {
+          title: 'AIF Exempelfiler',
+          description: 'Ladda ner gratis AIF Audio Interchange File Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audiokonverteringsverktyg, AIF-uppspelningsprogram och audiobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är AIF (Audio Interchange File Format) audio testfiler i olika storlekar för teständamål'
+      },
+      aiff: {
+        meta: {
+          title: 'Ladda ner Gratis AIFF Exempelfiler - Audio Interchange File Format Testfiler | MorphyHub',
+          description: 'Ladda ner gratis AIFF Audio Interchange File Format exempelfiler för att testa audiokonvertering, AIFF-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AIFF-till-MP3-konverterare, AIFF-till-WAV-konverterare, audiospelare, AIFF-uppspelningskompatibilitet och Audio Interchange File Format-stöd.',
+          keywords: 'AIFF exempelfiler, AIFF testfiler, ladda ner AIFF exempel, gratis AIFF testfiler, Audio Interchange File Format filer, AIFF till MP3 konverterare, AIFF till WAV konverterare, audiospelare testfiler, AIFF-uppspelning test, audiokonvertering exempel, Audio Interchange File Format test'
+        },
+        schema: {
+          name: 'Gratis AIFF Exempelfiler - Ladda ner Audio Interchange File Format Testfiler',
+          description: 'Ladda ner gratis AIFF Audio Interchange File Format exempelfiler för att testa audiokonvertering, AIFF-uppspelning, audiobearbetningsverktyg och multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AIFF-till-MP3-konverterare, AIFF-till-WAV-konverterare, audiospelare, AIFF-uppspelningskompatibilitet och Audio Interchange File Format-stöd.'
+        },
+        hero: {
+          title: 'AIFF Exempelfiler',
+          description: 'Ladda ner gratis AIFF Audio Interchange File Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audiokonverteringsverktyg, AIFF-uppspelningsprogram och audiobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är AIFF (Audio Interchange File Format) audio testfiler i olika storlekar för teständamål'
+      },
+      amr: {
+        meta: {
+          title: 'Ladda ner Gratis AMR Exempelfiler - Adaptive Multi-Rate Audio Testfiler | MorphyHub',
+          description: 'Ladda ner gratis AMR Adaptive Multi-Rate exempelfiler för att testa audiokonvertering, AMR-uppspelning, audiobearbetningsverktyg och mobil multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AMR-till-MP3-konverterare, AMR-till-WAV-konverterare, audiospelare, AMR-uppspelningskompatibilitet och Adaptive Multi-Rate-formatstöd.',
+          keywords: 'AMR exempelfiler, AMR testfiler, ladda ner AMR exempel, gratis AMR testfiler, Adaptive Multi-Rate filer, AMR till MP3 konverterare, AMR till WAV konverterare, audiospelare testfiler, AMR-uppspelning test, audiokonvertering exempel, Adaptive Multi-Rate-format test'
+        },
+        schema: {
+          name: 'Gratis AMR Exempelfiler - Ladda ner Adaptive Multi-Rate Audio Testfiler',
+          description: 'Ladda ner gratis AMR Adaptive Multi-Rate exempelfiler för att testa audiokonvertering, AMR-uppspelning, audiobearbetningsverktyg och mobil multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AMR-till-MP3-konverterare, AMR-till-WAV-konverterare, audiospelare, AMR-uppspelningskompatibilitet och Adaptive Multi-Rate-formatstöd.'
+        },
+        hero: {
+          title: 'AMR Exempelfiler',
+          description: 'Ladda ner gratis AMR Adaptive Multi-Rate exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audiokonverteringsverktyg, AMR-uppspelningsprogram och audiobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är AMR (Adaptive Multi-Rate) audio testfiler i olika storlekar för teständamål'
+      },
+      caf: {
+        meta: {
+          title: 'Ladda ner Gratis CAF Exempelfiler - Core Audio Format Testfiler | MorphyHub',
+          description: 'Ladda ner gratis CAF Core Audio Format exempelfiler för att testa audiokonvertering, CAF-uppspelning, audiobearbetningsverktyg och macOS multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAF-till-MP3-konverterare, CAF-till-WAV-konverterare, audiospelare, CAF-uppspelningskompatibilitet och Core Audio Format-stöd.',
+          keywords: 'CAF exempelfiler, CAF testfiler, ladda ner CAF exempel, gratis CAF testfiler, Core Audio Format filer, CAF till MP3 konverterare, CAF till WAV konverterare, audiospelare testfiler, CAF-uppspelning test, audiokonvertering exempel, Core Audio Format test'
+        },
+        schema: {
+          name: 'Gratis CAF Exempelfiler - Ladda ner Core Audio Format Testfiler',
+          description: 'Ladda ner gratis CAF Core Audio Format exempelfiler för att testa audiokonvertering, CAF-uppspelning, audiobearbetningsverktyg och macOS multimediaprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAF-till-MP3-konverterare, CAF-till-WAV-konverterare, audiospelare, CAF-uppspelningskompatibilitet och Core Audio Format-stöd.'
+        },
+        hero: {
+          title: 'CAF Exempelfiler',
+          description: 'Ladda ner gratis CAF Core Audio Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa audiokonverteringsverktyg, CAF-uppspelningsprogram och audiobearbetningsapplikationer.'
+        },
+        about_description: 'Detta är CAF (Core Audio Format) audio testfiler i olika storlekar för teständamål'
       }
     }
   }

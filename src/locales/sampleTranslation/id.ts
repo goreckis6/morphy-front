@@ -1519,6 +1519,326 @@ export const id: SamplePageTranslations = {
           description: 'Unduh file sampel 3GP video mobile 3GPP gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutar video mobile, konverter 3GP, dan perangkat lunak multimedia Anda.'
         },
         about_description: 'Ini adalah file uji 3GP (video mobile 3GPP) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      dav: {
+        meta: {
+          title: 'Unduh File Sampel DAV Gratis - File Uji Video DAV untuk Kamera Keamanan | MorphyHub',
+          description: 'Unduh file sampel DAV gratis untuk menguji pemutar video DAV, pemrosesan video kamera keamanan, konverter DAV, dan alat analisis video pengawasan. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutaran DAV, konverter DAV ke MP4, perangkat lunak kamera keamanan, alat pengawasan video, dan kompatibilitas format DAV.',
+          keywords: 'file sampel DAV, file uji DAV, unduh contoh DAV, file uji DAV gratis, file video DAV, file video kamera keamanan, konverter DAV ke MP4, uji pemutar DAV, contoh video pengawasan, file uji format DAV, file uji pengawasan video'
+        },
+        schema: {
+          name: 'File Sampel DAV Gratis - Unduh File Uji Video DAV untuk Kamera Keamanan',
+          description: 'Unduh file sampel DAV gratis untuk menguji pemutar video DAV, pemrosesan video kamera keamanan, konverter DAV, dan alat analisis video pengawasan. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutaran DAV, konverter DAV ke MP4, perangkat lunak kamera keamanan, alat pengawasan video, dan kompatibilitas format DAV.'
+        },
+        hero: {
+          title: 'File Sampel DAV',
+          description: 'Unduh file sampel DAV gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutar video DAV, alat pemrosesan video kamera keamanan, dan konverter DAV.'
+        },
+        about_description: 'Ini adalah file uji video DAV dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      dds: {
+        meta: {
+          title: 'Unduh File Sampel DDS Gratis - File Uji Tekstur DirectDraw Surface | MorphyHub',
+          description: 'Unduh file sampel DDS DirectDraw Surface gratis untuk menguji konversi gambar tekstur, visualisasi DDS, alat pengembangan game, dan perangkat lunak pemrosesan grafis. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemuatan tekstur DDS, konverter DDS ke PNG, kompatibilitas mesin game, alat kompresi tekstur, dan dukungan format DirectDraw Surface.',
+          keywords: 'file sampel DDS, file uji DDS, unduh contoh DDS, file uji DDS gratis, file DirectDraw Surface, file tekstur DDS, konverter DDS ke PNG, contoh gambar tekstur, file uji pengembangan game, uji format DDS, contoh tekstur grafis'
+        },
+        schema: {
+          name: 'File Sampel DDS Gratis - Unduh File Uji Tekstur DirectDraw Surface',
+          description: 'Unduh file sampel DDS DirectDraw Surface gratis untuk menguji konversi gambar tekstur, visualisasi DDS, alat pengembangan game, dan perangkat lunak pemrosesan grafis. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemuatan tekstur DDS, konverter DDS ke PNG, kompatibilitas mesin game, alat kompresi tekstur, dan dukungan format DirectDraw Surface.'
+        },
+        hero: {
+          title: 'File Sampel DDS',
+          description: 'Unduh file sampel DDS DirectDraw Surface gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi gambar tekstur, viewer DDS, dan perangkat lunak pengembangan game.'
+        },
+        about_description: 'Ini adalah file uji DDS (DirectDraw Surface) gambar tekstur dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      dng: {
+        meta: {
+          title: 'Unduh File Sampel DNG Gratis - File Uji Gambar Raw Digital Negative | MorphyHub',
+          description: 'Unduh file sampel DNG Digital Negative gambar raw gratis untuk menguji pemrosesan gambar raw, konversi DNG, perangkat lunak fotografi, dan alat pengeditan gambar profesional. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter DNG ke JPEG, editor gambar raw, visualisasi DNG, pemrosesan raw kamera, dan dukungan format Adobe Digital Negative.',
+          keywords: 'file sampel DNG, file uji DNG, unduh contoh DNG, file uji DNG gratis, file Digital Negative, file gambar raw DNG, konverter DNG ke JPEG, pemrosesan gambar raw, file uji fotografi, uji format DNG, contoh raw kamera, file uji Adobe DNG'
+        },
+        schema: {
+          name: 'File Sampel DNG Gratis - Unduh File Uji Gambar Raw Digital Negative',
+          description: 'Unduh file sampel DNG Digital Negative gambar raw gratis untuk menguji pemrosesan gambar raw, konversi DNG, perangkat lunak fotografi, dan alat pengeditan gambar profesional. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter DNG ke JPEG, editor gambar raw, visualisasi DNG, pemrosesan raw kamera, dan dukungan format Adobe Digital Negative.'
+        },
+        hero: {
+          title: 'File Sampel DNG',
+          description: 'Unduh file sampel DNG Digital Negative gambar raw gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pemrosesan gambar raw, konverter DNG, dan perangkat lunak fotografi.'
+        },
+        about_description: 'Ini adalah file uji DNG (Digital Negative) gambar raw dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      eps: {
+        meta: {
+          title: 'Unduh File Sampel EPS Gratis - File Uji Grafik Vektor Encapsulated PostScript | MorphyHub',
+          description: 'Unduh file sampel EPS Encapsulated PostScript gratis untuk menguji konversi grafik vektor, visualisasi EPS, pemrosesan PostScript, dan perangkat lunak desain profesional. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter EPS ke PDF, konverter EPS ke SVG, editor grafik vektor, viewer PostScript, dan kompatibilitas format Encapsulated PostScript.',
+          keywords: 'file sampel EPS, file uji EPS, unduh contoh EPS, file uji EPS gratis, file Encapsulated PostScript, grafik vektor EPS, konverter EPS ke PDF, konverter EPS ke SVG, contoh grafik vektor, file uji PostScript, file uji perangkat lunak desain, uji format EPS'
+        },
+        schema: {
+          name: 'File Sampel EPS Gratis - Unduh File Uji Grafik Vektor Encapsulated PostScript',
+          description: 'Unduh file sampel EPS Encapsulated PostScript gratis untuk menguji konversi grafik vektor, visualisasi EPS, pemrosesan PostScript, dan perangkat lunak desain profesional. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter EPS ke PDF, konverter EPS ke SVG, editor grafik vektor, viewer PostScript, dan kompatibilitas format Encapsulated PostScript.'
+        },
+        hero: {
+          title: 'File Sampel EPS',
+          description: 'Unduh file sampel EPS Encapsulated PostScript gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi grafik vektor, viewer EPS, dan perangkat lunak pemrosesan PostScript.'
+        },
+        about_description: 'Ini adalah file uji EPS (Encapsulated PostScript) grafik vektor dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      exr: {
+        meta: {
+          title: 'Unduh File Sampel EXR Gratis - File Uji Gambar High Dynamic Range OpenEXR | MorphyHub',
+          description: 'Unduh file sampel EXR OpenEXR gambar High Dynamic Range gratis untuk menguji pemrosesan gambar HDR, konversi EXR, perangkat lunak fotografi profesional, dan alat efek visual. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter EXR ke JPEG, editor gambar HDR, visualisasi EXR, pemrosesan High Dynamic Range, dan dukungan format OpenEXR.',
+          keywords: 'file sampel EXR, file uji EXR, unduh contoh EXR, file uji EXR gratis, file OpenEXR, gambar HDR EXR, konverter EXR ke JPEG, pemrosesan gambar HDR, contoh High Dynamic Range, file uji efek visual, uji format EXR, file uji fotografi profesional'
+        },
+        schema: {
+          name: 'File Sampel EXR Gratis - Unduh File Uji Gambar High Dynamic Range OpenEXR',
+          description: 'Unduh file sampel EXR OpenEXR gambar High Dynamic Range gratis untuk menguji pemrosesan gambar HDR, konversi EXR, perangkat lunak fotografi profesional, dan alat efek visual. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter EXR ke JPEG, editor gambar HDR, visualisasi EXR, pemrosesan High Dynamic Range, dan dukungan format OpenEXR.'
+        },
+        hero: {
+          title: 'File Sampel EXR',
+          description: 'Unduh file sampel EXR OpenEXR gambar High Dynamic Range gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pemrosesan gambar HDR, konverter EXR, dan perangkat lunak efek visual.'
+        },
+        about_description: 'Ini adalah file uji EXR (OpenEXR High Dynamic Range) gambar dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      hdr: {
+        meta: {
+          title: 'Unduh File Sampel HDR Gratis - File Uji Gambar High Dynamic Range | MorphyHub',
+          description: 'Unduh file sampel HDR gambar High Dynamic Range gratis untuk menguji pemrosesan gambar HDR, konversi HDR, perangkat lunak fotografi, dan alat pengeditan gambar. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HDR ke JPEG, editor gambar HDR, visualisasi HDR, alat tone mapping, dan dukungan format High Dynamic Range.',
+          keywords: 'file sampel HDR, file uji HDR, unduh contoh HDR, file uji HDR gratis, file High Dynamic Range, gambar HDR, konverter HDR ke JPEG, pemrosesan gambar HDR, file uji tone mapping, file uji fotografi, uji format HDR, contoh High Dynamic Range'
+        },
+        schema: {
+          name: 'File Sampel HDR Gratis - Unduh File Uji Gambar High Dynamic Range',
+          description: 'Unduh file sampel HDR gambar High Dynamic Range gratis untuk menguji pemrosesan gambar HDR, konversi HDR, perangkat lunak fotografi, dan alat pengeditan gambar. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HDR ke JPEG, editor gambar HDR, visualisasi HDR, alat tone mapping, dan dukungan format High Dynamic Range.'
+        },
+        hero: {
+          title: 'File Sampel HDR',
+          description: 'Unduh file sampel HDR gambar High Dynamic Range gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pemrosesan gambar HDR, konverter HDR, dan perangkat lunak fotografi.'
+        },
+        about_description: 'Ini adalah file uji HDR (High Dynamic Range) gambar dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      heic: {
+        meta: {
+          title: 'Unduh File Sampel HEIC Gratis - File Uji High Efficiency Image Container | MorphyHub',
+          description: 'Unduh file sampel HEIC High Efficiency Image Container gratis untuk menguji konversi gambar HEIC, visualisasi HEIC, pemrosesan format gambar modern, dan alat fotografi mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HEIC ke JPEG, konverter HEIC ke PNG, pemrosesan gambar iOS, perangkat lunak visualisasi HEIC, dan dukungan format High Efficiency Image Container.',
+          keywords: 'file sampel HEIC, file uji HEIC, unduh contoh HEIC, file uji HEIC gratis, file High Efficiency Image Container, gambar HEIC, konverter HEIC ke JPEG, konverter HEIC ke PNG, contoh gambar iOS, file uji fotografi mobile, uji format HEIC, contoh format gambar modern'
+        },
+        schema: {
+          name: 'File Sampel HEIC Gratis - Unduh File Uji High Efficiency Image Container',
+          description: 'Unduh file sampel HEIC High Efficiency Image Container gratis untuk menguji konversi gambar HEIC, visualisasi HEIC, pemrosesan format gambar modern, dan alat fotografi mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HEIC ke JPEG, konverter HEIC ke PNG, pemrosesan gambar iOS, perangkat lunak visualisasi HEIC, dan dukungan format High Efficiency Image Container.'
+        },
+        hero: {
+          title: 'File Sampel HEIC',
+          description: 'Unduh file sampel HEIC High Efficiency Image Container gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi gambar HEIC, viewer HEIC, dan perangkat lunak pemrosesan format gambar modern.'
+        },
+        about_description: 'Ini adalah file uji HEIC (High Efficiency Image Container) gambar dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      heif: {
+        meta: {
+          title: 'Unduh File Sampel HEIF Gratis - File Uji High Efficiency Image Format | MorphyHub',
+          description: 'Unduh file sampel HEIF High Efficiency Image Format gratis untuk menguji konversi gambar HEIF, visualisasi HEIF, pemrosesan format gambar modern, dan alat fotografi mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HEIF ke JPEG, konverter HEIF ke PNG, pemrosesan gambar mobile, perangkat lunak visualisasi HEIF, dan dukungan format High Efficiency Image Format.',
+          keywords: 'file sampel HEIF, file uji HEIF, unduh contoh HEIF, file uji HEIF gratis, file High Efficiency Image Format, gambar HEIF, konverter HEIF ke JPEG, konverter HEIF ke PNG, contoh gambar mobile, file uji format gambar modern, uji format HEIF, file uji kompresi gambar'
+        },
+        schema: {
+          name: 'File Sampel HEIF Gratis - Unduh File Uji High Efficiency Image Format',
+          description: 'Unduh file sampel HEIF High Efficiency Image Format gratis untuk menguji konversi gambar HEIF, visualisasi HEIF, pemrosesan format gambar modern, dan alat fotografi mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter HEIF ke JPEG, konverter HEIF ke PNG, pemrosesan gambar mobile, perangkat lunak visualisasi HEIF, dan dukungan format High Efficiency Image Format.'
+        },
+        hero: {
+          title: 'File Sampel HEIF',
+          description: 'Unduh file sampel HEIF High Efficiency Image Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi gambar HEIF, viewer HEIF, dan perangkat lunak pemrosesan format gambar modern.'
+        },
+        about_description: 'Ini adalah file uji HEIF (High Efficiency Image Format) gambar dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      icns: {
+        meta: {
+          title: 'Unduh File Sampel ICNS Gratis - File Uji Ikon macOS | MorphyHub',
+          description: 'Unduh file sampel ICNS ikon macOS gratis untuk menguji konversi ikon macOS, visualisasi ICNS, alat desain ikon, dan pengembangan aplikasi macOS. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter ICNS ke PNG, konverter ICNS ke ICO, editor ikon macOS, perangkat lunak desain ikon, dan dukungan format ikon macOS.',
+          keywords: 'file sampel ICNS, file uji ICNS, unduh contoh ICNS, file uji ICNS gratis, file ikon macOS, ikon ICNS, konverter ICNS ke PNG, konverter ICNS ke ICO, desain ikon macOS, file uji editor ikon, uji format ICNS, contoh ikon Apple'
+        },
+        schema: {
+          name: 'File Sampel ICNS Gratis - Unduh File Uji Ikon macOS',
+          description: 'Unduh file sampel ICNS ikon macOS gratis untuk menguji konversi ikon macOS, visualisasi ICNS, alat desain ikon, dan pengembangan aplikasi macOS. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter ICNS ke PNG, konverter ICNS ke ICO, editor ikon macOS, perangkat lunak desain ikon, dan dukungan format ikon macOS.'
+        },
+        hero: {
+          title: 'File Sampel ICNS',
+          description: 'Unduh file sampel ICNS ikon macOS gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi ikon macOS, viewer ICNS, dan perangkat lunak desain ikon.'
+        },
+        about_description: 'Ini adalah file uji ICNS (ikon macOS) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ico: {
+        meta: {
+          title: 'Unduh File Sampel ICO Gratis - File Uji Ikon Windows | MorphyHub',
+          description: 'Unduh file sampel ICO ikon Windows gratis untuk menguji konversi ikon Windows, visualisasi ICO, alat desain ikon, dan pengembangan aplikasi Windows. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter ICO ke PNG, konverter ICO ke ICNS, editor ikon Windows, perangkat lunak desain ikon, dan dukungan format ikon Windows.',
+          keywords: 'file sampel ICO, file uji ICO, unduh contoh ICO, file uji ICO gratis, file ikon Windows, ikon ICO, konverter ICO ke PNG, konverter ICO ke ICNS, desain ikon Windows, file uji editor ikon, uji format ICO, contoh ikon Windows'
+        },
+        schema: {
+          name: 'File Sampel ICO Gratis - Unduh File Uji Ikon Windows',
+          description: 'Unduh file sampel ICO ikon Windows gratis untuk menguji konversi ikon Windows, visualisasi ICO, alat desain ikon, dan pengembangan aplikasi Windows. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter ICO ke PNG, konverter ICO ke ICNS, editor ikon Windows, perangkat lunak desain ikon, dan dukungan format ikon Windows.'
+        },
+        hero: {
+          title: 'File Sampel ICO',
+          description: 'Unduh file sampel ICO ikon Windows gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi ikon Windows, viewer ICO, dan perangkat lunak desain ikon.'
+        },
+        about_description: 'Ini adalah file uji ICO (ikon Windows) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      jpeg: {
+        meta: {
+          title: 'Unduh File Sampel JPEG Gratis - File Uji Gambar JPEG untuk Alat Konversi | MorphyHub',
+          description: 'Unduh file sampel JPEG gratis untuk menguji konversi gambar JPEG, kompresi JPEG, alat pemrosesan gambar, dan perangkat lunak pengeditan foto. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter JPEG ke PNG, konverter JPEG ke PDF, alat kompresi gambar, optimisasi JPEG, dan dukungan format Joint Photographic Experts Group.',
+          keywords: 'file sampel JPEG, file uji JPEG, unduh contoh JPEG, file uji JPEG gratis, file gambar JPEG, konverter JPEG ke PNG, konverter JPEG ke PDF, file uji kompresi gambar, file uji pengeditan foto, uji format JPEG, contoh pemrosesan gambar'
+        },
+        schema: {
+          name: 'File Sampel JPEG Gratis - Unduh File Uji Gambar JPEG untuk Alat Konversi',
+          description: 'Unduh file sampel JPEG gratis untuk menguji konversi gambar JPEG, kompresi JPEG, alat pemrosesan gambar, dan perangkat lunak pengeditan foto. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter JPEG ke PNG, konverter JPEG ke PDF, alat kompresi gambar, optimisasi JPEG, dan dukungan format Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'File Sampel JPEG',
+          description: 'Unduh file sampel JPEG gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi gambar JPEG, perangkat lunak kompresi JPEG, dan aplikasi pemrosesan gambar.'
+        },
+        about_description: 'Ini adalah file uji gambar JPEG dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      jpg: {
+        meta: {
+          title: 'Unduh File Sampel JPG Gratis - File Uji Gambar JPG untuk Alat Konversi | MorphyHub',
+          description: 'Unduh file sampel JPG gratis untuk menguji konversi gambar JPG, kompresi JPG, alat pemrosesan gambar, dan perangkat lunak pengeditan foto. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter JPG ke PNG, konverter JPG ke PDF, alat kompresi gambar, optimisasi JPG, dan dukungan format Joint Photographic Experts Group.',
+          keywords: 'file sampel JPG, file uji JPG, unduh contoh JPG, file uji JPG gratis, file gambar JPG, konverter JPG ke PNG, konverter JPG ke PDF, file uji kompresi gambar, file uji pengeditan foto, uji format JPG, contoh pemrosesan gambar'
+        },
+        schema: {
+          name: 'File Sampel JPG Gratis - Unduh File Uji Gambar JPG untuk Alat Konversi',
+          description: 'Unduh file sampel JPG gratis untuk menguji konversi gambar JPG, kompresi JPG, alat pemrosesan gambar, dan perangkat lunak pengeditan foto. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter JPG ke PNG, konverter JPG ke PDF, alat kompresi gambar, optimisasi JPG, dan dukungan format Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'File Sampel JPG',
+          description: 'Unduh file sampel JPG gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi gambar JPG, perangkat lunak kompresi JPG, dan aplikasi pemrosesan gambar.'
+        },
+        about_description: 'Ini adalah file uji gambar JPG dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      m4v: {
+        meta: {
+          title: 'Unduh File Sampel M4V Gratis - File Uji Video M4V untuk Alat Konversi | MorphyHub',
+          description: 'Unduh file sampel M4V gratis untuk menguji konversi video M4V, pemutaran M4V, alat pemrosesan video, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter M4V ke MP4, konverter M4V ke AVI, pemutar video, kompatibilitas pemutaran M4V, dan dukungan format video MPEG-4.',
+          keywords: 'file sampel M4V, file uji M4V, unduh contoh M4V, file uji M4V gratis, file video M4V, konverter M4V ke MP4, konverter M4V ke AVI, file uji pemutar video, uji pemutaran M4V, contoh konversi video, uji format video MPEG-4'
+        },
+        schema: {
+          name: 'File Sampel M4V Gratis - Unduh File Uji Video M4V untuk Alat Konversi',
+          description: 'Unduh file sampel M4V gratis untuk menguji konversi video M4V, pemutaran M4V, alat pemrosesan video, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter M4V ke MP4, konverter M4V ke AVI, pemutar video, kompatibilitas pemutaran M4V, dan dukungan format video MPEG-4.'
+        },
+        hero: {
+          title: 'File Sampel M4V',
+          description: 'Unduh file sampel M4V gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi video M4V, perangkat lunak pemutaran M4V, dan aplikasi pemrosesan video.'
+        },
+        about_description: 'Ini adalah file uji video M4V dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      mkv: {
+        meta: {
+          title: 'Unduh File Sampel MKV Gratis - File Uji Video Matroska untuk Alat Konversi | MorphyHub',
+          description: 'Unduh file sampel MKV Matroska gratis untuk menguji konversi video MKV, pemutaran MKV, alat pemrosesan video, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter MKV ke MP4, konverter MKV ke AVI, pemutar video, kompatibilitas pemutaran MKV, dan dukungan format video Matroska.',
+          keywords: 'file sampel MKV, file uji MKV, unduh contoh MKV, file uji MKV gratis, file video Matroska, konverter MKV ke MP4, konverter MKV ke AVI, file uji pemutar video, uji pemutaran MKV, contoh konversi video, uji format Matroska'
+        },
+        schema: {
+          name: 'File Sampel MKV Gratis - Unduh File Uji Video Matroska untuk Alat Konversi',
+          description: 'Unduh file sampel MKV Matroska gratis untuk menguji konversi video MKV, pemutaran MKV, alat pemrosesan video, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter MKV ke MP4, konverter MKV ke AVI, pemutar video, kompatibilitas pemutaran MKV, dan dukungan format video Matroska.'
+        },
+        hero: {
+          title: 'File Sampel MKV',
+          description: 'Unduh file sampel MKV Matroska gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi video MKV, perangkat lunak pemutaran MKV, dan aplikasi pemrosesan video.'
+        },
+        about_description: 'Ini adalah file uji video MKV (Matroska) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      aac: {
+        meta: {
+          title: 'Unduh File Sampel AAC Gratis - File Uji Advanced Audio Coding | MorphyHub',
+          description: 'Unduh file sampel AAC Advanced Audio Coding gratis untuk menguji konversi audio, pemutaran AAC, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AAC ke MP3, konverter AAC ke WAV, pemutar audio, kompatibilitas pemutaran AAC, dan dukungan format Advanced Audio Coding.',
+          keywords: 'file sampel AAC, file uji AAC, unduh contoh AAC, file uji AAC gratis, file Advanced Audio Coding, konverter AAC ke MP3, konverter AAC ke WAV, file uji pemutar audio, uji pemutaran AAC, contoh konversi audio, uji format Advanced Audio Coding'
+        },
+        schema: {
+          name: 'File Sampel AAC Gratis - Unduh File Uji Advanced Audio Coding',
+          description: 'Unduh file sampel AAC Advanced Audio Coding gratis untuk menguji konversi audio, pemutaran AAC, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AAC ke MP3, konverter AAC ke WAV, pemutar audio, kompatibilitas pemutaran AAC, dan dukungan format Advanced Audio Coding.'
+        },
+        hero: {
+          title: 'File Sampel AAC',
+          description: 'Unduh file sampel AAC Advanced Audio Coding gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi audio, perangkat lunak pemutaran AAC, dan aplikasi pemrosesan audio.'
+        },
+        about_description: 'Ini adalah file uji AAC (Advanced Audio Coding) audio dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ac3: {
+        meta: {
+          title: 'Unduh File Sampel AC3 Gratis - File Uji Audio Dolby Digital | MorphyHub',
+          description: 'Unduh file sampel AC3 Dolby Digital gratis untuk menguji konversi audio, pemutaran AC3, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AC3 ke MP3, konverter AC3 ke WAV, pemutar audio, kompatibilitas pemutaran AC3, dan dukungan format Dolby Digital.',
+          keywords: 'file sampel AC3, file uji AC3, unduh contoh AC3, file uji AC3 gratis, file Dolby Digital, konverter AC3 ke MP3, konverter AC3 ke WAV, file uji pemutar audio, uji pemutaran AC3, contoh konversi audio, uji format Dolby Digital'
+        },
+        schema: {
+          name: 'File Sampel AC3 Gratis - Unduh File Uji Audio Dolby Digital',
+          description: 'Unduh file sampel AC3 Dolby Digital gratis untuk menguji konversi audio, pemutaran AC3, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AC3 ke MP3, konverter AC3 ke WAV, pemutar audio, kompatibilitas pemutaran AC3, dan dukungan format Dolby Digital.'
+        },
+        hero: {
+          title: 'File Sampel AC3',
+          description: 'Unduh file sampel AC3 Dolby Digital gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi audio, perangkat lunak pemutaran AC3, dan aplikasi pemrosesan audio.'
+        },
+        about_description: 'Ini adalah file uji AC3 (Dolby Digital) audio dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      aif: {
+        meta: {
+          title: 'Unduh File Sampel AIF Gratis - File Uji Audio Interchange File Format | MorphyHub',
+          description: 'Unduh file sampel AIF Audio Interchange File Format gratis untuk menguji konversi audio, pemutaran AIF, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AIF ke MP3, konverter AIF ke WAV, pemutar audio, kompatibilitas pemutaran AIF, dan dukungan format Audio Interchange File Format.',
+          keywords: 'file sampel AIF, file uji AIF, unduh contoh AIF, file uji AIF gratis, file Audio Interchange File Format, konverter AIF ke MP3, konverter AIF ke WAV, file uji pemutar audio, uji pemutaran AIF, contoh konversi audio, uji format Audio Interchange File Format'
+        },
+        schema: {
+          name: 'File Sampel AIF Gratis - Unduh File Uji Audio Interchange File Format',
+          description: 'Unduh file sampel AIF Audio Interchange File Format gratis untuk menguji konversi audio, pemutaran AIF, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AIF ke MP3, konverter AIF ke WAV, pemutar audio, kompatibilitas pemutaran AIF, dan dukungan format Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'File Sampel AIF',
+          description: 'Unduh file sampel AIF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi audio, perangkat lunak pemutaran AIF, dan aplikasi pemrosesan audio.'
+        },
+        about_description: 'Ini adalah file uji AIF (Audio Interchange File Format) audio dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      aiff: {
+        meta: {
+          title: 'Unduh File Sampel AIFF Gratis - File Uji Audio Interchange File Format | MorphyHub',
+          description: 'Unduh file sampel AIFF Audio Interchange File Format gratis untuk menguji konversi audio, pemutaran AIFF, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AIFF ke MP3, konverter AIFF ke WAV, pemutar audio, kompatibilitas pemutaran AIFF, dan dukungan format Audio Interchange File Format.',
+          keywords: 'file sampel AIFF, file uji AIFF, unduh contoh AIFF, file uji AIFF gratis, file Audio Interchange File Format, konverter AIFF ke MP3, konverter AIFF ke WAV, file uji pemutar audio, uji pemutaran AIFF, contoh konversi audio, uji format Audio Interchange File Format'
+        },
+        schema: {
+          name: 'File Sampel AIFF Gratis - Unduh File Uji Audio Interchange File Format',
+          description: 'Unduh file sampel AIFF Audio Interchange File Format gratis untuk menguji konversi audio, pemutaran AIFF, alat pemrosesan audio, dan perangkat lunak multimedia. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AIFF ke MP3, konverter AIFF ke WAV, pemutar audio, kompatibilitas pemutaran AIFF, dan dukungan format Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'File Sampel AIFF',
+          description: 'Unduh file sampel AIFF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi audio, perangkat lunak pemutaran AIFF, dan aplikasi pemrosesan audio.'
+        },
+        about_description: 'Ini adalah file uji AIFF (Audio Interchange File Format) audio dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      amr: {
+        meta: {
+          title: 'Unduh File Sampel AMR Gratis - File Uji Adaptive Multi-Rate Audio | MorphyHub',
+          description: 'Unduh file sampel AMR Adaptive Multi-Rate gratis untuk menguji konversi audio, pemutaran AMR, alat pemrosesan audio, dan perangkat lunak multimedia mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AMR ke MP3, konverter AMR ke WAV, pemutar audio, kompatibilitas pemutaran AMR, dan dukungan format Adaptive Multi-Rate.',
+          keywords: 'file sampel AMR, file uji AMR, unduh contoh AMR, file uji AMR gratis, file Adaptive Multi-Rate, konverter AMR ke MP3, konverter AMR ke WAV, file uji pemutar audio, uji pemutaran AMR, contoh konversi audio, uji format Adaptive Multi-Rate'
+        },
+        schema: {
+          name: 'File Sampel AMR Gratis - Unduh File Uji Adaptive Multi-Rate Audio',
+          description: 'Unduh file sampel AMR Adaptive Multi-Rate gratis untuk menguji konversi audio, pemutaran AMR, alat pemrosesan audio, dan perangkat lunak multimedia mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter AMR ke MP3, konverter AMR ke WAV, pemutar audio, kompatibilitas pemutaran AMR, dan dukungan format Adaptive Multi-Rate.'
+        },
+        hero: {
+          title: 'File Sampel AMR',
+          description: 'Unduh file sampel AMR Adaptive Multi-Rate gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi audio, perangkat lunak pemutaran AMR, dan aplikasi pemrosesan audio.'
+        },
+        about_description: 'Ini adalah file uji AMR (Adaptive Multi-Rate) audio dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      caf: {
+        meta: {
+          title: 'Unduh File Sampel CAF Gratis - File Uji Core Audio Format | MorphyHub',
+          description: 'Unduh file sampel CAF Core Audio Format gratis untuk menguji konversi audio, pemutaran CAF, alat pemrosesan audio, dan perangkat lunak multimedia macOS. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter CAF ke MP3, konverter CAF ke WAV, pemutar audio, kompatibilitas pemutaran CAF, dan dukungan format Core Audio Format.',
+          keywords: 'file sampel CAF, file uji CAF, unduh contoh CAF, file uji CAF gratis, file Core Audio Format, konverter CAF ke MP3, konverter CAF ke WAV, file uji pemutar audio, uji pemutaran CAF, contoh konversi audio, uji format Core Audio Format'
+        },
+        schema: {
+          name: 'File Sampel CAF Gratis - Unduh File Uji Core Audio Format',
+          description: 'Unduh file sampel CAF Core Audio Format gratis untuk menguji konversi audio, pemutaran CAF, alat pemrosesan audio, dan perangkat lunak multimedia macOS. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji konverter CAF ke MP3, konverter CAF ke WAV, pemutar audio, kompatibilitas pemutaran CAF, dan dukungan format Core Audio Format.'
+        },
+        hero: {
+          title: 'File Sampel CAF',
+          description: 'Unduh file sampel CAF Core Audio Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat konversi audio, perangkat lunak pemutaran CAF, dan aplikasi pemrosesan audio.'
+        },
+        about_description: 'Ini adalah file uji CAF (Core Audio Format) audio dalam berbagai ukuran untuk keperluan pengujian'
       }
     }
   }

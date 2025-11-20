@@ -1519,6 +1519,326 @@ export const ar: SamplePageTranslations = {
           description: 'قم بتنزيل ملفات عينة 3GP فيديو الجوال 3GPP مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار مشغلات فيديو الجوال، محولات 3GP وبرامج الوسائط المتعددة الخاصة بك.'
         },
         about_description: 'هذه ملفات اختبار 3GP (فيديو الجوال 3GPP) بأحجام مختلفة لأغراض الاختبار'
+      },
+      dav: {
+        meta: {
+          title: 'تحميل ملفات عينة DAV مجانية - ملفات اختبار فيديو DAV لكاميرات الأمان | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة فيديو DAV مجانية لاختبار مشغلات فيديو DAV، معالجة فيديو كاميرات الأمان، محولات DAV وأدوات تحليل فيديو المراقبة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار تشغيل DAV، محولات DAV إلى MP4، برامج كاميرات الأمان، أدوات مراقبة الفيديو وتوافق تنسيق DAV.',
+          keywords: 'ملفات عينة DAV، ملفات اختبار DAV، تحميل أمثلة DAV، ملفات اختبار DAV مجانية، ملفات فيديو DAV، ملفات فيديو كاميرات الأمان، محول DAV إلى MP4، اختبار مشغل DAV، عينات فيديو المراقبة، ملفات اختبار تنسيق DAV، ملفات اختبار مراقبة الفيديو'
+        },
+        schema: {
+          name: 'ملفات عينة DAV مجانية - تحميل ملفات اختبار فيديو DAV لكاميرات الأمان',
+          description: 'قم بتنزيل ملفات عينة فيديو DAV مجانية لاختبار مشغلات فيديو DAV، معالجة فيديو كاميرات الأمان، محولات DAV وأدوات تحليل فيديو المراقبة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار تشغيل DAV، محولات DAV إلى MP4، برامج كاميرات الأمان، أدوات مراقبة الفيديو وتوافق تنسيق DAV.'
+        },
+        hero: {
+          title: 'ملفات عينة DAV',
+          description: 'قم بتنزيل ملفات عينة فيديو DAV مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار مشغلات فيديو DAV، أدوات معالجة فيديو كاميرات الأمان ومحولات DAV الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار فيديو DAV بأحجام مختلفة لأغراض الاختبار'
+      },
+      dds: {
+        meta: {
+          title: 'تحميل ملفات عينة DDS مجانية - ملفات اختبار نسيج DirectDraw Surface | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة صور DDS DirectDraw Surface مجانية لاختبار تحويل صور النسيج، عرض DDS، أدوات تطوير الألعاب وبرامج معالجة الرسوم. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار تحميل نسيج DDS، محولات DDS إلى PNG، توافق محرك الألعاب، أدوات ضغط النسيج ودعم تنسيق DirectDraw Surface.',
+          keywords: 'ملفات عينة DDS، ملفات اختبار DDS، تحميل أمثلة DDS، ملفات اختبار DDS مجانية، ملفات DirectDraw Surface، ملفات نسيج DDS، محول DDS إلى PNG، عينات صور النسيج، ملفات اختبار تطوير الألعاب، اختبار تنسيق DDS، عينات نسيج الرسوم'
+        },
+        schema: {
+          name: 'ملفات عينة DDS مجانية - تحميل ملفات اختبار نسيج DirectDraw Surface',
+          description: 'قم بتنزيل ملفات عينة صور DDS DirectDraw Surface مجانية لاختبار تحويل صور النسيج، عرض DDS، أدوات تطوير الألعاب وبرامج معالجة الرسوم. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار تحميل نسيج DDS، محولات DDS إلى PNG، توافق محرك الألعاب، أدوات ضغط النسيج ودعم تنسيق DirectDraw Surface.'
+        },
+        hero: {
+          title: 'ملفات عينة DDS',
+          description: 'قم بتنزيل ملفات عينة صور DDS DirectDraw Surface مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل صور النسيج، عارضات DDS وبرامج تطوير الألعاب الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور نسيج DDS (DirectDraw Surface) بأحجام مختلفة لأغراض الاختبار'
+      },
+      dng: {
+        meta: {
+          title: 'تحميل ملفات عينة DNG مجانية - ملفات اختبار صور Raw Digital Negative | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة صور raw DNG Digital Negative مجانية لاختبار معالجة صور raw، تحويل DNG، برامج التصوير وأدوات تحرير الصور الاحترافية. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات DNG إلى JPEG، محررات صور raw، عرض DNG، معالجة raw الكاميرا ودعم تنسيق Adobe Digital Negative.',
+          keywords: 'ملفات عينة DNG، ملفات اختبار DNG، تحميل أمثلة DNG، ملفات اختبار DNG مجانية، ملفات Digital Negative، ملفات صور raw DNG، محول DNG إلى JPEG، معالجة صور raw، ملفات اختبار التصوير، اختبار تنسيق DNG، عينات raw الكاميرا، ملفات اختبار Adobe DNG'
+        },
+        schema: {
+          name: 'ملفات عينة DNG مجانية - تحميل ملفات اختبار صور Raw Digital Negative',
+          description: 'قم بتنزيل ملفات عينة صور raw DNG Digital Negative مجانية لاختبار معالجة صور raw، تحويل DNG، برامج التصوير وأدوات تحرير الصور الاحترافية. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات DNG إلى JPEG، محررات صور raw، عرض DNG، معالجة raw الكاميرا ودعم تنسيق Adobe Digital Negative.'
+        },
+        hero: {
+          title: 'ملفات عينة DNG',
+          description: 'قم بتنزيل ملفات عينة صور raw DNG Digital Negative مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات معالجة صور raw، محولات DNG وبرامج التصوير الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور raw DNG (Digital Negative) بأحجام مختلفة لأغراض الاختبار'
+      },
+      eps: {
+        meta: {
+          title: 'تحميل ملفات عينة EPS مجانية - ملفات اختبار رسوم متجهة Encapsulated PostScript | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة EPS Encapsulated PostScript مجانية لاختبار تحويل الرسوم المتجهة، عرض EPS، معالجة PostScript وبرامج التصميم الاحترافية. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات EPS إلى PDF، محولات EPS إلى SVG، محررات الرسوم المتجهة، عارضات PostScript وتوافق تنسيق Encapsulated PostScript.',
+          keywords: 'ملفات عينة EPS، ملفات اختبار EPS، تحميل أمثلة EPS، ملفات اختبار EPS مجانية، ملفات Encapsulated PostScript، رسوم متجهة EPS، محول EPS إلى PDF، محول EPS إلى SVG، عينات الرسوم المتجهة، ملفات اختبار PostScript، ملفات اختبار برامج التصميم، اختبار تنسيق EPS'
+        },
+        schema: {
+          name: 'ملفات عينة EPS مجانية - تحميل ملفات اختبار رسوم متجهة Encapsulated PostScript',
+          description: 'قم بتنزيل ملفات عينة EPS Encapsulated PostScript مجانية لاختبار تحويل الرسوم المتجهة، عرض EPS، معالجة PostScript وبرامج التصميم الاحترافية. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات EPS إلى PDF، محولات EPS إلى SVG، محررات الرسوم المتجهة، عارضات PostScript وتوافق تنسيق Encapsulated PostScript.'
+        },
+        hero: {
+          title: 'ملفات عينة EPS',
+          description: 'قم بتنزيل ملفات عينة EPS Encapsulated PostScript مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل الرسوم المتجهة، عارضات EPS وبرامج معالجة PostScript الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار رسوم متجهة EPS (Encapsulated PostScript) بأحجام مختلفة لأغراض الاختبار'
+      },
+      exr: {
+        meta: {
+          title: 'تحميل ملفات عينة EXR مجانية - ملفات اختبار صور High Dynamic Range OpenEXR | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة صور EXR OpenEXR High Dynamic Range مجانية لاختبار معالجة صور HDR، تحويل EXR، برامج التصوير الاحترافية وأدوات التأثيرات البصرية. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات EXR إلى JPEG، محررات صور HDR، عرض EXR، معالجة High Dynamic Range ودعم تنسيق OpenEXR.',
+          keywords: 'ملفات عينة EXR، ملفات اختبار EXR، تحميل أمثلة EXR، ملفات اختبار EXR مجانية، ملفات OpenEXR، صور HDR EXR، محول EXR إلى JPEG، معالجة صور HDR، عينات High Dynamic Range، ملفات اختبار التأثيرات البصرية، اختبار تنسيق EXR، ملفات اختبار التصوير الاحترافي'
+        },
+        schema: {
+          name: 'ملفات عينة EXR مجانية - تحميل ملفات اختبار صور High Dynamic Range OpenEXR',
+          description: 'قم بتنزيل ملفات عينة صور EXR OpenEXR High Dynamic Range مجانية لاختبار معالجة صور HDR، تحويل EXR، برامج التصوير الاحترافية وأدوات التأثيرات البصرية. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات EXR إلى JPEG، محررات صور HDR، عرض EXR، معالجة High Dynamic Range ودعم تنسيق OpenEXR.'
+        },
+        hero: {
+          title: 'ملفات عينة EXR',
+          description: 'قم بتنزيل ملفات عينة صور EXR OpenEXR High Dynamic Range مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات معالجة صور HDR، محولات EXR وبرامج التأثيرات البصرية الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور EXR (OpenEXR High Dynamic Range) بأحجام مختلفة لأغراض الاختبار'
+      },
+      hdr: {
+        meta: {
+          title: 'تحميل ملفات عينة HDR مجانية - ملفات اختبار صور High Dynamic Range | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة صور HDR High Dynamic Range مجانية لاختبار معالجة صور HDR، تحويل HDR، برامج التصوير وأدوات تحرير الصور. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات HDR إلى JPEG، محررات صور HDR، عرض HDR، أدوات تعيين النغمة ودعم تنسيق High Dynamic Range.',
+          keywords: 'ملفات عينة HDR، ملفات اختبار HDR، تحميل أمثلة HDR، ملفات اختبار HDR مجانية، ملفات High Dynamic Range، صور HDR، محول HDR إلى JPEG، معالجة صور HDR، ملفات اختبار تعيين النغمة، ملفات اختبار التصوير، اختبار تنسيق HDR، عينات High Dynamic Range'
+        },
+        schema: {
+          name: 'ملفات عينة HDR مجانية - تحميل ملفات اختبار صور High Dynamic Range',
+          description: 'قم بتنزيل ملفات عينة صور HDR High Dynamic Range مجانية لاختبار معالجة صور HDR، تحويل HDR، برامج التصوير وأدوات تحرير الصور. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات HDR إلى JPEG، محررات صور HDR، عرض HDR، أدوات تعيين النغمة ودعم تنسيق High Dynamic Range.'
+        },
+        hero: {
+          title: 'ملفات عينة HDR',
+          description: 'قم بتنزيل ملفات عينة صور HDR High Dynamic Range مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات معالجة صور HDR، محولات HDR وبرامج التصوير الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور HDR (High Dynamic Range) بأحجام مختلفة لأغراض الاختبار'
+      },
+      heic: {
+        meta: {
+          title: 'تحميل ملفات عينة HEIC مجانية - ملفات اختبار High Efficiency Image Container | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة HEIC High Efficiency Image Container مجانية لاختبار تحويل صور HEIC، عرض HEIC، معالجة تنسيقات الصور الحديثة وأدوات التصوير المحمول. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات HEIC إلى JPEG، محولات HEIC إلى PNG، معالجة صور iOS، برامج عرض HEIC ودعم تنسيق High Efficiency Image Container.',
+          keywords: 'ملفات عينة HEIC، ملفات اختبار HEIC، تحميل أمثلة HEIC، ملفات اختبار HEIC مجانية، ملفات High Efficiency Image Container، صور HEIC، محول HEIC إلى JPEG، محول HEIC إلى PNG، عينات صور iOS، ملفات اختبار التصوير المحمول، اختبار تنسيق HEIC، عينات تنسيقات الصور الحديثة'
+        },
+        schema: {
+          name: 'ملفات عينة HEIC مجانية - تحميل ملفات اختبار High Efficiency Image Container',
+          description: 'قم بتنزيل ملفات عينة HEIC High Efficiency Image Container مجانية لاختبار تحويل صور HEIC، عرض HEIC، معالجة تنسيقات الصور الحديثة وأدوات التصوير المحمول. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات HEIC إلى JPEG، محولات HEIC إلى PNG، معالجة صور iOS، برامج عرض HEIC ودعم تنسيق High Efficiency Image Container.'
+        },
+        hero: {
+          title: 'ملفات عينة HEIC',
+          description: 'قم بتنزيل ملفات عينة HEIC High Efficiency Image Container مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل صور HEIC، عارضات HEIC وبرامج معالجة تنسيقات الصور الحديثة الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور HEIC (High Efficiency Image Container) بأحجام مختلفة لأغراض الاختبار'
+      },
+      heif: {
+        meta: {
+          title: 'تحميل ملفات عينة HEIF مجانية - ملفات اختبار High Efficiency Image Format | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة HEIF High Efficiency Image Format مجانية لاختبار تحويل صور HEIF، عرض HEIF، معالجة تنسيقات الصور الحديثة وأدوات التصوير المحمول. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات HEIF إلى JPEG، محولات HEIF إلى PNG، معالجة صور المحمول، برامج عرض HEIF ودعم تنسيق High Efficiency Image Format.',
+          keywords: 'ملفات عينة HEIF، ملفات اختبار HEIF، تحميل أمثلة HEIF، ملفات اختبار HEIF مجانية، ملفات High Efficiency Image Format، صور HEIF، محول HEIF إلى JPEG، محول HEIF إلى PNG، عينات صور المحمول، ملفات اختبار تنسيقات الصور الحديثة، اختبار تنسيق HEIF، ملفات اختبار ضغط الصور'
+        },
+        schema: {
+          name: 'ملفات عينة HEIF مجانية - تحميل ملفات اختبار High Efficiency Image Format',
+          description: 'قم بتنزيل ملفات عينة HEIF High Efficiency Image Format مجانية لاختبار تحويل صور HEIF، عرض HEIF، معالجة تنسيقات الصور الحديثة وأدوات التصوير المحمول. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات HEIF إلى JPEG، محولات HEIF إلى PNG، معالجة صور المحمول، برامج عرض HEIF ودعم تنسيق High Efficiency Image Format.'
+        },
+        hero: {
+          title: 'ملفات عينة HEIF',
+          description: 'قم بتنزيل ملفات عينة HEIF High Efficiency Image Format مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل صور HEIF، عارضات HEIF وبرامج معالجة تنسيقات الصور الحديثة الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور HEIF (High Efficiency Image Format) بأحجام مختلفة لأغراض الاختبار'
+      },
+      icns: {
+        meta: {
+          title: 'تحميل ملفات عينة ICNS مجانية - ملفات اختبار أيقونات macOS | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة أيقونات ICNS macOS مجانية لاختبار تحويل أيقونات macOS، عرض ICNS، أدوات تصميم الأيقونات وتطوير تطبيقات macOS. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات ICNS إلى PNG، محولات ICNS إلى ICO، محررات أيقونات macOS، برامج تصميم الأيقونات ودعم تنسيق أيقونات macOS.',
+          keywords: 'ملفات عينة ICNS، ملفات اختبار ICNS، تحميل أمثلة ICNS، ملفات اختبار ICNS مجانية، ملفات أيقونات macOS، أيقونات ICNS، محول ICNS إلى PNG، محول ICNS إلى ICO، تصميم أيقونات macOS، ملفات اختبار محرر الأيقونات، اختبار تنسيق ICNS، عينات أيقونات Apple'
+        },
+        schema: {
+          name: 'ملفات عينة ICNS مجانية - تحميل ملفات اختبار أيقونات macOS',
+          description: 'قم بتنزيل ملفات عينة أيقونات ICNS macOS مجانية لاختبار تحويل أيقونات macOS، عرض ICNS، أدوات تصميم الأيقونات وتطوير تطبيقات macOS. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات ICNS إلى PNG، محولات ICNS إلى ICO، محررات أيقونات macOS، برامج تصميم الأيقونات ودعم تنسيق أيقونات macOS.'
+        },
+        hero: {
+          title: 'ملفات عينة ICNS',
+          description: 'قم بتنزيل ملفات عينة أيقونات ICNS macOS مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل أيقونات macOS، عارضات ICNS وبرامج تصميم الأيقونات الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار أيقونات ICNS (macOS) بأحجام مختلفة لأغراض الاختبار'
+      },
+      ico: {
+        meta: {
+          title: 'تحميل ملفات عينة ICO مجانية - ملفات اختبار أيقونات Windows | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة أيقونات ICO Windows مجانية لاختبار تحويل أيقونات Windows، عرض ICO، أدوات تصميم الأيقونات وتطوير تطبيقات Windows. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات ICO إلى PNG، محولات ICO إلى ICNS، محررات أيقونات Windows، برامج تصميم الأيقونات ودعم تنسيق أيقونات Windows.',
+          keywords: 'ملفات عينة ICO، ملفات اختبار ICO، تحميل أمثلة ICO، ملفات اختبار ICO مجانية، ملفات أيقونات Windows، أيقونات ICO، محول ICO إلى PNG، محول ICO إلى ICNS، تصميم أيقونات Windows، ملفات اختبار محرر الأيقونات، اختبار تنسيق ICO، عينات أيقونات Windows'
+        },
+        schema: {
+          name: 'ملفات عينة ICO مجانية - تحميل ملفات اختبار أيقونات Windows',
+          description: 'قم بتنزيل ملفات عينة أيقونات ICO Windows مجانية لاختبار تحويل أيقونات Windows، عرض ICO، أدوات تصميم الأيقونات وتطوير تطبيقات Windows. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات ICO إلى PNG، محولات ICO إلى ICNS، محررات أيقونات Windows، برامج تصميم الأيقونات ودعم تنسيق أيقونات Windows.'
+        },
+        hero: {
+          title: 'ملفات عينة ICO',
+          description: 'قم بتنزيل ملفات عينة أيقونات ICO Windows مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل أيقونات Windows، عارضات ICO وبرامج تصميم الأيقونات الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار أيقونات ICO (Windows) بأحجام مختلفة لأغراض الاختبار'
+      },
+      jpeg: {
+        meta: {
+          title: 'تحميل ملفات عينة JPEG مجانية - ملفات اختبار صور JPEG لأدوات التحويل | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة JPEG مجانية لاختبار تحويل صور JPEG، ضغط JPEG، أدوات معالجة الصور وبرامج تحرير الصور. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات JPEG إلى PNG، محولات JPEG إلى PDF، أدوات ضغط الصور، تحسين JPEG ودعم تنسيق Joint Photographic Experts Group.',
+          keywords: 'ملفات عينة JPEG، ملفات اختبار JPEG، تحميل أمثلة JPEG، ملفات اختبار JPEG مجانية، ملفات صور JPEG، محول JPEG إلى PNG، محول JPEG إلى PDF، ملفات اختبار ضغط الصور، ملفات اختبار تحرير الصور، اختبار تنسيق JPEG، عينات معالجة الصور'
+        },
+        schema: {
+          name: 'ملفات عينة JPEG مجانية - تحميل ملفات اختبار صور JPEG لأدوات التحويل',
+          description: 'قم بتنزيل ملفات عينة JPEG مجانية لاختبار تحويل صور JPEG، ضغط JPEG، أدوات معالجة الصور وبرامج تحرير الصور. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات JPEG إلى PNG، محولات JPEG إلى PDF، أدوات ضغط الصور، تحسين JPEG ودعم تنسيق Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'ملفات عينة JPEG',
+          description: 'قم بتنزيل ملفات عينة JPEG مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل صور JPEG، برامج ضغط JPEG وتطبيقات معالجة الصور الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور JPEG بأحجام مختلفة لأغراض الاختبار'
+      },
+      jpg: {
+        meta: {
+          title: 'تحميل ملفات عينة JPG مجانية - ملفات اختبار صور JPG لأدوات التحويل | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة JPG مجانية لاختبار تحويل صور JPG، ضغط JPG، أدوات معالجة الصور وبرامج تحرير الصور. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات JPG إلى PNG، محولات JPG إلى PDF، أدوات ضغط الصور، تحسين JPG ودعم تنسيق Joint Photographic Experts Group.',
+          keywords: 'ملفات عينة JPG، ملفات اختبار JPG، تحميل أمثلة JPG، ملفات اختبار JPG مجانية، ملفات صور JPG، محول JPG إلى PNG، محول JPG إلى PDF، ملفات اختبار ضغط الصور، ملفات اختبار تحرير الصور، اختبار تنسيق JPG، عينات معالجة الصور'
+        },
+        schema: {
+          name: 'ملفات عينة JPG مجانية - تحميل ملفات اختبار صور JPG لأدوات التحويل',
+          description: 'قم بتنزيل ملفات عينة JPG مجانية لاختبار تحويل صور JPG، ضغط JPG، أدوات معالجة الصور وبرامج تحرير الصور. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات JPG إلى PNG، محولات JPG إلى PDF، أدوات ضغط الصور، تحسين JPG ودعم تنسيق Joint Photographic Experts Group.'
+        },
+        hero: {
+          title: 'ملفات عينة JPG',
+          description: 'قم بتنزيل ملفات عينة JPG مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل صور JPG، برامج ضغط JPG وتطبيقات معالجة الصور الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صور JPG بأحجام مختلفة لأغراض الاختبار'
+      },
+      m4v: {
+        meta: {
+          title: 'تحميل ملفات عينة M4V مجانية - ملفات اختبار فيديو M4V لأدوات التحويل | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة M4V مجانية لاختبار تحويل فيديو M4V، تشغيل M4V، أدوات معالجة الفيديو وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات M4V إلى MP4، محولات M4V إلى AVI، مشغلات الفيديو، توافق تشغيل M4V ودعم تنسيق فيديو MPEG-4.',
+          keywords: 'ملفات عينة M4V، ملفات اختبار M4V، تحميل أمثلة M4V، ملفات اختبار M4V مجانية، ملفات فيديو M4V، محول M4V إلى MP4، محول M4V إلى AVI، ملفات اختبار مشغل الفيديو، اختبار تشغيل M4V، عينات تحويل الفيديو، اختبار تنسيق فيديو MPEG-4'
+        },
+        schema: {
+          name: 'ملفات عينة M4V مجانية - تحميل ملفات اختبار فيديو M4V لأدوات التحويل',
+          description: 'قم بتنزيل ملفات عينة M4V مجانية لاختبار تحويل فيديو M4V، تشغيل M4V، أدوات معالجة الفيديو وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات M4V إلى MP4، محولات M4V إلى AVI، مشغلات الفيديو، توافق تشغيل M4V ودعم تنسيق فيديو MPEG-4.'
+        },
+        hero: {
+          title: 'ملفات عينة M4V',
+          description: 'قم بتنزيل ملفات عينة M4V مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل فيديو M4V، برامج تشغيل M4V وتطبيقات معالجة الفيديو الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار فيديو M4V بأحجام مختلفة لأغراض الاختبار'
+      },
+      mkv: {
+        meta: {
+          title: 'تحميل ملفات عينة MKV مجانية - ملفات اختبار فيديو Matroska لأدوات التحويل | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة MKV Matroska مجانية لاختبار تحويل فيديو MKV، تشغيل MKV، أدوات معالجة الفيديو وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات MKV إلى MP4، محولات MKV إلى AVI، مشغلات الفيديو، توافق تشغيل MKV ودعم تنسيق فيديو Matroska.',
+          keywords: 'ملفات عينة MKV، ملفات اختبار MKV، تحميل أمثلة MKV، ملفات اختبار MKV مجانية، ملفات فيديو Matroska، محول MKV إلى MP4، محول MKV إلى AVI، ملفات اختبار مشغل الفيديو، اختبار تشغيل MKV، عينات تحويل الفيديو، اختبار تنسيق Matroska'
+        },
+        schema: {
+          name: 'ملفات عينة MKV مجانية - تحميل ملفات اختبار فيديو Matroska لأدوات التحويل',
+          description: 'قم بتنزيل ملفات عينة MKV Matroska مجانية لاختبار تحويل فيديو MKV، تشغيل MKV، أدوات معالجة الفيديو وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات MKV إلى MP4، محولات MKV إلى AVI، مشغلات الفيديو، توافق تشغيل MKV ودعم تنسيق فيديو Matroska.'
+        },
+        hero: {
+          title: 'ملفات عينة MKV',
+          description: 'قم بتنزيل ملفات عينة MKV Matroska مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل فيديو MKV، برامج تشغيل MKV وتطبيقات معالجة الفيديو الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار فيديو MKV (Matroska) بأحجام مختلفة لأغراض الاختبار'
+      },
+      aac: {
+        meta: {
+          title: 'تحميل ملفات عينة AAC مجانية - ملفات اختبار Advanced Audio Coding | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة AAC Advanced Audio Coding مجانية لاختبار تحويل الصوت، تشغيل AAC، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AAC إلى MP3، محولات AAC إلى WAV، مشغلات الصوت، توافق تشغيل AAC ودعم تنسيق Advanced Audio Coding.',
+          keywords: 'ملفات عينة AAC، ملفات اختبار AAC، تحميل أمثلة AAC، ملفات اختبار AAC مجانية، ملفات Advanced Audio Coding، محول AAC إلى MP3، محول AAC إلى WAV، ملفات اختبار مشغل الصوت، اختبار تشغيل AAC، عينات تحويل الصوت، اختبار تنسيق Advanced Audio Coding'
+        },
+        schema: {
+          name: 'ملفات عينة AAC مجانية - تحميل ملفات اختبار Advanced Audio Coding',
+          description: 'قم بتنزيل ملفات عينة AAC Advanced Audio Coding مجانية لاختبار تحويل الصوت، تشغيل AAC، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AAC إلى MP3، محولات AAC إلى WAV، مشغلات الصوت، توافق تشغيل AAC ودعم تنسيق Advanced Audio Coding.'
+        },
+        hero: {
+          title: 'ملفات عينة AAC',
+          description: 'قم بتنزيل ملفات عينة AAC Advanced Audio Coding مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل الصوت، برامج تشغيل AAC وتطبيقات معالجة الصوت الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صوت AAC (Advanced Audio Coding) بأحجام مختلفة لأغراض الاختبار'
+      },
+      ac3: {
+        meta: {
+          title: 'تحميل ملفات عينة AC3 مجانية - ملفات اختبار صوت Dolby Digital | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة AC3 Dolby Digital مجانية لاختبار تحويل الصوت، تشغيل AC3، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AC3 إلى MP3، محولات AC3 إلى WAV، مشغلات الصوت، توافق تشغيل AC3 ودعم تنسيق Dolby Digital.',
+          keywords: 'ملفات عينة AC3، ملفات اختبار AC3، تحميل أمثلة AC3، ملفات اختبار AC3 مجانية، ملفات Dolby Digital، محول AC3 إلى MP3، محول AC3 إلى WAV، ملفات اختبار مشغل الصوت، اختبار تشغيل AC3، عينات تحويل الصوت، اختبار تنسيق Dolby Digital'
+        },
+        schema: {
+          name: 'ملفات عينة AC3 مجانية - تحميل ملفات اختبار صوت Dolby Digital',
+          description: 'قم بتنزيل ملفات عينة AC3 Dolby Digital مجانية لاختبار تحويل الصوت، تشغيل AC3، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AC3 إلى MP3، محولات AC3 إلى WAV، مشغلات الصوت، توافق تشغيل AC3 ودعم تنسيق Dolby Digital.'
+        },
+        hero: {
+          title: 'ملفات عينة AC3',
+          description: 'قم بتنزيل ملفات عينة AC3 Dolby Digital مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل الصوت، برامج تشغيل AC3 وتطبيقات معالجة الصوت الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صوت AC3 (Dolby Digital) بأحجام مختلفة لأغراض الاختبار'
+      },
+      aif: {
+        meta: {
+          title: 'تحميل ملفات عينة AIF مجانية - ملفات اختبار Audio Interchange File Format | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة AIF Audio Interchange File Format مجانية لاختبار تحويل الصوت، تشغيل AIF، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AIF إلى MP3، محولات AIF إلى WAV، مشغلات الصوت، توافق تشغيل AIF ودعم تنسيق Audio Interchange File Format.',
+          keywords: 'ملفات عينة AIF، ملفات اختبار AIF، تحميل أمثلة AIF، ملفات اختبار AIF مجانية، ملفات Audio Interchange File Format، محول AIF إلى MP3، محول AIF إلى WAV، ملفات اختبار مشغل الصوت، اختبار تشغيل AIF، عينات تحويل الصوت، اختبار تنسيق Audio Interchange File Format'
+        },
+        schema: {
+          name: 'ملفات عينة AIF مجانية - تحميل ملفات اختبار Audio Interchange File Format',
+          description: 'قم بتنزيل ملفات عينة AIF Audio Interchange File Format مجانية لاختبار تحويل الصوت، تشغيل AIF، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AIF إلى MP3، محولات AIF إلى WAV، مشغلات الصوت، توافق تشغيل AIF ودعم تنسيق Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'ملفات عينة AIF',
+          description: 'قم بتنزيل ملفات عينة AIF Audio Interchange File Format مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل الصوت، برامج تشغيل AIF وتطبيقات معالجة الصوت الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صوت AIF (Audio Interchange File Format) بأحجام مختلفة لأغراض الاختبار'
+      },
+      aiff: {
+        meta: {
+          title: 'تحميل ملفات عينة AIFF مجانية - ملفات اختبار Audio Interchange File Format | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة AIFF Audio Interchange File Format مجانية لاختبار تحويل الصوت، تشغيل AIFF، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AIFF إلى MP3، محولات AIFF إلى WAV، مشغلات الصوت، توافق تشغيل AIFF ودعم تنسيق Audio Interchange File Format.',
+          keywords: 'ملفات عينة AIFF، ملفات اختبار AIFF، تحميل أمثلة AIFF، ملفات اختبار AIFF مجانية، ملفات Audio Interchange File Format، محول AIFF إلى MP3، محول AIFF إلى WAV، ملفات اختبار مشغل الصوت، اختبار تشغيل AIFF، عينات تحويل الصوت، اختبار تنسيق Audio Interchange File Format'
+        },
+        schema: {
+          name: 'ملفات عينة AIFF مجانية - تحميل ملفات اختبار Audio Interchange File Format',
+          description: 'قم بتنزيل ملفات عينة AIFF Audio Interchange File Format مجانية لاختبار تحويل الصوت، تشغيل AIFF، أدوات معالجة الصوت وبرامج الوسائط المتعددة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AIFF إلى MP3، محولات AIFF إلى WAV، مشغلات الصوت، توافق تشغيل AIFF ودعم تنسيق Audio Interchange File Format.'
+        },
+        hero: {
+          title: 'ملفات عينة AIFF',
+          description: 'قم بتنزيل ملفات عينة AIFF Audio Interchange File Format مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل الصوت، برامج تشغيل AIFF وتطبيقات معالجة الصوت الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صوت AIFF (Audio Interchange File Format) بأحجام مختلفة لأغراض الاختبار'
+      },
+      amr: {
+        meta: {
+          title: 'تحميل ملفات عينة AMR مجانية - ملفات اختبار Adaptive Multi-Rate Audio | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة AMR Adaptive Multi-Rate مجانية لاختبار تحويل الصوت، تشغيل AMR، أدوات معالجة الصوت وبرامج الوسائط المتعددة المحمولة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AMR إلى MP3، محولات AMR إلى WAV، مشغلات الصوت، توافق تشغيل AMR ودعم تنسيق Adaptive Multi-Rate.',
+          keywords: 'ملفات عينة AMR، ملفات اختبار AMR، تحميل أمثلة AMR، ملفات اختبار AMR مجانية، ملفات Adaptive Multi-Rate، محول AMR إلى MP3، محول AMR إلى WAV، ملفات اختبار مشغل الصوت، اختبار تشغيل AMR، عينات تحويل الصوت، اختبار تنسيق Adaptive Multi-Rate'
+        },
+        schema: {
+          name: 'ملفات عينة AMR مجانية - تحميل ملفات اختبار Adaptive Multi-Rate Audio',
+          description: 'قم بتنزيل ملفات عينة AMR Adaptive Multi-Rate مجانية لاختبار تحويل الصوت، تشغيل AMR، أدوات معالجة الصوت وبرامج الوسائط المتعددة المحمولة. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات AMR إلى MP3، محولات AMR إلى WAV، مشغلات الصوت، توافق تشغيل AMR ودعم تنسيق Adaptive Multi-Rate.'
+        },
+        hero: {
+          title: 'ملفات عينة AMR',
+          description: 'قم بتنزيل ملفات عينة AMR Adaptive Multi-Rate مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل الصوت، برامج تشغيل AMR وتطبيقات معالجة الصوت الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صوت AMR (Adaptive Multi-Rate) بأحجام مختلفة لأغراض الاختبار'
+      },
+      caf: {
+        meta: {
+          title: 'تحميل ملفات عينة CAF مجانية - ملفات اختبار Core Audio Format | MorphyHub',
+          description: 'قم بتنزيل ملفات عينة CAF Core Audio Format مجانية لاختبار تحويل الصوت، تشغيل CAF، أدوات معالجة الصوت وبرامج الوسائط المتعددة macOS. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات CAF إلى MP3، محولات CAF إلى WAV، مشغلات الصوت، توافق تشغيل CAF ودعم تنسيق Core Audio Format.',
+          keywords: 'ملفات عينة CAF، ملفات اختبار CAF، تحميل أمثلة CAF، ملفات اختبار CAF مجانية، ملفات Core Audio Format، محول CAF إلى MP3، محول CAF إلى WAV، ملفات اختبار مشغل الصوت، اختبار تشغيل CAF، عينات تحويل الصوت، اختبار تنسيق Core Audio Format'
+        },
+        schema: {
+          name: 'ملفات عينة CAF مجانية - تحميل ملفات اختبار Core Audio Format',
+          description: 'قم بتنزيل ملفات عينة CAF Core Audio Format مجانية لاختبار تحويل الصوت، تشغيل CAF، أدوات معالجة الصوت وبرامج الوسائط المتعددة macOS. أحجام ملفات متعددة: 100 KB، 1 MB، 5 MB، 50 MB و 100 MB. مثالي لاختبار محولات CAF إلى MP3، محولات CAF إلى WAV، مشغلات الصوت، توافق تشغيل CAF ودعم تنسيق Core Audio Format.'
+        },
+        hero: {
+          title: 'ملفات عينة CAF',
+          description: 'قم بتنزيل ملفات عينة CAF Core Audio Format مجانية للاختبار. أحجام ملفات متعددة متاحة لاختبار أدوات تحويل الصوت، برامج تشغيل CAF وتطبيقات معالجة الصوت الخاصة بك.'
+        },
+        about_description: 'هذه ملفات اختبار صوت CAF (Core Audio Format) بأحجام مختلفة لأغراض الاختبار'
       }
     }
   }

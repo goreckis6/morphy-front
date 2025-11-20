@@ -1519,6 +1519,326 @@ export const zh: SamplePageTranslations = {
           description: '下载免费3GP 3GPP移动视频示例文件用于测试。提供多种文件大小，用于测试移动视频播放器、3GP转换器和多媒体软件。'
         },
         about_description: '这些是用于测试目的的各种大小的3GP (3GPP移动视频)文件'
+      },
+      dav: {
+        meta: {
+          title: '下载免费DAV示例文件 - 安全摄像头DAV视频测试文件 | MorphyHub',
+          description: '下载免费DAV示例视频文件，用于测试DAV视频播放器、安全摄像头视频处理、DAV转换器和监控视频分析工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DAV播放、DAV到MP4转换器、安全摄像头软件、视频监控工具和DAV格式兼容性。',
+          keywords: 'DAV示例文件、DAV测试文件、下载DAV示例、免费DAV测试文件、DAV视频文件、安全摄像头视频文件、DAV到MP4转换器、DAV播放器测试、监控视频示例、DAV格式测试文件、视频监控测试文件'
+        },
+        schema: {
+          name: '免费DAV示例文件 - 下载安全摄像头DAV视频测试文件',
+          description: '下载免费DAV示例视频文件，用于测试DAV视频播放器、安全摄像头视频处理、DAV转换器和监控视频分析工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DAV播放、DAV到MP4转换器、安全摄像头软件、视频监控工具和DAV格式兼容性。'
+        },
+        hero: {
+          title: 'DAV示例文件',
+          description: '下载免费DAV示例视频文件用于测试。提供多种文件大小，用于测试DAV视频播放器、安全摄像头视频处理工具和DAV转换器。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DAV视频文件'
+      },
+      dds: {
+        meta: {
+          title: '下载免费DDS示例文件 - DirectDraw Surface纹理测试文件 | MorphyHub',
+          description: '下载免费DDS DirectDraw Surface示例图像文件，用于测试纹理图像转换、DDS查看、游戏开发工具和图形处理软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DDS纹理加载、DDS到PNG转换器、游戏引擎兼容性、纹理压缩工具和DirectDraw Surface格式支持。',
+          keywords: 'DDS示例文件、DDS测试文件、下载DDS示例、免费DDS测试文件、DirectDraw Surface文件、DDS纹理文件、DDS到PNG转换器、纹理图像示例、游戏开发测试文件、DDS格式测试、图形纹理示例'
+        },
+        schema: {
+          name: '免费DDS示例文件 - 下载DirectDraw Surface纹理测试文件',
+          description: '下载免费DDS DirectDraw Surface示例图像文件，用于测试纹理图像转换、DDS查看、游戏开发工具和图形处理软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DDS纹理加载、DDS到PNG转换器、游戏引擎兼容性、纹理压缩工具和DirectDraw Surface格式支持。'
+        },
+        hero: {
+          title: 'DDS示例文件',
+          description: '下载免费DDS DirectDraw Surface示例图像文件用于测试。提供多种文件大小，用于测试纹理图像转换工具、DDS查看器和游戏开发软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DDS (DirectDraw Surface)纹理图像文件'
+      },
+      dng: {
+        meta: {
+          title: '下载免费DNG示例文件 - Digital Negative原始图像测试文件 | MorphyHub',
+          description: '下载免费DNG Digital Negative原始图像示例文件，用于测试原始图像处理、DNG转换、摄影软件和专业图像编辑工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DNG到JPEG转换器、原始图像编辑器、DNG查看、相机原始处理和Adobe Digital Negative格式支持。',
+          keywords: 'DNG示例文件、DNG测试文件、下载DNG示例、免费DNG测试文件、Digital Negative文件、DNG原始图像文件、DNG到JPEG转换器、原始图像处理、摄影测试文件、DNG格式测试、相机原始示例、Adobe DNG测试文件'
+        },
+        schema: {
+          name: '免费DNG示例文件 - 下载Digital Negative原始图像测试文件',
+          description: '下载免费DNG Digital Negative原始图像示例文件，用于测试原始图像处理、DNG转换、摄影软件和专业图像编辑工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试DNG到JPEG转换器、原始图像编辑器、DNG查看、相机原始处理和Adobe Digital Negative格式支持。'
+        },
+        hero: {
+          title: 'DNG示例文件',
+          description: '下载免费DNG Digital Negative原始图像示例文件用于测试。提供多种文件大小，用于测试原始图像处理工具、DNG转换器和摄影软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DNG (Digital Negative)原始图像文件'
+      },
+      eps: {
+        meta: {
+          title: '下载免费EPS示例文件 - Encapsulated PostScript矢量图形测试文件 | MorphyHub',
+          description: '下载免费EPS Encapsulated PostScript示例文件，用于测试矢量图形转换、EPS查看、PostScript处理和专业设计软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试EPS到PDF转换器、EPS到SVG转换器、矢量图形编辑器、PostScript查看器和Encapsulated PostScript格式兼容性。',
+          keywords: 'EPS示例文件、EPS测试文件、下载EPS示例、免费EPS测试文件、Encapsulated PostScript文件、EPS矢量图形、EPS到PDF转换器、EPS到SVG转换器、矢量图形示例、PostScript测试文件、设计软件测试文件、EPS格式测试'
+        },
+        schema: {
+          name: '免费EPS示例文件 - 下载Encapsulated PostScript矢量图形测试文件',
+          description: '下载免费EPS Encapsulated PostScript示例文件，用于测试矢量图形转换、EPS查看、PostScript处理和专业设计软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试EPS到PDF转换器、EPS到SVG转换器、矢量图形编辑器、PostScript查看器和Encapsulated PostScript格式兼容性。'
+        },
+        hero: {
+          title: 'EPS示例文件',
+          description: '下载免费EPS Encapsulated PostScript示例文件用于测试。提供多种文件大小，用于测试矢量图形转换工具、EPS查看器和PostScript处理软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的EPS (Encapsulated PostScript)矢量图形文件'
+      },
+      exr: {
+        meta: {
+          title: '下载免费EXR示例文件 - OpenEXR高动态范围图像测试文件 | MorphyHub',
+          description: '下载免费EXR OpenEXR高动态范围图像示例文件，用于测试HDR图像处理、EXR转换、专业摄影软件和视觉效果工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试EXR到JPEG转换器、HDR图像编辑器、EXR查看、高动态范围处理和OpenEXR格式支持。',
+          keywords: 'EXR示例文件、EXR测试文件、下载EXR示例、免费EXR测试文件、OpenEXR文件、EXR HDR图像、EXR到JPEG转换器、HDR图像处理、高动态范围示例、视觉效果测试文件、EXR格式测试、专业摄影测试文件'
+        },
+        schema: {
+          name: '免费EXR示例文件 - 下载OpenEXR高动态范围图像测试文件',
+          description: '下载免费EXR OpenEXR高动态范围图像示例文件，用于测试HDR图像处理、EXR转换、专业摄影软件和视觉效果工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试EXR到JPEG转换器、HDR图像编辑器、EXR查看、高动态范围处理和OpenEXR格式支持。'
+        },
+        hero: {
+          title: 'EXR示例文件',
+          description: '下载免费EXR OpenEXR高动态范围图像示例文件用于测试。提供多种文件大小，用于测试HDR图像处理工具、EXR转换器和视觉效果软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的EXR (OpenEXR高动态范围)图像文件'
+      },
+      hdr: {
+        meta: {
+          title: '下载免费HDR示例文件 - 高动态范围图像测试文件 | MorphyHub',
+          description: '下载免费HDR高动态范围图像示例文件，用于测试HDR图像处理、HDR转换、摄影软件和图像编辑工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试HDR到JPEG转换器、HDR图像编辑器、HDR查看、色调映射工具和高动态范围格式支持。',
+          keywords: 'HDR示例文件、HDR测试文件、下载HDR示例、免费HDR测试文件、高动态范围文件、HDR图像、HDR到JPEG转换器、HDR图像处理、色调映射测试文件、摄影测试文件、HDR格式测试、高动态范围示例'
+        },
+        schema: {
+          name: '免费HDR示例文件 - 下载高动态范围图像测试文件',
+          description: '下载免费HDR高动态范围图像示例文件，用于测试HDR图像处理、HDR转换、摄影软件和图像编辑工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试HDR到JPEG转换器、HDR图像编辑器、HDR查看、色调映射工具和高动态范围格式支持。'
+        },
+        hero: {
+          title: 'HDR示例文件',
+          description: '下载免费HDR高动态范围图像示例文件用于测试。提供多种文件大小，用于测试HDR图像处理工具、HDR转换器和摄影软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的HDR (高动态范围)图像文件'
+      },
+      heic: {
+        meta: {
+          title: '下载免费HEIC示例文件 - 高效图像容器测试文件 | MorphyHub',
+          description: '下载免费HEIC高效图像容器示例文件，用于测试HEIC图像转换、HEIC查看、现代图像格式处理和移动摄影工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试HEIC到JPEG转换器、HEIC到PNG转换器、iOS图像处理、HEIC查看软件和高效图像容器格式支持。',
+          keywords: 'HEIC示例文件、HEIC测试文件、下载HEIC示例、免费HEIC测试文件、高效图像容器文件、HEIC图像、HEIC到JPEG转换器、HEIC到PNG转换器、iOS图像示例、移动摄影测试文件、HEIC格式测试、现代图像格式示例'
+        },
+        schema: {
+          name: '免费HEIC示例文件 - 下载高效图像容器测试文件',
+          description: '下载免费HEIC高效图像容器示例文件，用于测试HEIC图像转换、HEIC查看、现代图像格式处理和移动摄影工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试HEIC到JPEG转换器、HEIC到PNG转换器、iOS图像处理、HEIC查看软件和高效图像容器格式支持。'
+        },
+        hero: {
+          title: 'HEIC示例文件',
+          description: '下载免费HEIC高效图像容器示例文件用于测试。提供多种文件大小，用于测试HEIC图像转换工具、HEIC查看器和现代图像格式处理软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的HEIC (高效图像容器)图像文件'
+      },
+      heif: {
+        meta: {
+          title: '下载免费HEIF示例文件 - 高效图像格式测试文件 | MorphyHub',
+          description: '下载免费HEIF高效图像格式示例文件，用于测试HEIF图像转换、HEIF查看、现代图像格式处理和移动摄影工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试HEIF到JPEG转换器、HEIF到PNG转换器、移动图像处理、HEIF查看软件和高效图像格式支持。',
+          keywords: 'HEIF示例文件、HEIF测试文件、下载HEIF示例、免费HEIF测试文件、高效图像格式文件、HEIF图像、HEIF到JPEG转换器、HEIF到PNG转换器、移动图像示例、现代图像格式测试文件、HEIF格式测试、图像压缩测试文件'
+        },
+        schema: {
+          name: '免费HEIF示例文件 - 下载高效图像格式测试文件',
+          description: '下载免费HEIF高效图像格式示例文件，用于测试HEIF图像转换、HEIF查看、现代图像格式处理和移动摄影工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试HEIF到JPEG转换器、HEIF到PNG转换器、移动图像处理、HEIF查看软件和高效图像格式支持。'
+        },
+        hero: {
+          title: 'HEIF示例文件',
+          description: '下载免费HEIF高效图像格式示例文件用于测试。提供多种文件大小，用于测试HEIF图像转换工具、HEIF查看器和现代图像格式处理软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的HEIF (高效图像格式)图像文件'
+      },
+      icns: {
+        meta: {
+          title: '下载免费ICNS示例文件 - macOS图标测试文件 | MorphyHub',
+          description: '下载免费ICNS macOS图标示例文件，用于测试macOS图标转换、ICNS查看、图标设计工具和macOS应用程序开发。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ICNS到PNG转换器、ICNS到ICO转换器、macOS图标编辑器、图标设计软件和macOS图标格式支持。',
+          keywords: 'ICNS示例文件、ICNS测试文件、下载ICNS示例、免费ICNS测试文件、macOS图标文件、ICNS图标、ICNS到PNG转换器、ICNS到ICO转换器、macOS图标设计、图标编辑器测试文件、ICNS格式测试、Apple图标示例'
+        },
+        schema: {
+          name: '免费ICNS示例文件 - 下载macOS图标测试文件',
+          description: '下载免费ICNS macOS图标示例文件，用于测试macOS图标转换、ICNS查看、图标设计工具和macOS应用程序开发。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ICNS到PNG转换器、ICNS到ICO转换器、macOS图标编辑器、图标设计软件和macOS图标格式支持。'
+        },
+        hero: {
+          title: 'ICNS示例文件',
+          description: '下载免费ICNS macOS图标示例文件用于测试。提供多种文件大小，用于测试macOS图标转换工具、ICNS查看器和图标设计软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ICNS (macOS图标)文件'
+      },
+      ico: {
+        meta: {
+          title: '下载免费ICO示例文件 - Windows图标测试文件 | MorphyHub',
+          description: '下载免费ICO Windows图标示例文件，用于测试Windows图标转换、ICO查看、图标设计工具和Windows应用程序开发。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ICO到PNG转换器、ICO到ICNS转换器、Windows图标编辑器、图标设计软件和Windows图标格式支持。',
+          keywords: 'ICO示例文件、ICO测试文件、下载ICO示例、免费ICO测试文件、Windows图标文件、ICO图标、ICO到PNG转换器、ICO到ICNS转换器、Windows图标设计、图标编辑器测试文件、ICO格式测试、Windows图标示例'
+        },
+        schema: {
+          name: '免费ICO示例文件 - 下载Windows图标测试文件',
+          description: '下载免费ICO Windows图标示例文件，用于测试Windows图标转换、ICO查看、图标设计工具和Windows应用程序开发。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试ICO到PNG转换器、ICO到ICNS转换器、Windows图标编辑器、图标设计软件和Windows图标格式支持。'
+        },
+        hero: {
+          title: 'ICO示例文件',
+          description: '下载免费ICO Windows图标示例文件用于测试。提供多种文件大小，用于测试Windows图标转换工具、ICO查看器和图标设计软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ICO (Windows图标)文件'
+      },
+      jpeg: {
+        meta: {
+          title: '下载免费JPEG示例文件 - 转换工具用JPEG图像测试文件 | MorphyHub',
+          description: '下载免费JPEG示例文件，用于测试JPEG图像转换、JPEG压缩、图像处理工具和照片编辑软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试JPEG到PNG转换器、JPEG到PDF转换器、图像压缩工具、JPEG优化和联合图像专家组格式支持。',
+          keywords: 'JPEG示例文件、JPEG测试文件、下载JPEG示例、免费JPEG测试文件、JPEG图像文件、JPEG到PNG转换器、JPEG到PDF转换器、图像压缩测试文件、照片编辑测试文件、JPEG格式测试、图像处理示例'
+        },
+        schema: {
+          name: '免费JPEG示例文件 - 下载转换工具用JPEG图像测试文件',
+          description: '下载免费JPEG示例文件，用于测试JPEG图像转换、JPEG压缩、图像处理工具和照片编辑软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试JPEG到PNG转换器、JPEG到PDF转换器、图像压缩工具、JPEG优化和联合图像专家组格式支持。'
+        },
+        hero: {
+          title: 'JPEG示例文件',
+          description: '下载免费JPEG示例文件用于测试。提供多种文件大小，用于测试JPEG图像转换工具、JPEG压缩软件和图像处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JPEG图像文件'
+      },
+      jpg: {
+        meta: {
+          title: '下载免费JPG示例文件 - 转换工具用JPG图像测试文件 | MorphyHub',
+          description: '下载免费JPG示例文件，用于测试JPG图像转换、JPG压缩、图像处理工具和照片编辑软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试JPG到PNG转换器、JPG到PDF转换器、图像压缩工具、JPG优化和联合图像专家组格式支持。',
+          keywords: 'JPG示例文件、JPG测试文件、下载JPG示例、免费JPG测试文件、JPG图像文件、JPG到PNG转换器、JPG到PDF转换器、图像压缩测试文件、照片编辑测试文件、JPG格式测试、图像处理示例'
+        },
+        schema: {
+          name: '免费JPG示例文件 - 下载转换工具用JPG图像测试文件',
+          description: '下载免费JPG示例文件，用于测试JPG图像转换、JPG压缩、图像处理工具和照片编辑软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试JPG到PNG转换器、JPG到PDF转换器、图像压缩工具、JPG优化和联合图像专家组格式支持。'
+        },
+        hero: {
+          title: 'JPG示例文件',
+          description: '下载免费JPG示例文件用于测试。提供多种文件大小，用于测试JPG图像转换工具、JPG压缩软件和图像处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JPG图像文件'
+      },
+      m4v: {
+        meta: {
+          title: '下载免费M4V示例文件 - 转换工具用M4V视频测试文件 | MorphyHub',
+          description: '下载免费M4V示例文件，用于测试M4V视频转换、M4V播放、视频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试M4V到MP4转换器、M4V到AVI转换器、视频播放器、M4V播放兼容性和MPEG-4视频格式支持。',
+          keywords: 'M4V示例文件、M4V测试文件、下载M4V示例、免费M4V测试文件、M4V视频文件、M4V到MP4转换器、M4V到AVI转换器、视频播放器测试文件、M4V播放测试、视频转换示例、MPEG-4视频格式测试'
+        },
+        schema: {
+          name: '免费M4V示例文件 - 下载转换工具用M4V视频测试文件',
+          description: '下载免费M4V示例文件，用于测试M4V视频转换、M4V播放、视频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试M4V到MP4转换器、M4V到AVI转换器、视频播放器、M4V播放兼容性和MPEG-4视频格式支持。'
+        },
+        hero: {
+          title: 'M4V示例文件',
+          description: '下载免费M4V示例文件用于测试。提供多种文件大小，用于测试M4V视频转换工具、M4V播放软件和视频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的M4V视频文件'
+      },
+      mkv: {
+        meta: {
+          title: '下载免费MKV示例文件 - 转换工具用Matroska视频测试文件 | MorphyHub',
+          description: '下载免费MKV Matroska示例文件，用于测试MKV视频转换、MKV播放、视频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试MKV到MP4转换器、MKV到AVI转换器、视频播放器、MKV播放兼容性和Matroska视频格式支持。',
+          keywords: 'MKV示例文件、MKV测试文件、下载MKV示例、免费MKV测试文件、Matroska视频文件、MKV到MP4转换器、MKV到AVI转换器、视频播放器测试文件、MKV播放测试、视频转换示例、Matroska格式测试'
+        },
+        schema: {
+          name: '免费MKV示例文件 - 下载转换工具用Matroska视频测试文件',
+          description: '下载免费MKV Matroska示例文件，用于测试MKV视频转换、MKV播放、视频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试MKV到MP4转换器、MKV到AVI转换器、视频播放器、MKV播放兼容性和Matroska视频格式支持。'
+        },
+        hero: {
+          title: 'MKV示例文件',
+          description: '下载免费MKV Matroska示例文件用于测试。提供多种文件大小，用于测试MKV视频转换工具、MKV播放软件和视频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MKV (Matroska)视频文件'
+      },
+      aac: {
+        meta: {
+          title: '下载免费AAC示例文件 - 高级音频编码测试文件 | MorphyHub',
+          description: '下载免费AAC高级音频编码示例文件，用于测试音频转换、AAC播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AAC到MP3转换器、AAC到WAV转换器、音频播放器、AAC播放兼容性和高级音频编码格式支持。',
+          keywords: 'AAC示例文件、AAC测试文件、下载AAC示例、免费AAC测试文件、高级音频编码文件、AAC到MP3转换器、AAC到WAV转换器、音频播放器测试文件、AAC播放测试、音频转换示例、高级音频编码格式测试'
+        },
+        schema: {
+          name: '免费AAC示例文件 - 下载高级音频编码测试文件',
+          description: '下载免费AAC高级音频编码示例文件，用于测试音频转换、AAC播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AAC到MP3转换器、AAC到WAV转换器、音频播放器、AAC播放兼容性和高级音频编码格式支持。'
+        },
+        hero: {
+          title: 'AAC示例文件',
+          description: '下载免费AAC高级音频编码示例文件用于测试。提供多种文件大小，用于测试音频转换工具、AAC播放软件和音频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AAC (高级音频编码)音频文件'
+      },
+      ac3: {
+        meta: {
+          title: '下载免费AC3示例文件 - 杜比数字音频测试文件 | MorphyHub',
+          description: '下载免费AC3杜比数字示例文件，用于测试音频转换、AC3播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AC3到MP3转换器、AC3到WAV转换器、音频播放器、AC3播放兼容性和杜比数字格式支持。',
+          keywords: 'AC3示例文件、AC3测试文件、下载AC3示例、免费AC3测试文件、杜比数字文件、AC3到MP3转换器、AC3到WAV转换器、音频播放器测试文件、AC3播放测试、音频转换示例、杜比数字格式测试'
+        },
+        schema: {
+          name: '免费AC3示例文件 - 下载杜比数字音频测试文件',
+          description: '下载免费AC3杜比数字示例文件，用于测试音频转换、AC3播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AC3到MP3转换器、AC3到WAV转换器、音频播放器、AC3播放兼容性和杜比数字格式支持。'
+        },
+        hero: {
+          title: 'AC3示例文件',
+          description: '下载免费AC3杜比数字示例文件用于测试。提供多种文件大小，用于测试音频转换工具、AC3播放软件和音频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AC3 (杜比数字)音频文件'
+      },
+      aif: {
+        meta: {
+          title: '下载免费AIF示例文件 - 音频交换文件格式测试文件 | MorphyHub',
+          description: '下载免费AIF音频交换文件格式示例文件，用于测试音频转换、AIF播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AIF到MP3转换器、AIF到WAV转换器、音频播放器、AIF播放兼容性和音频交换文件格式支持。',
+          keywords: 'AIF示例文件、AIF测试文件、下载AIF示例、免费AIF测试文件、音频交换文件格式文件、AIF到MP3转换器、AIF到WAV转换器、音频播放器测试文件、AIF播放测试、音频转换示例、音频交换文件格式测试'
+        },
+        schema: {
+          name: '免费AIF示例文件 - 下载音频交换文件格式测试文件',
+          description: '下载免费AIF音频交换文件格式示例文件，用于测试音频转换、AIF播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AIF到MP3转换器、AIF到WAV转换器、音频播放器、AIF播放兼容性和音频交换文件格式支持。'
+        },
+        hero: {
+          title: 'AIF示例文件',
+          description: '下载免费AIF音频交换文件格式示例文件用于测试。提供多种文件大小，用于测试音频转换工具、AIF播放软件和音频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AIF (音频交换文件格式)音频文件'
+      },
+      aiff: {
+        meta: {
+          title: '下载免费AIFF示例文件 - 音频交换文件格式测试文件 | MorphyHub',
+          description: '下载免费AIFF音频交换文件格式示例文件，用于测试音频转换、AIFF播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AIFF到MP3转换器、AIFF到WAV转换器、音频播放器、AIFF播放兼容性和音频交换文件格式支持。',
+          keywords: 'AIFF示例文件、AIFF测试文件、下载AIFF示例、免费AIFF测试文件、音频交换文件格式文件、AIFF到MP3转换器、AIFF到WAV转换器、音频播放器测试文件、AIFF播放测试、音频转换示例、音频交换文件格式测试'
+        },
+        schema: {
+          name: '免费AIFF示例文件 - 下载音频交换文件格式测试文件',
+          description: '下载免费AIFF音频交换文件格式示例文件，用于测试音频转换、AIFF播放、音频处理工具和多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AIFF到MP3转换器、AIFF到WAV转换器、音频播放器、AIFF播放兼容性和音频交换文件格式支持。'
+        },
+        hero: {
+          title: 'AIFF示例文件',
+          description: '下载免费AIFF音频交换文件格式示例文件用于测试。提供多种文件大小，用于测试音频转换工具、AIFF播放软件和音频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AIFF (音频交换文件格式)音频文件'
+      },
+      amr: {
+        meta: {
+          title: '下载免费AMR示例文件 - 自适应多速率音频测试文件 | MorphyHub',
+          description: '下载免费AMR自适应多速率示例文件，用于测试音频转换、AMR播放、音频处理工具和移动多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AMR到MP3转换器、AMR到WAV转换器、音频播放器、AMR播放兼容性和自适应多速率格式支持。',
+          keywords: 'AMR示例文件、AMR测试文件、下载AMR示例、免费AMR测试文件、自适应多速率文件、AMR到MP3转换器、AMR到WAV转换器、音频播放器测试文件、AMR播放测试、音频转换示例、自适应多速率格式测试'
+        },
+        schema: {
+          name: '免费AMR示例文件 - 下载自适应多速率音频测试文件',
+          description: '下载免费AMR自适应多速率示例文件，用于测试音频转换、AMR播放、音频处理工具和移动多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AMR到MP3转换器、AMR到WAV转换器、音频播放器、AMR播放兼容性和自适应多速率格式支持。'
+        },
+        hero: {
+          title: 'AMR示例文件',
+          description: '下载免费AMR自适应多速率示例文件用于测试。提供多种文件大小，用于测试音频转换工具、AMR播放软件和音频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AMR (自适应多速率)音频文件'
+      },
+      caf: {
+        meta: {
+          title: '下载免费CAF示例文件 - 核心音频格式测试文件 | MorphyHub',
+          description: '下载免费CAF核心音频格式示例文件，用于测试音频转换、CAF播放、音频处理工具和macOS多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAF到MP3转换器、CAF到WAV转换器、音频播放器、CAF播放兼容性和核心音频格式支持。',
+          keywords: 'CAF示例文件、CAF测试文件、下载CAF示例、免费CAF测试文件、核心音频格式文件、CAF到MP3转换器、CAF到WAV转换器、音频播放器测试文件、CAF播放测试、音频转换示例、核心音频格式测试'
+        },
+        schema: {
+          name: '免费CAF示例文件 - 下载核心音频格式测试文件',
+          description: '下载免费CAF核心音频格式示例文件，用于测试音频转换、CAF播放、音频处理工具和macOS多媒体软件。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAF到MP3转换器、CAF到WAV转换器、音频播放器、CAF播放兼容性和核心音频格式支持。'
+        },
+        hero: {
+          title: 'CAF示例文件',
+          description: '下载免费CAF核心音频格式示例文件用于测试。提供多种文件大小，用于测试音频转换工具、CAF播放软件和音频处理应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CAF (核心音频格式)音频文件'
       }
     }
   }
