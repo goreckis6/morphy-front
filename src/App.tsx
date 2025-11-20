@@ -1413,6 +1413,39 @@ function App() {
         <Route path="/id/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/id/samples/sample-h" element={<SampleH />} />
         <Route path="/id/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/id/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/id/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/id/samples/sample-css" element={<SampleCss />} />
+        <Route path="/id/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/id/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/id/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/id/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/id/samples/sample-der" element={<SampleDer />} />
+        <Route path="/id/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/id/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/id/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/id/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/id/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/id/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/id/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/id/samples/sample-java" element={<SampleJava />} />
+        <Route path="/id/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/id/samples/sample-json" element={<SampleJson />} />
+        <Route path="/id/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/id/samples/sample-js" element={<SampleJs />} />
+        <Route path="/id/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/id/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/id/samples/sample-key" element={<SampleKey />} />
+        <Route path="/id/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/id/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/id/samples/sample-log" element={<SampleLog />} />
+        <Route path="/id/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/id/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/id/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/id/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/id/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/id/samples/sample-md" element={<SampleMd />} />
+        <Route path="/id/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Svenska (SV) Sample Files Routes */}
         <Route path="/sv/samples/sample-docx" element={<SampleDocx />} />
@@ -1443,6 +1476,39 @@ function App() {
         <Route path="/sv/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/sv/samples/sample-h" element={<SampleH />} />
         <Route path="/sv/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/sv/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/sv/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/sv/samples/sample-css" element={<SampleCss />} />
+        <Route path="/sv/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/sv/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/sv/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/sv/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/sv/samples/sample-der" element={<SampleDer />} />
+        <Route path="/sv/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/sv/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/sv/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/sv/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/sv/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/sv/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/sv/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/sv/samples/sample-java" element={<SampleJava />} />
+        <Route path="/sv/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/sv/samples/sample-json" element={<SampleJson />} />
+        <Route path="/sv/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/sv/samples/sample-js" element={<SampleJs />} />
+        <Route path="/sv/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/sv/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/sv/samples/sample-key" element={<SampleKey />} />
+        <Route path="/sv/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/sv/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/sv/samples/sample-log" element={<SampleLog />} />
+        <Route path="/sv/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/sv/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/sv/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/sv/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/sv/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/sv/samples/sample-md" element={<SampleMd />} />
+        <Route path="/sv/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Español (ES) Sample Files Routes */}
         <Route path="/es/samples/sample-docx" element={<SampleDocx />} />
@@ -1473,6 +1539,39 @@ function App() {
         <Route path="/es/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/es/samples/sample-h" element={<SampleH />} />
         <Route path="/es/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/es/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/es/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/es/samples/sample-css" element={<SampleCss />} />
+        <Route path="/es/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/es/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/es/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/es/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/es/samples/sample-der" element={<SampleDer />} />
+        <Route path="/es/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/es/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/es/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/es/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/es/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/es/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/es/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/es/samples/sample-java" element={<SampleJava />} />
+        <Route path="/es/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/es/samples/sample-json" element={<SampleJson />} />
+        <Route path="/es/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/es/samples/sample-js" element={<SampleJs />} />
+        <Route path="/es/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/es/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/es/samples/sample-key" element={<SampleKey />} />
+        <Route path="/es/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/es/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/es/samples/sample-log" element={<SampleLog />} />
+        <Route path="/es/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/es/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/es/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/es/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/es/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/es/samples/sample-md" element={<SampleMd />} />
+        <Route path="/es/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Français (FR) Sample Files Routes */}
         <Route path="/fr/samples/sample-docx" element={<SampleDocx />} />
@@ -1503,6 +1602,39 @@ function App() {
         <Route path="/fr/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/fr/samples/sample-h" element={<SampleH />} />
         <Route path="/fr/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/fr/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/fr/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/fr/samples/sample-css" element={<SampleCss />} />
+        <Route path="/fr/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/fr/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/fr/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/fr/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/fr/samples/sample-der" element={<SampleDer />} />
+        <Route path="/fr/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/fr/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/fr/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/fr/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/fr/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/fr/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/fr/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/fr/samples/sample-java" element={<SampleJava />} />
+        <Route path="/fr/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/fr/samples/sample-json" element={<SampleJson />} />
+        <Route path="/fr/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/fr/samples/sample-js" element={<SampleJs />} />
+        <Route path="/fr/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/fr/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/fr/samples/sample-key" element={<SampleKey />} />
+        <Route path="/fr/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/fr/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/fr/samples/sample-log" element={<SampleLog />} />
+        <Route path="/fr/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/fr/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/fr/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/fr/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/fr/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/fr/samples/sample-md" element={<SampleMd />} />
+        <Route path="/fr/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Italiano (IT) Sample Files Routes */}
         <Route path="/it/samples/sample-docx" element={<SampleDocx />} />
@@ -1533,6 +1665,39 @@ function App() {
         <Route path="/it/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/it/samples/sample-h" element={<SampleH />} />
         <Route path="/it/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/it/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/it/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/it/samples/sample-css" element={<SampleCss />} />
+        <Route path="/it/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/it/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/it/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/it/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/it/samples/sample-der" element={<SampleDer />} />
+        <Route path="/it/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/it/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/it/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/it/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/it/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/it/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/it/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/it/samples/sample-java" element={<SampleJava />} />
+        <Route path="/it/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/it/samples/sample-json" element={<SampleJson />} />
+        <Route path="/it/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/it/samples/sample-js" element={<SampleJs />} />
+        <Route path="/it/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/it/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/it/samples/sample-key" element={<SampleKey />} />
+        <Route path="/it/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/it/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/it/samples/sample-log" element={<SampleLog />} />
+        <Route path="/it/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/it/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/it/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/it/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/it/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/it/samples/sample-md" element={<SampleMd />} />
+        <Route path="/it/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Nederlands (NL) Sample Files Routes */}
         <Route path="/nl/samples/sample-docx" element={<SampleDocx />} />
@@ -1563,6 +1728,39 @@ function App() {
         <Route path="/nl/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/nl/samples/sample-h" element={<SampleH />} />
         <Route path="/nl/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/nl/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/nl/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/nl/samples/sample-css" element={<SampleCss />} />
+        <Route path="/nl/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/nl/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/nl/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/nl/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/nl/samples/sample-der" element={<SampleDer />} />
+        <Route path="/nl/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/nl/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/nl/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/nl/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/nl/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/nl/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/nl/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/nl/samples/sample-java" element={<SampleJava />} />
+        <Route path="/nl/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/nl/samples/sample-json" element={<SampleJson />} />
+        <Route path="/nl/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/nl/samples/sample-js" element={<SampleJs />} />
+        <Route path="/nl/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/nl/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/nl/samples/sample-key" element={<SampleKey />} />
+        <Route path="/nl/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/nl/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/nl/samples/sample-log" element={<SampleLog />} />
+        <Route path="/nl/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/nl/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/nl/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/nl/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/nl/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/nl/samples/sample-md" element={<SampleMd />} />
+        <Route path="/nl/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Português (PT) Sample Files Routes */}
         <Route path="/pt/samples/sample-docx" element={<SampleDocx />} />
@@ -1593,6 +1791,39 @@ function App() {
         <Route path="/pt/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/pt/samples/sample-h" element={<SampleH />} />
         <Route path="/pt/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/pt/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/pt/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/pt/samples/sample-css" element={<SampleCss />} />
+        <Route path="/pt/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/pt/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/pt/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/pt/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/pt/samples/sample-der" element={<SampleDer />} />
+        <Route path="/pt/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/pt/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/pt/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/pt/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/pt/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/pt/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/pt/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/pt/samples/sample-java" element={<SampleJava />} />
+        <Route path="/pt/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/pt/samples/sample-json" element={<SampleJson />} />
+        <Route path="/pt/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/pt/samples/sample-js" element={<SampleJs />} />
+        <Route path="/pt/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/pt/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/pt/samples/sample-key" element={<SampleKey />} />
+        <Route path="/pt/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/pt/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/pt/samples/sample-log" element={<SampleLog />} />
+        <Route path="/pt/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/pt/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/pt/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/pt/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/pt/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/pt/samples/sample-md" element={<SampleMd />} />
+        <Route path="/pt/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Tiếng Việt (VI) Sample Files Routes */}
         <Route path="/vi/samples/sample-docx" element={<SampleDocx />} />
@@ -1623,6 +1854,39 @@ function App() {
         <Route path="/vi/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/vi/samples/sample-h" element={<SampleH />} />
         <Route path="/vi/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/vi/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/vi/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/vi/samples/sample-css" element={<SampleCss />} />
+        <Route path="/vi/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/vi/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/vi/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/vi/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/vi/samples/sample-der" element={<SampleDer />} />
+        <Route path="/vi/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/vi/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/vi/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/vi/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/vi/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/vi/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/vi/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/vi/samples/sample-java" element={<SampleJava />} />
+        <Route path="/vi/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/vi/samples/sample-json" element={<SampleJson />} />
+        <Route path="/vi/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/vi/samples/sample-js" element={<SampleJs />} />
+        <Route path="/vi/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/vi/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/vi/samples/sample-key" element={<SampleKey />} />
+        <Route path="/vi/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/vi/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/vi/samples/sample-log" element={<SampleLog />} />
+        <Route path="/vi/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/vi/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/vi/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/vi/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/vi/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/vi/samples/sample-md" element={<SampleMd />} />
+        <Route path="/vi/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Türkçe (TR) Sample Files Routes */}
         <Route path="/tr/samples/sample-docx" element={<SampleDocx />} />
@@ -1653,6 +1917,39 @@ function App() {
         <Route path="/tr/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/tr/samples/sample-h" element={<SampleH />} />
         <Route path="/tr/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/tr/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/tr/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/tr/samples/sample-css" element={<SampleCss />} />
+        <Route path="/tr/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/tr/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/tr/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/tr/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/tr/samples/sample-der" element={<SampleDer />} />
+        <Route path="/tr/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/tr/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/tr/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/tr/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/tr/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/tr/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/tr/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/tr/samples/sample-java" element={<SampleJava />} />
+        <Route path="/tr/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/tr/samples/sample-json" element={<SampleJson />} />
+        <Route path="/tr/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/tr/samples/sample-js" element={<SampleJs />} />
+        <Route path="/tr/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/tr/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/tr/samples/sample-key" element={<SampleKey />} />
+        <Route path="/tr/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/tr/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/tr/samples/sample-log" element={<SampleLog />} />
+        <Route path="/tr/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/tr/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/tr/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/tr/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/tr/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/tr/samples/sample-md" element={<SampleMd />} />
+        <Route path="/tr/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* Русский (RU) Sample Files Routes */}
         <Route path="/ru/samples/sample-docx" element={<SampleDocx />} />
@@ -1683,6 +1980,39 @@ function App() {
         <Route path="/ru/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/ru/samples/sample-h" element={<SampleH />} />
         <Route path="/ru/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/ru/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/ru/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/ru/samples/sample-css" element={<SampleCss />} />
+        <Route path="/ru/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/ru/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/ru/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/ru/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/ru/samples/sample-der" element={<SampleDer />} />
+        <Route path="/ru/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/ru/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/ru/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/ru/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/ru/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/ru/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/ru/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/ru/samples/sample-java" element={<SampleJava />} />
+        <Route path="/ru/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/ru/samples/sample-json" element={<SampleJson />} />
+        <Route path="/ru/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/ru/samples/sample-js" element={<SampleJs />} />
+        <Route path="/ru/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/ru/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/ru/samples/sample-key" element={<SampleKey />} />
+        <Route path="/ru/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/ru/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/ru/samples/sample-log" element={<SampleLog />} />
+        <Route path="/ru/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/ru/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/ru/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/ru/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/ru/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/ru/samples/sample-md" element={<SampleMd />} />
+        <Route path="/ru/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* العربية (AR) Sample Files Routes */}
         <Route path="/ar/samples/sample-docx" element={<SampleDocx />} />
@@ -1713,6 +2043,39 @@ function App() {
         <Route path="/ar/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/ar/samples/sample-h" element={<SampleH />} />
         <Route path="/ar/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/ar/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/ar/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/ar/samples/sample-css" element={<SampleCss />} />
+        <Route path="/ar/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/ar/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/ar/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/ar/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/ar/samples/sample-der" element={<SampleDer />} />
+        <Route path="/ar/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/ar/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/ar/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/ar/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/ar/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/ar/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/ar/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/ar/samples/sample-java" element={<SampleJava />} />
+        <Route path="/ar/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/ar/samples/sample-json" element={<SampleJson />} />
+        <Route path="/ar/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/ar/samples/sample-js" element={<SampleJs />} />
+        <Route path="/ar/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/ar/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/ar/samples/sample-key" element={<SampleKey />} />
+        <Route path="/ar/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/ar/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/ar/samples/sample-log" element={<SampleLog />} />
+        <Route path="/ar/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/ar/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/ar/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/ar/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/ar/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/ar/samples/sample-md" element={<SampleMd />} />
+        <Route path="/ar/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* ไทย (TH) Sample Files Routes */}
         <Route path="/th/samples/sample-docx" element={<SampleDocx />} />
@@ -1743,6 +2106,39 @@ function App() {
         <Route path="/th/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/th/samples/sample-h" element={<SampleH />} />
         <Route path="/th/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/th/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/th/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/th/samples/sample-css" element={<SampleCss />} />
+        <Route path="/th/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/th/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/th/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/th/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/th/samples/sample-der" element={<SampleDer />} />
+        <Route path="/th/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/th/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/th/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/th/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/th/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/th/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/th/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/th/samples/sample-java" element={<SampleJava />} />
+        <Route path="/th/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/th/samples/sample-json" element={<SampleJson />} />
+        <Route path="/th/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/th/samples/sample-js" element={<SampleJs />} />
+        <Route path="/th/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/th/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/th/samples/sample-key" element={<SampleKey />} />
+        <Route path="/th/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/th/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/th/samples/sample-log" element={<SampleLog />} />
+        <Route path="/th/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/th/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/th/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/th/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/th/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/th/samples/sample-md" element={<SampleMd />} />
+        <Route path="/th/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* 日本語 (JA) Sample Files Routes */}
         <Route path="/ja/samples/sample-docx" element={<SampleDocx />} />
@@ -1773,6 +2169,39 @@ function App() {
         <Route path="/ja/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/ja/samples/sample-h" element={<SampleH />} />
         <Route path="/ja/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/ja/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/ja/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/ja/samples/sample-css" element={<SampleCss />} />
+        <Route path="/ja/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/ja/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/ja/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/ja/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/ja/samples/sample-der" element={<SampleDer />} />
+        <Route path="/ja/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/ja/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/ja/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/ja/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/ja/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/ja/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/ja/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/ja/samples/sample-java" element={<SampleJava />} />
+        <Route path="/ja/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/ja/samples/sample-json" element={<SampleJson />} />
+        <Route path="/ja/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/ja/samples/sample-js" element={<SampleJs />} />
+        <Route path="/ja/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/ja/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/ja/samples/sample-key" element={<SampleKey />} />
+        <Route path="/ja/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/ja/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/ja/samples/sample-log" element={<SampleLog />} />
+        <Route path="/ja/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/ja/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/ja/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/ja/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/ja/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/ja/samples/sample-md" element={<SampleMd />} />
+        <Route path="/ja/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* 简体中文 (ZH) Sample Files Routes */}
         <Route path="/zh/samples/sample-docx" element={<SampleDocx />} />
@@ -1803,6 +2232,39 @@ function App() {
         <Route path="/zh/samples/sample-cpp" element={<SampleCpp />} />
         <Route path="/zh/samples/sample-h" element={<SampleH />} />
         <Route path="/zh/samples/sample-hpp" element={<SampleHpp />} />
+        <Route path="/zh/samples/sample-hex" element={<SampleHex />} />
+        <Route path="/zh/samples/sample-cs" element={<SampleCs />} />
+        <Route path="/zh/samples/sample-css" element={<SampleCss />} />
+        <Route path="/zh/samples/sample-csr" element={<SampleCsr />} />
+        <Route path="/zh/samples/sample-customer-database-sql" element={<SampleCustomerDatabaseSql />} />
+        <Route path="/zh/samples/sample-dbf" element={<SampleDbf />} />
+        <Route path="/zh/samples/sample-dem" element={<SampleDem />} />
+        <Route path="/zh/samples/sample-der" element={<SampleDer />} />
+        <Route path="/zh/samples/sample-dmp" element={<SampleDmp />} />
+        <Route path="/zh/samples/sample-docker-compose-yml" element={<SampleDockerComposeYml />} />
+        <Route path="/zh/samples/sample-dockerfile" element={<SampleDockerfile />} />
+        <Route path="/zh/samples/sample-editorconfig" element={<SampleEditorconfig />} />
+        <Route path="/zh/samples/sample-ini" element={<SampleIni />} />
+        <Route path="/zh/samples/sample-intelhex" element={<SampleIntelhex />} />
+        <Route path="/zh/samples/sample-ipynb" element={<SampleIpynb />} />
+        <Route path="/zh/samples/sample-java" element={<SampleJava />} />
+        <Route path="/zh/samples/sample-jks" element={<SampleJks />} />
+        <Route path="/zh/samples/sample-json" element={<SampleJson />} />
+        <Route path="/zh/samples/sample-jsonl" element={<SampleJsonl />} />
+        <Route path="/zh/samples/sample-js" element={<SampleJs />} />
+        <Route path="/zh/samples/sample-jsx" element={<SampleJsx />} />
+        <Route path="/zh/samples/sample-jwt" element={<SampleJwt />} />
+        <Route path="/zh/samples/sample-key" element={<SampleKey />} />
+        <Route path="/zh/samples/sample-kml" element={<SampleKml />} />
+        <Route path="/zh/samples/sample-kt" element={<SampleKt />} />
+        <Route path="/zh/samples/sample-log" element={<SampleLog />} />
+        <Route path="/zh/samples/sample-lua" element={<SampleLua />} />
+        <Route path="/zh/samples/sample-m3u" element={<SampleM3u />} />
+        <Route path="/zh/samples/sample-m3u8" element={<SampleM3u8 />} />
+        <Route path="/zh/samples/sample-makefile" element={<SampleMakefile />} />
+        <Route path="/zh/samples/sample-mbtiles" element={<SampleMbtiles />} />
+        <Route path="/zh/samples/sample-md" element={<SampleMd />} />
+        <Route path="/zh/samples/sample-mdx" element={<SampleMdx />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />

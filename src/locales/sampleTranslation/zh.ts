@@ -479,6 +479,534 @@ export const zh: SamplePageTranslations = {
           description: '下载免费HPP C++头文件示例文件用于测试。提供多种文件大小，用于测试您的C++代码编译工具、头文件处理软件和C++开发应用程序。'
         },
         about_description: '这些是用于测试目的的各种大小的HPP (C++ header)文件'
+      },
+      hex: {
+        meta: {
+          title: '下载免费HEX示例文件 - 固件和嵌入式系统开发的hex测试文件 | MorphyHub',
+          description: '下载免费HEX hex示例文件用于测试固件编程、嵌入式系统开发和二进制数据分析。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试hex编辑器、固件加载器、微控制器编程和嵌入式开发工具。',
+          keywords: 'HEX示例文件、HEX测试文件、下载HEX示例、免费HEX测试文件、hex文件、hex固件文件、.hex测试文件、hex嵌入式文件、hex微控制器文件、hex编辑器测试文件、固件编程示例、hex二进制文件'
+        },
+        schema: {
+          name: '免费HEX示例文件 - 下载固件和嵌入式系统开发的hex测试文件',
+          description: '下载免费HEX hex示例文件用于测试固件编程、嵌入式系统开发和二进制数据分析。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试hex编辑器、固件加载器、微控制器编程和嵌入式开发工具。'
+        },
+        hero: {
+          title: 'HEX示例文件',
+          description: '下载免费HEX hex示例文件用于测试。提供多种文件大小，用于测试您的hex编辑器、固件编程工具和嵌入式开发应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的HEX (hex)文件'
+      },
+      cs: {
+        meta: {
+          title: '下载免费CS示例文件 - .NET开发的C#源代码测试文件 | MorphyHub',
+          description: '下载免费CS C#源代码示例文件用于测试C#编译、.NET开发和Visual Studio工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C#编译器、.NET框架、Visual Studio IDE、代码分析工具和C#开发环境。',
+          keywords: 'CS示例文件、CS测试文件、下载CS示例、免费CS测试文件、C#源代码示例、.NET代码文件、.cs测试文件、C#编程文件、Visual Studio测试文件、.NET开发示例、C#编译测试文件'
+        },
+        schema: {
+          name: '免费CS示例文件 - 下载.NET开发的C#源代码测试文件',
+          description: '下载免费CS C#源代码示例文件用于测试C#编译、.NET开发和Visual Studio工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试C#编译器、.NET框架、Visual Studio IDE、代码分析工具和C#开发环境。'
+        },
+        hero: {
+          title: 'CS示例文件',
+          description: '下载免费CS C#源代码示例文件用于测试。提供多种文件大小，用于测试您的C#编译、.NET开发和Visual Studio工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CS (C#)源代码文件'
+      },
+      css: {
+        meta: {
+          title: '下载免费CSS示例文件 - Web开发的样式表测试文件 | MorphyHub',
+          description: '下载免费CSS样式表示例文件用于测试Web样式、CSS解析和前端工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试CSS验证器、预处理器（SASS、LESS）、CSS压缩器、Web浏览器和前端开发框架。',
+          keywords: 'CSS示例文件、CSS测试文件、下载CSS示例、免费CSS测试文件、样式表示例、CSS样式表文件、.css测试文件、Web样式文件、CSS解析器测试文件、前端开发示例、CSS框架测试文件'
+        },
+        schema: {
+          name: '免费CSS示例文件 - 下载Web开发的样式表测试文件',
+          description: '下载免费CSS样式表示例文件用于测试Web样式、CSS解析和前端工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试CSS验证器、预处理器（SASS、LESS）、CSS压缩器、Web浏览器和前端开发框架。'
+        },
+        hero: {
+          title: 'CSS示例文件',
+          description: '下载免费CSS样式表示例文件用于测试。提供多种文件大小，用于测试您的CSS验证器、预处理器和Web开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CSS (Cascading Style Sheets)文件'
+      },
+      csr: {
+        meta: {
+          title: '下载免费CSR示例文件 - SSL/TLS的证书签名请求测试文件 | MorphyHub',
+          description: '下载免费CSR证书签名请求示例文件用于测试SSL/TLS证书生成、PKI管理和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试证书颁发机构、OpenSSL、SSL证书生成、PKI基础设施和安全证书管理工具。',
+          keywords: 'CSR示例文件、CSR测试文件、下载CSR示例、免费CSR测试文件、证书签名请求示例、SSL证书文件、.csr测试文件、PKI证书文件、OpenSSL测试文件、SSL/TLS证书示例、证书颁发机构测试文件'
+        },
+        schema: {
+          name: '免费CSR示例文件 - 下载SSL/TLS的证书签名请求测试文件',
+          description: '下载免费CSR证书签名请求示例文件用于测试SSL/TLS证书生成、PKI管理和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试证书颁发机构、OpenSSL、SSL证书生成、PKI基础设施和安全证书管理工具。'
+        },
+        hero: {
+          title: 'CSR示例文件',
+          description: '下载免费CSR证书签名请求示例文件用于测试。提供多种文件大小，用于测试您的SSL/TLS证书生成和PKI管理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CSR (Certificate Signing Request)文件'
+      },
+      'customer-database-sql': {
+        meta: {
+          title: '下载免费Customer Database SQL示例文件 - SQL数据库测试文件 | MorphyHub',
+          description: '下载免费Customer Database SQL示例文件用于测试SQL数据库操作、查询执行和数据库管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试SQL解析器、数据库导入工具、SQLite、MySQL、PostgreSQL和数据库管理系统。',
+          keywords: 'Customer Database SQL示例文件、SQL数据库测试文件、下载SQL示例、免费SQL测试文件、SQL数据库文件、.sql测试文件、SQL查询文件、数据库导入示例、SQLite测试文件、MySQL示例、PostgreSQL测试文件'
+        },
+        schema: {
+          name: '免费Customer Database SQL示例文件 - 下载SQL数据库测试文件',
+          description: '下载免费Customer Database SQL示例文件用于测试SQL数据库操作、查询执行和数据库管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试SQL解析器、数据库导入工具、SQLite、MySQL、PostgreSQL和数据库管理系统。'
+        },
+        hero: {
+          title: 'Customer Database SQL示例文件',
+          description: '下载免费Customer Database SQL示例文件用于测试。提供多种文件大小，用于测试您的SQL解析器、数据库导入工具和数据库管理系统。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Customer Database SQL文件'
+      },
+      dbf: {
+        meta: {
+          title: '下载免费DBF示例文件 - 数据管理的dBASE数据库测试文件 | MorphyHub',
+          description: '下载免费DBF dBASE数据库示例文件用于测试数据库操作、数据导入/导出和遗留数据库格式。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试dBASE兼容性、数据库转换器、数据迁移工具、电子表格应用程序和数据库管理系统。',
+          keywords: 'DBF示例文件、DBF测试文件、下载DBF示例、免费DBF测试文件、dBASE数据库文件、.dbf测试文件、数据库格式文件、遗留数据库示例、dBASE兼容性测试文件、数据导入示例'
+        },
+        schema: {
+          name: '免费DBF示例文件 - 下载数据管理的dBASE数据库测试文件',
+          description: '下载免费DBF dBASE数据库示例文件用于测试数据库操作、数据导入/导出和遗留数据库格式。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试dBASE兼容性、数据库转换器、数据迁移工具、电子表格应用程序和数据库管理系统。'
+        },
+        hero: {
+          title: 'DBF示例文件',
+          description: '下载免费DBF dBASE数据库示例文件用于测试。提供多种文件大小，用于测试您的数据库转换器、数据迁移工具和数据库管理系统。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DBF (dBASE数据库)文件'
+      },
+      dem: {
+        meta: {
+          title: '下载免费DEM示例文件 - GIS和地图制作的数字高程模型测试文件 | MorphyHub',
+          description: '下载免费DEM数字高程模型示例文件用于测试GIS应用程序、地形制图和地理空间分析工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试GIS软件、地形可视化、高程数据处理、制图应用程序和地理空间分析工具。',
+          keywords: 'DEM示例文件、DEM测试文件、下载DEM示例、免费DEM测试文件、数字高程模型文件、.dem测试文件、GIS高程文件、地形数据示例、地理空间数据文件、制图测试文件、高程模型示例'
+        },
+        schema: {
+          name: '免费DEM示例文件 - 下载GIS和地图制作的数字高程模型测试文件',
+          description: '下载免费DEM数字高程模型示例文件用于测试GIS应用程序、地形制图和地理空间分析工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试GIS软件、地形可视化、高程数据处理、制图应用程序和地理空间分析工具。'
+        },
+        hero: {
+          title: 'DEM示例文件',
+          description: '下载免费DEM数字高程模型示例文件用于测试。提供多种文件大小，用于测试您的GIS软件、地形可视化和地理空间分析工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DEM (Digital Elevation Model)文件'
+      },
+      der: {
+        meta: {
+          title: '下载免费DER示例文件 - Distinguished Encoding Rules证书测试文件 | MorphyHub',
+          description: '下载免费DER Distinguished Encoding Rules证书示例文件用于测试SSL/TLS证书、PKI管理和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试证书解析、OpenSSL、PKI基础设施、SSL证书验证和安全证书管理工具。',
+          keywords: 'DER示例文件、DER测试文件、下载DER示例、免费DER测试文件、Distinguished Encoding Rules文件、.der测试文件、证书文件、SSL证书示例、PKI证书文件、OpenSSL测试文件、证书解析示例'
+        },
+        schema: {
+          name: '免费DER示例文件 - 下载Distinguished Encoding Rules证书测试文件',
+          description: '下载免费DER Distinguished Encoding Rules证书示例文件用于测试SSL/TLS证书、PKI管理和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试证书解析、OpenSSL、PKI基础设施、SSL证书验证和安全证书管理工具。'
+        },
+        hero: {
+          title: 'DER示例文件',
+          description: '下载免费DER Distinguished Encoding Rules证书示例文件用于测试。提供多种文件大小，用于测试您的证书解析、OpenSSL和PKI管理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DER (Distinguished Encoding Rules)证书文件'
+      },
+      dmp: {
+        meta: {
+          title: '下载免费DMP示例文件 - 调试和分析的内存转储测试文件 | MorphyHub',
+          description: '下载免费DMP内存转储示例文件用于测试崩溃分析、调试工具和系统诊断。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试调试器、崩溃分析工具、内存分析器、系统诊断工具和取证分析应用程序。',
+          keywords: 'DMP示例文件、DMP测试文件、下载DMP示例、免费DMP测试文件、内存转储文件、.dmp测试文件、崩溃转储文件、调试文件、系统转储示例、内存分析文件、崩溃分析测试文件'
+        },
+        schema: {
+          name: '免费DMP示例文件 - 下载调试和分析的内存转储测试文件',
+          description: '下载免费DMP内存转储示例文件用于测试崩溃分析、调试工具和系统诊断。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试调试器、崩溃分析工具、内存分析器、系统诊断工具和取证分析应用程序。'
+        },
+        hero: {
+          title: 'DMP示例文件',
+          description: '下载免费DMP内存转储示例文件用于测试。提供多种文件大小，用于测试您的崩溃分析、调试和系统诊断工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DMP (内存转储)文件'
+      },
+      'docker-compose-yml': {
+        meta: {
+          title: '下载免费Docker Compose YML示例文件 - Docker Compose配置测试文件 | MorphyHub',
+          description: '下载免费Docker Compose YML配置示例文件用于测试Docker容器编排、多容器应用程序和DevOps工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Docker Compose、容器编排、YAML解析、DevOps自动化和容器化应用程序部署工具。',
+          keywords: 'Docker Compose YML示例文件、docker-compose测试文件、下载docker-compose示例、免费docker-compose测试文件、Docker Compose YAML文件、.yml测试文件、容器编排文件、DevOps配置示例、Docker Compose测试文件、多容器配置示例'
+        },
+        schema: {
+          name: '免费Docker Compose YML示例文件 - 下载Docker Compose配置测试文件',
+          description: '下载免费Docker Compose YML配置示例文件用于测试Docker容器编排、多容器应用程序和DevOps工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Docker Compose、容器编排、YAML解析、DevOps自动化和容器化应用程序部署工具。'
+        },
+        hero: {
+          title: 'Docker Compose YML示例文件',
+          description: '下载免费Docker Compose YML配置示例文件用于测试。提供多种文件大小，用于测试您的Docker Compose、容器编排和DevOps自动化工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Docker Compose YML配置文件'
+      },
+      dockerfile: {
+        meta: {
+          title: '下载免费Dockerfile示例文件 - Docker容器构建测试文件 | MorphyHub',
+          description: '下载免费Dockerfile Docker容器构建示例文件用于测试容器化、Docker构建和DevOps工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Docker构建、容器镜像创建、Dockerfile解析、容器化工具和DevOps自动化平台。',
+          keywords: 'Dockerfile示例文件、Dockerfile测试文件、下载Dockerfile示例、免费Dockerfile测试文件、Docker容器文件、Dockerfile测试文件、容器构建文件、Docker构建示例、容器化测试文件、DevOps Docker示例'
+        },
+        schema: {
+          name: '免费Dockerfile示例文件 - 下载Docker容器构建测试文件',
+          description: '下载免费Dockerfile Docker容器构建示例文件用于测试容器化、Docker构建和DevOps工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Docker构建、容器镜像创建、Dockerfile解析、容器化工具和DevOps自动化平台。'
+        },
+        hero: {
+          title: 'Dockerfile示例文件',
+          description: '下载免费Dockerfile Docker容器构建示例文件用于测试。提供多种文件大小，用于测试您的Docker构建、容器镜像创建和容器化工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Dockerfile (Docker容器构建)文件'
+      },
+      editorconfig: {
+        meta: {
+          title: '下载免费EditorConfig示例文件 - 编辑器配置测试文件 | MorphyHub',
+          description: '下载免费EditorConfig编辑器配置示例文件用于测试代码编辑器设置、格式一致性和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试EditorConfig解析器、代码编辑器插件、格式工具、IDE配置和开发环境设置工具。',
+          keywords: 'EditorConfig示例文件、EditorConfig测试文件、下载EditorConfig示例、免费EditorConfig测试文件、编辑器配置文件、.editorconfig测试文件、代码编辑器设置文件、IDE配置示例、格式配置文件、编辑器设置测试文件'
+        },
+        schema: {
+          name: '免费EditorConfig示例文件 - 下载编辑器配置测试文件',
+          description: '下载免费EditorConfig编辑器配置示例文件用于测试代码编辑器设置、格式一致性和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试EditorConfig解析器、代码编辑器插件、格式工具、IDE配置和开发环境设置工具。'
+        },
+        hero: {
+          title: 'EditorConfig示例文件',
+          description: '下载免费EditorConfig编辑器配置示例文件用于测试。提供多种文件大小，用于测试您的EditorConfig解析器、代码编辑器插件和格式工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的EditorConfig (编辑器配置)文件'
+      },
+      ini: {
+        meta: {
+          title: '下载免费INI示例文件 - 应用程序的INI配置测试文件 | MorphyHub',
+          description: '下载免费INI配置示例文件用于测试应用程序设置、INI文件解析和配置管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试INI解析器、应用程序配置、设置管理、Windows INI文件和软件配置实用程序。',
+          keywords: 'INI示例文件、INI测试文件、下载INI示例、免费INI测试文件、INI配置文件、.ini测试文件、应用程序设置文件、INI配置示例、Windows INI文件、配置文件示例、INI解析测试文件'
+        },
+        schema: {
+          name: '免费INI示例文件 - 下载应用程序的INI配置测试文件',
+          description: '下载免费INI配置示例文件用于测试应用程序设置、INI文件解析和配置管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试INI解析器、应用程序配置、设置管理、Windows INI文件和软件配置实用程序。'
+        },
+        hero: {
+          title: 'INI示例文件',
+          description: '下载免费INI配置示例文件用于测试。提供多种文件大小，用于测试您的INI解析器、应用程序配置和设置管理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的INI (配置)文件'
+      },
+      intelhex: {
+        meta: {
+          title: '下载免费IntelHex示例文件 - 固件开发的Intel hex测试文件 | MorphyHub',
+          description: '下载免费IntelHex Intel hex示例文件用于测试固件编程、嵌入式系统开发和微控制器工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试IntelHex解析器、固件加载器、微控制器编程、嵌入式开发工具和hex文件处理应用程序。',
+          keywords: 'IntelHex示例文件、IntelHex测试文件、下载IntelHex示例、免费IntelHex测试文件、Intel hex文件、.intelhex测试文件、hex固件文件、hex嵌入式文件、hex微控制器文件、IntelHex解析器测试文件、固件编程示例'
+        },
+        schema: {
+          name: '免费IntelHex示例文件 - 下载固件开发的Intel hex测试文件',
+          description: '下载免费IntelHex Intel hex示例文件用于测试固件编程、嵌入式系统开发和微控制器工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试IntelHex解析器、固件加载器、微控制器编程、嵌入式开发工具和hex文件处理应用程序。'
+        },
+        hero: {
+          title: 'IntelHex示例文件',
+          description: '下载免费IntelHex Intel hex示例文件用于测试。提供多种文件大小，用于测试您的IntelHex解析器、固件加载器和嵌入式开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的IntelHex (Intel hex)文件'
+      },
+      ipynb: {
+        meta: {
+          title: '下载免费IPYNB示例文件 - 数据科学的Jupyter Notebook测试文件 | MorphyHub',
+          description: '下载免费IPYNB Jupyter Notebook示例文件用于测试数据科学工作流、Python执行和笔记本分析工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Jupyter Notebook、Python数据科学工具、笔记本查看器、数据分析应用程序和科学计算平台。',
+          keywords: 'IPYNB示例文件、IPYNB测试文件、下载IPYNB示例、免费IPYNB测试文件、Jupyter Notebook文件、.ipynb测试文件、Python笔记本文件、数据科学笔记本示例、Jupyter测试文件、笔记本分析文件、数据科学工作流示例'
+        },
+        schema: {
+          name: '免费IPYNB示例文件 - 下载数据科学的Jupyter Notebook测试文件',
+          description: '下载免费IPYNB Jupyter Notebook示例文件用于测试数据科学工作流、Python执行和笔记本分析工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Jupyter Notebook、Python数据科学工具、笔记本查看器、数据分析应用程序和科学计算平台。'
+        },
+        hero: {
+          title: 'IPYNB示例文件',
+          description: '下载免费IPYNB Jupyter Notebook示例文件用于测试。提供多种文件大小，用于测试您的Jupyter Notebook、Python数据科学工具和笔记本分析应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的IPYNB (Jupyter Notebook)文件'
+      },
+      java: {
+        meta: {
+          title: '下载免费Java示例文件 - 开发的Java源代码测试文件 | MorphyHub',
+          description: '下载免费Java Java源代码示例文件用于测试Java编译、JVM应用程序和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Java编译器、JVM、IDE支持（Eclipse、IntelliJ）、Java构建工具（Maven、Gradle）和Java开发环境。',
+          keywords: 'Java示例文件、Java测试文件、下载Java示例、免费Java测试文件、Java源代码文件、.java测试文件、Java编程文件、JVM测试文件、Java编译示例、Java IDE测试文件、Java开发示例'
+        },
+        schema: {
+          name: '免费Java示例文件 - 下载开发的Java源代码测试文件',
+          description: '下载免费Java Java源代码示例文件用于测试Java编译、JVM应用程序和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Java编译器、JVM、IDE支持（Eclipse、IntelliJ）、Java构建工具（Maven、Gradle）和Java开发环境。'
+        },
+        hero: {
+          title: 'Java示例文件',
+          description: '下载免费Java Java源代码示例文件用于测试。提供多种文件大小，用于测试您的Java编译器、JVM和Java开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Java源代码文件'
+      },
+      jks: {
+        meta: {
+          title: '下载免费JKS示例文件 - SSL/TLS安全的Java KeyStore测试文件 | MorphyHub',
+          description: '下载免费JKS Java KeyStore示例文件用于测试SSL/TLS证书存储、Java安全和PKI管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Java KeyStore管理、JKS解析、SSL证书存储、Java安全工具和PKI基础设施。',
+          keywords: 'JKS示例文件、JKS测试文件、下载JKS示例、免费JKS测试文件、Java KeyStore文件、.jks测试文件、SSL证书文件、Java安全文件、keystore测试文件、PKI证书示例、Java KeyStore管理测试文件'
+        },
+        schema: {
+          name: '免费JKS示例文件 - 下载SSL/TLS安全的Java KeyStore测试文件',
+          description: '下载免费JKS Java KeyStore示例文件用于测试SSL/TLS证书存储、Java安全和PKI管理工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Java KeyStore管理、JKS解析、SSL证书存储、Java安全工具和PKI基础设施。'
+        },
+        hero: {
+          title: 'JKS示例文件',
+          description: '下载免费JKS Java KeyStore示例文件用于测试。提供多种文件大小，用于测试您的Java KeyStore管理、JKS解析和SSL证书存储工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JKS (Java KeyStore)文件'
+      },
+      json: {
+        meta: {
+          title: '下载免费JSON示例文件 - Web开发的JSON数据测试文件 | MorphyHub',
+          description: '下载免费JSON JSON数据示例文件用于测试JSON解析、API集成和Web开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JSON解析器、API响应、数据交换格式、Web应用程序和JSON验证工具。',
+          keywords: 'JSON示例文件、JSON测试文件、下载JSON示例、免费JSON测试文件、JSON数据文件、.json测试文件、JSON API文件、JSON解析器测试文件、数据交换示例、JSON Web文件、JSON验证测试文件'
+        },
+        schema: {
+          name: '免费JSON示例文件 - 下载Web开发的JSON数据测试文件',
+          description: '下载免费JSON JSON数据示例文件用于测试JSON解析、API集成和Web开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JSON解析器、API响应、数据交换格式、Web应用程序和JSON验证工具。'
+        },
+        hero: {
+          title: 'JSON示例文件',
+          description: '下载免费JSON JSON数据示例文件用于测试。提供多种文件大小，用于测试您的JSON解析器、API集成和Web开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JSON (JavaScript Object Notation)文件'
+      },
+      jsonl: {
+        meta: {
+          title: '下载免费JSONL示例文件 - 数据处理的JSON Lines测试文件 | MorphyHub',
+          description: '下载免费JSONL JSON Lines示例文件用于测试数据处理、JSON流式传输和大数据工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JSONL解析器、数据流式传输应用程序、ETL工具、大数据处理和日志文件分析工具。',
+          keywords: 'JSONL示例文件、JSONL测试文件、下载JSONL示例、免费JSONL测试文件、JSON Lines文件、.jsonl测试文件、JSON流式传输文件、数据处理示例、JSON ETL文件、JSON大数据示例、JSON日志分析文件'
+        },
+        schema: {
+          name: '免费JSONL示例文件 - 下载数据处理的JSON Lines测试文件',
+          description: '下载免费JSONL JSON Lines示例文件用于测试数据处理、JSON流式传输和大数据工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JSONL解析器、数据流式传输应用程序、ETL工具、大数据处理和日志文件分析工具。'
+        },
+        hero: {
+          title: 'JSONL示例文件',
+          description: '下载免费JSONL JSON Lines示例文件用于测试。提供多种文件大小，用于测试您的JSONL解析器、数据流式传输应用程序和大数据处理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JSONL (JSON Lines)文件'
+      },
+      js: {
+        meta: {
+          title: '下载免费JS示例文件 - Web开发的JavaScript源代码测试文件 | MorphyHub',
+          description: '下载免费JS JavaScript源代码示例文件用于测试JavaScript执行、Web开发和前端工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JavaScript引擎、Node.js、Web浏览器、JavaScript压缩器、代码分析工具和前端开发框架。',
+          keywords: 'JS示例文件、JS测试文件、下载JS示例、免费JS测试文件、JavaScript源代码文件、.js测试文件、JavaScript编程文件、Node.js测试文件、JavaScript Web文件、JS压缩器测试文件、前端开发示例'
+        },
+        schema: {
+          name: '免费JS示例文件 - 下载Web开发的JavaScript源代码测试文件',
+          description: '下载免费JS JavaScript源代码示例文件用于测试JavaScript执行、Web开发和前端工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JavaScript引擎、Node.js、Web浏览器、JavaScript压缩器、代码分析工具和前端开发框架。'
+        },
+        hero: {
+          title: 'JS示例文件',
+          description: '下载免费JS JavaScript源代码示例文件用于测试。提供多种文件大小，用于测试您的JavaScript引擎、Node.js和Web开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JS (JavaScript)源代码文件'
+      },
+      jsx: {
+        meta: {
+          title: '下载免费JSX示例文件 - 前端开发的React JSX测试文件 | MorphyHub',
+          description: '下载免费JSX React JSX示例文件用于测试React开发、JSX编译和前端框架。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试React、JSX转译器（Babel）、前端构建工具、React开发环境和现代JavaScript框架。',
+          keywords: 'JSX示例文件、JSX测试文件、下载JSX示例、免费JSX测试文件、React JSX文件、.jsx测试文件、React组件文件、JSX转译器测试文件、JSX前端文件、React开发示例、Babel JSX测试文件'
+        },
+        schema: {
+          name: '免费JSX示例文件 - 下载前端开发的React JSX测试文件',
+          description: '下载免费JSX React JSX示例文件用于测试React开发、JSX编译和前端框架。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试React、JSX转译器（Babel）、前端构建工具、React开发环境和现代JavaScript框架。'
+        },
+        hero: {
+          title: 'JSX示例文件',
+          description: '下载免费JSX React JSX示例文件用于测试。提供多种文件大小，用于测试您的React、JSX转译器和前端开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JSX (React JSX)文件'
+      },
+      jwt: {
+        meta: {
+          title: '下载免费JWT示例文件 - API安全的JSON Web Token测试文件 | MorphyHub',
+          description: '下载免费JWT JSON Web Token示例文件用于测试API身份验证、JWT令牌解析和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JWT解析器、API身份验证、令牌验证、OAuth 2.0和安全测试工具。',
+          keywords: 'JWT示例文件、JWT测试文件、下载JWT示例、免费JWT测试文件、JSON Web Token文件、.jwt测试文件、身份验证令牌文件、API安全文件、JWT解析器测试文件、OAuth令牌示例、安全测试文件'
+        },
+        schema: {
+          name: '免费JWT示例文件 - 下载API安全的JSON Web Token测试文件',
+          description: '下载免费JWT JSON Web Token示例文件用于测试API身份验证、JWT令牌解析和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JWT解析器、API身份验证、令牌验证、OAuth 2.0和安全测试工具。'
+        },
+        hero: {
+          title: 'JWT示例文件',
+          description: '下载免费JWT JSON Web Token示例文件用于测试。提供多种文件大小，用于测试您的JWT解析器、API身份验证和安全工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JWT (JSON Web Token)文件'
+      },
+      key: {
+        meta: {
+          title: '下载免费KEY示例文件 - SSL/TLS安全的私钥测试文件 | MorphyHub',
+          description: '下载免费KEY私钥示例文件用于测试SSL/TLS证书、加密操作和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试私钥解析、OpenSSL、SSL证书生成、加密库和安全证书管理工具。',
+          keywords: 'KEY示例文件、KEY测试文件、下载KEY示例、免费KEY测试文件、私钥文件、.key测试文件、SSL密钥文件、加密密钥文件、OpenSSL测试文件、安全密钥示例、证书密钥测试文件'
+        },
+        schema: {
+          name: '免费KEY示例文件 - 下载SSL/TLS安全的私钥测试文件',
+          description: '下载免费KEY私钥示例文件用于测试SSL/TLS证书、加密操作和安全工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试私钥解析、OpenSSL、SSL证书生成、加密库和安全证书管理工具。'
+        },
+        hero: {
+          title: 'KEY示例文件',
+          description: '下载免费KEY私钥示例文件用于测试。提供多种文件大小，用于测试您的私钥解析、OpenSSL和安全证书管理工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的KEY (私钥)文件'
+      },
+      kml: {
+        meta: {
+          title: '下载免费KML示例文件 - GIS和地图制作的Keyhole Markup Language测试文件 | MorphyHub',
+          description: '下载免费KML Keyhole Markup Language地理数据示例文件用于测试GIS应用程序、地图可视化和地理空间工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Google Earth、GIS软件、地图渲染、地理数据处理和地理空间分析工具。',
+          keywords: 'KML示例文件、KML测试文件、下载KML示例、免费KML测试文件、Keyhole Markup Language文件、.kml测试文件、地理数据文件、地图数据示例、KML GIS文件、Google Earth测试文件、地理空间数据示例'
+        },
+        schema: {
+          name: '免费KML示例文件 - 下载GIS和地图制作的Keyhole Markup Language测试文件',
+          description: '下载免费KML Keyhole Markup Language地理数据示例文件用于测试GIS应用程序、地图可视化和地理空间工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Google Earth、GIS软件、地图渲染、地理数据处理和地理空间分析工具。'
+        },
+        hero: {
+          title: 'KML示例文件',
+          description: '下载免费KML Keyhole Markup Language地理数据示例文件用于测试。提供多种文件大小，用于测试您的GIS软件、地图可视化和地理空间分析工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的KML (Keyhole Markup Language)地理数据文件'
+      },
+      kt: {
+        meta: {
+          title: '下载免费KT示例文件 - Android开发的Kotlin源代码测试文件 | MorphyHub',
+          description: '下载免费KT Kotlin源代码示例文件用于测试Kotlin编译、Android开发和JVM应用程序。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Kotlin编译器、Android Studio、Kotlin/JVM、IDE支持和Kotlin开发环境。',
+          keywords: 'KT示例文件、KT测试文件、下载KT示例、免费KT测试文件、Kotlin源代码文件、.kt测试文件、Kotlin编程文件、Android Kotlin文件、Kotlin编译器测试文件、Kotlin JVM示例、Kotlin开发测试文件'
+        },
+        schema: {
+          name: '免费KT示例文件 - 下载Android开发的Kotlin源代码测试文件',
+          description: '下载免费KT Kotlin源代码示例文件用于测试Kotlin编译、Android开发和JVM应用程序。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Kotlin编译器、Android Studio、Kotlin/JVM、IDE支持和Kotlin开发环境。'
+        },
+        hero: {
+          title: 'KT示例文件',
+          description: '下载免费KT Kotlin源代码示例文件用于测试。提供多种文件大小，用于测试您的Kotlin编译器、Android Studio和Kotlin开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的KT (Kotlin)源代码文件'
+      },
+      log: {
+        meta: {
+          title: '下载免费LOG示例文件 - 调试和系统分析的日志测试文件 | MorphyHub',
+          description: '下载免费LOG日志示例文件用于测试日志解析、系统分析和调试工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试日志分析器、系统监控工具、调试应用程序、日志聚合系统和系统诊断工具。',
+          keywords: 'LOG示例文件、LOG测试文件、下载LOG示例、免费LOG测试文件、日志文件、.log测试文件、系统日志文件、应用程序日志示例、日志解析器测试文件、日志调试文件、系统日志分析示例'
+        },
+        schema: {
+          name: '免费LOG示例文件 - 下载调试和系统分析的日志测试文件',
+          description: '下载免费LOG日志示例文件用于测试日志解析、系统分析和调试工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试日志分析器、系统监控工具、调试应用程序、日志聚合系统和系统诊断工具。'
+        },
+        hero: {
+          title: 'LOG示例文件',
+          description: '下载免费LOG日志示例文件用于测试。提供多种文件大小，用于测试您的日志分析器、系统监控和调试工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的LOG文件'
+      },
+      lua: {
+        meta: {
+          title: '下载免费LUA示例文件 - 游戏开发和自动化的Lua脚本测试文件 | MorphyHub',
+          description: '下载免费LUA Lua脚本示例文件用于测试Lua执行、游戏开发和自动化工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Lua解释器、游戏引擎、脚本环境、自动化工具和嵌入式Lua应用程序。',
+          keywords: 'LUA示例文件、LUA测试文件、下载LUA示例、免费LUA测试文件、Lua脚本文件、.lua测试文件、Lua编程文件、游戏脚本文件、Lua解释器测试文件、自动化脚本示例、嵌入式Lua测试文件'
+        },
+        schema: {
+          name: '免费LUA示例文件 - 下载游戏开发和自动化的Lua脚本测试文件',
+          description: '下载免费LUA Lua脚本示例文件用于测试Lua执行、游戏开发和自动化工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Lua解释器、游戏引擎、脚本环境、自动化工具和嵌入式Lua应用程序。'
+        },
+        hero: {
+          title: 'LUA示例文件',
+          description: '下载免费LUA Lua脚本示例文件用于测试。提供多种文件大小，用于测试您的Lua解释器、游戏引擎和自动化工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的LUA (Lua脚本)文件'
+      },
+      m3u: {
+        meta: {
+          title: '下载免费M3U示例文件 - 媒体播放器的M3U播放列表测试文件 | MorphyHub',
+          description: '下载免费M3U M3U播放列表示例文件用于测试媒体播放器、播放列表解析和audio/video流式传输工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试媒体播放器、播放列表管理器、流式传输应用程序、audio播放器和video播放器软件。',
+          keywords: 'M3U示例文件、M3U测试文件、下载M3U示例、免费M3U测试文件、M3U播放列表文件、.m3u测试文件、媒体播放列表文件、audio播放列表示例、video播放列表文件、媒体播放器测试文件、流式传输播放列表示例'
+        },
+        schema: {
+          name: '免费M3U示例文件 - 下载媒体播放器的M3U播放列表测试文件',
+          description: '下载免费M3U M3U播放列表示例文件用于测试媒体播放器、播放列表解析和audio/video流式传输工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试媒体播放器、播放列表管理器、流式传输应用程序、audio播放器和video播放器软件。'
+        },
+        hero: {
+          title: 'M3U示例文件',
+          description: '下载免费M3U M3U播放列表示例文件用于测试。提供多种文件大小，用于测试您的媒体播放器、播放列表管理器和流式传输应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的M3U (播放列表)文件'
+      },
+      m3u8: {
+        meta: {
+          title: '下载免费M3U8示例文件 - video流式传输的M3U8 HLS播放列表测试文件 | MorphyHub',
+          description: '下载免费M3U8 M3U8 HLS (HTTP Live Streaming)播放列表示例文件用于测试video流式传输、HLS播放器和媒体交付工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试HLS播放器、video流式传输平台、自适应比特率流式传输、媒体服务器和video交付系统。',
+          keywords: 'M3U8示例文件、M3U8测试文件、下载M3U8示例、免费M3U8测试文件、M3U8 HLS播放列表文件、.m3u8测试文件、HTTP Live Streaming文件、video流式传输播放列表示例、HLS播放器测试文件、自适应流式传输示例、媒体服务器播放列表文件'
+        },
+        schema: {
+          name: '免费M3U8示例文件 - 下载video流式传输的M3U8 HLS播放列表测试文件',
+          description: '下载免费M3U8 M3U8 HLS (HTTP Live Streaming)播放列表示例文件用于测试video流式传输、HLS播放器和媒体交付工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试HLS播放器、video流式传输平台、自适应比特率流式传输、媒体服务器和video交付系统。'
+        },
+        hero: {
+          title: 'M3U8示例文件',
+          description: '下载免费M3U8 M3U8 HLS播放列表示例文件用于测试。提供多种文件大小，用于测试您的HLS播放器、video流式传输平台和媒体交付系统。'
+        },
+        about_description: '这些是用于测试目的的各种大小的M3U8 (HLS播放列表)文件'
+      },
+      makefile: {
+        meta: {
+          title: '下载免费Makefile示例文件 - Makefile构建配置测试文件 | MorphyHub',
+          description: '下载免费Makefile构建配置示例文件用于测试构建自动化、Make构建系统和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Make构建系统、构建自动化工具、C/C++编译、构建脚本和开发构建环境。',
+          keywords: 'Makefile示例文件、Makefile测试文件、下载Makefile示例、免费Makefile测试文件、Makefile构建文件、Makefile测试文件、构建配置文件、Make构建系统示例、C/C++构建文件、构建自动化测试文件、Makefile编译示例'
+        },
+        schema: {
+          name: '免费Makefile示例文件 - 下载Makefile构建配置测试文件',
+          description: '下载免费Makefile构建配置示例文件用于测试构建自动化、Make构建系统和开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Make构建系统、构建自动化工具、C/C++编译、构建脚本和开发构建环境。'
+        },
+        hero: {
+          title: 'Makefile示例文件',
+          description: '下载免费Makefile构建配置示例文件用于测试。提供多种文件大小，用于测试您的Make构建系统、构建自动化工具和开发构建环境。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Makefile (构建配置)文件'
+      },
+      mbtiles: {
+        meta: {
+          title: '下载免费MBTiles示例文件 - MBTiles地图瓦片数据库测试文件 | MorphyHub',
+          description: '下载免费MBTiles地图瓦片数据库示例文件用于测试地图渲染、GIS应用程序和制图工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试地图瓦片服务器、GIS软件、地图渲染引擎、移动制图应用程序和离线地图工具。',
+          keywords: 'MBTiles示例文件、MBTiles测试文件、下载MBTiles示例、免费MBTiles测试文件、MBTiles地图瓦片文件、.mbtiles测试文件、地图数据库文件、GIS瓦片示例、地图渲染文件、移动地图测试文件、离线地图瓦片示例'
+        },
+        schema: {
+          name: '免费MBTiles示例文件 - 下载MBTiles地图瓦片数据库测试文件',
+          description: '下载免费MBTiles地图瓦片数据库示例文件用于测试地图渲染、GIS应用程序和制图工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试地图瓦片服务器、GIS软件、地图渲染引擎、移动制图应用程序和离线地图工具。'
+        },
+        hero: {
+          title: 'MBTiles示例文件',
+          description: '下载免费MBTiles地图瓦片数据库示例文件用于测试。提供多种文件大小，用于测试您的地图瓦片服务器、GIS软件和地图渲染引擎。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MBTiles (地图瓦片数据库)文件'
+      },
+      md: {
+        meta: {
+          title: '下载免费MD示例文件 - Markdown文档测试文件 | MorphyHub',
+          description: '下载免费MD Markdown文档示例文件用于测试Markdown解析、文档工具和内容管理系统。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Markdown解析器、文档生成器、静态站点生成器、GitHub Markdown和内容管理平台。',
+          keywords: 'MD示例文件、MD测试文件、下载MD示例、免费MD测试文件、Markdown文件、.md测试文件、Markdown文档文件、Markdown解析器测试文件、GitHub Markdown示例、静态站点生成器文件、文档生成器测试文件'
+        },
+        schema: {
+          name: '免费MD示例文件 - 下载Markdown文档测试文件',
+          description: '下载免费MD Markdown文档示例文件用于测试Markdown解析、文档工具和内容管理系统。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Markdown解析器、文档生成器、静态站点生成器、GitHub Markdown和内容管理平台。'
+        },
+        hero: {
+          title: 'MD示例文件',
+          description: '下载免费MD Markdown文档示例文件用于测试。提供多种文件大小，用于测试您的Markdown解析器、文档生成器和内容管理系统。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MD (Markdown)文件'
+      },
+      mdx: {
+        meta: {
+          title: '下载免费MDX示例文件 - 文档的MDX React Markdown测试文件 | MorphyHub',
+          description: '下载免费MDX MDX (Markdown + JSX)示例文件用于测试React文档、静态站点生成器和内容管理系统。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试MDX解析器、React文档工具、Next.js、Gatsby、静态站点生成器和现代文档平台。',
+          keywords: 'MDX示例文件、MDX测试文件、下载MDX示例、免费MDX测试文件、MDX React Markdown文件、.mdx测试文件、React文档文件、MDX解析器测试文件、MDX Next.js示例、MDX Gatsby文件、静态站点生成器MDX测试文件'
+        },
+        schema: {
+          name: '免费MDX示例文件 - 下载文档的MDX React Markdown测试文件',
+          description: '下载免费MDX MDX (Markdown + JSX)示例文件用于测试React文档、静态站点生成器和内容管理系统。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试MDX解析器、React文档工具、Next.js、Gatsby、静态站点生成器和现代文档平台。'
+        },
+        hero: {
+          title: 'MDX示例文件',
+          description: '下载免费MDX MDX (Markdown + JSX)示例文件用于测试。提供多种文件大小，用于测试您的MDX解析器、React文档工具和静态站点生成器。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MDX (Markdown + JSX)文件'
       }
     }
   }

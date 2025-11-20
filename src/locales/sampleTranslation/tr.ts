@@ -479,6 +479,534 @@ export const tr: SamplePageTranslations = {
           description: 'Test için ücretsiz HPP C++ başlık dosyası örnek dosyalarını indirin. C++ kodu derleme araçlarınızı, başlık dosyası işleme yazılımınızı ve C++ geliştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
         },
         about_description: 'Bunlar test amaçlı çeşitli boyutlarda HPP (C++ header) dosyalarıdır'
+      },
+      hex: {
+        meta: {
+          title: 'Ücretsiz HEX örnek dosyaları indirin - Firmware ve gömülü sistem geliştirme için hex test dosyaları | MorphyHub',
+          description: 'Firmware programlama, gömülü sistem geliştirme ve ikili veri analizini test etmek için ücretsiz HEX hex örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hex editörler, firmware yükleyiciler, mikrodenetleyici programlama ve gömülü geliştirme araçlarını test etmek için mükemmel.',
+          keywords: 'HEX örnek dosyaları, HEX test dosyaları, HEX örnekleri indir, ücretsiz HEX test dosyaları, hex dosyaları, hex firmware dosyaları, .hex test dosyaları, hex gömülü dosyalar, hex mikrodenetleyici dosyaları, hex editör test dosyaları, firmware programlama örnekleri, hex ikili dosyalar'
+        },
+        schema: {
+          name: 'Ücretsiz HEX örnek dosyaları - Firmware ve gömülü sistem geliştirme için hex test dosyalarını indirin',
+          description: 'Firmware programlama, gömülü sistem geliştirme ve ikili veri analizini test etmek için ücretsiz HEX hex örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hex editörler, firmware yükleyiciler, mikrodenetleyici programlama ve gömülü geliştirme araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'HEX örnek dosyaları',
+          description: 'Test için ücretsiz HEX hex örnek dosyalarını indirin. Hex editörlerinizi, firmware programlama araçlarınızı ve gömülü geliştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda HEX (hex) dosyalarıdır'
+      },
+      cs: {
+        meta: {
+          title: 'Ücretsiz CS örnek dosyaları indirin - .NET geliştirme için C# kaynak kodu test dosyaları | MorphyHub',
+          description: 'C# derleme, .NET geliştirme ve Visual Studio araçlarını test etmek için ücretsiz CS C# kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C# derleyicileri, .NET framework\'leri, Visual Studio IDE, kod analiz araçları ve C# geliştirme ortamlarını test etmek için mükemmel.',
+          keywords: 'CS örnek dosyaları, CS test dosyaları, CS örnekleri indir, ücretsiz CS test dosyaları, C# kaynak kodu örnekleri, .NET kod dosyaları, .cs test dosyaları, C# programlama dosyaları, Visual Studio test dosyaları, .NET geliştirme örnekleri, C# derleme test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz CS örnek dosyaları - .NET geliştirme için C# kaynak kodu test dosyalarını indirin',
+          description: 'C# derleme, .NET geliştirme ve Visual Studio araçlarını test etmek için ücretsiz CS C# kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. C# derleyicileri, .NET framework\'leri, Visual Studio IDE, kod analiz araçları ve C# geliştirme ortamlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CS örnek dosyaları',
+          description: 'Test için ücretsiz CS C# kaynak kodu örnek dosyalarını indirin. C# derlemenizi, .NET geliştirmenizi ve Visual Studio araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CS (C#) kaynak kodu dosyalarıdır'
+      },
+      css: {
+        meta: {
+          title: 'Ücretsiz CSS örnek dosyaları indirin - Web geliştirme için stylesheet test dosyaları | MorphyHub',
+          description: 'Web stillendirme, CSS ayrıştırma ve front-end araçlarını test etmek için ücretsiz CSS stylesheet örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CSS doğrulayıcıları, ön işlemciler (SASS, LESS), CSS küçültücüleri, web tarayıcıları ve front-end geliştirme framework\'lerini test etmek için mükemmel.',
+          keywords: 'CSS örnek dosyaları, CSS test dosyaları, CSS örnekleri indir, ücretsiz CSS test dosyaları, stylesheet örnekleri, CSS stylesheet dosyaları, .css test dosyaları, web stillendirme dosyaları, CSS parser test dosyaları, front-end geliştirme örnekleri, CSS framework test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz CSS örnek dosyaları - Web geliştirme için stylesheet test dosyalarını indirin',
+          description: 'Web stillendirme, CSS ayrıştırma ve front-end araçlarını test etmek için ücretsiz CSS stylesheet örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CSS doğrulayıcıları, ön işlemciler (SASS, LESS), CSS küçültücüleri, web tarayıcıları ve front-end geliştirme framework\'lerini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CSS örnek dosyaları',
+          description: 'Test için ücretsiz CSS stylesheet örnek dosyalarını indirin. CSS doğrulayıcılarınızı, ön işlemcilerinizi ve web geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CSS (Cascading Style Sheets) dosyalarıdır'
+      },
+      csr: {
+        meta: {
+          title: 'Ücretsiz CSR örnek dosyaları indirin - SSL/TLS için sertifika imza isteği test dosyaları | MorphyHub',
+          description: 'SSL/TLS sertifika oluşturma, PKI yönetimi ve güvenlik araçlarını test etmek için ücretsiz CSR sertifika imza isteği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sertifika yetkilileri, OpenSSL, SSL sertifika oluşturma, PKI altyapısı ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.',
+          keywords: 'CSR örnek dosyaları, CSR test dosyaları, CSR örnekleri indir, ücretsiz CSR test dosyaları, sertifika imza isteği örnekleri, SSL sertifika dosyaları, .csr test dosyaları, PKI sertifika dosyaları, OpenSSL test dosyaları, SSL/TLS sertifika örnekleri, sertifika yetkisi test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz CSR örnek dosyaları - SSL/TLS için sertifika imza isteği test dosyalarını indirin',
+          description: 'SSL/TLS sertifika oluşturma, PKI yönetimi ve güvenlik araçlarını test etmek için ücretsiz CSR sertifika imza isteği örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sertifika yetkilileri, OpenSSL, SSL sertifika oluşturma, PKI altyapısı ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CSR örnek dosyaları',
+          description: 'Test için ücretsiz CSR sertifika imza isteği örnek dosyalarını indirin. SSL/TLS sertifika oluşturmanızı ve PKI yönetim araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CSR (Certificate Signing Request) dosyalarıdır'
+      },
+      'customer-database-sql': {
+        meta: {
+          title: 'Ücretsiz Customer Database SQL örnek dosyaları indirin - SQL veritabanı test dosyaları | MorphyHub',
+          description: 'SQL veritabanı işlemlerini, sorgu yürütmeyi ve veritabanı yönetim araçlarını test etmek için ücretsiz Customer Database SQL örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. SQL parser\'ları, veritabanı içe aktarma araçları, SQLite, MySQL, PostgreSQL ve veritabanı yönetim sistemlerini test etmek için mükemmel.',
+          keywords: 'Customer Database SQL örnek dosyaları, SQL veritabanı test dosyaları, SQL örnekleri indir, ücretsiz SQL test dosyaları, SQL veritabanı dosyaları, .sql test dosyaları, SQL sorgu dosyaları, veritabanı içe aktarma örnekleri, SQLite test dosyaları, MySQL örnekleri, PostgreSQL test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz Customer Database SQL örnek dosyaları - SQL veritabanı test dosyalarını indirin',
+          description: 'SQL veritabanı işlemlerini, sorgu yürütmeyi ve veritabanı yönetim araçlarını test etmek için ücretsiz Customer Database SQL örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. SQL parser\'ları, veritabanı içe aktarma araçları, SQLite, MySQL, PostgreSQL ve veritabanı yönetim sistemlerini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Customer Database SQL örnek dosyaları',
+          description: 'Test için ücretsiz Customer Database SQL örnek dosyalarını indirin. SQL parser\'larınızı, veritabanı içe aktarma araçlarınızı ve veritabanı yönetim sistemlerinizi test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Customer Database SQL dosyalarıdır'
+      },
+      dbf: {
+        meta: {
+          title: 'Ücretsiz DBF örnek dosyaları indirin - Veri yönetimi için dBASE veritabanı test dosyaları | MorphyHub',
+          description: 'Veritabanı işlemlerini, veri içe/dışa aktarmayı ve eski veritabanı formatlarını test etmek için ücretsiz DBF dBASE veritabanı örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. dBASE uyumluluğu, veritabanı dönüştürücüleri, veri migrasyon araçları, elektronik tablo uygulamaları ve veritabanı yönetim sistemlerini test etmek için mükemmel.',
+          keywords: 'DBF örnek dosyaları, DBF test dosyaları, DBF örnekleri indir, ücretsiz DBF test dosyaları, dBASE veritabanı dosyaları, .dbf test dosyaları, veritabanı format dosyaları, eski veritabanı örnekleri, dBASE uyumluluk test dosyaları, veri içe aktarma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz DBF örnek dosyaları - Veri yönetimi için dBASE veritabanı test dosyalarını indirin',
+          description: 'Veritabanı işlemlerini, veri içe/dışa aktarmayı ve eski veritabanı formatlarını test etmek için ücretsiz DBF dBASE veritabanı örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. dBASE uyumluluğu, veritabanı dönüştürücüleri, veri migrasyon araçları, elektronik tablo uygulamaları ve veritabanı yönetim sistemlerini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DBF örnek dosyaları',
+          description: 'Test için ücretsiz DBF dBASE veritabanı örnek dosyalarını indirin. Veritabanı dönüştürücülerinizi, veri migrasyon araçlarınızı ve veritabanı yönetim sistemlerinizi test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DBF (dBASE veritabanı) dosyalarıdır'
+      },
+      dem: {
+        meta: {
+          title: 'Ücretsiz DEM örnek dosyaları indirin - GIS ve haritalama için dijital yükseklik modeli test dosyaları | MorphyHub',
+          description: 'GIS uygulamalarını, arazi haritalamayı ve coğrafi uzamsal analiz araçlarını test etmek için ücretsiz DEM dijital yükseklik modeli örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GIS yazılımları, arazi görselleştirme, yükseklik verisi işleme, haritalama uygulamaları ve coğrafi uzamsal analiz araçlarını test etmek için mükemmel.',
+          keywords: 'DEM örnek dosyaları, DEM test dosyaları, DEM örnekleri indir, ücretsiz DEM test dosyaları, dijital yükseklik modeli dosyaları, .dem test dosyaları, GIS yükseklik dosyaları, arazi verisi örnekleri, coğrafi uzamsal veri dosyaları, haritalama test dosyaları, yükseklik modeli örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz DEM örnek dosyaları - GIS ve haritalama için dijital yükseklik modeli test dosyalarını indirin',
+          description: 'GIS uygulamalarını, arazi haritalamayı ve coğrafi uzamsal analiz araçlarını test etmek için ücretsiz DEM dijital yükseklik modeli örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GIS yazılımları, arazi görselleştirme, yükseklik verisi işleme, haritalama uygulamaları ve coğrafi uzamsal analiz araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DEM örnek dosyaları',
+          description: 'Test için ücretsiz DEM dijital yükseklik modeli örnek dosyalarını indirin. GIS yazılımınızı, arazi görselleştirmenizi ve coğrafi uzamsal analiz araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DEM (Digital Elevation Model) dosyalarıdır'
+      },
+      der: {
+        meta: {
+          title: 'Ücretsiz DER örnek dosyaları indirin - Distinguished Encoding Rules sertifika test dosyaları | MorphyHub',
+          description: 'SSL/TLS sertifikalarını, PKI yönetimini ve güvenlik araçlarını test etmek için ücretsiz DER Distinguished Encoding Rules sertifika örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sertifika ayrıştırma, OpenSSL, PKI altyapısı, SSL sertifika doğrulama ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.',
+          keywords: 'DER örnek dosyaları, DER test dosyaları, DER örnekleri indir, ücretsiz DER test dosyaları, Distinguished Encoding Rules dosyaları, .der test dosyaları, sertifika dosyaları, SSL sertifika örnekleri, PKI sertifika dosyaları, OpenSSL test dosyaları, sertifika ayrıştırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz DER örnek dosyaları - Distinguished Encoding Rules sertifika test dosyalarını indirin',
+          description: 'SSL/TLS sertifikalarını, PKI yönetimini ve güvenlik araçlarını test etmek için ücretsiz DER Distinguished Encoding Rules sertifika örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Sertifika ayrıştırma, OpenSSL, PKI altyapısı, SSL sertifika doğrulama ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DER örnek dosyaları',
+          description: 'Test için ücretsiz DER Distinguished Encoding Rules sertifika örnek dosyalarını indirin. Sertifika ayrıştırmanızı, OpenSSL\'inizi ve PKI yönetim araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DER (Distinguished Encoding Rules) sertifika dosyalarıdır'
+      },
+      dmp: {
+        meta: {
+          title: 'Ücretsiz DMP örnek dosyaları indirin - Hata ayıklama ve analiz için bellek dökümü test dosyaları | MorphyHub',
+          description: 'Çökme analizi, hata ayıklama araçları ve sistem tanılamayı test etmek için ücretsiz DMP bellek dökümü örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hata ayıklayıcılar, çökme analiz araçları, bellek analizörleri, sistem tanılama araçları ve adli analiz uygulamalarını test etmek için mükemmel.',
+          keywords: 'DMP örnek dosyaları, DMP test dosyaları, DMP örnekleri indir, ücretsiz DMP test dosyaları, bellek dökümü dosyaları, .dmp test dosyaları, çökme dökümü dosyaları, hata ayıklama dosyaları, sistem dökümü örnekleri, bellek analizi dosyaları, çökme analizi test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz DMP örnek dosyaları - Hata ayıklama ve analiz için bellek dökümü test dosyalarını indirin',
+          description: 'Çökme analizi, hata ayıklama araçları ve sistem tanılamayı test etmek için ücretsiz DMP bellek dökümü örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hata ayıklayıcılar, çökme analiz araçları, bellek analizörleri, sistem tanılama araçları ve adli analiz uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DMP örnek dosyaları',
+          description: 'Test için ücretsiz DMP bellek dökümü örnek dosyalarını indirin. Çökme analizinizi, hata ayıklamanızı ve sistem tanılama araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DMP (bellek dökümü) dosyalarıdır'
+      },
+      'docker-compose-yml': {
+        meta: {
+          title: 'Ücretsiz Docker Compose YML örnek dosyaları indirin - Docker Compose yapılandırma test dosyaları | MorphyHub',
+          description: 'Docker container orkestrasyonunu, çoklu container uygulamalarını ve DevOps araçlarını test etmek için ücretsiz Docker Compose YML yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Docker Compose, container orkestrasyonu, YAML ayrıştırma, DevOps otomasyonu ve containerize edilmiş uygulama dağıtım araçlarını test etmek için mükemmel.',
+          keywords: 'Docker Compose YML örnek dosyaları, docker-compose test dosyaları, docker-compose örnekleri indir, ücretsiz docker-compose test dosyaları, Docker Compose YAML dosyaları, .yml test dosyaları, container orkestrasyonu dosyaları, DevOps yapılandırma örnekleri, Docker Compose test dosyaları, çoklu container yapılandırma örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Docker Compose YML örnek dosyaları - Docker Compose yapılandırma test dosyalarını indirin',
+          description: 'Docker container orkestrasyonunu, çoklu container uygulamalarını ve DevOps araçlarını test etmek için ücretsiz Docker Compose YML yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Docker Compose, container orkestrasyonu, YAML ayrıştırma, DevOps otomasyonu ve containerize edilmiş uygulama dağıtım araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Docker Compose YML örnek dosyaları',
+          description: 'Test için ücretsiz Docker Compose YML yapılandırma örnek dosyalarını indirin. Docker Compose\'unuzu, container orkestrasyonunuzu ve DevOps otomasyon araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Docker Compose YML yapılandırma dosyalarıdır'
+      },
+      dockerfile: {
+        meta: {
+          title: 'Ücretsiz Dockerfile örnek dosyaları indirin - Docker container build test dosyaları | MorphyHub',
+          description: 'Containerizasyonu, Docker build\'i ve DevOps araçlarını test etmek için ücretsiz Dockerfile Docker container build örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Docker build, container image oluşturma, Dockerfile ayrıştırma, containerizasyon araçları ve DevOps otomasyon platformlarını test etmek için mükemmel.',
+          keywords: 'Dockerfile örnek dosyaları, Dockerfile test dosyaları, Dockerfile örnekleri indir, ücretsiz Dockerfile test dosyaları, Docker container dosyaları, Dockerfile test dosyaları, container build dosyaları, Docker build örnekleri, containerizasyon test dosyaları, DevOps Docker örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Dockerfile örnek dosyaları - Docker container build test dosyalarını indirin',
+          description: 'Containerizasyonu, Docker build\'i ve DevOps araçlarını test etmek için ücretsiz Dockerfile Docker container build örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Docker build, container image oluşturma, Dockerfile ayrıştırma, containerizasyon araçları ve DevOps otomasyon platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Dockerfile örnek dosyaları',
+          description: 'Test için ücretsiz Dockerfile Docker container build örnek dosyalarını indirin. Docker build\'lerinizi, container image oluşturmanızı ve containerizasyon araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Dockerfile (Docker container build) dosyalarıdır'
+      },
+      editorconfig: {
+        meta: {
+          title: 'Ücretsiz EditorConfig örnek dosyaları indirin - Editör yapılandırma test dosyaları | MorphyHub',
+          description: 'Kod editörü ayarlarını, format tutarlılığını ve geliştirme araçlarını test etmek için ücretsiz EditorConfig editör yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EditorConfig parser\'ları, kod editörü eklentileri, format araçları, IDE yapılandırması ve geliştirme ortamı kurulum araçlarını test etmek için mükemmel.',
+          keywords: 'EditorConfig örnek dosyaları, EditorConfig test dosyaları, EditorConfig örnekleri indir, ücretsiz EditorConfig test dosyaları, editör yapılandırma dosyaları, .editorconfig test dosyaları, kod editörü ayar dosyaları, IDE yapılandırma örnekleri, format yapılandırma dosyaları, editör ayar test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz EditorConfig örnek dosyaları - Editör yapılandırma test dosyalarını indirin',
+          description: 'Kod editörü ayarlarını, format tutarlılığını ve geliştirme araçlarını test etmek için ücretsiz EditorConfig editör yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. EditorConfig parser\'ları, kod editörü eklentileri, format araçları, IDE yapılandırması ve geliştirme ortamı kurulum araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'EditorConfig örnek dosyaları',
+          description: 'Test için ücretsiz EditorConfig editör yapılandırma örnek dosyalarını indirin. EditorConfig parser\'larınızı, kod editörü eklentilerinizi ve format araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda EditorConfig (editör yapılandırma) dosyalarıdır'
+      },
+      ini: {
+        meta: {
+          title: 'Ücretsiz INI örnek dosyaları indirin - Uygulamalar için INI yapılandırma test dosyaları | MorphyHub',
+          description: 'Uygulama ayarlarını, INI dosya ayrıştırmayı ve yapılandırma yönetim araçlarını test etmek için ücretsiz INI yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. INI parser\'ları, uygulama yapılandırması, ayar yönetimi, Windows INI dosyaları ve yazılım yapılandırma yardımcı programlarını test etmek için mükemmel.',
+          keywords: 'INI örnek dosyaları, INI test dosyaları, INI örnekleri indir, ücretsiz INI test dosyaları, INI yapılandırma dosyaları, .ini test dosyaları, uygulama ayar dosyaları, INI yapılandırma örnekleri, Windows INI dosyaları, yapılandırma dosyası örnekleri, INI ayrıştırma test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz INI örnek dosyaları - Uygulamalar için INI yapılandırma test dosyalarını indirin',
+          description: 'Uygulama ayarlarını, INI dosya ayrıştırmayı ve yapılandırma yönetim araçlarını test etmek için ücretsiz INI yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. INI parser\'ları, uygulama yapılandırması, ayar yönetimi, Windows INI dosyaları ve yazılım yapılandırma yardımcı programlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'INI örnek dosyaları',
+          description: 'Test için ücretsiz INI yapılandırma örnek dosyalarını indirin. INI parser\'larınızı, uygulama yapılandırmanızı ve ayar yönetim araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda INI (yapılandırma) dosyalarıdır'
+      },
+      intelhex: {
+        meta: {
+          title: 'Ücretsiz IntelHex örnek dosyaları indirin - Firmware geliştirme için Intel hex test dosyaları | MorphyHub',
+          description: 'Firmware programlamayı, gömülü sistem geliştirmeyi ve mikrodenetleyici araçlarını test etmek için ücretsiz IntelHex Intel hex örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IntelHex parser\'ları, firmware yükleyiciler, mikrodenetleyici programlama, gömülü geliştirme araçları ve hex dosya işleme uygulamalarını test etmek için mükemmel.',
+          keywords: 'IntelHex örnek dosyaları, IntelHex test dosyaları, IntelHex örnekleri indir, ücretsiz IntelHex test dosyaları, Intel hex dosyaları, .intelhex test dosyaları, hex firmware dosyaları, hex gömülü dosyalar, hex mikrodenetleyici dosyaları, IntelHex parser test dosyaları, firmware programlama örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz IntelHex örnek dosyaları - Firmware geliştirme için Intel hex test dosyalarını indirin',
+          description: 'Firmware programlamayı, gömülü sistem geliştirmeyi ve mikrodenetleyici araçlarını test etmek için ücretsiz IntelHex Intel hex örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IntelHex parser\'ları, firmware yükleyiciler, mikrodenetleyici programlama, gömülü geliştirme araçları ve hex dosya işleme uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'IntelHex örnek dosyaları',
+          description: 'Test için ücretsiz IntelHex Intel hex örnek dosyalarını indirin. IntelHex parser\'larınızı, firmware yükleyicilerinizi ve gömülü geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda IntelHex (Intel hex) dosyalarıdır'
+      },
+      ipynb: {
+        meta: {
+          title: 'Ücretsiz IPYNB örnek dosyaları indirin - Veri bilimi için Jupyter Notebook test dosyaları | MorphyHub',
+          description: 'Veri bilimi iş akışlarını, Python yürütmeyi ve notebook analiz araçlarını test etmek için ücretsiz IPYNB Jupyter Notebook örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Jupyter Notebook, Python veri bilimi araçları, notebook görüntüleyiciler, veri analiz uygulamaları ve bilimsel hesaplama platformlarını test etmek için mükemmel.',
+          keywords: 'IPYNB örnek dosyaları, IPYNB test dosyaları, IPYNB örnekleri indir, ücretsiz IPYNB test dosyaları, Jupyter Notebook dosyaları, .ipynb test dosyaları, Python notebook dosyaları, veri bilimi notebook örnekleri, Jupyter test dosyaları, notebook analiz dosyaları, veri bilimi iş akışı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz IPYNB örnek dosyaları - Veri bilimi için Jupyter Notebook test dosyalarını indirin',
+          description: 'Veri bilimi iş akışlarını, Python yürütmeyi ve notebook analiz araçlarını test etmek için ücretsiz IPYNB Jupyter Notebook örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Jupyter Notebook, Python veri bilimi araçları, notebook görüntüleyiciler, veri analiz uygulamaları ve bilimsel hesaplama platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'IPYNB örnek dosyaları',
+          description: 'Test için ücretsiz IPYNB Jupyter Notebook örnek dosyalarını indirin. Jupyter Notebook\'unuzu, Python veri bilimi araçlarınızı ve notebook analiz uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda IPYNB (Jupyter Notebook) dosyalarıdır'
+      },
+      java: {
+        meta: {
+          title: 'Ücretsiz Java örnek dosyaları indirin - Geliştirme için Java kaynak kodu test dosyaları | MorphyHub',
+          description: 'Java derlemeyi, JVM uygulamalarını ve geliştirme araçlarını test etmek için ücretsiz Java Java kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Java derleyicileri, JVM, IDE desteği (Eclipse, IntelliJ), Java build araçları (Maven, Gradle) ve Java geliştirme ortamlarını test etmek için mükemmel.',
+          keywords: 'Java örnek dosyaları, Java test dosyaları, Java örnekleri indir, ücretsiz Java test dosyaları, Java kaynak kodu dosyaları, .java test dosyaları, Java programlama dosyaları, JVM test dosyaları, Java derleme örnekleri, Java IDE test dosyaları, Java geliştirme örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Java örnek dosyaları - Geliştirme için Java kaynak kodu test dosyalarını indirin',
+          description: 'Java derlemeyi, JVM uygulamalarını ve geliştirme araçlarını test etmek için ücretsiz Java Java kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Java derleyicileri, JVM, IDE desteği (Eclipse, IntelliJ), Java build araçları (Maven, Gradle) ve Java geliştirme ortamlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Java örnek dosyaları',
+          description: 'Test için ücretsiz Java Java kaynak kodu örnek dosyalarını indirin. Java derleyicilerinizi, JVM\'inizi ve Java geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Java kaynak kodu dosyalarıdır'
+      },
+      jks: {
+        meta: {
+          title: 'Ücretsiz JKS örnek dosyaları indirin - SSL/TLS güvenliği için Java KeyStore test dosyaları | MorphyHub',
+          description: 'SSL/TLS sertifika depolamayı, Java güvenliğini ve PKI yönetim araçlarını test etmek için ücretsiz JKS Java KeyStore örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Java KeyStore yönetimi, JKS ayrıştırma, SSL sertifika depolama, Java güvenlik araçları ve PKI altyapısını test etmek için mükemmel.',
+          keywords: 'JKS örnek dosyaları, JKS test dosyaları, JKS örnekleri indir, ücretsiz JKS test dosyaları, Java KeyStore dosyaları, .jks test dosyaları, SSL sertifika dosyaları, Java güvenlik dosyaları, keystore test dosyaları, PKI sertifika örnekleri, Java KeyStore yönetimi test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz JKS örnek dosyaları - SSL/TLS güvenliği için Java KeyStore test dosyalarını indirin',
+          description: 'SSL/TLS sertifika depolamayı, Java güvenliğini ve PKI yönetim araçlarını test etmek için ücretsiz JKS Java KeyStore örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Java KeyStore yönetimi, JKS ayrıştırma, SSL sertifika depolama, Java güvenlik araçları ve PKI altyapısını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JKS örnek dosyaları',
+          description: 'Test için ücretsiz JKS Java KeyStore örnek dosyalarını indirin. Java KeyStore yönetiminizi, JKS ayrıştırmanızı ve SSL sertifika depolama araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JKS (Java KeyStore) dosyalarıdır'
+      },
+      json: {
+        meta: {
+          title: 'Ücretsiz JSON örnek dosyaları indirin - Web geliştirme için JSON veri test dosyaları | MorphyHub',
+          description: 'JSON ayrıştırmayı, API entegrasyonunu ve web geliştirme araçlarını test etmek için ücretsiz JSON JSON veri örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JSON parser\'ları, API yanıtları, veri değişim formatları, web uygulamaları ve JSON doğrulama araçlarını test etmek için mükemmel.',
+          keywords: 'JSON örnek dosyaları, JSON test dosyaları, JSON örnekleri indir, ücretsiz JSON test dosyaları, JSON veri dosyaları, .json test dosyaları, JSON API dosyaları, JSON parser test dosyaları, veri değişim örnekleri, JSON web dosyaları, JSON doğrulama test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz JSON örnek dosyaları - Web geliştirme için JSON veri test dosyalarını indirin',
+          description: 'JSON ayrıştırmayı, API entegrasyonunu ve web geliştirme araçlarını test etmek için ücretsiz JSON JSON veri örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JSON parser\'ları, API yanıtları, veri değişim formatları, web uygulamaları ve JSON doğrulama araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JSON örnek dosyaları',
+          description: 'Test için ücretsiz JSON JSON veri örnek dosyalarını indirin. JSON parser\'larınızı, API entegrasyonunuzu ve web geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JSON (JavaScript Object Notation) dosyalarıdır'
+      },
+      jsonl: {
+        meta: {
+          title: 'Ücretsiz JSONL örnek dosyaları indirin - Veri işleme için JSON Lines test dosyaları | MorphyHub',
+          description: 'Veri işlemeyi, JSON streaming\'i ve big data araçlarını test etmek için ücretsiz JSONL JSON Lines örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JSONL parser\'ları, veri streaming uygulamaları, ETL araçları, big data işleme ve log dosyası analiz araçlarını test etmek için mükemmel.',
+          keywords: 'JSONL örnek dosyaları, JSONL test dosyaları, JSONL örnekleri indir, ücretsiz JSONL test dosyaları, JSON Lines dosyaları, .jsonl test dosyaları, JSON streaming dosyaları, veri işleme örnekleri, JSON ETL dosyaları, JSON big data örnekleri, JSON log analiz dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz JSONL örnek dosyaları - Veri işleme için JSON Lines test dosyalarını indirin',
+          description: 'Veri işlemeyi, JSON streaming\'i ve big data araçlarını test etmek için ücretsiz JSONL JSON Lines örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JSONL parser\'ları, veri streaming uygulamaları, ETL araçları, big data işleme ve log dosyası analiz araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JSONL örnek dosyaları',
+          description: 'Test için ücretsiz JSONL JSON Lines örnek dosyalarını indirin. JSONL parser\'larınızı, veri streaming uygulamalarınızı ve big data işleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JSONL (JSON Lines) dosyalarıdır'
+      },
+      js: {
+        meta: {
+          title: 'Ücretsiz JS örnek dosyaları indirin - Web geliştirme için JavaScript kaynak kodu test dosyaları | MorphyHub',
+          description: 'JavaScript yürütmeyi, web geliştirmeyi ve front-end araçlarını test etmek için ücretsiz JS JavaScript kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JavaScript motorları, Node.js, web tarayıcıları, JavaScript küçültücüleri, kod analiz araçları ve front-end geliştirme framework\'lerini test etmek için mükemmel.',
+          keywords: 'JS örnek dosyaları, JS test dosyaları, JS örnekleri indir, ücretsiz JS test dosyaları, JavaScript kaynak kodu dosyaları, .js test dosyaları, JavaScript programlama dosyaları, Node.js test dosyaları, JavaScript web dosyaları, JS küçültücü test dosyaları, front-end geliştirme örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz JS örnek dosyaları - Web geliştirme için JavaScript kaynak kodu test dosyalarını indirin',
+          description: 'JavaScript yürütmeyi, web geliştirmeyi ve front-end araçlarını test etmek için ücretsiz JS JavaScript kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JavaScript motorları, Node.js, web tarayıcıları, JavaScript küçültücüleri, kod analiz araçları ve front-end geliştirme framework\'lerini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JS örnek dosyaları',
+          description: 'Test için ücretsiz JS JavaScript kaynak kodu örnek dosyalarını indirin. JavaScript motorlarınızı, Node.js\'inizi ve web geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JS (JavaScript) kaynak kodu dosyalarıdır'
+      },
+      jsx: {
+        meta: {
+          title: 'Ücretsiz JSX örnek dosyaları indirin - Front-end geliştirme için React JSX test dosyaları | MorphyHub',
+          description: 'React geliştirmeyi, JSX derlemeyi ve front-end framework\'lerini test etmek için ücretsiz JSX React JSX örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. React, JSX transpiler\'ları (Babel), front-end build araçları, React geliştirme ortamları ve modern JavaScript framework\'lerini test etmek için mükemmel.',
+          keywords: 'JSX örnek dosyaları, JSX test dosyaları, JSX örnekleri indir, ücretsiz JSX test dosyaları, React JSX dosyaları, .jsx test dosyaları, React component dosyaları, JSX transpiler test dosyaları, JSX front-end dosyaları, React geliştirme örnekleri, Babel JSX test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz JSX örnek dosyaları - Front-end geliştirme için React JSX test dosyalarını indirin',
+          description: 'React geliştirmeyi, JSX derlemeyi ve front-end framework\'lerini test etmek için ücretsiz JSX React JSX örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. React, JSX transpiler\'ları (Babel), front-end build araçları, React geliştirme ortamları ve modern JavaScript framework\'lerini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JSX örnek dosyaları',
+          description: 'Test için ücretsiz JSX React JSX örnek dosyalarını indirin. React\'inizi, JSX transpiler\'larınızı ve front-end geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JSX (React JSX) dosyalarıdır'
+      },
+      jwt: {
+        meta: {
+          title: 'Ücretsiz JWT örnek dosyaları indirin - API güvenliği için JSON Web Token test dosyaları | MorphyHub',
+          description: 'API kimlik doğrulamayı, JWT token ayrıştırmayı ve güvenlik araçlarını test etmek için ücretsiz JWT JSON Web Token örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JWT parser\'ları, API kimlik doğrulama, token doğrulama, OAuth 2.0 ve güvenlik test araçlarını test etmek için mükemmel.',
+          keywords: 'JWT örnek dosyaları, JWT test dosyaları, JWT örnekleri indir, ücretsiz JWT test dosyaları, JSON Web Token dosyaları, .jwt test dosyaları, kimlik doğrulama token dosyaları, API güvenlik dosyaları, JWT parser test dosyaları, OAuth token örnekleri, güvenlik test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz JWT örnek dosyaları - API güvenliği için JSON Web Token test dosyalarını indirin',
+          description: 'API kimlik doğrulamayı, JWT token ayrıştırmayı ve güvenlik araçlarını test etmek için ücretsiz JWT JSON Web Token örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JWT parser\'ları, API kimlik doğrulama, token doğrulama, OAuth 2.0 ve güvenlik test araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JWT örnek dosyaları',
+          description: 'Test için ücretsiz JWT JSON Web Token örnek dosyalarını indirin. JWT parser\'larınızı, API kimlik doğrulamanızı ve güvenlik araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JWT (JSON Web Token) dosyalarıdır'
+      },
+      key: {
+        meta: {
+          title: 'Ücretsiz KEY örnek dosyaları indirin - SSL/TLS güvenliği için özel anahtar test dosyaları | MorphyHub',
+          description: 'SSL/TLS sertifikalarını, kriptografik işlemleri ve güvenlik araçlarını test etmek için ücretsiz KEY özel anahtar örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Özel anahtar ayrıştırma, OpenSSL, SSL sertifika oluşturma, kriptografik kütüphaneler ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.',
+          keywords: 'KEY örnek dosyaları, KEY test dosyaları, KEY örnekleri indir, ücretsiz KEY test dosyaları, özel anahtar dosyaları, .key test dosyaları, SSL anahtar dosyaları, kriptografik anahtar dosyaları, OpenSSL test dosyaları, güvenlik anahtarı örnekleri, sertifika anahtarı test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz KEY örnek dosyaları - SSL/TLS güvenliği için özel anahtar test dosyalarını indirin',
+          description: 'SSL/TLS sertifikalarını, kriptografik işlemleri ve güvenlik araçlarını test etmek için ücretsiz KEY özel anahtar örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Özel anahtar ayrıştırma, OpenSSL, SSL sertifika oluşturma, kriptografik kütüphaneler ve güvenlik sertifika yönetim araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'KEY örnek dosyaları',
+          description: 'Test için ücretsiz KEY özel anahtar örnek dosyalarını indirin. Özel anahtar ayrıştırmanızı, OpenSSL\'inizi ve güvenlik sertifika yönetim araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda KEY (özel anahtar) dosyalarıdır'
+      },
+      kml: {
+        meta: {
+          title: 'Ücretsiz KML örnek dosyaları indirin - GIS ve haritalama için Keyhole Markup Language test dosyaları | MorphyHub',
+          description: 'GIS uygulamalarını, harita görselleştirmeyi ve coğrafi uzamsal araçları test etmek için ücretsiz KML Keyhole Markup Language coğrafi veri örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Google Earth, GIS yazılımları, harita renderleme, coğrafi veri işleme ve coğrafi uzamsal analiz araçlarını test etmek için mükemmel.',
+          keywords: 'KML örnek dosyaları, KML test dosyaları, KML örnekleri indir, ücretsiz KML test dosyaları, Keyhole Markup Language dosyaları, .kml test dosyaları, coğrafi veri dosyaları, harita verisi örnekleri, KML GIS dosyaları, Google Earth test dosyaları, coğrafi uzamsal veri örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz KML örnek dosyaları - GIS ve haritalama için Keyhole Markup Language test dosyalarını indirin',
+          description: 'GIS uygulamalarını, harita görselleştirmeyi ve coğrafi uzamsal araçları test etmek için ücretsiz KML Keyhole Markup Language coğrafi veri örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Google Earth, GIS yazılımları, harita renderleme, coğrafi veri işleme ve coğrafi uzamsal analiz araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'KML örnek dosyaları',
+          description: 'Test için ücretsiz KML Keyhole Markup Language coğrafi veri örnek dosyalarını indirin. GIS yazılımınızı, harita görselleştirmenizi ve coğrafi uzamsal analiz araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda KML (Keyhole Markup Language) coğrafi veri dosyalarıdır'
+      },
+      kt: {
+        meta: {
+          title: 'Ücretsiz KT örnek dosyaları indirin - Android geliştirme için Kotlin kaynak kodu test dosyaları | MorphyHub',
+          description: 'Kotlin derlemeyi, Android geliştirmeyi ve JVM uygulamalarını test etmek için ücretsiz KT Kotlin kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Kotlin derleyicileri, Android Studio, Kotlin/JVM, IDE desteği ve Kotlin geliştirme ortamlarını test etmek için mükemmel.',
+          keywords: 'KT örnek dosyaları, KT test dosyaları, KT örnekleri indir, ücretsiz KT test dosyaları, Kotlin kaynak kodu dosyaları, .kt test dosyaları, Kotlin programlama dosyaları, Android Kotlin dosyaları, Kotlin derleyici test dosyaları, Kotlin JVM örnekleri, Kotlin geliştirme test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz KT örnek dosyaları - Android geliştirme için Kotlin kaynak kodu test dosyalarını indirin',
+          description: 'Kotlin derlemeyi, Android geliştirmeyi ve JVM uygulamalarını test etmek için ücretsiz KT Kotlin kaynak kodu örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Kotlin derleyicileri, Android Studio, Kotlin/JVM, IDE desteği ve Kotlin geliştirme ortamlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'KT örnek dosyaları',
+          description: 'Test için ücretsiz KT Kotlin kaynak kodu örnek dosyalarını indirin. Kotlin derleyicilerinizi, Android Studio\'nuzu ve Kotlin geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda KT (Kotlin) kaynak kodu dosyalarıdır'
+      },
+      log: {
+        meta: {
+          title: 'Ücretsiz LOG örnek dosyaları indirin - Hata ayıklama ve sistem analizi için log test dosyaları | MorphyHub',
+          description: 'Log ayrıştırmayı, sistem analizini ve hata ayıklama araçlarını test etmek için ücretsiz LOG log örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Log analizörleri, sistem izleme araçları, hata ayıklama uygulamaları, log toplama sistemleri ve sistem tanılama araçlarını test etmek için mükemmel.',
+          keywords: 'LOG örnek dosyaları, LOG test dosyaları, LOG örnekleri indir, ücretsiz LOG test dosyaları, log dosyaları, .log test dosyaları, sistem log dosyaları, uygulama log örnekleri, log parser test dosyaları, log hata ayıklama dosyaları, sistem log analizi örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz LOG örnek dosyaları - Hata ayıklama ve sistem analizi için log test dosyalarını indirin',
+          description: 'Log ayrıştırmayı, sistem analizini ve hata ayıklama araçlarını test etmek için ücretsiz LOG log örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Log analizörleri, sistem izleme araçları, hata ayıklama uygulamaları, log toplama sistemleri ve sistem tanılama araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'LOG örnek dosyaları',
+          description: 'Test için ücretsiz LOG log örnek dosyalarını indirin. Log analizörlerinizi, sistem izlemenizi ve hata ayıklama araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda LOG dosyalarıdır'
+      },
+      lua: {
+        meta: {
+          title: 'Ücretsiz LUA örnek dosyaları indirin - Oyun geliştirme ve otomasyon için Lua script test dosyaları | MorphyHub',
+          description: 'Lua yürütmeyi, oyun geliştirmeyi ve otomasyon araçlarını test etmek için ücretsiz LUA Lua script örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Lua yorumlayıcıları, oyun motorları, script ortamları, otomasyon araçları ve gömülü Lua uygulamalarını test etmek için mükemmel.',
+          keywords: 'LUA örnek dosyaları, LUA test dosyaları, LUA örnekleri indir, ücretsiz LUA test dosyaları, Lua script dosyaları, .lua test dosyaları, Lua programlama dosyaları, oyun script dosyaları, Lua yorumlayıcı test dosyaları, otomasyon script örnekleri, gömülü Lua test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz LUA örnek dosyaları - Oyun geliştirme ve otomasyon için Lua script test dosyalarını indirin',
+          description: 'Lua yürütmeyi, oyun geliştirmeyi ve otomasyon araçlarını test etmek için ücretsiz LUA Lua script örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Lua yorumlayıcıları, oyun motorları, script ortamları, otomasyon araçları ve gömülü Lua uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'LUA örnek dosyaları',
+          description: 'Test için ücretsiz LUA Lua script örnek dosyalarını indirin. Lua yorumlayıcılarınızı, oyun motorlarınızı ve otomasyon araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda LUA (Lua script) dosyalarıdır'
+      },
+      m3u: {
+        meta: {
+          title: 'Ücretsiz M3U örnek dosyaları indirin - Medya oynatıcılar için M3U playlist test dosyaları | MorphyHub',
+          description: 'Medya oynatıcıları, playlist ayrıştırmayı ve ses/video streaming araçlarını test etmek için ücretsiz M3U M3U playlist örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Medya oynatıcıları, playlist yöneticileri, streaming uygulamaları, ses oynatıcıları ve video oynatıcı yazılımlarını test etmek için mükemmel.',
+          keywords: 'M3U örnek dosyaları, M3U test dosyaları, M3U örnekleri indir, ücretsiz M3U test dosyaları, M3U playlist dosyaları, .m3u test dosyaları, medya playlist dosyaları, ses playlist örnekleri, video playlist dosyaları, medya oynatıcı test dosyaları, streaming playlist örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz M3U örnek dosyaları - Medya oynatıcılar için M3U playlist test dosyalarını indirin',
+          description: 'Medya oynatıcıları, playlist ayrıştırmayı ve ses/video streaming araçlarını test etmek için ücretsiz M3U M3U playlist örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Medya oynatıcıları, playlist yöneticileri, streaming uygulamaları, ses oynatıcıları ve video oynatıcı yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'M3U örnek dosyaları',
+          description: 'Test için ücretsiz M3U M3U playlist örnek dosyalarını indirin. Medya oynatıcılarınızı, playlist yöneticilerinizi ve streaming uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda M3U (playlist) dosyalarıdır'
+      },
+      m3u8: {
+        meta: {
+          title: 'Ücretsiz M3U8 örnek dosyaları indirin - Video streaming için M3U8 HLS playlist test dosyaları | MorphyHub',
+          description: 'Video streaming\'i, HLS oynatıcıları ve medya dağıtım araçlarını test etmek için ücretsiz M3U8 M3U8 HLS (HTTP Live Streaming) playlist örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HLS oynatıcıları, video streaming platformları, uyarlanabilir bitrate streaming, medya sunucuları ve video dağıtım sistemlerini test etmek için mükemmel.',
+          keywords: 'M3U8 örnek dosyaları, M3U8 test dosyaları, M3U8 örnekleri indir, ücretsiz M3U8 test dosyaları, M3U8 HLS playlist dosyaları, .m3u8 test dosyaları, HTTP Live Streaming dosyaları, video streaming playlist örnekleri, HLS oynatıcı test dosyaları, uyarlanabilir streaming örnekleri, medya sunucu playlist dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz M3U8 örnek dosyaları - Video streaming için M3U8 HLS playlist test dosyalarını indirin',
+          description: 'Video streaming\'i, HLS oynatıcıları ve medya dağıtım araçlarını test etmek için ücretsiz M3U8 M3U8 HLS (HTTP Live Streaming) playlist örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. HLS oynatıcıları, video streaming platformları, uyarlanabilir bitrate streaming, medya sunucuları ve video dağıtım sistemlerini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'M3U8 örnek dosyaları',
+          description: 'Test için ücretsiz M3U8 M3U8 HLS playlist örnek dosyalarını indirin. HLS oynatıcılarınızı, video streaming platformlarınızı ve medya dağıtım sistemlerinizi test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda M3U8 (HLS playlist) dosyalarıdır'
+      },
+      makefile: {
+        meta: {
+          title: 'Ücretsiz Makefile örnek dosyaları indirin - Makefile build yapılandırma test dosyaları | MorphyHub',
+          description: 'Build otomasyonunu, Make build sistemini ve geliştirme araçlarını test etmek için ücretsiz Makefile build yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Make build sistemi, build otomasyon araçları, C/C++ derleme, build script\'leri ve geliştirme build ortamlarını test etmek için mükemmel.',
+          keywords: 'Makefile örnek dosyaları, Makefile test dosyaları, Makefile örnekleri indir, ücretsiz Makefile test dosyaları, Makefile build dosyaları, Makefile test dosyaları, build yapılandırma dosyaları, Make build sistemi örnekleri, C/C++ build dosyaları, build otomasyon test dosyaları, Makefile derleme örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Makefile örnek dosyaları - Makefile build yapılandırma test dosyalarını indirin',
+          description: 'Build otomasyonunu, Make build sistemini ve geliştirme araçlarını test etmek için ücretsiz Makefile build yapılandırma örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Make build sistemi, build otomasyon araçları, C/C++ derleme, build script\'leri ve geliştirme build ortamlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Makefile örnek dosyaları',
+          description: 'Test için ücretsiz Makefile build yapılandırma örnek dosyalarını indirin. Make build sisteminizi, build otomasyon araçlarınızı ve geliştirme build ortamlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Makefile (build yapılandırma) dosyalarıdır'
+      },
+      mbtiles: {
+        meta: {
+          title: 'Ücretsiz MBTiles örnek dosyaları indirin - MBTiles harita tile veritabanı test dosyaları | MorphyHub',
+          description: 'Harita renderlamayı, GIS uygulamalarını ve haritalama araçlarını test etmek için ücretsiz MBTiles harita tile veritabanı örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Harita tile sunucuları, GIS yazılımları, harita renderlama motorları, mobil haritalama uygulamaları ve offline harita araçlarını test etmek için mükemmel.',
+          keywords: 'MBTiles örnek dosyaları, MBTiles test dosyaları, MBTiles örnekleri indir, ücretsiz MBTiles test dosyaları, MBTiles harita tile dosyaları, .mbtiles test dosyaları, harita veritabanı dosyaları, GIS tile örnekleri, harita renderlama dosyaları, mobil harita test dosyaları, offline harita tile örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz MBTiles örnek dosyaları - MBTiles harita tile veritabanı test dosyalarını indirin',
+          description: 'Harita renderlamayı, GIS uygulamalarını ve haritalama araçlarını test etmek için ücretsiz MBTiles harita tile veritabanı örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Harita tile sunucuları, GIS yazılımları, harita renderlama motorları, mobil haritalama uygulamaları ve offline harita araçlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MBTiles örnek dosyaları',
+          description: 'Test için ücretsiz MBTiles harita tile veritabanı örnek dosyalarını indirin. Harita tile sunucularınızı, GIS yazılımınızı ve harita renderlama motorlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MBTiles (harita tile veritabanı) dosyalarıdır'
+      },
+      md: {
+        meta: {
+          title: 'Ücretsiz MD örnek dosyaları indirin - Markdown dokümantasyon test dosyaları | MorphyHub',
+          description: 'Markdown ayrıştırmayı, dokümantasyon araçlarını ve içerik yönetim sistemlerini test etmek için ücretsiz MD Markdown dokümantasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Markdown parser\'ları, dokümantasyon oluşturucuları, statik site oluşturucuları, GitHub Markdown ve içerik yönetim platformlarını test etmek için mükemmel.',
+          keywords: 'MD örnek dosyaları, MD test dosyaları, MD örnekleri indir, ücretsiz MD test dosyaları, Markdown dosyaları, .md test dosyaları, Markdown dokümantasyon dosyaları, Markdown parser test dosyaları, GitHub Markdown örnekleri, statik site oluşturucu dosyaları, dokümantasyon oluşturucu test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz MD örnek dosyaları - Markdown dokümantasyon test dosyalarını indirin',
+          description: 'Markdown ayrıştırmayı, dokümantasyon araçlarını ve içerik yönetim sistemlerini test etmek için ücretsiz MD Markdown dokümantasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Markdown parser\'ları, dokümantasyon oluşturucuları, statik site oluşturucuları, GitHub Markdown ve içerik yönetim platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MD örnek dosyaları',
+          description: 'Test için ücretsiz MD Markdown dokümantasyon örnek dosyalarını indirin. Markdown parser\'larınızı, dokümantasyon oluşturucularınızı ve içerik yönetim sistemlerinizi test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MD (Markdown) dosyalarıdır'
+      },
+      mdx: {
+        meta: {
+          title: 'Ücretsiz MDX örnek dosyaları indirin - Dokümantasyon için MDX React Markdown test dosyaları | MorphyHub',
+          description: 'React dokümantasyonunu, statik site oluşturucularını ve içerik yönetim sistemlerini test etmek için ücretsiz MDX MDX (Markdown + JSX) örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MDX parser\'ları, React dokümantasyon araçları, Next.js, Gatsby, statik site oluşturucuları ve modern dokümantasyon platformlarını test etmek için mükemmel.',
+          keywords: 'MDX örnek dosyaları, MDX test dosyaları, MDX örnekleri indir, ücretsiz MDX test dosyaları, MDX React Markdown dosyaları, .mdx test dosyaları, React dokümantasyon dosyaları, MDX parser test dosyaları, MDX Next.js örnekleri, MDX Gatsby dosyaları, statik site oluşturucu MDX test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz MDX örnek dosyaları - Dokümantasyon için MDX React Markdown test dosyalarını indirin',
+          description: 'React dokümantasyonunu, statik site oluşturucularını ve içerik yönetim sistemlerini test etmek için ücretsiz MDX MDX (Markdown + JSX) örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. MDX parser\'ları, React dokümantasyon araçları, Next.js, Gatsby, statik site oluşturucuları ve modern dokümantasyon platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MDX örnek dosyaları',
+          description: 'Test için ücretsiz MDX MDX (Markdown + JSX) örnek dosyalarını indirin. MDX parser\'larınızı, React dokümantasyon araçlarınızı ve statik site oluşturucularınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MDX (Markdown + JSX) dosyalarıdır'
       }
     }
   }
