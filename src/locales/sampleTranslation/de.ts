@@ -1263,6 +1263,262 @@ export const de: SamplePageTranslations = {
           description: 'Laden Sie kostenlose DWG-Beispieldateien für AutoCAD-Zeichnungen zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Software, AutoCAD-Kompatibilität und technischen Zeichentools zu testen.'
         },
         about_description: 'Dies sind DWG (AutoCAD-Zeichnung) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      dxf: {
+        meta: {
+          title: 'Kostenlose DXF-Beispieldateien herunterladen - Drawing Exchange Format Testdateien AutoCAD | MorphyHub',
+          description: 'Laden Sie kostenlose DXF Drawing Exchange Format-Beispieldateien zum Testen von CAD-Software, DXF-Konvertern und technischen Zeichentools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AutoCAD, CAD-Viewern, DXF-Parsern und Zeichnungsdatei-Austauschanwendungen.',
+          keywords: 'DXF-Beispieldateien, DXF-Testdateien, DXF-Beispiele herunterladen, kostenlose DXF-Testdateien, AutoCAD DXF-Dateien, Drawing Exchange Format-Dateien, CAD DXF-Dateien, DXF-Konverter-Testdateien, technische Zeichnungsdateien, DXF-Parser-Testdateien, CAD-Dateiaustausch-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose DXF-Beispieldateien - Drawing Exchange Format Testdateien herunterladen',
+          description: 'Laden Sie kostenlose DXF Drawing Exchange Format-Beispieldateien zum Testen von CAD-Software, DXF-Konvertern und technischen Zeichentools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AutoCAD, CAD-Viewern, DXF-Parsern und Zeichnungsdatei-Austauschanwendungen.'
+        },
+        hero: {
+          title: 'DXF-Beispieldateien',
+          description: 'Laden Sie kostenlose DXF Drawing Exchange Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Software, DXF-Konverter und technischen Zeichentools zu testen.'
+        },
+        about_description: 'Dies sind DXF (Drawing Exchange Format) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      ifc: {
+        meta: {
+          title: 'Kostenlose IFC-Beispieldateien herunterladen - Industry Foundation Classes BIM Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose IFC Industry Foundation Classes-Beispieldateien zum Testen von BIM-Software, IFC-Viewern, Building Information Modeling-Tools und Bauverwaltungsanwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Revit, ArchiCAD, IFC-Parsern, BIM-Viewern und Gebäudedesign-Software.',
+          keywords: 'IFC-Beispieldateien, IFC-Testdateien, IFC-Beispiele herunterladen, kostenlose IFC-Testdateien, Industry Foundation Classes-Dateien, BIM IFC-Dateien, Building Information Modeling-Dateien, IFC-Viewer-Testdateien, Bausoftware-Dateien, IFC-Parser-Testdateien, BIM-Austauschformat-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose IFC-Beispieldateien - Industry Foundation Classes BIM Testdateien herunterladen',
+          description: 'Laden Sie kostenlose IFC Industry Foundation Classes-Beispieldateien zum Testen von BIM-Software, IFC-Viewern, Building Information Modeling-Tools und Bauverwaltungsanwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Revit, ArchiCAD, IFC-Parsern, BIM-Viewern und Gebäudedesign-Software.'
+        },
+        hero: {
+          title: 'IFC-Beispieldateien',
+          description: 'Laden Sie kostenlose IFC Industry Foundation Classes-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre BIM-Software, IFC-Viewer und Building Information Modeling-Tools zu testen.'
+        },
+        about_description: 'Dies sind IFC (Industry Foundation Classes) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      iges: {
+        meta: {
+          title: 'Kostenlose IGES-Beispieldateien herunterladen - Initial Graphics Exchange Specification CAD Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose IGES Initial Graphics Exchange Specification-Beispieldateien zum Testen von CAD-Software, IGES-Konvertern, 3D-Modellierungstools und Engineering-Design-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Systemen, IGES-Parsern, 3D-Modellaustausch-Tools und Engineering-Software.',
+          keywords: 'IGES-Beispieldateien, IGES-Testdateien, IGES-Beispiele herunterladen, kostenlose IGES-Testdateien, Initial Graphics Exchange Specification-Dateien, CAD IGES-Dateien, 3D-Modellaustausch-Dateien, IGES-Konverter-Testdateien, Engineering-Design-Dateien, IGES-Parser-Testdateien, CAD-Austauschformat-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose IGES-Beispieldateien - Initial Graphics Exchange Specification CAD Testdateien herunterladen',
+          description: 'Laden Sie kostenlose IGES Initial Graphics Exchange Specification-Beispieldateien zum Testen von CAD-Software, IGES-Konvertern, 3D-Modellierungstools und Engineering-Design-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Systemen, IGES-Parsern, 3D-Modellaustausch-Tools und Engineering-Software.'
+        },
+        hero: {
+          title: 'IGES-Beispieldateien',
+          description: 'Laden Sie kostenlose IGES Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Software, IGES-Konverter und 3D-Modellierungstools zu testen.'
+        },
+        about_description: 'Dies sind IGES (Initial Graphics Exchange Specification) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      igs: {
+        meta: {
+          title: 'Kostenlose IGS-Beispieldateien herunterladen - Initial Graphics Exchange Specification CAD Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose IGS Initial Graphics Exchange Specification-Beispieldateien zum Testen von CAD-Software, IGS-Konvertern, 3D-Modellierungstools und Engineering-Design-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Systemen, IGS-Parsern, 3D-Modellaustausch-Tools und Engineering-Software.',
+          keywords: 'IGS-Beispieldateien, IGS-Testdateien, IGS-Beispiele herunterladen, kostenlose IGS-Testdateien, Initial Graphics Exchange Specification-Dateien, CAD IGS-Dateien, 3D-Modellaustausch-Dateien, IGS-Konverter-Testdateien, Engineering-Design-Dateien, IGS-Parser-Testdateien, CAD-Austauschformat-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose IGS-Beispieldateien - Initial Graphics Exchange Specification CAD Testdateien herunterladen',
+          description: 'Laden Sie kostenlose IGS Initial Graphics Exchange Specification-Beispieldateien zum Testen von CAD-Software, IGS-Konvertern, 3D-Modellierungstools und Engineering-Design-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CAD-Systemen, IGS-Parsern, 3D-Modellaustausch-Tools und Engineering-Software.'
+        },
+        hero: {
+          title: 'IGS-Beispieldateien',
+          description: 'Laden Sie kostenlose IGS Initial Graphics Exchange Specification-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Software, IGS-Konverter und 3D-Modellierungstools zu testen.'
+        },
+        about_description: 'Dies sind IGS (Initial Graphics Exchange Specification) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      las: {
+        meta: {
+          title: 'Kostenlose LAS-Beispieldateien herunterladen - LiDAR-Punktwolken-Daten Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose LAS LiDAR-Punktwolken-Beispieldateien zum Testen von Punktwolkenverarbeitung, LiDAR-Analysetools, 3D-Mapping-Software und Geodatenanwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LAS-Parsern, Punktwolken-Viewern, LiDAR-Verarbeitungstools, 3D-Mapping-Software und Geodatenanalyse-Plattformen.',
+          keywords: 'LAS-Beispieldateien, LAS-Testdateien, LAS-Beispiele herunterladen, kostenlose LAS-Testdateien, LiDAR-Punktwolken-Dateien, LAS-Format-Dateien, Punktwolkendaten-Dateien, LAS-Parser-Testdateien, Geodaten-Dateien, LiDAR-Analyse-Testdateien, 3D-Mapping-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose LAS-Beispieldateien - LiDAR-Punktwolken-Daten Testdateien herunterladen',
+          description: 'Laden Sie kostenlose LAS LiDAR-Punktwolken-Beispieldateien zum Testen von Punktwolkenverarbeitung, LiDAR-Analysetools, 3D-Mapping-Software und Geodatenanwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von LAS-Parsern, Punktwolken-Viewern, LiDAR-Verarbeitungstools, 3D-Mapping-Software und Geodatenanalyse-Plattformen.'
+        },
+        hero: {
+          title: 'LAS-Beispieldateien',
+          description: 'Laden Sie kostenlose LAS LiDAR-Punktwolken-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Punktwolkenverarbeitung, LiDAR-Analysetools und 3D-Mapping-Software zu testen.'
+        },
+        about_description: 'Dies sind LAS (LiDAR-Punktwolken) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      ma: {
+        meta: {
+          title: 'Kostenlose MA-Beispieldateien herunterladen - Maya ASCII-Szene Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose MA Maya ASCII-Szene-Beispieldateien zum Testen von Maya-Szenenkonvertierung, 3D-Animationssoftware, MA-Dateiparsern und Animationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Autodesk Maya, MA-Datei-Viewern, Szenenkonvertierungstools, 3D-Animationsplattformen und Animations-Workflow-Software.',
+          keywords: 'MA-Beispieldateien, MA-Testdateien, MA-Beispiele herunterladen, kostenlose MA-Testdateien, Maya ASCII-Szene-Dateien, MA-Format-Dateien, 3D-Animationsszene-Dateien, MA-Parser-Testdateien, Animationsdateien, Maya-Szene-Testdateien, 3D-Animations-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose MA-Beispieldateien - Maya ASCII-Szene Testdateien herunterladen',
+          description: 'Laden Sie kostenlose MA Maya ASCII-Szene-Beispieldateien zum Testen von Maya-Szenenkonvertierung, 3D-Animationssoftware, MA-Dateiparsern und Animationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Autodesk Maya, MA-Datei-Viewern, Szenenkonvertierungstools, 3D-Animationsplattformen und Animations-Workflow-Software.'
+        },
+        hero: {
+          title: 'MA-Beispieldateien',
+          description: 'Laden Sie kostenlose MA Maya ASCII-Szene-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Maya-Szenenkonvertierung, 3D-Animationssoftware und Animationstools zu testen.'
+        },
+        about_description: 'Dies sind MA (Maya ASCII-Szene) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      max: {
+        meta: {
+          title: 'Kostenlose MAX-Beispieldateien herunterladen - 3ds Max-Szene Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose MAX 3ds Max-Szene-Beispieldateien zum Testen von 3ds Max-Szenenkonvertierung, 3D-Modellierungssoftware, MAX-Dateiparsern und 3D-Design-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Autodesk 3ds Max, MAX-Datei-Viewern, Szenenkonvertierungstools, 3D-Modellierungsplattformen und 3D-Design-Workflow-Software.',
+          keywords: 'MAX-Beispieldateien, MAX-Testdateien, MAX-Beispiele herunterladen, kostenlose MAX-Testdateien, 3ds Max-Szene-Dateien, MAX-Format-Dateien, 3D-Modellierungsszene-Dateien, MAX-Parser-Testdateien, 3D-Design-Dateien, 3ds Max-Szene-Testdateien, 3D-Modellierungs-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose MAX-Beispieldateien - 3ds Max-Szene Testdateien herunterladen',
+          description: 'Laden Sie kostenlose MAX 3ds Max-Szene-Beispieldateien zum Testen von 3ds Max-Szenenkonvertierung, 3D-Modellierungssoftware, MAX-Dateiparsern und 3D-Design-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Autodesk 3ds Max, MAX-Datei-Viewern, Szenenkonvertierungstools, 3D-Modellierungsplattformen und 3D-Design-Workflow-Software.'
+        },
+        hero: {
+          title: 'MAX-Beispieldateien',
+          description: 'Laden Sie kostenlose MAX 3ds Max-Szene-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3ds Max-Szenenkonvertierung, 3D-Modellierungssoftware und 3D-Design-Tools zu testen.'
+        },
+        about_description: 'Dies sind MAX (3ds Max-Szene) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      mb: {
+        meta: {
+          title: 'Kostenlose MB-Beispieldateien herunterladen - Maya Binary-Szene Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose MB Maya Binary-Szene-Beispieldateien zum Testen von Maya-Szenenkonvertierung, 3D-Animationssoftware, MB-Dateiparsern und Animationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Autodesk Maya, MB-Datei-Viewern, Szenenkonvertierungstools, 3D-Animationsplattformen und Animations-Workflow-Software.',
+          keywords: 'MB-Beispieldateien, MB-Testdateien, MB-Beispiele herunterladen, kostenlose MB-Testdateien, Maya Binary-Szene-Dateien, MB-Format-Dateien, 3D-Animationsszene-Dateien, MB-Parser-Testdateien, Animationsdateien, Maya-Szene-Testdateien, 3D-Animations-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose MB-Beispieldateien - Maya Binary-Szene Testdateien herunterladen',
+          description: 'Laden Sie kostenlose MB Maya Binary-Szene-Beispieldateien zum Testen von Maya-Szenenkonvertierung, 3D-Animationssoftware, MB-Dateiparsern und Animationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Autodesk Maya, MB-Datei-Viewern, Szenenkonvertierungstools, 3D-Animationsplattformen und Animations-Workflow-Software.'
+        },
+        hero: {
+          title: 'MB-Beispieldateien',
+          description: 'Laden Sie kostenlose MB Maya Binary-Szene-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Maya-Szenenkonvertierung, 3D-Animationssoftware und Animationstools zu testen.'
+        },
+        about_description: 'Dies sind MB (Maya Binary-Szene) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      indd: {
+        meta: {
+          title: 'Kostenlose INDD-Beispieldateien herunterladen - Adobe InDesign-Dokument Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose INDD Adobe InDesign-Dokument-Beispieldateien zum Testen von InDesign-Kompatibilität, INDD-Konvertern, Desktop-Publishing-Software und Layout-Design-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Adobe InDesign, INDD-Datei-Viewern, Dokumentkonvertierungstools, Desktop-Publishing-Plattformen und Layout-Design-Software.',
+          keywords: 'INDD-Beispieldateien, INDD-Testdateien, INDD-Beispiele herunterladen, kostenlose INDD-Testdateien, Adobe InDesign-Dateien, INDD-Format-Dateien, Desktop-Publishing-Dateien, INDD-Konverter-Testdateien, Layout-Design-Dateien, InDesign-Dokument-Testdateien, Publishing-Software-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose INDD-Beispieldateien - Adobe InDesign-Dokument Testdateien herunterladen',
+          description: 'Laden Sie kostenlose INDD Adobe InDesign-Dokument-Beispieldateien zum Testen von InDesign-Kompatibilität, INDD-Konvertern, Desktop-Publishing-Software und Layout-Design-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Adobe InDesign, INDD-Datei-Viewern, Dokumentkonvertierungstools, Desktop-Publishing-Plattformen und Layout-Design-Software.'
+        },
+        hero: {
+          title: 'INDD-Beispieldateien',
+          description: 'Laden Sie kostenlose INDD Adobe InDesign-Dokument-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre InDesign-Kompatibilität, INDD-Konverter und Desktop-Publishing-Software zu testen.'
+        },
+        about_description: 'Dies sind INDD (Adobe InDesign-Dokument) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Kostenlose animierte GIF-Beispieldateien herunterladen - Animierte Bild Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose animierte GIF-Beispieldateien zum Testen von GIF-Animationswiedergabe, Bild-Viewern, Webbrowsern und Animationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIF-Viewern, Animations-Playern, Bildverarbeitungstools, Web-Entwicklungsplattformen und Multimedia-Anwendungen.',
+          keywords: 'animierte GIF-Beispieldateien, animierte GIF-Testdateien, animierte GIF-Beispiele herunterladen, kostenlose animierte GIF-Testdateien, GIF-Animationsdateien, animierte Bilddateien, GIF-Player-Testdateien, Animationsdateien, Web-Animation-Testdateien, Multimedia-GIF-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose animierte GIF-Beispieldateien - Animierte Bild Testdateien herunterladen',
+          description: 'Laden Sie kostenlose animierte GIF-Beispieldateien zum Testen von GIF-Animationswiedergabe, Bild-Viewern, Webbrowsern und Animationstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von GIF-Viewern, Animations-Playern, Bildverarbeitungstools, Web-Entwicklungsplattformen und Multimedia-Anwendungen.'
+        },
+        hero: {
+          title: 'Animierte GIF-Beispieldateien',
+          description: 'Laden Sie kostenlose animierte GIF-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre GIF-Animationswiedergabe, Bild-Viewer und Animationstools zu testen.'
+        },
+        about_description: 'Dies sind animierte GIF-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      apng: {
+        meta: {
+          title: 'Kostenlose APNG-Beispieldateien herunterladen - Animierte PNG-Bild Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose APNG Animated Portable Network Graphics-Beispieldateien zum Testen von APNG-Animationswiedergabe, Bild-Viewern, Webbrowsern und modernen Bildtools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von APNG-Viewern, Animations-Playern, Bildverarbeitungstools, Web-Entwicklungsplattformen und modernen Multimedia-Anwendungen.',
+          keywords: 'APNG-Beispieldateien, APNG-Testdateien, APNG-Beispiele herunterladen, kostenlose APNG-Testdateien, Animated PNG-Dateien, APNG-Animationsdateien, APNG-Player-Testdateien, Animationsdateien, Web-Animation-Testdateien, moderne Bildformat-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose APNG-Beispieldateien - Animierte PNG-Bild Testdateien herunterladen',
+          description: 'Laden Sie kostenlose APNG Animated Portable Network Graphics-Beispieldateien zum Testen von APNG-Animationswiedergabe, Bild-Viewern, Webbrowsern und modernen Bildtools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von APNG-Viewern, Animations-Playern, Bildverarbeitungstools, Web-Entwicklungsplattformen und modernen Multimedia-Anwendungen.'
+        },
+        hero: {
+          title: 'APNG-Beispieldateien',
+          description: 'Laden Sie kostenlose APNG Animated Portable Network Graphics-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre APNG-Animationswiedergabe, Bild-Viewer und modernen Bildtools zu testen.'
+        },
+        about_description: 'Dies sind APNG (Animated Portable Network Graphics) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      avif: {
+        meta: {
+          title: 'Kostenlose AVIF-Beispieldateien herunterladen - AV1 Image File Format Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose AVIF AV1 Image File Format-Beispieldateien zum Testen moderner Bildkompression, AVIF-Viewern, Webbrowsern und Bildtools der nächsten Generation herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AVIF-Viewern, Bildverarbeitungstools, Web-Entwicklungsplattformen, modernem Bildformat-Support und Multimedia-Anwendungen der nächsten Generation.',
+          keywords: 'AVIF-Beispieldateien, AVIF-Testdateien, AVIF-Beispiele herunterladen, kostenlose AVIF-Testdateien, AV1 Image File Format-Dateien, AVIF-Bilddateien, AVIF-Viewer-Testdateien, moderne Bilddateien, Web-Bildformat-Testdateien, Bildformat der nächsten Generation-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose AVIF-Beispieldateien - AV1 Image File Format Testdateien herunterladen',
+          description: 'Laden Sie kostenlose AVIF AV1 Image File Format-Beispieldateien zum Testen moderner Bildkompression, AVIF-Viewern, Webbrowsern und Bildtools der nächsten Generation herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AVIF-Viewern, Bildverarbeitungstools, Web-Entwicklungsplattformen, modernem Bildformat-Support und Multimedia-Anwendungen der nächsten Generation.'
+        },
+        hero: {
+          title: 'AVIF-Beispieldateien',
+          description: 'Laden Sie kostenlose AVIF AV1 Image File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre moderne Bildkompression, AVIF-Viewer und Bildtools der nächsten Generation zu testen.'
+        },
+        about_description: 'Dies sind AVIF (AV1 Image File Format) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      bmp: {
+        meta: {
+          title: 'Kostenlose BMP-Beispieldateien herunterladen - Bitmap-Bild Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose BMP-Bitmap-Beispieldateien zum Testen von Bild-Viewern, BMP-Konvertern, Grafiksoftware und Bildverarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BMP-Viewern, Bildeditoren, Grafik-Konvertierungstools, Bildverarbeitungsplattformen und Bitmap-Format-Support.',
+          keywords: 'BMP-Beispieldateien, BMP-Testdateien, BMP-Beispiele herunterladen, kostenlose BMP-Testdateien, Bitmap-Bilddateien, BMP-Format-Dateien, Bild-Viewer-Testdateien, Grafikdateien, Bild-Konvertierungs-Testdateien, Bitmap-Format-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose BMP-Beispieldateien - Bitmap-Bild Testdateien herunterladen',
+          description: 'Laden Sie kostenlose BMP-Bitmap-Beispieldateien zum Testen von Bild-Viewern, BMP-Konvertern, Grafiksoftware und Bildverarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von BMP-Viewern, Bildeditoren, Grafik-Konvertierungstools, Bildverarbeitungsplattformen und Bitmap-Format-Support.'
+        },
+        hero: {
+          title: 'BMP-Beispieldateien',
+          description: 'Laden Sie kostenlose BMP-Bitmap-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Bild-Viewer, BMP-Konverter und Grafiksoftware zu testen.'
+        },
+        about_description: 'Dies sind BMP (Bitmap) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Kostenlose Barcode-SVG-Beispieldateien herunterladen - Skalierbare Vektor-Barcode Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose Barcode-SVG-Beispieldateien zum Testen von Barcode-Generierung, SVG-Barcode-Lesern, Vektorgrafik-Tools und Barcode-Scanning-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Barcode-Generatoren, SVG-Viewern, Barcode-Scanning-Tools, Vektorgrafik-Plattformen und Barcode-Erkennungssoftware.',
+          keywords: 'Barcode-SVG-Beispieldateien, Barcode-SVG-Testdateien, Barcode-SVG-Beispiele herunterladen, kostenlose Barcode-SVG-Testdateien, SVG-Barcode-Dateien, Vektor-Barcode-Dateien, Barcode-Generator-Testdateien, SVG-Dateien, Barcode-Scanning-Testdateien, Vektorgrafik-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose Barcode-SVG-Beispieldateien - Skalierbare Vektor-Barcode Testdateien herunterladen',
+          description: 'Laden Sie kostenlose Barcode-SVG-Beispieldateien zum Testen von Barcode-Generierung, SVG-Barcode-Lesern, Vektorgrafik-Tools und Barcode-Scanning-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Barcode-Generatoren, SVG-Viewern, Barcode-Scanning-Tools, Vektorgrafik-Plattformen und Barcode-Erkennungssoftware.'
+        },
+        hero: {
+          title: 'Barcode-SVG-Beispieldateien',
+          description: 'Laden Sie kostenlose Barcode-SVG-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Barcode-Generierung, SVG-Barcode-Leser und Vektorgrafik-Tools zu testen.'
+        },
+        about_description: 'Dies sind Barcode-SVG-Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      avi: {
+        meta: {
+          title: 'Kostenlose AVI-Beispieldateien herunterladen - Audio Video Interleave Video Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose AVI Audio Video Interleave-Beispieldateien zum Testen von Video-Playern, AVI-Konvertern, Multimedia-Software und Video-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AVI-Playern, Video-Editoren, Multimedia-Konvertierungstools, Video-Verarbeitungsplattformen und Video-Format-Support.',
+          keywords: 'AVI-Beispieldateien, AVI-Testdateien, AVI-Beispiele herunterladen, kostenlose AVI-Testdateien, Audio Video Interleave-Dateien, AVI-Videodateien, Video-Player-Testdateien, Multimedia-Dateien, Video-Konvertierungs-Testdateien, Video-Format-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose AVI-Beispieldateien - Audio Video Interleave Video Testdateien herunterladen',
+          description: 'Laden Sie kostenlose AVI Audio Video Interleave-Beispieldateien zum Testen von Video-Playern, AVI-Konvertern, Multimedia-Software und Video-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AVI-Playern, Video-Editoren, Multimedia-Konvertierungstools, Video-Verarbeitungsplattformen und Video-Format-Support.'
+        },
+        hero: {
+          title: 'AVI-Beispieldateien',
+          description: 'Laden Sie kostenlose AVI Audio Video Interleave-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Video-Player, AVI-Konverter und Multimedia-Software zu testen.'
+        },
+        about_description: 'Dies sind AVI (Audio Video Interleave) Testdateien in verschiedenen Größen für Testzwecke'
+      },
+      '3gp': {
+        meta: {
+          title: 'Kostenlose 3GP-Beispieldateien herunterladen - 3GPP Mobile Video Testdateien | MorphyHub',
+          description: 'Laden Sie kostenlose 3GP 3GPP Mobile Video-Beispieldateien zum Testen von Mobile Video-Playern, 3GP-Konvertern, Multimedia-Software und Mobile Video-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3GP-Playern, Mobile Video-Editoren, Video-Konvertierungstools, Mobile Multimedia-Plattformen und Mobile Video-Format-Support.',
+          keywords: '3GP-Beispieldateien, 3GP-Testdateien, 3GP-Beispiele herunterladen, kostenlose 3GP-Testdateien, 3GPP Mobile Video-Dateien, 3GP-Videodateien, Mobile Video-Player-Testdateien, Multimedia-Dateien, Mobile Video-Konvertierungs-Testdateien, Mobile Video-Format-Beispiele'
+        },
+        schema: {
+          name: 'Kostenlose 3GP-Beispieldateien - 3GPP Mobile Video Testdateien herunterladen',
+          description: 'Laden Sie kostenlose 3GP 3GPP Mobile Video-Beispieldateien zum Testen von Mobile Video-Playern, 3GP-Konvertern, Multimedia-Software und Mobile Video-Verarbeitungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3GP-Playern, Mobile Video-Editoren, Video-Konvertierungstools, Mobile Multimedia-Plattformen und Mobile Video-Format-Support.'
+        },
+        hero: {
+          title: '3GP-Beispieldateien',
+          description: 'Laden Sie kostenlose 3GP 3GPP Mobile Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Mobile Video-Player, 3GP-Konverter und Multimedia-Software zu testen.'
+        },
+        about_description: 'Dies sind 3GP (3GPP Mobile Video) Testdateien in verschiedenen Größen für Testzwecke'
       }
     }
   }

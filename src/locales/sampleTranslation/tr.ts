@@ -1263,6 +1263,262 @@ export const tr: SamplePageTranslations = {
           description: 'Test için ücretsiz DWG AutoCAD çizim örnek dosyalarını indirin. CAD yazılımınızı, AutoCAD uyumluluğunuzu ve teknik çizim araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
         },
         about_description: 'Bunlar test amaçlı çeşitli boyutlarda DWG (AutoCAD çizim) dosyalarıdır'
+      },
+      dxf: {
+        meta: {
+          title: 'Ücretsiz DXF Örnek Dosyaları İndir - Drawing Exchange Format Test Dosyaları AutoCAD | MorphyHub',
+          description: 'CAD yazılımlarını, DXF dönüştürücülerini ve teknik çizim araçlarını test etmek için ücretsiz DXF Drawing Exchange Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AutoCAD, CAD görüntüleyicileri, DXF ayrıştırıcıları ve çizim dosyası değişim uygulamalarını test etmek için mükemmel.',
+          keywords: 'DXF örnek dosyaları, DXF test dosyaları, DXF örnekleri indir, ücretsiz DXF test dosyaları, AutoCAD DXF dosyaları, Drawing Exchange Format dosyaları, CAD DXF dosyaları, DXF dönüştürücü test dosyaları, teknik çizim dosyaları, DXF ayrıştırıcı test dosyaları, CAD dosya değişimi örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz DXF Örnek Dosyaları - Drawing Exchange Format Test Dosyaları İndir',
+          description: 'CAD yazılımlarını, DXF dönüştürücülerini ve teknik çizim araçlarını test etmek için ücretsiz DXF Drawing Exchange Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AutoCAD, CAD görüntüleyicileri, DXF ayrıştırıcıları ve çizim dosyası değişim uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DXF Örnek Dosyaları',
+          description: 'Test için ücretsiz DXF Drawing Exchange Format örnek dosyalarını indirin. CAD yazılımınızı, DXF dönüştürücülerinizi ve teknik çizim araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DXF (Drawing Exchange Format) dosyalarıdır'
+      },
+      ifc: {
+        meta: {
+          title: 'Ücretsiz IFC Örnek Dosyaları İndir - Industry Foundation Classes BIM Test Dosyaları | MorphyHub',
+          description: 'BIM yazılımlarını, IFC görüntüleyicilerini, bina bilgi modelleme araçlarını ve inşaat yönetimi uygulamalarını test etmek için ücretsiz IFC Industry Foundation Classes örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Revit, ArchiCAD, IFC ayrıştırıcıları, BIM görüntüleyicileri ve bina tasarım yazılımlarını test etmek için mükemmel.',
+          keywords: 'IFC örnek dosyaları, IFC test dosyaları, IFC örnekleri indir, ücretsiz IFC test dosyaları, Industry Foundation Classes dosyaları, BIM IFC dosyaları, bina bilgi modelleme dosyaları, IFC görüntüleyici test dosyaları, inşaat yazılımı dosyaları, IFC ayrıştırıcı test dosyaları, BIM değişim formatı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz IFC Örnek Dosyaları - Industry Foundation Classes BIM Test Dosyaları İndir',
+          description: 'BIM yazılımlarını, IFC görüntüleyicilerini, bina bilgi modelleme araçlarını ve inşaat yönetimi uygulamalarını test etmek için ücretsiz IFC Industry Foundation Classes örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Revit, ArchiCAD, IFC ayrıştırıcıları, BIM görüntüleyicileri ve bina tasarım yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'IFC Örnek Dosyaları',
+          description: 'Test için ücretsiz IFC Industry Foundation Classes örnek dosyalarını indirin. BIM yazılımınızı, IFC görüntüleyicilerinizi ve bina bilgi modelleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda IFC (Industry Foundation Classes) dosyalarıdır'
+      },
+      iges: {
+        meta: {
+          title: 'Ücretsiz IGES Örnek Dosyaları İndir - Initial Graphics Exchange Specification CAD Test Dosyaları | MorphyHub',
+          description: 'CAD yazılımlarını, IGES dönüştürücülerini, 3D modelleme araçlarını ve mühendislik tasarım uygulamalarını test etmek için ücretsiz IGES Initial Graphics Exchange Specification örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAD sistemlerini, IGES ayrıştırıcılarını, 3D model değişim araçlarını ve mühendislik yazılımlarını test etmek için mükemmel.',
+          keywords: 'IGES örnek dosyaları, IGES test dosyaları, IGES örnekleri indir, ücretsiz IGES test dosyaları, Initial Graphics Exchange Specification dosyaları, CAD IGES dosyaları, 3D model değişim dosyaları, IGES dönüştürücü test dosyaları, mühendislik tasarım dosyaları, IGES ayrıştırıcı test dosyaları, CAD değişim formatı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz IGES Örnek Dosyaları - Initial Graphics Exchange Specification CAD Test Dosyaları İndir',
+          description: 'CAD yazılımlarını, IGES dönüştürücülerini, 3D modelleme araçlarını ve mühendislik tasarım uygulamalarını test etmek için ücretsiz IGES Initial Graphics Exchange Specification örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAD sistemlerini, IGES ayrıştırıcılarını, 3D model değişim araçlarını ve mühendislik yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'IGES Örnek Dosyaları',
+          description: 'Test için ücretsiz IGES Initial Graphics Exchange Specification örnek dosyalarını indirin. CAD yazılımınızı, IGES dönüştürücülerinizi ve 3D modelleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda IGES (Initial Graphics Exchange Specification) dosyalarıdır'
+      },
+      igs: {
+        meta: {
+          title: 'Ücretsiz IGS Örnek Dosyaları İndir - Initial Graphics Exchange Specification CAD Test Dosyaları | MorphyHub',
+          description: 'CAD yazılımlarını, IGS dönüştürücülerini, 3D modelleme araçlarını ve mühendislik tasarım uygulamalarını test etmek için ücretsiz IGS Initial Graphics Exchange Specification örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAD sistemlerini, IGS ayrıştırıcılarını, 3D model değişim araçlarını ve mühendislik yazılımlarını test etmek için mükemmel.',
+          keywords: 'IGS örnek dosyaları, IGS test dosyaları, IGS örnekleri indir, ücretsiz IGS test dosyaları, Initial Graphics Exchange Specification dosyaları, CAD IGS dosyaları, 3D model değişim dosyaları, IGS dönüştürücü test dosyaları, mühendislik tasarım dosyaları, IGS ayrıştırıcı test dosyaları, CAD değişim formatı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz IGS Örnek Dosyaları - Initial Graphics Exchange Specification CAD Test Dosyaları İndir',
+          description: 'CAD yazılımlarını, IGS dönüştürücülerini, 3D modelleme araçlarını ve mühendislik tasarım uygulamalarını test etmek için ücretsiz IGS Initial Graphics Exchange Specification örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CAD sistemlerini, IGS ayrıştırıcılarını, 3D model değişim araçlarını ve mühendislik yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'IGS Örnek Dosyaları',
+          description: 'Test için ücretsiz IGS Initial Graphics Exchange Specification örnek dosyalarını indirin. CAD yazılımınızı, IGS dönüştürücülerinizi ve 3D modelleme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda IGS (Initial Graphics Exchange Specification) dosyalarıdır'
+      },
+      las: {
+        meta: {
+          title: 'Ücretsiz LAS Örnek Dosyaları İndir - LiDAR Point Cloud Veri Test Dosyaları | MorphyHub',
+          description: 'Point cloud işlemeyi, LiDAR analiz araçlarını, 3D haritalama yazılımlarını ve coğrafi uzamsal uygulamaları test etmek için ücretsiz LAS LiDAR point cloud örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LAS ayrıştırıcıları, point cloud görüntüleyicileri, LiDAR işleme araçlarını, 3D haritalama yazılımlarını ve coğrafi uzamsal analiz platformlarını test etmek için mükemmel.',
+          keywords: 'LAS örnek dosyaları, LAS test dosyaları, LAS örnekleri indir, ücretsiz LAS test dosyaları, LiDAR point cloud dosyaları, LAS format dosyaları, point cloud veri dosyaları, LAS ayrıştırıcı test dosyaları, coğrafi uzamsal dosyalar, LiDAR analiz test dosyaları, 3D haritalama örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz LAS Örnek Dosyaları - LiDAR Point Cloud Veri Test Dosyaları İndir',
+          description: 'Point cloud işlemeyi, LiDAR analiz araçlarını, 3D haritalama yazılımlarını ve coğrafi uzamsal uygulamaları test etmek için ücretsiz LAS LiDAR point cloud örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. LAS ayrıştırıcıları, point cloud görüntüleyicileri, LiDAR işleme araçlarını, 3D haritalama yazılımlarını ve coğrafi uzamsal analiz platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'LAS Örnek Dosyaları',
+          description: 'Test için ücretsiz LAS LiDAR point cloud örnek dosyalarını indirin. Point cloud işlemenizi, LiDAR analiz araçlarınızı ve 3D haritalama yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda LAS (LiDAR point cloud) dosyalarıdır'
+      },
+      ma: {
+        meta: {
+          title: 'Ücretsiz MA Örnek Dosyaları İndir - Maya ASCII Scene Test Dosyaları | MorphyHub',
+          description: 'Maya scene dönüşümünü, 3D animasyon yazılımlarını, MA dosya ayrıştırıcılarını ve animasyon araçlarını test etmek için ücretsiz MA Maya ASCII scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk Maya, MA dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D animasyon platformlarını ve animasyon iş akışı yazılımlarını test etmek için mükemmel.',
+          keywords: 'MA örnek dosyaları, MA test dosyaları, MA örnekleri indir, ücretsiz MA test dosyaları, Maya ASCII scene dosyaları, MA format dosyaları, 3D animasyon scene dosyaları, MA ayrıştırıcı test dosyaları, animasyon dosyaları, Maya scene test dosyaları, 3D animasyon örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz MA Örnek Dosyaları - Maya ASCII Scene Test Dosyaları İndir',
+          description: 'Maya scene dönüşümünü, 3D animasyon yazılımlarını, MA dosya ayrıştırıcılarını ve animasyon araçlarını test etmek için ücretsiz MA Maya ASCII scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk Maya, MA dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D animasyon platformlarını ve animasyon iş akışı yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MA Örnek Dosyaları',
+          description: 'Test için ücretsiz MA Maya ASCII scene örnek dosyalarını indirin. Maya scene dönüşümünüzü, 3D animasyon yazılımlarınızı ve animasyon araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MA (Maya ASCII scene) dosyalarıdır'
+      },
+      max: {
+        meta: {
+          title: 'Ücretsiz MAX Örnek Dosyaları İndir - 3ds Max Scene Test Dosyaları | MorphyHub',
+          description: '3ds Max scene dönüşümünü, 3D modelleme yazılımlarını, MAX dosya ayrıştırıcılarını ve 3D tasarım araçlarını test etmek için ücretsiz MAX 3ds Max scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk 3ds Max, MAX dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D modelleme platformlarını ve 3D tasarım iş akışı yazılımlarını test etmek için mükemmel.',
+          keywords: 'MAX örnek dosyaları, MAX test dosyaları, MAX örnekleri indir, ücretsiz MAX test dosyaları, 3ds Max scene dosyaları, MAX format dosyaları, 3D modelleme scene dosyaları, MAX ayrıştırıcı test dosyaları, 3D tasarım dosyaları, 3ds Max scene test dosyaları, 3D modelleme örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz MAX Örnek Dosyaları - 3ds Max Scene Test Dosyaları İndir',
+          description: '3ds Max scene dönüşümünü, 3D modelleme yazılımlarını, MAX dosya ayrıştırıcılarını ve 3D tasarım araçlarını test etmek için ücretsiz MAX 3ds Max scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk 3ds Max, MAX dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D modelleme platformlarını ve 3D tasarım iş akışı yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MAX Örnek Dosyaları',
+          description: 'Test için ücretsiz MAX 3ds Max scene örnek dosyalarını indirin. 3ds Max scene dönüşümünüzü, 3D modelleme yazılımlarınızı ve 3D tasarım araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MAX (3ds Max scene) dosyalarıdır'
+      },
+      mb: {
+        meta: {
+          title: 'Ücretsiz MB Örnek Dosyaları İndir - Maya Binary Scene Test Dosyaları | MorphyHub',
+          description: 'Maya scene dönüşümünü, 3D animasyon yazılımlarını, MB dosya ayrıştırıcılarını ve animasyon araçlarını test etmek için ücretsiz MB Maya Binary scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk Maya, MB dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D animasyon platformlarını ve animasyon iş akışı yazılımlarını test etmek için mükemmel.',
+          keywords: 'MB örnek dosyaları, MB test dosyaları, MB örnekleri indir, ücretsiz MB test dosyaları, Maya Binary scene dosyaları, MB format dosyaları, 3D animasyon scene dosyaları, MB ayrıştırıcı test dosyaları, animasyon dosyaları, Maya scene test dosyaları, 3D animasyon örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz MB Örnek Dosyaları - Maya Binary Scene Test Dosyaları İndir',
+          description: 'Maya scene dönüşümünü, 3D animasyon yazılımlarını, MB dosya ayrıştırıcılarını ve animasyon araçlarını test etmek için ücretsiz MB Maya Binary scene örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Autodesk Maya, MB dosya görüntüleyicileri, scene dönüşüm araçlarını, 3D animasyon platformlarını ve animasyon iş akışı yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'MB Örnek Dosyaları',
+          description: 'Test için ücretsiz MB Maya Binary scene örnek dosyalarını indirin. Maya scene dönüşümünüzü, 3D animasyon yazılımlarınızı ve animasyon araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda MB (Maya Binary scene) dosyalarıdır'
+      },
+      indd: {
+        meta: {
+          title: 'Ücretsiz INDD Örnek Dosyaları İndir - Adobe InDesign Belge Test Dosyaları | MorphyHub',
+          description: 'InDesign uyumluluğunu, INDD dönüştürücülerini, masaüstü yayıncılık yazılımlarını ve düzen tasarım araçlarını test etmek için ücretsiz INDD Adobe InDesign belge örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Adobe InDesign, INDD dosya görüntüleyicileri, belge dönüşüm araçlarını, masaüstü yayıncılık platformlarını ve düzen tasarım yazılımlarını test etmek için mükemmel.',
+          keywords: 'INDD örnek dosyaları, INDD test dosyaları, INDD örnekleri indir, ücretsiz INDD test dosyaları, Adobe InDesign dosyaları, INDD format dosyaları, masaüstü yayıncılık dosyaları, INDD dönüştürücü test dosyaları, düzen tasarım dosyaları, InDesign belge test dosyaları, yayıncılık yazılımı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz INDD Örnek Dosyaları - Adobe InDesign Belge Test Dosyaları İndir',
+          description: 'InDesign uyumluluğunu, INDD dönüştürücülerini, masaüstü yayıncılık yazılımlarını ve düzen tasarım araçlarını test etmek için ücretsiz INDD Adobe InDesign belge örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Adobe InDesign, INDD dosya görüntüleyicileri, belge dönüşüm araçlarını, masaüstü yayıncılık platformlarını ve düzen tasarım yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'INDD Örnek Dosyaları',
+          description: 'Test için ücretsiz INDD Adobe InDesign belge örnek dosyalarını indirin. InDesign uyumluluğunuzu, INDD dönüştürücülerinizi ve masaüstü yayıncılık yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda INDD (Adobe InDesign belge) dosyalarıdır'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Ücretsiz Animasyonlu GIF Örnek Dosyaları İndir - Animasyonlu Görüntü Test Dosyaları | MorphyHub',
+          description: 'GIF animasyon oynatmayı, görüntü görüntüleyicilerini, web tarayıcılarını ve animasyon araçlarını test etmek için ücretsiz animasyonlu GIF örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GIF görüntüleyicileri, animasyon oynatıcıları, görüntü işleme araçlarını, web geliştirme platformlarını ve multimedya uygulamalarını test etmek için mükemmel.',
+          keywords: 'animasyonlu GIF örnek dosyaları, animasyonlu GIF test dosyaları, animasyonlu GIF örnekleri indir, ücretsiz animasyonlu GIF test dosyaları, GIF animasyon dosyaları, animasyonlu görüntü dosyaları, GIF oynatıcı test dosyaları, animasyon dosyaları, web animasyon test dosyaları, multimedya GIF örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Animasyonlu GIF Örnek Dosyaları - Animasyonlu Görüntü Test Dosyaları İndir',
+          description: 'GIF animasyon oynatmayı, görüntü görüntüleyicilerini, web tarayıcılarını ve animasyon araçlarını test etmek için ücretsiz animasyonlu GIF örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. GIF görüntüleyicileri, animasyon oynatıcıları, görüntü işleme araçlarını, web geliştirme platformlarını ve multimedya uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Animasyonlu GIF Örnek Dosyaları',
+          description: 'Test için ücretsiz animasyonlu GIF örnek dosyalarını indirin. GIF animasyon oynatmanızı, görüntü görüntüleyicilerinizi ve animasyon araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda animasyonlu GIF dosyalarıdır'
+      },
+      apng: {
+        meta: {
+          title: 'Ücretsiz APNG Örnek Dosyaları İndir - Animasyonlu PNG Görüntü Test Dosyaları | MorphyHub',
+          description: 'APNG animasyon oynatmayı, görüntü görüntüleyicilerini, web tarayıcılarını ve modern görüntü araçlarını test etmek için ücretsiz APNG Animated Portable Network Graphics örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. APNG görüntüleyicileri, animasyon oynatıcıları, görüntü işleme araçlarını, web geliştirme platformlarını ve modern multimedya uygulamalarını test etmek için mükemmel.',
+          keywords: 'APNG örnek dosyaları, APNG test dosyaları, APNG örnekleri indir, ücretsiz APNG test dosyaları, Animated PNG dosyaları, APNG animasyon dosyaları, APNG oynatıcı test dosyaları, animasyon dosyaları, web animasyon test dosyaları, modern görüntü formatı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz APNG Örnek Dosyaları - Animasyonlu PNG Görüntü Test Dosyaları İndir',
+          description: 'APNG animasyon oynatmayı, görüntü görüntüleyicilerini, web tarayıcılarını ve modern görüntü araçlarını test etmek için ücretsiz APNG Animated Portable Network Graphics örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. APNG görüntüleyicileri, animasyon oynatıcıları, görüntü işleme araçlarını, web geliştirme platformlarını ve modern multimedya uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'APNG Örnek Dosyaları',
+          description: 'Test için ücretsiz APNG Animated Portable Network Graphics örnek dosyalarını indirin. APNG animasyon oynatmanızı, görüntü görüntüleyicilerinizi ve modern görüntü araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda APNG (Animated Portable Network Graphics) dosyalarıdır'
+      },
+      avif: {
+        meta: {
+          title: 'Ücretsiz AVIF Örnek Dosyaları İndir - AV1 Image File Format Test Dosyaları | MorphyHub',
+          description: 'Modern görüntü sıkıştırmasını, AVIF görüntüleyicilerini, web tarayıcılarını ve yeni nesil görüntü araçlarını test etmek için ücretsiz AVIF AV1 Image File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AVIF görüntüleyicileri, görüntü işleme araçlarını, web geliştirme platformlarını, modern görüntü formatı desteğini ve yeni nesil multimedya uygulamalarını test etmek için mükemmel.',
+          keywords: 'AVIF örnek dosyaları, AVIF test dosyaları, AVIF örnekleri indir, ücretsiz AVIF test dosyaları, AV1 Image File Format dosyaları, AVIF görüntü dosyaları, AVIF görüntüleyici test dosyaları, modern görüntü dosyaları, web görüntü formatı test dosyaları, yeni nesil görüntü formatı örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz AVIF Örnek Dosyaları - AV1 Image File Format Test Dosyaları İndir',
+          description: 'Modern görüntü sıkıştırmasını, AVIF görüntüleyicilerini, web tarayıcılarını ve yeni nesil görüntü araçlarını test etmek için ücretsiz AVIF AV1 Image File Format örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AVIF görüntüleyicileri, görüntü işleme araçlarını, web geliştirme platformlarını, modern görüntü formatı desteğini ve yeni nesil multimedya uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AVIF Örnek Dosyaları',
+          description: 'Test için ücretsiz AVIF AV1 Image File Format örnek dosyalarını indirin. Modern görüntü sıkıştırmanızı, AVIF görüntüleyicilerinizi ve yeni nesil görüntü araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AVIF (AV1 Image File Format) dosyalarıdır'
+      },
+      bmp: {
+        meta: {
+          title: 'Ücretsiz BMP Örnek Dosyaları İndir - Bitmap Görüntü Test Dosyaları | MorphyHub',
+          description: 'Görüntü görüntüleyicilerini, BMP dönüştürücülerini, grafik yazılımlarını ve görüntü işleme araçlarını test etmek için ücretsiz BMP bitmap örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BMP görüntüleyicileri, görüntü düzenleyicileri, grafik dönüşüm araçlarını, görüntü işleme platformlarını ve bitmap format desteğini test etmek için mükemmel.',
+          keywords: 'BMP örnek dosyaları, BMP test dosyaları, BMP örnekleri indir, ücretsiz BMP test dosyaları, bitmap görüntü dosyaları, BMP format dosyaları, görüntü görüntüleyici test dosyaları, grafik dosyaları, görüntü dönüşüm test dosyaları, bitmap format örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz BMP Örnek Dosyaları - Bitmap Görüntü Test Dosyaları İndir',
+          description: 'Görüntü görüntüleyicilerini, BMP dönüştürücülerini, grafik yazılımlarını ve görüntü işleme araçlarını test etmek için ücretsiz BMP bitmap örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. BMP görüntüleyicileri, görüntü düzenleyicileri, grafik dönüşüm araçlarını, görüntü işleme platformlarını ve bitmap format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'BMP Örnek Dosyaları',
+          description: 'Test için ücretsiz BMP bitmap örnek dosyalarını indirin. Görüntü görüntüleyicilerinizi, BMP dönüştürücülerinizi ve grafik yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda BMP (bitmap) dosyalarıdır'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Ücretsiz Barkod SVG Örnek Dosyaları İndir - Ölçeklenebilir Vektör Barkod Test Dosyaları | MorphyHub',
+          description: 'Barkod oluşturmayı, SVG barkod okuyucularını, vektör grafik araçlarını ve barkod tarama uygulamalarını test etmek için ücretsiz barkod SVG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Barkod oluşturucuları, SVG görüntüleyicileri, barkod tarama araçlarını, vektör grafik platformlarını ve barkod tanıma yazılımlarını test etmek için mükemmel.',
+          keywords: 'barkod SVG örnek dosyaları, barkod SVG test dosyaları, barkod SVG örnekleri indir, ücretsiz barkod SVG test dosyaları, SVG barkod dosyaları, vektör barkod dosyaları, barkod oluşturucu test dosyaları, SVG dosyaları, barkod tarama test dosyaları, vektör grafik örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz Barkod SVG Örnek Dosyaları - Ölçeklenebilir Vektör Barkod Test Dosyaları İndir',
+          description: 'Barkod oluşturmayı, SVG barkod okuyucularını, vektör grafik araçlarını ve barkod tarama uygulamalarını test etmek için ücretsiz barkod SVG örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Barkod oluşturucuları, SVG görüntüleyicileri, barkod tarama araçlarını, vektör grafik platformlarını ve barkod tanıma yazılımlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Barkod SVG Örnek Dosyaları',
+          description: 'Test için ücretsiz barkod SVG örnek dosyalarını indirin. Barkod oluşturmanızı, SVG barkod okuyucularınızı ve vektör grafik araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda barkod SVG dosyalarıdır'
+      },
+      avi: {
+        meta: {
+          title: 'Ücretsiz AVI Örnek Dosyaları İndir - Audio Video Interleave Video Test Dosyaları | MorphyHub',
+          description: 'Video oynatıcıları, AVI dönüştürücülerini, multimedya yazılımlarını ve video işleme araçlarını test etmek için ücretsiz AVI Audio Video Interleave örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AVI oynatıcıları, video düzenleyicileri, multimedya dönüşüm araçlarını, video işleme platformlarını ve video format desteğini test etmek için mükemmel.',
+          keywords: 'AVI örnek dosyaları, AVI test dosyaları, AVI örnekleri indir, ücretsiz AVI test dosyaları, Audio Video Interleave dosyaları, AVI video dosyaları, video oynatıcı test dosyaları, multimedya dosyaları, video dönüşüm test dosyaları, video format örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz AVI Örnek Dosyaları - Audio Video Interleave Video Test Dosyaları İndir',
+          description: 'Video oynatıcıları, AVI dönüştürücülerini, multimedya yazılımlarını ve video işleme araçlarını test etmek için ücretsiz AVI Audio Video Interleave örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AVI oynatıcıları, video düzenleyicileri, multimedya dönüşüm araçlarını, video işleme platformlarını ve video format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AVI Örnek Dosyaları',
+          description: 'Test için ücretsiz AVI Audio Video Interleave örnek dosyalarını indirin. Video oynatıcılarınızı, AVI dönüştürücülerinizi ve multimedya yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AVI (Audio Video Interleave) dosyalarıdır'
+      },
+      '3gp': {
+        meta: {
+          title: 'Ücretsiz 3GP Örnek Dosyaları İndir - 3GPP Mobile Video Test Dosyaları | MorphyHub',
+          description: 'Mobil video oynatıcıları, 3GP dönüştürücülerini, multimedya yazılımlarını ve mobil video işleme araçlarını test etmek için ücretsiz 3GP 3GPP mobile video örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3GP oynatıcıları, mobil video düzenleyicileri, video dönüşüm araçlarını, mobil multimedya platformlarını ve mobil video format desteğini test etmek için mükemmel.',
+          keywords: '3GP örnek dosyaları, 3GP test dosyaları, 3GP örnekleri indir, ücretsiz 3GP test dosyaları, 3GPP mobile video dosyaları, 3GP video dosyaları, mobil video oynatıcı test dosyaları, multimedya dosyaları, mobil video dönüşüm test dosyaları, mobil video format örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz 3GP Örnek Dosyaları - 3GPP Mobile Video Test Dosyaları İndir',
+          description: 'Mobil video oynatıcıları, 3GP dönüştürücülerini, multimedya yazılımlarını ve mobil video işleme araçlarını test etmek için ücretsiz 3GP 3GPP mobile video örnek dosyalarını indirin. Birden fazla dosya boyutu: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3GP oynatıcıları, mobil video düzenleyicileri, video dönüşüm araçlarını, mobil multimedya platformlarını ve mobil video format desteğini test etmek için mükemmel.'
+        },
+        hero: {
+          title: '3GP Örnek Dosyaları',
+          description: 'Test için ücretsiz 3GP 3GPP mobile video örnek dosyalarını indirin. Mobil video oynatıcılarınızı, 3GP dönüştürücülerinizi ve multimedya yazılımlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda 3GP (3GPP mobile video) dosyalarıdır'
       }
     }
   }

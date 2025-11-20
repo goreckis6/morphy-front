@@ -1263,6 +1263,262 @@ export const en: SamplePageTranslations = {
           description: 'Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available to test your CAD software, AutoCAD compatibility, and technical drawing tools.'
         },
         about_description: 'These are test DWG (AutoCAD drawing) files in various sizes for testing purposes'
+      },
+      dxf: {
+        meta: {
+          title: 'Download Free DXF Sample Files - AutoCAD Drawing Exchange Format Test Files | MorphyHub',
+          description: 'Download free DXF Drawing Exchange Format sample files for testing CAD software, DXF converters, and technical drawing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing AutoCAD, CAD viewers, DXF parsers, and drawing file exchange applications.',
+          keywords: 'DXF sample files, DXF test files, download DXF examples, free DXF test files, AutoCAD DXF files, Drawing Exchange Format files, CAD DXF files, DXF converter test files, technical drawing files, DXF parser test files, CAD file exchange examples'
+        },
+        schema: {
+          name: 'Free DXF Sample Files - Download Drawing Exchange Format Test Files',
+          description: 'Download free DXF Drawing Exchange Format sample files for testing CAD software, DXF converters, and technical drawing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing AutoCAD, CAD viewers, DXF parsers, and drawing file exchange applications.'
+        },
+        hero: {
+          title: 'DXF Sample Files',
+          description: 'Download free DXF Drawing Exchange Format sample files for testing. Multiple file sizes available to test your CAD software, DXF converters, and technical drawing tools.'
+        },
+        about_description: 'These are test DXF (Drawing Exchange Format) files in various sizes for testing purposes'
+      },
+      ifc: {
+        meta: {
+          title: 'Download Free IFC Sample Files - Industry Foundation Classes BIM Test Files | MorphyHub',
+          description: 'Download free IFC Industry Foundation Classes sample files for testing BIM software, IFC viewers, building information modeling tools, and construction management applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Revit, ArchiCAD, IFC parsers, BIM viewers, and building design software.',
+          keywords: 'IFC sample files, IFC test files, download IFC examples, free IFC test files, Industry Foundation Classes files, BIM IFC files, building information modeling files, IFC viewer test files, construction software files, IFC parser test files, BIM exchange format examples'
+        },
+        schema: {
+          name: 'Free IFC Sample Files - Download Industry Foundation Classes BIM Test Files',
+          description: 'Download free IFC Industry Foundation Classes sample files for testing BIM software, IFC viewers, building information modeling tools, and construction management applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Revit, ArchiCAD, IFC parsers, BIM viewers, and building design software.'
+        },
+        hero: {
+          title: 'IFC Sample Files',
+          description: 'Download free IFC Industry Foundation Classes sample files for testing. Multiple file sizes available to test your BIM software, IFC viewers, and building information modeling tools.'
+        },
+        about_description: 'These are test IFC (Industry Foundation Classes) files in various sizes for testing purposes'
+      },
+      iges: {
+        meta: {
+          title: 'Download Free IGES Sample Files - Initial Graphics Exchange Specification CAD Test Files | MorphyHub',
+          description: 'Download free IGES Initial Graphics Exchange Specification sample files for testing CAD software, IGES converters, 3D modeling tools, and engineering design applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing CAD systems, IGES parsers, 3D model exchange tools, and engineering software.',
+          keywords: 'IGES sample files, IGES test files, download IGES examples, free IGES test files, Initial Graphics Exchange Specification files, CAD IGES files, 3D model exchange files, IGES converter test files, engineering design files, IGES parser test files, CAD exchange format examples'
+        },
+        schema: {
+          name: 'Free IGES Sample Files - Download Initial Graphics Exchange Specification CAD Test Files',
+          description: 'Download free IGES Initial Graphics Exchange Specification sample files for testing CAD software, IGES converters, 3D modeling tools, and engineering design applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing CAD systems, IGES parsers, 3D model exchange tools, and engineering software.'
+        },
+        hero: {
+          title: 'IGES Sample Files',
+          description: 'Download free IGES Initial Graphics Exchange Specification sample files for testing. Multiple file sizes available to test your CAD software, IGES converters, and 3D modeling tools.'
+        },
+        about_description: 'These are test IGES (Initial Graphics Exchange Specification) files in various sizes for testing purposes'
+      },
+      igs: {
+        meta: {
+          title: 'Download Free IGS Sample Files - Initial Graphics Exchange Specification CAD Test Files | MorphyHub',
+          description: 'Download free IGS Initial Graphics Exchange Specification sample files for testing CAD software, IGS converters, 3D modeling tools, and engineering design applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing CAD systems, IGS parsers, 3D model exchange tools, and engineering software.',
+          keywords: 'IGS sample files, IGS test files, download IGS examples, free IGS test files, Initial Graphics Exchange Specification files, CAD IGS files, 3D model exchange files, IGS converter test files, engineering design files, IGS parser test files, CAD exchange format examples'
+        },
+        schema: {
+          name: 'Free IGS Sample Files - Download Initial Graphics Exchange Specification CAD Test Files',
+          description: 'Download free IGS Initial Graphics Exchange Specification sample files for testing CAD software, IGS converters, 3D modeling tools, and engineering design applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing CAD systems, IGS parsers, 3D model exchange tools, and engineering software.'
+        },
+        hero: {
+          title: 'IGS Sample Files',
+          description: 'Download free IGS Initial Graphics Exchange Specification sample files for testing. Multiple file sizes available to test your CAD software, IGS converters, and 3D modeling tools.'
+        },
+        about_description: 'These are test IGS (Initial Graphics Exchange Specification) files in various sizes for testing purposes'
+      },
+      las: {
+        meta: {
+          title: 'Download Free LAS Sample Files - LiDAR Point Cloud Data Test Files | MorphyHub',
+          description: 'Download free LAS LiDAR point cloud sample files for testing point cloud processing, LiDAR analysis tools, 3D mapping software, and geospatial applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing LAS parsers, point cloud viewers, LiDAR processing tools, 3D mapping software, and geospatial analysis platforms.',
+          keywords: 'LAS sample files, LAS test files, download LAS examples, free LAS test files, LiDAR point cloud files, LAS format files, point cloud data files, LAS parser test files, geospatial files, LiDAR analysis test files, 3D mapping examples'
+        },
+        schema: {
+          name: 'Free LAS Sample Files - Download LiDAR Point Cloud Data Test Files',
+          description: 'Download free LAS LiDAR point cloud sample files for testing point cloud processing, LiDAR analysis tools, 3D mapping software, and geospatial applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing LAS parsers, point cloud viewers, LiDAR processing tools, 3D mapping software, and geospatial analysis platforms.'
+        },
+        hero: {
+          title: 'LAS Sample Files',
+          description: 'Download free LAS LiDAR point cloud sample files for testing. Multiple file sizes available to test your point cloud processing, LiDAR analysis tools, and 3D mapping software.'
+        },
+        about_description: 'These are test LAS (LiDAR point cloud) files in various sizes for testing purposes'
+      },
+      ma: {
+        meta: {
+          title: 'Download Free MA Sample Files - Maya ASCII Scene Test Files | MorphyHub',
+          description: 'Download free MA Maya ASCII scene sample files for testing Maya scene conversion, 3D animation software, MA file parsers, and animation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Autodesk Maya, MA file viewers, scene conversion tools, 3D animation platforms, and animation workflow software.',
+          keywords: 'MA sample files, MA test files, download MA examples, free MA test files, Maya ASCII scene files, MA format files, 3D animation scene files, MA parser test files, animation files, Maya scene test files, 3D animation examples'
+        },
+        schema: {
+          name: 'Free MA Sample Files - Download Maya ASCII Scene Test Files',
+          description: 'Download free MA Maya ASCII scene sample files for testing Maya scene conversion, 3D animation software, MA file parsers, and animation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Autodesk Maya, MA file viewers, scene conversion tools, 3D animation platforms, and animation workflow software.'
+        },
+        hero: {
+          title: 'MA Sample Files',
+          description: 'Download free MA Maya ASCII scene sample files for testing. Multiple file sizes available to test your Maya scene conversion, 3D animation software, and animation tools.'
+        },
+        about_description: 'These are test MA (Maya ASCII scene) files in various sizes for testing purposes'
+      },
+      max: {
+        meta: {
+          title: 'Download Free MAX Sample Files - 3ds Max Scene Test Files | MorphyHub',
+          description: 'Download free MAX 3ds Max scene sample files for testing 3ds Max scene conversion, 3D modeling software, MAX file parsers, and 3D design tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Autodesk 3ds Max, MAX file viewers, scene conversion tools, 3D modeling platforms, and 3D design workflow software.',
+          keywords: 'MAX sample files, MAX test files, download MAX examples, free MAX test files, 3ds Max scene files, MAX format files, 3D modeling scene files, MAX parser test files, 3D design files, 3ds Max scene test files, 3D modeling examples'
+        },
+        schema: {
+          name: 'Free MAX Sample Files - Download 3ds Max Scene Test Files',
+          description: 'Download free MAX 3ds Max scene sample files for testing 3ds Max scene conversion, 3D modeling software, MAX file parsers, and 3D design tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Autodesk 3ds Max, MAX file viewers, scene conversion tools, 3D modeling platforms, and 3D design workflow software.'
+        },
+        hero: {
+          title: 'MAX Sample Files',
+          description: 'Download free MAX 3ds Max scene sample files for testing. Multiple file sizes available to test your 3ds Max scene conversion, 3D modeling software, and 3D design tools.'
+        },
+        about_description: 'These are test MAX (3ds Max scene) files in various sizes for testing purposes'
+      },
+      mb: {
+        meta: {
+          title: 'Download Free MB Sample Files - Maya Binary Scene Test Files | MorphyHub',
+          description: 'Download free MB Maya binary scene sample files for testing Maya scene conversion, 3D animation software, MB file parsers, and animation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Autodesk Maya, MB file viewers, scene conversion tools, 3D animation platforms, and animation workflow software.',
+          keywords: 'MB sample files, MB test files, download MB examples, free MB test files, Maya binary scene files, MB format files, 3D animation scene files, MB parser test files, animation files, Maya scene test files, 3D animation examples'
+        },
+        schema: {
+          name: 'Free MB Sample Files - Download Maya Binary Scene Test Files',
+          description: 'Download free MB Maya binary scene sample files for testing Maya scene conversion, 3D animation software, MB file parsers, and animation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Autodesk Maya, MB file viewers, scene conversion tools, 3D animation platforms, and animation workflow software.'
+        },
+        hero: {
+          title: 'MB Sample Files',
+          description: 'Download free MB Maya binary scene sample files for testing. Multiple file sizes available to test your Maya scene conversion, 3D animation software, and animation tools.'
+        },
+        about_description: 'These are test MB (Maya binary scene) files in various sizes for testing purposes'
+      },
+      indd: {
+        meta: {
+          title: 'Download Free INDD Sample Files - Adobe InDesign Document Test Files | MorphyHub',
+          description: 'Download free INDD Adobe InDesign document sample files for testing InDesign compatibility, INDD converters, desktop publishing software, and layout design tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Adobe InDesign, INDD file viewers, document conversion tools, desktop publishing platforms, and layout design software.',
+          keywords: 'INDD sample files, INDD test files, download INDD examples, free INDD test files, Adobe InDesign files, INDD format files, desktop publishing files, INDD converter test files, layout design files, InDesign document test files, publishing software examples'
+        },
+        schema: {
+          name: 'Free INDD Sample Files - Download Adobe InDesign Document Test Files',
+          description: 'Download free INDD Adobe InDesign document sample files for testing InDesign compatibility, INDD converters, desktop publishing software, and layout design tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing Adobe InDesign, INDD file viewers, document conversion tools, desktop publishing platforms, and layout design software.'
+        },
+        hero: {
+          title: 'INDD Sample Files',
+          description: 'Download free INDD Adobe InDesign document sample files for testing. Multiple file sizes available to test your InDesign compatibility, INDD converters, and desktop publishing software.'
+        },
+        about_description: 'These are test INDD (Adobe InDesign document) files in various sizes for testing purposes'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Download Free Animated GIF Sample Files - Animated Image Test Files | MorphyHub',
+          description: 'Download free animated GIF sample files for testing GIF animation playback, image viewers, web browsers, and animation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing GIF viewers, animation players, image processing tools, web development platforms, and multimedia applications.',
+          keywords: 'animated GIF sample files, animated GIF test files, download animated GIF examples, free animated GIF test files, GIF animation files, animated image files, GIF player test files, animation files, web animation test files, multimedia GIF examples'
+        },
+        schema: {
+          name: 'Free Animated GIF Sample Files - Download Animated Image Test Files',
+          description: 'Download free animated GIF sample files for testing GIF animation playback, image viewers, web browsers, and animation tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing GIF viewers, animation players, image processing tools, web development platforms, and multimedia applications.'
+        },
+        hero: {
+          title: 'Animated GIF Sample Files',
+          description: 'Download free animated GIF sample files for testing. Multiple file sizes available to test your GIF animation playback, image viewers, and animation tools.'
+        },
+        about_description: 'These are test animated GIF files in various sizes for testing purposes'
+      },
+      apng: {
+        meta: {
+          title: 'Download Free APNG Sample Files - Animated PNG Image Test Files | MorphyHub',
+          description: 'Download free APNG Animated Portable Network Graphics sample files for testing APNG animation playback, image viewers, web browsers, and modern image tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing APNG viewers, animation players, image processing tools, web development platforms, and modern multimedia applications.',
+          keywords: 'APNG sample files, APNG test files, download APNG examples, free APNG test files, Animated PNG files, APNG animation files, APNG player test files, animation files, web animation test files, modern image format examples'
+        },
+        schema: {
+          name: 'Free APNG Sample Files - Download Animated PNG Image Test Files',
+          description: 'Download free APNG Animated Portable Network Graphics sample files for testing APNG animation playback, image viewers, web browsers, and modern image tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing APNG viewers, animation players, image processing tools, web development platforms, and modern multimedia applications.'
+        },
+        hero: {
+          title: 'APNG Sample Files',
+          description: 'Download free APNG Animated Portable Network Graphics sample files for testing. Multiple file sizes available to test your APNG animation playback, image viewers, and modern image tools.'
+        },
+        about_description: 'These are test APNG (Animated Portable Network Graphics) files in various sizes for testing purposes'
+      },
+      avif: {
+        meta: {
+          title: 'Download Free AVIF Sample Files - AV1 Image File Format Test Files | MorphyHub',
+          description: 'Download free AVIF AV1 Image File Format sample files for testing modern image compression, AVIF viewers, web browsers, and next-generation image tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing AVIF viewers, image processing tools, web development platforms, modern image format support, and next-gen multimedia applications.',
+          keywords: 'AVIF sample files, AVIF test files, download AVIF examples, free AVIF test files, AV1 Image File Format files, AVIF image files, AVIF viewer test files, modern image files, web image format test files, next-gen image format examples'
+        },
+        schema: {
+          name: 'Free AVIF Sample Files - Download AV1 Image File Format Test Files',
+          description: 'Download free AVIF AV1 Image File Format sample files for testing modern image compression, AVIF viewers, web browsers, and next-generation image tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing AVIF viewers, image processing tools, web development platforms, modern image format support, and next-gen multimedia applications.'
+        },
+        hero: {
+          title: 'AVIF Sample Files',
+          description: 'Download free AVIF AV1 Image File Format sample files for testing. Multiple file sizes available to test your modern image compression, AVIF viewers, and next-generation image tools.'
+        },
+        about_description: 'These are test AVIF (AV1 Image File Format) files in various sizes for testing purposes'
+      },
+      bmp: {
+        meta: {
+          title: 'Download Free BMP Sample Files - Bitmap Image Test Files | MorphyHub',
+          description: 'Download free BMP bitmap sample files for testing image viewers, BMP converters, graphics software, and image processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing BMP viewers, image editors, graphics conversion tools, image processing platforms, and bitmap format support.',
+          keywords: 'BMP sample files, BMP test files, download BMP examples, free BMP test files, bitmap image files, BMP format files, image viewer test files, graphics files, image conversion test files, bitmap format examples'
+        },
+        schema: {
+          name: 'Free BMP Sample Files - Download Bitmap Image Test Files',
+          description: 'Download free BMP bitmap sample files for testing image viewers, BMP converters, graphics software, and image processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing BMP viewers, image editors, graphics conversion tools, image processing platforms, and bitmap format support.'
+        },
+        hero: {
+          title: 'BMP Sample Files',
+          description: 'Download free BMP bitmap sample files for testing. Multiple file sizes available to test your image viewers, BMP converters, and graphics software.'
+        },
+        about_description: 'These are test BMP (bitmap) files in various sizes for testing purposes'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Download Free Barcode SVG Sample Files - Scalable Vector Barcode Test Files | MorphyHub',
+          description: 'Download free barcode SVG sample files for testing barcode generation, SVG barcode readers, vector graphics tools, and barcode scanning applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing barcode generators, SVG viewers, barcode scanning tools, vector graphics platforms, and barcode recognition software.',
+          keywords: 'barcode SVG sample files, barcode SVG test files, download barcode SVG examples, free barcode SVG test files, SVG barcode files, vector barcode files, barcode generator test files, SVG files, barcode scanning test files, vector graphics examples'
+        },
+        schema: {
+          name: 'Free Barcode SVG Sample Files - Download Scalable Vector Barcode Test Files',
+          description: 'Download free barcode SVG sample files for testing barcode generation, SVG barcode readers, vector graphics tools, and barcode scanning applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing barcode generators, SVG viewers, barcode scanning tools, vector graphics platforms, and barcode recognition software.'
+        },
+        hero: {
+          title: 'Barcode SVG Sample Files',
+          description: 'Download free barcode SVG sample files for testing. Multiple file sizes available to test your barcode generation, SVG barcode readers, and vector graphics tools.'
+        },
+        about_description: 'These are test barcode SVG files in various sizes for testing purposes'
+      },
+      avi: {
+        meta: {
+          title: 'Download Free AVI Sample Files - Audio Video Interleave Video Test Files | MorphyHub',
+          description: 'Download free AVI Audio Video Interleave sample files for testing video players, AVI converters, multimedia software, and video processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing AVI players, video editors, multimedia conversion tools, video processing platforms, and video format support.',
+          keywords: 'AVI sample files, AVI test files, download AVI examples, free AVI test files, Audio Video Interleave files, AVI video files, video player test files, multimedia files, video conversion test files, video format examples'
+        },
+        schema: {
+          name: 'Free AVI Sample Files - Download Audio Video Interleave Video Test Files',
+          description: 'Download free AVI Audio Video Interleave sample files for testing video players, AVI converters, multimedia software, and video processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing AVI players, video editors, multimedia conversion tools, video processing platforms, and video format support.'
+        },
+        hero: {
+          title: 'AVI Sample Files',
+          description: 'Download free AVI Audio Video Interleave sample files for testing. Multiple file sizes available to test your video players, AVI converters, and multimedia software.'
+        },
+        about_description: 'These are test AVI (Audio Video Interleave) files in various sizes for testing purposes'
+      },
+      '3gp': {
+        meta: {
+          title: 'Download Free 3GP Sample Files - 3GPP Mobile Video Test Files | MorphyHub',
+          description: 'Download free 3GP 3GPP mobile video sample files for testing mobile video players, 3GP converters, multimedia software, and mobile video processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing 3GP players, mobile video editors, video conversion tools, mobile multimedia platforms, and mobile video format support.',
+          keywords: '3GP sample files, 3GP test files, download 3GP examples, free 3GP test files, 3GPP mobile video files, 3GP video files, mobile video player test files, multimedia files, mobile video conversion test files, mobile video format examples'
+        },
+        schema: {
+          name: 'Free 3GP Sample Files - Download 3GPP Mobile Video Test Files',
+          description: 'Download free 3GP 3GPP mobile video sample files for testing mobile video players, 3GP converters, multimedia software, and mobile video processing tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB and 100 MB. Perfect for testing 3GP players, mobile video editors, video conversion tools, mobile multimedia platforms, and mobile video format support.'
+        },
+        hero: {
+          title: '3GP Sample Files',
+          description: 'Download free 3GP 3GPP mobile video sample files for testing. Multiple file sizes available to test your mobile video players, 3GP converters, and multimedia software.'
+        },
+        about_description: 'These are test 3GP (3GPP mobile video) files in various sizes for testing purposes'
       }
     }
   }

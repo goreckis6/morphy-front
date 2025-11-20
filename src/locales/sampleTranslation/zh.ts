@@ -1263,6 +1263,262 @@ export const zh: SamplePageTranslations = {
           description: '下载免费DWG AutoCAD图纸示例文件用于测试。提供多种文件大小，用于测试您的CAD软件、AutoCAD兼容性和技术绘图工具。'
         },
         about_description: '这些是用于测试目的的各种大小的DWG (AutoCAD图纸)文件'
+      },
+      dxf: {
+        meta: {
+          title: '下载免费DXF示例文件 - Drawing Exchange Format测试文件AutoCAD | MorphyHub',
+          description: '下载免费DXF Drawing Exchange Format示例文件，用于测试CAD软件、DXF转换器和技术绘图工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AutoCAD、CAD查看器、DXF解析器和绘图文件交换应用程序。',
+          keywords: 'DXF示例文件、DXF测试文件、下载DXF示例、免费DXF测试文件、AutoCAD DXF文件、Drawing Exchange Format文件、CAD DXF文件、DXF转换器测试文件、技术绘图文件、DXF解析器测试文件、CAD文件交换示例'
+        },
+        schema: {
+          name: '免费DXF示例文件 - 下载Drawing Exchange Format测试文件',
+          description: '下载免费DXF Drawing Exchange Format示例文件，用于测试CAD软件、DXF转换器和技术绘图工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AutoCAD、CAD查看器、DXF解析器和绘图文件交换应用程序。'
+        },
+        hero: {
+          title: 'DXF示例文件',
+          description: '下载免费DXF Drawing Exchange Format示例文件用于测试。提供多种文件大小，用于测试您的CAD软件、DXF转换器和技术绘图工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DXF (Drawing Exchange Format)文件'
+      },
+      ifc: {
+        meta: {
+          title: '下载免费IFC示例文件 - Industry Foundation Classes BIM测试文件 | MorphyHub',
+          description: '下载免费IFC Industry Foundation Classes示例文件，用于测试BIM软件、IFC查看器、建筑信息建模工具和施工管理应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Revit、ArchiCAD、IFC解析器、BIM查看器和建筑设计软件。',
+          keywords: 'IFC示例文件、IFC测试文件、下载IFC示例、免费IFC测试文件、Industry Foundation Classes文件、BIM IFC文件、建筑信息建模文件、IFC查看器测试文件、施工软件文件、IFC解析器测试文件、BIM交换格式示例'
+        },
+        schema: {
+          name: '免费IFC示例文件 - 下载Industry Foundation Classes BIM测试文件',
+          description: '下载免费IFC Industry Foundation Classes示例文件，用于测试BIM软件、IFC查看器、建筑信息建模工具和施工管理应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Revit、ArchiCAD、IFC解析器、BIM查看器和建筑设计软件。'
+        },
+        hero: {
+          title: 'IFC示例文件',
+          description: '下载免费IFC Industry Foundation Classes示例文件用于测试。提供多种文件大小，用于测试您的BIM软件、IFC查看器和建筑信息建模工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的IFC (Industry Foundation Classes)文件'
+      },
+      iges: {
+        meta: {
+          title: '下载免费IGES示例文件 - Initial Graphics Exchange Specification CAD测试文件 | MorphyHub',
+          description: '下载免费IGES Initial Graphics Exchange Specification示例文件，用于测试CAD软件、IGES转换器、3D建模工具和工程设计应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAD系统、IGES解析器、3D模型交换工具和工程软件。',
+          keywords: 'IGES示例文件、IGES测试文件、下载IGES示例、免费IGES测试文件、Initial Graphics Exchange Specification文件、CAD IGES文件、3D模型交换文件、IGES转换器测试文件、工程设计文件、IGES解析器测试文件、CAD交换格式示例'
+        },
+        schema: {
+          name: '免费IGES示例文件 - 下载Initial Graphics Exchange Specification CAD测试文件',
+          description: '下载免费IGES Initial Graphics Exchange Specification示例文件，用于测试CAD软件、IGES转换器、3D建模工具和工程设计应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAD系统、IGES解析器、3D模型交换工具和工程软件。'
+        },
+        hero: {
+          title: 'IGES示例文件',
+          description: '下载免费IGES Initial Graphics Exchange Specification示例文件用于测试。提供多种文件大小，用于测试您的CAD软件、IGES转换器和3D建模工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的IGES (Initial Graphics Exchange Specification)文件'
+      },
+      igs: {
+        meta: {
+          title: '下载免费IGS示例文件 - Initial Graphics Exchange Specification CAD测试文件 | MorphyHub',
+          description: '下载免费IGS Initial Graphics Exchange Specification示例文件，用于测试CAD软件、IGS转换器、3D建模工具和工程设计应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAD系统、IGS解析器、3D模型交换工具和工程软件。',
+          keywords: 'IGS示例文件、IGS测试文件、下载IGS示例、免费IGS测试文件、Initial Graphics Exchange Specification文件、CAD IGS文件、3D模型交换文件、IGS转换器测试文件、工程设计文件、IGS解析器测试文件、CAD交换格式示例'
+        },
+        schema: {
+          name: '免费IGS示例文件 - 下载Initial Graphics Exchange Specification CAD测试文件',
+          description: '下载免费IGS Initial Graphics Exchange Specification示例文件，用于测试CAD软件、IGS转换器、3D建模工具和工程设计应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试CAD系统、IGS解析器、3D模型交换工具和工程软件。'
+        },
+        hero: {
+          title: 'IGS示例文件',
+          description: '下载免费IGS Initial Graphics Exchange Specification示例文件用于测试。提供多种文件大小，用于测试您的CAD软件、IGS转换器和3D建模工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的IGS (Initial Graphics Exchange Specification)文件'
+      },
+      las: {
+        meta: {
+          title: '下载免费LAS示例文件 - LiDAR点云数据测试文件 | MorphyHub',
+          description: '下载免费LAS LiDAR点云示例文件，用于测试点云处理、LiDAR分析工具、3D制图软件和地理空间应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LAS解析器、点云查看器、LiDAR处理工具、3D制图软件和地理空间分析平台。',
+          keywords: 'LAS示例文件、LAS测试文件、下载LAS示例、免费LAS测试文件、LiDAR点云文件、LAS格式文件、点云数据文件、LAS解析器测试文件、地理空间文件、LiDAR分析测试文件、3D制图示例'
+        },
+        schema: {
+          name: '免费LAS示例文件 - 下载LiDAR点云数据测试文件',
+          description: '下载免费LAS LiDAR点云示例文件，用于测试点云处理、LiDAR分析工具、3D制图软件和地理空间应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试LAS解析器、点云查看器、LiDAR处理工具、3D制图软件和地理空间分析平台。'
+        },
+        hero: {
+          title: 'LAS示例文件',
+          description: '下载免费LAS LiDAR点云示例文件用于测试。提供多种文件大小，用于测试点云处理、LiDAR分析工具和3D制图软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的LAS (LiDAR点云)文件'
+      },
+      ma: {
+        meta: {
+          title: '下载免费MA示例文件 - Maya ASCII场景测试文件 | MorphyHub',
+          description: '下载免费MA Maya ASCII场景示例文件，用于测试Maya场景转换、3D动画软件、MA文件解析器和动画工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Autodesk Maya、MA文件查看器、场景转换工具、3D动画平台和动画工作流软件。',
+          keywords: 'MA示例文件、MA测试文件、下载MA示例、免费MA测试文件、Maya ASCII场景文件、MA格式文件、3D动画场景文件、MA解析器测试文件、动画文件、Maya场景测试文件、3D动画示例'
+        },
+        schema: {
+          name: '免费MA示例文件 - 下载Maya ASCII场景测试文件',
+          description: '下载免费MA Maya ASCII场景示例文件，用于测试Maya场景转换、3D动画软件、MA文件解析器和动画工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Autodesk Maya、MA文件查看器、场景转换工具、3D动画平台和动画工作流软件。'
+        },
+        hero: {
+          title: 'MA示例文件',
+          description: '下载免费MA Maya ASCII场景示例文件用于测试。提供多种文件大小，用于测试Maya场景转换、3D动画软件和动画工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MA (Maya ASCII场景)文件'
+      },
+      max: {
+        meta: {
+          title: '下载免费MAX示例文件 - 3ds Max场景测试文件 | MorphyHub',
+          description: '下载免费MAX 3ds Max场景示例文件，用于测试3ds Max场景转换、3D建模软件、MAX文件解析器和3D设计工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Autodesk 3ds Max、MAX文件查看器、场景转换工具、3D建模平台和3D设计工作流软件。',
+          keywords: 'MAX示例文件、MAX测试文件、下载MAX示例、免费MAX测试文件、3ds Max场景文件、MAX格式文件、3D建模场景文件、MAX解析器测试文件、3D设计文件、3ds Max场景测试文件、3D建模示例'
+        },
+        schema: {
+          name: '免费MAX示例文件 - 下载3ds Max场景测试文件',
+          description: '下载免费MAX 3ds Max场景示例文件，用于测试3ds Max场景转换、3D建模软件、MAX文件解析器和3D设计工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Autodesk 3ds Max、MAX文件查看器、场景转换工具、3D建模平台和3D设计工作流软件。'
+        },
+        hero: {
+          title: 'MAX示例文件',
+          description: '下载免费MAX 3ds Max场景示例文件用于测试。提供多种文件大小，用于测试3ds Max场景转换、3D建模软件和3D设计工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MAX (3ds Max场景)文件'
+      },
+      mb: {
+        meta: {
+          title: '下载免费MB示例文件 - Maya Binary场景测试文件 | MorphyHub',
+          description: '下载免费MB Maya Binary场景示例文件，用于测试Maya场景转换、3D动画软件、MB文件解析器和动画工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Autodesk Maya、MB文件查看器、场景转换工具、3D动画平台和动画工作流软件。',
+          keywords: 'MB示例文件、MB测试文件、下载MB示例、免费MB测试文件、Maya Binary场景文件、MB格式文件、3D动画场景文件、MB解析器测试文件、动画文件、Maya场景测试文件、3D动画示例'
+        },
+        schema: {
+          name: '免费MB示例文件 - 下载Maya Binary场景测试文件',
+          description: '下载免费MB Maya Binary场景示例文件，用于测试Maya场景转换、3D动画软件、MB文件解析器和动画工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Autodesk Maya、MB文件查看器、场景转换工具、3D动画平台和动画工作流软件。'
+        },
+        hero: {
+          title: 'MB示例文件',
+          description: '下载免费MB Maya Binary场景示例文件用于测试。提供多种文件大小，用于测试Maya场景转换、3D动画软件和动画工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的MB (Maya Binary场景)文件'
+      },
+      indd: {
+        meta: {
+          title: '下载免费INDD示例文件 - Adobe InDesign文档测试文件 | MorphyHub',
+          description: '下载免费INDD Adobe InDesign文档示例文件，用于测试InDesign兼容性、INDD转换器、桌面出版软件和布局设计工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Adobe InDesign、INDD文件查看器、文档转换工具、桌面出版平台和布局设计软件。',
+          keywords: 'INDD示例文件、INDD测试文件、下载INDD示例、免费INDD测试文件、Adobe InDesign文件、INDD格式文件、桌面出版文件、INDD转换器测试文件、布局设计文件、InDesign文档测试文件、出版软件示例'
+        },
+        schema: {
+          name: '免费INDD示例文件 - 下载Adobe InDesign文档测试文件',
+          description: '下载免费INDD Adobe InDesign文档示例文件，用于测试InDesign兼容性、INDD转换器、桌面出版软件和布局设计工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试Adobe InDesign、INDD文件查看器、文档转换工具、桌面出版平台和布局设计软件。'
+        },
+        hero: {
+          title: 'INDD示例文件',
+          description: '下载免费INDD Adobe InDesign文档示例文件用于测试。提供多种文件大小，用于测试InDesign兼容性、INDD转换器和桌面出版软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的INDD (Adobe InDesign文档)文件'
+      },
+      'animated-gif': {
+        meta: {
+          title: '下载免费动画GIF示例文件 - 动画图像测试文件 | MorphyHub',
+          description: '下载免费动画GIF示例文件，用于测试GIF动画播放、图像查看器、网络浏览器和动画工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试GIF查看器、动画播放器、图像处理工具、网络开发平台和多媒体应用程序。',
+          keywords: '动画GIF示例文件、动画GIF测试文件、下载动画GIF示例、免费动画GIF测试文件、GIF动画文件、动画图像文件、GIF播放器测试文件、动画文件、网络动画测试文件、多媒体GIF示例'
+        },
+        schema: {
+          name: '免费动画GIF示例文件 - 下载动画图像测试文件',
+          description: '下载免费动画GIF示例文件，用于测试GIF动画播放、图像查看器、网络浏览器和动画工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试GIF查看器、动画播放器、图像处理工具、网络开发平台和多媒体应用程序。'
+        },
+        hero: {
+          title: '动画GIF示例文件',
+          description: '下载免费动画GIF示例文件用于测试。提供多种文件大小，用于测试GIF动画播放、图像查看器和动画工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的动画GIF文件'
+      },
+      apng: {
+        meta: {
+          title: '下载免费APNG示例文件 - 动画PNG图像测试文件 | MorphyHub',
+          description: '下载免费APNG Animated Portable Network Graphics示例文件，用于测试APNG动画播放、图像查看器、网络浏览器和现代图像工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试APNG查看器、动画播放器、图像处理工具、网络开发平台和现代多媒体应用程序。',
+          keywords: 'APNG示例文件、APNG测试文件、下载APNG示例、免费APNG测试文件、Animated PNG文件、APNG动画文件、APNG播放器测试文件、动画文件、网络动画测试文件、现代图像格式示例'
+        },
+        schema: {
+          name: '免费APNG示例文件 - 下载动画PNG图像测试文件',
+          description: '下载免费APNG Animated Portable Network Graphics示例文件，用于测试APNG动画播放、图像查看器、网络浏览器和现代图像工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试APNG查看器、动画播放器、图像处理工具、网络开发平台和现代多媒体应用程序。'
+        },
+        hero: {
+          title: 'APNG示例文件',
+          description: '下载免费APNG Animated Portable Network Graphics示例文件用于测试。提供多种文件大小，用于测试APNG动画播放、图像查看器和现代图像工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的APNG (Animated Portable Network Graphics)文件'
+      },
+      avif: {
+        meta: {
+          title: '下载免费AVIF示例文件 - AV1图像文件格式测试文件 | MorphyHub',
+          description: '下载免费AVIF AV1 Image File Format示例文件，用于测试现代图像压缩、AVIF查看器、网络浏览器和下一代图像工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AVIF查看器、图像处理工具、网络开发平台、现代图像格式支持和下一代多媒体应用程序。',
+          keywords: 'AVIF示例文件、AVIF测试文件、下载AVIF示例、免费AVIF测试文件、AV1 Image File Format文件、AVIF图像文件、AVIF查看器测试文件、现代图像文件、网络图像格式测试文件、下一代图像格式示例'
+        },
+        schema: {
+          name: '免费AVIF示例文件 - 下载AV1图像文件格式测试文件',
+          description: '下载免费AVIF AV1 Image File Format示例文件，用于测试现代图像压缩、AVIF查看器、网络浏览器和下一代图像工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AVIF查看器、图像处理工具、网络开发平台、现代图像格式支持和下一代多媒体应用程序。'
+        },
+        hero: {
+          title: 'AVIF示例文件',
+          description: '下载免费AVIF AV1 Image File Format示例文件用于测试。提供多种文件大小，用于测试现代图像压缩、AVIF查看器和下一代图像工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AVIF (AV1 Image File Format)文件'
+      },
+      bmp: {
+        meta: {
+          title: '下载免费BMP示例文件 - 位图图像测试文件 | MorphyHub',
+          description: '下载免费BMP位图示例文件，用于测试图像查看器、BMP转换器、图形软件和图像处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试BMP查看器、图像编辑器、图形转换工具、图像处理平台和位图格式支持。',
+          keywords: 'BMP示例文件、BMP测试文件、下载BMP示例、免费BMP测试文件、位图图像文件、BMP格式文件、图像查看器测试文件、图形文件、图像转换测试文件、位图格式示例'
+        },
+        schema: {
+          name: '免费BMP示例文件 - 下载位图图像测试文件',
+          description: '下载免费BMP位图示例文件，用于测试图像查看器、BMP转换器、图形软件和图像处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试BMP查看器、图像编辑器、图形转换工具、图像处理平台和位图格式支持。'
+        },
+        hero: {
+          title: 'BMP示例文件',
+          description: '下载免费BMP位图示例文件用于测试。提供多种文件大小，用于测试图像查看器、BMP转换器和图形软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的BMP (位图)文件'
+      },
+      'barcode-svg': {
+        meta: {
+          title: '下载免费条形码SVG示例文件 - 可缩放矢量条形码测试文件 | MorphyHub',
+          description: '下载免费条形码SVG示例文件，用于测试条形码生成、SVG条形码读取器、矢量图形工具和条形码扫描应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试条形码生成器、SVG查看器、条形码扫描工具、矢量图形平台和条形码识别软件。',
+          keywords: '条形码SVG示例文件、条形码SVG测试文件、下载条形码SVG示例、免费条形码SVG测试文件、SVG条形码文件、矢量条形码文件、条形码生成器测试文件、SVG文件、条形码扫描测试文件、矢量图形示例'
+        },
+        schema: {
+          name: '免费条形码SVG示例文件 - 下载可缩放矢量条形码测试文件',
+          description: '下载免费条形码SVG示例文件，用于测试条形码生成、SVG条形码读取器、矢量图形工具和条形码扫描应用程序。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试条形码生成器、SVG查看器、条形码扫描工具、矢量图形平台和条形码识别软件。'
+        },
+        hero: {
+          title: '条形码SVG示例文件',
+          description: '下载免费条形码SVG示例文件用于测试。提供多种文件大小，用于测试条形码生成、SVG条形码读取器和矢量图形工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的条形码SVG文件'
+      },
+      avi: {
+        meta: {
+          title: '下载免费AVI示例文件 - Audio Video Interleave视频测试文件 | MorphyHub',
+          description: '下载免费AVI Audio Video Interleave示例文件，用于测试视频播放器、AVI转换器、多媒体软件和视频处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AVI播放器、视频编辑器、多媒体转换工具、视频处理平台和视频格式支持。',
+          keywords: 'AVI示例文件、AVI测试文件、下载AVI示例、免费AVI测试文件、Audio Video Interleave文件、AVI视频文件、视频播放器测试文件、多媒体文件、视频转换测试文件、视频格式示例'
+        },
+        schema: {
+          name: '免费AVI示例文件 - 下载Audio Video Interleave视频测试文件',
+          description: '下载免费AVI Audio Video Interleave示例文件，用于测试视频播放器、AVI转换器、多媒体软件和视频处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试AVI播放器、视频编辑器、多媒体转换工具、视频处理平台和视频格式支持。'
+        },
+        hero: {
+          title: 'AVI示例文件',
+          description: '下载免费AVI Audio Video Interleave示例文件用于测试。提供多种文件大小，用于测试视频播放器、AVI转换器和多媒体软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AVI (Audio Video Interleave)文件'
+      },
+      '3gp': {
+        meta: {
+          title: '下载免费3GP示例文件 - 3GPP移动视频测试文件 | MorphyHub',
+          description: '下载免费3GP 3GPP移动视频示例文件，用于测试移动视频播放器、3GP转换器、多媒体软件和移动视频处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试3GP播放器、移动视频编辑器、视频转换工具、移动多媒体平台和移动视频格式支持。',
+          keywords: '3GP示例文件、3GP测试文件、下载3GP示例、免费3GP测试文件、3GPP移动视频文件、3GP视频文件、移动视频播放器测试文件、多媒体文件、移动视频转换测试文件、移动视频格式示例'
+        },
+        schema: {
+          name: '免费3GP示例文件 - 下载3GPP移动视频测试文件',
+          description: '下载免费3GP 3GPP移动视频示例文件，用于测试移动视频播放器、3GP转换器、多媒体软件和移动视频处理工具。多种文件大小：100 KB、1 MB、5 MB、50 MB和100 MB。非常适合测试3GP播放器、移动视频编辑器、视频转换工具、移动多媒体平台和移动视频格式支持。'
+        },
+        hero: {
+          title: '3GP示例文件',
+          description: '下载免费3GP 3GPP移动视频示例文件用于测试。提供多种文件大小，用于测试移动视频播放器、3GP转换器和多媒体软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的3GP (3GPP移动视频)文件'
       }
     }
   }

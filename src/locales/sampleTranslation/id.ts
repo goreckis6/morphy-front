@@ -1263,6 +1263,262 @@ export const id: SamplePageTranslations = {
           description: 'Unduh file sampel DWG gambar AutoCAD gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak CAD, kompatibilitas AutoCAD, dan alat gambar teknis Anda.'
         },
         about_description: 'Ini adalah file uji DWG (gambar AutoCAD) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      dxf: {
+        meta: {
+          title: 'Unduh File Sampel DXF Gratis - File Uji Drawing Exchange Format AutoCAD | MorphyHub',
+          description: 'Unduh file sampel DXF Drawing Exchange Format gratis untuk menguji perangkat lunak CAD, konverter DXF, dan alat gambar teknis. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji AutoCAD, penampil CAD, parser DXF, dan aplikasi pertukaran file gambar.',
+          keywords: 'file sampel DXF, file uji DXF, unduh contoh DXF, file uji DXF gratis, file AutoCAD DXF, file Drawing Exchange Format, file CAD DXF, file uji konverter DXF, file gambar teknis, file uji parser DXF, contoh pertukaran file CAD'
+        },
+        schema: {
+          name: 'File Sampel DXF Gratis - Unduh File Uji Drawing Exchange Format',
+          description: 'Unduh file sampel DXF Drawing Exchange Format gratis untuk menguji perangkat lunak CAD, konverter DXF, dan alat gambar teknis. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji AutoCAD, penampil CAD, parser DXF, dan aplikasi pertukaran file gambar.'
+        },
+        hero: {
+          title: 'File Sampel DXF',
+          description: 'Unduh file sampel DXF Drawing Exchange Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak CAD, konverter DXF, dan alat gambar teknis Anda.'
+        },
+        about_description: 'Ini adalah file uji DXF (Drawing Exchange Format) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ifc: {
+        meta: {
+          title: 'Unduh File Sampel IFC Gratis - File Uji Industry Foundation Classes BIM | MorphyHub',
+          description: 'Unduh file sampel IFC Industry Foundation Classes gratis untuk menguji perangkat lunak BIM, penampil IFC, alat pemodelan informasi bangunan, dan aplikasi manajemen konstruksi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Revit, ArchiCAD, parser IFC, penampil BIM, dan perangkat lunak desain bangunan.',
+          keywords: 'file sampel IFC, file uji IFC, unduh contoh IFC, file uji IFC gratis, file Industry Foundation Classes, file BIM IFC, file pemodelan informasi bangunan, file uji penampil IFC, file perangkat lunak konstruksi, file uji parser IFC, contoh format pertukaran BIM'
+        },
+        schema: {
+          name: 'File Sampel IFC Gratis - Unduh File Uji Industry Foundation Classes BIM',
+          description: 'Unduh file sampel IFC Industry Foundation Classes gratis untuk menguji perangkat lunak BIM, penampil IFC, alat pemodelan informasi bangunan, dan aplikasi manajemen konstruksi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Revit, ArchiCAD, parser IFC, penampil BIM, dan perangkat lunak desain bangunan.'
+        },
+        hero: {
+          title: 'File Sampel IFC',
+          description: 'Unduh file sampel IFC Industry Foundation Classes gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak BIM, penampil IFC, dan alat pemodelan informasi bangunan Anda.'
+        },
+        about_description: 'Ini adalah file uji IFC (Industry Foundation Classes) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      iges: {
+        meta: {
+          title: 'Unduh File Sampel IGES Gratis - File Uji Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Unduh file sampel IGES Initial Graphics Exchange Specification gratis untuk menguji perangkat lunak CAD, konverter IGES, alat pemodelan 3D, dan aplikasi desain teknik. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji sistem CAD, parser IGES, alat pertukaran model 3D, dan perangkat lunak teknik.',
+          keywords: 'file sampel IGES, file uji IGES, unduh contoh IGES, file uji IGES gratis, file Initial Graphics Exchange Specification, file CAD IGES, file pertukaran model 3D, file uji konverter IGES, file desain teknik, file uji parser IGES, contoh format pertukaran CAD'
+        },
+        schema: {
+          name: 'File Sampel IGES Gratis - Unduh File Uji Initial Graphics Exchange Specification CAD',
+          description: 'Unduh file sampel IGES Initial Graphics Exchange Specification gratis untuk menguji perangkat lunak CAD, konverter IGES, alat pemodelan 3D, dan aplikasi desain teknik. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji sistem CAD, parser IGES, alat pertukaran model 3D, dan perangkat lunak teknik.'
+        },
+        hero: {
+          title: 'File Sampel IGES',
+          description: 'Unduh file sampel IGES Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak CAD, konverter IGES, dan alat pemodelan 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji IGES (Initial Graphics Exchange Specification) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      igs: {
+        meta: {
+          title: 'Unduh File Sampel IGS Gratis - File Uji Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Unduh file sampel IGS Initial Graphics Exchange Specification gratis untuk menguji perangkat lunak CAD, konverter IGS, alat pemodelan 3D, dan aplikasi desain teknik. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji sistem CAD, parser IGS, alat pertukaran model 3D, dan perangkat lunak teknik.',
+          keywords: 'file sampel IGS, file uji IGS, unduh contoh IGS, file uji IGS gratis, file Initial Graphics Exchange Specification, file CAD IGS, file pertukaran model 3D, file uji konverter IGS, file desain teknik, file uji parser IGS, contoh format pertukaran CAD'
+        },
+        schema: {
+          name: 'File Sampel IGS Gratis - Unduh File Uji Initial Graphics Exchange Specification CAD',
+          description: 'Unduh file sampel IGS Initial Graphics Exchange Specification gratis untuk menguji perangkat lunak CAD, konverter IGS, alat pemodelan 3D, dan aplikasi desain teknik. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji sistem CAD, parser IGS, alat pertukaran model 3D, dan perangkat lunak teknik.'
+        },
+        hero: {
+          title: 'File Sampel IGS',
+          description: 'Unduh file sampel IGS Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak CAD, konverter IGS, dan alat pemodelan 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji IGS (Initial Graphics Exchange Specification) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      las: {
+        meta: {
+          title: 'Unduh File Sampel LAS Gratis - File Uji Data Point Cloud LiDAR | MorphyHub',
+          description: 'Unduh file sampel LAS point cloud LiDAR gratis untuk menguji pemrosesan point cloud, alat analisis LiDAR, perangkat lunak pemetaan 3D, dan aplikasi geospasial. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji parser LAS, penampil point cloud, alat pemrosesan LiDAR, perangkat lunak pemetaan 3D, dan platform analisis geospasial.',
+          keywords: 'file sampel LAS, file uji LAS, unduh contoh LAS, file uji LAS gratis, file point cloud LiDAR, file format LAS, file data point cloud, file uji parser LAS, file geospasial, file uji analisis LiDAR, contoh pemetaan 3D'
+        },
+        schema: {
+          name: 'File Sampel LAS Gratis - Unduh File Uji Data Point Cloud LiDAR',
+          description: 'Unduh file sampel LAS point cloud LiDAR gratis untuk menguji pemrosesan point cloud, alat analisis LiDAR, perangkat lunak pemetaan 3D, dan aplikasi geospasial. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji parser LAS, penampil point cloud, alat pemrosesan LiDAR, perangkat lunak pemetaan 3D, dan platform analisis geospasial.'
+        },
+        hero: {
+          title: 'File Sampel LAS',
+          description: 'Unduh file sampel LAS point cloud LiDAR gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan point cloud, alat analisis LiDAR, dan perangkat lunak pemetaan 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji LAS (point cloud LiDAR) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ma: {
+        meta: {
+          title: 'Unduh File Sampel MA Gratis - File Uji Scene Maya ASCII | MorphyHub',
+          description: 'Unduh file sampel MA scene Maya ASCII gratis untuk menguji konversi scene Maya, perangkat lunak animasi 3D, parser file MA, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk Maya, penampil file MA, alat konversi scene, platform animasi 3D, dan perangkat lunak workflow animasi.',
+          keywords: 'file sampel MA, file uji MA, unduh contoh MA, file uji MA gratis, file scene Maya ASCII, file format MA, file scene animasi 3D, file uji parser MA, file animasi, file uji scene Maya, contoh animasi 3D'
+        },
+        schema: {
+          name: 'File Sampel MA Gratis - Unduh File Uji Scene Maya ASCII',
+          description: 'Unduh file sampel MA scene Maya ASCII gratis untuk menguji konversi scene Maya, perangkat lunak animasi 3D, parser file MA, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk Maya, penampil file MA, alat konversi scene, platform animasi 3D, dan perangkat lunak workflow animasi.'
+        },
+        hero: {
+          title: 'File Sampel MA',
+          description: 'Unduh file sampel MA scene Maya ASCII gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji konversi scene Maya, perangkat lunak animasi 3D, dan alat animasi Anda.'
+        },
+        about_description: 'Ini adalah file uji MA (scene Maya ASCII) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      max: {
+        meta: {
+          title: 'Unduh File Sampel MAX Gratis - File Uji Scene 3ds Max | MorphyHub',
+          description: 'Unduh file sampel MAX scene 3ds Max gratis untuk menguji konversi scene 3ds Max, perangkat lunak pemodelan 3D, parser file MAX, dan alat desain 3D. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk 3ds Max, penampil file MAX, alat konversi scene, platform pemodelan 3D, dan perangkat lunak workflow desain 3D.',
+          keywords: 'file sampel MAX, file uji MAX, unduh contoh MAX, file uji MAX gratis, file scene 3ds Max, file format MAX, file scene pemodelan 3D, file uji parser MAX, file desain 3D, file uji scene 3ds Max, contoh pemodelan 3D'
+        },
+        schema: {
+          name: 'File Sampel MAX Gratis - Unduh File Uji Scene 3ds Max',
+          description: 'Unduh file sampel MAX scene 3ds Max gratis untuk menguji konversi scene 3ds Max, perangkat lunak pemodelan 3D, parser file MAX, dan alat desain 3D. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk 3ds Max, penampil file MAX, alat konversi scene, platform pemodelan 3D, dan perangkat lunak workflow desain 3D.'
+        },
+        hero: {
+          title: 'File Sampel MAX',
+          description: 'Unduh file sampel MAX scene 3ds Max gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji konversi scene 3ds Max, perangkat lunak pemodelan 3D, dan alat desain 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji MAX (scene 3ds Max) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      mb: {
+        meta: {
+          title: 'Unduh File Sampel MB Gratis - File Uji Scene Maya Binary | MorphyHub',
+          description: 'Unduh file sampel MB scene Maya Binary gratis untuk menguji konversi scene Maya, perangkat lunak animasi 3D, parser file MB, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk Maya, penampil file MB, alat konversi scene, platform animasi 3D, dan perangkat lunak workflow animasi.',
+          keywords: 'file sampel MB, file uji MB, unduh contoh MB, file uji MB gratis, file scene Maya Binary, file format MB, file scene animasi 3D, file uji parser MB, file animasi, file uji scene Maya, contoh animasi 3D'
+        },
+        schema: {
+          name: 'File Sampel MB Gratis - Unduh File Uji Scene Maya Binary',
+          description: 'Unduh file sampel MB scene Maya Binary gratis untuk menguji konversi scene Maya, perangkat lunak animasi 3D, parser file MB, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Autodesk Maya, penampil file MB, alat konversi scene, platform animasi 3D, dan perangkat lunak workflow animasi.'
+        },
+        hero: {
+          title: 'File Sampel MB',
+          description: 'Unduh file sampel MB scene Maya Binary gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji konversi scene Maya, perangkat lunak animasi 3D, dan alat animasi Anda.'
+        },
+        about_description: 'Ini adalah file uji MB (scene Maya Binary) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      indd: {
+        meta: {
+          title: 'Unduh File Sampel INDD Gratis - File Uji Dokumen Adobe InDesign | MorphyHub',
+          description: 'Unduh file sampel INDD dokumen Adobe InDesign gratis untuk menguji kompatibilitas InDesign, konverter INDD, perangkat lunak desktop publishing, dan alat desain layout. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Adobe InDesign, penampil file INDD, alat konversi dokumen, platform desktop publishing, dan perangkat lunak desain layout.',
+          keywords: 'file sampel INDD, file uji INDD, unduh contoh INDD, file uji INDD gratis, file Adobe InDesign, file format INDD, file desktop publishing, file uji konverter INDD, file desain layout, file uji dokumen InDesign, contoh perangkat lunak penerbitan'
+        },
+        schema: {
+          name: 'File Sampel INDD Gratis - Unduh File Uji Dokumen Adobe InDesign',
+          description: 'Unduh file sampel INDD dokumen Adobe InDesign gratis untuk menguji kompatibilitas InDesign, konverter INDD, perangkat lunak desktop publishing, dan alat desain layout. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji Adobe InDesign, penampil file INDD, alat konversi dokumen, platform desktop publishing, dan perangkat lunak desain layout.'
+        },
+        hero: {
+          title: 'File Sampel INDD',
+          description: 'Unduh file sampel INDD dokumen Adobe InDesign gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompatibilitas InDesign, konverter INDD, dan perangkat lunak desktop publishing Anda.'
+        },
+        about_description: 'Ini adalah file uji INDD (dokumen Adobe InDesign) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Unduh File Sampel GIF Animasi Gratis - File Uji Gambar Animasi | MorphyHub',
+          description: 'Unduh file sampel GIF animasi gratis untuk menguji pemutaran animasi GIF, penampil gambar, browser web, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil GIF, pemutar animasi, alat pemrosesan gambar, platform pengembangan web, dan aplikasi multimedia.',
+          keywords: 'file sampel GIF animasi, file uji GIF animasi, unduh contoh GIF animasi, file uji GIF animasi gratis, file animasi GIF, file gambar animasi, file uji pemutar GIF, file animasi, file uji animasi web, contoh GIF multimedia'
+        },
+        schema: {
+          name: 'File Sampel GIF Animasi Gratis - Unduh File Uji Gambar Animasi',
+          description: 'Unduh file sampel GIF animasi gratis untuk menguji pemutaran animasi GIF, penampil gambar, browser web, dan alat animasi. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil GIF, pemutar animasi, alat pemrosesan gambar, platform pengembangan web, dan aplikasi multimedia.'
+        },
+        hero: {
+          title: 'File Sampel GIF Animasi',
+          description: 'Unduh file sampel GIF animasi gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran animasi GIF, penampil gambar, dan alat animasi Anda.'
+        },
+        about_description: 'Ini adalah file uji GIF animasi dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      apng: {
+        meta: {
+          title: 'Unduh File Sampel APNG Gratis - File Uji Gambar PNG Animasi | MorphyHub',
+          description: 'Unduh file sampel APNG Animated Portable Network Graphics gratis untuk menguji pemutaran animasi APNG, penampil gambar, browser web, dan alat gambar modern. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil APNG, pemutar animasi, alat pemrosesan gambar, platform pengembangan web, dan aplikasi multimedia modern.',
+          keywords: 'file sampel APNG, file uji APNG, unduh contoh APNG, file uji APNG gratis, file Animated PNG, file animasi APNG, file uji pemutar APNG, file animasi, file uji animasi web, contoh format gambar modern'
+        },
+        schema: {
+          name: 'File Sampel APNG Gratis - Unduh File Uji Gambar PNG Animasi',
+          description: 'Unduh file sampel APNG Animated Portable Network Graphics gratis untuk menguji pemutaran animasi APNG, penampil gambar, browser web, dan alat gambar modern. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil APNG, pemutar animasi, alat pemrosesan gambar, platform pengembangan web, dan aplikasi multimedia modern.'
+        },
+        hero: {
+          title: 'File Sampel APNG',
+          description: 'Unduh file sampel APNG Animated Portable Network Graphics gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran animasi APNG, penampil gambar, dan alat gambar modern Anda.'
+        },
+        about_description: 'Ini adalah file uji APNG (Animated Portable Network Graphics) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      avif: {
+        meta: {
+          title: 'Unduh File Sampel AVIF Gratis - File Uji Format Gambar AV1 | MorphyHub',
+          description: 'Unduh file sampel AVIF AV1 Image File Format gratis untuk menguji kompresi gambar modern, penampil AVIF, browser web, dan alat gambar generasi berikutnya. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil AVIF, alat pemrosesan gambar, platform pengembangan web, dukungan format gambar modern, dan aplikasi multimedia generasi berikutnya.',
+          keywords: 'file sampel AVIF, file uji AVIF, unduh contoh AVIF, file uji AVIF gratis, file AV1 Image File Format, file gambar AVIF, file uji penampil AVIF, file gambar modern, file uji format gambar web, contoh format gambar generasi berikutnya'
+        },
+        schema: {
+          name: 'File Sampel AVIF Gratis - Unduh File Uji Format Gambar AV1',
+          description: 'Unduh file sampel AVIF AV1 Image File Format gratis untuk menguji kompresi gambar modern, penampil AVIF, browser web, dan alat gambar generasi berikutnya. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil AVIF, alat pemrosesan gambar, platform pengembangan web, dukungan format gambar modern, dan aplikasi multimedia generasi berikutnya.'
+        },
+        hero: {
+          title: 'File Sampel AVIF',
+          description: 'Unduh file sampel AVIF AV1 Image File Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompresi gambar modern, penampil AVIF, dan alat gambar generasi berikutnya Anda.'
+        },
+        about_description: 'Ini adalah file uji AVIF (AV1 Image File Format) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      bmp: {
+        meta: {
+          title: 'Unduh File Sampel BMP Gratis - File Uji Gambar Bitmap | MorphyHub',
+          description: 'Unduh file sampel BMP bitmap gratis untuk menguji penampil gambar, konverter BMP, perangkat lunak grafis, dan alat pemrosesan gambar. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil BMP, editor gambar, alat konversi grafis, platform pemrosesan gambar, dan dukungan format bitmap.',
+          keywords: 'file sampel BMP, file uji BMP, unduh contoh BMP, file uji BMP gratis, file gambar bitmap, file format BMP, file uji penampil gambar, file grafis, file uji konversi gambar, contoh format bitmap'
+        },
+        schema: {
+          name: 'File Sampel BMP Gratis - Unduh File Uji Gambar Bitmap',
+          description: 'Unduh file sampel BMP bitmap gratis untuk menguji penampil gambar, konverter BMP, perangkat lunak grafis, dan alat pemrosesan gambar. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji penampil BMP, editor gambar, alat konversi grafis, platform pemrosesan gambar, dan dukungan format bitmap.'
+        },
+        hero: {
+          title: 'File Sampel BMP',
+          description: 'Unduh file sampel BMP bitmap gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji penampil gambar, konverter BMP, dan perangkat lunak grafis Anda.'
+        },
+        about_description: 'Ini adalah file uji BMP (bitmap) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Unduh File Sampel Barcode SVG Gratis - File Uji Barcode Vektor Skalabel | MorphyHub',
+          description: 'Unduh file sampel barcode SVG gratis untuk menguji pembuatan barcode, pembaca barcode SVG, alat grafik vektor, dan aplikasi pemindaian barcode. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji generator barcode, penampil SVG, alat pemindaian barcode, platform grafik vektor, dan perangkat lunak pengenalan barcode.',
+          keywords: 'file sampel barcode SVG, file uji barcode SVG, unduh contoh barcode SVG, file uji barcode SVG gratis, file barcode SVG, file barcode vektor, file uji generator barcode, file SVG, file uji pemindaian barcode, contoh grafik vektor'
+        },
+        schema: {
+          name: 'File Sampel Barcode SVG Gratis - Unduh File Uji Barcode Vektor Skalabel',
+          description: 'Unduh file sampel barcode SVG gratis untuk menguji pembuatan barcode, pembaca barcode SVG, alat grafik vektor, dan aplikasi pemindaian barcode. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji generator barcode, penampil SVG, alat pemindaian barcode, platform grafik vektor, dan perangkat lunak pengenalan barcode.'
+        },
+        hero: {
+          title: 'File Sampel Barcode SVG',
+          description: 'Unduh file sampel barcode SVG gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pembuatan barcode, pembaca barcode SVG, dan alat grafik vektor Anda.'
+        },
+        about_description: 'Ini adalah file uji barcode SVG dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      avi: {
+        meta: {
+          title: 'Unduh File Sampel AVI Gratis - File Uji Video Audio Video Interleave | MorphyHub',
+          description: 'Unduh file sampel AVI Audio Video Interleave gratis untuk menguji pemutar video, konverter AVI, perangkat lunak multimedia, dan alat pemrosesan video. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutar AVI, editor video, alat konversi multimedia, platform pemrosesan video, dan dukungan format video.',
+          keywords: 'file sampel AVI, file uji AVI, unduh contoh AVI, file uji AVI gratis, file Audio Video Interleave, file video AVI, file uji pemutar video, file multimedia, file uji konversi video, contoh format video'
+        },
+        schema: {
+          name: 'File Sampel AVI Gratis - Unduh File Uji Video Audio Video Interleave',
+          description: 'Unduh file sampel AVI Audio Video Interleave gratis untuk menguji pemutar video, konverter AVI, perangkat lunak multimedia, dan alat pemrosesan video. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutar AVI, editor video, alat konversi multimedia, platform pemrosesan video, dan dukungan format video.'
+        },
+        hero: {
+          title: 'File Sampel AVI',
+          description: 'Unduh file sampel AVI Audio Video Interleave gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutar video, konverter AVI, dan perangkat lunak multimedia Anda.'
+        },
+        about_description: 'Ini adalah file uji AVI (Audio Video Interleave) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      '3gp': {
+        meta: {
+          title: 'Unduh File Sampel 3GP Gratis - File Uji Video Mobile 3GPP | MorphyHub',
+          description: 'Unduh file sampel 3GP video mobile 3GPP gratis untuk menguji pemutar video mobile, konverter 3GP, perangkat lunak multimedia, dan alat pemrosesan video mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutar 3GP, editor video mobile, alat konversi video, platform multimedia mobile, dan dukungan format video mobile.',
+          keywords: 'file sampel 3GP, file uji 3GP, unduh contoh 3GP, file uji 3GP gratis, file video mobile 3GPP, file video 3GP, file uji pemutar video mobile, file multimedia, file uji konversi video mobile, contoh format video mobile'
+        },
+        schema: {
+          name: 'File Sampel 3GP Gratis - Unduh File Uji Video Mobile 3GPP',
+          description: 'Unduh file sampel 3GP video mobile 3GPP gratis untuk menguji pemutar video mobile, konverter 3GP, perangkat lunak multimedia, dan alat pemrosesan video mobile. Berbagai ukuran file: 100 KB, 1 MB, 5 MB, 50 MB dan 100 MB. Sempurna untuk menguji pemutar 3GP, editor video mobile, alat konversi video, platform multimedia mobile, dan dukungan format video mobile.'
+        },
+        hero: {
+          title: 'File Sampel 3GP',
+          description: 'Unduh file sampel 3GP video mobile 3GPP gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutar video mobile, konverter 3GP, dan perangkat lunak multimedia Anda.'
+        },
+        about_description: 'Ini adalah file uji 3GP (video mobile 3GPP) dalam berbagai ukuran untuk keperluan pengujian'
       }
     }
   }

@@ -1263,6 +1263,262 @@ export const pl: SamplePageTranslations = {
           description: 'Pobierz darmowe pliki przykładowe DWG rysunków AutoCAD do testowania. Różne rozmiary plików dostępne do testowania oprogramowania CAD, kompatybilności AutoCAD i narzędzi rysunku technicznego.'
         },
         about_description: 'To są testowe pliki DWG (rysunek AutoCAD) w różnych rozmiarach do celów testowych'
+      },
+      dxf: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe DXF - Pliki testowe Drawing Exchange Format AutoCAD | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe DXF Drawing Exchange Format do testowania oprogramowania CAD, konwerterów DXF i narzędzi rysunku technicznego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania AutoCAD, przeglądarek CAD, parserów DXF i aplikacji wymiany plików rysunkowych.',
+          keywords: 'pliki przykładowe DXF, pliki testowe DXF, pobierz przykłady DXF, darmowe pliki testowe DXF, pliki AutoCAD DXF, pliki Drawing Exchange Format, pliki CAD DXF, pliki testowe konwertera DXF, pliki rysunku technicznego, pliki testowe parsera DXF, przykłady wymiany plików CAD'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe DXF - Pobierz pliki testowe Drawing Exchange Format',
+          description: 'Pobierz darmowe pliki przykładowe DXF Drawing Exchange Format do testowania oprogramowania CAD, konwerterów DXF i narzędzi rysunku technicznego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania AutoCAD, przeglądarek CAD, parserów DXF i aplikacji wymiany plików rysunkowych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe DXF',
+          description: 'Pobierz darmowe pliki przykładowe DXF Drawing Exchange Format do testowania. Różne rozmiary plików dostępne do testowania oprogramowania CAD, konwerterów DXF i narzędzi rysunku technicznego.'
+        },
+        about_description: 'To są testowe pliki DXF (Drawing Exchange Format) w różnych rozmiarach do celów testowych'
+      },
+      ifc: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe IFC - Pliki testowe Industry Foundation Classes BIM | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe IFC Industry Foundation Classes do testowania oprogramowania BIM, przeglądarek IFC, narzędzi modelowania informacji o budynku i aplikacji zarządzania budową. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Revit, ArchiCAD, parserów IFC, przeglądarek BIM i oprogramowania projektowania budynków.',
+          keywords: 'pliki przykładowe IFC, pliki testowe IFC, pobierz przykłady IFC, darmowe pliki testowe IFC, pliki Industry Foundation Classes, pliki BIM IFC, pliki modelowania informacji o budynku, pliki testowe przeglądarki IFC, pliki oprogramowania budowlanego, pliki testowe parsera IFC, przykłady formatu wymiany BIM'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe IFC - Pobierz pliki testowe Industry Foundation Classes BIM',
+          description: 'Pobierz darmowe pliki przykładowe IFC Industry Foundation Classes do testowania oprogramowania BIM, przeglądarek IFC, narzędzi modelowania informacji o budynku i aplikacji zarządzania budową. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Revit, ArchiCAD, parserów IFC, przeglądarek BIM i oprogramowania projektowania budynków.'
+        },
+        hero: {
+          title: 'Pliki przykładowe IFC',
+          description: 'Pobierz darmowe pliki przykładowe IFC Industry Foundation Classes do testowania. Różne rozmiary plików dostępne do testowania oprogramowania BIM, przeglądarek IFC i narzędzi modelowania informacji o budynku.'
+        },
+        about_description: 'To są testowe pliki IFC (Industry Foundation Classes) w różnych rozmiarach do celów testowych'
+      },
+      iges: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe IGES - Pliki testowe Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe IGES Initial Graphics Exchange Specification do testowania oprogramowania CAD, konwerterów IGES, narzędzi modelowania 3D i aplikacji projektowania inżynierskiego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania systemów CAD, parserów IGES, narzędzi wymiany modeli 3D i oprogramowania inżynierskiego.',
+          keywords: 'pliki przykładowe IGES, pliki testowe IGES, pobierz przykłady IGES, darmowe pliki testowe IGES, pliki Initial Graphics Exchange Specification, pliki CAD IGES, pliki wymiany modeli 3D, pliki testowe konwertera IGES, pliki projektowania inżynierskiego, pliki testowe parsera IGES, przykłady formatu wymiany CAD'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe IGES - Pobierz pliki testowe Initial Graphics Exchange Specification CAD',
+          description: 'Pobierz darmowe pliki przykładowe IGES Initial Graphics Exchange Specification do testowania oprogramowania CAD, konwerterów IGES, narzędzi modelowania 3D i aplikacji projektowania inżynierskiego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania systemów CAD, parserów IGES, narzędzi wymiany modeli 3D i oprogramowania inżynierskiego.'
+        },
+        hero: {
+          title: 'Pliki przykładowe IGES',
+          description: 'Pobierz darmowe pliki przykładowe IGES Initial Graphics Exchange Specification do testowania. Różne rozmiary plików dostępne do testowania oprogramowania CAD, konwerterów IGES i narzędzi modelowania 3D.'
+        },
+        about_description: 'To są testowe pliki IGES (Initial Graphics Exchange Specification) w różnych rozmiarach do celów testowych'
+      },
+      igs: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe IGS - Pliki testowe Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe IGS Initial Graphics Exchange Specification do testowania oprogramowania CAD, konwerterów IGS, narzędzi modelowania 3D i aplikacji projektowania inżynierskiego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania systemów CAD, parserów IGS, narzędzi wymiany modeli 3D i oprogramowania inżynierskiego.',
+          keywords: 'pliki przykładowe IGS, pliki testowe IGS, pobierz przykłady IGS, darmowe pliki testowe IGS, pliki Initial Graphics Exchange Specification, pliki CAD IGS, pliki wymiany modeli 3D, pliki testowe konwertera IGS, pliki projektowania inżynierskiego, pliki testowe parsera IGS, przykłady formatu wymiany CAD'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe IGS - Pobierz pliki testowe Initial Graphics Exchange Specification CAD',
+          description: 'Pobierz darmowe pliki przykładowe IGS Initial Graphics Exchange Specification do testowania oprogramowania CAD, konwerterów IGS, narzędzi modelowania 3D i aplikacji projektowania inżynierskiego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania systemów CAD, parserów IGS, narzędzi wymiany modeli 3D i oprogramowania inżynierskiego.'
+        },
+        hero: {
+          title: 'Pliki przykładowe IGS',
+          description: 'Pobierz darmowe pliki przykładowe IGS Initial Graphics Exchange Specification do testowania. Różne rozmiary plików dostępne do testowania oprogramowania CAD, konwerterów IGS i narzędzi modelowania 3D.'
+        },
+        about_description: 'To są testowe pliki IGS (Initial Graphics Exchange Specification) w różnych rozmiarach do celów testowych'
+      },
+      las: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe LAS - Pliki testowe danych chmury punktów LiDAR | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe LAS chmury punktów LiDAR do testowania przetwarzania chmur punktów, narzędzi analizy LiDAR, oprogramowania mapowania 3D i aplikacji geoprzestrzennych. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parserów LAS, przeglądarek chmur punktów, narzędzi przetwarzania LiDAR, oprogramowania mapowania 3D i platform analizy geoprzestrzennej.',
+          keywords: 'pliki przykładowe LAS, pliki testowe LAS, pobierz przykłady LAS, darmowe pliki testowe LAS, pliki chmury punktów LiDAR, pliki formatu LAS, pliki danych chmury punktów, pliki testowe parsera LAS, pliki geoprzestrzenne, pliki testowe analizy LiDAR, przykłady mapowania 3D'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe LAS - Pobierz pliki testowe danych chmury punktów LiDAR',
+          description: 'Pobierz darmowe pliki przykładowe LAS chmury punktów LiDAR do testowania przetwarzania chmur punktów, narzędzi analizy LiDAR, oprogramowania mapowania 3D i aplikacji geoprzestrzennych. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania parserów LAS, przeglądarek chmur punktów, narzędzi przetwarzania LiDAR, oprogramowania mapowania 3D i platform analizy geoprzestrzennej.'
+        },
+        hero: {
+          title: 'Pliki przykładowe LAS',
+          description: 'Pobierz darmowe pliki przykładowe LAS chmury punktów LiDAR do testowania. Różne rozmiary plików dostępne do testowania przetwarzania chmur punktów, narzędzi analizy LiDAR i oprogramowania mapowania 3D.'
+        },
+        about_description: 'To są testowe pliki LAS (chmura punktów LiDAR) w różnych rozmiarach do celów testowych'
+      },
+      ma: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe MA - Pliki testowe scen Maya ASCII | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe MA scen Maya ASCII do testowania konwersji scen Maya, oprogramowania animacji 3D, parserów plików MA i narzędzi animacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Autodesk Maya, przeglądarek plików MA, narzędzi konwersji scen, platform animacji 3D i oprogramowania przepływu pracy animacji.',
+          keywords: 'pliki przykładowe MA, pliki testowe MA, pobierz przykłady MA, darmowe pliki testowe MA, pliki scen Maya ASCII, pliki formatu MA, pliki scen animacji 3D, pliki testowe parsera MA, pliki animacji, pliki testowe scen Maya, przykłady animacji 3D'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe MA - Pobierz pliki testowe scen Maya ASCII',
+          description: 'Pobierz darmowe pliki przykładowe MA scen Maya ASCII do testowania konwersji scen Maya, oprogramowania animacji 3D, parserów plików MA i narzędzi animacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Autodesk Maya, przeglądarek plików MA, narzędzi konwersji scen, platform animacji 3D i oprogramowania przepływu pracy animacji.'
+        },
+        hero: {
+          title: 'Pliki przykładowe MA',
+          description: 'Pobierz darmowe pliki przykładowe MA scen Maya ASCII do testowania. Różne rozmiary plików dostępne do testowania konwersji scen Maya, oprogramowania animacji 3D i narzędzi animacji.'
+        },
+        about_description: 'To są testowe pliki MA (sceny Maya ASCII) w różnych rozmiarach do celów testowych'
+      },
+      max: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe MAX - Pliki testowe scen 3ds Max | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe MAX scen 3ds Max do testowania konwersji scen 3ds Max, oprogramowania modelowania 3D, parserów plików MAX i narzędzi projektowania 3D. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Autodesk 3ds Max, przeglądarek plików MAX, narzędzi konwersji scen, platform modelowania 3D i oprogramowania przepływu pracy projektowania 3D.',
+          keywords: 'pliki przykładowe MAX, pliki testowe MAX, pobierz przykłady MAX, darmowe pliki testowe MAX, pliki scen 3ds Max, pliki formatu MAX, pliki scen modelowania 3D, pliki testowe parsera MAX, pliki projektowania 3D, pliki testowe scen 3ds Max, przykłady modelowania 3D'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe MAX - Pobierz pliki testowe scen 3ds Max',
+          description: 'Pobierz darmowe pliki przykładowe MAX scen 3ds Max do testowania konwersji scen 3ds Max, oprogramowania modelowania 3D, parserów plików MAX i narzędzi projektowania 3D. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Autodesk 3ds Max, przeglądarek plików MAX, narzędzi konwersji scen, platform modelowania 3D i oprogramowania przepływu pracy projektowania 3D.'
+        },
+        hero: {
+          title: 'Pliki przykładowe MAX',
+          description: 'Pobierz darmowe pliki przykładowe MAX scen 3ds Max do testowania. Różne rozmiary plików dostępne do testowania konwersji scen 3ds Max, oprogramowania modelowania 3D i narzędzi projektowania 3D.'
+        },
+        about_description: 'To są testowe pliki MAX (sceny 3ds Max) w różnych rozmiarach do celów testowych'
+      },
+      mb: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe MB - Pliki testowe scen Maya Binary | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe MB scen Maya Binary do testowania konwersji scen Maya, oprogramowania animacji 3D, parserów plików MB i narzędzi animacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Autodesk Maya, przeglądarek plików MB, narzędzi konwersji scen, platform animacji 3D i oprogramowania przepływu pracy animacji.',
+          keywords: 'pliki przykładowe MB, pliki testowe MB, pobierz przykłady MB, darmowe pliki testowe MB, pliki scen Maya Binary, pliki formatu MB, pliki scen animacji 3D, pliki testowe parsera MB, pliki animacji, pliki testowe scen Maya, przykłady animacji 3D'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe MB - Pobierz pliki testowe scen Maya Binary',
+          description: 'Pobierz darmowe pliki przykładowe MB scen Maya Binary do testowania konwersji scen Maya, oprogramowania animacji 3D, parserów plików MB i narzędzi animacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Autodesk Maya, przeglądarek plików MB, narzędzi konwersji scen, platform animacji 3D i oprogramowania przepływu pracy animacji.'
+        },
+        hero: {
+          title: 'Pliki przykładowe MB',
+          description: 'Pobierz darmowe pliki przykładowe MB scen Maya Binary do testowania. Różne rozmiary plików dostępne do testowania konwersji scen Maya, oprogramowania animacji 3D i narzędzi animacji.'
+        },
+        about_description: 'To są testowe pliki MB (sceny Maya Binary) w różnych rozmiarach do celów testowych'
+      },
+      indd: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe INDD - Pliki testowe dokumentów Adobe InDesign | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe INDD dokumentów Adobe InDesign do testowania kompatybilności InDesign, konwerterów INDD, oprogramowania DTP i narzędzi projektowania layoutu. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Adobe InDesign, przeglądarek plików INDD, narzędzi konwersji dokumentów, platform DTP i oprogramowania projektowania layoutu.',
+          keywords: 'pliki przykładowe INDD, pliki testowe INDD, pobierz przykłady INDD, darmowe pliki testowe INDD, pliki Adobe InDesign, pliki formatu INDD, pliki DTP, pliki testowe konwertera INDD, pliki projektowania layoutu, pliki testowe dokumentów InDesign, przykłady oprogramowania wydawniczego'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe INDD - Pobierz pliki testowe dokumentów Adobe InDesign',
+          description: 'Pobierz darmowe pliki przykładowe INDD dokumentów Adobe InDesign do testowania kompatybilności InDesign, konwerterów INDD, oprogramowania DTP i narzędzi projektowania layoutu. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Adobe InDesign, przeglądarek plików INDD, narzędzi konwersji dokumentów, platform DTP i oprogramowania projektowania layoutu.'
+        },
+        hero: {
+          title: 'Pliki przykładowe INDD',
+          description: 'Pobierz darmowe pliki przykładowe INDD dokumentów Adobe InDesign do testowania. Różne rozmiary plików dostępne do testowania kompatybilności InDesign, konwerterów INDD i oprogramowania DTP.'
+        },
+        about_description: 'To są testowe pliki INDD (dokumenty Adobe InDesign) w różnych rozmiarach do celów testowych'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe animowanego GIF - Pliki testowe animowanych obrazów | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe animowanego GIF do testowania odtwarzania animacji GIF, przeglądarek obrazów, przeglądarek internetowych i narzędzi animacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek GIF, odtwarzaczy animacji, narzędzi przetwarzania obrazów, platform web development i aplikacji multimedialnych.',
+          keywords: 'pliki przykładowe animowanego GIF, pliki testowe animowanego GIF, pobierz przykłady animowanego GIF, darmowe pliki testowe animowanego GIF, pliki animacji GIF, pliki animowanych obrazów, pliki testowe odtwarzacza GIF, pliki animacji, pliki testowe animacji internetowej, przykłady multimedialnego GIF'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe animowanego GIF - Pobierz pliki testowe animowanych obrazów',
+          description: 'Pobierz darmowe pliki przykładowe animowanego GIF do testowania odtwarzania animacji GIF, przeglądarek obrazów, przeglądarek internetowych i narzędzi animacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek GIF, odtwarzaczy animacji, narzędzi przetwarzania obrazów, platform web development i aplikacji multimedialnych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe animowanego GIF',
+          description: 'Pobierz darmowe pliki przykładowe animowanego GIF do testowania. Różne rozmiary plików dostępne do testowania odtwarzania animacji GIF, przeglądarek obrazów i narzędzi animacji.'
+        },
+        about_description: 'To są testowe pliki animowanego GIF w różnych rozmiarach do celów testowych'
+      },
+      apng: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe APNG - Pliki testowe animowanych obrazów PNG | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe APNG Animated Portable Network Graphics do testowania odtwarzania animacji APNG, przeglądarek obrazów, przeglądarek internetowych i nowoczesnych narzędzi obrazów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek APNG, odtwarzaczy animacji, narzędzi przetwarzania obrazów, platform web development i nowoczesnych aplikacji multimedialnych.',
+          keywords: 'pliki przykładowe APNG, pliki testowe APNG, pobierz przykłady APNG, darmowe pliki testowe APNG, pliki Animated PNG, pliki animacji APNG, pliki testowe odtwarzacza APNG, pliki animacji, pliki testowe animacji internetowej, przykłady nowoczesnego formatu obrazów'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe APNG - Pobierz pliki testowe animowanych obrazów PNG',
+          description: 'Pobierz darmowe pliki przykładowe APNG Animated Portable Network Graphics do testowania odtwarzania animacji APNG, przeglądarek obrazów, przeglądarek internetowych i nowoczesnych narzędzi obrazów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek APNG, odtwarzaczy animacji, narzędzi przetwarzania obrazów, platform web development i nowoczesnych aplikacji multimedialnych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe APNG',
+          description: 'Pobierz darmowe pliki przykładowe APNG Animated Portable Network Graphics do testowania. Różne rozmiary plików dostępne do testowania odtwarzania animacji APNG, przeglądarek obrazów i nowoczesnych narzędzi obrazów.'
+        },
+        about_description: 'To są testowe pliki APNG (Animated Portable Network Graphics) w różnych rozmiarach do celów testowych'
+      },
+      avif: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe AVIF - Pliki testowe formatu obrazów AV1 | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe AVIF AV1 Image File Format do testowania nowoczesnej kompresji obrazów, przeglądarek AVIF, przeglądarek internetowych i narzędzi obrazów nowej generacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek AVIF, narzędzi przetwarzania obrazów, platform web development, wsparcia nowoczesnych formatów obrazów i aplikacji multimedialnych nowej generacji.',
+          keywords: 'pliki przykładowe AVIF, pliki testowe AVIF, pobierz przykłady AVIF, darmowe pliki testowe AVIF, pliki AV1 Image File Format, pliki obrazów AVIF, pliki testowe przeglądarki AVIF, pliki nowoczesnych obrazów, pliki testowe formatu obrazów internetowych, przykłady formatu obrazów nowej generacji'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe AVIF - Pobierz pliki testowe formatu obrazów AV1',
+          description: 'Pobierz darmowe pliki przykładowe AVIF AV1 Image File Format do testowania nowoczesnej kompresji obrazów, przeglądarek AVIF, przeglądarek internetowych i narzędzi obrazów nowej generacji. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek AVIF, narzędzi przetwarzania obrazów, platform web development, wsparcia nowoczesnych formatów obrazów i aplikacji multimedialnych nowej generacji.'
+        },
+        hero: {
+          title: 'Pliki przykładowe AVIF',
+          description: 'Pobierz darmowe pliki przykładowe AVIF AV1 Image File Format do testowania. Różne rozmiary plików dostępne do testowania nowoczesnej kompresji obrazów, przeglądarek AVIF i narzędzi obrazów nowej generacji.'
+        },
+        about_description: 'To są testowe pliki AVIF (AV1 Image File Format) w różnych rozmiarach do celów testowych'
+      },
+      bmp: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe BMP - Pliki testowe obrazów bitmapowych | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe BMP bitmap do testowania przeglądarek obrazów, konwerterów BMP, oprogramowania graficznego i narzędzi przetwarzania obrazów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek BMP, edytorów obrazów, narzędzi konwersji grafiki, platform przetwarzania obrazów i wsparcia formatu bitmap.',
+          keywords: 'pliki przykładowe BMP, pliki testowe BMP, pobierz przykłady BMP, darmowe pliki testowe BMP, pliki obrazów bitmapowych, pliki formatu BMP, pliki testowe przeglądarki obrazów, pliki graficzne, pliki testowe konwersji obrazów, przykłady formatu bitmap'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe BMP - Pobierz pliki testowe obrazów bitmapowych',
+          description: 'Pobierz darmowe pliki przykładowe BMP bitmap do testowania przeglądarek obrazów, konwerterów BMP, oprogramowania graficznego i narzędzi przetwarzania obrazów. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek BMP, edytorów obrazów, narzędzi konwersji grafiki, platform przetwarzania obrazów i wsparcia formatu bitmap.'
+        },
+        hero: {
+          title: 'Pliki przykładowe BMP',
+          description: 'Pobierz darmowe pliki przykładowe BMP bitmap do testowania. Różne rozmiary plików dostępne do testowania przeglądarek obrazów, konwerterów BMP i oprogramowania graficznego.'
+        },
+        about_description: 'To są testowe pliki BMP (bitmap) w różnych rozmiarach do celów testowych'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe kodu kreskowego SVG - Pliki testowe skalowalnych kodów kreskowych wektorowych | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe kodu kreskowego SVG do testowania generowania kodów kreskowych, czytników kodów kreskowych SVG, narzędzi grafiki wektorowej i aplikacji skanowania kodów kreskowych. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania generatorów kodów kreskowych, przeglądarek SVG, narzędzi skanowania kodów kreskowych, platform grafiki wektorowej i oprogramowania rozpoznawania kodów kreskowych.',
+          keywords: 'pliki przykładowe kodu kreskowego SVG, pliki testowe kodu kreskowego SVG, pobierz przykłady kodu kreskowego SVG, darmowe pliki testowe kodu kreskowego SVG, pliki kodów kreskowych SVG, pliki wektorowych kodów kreskowych, pliki testowe generatora kodów kreskowych, pliki SVG, pliki testowe skanowania kodów kreskowych, przykłady grafiki wektorowej'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe kodu kreskowego SVG - Pobierz pliki testowe skalowalnych kodów kreskowych wektorowych',
+          description: 'Pobierz darmowe pliki przykładowe kodu kreskowego SVG do testowania generowania kodów kreskowych, czytników kodów kreskowych SVG, narzędzi grafiki wektorowej i aplikacji skanowania kodów kreskowych. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania generatorów kodów kreskowych, przeglądarek SVG, narzędzi skanowania kodów kreskowych, platform grafiki wektorowej i oprogramowania rozpoznawania kodów kreskowych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe kodu kreskowego SVG',
+          description: 'Pobierz darmowe pliki przykładowe kodu kreskowego SVG do testowania. Różne rozmiary plików dostępne do testowania generowania kodów kreskowych, czytników kodów kreskowych SVG i narzędzi grafiki wektorowej.'
+        },
+        about_description: 'To są testowe pliki kodu kreskowego SVG w różnych rozmiarach do celów testowych'
+      },
+      avi: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe AVI - Pliki testowe wideo Audio Video Interleave | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe AVI Audio Video Interleave do testowania odtwarzaczy wideo, konwerterów AVI, oprogramowania multimedialnego i narzędzi przetwarzania wideo. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzaczy AVI, edytorów wideo, narzędzi konwersji multimedialnej, platform przetwarzania wideo i wsparcia formatu wideo.',
+          keywords: 'pliki przykładowe AVI, pliki testowe AVI, pobierz przykłady AVI, darmowe pliki testowe AVI, pliki Audio Video Interleave, pliki wideo AVI, pliki testowe odtwarzacza wideo, pliki multimedialne, pliki testowe konwersji wideo, przykłady formatu wideo'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe AVI - Pobierz pliki testowe wideo Audio Video Interleave',
+          description: 'Pobierz darmowe pliki przykładowe AVI Audio Video Interleave do testowania odtwarzaczy wideo, konwerterów AVI, oprogramowania multimedialnego i narzędzi przetwarzania wideo. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzaczy AVI, edytorów wideo, narzędzi konwersji multimedialnej, platform przetwarzania wideo i wsparcia formatu wideo.'
+        },
+        hero: {
+          title: 'Pliki przykładowe AVI',
+          description: 'Pobierz darmowe pliki przykładowe AVI Audio Video Interleave do testowania. Różne rozmiary plików dostępne do testowania odtwarzaczy wideo, konwerterów AVI i oprogramowania multimedialnego.'
+        },
+        about_description: 'To są testowe pliki AVI (Audio Video Interleave) w różnych rozmiarach do celów testowych'
+      },
+      '3gp': {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe 3GP - Pliki testowe wideo mobilnego 3GPP | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe 3GP wideo mobilnego 3GPP do testowania odtwarzaczy wideo mobilnych, konwerterów 3GP, oprogramowania multimedialnego i narzędzi przetwarzania wideo mobilnego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzaczy 3GP, edytorów wideo mobilnych, narzędzi konwersji wideo, platform multimedialnych mobilnych i wsparcia formatu wideo mobilnego.',
+          keywords: 'pliki przykładowe 3GP, pliki testowe 3GP, pobierz przykłady 3GP, darmowe pliki testowe 3GP, pliki wideo mobilnego 3GPP, pliki wideo 3GP, pliki testowe odtwarzacza wideo mobilnego, pliki multimedialne, pliki testowe konwersji wideo mobilnego, przykłady formatu wideo mobilnego'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe 3GP - Pobierz pliki testowe wideo mobilnego 3GPP',
+          description: 'Pobierz darmowe pliki przykładowe 3GP wideo mobilnego 3GPP do testowania odtwarzaczy wideo mobilnych, konwerterów 3GP, oprogramowania multimedialnego i narzędzi przetwarzania wideo mobilnego. Różne rozmiary plików: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania odtwarzaczy 3GP, edytorów wideo mobilnych, narzędzi konwersji wideo, platform multimedialnych mobilnych i wsparcia formatu wideo mobilnego.'
+        },
+        hero: {
+          title: 'Pliki przykładowe 3GP',
+          description: 'Pobierz darmowe pliki przykładowe 3GP wideo mobilnego 3GPP do testowania. Różne rozmiary plików dostępne do testowania odtwarzaczy wideo mobilnych, konwerterów 3GP i oprogramowania multimedialnego.'
+        },
+        about_description: 'To są testowe pliki 3GP (wideo mobilne 3GPP) w różnych rozmiarach do celów testowych'
       }
     }
   }

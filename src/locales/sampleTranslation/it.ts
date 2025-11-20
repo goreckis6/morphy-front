@@ -1263,6 +1263,262 @@ export const it: SamplePageTranslations = {
           description: 'Scarica file di esempio DWG disegni AutoCAD gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi software CAD, compatibilità AutoCAD e strumenti disegno tecnico.'
         },
         about_description: 'Questi sono file di test DWG (disegno AutoCAD) di varie dimensioni per scopi di test'
+      },
+      dxf: {
+        meta: {
+          title: 'Scarica File di Esempio DXF Gratuiti - File di Test Drawing Exchange Format AutoCAD | MorphyHub',
+          description: 'Scarica file di esempio DXF Drawing Exchange Format gratuiti per testare software CAD, convertitori DXF e strumenti di disegno tecnico. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare AutoCAD, visualizzatori CAD, parser DXF e applicazioni di scambio file di disegno.',
+          keywords: 'file di esempio DXF, file di test DXF, scarica esempi DXF, file di test DXF gratuiti, file AutoCAD DXF, file Drawing Exchange Format, file CAD DXF, file di test convertitore DXF, file di disegno tecnico, file di test parser DXF, esempi di scambio file CAD'
+        },
+        schema: {
+          name: 'File di Esempio DXF Gratuiti - Scarica File di Test Drawing Exchange Format',
+          description: 'Scarica file di esempio DXF Drawing Exchange Format gratuiti per testare software CAD, convertitori DXF e strumenti di disegno tecnico. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare AutoCAD, visualizzatori CAD, parser DXF e applicazioni di scambio file di disegno.'
+        },
+        hero: {
+          title: 'File di Esempio DXF',
+          description: 'Scarica file di esempio DXF Drawing Exchange Format gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi software CAD, convertitori DXF e strumenti di disegno tecnico.'
+        },
+        about_description: 'Questi sono file di test DXF (Drawing Exchange Format) di varie dimensioni per scopi di test'
+      },
+      ifc: {
+        meta: {
+          title: 'Scarica File di Esempio IFC Gratuiti - File di Test Industry Foundation Classes BIM | MorphyHub',
+          description: 'Scarica file di esempio IFC Industry Foundation Classes gratuiti per testare software BIM, visualizzatori IFC, strumenti di modellazione delle informazioni sugli edifici e applicazioni di gestione delle costruzioni. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Revit, ArchiCAD, parser IFC, visualizzatori BIM e software di progettazione edilizia.',
+          keywords: 'file di esempio IFC, file di test IFC, scarica esempi IFC, file di test IFC gratuiti, file Industry Foundation Classes, file BIM IFC, file di modellazione delle informazioni sugli edifici, file di test visualizzatore IFC, file software edile, file di test parser IFC, esempi formato di scambio BIM'
+        },
+        schema: {
+          name: 'File di Esempio IFC Gratuiti - Scarica File di Test Industry Foundation Classes BIM',
+          description: 'Scarica file di esempio IFC Industry Foundation Classes gratuiti per testare software BIM, visualizzatori IFC, strumenti di modellazione delle informazioni sugli edifici e applicazioni di gestione delle costruzioni. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Revit, ArchiCAD, parser IFC, visualizzatori BIM e software di progettazione edilizia.'
+        },
+        hero: {
+          title: 'File di Esempio IFC',
+          description: 'Scarica file di esempio IFC Industry Foundation Classes gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi software BIM, visualizzatori IFC e strumenti di modellazione delle informazioni sugli edifici.'
+        },
+        about_description: 'Questi sono file di test IFC (Industry Foundation Classes) di varie dimensioni per scopi di test'
+      },
+      iges: {
+        meta: {
+          title: 'Scarica File di Esempio IGES Gratuiti - File di Test Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Scarica file di esempio IGES Initial Graphics Exchange Specification gratuiti per testare software CAD, convertitori IGES, strumenti di modellazione 3D e applicazioni di progettazione ingegneristica. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare sistemi CAD, parser IGES, strumenti di scambio modelli 3D e software ingegneristico.',
+          keywords: 'file di esempio IGES, file di test IGES, scarica esempi IGES, file di test IGES gratuiti, file Initial Graphics Exchange Specification, file CAD IGES, file di scambio modelli 3D, file di test convertitore IGES, file di progettazione ingegneristica, file di test parser IGES, esempi formato di scambio CAD'
+        },
+        schema: {
+          name: 'File di Esempio IGES Gratuiti - Scarica File di Test Initial Graphics Exchange Specification CAD',
+          description: 'Scarica file di esempio IGES Initial Graphics Exchange Specification gratuiti per testare software CAD, convertitori IGES, strumenti di modellazione 3D e applicazioni di progettazione ingegneristica. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare sistemi CAD, parser IGES, strumenti di scambio modelli 3D e software ingegneristico.'
+        },
+        hero: {
+          title: 'File di Esempio IGES',
+          description: 'Scarica file di esempio IGES Initial Graphics Exchange Specification gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi software CAD, convertitori IGES e strumenti di modellazione 3D.'
+        },
+        about_description: 'Questi sono file di test IGES (Initial Graphics Exchange Specification) di varie dimensioni per scopi di test'
+      },
+      igs: {
+        meta: {
+          title: 'Scarica File di Esempio IGS Gratuiti - File di Test Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Scarica file di esempio IGS Initial Graphics Exchange Specification gratuiti per testare software CAD, convertitori IGS, strumenti di modellazione 3D e applicazioni di progettazione ingegneristica. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare sistemi CAD, parser IGS, strumenti di scambio modelli 3D e software ingegneristico.',
+          keywords: 'file di esempio IGS, file di test IGS, scarica esempi IGS, file di test IGS gratuiti, file Initial Graphics Exchange Specification, file CAD IGS, file di scambio modelli 3D, file di test convertitore IGS, file di progettazione ingegneristica, file di test parser IGS, esempi formato di scambio CAD'
+        },
+        schema: {
+          name: 'File di Esempio IGS Gratuiti - Scarica File di Test Initial Graphics Exchange Specification CAD',
+          description: 'Scarica file di esempio IGS Initial Graphics Exchange Specification gratuiti per testare software CAD, convertitori IGS, strumenti di modellazione 3D e applicazioni di progettazione ingegneristica. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare sistemi CAD, parser IGS, strumenti di scambio modelli 3D e software ingegneristico.'
+        },
+        hero: {
+          title: 'File di Esempio IGS',
+          description: 'Scarica file di esempio IGS Initial Graphics Exchange Specification gratuiti per test. Dimensioni file multiple disponibili per testare i tuoi software CAD, convertitori IGS e strumenti di modellazione 3D.'
+        },
+        about_description: 'Questi sono file di test IGS (Initial Graphics Exchange Specification) di varie dimensioni per scopi di test'
+      },
+      las: {
+        meta: {
+          title: 'Scarica File di Esempio LAS Gratuiti - File di Test Dati Point Cloud LiDAR | MorphyHub',
+          description: 'Scarica file di esempio LAS point cloud LiDAR gratuiti per testare l\'elaborazione di point cloud, strumenti di analisi LiDAR, software di mappatura 3D e applicazioni geospaziali. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser LAS, visualizzatori point cloud, strumenti di elaborazione LiDAR, software di mappatura 3D e piattaforme di analisi geospaziale.',
+          keywords: 'file di esempio LAS, file di test LAS, scarica esempi LAS, file di test LAS gratuiti, file point cloud LiDAR, file formato LAS, file dati point cloud, file di test parser LAS, file geospaziali, file di test analisi LiDAR, esempi di mappatura 3D'
+        },
+        schema: {
+          name: 'File di Esempio LAS Gratuiti - Scarica File di Test Dati Point Cloud LiDAR',
+          description: 'Scarica file di esempio LAS point cloud LiDAR gratuiti per testare l\'elaborazione di point cloud, strumenti di analisi LiDAR, software di mappatura 3D e applicazioni geospaziali. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare parser LAS, visualizzatori point cloud, strumenti di elaborazione LiDAR, software di mappatura 3D e piattaforme di analisi geospaziale.'
+        },
+        hero: {
+          title: 'File di Esempio LAS',
+          description: 'Scarica file di esempio LAS point cloud LiDAR gratuiti per test. Dimensioni file multiple disponibili per testare l\'elaborazione di point cloud, strumenti di analisi LiDAR e software di mappatura 3D.'
+        },
+        about_description: 'Questi sono file di test LAS (point cloud LiDAR) di varie dimensioni per scopi di test'
+      },
+      ma: {
+        meta: {
+          title: 'Scarica File di Esempio MA Gratuiti - File di Test Scena Maya ASCII | MorphyHub',
+          description: 'Scarica file di esempio MA scena Maya ASCII gratuiti per testare la conversione di scene Maya, software di animazione 3D, parser di file MA e strumenti di animazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Autodesk Maya, visualizzatori file MA, strumenti di conversione scene, piattaforme di animazione 3D e software di workflow animazione.',
+          keywords: 'file di esempio MA, file di test MA, scarica esempi MA, file di test MA gratuiti, file scena Maya ASCII, file formato MA, file scena animazione 3D, file di test parser MA, file animazione, file di test scena Maya, esempi animazione 3D'
+        },
+        schema: {
+          name: 'File di Esempio MA Gratuiti - Scarica File di Test Scena Maya ASCII',
+          description: 'Scarica file di esempio MA scena Maya ASCII gratuiti per testare la conversione di scene Maya, software di animazione 3D, parser di file MA e strumenti di animazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Autodesk Maya, visualizzatori file MA, strumenti di conversione scene, piattaforme di animazione 3D e software di workflow animazione.'
+        },
+        hero: {
+          title: 'File di Esempio MA',
+          description: 'Scarica file di esempio MA scena Maya ASCII gratuiti per test. Dimensioni file multiple disponibili per testare la conversione di scene Maya, software di animazione 3D e strumenti di animazione.'
+        },
+        about_description: 'Questi sono file di test MA (scena Maya ASCII) di varie dimensioni per scopi di test'
+      },
+      max: {
+        meta: {
+          title: 'Scarica File di Esempio MAX Gratuiti - File di Test Scena 3ds Max | MorphyHub',
+          description: 'Scarica file di esempio MAX scena 3ds Max gratuiti per testare la conversione di scene 3ds Max, software di modellazione 3D, parser di file MAX e strumenti di progettazione 3D. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Autodesk 3ds Max, visualizzatori file MAX, strumenti di conversione scene, piattaforme di modellazione 3D e software di workflow progettazione 3D.',
+          keywords: 'file di esempio MAX, file di test MAX, scarica esempi MAX, file di test MAX gratuiti, file scena 3ds Max, file formato MAX, file scena modellazione 3D, file di test parser MAX, file progettazione 3D, file di test scena 3ds Max, esempi modellazione 3D'
+        },
+        schema: {
+          name: 'File di Esempio MAX Gratuiti - Scarica File di Test Scena 3ds Max',
+          description: 'Scarica file di esempio MAX scena 3ds Max gratuiti per testare la conversione di scene 3ds Max, software di modellazione 3D, parser di file MAX e strumenti di progettazione 3D. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Autodesk 3ds Max, visualizzatori file MAX, strumenti di conversione scene, piattaforme di modellazione 3D e software di workflow progettazione 3D.'
+        },
+        hero: {
+          title: 'File di Esempio MAX',
+          description: 'Scarica file di esempio MAX scena 3ds Max gratuiti per test. Dimensioni file multiple disponibili per testare la conversione di scene 3ds Max, software di modellazione 3D e strumenti di progettazione 3D.'
+        },
+        about_description: 'Questi sono file di test MAX (scena 3ds Max) di varie dimensioni per scopi di test'
+      },
+      mb: {
+        meta: {
+          title: 'Scarica File di Esempio MB Gratuiti - File di Test Scena Maya Binary | MorphyHub',
+          description: 'Scarica file di esempio MB scena Maya Binary gratuiti per testare la conversione di scene Maya, software di animazione 3D, parser di file MB e strumenti di animazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Autodesk Maya, visualizzatori file MB, strumenti di conversione scene, piattaforme di animazione 3D e software di workflow animazione.',
+          keywords: 'file di esempio MB, file di test MB, scarica esempi MB, file di test MB gratuiti, file scena Maya Binary, file formato MB, file scena animazione 3D, file di test parser MB, file animazione, file di test scena Maya, esempi animazione 3D'
+        },
+        schema: {
+          name: 'File di Esempio MB Gratuiti - Scarica File di Test Scena Maya Binary',
+          description: 'Scarica file di esempio MB scena Maya Binary gratuiti per testare la conversione di scene Maya, software di animazione 3D, parser di file MB e strumenti di animazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Autodesk Maya, visualizzatori file MB, strumenti di conversione scene, piattaforme di animazione 3D e software di workflow animazione.'
+        },
+        hero: {
+          title: 'File di Esempio MB',
+          description: 'Scarica file di esempio MB scena Maya Binary gratuiti per test. Dimensioni file multiple disponibili per testare la conversione di scene Maya, software di animazione 3D e strumenti di animazione.'
+        },
+        about_description: 'Questi sono file di test MB (scena Maya Binary) di varie dimensioni per scopi di test'
+      },
+      indd: {
+        meta: {
+          title: 'Scarica File di Esempio INDD Gratuiti - File di Test Documento Adobe InDesign | MorphyHub',
+          description: 'Scarica file di esempio INDD documento Adobe InDesign gratuiti per testare la compatibilità InDesign, convertitori INDD, software desktop publishing e strumenti di progettazione layout. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Adobe InDesign, visualizzatori file INDD, strumenti di conversione documenti, piattaforme desktop publishing e software di progettazione layout.',
+          keywords: 'file di esempio INDD, file di test INDD, scarica esempi INDD, file di test INDD gratuiti, file Adobe InDesign, file formato INDD, file desktop publishing, file di test convertitore INDD, file progettazione layout, file di test documento InDesign, esempi software editoriale'
+        },
+        schema: {
+          name: 'File di Esempio INDD Gratuiti - Scarica File di Test Documento Adobe InDesign',
+          description: 'Scarica file di esempio INDD documento Adobe InDesign gratuiti per testare la compatibilità InDesign, convertitori INDD, software desktop publishing e strumenti di progettazione layout. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare Adobe InDesign, visualizzatori file INDD, strumenti di conversione documenti, piattaforme desktop publishing e software di progettazione layout.'
+        },
+        hero: {
+          title: 'File di Esempio INDD',
+          description: 'Scarica file di esempio INDD documento Adobe InDesign gratuiti per test. Dimensioni file multiple disponibili per testare la compatibilità InDesign, convertitori INDD e software desktop publishing.'
+        },
+        about_description: 'Questi sono file di test INDD (documento Adobe InDesign) di varie dimensioni per scopi di test'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Scarica File di Esempio GIF Animati Gratuiti - File di Test Immagini Animate | MorphyHub',
+          description: 'Scarica file di esempio GIF animati gratuiti per testare la riproduzione di animazioni GIF, visualizzatori di immagini, browser web e strumenti di animazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori GIF, lettori di animazione, strumenti di elaborazione immagini, piattaforme di sviluppo web e applicazioni multimediali.',
+          keywords: 'file di esempio GIF animati, file di test GIF animati, scarica esempi GIF animati, file di test GIF animati gratuiti, file animazione GIF, file immagini animate, file di test lettore GIF, file animazione, file di test animazione web, esempi GIF multimediali'
+        },
+        schema: {
+          name: 'File di Esempio GIF Animati Gratuiti - Scarica File di Test Immagini Animate',
+          description: 'Scarica file di esempio GIF animati gratuiti per testare la riproduzione di animazioni GIF, visualizzatori di immagini, browser web e strumenti di animazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori GIF, lettori di animazione, strumenti di elaborazione immagini, piattaforme di sviluppo web e applicazioni multimediali.'
+        },
+        hero: {
+          title: 'File di Esempio GIF Animati',
+          description: 'Scarica file di esempio GIF animati gratuiti per test. Dimensioni file multiple disponibili per testare la riproduzione di animazioni GIF, visualizzatori di immagini e strumenti di animazione.'
+        },
+        about_description: 'Questi sono file di test GIF animati di varie dimensioni per scopi di test'
+      },
+      apng: {
+        meta: {
+          title: 'Scarica File di Esempio APNG Gratuiti - File di Test Immagini PNG Animate | MorphyHub',
+          description: 'Scarica file di esempio APNG Animated Portable Network Graphics gratuiti per testare la riproduzione di animazioni APNG, visualizzatori di immagini, browser web e strumenti di immagini moderni. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori APNG, lettori di animazione, strumenti di elaborazione immagini, piattaforme di sviluppo web e applicazioni multimediali moderne.',
+          keywords: 'file di esempio APNG, file di test APNG, scarica esempi APNG, file di test APNG gratuiti, file Animated PNG, file animazione APNG, file di test lettore APNG, file animazione, file di test animazione web, esempi formato immagine moderno'
+        },
+        schema: {
+          name: 'File di Esempio APNG Gratuiti - Scarica File di Test Immagini PNG Animate',
+          description: 'Scarica file di esempio APNG Animated Portable Network Graphics gratuiti per testare la riproduzione di animazioni APNG, visualizzatori di immagini, browser web e strumenti di immagini moderni. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori APNG, lettori di animazione, strumenti di elaborazione immagini, piattaforme di sviluppo web e applicazioni multimediali moderne.'
+        },
+        hero: {
+          title: 'File di Esempio APNG',
+          description: 'Scarica file di esempio APNG Animated Portable Network Graphics gratuiti per test. Dimensioni file multiple disponibili per testare la riproduzione di animazioni APNG, visualizzatori di immagini e strumenti di immagini moderni.'
+        },
+        about_description: 'Questi sono file di test APNG (Animated Portable Network Graphics) di varie dimensioni per scopi di test'
+      },
+      avif: {
+        meta: {
+          title: 'Scarica File di Esempio AVIF Gratuiti - File di Test Formato Immagine AV1 | MorphyHub',
+          description: 'Scarica file di esempio AVIF AV1 Image File Format gratuiti per testare la compressione immagini moderna, visualizzatori AVIF, browser web e strumenti di immagini di prossima generazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori AVIF, strumenti di elaborazione immagini, piattaforme di sviluppo web, supporto formato immagine moderno e applicazioni multimediali di prossima generazione.',
+          keywords: 'file di esempio AVIF, file di test AVIF, scarica esempi AVIF, file di test AVIF gratuiti, file AV1 Image File Format, file immagini AVIF, file di test visualizzatore AVIF, file immagini moderne, file di test formato immagine web, esempi formato immagine prossima generazione'
+        },
+        schema: {
+          name: 'File di Esempio AVIF Gratuiti - Scarica File di Test Formato Immagine AV1',
+          description: 'Scarica file di esempio AVIF AV1 Image File Format gratuiti per testare la compressione immagini moderna, visualizzatori AVIF, browser web e strumenti di immagini di prossima generazione. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori AVIF, strumenti di elaborazione immagini, piattaforme di sviluppo web, supporto formato immagine moderno e applicazioni multimediali di prossima generazione.'
+        },
+        hero: {
+          title: 'File di Esempio AVIF',
+          description: 'Scarica file di esempio AVIF AV1 Image File Format gratuiti per test. Dimensioni file multiple disponibili per testare la compressione immagini moderna, visualizzatori AVIF e strumenti di immagini di prossima generazione.'
+        },
+        about_description: 'Questi sono file di test AVIF (AV1 Image File Format) di varie dimensioni per scopi di test'
+      },
+      bmp: {
+        meta: {
+          title: 'Scarica File di Esempio BMP Gratuiti - File di Test Immagini Bitmap | MorphyHub',
+          description: 'Scarica file di esempio BMP bitmap gratuiti per testare visualizzatori di immagini, convertitori BMP, software grafici e strumenti di elaborazione immagini. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori BMP, editor di immagini, strumenti di conversione grafica, piattaforme di elaborazione immagini e supporto formato bitmap.',
+          keywords: 'file di esempio BMP, file di test BMP, scarica esempi BMP, file di test BMP gratuiti, file immagini bitmap, file formato BMP, file di test visualizzatore immagini, file grafici, file di test conversione immagini, esempi formato bitmap'
+        },
+        schema: {
+          name: 'File di Esempio BMP Gratuiti - Scarica File di Test Immagini Bitmap',
+          description: 'Scarica file di esempio BMP bitmap gratuiti per testare visualizzatori di immagini, convertitori BMP, software grafici e strumenti di elaborazione immagini. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare visualizzatori BMP, editor di immagini, strumenti di conversione grafica, piattaforme di elaborazione immagini e supporto formato bitmap.'
+        },
+        hero: {
+          title: 'File di Esempio BMP',
+          description: 'Scarica file di esempio BMP bitmap gratuiti per test. Dimensioni file multiple disponibili per testare visualizzatori di immagini, convertitori BMP e software grafici.'
+        },
+        about_description: 'Questi sono file di test BMP (bitmap) di varie dimensioni per scopi di test'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Scarica File di Esempio Barcode SVG Gratuiti - File di Test Barcode Vettoriali Scalabili | MorphyHub',
+          description: 'Scarica file di esempio barcode SVG gratuiti per testare la generazione di barcode, lettori barcode SVG, strumenti di grafica vettoriale e applicazioni di scansione barcode. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare generatori di barcode, visualizzatori SVG, strumenti di scansione barcode, piattaforme di grafica vettoriale e software di riconoscimento barcode.',
+          keywords: 'file di esempio barcode SVG, file di test barcode SVG, scarica esempi barcode SVG, file di test barcode SVG gratuiti, file barcode SVG, file barcode vettoriali, file di test generatore barcode, file SVG, file di test scansione barcode, esempi grafica vettoriale'
+        },
+        schema: {
+          name: 'File di Esempio Barcode SVG Gratuiti - Scarica File di Test Barcode Vettoriali Scalabili',
+          description: 'Scarica file di esempio barcode SVG gratuiti per testare la generazione di barcode, lettori barcode SVG, strumenti di grafica vettoriale e applicazioni di scansione barcode. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare generatori di barcode, visualizzatori SVG, strumenti di scansione barcode, piattaforme di grafica vettoriale e software di riconoscimento barcode.'
+        },
+        hero: {
+          title: 'File di Esempio Barcode SVG',
+          description: 'Scarica file di esempio barcode SVG gratuiti per test. Dimensioni file multiple disponibili per testare la generazione di barcode, lettori barcode SVG e strumenti di grafica vettoriale.'
+        },
+        about_description: 'Questi sono file di test barcode SVG di varie dimensioni per scopi di test'
+      },
+      avi: {
+        meta: {
+          title: 'Scarica File di Esempio AVI Gratuiti - File di Test Video Audio Video Interleave | MorphyHub',
+          description: 'Scarica file di esempio AVI Audio Video Interleave gratuiti per testare lettori video, convertitori AVI, software multimediale e strumenti di elaborazione video. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori AVI, editor video, strumenti di conversione multimediale, piattaforme di elaborazione video e supporto formato video.',
+          keywords: 'file di esempio AVI, file di test AVI, scarica esempi AVI, file di test AVI gratuiti, file Audio Video Interleave, file video AVI, file di test lettore video, file multimediali, file di test conversione video, esempi formato video'
+        },
+        schema: {
+          name: 'File di Esempio AVI Gratuiti - Scarica File di Test Video Audio Video Interleave',
+          description: 'Scarica file di esempio AVI Audio Video Interleave gratuiti per testare lettori video, convertitori AVI, software multimediale e strumenti di elaborazione video. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori AVI, editor video, strumenti di conversione multimediale, piattaforme di elaborazione video e supporto formato video.'
+        },
+        hero: {
+          title: 'File di Esempio AVI',
+          description: 'Scarica file di esempio AVI Audio Video Interleave gratuiti per test. Dimensioni file multiple disponibili per testare lettori video, convertitori AVI e software multimediale.'
+        },
+        about_description: 'Questi sono file di test AVI (Audio Video Interleave) di varie dimensioni per scopi di test'
+      },
+      '3gp': {
+        meta: {
+          title: 'Scarica File di Esempio 3GP Gratuiti - File di Test Video Mobile 3GPP | MorphyHub',
+          description: 'Scarica file di esempio 3GP video mobile 3GPP gratuiti per testare lettori video mobili, convertitori 3GP, software multimediale e strumenti di elaborazione video mobile. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori 3GP, editor video mobili, strumenti di conversione video, piattaforme multimediali mobili e supporto formato video mobile.',
+          keywords: 'file di esempio 3GP, file di test 3GP, scarica esempi 3GP, file di test 3GP gratuiti, file video mobile 3GPP, file video 3GP, file di test lettore video mobile, file multimediali, file di test conversione video mobile, esempi formato video mobile'
+        },
+        schema: {
+          name: 'File di Esempio 3GP Gratuiti - Scarica File di Test Video Mobile 3GPP',
+          description: 'Scarica file di esempio 3GP video mobile 3GPP gratuiti per testare lettori video mobili, convertitori 3GP, software multimediale e strumenti di elaborazione video mobile. Dimensioni file multiple: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfetto per testare lettori 3GP, editor video mobili, strumenti di conversione video, piattaforme multimediali mobili e supporto formato video mobile.'
+        },
+        hero: {
+          title: 'File di Esempio 3GP',
+          description: 'Scarica file di esempio 3GP video mobile 3GPP gratuiti per test. Dimensioni file multiple disponibili per testare lettori video mobili, convertitori 3GP e software multimediale.'
+        },
+        about_description: 'Questi sono file di test 3GP (video mobile 3GPP) di varie dimensioni per scopi di test'
       }
     }
   }

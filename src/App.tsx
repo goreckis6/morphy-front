@@ -1462,6 +1462,22 @@ function App() {
         <Route path="/id/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/id/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/id/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/id/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/id/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/id/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/id/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/id/samples/sample-las" element={<SampleLas />} />
+        <Route path="/id/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/id/samples/sample-max" element={<SampleMax />} />
+        <Route path="/id/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/id/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/id/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/id/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/id/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/id/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/id/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/id/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/id/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Svenska (SV) Sample Files Routes */}
         <Route path="/sv/samples/sample-docx" element={<SampleDocx />} />
@@ -1541,6 +1557,22 @@ function App() {
         <Route path="/sv/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/sv/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/sv/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/sv/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/sv/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/sv/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/sv/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/sv/samples/sample-las" element={<SampleLas />} />
+        <Route path="/sv/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/sv/samples/sample-max" element={<SampleMax />} />
+        <Route path="/sv/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/sv/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/sv/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/sv/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/sv/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/sv/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/sv/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/sv/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/sv/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Español (ES) Sample Files Routes */}
         <Route path="/es/samples/sample-docx" element={<SampleDocx />} />
@@ -1620,6 +1652,22 @@ function App() {
         <Route path="/es/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/es/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/es/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/es/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/es/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/es/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/es/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/es/samples/sample-las" element={<SampleLas />} />
+        <Route path="/es/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/es/samples/sample-max" element={<SampleMax />} />
+        <Route path="/es/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/es/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/es/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/es/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/es/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/es/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/es/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/es/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/es/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Français (FR) Sample Files Routes */}
         <Route path="/fr/samples/sample-docx" element={<SampleDocx />} />
@@ -1699,6 +1747,22 @@ function App() {
         <Route path="/fr/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/fr/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/fr/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/fr/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/fr/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/fr/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/fr/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/fr/samples/sample-las" element={<SampleLas />} />
+        <Route path="/fr/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/fr/samples/sample-max" element={<SampleMax />} />
+        <Route path="/fr/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/fr/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/fr/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/fr/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/fr/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/fr/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/fr/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/fr/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/fr/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Italiano (IT) Sample Files Routes */}
         <Route path="/it/samples/sample-docx" element={<SampleDocx />} />
@@ -1778,6 +1842,22 @@ function App() {
         <Route path="/it/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/it/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/it/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/it/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/it/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/it/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/it/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/it/samples/sample-las" element={<SampleLas />} />
+        <Route path="/it/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/it/samples/sample-max" element={<SampleMax />} />
+        <Route path="/it/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/it/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/it/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/it/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/it/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/it/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/it/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/it/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/it/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Nederlands (NL) Sample Files Routes */}
         <Route path="/nl/samples/sample-docx" element={<SampleDocx />} />
@@ -1857,6 +1937,22 @@ function App() {
         <Route path="/nl/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/nl/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/nl/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/nl/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/nl/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/nl/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/nl/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/nl/samples/sample-las" element={<SampleLas />} />
+        <Route path="/nl/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/nl/samples/sample-max" element={<SampleMax />} />
+        <Route path="/nl/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/nl/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/nl/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/nl/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/nl/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/nl/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/nl/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/nl/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/nl/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Português (PT) Sample Files Routes */}
         <Route path="/pt/samples/sample-docx" element={<SampleDocx />} />
@@ -1936,6 +2032,22 @@ function App() {
         <Route path="/pt/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/pt/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/pt/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/pt/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/pt/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/pt/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/pt/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/pt/samples/sample-las" element={<SampleLas />} />
+        <Route path="/pt/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/pt/samples/sample-max" element={<SampleMax />} />
+        <Route path="/pt/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/pt/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/pt/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/pt/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/pt/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/pt/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/pt/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/pt/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/pt/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Tiếng Việt (VI) Sample Files Routes */}
         <Route path="/vi/samples/sample-docx" element={<SampleDocx />} />
@@ -2015,6 +2127,22 @@ function App() {
         <Route path="/vi/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/vi/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/vi/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/vi/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/vi/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/vi/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/vi/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/vi/samples/sample-las" element={<SampleLas />} />
+        <Route path="/vi/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/vi/samples/sample-max" element={<SampleMax />} />
+        <Route path="/vi/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/vi/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/vi/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/vi/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/vi/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/vi/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/vi/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/vi/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/vi/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Türkçe (TR) Sample Files Routes */}
         <Route path="/tr/samples/sample-docx" element={<SampleDocx />} />
@@ -2094,6 +2222,22 @@ function App() {
         <Route path="/tr/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/tr/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/tr/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/tr/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/tr/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/tr/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/tr/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/tr/samples/sample-las" element={<SampleLas />} />
+        <Route path="/tr/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/tr/samples/sample-max" element={<SampleMax />} />
+        <Route path="/tr/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/tr/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/tr/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/tr/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/tr/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/tr/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/tr/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/tr/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/tr/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* Русский (RU) Sample Files Routes */}
         <Route path="/ru/samples/sample-docx" element={<SampleDocx />} />
@@ -2173,6 +2317,22 @@ function App() {
         <Route path="/ru/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/ru/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/ru/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/ru/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/ru/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/ru/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/ru/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/ru/samples/sample-las" element={<SampleLas />} />
+        <Route path="/ru/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/ru/samples/sample-max" element={<SampleMax />} />
+        <Route path="/ru/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/ru/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/ru/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/ru/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/ru/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/ru/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/ru/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/ru/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/ru/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* العربية (AR) Sample Files Routes */}
         <Route path="/ar/samples/sample-docx" element={<SampleDocx />} />
@@ -2252,6 +2412,22 @@ function App() {
         <Route path="/ar/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/ar/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/ar/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/ar/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/ar/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/ar/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/ar/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/ar/samples/sample-las" element={<SampleLas />} />
+        <Route path="/ar/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/ar/samples/sample-max" element={<SampleMax />} />
+        <Route path="/ar/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/ar/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/ar/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/ar/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/ar/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/ar/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/ar/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/ar/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/ar/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* ไทย (TH) Sample Files Routes */}
         <Route path="/th/samples/sample-docx" element={<SampleDocx />} />
@@ -2331,6 +2507,22 @@ function App() {
         <Route path="/th/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/th/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/th/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/th/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/th/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/th/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/th/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/th/samples/sample-las" element={<SampleLas />} />
+        <Route path="/th/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/th/samples/sample-max" element={<SampleMax />} />
+        <Route path="/th/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/th/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/th/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/th/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/th/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/th/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/th/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/th/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/th/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* 日本語 (JA) Sample Files Routes */}
         <Route path="/ja/samples/sample-docx" element={<SampleDocx />} />
@@ -2410,6 +2602,22 @@ function App() {
         <Route path="/ja/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/ja/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/ja/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/ja/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/ja/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/ja/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/ja/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/ja/samples/sample-las" element={<SampleLas />} />
+        <Route path="/ja/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/ja/samples/sample-max" element={<SampleMax />} />
+        <Route path="/ja/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/ja/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/ja/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/ja/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/ja/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/ja/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/ja/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/ja/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/ja/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* 简体中文 (ZH) Sample Files Routes */}
         <Route path="/zh/samples/sample-docx" element={<SampleDocx />} />
@@ -2489,6 +2697,22 @@ function App() {
         <Route path="/zh/samples/sample-blend" element={<SampleBlend />} />
         <Route path="/zh/samples/sample-bvh" element={<SampleBvh />} />
         <Route path="/zh/samples/sample-dwg" element={<SampleDwg />} />
+        <Route path="/zh/samples/sample-dxf" element={<SampleDxf />} />
+        <Route path="/zh/samples/sample-ifc" element={<SampleIfc />} />
+        <Route path="/zh/samples/sample-iges" element={<SampleIges />} />
+        <Route path="/zh/samples/sample-igs" element={<SampleIgs />} />
+        <Route path="/zh/samples/sample-las" element={<SampleLas />} />
+        <Route path="/zh/samples/sample-ma" element={<SampleMa />} />
+        <Route path="/zh/samples/sample-max" element={<SampleMax />} />
+        <Route path="/zh/samples/sample-mb" element={<SampleMb />} />
+        <Route path="/zh/samples/sample-indd" element={<SampleIndd />} />
+        <Route path="/zh/samples/sample-animated-gif" element={<SampleAnimatedGif />} />
+        <Route path="/zh/samples/sample-apng" element={<SampleApng />} />
+        <Route path="/zh/samples/sample-avif" element={<SampleAvif />} />
+        <Route path="/zh/samples/sample-bmp" element={<SampleBmp />} />
+        <Route path="/zh/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
+        <Route path="/zh/samples/sample-avi" element={<SampleAvi />} />
+        <Route path="/zh/samples/sample-3gp" element={<Sample3gp />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />

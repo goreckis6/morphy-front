@@ -1263,6 +1263,262 @@ export const nl: SamplePageTranslations = {
           description: 'Download gratis DWG AutoCAD tekening voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw CAD software, AutoCAD compatibiliteit en technische tekening tools te testen.'
         },
         about_description: 'Dit zijn DWG (AutoCAD tekening) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      dxf: {
+        meta: {
+          title: 'Gratis DXF Voorbeeldbestanden Downloaden - Drawing Exchange Format Testbestanden AutoCAD | MorphyHub',
+          description: 'Download gratis DXF Drawing Exchange Format voorbeeldbestanden om CAD-software, DXF-converters en technische tekenhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AutoCAD, CAD-viewers, DXF-parsers en tekenbestand uitwisselingsapplicaties.',
+          keywords: 'DXF voorbeeldbestanden, DXF testbestanden, DXF voorbeelden downloaden, gratis DXF testbestanden, AutoCAD DXF bestanden, Drawing Exchange Format bestanden, CAD DXF bestanden, DXF converter testbestanden, technische tekenbestanden, DXF parser testbestanden, CAD bestandsuitwisseling voorbeelden'
+        },
+        schema: {
+          name: 'Gratis DXF Voorbeeldbestanden - Drawing Exchange Format Testbestanden Downloaden',
+          description: 'Download gratis DXF Drawing Exchange Format voorbeeldbestanden om CAD-software, DXF-converters en technische tekenhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AutoCAD, CAD-viewers, DXF-parsers en tekenbestand uitwisselingsapplicaties.'
+        },
+        hero: {
+          title: 'DXF Voorbeeldbestanden',
+          description: 'Download gratis DXF Drawing Exchange Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw CAD-software, DXF-converters en technische tekenhulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn DXF (Drawing Exchange Format) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ifc: {
+        meta: {
+          title: 'Gratis IFC Voorbeeldbestanden Downloaden - Industry Foundation Classes BIM Testbestanden | MorphyHub',
+          description: 'Download gratis IFC Industry Foundation Classes voorbeeldbestanden om BIM-software, IFC-viewers, bouwinformatie modelleringshulpmiddelen en bouwbeheerapplicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Revit, ArchiCAD, IFC-parsers, BIM-viewers en gebouwontwerpsoftware.',
+          keywords: 'IFC voorbeeldbestanden, IFC testbestanden, IFC voorbeelden downloaden, gratis IFC testbestanden, Industry Foundation Classes bestanden, BIM IFC bestanden, bouwinformatie modellering bestanden, IFC viewer testbestanden, bouwsoftware bestanden, IFC parser testbestanden, BIM uitwisselingsformaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis IFC Voorbeeldbestanden - Industry Foundation Classes BIM Testbestanden Downloaden',
+          description: 'Download gratis IFC Industry Foundation Classes voorbeeldbestanden om BIM-software, IFC-viewers, bouwinformatie modelleringshulpmiddelen en bouwbeheerapplicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Revit, ArchiCAD, IFC-parsers, BIM-viewers en gebouwontwerpsoftware.'
+        },
+        hero: {
+          title: 'IFC Voorbeeldbestanden',
+          description: 'Download gratis IFC Industry Foundation Classes voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw BIM-software, IFC-viewers en bouwinformatie modelleringshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn IFC (Industry Foundation Classes) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      iges: {
+        meta: {
+          title: 'Gratis IGES Voorbeeldbestanden Downloaden - Initial Graphics Exchange Specification CAD Testbestanden | MorphyHub',
+          description: 'Download gratis IGES Initial Graphics Exchange Specification voorbeeldbestanden om CAD-software, IGES-converters, 3D-modelleringshulpmiddelen en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAD-systemen, IGES-parsers, 3D-model uitwisselingshulpmiddelen en engineering software.',
+          keywords: 'IGES voorbeeldbestanden, IGES testbestanden, IGES voorbeelden downloaden, gratis IGES testbestanden, Initial Graphics Exchange Specification bestanden, CAD IGES bestanden, 3D-model uitwisseling bestanden, IGES converter testbestanden, engineering design bestanden, IGES parser testbestanden, CAD uitwisselingsformaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis IGES Voorbeeldbestanden - Initial Graphics Exchange Specification CAD Testbestanden Downloaden',
+          description: 'Download gratis IGES Initial Graphics Exchange Specification voorbeeldbestanden om CAD-software, IGES-converters, 3D-modelleringshulpmiddelen en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAD-systemen, IGES-parsers, 3D-model uitwisselingshulpmiddelen en engineering software.'
+        },
+        hero: {
+          title: 'IGES Voorbeeldbestanden',
+          description: 'Download gratis IGES Initial Graphics Exchange Specification voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw CAD-software, IGES-converters en 3D-modelleringshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn IGES (Initial Graphics Exchange Specification) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      igs: {
+        meta: {
+          title: 'Gratis IGS Voorbeeldbestanden Downloaden - Initial Graphics Exchange Specification CAD Testbestanden | MorphyHub',
+          description: 'Download gratis IGS Initial Graphics Exchange Specification voorbeeldbestanden om CAD-software, IGS-converters, 3D-modelleringshulpmiddelen en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAD-systemen, IGS-parsers, 3D-model uitwisselingshulpmiddelen en engineering software.',
+          keywords: 'IGS voorbeeldbestanden, IGS testbestanden, IGS voorbeelden downloaden, gratis IGS testbestanden, Initial Graphics Exchange Specification bestanden, CAD IGS bestanden, 3D-model uitwisseling bestanden, IGS converter testbestanden, engineering design bestanden, IGS parser testbestanden, CAD uitwisselingsformaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis IGS Voorbeeldbestanden - Initial Graphics Exchange Specification CAD Testbestanden Downloaden',
+          description: 'Download gratis IGS Initial Graphics Exchange Specification voorbeeldbestanden om CAD-software, IGS-converters, 3D-modelleringshulpmiddelen en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CAD-systemen, IGS-parsers, 3D-model uitwisselingshulpmiddelen en engineering software.'
+        },
+        hero: {
+          title: 'IGS Voorbeeldbestanden',
+          description: 'Download gratis IGS Initial Graphics Exchange Specification voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw CAD-software, IGS-converters en 3D-modelleringshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn IGS (Initial Graphics Exchange Specification) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      las: {
+        meta: {
+          title: 'Gratis LAS Voorbeeldbestanden Downloaden - LiDAR Point Cloud Data Testbestanden | MorphyHub',
+          description: 'Download gratis LAS LiDAR point cloud voorbeeldbestanden om point cloud verwerking, LiDAR-analysehulpmiddelen, 3D-mapping software en geo-ruimtelijke applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LAS-parsers, point cloud viewers, LiDAR-verwerkingshulpmiddelen, 3D-mapping software en geo-ruimtelijke analyseplatforms.',
+          keywords: 'LAS voorbeeldbestanden, LAS testbestanden, LAS voorbeelden downloaden, gratis LAS testbestanden, LiDAR point cloud bestanden, LAS formaat bestanden, point cloud data bestanden, LAS parser testbestanden, geo-ruimtelijke bestanden, LiDAR analyse testbestanden, 3D-mapping voorbeelden'
+        },
+        schema: {
+          name: 'Gratis LAS Voorbeeldbestanden - LiDAR Point Cloud Data Testbestanden Downloaden',
+          description: 'Download gratis LAS LiDAR point cloud voorbeeldbestanden om point cloud verwerking, LiDAR-analysehulpmiddelen, 3D-mapping software en geo-ruimtelijke applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van LAS-parsers, point cloud viewers, LiDAR-verwerkingshulpmiddelen, 3D-mapping software en geo-ruimtelijke analyseplatforms.'
+        },
+        hero: {
+          title: 'LAS Voorbeeldbestanden',
+          description: 'Download gratis LAS LiDAR point cloud voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om point cloud verwerking, LiDAR-analysehulpmiddelen en 3D-mapping software te testen.'
+        },
+        about_description: 'Dit zijn LAS (LiDAR point cloud) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ma: {
+        meta: {
+          title: 'Gratis MA Voorbeeldbestanden Downloaden - Maya ASCII Scene Testbestanden | MorphyHub',
+          description: 'Download gratis MA Maya ASCII scene voorbeeldbestanden om Maya scene conversie, 3D-animatiesoftware, MA-bestandsparsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk Maya, MA-bestandsviewers, scene conversiehulpmiddelen, 3D-animatieplatforms en animatieworkflow software.',
+          keywords: 'MA voorbeeldbestanden, MA testbestanden, MA voorbeelden downloaden, gratis MA testbestanden, Maya ASCII scene bestanden, MA formaat bestanden, 3D-animatie scene bestanden, MA parser testbestanden, animatie bestanden, Maya scene testbestanden, 3D-animatie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis MA Voorbeeldbestanden - Maya ASCII Scene Testbestanden Downloaden',
+          description: 'Download gratis MA Maya ASCII scene voorbeeldbestanden om Maya scene conversie, 3D-animatiesoftware, MA-bestandsparsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk Maya, MA-bestandsviewers, scene conversiehulpmiddelen, 3D-animatieplatforms en animatieworkflow software.'
+        },
+        hero: {
+          title: 'MA Voorbeeldbestanden',
+          description: 'Download gratis MA Maya ASCII scene voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om Maya scene conversie, 3D-animatiesoftware en animatiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn MA (Maya ASCII scene) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      max: {
+        meta: {
+          title: 'Gratis MAX Voorbeeldbestanden Downloaden - 3ds Max Scene Testbestanden | MorphyHub',
+          description: 'Download gratis MAX 3ds Max scene voorbeeldbestanden om 3ds Max scene conversie, 3D-modelleringssoftware, MAX-bestandsparsers en 3D-designhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk 3ds Max, MAX-bestandsviewers, scene conversiehulpmiddelen, 3D-modelleringsplatforms en 3D-design workflow software.',
+          keywords: 'MAX voorbeeldbestanden, MAX testbestanden, MAX voorbeelden downloaden, gratis MAX testbestanden, 3ds Max scene bestanden, MAX formaat bestanden, 3D-modellering scene bestanden, MAX parser testbestanden, 3D-design bestanden, 3ds Max scene testbestanden, 3D-modellering voorbeelden'
+        },
+        schema: {
+          name: 'Gratis MAX Voorbeeldbestanden - 3ds Max Scene Testbestanden Downloaden',
+          description: 'Download gratis MAX 3ds Max scene voorbeeldbestanden om 3ds Max scene conversie, 3D-modelleringssoftware, MAX-bestandsparsers en 3D-designhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk 3ds Max, MAX-bestandsviewers, scene conversiehulpmiddelen, 3D-modelleringsplatforms en 3D-design workflow software.'
+        },
+        hero: {
+          title: 'MAX Voorbeeldbestanden',
+          description: 'Download gratis MAX 3ds Max scene voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om 3ds Max scene conversie, 3D-modelleringssoftware en 3D-designhulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn MAX (3ds Max scene) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      mb: {
+        meta: {
+          title: 'Gratis MB Voorbeeldbestanden Downloaden - Maya Binary Scene Testbestanden | MorphyHub',
+          description: 'Download gratis MB Maya Binary scene voorbeeldbestanden om Maya scene conversie, 3D-animatiesoftware, MB-bestandsparsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk Maya, MB-bestandsviewers, scene conversiehulpmiddelen, 3D-animatieplatforms en animatieworkflow software.',
+          keywords: 'MB voorbeeldbestanden, MB testbestanden, MB voorbeelden downloaden, gratis MB testbestanden, Maya Binary scene bestanden, MB formaat bestanden, 3D-animatie scene bestanden, MB parser testbestanden, animatie bestanden, Maya scene testbestanden, 3D-animatie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis MB Voorbeeldbestanden - Maya Binary Scene Testbestanden Downloaden',
+          description: 'Download gratis MB Maya Binary scene voorbeeldbestanden om Maya scene conversie, 3D-animatiesoftware, MB-bestandsparsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Autodesk Maya, MB-bestandsviewers, scene conversiehulpmiddelen, 3D-animatieplatforms en animatieworkflow software.'
+        },
+        hero: {
+          title: 'MB Voorbeeldbestanden',
+          description: 'Download gratis MB Maya Binary scene voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om Maya scene conversie, 3D-animatiesoftware en animatiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn MB (Maya Binary scene) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      indd: {
+        meta: {
+          title: 'Gratis INDD Voorbeeldbestanden Downloaden - Adobe InDesign Document Testbestanden | MorphyHub',
+          description: 'Download gratis INDD Adobe InDesign document voorbeeldbestanden om InDesign-compatibiliteit, INDD-converters, desktop publishing software en layout designhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Adobe InDesign, INDD-bestandsviewers, document conversiehulpmiddelen, desktop publishing platforms en layout design software.',
+          keywords: 'INDD voorbeeldbestanden, INDD testbestanden, INDD voorbeelden downloaden, gratis INDD testbestanden, Adobe InDesign bestanden, INDD formaat bestanden, desktop publishing bestanden, INDD converter testbestanden, layout design bestanden, InDesign document testbestanden, publicatiesoftware voorbeelden'
+        },
+        schema: {
+          name: 'Gratis INDD Voorbeeldbestanden - Adobe InDesign Document Testbestanden Downloaden',
+          description: 'Download gratis INDD Adobe InDesign document voorbeeldbestanden om InDesign-compatibiliteit, INDD-converters, desktop publishing software en layout designhulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Adobe InDesign, INDD-bestandsviewers, document conversiehulpmiddelen, desktop publishing platforms en layout design software.'
+        },
+        hero: {
+          title: 'INDD Voorbeeldbestanden',
+          description: 'Download gratis INDD Adobe InDesign document voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om InDesign-compatibiliteit, INDD-converters en desktop publishing software te testen.'
+        },
+        about_description: 'Dit zijn INDD (Adobe InDesign document) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Gratis Geanimeerde GIF Voorbeeldbestanden Downloaden - Geanimeerde Afbeelding Testbestanden | MorphyHub',
+          description: 'Download gratis geanimeerde GIF voorbeeldbestanden om GIF-animatieweergave, afbeeldingsviewers, webbrowsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van GIF-viewers, animatiespelers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms en multimediatoepassingen.',
+          keywords: 'geanimeerde GIF voorbeeldbestanden, geanimeerde GIF testbestanden, geanimeerde GIF voorbeelden downloaden, gratis geanimeerde GIF testbestanden, GIF-animatie bestanden, geanimeerde afbeeldingsbestanden, GIF-speler testbestanden, animatie bestanden, web-animatie testbestanden, multimedi GIF voorbeelden'
+        },
+        schema: {
+          name: 'Gratis Geanimeerde GIF Voorbeeldbestanden - Geanimeerde Afbeelding Testbestanden Downloaden',
+          description: 'Download gratis geanimeerde GIF voorbeeldbestanden om GIF-animatieweergave, afbeeldingsviewers, webbrowsers en animatiehulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van GIF-viewers, animatiespelers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms en multimediatoepassingen.'
+        },
+        hero: {
+          title: 'Geanimeerde GIF Voorbeeldbestanden',
+          description: 'Download gratis geanimeerde GIF voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om GIF-animatieweergave, afbeeldingsviewers en animatiehulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn geanimeerde GIF testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      apng: {
+        meta: {
+          title: 'Gratis APNG Voorbeeldbestanden Downloaden - Geanimeerde PNG Afbeelding Testbestanden | MorphyHub',
+          description: 'Download gratis APNG Animated Portable Network Graphics voorbeeldbestanden om APNG-animatieweergave, afbeeldingsviewers, webbrowsers en moderne afbeeldingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van APNG-viewers, animatiespelers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms en moderne multimediatoepassingen.',
+          keywords: 'APNG voorbeeldbestanden, APNG testbestanden, APNG voorbeelden downloaden, gratis APNG testbestanden, Animated PNG bestanden, APNG-animatie bestanden, APNG-speler testbestanden, animatie bestanden, web-animatie testbestanden, modern afbeeldingsformaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis APNG Voorbeeldbestanden - Geanimeerde PNG Afbeelding Testbestanden Downloaden',
+          description: 'Download gratis APNG Animated Portable Network Graphics voorbeeldbestanden om APNG-animatieweergave, afbeeldingsviewers, webbrowsers en moderne afbeeldingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van APNG-viewers, animatiespelers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms en moderne multimediatoepassingen.'
+        },
+        hero: {
+          title: 'APNG Voorbeeldbestanden',
+          description: 'Download gratis APNG Animated Portable Network Graphics voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om APNG-animatieweergave, afbeeldingsviewers en moderne afbeeldingshulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn APNG (Animated Portable Network Graphics) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      avif: {
+        meta: {
+          title: 'Gratis AVIF Voorbeeldbestanden Downloaden - AV1 Image File Format Testbestanden | MorphyHub',
+          description: 'Download gratis AVIF AV1 Image File Format voorbeeldbestanden om moderne afbeeldingscompressie, AVIF-viewers, webbrowsers en afbeeldingshulpmiddelen van de volgende generatie te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AVIF-viewers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms, modern afbeeldingsformaat ondersteuning en multimediatoepassingen van de volgende generatie.',
+          keywords: 'AVIF voorbeeldbestanden, AVIF testbestanden, AVIF voorbeelden downloaden, gratis AVIF testbestanden, AV1 Image File Format bestanden, AVIF afbeeldingsbestanden, AVIF viewer testbestanden, moderne afbeeldingsbestanden, web afbeeldingsformaat testbestanden, afbeeldingsformaat volgende generatie voorbeelden'
+        },
+        schema: {
+          name: 'Gratis AVIF Voorbeeldbestanden - AV1 Image File Format Testbestanden Downloaden',
+          description: 'Download gratis AVIF AV1 Image File Format voorbeeldbestanden om moderne afbeeldingscompressie, AVIF-viewers, webbrowsers en afbeeldingshulpmiddelen van de volgende generatie te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AVIF-viewers, afbeeldingsverwerkingshulpmiddelen, webontwikkelingsplatforms, modern afbeeldingsformaat ondersteuning en multimediatoepassingen van de volgende generatie.'
+        },
+        hero: {
+          title: 'AVIF Voorbeeldbestanden',
+          description: 'Download gratis AVIF AV1 Image File Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om moderne afbeeldingscompressie, AVIF-viewers en afbeeldingshulpmiddelen van de volgende generatie te testen.'
+        },
+        about_description: 'Dit zijn AVIF (AV1 Image File Format) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      bmp: {
+        meta: {
+          title: 'Gratis BMP Voorbeeldbestanden Downloaden - Bitmap Afbeelding Testbestanden | MorphyHub',
+          description: 'Download gratis BMP bitmap voorbeeldbestanden om afbeeldingsviewers, BMP-converters, grafische software en afbeeldingsverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BMP-viewers, afbeeldingseditors, grafische conversiehulpmiddelen, afbeeldingsverwerkingsplatforms en bitmap formaat ondersteuning.',
+          keywords: 'BMP voorbeeldbestanden, BMP testbestanden, BMP voorbeelden downloaden, gratis BMP testbestanden, bitmap afbeeldingsbestanden, BMP formaat bestanden, afbeeldingsviewer testbestanden, grafische bestanden, afbeeldingsconversie testbestanden, bitmap formaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis BMP Voorbeeldbestanden - Bitmap Afbeelding Testbestanden Downloaden',
+          description: 'Download gratis BMP bitmap voorbeeldbestanden om afbeeldingsviewers, BMP-converters, grafische software en afbeeldingsverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van BMP-viewers, afbeeldingseditors, grafische conversiehulpmiddelen, afbeeldingsverwerkingsplatforms en bitmap formaat ondersteuning.'
+        },
+        hero: {
+          title: 'BMP Voorbeeldbestanden',
+          description: 'Download gratis BMP bitmap voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om afbeeldingsviewers, BMP-converters en grafische software te testen.'
+        },
+        about_description: 'Dit zijn BMP (bitmap) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Gratis Barcode SVG Voorbeeldbestanden Downloaden - Schaalbare Vector Barcode Testbestanden | MorphyHub',
+          description: 'Download gratis barcode SVG voorbeeldbestanden om barcode-generatie, SVG barcode-lezers, vector grafische hulpmiddelen en barcode-scanapplicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van barcode-generatoren, SVG-viewers, barcode-scanhulpmiddelen, vector grafische platforms en barcode-herkenningssoftware.',
+          keywords: 'barcode SVG voorbeeldbestanden, barcode SVG testbestanden, barcode SVG voorbeelden downloaden, gratis barcode SVG testbestanden, SVG barcode bestanden, vector barcode bestanden, barcode generator testbestanden, SVG bestanden, barcode scan testbestanden, vector grafische voorbeelden'
+        },
+        schema: {
+          name: 'Gratis Barcode SVG Voorbeeldbestanden - Schaalbare Vector Barcode Testbestanden Downloaden',
+          description: 'Download gratis barcode SVG voorbeeldbestanden om barcode-generatie, SVG barcode-lezers, vector grafische hulpmiddelen en barcode-scanapplicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van barcode-generatoren, SVG-viewers, barcode-scanhulpmiddelen, vector grafische platforms en barcode-herkenningssoftware.'
+        },
+        hero: {
+          title: 'Barcode SVG Voorbeeldbestanden',
+          description: 'Download gratis barcode SVG voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om barcode-generatie, SVG barcode-lezers en vector grafische hulpmiddelen te testen.'
+        },
+        about_description: 'Dit zijn barcode SVG testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      avi: {
+        meta: {
+          title: 'Gratis AVI Voorbeeldbestanden Downloaden - Audio Video Interleave Video Testbestanden | MorphyHub',
+          description: 'Download gratis AVI Audio Video Interleave voorbeeldbestanden om videospelers, AVI-converters, multimedi software en videoverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AVI-spelers, video-editors, multimediaconversiehulpmiddelen, videoverwerkingsplatforms en video formaat ondersteuning.',
+          keywords: 'AVI voorbeeldbestanden, AVI testbestanden, AVI voorbeelden downloaden, gratis AVI testbestanden, Audio Video Interleave bestanden, AVI videobestanden, videospeler testbestanden, multimediabestanden, videoconversie testbestanden, video formaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis AVI Voorbeeldbestanden - Audio Video Interleave Video Testbestanden Downloaden',
+          description: 'Download gratis AVI Audio Video Interleave voorbeeldbestanden om videospelers, AVI-converters, multimedi software en videoverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AVI-spelers, video-editors, multimediaconversiehulpmiddelen, videoverwerkingsplatforms en video formaat ondersteuning.'
+        },
+        hero: {
+          title: 'AVI Voorbeeldbestanden',
+          description: 'Download gratis AVI Audio Video Interleave voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om videospelers, AVI-converters en multimedi software te testen.'
+        },
+        about_description: 'Dit zijn AVI (Audio Video Interleave) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      '3gp': {
+        meta: {
+          title: 'Gratis 3GP Voorbeeldbestanden Downloaden - 3GPP Mobile Video Testbestanden | MorphyHub',
+          description: 'Download gratis 3GP 3GPP mobile video voorbeeldbestanden om mobiele videospelers, 3GP-converters, multimedi software en mobiele videoverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3GP-spelers, mobiele video-editors, videoconversiehulpmiddelen, mobiele multimediplatforms en mobiel video formaat ondersteuning.',
+          keywords: '3GP voorbeeldbestanden, 3GP testbestanden, 3GP voorbeelden downloaden, gratis 3GP testbestanden, 3GPP mobile video bestanden, 3GP videobestanden, mobiele videospeler testbestanden, multimediabestanden, mobiele videoconversie testbestanden, mobiel video formaat voorbeelden'
+        },
+        schema: {
+          name: 'Gratis 3GP Voorbeeldbestanden - 3GPP Mobile Video Testbestanden Downloaden',
+          description: 'Download gratis 3GP 3GPP mobile video voorbeeldbestanden om mobiele videospelers, 3GP-converters, multimedi software en mobiele videoverwerkingshulpmiddelen te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3GP-spelers, mobiele video-editors, videoconversiehulpmiddelen, mobiele multimediplatforms en mobiel video formaat ondersteuning.'
+        },
+        hero: {
+          title: '3GP Voorbeeldbestanden',
+          description: 'Download gratis 3GP 3GPP mobile video voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om mobiele videospelers, 3GP-converters en multimedi software te testen.'
+        },
+        about_description: 'Dit zijn 3GP (3GPP mobile video) testbestanden in verschillende formaten voor testdoeleinden'
       }
     }
   }

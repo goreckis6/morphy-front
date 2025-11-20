@@ -1263,6 +1263,262 @@ export const vi: SamplePageTranslations = {
           description: 'Tải xuống tệp mẫu DWG bản vẽ AutoCAD miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm CAD, tương thích AutoCAD và công cụ vẽ kỹ thuật của bạn.'
         },
         about_description: 'Đây là các tệp thử nghiệm DWG (bản vẽ AutoCAD) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      dxf: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu DXF Miễn Phí - Tệp Kiểm Tra Drawing Exchange Format AutoCAD | MorphyHub',
+          description: 'Tải xuống tệp mẫu DXF Drawing Exchange Format miễn phí để kiểm tra phần mềm CAD, bộ chuyển đổi DXF và công cụ vẽ kỹ thuật. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra AutoCAD, trình xem CAD, trình phân tích DXF và ứng dụng trao đổi tệp bản vẽ.',
+          keywords: 'tệp mẫu DXF, tệp kiểm tra DXF, tải xuống ví dụ DXF, tệp kiểm tra DXF miễn phí, tệp AutoCAD DXF, tệp Drawing Exchange Format, tệp CAD DXF, tệp kiểm tra bộ chuyển đổi DXF, tệp bản vẽ kỹ thuật, tệp kiểm tra trình phân tích DXF, ví dụ trao đổi tệp CAD'
+        },
+        schema: {
+          name: 'Tệp Mẫu DXF Miễn Phí - Tải Xuống Tệp Kiểm Tra Drawing Exchange Format',
+          description: 'Tải xuống tệp mẫu DXF Drawing Exchange Format miễn phí để kiểm tra phần mềm CAD, bộ chuyển đổi DXF và công cụ vẽ kỹ thuật. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra AutoCAD, trình xem CAD, trình phân tích DXF và ứng dụng trao đổi tệp bản vẽ.'
+        },
+        hero: {
+          title: 'Tệp Mẫu DXF',
+          description: 'Tải xuống tệp mẫu DXF Drawing Exchange Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm CAD, bộ chuyển đổi DXF và công cụ vẽ kỹ thuật của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm DXF (Drawing Exchange Format) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ifc: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu IFC Miễn Phí - Tệp Kiểm Tra Industry Foundation Classes BIM | MorphyHub',
+          description: 'Tải xuống tệp mẫu IFC Industry Foundation Classes miễn phí để kiểm tra phần mềm BIM, trình xem IFC, công cụ mô hình hóa thông tin tòa nhà và ứng dụng quản lý xây dựng. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Revit, ArchiCAD, trình phân tích IFC, trình xem BIM và phần mềm thiết kế tòa nhà.',
+          keywords: 'tệp mẫu IFC, tệp kiểm tra IFC, tải xuống ví dụ IFC, tệp kiểm tra IFC miễn phí, tệp Industry Foundation Classes, tệp BIM IFC, tệp mô hình hóa thông tin tòa nhà, tệp kiểm tra trình xem IFC, tệp phần mềm xây dựng, tệp kiểm tra trình phân tích IFC, ví dụ định dạng trao đổi BIM'
+        },
+        schema: {
+          name: 'Tệp Mẫu IFC Miễn Phí - Tải Xuống Tệp Kiểm Tra Industry Foundation Classes BIM',
+          description: 'Tải xuống tệp mẫu IFC Industry Foundation Classes miễn phí để kiểm tra phần mềm BIM, trình xem IFC, công cụ mô hình hóa thông tin tòa nhà và ứng dụng quản lý xây dựng. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Revit, ArchiCAD, trình phân tích IFC, trình xem BIM và phần mềm thiết kế tòa nhà.'
+        },
+        hero: {
+          title: 'Tệp Mẫu IFC',
+          description: 'Tải xuống tệp mẫu IFC Industry Foundation Classes miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm BIM, trình xem IFC và công cụ mô hình hóa thông tin tòa nhà của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm IFC (Industry Foundation Classes) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      iges: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu IGES Miễn Phí - Tệp Kiểm Tra Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Tải xuống tệp mẫu IGES Initial Graphics Exchange Specification miễn phí để kiểm tra phần mềm CAD, bộ chuyển đổi IGES, công cụ mô hình hóa 3D và ứng dụng thiết kế kỹ thuật. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra hệ thống CAD, trình phân tích IGES, công cụ trao đổi mô hình 3D và phần mềm kỹ thuật.',
+          keywords: 'tệp mẫu IGES, tệp kiểm tra IGES, tải xuống ví dụ IGES, tệp kiểm tra IGES miễn phí, tệp Initial Graphics Exchange Specification, tệp CAD IGES, tệp trao đổi mô hình 3D, tệp kiểm tra bộ chuyển đổi IGES, tệp thiết kế kỹ thuật, tệp kiểm tra trình phân tích IGES, ví dụ định dạng trao đổi CAD'
+        },
+        schema: {
+          name: 'Tệp Mẫu IGES Miễn Phí - Tải Xuống Tệp Kiểm Tra Initial Graphics Exchange Specification CAD',
+          description: 'Tải xuống tệp mẫu IGES Initial Graphics Exchange Specification miễn phí để kiểm tra phần mềm CAD, bộ chuyển đổi IGES, công cụ mô hình hóa 3D và ứng dụng thiết kế kỹ thuật. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra hệ thống CAD, trình phân tích IGES, công cụ trao đổi mô hình 3D và phần mềm kỹ thuật.'
+        },
+        hero: {
+          title: 'Tệp Mẫu IGES',
+          description: 'Tải xuống tệp mẫu IGES Initial Graphics Exchange Specification miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm CAD, bộ chuyển đổi IGES và công cụ mô hình hóa 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm IGES (Initial Graphics Exchange Specification) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      igs: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu IGS Miễn Phí - Tệp Kiểm Tra Initial Graphics Exchange Specification CAD | MorphyHub',
+          description: 'Tải xuống tệp mẫu IGS Initial Graphics Exchange Specification miễn phí để kiểm tra phần mềm CAD, bộ chuyển đổi IGS, công cụ mô hình hóa 3D và ứng dụng thiết kế kỹ thuật. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra hệ thống CAD, trình phân tích IGS, công cụ trao đổi mô hình 3D và phần mềm kỹ thuật.',
+          keywords: 'tệp mẫu IGS, tệp kiểm tra IGS, tải xuống ví dụ IGS, tệp kiểm tra IGS miễn phí, tệp Initial Graphics Exchange Specification, tệp CAD IGS, tệp trao đổi mô hình 3D, tệp kiểm tra bộ chuyển đổi IGS, tệp thiết kế kỹ thuật, tệp kiểm tra trình phân tích IGS, ví dụ định dạng trao đổi CAD'
+        },
+        schema: {
+          name: 'Tệp Mẫu IGS Miễn Phí - Tải Xuống Tệp Kiểm Tra Initial Graphics Exchange Specification CAD',
+          description: 'Tải xuống tệp mẫu IGS Initial Graphics Exchange Specification miễn phí để kiểm tra phần mềm CAD, bộ chuyển đổi IGS, công cụ mô hình hóa 3D và ứng dụng thiết kế kỹ thuật. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra hệ thống CAD, trình phân tích IGS, công cụ trao đổi mô hình 3D và phần mềm kỹ thuật.'
+        },
+        hero: {
+          title: 'Tệp Mẫu IGS',
+          description: 'Tải xuống tệp mẫu IGS Initial Graphics Exchange Specification miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm CAD, bộ chuyển đổi IGS và công cụ mô hình hóa 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm IGS (Initial Graphics Exchange Specification) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      las: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu LAS Miễn Phí - Tệp Kiểm Tra Dữ Liệu Point Cloud LiDAR | MorphyHub',
+          description: 'Tải xuống tệp mẫu LAS point cloud LiDAR miễn phí để kiểm tra xử lý point cloud, công cụ phân tích LiDAR, phần mềm lập bản đồ 3D và ứng dụng không gian địa lý. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích LAS, trình xem point cloud, công cụ xử lý LiDAR, phần mềm lập bản đồ 3D và nền tảng phân tích không gian địa lý.',
+          keywords: 'tệp mẫu LAS, tệp kiểm tra LAS, tải xuống ví dụ LAS, tệp kiểm tra LAS miễn phí, tệp point cloud LiDAR, tệp định dạng LAS, tệp dữ liệu point cloud, tệp kiểm tra trình phân tích LAS, tệp không gian địa lý, tệp kiểm tra phân tích LiDAR, ví dụ lập bản đồ 3D'
+        },
+        schema: {
+          name: 'Tệp Mẫu LAS Miễn Phí - Tải Xuống Tệp Kiểm Tra Dữ Liệu Point Cloud LiDAR',
+          description: 'Tải xuống tệp mẫu LAS point cloud LiDAR miễn phí để kiểm tra xử lý point cloud, công cụ phân tích LiDAR, phần mềm lập bản đồ 3D và ứng dụng không gian địa lý. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích LAS, trình xem point cloud, công cụ xử lý LiDAR, phần mềm lập bản đồ 3D và nền tảng phân tích không gian địa lý.'
+        },
+        hero: {
+          title: 'Tệp Mẫu LAS',
+          description: 'Tải xuống tệp mẫu LAS point cloud LiDAR miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra xử lý point cloud, công cụ phân tích LiDAR và phần mềm lập bản đồ 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm LAS (point cloud LiDAR) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ma: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu MA Miễn Phí - Tệp Kiểm Tra Scene Maya ASCII | MorphyHub',
+          description: 'Tải xuống tệp mẫu MA scene Maya ASCII miễn phí để kiểm tra chuyển đổi scene Maya, phần mềm hoạt hình 3D, trình phân tích tệp MA và công cụ hoạt hình. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Autodesk Maya, trình xem tệp MA, công cụ chuyển đổi scene, nền tảng hoạt hình 3D và phần mềm quy trình làm việc hoạt hình.',
+          keywords: 'tệp mẫu MA, tệp kiểm tra MA, tải xuống ví dụ MA, tệp kiểm tra MA miễn phí, tệp scene Maya ASCII, tệp định dạng MA, tệp scene hoạt hình 3D, tệp kiểm tra trình phân tích MA, tệp hoạt hình, tệp kiểm tra scene Maya, ví dụ hoạt hình 3D'
+        },
+        schema: {
+          name: 'Tệp Mẫu MA Miễn Phí - Tải Xuống Tệp Kiểm Tra Scene Maya ASCII',
+          description: 'Tải xuống tệp mẫu MA scene Maya ASCII miễn phí để kiểm tra chuyển đổi scene Maya, phần mềm hoạt hình 3D, trình phân tích tệp MA và công cụ hoạt hình. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Autodesk Maya, trình xem tệp MA, công cụ chuyển đổi scene, nền tảng hoạt hình 3D và phần mềm quy trình làm việc hoạt hình.'
+        },
+        hero: {
+          title: 'Tệp Mẫu MA',
+          description: 'Tải xuống tệp mẫu MA scene Maya ASCII miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra chuyển đổi scene Maya, phần mềm hoạt hình 3D và công cụ hoạt hình của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm MA (scene Maya ASCII) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      max: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu MAX Miễn Phí - Tệp Kiểm Tra Scene 3ds Max | MorphyHub',
+          description: 'Tải xuống tệp mẫu MAX scene 3ds Max miễn phí để kiểm tra chuyển đổi scene 3ds Max, phần mềm mô hình hóa 3D, trình phân tích tệp MAX và công cụ thiết kế 3D. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Autodesk 3ds Max, trình xem tệp MAX, công cụ chuyển đổi scene, nền tảng mô hình hóa 3D và phần mềm quy trình làm việc thiết kế 3D.',
+          keywords: 'tệp mẫu MAX, tệp kiểm tra MAX, tải xuống ví dụ MAX, tệp kiểm tra MAX miễn phí, tệp scene 3ds Max, tệp định dạng MAX, tệp scene mô hình hóa 3D, tệp kiểm tra trình phân tích MAX, tệp thiết kế 3D, tệp kiểm tra scene 3ds Max, ví dụ mô hình hóa 3D'
+        },
+        schema: {
+          name: 'Tệp Mẫu MAX Miễn Phí - Tải Xuống Tệp Kiểm Tra Scene 3ds Max',
+          description: 'Tải xuống tệp mẫu MAX scene 3ds Max miễn phí để kiểm tra chuyển đổi scene 3ds Max, phần mềm mô hình hóa 3D, trình phân tích tệp MAX và công cụ thiết kế 3D. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Autodesk 3ds Max, trình xem tệp MAX, công cụ chuyển đổi scene, nền tảng mô hình hóa 3D và phần mềm quy trình làm việc thiết kế 3D.'
+        },
+        hero: {
+          title: 'Tệp Mẫu MAX',
+          description: 'Tải xuống tệp mẫu MAX scene 3ds Max miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra chuyển đổi scene 3ds Max, phần mềm mô hình hóa 3D và công cụ thiết kế 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm MAX (scene 3ds Max) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      mb: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu MB Miễn Phí - Tệp Kiểm Tra Scene Maya Binary | MorphyHub',
+          description: 'Tải xuống tệp mẫu MB scene Maya Binary miễn phí để kiểm tra chuyển đổi scene Maya, phần mềm hoạt hình 3D, trình phân tích tệp MB và công cụ hoạt hình. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Autodesk Maya, trình xem tệp MB, công cụ chuyển đổi scene, nền tảng hoạt hình 3D và phần mềm quy trình làm việc hoạt hình.',
+          keywords: 'tệp mẫu MB, tệp kiểm tra MB, tải xuống ví dụ MB, tệp kiểm tra MB miễn phí, tệp scene Maya Binary, tệp định dạng MB, tệp scene hoạt hình 3D, tệp kiểm tra trình phân tích MB, tệp hoạt hình, tệp kiểm tra scene Maya, ví dụ hoạt hình 3D'
+        },
+        schema: {
+          name: 'Tệp Mẫu MB Miễn Phí - Tải Xuống Tệp Kiểm Tra Scene Maya Binary',
+          description: 'Tải xuống tệp mẫu MB scene Maya Binary miễn phí để kiểm tra chuyển đổi scene Maya, phần mềm hoạt hình 3D, trình phân tích tệp MB và công cụ hoạt hình. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Autodesk Maya, trình xem tệp MB, công cụ chuyển đổi scene, nền tảng hoạt hình 3D và phần mềm quy trình làm việc hoạt hình.'
+        },
+        hero: {
+          title: 'Tệp Mẫu MB',
+          description: 'Tải xuống tệp mẫu MB scene Maya Binary miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra chuyển đổi scene Maya, phần mềm hoạt hình 3D và công cụ hoạt hình của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm MB (scene Maya Binary) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      indd: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu INDD Miễn Phí - Tệp Kiểm Tra Tài Liệu Adobe InDesign | MorphyHub',
+          description: 'Tải xuống tệp mẫu INDD tài liệu Adobe InDesign miễn phí để kiểm tra tương thích InDesign, bộ chuyển đổi INDD, phần mềm xuất bản máy tính để bàn và công cụ thiết kế bố cục. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Adobe InDesign, trình xem tệp INDD, công cụ chuyển đổi tài liệu, nền tảng xuất bản máy tính để bàn và phần mềm thiết kế bố cục.',
+          keywords: 'tệp mẫu INDD, tệp kiểm tra INDD, tải xuống ví dụ INDD, tệp kiểm tra INDD miễn phí, tệp Adobe InDesign, tệp định dạng INDD, tệp xuất bản máy tính để bàn, tệp kiểm tra bộ chuyển đổi INDD, tệp thiết kế bố cục, tệp kiểm tra tài liệu InDesign, ví dụ phần mềm xuất bản'
+        },
+        schema: {
+          name: 'Tệp Mẫu INDD Miễn Phí - Tải Xuống Tệp Kiểm Tra Tài Liệu Adobe InDesign',
+          description: 'Tải xuống tệp mẫu INDD tài liệu Adobe InDesign miễn phí để kiểm tra tương thích InDesign, bộ chuyển đổi INDD, phần mềm xuất bản máy tính để bàn và công cụ thiết kế bố cục. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Adobe InDesign, trình xem tệp INDD, công cụ chuyển đổi tài liệu, nền tảng xuất bản máy tính để bàn và phần mềm thiết kế bố cục.'
+        },
+        hero: {
+          title: 'Tệp Mẫu INDD',
+          description: 'Tải xuống tệp mẫu INDD tài liệu Adobe InDesign miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra tương thích InDesign, bộ chuyển đổi INDD và phần mềm xuất bản máy tính để bàn của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm INDD (tài liệu Adobe InDesign) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu GIF Hoạt Hình Miễn Phí - Tệp Kiểm Tra Hình Ảnh Hoạt Hình | MorphyHub',
+          description: 'Tải xuống tệp mẫu GIF hoạt hình miễn phí để kiểm tra phát lại hoạt hình GIF, trình xem hình ảnh, trình duyệt web và công cụ hoạt hình. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem GIF, trình phát hoạt hình, công cụ xử lý hình ảnh, nền tảng phát triển web và ứng dụng đa phương tiện.',
+          keywords: 'tệp mẫu GIF hoạt hình, tệp kiểm tra GIF hoạt hình, tải xuống ví dụ GIF hoạt hình, tệp kiểm tra GIF hoạt hình miễn phí, tệp hoạt hình GIF, tệp hình ảnh hoạt hình, tệp kiểm tra trình phát GIF, tệp hoạt hình, tệp kiểm tra hoạt hình web, ví dụ GIF đa phương tiện'
+        },
+        schema: {
+          name: 'Tệp Mẫu GIF Hoạt Hình Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh Hoạt Hình',
+          description: 'Tải xuống tệp mẫu GIF hoạt hình miễn phí để kiểm tra phát lại hoạt hình GIF, trình xem hình ảnh, trình duyệt web và công cụ hoạt hình. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem GIF, trình phát hoạt hình, công cụ xử lý hình ảnh, nền tảng phát triển web và ứng dụng đa phương tiện.'
+        },
+        hero: {
+          title: 'Tệp Mẫu GIF Hoạt Hình',
+          description: 'Tải xuống tệp mẫu GIF hoạt hình miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phát lại hoạt hình GIF, trình xem hình ảnh và công cụ hoạt hình của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm GIF hoạt hình với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      apng: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu APNG Miễn Phí - Tệp Kiểm Tra Hình Ảnh PNG Hoạt Hình | MorphyHub',
+          description: 'Tải xuống tệp mẫu APNG Animated Portable Network Graphics miễn phí để kiểm tra phát lại hoạt hình APNG, trình xem hình ảnh, trình duyệt web và công cụ hình ảnh hiện đại. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem APNG, trình phát hoạt hình, công cụ xử lý hình ảnh, nền tảng phát triển web và ứng dụng đa phương tiện hiện đại.',
+          keywords: 'tệp mẫu APNG, tệp kiểm tra APNG, tải xuống ví dụ APNG, tệp kiểm tra APNG miễn phí, tệp Animated PNG, tệp hoạt hình APNG, tệp kiểm tra trình phát APNG, tệp hoạt hình, tệp kiểm tra hoạt hình web, ví dụ định dạng hình ảnh hiện đại'
+        },
+        schema: {
+          name: 'Tệp Mẫu APNG Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh PNG Hoạt Hình',
+          description: 'Tải xuống tệp mẫu APNG Animated Portable Network Graphics miễn phí để kiểm tra phát lại hoạt hình APNG, trình xem hình ảnh, trình duyệt web và công cụ hình ảnh hiện đại. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem APNG, trình phát hoạt hình, công cụ xử lý hình ảnh, nền tảng phát triển web và ứng dụng đa phương tiện hiện đại.'
+        },
+        hero: {
+          title: 'Tệp Mẫu APNG',
+          description: 'Tải xuống tệp mẫu APNG Animated Portable Network Graphics miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phát lại hoạt hình APNG, trình xem hình ảnh và công cụ hình ảnh hiện đại của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm APNG (Animated Portable Network Graphics) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      avif: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu AVIF Miễn Phí - Tệp Kiểm Tra Định Dạng Hình Ảnh AV1 | MorphyHub',
+          description: 'Tải xuống tệp mẫu AVIF AV1 Image File Format miễn phí để kiểm tra nén hình ảnh hiện đại, trình xem AVIF, trình duyệt web và công cụ hình ảnh thế hệ tiếp theo. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem AVIF, công cụ xử lý hình ảnh, nền tảng phát triển web, hỗ trợ định dạng hình ảnh hiện đại và ứng dụng đa phương tiện thế hệ tiếp theo.',
+          keywords: 'tệp mẫu AVIF, tệp kiểm tra AVIF, tải xuống ví dụ AVIF, tệp kiểm tra AVIF miễn phí, tệp AV1 Image File Format, tệp hình ảnh AVIF, tệp kiểm tra trình xem AVIF, tệp hình ảnh hiện đại, tệp kiểm tra định dạng hình ảnh web, ví dụ định dạng hình ảnh thế hệ tiếp theo'
+        },
+        schema: {
+          name: 'Tệp Mẫu AVIF Miễn Phí - Tải Xuống Tệp Kiểm Tra Định Dạng Hình Ảnh AV1',
+          description: 'Tải xuống tệp mẫu AVIF AV1 Image File Format miễn phí để kiểm tra nén hình ảnh hiện đại, trình xem AVIF, trình duyệt web và công cụ hình ảnh thế hệ tiếp theo. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem AVIF, công cụ xử lý hình ảnh, nền tảng phát triển web, hỗ trợ định dạng hình ảnh hiện đại và ứng dụng đa phương tiện thế hệ tiếp theo.'
+        },
+        hero: {
+          title: 'Tệp Mẫu AVIF',
+          description: 'Tải xuống tệp mẫu AVIF AV1 Image File Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra nén hình ảnh hiện đại, trình xem AVIF và công cụ hình ảnh thế hệ tiếp theo của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AVIF (AV1 Image File Format) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      bmp: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu BMP Miễn Phí - Tệp Kiểm Tra Hình Ảnh Bitmap | MorphyHub',
+          description: 'Tải xuống tệp mẫu BMP bitmap miễn phí để kiểm tra trình xem hình ảnh, bộ chuyển đổi BMP, phần mềm đồ họa và công cụ xử lý hình ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem BMP, trình chỉnh sửa hình ảnh, công cụ chuyển đổi đồ họa, nền tảng xử lý hình ảnh và hỗ trợ định dạng bitmap.',
+          keywords: 'tệp mẫu BMP, tệp kiểm tra BMP, tải xuống ví dụ BMP, tệp kiểm tra BMP miễn phí, tệp hình ảnh bitmap, tệp định dạng BMP, tệp kiểm tra trình xem hình ảnh, tệp đồ họa, tệp kiểm tra chuyển đổi hình ảnh, ví dụ định dạng bitmap'
+        },
+        schema: {
+          name: 'Tệp Mẫu BMP Miễn Phí - Tải Xuống Tệp Kiểm Tra Hình Ảnh Bitmap',
+          description: 'Tải xuống tệp mẫu BMP bitmap miễn phí để kiểm tra trình xem hình ảnh, bộ chuyển đổi BMP, phần mềm đồ họa và công cụ xử lý hình ảnh. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem BMP, trình chỉnh sửa hình ảnh, công cụ chuyển đổi đồ họa, nền tảng xử lý hình ảnh và hỗ trợ định dạng bitmap.'
+        },
+        hero: {
+          title: 'Tệp Mẫu BMP',
+          description: 'Tải xuống tệp mẫu BMP bitmap miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình xem hình ảnh, bộ chuyển đổi BMP và phần mềm đồ họa của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm BMP (bitmap) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu Mã Vạch SVG Miễn Phí - Tệp Kiểm Tra Mã Vạch Vectơ Có Thể Mở Rộng | MorphyHub',
+          description: 'Tải xuống tệp mẫu mã vạch SVG miễn phí để kiểm tra tạo mã vạch, trình đọc mã vạch SVG, công cụ đồ họa vectơ và ứng dụng quét mã vạch. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình tạo mã vạch, trình xem SVG, công cụ quét mã vạch, nền tảng đồ họa vectơ và phần mềm nhận dạng mã vạch.',
+          keywords: 'tệp mẫu mã vạch SVG, tệp kiểm tra mã vạch SVG, tải xuống ví dụ mã vạch SVG, tệp kiểm tra mã vạch SVG miễn phí, tệp mã vạch SVG, tệp mã vạch vectơ, tệp kiểm tra trình tạo mã vạch, tệp SVG, tệp kiểm tra quét mã vạch, ví dụ đồ họa vectơ'
+        },
+        schema: {
+          name: 'Tệp Mẫu Mã Vạch SVG Miễn Phí - Tải Xuống Tệp Kiểm Tra Mã Vạch Vectơ Có Thể Mở Rộng',
+          description: 'Tải xuống tệp mẫu mã vạch SVG miễn phí để kiểm tra tạo mã vạch, trình đọc mã vạch SVG, công cụ đồ họa vectơ và ứng dụng quét mã vạch. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình tạo mã vạch, trình xem SVG, công cụ quét mã vạch, nền tảng đồ họa vectơ và phần mềm nhận dạng mã vạch.'
+        },
+        hero: {
+          title: 'Tệp Mẫu Mã Vạch SVG',
+          description: 'Tải xuống tệp mẫu mã vạch SVG miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra tạo mã vạch, trình đọc mã vạch SVG và công cụ đồ họa vectơ của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm mã vạch SVG với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      avi: {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu AVI Miễn Phí - Tệp Kiểm Tra Video Audio Video Interleave | MorphyHub',
+          description: 'Tải xuống tệp mẫu AVI Audio Video Interleave miễn phí để kiểm tra trình phát video, bộ chuyển đổi AVI, phần mềm đa phương tiện và công cụ xử lý video. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phát AVI, trình chỉnh sửa video, công cụ chuyển đổi đa phương tiện, nền tảng xử lý video và hỗ trợ định dạng video.',
+          keywords: 'tệp mẫu AVI, tệp kiểm tra AVI, tải xuống ví dụ AVI, tệp kiểm tra AVI miễn phí, tệp Audio Video Interleave, tệp video AVI, tệp kiểm tra trình phát video, tệp đa phương tiện, tệp kiểm tra chuyển đổi video, ví dụ định dạng video'
+        },
+        schema: {
+          name: 'Tệp Mẫu AVI Miễn Phí - Tải Xuống Tệp Kiểm Tra Video Audio Video Interleave',
+          description: 'Tải xuống tệp mẫu AVI Audio Video Interleave miễn phí để kiểm tra trình phát video, bộ chuyển đổi AVI, phần mềm đa phương tiện và công cụ xử lý video. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phát AVI, trình chỉnh sửa video, công cụ chuyển đổi đa phương tiện, nền tảng xử lý video và hỗ trợ định dạng video.'
+        },
+        hero: {
+          title: 'Tệp Mẫu AVI',
+          description: 'Tải xuống tệp mẫu AVI Audio Video Interleave miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình phát video, bộ chuyển đổi AVI và phần mềm đa phương tiện của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AVI (Audio Video Interleave) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      '3gp': {
+        meta: {
+          title: 'Tải Xuống Tệp Mẫu 3GP Miễn Phí - Tệp Kiểm Tra Video Mobile 3GPP | MorphyHub',
+          description: 'Tải xuống tệp mẫu 3GP video mobile 3GPP miễn phí để kiểm tra trình phát video mobile, bộ chuyển đổi 3GP, phần mềm đa phương tiện và công cụ xử lý video mobile. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phát 3GP, trình chỉnh sửa video mobile, công cụ chuyển đổi video, nền tảng đa phương tiện mobile và hỗ trợ định dạng video mobile.',
+          keywords: 'tệp mẫu 3GP, tệp kiểm tra 3GP, tải xuống ví dụ 3GP, tệp kiểm tra 3GP miễn phí, tệp video mobile 3GPP, tệp video 3GP, tệp kiểm tra trình phát video mobile, tệp đa phương tiện, tệp kiểm tra chuyển đổi video mobile, ví dụ định dạng video mobile'
+        },
+        schema: {
+          name: 'Tệp Mẫu 3GP Miễn Phí - Tải Xuống Tệp Kiểm Tra Video Mobile 3GPP',
+          description: 'Tải xuống tệp mẫu 3GP video mobile 3GPP miễn phí để kiểm tra trình phát video mobile, bộ chuyển đổi 3GP, phần mềm đa phương tiện và công cụ xử lý video mobile. Nhiều kích thước tệp: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phát 3GP, trình chỉnh sửa video mobile, công cụ chuyển đổi video, nền tảng đa phương tiện mobile và hỗ trợ định dạng video mobile.'
+        },
+        hero: {
+          title: 'Tệp Mẫu 3GP',
+          description: 'Tải xuống tệp mẫu 3GP video mobile 3GPP miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình phát video mobile, bộ chuyển đổi 3GP và phần mềm đa phương tiện của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm 3GP (video mobile 3GPP) với nhiều kích thước khác nhau cho mục đích kiểm tra'
       }
     }
   }

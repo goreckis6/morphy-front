@@ -1263,6 +1263,262 @@ export const ja: SamplePageTranslations = {
           description: 'テスト用の無料DWG AutoCAD図面サンプルファイルをダウンロード。CADソフトウェア、AutoCADの互換性、技術図面ツールをテストするための複数のファイルサイズを利用できます。'
         },
         about_description: 'これらはテスト目的のさまざまなサイズのDWG (AutoCAD図面)ファイルです'
+      },
+      dxf: {
+        meta: {
+          title: '無料DXFサンプルファイルをダウンロード - Drawing Exchange FormatテストファイルAutoCAD | MorphyHub',
+          description: 'CADソフトウェア、DXFコンバーター、技術図面ツールをテストするための無料DXF Drawing Exchange Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AutoCAD、CADビューアー、DXFパーサー、図面ファイル交換アプリケーションのテストに最適。',
+          keywords: 'DXFサンプルファイル、DXFテストファイル、DXFサンプルをダウンロード、無料DXFテストファイル、AutoCAD DXFファイル、Drawing Exchange Formatファイル、CAD DXFファイル、DXFコンバーターテストファイル、技術図面ファイル、DXFパーサーテストファイル、CADファイル交換サンプル'
+        },
+        schema: {
+          name: '無料DXFサンプルファイル - Drawing Exchange Formatテストファイルをダウンロード',
+          description: 'CADソフトウェア、DXFコンバーター、技術図面ツールをテストするための無料DXF Drawing Exchange Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AutoCAD、CADビューアー、DXFパーサー、図面ファイル交換アプリケーションのテストに最適。'
+        },
+        hero: {
+          title: 'DXFサンプルファイル',
+          description: 'テスト用の無料DXF Drawing Exchange Formatサンプルファイルをダウンロード。CADソフトウェア、DXFコンバーター、技術図面ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのDXF (Drawing Exchange Format)ファイルです'
+      },
+      ifc: {
+        meta: {
+          title: '無料IFCサンプルファイルをダウンロード - Industry Foundation Classes BIMテストファイル | MorphyHub',
+          description: 'BIMソフトウェア、IFCビューアー、建築情報モデリングツール、建設管理アプリケーションをテストするための無料IFC Industry Foundation Classesサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Revit、ArchiCAD、IFCパーサー、BIMビューアー、建築設計ソフトウェアのテストに最適。',
+          keywords: 'IFCサンプルファイル、IFCテストファイル、IFCサンプルをダウンロード、無料IFCテストファイル、Industry Foundation Classesファイル、BIM IFCファイル、建築情報モデリングファイル、IFCビューアーテストファイル、建設ソフトウェアファイル、IFCパーサーテストファイル、BIM交換フォーマットサンプル'
+        },
+        schema: {
+          name: '無料IFCサンプルファイル - Industry Foundation Classes BIMテストファイルをダウンロード',
+          description: 'BIMソフトウェア、IFCビューアー、建築情報モデリングツール、建設管理アプリケーションをテストするための無料IFC Industry Foundation Classesサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Revit、ArchiCAD、IFCパーサー、BIMビューアー、建築設計ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'IFCサンプルファイル',
+          description: 'テスト用の無料IFC Industry Foundation Classesサンプルファイルをダウンロード。BIMソフトウェア、IFCビューアー、建築情報モデリングツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのIFC (Industry Foundation Classes)ファイルです'
+      },
+      iges: {
+        meta: {
+          title: '無料IGESサンプルファイルをダウンロード - Initial Graphics Exchange Specification CADテストファイル | MorphyHub',
+          description: 'CADソフトウェア、IGESコンバーター、3Dモデリングツール、エンジニアリング設計アプリケーションをテストするための無料IGES Initial Graphics Exchange Specificationサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CADシステム、IGESパーサー、3Dモデル交換ツール、エンジニアリングソフトウェアのテストに最適。',
+          keywords: 'IGESサンプルファイル、IGESテストファイル、IGESサンプルをダウンロード、無料IGESテストファイル、Initial Graphics Exchange Specificationファイル、CAD IGESファイル、3Dモデル交換ファイル、IGESコンバーターテストファイル、エンジニアリング設計ファイル、IGESパーサーテストファイル、CAD交換フォーマットサンプル'
+        },
+        schema: {
+          name: '無料IGESサンプルファイル - Initial Graphics Exchange Specification CADテストファイルをダウンロード',
+          description: 'CADソフトウェア、IGESコンバーター、3Dモデリングツール、エンジニアリング設計アプリケーションをテストするための無料IGES Initial Graphics Exchange Specificationサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CADシステム、IGESパーサー、3Dモデル交換ツール、エンジニアリングソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'IGESサンプルファイル',
+          description: 'テスト用の無料IGES Initial Graphics Exchange Specificationサンプルファイルをダウンロード。CADソフトウェア、IGESコンバーター、3Dモデリングツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのIGES (Initial Graphics Exchange Specification)ファイルです'
+      },
+      igs: {
+        meta: {
+          title: '無料IGSサンプルファイルをダウンロード - Initial Graphics Exchange Specification CADテストファイル | MorphyHub',
+          description: 'CADソフトウェア、IGSコンバーター、3Dモデリングツール、エンジニアリング設計アプリケーションをテストするための無料IGS Initial Graphics Exchange Specificationサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CADシステム、IGSパーサー、3Dモデル交換ツール、エンジニアリングソフトウェアのテストに最適。',
+          keywords: 'IGSサンプルファイル、IGSテストファイル、IGSサンプルをダウンロード、無料IGSテストファイル、Initial Graphics Exchange Specificationファイル、CAD IGSファイル、3Dモデル交換ファイル、IGSコンバーターテストファイル、エンジニアリング設計ファイル、IGSパーサーテストファイル、CAD交換フォーマットサンプル'
+        },
+        schema: {
+          name: '無料IGSサンプルファイル - Initial Graphics Exchange Specification CADテストファイルをダウンロード',
+          description: 'CADソフトウェア、IGSコンバーター、3Dモデリングツール、エンジニアリング設計アプリケーションをテストするための無料IGS Initial Graphics Exchange Specificationサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。CADシステム、IGSパーサー、3Dモデル交換ツール、エンジニアリングソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'IGSサンプルファイル',
+          description: 'テスト用の無料IGS Initial Graphics Exchange Specificationサンプルファイルをダウンロード。CADソフトウェア、IGSコンバーター、3Dモデリングツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのIGS (Initial Graphics Exchange Specification)ファイルです'
+      },
+      las: {
+        meta: {
+          title: '無料LASサンプルファイルをダウンロード - LiDARポイントクラウドデータテストファイル | MorphyHub',
+          description: 'ポイントクラウド処理、LiDAR解析ツール、3Dマッピングソフトウェア、地理空間アプリケーションをテストするための無料LAS LiDARポイントクラウドサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LASパーサー、ポイントクラウドビューアー、LiDAR処理ツール、3Dマッピングソフトウェア、地理空間解析プラットフォームのテストに最適。',
+          keywords: 'LASサンプルファイル、LASテストファイル、LASサンプルをダウンロード、無料LASテストファイル、LiDARポイントクラウドファイル、LASフォーマットファイル、ポイントクラウドデータファイル、LASパーサーテストファイル、地理空間ファイル、LiDAR解析テストファイル、3Dマッピングサンプル'
+        },
+        schema: {
+          name: '無料LASサンプルファイル - LiDARポイントクラウドデータテストファイルをダウンロード',
+          description: 'ポイントクラウド処理、LiDAR解析ツール、3Dマッピングソフトウェア、地理空間アプリケーションをテストするための無料LAS LiDARポイントクラウドサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。LASパーサー、ポイントクラウドビューアー、LiDAR処理ツール、3Dマッピングソフトウェア、地理空間解析プラットフォームのテストに最適。'
+        },
+        hero: {
+          title: 'LASサンプルファイル',
+          description: 'テスト用の無料LAS LiDARポイントクラウドサンプルファイルをダウンロード。ポイントクラウド処理、LiDAR解析ツール、3Dマッピングソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのLAS (LiDARポイントクラウド)ファイルです'
+      },
+      ma: {
+        meta: {
+          title: '無料MAサンプルファイルをダウンロード - Maya ASCIIシーンテストファイル | MorphyHub',
+          description: 'Mayaシーン変換、3Dアニメーションソフトウェア、MAファイルパーサー、アニメーションツールをテストするための無料MA Maya ASCIIシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk Maya、MAファイルビューアー、シーン変換ツール、3Dアニメーションプラットフォーム、アニメーションワークフローソフトウェアのテストに最適。',
+          keywords: 'MAサンプルファイル、MAテストファイル、MAサンプルをダウンロード、無料MAテストファイル、Maya ASCIIシーンファイル、MAフォーマットファイル、3Dアニメーションシーンファイル、MAパーサーテストファイル、アニメーションファイル、Mayaシーンテストファイル、3Dアニメーションサンプル'
+        },
+        schema: {
+          name: '無料MAサンプルファイル - Maya ASCIIシーンテストファイルをダウンロード',
+          description: 'Mayaシーン変換、3Dアニメーションソフトウェア、MAファイルパーサー、アニメーションツールをテストするための無料MA Maya ASCIIシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk Maya、MAファイルビューアー、シーン変換ツール、3Dアニメーションプラットフォーム、アニメーションワークフローソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'MAサンプルファイル',
+          description: 'テスト用の無料MA Maya ASCIIシーンサンプルファイルをダウンロード。Mayaシーン変換、3Dアニメーションソフトウェア、アニメーションツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのMA (Maya ASCIIシーン)ファイルです'
+      },
+      max: {
+        meta: {
+          title: '無料MAXサンプルファイルをダウンロード - 3ds Maxシーンテストファイル | MorphyHub',
+          description: '3ds Maxシーン変換、3Dモデリングソフトウェア、MAXファイルパーサー、3Dデザインツールをテストするための無料MAX 3ds Maxシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk 3ds Max、MAXファイルビューアー、シーン変換ツール、3Dモデリングプラットフォーム、3Dデザインワークフローソフトウェアのテストに最適。',
+          keywords: 'MAXサンプルファイル、MAXテストファイル、MAXサンプルをダウンロード、無料MAXテストファイル、3ds Maxシーンファイル、MAXフォーマットファイル、3Dモデリングシーンファイル、MAXパーサーテストファイル、3Dデザインファイル、3ds Maxシーンテストファイル、3Dモデリングサンプル'
+        },
+        schema: {
+          name: '無料MAXサンプルファイル - 3ds Maxシーンテストファイルをダウンロード',
+          description: '3ds Maxシーン変換、3Dモデリングソフトウェア、MAXファイルパーサー、3Dデザインツールをテストするための無料MAX 3ds Maxシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk 3ds Max、MAXファイルビューアー、シーン変換ツール、3Dモデリングプラットフォーム、3Dデザインワークフローソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'MAXサンプルファイル',
+          description: 'テスト用の無料MAX 3ds Maxシーンサンプルファイルをダウンロード。3ds Maxシーン変換、3Dモデリングソフトウェア、3Dデザインツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのMAX (3ds Maxシーン)ファイルです'
+      },
+      mb: {
+        meta: {
+          title: '無料MBサンプルファイルをダウンロード - Maya Binaryシーンテストファイル | MorphyHub',
+          description: 'Mayaシーン変換、3Dアニメーションソフトウェア、MBファイルパーサー、アニメーションツールをテストするための無料MB Maya Binaryシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk Maya、MBファイルビューアー、シーン変換ツール、3Dアニメーションプラットフォーム、アニメーションワークフローソフトウェアのテストに最適。',
+          keywords: 'MBサンプルファイル、MBテストファイル、MBサンプルをダウンロード、無料MBテストファイル、Maya Binaryシーンファイル、MBフォーマットファイル、3Dアニメーションシーンファイル、MBパーサーテストファイル、アニメーションファイル、Mayaシーンテストファイル、3Dアニメーションサンプル'
+        },
+        schema: {
+          name: '無料MBサンプルファイル - Maya Binaryシーンテストファイルをダウンロード',
+          description: 'Mayaシーン変換、3Dアニメーションソフトウェア、MBファイルパーサー、アニメーションツールをテストするための無料MB Maya Binaryシーンサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Autodesk Maya、MBファイルビューアー、シーン変換ツール、3Dアニメーションプラットフォーム、アニメーションワークフローソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'MBサンプルファイル',
+          description: 'テスト用の無料MB Maya Binaryシーンサンプルファイルをダウンロード。Mayaシーン変換、3Dアニメーションソフトウェア、アニメーションツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのMB (Maya Binaryシーン)ファイルです'
+      },
+      indd: {
+        meta: {
+          title: '無料INDDサンプルファイルをダウンロード - Adobe InDesignドキュメントテストファイル | MorphyHub',
+          description: 'InDesign互換性、INDDコンバーター、デスクトップパブリッシングソフトウェア、レイアウトデザインツールをテストするための無料INDD Adobe InDesignドキュメントサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Adobe InDesign、INDDファイルビューアー、ドキュメント変換ツール、デスクトップパブリッシングプラットフォーム、レイアウトデザインソフトウェアのテストに最適。',
+          keywords: 'INDDサンプルファイル、INDDテストファイル、INDDサンプルをダウンロード、無料INDDテストファイル、Adobe InDesignファイル、INDDフォーマットファイル、デスクトップパブリッシングファイル、INDDコンバーターテストファイル、レイアウトデザインファイル、InDesignドキュメントテストファイル、パブリッシングソフトウェアサンプル'
+        },
+        schema: {
+          name: '無料INDDサンプルファイル - Adobe InDesignドキュメントテストファイルをダウンロード',
+          description: 'InDesign互換性、INDDコンバーター、デスクトップパブリッシングソフトウェア、レイアウトデザインツールをテストするための無料INDD Adobe InDesignドキュメントサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。Adobe InDesign、INDDファイルビューアー、ドキュメント変換ツール、デスクトップパブリッシングプラットフォーム、レイアウトデザインソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'INDDサンプルファイル',
+          description: 'テスト用の無料INDD Adobe InDesignドキュメントサンプルファイルをダウンロード。InDesign互換性、INDDコンバーター、デスクトップパブリッシングソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのINDD (Adobe InDesignドキュメント)ファイルです'
+      },
+      'animated-gif': {
+        meta: {
+          title: '無料アニメーションGIFサンプルファイルをダウンロード - アニメーション画像テストファイル | MorphyHub',
+          description: 'GIFアニメーション再生、画像ビューアー、ウェブブラウザー、アニメーションツールをテストするための無料アニメーションGIFサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。GIFビューアー、アニメーションプレーヤー、画像処理ツール、ウェブ開発プラットフォーム、マルチメディアアプリケーションのテストに最適。',
+          keywords: 'アニメーションGIFサンプルファイル、アニメーションGIFテストファイル、アニメーションGIFサンプルをダウンロード、無料アニメーションGIFテストファイル、GIFアニメーションファイル、アニメーション画像ファイル、GIFプレーヤーテストファイル、アニメーションファイル、ウェブアニメーションテストファイル、マルチメディアGIFサンプル'
+        },
+        schema: {
+          name: '無料アニメーションGIFサンプルファイル - アニメーション画像テストファイルをダウンロード',
+          description: 'GIFアニメーション再生、画像ビューアー、ウェブブラウザー、アニメーションツールをテストするための無料アニメーションGIFサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。GIFビューアー、アニメーションプレーヤー、画像処理ツール、ウェブ開発プラットフォーム、マルチメディアアプリケーションのテストに最適。'
+        },
+        hero: {
+          title: 'アニメーションGIFサンプルファイル',
+          description: 'テスト用の無料アニメーションGIFサンプルファイルをダウンロード。GIFアニメーション再生、画像ビューアー、アニメーションツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのアニメーションGIFファイルです'
+      },
+      apng: {
+        meta: {
+          title: '無料APNGサンプルファイルをダウンロード - アニメーションPNG画像テストファイル | MorphyHub',
+          description: 'APNGアニメーション再生、画像ビューアー、ウェブブラウザー、モダンな画像ツールをテストするための無料APNG Animated Portable Network Graphicsサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。APNGビューアー、アニメーションプレーヤー、画像処理ツール、ウェブ開発プラットフォーム、モダンなマルチメディアアプリケーションのテストに最適。',
+          keywords: 'APNGサンプルファイル、APNGテストファイル、APNGサンプルをダウンロード、無料APNGテストファイル、Animated PNGファイル、APNGアニメーションファイル、APNGプレーヤーテストファイル、アニメーションファイル、ウェブアニメーションテストファイル、モダンな画像フォーマットサンプル'
+        },
+        schema: {
+          name: '無料APNGサンプルファイル - アニメーションPNG画像テストファイルをダウンロード',
+          description: 'APNGアニメーション再生、画像ビューアー、ウェブブラウザー、モダンな画像ツールをテストするための無料APNG Animated Portable Network Graphicsサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。APNGビューアー、アニメーションプレーヤー、画像処理ツール、ウェブ開発プラットフォーム、モダンなマルチメディアアプリケーションのテストに最適。'
+        },
+        hero: {
+          title: 'APNGサンプルファイル',
+          description: 'テスト用の無料APNG Animated Portable Network Graphicsサンプルファイルをダウンロード。APNGアニメーション再生、画像ビューアー、モダンな画像ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAPNG (Animated Portable Network Graphics)ファイルです'
+      },
+      avif: {
+        meta: {
+          title: '無料AVIFサンプルファイルをダウンロード - AV1 Image File Formatテストファイル | MorphyHub',
+          description: 'モダンな画像圧縮、AVIFビューアー、ウェブブラウザー、次世代画像ツールをテストするための無料AVIF AV1 Image File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AVIFビューアー、画像処理ツール、ウェブ開発プラットフォーム、モダンな画像フォーマットサポート、次世代マルチメディアアプリケーションのテストに最適。',
+          keywords: 'AVIFサンプルファイル、AVIFテストファイル、AVIFサンプルをダウンロード、無料AVIFテストファイル、AV1 Image File Formatファイル、AVIF画像ファイル、AVIFビューアーテストファイル、モダンな画像ファイル、ウェブ画像フォーマットテストファイル、次世代画像フォーマットサンプル'
+        },
+        schema: {
+          name: '無料AVIFサンプルファイル - AV1 Image File Formatテストファイルをダウンロード',
+          description: 'モダンな画像圧縮、AVIFビューアー、ウェブブラウザー、次世代画像ツールをテストするための無料AVIF AV1 Image File Formatサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AVIFビューアー、画像処理ツール、ウェブ開発プラットフォーム、モダンな画像フォーマットサポート、次世代マルチメディアアプリケーションのテストに最適。'
+        },
+        hero: {
+          title: 'AVIFサンプルファイル',
+          description: 'テスト用の無料AVIF AV1 Image File Formatサンプルファイルをダウンロード。モダンな画像圧縮、AVIFビューアー、次世代画像ツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAVIF (AV1 Image File Format)ファイルです'
+      },
+      bmp: {
+        meta: {
+          title: '無料BMPサンプルファイルをダウンロード - ビットマップ画像テストファイル | MorphyHub',
+          description: '画像ビューアー、BMPコンバーター、グラフィックソフトウェア、画像処理ツールをテストするための無料BMPビットマップサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。BMPビューアー、画像エディター、グラフィック変換ツール、画像処理プラットフォーム、ビットマップフォーマットサポートのテストに最適。',
+          keywords: 'BMPサンプルファイル、BMPテストファイル、BMPサンプルをダウンロード、無料BMPテストファイル、ビットマップ画像ファイル、BMPフォーマットファイル、画像ビューアーテストファイル、グラフィックファイル、画像変換テストファイル、ビットマップフォーマットサンプル'
+        },
+        schema: {
+          name: '無料BMPサンプルファイル - ビットマップ画像テストファイルをダウンロード',
+          description: '画像ビューアー、BMPコンバーター、グラフィックソフトウェア、画像処理ツールをテストするための無料BMPビットマップサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。BMPビューアー、画像エディター、グラフィック変換ツール、画像処理プラットフォーム、ビットマップフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'BMPサンプルファイル',
+          description: 'テスト用の無料BMPビットマップサンプルファイルをダウンロード。画像ビューアー、BMPコンバーター、グラフィックソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのBMP (ビットマップ)ファイルです'
+      },
+      'barcode-svg': {
+        meta: {
+          title: '無料バーコードSVGサンプルファイルをダウンロード - スケーラブルベクターバーコードテストファイル | MorphyHub',
+          description: 'バーコード生成、SVGバーコードリーダー、ベクターグラフィックツール、バーコードスキャンアプリケーションをテストするための無料バーコードSVGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。バーコードジェネレーター、SVGビューアー、バーコードスキャンツール、ベクターグラフィックプラットフォーム、バーコード認識ソフトウェアのテストに最適。',
+          keywords: 'バーコードSVGサンプルファイル、バーコードSVGテストファイル、バーコードSVGサンプルをダウンロード、無料バーコードSVGテストファイル、SVGバーコードファイル、ベクターバーコードファイル、バーコードジェネレーターテストファイル、SVGファイル、バーコードスキャンテストファイル、ベクターグラフィックサンプル'
+        },
+        schema: {
+          name: '無料バーコードSVGサンプルファイル - スケーラブルベクターバーコードテストファイルをダウンロード',
+          description: 'バーコード生成、SVGバーコードリーダー、ベクターグラフィックツール、バーコードスキャンアプリケーションをテストするための無料バーコードSVGサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。バーコードジェネレーター、SVGビューアー、バーコードスキャンツール、ベクターグラフィックプラットフォーム、バーコード認識ソフトウェアのテストに最適。'
+        },
+        hero: {
+          title: 'バーコードSVGサンプルファイル',
+          description: 'テスト用の無料バーコードSVGサンプルファイルをダウンロード。バーコード生成、SVGバーコードリーダー、ベクターグラフィックツールをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのバーコードSVGファイルです'
+      },
+      avi: {
+        meta: {
+          title: '無料AVIサンプルファイルをダウンロード - Audio Video Interleaveビデオテストファイル | MorphyHub',
+          description: 'ビデオプレーヤー、AVIコンバーター、マルチメディアソフトウェア、ビデオ処理ツールをテストするための無料AVI Audio Video Interleaveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AVIプレーヤー、ビデオエディター、マルチメディア変換ツール、ビデオ処理プラットフォーム、ビデオフォーマットサポートのテストに最適。',
+          keywords: 'AVIサンプルファイル、AVIテストファイル、AVIサンプルをダウンロード、無料AVIテストファイル、Audio Video Interleaveファイル、AVIビデオファイル、ビデオプレーヤーテストファイル、マルチメディアファイル、ビデオ変換テストファイル、ビデオフォーマットサンプル'
+        },
+        schema: {
+          name: '無料AVIサンプルファイル - Audio Video Interleaveビデオテストファイルをダウンロード',
+          description: 'ビデオプレーヤー、AVIコンバーター、マルチメディアソフトウェア、ビデオ処理ツールをテストするための無料AVI Audio Video Interleaveサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。AVIプレーヤー、ビデオエディター、マルチメディア変換ツール、ビデオ処理プラットフォーム、ビデオフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: 'AVIサンプルファイル',
+          description: 'テスト用の無料AVI Audio Video Interleaveサンプルファイルをダウンロード。ビデオプレーヤー、AVIコンバーター、マルチメディアソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズのAVI (Audio Video Interleave)ファイルです'
+      },
+      '3gp': {
+        meta: {
+          title: '無料3GPサンプルファイルをダウンロード - 3GPPモバイルビデオテストファイル | MorphyHub',
+          description: 'モバイルビデオプレーヤー、3GPコンバーター、マルチメディアソフトウェア、モバイルビデオ処理ツールをテストするための無料3GP 3GPPモバイルビデオサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。3GPプレーヤー、モバイルビデオエディター、ビデオ変換ツール、モバイルマルチメディアプラットフォーム、モバイルビデオフォーマットサポートのテストに最適。',
+          keywords: '3GPサンプルファイル、3GPテストファイル、3GPサンプルをダウンロード、無料3GPテストファイル、3GPPモバイルビデオファイル、3GPビデオファイル、モバイルビデオプレーヤーテストファイル、マルチメディアファイル、モバイルビデオ変換テストファイル、モバイルビデオフォーマットサンプル'
+        },
+        schema: {
+          name: '無料3GPサンプルファイル - 3GPPモバイルビデオテストファイルをダウンロード',
+          description: 'モバイルビデオプレーヤー、3GPコンバーター、マルチメディアソフトウェア、モバイルビデオ処理ツールをテストするための無料3GP 3GPPモバイルビデオサンプルファイルをダウンロード。複数のファイルサイズ: 100 KB、1 MB、5 MB、50 MB、100 MB。3GPプレーヤー、モバイルビデオエディター、ビデオ変換ツール、モバイルマルチメディアプラットフォーム、モバイルビデオフォーマットサポートのテストに最適。'
+        },
+        hero: {
+          title: '3GPサンプルファイル',
+          description: 'テスト用の無料3GP 3GPPモバイルビデオサンプルファイルをダウンロード。モバイルビデオプレーヤー、3GPコンバーター、マルチメディアソフトウェアをテストするための複数のファイルサイズを利用できます。'
+        },
+        about_description: 'これらはテスト目的のさまざまなサイズの3GP (3GPPモバイルビデオ)ファイルです'
       }
     }
   }

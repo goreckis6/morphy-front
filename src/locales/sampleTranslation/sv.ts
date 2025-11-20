@@ -1263,6 +1263,262 @@ export const sv: SamplePageTranslations = {
           description: 'Ladda ner gratis DWG AutoCAD-ritning exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina CAD-program, AutoCAD-kompatibilitet och teknisk ritningsverktyg.'
         },
         about_description: 'Detta är DWG (AutoCAD-ritning) filer i olika storlekar för teständamål'
+      },
+      dxf: {
+        meta: {
+          title: 'Ladda ner Gratis DXF Exempelfiler - Drawing Exchange Format Testfiler AutoCAD | MorphyHub',
+          description: 'Ladda ner gratis DXF Drawing Exchange Format exempelfiler för att testa CAD-program, DXF-konverterare och teknisk ritningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AutoCAD, CAD-visare, DXF-parsers och ritningsfil utbytesapplikationer.',
+          keywords: 'DXF exempelfiler, DXF testfiler, ladda ner DXF exempel, gratis DXF testfiler, AutoCAD DXF-filer, Drawing Exchange Format filer, CAD DXF-filer, DXF-konverterare testfiler, teknisk ritningsfiler, DXF-parser testfiler, CAD-filutbyte exempel'
+        },
+        schema: {
+          name: 'Gratis DXF Exempelfiler - Ladda ner Drawing Exchange Format Testfiler',
+          description: 'Ladda ner gratis DXF Drawing Exchange Format exempelfiler för att testa CAD-program, DXF-konverterare och teknisk ritningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AutoCAD, CAD-visare, DXF-parsers och ritningsfil utbytesapplikationer.'
+        },
+        hero: {
+          title: 'DXF Exempelfiler',
+          description: 'Ladda ner gratis DXF Drawing Exchange Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina CAD-program, DXF-konverterare och teknisk ritningsverktyg.'
+        },
+        about_description: 'Detta är DXF (Drawing Exchange Format) testfiler i olika storlekar för teständamål'
+      },
+      ifc: {
+        meta: {
+          title: 'Ladda ner Gratis IFC Exempelfiler - Industry Foundation Classes BIM Testfiler | MorphyHub',
+          description: 'Ladda ner gratis IFC Industry Foundation Classes exempelfiler för att testa BIM-program, IFC-visare, byggnadsinformationsmodelleringsverktyg och byggförvaltningsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Revit, ArchiCAD, IFC-parsers, BIM-visare och byggnadsdesignprogram.',
+          keywords: 'IFC exempelfiler, IFC testfiler, ladda ner IFC exempel, gratis IFC testfiler, Industry Foundation Classes filer, BIM IFC-filer, byggnadsinformationsmodellering filer, IFC-visare testfiler, byggprogram filer, IFC-parser testfiler, BIM-utbytesformat exempel'
+        },
+        schema: {
+          name: 'Gratis IFC Exempelfiler - Ladda ner Industry Foundation Classes BIM Testfiler',
+          description: 'Ladda ner gratis IFC Industry Foundation Classes exempelfiler för att testa BIM-program, IFC-visare, byggnadsinformationsmodelleringsverktyg och byggförvaltningsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Revit, ArchiCAD, IFC-parsers, BIM-visare och byggnadsdesignprogram.'
+        },
+        hero: {
+          title: 'IFC Exempelfiler',
+          description: 'Ladda ner gratis IFC Industry Foundation Classes exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina BIM-program, IFC-visare och byggnadsinformationsmodelleringsverktyg.'
+        },
+        about_description: 'Detta är IFC (Industry Foundation Classes) testfiler i olika storlekar för teständamål'
+      },
+      iges: {
+        meta: {
+          title: 'Ladda ner Gratis IGES Exempelfiler - Initial Graphics Exchange Specification CAD Testfiler | MorphyHub',
+          description: 'Ladda ner gratis IGES Initial Graphics Exchange Specification exempelfiler för att testa CAD-program, IGES-konverterare, 3D-modelleringsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAD-system, IGES-parsers, 3D-modellutbytesverktyg och ingenjörsprogram.',
+          keywords: 'IGES exempelfiler, IGES testfiler, ladda ner IGES exempel, gratis IGES testfiler, Initial Graphics Exchange Specification filer, CAD IGES-filer, 3D-modellutbyte filer, IGES-konverterare testfiler, ingenjörsdesign filer, IGES-parser testfiler, CAD-utbytesformat exempel'
+        },
+        schema: {
+          name: 'Gratis IGES Exempelfiler - Ladda ner Initial Graphics Exchange Specification CAD Testfiler',
+          description: 'Ladda ner gratis IGES Initial Graphics Exchange Specification exempelfiler för att testa CAD-program, IGES-konverterare, 3D-modelleringsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAD-system, IGES-parsers, 3D-modellutbytesverktyg och ingenjörsprogram.'
+        },
+        hero: {
+          title: 'IGES Exempelfiler',
+          description: 'Ladda ner gratis IGES Initial Graphics Exchange Specification exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina CAD-program, IGES-konverterare och 3D-modelleringsverktyg.'
+        },
+        about_description: 'Detta är IGES (Initial Graphics Exchange Specification) testfiler i olika storlekar för teständamål'
+      },
+      igs: {
+        meta: {
+          title: 'Ladda ner Gratis IGS Exempelfiler - Initial Graphics Exchange Specification CAD Testfiler | MorphyHub',
+          description: 'Ladda ner gratis IGS Initial Graphics Exchange Specification exempelfiler för att testa CAD-program, IGS-konverterare, 3D-modelleringsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAD-system, IGS-parsers, 3D-modellutbytesverktyg och ingenjörsprogram.',
+          keywords: 'IGS exempelfiler, IGS testfiler, ladda ner IGS exempel, gratis IGS testfiler, Initial Graphics Exchange Specification filer, CAD IGS-filer, 3D-modellutbyte filer, IGS-konverterare testfiler, ingenjörsdesign filer, IGS-parser testfiler, CAD-utbytesformat exempel'
+        },
+        schema: {
+          name: 'Gratis IGS Exempelfiler - Ladda ner Initial Graphics Exchange Specification CAD Testfiler',
+          description: 'Ladda ner gratis IGS Initial Graphics Exchange Specification exempelfiler för att testa CAD-program, IGS-konverterare, 3D-modelleringsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CAD-system, IGS-parsers, 3D-modellutbytesverktyg och ingenjörsprogram.'
+        },
+        hero: {
+          title: 'IGS Exempelfiler',
+          description: 'Ladda ner gratis IGS Initial Graphics Exchange Specification exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina CAD-program, IGS-konverterare och 3D-modelleringsverktyg.'
+        },
+        about_description: 'Detta är IGS (Initial Graphics Exchange Specification) testfiler i olika storlekar för teständamål'
+      },
+      las: {
+        meta: {
+          title: 'Ladda ner Gratis LAS Exempelfiler - LiDAR Point Cloud Data Testfiler | MorphyHub',
+          description: 'Ladda ner gratis LAS LiDAR point cloud exempelfiler för att testa point cloud-bearbetning, LiDAR-analysverktyg, 3D-kartläggningsprogram och geospatiala applikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LAS-parsers, point cloud-visare, LiDAR-bearbetningsverktyg, 3D-kartläggningsprogram och geospatiala analysplattformar.',
+          keywords: 'LAS exempelfiler, LAS testfiler, ladda ner LAS exempel, gratis LAS testfiler, LiDAR point cloud filer, LAS-format filer, point cloud-data filer, LAS-parser testfiler, geospatiala filer, LiDAR-analys testfiler, 3D-kartläggning exempel'
+        },
+        schema: {
+          name: 'Gratis LAS Exempelfiler - Ladda ner LiDAR Point Cloud Data Testfiler',
+          description: 'Ladda ner gratis LAS LiDAR point cloud exempelfiler för att testa point cloud-bearbetning, LiDAR-analysverktyg, 3D-kartläggningsprogram och geospatiala applikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa LAS-parsers, point cloud-visare, LiDAR-bearbetningsverktyg, 3D-kartläggningsprogram och geospatiala analysplattformar.'
+        },
+        hero: {
+          title: 'LAS Exempelfiler',
+          description: 'Ladda ner gratis LAS LiDAR point cloud exempelfiler för testning. Flera filstorlekar tillgängliga för att testa point cloud-bearbetning, LiDAR-analysverktyg och 3D-kartläggningsprogram.'
+        },
+        about_description: 'Detta är LAS (LiDAR point cloud) testfiler i olika storlekar för teständamål'
+      },
+      ma: {
+        meta: {
+          title: 'Ladda ner Gratis MA Exempelfiler - Maya ASCII Scene Testfiler | MorphyHub',
+          description: 'Ladda ner gratis MA Maya ASCII scene exempelfiler för att testa Maya scene-konvertering, 3D-animeringsprogram, MA-filparsers och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk Maya, MA-filvisare, scene-konverteringsverktyg, 3D-animationsplattformar och animationsarbetsflödesprogram.',
+          keywords: 'MA exempelfiler, MA testfiler, ladda ner MA exempel, gratis MA testfiler, Maya ASCII scene filer, MA-format filer, 3D-animationsscene filer, MA-parser testfiler, animationsfiler, Maya scene testfiler, 3D-animation exempel'
+        },
+        schema: {
+          name: 'Gratis MA Exempelfiler - Ladda ner Maya ASCII Scene Testfiler',
+          description: 'Ladda ner gratis MA Maya ASCII scene exempelfiler för att testa Maya scene-konvertering, 3D-animeringsprogram, MA-filparsers och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk Maya, MA-filvisare, scene-konverteringsverktyg, 3D-animationsplattformar och animationsarbetsflödesprogram.'
+        },
+        hero: {
+          title: 'MA Exempelfiler',
+          description: 'Ladda ner gratis MA Maya ASCII scene exempelfiler för testning. Flera filstorlekar tillgängliga för att testa Maya scene-konvertering, 3D-animeringsprogram och animationsverktyg.'
+        },
+        about_description: 'Detta är MA (Maya ASCII scene) testfiler i olika storlekar för teständamål'
+      },
+      max: {
+        meta: {
+          title: 'Ladda ner Gratis MAX Exempelfiler - 3ds Max Scene Testfiler | MorphyHub',
+          description: 'Ladda ner gratis MAX 3ds Max scene exempelfiler för att testa 3ds Max scene-konvertering, 3D-modelleringsprogram, MAX-filparsers och 3D-designverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk 3ds Max, MAX-filvisare, scene-konverteringsverktyg, 3D-modelleringsplattformar och 3D-designarbetsflödesprogram.',
+          keywords: 'MAX exempelfiler, MAX testfiler, ladda ner MAX exempel, gratis MAX testfiler, 3ds Max scene filer, MAX-format filer, 3D-modelleringsscene filer, MAX-parser testfiler, 3D-design filer, 3ds Max scene testfiler, 3D-modellering exempel'
+        },
+        schema: {
+          name: 'Gratis MAX Exempelfiler - Ladda ner 3ds Max Scene Testfiler',
+          description: 'Ladda ner gratis MAX 3ds Max scene exempelfiler för att testa 3ds Max scene-konvertering, 3D-modelleringsprogram, MAX-filparsers och 3D-designverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk 3ds Max, MAX-filvisare, scene-konverteringsverktyg, 3D-modelleringsplattformar och 3D-designarbetsflödesprogram.'
+        },
+        hero: {
+          title: 'MAX Exempelfiler',
+          description: 'Ladda ner gratis MAX 3ds Max scene exempelfiler för testning. Flera filstorlekar tillgängliga för att testa 3ds Max scene-konvertering, 3D-modelleringsprogram och 3D-designverktyg.'
+        },
+        about_description: 'Detta är MAX (3ds Max scene) testfiler i olika storlekar för teständamål'
+      },
+      mb: {
+        meta: {
+          title: 'Ladda ner Gratis MB Exempelfiler - Maya Binary Scene Testfiler | MorphyHub',
+          description: 'Ladda ner gratis MB Maya Binary scene exempelfiler för att testa Maya scene-konvertering, 3D-animeringsprogram, MB-filparsers och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk Maya, MB-filvisare, scene-konverteringsverktyg, 3D-animationsplattformar och animationsarbetsflödesprogram.',
+          keywords: 'MB exempelfiler, MB testfiler, ladda ner MB exempel, gratis MB testfiler, Maya Binary scene filer, MB-format filer, 3D-animationsscene filer, MB-parser testfiler, animationsfiler, Maya scene testfiler, 3D-animation exempel'
+        },
+        schema: {
+          name: 'Gratis MB Exempelfiler - Ladda ner Maya Binary Scene Testfiler',
+          description: 'Ladda ner gratis MB Maya Binary scene exempelfiler för att testa Maya scene-konvertering, 3D-animeringsprogram, MB-filparsers och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Autodesk Maya, MB-filvisare, scene-konverteringsverktyg, 3D-animationsplattformar och animationsarbetsflödesprogram.'
+        },
+        hero: {
+          title: 'MB Exempelfiler',
+          description: 'Ladda ner gratis MB Maya Binary scene exempelfiler för testning. Flera filstorlekar tillgängliga för att testa Maya scene-konvertering, 3D-animeringsprogram och animationsverktyg.'
+        },
+        about_description: 'Detta är MB (Maya Binary scene) testfiler i olika storlekar för teständamål'
+      },
+      indd: {
+        meta: {
+          title: 'Ladda ner Gratis INDD Exempelfiler - Adobe InDesign Dokument Testfiler | MorphyHub',
+          description: 'Ladda ner gratis INDD Adobe InDesign dokument exempelfiler för att testa InDesign-kompatibilitet, INDD-konverterare, skrivbordsutgivningsprogram och layoutdesignverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Adobe InDesign, INDD-filvisare, dokumentkonverteringsverktyg, skrivbordsutgivningsplattformar och layoutdesignprogram.',
+          keywords: 'INDD exempelfiler, INDD testfiler, ladda ner INDD exempel, gratis INDD testfiler, Adobe InDesign filer, INDD-format filer, skrivbordsutgivning filer, INDD-konverterare testfiler, layoutdesign filer, InDesign dokument testfiler, publiceringsprogram exempel'
+        },
+        schema: {
+          name: 'Gratis INDD Exempelfiler - Ladda ner Adobe InDesign Dokument Testfiler',
+          description: 'Ladda ner gratis INDD Adobe InDesign dokument exempelfiler för att testa InDesign-kompatibilitet, INDD-konverterare, skrivbordsutgivningsprogram och layoutdesignverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Adobe InDesign, INDD-filvisare, dokumentkonverteringsverktyg, skrivbordsutgivningsplattformar och layoutdesignprogram.'
+        },
+        hero: {
+          title: 'INDD Exempelfiler',
+          description: 'Ladda ner gratis INDD Adobe InDesign dokument exempelfiler för testning. Flera filstorlekar tillgängliga för att testa InDesign-kompatibilitet, INDD-konverterare och skrivbordsutgivningsprogram.'
+        },
+        about_description: 'Detta är INDD (Adobe InDesign dokument) testfiler i olika storlekar för teständamål'
+      },
+      'animated-gif': {
+        meta: {
+          title: 'Ladda ner Gratis Animerade GIF Exempelfiler - Animerade Bild Testfiler | MorphyHub',
+          description: 'Ladda ner gratis animerade GIF exempelfiler för att testa GIF-animationsuppspelning, bildvisare, webbläsare och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa GIF-visare, animationsspelare, bildbehandlingsverktyg, webbutvecklingsplattformar och multimediaapplikationer.',
+          keywords: 'animerade GIF exempelfiler, animerade GIF testfiler, ladda ner animerade GIF exempel, gratis animerade GIF testfiler, GIF-animationsfiler, animerade bildfiler, GIF-spelare testfiler, animationsfiler, webbanimation testfiler, multimedia GIF exempel'
+        },
+        schema: {
+          name: 'Gratis Animerade GIF Exempelfiler - Ladda ner Animerade Bild Testfiler',
+          description: 'Ladda ner gratis animerade GIF exempelfiler för att testa GIF-animationsuppspelning, bildvisare, webbläsare och animationsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa GIF-visare, animationsspelare, bildbehandlingsverktyg, webbutvecklingsplattformar och multimediaapplikationer.'
+        },
+        hero: {
+          title: 'Animerade GIF Exempelfiler',
+          description: 'Ladda ner gratis animerade GIF exempelfiler för testning. Flera filstorlekar tillgängliga för att testa GIF-animationsuppspelning, bildvisare och animationsverktyg.'
+        },
+        about_description: 'Detta är animerade GIF testfiler i olika storlekar för teständamål'
+      },
+      apng: {
+        meta: {
+          title: 'Ladda ner Gratis APNG Exempelfiler - Animerade PNG Bild Testfiler | MorphyHub',
+          description: 'Ladda ner gratis APNG Animated Portable Network Graphics exempelfiler för att testa APNG-animationsuppspelning, bildvisare, webbläsare och moderna bildverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa APNG-visare, animationsspelare, bildbehandlingsverktyg, webbutvecklingsplattformar och moderna multimediaapplikationer.',
+          keywords: 'APNG exempelfiler, APNG testfiler, ladda ner APNG exempel, gratis APNG testfiler, Animated PNG filer, APNG-animationsfiler, APNG-spelare testfiler, animationsfiler, webbanimation testfiler, modernt bildformat exempel'
+        },
+        schema: {
+          name: 'Gratis APNG Exempelfiler - Ladda ner Animerade PNG Bild Testfiler',
+          description: 'Ladda ner gratis APNG Animated Portable Network Graphics exempelfiler för att testa APNG-animationsuppspelning, bildvisare, webbläsare och moderna bildverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa APNG-visare, animationsspelare, bildbehandlingsverktyg, webbutvecklingsplattformar och moderna multimediaapplikationer.'
+        },
+        hero: {
+          title: 'APNG Exempelfiler',
+          description: 'Ladda ner gratis APNG Animated Portable Network Graphics exempelfiler för testning. Flera filstorlekar tillgängliga för att testa APNG-animationsuppspelning, bildvisare och moderna bildverktyg.'
+        },
+        about_description: 'Detta är APNG (Animated Portable Network Graphics) testfiler i olika storlekar för teständamål'
+      },
+      avif: {
+        meta: {
+          title: 'Ladda ner Gratis AVIF Exempelfiler - AV1 Image File Format Testfiler | MorphyHub',
+          description: 'Ladda ner gratis AVIF AV1 Image File Format exempelfiler för att testa modern bildkomprimering, AVIF-visare, webbläsare och bildverktyg av nästa generation. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AVIF-visare, bildbehandlingsverktyg, webbutvecklingsplattformar, modernt bildformatstöd och multimediaapplikationer av nästa generation.',
+          keywords: 'AVIF exempelfiler, AVIF testfiler, ladda ner AVIF exempel, gratis AVIF testfiler, AV1 Image File Format filer, AVIF bildfiler, AVIF-visare testfiler, moderna bildfiler, webb bildformat testfiler, bildformat nästa generation exempel'
+        },
+        schema: {
+          name: 'Gratis AVIF Exempelfiler - Ladda ner AV1 Image File Format Testfiler',
+          description: 'Ladda ner gratis AVIF AV1 Image File Format exempelfiler för att testa modern bildkomprimering, AVIF-visare, webbläsare och bildverktyg av nästa generation. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AVIF-visare, bildbehandlingsverktyg, webbutvecklingsplattformar, modernt bildformatstöd och multimediaapplikationer av nästa generation.'
+        },
+        hero: {
+          title: 'AVIF Exempelfiler',
+          description: 'Ladda ner gratis AVIF AV1 Image File Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa modern bildkomprimering, AVIF-visare och bildverktyg av nästa generation.'
+        },
+        about_description: 'Detta är AVIF (AV1 Image File Format) testfiler i olika storlekar för teständamål'
+      },
+      bmp: {
+        meta: {
+          title: 'Ladda ner Gratis BMP Exempelfiler - Bitmap Bild Testfiler | MorphyHub',
+          description: 'Ladda ner gratis BMP bitmap exempelfiler för att testa bildvisare, BMP-konverterare, grafikprogram och bildbehandlingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BMP-visare, bildredigerare, grafikomvandlingsverktyg, bildbehandlingsplattformar och bitmap-formatstöd.',
+          keywords: 'BMP exempelfiler, BMP testfiler, ladda ner BMP exempel, gratis BMP testfiler, bitmap bildfiler, BMP-format filer, bildvisare testfiler, grafikfiler, bildomvandling testfiler, bitmap-format exempel'
+        },
+        schema: {
+          name: 'Gratis BMP Exempelfiler - Ladda ner Bitmap Bild Testfiler',
+          description: 'Ladda ner gratis BMP bitmap exempelfiler för att testa bildvisare, BMP-konverterare, grafikprogram och bildbehandlingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa BMP-visare, bildredigerare, grafikomvandlingsverktyg, bildbehandlingsplattformar och bitmap-formatstöd.'
+        },
+        hero: {
+          title: 'BMP Exempelfiler',
+          description: 'Ladda ner gratis BMP bitmap exempelfiler för testning. Flera filstorlekar tillgängliga för att testa bildvisare, BMP-konverterare och grafikprogram.'
+        },
+        about_description: 'Detta är BMP (bitmap) testfiler i olika storlekar för teständamål'
+      },
+      'barcode-svg': {
+        meta: {
+          title: 'Ladda ner Gratis Streckkod SVG Exempelfiler - Skalbara Vektor Streckkod Testfiler | MorphyHub',
+          description: 'Ladda ner gratis streckkod SVG exempelfiler för att testa streckkodsgenerering, SVG streckkodsläsare, vektorgrafikverktyg och streckkodsskanningsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa streckkodsgeneratorer, SVG-visare, streckkodsskanningsverktyg, vektorgrafikplattformar och streckkodsigenkänningsprogram.',
+          keywords: 'streckkod SVG exempelfiler, streckkod SVG testfiler, ladda ner streckkod SVG exempel, gratis streckkod SVG testfiler, SVG streckkodsfiler, vektor streckkodsfiler, streckkodsgenerator testfiler, SVG-filer, streckkodsskanning testfiler, vektorgrafik exempel'
+        },
+        schema: {
+          name: 'Gratis Streckkod SVG Exempelfiler - Ladda ner Skalbara Vektor Streckkod Testfiler',
+          description: 'Ladda ner gratis streckkod SVG exempelfiler för att testa streckkodsgenerering, SVG streckkodsläsare, vektorgrafikverktyg och streckkodsskanningsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa streckkodsgeneratorer, SVG-visare, streckkodsskanningsverktyg, vektorgrafikplattformar och streckkodsigenkänningsprogram.'
+        },
+        hero: {
+          title: 'Streckkod SVG Exempelfiler',
+          description: 'Ladda ner gratis streckkod SVG exempelfiler för testning. Flera filstorlekar tillgängliga för att testa streckkodsgenerering, SVG streckkodsläsare och vektorgrafikverktyg.'
+        },
+        about_description: 'Detta är streckkod SVG testfiler i olika storlekar för teständamål'
+      },
+      avi: {
+        meta: {
+          title: 'Ladda ner Gratis AVI Exempelfiler - Audio Video Interleave Video Testfiler | MorphyHub',
+          description: 'Ladda ner gratis AVI Audio Video Interleave exempelfiler för att testa videospelare, AVI-konverterare, multimediaprogram och videobearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AVI-spelare, videoredigerare, multimediakonverteringsverktyg, videobearbetningsplattformar och videoformatstöd.',
+          keywords: 'AVI exempelfiler, AVI testfiler, ladda ner AVI exempel, gratis AVI testfiler, Audio Video Interleave filer, AVI videofiler, videospelare testfiler, multimediafiler, videokonvertering testfiler, videoformat exempel'
+        },
+        schema: {
+          name: 'Gratis AVI Exempelfiler - Ladda ner Audio Video Interleave Video Testfiler',
+          description: 'Ladda ner gratis AVI Audio Video Interleave exempelfiler för att testa videospelare, AVI-konverterare, multimediaprogram och videobearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AVI-spelare, videoredigerare, multimediakonverteringsverktyg, videobearbetningsplattformar och videoformatstöd.'
+        },
+        hero: {
+          title: 'AVI Exempelfiler',
+          description: 'Ladda ner gratis AVI Audio Video Interleave exempelfiler för testning. Flera filstorlekar tillgängliga för att testa videospelare, AVI-konverterare och multimediaprogram.'
+        },
+        about_description: 'Detta är AVI (Audio Video Interleave) testfiler i olika storlekar för teständamål'
+      },
+      '3gp': {
+        meta: {
+          title: 'Ladda ner Gratis 3GP Exempelfiler - 3GPP Mobile Video Testfiler | MorphyHub',
+          description: 'Ladda ner gratis 3GP 3GPP mobile video exempelfiler för att testa mobila videospelare, 3GP-konverterare, multimediaprogram och mobila videobearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3GP-spelare, mobila videoredigerare, videokonverteringsverktyg, mobila multimediaplattformar och mobilt videoformatstöd.',
+          keywords: '3GP exempelfiler, 3GP testfiler, ladda ner 3GP exempel, gratis 3GP testfiler, 3GPP mobile video filer, 3GP videofiler, mobil videospelare testfiler, multimediafiler, mobil videokonvertering testfiler, mobilt videoformat exempel'
+        },
+        schema: {
+          name: 'Gratis 3GP Exempelfiler - Ladda ner 3GPP Mobile Video Testfiler',
+          description: 'Ladda ner gratis 3GP 3GPP mobile video exempelfiler för att testa mobila videospelare, 3GP-konverterare, multimediaprogram och mobila videobearbetningsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3GP-spelare, mobila videoredigerare, videokonverteringsverktyg, mobila multimediaplattformar och mobilt videoformatstöd.'
+        },
+        hero: {
+          title: '3GP Exempelfiler',
+          description: 'Ladda ner gratis 3GP 3GPP mobile video exempelfiler för testning. Flera filstorlekar tillgängliga för att testa mobila videospelare, 3GP-konverterare och multimediaprogram.'
+        },
+        about_description: 'Detta är 3GP (3GPP mobile video) testfiler i olika storlekar för teständamål'
       }
     }
   }
