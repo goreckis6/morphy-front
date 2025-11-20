@@ -1007,6 +1007,262 @@ export const pt: SamplePageTranslations = {
           description: 'Baixe arquivos de exemplo MDX MDX (Markdown + JSX) grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus parsers MDX, ferramentas de documentação React e geradores de sites estáticos.'
         },
         about_description: 'Estes são arquivos de teste MDX (Markdown + JSX) em vários tamanhos para fins de teste'
+      },
+      apk: {
+        meta: {
+          title: 'Baixar arquivos de exemplo APK grátis - Arquivos de teste pacotes aplicação Android | MorphyHub',
+          description: 'Baixe arquivos de exemplo APK pacotes aplicação Android grátis para testar instalação aplicações Android, análise APK, engenharia reversa e ferramentas desenvolvimento móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores APK, emuladores Android, analisadores aplicações, scanners segurança e plataformas desenvolvimento aplicações móveis.',
+          keywords: 'arquivos de exemplo APK, arquivos de teste APK, baixar exemplos APK, arquivos de teste APK grátis, arquivos APK Android, arquivos de teste .apk, arquivos pacotes aplicação Android, arquivos de teste instalador APK, arquivos de teste emulador Android, exemplos desenvolvimento aplicações móveis, arquivos engenharia reversa APK'
+        },
+        schema: {
+          name: 'Arquivos de exemplo APK grátis - Baixar arquivos de teste pacotes aplicação Android',
+          description: 'Baixe arquivos de exemplo APK pacotes aplicação Android grátis para testar instalação aplicações Android, análise APK, engenharia reversa e ferramentas desenvolvimento móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores APK, emuladores Android, analisadores aplicações, scanners segurança e plataformas desenvolvimento aplicações móveis.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo APK',
+          description: 'Baixe arquivos de exemplo APK pacotes aplicação Android grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar suas ferramentas instalação aplicações Android, analisadores APK e plataformas desenvolvimento móvel.'
+        },
+        about_description: 'Estes são arquivos de teste APK (pacote aplicação Android) em vários tamanhos para fins de teste'
+      },
+      appimage: {
+        meta: {
+          title: 'Baixar arquivos de exemplo AppImage grátis - Arquivos de teste aplicações portáteis Linux | MorphyHub',
+          description: 'Baixe arquivos de exemplo AppImage aplicações portáteis Linux grátis para testar distribuição aplicações Linux, execução AppImage e compatibilidade cross-distribuição. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar runners AppImage, lançadores aplicações Linux, ferramentas aplicações portáteis e distribuição software Linux universal.',
+          keywords: 'arquivos de exemplo AppImage, arquivos de teste AppImage, baixar exemplos AppImage, arquivos de teste AppImage grátis, arquivos AppImage Linux, arquivos de teste .AppImage, aplicações portáteis Linux, arquivos de teste runner AppImage, arquivos aplicações Linux, aplicações cross-distribuição, exemplos software Linux universal'
+        },
+        schema: {
+          name: 'Arquivos de exemplo AppImage grátis - Baixar arquivos de teste aplicações portáteis Linux',
+          description: 'Baixe arquivos de exemplo AppImage aplicações portáteis Linux grátis para testar distribuição aplicações Linux, execução AppImage e compatibilidade cross-distribuição. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar runners AppImage, lançadores aplicações Linux, ferramentas aplicações portáteis e distribuição software Linux universal.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo AppImage',
+          description: 'Baixe arquivos de exemplo AppImage aplicações portáteis Linux grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus runners AppImage, lançadores aplicações Linux e ferramentas aplicações portáteis.'
+        },
+        about_description: 'Estes são arquivos de teste AppImage (aplicação portátil Linux) em vários tamanhos para fins de teste'
+      },
+      elf: {
+        meta: {
+          title: 'Baixar arquivos de exemplo ELF grátis - Arquivos de teste Executable and Linkable Format para Linux/Unix | MorphyHub',
+          description: 'Baixe arquivos de exemplo ELF Executable and Linkable Format grátis para testar análise binários Linux/Unix, parsing ELF, engenharia reversa e depuração sistema. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores ELF, desmontadores binários, ferramentas engenharia reversa, depuradores sistema e plataformas análise executáveis Linux.',
+          keywords: 'arquivos de exemplo ELF, arquivos de teste ELF, baixar exemplos ELF, arquivos de teste ELF grátis, arquivos ELF Linux, arquivos de teste .elf, arquivos executáveis Unix, arquivos análise binária ELF, arquivos engenharia reversa ELF, arquivos binários Linux, arquivos de teste desmontador ELF'
+        },
+        schema: {
+          name: 'Arquivos de exemplo ELF grátis - Baixar arquivos de teste Executable and Linkable Format para Linux/Unix',
+          description: 'Baixe arquivos de exemplo ELF Executable and Linkable Format grátis para testar análise binários Linux/Unix, parsing ELF, engenharia reversa e depuração sistema. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores ELF, desmontadores binários, ferramentas engenharia reversa, depuradores sistema e plataformas análise executáveis Linux.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo ELF',
+          description: 'Baixe arquivos de exemplo ELF Executable and Linkable Format grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus analisadores ELF, desmontadores binários e ferramentas engenharia reversa.'
+        },
+        about_description: 'Estes são arquivos de teste ELF (Executable and Linkable Format) em vários tamanhos para fins de teste'
+      },
+      exe: {
+        meta: {
+          title: 'Baixar arquivos de exemplo EXE grátis - Arquivos de teste executáveis Windows | MorphyHub',
+          description: 'Baixe arquivos de exemplo EXE executáveis Windows grátis para testar execução aplicações Windows, análise EXE, parsing binários e ferramentas desenvolvimento Windows. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores executáveis Windows, desmontadores binários, ferramentas engenharia reversa, plataformas análise malware e desenvolvimento aplicações Windows.',
+          keywords: 'arquivos de exemplo EXE, arquivos de teste EXE, baixar exemplos EXE, arquivos de teste EXE grátis, arquivos EXE Windows, arquivos de teste .exe, arquivos executáveis Windows, arquivos análise binária EXE, arquivos aplicações Windows, arquivos engenharia reversa EXE, arquivos de teste desmontador binários Windows'
+        },
+        schema: {
+          name: 'Arquivos de exemplo EXE grátis - Baixar arquivos de teste executáveis Windows',
+          description: 'Baixe arquivos de exemplo EXE executáveis Windows grátis para testar execução aplicações Windows, análise EXE, parsing binários e ferramentas desenvolvimento Windows. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar analisadores executáveis Windows, desmontadores binários, ferramentas engenharia reversa, plataformas análise malware e desenvolvimento aplicações Windows.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo EXE',
+          description: 'Baixe arquivos de exemplo EXE executáveis Windows grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus analisadores executáveis Windows, desmontadores binários e ferramentas engenharia reversa.'
+        },
+        about_description: 'Estes são arquivos de teste EXE (executável Windows) em vários tamanhos para fins de teste'
+      },
+      ipa: {
+        meta: {
+          title: 'Baixar arquivos de exemplo IPA grátis - Arquivos de teste pacotes aplicação iOS | MorphyHub',
+          description: 'Baixe arquivos de exemplo IPA pacotes aplicação iOS grátis para testar instalação aplicações iOS, análise IPA, distribuição aplicações iOS e ferramentas desenvolvimento móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores IPA, simuladores iOS, analisadores aplicações, ferramentas desenvolvimento iOS e plataformas distribuição aplicações móveis.',
+          keywords: 'arquivos de exemplo IPA, arquivos de teste IPA, baixar exemplos IPA, arquivos de teste IPA grátis, arquivos IPA iOS, arquivos de teste .ipa, arquivos pacotes aplicação iOS, arquivos de teste instalador IPA, arquivos de teste simulador iOS, exemplos desenvolvimento aplicações móveis, arquivos distribuição aplicação iOS'
+        },
+        schema: {
+          name: 'Arquivos de exemplo IPA grátis - Baixar arquivos de teste pacotes aplicação iOS',
+          description: 'Baixe arquivos de exemplo IPA pacotes aplicação iOS grátis para testar instalação aplicações iOS, análise IPA, distribuição aplicações iOS e ferramentas desenvolvimento móvel. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores IPA, simuladores iOS, analisadores aplicações, ferramentas desenvolvimento iOS e plataformas distribuição aplicações móveis.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo IPA',
+          description: 'Baixe arquivos de exemplo IPA pacotes aplicação iOS grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar suas ferramentas instalação aplicações iOS, analisadores IPA e plataformas desenvolvimento móvel.'
+        },
+        about_description: 'Estes são arquivos de teste IPA (pacote aplicação iOS) em vários tamanhos para fins de teste'
+      },
+      jar: {
+        meta: {
+          title: 'Baixar arquivos de exemplo JAR grátis - Arquivos de teste arquivos Java | MorphyHub',
+          description: 'Baixe arquivos de exemplo JAR arquivos Java grátis para testar execução aplicações Java, extração JAR, análise JAR e ferramentas desenvolvimento Java. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extratores JAR, ambientes execução Java, analisadores JAR, ferramentas desenvolvimento Java e plataformas implantação aplicações Java.',
+          keywords: 'arquivos de exemplo JAR, arquivos de teste JAR, baixar exemplos JAR, arquivos de teste JAR grátis, arquivos JAR Java, arquivos de teste .jar, arquivos arquivos Java, arquivos de teste extrator JAR, arquivos de teste runtime Java, exemplos desenvolvimento Java, arquivos análise JAR'
+        },
+        schema: {
+          name: 'Arquivos de exemplo JAR grátis - Baixar arquivos de teste arquivos Java',
+          description: 'Baixe arquivos de exemplo JAR arquivos Java grátis para testar execução aplicações Java, extração JAR, análise JAR e ferramentas desenvolvimento Java. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar extratores JAR, ambientes execução Java, analisadores JAR, ferramentas desenvolvimento Java e plataformas implantação aplicações Java.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo JAR',
+          description: 'Baixe arquivos de exemplo JAR arquivos Java grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus extratores JAR, ambientes execução Java e ferramentas desenvolvimento Java.'
+        },
+        about_description: 'Estes são arquivos de teste JAR (arquivo Java) em vários tamanhos para fins de teste'
+      },
+      crx: {
+        meta: {
+          title: 'Baixar arquivos de exemplo CRX grátis - Arquivos de teste pacotes extensões Chrome | MorphyHub',
+          description: 'Baixe arquivos de exemplo CRX pacotes extensões Chrome grátis para testar instalação extensões Chrome, análise CRX, desenvolvimento extensões navegador e ferramentas extensões web. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores CRX, analisadores extensões Chrome, ferramentas desenvolvimento extensões navegador e plataformas distribuição extensões web.',
+          keywords: 'arquivos de exemplo CRX, arquivos de teste CRX, baixar exemplos CRX, arquivos de teste CRX grátis, arquivos CRX Chrome, arquivos de teste .crx, arquivos extensões Chrome, arquivos de teste instalador CRX, arquivos extensões navegador, exemplos desenvolvimento extensões web, arquivos análise extensões Chrome'
+        },
+        schema: {
+          name: 'Arquivos de exemplo CRX grátis - Baixar arquivos de teste pacotes extensões Chrome',
+          description: 'Baixe arquivos de exemplo CRX pacotes extensões Chrome grátis para testar instalação extensões Chrome, análise CRX, desenvolvimento extensões navegador e ferramentas extensões web. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar instaladores CRX, analisadores extensões Chrome, ferramentas desenvolvimento extensões navegador e plataformas distribuição extensões web.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo CRX',
+          description: 'Baixe arquivos de exemplo CRX pacotes extensões Chrome grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar suas ferramentas instalação extensões Chrome, analisadores CRX e plataformas desenvolvimento extensões navegador.'
+        },
+        about_description: 'Estes são arquivos de teste CRX (pacote extensões Chrome) em vários tamanhos para fins de teste'
+      },
+      '3ds': {
+        meta: {
+          title: 'Baixar arquivos de exemplo 3DS grátis - Arquivos de teste modelos 3D para impressão 3D e modelagem | MorphyHub',
+          description: 'Baixe arquivos de exemplo 3DS modelos 3D grátis para testar softwares modelagem 3D, ferramentas impressão 3D, conversão malhas e aplicações visualização 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores modelos 3D, impressoras 3D, softwares CAD, editores malhas e aplicações gráficos 3D.',
+          keywords: 'arquivos de exemplo 3DS, arquivos de teste 3DS, baixar exemplos 3DS, arquivos de teste 3DS grátis, arquivos modelos 3D 3DS, arquivos de teste .3ds, arquivos modelagem 3D, arquivos de teste impressão 3D, arquivos CAD 3DS, arquivos modelos malhas, exemplos gráficos 3D'
+        },
+        schema: {
+          name: 'Arquivos de exemplo 3DS grátis - Baixar arquivos de teste modelos 3D para impressão 3D e modelagem',
+          description: 'Baixe arquivos de exemplo 3DS modelos 3D grátis para testar softwares modelagem 3D, ferramentas impressão 3D, conversão malhas e aplicações visualização 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores modelos 3D, impressoras 3D, softwares CAD, editores malhas e aplicações gráficos 3D.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo 3DS',
+          description: 'Baixe arquivos de exemplo 3DS modelos 3D grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus softwares modelagem 3D, ferramentas impressão 3D e aplicações visualização 3D.'
+        },
+        about_description: 'Estes são arquivos de teste 3DS (modelo 3D) em vários tamanhos para fins de teste'
+      },
+      '3mf': {
+        meta: {
+          title: 'Baixar arquivos de exemplo 3MF grátis - Arquivos de teste 3D Manufacturing Format para impressão 3D | MorphyHub',
+          description: 'Baixe arquivos de exemplo 3MF 3D Manufacturing Format grátis para testar impressão 3D, fabricação aditiva, corte modelos 3D e compatibilidade impressoras 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar cortadores impressoras 3D, softwares fabricação aditiva, visualizadores 3MF, fluxos trabalho impressão 3D e plataformas fabricação 3D modernas.',
+          keywords: 'arquivos de exemplo 3MF, arquivos de teste 3MF, baixar exemplos 3MF, arquivos de teste 3MF grátis, arquivos impressão 3D 3MF, arquivos de teste .3mf, arquivos fabricação aditiva, arquivos de teste cortador impressora 3D, arquivos de teste visualizador 3MF, exemplos fabricação 3D, arquivos impressão 3D moderna'
+        },
+        schema: {
+          name: 'Arquivos de exemplo 3MF grátis - Baixar arquivos de teste 3D Manufacturing Format para impressão 3D',
+          description: 'Baixe arquivos de exemplo 3MF 3D Manufacturing Format grátis para testar impressão 3D, fabricação aditiva, corte modelos 3D e compatibilidade impressoras 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar cortadores impressoras 3D, softwares fabricação aditiva, visualizadores 3MF, fluxos trabalho impressão 3D e plataformas fabricação 3D modernas.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo 3MF',
+          description: 'Baixe arquivos de exemplo 3MF 3D Manufacturing Format grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus cortadores impressoras 3D, softwares fabricação aditiva e fluxos trabalho impressão 3D.'
+        },
+        about_description: 'Estes são arquivos de teste 3MF (3D Manufacturing Format) em vários tamanhos para fins de teste'
+      },
+      ai: {
+        meta: {
+          title: 'Baixar arquivos de exemplo AI grátis - Arquivos de teste gráficos vetoriais Adobe Illustrator | MorphyHub',
+          description: 'Baixe arquivos de exemplo AI gráficos vetoriais Adobe Illustrator grátis para testar edição gráficos vetoriais, conversão arquivos AI, compatibilidade softwares design e ferramentas design gráfico. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Adobe Illustrator, editores gráficos vetoriais, conversores arquivos AI, softwares design e plataformas design gráfico profissionais.',
+          keywords: 'arquivos de exemplo AI, arquivos de teste AI, baixar exemplos AI, arquivos de teste AI grátis, arquivos AI Adobe Illustrator, arquivos de teste .ai, arquivos gráficos vetoriais, arquivos de teste Illustrator, arquivos softwares design, exemplos edição vetorial, arquivos design gráfico AI'
+        },
+        schema: {
+          name: 'Arquivos de exemplo AI grátis - Baixar arquivos de teste gráficos vetoriais Adobe Illustrator',
+          description: 'Baixe arquivos de exemplo AI gráficos vetoriais Adobe Illustrator grátis para testar edição gráficos vetoriais, conversão arquivos AI, compatibilidade softwares design e ferramentas design gráfico. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Adobe Illustrator, editores gráficos vetoriais, conversores arquivos AI, softwares design e plataformas design gráfico profissionais.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo AI',
+          description: 'Baixe arquivos de exemplo AI gráficos vetoriais Adobe Illustrator grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus editores gráficos vetoriais, conversores arquivos AI e softwares design.'
+        },
+        about_description: 'Estes são arquivos de teste AI (Adobe Illustrator) gráficos vetoriais em vários tamanhos para fins de teste'
+      },
+      ase: {
+        meta: {
+          title: 'Baixar arquivos de exemplo ASE grátis - Arquivos de teste animações sprite Aseprite | MorphyHub',
+          description: 'Baixe arquivos de exemplo ASE animações sprite Aseprite grátis para testar edição pixel art, animação sprites, ferramentas desenvolvimento jogos e softwares animação 2D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Aseprite, editores pixel art, ferramentas animação sprites, softwares desenvolvimento jogos e plataformas animação 2D.',
+          keywords: 'arquivos de exemplo ASE, arquivos de teste ASE, baixar exemplos ASE, arquivos de teste ASE grátis, arquivos ASE Aseprite, arquivos de teste .ase, arquivos animação sprite, arquivos de teste pixel art, arquivos desenvolvimento jogos, exemplos animação 2D, arquivos de teste Aseprite'
+        },
+        schema: {
+          name: 'Arquivos de exemplo ASE grátis - Baixar arquivos de teste animações sprite Aseprite',
+          description: 'Baixe arquivos de exemplo ASE animações sprite Aseprite grátis para testar edição pixel art, animação sprites, ferramentas desenvolvimento jogos e softwares animação 2D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar Aseprite, editores pixel art, ferramentas animação sprites, softwares desenvolvimento jogos e plataformas animação 2D.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo ASE',
+          description: 'Baixe arquivos de exemplo ASE animações sprite Aseprite grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus editores pixel art, ferramentas animação sprites e softwares desenvolvimento jogos.'
+        },
+        about_description: 'Estes são arquivos de teste ASE (animação sprite Aseprite) em vários tamanhos para fins de teste'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Baixar arquivos de exemplo Animation FBX grátis - Arquivos de teste animações 3D Autodesk FBX | MorphyHub',
+          description: 'Baixe arquivos de exemplo Animation FBX animações 3D Autodesk FBX grátis para testar animação 3D, rigging personagens, dados motion capture e softwares gráficos 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar softwares animação 3D, motores jogos, ferramentas motion capture, plataformas animação personagens e aplicações gráficos 3D.',
+          keywords: 'arquivos de exemplo Animation FBX, arquivos de teste animação FBX, baixar exemplos animação FBX, arquivos de teste animação FBX grátis, arquivos Autodesk FBX, arquivos de teste animação .fbx, arquivos animação 3D, arquivos de teste animação personagens, arquivos motion capture, exemplos animação gráficos 3D, arquivos FBX motor jogos'
+        },
+        schema: {
+          name: 'Arquivos de exemplo Animation FBX grátis - Baixar arquivos de teste animações 3D Autodesk FBX',
+          description: 'Baixe arquivos de exemplo Animation FBX animações 3D Autodesk FBX grátis para testar animação 3D, rigging personagens, dados motion capture e softwares gráficos 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar softwares animação 3D, motores jogos, ferramentas motion capture, plataformas animação personagens e aplicações gráficos 3D.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo Animation FBX',
+          description: 'Baixe arquivos de exemplo Animation FBX animações 3D Autodesk FBX grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus softwares animação 3D, motores jogos e ferramentas motion capture.'
+        },
+        about_description: 'Estes são arquivos de teste Animation FBX (animação 3D Autodesk FBX) em vários tamanhos para fins de teste'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Baixar arquivos de exemplo AssetBundle grátis - Arquivos de teste Unity AssetBundle para desenvolvimento jogos | MorphyHub',
+          description: 'Baixe arquivos de exemplo AssetBundle Unity AssetBundle grátis para testar desenvolvimento jogos Unity, carregamento assets, gestão recursos jogos e ferramentas motor Unity. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar motor Unity, carregadores assets jogos, ferramentas desenvolvimento Unity, gestores recursos jogos e plataformas desenvolvimento jogos Unity.',
+          keywords: 'arquivos de exemplo AssetBundle, arquivos de teste AssetBundle, baixar exemplos AssetBundle, arquivos de teste AssetBundle grátis, arquivos Unity AssetBundle, arquivos assets Unity, arquivos desenvolvimento jogos, arquivos de teste motor Unity, arquivos de teste carregador assets jogos, exemplos desenvolvimento Unity, arquivos gestão recursos jogos'
+        },
+        schema: {
+          name: 'Arquivos de exemplo AssetBundle grátis - Baixar arquivos de teste Unity AssetBundle para desenvolvimento jogos',
+          description: 'Baixe arquivos de exemplo AssetBundle Unity AssetBundle grátis para testar desenvolvimento jogos Unity, carregamento assets, gestão recursos jogos e ferramentas motor Unity. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar motor Unity, carregadores assets jogos, ferramentas desenvolvimento Unity, gestores recursos jogos e plataformas desenvolvimento jogos Unity.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo AssetBundle',
+          description: 'Baixe arquivos de exemplo AssetBundle Unity AssetBundle grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seu motor Unity, carregadores assets jogos e ferramentas desenvolvimento Unity.'
+        },
+        about_description: 'Estes são arquivos de teste AssetBundle (Unity AssetBundle) em vários tamanhos para fins de teste'
+      },
+      blend: {
+        meta: {
+          title: 'Baixar arquivos de exemplo BLEND grátis - Arquivos de teste projetos 3D Blender | MorphyHub',
+          description: 'Baixe arquivos de exemplo BLEND projetos 3D Blender grátis para testar modelagem 3D, compatibilidade projetos Blender, fluxos trabalho animação 3D e softwares gráficos 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar software Blender, ferramentas modelagem 3D, visualizadores projetos Blender, plataformas animação 3D e aplicações gráficos 3D profissionais.',
+          keywords: 'arquivos de exemplo BLEND, arquivos de teste BLEND, baixar exemplos BLEND, arquivos de teste BLEND grátis, arquivos BLEND Blender, arquivos de teste .blend, arquivos projetos Blender, arquivos de teste modelagem 3D, arquivos de teste Blender, exemplos animação 3D, arquivos gráficos 3D BLEND'
+        },
+        schema: {
+          name: 'Arquivos de exemplo BLEND grátis - Baixar arquivos de teste projetos 3D Blender',
+          description: 'Baixe arquivos de exemplo BLEND projetos 3D Blender grátis para testar modelagem 3D, compatibilidade projetos Blender, fluxos trabalho animação 3D e softwares gráficos 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar software Blender, ferramentas modelagem 3D, visualizadores projetos Blender, plataformas animação 3D e aplicações gráficos 3D profissionais.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo BLEND',
+          description: 'Baixe arquivos de exemplo BLEND projetos 3D Blender grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seu software Blender, ferramentas modelagem 3D e plataformas animação 3D.'
+        },
+        about_description: 'Estes são arquivos de teste BLEND (projeto 3D Blender) em vários tamanhos para fins de teste'
+      },
+      bvh: {
+        meta: {
+          title: 'Baixar arquivos de exemplo BVH grátis - Arquivos de teste motion capture Biovision Hierarchy | MorphyHub',
+          description: 'Baixe arquivos de exemplo BVH motion capture Biovision Hierarchy grátis para testar dados motion capture, animação personagens, sistemas animação esquelética e softwares animação 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores motion capture, ferramentas animação personagens, sistemas animação esquelética, plataformas animação 3D e softwares análise motion capture.',
+          keywords: 'arquivos de exemplo BVH, arquivos de teste BVH, baixar exemplos BVH, arquivos de teste BVH grátis, arquivos BVH Biovision Hierarchy, arquivos de teste .bvh, arquivos motion capture, arquivos de teste animação personagens, arquivos animação esquelética, exemplos animação 3D BVH, arquivos análise motion capture'
+        },
+        schema: {
+          name: 'Arquivos de exemplo BVH grátis - Baixar arquivos de teste motion capture Biovision Hierarchy',
+          description: 'Baixe arquivos de exemplo BVH motion capture Biovision Hierarchy grátis para testar dados motion capture, animação personagens, sistemas animação esquelética e softwares animação 3D. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar visualizadores motion capture, ferramentas animação personagens, sistemas animação esquelética, plataformas animação 3D e softwares análise motion capture.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo BVH',
+          description: 'Baixe arquivos de exemplo BVH motion capture Biovision Hierarchy grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus visualizadores motion capture, ferramentas animação personagens e plataformas animação 3D.'
+        },
+        about_description: 'Estes são arquivos de teste BVH (motion capture Biovision Hierarchy) em vários tamanhos para fins de teste'
+      },
+      dwg: {
+        meta: {
+          title: 'Baixar arquivos de exemplo DWG grátis - Arquivos de teste desenhos AutoCAD para design CAD | MorphyHub',
+          description: 'Baixe arquivos de exemplo DWG desenhos AutoCAD grátis para testar softwares CAD, compatibilidade AutoCAD, ferramentas desenho técnico e aplicações design engenharia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar AutoCAD, visualizadores CAD, softwares desenho técnico, ferramentas design engenharia e plataformas CAD profissionais.',
+          keywords: 'arquivos de exemplo DWG, arquivos de teste DWG, baixar exemplos DWG, arquivos de teste DWG grátis, arquivos DWG AutoCAD, arquivos de teste .dwg, arquivos desenhos CAD, arquivos de teste AutoCAD, arquivos desenho técnico, exemplos design engenharia, arquivos softwares CAD DWG'
+        },
+        schema: {
+          name: 'Arquivos de exemplo DWG grátis - Baixar arquivos de teste desenhos AutoCAD para design CAD',
+          description: 'Baixe arquivos de exemplo DWG desenhos AutoCAD grátis para testar softwares CAD, compatibilidade AutoCAD, ferramentas desenho técnico e aplicações design engenharia. Múltiplos tamanhos: 100 KB, 1 MB, 5 MB, 50 MB e 100 MB. Perfeito para testar AutoCAD, visualizadores CAD, softwares desenho técnico, ferramentas design engenharia e plataformas CAD profissionais.'
+        },
+        hero: {
+          title: 'Arquivos de exemplo DWG',
+          description: 'Baixe arquivos de exemplo DWG desenhos AutoCAD grátis para testes. Múltiplos tamanhos de arquivo disponíveis para testar seus softwares CAD, compatibilidade AutoCAD e ferramentas desenho técnico.'
+        },
+        about_description: 'Estes são arquivos de teste DWG (desenho AutoCAD) em vários tamanhos para fins de teste'
       }
     }
   }

@@ -1007,6 +1007,262 @@ export const th: SamplePageTranslations = {
           description: 'ดาวน์โหลดไฟล์ตัวอย่าง MDX MDX (Markdown + JSX) ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ MDX parser ของคุณ เครื่องมือเอกสาร React และตัวสร้างเว็บไซต์แบบสแตติก'
         },
         about_description: 'นี่คือไฟล์ทดสอบ MDX (Markdown + JSX) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      apk: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง APK ฟรี - ไฟล์ทดสอบแพ็คเกจแอปพลิเคชัน Android | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง APK แพ็คเกจแอปพลิเคชัน Android ฟรีสำหรับทดสอบการติดตั้งแอปพลิเคชัน Android การวิเคราะห์ APK reverse engineering และเครื่องมือพัฒนาโมบายล์ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ APK installer, Android emulator, app analyzer, security scanner และแพลตฟอร์มพัฒนาแอปพลิเคชันโมบายล์',
+          keywords: 'ไฟล์ตัวอย่าง APK, ไฟล์ทดสอบ APK, ดาวน์โหลดตัวอย่าง APK, ไฟล์ทดสอบ APK ฟรี, ไฟล์ APK Android, ไฟล์ทดสอบ .apk, ไฟล์แพ็คเกจแอปพลิเคชัน Android, ไฟล์ทดสอบ APK installer, ไฟล์ทดสอบ Android emulator, ตัวอย่างพัฒนาแอปพลิเคชันโมบายล์, ไฟล์ reverse engineering APK'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง APK ฟรี - ดาวน์โหลดไฟล์ทดสอบแพ็คเกจแอปพลิเคชัน Android',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง APK แพ็คเกจแอปพลิเคชัน Android ฟรีสำหรับทดสอบการติดตั้งแอปพลิเคชัน Android การวิเคราะห์ APK reverse engineering และเครื่องมือพัฒนาโมบายล์ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ APK installer, Android emulator, app analyzer, security scanner และแพลตฟอร์มพัฒนาแอปพลิเคชันโมบายล์'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง APK',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง APK แพ็คเกจแอปพลิเคชัน Android ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบเครื่องมือติดตั้งแอปพลิเคชัน Android, APK analyzer และแพลตฟอร์มพัฒนาโมบายล์ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ APK (แพ็คเกจแอปพลิเคชัน Android) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      appimage: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง AppImage ฟรี - ไฟล์ทดสอบแอปพลิเคชัน Linux แบบพกพา | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AppImage แอปพลิเคชัน Linux แบบพกพาฟรีสำหรับทดสอบการแจกจ่ายแอปพลิเคชัน Linux การรัน AppImage และความเข้ากันได้ข้ามการแจกจ่าย ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ AppImage runner, Linux application launcher, เครื่องมือแอปพลิเคชันแบบพกพาและการแจกจ่ายซอฟต์แวร์ Linux สากล',
+          keywords: 'ไฟล์ตัวอย่าง AppImage, ไฟล์ทดสอบ AppImage, ดาวน์โหลดตัวอย่าง AppImage, ไฟล์ทดสอบ AppImage ฟรี, ไฟล์ AppImage Linux, ไฟล์ทดสอบ .AppImage, แอปพลิเคชัน Linux แบบพกพา, ไฟล์ทดสอบ AppImage runner, ไฟล์แอปพลิเคชัน Linux, แอปพลิเคชันข้ามการแจกจ่าย, ตัวอย่างซอฟต์แวร์ Linux สากล'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง AppImage ฟรี - ดาวน์โหลดไฟล์ทดสอบแอปพลิเคชัน Linux แบบพกพา',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AppImage แอปพลิเคชัน Linux แบบพกพาฟรีสำหรับทดสอบการแจกจ่ายแอปพลิเคชัน Linux การรัน AppImage และความเข้ากันได้ข้ามการแจกจ่าย ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ AppImage runner, Linux application launcher, เครื่องมือแอปพลิเคชันแบบพกพาและการแจกจ่ายซอฟต์แวร์ Linux สากล'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง AppImage',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AppImage แอปพลิเคชัน Linux แบบพกพาฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ AppImage runner, Linux application launcher และเครื่องมือแอปพลิเคชันแบบพกพาของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ AppImage (แอปพลิเคชัน Linux แบบพกพา) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      elf: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง ELF ฟรี - ไฟล์ทดสอบ Executable and Linkable Format สำหรับ Linux/Unix | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง ELF Executable and Linkable Format ฟรีสำหรับทดสอบการวิเคราะห์ไบนารี Linux/Unix การแยกวิเคราะห์ ELF reverse engineering และการดีบักระบบ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ ELF analyzer, binary disassembler, เครื่องมือ reverse engineering, system debugger และแพลตฟอร์มวิเคราะห์ executable Linux',
+          keywords: 'ไฟล์ตัวอย่าง ELF, ไฟล์ทดสอบ ELF, ดาวน์โหลดตัวอย่าง ELF, ไฟล์ทดสอบ ELF ฟรี, ไฟล์ ELF Linux, ไฟล์ทดสอบ .elf, ไฟล์ executable Unix, ไฟล์วิเคราะห์ไบนารี ELF, ไฟล์ reverse engineering ELF, ไฟล์ไบนารี Linux, ไฟล์ทดสอบ ELF disassembler'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง ELF ฟรี - ดาวน์โหลดไฟล์ทดสอบ Executable and Linkable Format สำหรับ Linux/Unix',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง ELF Executable and Linkable Format ฟรีสำหรับทดสอบการวิเคราะห์ไบนารี Linux/Unix การแยกวิเคราะห์ ELF reverse engineering และการดีบักระบบ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ ELF analyzer, binary disassembler, เครื่องมือ reverse engineering, system debugger และแพลตฟอร์มวิเคราะห์ executable Linux'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง ELF',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง ELF Executable and Linkable Format ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ ELF analyzer, binary disassembler และเครื่องมือ reverse engineering ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ ELF (Executable and Linkable Format) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      exe: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง EXE ฟรี - ไฟล์ทดสอบ executable Windows | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง EXE executable Windows ฟรีสำหรับทดสอบการรันแอปพลิเคชัน Windows การวิเคราะห์ EXE การแยกวิเคราะห์ไบนารีและเครื่องมือพัฒนา Windows ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Windows executable analyzer, binary disassembler, เครื่องมือ reverse engineering, แพลตฟอร์มวิเคราะห์ malware และการพัฒนาแอปพลิเคชัน Windows',
+          keywords: 'ไฟล์ตัวอย่าง EXE, ไฟล์ทดสอบ EXE, ดาวน์โหลดตัวอย่าง EXE, ไฟล์ทดสอบ EXE ฟรี, ไฟล์ EXE Windows, ไฟล์ทดสอบ .exe, ไฟล์ executable Windows, ไฟล์วิเคราะห์ไบนารี EXE, ไฟล์แอปพลิเคชัน Windows, ไฟล์ reverse engineering EXE, ไฟล์ทดสอบ binary disassembler Windows'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง EXE ฟรี - ดาวน์โหลดไฟล์ทดสอบ executable Windows',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง EXE executable Windows ฟรีสำหรับทดสอบการรันแอปพลิเคชัน Windows การวิเคราะห์ EXE การแยกวิเคราะห์ไบนารีและเครื่องมือพัฒนา Windows ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Windows executable analyzer, binary disassembler, เครื่องมือ reverse engineering, แพลตฟอร์มวิเคราะห์ malware และการพัฒนาแอปพลิเคชัน Windows'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง EXE',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง EXE executable Windows ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ Windows executable analyzer, binary disassembler และเครื่องมือ reverse engineering ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ EXE (executable Windows) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      ipa: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง IPA ฟรี - ไฟล์ทดสอบแพ็คเกจแอปพลิเคชัน iOS | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง IPA แพ็คเกจแอปพลิเคชัน iOS ฟรีสำหรับทดสอบการติดตั้งแอปพลิเคชัน iOS การวิเคราะห์ IPA การแจกจ่ายแอปพลิเคชัน iOS และเครื่องมือพัฒนาโมบายล์ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ IPA installer, iOS simulator, app analyzer, เครื่องมือพัฒนา iOS และแพลตฟอร์มแจกจ่ายแอปพลิเคชันโมบายล์',
+          keywords: 'ไฟล์ตัวอย่าง IPA, ไฟล์ทดสอบ IPA, ดาวน์โหลดตัวอย่าง IPA, ไฟล์ทดสอบ IPA ฟรี, ไฟล์ IPA iOS, ไฟล์ทดสอบ .ipa, ไฟล์แพ็คเกจแอปพลิเคชัน iOS, ไฟล์ทดสอบ IPA installer, ไฟล์ทดสอบ iOS simulator, ตัวอย่างพัฒนาแอปพลิเคชันโมบายล์, ไฟล์แจกจ่ายแอปพลิเคชัน iOS'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง IPA ฟรี - ดาวน์โหลดไฟล์ทดสอบแพ็คเกจแอปพลิเคชัน iOS',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง IPA แพ็คเกจแอปพลิเคชัน iOS ฟรีสำหรับทดสอบการติดตั้งแอปพลิเคชัน iOS การวิเคราะห์ IPA การแจกจ่ายแอปพลิเคชัน iOS และเครื่องมือพัฒนาโมบายล์ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ IPA installer, iOS simulator, app analyzer, เครื่องมือพัฒนา iOS และแพลตฟอร์มแจกจ่ายแอปพลิเคชันโมบายล์'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง IPA',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง IPA แพ็คเกจแอปพลิเคชัน iOS ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบเครื่องมือติดตั้งแอปพลิเคชัน iOS, IPA analyzer และแพลตฟอร์มพัฒนาโมบายล์ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ IPA (แพ็คเกจแอปพลิเคชัน iOS) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      jar: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง JAR ฟรี - ไฟล์ทดสอบ archive Java | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง JAR archive Java ฟรีสำหรับทดสอบการรันแอปพลิเคชัน Java การสกัด JAR การวิเคราะห์ JAR และเครื่องมือพัฒนา Java ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ JAR extractor, Java runtime environment, JAR analyzer, เครื่องมือพัฒนา Java และแพลตฟอร์ม deployment แอปพลิเคชัน Java',
+          keywords: 'ไฟล์ตัวอย่าง JAR, ไฟล์ทดสอบ JAR, ดาวน์โหลดตัวอย่าง JAR, ไฟล์ทดสอบ JAR ฟรี, ไฟล์ JAR Java, ไฟล์ทดสอบ .jar, ไฟล์ archive Java, ไฟล์ทดสอบ JAR extractor, ไฟล์ทดสอบ Java runtime, ตัวอย่างพัฒนา Java, ไฟล์วิเคราะห์ JAR'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง JAR ฟรี - ดาวน์โหลดไฟล์ทดสอบ archive Java',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง JAR archive Java ฟรีสำหรับทดสอบการรันแอปพลิเคชัน Java การสกัด JAR การวิเคราะห์ JAR และเครื่องมือพัฒนา Java ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ JAR extractor, Java runtime environment, JAR analyzer, เครื่องมือพัฒนา Java และแพลตฟอร์ม deployment แอปพลิเคชัน Java'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง JAR',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง JAR archive Java ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ JAR extractor, Java runtime environment และเครื่องมือพัฒนา Java ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ JAR (archive Java) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      crx: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง CRX ฟรี - ไฟล์ทดสอบแพ็คเกจส่วนขยาย Chrome | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง CRX แพ็คเกจส่วนขยาย Chrome ฟรีสำหรับทดสอบการติดตั้งส่วนขยาย Chrome การวิเคราะห์ CRX การพัฒนาส่วนขยายเบราว์เซอร์และเครื่องมือส่วนขยายเว็บ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ CRX installer, Chrome extension analyzer, เครื่องมือพัฒนาส่วนขยายเบราว์เซอร์และแพลตฟอร์มแจกจ่ายส่วนขยายเว็บ',
+          keywords: 'ไฟล์ตัวอย่าง CRX, ไฟล์ทดสอบ CRX, ดาวน์โหลดตัวอย่าง CRX, ไฟล์ทดสอบ CRX ฟรี, ไฟล์ CRX Chrome, ไฟล์ทดสอบ .crx, ไฟล์ส่วนขยาย Chrome, ไฟล์ทดสอบ CRX installer, ไฟล์ส่วนขยายเบราว์เซอร์, ตัวอย่างพัฒนาส่วนขยายเว็บ, ไฟล์วิเคราะห์ส่วนขยาย Chrome'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง CRX ฟรี - ดาวน์โหลดไฟล์ทดสอบแพ็คเกจส่วนขยาย Chrome',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง CRX แพ็คเกจส่วนขยาย Chrome ฟรีสำหรับทดสอบการติดตั้งส่วนขยาย Chrome การวิเคราะห์ CRX การพัฒนาส่วนขยายเบราว์เซอร์และเครื่องมือส่วนขยายเว็บ ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ CRX installer, Chrome extension analyzer, เครื่องมือพัฒนาส่วนขยายเบราว์เซอร์และแพลตฟอร์มแจกจ่ายส่วนขยายเว็บ'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง CRX',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง CRX แพ็คเกจส่วนขยาย Chrome ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบเครื่องมือติดตั้งส่วนขยาย Chrome, CRX analyzer และแพลตฟอร์มพัฒนาส่วนขยายเบราว์เซอร์ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ CRX (แพ็คเกจส่วนขยาย Chrome) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      '3ds': {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง 3DS ฟรี - ไฟล์ทดสอบโมเดล 3D สำหรับการพิมพ์ 3D และการสร้างแบบจำลอง | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง 3DS โมเดล 3D ฟรีสำหรับทดสอบซอฟต์แวร์สร้างแบบจำลอง 3D เครื่องมือพิมพ์ 3D การแปลง mesh และแอปพลิเคชันการแสดงผล 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ 3D model viewer, 3D printer, ซอฟต์แวร์ CAD, mesh editor และแอปพลิเคชันกราฟิก 3D',
+          keywords: 'ไฟล์ตัวอย่าง 3DS, ไฟล์ทดสอบ 3DS, ดาวน์โหลดตัวอย่าง 3DS, ไฟล์ทดสอบ 3DS ฟรี, ไฟล์โมเดล 3D 3DS, ไฟล์ทดสอบ .3ds, ไฟล์สร้างแบบจำลอง 3D, ไฟล์ทดสอบการพิมพ์ 3D, ไฟล์ CAD 3DS, ไฟล์โมเดล mesh, ตัวอย่างกราฟิก 3D'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง 3DS ฟรี - ดาวน์โหลดไฟล์ทดสอบโมเดล 3D สำหรับการพิมพ์ 3D และการสร้างแบบจำลอง',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง 3DS โมเดล 3D ฟรีสำหรับทดสอบซอฟต์แวร์สร้างแบบจำลอง 3D เครื่องมือพิมพ์ 3D การแปลง mesh และแอปพลิเคชันการแสดงผล 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ 3D model viewer, 3D printer, ซอฟต์แวร์ CAD, mesh editor และแอปพลิเคชันกราฟิก 3D'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง 3DS',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง 3DS โมเดล 3D ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบซอฟต์แวร์สร้างแบบจำลอง 3D, เครื่องมือพิมพ์ 3D และแอปพลิเคชันการแสดงผล 3D ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ 3DS (โมเดล 3D) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      '3mf': {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง 3MF ฟรี - ไฟล์ทดสอบ 3D Manufacturing Format สำหรับการพิมพ์ 3D | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง 3MF 3D Manufacturing Format ฟรีสำหรับทดสอบการพิมพ์ 3D การผลิตแบบเติมแต่ง การตัดโมเดล 3D และความเข้ากันได้ของเครื่องพิมพ์ 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ 3D printer slicer, ซอฟต์แวร์การผลิตแบบเติมแต่ง, 3MF viewer, workflow การพิมพ์ 3D และแพลตฟอร์มการผลิต 3D สมัยใหม่',
+          keywords: 'ไฟล์ตัวอย่าง 3MF, ไฟล์ทดสอบ 3MF, ดาวน์โหลดตัวอย่าง 3MF, ไฟล์ทดสอบ 3MF ฟรี, ไฟล์การพิมพ์ 3D 3MF, ไฟล์ทดสอบ .3mf, ไฟล์การผลิตแบบเติมแต่ง, ไฟล์ทดสอบ 3D printer slicer, ไฟล์ทดสอบ 3MF viewer, ตัวอย่างการผลิต 3D, ไฟล์การพิมพ์ 3D สมัยใหม่'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง 3MF ฟรี - ดาวน์โหลดไฟล์ทดสอบ 3D Manufacturing Format สำหรับการพิมพ์ 3D',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง 3MF 3D Manufacturing Format ฟรีสำหรับทดสอบการพิมพ์ 3D การผลิตแบบเติมแต่ง การตัดโมเดล 3D และความเข้ากันได้ของเครื่องพิมพ์ 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ 3D printer slicer, ซอฟต์แวร์การผลิตแบบเติมแต่ง, 3MF viewer, workflow การพิมพ์ 3D และแพลตฟอร์มการผลิต 3D สมัยใหม่'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง 3MF',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง 3MF 3D Manufacturing Format ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ 3D printer slicer, ซอฟต์แวร์การผลิตแบบเติมแต่งและ workflow การพิมพ์ 3D ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ 3MF (3D Manufacturing Format) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      ai: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง AI ฟรี - ไฟล์ทดสอบกราฟิกเวกเตอร์ Adobe Illustrator | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AI กราฟิกเวกเตอร์ Adobe Illustrator ฟรีสำหรับทดสอบการแก้ไขกราฟิกเวกเตอร์ การแปลงไฟล์ AI ความเข้ากันได้ของซอฟต์แวร์ออกแบบและเครื่องมือออกแบบกราฟิก ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Adobe Illustrator, vector graphics editor, AI file converter, ซอฟต์แวร์ออกแบบและแพลตฟอร์มออกแบบกราฟิกมืออาชีพ',
+          keywords: 'ไฟล์ตัวอย่าง AI, ไฟล์ทดสอบ AI, ดาวน์โหลดตัวอย่าง AI, ไฟล์ทดสอบ AI ฟรี, ไฟล์ AI Adobe Illustrator, ไฟล์ทดสอบ .ai, ไฟล์กราฟิกเวกเตอร์, ไฟล์ทดสอบ Illustrator, ไฟล์ซอฟต์แวร์ออกแบบ, ตัวอย่างการแก้ไขเวกเตอร์, ไฟล์ออกแบบกราฟิก AI'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง AI ฟรี - ดาวน์โหลดไฟล์ทดสอบกราฟิกเวกเตอร์ Adobe Illustrator',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AI กราฟิกเวกเตอร์ Adobe Illustrator ฟรีสำหรับทดสอบการแก้ไขกราฟิกเวกเตอร์ การแปลงไฟล์ AI ความเข้ากันได้ของซอฟต์แวร์ออกแบบและเครื่องมือออกแบบกราฟิก ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Adobe Illustrator, vector graphics editor, AI file converter, ซอฟต์แวร์ออกแบบและแพลตฟอร์มออกแบบกราฟิกมืออาชีพ'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง AI',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AI กราฟิกเวกเตอร์ Adobe Illustrator ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ vector graphics editor, AI file converter และซอฟต์แวร์ออกแบบของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ AI (Adobe Illustrator) กราฟิกเวกเตอร์ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      ase: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง ASE ฟรี - ไฟล์ทดสอบแอนิเมชัน sprite Aseprite | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง ASE แอนิเมชัน sprite Aseprite ฟรีสำหรับทดสอบการแก้ไข pixel art, แอนิเมชัน sprite, เครื่องมือพัฒนาเกมและซอฟต์แวร์แอนิเมชัน 2D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Aseprite, pixel art editor, เครื่องมือแอนิเมชัน sprite, ซอฟต์แวร์พัฒนาเกมและแพลตฟอร์มแอนิเมชัน 2D',
+          keywords: 'ไฟล์ตัวอย่าง ASE, ไฟล์ทดสอบ ASE, ดาวน์โหลดตัวอย่าง ASE, ไฟล์ทดสอบ ASE ฟรี, ไฟล์ ASE Aseprite, ไฟล์ทดสอบ .ase, ไฟล์แอนิเมชัน sprite, ไฟล์ทดสอบ pixel art, ไฟล์พัฒนาเกม, ตัวอย่างแอนิเมชัน 2D, ไฟล์ทดสอบ Aseprite'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง ASE ฟรี - ดาวน์โหลดไฟล์ทดสอบแอนิเมชัน sprite Aseprite',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง ASE แอนิเมชัน sprite Aseprite ฟรีสำหรับทดสอบการแก้ไข pixel art, แอนิเมชัน sprite, เครื่องมือพัฒนาเกมและซอฟต์แวร์แอนิเมชัน 2D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Aseprite, pixel art editor, เครื่องมือแอนิเมชัน sprite, ซอฟต์แวร์พัฒนาเกมและแพลตฟอร์มแอนิเมชัน 2D'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง ASE',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง ASE แอนิเมชัน sprite Aseprite ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ pixel art editor, เครื่องมือแอนิเมชัน sprite และซอฟต์แวร์พัฒนาเกมของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ ASE (แอนิเมชัน sprite Aseprite) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง Animation FBX ฟรี - ไฟล์ทดสอบแอนิเมชัน 3D Autodesk FBX | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง Animation FBX แอนิเมชัน 3D Autodesk FBX ฟรีสำหรับทดสอบแอนิเมชัน 3D, character rigging, ข้อมูล motion capture และซอฟต์แวร์กราฟิก 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบซอฟต์แวร์แอนิเมชัน 3D, game engine, เครื่องมือ motion capture, แพลตฟอร์มแอนิเมชันตัวละครและแอปพลิเคชันกราฟิก 3D',
+          keywords: 'ไฟล์ตัวอย่าง Animation FBX, ไฟล์ทดสอบแอนิเมชัน FBX, ดาวน์โหลดตัวอย่างแอนิเมชัน FBX, ไฟล์ทดสอบแอนิเมชัน FBX ฟรี, ไฟล์ Autodesk FBX, ไฟล์ทดสอบแอนิเมชัน .fbx, ไฟล์แอนิเมชัน 3D, ไฟล์ทดสอบแอนิเมชันตัวละคร, ไฟล์ motion capture, ตัวอย่างแอนิเมชันกราฟิก 3D, ไฟล์ FBX game engine'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง Animation FBX ฟรี - ดาวน์โหลดไฟล์ทดสอบแอนิเมชัน 3D Autodesk FBX',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง Animation FBX แอนิเมชัน 3D Autodesk FBX ฟรีสำหรับทดสอบแอนิเมชัน 3D, character rigging, ข้อมูล motion capture และซอฟต์แวร์กราฟิก 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบซอฟต์แวร์แอนิเมชัน 3D, game engine, เครื่องมือ motion capture, แพลตฟอร์มแอนิเมชันตัวละครและแอปพลิเคชันกราฟิก 3D'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง Animation FBX',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง Animation FBX แอนิเมชัน 3D Autodesk FBX ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบซอฟต์แวร์แอนิเมชัน 3D, game engine และเครื่องมือ motion capture ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ Animation FBX (แอนิเมชัน 3D Autodesk FBX) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      assetbundle: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง AssetBundle ฟรี - ไฟล์ทดสอบ Unity AssetBundle สำหรับการพัฒนาเกม | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AssetBundle Unity AssetBundle ฟรีสำหรับทดสอบการพัฒนาเกม Unity, การโหลด asset, การจัดการทรัพยากรเกมและเครื่องมือ Unity engine ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Unity engine, game asset loader, เครื่องมือพัฒนา Unity, game resource manager และแพลตฟอร์มพัฒนาเกม Unity',
+          keywords: 'ไฟล์ตัวอย่าง AssetBundle, ไฟล์ทดสอบ AssetBundle, ดาวน์โหลดตัวอย่าง AssetBundle, ไฟล์ทดสอบ AssetBundle ฟรี, ไฟล์ Unity AssetBundle, ไฟล์ asset Unity, ไฟล์พัฒนาเกม, ไฟล์ทดสอบ Unity engine, ไฟล์ทดสอบ game asset loader, ตัวอย่างพัฒนา Unity, ไฟล์จัดการทรัพยากรเกม'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง AssetBundle ฟรี - ดาวน์โหลดไฟล์ทดสอบ Unity AssetBundle สำหรับการพัฒนาเกม',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AssetBundle Unity AssetBundle ฟรีสำหรับทดสอบการพัฒนาเกม Unity, การโหลด asset, การจัดการทรัพยากรเกมและเครื่องมือ Unity engine ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ Unity engine, game asset loader, เครื่องมือพัฒนา Unity, game resource manager และแพลตฟอร์มพัฒนาเกม Unity'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง AssetBundle',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง AssetBundle Unity AssetBundle ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ Unity engine, game asset loader และเครื่องมือพัฒนา Unity ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ AssetBundle (Unity AssetBundle) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      blend: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง BLEND ฟรี - ไฟล์ทดสอบโปรเจ็กต์ 3D Blender | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง BLEND โปรเจ็กต์ 3D Blender ฟรีสำหรับทดสอบการสร้างแบบจำลอง 3D, ความเข้ากันได้ของโปรเจ็กต์ Blender, workflow แอนิเมชัน 3D และซอฟต์แวร์กราฟิก 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบซอฟต์แวร์ Blender, เครื่องมือสร้างแบบจำลอง 3D, Blender project viewer, แพลตฟอร์มแอนิเมชัน 3D และแอปพลิเคชันกราฟิก 3D มืออาชีพ',
+          keywords: 'ไฟล์ตัวอย่าง BLEND, ไฟล์ทดสอบ BLEND, ดาวน์โหลดตัวอย่าง BLEND, ไฟล์ทดสอบ BLEND ฟรี, ไฟล์ BLEND Blender, ไฟล์ทดสอบ .blend, ไฟล์โปรเจ็กต์ Blender, ไฟล์ทดสอบการสร้างแบบจำลอง 3D, ไฟล์ทดสอบ Blender, ตัวอย่างแอนิเมชัน 3D, ไฟล์กราฟิก 3D BLEND'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง BLEND ฟรี - ดาวน์โหลดไฟล์ทดสอบโปรเจ็กต์ 3D Blender',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง BLEND โปรเจ็กต์ 3D Blender ฟรีสำหรับทดสอบการสร้างแบบจำลอง 3D, ความเข้ากันได้ของโปรเจ็กต์ Blender, workflow แอนิเมชัน 3D และซอฟต์แวร์กราฟิก 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบซอฟต์แวร์ Blender, เครื่องมือสร้างแบบจำลอง 3D, Blender project viewer, แพลตฟอร์มแอนิเมชัน 3D และแอปพลิเคชันกราฟิก 3D มืออาชีพ'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง BLEND',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง BLEND โปรเจ็กต์ 3D Blender ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบซอฟต์แวร์ Blender, เครื่องมือสร้างแบบจำลอง 3D และแพลตฟอร์มแอนิเมชัน 3D ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ BLEND (โปรเจ็กต์ 3D Blender) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      bvh: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง BVH ฟรี - ไฟล์ทดสอบ motion capture Biovision Hierarchy | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง BVH motion capture Biovision Hierarchy ฟรีสำหรับทดสอบข้อมูล motion capture, แอนิเมชันตัวละคร, ระบบแอนิเมชันโครงกระดูกและซอฟต์แวร์แอนิเมชัน 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ motion capture viewer, เครื่องมือแอนิเมชันตัวละคร, ระบบแอนิเมชันโครงกระดูก, แพลตฟอร์มแอนิเมชัน 3D และซอฟต์แวร์วิเคราะห์ motion capture',
+          keywords: 'ไฟล์ตัวอย่าง BVH, ไฟล์ทดสอบ BVH, ดาวน์โหลดตัวอย่าง BVH, ไฟล์ทดสอบ BVH ฟรี, ไฟล์ BVH Biovision Hierarchy, ไฟล์ทดสอบ .bvh, ไฟล์ motion capture, ไฟล์ทดสอบแอนิเมชันตัวละคร, ไฟล์แอนิเมชันโครงกระดูก, ตัวอย่างแอนิเมชัน 3D BVH, ไฟล์วิเคราะห์ motion capture'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง BVH ฟรี - ดาวน์โหลดไฟล์ทดสอบ motion capture Biovision Hierarchy',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง BVH motion capture Biovision Hierarchy ฟรีสำหรับทดสอบข้อมูล motion capture, แอนิเมชันตัวละคร, ระบบแอนิเมชันโครงกระดูกและซอฟต์แวร์แอนิเมชัน 3D ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ motion capture viewer, เครื่องมือแอนิเมชันตัวละคร, ระบบแอนิเมชันโครงกระดูก, แพลตฟอร์มแอนิเมชัน 3D และซอฟต์แวร์วิเคราะห์ motion capture'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง BVH',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง BVH motion capture Biovision Hierarchy ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบ motion capture viewer, เครื่องมือแอนิเมชันตัวละครและแพลตฟอร์มแอนิเมชัน 3D ของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ BVH (motion capture Biovision Hierarchy) ขนาดต่างๆ สำหรับการทดสอบ'
+      },
+      dwg: {
+        meta: {
+          title: 'ดาวน์โหลดไฟล์ตัวอย่าง DWG ฟรี - ไฟล์ทดสอบแบบร่าง AutoCAD สำหรับการออกแบบ CAD | MorphyHub',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง DWG แบบร่าง AutoCAD ฟรีสำหรับทดสอบซอฟต์แวร์ CAD, ความเข้ากันได้ของ AutoCAD, เครื่องมือวาดภาพทางเทคนิคและแอปพลิเคชันออกแบบวิศวกรรม ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ AutoCAD, CAD viewer, ซอฟต์แวร์วาดภาพทางเทคนิค, เครื่องมือออกแบบวิศวกรรมและแพลตฟอร์ม CAD มืออาชีพ',
+          keywords: 'ไฟล์ตัวอย่าง DWG, ไฟล์ทดสอบ DWG, ดาวน์โหลดตัวอย่าง DWG, ไฟล์ทดสอบ DWG ฟรี, ไฟล์ DWG AutoCAD, ไฟล์ทดสอบ .dwg, ไฟล์แบบร่าง CAD, ไฟล์ทดสอบ AutoCAD, ไฟล์วาดภาพทางเทคนิค, ตัวอย่างออกแบบวิศวกรรม, ไฟล์ซอฟต์แวร์ CAD DWG'
+        },
+        schema: {
+          name: 'ไฟล์ตัวอย่าง DWG ฟรี - ดาวน์โหลดไฟล์ทดสอบแบบร่าง AutoCAD สำหรับการออกแบบ CAD',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง DWG แบบร่าง AutoCAD ฟรีสำหรับทดสอบซอฟต์แวร์ CAD, ความเข้ากันได้ของ AutoCAD, เครื่องมือวาดภาพทางเทคนิคและแอปพลิเคชันออกแบบวิศวกรรม ขนาดหลายขนาด: 100 KB, 1 MB, 5 MB, 50 MB และ 100 MB เหมาะสำหรับทดสอบ AutoCAD, CAD viewer, ซอฟต์แวร์วาดภาพทางเทคนิค, เครื่องมือออกแบบวิศวกรรมและแพลตฟอร์ม CAD มืออาชีพ'
+        },
+        hero: {
+          title: 'ไฟล์ตัวอย่าง DWG',
+          description: 'ดาวน์โหลดไฟล์ตัวอย่าง DWG แบบร่าง AutoCAD ฟรีสำหรับการทดสอบ ขนาดไฟล์หลายขนาดพร้อมใช้งานเพื่อทดสอบซอฟต์แวร์ CAD, ความเข้ากันได้ของ AutoCAD และเครื่องมือวาดภาพทางเทคนิคของคุณ'
+        },
+        about_description: 'นี่คือไฟล์ทดสอบ DWG (แบบร่าง AutoCAD) ขนาดต่างๆ สำหรับการทดสอบ'
       }
     }
   }

@@ -1007,6 +1007,262 @@ export const es: SamplePageTranslations = {
           description: 'Descarga archivos de muestra MDX MDX (Markdown + JSX) gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus parsers MDX, herramientas de documentación React y generadores de sitios estáticos.'
         },
         about_description: 'Estos son archivos de prueba MDX (Markdown + JSX) en varios tamaños para fines de prueba'
+      },
+      apk: {
+        meta: {
+          title: 'Descarga archivos de muestra APK gratis - Archivos de prueba paquetes de aplicación Android | MorphyHub',
+          description: 'Descarga archivos de muestra APK paquetes de aplicación Android gratis para probar instalación de aplicaciones Android, análisis APK, ingeniería inversa y herramientas de desarrollo móvil. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar instaladores APK, emuladores Android, analizadores de aplicaciones, escáneres de seguridad y plataformas de desarrollo de aplicaciones móviles.',
+          keywords: 'archivos de muestra APK, archivos de prueba APK, descarga ejemplos APK, archivos de prueba APK gratis, archivos APK Android, archivos de prueba .apk, archivos paquetes aplicación Android, archivos de prueba instalador APK, archivos de prueba emulador Android, ejemplos desarrollo aplicaciones móviles, archivos ingeniería inversa APK'
+        },
+        schema: {
+          name: 'Archivos de muestra APK gratis - Descarga archivos de prueba paquetes de aplicación Android',
+          description: 'Descarga archivos de muestra APK paquetes de aplicación Android gratis para probar instalación de aplicaciones Android, análisis APK, ingeniería inversa y herramientas de desarrollo móvil. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar instaladores APK, emuladores Android, analizadores de aplicaciones, escáneres de seguridad y plataformas de desarrollo de aplicaciones móviles.'
+        },
+        hero: {
+          title: 'Archivos de muestra APK',
+          description: 'Descarga archivos de muestra APK paquetes de aplicación Android gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de aplicaciones Android, analizadores APK y plataformas de desarrollo móvil.'
+        },
+        about_description: 'Estos son archivos de prueba APK (paquete de aplicación Android) en varios tamaños para fines de prueba'
+      },
+      appimage: {
+        meta: {
+          title: 'Descarga archivos de muestra AppImage gratis - Archivos de prueba aplicaciones portátiles Linux | MorphyHub',
+          description: 'Descarga archivos de muestra AppImage aplicaciones portátiles Linux gratis para probar distribución de aplicaciones Linux, ejecución AppImage y compatibilidad entre distribuciones. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar ejecutores AppImage, lanzadores de aplicaciones Linux, herramientas de aplicaciones portátiles y distribución universal de software Linux.',
+          keywords: 'archivos de muestra AppImage, archivos de prueba AppImage, descarga ejemplos AppImage, archivos de prueba AppImage gratis, archivos AppImage Linux, archivos de prueba .AppImage, aplicaciones portátiles Linux, archivos de prueba ejecutor AppImage, archivos aplicaciones Linux, aplicaciones entre distribuciones, ejemplos software Linux universal'
+        },
+        schema: {
+          name: 'Archivos de muestra AppImage gratis - Descarga archivos de prueba aplicaciones portátiles Linux',
+          description: 'Descarga archivos de muestra AppImage aplicaciones portátiles Linux gratis para probar distribución de aplicaciones Linux, ejecución AppImage y compatibilidad entre distribuciones. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar ejecutores AppImage, lanzadores de aplicaciones Linux, herramientas de aplicaciones portátiles y distribución universal de software Linux.'
+        },
+        hero: {
+          title: 'Archivos de muestra AppImage',
+          description: 'Descarga archivos de muestra AppImage aplicaciones portátiles Linux gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus ejecutores AppImage, lanzadores de aplicaciones Linux y herramientas de aplicaciones portátiles.'
+        },
+        about_description: 'Estos son archivos de prueba AppImage (aplicación portátil Linux) en varios tamaños para fines de prueba'
+      },
+      elf: {
+        meta: {
+          title: 'Descarga archivos de muestra ELF gratis - Archivos de prueba Executable and Linkable Format para Linux/Unix | MorphyHub',
+          description: 'Descarga archivos de muestra ELF Executable and Linkable Format gratis para probar análisis de binarios Linux/Unix, análisis ELF, ingeniería inversa y depuración del sistema. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores ELF, desensambladores binarios, herramientas de ingeniería inversa, depuradores del sistema y plataformas de análisis de ejecutables Linux.',
+          keywords: 'archivos de muestra ELF, archivos de prueba ELF, descarga ejemplos ELF, archivos de prueba ELF gratis, archivos ELF Linux, archivos de prueba .elf, archivos ejecutables Unix, archivos análisis binario ELF, archivos ingeniería inversa ELF, archivos binarios Linux, archivos de prueba desensamblador ELF'
+        },
+        schema: {
+          name: 'Archivos de muestra ELF gratis - Descarga archivos de prueba Executable and Linkable Format para Linux/Unix',
+          description: 'Descarga archivos de muestra ELF Executable and Linkable Format gratis para probar análisis de binarios Linux/Unix, análisis ELF, ingeniería inversa y depuración del sistema. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores ELF, desensambladores binarios, herramientas de ingeniería inversa, depuradores del sistema y plataformas de análisis de ejecutables Linux.'
+        },
+        hero: {
+          title: 'Archivos de muestra ELF',
+          description: 'Descarga archivos de muestra ELF Executable and Linkable Format gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus analizadores ELF, desensambladores binarios y herramientas de ingeniería inversa.'
+        },
+        about_description: 'Estos son archivos de prueba ELF (Executable and Linkable Format) en varios tamaños para fines de prueba'
+      },
+      exe: {
+        meta: {
+          title: 'Descarga archivos de muestra EXE gratis - Archivos de prueba ejecutables Windows | MorphyHub',
+          description: 'Descarga archivos de muestra EXE ejecutables Windows gratis para probar ejecución de aplicaciones Windows, análisis EXE, análisis de binarios y herramientas de desarrollo Windows. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores de ejecutables Windows, desensambladores binarios, herramientas de ingeniería inversa, plataformas de análisis de malware y desarrollo de aplicaciones Windows.',
+          keywords: 'archivos de muestra EXE, archivos de prueba EXE, descarga ejemplos EXE, archivos de prueba EXE gratis, archivos EXE Windows, archivos de prueba .exe, archivos ejecutables Windows, archivos análisis binario EXE, archivos aplicaciones Windows, archivos ingeniería inversa EXE, archivos de prueba desensamblador binarios Windows'
+        },
+        schema: {
+          name: 'Archivos de muestra EXE gratis - Descarga archivos de prueba ejecutables Windows',
+          description: 'Descarga archivos de muestra EXE ejecutables Windows gratis para probar ejecución de aplicaciones Windows, análisis EXE, análisis de binarios y herramientas de desarrollo Windows. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar analizadores de ejecutables Windows, desensambladores binarios, herramientas de ingeniería inversa, plataformas de análisis de malware y desarrollo de aplicaciones Windows.'
+        },
+        hero: {
+          title: 'Archivos de muestra EXE',
+          description: 'Descarga archivos de muestra EXE ejecutables Windows gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus analizadores de ejecutables Windows, desensambladores binarios y herramientas de ingeniería inversa.'
+        },
+        about_description: 'Estos son archivos de prueba EXE (ejecutable Windows) en varios tamaños para fines de prueba'
+      },
+      ipa: {
+        meta: {
+          title: 'Descarga archivos de muestra IPA gratis - Archivos de prueba paquetes de aplicación iOS | MorphyHub',
+          description: 'Descarga archivos de muestra IPA paquetes de aplicación iOS gratis para probar instalación de aplicaciones iOS, análisis IPA, distribución de aplicaciones iOS y herramientas de desarrollo móvil. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar instaladores IPA, simuladores iOS, analizadores de aplicaciones, herramientas de desarrollo iOS y plataformas de distribución de aplicaciones móviles.',
+          keywords: 'archivos de muestra IPA, archivos de prueba IPA, descarga ejemplos IPA, archivos de prueba IPA gratis, archivos IPA iOS, archivos de prueba .ipa, archivos paquetes aplicación iOS, archivos de prueba instalador IPA, archivos de prueba simulador iOS, ejemplos desarrollo aplicaciones móviles, archivos distribución aplicación iOS'
+        },
+        schema: {
+          name: 'Archivos de muestra IPA gratis - Descarga archivos de prueba paquetes de aplicación iOS',
+          description: 'Descarga archivos de muestra IPA paquetes de aplicación iOS gratis para probar instalación de aplicaciones iOS, análisis IPA, distribución de aplicaciones iOS y herramientas de desarrollo móvil. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar instaladores IPA, simuladores iOS, analizadores de aplicaciones, herramientas de desarrollo iOS y plataformas de distribución de aplicaciones móviles.'
+        },
+        hero: {
+          title: 'Archivos de muestra IPA',
+          description: 'Descarga archivos de muestra IPA paquetes de aplicación iOS gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de aplicaciones iOS, analizadores IPA y plataformas de desarrollo móvil.'
+        },
+        about_description: 'Estos son archivos de prueba IPA (paquete de aplicación iOS) en varios tamaños para fines de prueba'
+      },
+      jar: {
+        meta: {
+          title: 'Descarga archivos de muestra JAR gratis - Archivos de prueba archivos Java | MorphyHub',
+          description: 'Descarga archivos de muestra JAR archivos Java gratis para probar ejecución de aplicaciones Java, extracción JAR, análisis JAR y herramientas de desarrollo Java. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar extractores JAR, entornos de ejecución Java, analizadores JAR, herramientas de desarrollo Java y plataformas de implementación de aplicaciones Java.',
+          keywords: 'archivos de muestra JAR, archivos de prueba JAR, descarga ejemplos JAR, archivos de prueba JAR gratis, archivos JAR Java, archivos de prueba .jar, archivos archivos Java, archivos de prueba extractor JAR, archivos de prueba runtime Java, ejemplos desarrollo Java, archivos análisis JAR'
+        },
+        schema: {
+          name: 'Archivos de muestra JAR gratis - Descarga archivos de prueba archivos Java',
+          description: 'Descarga archivos de muestra JAR archivos Java gratis para probar ejecución de aplicaciones Java, extracción JAR, análisis JAR y herramientas de desarrollo Java. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar extractores JAR, entornos de ejecución Java, analizadores JAR, herramientas de desarrollo Java y plataformas de implementación de aplicaciones Java.'
+        },
+        hero: {
+          title: 'Archivos de muestra JAR',
+          description: 'Descarga archivos de muestra JAR archivos Java gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus extractores JAR, entornos de ejecución Java y herramientas de desarrollo Java.'
+        },
+        about_description: 'Estos son archivos de prueba JAR (archivo Java) en varios tamaños para fines de prueba'
+      },
+      crx: {
+        meta: {
+          title: 'Descarga archivos de muestra CRX gratis - Archivos de prueba paquetes de extensiones Chrome | MorphyHub',
+          description: 'Descarga archivos de muestra CRX paquetes de extensiones Chrome gratis para probar instalación de extensiones Chrome, análisis CRX, desarrollo de extensiones de navegador y herramientas de extensiones web. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar instaladores CRX, analizadores de extensiones Chrome, herramientas de desarrollo de extensiones de navegador y plataformas de distribución de extensiones web.',
+          keywords: 'archivos de muestra CRX, archivos de prueba CRX, descarga ejemplos CRX, archivos de prueba CRX gratis, archivos CRX Chrome, archivos de prueba .crx, archivos extensiones Chrome, archivos de prueba instalador CRX, archivos extensiones navegador, ejemplos desarrollo extensiones web, archivos análisis extensiones Chrome'
+        },
+        schema: {
+          name: 'Archivos de muestra CRX gratis - Descarga archivos de prueba paquetes de extensiones Chrome',
+          description: 'Descarga archivos de muestra CRX paquetes de extensiones Chrome gratis para probar instalación de extensiones Chrome, análisis CRX, desarrollo de extensiones de navegador y herramientas de extensiones web. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar instaladores CRX, analizadores de extensiones Chrome, herramientas de desarrollo de extensiones de navegador y plataformas de distribución de extensiones web.'
+        },
+        hero: {
+          title: 'Archivos de muestra CRX',
+          description: 'Descarga archivos de muestra CRX paquetes de extensiones Chrome gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de extensiones Chrome, analizadores CRX y plataformas de desarrollo de extensiones de navegador.'
+        },
+        about_description: 'Estos son archivos de prueba CRX (paquete de extensiones Chrome) en varios tamaños para fines de prueba'
+      },
+      '3ds': {
+        meta: {
+          title: 'Descarga archivos de muestra 3DS gratis - Archivos de prueba modelos 3D para impresión 3D y modelado | MorphyHub',
+          description: 'Descarga archivos de muestra 3DS modelos 3D gratis para probar software de modelado 3D, herramientas de impresión 3D, conversión de mallas y aplicaciones de visualización 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar visualizadores de modelos 3D, impresoras 3D, software CAD, editores de mallas y aplicaciones de gráficos 3D.',
+          keywords: 'archivos de muestra 3DS, archivos de prueba 3DS, descarga ejemplos 3DS, archivos de prueba 3DS gratis, archivos modelos 3D 3DS, archivos de prueba .3ds, archivos modelado 3D, archivos de prueba impresión 3D, archivos CAD 3DS, archivos modelos mallas, ejemplos gráficos 3D'
+        },
+        schema: {
+          name: 'Archivos de muestra 3DS gratis - Descarga archivos de prueba modelos 3D para impresión 3D y modelado',
+          description: 'Descarga archivos de muestra 3DS modelos 3D gratis para probar software de modelado 3D, herramientas de impresión 3D, conversión de mallas y aplicaciones de visualización 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar visualizadores de modelos 3D, impresoras 3D, software CAD, editores de mallas y aplicaciones de gráficos 3D.'
+        },
+        hero: {
+          title: 'Archivos de muestra 3DS',
+          description: 'Descarga archivos de muestra 3DS modelos 3D gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus software de modelado 3D, herramientas de impresión 3D y aplicaciones de visualización 3D.'
+        },
+        about_description: 'Estos son archivos de prueba 3DS (modelo 3D) en varios tamaños para fines de prueba'
+      },
+      '3mf': {
+        meta: {
+          title: 'Descarga archivos de muestra 3MF gratis - Archivos de prueba 3D Manufacturing Format para impresión 3D | MorphyHub',
+          description: 'Descarga archivos de muestra 3MF 3D Manufacturing Format gratis para probar impresión 3D, fabricación aditiva, corte de modelos 3D y compatibilidad de impresoras 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar cortadores de impresoras 3D, software de fabricación aditiva, visualizadores 3MF, flujos de trabajo de impresión 3D y plataformas modernas de fabricación 3D.',
+          keywords: 'archivos de muestra 3MF, archivos de prueba 3MF, descarga ejemplos 3MF, archivos de prueba 3MF gratis, archivos impresión 3D 3MF, archivos de prueba .3mf, archivos fabricación aditiva, archivos de prueba cortador impresora 3D, archivos de prueba visualizador 3MF, ejemplos fabricación 3D, archivos impresión 3D moderna'
+        },
+        schema: {
+          name: 'Archivos de muestra 3MF gratis - Descarga archivos de prueba 3D Manufacturing Format para impresión 3D',
+          description: 'Descarga archivos de muestra 3MF 3D Manufacturing Format gratis para probar impresión 3D, fabricación aditiva, corte de modelos 3D y compatibilidad de impresoras 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar cortadores de impresoras 3D, software de fabricación aditiva, visualizadores 3MF, flujos de trabajo de impresión 3D y plataformas modernas de fabricación 3D.'
+        },
+        hero: {
+          title: 'Archivos de muestra 3MF',
+          description: 'Descarga archivos de muestra 3MF 3D Manufacturing Format gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus cortadores de impresoras 3D, software de fabricación aditiva y flujos de trabajo de impresión 3D.'
+        },
+        about_description: 'Estos son archivos de prueba 3MF (3D Manufacturing Format) en varios tamaños para fines de prueba'
+      },
+      ai: {
+        meta: {
+          title: 'Descarga archivos de muestra AI gratis - Archivos de prueba gráficos vectoriales Adobe Illustrator | MorphyHub',
+          description: 'Descarga archivos de muestra AI gráficos vectoriales Adobe Illustrator gratis para probar edición de gráficos vectoriales, conversión de archivos AI, compatibilidad de software de diseño y herramientas de diseño gráfico. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar Adobe Illustrator, editores de gráficos vectoriales, convertidores de archivos AI, software de diseño y plataformas profesionales de diseño gráfico.',
+          keywords: 'archivos de muestra AI, archivos de prueba AI, descarga ejemplos AI, archivos de prueba AI gratis, archivos AI Adobe Illustrator, archivos de prueba .ai, archivos gráficos vectoriales, archivos de prueba Illustrator, archivos software diseño, ejemplos edición vectorial, archivos diseño gráfico AI'
+        },
+        schema: {
+          name: 'Archivos de muestra AI gratis - Descarga archivos de prueba gráficos vectoriales Adobe Illustrator',
+          description: 'Descarga archivos de muestra AI gráficos vectoriales Adobe Illustrator gratis para probar edición de gráficos vectoriales, conversión de archivos AI, compatibilidad de software de diseño y herramientas de diseño gráfico. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar Adobe Illustrator, editores de gráficos vectoriales, convertidores de archivos AI, software de diseño y plataformas profesionales de diseño gráfico.'
+        },
+        hero: {
+          title: 'Archivos de muestra AI',
+          description: 'Descarga archivos de muestra AI gráficos vectoriales Adobe Illustrator gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus editores de gráficos vectoriales, convertidores de archivos AI y software de diseño.'
+        },
+        about_description: 'Estos son archivos de prueba AI (Adobe Illustrator) gráficos vectoriales en varios tamaños para fines de prueba'
+      },
+      ase: {
+        meta: {
+          title: 'Descarga archivos de muestra ASE gratis - Archivos de prueba animaciones sprite Aseprite | MorphyHub',
+          description: 'Descarga archivos de muestra ASE animaciones sprite Aseprite gratis para probar edición de pixel art, animación de sprites, herramientas de desarrollo de juegos y software de animación 2D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar Aseprite, editores de pixel art, herramientas de animación de sprites, software de desarrollo de juegos y plataformas de animación 2D.',
+          keywords: 'archivos de muestra ASE, archivos de prueba ASE, descarga ejemplos ASE, archivos de prueba ASE gratis, archivos ASE Aseprite, archivos de prueba .ase, archivos animación sprite, archivos de prueba pixel art, archivos desarrollo juegos, ejemplos animación 2D, archivos de prueba Aseprite'
+        },
+        schema: {
+          name: 'Archivos de muestra ASE gratis - Descarga archivos de prueba animaciones sprite Aseprite',
+          description: 'Descarga archivos de muestra ASE animaciones sprite Aseprite gratis para probar edición de pixel art, animación de sprites, herramientas de desarrollo de juegos y software de animación 2D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar Aseprite, editores de pixel art, herramientas de animación de sprites, software de desarrollo de juegos y plataformas de animación 2D.'
+        },
+        hero: {
+          title: 'Archivos de muestra ASE',
+          description: 'Descarga archivos de muestra ASE animaciones sprite Aseprite gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus editores de pixel art, herramientas de animación de sprites y software de desarrollo de juegos.'
+        },
+        about_description: 'Estos son archivos de prueba ASE (animación sprite Aseprite) en varios tamaños para fines de prueba'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Descarga archivos de muestra Animation FBX gratis - Archivos de prueba animaciones 3D Autodesk FBX | MorphyHub',
+          description: 'Descarga archivos de muestra Animation FBX animaciones 3D Autodesk FBX gratis para probar animación 3D, rigging de personajes, datos de captura de movimiento y software de gráficos 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar software de animación 3D, motores de juegos, herramientas de captura de movimiento, plataformas de animación de personajes y aplicaciones de gráficos 3D.',
+          keywords: 'archivos de muestra Animation FBX, archivos de prueba animación FBX, descarga ejemplos animación FBX, archivos de prueba animación FBX gratis, archivos Autodesk FBX, archivos de prueba animación .fbx, archivos animación 3D, archivos de prueba animación personajes, archivos captura movimiento, ejemplos animación gráficos 3D, archivos FBX motor juegos'
+        },
+        schema: {
+          name: 'Archivos de muestra Animation FBX gratis - Descarga archivos de prueba animaciones 3D Autodesk FBX',
+          description: 'Descarga archivos de muestra Animation FBX animaciones 3D Autodesk FBX gratis para probar animación 3D, rigging de personajes, datos de captura de movimiento y software de gráficos 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar software de animación 3D, motores de juegos, herramientas de captura de movimiento, plataformas de animación de personajes y aplicaciones de gráficos 3D.'
+        },
+        hero: {
+          title: 'Archivos de muestra Animation FBX',
+          description: 'Descarga archivos de muestra Animation FBX animaciones 3D Autodesk FBX gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus software de animación 3D, motores de juegos y herramientas de captura de movimiento.'
+        },
+        about_description: 'Estos son archivos de prueba Animation FBX (animación 3D Autodesk FBX) en varios tamaños para fines de prueba'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Descarga archivos de muestra AssetBundle gratis - Archivos de prueba Unity AssetBundle para desarrollo de juegos | MorphyHub',
+          description: 'Descarga archivos de muestra AssetBundle Unity AssetBundle gratis para probar desarrollo de juegos Unity, carga de recursos, gestión de recursos de juegos y herramientas del motor Unity. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar motor Unity, cargadores de recursos de juegos, herramientas de desarrollo Unity, gestores de recursos de juegos y plataformas de desarrollo de juegos Unity.',
+          keywords: 'archivos de muestra AssetBundle, archivos de prueba AssetBundle, descarga ejemplos AssetBundle, archivos de prueba AssetBundle gratis, archivos Unity AssetBundle, archivos recursos Unity, archivos desarrollo juegos, archivos de prueba motor Unity, archivos de prueba cargador recursos juegos, ejemplos desarrollo Unity, archivos gestión recursos juegos'
+        },
+        schema: {
+          name: 'Archivos de muestra AssetBundle gratis - Descarga archivos de prueba Unity AssetBundle para desarrollo de juegos',
+          description: 'Descarga archivos de muestra AssetBundle Unity AssetBundle gratis para probar desarrollo de juegos Unity, carga de recursos, gestión de recursos de juegos y herramientas del motor Unity. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar motor Unity, cargadores de recursos de juegos, herramientas de desarrollo Unity, gestores de recursos de juegos y plataformas de desarrollo de juegos Unity.'
+        },
+        hero: {
+          title: 'Archivos de muestra AssetBundle',
+          description: 'Descarga archivos de muestra AssetBundle Unity AssetBundle gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus motor Unity, cargadores de recursos de juegos y herramientas de desarrollo Unity.'
+        },
+        about_description: 'Estos son archivos de prueba AssetBundle (Unity AssetBundle) en varios tamaños para fines de prueba'
+      },
+      blend: {
+        meta: {
+          title: 'Descarga archivos de muestra BLEND gratis - Archivos de prueba proyectos 3D Blender | MorphyHub',
+          description: 'Descarga archivos de muestra BLEND proyectos 3D Blender gratis para probar modelado 3D, compatibilidad de proyectos Blender, flujos de trabajo de animación 3D y software de gráficos 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar software Blender, herramientas de modelado 3D, visualizadores de proyectos Blender, plataformas de animación 3D y aplicaciones profesionales de gráficos 3D.',
+          keywords: 'archivos de muestra BLEND, archivos de prueba BLEND, descarga ejemplos BLEND, archivos de prueba BLEND gratis, archivos BLEND Blender, archivos de prueba .blend, archivos proyectos Blender, archivos de prueba modelado 3D, archivos de prueba Blender, ejemplos animación 3D, archivos gráficos 3D BLEND'
+        },
+        schema: {
+          name: 'Archivos de muestra BLEND gratis - Descarga archivos de prueba proyectos 3D Blender',
+          description: 'Descarga archivos de muestra BLEND proyectos 3D Blender gratis para probar modelado 3D, compatibilidad de proyectos Blender, flujos de trabajo de animación 3D y software de gráficos 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar software Blender, herramientas de modelado 3D, visualizadores de proyectos Blender, plataformas de animación 3D y aplicaciones profesionales de gráficos 3D.'
+        },
+        hero: {
+          title: 'Archivos de muestra BLEND',
+          description: 'Descarga archivos de muestra BLEND proyectos 3D Blender gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus software Blender, herramientas de modelado 3D y plataformas de animación 3D.'
+        },
+        about_description: 'Estos son archivos de prueba BLEND (proyecto 3D Blender) en varios tamaños para fines de prueba'
+      },
+      bvh: {
+        meta: {
+          title: 'Descarga archivos de muestra BVH gratis - Archivos de prueba captura de movimiento Biovision Hierarchy | MorphyHub',
+          description: 'Descarga archivos de muestra BVH captura de movimiento Biovision Hierarchy gratis para probar datos de captura de movimiento, animación de personajes, sistemas de animación esquelética y software de animación 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar visualizadores de captura de movimiento, herramientas de animación de personajes, sistemas de animación esquelética, plataformas de animación 3D y software de análisis de captura de movimiento.',
+          keywords: 'archivos de muestra BVH, archivos de prueba BVH, descarga ejemplos BVH, archivos de prueba BVH gratis, archivos BVH Biovision Hierarchy, archivos de prueba .bvh, archivos captura movimiento, archivos de prueba animación personajes, archivos animación esquelética, ejemplos animación 3D BVH, archivos análisis captura movimiento'
+        },
+        schema: {
+          name: 'Archivos de muestra BVH gratis - Descarga archivos de prueba captura de movimiento Biovision Hierarchy',
+          description: 'Descarga archivos de muestra BVH captura de movimiento Biovision Hierarchy gratis para probar datos de captura de movimiento, animación de personajes, sistemas de animación esquelética y software de animación 3D. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar visualizadores de captura de movimiento, herramientas de animación de personajes, sistemas de animación esquelética, plataformas de animación 3D y software de análisis de captura de movimiento.'
+        },
+        hero: {
+          title: 'Archivos de muestra BVH',
+          description: 'Descarga archivos de muestra BVH captura de movimiento Biovision Hierarchy gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus visualizadores de captura de movimiento, herramientas de animación de personajes y plataformas de animación 3D.'
+        },
+        about_description: 'Estos son archivos de prueba BVH (captura de movimiento Biovision Hierarchy) en varios tamaños para fines de prueba'
+      },
+      dwg: {
+        meta: {
+          title: 'Descarga archivos de muestra DWG gratis - Archivos de prueba dibujos AutoCAD para diseño CAD | MorphyHub',
+          description: 'Descarga archivos de muestra DWG dibujos AutoCAD gratis para probar software CAD, compatibilidad AutoCAD, herramientas de dibujo técnico y aplicaciones de diseño de ingeniería. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar AutoCAD, visualizadores CAD, software de dibujo técnico, herramientas de diseño de ingeniería y plataformas CAD profesionales.',
+          keywords: 'archivos de muestra DWG, archivos de prueba DWG, descarga ejemplos DWG, archivos de prueba DWG gratis, archivos DWG AutoCAD, archivos de prueba .dwg, archivos dibujos CAD, archivos de prueba AutoCAD, archivos dibujo técnico, ejemplos diseño ingeniería, archivos software CAD DWG'
+        },
+        schema: {
+          name: 'Archivos de muestra DWG gratis - Descarga archivos de prueba dibujos AutoCAD para diseño CAD',
+          description: 'Descarga archivos de muestra DWG dibujos AutoCAD gratis para probar software CAD, compatibilidad AutoCAD, herramientas de dibujo técnico y aplicaciones de diseño de ingeniería. Múltiples tamaños: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar AutoCAD, visualizadores CAD, software de dibujo técnico, herramientas de diseño de ingeniería y plataformas CAD profesionales.'
+        },
+        hero: {
+          title: 'Archivos de muestra DWG',
+          description: 'Descarga archivos de muestra DWG dibujos AutoCAD gratis para pruebas. Múltiples tamaños de archivo disponibles para probar tus software CAD, compatibilidad AutoCAD y herramientas de dibujo técnico.'
+        },
+        about_description: 'Estos son archivos de prueba DWG (dibujo AutoCAD) en varios tamaños para fines de prueba'
       }
     }
   }

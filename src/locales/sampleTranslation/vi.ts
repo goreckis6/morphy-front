@@ -1007,6 +1007,262 @@ export const vi: SamplePageTranslations = {
           description: 'Tải xuống tệp mẫu MDX MDX (Markdown + JSX) miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra parser MDX, công cụ tài liệu React và trình tạo trang web tĩnh của bạn.'
         },
         about_description: 'Đây là các tệp thử nghiệm MDX (Markdown + JSX) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      apk: {
+        meta: {
+          title: 'Tải xuống tệp mẫu APK miễn phí - Tệp thử nghiệm gói ứng dụng Android | MorphyHub',
+          description: 'Tải xuống tệp mẫu APK gói ứng dụng Android miễn phí để kiểm tra cài đặt ứng dụng Android, phân tích APK, kỹ thuật đảo ngược và công cụ phát triển di động. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cài đặt APK, trình giả lập Android, trình phân tích ứng dụng, trình quét bảo mật và nền tảng phát triển ứng dụng di động.',
+          keywords: 'tệp mẫu APK, tệp thử nghiệm APK, tải xuống mẫu APK, tệp thử nghiệm APK miễn phí, tệp APK Android, tệp thử nghiệm .apk, tệp gói ứng dụng Android, tệp thử nghiệm trình cài đặt APK, tệp thử nghiệm trình giả lập Android, mẫu phát triển ứng dụng di động, tệp kỹ thuật đảo ngược APK'
+        },
+        schema: {
+          name: 'Tệp mẫu APK miễn phí - Tải xuống tệp thử nghiệm gói ứng dụng Android',
+          description: 'Tải xuống tệp mẫu APK gói ứng dụng Android miễn phí để kiểm tra cài đặt ứng dụng Android, phân tích APK, kỹ thuật đảo ngược và công cụ phát triển di động. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cài đặt APK, trình giả lập Android, trình phân tích ứng dụng, trình quét bảo mật và nền tảng phát triển ứng dụng di động.'
+        },
+        hero: {
+          title: 'Tệp mẫu APK',
+          description: 'Tải xuống tệp mẫu APK gói ứng dụng Android miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ cài đặt ứng dụng Android, trình phân tích APK và nền tảng phát triển di động của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm APK (gói ứng dụng Android) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      appimage: {
+        meta: {
+          title: 'Tải xuống tệp mẫu AppImage miễn phí - Tệp thử nghiệm ứng dụng di động Linux | MorphyHub',
+          description: 'Tải xuống tệp mẫu AppImage ứng dụng di động Linux miễn phí để kiểm tra phân phối ứng dụng Linux, thực thi AppImage và tương thích đa phân phối. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình chạy AppImage, trình khởi chạy ứng dụng Linux, công cụ ứng dụng di động và phân phối phần mềm Linux phổ quát.',
+          keywords: 'tệp mẫu AppImage, tệp thử nghiệm AppImage, tải xuống mẫu AppImage, tệp thử nghiệm AppImage miễn phí, tệp AppImage Linux, tệp thử nghiệm .AppImage, ứng dụng di động Linux, tệp thử nghiệm trình chạy AppImage, tệp ứng dụng Linux, ứng dụng đa phân phối, mẫu phần mềm Linux phổ quát'
+        },
+        schema: {
+          name: 'Tệp mẫu AppImage miễn phí - Tải xuống tệp thử nghiệm ứng dụng di động Linux',
+          description: 'Tải xuống tệp mẫu AppImage ứng dụng di động Linux miễn phí để kiểm tra phân phối ứng dụng Linux, thực thi AppImage và tương thích đa phân phối. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình chạy AppImage, trình khởi chạy ứng dụng Linux, công cụ ứng dụng di động và phân phối phần mềm Linux phổ quát.'
+        },
+        hero: {
+          title: 'Tệp mẫu AppImage',
+          description: 'Tải xuống tệp mẫu AppImage ứng dụng di động Linux miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình chạy AppImage, trình khởi chạy ứng dụng Linux và công cụ ứng dụng di động của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AppImage (ứng dụng di động Linux) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      elf: {
+        meta: {
+          title: 'Tải xuống tệp mẫu ELF miễn phí - Tệp thử nghiệm Executable and Linkable Format cho Linux/Unix | MorphyHub',
+          description: 'Tải xuống tệp mẫu ELF Executable and Linkable Format miễn phí để kiểm tra phân tích nhị phân Linux/Unix, phân tích ELF, kỹ thuật đảo ngược và gỡ lỗi hệ thống. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích ELF, trình dịch ngược nhị phân, công cụ kỹ thuật đảo ngược, trình gỡ lỗi hệ thống và nền tảng phân tích thực thi Linux.',
+          keywords: 'tệp mẫu ELF, tệp thử nghiệm ELF, tải xuống mẫu ELF, tệp thử nghiệm ELF miễn phí, tệp ELF Linux, tệp thử nghiệm .elf, tệp thực thi Unix, tệp phân tích nhị phân ELF, tệp kỹ thuật đảo ngược ELF, tệp nhị phân Linux, tệp thử nghiệm trình dịch ngược ELF'
+        },
+        schema: {
+          name: 'Tệp mẫu ELF miễn phí - Tải xuống tệp thử nghiệm Executable and Linkable Format cho Linux/Unix',
+          description: 'Tải xuống tệp mẫu ELF Executable and Linkable Format miễn phí để kiểm tra phân tích nhị phân Linux/Unix, phân tích ELF, kỹ thuật đảo ngược và gỡ lỗi hệ thống. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích ELF, trình dịch ngược nhị phân, công cụ kỹ thuật đảo ngược, trình gỡ lỗi hệ thống và nền tảng phân tích thực thi Linux.'
+        },
+        hero: {
+          title: 'Tệp mẫu ELF',
+          description: 'Tải xuống tệp mẫu ELF Executable and Linkable Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình phân tích ELF, trình dịch ngược nhị phân và công cụ kỹ thuật đảo ngược của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm ELF (Executable and Linkable Format) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      exe: {
+        meta: {
+          title: 'Tải xuống tệp mẫu EXE miễn phí - Tệp thử nghiệm thực thi Windows | MorphyHub',
+          description: 'Tải xuống tệp mẫu EXE thực thi Windows miễn phí để kiểm tra thực thi ứng dụng Windows, phân tích EXE, phân tích nhị phân và công cụ phát triển Windows. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích thực thi Windows, trình dịch ngược nhị phân, công cụ kỹ thuật đảo ngược, nền tảng phân tích phần mềm độc hại và phát triển ứng dụng Windows.',
+          keywords: 'tệp mẫu EXE, tệp thử nghiệm EXE, tải xuống mẫu EXE, tệp thử nghiệm EXE miễn phí, tệp EXE Windows, tệp thử nghiệm .exe, tệp thực thi Windows, tệp phân tích nhị phân EXE, tệp ứng dụng Windows, tệp kỹ thuật đảo ngược EXE, tệp thử nghiệm trình dịch ngược nhị phân Windows'
+        },
+        schema: {
+          name: 'Tệp mẫu EXE miễn phí - Tải xuống tệp thử nghiệm thực thi Windows',
+          description: 'Tải xuống tệp mẫu EXE thực thi Windows miễn phí để kiểm tra thực thi ứng dụng Windows, phân tích EXE, phân tích nhị phân và công cụ phát triển Windows. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình phân tích thực thi Windows, trình dịch ngược nhị phân, công cụ kỹ thuật đảo ngược, nền tảng phân tích phần mềm độc hại và phát triển ứng dụng Windows.'
+        },
+        hero: {
+          title: 'Tệp mẫu EXE',
+          description: 'Tải xuống tệp mẫu EXE thực thi Windows miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình phân tích thực thi Windows, trình dịch ngược nhị phân và công cụ kỹ thuật đảo ngược của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm EXE (thực thi Windows) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ipa: {
+        meta: {
+          title: 'Tải xuống tệp mẫu IPA miễn phí - Tệp thử nghiệm gói ứng dụng iOS | MorphyHub',
+          description: 'Tải xuống tệp mẫu IPA gói ứng dụng iOS miễn phí để kiểm tra cài đặt ứng dụng iOS, phân tích IPA, phân phối ứng dụng iOS và công cụ phát triển di động. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cài đặt IPA, trình giả lập iOS, trình phân tích ứng dụng, công cụ phát triển iOS và nền tảng phân phối ứng dụng di động.',
+          keywords: 'tệp mẫu IPA, tệp thử nghiệm IPA, tải xuống mẫu IPA, tệp thử nghiệm IPA miễn phí, tệp IPA iOS, tệp thử nghiệm .ipa, tệp gói ứng dụng iOS, tệp thử nghiệm trình cài đặt IPA, tệp thử nghiệm trình giả lập iOS, mẫu phát triển ứng dụng di động, tệp phân phối ứng dụng iOS'
+        },
+        schema: {
+          name: 'Tệp mẫu IPA miễn phí - Tải xuống tệp thử nghiệm gói ứng dụng iOS',
+          description: 'Tải xuống tệp mẫu IPA gói ứng dụng iOS miễn phí để kiểm tra cài đặt ứng dụng iOS, phân tích IPA, phân phối ứng dụng iOS và công cụ phát triển di động. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cài đặt IPA, trình giả lập iOS, trình phân tích ứng dụng, công cụ phát triển iOS và nền tảng phân phối ứng dụng di động.'
+        },
+        hero: {
+          title: 'Tệp mẫu IPA',
+          description: 'Tải xuống tệp mẫu IPA gói ứng dụng iOS miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ cài đặt ứng dụng iOS, trình phân tích IPA và nền tảng phát triển di động của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm IPA (gói ứng dụng iOS) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      jar: {
+        meta: {
+          title: 'Tải xuống tệp mẫu JAR miễn phí - Tệp thử nghiệm lưu trữ Java | MorphyHub',
+          description: 'Tải xuống tệp mẫu JAR lưu trữ Java miễn phí để kiểm tra thực thi ứng dụng Java, trích xuất JAR, phân tích JAR và công cụ phát triển Java. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình trích xuất JAR, môi trường thực thi Java, trình phân tích JAR, công cụ phát triển Java và nền tảng triển khai ứng dụng Java.',
+          keywords: 'tệp mẫu JAR, tệp thử nghiệm JAR, tải xuống mẫu JAR, tệp thử nghiệm JAR miễn phí, tệp JAR Java, tệp thử nghiệm .jar, tệp lưu trữ Java, tệp thử nghiệm trình trích xuất JAR, tệp thử nghiệm runtime Java, mẫu phát triển Java, tệp phân tích JAR'
+        },
+        schema: {
+          name: 'Tệp mẫu JAR miễn phí - Tải xuống tệp thử nghiệm lưu trữ Java',
+          description: 'Tải xuống tệp mẫu JAR lưu trữ Java miễn phí để kiểm tra thực thi ứng dụng Java, trích xuất JAR, phân tích JAR và công cụ phát triển Java. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình trích xuất JAR, môi trường thực thi Java, trình phân tích JAR, công cụ phát triển Java và nền tảng triển khai ứng dụng Java.'
+        },
+        hero: {
+          title: 'Tệp mẫu JAR',
+          description: 'Tải xuống tệp mẫu JAR lưu trữ Java miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình trích xuất JAR, môi trường thực thi Java và công cụ phát triển Java của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm JAR (lưu trữ Java) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      crx: {
+        meta: {
+          title: 'Tải xuống tệp mẫu CRX miễn phí - Tệp thử nghiệm gói tiện ích mở rộng Chrome | MorphyHub',
+          description: 'Tải xuống tệp mẫu CRX gói tiện ích mở rộng Chrome miễn phí để kiểm tra cài đặt tiện ích mở rộng Chrome, phân tích CRX, phát triển tiện ích mở rộng trình duyệt và công cụ tiện ích mở rộng web. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cài đặt CRX, trình phân tích tiện ích mở rộng Chrome, công cụ phát triển tiện ích mở rộng trình duyệt và nền tảng phân phối tiện ích mở rộng web.',
+          keywords: 'tệp mẫu CRX, tệp thử nghiệm CRX, tải xuống mẫu CRX, tệp thử nghiệm CRX miễn phí, tệp CRX Chrome, tệp thử nghiệm .crx, tệp tiện ích mở rộng Chrome, tệp thử nghiệm trình cài đặt CRX, tệp tiện ích mở rộng trình duyệt, mẫu phát triển tiện ích mở rộng web, tệp phân tích tiện ích mở rộng Chrome'
+        },
+        schema: {
+          name: 'Tệp mẫu CRX miễn phí - Tải xuống tệp thử nghiệm gói tiện ích mở rộng Chrome',
+          description: 'Tải xuống tệp mẫu CRX gói tiện ích mở rộng Chrome miễn phí để kiểm tra cài đặt tiện ích mở rộng Chrome, phân tích CRX, phát triển tiện ích mở rộng trình duyệt và công cụ tiện ích mở rộng web. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cài đặt CRX, trình phân tích tiện ích mở rộng Chrome, công cụ phát triển tiện ích mở rộng trình duyệt và nền tảng phân phối tiện ích mở rộng web.'
+        },
+        hero: {
+          title: 'Tệp mẫu CRX',
+          description: 'Tải xuống tệp mẫu CRX gói tiện ích mở rộng Chrome miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra công cụ cài đặt tiện ích mở rộng Chrome, trình phân tích CRX và nền tảng phát triển tiện ích mở rộng trình duyệt của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm CRX (gói tiện ích mở rộng Chrome) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      '3ds': {
+        meta: {
+          title: 'Tải xuống tệp mẫu 3DS miễn phí - Tệp thử nghiệm mô hình 3D cho in 3D và mô hình hóa | MorphyHub',
+          description: 'Tải xuống tệp mẫu 3DS mô hình 3D miễn phí để kiểm tra phần mềm mô hình hóa 3D, công cụ in 3D, chuyển đổi lưới và ứng dụng trực quan hóa 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem mô hình 3D, máy in 3D, phần mềm CAD, trình chỉnh sửa lưới và ứng dụng đồ họa 3D.',
+          keywords: 'tệp mẫu 3DS, tệp thử nghiệm 3DS, tải xuống mẫu 3DS, tệp thử nghiệm 3DS miễn phí, tệp mô hình 3D 3DS, tệp thử nghiệm .3ds, tệp mô hình hóa 3D, tệp thử nghiệm in 3D, tệp CAD 3DS, tệp mô hình lưới, mẫu đồ họa 3D'
+        },
+        schema: {
+          name: 'Tệp mẫu 3DS miễn phí - Tải xuống tệp thử nghiệm mô hình 3D cho in 3D và mô hình hóa',
+          description: 'Tải xuống tệp mẫu 3DS mô hình 3D miễn phí để kiểm tra phần mềm mô hình hóa 3D, công cụ in 3D, chuyển đổi lưới và ứng dụng trực quan hóa 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem mô hình 3D, máy in 3D, phần mềm CAD, trình chỉnh sửa lưới và ứng dụng đồ họa 3D.'
+        },
+        hero: {
+          title: 'Tệp mẫu 3DS',
+          description: 'Tải xuống tệp mẫu 3DS mô hình 3D miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm mô hình hóa 3D, công cụ in 3D và ứng dụng trực quan hóa 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm 3DS (mô hình 3D) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      '3mf': {
+        meta: {
+          title: 'Tải xuống tệp mẫu 3MF miễn phí - Tệp thử nghiệm 3D Manufacturing Format cho in 3D | MorphyHub',
+          description: 'Tải xuống tệp mẫu 3MF 3D Manufacturing Format miễn phí để kiểm tra in 3D, sản xuất bổ sung, cắt mô hình 3D và tương thích máy in 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cắt máy in 3D, phần mềm sản xuất bổ sung, trình xem 3MF, quy trình làm việc in 3D và nền tảng sản xuất 3D hiện đại.',
+          keywords: 'tệp mẫu 3MF, tệp thử nghiệm 3MF, tải xuống mẫu 3MF, tệp thử nghiệm 3MF miễn phí, tệp in 3D 3MF, tệp thử nghiệm .3mf, tệp sản xuất bổ sung, tệp thử nghiệm trình cắt máy in 3D, tệp thử nghiệm trình xem 3MF, mẫu sản xuất 3D, tệp in 3D hiện đại'
+        },
+        schema: {
+          name: 'Tệp mẫu 3MF miễn phí - Tải xuống tệp thử nghiệm 3D Manufacturing Format cho in 3D',
+          description: 'Tải xuống tệp mẫu 3MF 3D Manufacturing Format miễn phí để kiểm tra in 3D, sản xuất bổ sung, cắt mô hình 3D và tương thích máy in 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình cắt máy in 3D, phần mềm sản xuất bổ sung, trình xem 3MF, quy trình làm việc in 3D và nền tảng sản xuất 3D hiện đại.'
+        },
+        hero: {
+          title: 'Tệp mẫu 3MF',
+          description: 'Tải xuống tệp mẫu 3MF 3D Manufacturing Format miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình cắt máy in 3D, phần mềm sản xuất bổ sung và quy trình làm việc in 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm 3MF (3D Manufacturing Format) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ai: {
+        meta: {
+          title: 'Tải xuống tệp mẫu AI miễn phí - Tệp thử nghiệm đồ họa vector Adobe Illustrator | MorphyHub',
+          description: 'Tải xuống tệp mẫu AI đồ họa vector Adobe Illustrator miễn phí để kiểm tra chỉnh sửa đồ họa vector, chuyển đổi tệp AI, tương thích phần mềm thiết kế và công cụ thiết kế đồ họa. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Adobe Illustrator, trình chỉnh sửa đồ họa vector, trình chuyển đổi tệp AI, phần mềm thiết kế và nền tảng thiết kế đồ họa chuyên nghiệp.',
+          keywords: 'tệp mẫu AI, tệp thử nghiệm AI, tải xuống mẫu AI, tệp thử nghiệm AI miễn phí, tệp AI Adobe Illustrator, tệp thử nghiệm .ai, tệp đồ họa vector, tệp thử nghiệm Illustrator, tệp phần mềm thiết kế, mẫu chỉnh sửa vector, tệp thiết kế đồ họa AI'
+        },
+        schema: {
+          name: 'Tệp mẫu AI miễn phí - Tải xuống tệp thử nghiệm đồ họa vector Adobe Illustrator',
+          description: 'Tải xuống tệp mẫu AI đồ họa vector Adobe Illustrator miễn phí để kiểm tra chỉnh sửa đồ họa vector, chuyển đổi tệp AI, tương thích phần mềm thiết kế và công cụ thiết kế đồ họa. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Adobe Illustrator, trình chỉnh sửa đồ họa vector, trình chuyển đổi tệp AI, phần mềm thiết kế và nền tảng thiết kế đồ họa chuyên nghiệp.'
+        },
+        hero: {
+          title: 'Tệp mẫu AI',
+          description: 'Tải xuống tệp mẫu AI đồ họa vector Adobe Illustrator miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình chỉnh sửa đồ họa vector, trình chuyển đổi tệp AI và phần mềm thiết kế của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AI (Adobe Illustrator) đồ họa vector với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      ase: {
+        meta: {
+          title: 'Tải xuống tệp mẫu ASE miễn phí - Tệp thử nghiệm hoạt hình sprite Aseprite | MorphyHub',
+          description: 'Tải xuống tệp mẫu ASE hoạt hình sprite Aseprite miễn phí để kiểm tra chỉnh sửa pixel art, hoạt hình sprite, công cụ phát triển trò chơi và phần mềm hoạt hình 2D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Aseprite, trình chỉnh sửa pixel art, công cụ hoạt hình sprite, phần mềm phát triển trò chơi và nền tảng hoạt hình 2D.',
+          keywords: 'tệp mẫu ASE, tệp thử nghiệm ASE, tải xuống mẫu ASE, tệp thử nghiệm ASE miễn phí, tệp ASE Aseprite, tệp thử nghiệm .ase, tệp hoạt hình sprite, tệp thử nghiệm pixel art, tệp phát triển trò chơi, mẫu hoạt hình 2D, tệp thử nghiệm Aseprite'
+        },
+        schema: {
+          name: 'Tệp mẫu ASE miễn phí - Tải xuống tệp thử nghiệm hoạt hình sprite Aseprite',
+          description: 'Tải xuống tệp mẫu ASE hoạt hình sprite Aseprite miễn phí để kiểm tra chỉnh sửa pixel art, hoạt hình sprite, công cụ phát triển trò chơi và phần mềm hoạt hình 2D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra Aseprite, trình chỉnh sửa pixel art, công cụ hoạt hình sprite, phần mềm phát triển trò chơi và nền tảng hoạt hình 2D.'
+        },
+        hero: {
+          title: 'Tệp mẫu ASE',
+          description: 'Tải xuống tệp mẫu ASE hoạt hình sprite Aseprite miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình chỉnh sửa pixel art, công cụ hoạt hình sprite và phần mềm phát triển trò chơi của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm ASE (hoạt hình sprite Aseprite) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Tải xuống tệp mẫu Animation FBX miễn phí - Tệp thử nghiệm hoạt hình 3D Autodesk FBX | MorphyHub',
+          description: 'Tải xuống tệp mẫu Animation FBX hoạt hình 3D Autodesk FBX miễn phí để kiểm tra hoạt hình 3D, rigging nhân vật, dữ liệu motion capture và phần mềm đồ họa 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phần mềm hoạt hình 3D, game engine, công cụ motion capture, nền tảng hoạt hình nhân vật và ứng dụng đồ họa 3D.',
+          keywords: 'tệp mẫu Animation FBX, tệp thử nghiệm hoạt hình FBX, tải xuống mẫu hoạt hình FBX, tệp thử nghiệm hoạt hình FBX miễn phí, tệp Autodesk FBX, tệp thử nghiệm hoạt hình .fbx, tệp hoạt hình 3D, tệp thử nghiệm hoạt hình nhân vật, tệp motion capture, mẫu hoạt hình đồ họa 3D, tệp FBX game engine'
+        },
+        schema: {
+          name: 'Tệp mẫu Animation FBX miễn phí - Tải xuống tệp thử nghiệm hoạt hình 3D Autodesk FBX',
+          description: 'Tải xuống tệp mẫu Animation FBX hoạt hình 3D Autodesk FBX miễn phí để kiểm tra hoạt hình 3D, rigging nhân vật, dữ liệu motion capture và phần mềm đồ họa 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phần mềm hoạt hình 3D, game engine, công cụ motion capture, nền tảng hoạt hình nhân vật và ứng dụng đồ họa 3D.'
+        },
+        hero: {
+          title: 'Tệp mẫu Animation FBX',
+          description: 'Tải xuống tệp mẫu Animation FBX hoạt hình 3D Autodesk FBX miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm hoạt hình 3D, game engine và công cụ motion capture của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm Animation FBX (hoạt hình 3D Autodesk FBX) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Tải xuống tệp mẫu AssetBundle miễn phí - Tệp thử nghiệm Unity AssetBundle cho phát triển trò chơi | MorphyHub',
+          description: 'Tải xuống tệp mẫu AssetBundle Unity AssetBundle miễn phí để kiểm tra phát triển trò chơi Unity, tải tài sản, quản lý tài nguyên trò chơi và công cụ engine Unity. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra engine Unity, trình tải tài sản trò chơi, công cụ phát triển Unity, trình quản lý tài nguyên trò chơi và nền tảng phát triển trò chơi Unity.',
+          keywords: 'tệp mẫu AssetBundle, tệp thử nghiệm AssetBundle, tải xuống mẫu AssetBundle, tệp thử nghiệm AssetBundle miễn phí, tệp Unity AssetBundle, tệp tài sản Unity, tệp phát triển trò chơi, tệp thử nghiệm engine Unity, tệp thử nghiệm trình tải tài sản trò chơi, mẫu phát triển Unity, tệp quản lý tài nguyên trò chơi'
+        },
+        schema: {
+          name: 'Tệp mẫu AssetBundle miễn phí - Tải xuống tệp thử nghiệm Unity AssetBundle cho phát triển trò chơi',
+          description: 'Tải xuống tệp mẫu AssetBundle Unity AssetBundle miễn phí để kiểm tra phát triển trò chơi Unity, tải tài sản, quản lý tài nguyên trò chơi và công cụ engine Unity. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra engine Unity, trình tải tài sản trò chơi, công cụ phát triển Unity, trình quản lý tài nguyên trò chơi và nền tảng phát triển trò chơi Unity.'
+        },
+        hero: {
+          title: 'Tệp mẫu AssetBundle',
+          description: 'Tải xuống tệp mẫu AssetBundle Unity AssetBundle miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra engine Unity, trình tải tài sản trò chơi và công cụ phát triển Unity của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm AssetBundle (Unity AssetBundle) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      blend: {
+        meta: {
+          title: 'Tải xuống tệp mẫu BLEND miễn phí - Tệp thử nghiệm dự án 3D Blender | MorphyHub',
+          description: 'Tải xuống tệp mẫu BLEND dự án 3D Blender miễn phí để kiểm tra mô hình hóa 3D, tương thích dự án Blender, quy trình làm việc hoạt hình 3D và phần mềm đồ họa 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phần mềm Blender, công cụ mô hình hóa 3D, trình xem dự án Blender, nền tảng hoạt hình 3D và ứng dụng đồ họa 3D chuyên nghiệp.',
+          keywords: 'tệp mẫu BLEND, tệp thử nghiệm BLEND, tải xuống mẫu BLEND, tệp thử nghiệm BLEND miễn phí, tệp BLEND Blender, tệp thử nghiệm .blend, tệp dự án Blender, tệp thử nghiệm mô hình hóa 3D, tệp thử nghiệm Blender, mẫu hoạt hình 3D, tệp đồ họa 3D BLEND'
+        },
+        schema: {
+          name: 'Tệp mẫu BLEND miễn phí - Tải xuống tệp thử nghiệm dự án 3D Blender',
+          description: 'Tải xuống tệp mẫu BLEND dự án 3D Blender miễn phí để kiểm tra mô hình hóa 3D, tương thích dự án Blender, quy trình làm việc hoạt hình 3D và phần mềm đồ họa 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra phần mềm Blender, công cụ mô hình hóa 3D, trình xem dự án Blender, nền tảng hoạt hình 3D và ứng dụng đồ họa 3D chuyên nghiệp.'
+        },
+        hero: {
+          title: 'Tệp mẫu BLEND',
+          description: 'Tải xuống tệp mẫu BLEND dự án 3D Blender miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm Blender, công cụ mô hình hóa 3D và nền tảng hoạt hình 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm BLEND (dự án 3D Blender) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      bvh: {
+        meta: {
+          title: 'Tải xuống tệp mẫu BVH miễn phí - Tệp thử nghiệm motion capture Biovision Hierarchy | MorphyHub',
+          description: 'Tải xuống tệp mẫu BVH motion capture Biovision Hierarchy miễn phí để kiểm tra dữ liệu motion capture, hoạt hình nhân vật, hệ thống hoạt hình khung xương và phần mềm hoạt hình 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem motion capture, công cụ hoạt hình nhân vật, hệ thống hoạt hình khung xương, nền tảng hoạt hình 3D và phần mềm phân tích motion capture.',
+          keywords: 'tệp mẫu BVH, tệp thử nghiệm BVH, tải xuống mẫu BVH, tệp thử nghiệm BVH miễn phí, tệp BVH Biovision Hierarchy, tệp thử nghiệm .bvh, tệp motion capture, tệp thử nghiệm hoạt hình nhân vật, tệp hoạt hình khung xương, mẫu hoạt hình 3D BVH, tệp phân tích motion capture'
+        },
+        schema: {
+          name: 'Tệp mẫu BVH miễn phí - Tải xuống tệp thử nghiệm motion capture Biovision Hierarchy',
+          description: 'Tải xuống tệp mẫu BVH motion capture Biovision Hierarchy miễn phí để kiểm tra dữ liệu motion capture, hoạt hình nhân vật, hệ thống hoạt hình khung xương và phần mềm hoạt hình 3D. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra trình xem motion capture, công cụ hoạt hình nhân vật, hệ thống hoạt hình khung xương, nền tảng hoạt hình 3D và phần mềm phân tích motion capture.'
+        },
+        hero: {
+          title: 'Tệp mẫu BVH',
+          description: 'Tải xuống tệp mẫu BVH motion capture Biovision Hierarchy miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra trình xem motion capture, công cụ hoạt hình nhân vật và nền tảng hoạt hình 3D của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm BVH (motion capture Biovision Hierarchy) với nhiều kích thước khác nhau cho mục đích kiểm tra'
+      },
+      dwg: {
+        meta: {
+          title: 'Tải xuống tệp mẫu DWG miễn phí - Tệp thử nghiệm bản vẽ AutoCAD cho thiết kế CAD | MorphyHub',
+          description: 'Tải xuống tệp mẫu DWG bản vẽ AutoCAD miễn phí để kiểm tra phần mềm CAD, tương thích AutoCAD, công cụ vẽ kỹ thuật và ứng dụng thiết kế kỹ thuật. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra AutoCAD, trình xem CAD, phần mềm vẽ kỹ thuật, công cụ thiết kế kỹ thuật và nền tảng CAD chuyên nghiệp.',
+          keywords: 'tệp mẫu DWG, tệp thử nghiệm DWG, tải xuống mẫu DWG, tệp thử nghiệm DWG miễn phí, tệp DWG AutoCAD, tệp thử nghiệm .dwg, tệp bản vẽ CAD, tệp thử nghiệm AutoCAD, tệp vẽ kỹ thuật, mẫu thiết kế kỹ thuật, tệp phần mềm CAD DWG'
+        },
+        schema: {
+          name: 'Tệp mẫu DWG miễn phí - Tải xuống tệp thử nghiệm bản vẽ AutoCAD cho thiết kế CAD',
+          description: 'Tải xuống tệp mẫu DWG bản vẽ AutoCAD miễn phí để kiểm tra phần mềm CAD, tương thích AutoCAD, công cụ vẽ kỹ thuật và ứng dụng thiết kế kỹ thuật. Nhiều kích thước: 100 KB, 1 MB, 5 MB, 50 MB và 100 MB. Hoàn hảo để kiểm tra AutoCAD, trình xem CAD, phần mềm vẽ kỹ thuật, công cụ thiết kế kỹ thuật và nền tảng CAD chuyên nghiệp.'
+        },
+        hero: {
+          title: 'Tệp mẫu DWG',
+          description: 'Tải xuống tệp mẫu DWG bản vẽ AutoCAD miễn phí để kiểm tra. Nhiều kích thước tệp có sẵn để kiểm tra phần mềm CAD, tương thích AutoCAD và công cụ vẽ kỹ thuật của bạn.'
+        },
+        about_description: 'Đây là các tệp thử nghiệm DWG (bản vẽ AutoCAD) với nhiều kích thước khác nhau cho mục đích kiểm tra'
       }
     }
   }

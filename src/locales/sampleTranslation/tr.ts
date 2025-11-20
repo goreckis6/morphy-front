@@ -1007,6 +1007,262 @@ export const tr: SamplePageTranslations = {
           description: 'Test için ücretsiz MDX MDX (Markdown + JSX) örnek dosyalarını indirin. MDX parser\'larınızı, React dokümantasyon araçlarınızı ve statik site oluşturucularınızı test etmek için birden fazla dosya boyutu mevcut.'
         },
         about_description: 'Bunlar test amaçlı çeşitli boyutlarda MDX (Markdown + JSX) dosyalarıdır'
+      },
+      apk: {
+        meta: {
+          title: 'Ücretsiz APK örnek dosyaları indirin - Android uygulama paketi test dosyaları | MorphyHub',
+          description: 'Android uygulama kurulumu, APK analizi, tersine mühendislik ve mobil geliştirme araçlarını test etmek için ücretsiz APK Android uygulama paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. APK yükleyiciler, Android emülatörler, uygulama analizörleri, güvenlik tarayıcıları ve mobil uygulama geliştirme platformlarını test etmek için mükemmel.',
+          keywords: 'APK örnek dosyaları, APK test dosyaları, APK örnekleri indir, ücretsiz APK test dosyaları, Android APK dosyaları, .apk test dosyaları, Android uygulama paketi dosyaları, APK yükleyici test dosyaları, Android emülatör test dosyaları, mobil uygulama geliştirme örnekleri, APK tersine mühendislik dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz APK örnek dosyaları - Android uygulama paketi test dosyalarını indirin',
+          description: 'Android uygulama kurulumu, APK analizi, tersine mühendislik ve mobil geliştirme araçlarını test etmek için ücretsiz APK Android uygulama paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. APK yükleyiciler, Android emülatörler, uygulama analizörleri, güvenlik tarayıcıları ve mobil uygulama geliştirme platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'APK örnek dosyaları',
+          description: 'Test için ücretsiz APK Android uygulama paketi örnek dosyalarını indirin. Android uygulama kurulum araçlarınızı, APK analizörlerinizi ve mobil geliştirme platformlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda APK (Android uygulama paketi) dosyalarıdır'
+      },
+      appimage: {
+        meta: {
+          title: 'Ücretsiz AppImage örnek dosyaları indirin - Linux taşınabilir uygulama test dosyaları | MorphyHub',
+          description: 'Linux uygulama dağıtımı, AppImage yürütme ve dağıtımlar arası uyumluluğu test etmek için ücretsiz AppImage Linux taşınabilir uygulama örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AppImage çalıştırıcıları, Linux uygulama başlatıcıları, taşınabilir uygulama araçları ve evrensel Linux yazılım dağıtımını test etmek için mükemmel.',
+          keywords: 'AppImage örnek dosyaları, AppImage test dosyaları, AppImage örnekleri indir, ücretsiz AppImage test dosyaları, Linux AppImage dosyaları, .AppImage test dosyaları, taşınabilir Linux uygulamaları, AppImage çalıştırıcı test dosyaları, Linux uygulama dosyaları, dağıtımlar arası uygulamalar, evrensel Linux yazılım örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz AppImage örnek dosyaları - Linux taşınabilir uygulama test dosyalarını indirin',
+          description: 'Linux uygulama dağıtımı, AppImage yürütme ve dağıtımlar arası uyumluluğu test etmek için ücretsiz AppImage Linux taşınabilir uygulama örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AppImage çalıştırıcıları, Linux uygulama başlatıcıları, taşınabilir uygulama araçları ve evrensel Linux yazılım dağıtımını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AppImage örnek dosyaları',
+          description: 'Test için ücretsiz AppImage Linux taşınabilir uygulama örnek dosyalarını indirin. AppImage çalıştırıcılarınızı, Linux uygulama başlatıcılarınızı ve taşınabilir uygulama araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AppImage (Linux taşınabilir uygulama) dosyalarıdır'
+      },
+      elf: {
+        meta: {
+          title: 'Ücretsiz ELF örnek dosyaları indirin - Linux/Unix için Executable and Linkable Format test dosyaları | MorphyHub',
+          description: 'Linux/Unix ikili analizi, ELF ayrıştırma, tersine mühendislik ve sistem hata ayıklamayı test etmek için ücretsiz ELF Executable and Linkable Format örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ELF analizörleri, ikili ayrıştırıcılar, tersine mühendislik araçları, sistem hata ayıklayıcıları ve Linux çalıştırılabilir analiz platformlarını test etmek için mükemmel.',
+          keywords: 'ELF örnek dosyaları, ELF test dosyaları, ELF örnekleri indir, ücretsiz ELF test dosyaları, Linux ELF dosyaları, .elf test dosyaları, Unix çalıştırılabilir dosyalar, ELF ikili analiz dosyaları, tersine mühendislik ELF dosyaları, Linux ikili dosyalar, ELF ayrıştırıcı test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz ELF örnek dosyaları - Linux/Unix için Executable and Linkable Format test dosyalarını indirin',
+          description: 'Linux/Unix ikili analizi, ELF ayrıştırma, tersine mühendislik ve sistem hata ayıklamayı test etmek için ücretsiz ELF Executable and Linkable Format örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. ELF analizörleri, ikili ayrıştırıcılar, tersine mühendislik araçları, sistem hata ayıklayıcıları ve Linux çalıştırılabilir analiz platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ELF örnek dosyaları',
+          description: 'Test için ücretsiz ELF Executable and Linkable Format örnek dosyalarını indirin. ELF analizörlerinizi, ikili ayrıştırıcılarınızı ve tersine mühendislik araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ELF (Executable and Linkable Format) dosyalarıdır'
+      },
+      exe: {
+        meta: {
+          title: 'Ücretsiz EXE örnek dosyaları indirin - Windows çalıştırılabilir test dosyaları | MorphyHub',
+          description: 'Windows uygulama yürütme, EXE analizi, ikili ayrıştırma ve Windows geliştirme araçlarını test etmek için ücretsiz EXE Windows çalıştırılabilir örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Windows çalıştırılabilir analizörleri, ikili ayrıştırıcılar, tersine mühendislik araçları, kötü amaçlı yazılım analiz platformları ve Windows uygulama geliştirmeyi test etmek için mükemmel.',
+          keywords: 'EXE örnek dosyaları, EXE test dosyaları, EXE örnekleri indir, ücretsiz EXE test dosyaları, Windows EXE dosyaları, .exe test dosyaları, Windows çalıştırılabilir dosyalar, EXE ikili analiz dosyaları, Windows uygulama dosyaları, tersine mühendislik EXE dosyaları, Windows ikili ayrıştırıcı test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz EXE örnek dosyaları - Windows çalıştırılabilir test dosyalarını indirin',
+          description: 'Windows uygulama yürütme, EXE analizi, ikili ayrıştırma ve Windows geliştirme araçlarını test etmek için ücretsiz EXE Windows çalıştırılabilir örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Windows çalıştırılabilir analizörleri, ikili ayrıştırıcılar, tersine mühendislik araçları, kötü amaçlı yazılım analiz platformları ve Windows uygulama geliştirmeyi test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'EXE örnek dosyaları',
+          description: 'Test için ücretsiz EXE Windows çalıştırılabilir örnek dosyalarını indirin. Windows çalıştırılabilir analizörlerinizi, ikili ayrıştırıcılarınızı ve tersine mühendislik araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda EXE (Windows çalıştırılabilir) dosyalarıdır'
+      },
+      ipa: {
+        meta: {
+          title: 'Ücretsiz IPA örnek dosyaları indirin - iOS uygulama paketi test dosyaları | MorphyHub',
+          description: 'iOS uygulama kurulumu, IPA analizi, iOS uygulama dağıtımı ve mobil geliştirme araçlarını test etmek için ücretsiz IPA iOS uygulama paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IPA yükleyiciler, iOS simülatörleri, uygulama analizörleri, iOS geliştirme araçları ve mobil uygulama dağıtım platformlarını test etmek için mükemmel.',
+          keywords: 'IPA örnek dosyaları, IPA test dosyaları, IPA örnekleri indir, ücretsiz IPA test dosyaları, iOS IPA dosyaları, .ipa test dosyaları, iOS uygulama paketi dosyaları, IPA yükleyici test dosyaları, iOS simülatör test dosyaları, mobil uygulama geliştirme örnekleri, iOS uygulama dağıtım dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz IPA örnek dosyaları - iOS uygulama paketi test dosyalarını indirin',
+          description: 'iOS uygulama kurulumu, IPA analizi, iOS uygulama dağıtımı ve mobil geliştirme araçlarını test etmek için ücretsiz IPA iOS uygulama paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. IPA yükleyiciler, iOS simülatörleri, uygulama analizörleri, iOS geliştirme araçları ve mobil uygulama dağıtım platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'IPA örnek dosyaları',
+          description: 'Test için ücretsiz IPA iOS uygulama paketi örnek dosyalarını indirin. iOS uygulama kurulum araçlarınızı, IPA analizörlerinizi ve mobil geliştirme platformlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda IPA (iOS uygulama paketi) dosyalarıdır'
+      },
+      jar: {
+        meta: {
+          title: 'Ücretsiz JAR örnek dosyaları indirin - Java arşiv test dosyaları | MorphyHub',
+          description: 'Java uygulama yürütme, JAR çıkarma, JAR analizi ve Java geliştirme araçlarını test etmek için ücretsiz JAR Java arşiv örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JAR çıkarıcıları, Java çalışma zamanı ortamları, JAR analizörleri, Java geliştirme araçları ve Java uygulama dağıtım platformlarını test etmek için mükemmel.',
+          keywords: 'JAR örnek dosyaları, JAR test dosyaları, JAR örnekleri indir, ücretsiz JAR test dosyaları, Java JAR dosyaları, .jar test dosyaları, Java arşiv dosyaları, JAR çıkarıcı test dosyaları, Java çalışma zamanı test dosyaları, Java geliştirme örnekleri, JAR analiz dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz JAR örnek dosyaları - Java arşiv test dosyalarını indirin',
+          description: 'Java uygulama yürütme, JAR çıkarma, JAR analizi ve Java geliştirme araçlarını test etmek için ücretsiz JAR Java arşiv örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. JAR çıkarıcıları, Java çalışma zamanı ortamları, JAR analizörleri, Java geliştirme araçları ve Java uygulama dağıtım platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'JAR örnek dosyaları',
+          description: 'Test için ücretsiz JAR Java arşiv örnek dosyalarını indirin. JAR çıkarıcılarınızı, Java çalışma zamanı ortamlarınızı ve Java geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda JAR (Java arşiv) dosyalarıdır'
+      },
+      crx: {
+        meta: {
+          title: 'Ücretsiz CRX örnek dosyaları indirin - Chrome uzantı paketi test dosyaları | MorphyHub',
+          description: 'Chrome uzantı kurulumu, CRX analizi, tarayıcı uzantı geliştirme ve web uzantı araçlarını test etmek için ücretsiz CRX Chrome uzantı paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CRX yükleyiciler, Chrome uzantı analizörleri, tarayıcı uzantı geliştirme araçları ve web uzantı dağıtım platformlarını test etmek için mükemmel.',
+          keywords: 'CRX örnek dosyaları, CRX test dosyaları, CRX örnekleri indir, ücretsiz CRX test dosyaları, Chrome CRX dosyaları, .crx test dosyaları, Chrome uzantı dosyaları, CRX yükleyici test dosyaları, tarayıcı uzantı dosyaları, web uzantı geliştirme örnekleri, Chrome uzantı analiz dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz CRX örnek dosyaları - Chrome uzantı paketi test dosyalarını indirin',
+          description: 'Chrome uzantı kurulumu, CRX analizi, tarayıcı uzantı geliştirme ve web uzantı araçlarını test etmek için ücretsiz CRX Chrome uzantı paketi örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. CRX yükleyiciler, Chrome uzantı analizörleri, tarayıcı uzantı geliştirme araçları ve web uzantı dağıtım platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'CRX örnek dosyaları',
+          description: 'Test için ücretsiz CRX Chrome uzantı paketi örnek dosyalarını indirin. Chrome uzantı kurulum araçlarınızı, CRX analizörlerinizi ve tarayıcı uzantı geliştirme platformlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda CRX (Chrome uzantı paketi) dosyalarıdır'
+      },
+      '3ds': {
+        meta: {
+          title: 'Ücretsiz 3DS örnek dosyaları indirin - 3D yazdırma ve modelleme için 3D model test dosyaları | MorphyHub',
+          description: '3D modelleme yazılımı, 3D yazdırma araçları, mesh dönüştürme ve 3D görselleştirme uygulamalarını test etmek için ücretsiz 3DS 3D model örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D model görüntüleyiciler, 3D yazıcılar, CAD yazılımı, mesh düzenleyiciler ve 3D grafik uygulamalarını test etmek için mükemmel.',
+          keywords: '3DS örnek dosyaları, 3DS test dosyaları, 3DS örnekleri indir, ücretsiz 3DS test dosyaları, 3D model 3DS dosyaları, .3ds test dosyaları, 3D modelleme dosyaları, 3D yazdırma test dosyaları, CAD 3DS dosyaları, mesh model dosyaları, 3D grafik örnekleri'
+        },
+        schema: {
+          name: 'Ücretsiz 3DS örnek dosyaları - 3D yazdırma ve modelleme için 3D model test dosyalarını indirin',
+          description: '3D modelleme yazılımı, 3D yazdırma araçları, mesh dönüştürme ve 3D görselleştirme uygulamalarını test etmek için ücretsiz 3DS 3D model örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D model görüntüleyiciler, 3D yazıcılar, CAD yazılımı, mesh düzenleyiciler ve 3D grafik uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: '3DS örnek dosyaları',
+          description: 'Test için ücretsiz 3DS 3D model örnek dosyalarını indirin. 3D modelleme yazılımınızı, 3D yazdırma araçlarınızı ve 3D görselleştirme uygulamalarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda 3DS (3D model) dosyalarıdır'
+      },
+      '3mf': {
+        meta: {
+          title: 'Ücretsiz 3MF örnek dosyaları indirin - 3D yazdırma için 3D Manufacturing Format test dosyaları | MorphyHub',
+          description: '3D yazdırma, eklemeli üretim, 3D model dilimleme ve 3D yazıcı uyumluluğunu test etmek için ücretsiz 3MF 3D Manufacturing Format örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D yazıcı dilimleyiciler, eklemeli üretim yazılımı, 3MF görüntüleyiciler, 3D yazdırma iş akışları ve modern 3D üretim platformlarını test etmek için mükemmel.',
+          keywords: '3MF örnek dosyaları, 3MF test dosyaları, 3MF örnekleri indir, ücretsiz 3MF test dosyaları, 3D yazdırma 3MF dosyaları, .3mf test dosyaları, eklemeli üretim dosyaları, 3D yazıcı dilimleyici test dosyaları, 3MF görüntüleyici test dosyaları, 3D üretim örnekleri, modern 3D yazdırma dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz 3MF örnek dosyaları - 3D yazdırma için 3D Manufacturing Format test dosyalarını indirin',
+          description: '3D yazdırma, eklemeli üretim, 3D model dilimleme ve 3D yazıcı uyumluluğunu test etmek için ücretsiz 3MF 3D Manufacturing Format örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D yazıcı dilimleyiciler, eklemeli üretim yazılımı, 3MF görüntüleyiciler, 3D yazdırma iş akışları ve modern 3D üretim platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: '3MF örnek dosyaları',
+          description: 'Test için ücretsiz 3MF 3D Manufacturing Format örnek dosyalarını indirin. 3D yazıcı dilimleyicilerinizi, eklemeli üretim yazılımınızı ve 3D yazdırma iş akışlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda 3MF (3D Manufacturing Format) dosyalarıdır'
+      },
+      ai: {
+        meta: {
+          title: 'Ücretsiz AI örnek dosyaları indirin - Adobe Illustrator vektör grafik test dosyaları | MorphyHub',
+          description: 'Vektör grafik düzenleme, AI dosya dönüştürme, tasarım yazılımı uyumluluğu ve grafik tasarım araçlarını test etmek için ücretsiz AI Adobe Illustrator vektör grafik örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Adobe Illustrator, vektör grafik düzenleyiciler, AI dosya dönüştürücüler, tasarım yazılımı ve profesyonel grafik tasarım platformlarını test etmek için mükemmel.',
+          keywords: 'AI örnek dosyaları, AI test dosyaları, AI örnekleri indir, ücretsiz AI test dosyaları, Adobe Illustrator AI dosyaları, .ai test dosyaları, vektör grafik dosyaları, Illustrator test dosyaları, tasarım yazılımı dosyaları, vektör düzenleme örnekleri, grafik tasarım AI dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz AI örnek dosyaları - Adobe Illustrator vektör grafik test dosyalarını indirin',
+          description: 'Vektör grafik düzenleme, AI dosya dönüştürme, tasarım yazılımı uyumluluğu ve grafik tasarım araçlarını test etmek için ücretsiz AI Adobe Illustrator vektör grafik örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Adobe Illustrator, vektör grafik düzenleyiciler, AI dosya dönüştürücüler, tasarım yazılımı ve profesyonel grafik tasarım platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AI örnek dosyaları',
+          description: 'Test için ücretsiz AI Adobe Illustrator vektör grafik örnek dosyalarını indirin. Vektör grafik düzenleyicilerinizi, AI dosya dönüştürücülerinizi ve tasarım yazılımınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AI (Adobe Illustrator) vektör grafik dosyalarıdır'
+      },
+      ase: {
+        meta: {
+          title: 'Ücretsiz ASE örnek dosyaları indirin - Aseprite sprite animasyon test dosyaları | MorphyHub',
+          description: 'Pixel art düzenleme, sprite animasyon, oyun geliştirme araçları ve 2D animasyon yazılımını test etmek için ücretsiz ASE Aseprite sprite animasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Aseprite, pixel art düzenleyiciler, sprite animasyon araçları, oyun geliştirme yazılımı ve 2D animasyon platformlarını test etmek için mükemmel.',
+          keywords: 'ASE örnek dosyaları, ASE test dosyaları, ASE örnekleri indir, ücretsiz ASE test dosyaları, Aseprite ASE dosyaları, .ase test dosyaları, sprite animasyon dosyaları, pixel art test dosyaları, oyun geliştirme dosyaları, 2D animasyon örnekleri, Aseprite test dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz ASE örnek dosyaları - Aseprite sprite animasyon test dosyalarını indirin',
+          description: 'Pixel art düzenleme, sprite animasyon, oyun geliştirme araçları ve 2D animasyon yazılımını test etmek için ücretsiz ASE Aseprite sprite animasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Aseprite, pixel art düzenleyiciler, sprite animasyon araçları, oyun geliştirme yazılımı ve 2D animasyon platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'ASE örnek dosyaları',
+          description: 'Test için ücretsiz ASE Aseprite sprite animasyon örnek dosyalarını indirin. Pixel art düzenleyicilerinizi, sprite animasyon araçlarınızı ve oyun geliştirme yazılımınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda ASE (Aseprite sprite animasyon) dosyalarıdır'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Ücretsiz Animation FBX örnek dosyaları indirin - Autodesk FBX 3D animasyon test dosyaları | MorphyHub',
+          description: '3D animasyon, karakter rigging, hareket yakalama verileri ve 3D grafik yazılımını test etmek için ücretsiz Animation FBX Autodesk FBX 3D animasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D animasyon yazılımı, oyun motorları, hareket yakalama araçları, karakter animasyon platformları ve 3D grafik uygulamalarını test etmek için mükemmel.',
+          keywords: 'Animation FBX örnek dosyaları, FBX animasyon test dosyaları, FBX animasyon örnekleri indir, ücretsiz FBX animasyon test dosyaları, Autodesk FBX dosyaları, .fbx animasyon test dosyaları, 3D animasyon dosyaları, karakter animasyon test dosyaları, hareket yakalama dosyaları, 3D grafik animasyon örnekleri, oyun motoru FBX dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz Animation FBX örnek dosyaları - Autodesk FBX 3D animasyon test dosyalarını indirin',
+          description: '3D animasyon, karakter rigging, hareket yakalama verileri ve 3D grafik yazılımını test etmek için ücretsiz Animation FBX Autodesk FBX 3D animasyon örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. 3D animasyon yazılımı, oyun motorları, hareket yakalama araçları, karakter animasyon platformları ve 3D grafik uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'Animation FBX örnek dosyaları',
+          description: 'Test için ücretsiz Animation FBX Autodesk FBX 3D animasyon örnek dosyalarını indirin. 3D animasyon yazılımınızı, oyun motorlarınızı ve hareket yakalama araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda Animation FBX (Autodesk FBX 3D animasyon) dosyalarıdır'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Ücretsiz AssetBundle örnek dosyaları indirin - Oyun geliştirme için Unity AssetBundle test dosyaları | MorphyHub',
+          description: 'Unity oyun geliştirme, varlık yükleme, oyun kaynak yönetimi ve Unity motor araçlarını test etmek için ücretsiz AssetBundle Unity AssetBundle örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Unity motoru, oyun varlık yükleyicileri, Unity geliştirme araçları, oyun kaynak yöneticileri ve Unity oyun geliştirme platformlarını test etmek için mükemmel.',
+          keywords: 'AssetBundle örnek dosyaları, AssetBundle test dosyaları, AssetBundle örnekleri indir, ücretsiz AssetBundle test dosyaları, Unity AssetBundle dosyaları, Unity varlık dosyaları, oyun geliştirme dosyaları, Unity motor test dosyaları, oyun varlık yükleyici test dosyaları, Unity geliştirme örnekleri, oyun kaynak yönetimi dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz AssetBundle örnek dosyaları - Oyun geliştirme için Unity AssetBundle test dosyalarını indirin',
+          description: 'Unity oyun geliştirme, varlık yükleme, oyun kaynak yönetimi ve Unity motor araçlarını test etmek için ücretsiz AssetBundle Unity AssetBundle örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Unity motoru, oyun varlık yükleyicileri, Unity geliştirme araçları, oyun kaynak yöneticileri ve Unity oyun geliştirme platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'AssetBundle örnek dosyaları',
+          description: 'Test için ücretsiz AssetBundle Unity AssetBundle örnek dosyalarını indirin. Unity motorunuzu, oyun varlık yükleyicilerinizi ve Unity geliştirme araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda AssetBundle (Unity AssetBundle) dosyalarıdır'
+      },
+      blend: {
+        meta: {
+          title: 'Ücretsiz BLEND örnek dosyaları indirin - Blender 3D proje test dosyaları | MorphyHub',
+          description: '3D modelleme, Blender proje uyumluluğu, 3D animasyon iş akışları ve 3D grafik yazılımını test etmek için ücretsiz BLEND Blender 3D proje örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Blender yazılımı, 3D modelleme araçları, Blender proje görüntüleyiciler, 3D animasyon platformları ve profesyonel 3D grafik uygulamalarını test etmek için mükemmel.',
+          keywords: 'BLEND örnek dosyaları, BLEND test dosyaları, BLEND örnekleri indir, ücretsiz BLEND test dosyaları, Blender BLEND dosyaları, .blend test dosyaları, Blender proje dosyaları, 3D modelleme test dosyaları, Blender test dosyaları, 3D animasyon örnekleri, 3D grafik BLEND dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz BLEND örnek dosyaları - Blender 3D proje test dosyalarını indirin',
+          description: '3D modelleme, Blender proje uyumluluğu, 3D animasyon iş akışları ve 3D grafik yazılımını test etmek için ücretsiz BLEND Blender 3D proje örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Blender yazılımı, 3D modelleme araçları, Blender proje görüntüleyiciler, 3D animasyon platformları ve profesyonel 3D grafik uygulamalarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'BLEND örnek dosyaları',
+          description: 'Test için ücretsiz BLEND Blender 3D proje örnek dosyalarını indirin. Blender yazılımınızı, 3D modelleme araçlarınızı ve 3D animasyon platformlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda BLEND (Blender 3D proje) dosyalarıdır'
+      },
+      bvh: {
+        meta: {
+          title: 'Ücretsiz BVH örnek dosyaları indirin - Biovision Hierarchy hareket yakalama test dosyaları | MorphyHub',
+          description: 'Hareket yakalama verileri, karakter animasyon, iskelet animasyon sistemleri ve 3D animasyon yazılımını test etmek için ücretsiz BVH Biovision Hierarchy hareket yakalama örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hareket yakalama görüntüleyiciler, karakter animasyon araçları, iskelet animasyon sistemleri, 3D animasyon platformları ve hareket yakalama analiz yazılımını test etmek için mükemmel.',
+          keywords: 'BVH örnek dosyaları, BVH test dosyaları, BVH örnekleri indir, ücretsiz BVH test dosyaları, Biovision Hierarchy BVH dosyaları, .bvh test dosyaları, hareket yakalama dosyaları, karakter animasyon test dosyaları, iskelet animasyon dosyaları, 3D animasyon BVH örnekleri, hareket yakalama analiz dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz BVH örnek dosyaları - Biovision Hierarchy hareket yakalama test dosyalarını indirin',
+          description: 'Hareket yakalama verileri, karakter animasyon, iskelet animasyon sistemleri ve 3D animasyon yazılımını test etmek için ücretsiz BVH Biovision Hierarchy hareket yakalama örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. Hareket yakalama görüntüleyiciler, karakter animasyon araçları, iskelet animasyon sistemleri, 3D animasyon platformları ve hareket yakalama analiz yazılımını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'BVH örnek dosyaları',
+          description: 'Test için ücretsiz BVH Biovision Hierarchy hareket yakalama örnek dosyalarını indirin. Hareket yakalama görüntüleyicilerinizi, karakter animasyon araçlarınızı ve 3D animasyon platformlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda BVH (Biovision Hierarchy hareket yakalama) dosyalarıdır'
+      },
+      dwg: {
+        meta: {
+          title: 'Ücretsiz DWG örnek dosyaları indirin - CAD tasarım için AutoCAD çizim test dosyaları | MorphyHub',
+          description: 'CAD yazılımı, AutoCAD uyumluluğu, teknik çizim araçları ve mühendislik tasarım uygulamalarını test etmek için ücretsiz DWG AutoCAD çizim örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AutoCAD, CAD görüntüleyiciler, teknik çizim yazılımı, mühendislik tasarım araçları ve profesyonel CAD platformlarını test etmek için mükemmel.',
+          keywords: 'DWG örnek dosyaları, DWG test dosyaları, DWG örnekleri indir, ücretsiz DWG test dosyaları, AutoCAD DWG dosyaları, .dwg test dosyaları, CAD çizim dosyaları, AutoCAD test dosyaları, teknik çizim dosyaları, mühendislik tasarım örnekleri, CAD yazılımı DWG dosyaları'
+        },
+        schema: {
+          name: 'Ücretsiz DWG örnek dosyaları - CAD tasarım için AutoCAD çizim test dosyalarını indirin',
+          description: 'CAD yazılımı, AutoCAD uyumluluğu, teknik çizim araçları ve mühendislik tasarım uygulamalarını test etmek için ücretsiz DWG AutoCAD çizim örnek dosyalarını indirin. Birden fazla boyut: 100 KB, 1 MB, 5 MB, 50 MB ve 100 MB. AutoCAD, CAD görüntüleyiciler, teknik çizim yazılımı, mühendislik tasarım araçları ve profesyonel CAD platformlarını test etmek için mükemmel.'
+        },
+        hero: {
+          title: 'DWG örnek dosyaları',
+          description: 'Test için ücretsiz DWG AutoCAD çizim örnek dosyalarını indirin. CAD yazılımınızı, AutoCAD uyumluluğunuzu ve teknik çizim araçlarınızı test etmek için birden fazla dosya boyutu mevcut.'
+        },
+        about_description: 'Bunlar test amaçlı çeşitli boyutlarda DWG (AutoCAD çizim) dosyalarıdır'
       }
     }
   }

@@ -1446,6 +1446,22 @@ function App() {
         <Route path="/id/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/id/samples/sample-md" element={<SampleMd />} />
         <Route path="/id/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/id/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/id/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/id/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/id/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/id/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/id/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/id/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/id/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/id/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/id/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/id/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/id/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/id/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/id/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/id/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/id/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Svenska (SV) Sample Files Routes */}
         <Route path="/sv/samples/sample-docx" element={<SampleDocx />} />
@@ -1509,6 +1525,22 @@ function App() {
         <Route path="/sv/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/sv/samples/sample-md" element={<SampleMd />} />
         <Route path="/sv/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/sv/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/sv/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/sv/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/sv/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/sv/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/sv/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/sv/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/sv/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/sv/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/sv/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/sv/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/sv/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/sv/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/sv/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/sv/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/sv/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Español (ES) Sample Files Routes */}
         <Route path="/es/samples/sample-docx" element={<SampleDocx />} />
@@ -1572,6 +1604,22 @@ function App() {
         <Route path="/es/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/es/samples/sample-md" element={<SampleMd />} />
         <Route path="/es/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/es/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/es/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/es/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/es/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/es/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/es/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/es/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/es/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/es/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/es/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/es/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/es/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/es/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/es/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/es/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/es/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Français (FR) Sample Files Routes */}
         <Route path="/fr/samples/sample-docx" element={<SampleDocx />} />
@@ -1635,6 +1683,22 @@ function App() {
         <Route path="/fr/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/fr/samples/sample-md" element={<SampleMd />} />
         <Route path="/fr/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/fr/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/fr/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/fr/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/fr/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/fr/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/fr/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/fr/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/fr/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/fr/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/fr/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/fr/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/fr/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/fr/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/fr/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/fr/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/fr/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Italiano (IT) Sample Files Routes */}
         <Route path="/it/samples/sample-docx" element={<SampleDocx />} />
@@ -1698,6 +1762,22 @@ function App() {
         <Route path="/it/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/it/samples/sample-md" element={<SampleMd />} />
         <Route path="/it/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/it/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/it/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/it/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/it/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/it/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/it/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/it/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/it/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/it/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/it/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/it/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/it/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/it/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/it/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/it/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/it/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Nederlands (NL) Sample Files Routes */}
         <Route path="/nl/samples/sample-docx" element={<SampleDocx />} />
@@ -1761,6 +1841,22 @@ function App() {
         <Route path="/nl/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/nl/samples/sample-md" element={<SampleMd />} />
         <Route path="/nl/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/nl/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/nl/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/nl/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/nl/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/nl/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/nl/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/nl/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/nl/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/nl/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/nl/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/nl/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/nl/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/nl/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/nl/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/nl/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/nl/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Português (PT) Sample Files Routes */}
         <Route path="/pt/samples/sample-docx" element={<SampleDocx />} />
@@ -1824,6 +1920,22 @@ function App() {
         <Route path="/pt/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/pt/samples/sample-md" element={<SampleMd />} />
         <Route path="/pt/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/pt/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/pt/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/pt/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/pt/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/pt/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/pt/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/pt/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/pt/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/pt/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/pt/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/pt/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/pt/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/pt/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/pt/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/pt/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/pt/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Tiếng Việt (VI) Sample Files Routes */}
         <Route path="/vi/samples/sample-docx" element={<SampleDocx />} />
@@ -1887,6 +1999,22 @@ function App() {
         <Route path="/vi/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/vi/samples/sample-md" element={<SampleMd />} />
         <Route path="/vi/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/vi/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/vi/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/vi/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/vi/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/vi/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/vi/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/vi/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/vi/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/vi/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/vi/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/vi/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/vi/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/vi/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/vi/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/vi/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/vi/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Türkçe (TR) Sample Files Routes */}
         <Route path="/tr/samples/sample-docx" element={<SampleDocx />} />
@@ -1950,6 +2078,22 @@ function App() {
         <Route path="/tr/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/tr/samples/sample-md" element={<SampleMd />} />
         <Route path="/tr/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/tr/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/tr/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/tr/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/tr/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/tr/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/tr/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/tr/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/tr/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/tr/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/tr/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/tr/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/tr/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/tr/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/tr/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/tr/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/tr/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* Русский (RU) Sample Files Routes */}
         <Route path="/ru/samples/sample-docx" element={<SampleDocx />} />
@@ -2013,6 +2157,22 @@ function App() {
         <Route path="/ru/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/ru/samples/sample-md" element={<SampleMd />} />
         <Route path="/ru/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/ru/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/ru/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/ru/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/ru/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/ru/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/ru/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/ru/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/ru/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/ru/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/ru/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/ru/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/ru/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/ru/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/ru/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/ru/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/ru/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* العربية (AR) Sample Files Routes */}
         <Route path="/ar/samples/sample-docx" element={<SampleDocx />} />
@@ -2076,6 +2236,22 @@ function App() {
         <Route path="/ar/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/ar/samples/sample-md" element={<SampleMd />} />
         <Route path="/ar/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/ar/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/ar/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/ar/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/ar/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/ar/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/ar/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/ar/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/ar/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/ar/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/ar/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/ar/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/ar/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/ar/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/ar/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/ar/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/ar/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* ไทย (TH) Sample Files Routes */}
         <Route path="/th/samples/sample-docx" element={<SampleDocx />} />
@@ -2139,6 +2315,22 @@ function App() {
         <Route path="/th/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/th/samples/sample-md" element={<SampleMd />} />
         <Route path="/th/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/th/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/th/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/th/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/th/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/th/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/th/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/th/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/th/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/th/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/th/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/th/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/th/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/th/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/th/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/th/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/th/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* 日本語 (JA) Sample Files Routes */}
         <Route path="/ja/samples/sample-docx" element={<SampleDocx />} />
@@ -2202,6 +2394,22 @@ function App() {
         <Route path="/ja/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/ja/samples/sample-md" element={<SampleMd />} />
         <Route path="/ja/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/ja/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/ja/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/ja/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/ja/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/ja/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/ja/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/ja/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/ja/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/ja/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/ja/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/ja/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/ja/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/ja/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/ja/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/ja/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/ja/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* 简体中文 (ZH) Sample Files Routes */}
         <Route path="/zh/samples/sample-docx" element={<SampleDocx />} />
@@ -2265,6 +2473,22 @@ function App() {
         <Route path="/zh/samples/sample-mbtiles" element={<SampleMbtiles />} />
         <Route path="/zh/samples/sample-md" element={<SampleMd />} />
         <Route path="/zh/samples/sample-mdx" element={<SampleMdx />} />
+        <Route path="/zh/samples/sample-apk" element={<SampleApk />} />
+        <Route path="/zh/samples/sample-appimage" element={<SampleAppimage />} />
+        <Route path="/zh/samples/sample-elf" element={<SampleElf />} />
+        <Route path="/zh/samples/sample-exe" element={<SampleExe />} />
+        <Route path="/zh/samples/sample-ipa" element={<SampleIpa />} />
+        <Route path="/zh/samples/sample-jar" element={<SampleJar />} />
+        <Route path="/zh/samples/sample-crx" element={<SampleCrx />} />
+        <Route path="/zh/samples/sample-3ds" element={<Sample3ds />} />
+        <Route path="/zh/samples/sample-3mf" element={<Sample3mf />} />
+        <Route path="/zh/samples/sample-ai" element={<SampleAi />} />
+        <Route path="/zh/samples/sample-ase" element={<SampleAse />} />
+        <Route path="/zh/samples/sample-animation-fbx" element={<SampleAnimationFbx />} />
+        <Route path="/zh/samples/sample-assetbundle" element={<SampleAssetbundle />} />
+        <Route path="/zh/samples/sample-blend" element={<SampleBlend />} />
+        <Route path="/zh/samples/sample-bvh" element={<SampleBvh />} />
+        <Route path="/zh/samples/sample-dwg" element={<SampleDwg />} />
 
         {/* 404 - catch all */}
         <Route path="*" element={<NotFound />} />

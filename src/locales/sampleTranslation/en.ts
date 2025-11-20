@@ -1007,6 +1007,262 @@ export const en: SamplePageTranslations = {
           description: 'Download free MDX sample MDX (Markdown + JSX) files for testing. Multiple file sizes available to test your MDX parsers, React documentation tools, and static site generators.'
         },
         about_description: 'These are test MDX (Markdown + JSX) files in various sizes for testing purposes'
+      },
+      apk: {
+        meta: {
+          title: 'Free APK Sample Files Download - Test Android Application Package Files | MorphyHub',
+          description: 'Download free APK sample Android application package files for testing Android app installation, APK analysis, reverse engineering, and mobile development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing APK installers, Android emulators, app analyzers, security scanners, and mobile app development platforms.',
+          keywords: 'APK sample files, test APK files, download APK samples, free APK test files, Android APK files, .apk test files, Android app package files, APK installer test files, Android emulator test files, mobile app development samples, APK reverse engineering files'
+        },
+        schema: {
+          name: 'Free APK Sample Files - Download Test Android Application Package Files',
+          description: 'Download free APK sample Android application package files for testing Android app installation, APK analysis, reverse engineering, and mobile development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing APK installers, Android emulators, app analyzers, security scanners, and mobile app development platforms.'
+        },
+        hero: {
+          title: 'APK Sample Files',
+          description: 'Download free APK sample Android application package files for testing. Multiple file sizes available to test your Android app installation tools, APK analyzers, and mobile development platforms.'
+        },
+        about_description: 'These are test APK (Android application package) files in various sizes for testing purposes'
+      },
+      appimage: {
+        meta: {
+          title: 'Free AppImage Sample Files Download - Test Linux Portable Application Files | MorphyHub',
+          description: 'Download free AppImage sample Linux portable application files for testing Linux app distribution, AppImage execution, and cross-distribution compatibility. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AppImage runners, Linux application launchers, portable app tools, and universal Linux software distribution.',
+          keywords: 'AppImage sample files, test AppImage files, download AppImage samples, free AppImage test files, Linux AppImage files, .AppImage test files, portable Linux apps, AppImage runner test files, Linux application files, cross-distribution apps, universal Linux software samples'
+        },
+        schema: {
+          name: 'Free AppImage Sample Files - Download Test Linux Portable Application Files',
+          description: 'Download free AppImage sample Linux portable application files for testing Linux app distribution, AppImage execution, and cross-distribution compatibility. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AppImage runners, Linux application launchers, portable app tools, and universal Linux software distribution.'
+        },
+        hero: {
+          title: 'AppImage Sample Files',
+          description: 'Download free AppImage sample Linux portable application files for testing. Multiple file sizes available to test your AppImage runners, Linux application launchers, and portable app tools.'
+        },
+        about_description: 'These are test AppImage (Linux portable application) files in various sizes for testing purposes'
+      },
+      elf: {
+        meta: {
+          title: 'Free ELF Sample Files Download - Test Executable and Linkable Format Files for Linux/Unix | MorphyHub',
+          description: 'Download free ELF sample Executable and Linkable Format files for testing Linux/Unix binary analysis, ELF parsing, reverse engineering, and system debugging. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ELF analyzers, binary disassemblers, reverse engineering tools, system debuggers, and Linux executable analysis platforms.',
+          keywords: 'ELF sample files, test ELF files, download ELF samples, free ELF test files, Linux ELF files, .elf test files, Unix executable files, ELF binary analysis files, reverse engineering ELF files, Linux binary files, ELF disassembler test files'
+        },
+        schema: {
+          name: 'Free ELF Sample Files - Download Test Executable and Linkable Format Files for Linux/Unix',
+          description: 'Download free ELF sample Executable and Linkable Format files for testing Linux/Unix binary analysis, ELF parsing, reverse engineering, and system debugging. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing ELF analyzers, binary disassemblers, reverse engineering tools, system debuggers, and Linux executable analysis platforms.'
+        },
+        hero: {
+          title: 'ELF Sample Files',
+          description: 'Download free ELF sample Executable and Linkable Format files for testing. Multiple file sizes available to test your ELF analyzers, binary disassemblers, and reverse engineering tools.'
+        },
+        about_description: 'These are test ELF (Executable and Linkable Format) files in various sizes for testing purposes'
+      },
+      exe: {
+        meta: {
+          title: 'Free EXE Sample Files Download - Test Windows Executable Files | MorphyHub',
+          description: 'Download free EXE sample Windows executable files for testing Windows application execution, EXE analysis, binary parsing, and Windows development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows executable analyzers, binary disassemblers, reverse engineering tools, malware analysis platforms, and Windows application development.',
+          keywords: 'EXE sample files, test EXE files, download EXE samples, free EXE test files, Windows EXE files, .exe test files, Windows executable files, EXE binary analysis files, Windows application files, reverse engineering EXE files, Windows binary disassembler test files'
+        },
+        schema: {
+          name: 'Free EXE Sample Files - Download Test Windows Executable Files',
+          description: 'Download free EXE sample Windows executable files for testing Windows application execution, EXE analysis, binary parsing, and Windows development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Windows executable analyzers, binary disassemblers, reverse engineering tools, malware analysis platforms, and Windows application development.'
+        },
+        hero: {
+          title: 'EXE Sample Files',
+          description: 'Download free EXE sample Windows executable files for testing. Multiple file sizes available to test your Windows executable analyzers, binary disassemblers, and reverse engineering tools.'
+        },
+        about_description: 'These are test EXE (Windows executable) files in various sizes for testing purposes'
+      },
+      ipa: {
+        meta: {
+          title: 'Free IPA Sample Files Download - Test iOS Application Package Files | MorphyHub',
+          description: 'Download free IPA sample iOS application package files for testing iOS app installation, IPA analysis, iOS app distribution, and mobile development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing IPA installers, iOS simulators, app analyzers, iOS development tools, and mobile app distribution platforms.',
+          keywords: 'IPA sample files, test IPA files, download IPA samples, free IPA test files, iOS IPA files, .ipa test files, iOS app package files, IPA installer test files, iOS simulator test files, mobile app development samples, iOS app distribution files'
+        },
+        schema: {
+          name: 'Free IPA Sample Files - Download Test iOS Application Package Files',
+          description: 'Download free IPA sample iOS application package files for testing iOS app installation, IPA analysis, iOS app distribution, and mobile development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing IPA installers, iOS simulators, app analyzers, iOS development tools, and mobile app distribution platforms.'
+        },
+        hero: {
+          title: 'IPA Sample Files',
+          description: 'Download free IPA sample iOS application package files for testing. Multiple file sizes available to test your iOS app installation tools, IPA analyzers, and mobile development platforms.'
+        },
+        about_description: 'These are test IPA (iOS application package) files in various sizes for testing purposes'
+      },
+      jar: {
+        meta: {
+          title: 'Free JAR Sample Files Download - Test Java Archive Files | MorphyHub',
+          description: 'Download free JAR sample Java archive files for testing Java application execution, JAR extraction, JAR analysis, and Java development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JAR extractors, Java runtime environments, JAR analyzers, Java development tools, and Java application deployment platforms.',
+          keywords: 'JAR sample files, test JAR files, download JAR samples, free JAR test files, Java JAR files, .jar test files, Java archive files, JAR extractor test files, Java runtime test files, Java development samples, JAR analysis files'
+        },
+        schema: {
+          name: 'Free JAR Sample Files - Download Test Java Archive Files',
+          description: 'Download free JAR sample Java archive files for testing Java application execution, JAR extraction, JAR analysis, and Java development tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing JAR extractors, Java runtime environments, JAR analyzers, Java development tools, and Java application deployment platforms.'
+        },
+        hero: {
+          title: 'JAR Sample Files',
+          description: 'Download free JAR sample Java archive files for testing. Multiple file sizes available to test your JAR extractors, Java runtime environments, and Java development tools.'
+        },
+        about_description: 'These are test JAR (Java archive) files in various sizes for testing purposes'
+      },
+      crx: {
+        meta: {
+          title: 'Free CRX Sample Files Download - Test Chrome Extension Package Files | MorphyHub',
+          description: 'Download free CRX sample Chrome extension package files for testing Chrome extension installation, CRX analysis, browser extension development, and web extension tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CRX installers, Chrome extension analyzers, browser extension development tools, and web extension distribution platforms.',
+          keywords: 'CRX sample files, test CRX files, download CRX samples, free CRX test files, Chrome CRX files, .crx test files, Chrome extension files, CRX installer test files, browser extension files, web extension development samples, Chrome extension analysis files'
+        },
+        schema: {
+          name: 'Free CRX Sample Files - Download Test Chrome Extension Package Files',
+          description: 'Download free CRX sample Chrome extension package files for testing Chrome extension installation, CRX analysis, browser extension development, and web extension tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing CRX installers, Chrome extension analyzers, browser extension development tools, and web extension distribution platforms.'
+        },
+        hero: {
+          title: 'CRX Sample Files',
+          description: 'Download free CRX sample Chrome extension package files for testing. Multiple file sizes available to test your Chrome extension installation tools, CRX analyzers, and browser extension development platforms.'
+        },
+        about_description: 'These are test CRX (Chrome extension package) files in various sizes for testing purposes'
+      },
+      '3ds': {
+        meta: {
+          title: 'Free 3DS Sample Files Download - Test 3D Model Files for 3D Printing & Modeling | MorphyHub',
+          description: 'Download free 3DS sample 3D model files for testing 3D modeling software, 3D printing tools, mesh conversion, and 3D visualization applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model viewers, 3D printers, CAD software, mesh editors, and 3D graphics applications.',
+          keywords: '3DS sample files, test 3DS files, download 3DS samples, free 3DS test files, 3D model 3DS files, .3ds test files, 3D modeling files, 3D printing test files, CAD 3DS files, mesh model files, 3D graphics samples'
+        },
+        schema: {
+          name: 'Free 3DS Sample Files - Download Test 3D Model Files for 3D Printing & Modeling',
+          description: 'Download free 3DS sample 3D model files for testing 3D modeling software, 3D printing tools, mesh conversion, and 3D visualization applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D model viewers, 3D printers, CAD software, mesh editors, and 3D graphics applications.'
+        },
+        hero: {
+          title: '3DS Sample Files',
+          description: 'Download free 3DS sample 3D model files for testing. Multiple file sizes available to test your 3D modeling software, 3D printing tools, and 3D visualization applications.'
+        },
+        about_description: 'These are test 3DS (3D model) files in various sizes for testing purposes'
+      },
+      '3mf': {
+        meta: {
+          title: 'Free 3MF Sample Files Download - Test 3D Manufacturing Format Files for 3D Printing | MorphyHub',
+          description: 'Download free 3MF sample 3D Manufacturing Format files for testing 3D printing, additive manufacturing, 3D model slicing, and 3D printer compatibility. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printer slicers, additive manufacturing software, 3MF viewers, 3D printing workflows, and modern 3D manufacturing platforms.',
+          keywords: '3MF sample files, test 3MF files, download 3MF samples, free 3MF test files, 3D printing 3MF files, .3mf test files, additive manufacturing files, 3D printer slicer test files, 3MF viewer test files, 3D manufacturing samples, modern 3D printing files'
+        },
+        schema: {
+          name: 'Free 3MF Sample Files - Download Test 3D Manufacturing Format Files for 3D Printing',
+          description: 'Download free 3MF sample 3D Manufacturing Format files for testing 3D printing, additive manufacturing, 3D model slicing, and 3D printer compatibility. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D printer slicers, additive manufacturing software, 3MF viewers, 3D printing workflows, and modern 3D manufacturing platforms.'
+        },
+        hero: {
+          title: '3MF Sample Files',
+          description: 'Download free 3MF sample 3D Manufacturing Format files for testing. Multiple file sizes available to test your 3D printer slicers, additive manufacturing software, and 3D printing workflows.'
+        },
+        about_description: 'These are test 3MF (3D Manufacturing Format) files in various sizes for testing purposes'
+      },
+      ai: {
+        meta: {
+          title: 'Free AI Sample Files Download - Test Adobe Illustrator Vector Graphics Files | MorphyHub',
+          description: 'Download free AI sample Adobe Illustrator vector graphics files for testing vector graphics editing, AI file conversion, design software compatibility, and graphic design tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Adobe Illustrator, vector graphics editors, AI file converters, design software, and professional graphic design platforms.',
+          keywords: 'AI sample files, test AI files, download AI samples, free AI test files, Adobe Illustrator AI files, .ai test files, vector graphics files, Illustrator test files, design software files, vector editing samples, graphic design AI files'
+        },
+        schema: {
+          name: 'Free AI Sample Files - Download Test Adobe Illustrator Vector Graphics Files',
+          description: 'Download free AI sample Adobe Illustrator vector graphics files for testing vector graphics editing, AI file conversion, design software compatibility, and graphic design tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Adobe Illustrator, vector graphics editors, AI file converters, design software, and professional graphic design platforms.'
+        },
+        hero: {
+          title: 'AI Sample Files',
+          description: 'Download free AI sample Adobe Illustrator vector graphics files for testing. Multiple file sizes available to test your vector graphics editors, AI file converters, and design software.'
+        },
+        about_description: 'These are test AI (Adobe Illustrator) vector graphics files in various sizes for testing purposes'
+      },
+      ase: {
+        meta: {
+          title: 'Free ASE Sample Files Download - Test Aseprite Sprite Animation Files | MorphyHub',
+          description: 'Download free ASE sample Aseprite sprite animation files for testing pixel art editing, sprite animation, game development tools, and 2D animation software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Aseprite, pixel art editors, sprite animation tools, game development software, and 2D animation platforms.',
+          keywords: 'ASE sample files, test ASE files, download ASE samples, free ASE test files, Aseprite ASE files, .ase test files, sprite animation files, pixel art test files, game development files, 2D animation samples, Aseprite test files'
+        },
+        schema: {
+          name: 'Free ASE Sample Files - Download Test Aseprite Sprite Animation Files',
+          description: 'Download free ASE sample Aseprite sprite animation files for testing pixel art editing, sprite animation, game development tools, and 2D animation software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Aseprite, pixel art editors, sprite animation tools, game development software, and 2D animation platforms.'
+        },
+        hero: {
+          title: 'ASE Sample Files',
+          description: 'Download free ASE sample Aseprite sprite animation files for testing. Multiple file sizes available to test your pixel art editors, sprite animation tools, and game development software.'
+        },
+        about_description: 'These are test ASE (Aseprite sprite animation) files in various sizes for testing purposes'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Free Animation FBX Sample Files Download - Test Autodesk FBX 3D Animation Files | MorphyHub',
+          description: 'Download free Animation FBX sample Autodesk FBX 3D animation files for testing 3D animation, character rigging, motion capture data, and 3D graphics software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation software, game engines, motion capture tools, character animation platforms, and 3D graphics applications.',
+          keywords: 'Animation FBX sample files, test FBX animation files, download FBX animation samples, free FBX animation test files, Autodesk FBX files, .fbx animation test files, 3D animation files, character animation test files, motion capture files, 3D graphics animation samples, game engine FBX files'
+        },
+        schema: {
+          name: 'Free Animation FBX Sample Files - Download Test Autodesk FBX 3D Animation Files',
+          description: 'Download free Animation FBX sample Autodesk FBX 3D animation files for testing 3D animation, character rigging, motion capture data, and 3D graphics software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing 3D animation software, game engines, motion capture tools, character animation platforms, and 3D graphics applications.'
+        },
+        hero: {
+          title: 'Animation FBX Sample Files',
+          description: 'Download free Animation FBX sample Autodesk FBX 3D animation files for testing. Multiple file sizes available to test your 3D animation software, game engines, and motion capture tools.'
+        },
+        about_description: 'These are test Animation FBX (Autodesk FBX 3D animation) files in various sizes for testing purposes'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Free AssetBundle Sample Files Download - Test Unity AssetBundle Files for Game Development | MorphyHub',
+          description: 'Download free AssetBundle sample Unity AssetBundle files for testing Unity game development, asset loading, game resource management, and Unity engine tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Unity engine, game asset loaders, Unity development tools, game resource managers, and Unity game development platforms.',
+          keywords: 'AssetBundle sample files, test AssetBundle files, download AssetBundle samples, free AssetBundle test files, Unity AssetBundle files, Unity asset files, game development files, Unity engine test files, game asset loader test files, Unity development samples, game resource management files'
+        },
+        schema: {
+          name: 'Free AssetBundle Sample Files - Download Test Unity AssetBundle Files for Game Development',
+          description: 'Download free AssetBundle sample Unity AssetBundle files for testing Unity game development, asset loading, game resource management, and Unity engine tools. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Unity engine, game asset loaders, Unity development tools, game resource managers, and Unity game development platforms.'
+        },
+        hero: {
+          title: 'AssetBundle Sample Files',
+          description: 'Download free AssetBundle sample Unity AssetBundle files for testing. Multiple file sizes available to test your Unity engine, game asset loaders, and Unity development tools.'
+        },
+        about_description: 'These are test AssetBundle (Unity AssetBundle) files in various sizes for testing purposes'
+      },
+      blend: {
+        meta: {
+          title: 'Free BLEND Sample Files Download - Test Blender 3D Project Files | MorphyHub',
+          description: 'Download free BLEND sample Blender 3D project files for testing 3D modeling, Blender project compatibility, 3D animation workflows, and 3D graphics software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Blender software, 3D modeling tools, Blender project viewers, 3D animation platforms, and professional 3D graphics applications.',
+          keywords: 'BLEND sample files, test BLEND files, download BLEND samples, free BLEND test files, Blender BLEND files, .blend test files, Blender project files, 3D modeling test files, Blender test files, 3D animation samples, 3D graphics BLEND files'
+        },
+        schema: {
+          name: 'Free BLEND Sample Files - Download Test Blender 3D Project Files',
+          description: 'Download free BLEND sample Blender 3D project files for testing 3D modeling, Blender project compatibility, 3D animation workflows, and 3D graphics software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing Blender software, 3D modeling tools, Blender project viewers, 3D animation platforms, and professional 3D graphics applications.'
+        },
+        hero: {
+          title: 'BLEND Sample Files',
+          description: 'Download free BLEND sample Blender 3D project files for testing. Multiple file sizes available to test your Blender software, 3D modeling tools, and 3D animation platforms.'
+        },
+        about_description: 'These are test BLEND (Blender 3D project) files in various sizes for testing purposes'
+      },
+      bvh: {
+        meta: {
+          title: 'Free BVH Sample Files Download - Test Biovision Hierarchy Motion Capture Files | MorphyHub',
+          description: 'Download free BVH sample Biovision Hierarchy motion capture files for testing motion capture data, character animation, skeletal animation systems, and 3D animation software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture viewers, character animation tools, skeletal animation systems, 3D animation platforms, and motion capture analysis software.',
+          keywords: 'BVH sample files, test BVH files, download BVH samples, free BVH test files, Biovision Hierarchy BVH files, .bvh test files, motion capture files, character animation test files, skeletal animation files, 3D animation BVH samples, motion capture analysis files'
+        },
+        schema: {
+          name: 'Free BVH Sample Files - Download Test Biovision Hierarchy Motion Capture Files',
+          description: 'Download free BVH sample Biovision Hierarchy motion capture files for testing motion capture data, character animation, skeletal animation systems, and 3D animation software. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing motion capture viewers, character animation tools, skeletal animation systems, 3D animation platforms, and motion capture analysis software.'
+        },
+        hero: {
+          title: 'BVH Sample Files',
+          description: 'Download free BVH sample Biovision Hierarchy motion capture files for testing. Multiple file sizes available to test your motion capture viewers, character animation tools, and 3D animation platforms.'
+        },
+        about_description: 'These are test BVH (Biovision Hierarchy motion capture) files in various sizes for testing purposes'
+      },
+      dwg: {
+        meta: {
+          title: 'Free DWG Sample Files Download - Test AutoCAD Drawing Files for CAD Design | MorphyHub',
+          description: 'Download free DWG sample AutoCAD drawing files for testing CAD software, AutoCAD compatibility, technical drawing tools, and engineering design applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AutoCAD, CAD viewers, technical drawing software, engineering design tools, and professional CAD platforms.',
+          keywords: 'DWG sample files, test DWG files, download DWG samples, free DWG test files, AutoCAD DWG files, .dwg test files, CAD drawing files, AutoCAD test files, technical drawing files, engineering design samples, CAD software DWG files'
+        },
+        schema: {
+          name: 'Free DWG Sample Files - Download Test AutoCAD Drawing Files for CAD Design',
+          description: 'Download free DWG sample AutoCAD drawing files for testing CAD software, AutoCAD compatibility, technical drawing tools, and engineering design applications. Multiple file sizes: 100 KB, 1 MB, 5 MB, 50 MB, and 100 MB. Perfect for testing AutoCAD, CAD viewers, technical drawing software, engineering design tools, and professional CAD platforms.'
+        },
+        hero: {
+          title: 'DWG Sample Files',
+          description: 'Download free DWG sample AutoCAD drawing files for testing. Multiple file sizes available to test your CAD software, AutoCAD compatibility, and technical drawing tools.'
+        },
+        about_description: 'These are test DWG (AutoCAD drawing) files in various sizes for testing purposes'
       }
     }
   }

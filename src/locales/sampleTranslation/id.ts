@@ -1007,6 +1007,262 @@ export const id: SamplePageTranslations = {
           description: 'Unduh file sampel MDX MDX (Markdown + JSX) gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji MDX parser Anda, alat dokumentasi React, dan static site generator.'
         },
         about_description: 'Ini adalah file uji MDX (Markdown + JSX) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      apk: {
+        meta: {
+          title: 'Unduh file sampel APK gratis - File uji paket aplikasi Android | MorphyHub',
+          description: 'Unduh file sampel APK paket aplikasi Android gratis untuk menguji instalasi aplikasi Android, analisis APK, reverse engineering, dan alat pengembangan seluler. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer APK, emulator Android, analisator aplikasi, pemindai keamanan, dan platform pengembangan aplikasi seluler.',
+          keywords: 'file sampel APK, file uji APK, unduh sampel APK, file uji APK gratis, file APK Android, file uji .apk, file paket aplikasi Android, file uji installer APK, file uji emulator Android, sampel pengembangan aplikasi seluler, file reverse engineering APK'
+        },
+        schema: {
+          name: 'File sampel APK gratis - Unduh file uji paket aplikasi Android',
+          description: 'Unduh file sampel APK paket aplikasi Android gratis untuk menguji instalasi aplikasi Android, analisis APK, reverse engineering, dan alat pengembangan seluler. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer APK, emulator Android, analisator aplikasi, pemindai keamanan, dan platform pengembangan aplikasi seluler.'
+        },
+        hero: {
+          title: 'File Sampel APK',
+          description: 'Unduh file sampel APK paket aplikasi Android gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat instalasi aplikasi Android, analisator APK, dan platform pengembangan seluler Anda.'
+        },
+        about_description: 'Ini adalah file uji APK (paket aplikasi Android) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      appimage: {
+        meta: {
+          title: 'Unduh file sampel AppImage gratis - File uji aplikasi portabel Linux | MorphyHub',
+          description: 'Unduh file sampel AppImage aplikasi portabel Linux gratis untuk menguji distribusi aplikasi Linux, eksekusi AppImage, dan kompatibilitas lintas distribusi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji runner AppImage, peluncur aplikasi Linux, alat aplikasi portabel, dan distribusi perangkat lunak Linux universal.',
+          keywords: 'file sampel AppImage, file uji AppImage, unduh sampel AppImage, file uji AppImage gratis, file AppImage Linux, file uji .AppImage, aplikasi portabel Linux, file uji runner AppImage, file aplikasi Linux, aplikasi lintas distribusi, sampel perangkat lunak Linux universal'
+        },
+        schema: {
+          name: 'File sampel AppImage gratis - Unduh file uji aplikasi portabel Linux',
+          description: 'Unduh file sampel AppImage aplikasi portabel Linux gratis untuk menguji distribusi aplikasi Linux, eksekusi AppImage, dan kompatibilitas lintas distribusi. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji runner AppImage, peluncur aplikasi Linux, alat aplikasi portabel, dan distribusi perangkat lunak Linux universal.'
+        },
+        hero: {
+          title: 'File Sampel AppImage',
+          description: 'Unduh file sampel AppImage aplikasi portabel Linux gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji runner AppImage, peluncur aplikasi Linux, dan alat aplikasi portabel Anda.'
+        },
+        about_description: 'Ini adalah file uji AppImage (aplikasi portabel Linux) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      elf: {
+        meta: {
+          title: 'Unduh file sampel ELF gratis - File uji Executable and Linkable Format untuk Linux/Unix | MorphyHub',
+          description: 'Unduh file sampel ELF Executable and Linkable Format gratis untuk menguji analisis biner Linux/Unix, parsing ELF, reverse engineering, dan debugging sistem. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator ELF, disassembler biner, alat reverse engineering, debugger sistem, dan platform analisis executable Linux.',
+          keywords: 'file sampel ELF, file uji ELF, unduh sampel ELF, file uji ELF gratis, file ELF Linux, file uji .elf, file executable Unix, file analisis biner ELF, file reverse engineering ELF, file biner Linux, file uji disassembler ELF'
+        },
+        schema: {
+          name: 'File sampel ELF gratis - Unduh file uji Executable and Linkable Format untuk Linux/Unix',
+          description: 'Unduh file sampel ELF Executable and Linkable Format gratis untuk menguji analisis biner Linux/Unix, parsing ELF, reverse engineering, dan debugging sistem. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator ELF, disassembler biner, alat reverse engineering, debugger sistem, dan platform analisis executable Linux.'
+        },
+        hero: {
+          title: 'File Sampel ELF',
+          description: 'Unduh file sampel ELF Executable and Linkable Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji analisator ELF, disassembler biner, dan alat reverse engineering Anda.'
+        },
+        about_description: 'Ini adalah file uji ELF (Executable and Linkable Format) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      exe: {
+        meta: {
+          title: 'Unduh file sampel EXE gratis - File uji executable Windows | MorphyHub',
+          description: 'Unduh file sampel EXE executable Windows gratis untuk menguji eksekusi aplikasi Windows, analisis EXE, parsing biner, dan alat pengembangan Windows. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator executable Windows, disassembler biner, alat reverse engineering, platform analisis malware, dan pengembangan aplikasi Windows.',
+          keywords: 'file sampel EXE, file uji EXE, unduh sampel EXE, file uji EXE gratis, file EXE Windows, file uji .exe, file executable Windows, file analisis biner EXE, file aplikasi Windows, file reverse engineering EXE, file uji disassembler biner Windows'
+        },
+        schema: {
+          name: 'File sampel EXE gratis - Unduh file uji executable Windows',
+          description: 'Unduh file sampel EXE executable Windows gratis untuk menguji eksekusi aplikasi Windows, analisis EXE, parsing biner, dan alat pengembangan Windows. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisator executable Windows, disassembler biner, alat reverse engineering, platform analisis malware, dan pengembangan aplikasi Windows.'
+        },
+        hero: {
+          title: 'File Sampel EXE',
+          description: 'Unduh file sampel EXE executable Windows gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji analisator executable Windows, disassembler biner, dan alat reverse engineering Anda.'
+        },
+        about_description: 'Ini adalah file uji EXE (executable Windows) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ipa: {
+        meta: {
+          title: 'Unduh file sampel IPA gratis - File uji paket aplikasi iOS | MorphyHub',
+          description: 'Unduh file sampel IPA paket aplikasi iOS gratis untuk menguji instalasi aplikasi iOS, analisis IPA, distribusi aplikasi iOS, dan alat pengembangan seluler. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer IPA, simulator iOS, analisator aplikasi, alat pengembangan iOS, dan platform distribusi aplikasi seluler.',
+          keywords: 'file sampel IPA, file uji IPA, unduh sampel IPA, file uji IPA gratis, file IPA iOS, file uji .ipa, file paket aplikasi iOS, file uji installer IPA, file uji simulator iOS, sampel pengembangan aplikasi seluler, file distribusi aplikasi iOS'
+        },
+        schema: {
+          name: 'File sampel IPA gratis - Unduh file uji paket aplikasi iOS',
+          description: 'Unduh file sampel IPA paket aplikasi iOS gratis untuk menguji instalasi aplikasi iOS, analisis IPA, distribusi aplikasi iOS, dan alat pengembangan seluler. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer IPA, simulator iOS, analisator aplikasi, alat pengembangan iOS, dan platform distribusi aplikasi seluler.'
+        },
+        hero: {
+          title: 'File Sampel IPA',
+          description: 'Unduh file sampel IPA paket aplikasi iOS gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat instalasi aplikasi iOS, analisator IPA, dan platform pengembangan seluler Anda.'
+        },
+        about_description: 'Ini adalah file uji IPA (paket aplikasi iOS) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      jar: {
+        meta: {
+          title: 'Unduh file sampel JAR gratis - File uji arsip Java | MorphyHub',
+          description: 'Unduh file sampel JAR arsip Java gratis untuk menguji eksekusi aplikasi Java, ekstraksi JAR, analisis JAR, dan alat pengembangan Java. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraktor JAR, runtime Java, analisator JAR, alat pengembangan Java, dan platform deployment aplikasi Java.',
+          keywords: 'file sampel JAR, file uji JAR, unduh sampel JAR, file uji JAR gratis, file JAR Java, file uji .jar, file arsip Java, file uji ekstraktor JAR, file uji runtime Java, sampel pengembangan Java, file analisis JAR'
+        },
+        schema: {
+          name: 'File sampel JAR gratis - Unduh file uji arsip Java',
+          description: 'Unduh file sampel JAR arsip Java gratis untuk menguji eksekusi aplikasi Java, ekstraksi JAR, analisis JAR, dan alat pengembangan Java. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraktor JAR, runtime Java, analisator JAR, alat pengembangan Java, dan platform deployment aplikasi Java.'
+        },
+        hero: {
+          title: 'File Sampel JAR',
+          description: 'Unduh file sampel JAR arsip Java gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraktor JAR, runtime Java, dan alat pengembangan Java Anda.'
+        },
+        about_description: 'Ini adalah file uji JAR (arsip Java) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      crx: {
+        meta: {
+          title: 'Unduh file sampel CRX gratis - File uji paket ekstensi Chrome | MorphyHub',
+          description: 'Unduh file sampel CRX paket ekstensi Chrome gratis untuk menguji instalasi ekstensi Chrome, analisis CRX, pengembangan ekstensi browser, dan alat ekstensi web. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer CRX, analisator ekstensi Chrome, alat pengembangan ekstensi browser, dan platform distribusi ekstensi web.',
+          keywords: 'file sampel CRX, file uji CRX, unduh sampel CRX, file uji CRX gratis, file CRX Chrome, file uji .crx, file ekstensi Chrome, file uji installer CRX, file ekstensi browser, sampel pengembangan ekstensi web, file analisis ekstensi Chrome'
+        },
+        schema: {
+          name: 'File sampel CRX gratis - Unduh file uji paket ekstensi Chrome',
+          description: 'Unduh file sampel CRX paket ekstensi Chrome gratis untuk menguji instalasi ekstensi Chrome, analisis CRX, pengembangan ekstensi browser, dan alat ekstensi web. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji installer CRX, analisator ekstensi Chrome, alat pengembangan ekstensi browser, dan platform distribusi ekstensi web.'
+        },
+        hero: {
+          title: 'File Sampel CRX',
+          description: 'Unduh file sampel CRX paket ekstensi Chrome gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat instalasi ekstensi Chrome, analisator CRX, dan platform pengembangan ekstensi browser Anda.'
+        },
+        about_description: 'Ini adalah file uji CRX (paket ekstensi Chrome) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      '3ds': {
+        meta: {
+          title: 'Unduh file sampel 3DS gratis - File uji model 3D untuk pencetakan 3D dan pemodelan | MorphyHub',
+          description: 'Unduh file sampel 3DS model 3D gratis untuk menguji perangkat lunak pemodelan 3D, alat pencetakan 3D, konversi mesh, dan aplikasi visualisasi 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji viewer model 3D, printer 3D, perangkat lunak CAD, editor mesh, dan aplikasi grafik 3D.',
+          keywords: 'file sampel 3DS, file uji 3DS, unduh sampel 3DS, file uji 3DS gratis, file model 3D 3DS, file uji .3ds, file pemodelan 3D, file uji pencetakan 3D, file CAD 3DS, file model mesh, sampel grafik 3D'
+        },
+        schema: {
+          name: 'File sampel 3DS gratis - Unduh file uji model 3D untuk pencetakan 3D dan pemodelan',
+          description: 'Unduh file sampel 3DS model 3D gratis untuk menguji perangkat lunak pemodelan 3D, alat pencetakan 3D, konversi mesh, dan aplikasi visualisasi 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji viewer model 3D, printer 3D, perangkat lunak CAD, editor mesh, dan aplikasi grafik 3D.'
+        },
+        hero: {
+          title: 'File Sampel 3DS',
+          description: 'Unduh file sampel 3DS model 3D gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak pemodelan 3D, alat pencetakan 3D, dan aplikasi visualisasi 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji 3DS (model 3D) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      '3mf': {
+        meta: {
+          title: 'Unduh file sampel 3MF gratis - File uji 3D Manufacturing Format untuk pencetakan 3D | MorphyHub',
+          description: 'Unduh file sampel 3MF 3D Manufacturing Format gratis untuk menguji pencetakan 3D, manufaktur aditif, slicing model 3D, dan kompatibilitas printer 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji slicer printer 3D, perangkat lunak manufaktur aditif, viewer 3MF, workflow pencetakan 3D, dan platform manufaktur 3D modern.',
+          keywords: 'file sampel 3MF, file uji 3MF, unduh sampel 3MF, file uji 3MF gratis, file pencetakan 3D 3MF, file uji .3mf, file manufaktur aditif, file uji slicer printer 3D, file uji viewer 3MF, sampel manufaktur 3D, file pencetakan 3D modern'
+        },
+        schema: {
+          name: 'File sampel 3MF gratis - Unduh file uji 3D Manufacturing Format untuk pencetakan 3D',
+          description: 'Unduh file sampel 3MF 3D Manufacturing Format gratis untuk menguji pencetakan 3D, manufaktur aditif, slicing model 3D, dan kompatibilitas printer 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji slicer printer 3D, perangkat lunak manufaktur aditif, viewer 3MF, workflow pencetakan 3D, dan platform manufaktur 3D modern.'
+        },
+        hero: {
+          title: 'File Sampel 3MF',
+          description: 'Unduh file sampel 3MF 3D Manufacturing Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji slicer printer 3D, perangkat lunak manufaktur aditif, dan workflow pencetakan 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji 3MF (3D Manufacturing Format) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ai: {
+        meta: {
+          title: 'Unduh file sampel AI gratis - File uji grafik vektor Adobe Illustrator | MorphyHub',
+          description: 'Unduh file sampel AI grafik vektor Adobe Illustrator gratis untuk menguji pengeditan grafik vektor, konversi file AI, kompatibilitas perangkat lunak desain, dan alat desain grafis. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Adobe Illustrator, editor grafik vektor, konverter file AI, perangkat lunak desain, dan platform desain grafis profesional.',
+          keywords: 'file sampel AI, file uji AI, unduh sampel AI, file uji AI gratis, file AI Adobe Illustrator, file uji .ai, file grafik vektor, file uji Illustrator, file perangkat lunak desain, sampel pengeditan vektor, file desain grafis AI'
+        },
+        schema: {
+          name: 'File sampel AI gratis - Unduh file uji grafik vektor Adobe Illustrator',
+          description: 'Unduh file sampel AI grafik vektor Adobe Illustrator gratis untuk menguji pengeditan grafik vektor, konversi file AI, kompatibilitas perangkat lunak desain, dan alat desain grafis. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Adobe Illustrator, editor grafik vektor, konverter file AI, perangkat lunak desain, dan platform desain grafis profesional.'
+        },
+        hero: {
+          title: 'File Sampel AI',
+          description: 'Unduh file sampel AI grafik vektor Adobe Illustrator gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji editor grafik vektor, konverter file AI, dan perangkat lunak desain Anda.'
+        },
+        about_description: 'Ini adalah file uji AI (Adobe Illustrator) grafik vektor dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      ase: {
+        meta: {
+          title: 'Unduh file sampel ASE gratis - File uji animasi sprite Aseprite | MorphyHub',
+          description: 'Unduh file sampel ASE animasi sprite Aseprite gratis untuk menguji pengeditan pixel art, animasi sprite, alat pengembangan game, dan perangkat lunak animasi 2D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Aseprite, editor pixel art, alat animasi sprite, perangkat lunak pengembangan game, dan platform animasi 2D.',
+          keywords: 'file sampel ASE, file uji ASE, unduh sampel ASE, file uji ASE gratis, file ASE Aseprite, file uji .ase, file animasi sprite, file uji pixel art, file pengembangan game, sampel animasi 2D, file uji Aseprite'
+        },
+        schema: {
+          name: 'File sampel ASE gratis - Unduh file uji animasi sprite Aseprite',
+          description: 'Unduh file sampel ASE animasi sprite Aseprite gratis untuk menguji pengeditan pixel art, animasi sprite, alat pengembangan game, dan perangkat lunak animasi 2D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji Aseprite, editor pixel art, alat animasi sprite, perangkat lunak pengembangan game, dan platform animasi 2D.'
+        },
+        hero: {
+          title: 'File Sampel ASE',
+          description: 'Unduh file sampel ASE animasi sprite Aseprite gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji editor pixel art, alat animasi sprite, dan perangkat lunak pengembangan game Anda.'
+        },
+        about_description: 'Ini adalah file uji ASE (animasi sprite Aseprite) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Unduh file sampel Animation FBX gratis - File uji animasi 3D Autodesk FBX | MorphyHub',
+          description: 'Unduh file sampel Animation FBX animasi 3D Autodesk FBX gratis untuk menguji animasi 3D, rigging karakter, data motion capture, dan perangkat lunak grafik 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji perangkat lunak animasi 3D, game engine, alat motion capture, platform animasi karakter, dan aplikasi grafik 3D.',
+          keywords: 'file sampel Animation FBX, file uji animasi FBX, unduh sampel animasi FBX, file uji animasi FBX gratis, file Autodesk FBX, file uji animasi .fbx, file animasi 3D, file uji animasi karakter, file motion capture, sampel animasi grafik 3D, file FBX game engine'
+        },
+        schema: {
+          name: 'File sampel Animation FBX gratis - Unduh file uji animasi 3D Autodesk FBX',
+          description: 'Unduh file sampel Animation FBX animasi 3D Autodesk FBX gratis untuk menguji animasi 3D, rigging karakter, data motion capture, dan perangkat lunak grafik 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji perangkat lunak animasi 3D, game engine, alat motion capture, platform animasi karakter, dan aplikasi grafik 3D.'
+        },
+        hero: {
+          title: 'File Sampel Animation FBX',
+          description: 'Unduh file sampel Animation FBX animasi 3D Autodesk FBX gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak animasi 3D, game engine, dan alat motion capture Anda.'
+        },
+        about_description: 'Ini adalah file uji Animation FBX (animasi 3D Autodesk FBX) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Unduh file sampel AssetBundle gratis - File uji Unity AssetBundle untuk pengembangan game | MorphyHub',
+          description: 'Unduh file sampel AssetBundle Unity AssetBundle gratis untuk menguji pengembangan game Unity, pemuatan asset, manajemen sumber daya game, dan alat engine Unity. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji engine Unity, pemuat asset game, alat pengembangan Unity, manajer sumber daya game, dan platform pengembangan game Unity.',
+          keywords: 'file sampel AssetBundle, file uji AssetBundle, unduh sampel AssetBundle, file uji AssetBundle gratis, file Unity AssetBundle, file asset Unity, file pengembangan game, file uji engine Unity, file uji pemuat asset game, sampel pengembangan Unity, file manajemen sumber daya game'
+        },
+        schema: {
+          name: 'File sampel AssetBundle gratis - Unduh file uji Unity AssetBundle untuk pengembangan game',
+          description: 'Unduh file sampel AssetBundle Unity AssetBundle gratis untuk menguji pengembangan game Unity, pemuatan asset, manajemen sumber daya game, dan alat engine Unity. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji engine Unity, pemuat asset game, alat pengembangan Unity, manajer sumber daya game, dan platform pengembangan game Unity.'
+        },
+        hero: {
+          title: 'File Sampel AssetBundle',
+          description: 'Unduh file sampel AssetBundle Unity AssetBundle gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji engine Unity, pemuat asset game, dan alat pengembangan Unity Anda.'
+        },
+        about_description: 'Ini adalah file uji AssetBundle (Unity AssetBundle) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      blend: {
+        meta: {
+          title: 'Unduh file sampel BLEND gratis - File uji proyek 3D Blender | MorphyHub',
+          description: 'Unduh file sampel BLEND proyek 3D Blender gratis untuk menguji pemodelan 3D, kompatibilitas proyek Blender, workflow animasi 3D, dan perangkat lunak grafik 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji perangkat lunak Blender, alat pemodelan 3D, viewer proyek Blender, platform animasi 3D, dan aplikasi grafik 3D profesional.',
+          keywords: 'file sampel BLEND, file uji BLEND, unduh sampel BLEND, file uji BLEND gratis, file BLEND Blender, file uji .blend, file proyek Blender, file uji pemodelan 3D, file uji Blender, sampel animasi 3D, file grafik 3D BLEND'
+        },
+        schema: {
+          name: 'File sampel BLEND gratis - Unduh file uji proyek 3D Blender',
+          description: 'Unduh file sampel BLEND proyek 3D Blender gratis untuk menguji pemodelan 3D, kompatibilitas proyek Blender, workflow animasi 3D, dan perangkat lunak grafik 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji perangkat lunak Blender, alat pemodelan 3D, viewer proyek Blender, platform animasi 3D, dan aplikasi grafik 3D profesional.'
+        },
+        hero: {
+          title: 'File Sampel BLEND',
+          description: 'Unduh file sampel BLEND proyek 3D Blender gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak Blender, alat pemodelan 3D, dan platform animasi 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji BLEND (proyek 3D Blender) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      bvh: {
+        meta: {
+          title: 'Unduh file sampel BVH gratis - File uji motion capture Biovision Hierarchy | MorphyHub',
+          description: 'Unduh file sampel BVH motion capture Biovision Hierarchy gratis untuk menguji data motion capture, animasi karakter, sistem animasi kerangka, dan perangkat lunak animasi 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji viewer motion capture, alat animasi karakter, sistem animasi kerangka, platform animasi 3D, dan perangkat lunak analisis motion capture.',
+          keywords: 'file sampel BVH, file uji BVH, unduh sampel BVH, file uji BVH gratis, file BVH Biovision Hierarchy, file uji .bvh, file motion capture, file uji animasi karakter, file animasi kerangka, sampel animasi 3D BVH, file analisis motion capture'
+        },
+        schema: {
+          name: 'File sampel BVH gratis - Unduh file uji motion capture Biovision Hierarchy',
+          description: 'Unduh file sampel BVH motion capture Biovision Hierarchy gratis untuk menguji data motion capture, animasi karakter, sistem animasi kerangka, dan perangkat lunak animasi 3D. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji viewer motion capture, alat animasi karakter, sistem animasi kerangka, platform animasi 3D, dan perangkat lunak analisis motion capture.'
+        },
+        hero: {
+          title: 'File Sampel BVH',
+          description: 'Unduh file sampel BVH motion capture Biovision Hierarchy gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji viewer motion capture, alat animasi karakter, dan platform animasi 3D Anda.'
+        },
+        about_description: 'Ini adalah file uji BVH (motion capture Biovision Hierarchy) dalam berbagai ukuran untuk keperluan pengujian'
+      },
+      dwg: {
+        meta: {
+          title: 'Unduh file sampel DWG gratis - File uji gambar AutoCAD untuk desain CAD | MorphyHub',
+          description: 'Unduh file sampel DWG gambar AutoCAD gratis untuk menguji perangkat lunak CAD, kompatibilitas AutoCAD, alat gambar teknis, dan aplikasi desain teknik. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji AutoCAD, viewer CAD, perangkat lunak gambar teknis, alat desain teknik, dan platform CAD profesional.',
+          keywords: 'file sampel DWG, file uji DWG, unduh sampel DWG, file uji DWG gratis, file DWG AutoCAD, file uji .dwg, file gambar CAD, file uji AutoCAD, file gambar teknis, sampel desain teknik, file perangkat lunak CAD DWG'
+        },
+        schema: {
+          name: 'File sampel DWG gratis - Unduh file uji gambar AutoCAD untuk desain CAD',
+          description: 'Unduh file sampel DWG gambar AutoCAD gratis untuk menguji perangkat lunak CAD, kompatibilitas AutoCAD, alat gambar teknis, dan aplikasi desain teknik. Berbagai ukuran: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji AutoCAD, viewer CAD, perangkat lunak gambar teknis, alat desain teknik, dan platform CAD profesional.'
+        },
+        hero: {
+          title: 'File Sampel DWG',
+          description: 'Unduh file sampel DWG gambar AutoCAD gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji perangkat lunak CAD, kompatibilitas AutoCAD, dan alat gambar teknis Anda.'
+        },
+        about_description: 'Ini adalah file uji DWG (gambar AutoCAD) dalam berbagai ukuran untuk keperluan pengujian'
       }
     }
   }

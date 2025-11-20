@@ -1007,6 +1007,262 @@ export const nl: SamplePageTranslations = {
           description: 'Download gratis MDX MDX (Markdown + JSX) voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw MDX parsers, React documentatie tools en statische site generators te testen.'
         },
         about_description: 'Dit zijn MDX (Markdown + JSX) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      apk: {
+        meta: {
+          title: 'Gratis APK voorbeeldbestanden downloaden - Android applicatiepakket testbestanden | MorphyHub',
+          description: 'Download gratis APK Android applicatiepakket voorbeeldbestanden om Android app installatie, APK analyse, reverse engineering en mobiele ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van APK installers, Android emulators, app analysers, beveiligingsscanners en mobiele app ontwikkeling platforms.',
+          keywords: 'APK voorbeeldbestanden, APK testbestanden, APK voorbeelden downloaden, gratis APK testbestanden, Android APK bestanden, .apk testbestanden, Android app pakket bestanden, APK installer testbestanden, Android emulator testbestanden, mobiele app ontwikkeling voorbeelden, APK reverse engineering bestanden'
+        },
+        schema: {
+          name: 'Gratis APK voorbeeldbestanden - Download Android applicatiepakket testbestanden',
+          description: 'Download gratis APK Android applicatiepakket voorbeeldbestanden om Android app installatie, APK analyse, reverse engineering en mobiele ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van APK installers, Android emulators, app analysers, beveiligingsscanners en mobiele app ontwikkeling platforms.'
+        },
+        hero: {
+          title: 'APK voorbeeldbestanden',
+          description: 'Download gratis APK Android applicatiepakket voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw Android app installatie tools, APK analysers en mobiele ontwikkeling platforms te testen.'
+        },
+        about_description: 'Dit zijn APK (Android applicatiepakket) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      appimage: {
+        meta: {
+          title: 'Gratis AppImage voorbeeldbestanden downloaden - Linux draagbare applicatie testbestanden | MorphyHub',
+          description: 'Download gratis AppImage Linux draagbare applicatie voorbeeldbestanden om Linux app distributie, AppImage uitvoering en cross-distributie compatibiliteit te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AppImage runners, Linux applicatie launchers, draagbare app tools en universele Linux software distributie.',
+          keywords: 'AppImage voorbeeldbestanden, AppImage testbestanden, AppImage voorbeelden downloaden, gratis AppImage testbestanden, Linux AppImage bestanden, .AppImage testbestanden, draagbare Linux apps, AppImage runner testbestanden, Linux applicatie bestanden, cross-distributie apps, universele Linux software voorbeelden'
+        },
+        schema: {
+          name: 'Gratis AppImage voorbeeldbestanden - Download Linux draagbare applicatie testbestanden',
+          description: 'Download gratis AppImage Linux draagbare applicatie voorbeeldbestanden om Linux app distributie, AppImage uitvoering en cross-distributie compatibiliteit te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AppImage runners, Linux applicatie launchers, draagbare app tools en universele Linux software distributie.'
+        },
+        hero: {
+          title: 'AppImage voorbeeldbestanden',
+          description: 'Download gratis AppImage Linux draagbare applicatie voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw AppImage runners, Linux applicatie launchers en draagbare app tools te testen.'
+        },
+        about_description: 'Dit zijn AppImage (Linux draagbare applicatie) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      elf: {
+        meta: {
+          title: 'Gratis ELF voorbeeldbestanden downloaden - Executable and Linkable Format testbestanden voor Linux/Unix | MorphyHub',
+          description: 'Download gratis ELF Executable and Linkable Format voorbeeldbestanden om Linux/Unix binaire analyse, ELF parsing, reverse engineering en systeem debugging te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ELF analysers, binaire disassemblers, reverse engineering tools, systeem debuggers en Linux executable analyse platforms.',
+          keywords: 'ELF voorbeeldbestanden, ELF testbestanden, ELF voorbeelden downloaden, gratis ELF testbestanden, Linux ELF bestanden, .elf testbestanden, Unix executable bestanden, ELF binaire analyse bestanden, reverse engineering ELF bestanden, Linux binaire bestanden, ELF disassembler testbestanden'
+        },
+        schema: {
+          name: 'Gratis ELF voorbeeldbestanden - Download Executable and Linkable Format testbestanden voor Linux/Unix',
+          description: 'Download gratis ELF Executable and Linkable Format voorbeeldbestanden om Linux/Unix binaire analyse, ELF parsing, reverse engineering en systeem debugging te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van ELF analysers, binaire disassemblers, reverse engineering tools, systeem debuggers en Linux executable analyse platforms.'
+        },
+        hero: {
+          title: 'ELF voorbeeldbestanden',
+          description: 'Download gratis ELF Executable and Linkable Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw ELF analysers, binaire disassemblers en reverse engineering tools te testen.'
+        },
+        about_description: 'Dit zijn ELF (Executable and Linkable Format) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      exe: {
+        meta: {
+          title: 'Gratis EXE voorbeeldbestanden downloaden - Windows executable testbestanden | MorphyHub',
+          description: 'Download gratis EXE Windows executable voorbeeldbestanden om Windows applicatie uitvoering, EXE analyse, binaire parsing en Windows ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Windows executable analysers, binaire disassemblers, reverse engineering tools, malware analyse platforms en Windows applicatie ontwikkeling.',
+          keywords: 'EXE voorbeeldbestanden, EXE testbestanden, EXE voorbeelden downloaden, gratis EXE testbestanden, Windows EXE bestanden, .exe testbestanden, Windows executable bestanden, EXE binaire analyse bestanden, Windows applicatie bestanden, reverse engineering EXE bestanden, Windows binaire disassembler testbestanden'
+        },
+        schema: {
+          name: 'Gratis EXE voorbeeldbestanden - Download Windows executable testbestanden',
+          description: 'Download gratis EXE Windows executable voorbeeldbestanden om Windows applicatie uitvoering, EXE analyse, binaire parsing en Windows ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Windows executable analysers, binaire disassemblers, reverse engineering tools, malware analyse platforms en Windows applicatie ontwikkeling.'
+        },
+        hero: {
+          title: 'EXE voorbeeldbestanden',
+          description: 'Download gratis EXE Windows executable voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw Windows executable analysers, binaire disassemblers en reverse engineering tools te testen.'
+        },
+        about_description: 'Dit zijn EXE (Windows executable) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ipa: {
+        meta: {
+          title: 'Gratis IPA voorbeeldbestanden downloaden - iOS applicatiepakket testbestanden | MorphyHub',
+          description: 'Download gratis IPA iOS applicatiepakket voorbeeldbestanden om iOS app installatie, IPA analyse, iOS app distributie en mobiele ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van IPA installers, iOS simulators, app analysers, iOS ontwikkeling tools en mobiele app distributie platforms.',
+          keywords: 'IPA voorbeeldbestanden, IPA testbestanden, IPA voorbeelden downloaden, gratis IPA testbestanden, iOS IPA bestanden, .ipa testbestanden, iOS app pakket bestanden, IPA installer testbestanden, iOS simulator testbestanden, mobiele app ontwikkeling voorbeelden, iOS app distributie bestanden'
+        },
+        schema: {
+          name: 'Gratis IPA voorbeeldbestanden - Download iOS applicatiepakket testbestanden',
+          description: 'Download gratis IPA iOS applicatiepakket voorbeeldbestanden om iOS app installatie, IPA analyse, iOS app distributie en mobiele ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van IPA installers, iOS simulators, app analysers, iOS ontwikkeling tools en mobiele app distributie platforms.'
+        },
+        hero: {
+          title: 'IPA voorbeeldbestanden',
+          description: 'Download gratis IPA iOS applicatiepakket voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw iOS app installatie tools, IPA analysers en mobiele ontwikkeling platforms te testen.'
+        },
+        about_description: 'Dit zijn IPA (iOS applicatiepakket) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      jar: {
+        meta: {
+          title: 'Gratis JAR voorbeeldbestanden downloaden - Java archief testbestanden | MorphyHub',
+          description: 'Download gratis JAR Java archief voorbeeldbestanden om Java applicatie uitvoering, JAR extractie, JAR analyse en Java ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JAR extractors, Java runtime omgevingen, JAR analysers, Java ontwikkeling tools en Java applicatie deployment platforms.',
+          keywords: 'JAR voorbeeldbestanden, JAR testbestanden, JAR voorbeelden downloaden, gratis JAR testbestanden, Java JAR bestanden, .jar testbestanden, Java archief bestanden, JAR extractor testbestanden, Java runtime testbestanden, Java ontwikkeling voorbeelden, JAR analyse bestanden'
+        },
+        schema: {
+          name: 'Gratis JAR voorbeeldbestanden - Download Java archief testbestanden',
+          description: 'Download gratis JAR Java archief voorbeeldbestanden om Java applicatie uitvoering, JAR extractie, JAR analyse en Java ontwikkeling tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van JAR extractors, Java runtime omgevingen, JAR analysers, Java ontwikkeling tools en Java applicatie deployment platforms.'
+        },
+        hero: {
+          title: 'JAR voorbeeldbestanden',
+          description: 'Download gratis JAR Java archief voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw JAR extractors, Java runtime omgevingen en Java ontwikkeling tools te testen.'
+        },
+        about_description: 'Dit zijn JAR (Java archief) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      crx: {
+        meta: {
+          title: 'Gratis CRX voorbeeldbestanden downloaden - Chrome extensie pakket testbestanden | MorphyHub',
+          description: 'Download gratis CRX Chrome extensie pakket voorbeeldbestanden om Chrome extensie installatie, CRX analyse, browser extensie ontwikkeling en web extensie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CRX installers, Chrome extensie analysers, browser extensie ontwikkeling tools en web extensie distributie platforms.',
+          keywords: 'CRX voorbeeldbestanden, CRX testbestanden, CRX voorbeelden downloaden, gratis CRX testbestanden, Chrome CRX bestanden, .crx testbestanden, Chrome extensie bestanden, CRX installer testbestanden, browser extensie bestanden, web extensie ontwikkeling voorbeelden, Chrome extensie analyse bestanden'
+        },
+        schema: {
+          name: 'Gratis CRX voorbeeldbestanden - Download Chrome extensie pakket testbestanden',
+          description: 'Download gratis CRX Chrome extensie pakket voorbeeldbestanden om Chrome extensie installatie, CRX analyse, browser extensie ontwikkeling en web extensie tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van CRX installers, Chrome extensie analysers, browser extensie ontwikkeling tools en web extensie distributie platforms.'
+        },
+        hero: {
+          title: 'CRX voorbeeldbestanden',
+          description: 'Download gratis CRX Chrome extensie pakket voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw Chrome extensie installatie tools, CRX analysers en browser extensie ontwikkeling platforms te testen.'
+        },
+        about_description: 'Dit zijn CRX (Chrome extensie pakket) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      '3ds': {
+        meta: {
+          title: 'Gratis 3DS voorbeeldbestanden downloaden - 3D model testbestanden voor 3D printen en modelleren | MorphyHub',
+          description: 'Download gratis 3DS 3D model voorbeeldbestanden om 3D modelleringssoftware, 3D print tools, mesh conversie en 3D visualisatie applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D model viewers, 3D printers, CAD software, mesh editors en 3D graphics applicaties.',
+          keywords: '3DS voorbeeldbestanden, 3DS testbestanden, 3DS voorbeelden downloaden, gratis 3DS testbestanden, 3D model 3DS bestanden, .3ds testbestanden, 3D modellering bestanden, 3D print testbestanden, CAD 3DS bestanden, mesh model bestanden, 3D graphics voorbeelden'
+        },
+        schema: {
+          name: 'Gratis 3DS voorbeeldbestanden - Download 3D model testbestanden voor 3D printen en modelleren',
+          description: 'Download gratis 3DS 3D model voorbeeldbestanden om 3D modelleringssoftware, 3D print tools, mesh conversie en 3D visualisatie applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D model viewers, 3D printers, CAD software, mesh editors en 3D graphics applicaties.'
+        },
+        hero: {
+          title: '3DS voorbeeldbestanden',
+          description: 'Download gratis 3DS 3D model voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw 3D modelleringssoftware, 3D print tools en 3D visualisatie applicaties te testen.'
+        },
+        about_description: 'Dit zijn 3DS (3D model) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      '3mf': {
+        meta: {
+          title: 'Gratis 3MF voorbeeldbestanden downloaden - 3D Manufacturing Format testbestanden voor 3D printen | MorphyHub',
+          description: 'Download gratis 3MF 3D Manufacturing Format voorbeeldbestanden om 3D printen, additieve productie, 3D model slicing en 3D printer compatibiliteit te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D printer slicers, additieve productie software, 3MF viewers, 3D print workflows en moderne 3D productie platforms.',
+          keywords: '3MF voorbeeldbestanden, 3MF testbestanden, 3MF voorbeelden downloaden, gratis 3MF testbestanden, 3D print 3MF bestanden, .3mf testbestanden, additieve productie bestanden, 3D printer slicer testbestanden, 3MF viewer testbestanden, 3D productie voorbeelden, moderne 3D print bestanden'
+        },
+        schema: {
+          name: 'Gratis 3MF voorbeeldbestanden - Download 3D Manufacturing Format testbestanden voor 3D printen',
+          description: 'Download gratis 3MF 3D Manufacturing Format voorbeeldbestanden om 3D printen, additieve productie, 3D model slicing en 3D printer compatibiliteit te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D printer slicers, additieve productie software, 3MF viewers, 3D print workflows en moderne 3D productie platforms.'
+        },
+        hero: {
+          title: '3MF voorbeeldbestanden',
+          description: 'Download gratis 3MF 3D Manufacturing Format voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw 3D printer slicers, additieve productie software en 3D print workflows te testen.'
+        },
+        about_description: 'Dit zijn 3MF (3D Manufacturing Format) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ai: {
+        meta: {
+          title: 'Gratis AI voorbeeldbestanden downloaden - Adobe Illustrator vector graphics testbestanden | MorphyHub',
+          description: 'Download gratis AI Adobe Illustrator vector graphics voorbeeldbestanden om vector graphics editing, AI bestand conversie, design software compatibiliteit en grafisch design tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Adobe Illustrator, vector graphics editors, AI bestand converters, design software en professionele grafisch design platforms.',
+          keywords: 'AI voorbeeldbestanden, AI testbestanden, AI voorbeelden downloaden, gratis AI testbestanden, Adobe Illustrator AI bestanden, .ai testbestanden, vector graphics bestanden, Illustrator testbestanden, design software bestanden, vector editing voorbeelden, grafisch design AI bestanden'
+        },
+        schema: {
+          name: 'Gratis AI voorbeeldbestanden - Download Adobe Illustrator vector graphics testbestanden',
+          description: 'Download gratis AI Adobe Illustrator vector graphics voorbeeldbestanden om vector graphics editing, AI bestand conversie, design software compatibiliteit en grafisch design tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Adobe Illustrator, vector graphics editors, AI bestand converters, design software en professionele grafisch design platforms.'
+        },
+        hero: {
+          title: 'AI voorbeeldbestanden',
+          description: 'Download gratis AI Adobe Illustrator vector graphics voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw vector graphics editors, AI bestand converters en design software te testen.'
+        },
+        about_description: 'Dit zijn AI (Adobe Illustrator) vector graphics testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      ase: {
+        meta: {
+          title: 'Gratis ASE voorbeeldbestanden downloaden - Aseprite sprite animatie testbestanden | MorphyHub',
+          description: 'Download gratis ASE Aseprite sprite animatie voorbeeldbestanden om pixel art editing, sprite animatie, game ontwikkeling tools en 2D animatie software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Aseprite, pixel art editors, sprite animatie tools, game ontwikkeling software en 2D animatie platforms.',
+          keywords: 'ASE voorbeeldbestanden, ASE testbestanden, ASE voorbeelden downloaden, gratis ASE testbestanden, Aseprite ASE bestanden, .ase testbestanden, sprite animatie bestanden, pixel art testbestanden, game ontwikkeling bestanden, 2D animatie voorbeelden, Aseprite testbestanden'
+        },
+        schema: {
+          name: 'Gratis ASE voorbeeldbestanden - Download Aseprite sprite animatie testbestanden',
+          description: 'Download gratis ASE Aseprite sprite animatie voorbeeldbestanden om pixel art editing, sprite animatie, game ontwikkeling tools en 2D animatie software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Aseprite, pixel art editors, sprite animatie tools, game ontwikkeling software en 2D animatie platforms.'
+        },
+        hero: {
+          title: 'ASE voorbeeldbestanden',
+          description: 'Download gratis ASE Aseprite sprite animatie voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw pixel art editors, sprite animatie tools en game ontwikkeling software te testen.'
+        },
+        about_description: 'Dit zijn ASE (Aseprite sprite animatie) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Gratis Animation FBX voorbeeldbestanden downloaden - Autodesk FBX 3D animatie testbestanden | MorphyHub',
+          description: 'Download gratis Animation FBX Autodesk FBX 3D animatie voorbeeldbestanden om 3D animatie, character rigging, motion capture data en 3D graphics software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D animatie software, game engines, motion capture tools, character animatie platforms en 3D graphics applicaties.',
+          keywords: 'Animation FBX voorbeeldbestanden, FBX animatie testbestanden, FBX animatie voorbeelden downloaden, gratis FBX animatie testbestanden, Autodesk FBX bestanden, .fbx animatie testbestanden, 3D animatie bestanden, character animatie testbestanden, motion capture bestanden, 3D graphics animatie voorbeelden, game engine FBX bestanden'
+        },
+        schema: {
+          name: 'Gratis Animation FBX voorbeeldbestanden - Download Autodesk FBX 3D animatie testbestanden',
+          description: 'Download gratis Animation FBX Autodesk FBX 3D animatie voorbeeldbestanden om 3D animatie, character rigging, motion capture data en 3D graphics software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van 3D animatie software, game engines, motion capture tools, character animatie platforms en 3D graphics applicaties.'
+        },
+        hero: {
+          title: 'Animation FBX voorbeeldbestanden',
+          description: 'Download gratis Animation FBX Autodesk FBX 3D animatie voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw 3D animatie software, game engines en motion capture tools te testen.'
+        },
+        about_description: 'Dit zijn Animation FBX (Autodesk FBX 3D animatie) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Gratis AssetBundle voorbeeldbestanden downloaden - Unity AssetBundle testbestanden voor game ontwikkeling | MorphyHub',
+          description: 'Download gratis AssetBundle Unity AssetBundle voorbeeldbestanden om Unity game ontwikkeling, asset loading, game resource management en Unity engine tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Unity engine, game asset loaders, Unity ontwikkeling tools, game resource managers en Unity game ontwikkeling platforms.',
+          keywords: 'AssetBundle voorbeeldbestanden, AssetBundle testbestanden, AssetBundle voorbeelden downloaden, gratis AssetBundle testbestanden, Unity AssetBundle bestanden, Unity asset bestanden, game ontwikkeling bestanden, Unity engine testbestanden, game asset loader testbestanden, Unity ontwikkeling voorbeelden, game resource management bestanden'
+        },
+        schema: {
+          name: 'Gratis AssetBundle voorbeeldbestanden - Download Unity AssetBundle testbestanden voor game ontwikkeling',
+          description: 'Download gratis AssetBundle Unity AssetBundle voorbeeldbestanden om Unity game ontwikkeling, asset loading, game resource management en Unity engine tools te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Unity engine, game asset loaders, Unity ontwikkeling tools, game resource managers en Unity game ontwikkeling platforms.'
+        },
+        hero: {
+          title: 'AssetBundle voorbeeldbestanden',
+          description: 'Download gratis AssetBundle Unity AssetBundle voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw Unity engine, game asset loaders en Unity ontwikkeling tools te testen.'
+        },
+        about_description: 'Dit zijn AssetBundle (Unity AssetBundle) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      blend: {
+        meta: {
+          title: 'Gratis BLEND voorbeeldbestanden downloaden - Blender 3D project testbestanden | MorphyHub',
+          description: 'Download gratis BLEND Blender 3D project voorbeeldbestanden om 3D modellering, Blender project compatibiliteit, 3D animatie workflows en 3D graphics software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Blender software, 3D modellering tools, Blender project viewers, 3D animatie platforms en professionele 3D graphics applicaties.',
+          keywords: 'BLEND voorbeeldbestanden, BLEND testbestanden, BLEND voorbeelden downloaden, gratis BLEND testbestanden, Blender BLEND bestanden, .blend testbestanden, Blender project bestanden, 3D modellering testbestanden, Blender testbestanden, 3D animatie voorbeelden, 3D graphics BLEND bestanden'
+        },
+        schema: {
+          name: 'Gratis BLEND voorbeeldbestanden - Download Blender 3D project testbestanden',
+          description: 'Download gratis BLEND Blender 3D project voorbeeldbestanden om 3D modellering, Blender project compatibiliteit, 3D animatie workflows en 3D graphics software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van Blender software, 3D modellering tools, Blender project viewers, 3D animatie platforms en professionele 3D graphics applicaties.'
+        },
+        hero: {
+          title: 'BLEND voorbeeldbestanden',
+          description: 'Download gratis BLEND Blender 3D project voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw Blender software, 3D modellering tools en 3D animatie platforms te testen.'
+        },
+        about_description: 'Dit zijn BLEND (Blender 3D project) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      bvh: {
+        meta: {
+          title: 'Gratis BVH voorbeeldbestanden downloaden - Biovision Hierarchy motion capture testbestanden | MorphyHub',
+          description: 'Download gratis BVH Biovision Hierarchy motion capture voorbeeldbestanden om motion capture data, character animatie, skeletale animatie systemen en 3D animatie software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van motion capture viewers, character animatie tools, skeletale animatie systemen, 3D animatie platforms en motion capture analyse software.',
+          keywords: 'BVH voorbeeldbestanden, BVH testbestanden, BVH voorbeelden downloaden, gratis BVH testbestanden, Biovision Hierarchy BVH bestanden, .bvh testbestanden, motion capture bestanden, character animatie testbestanden, skeletale animatie bestanden, 3D animatie BVH voorbeelden, motion capture analyse bestanden'
+        },
+        schema: {
+          name: 'Gratis BVH voorbeeldbestanden - Download Biovision Hierarchy motion capture testbestanden',
+          description: 'Download gratis BVH Biovision Hierarchy motion capture voorbeeldbestanden om motion capture data, character animatie, skeletale animatie systemen en 3D animatie software te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van motion capture viewers, character animatie tools, skeletale animatie systemen, 3D animatie platforms en motion capture analyse software.'
+        },
+        hero: {
+          title: 'BVH voorbeeldbestanden',
+          description: 'Download gratis BVH Biovision Hierarchy motion capture voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw motion capture viewers, character animatie tools en 3D animatie platforms te testen.'
+        },
+        about_description: 'Dit zijn BVH (Biovision Hierarchy motion capture) testbestanden in verschillende formaten voor testdoeleinden'
+      },
+      dwg: {
+        meta: {
+          title: 'Gratis DWG voorbeeldbestanden downloaden - AutoCAD tekening testbestanden voor CAD design | MorphyHub',
+          description: 'Download gratis DWG AutoCAD tekening voorbeeldbestanden om CAD software, AutoCAD compatibiliteit, technische tekening tools en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AutoCAD, CAD viewers, technische tekening software, engineering design tools en professionele CAD platforms.',
+          keywords: 'DWG voorbeeldbestanden, DWG testbestanden, DWG voorbeelden downloaden, gratis DWG testbestanden, AutoCAD DWG bestanden, .dwg testbestanden, CAD tekening bestanden, AutoCAD testbestanden, technische tekening bestanden, engineering design voorbeelden, CAD software DWG bestanden'
+        },
+        schema: {
+          name: 'Gratis DWG voorbeeldbestanden - Download AutoCAD tekening testbestanden voor CAD design',
+          description: 'Download gratis DWG AutoCAD tekening voorbeeldbestanden om CAD software, AutoCAD compatibiliteit, technische tekening tools en engineering design applicaties te testen. Meerdere bestandsgroottes: 100 KB, 1 MB, 5 MB, 50 MB en 100 MB. Perfect voor het testen van AutoCAD, CAD viewers, technische tekening software, engineering design tools en professionele CAD platforms.'
+        },
+        hero: {
+          title: 'DWG voorbeeldbestanden',
+          description: 'Download gratis DWG AutoCAD tekening voorbeeldbestanden voor tests. Meerdere bestandsgroottes beschikbaar om uw CAD software, AutoCAD compatibiliteit en technische tekening tools te testen.'
+        },
+        about_description: 'Dit zijn DWG (AutoCAD tekening) testbestanden in verschillende formaten voor testdoeleinden'
       }
     }
   }

@@ -1007,6 +1007,262 @@ export const de: SamplePageTranslations = {
           description: 'Laden Sie kostenlose MDX-Beispieldateien mit MDX (Markdown + JSX) zum Testen herunter. Mehrere Dateigrößen verfügbar, um Ihre MDX-Parser, React-Dokumentationstools und Static-Site-Generatoren zu testen.'
         },
         about_description: 'Dies sind MDX (Markdown + JSX) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      apk: {
+        meta: {
+          title: 'Kostenlose APK-Beispieldateien herunterladen - Testdateien für Android-Anwendungspakete | MorphyHub',
+          description: 'Laden Sie kostenlose APK-Beispieldateien für Android-Anwendungspakete zum Testen von Android-App-Installation, APK-Analyse, Reverse Engineering und mobilen Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von APK-Installern, Android-Emulatoren, App-Analysatoren, Sicherheitsscannern und mobilen App-Entwicklungsplattformen.',
+          keywords: 'APK-Beispieldateien, APK-Testdateien, APK-Beispiele herunterladen, kostenlose APK-Testdateien, Android-APK-Dateien, .apk-Testdateien, Android-App-Paketdateien, APK-Installer-Testdateien, Android-Emulator-Testdateien, mobile App-Entwicklungsbeispiele, APK-Reverse-Engineering-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose APK-Beispieldateien - Testdateien für Android-Anwendungspakete herunterladen',
+          description: 'Laden Sie kostenlose APK-Beispieldateien für Android-Anwendungspakete zum Testen von Android-App-Installation, APK-Analyse, Reverse Engineering und mobilen Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von APK-Installern, Android-Emulatoren, App-Analysatoren, Sicherheitsscannern und mobilen App-Entwicklungsplattformen.'
+        },
+        hero: {
+          title: 'APK-Beispieldateien',
+          description: 'Laden Sie kostenlose APK-Beispieldateien für Android-Anwendungspakete zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Android-App-Installationstools, APK-Analysatoren und mobilen Entwicklungsplattformen zu testen.'
+        },
+        about_description: 'Dies sind APK (Android-Anwendungspaket) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      appimage: {
+        meta: {
+          title: 'Kostenlose AppImage-Beispieldateien herunterladen - Testdateien für portable Linux-Anwendungen | MorphyHub',
+          description: 'Laden Sie kostenlose AppImage-Beispieldateien für portable Linux-Anwendungen zum Testen von Linux-App-Verteilung, AppImage-Ausführung und plattformübergreifender Kompatibilität herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AppImage-Runnern, Linux-Anwendungsstartern, portablen App-Tools und universeller Linux-Softwareverteilung.',
+          keywords: 'AppImage-Beispieldateien, AppImage-Testdateien, AppImage-Beispiele herunterladen, kostenlose AppImage-Testdateien, Linux-AppImage-Dateien, .AppImage-Testdateien, portable Linux-Apps, AppImage-Runner-Testdateien, Linux-Anwendungsdateien, plattformübergreifende Apps, universelle Linux-Softwarebeispiele'
+        },
+        schema: {
+          name: 'Kostenlose AppImage-Beispieldateien - Testdateien für portable Linux-Anwendungen herunterladen',
+          description: 'Laden Sie kostenlose AppImage-Beispieldateien für portable Linux-Anwendungen zum Testen von Linux-App-Verteilung, AppImage-Ausführung und plattformübergreifender Kompatibilität herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AppImage-Runnern, Linux-Anwendungsstartern, portablen App-Tools und universeller Linux-Softwareverteilung.'
+        },
+        hero: {
+          title: 'AppImage-Beispieldateien',
+          description: 'Laden Sie kostenlose AppImage-Beispieldateien für portable Linux-Anwendungen zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre AppImage-Runner, Linux-Anwendungsstarter und portablen App-Tools zu testen.'
+        },
+        about_description: 'Dies sind AppImage (portable Linux-Anwendung) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      elf: {
+        meta: {
+          title: 'Kostenlose ELF-Beispieldateien herunterladen - Testdateien für Executable and Linkable Format für Linux/Unix | MorphyHub',
+          description: 'Laden Sie kostenlose ELF-Beispieldateien für Executable and Linkable Format zum Testen von Linux/Unix-Binäranalyse, ELF-Parsing, Reverse Engineering und System-Debugging herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ELF-Analysatoren, Binärdisassemblern, Reverse-Engineering-Tools, System-Debuggern und Linux-Executable-Analyseplattformen.',
+          keywords: 'ELF-Beispieldateien, ELF-Testdateien, ELF-Beispiele herunterladen, kostenlose ELF-Testdateien, Linux-ELF-Dateien, .elf-Testdateien, Unix-Executable-Dateien, ELF-Binäranalyse-Dateien, Reverse-Engineering-ELF-Dateien, Linux-Binärdateien, ELF-Disassembler-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose ELF-Beispieldateien - Testdateien für Executable and Linkable Format für Linux/Unix herunterladen',
+          description: 'Laden Sie kostenlose ELF-Beispieldateien für Executable and Linkable Format zum Testen von Linux/Unix-Binäranalyse, ELF-Parsing, Reverse Engineering und System-Debugging herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von ELF-Analysatoren, Binärdisassemblern, Reverse-Engineering-Tools, System-Debuggern und Linux-Executable-Analyseplattformen.'
+        },
+        hero: {
+          title: 'ELF-Beispieldateien',
+          description: 'Laden Sie kostenlose ELF-Beispieldateien für Executable and Linkable Format zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre ELF-Analysatoren, Binärdisassembler und Reverse-Engineering-Tools zu testen.'
+        },
+        about_description: 'Dies sind ELF (Executable and Linkable Format) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      exe: {
+        meta: {
+          title: 'Kostenlose EXE-Beispieldateien herunterladen - Testdateien für Windows-Executables | MorphyHub',
+          description: 'Laden Sie kostenlose EXE-Beispieldateien für Windows-Executables zum Testen von Windows-Anwendungsausführung, EXE-Analyse, Binärparsing und Windows-Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Windows-Executable-Analysatoren, Binärdisassemblern, Reverse-Engineering-Tools, Malware-Analyseplattformen und Windows-Anwendungsentwicklung.',
+          keywords: 'EXE-Beispieldateien, EXE-Testdateien, EXE-Beispiele herunterladen, kostenlose EXE-Testdateien, Windows-EXE-Dateien, .exe-Testdateien, Windows-Executable-Dateien, EXE-Binäranalyse-Dateien, Windows-Anwendungsdateien, Reverse-Engineering-EXE-Dateien, Windows-Binärdisassembler-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose EXE-Beispieldateien - Testdateien für Windows-Executables herunterladen',
+          description: 'Laden Sie kostenlose EXE-Beispieldateien für Windows-Executables zum Testen von Windows-Anwendungsausführung, EXE-Analyse, Binärparsing und Windows-Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Windows-Executable-Analysatoren, Binärdisassemblern, Reverse-Engineering-Tools, Malware-Analyseplattformen und Windows-Anwendungsentwicklung.'
+        },
+        hero: {
+          title: 'EXE-Beispieldateien',
+          description: 'Laden Sie kostenlose EXE-Beispieldateien für Windows-Executables zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Windows-Executable-Analysatoren, Binärdisassembler und Reverse-Engineering-Tools zu testen.'
+        },
+        about_description: 'Dies sind EXE (Windows-Executable) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      ipa: {
+        meta: {
+          title: 'Kostenlose IPA-Beispieldateien herunterladen - Testdateien für iOS-Anwendungspakete | MorphyHub',
+          description: 'Laden Sie kostenlose IPA-Beispieldateien für iOS-Anwendungspakete zum Testen von iOS-App-Installation, IPA-Analyse, iOS-App-Verteilung und mobilen Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von IPA-Installern, iOS-Simulatoren, App-Analysatoren, iOS-Entwicklungstools und mobilen App-Verteilungsplattformen.',
+          keywords: 'IPA-Beispieldateien, IPA-Testdateien, IPA-Beispiele herunterladen, kostenlose IPA-Testdateien, iOS-IPA-Dateien, .ipa-Testdateien, iOS-App-Paketdateien, IPA-Installer-Testdateien, iOS-Simulator-Testdateien, mobile App-Entwicklungsbeispiele, iOS-App-Verteilungsdateien'
+        },
+        schema: {
+          name: 'Kostenlose IPA-Beispieldateien - Testdateien für iOS-Anwendungspakete herunterladen',
+          description: 'Laden Sie kostenlose IPA-Beispieldateien für iOS-Anwendungspakete zum Testen von iOS-App-Installation, IPA-Analyse, iOS-App-Verteilung und mobilen Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von IPA-Installern, iOS-Simulatoren, App-Analysatoren, iOS-Entwicklungstools und mobilen App-Verteilungsplattformen.'
+        },
+        hero: {
+          title: 'IPA-Beispieldateien',
+          description: 'Laden Sie kostenlose IPA-Beispieldateien für iOS-Anwendungspakete zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre iOS-App-Installationstools, IPA-Analysatoren und mobilen Entwicklungsplattformen zu testen.'
+        },
+        about_description: 'Dies sind IPA (iOS-Anwendungspaket) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      jar: {
+        meta: {
+          title: 'Kostenlose JAR-Beispieldateien herunterladen - Testdateien für Java-Archive | MorphyHub',
+          description: 'Laden Sie kostenlose JAR-Beispieldateien für Java-Archive zum Testen von Java-Anwendungsausführung, JAR-Extraktion, JAR-Analyse und Java-Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JAR-Extraktoren, Java-Laufzeitumgebungen, JAR-Analysatoren, Java-Entwicklungstools und Java-Anwendungsbereitstellungsplattformen.',
+          keywords: 'JAR-Beispieldateien, JAR-Testdateien, JAR-Beispiele herunterladen, kostenlose JAR-Testdateien, Java-JAR-Dateien, .jar-Testdateien, Java-Archivdateien, JAR-Extraktor-Testdateien, Java-Laufzeit-Testdateien, Java-Entwicklungsbeispiele, JAR-Analyse-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose JAR-Beispieldateien - Testdateien für Java-Archive herunterladen',
+          description: 'Laden Sie kostenlose JAR-Beispieldateien für Java-Archive zum Testen von Java-Anwendungsausführung, JAR-Extraktion, JAR-Analyse und Java-Entwicklungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von JAR-Extraktoren, Java-Laufzeitumgebungen, JAR-Analysatoren, Java-Entwicklungstools und Java-Anwendungsbereitstellungsplattformen.'
+        },
+        hero: {
+          title: 'JAR-Beispieldateien',
+          description: 'Laden Sie kostenlose JAR-Beispieldateien für Java-Archive zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre JAR-Extraktoren, Java-Laufzeitumgebungen und Java-Entwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind JAR (Java-Archiv) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      crx: {
+        meta: {
+          title: 'Kostenlose CRX-Beispieldateien herunterladen - Testdateien für Chrome-Erweiterungspakete | MorphyHub',
+          description: 'Laden Sie kostenlose CRX-Beispieldateien für Chrome-Erweiterungspakete zum Testen von Chrome-Erweiterungsinstallation, CRX-Analyse, Browser-Erweiterungsentwicklung und Web-Erweiterungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CRX-Installern, Chrome-Erweiterungsanalysatoren, Browser-Erweiterungsentwicklungstools und Web-Erweiterungsverteilungsplattformen.',
+          keywords: 'CRX-Beispieldateien, CRX-Testdateien, CRX-Beispiele herunterladen, kostenlose CRX-Testdateien, Chrome-CRX-Dateien, .crx-Testdateien, Chrome-Erweiterungsdateien, CRX-Installer-Testdateien, Browser-Erweiterungsdateien, Web-Erweiterungsentwicklungsbeispiele, Chrome-Erweiterungsanalyse-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose CRX-Beispieldateien - Testdateien für Chrome-Erweiterungspakete herunterladen',
+          description: 'Laden Sie kostenlose CRX-Beispieldateien für Chrome-Erweiterungspakete zum Testen von Chrome-Erweiterungsinstallation, CRX-Analyse, Browser-Erweiterungsentwicklung und Web-Erweiterungstools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von CRX-Installern, Chrome-Erweiterungsanalysatoren, Browser-Erweiterungsentwicklungstools und Web-Erweiterungsverteilungsplattformen.'
+        },
+        hero: {
+          title: 'CRX-Beispieldateien',
+          description: 'Laden Sie kostenlose CRX-Beispieldateien für Chrome-Erweiterungspakete zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Chrome-Erweiterungsinstallationstools, CRX-Analysatoren und Browser-Erweiterungsentwicklungsplattformen zu testen.'
+        },
+        about_description: 'Dies sind CRX (Chrome-Erweiterungspaket) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      '3ds': {
+        meta: {
+          title: 'Kostenlose 3DS-Beispieldateien herunterladen - Testdateien für 3D-Modelle für 3D-Druck & Modellierung | MorphyHub',
+          description: 'Laden Sie kostenlose 3DS-Beispieldateien für 3D-Modelle zum Testen von 3D-Modellierungssoftware, 3D-Drucktools, Mesh-Konvertierung und 3D-Visualisierungsanwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Modellbetrachtern, 3D-Druckern, CAD-Software, Mesh-Editoren und 3D-Grafikanwendungen.',
+          keywords: '3DS-Beispieldateien, 3DS-Testdateien, 3DS-Beispiele herunterladen, kostenlose 3DS-Testdateien, 3D-Modell-3DS-Dateien, .3ds-Testdateien, 3D-Modellierungsdateien, 3D-Druck-Testdateien, CAD-3DS-Dateien, Mesh-Modelldateien, 3D-Grafikbeispiele'
+        },
+        schema: {
+          name: 'Kostenlose 3DS-Beispieldateien - Testdateien für 3D-Modelle für 3D-Druck & Modellierung herunterladen',
+          description: 'Laden Sie kostenlose 3DS-Beispieldateien für 3D-Modelle zum Testen von 3D-Modellierungssoftware, 3D-Drucktools, Mesh-Konvertierung und 3D-Visualisierungsanwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Modellbetrachtern, 3D-Druckern, CAD-Software, Mesh-Editoren und 3D-Grafikanwendungen.'
+        },
+        hero: {
+          title: '3DS-Beispieldateien',
+          description: 'Laden Sie kostenlose 3DS-Beispieldateien für 3D-Modelle zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Modellierungssoftware, 3D-Drucktools und 3D-Visualisierungsanwendungen zu testen.'
+        },
+        about_description: 'Dies sind 3DS (3D-Modell) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      '3mf': {
+        meta: {
+          title: 'Kostenlose 3MF-Beispieldateien herunterladen - Testdateien für 3D Manufacturing Format für 3D-Druck | MorphyHub',
+          description: 'Laden Sie kostenlose 3MF-Beispieldateien für 3D Manufacturing Format zum Testen von 3D-Druck, additiver Fertigung, 3D-Modellslicing und 3D-Drucker-Kompatibilität herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Drucker-Slicern, additiver Fertigungssoftware, 3MF-Viewern, 3D-Druck-Workflows und modernen 3D-Fertigungsplattformen.',
+          keywords: '3MF-Beispieldateien, 3MF-Testdateien, 3MF-Beispiele herunterladen, kostenlose 3MF-Testdateien, 3D-Druck-3MF-Dateien, .3mf-Testdateien, additive Fertigungsdateien, 3D-Drucker-Slicer-Testdateien, 3MF-Viewer-Testdateien, 3D-Fertigungsbeispiele, moderne 3D-Druck-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose 3MF-Beispieldateien - Testdateien für 3D Manufacturing Format für 3D-Druck herunterladen',
+          description: 'Laden Sie kostenlose 3MF-Beispieldateien für 3D Manufacturing Format zum Testen von 3D-Druck, additiver Fertigung, 3D-Modellslicing und 3D-Drucker-Kompatibilität herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Drucker-Slicern, additiver Fertigungssoftware, 3MF-Viewern, 3D-Druck-Workflows und modernen 3D-Fertigungsplattformen.'
+        },
+        hero: {
+          title: '3MF-Beispieldateien',
+          description: 'Laden Sie kostenlose 3MF-Beispieldateien für 3D Manufacturing Format zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Drucker-Slicer, additive Fertigungssoftware und 3D-Druck-Workflows zu testen.'
+        },
+        about_description: 'Dies sind 3MF (3D Manufacturing Format) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      ai: {
+        meta: {
+          title: 'Kostenlose AI-Beispieldateien herunterladen - Testdateien für Adobe Illustrator Vektorgrafiken | MorphyHub',
+          description: 'Laden Sie kostenlose AI-Beispieldateien für Adobe Illustrator Vektorgrafiken zum Testen von Vektorgrafikbearbeitung, AI-Dateikonvertierung, Design-Software-Kompatibilität und Grafikdesigntools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Adobe Illustrator, Vektorgrafikeditoren, AI-Dateikonvertern, Design-Software und professionellen Grafikdesignplattformen.',
+          keywords: 'AI-Beispieldateien, AI-Testdateien, AI-Beispiele herunterladen, kostenlose AI-Testdateien, Adobe Illustrator AI-Dateien, .ai-Testdateien, Vektorgrafikdateien, Illustrator-Testdateien, Design-Software-Dateien, Vektorbearbeitungsbeispiele, Grafikdesign-AI-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose AI-Beispieldateien - Testdateien für Adobe Illustrator Vektorgrafiken herunterladen',
+          description: 'Laden Sie kostenlose AI-Beispieldateien für Adobe Illustrator Vektorgrafiken zum Testen von Vektorgrafikbearbeitung, AI-Dateikonvertierung, Design-Software-Kompatibilität und Grafikdesigntools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Adobe Illustrator, Vektorgrafikeditoren, AI-Dateikonvertern, Design-Software und professionellen Grafikdesignplattformen.'
+        },
+        hero: {
+          title: 'AI-Beispieldateien',
+          description: 'Laden Sie kostenlose AI-Beispieldateien für Adobe Illustrator Vektorgrafiken zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Vektorgrafikeditoren, AI-Dateikonverter und Design-Software zu testen.'
+        },
+        about_description: 'Dies sind AI (Adobe Illustrator) Vektorgrafikdateien in verschiedenen Größen für Testzwecke'
+      },
+      ase: {
+        meta: {
+          title: 'Kostenlose ASE-Beispieldateien herunterladen - Testdateien für Aseprite Sprite-Animationen | MorphyHub',
+          description: 'Laden Sie kostenlose ASE-Beispieldateien für Aseprite Sprite-Animationen zum Testen von Pixel-Art-Bearbeitung, Sprite-Animation, Spieleentwicklungstools und 2D-Animationssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Aseprite, Pixel-Art-Editoren, Sprite-Animations-Tools, Spieleentwicklungssoftware und 2D-Animationsplattformen.',
+          keywords: 'ASE-Beispieldateien, ASE-Testdateien, ASE-Beispiele herunterladen, kostenlose ASE-Testdateien, Aseprite-ASE-Dateien, .ase-Testdateien, Sprite-Animationsdateien, Pixel-Art-Testdateien, Spieleentwicklungsdateien, 2D-Animationsbeispiele, Aseprite-Testdateien'
+        },
+        schema: {
+          name: 'Kostenlose ASE-Beispieldateien - Testdateien für Aseprite Sprite-Animationen herunterladen',
+          description: 'Laden Sie kostenlose ASE-Beispieldateien für Aseprite Sprite-Animationen zum Testen von Pixel-Art-Bearbeitung, Sprite-Animation, Spieleentwicklungstools und 2D-Animationssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Aseprite, Pixel-Art-Editoren, Sprite-Animations-Tools, Spieleentwicklungssoftware und 2D-Animationsplattformen.'
+        },
+        hero: {
+          title: 'ASE-Beispieldateien',
+          description: 'Laden Sie kostenlose ASE-Beispieldateien für Aseprite Sprite-Animationen zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Pixel-Art-Editoren, Sprite-Animations-Tools und Spieleentwicklungssoftware zu testen.'
+        },
+        about_description: 'Dies sind ASE (Aseprite Sprite-Animation) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Kostenlose Animation FBX-Beispieldateien herunterladen - Testdateien für Autodesk FBX 3D-Animationen | MorphyHub',
+          description: 'Laden Sie kostenlose Animation FBX-Beispieldateien für Autodesk FBX 3D-Animationen zum Testen von 3D-Animation, Character-Rigging, Motion-Capture-Daten und 3D-Grafiksoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Animationssoftware, Spiel-Engines, Motion-Capture-Tools, Character-Animationsplattformen und 3D-Grafikanwendungen.',
+          keywords: 'Animation FBX-Beispieldateien, FBX-Animations-Testdateien, FBX-Animations-Beispiele herunterladen, kostenlose FBX-Animations-Testdateien, Autodesk FBX-Dateien, .fbx-Animations-Testdateien, 3D-Animationsdateien, Character-Animations-Testdateien, Motion-Capture-Dateien, 3D-Grafik-Animationsbeispiele, Spiel-Engine-FBX-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose Animation FBX-Beispieldateien - Testdateien für Autodesk FBX 3D-Animationen herunterladen',
+          description: 'Laden Sie kostenlose Animation FBX-Beispieldateien für Autodesk FBX 3D-Animationen zum Testen von 3D-Animation, Character-Rigging, Motion-Capture-Daten und 3D-Grafiksoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Animationssoftware, Spiel-Engines, Motion-Capture-Tools, Character-Animationsplattformen und 3D-Grafikanwendungen.'
+        },
+        hero: {
+          title: 'Animation FBX-Beispieldateien',
+          description: 'Laden Sie kostenlose Animation FBX-Beispieldateien für Autodesk FBX 3D-Animationen zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Animationssoftware, Spiel-Engines und Motion-Capture-Tools zu testen.'
+        },
+        about_description: 'Dies sind Animation FBX (Autodesk FBX 3D-Animation) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Kostenlose AssetBundle-Beispieldateien herunterladen - Testdateien für Unity AssetBundle für Spieleentwicklung | MorphyHub',
+          description: 'Laden Sie kostenlose AssetBundle-Beispieldateien für Unity AssetBundle zum Testen von Unity-Spieleentwicklung, Asset-Loading, Spiel-Ressourcenverwaltung und Unity-Engine-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Unity-Engine, Spiel-Asset-Loadern, Unity-Entwicklungstools, Spiel-Ressourcenmanagern und Unity-Spieleentwicklungsplattformen.',
+          keywords: 'AssetBundle-Beispieldateien, AssetBundle-Testdateien, AssetBundle-Beispiele herunterladen, kostenlose AssetBundle-Testdateien, Unity AssetBundle-Dateien, Unity-Asset-Dateien, Spieleentwicklungsdateien, Unity-Engine-Testdateien, Spiel-Asset-Loader-Testdateien, Unity-Entwicklungsbeispiele, Spiel-Ressourcenverwaltungsdateien'
+        },
+        schema: {
+          name: 'Kostenlose AssetBundle-Beispieldateien - Testdateien für Unity AssetBundle für Spieleentwicklung herunterladen',
+          description: 'Laden Sie kostenlose AssetBundle-Beispieldateien für Unity AssetBundle zum Testen von Unity-Spieleentwicklung, Asset-Loading, Spiel-Ressourcenverwaltung und Unity-Engine-Tools herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Unity-Engine, Spiel-Asset-Loadern, Unity-Entwicklungstools, Spiel-Ressourcenmanagern und Unity-Spieleentwicklungsplattformen.'
+        },
+        hero: {
+          title: 'AssetBundle-Beispieldateien',
+          description: 'Laden Sie kostenlose AssetBundle-Beispieldateien für Unity AssetBundle zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Unity-Engine, Spiel-Asset-Loader und Unity-Entwicklungstools zu testen.'
+        },
+        about_description: 'Dies sind AssetBundle (Unity AssetBundle) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      blend: {
+        meta: {
+          title: 'Kostenlose BLEND-Beispieldateien herunterladen - Testdateien für Blender 3D-Projekte | MorphyHub',
+          description: 'Laden Sie kostenlose BLEND-Beispieldateien für Blender 3D-Projekte zum Testen von 3D-Modellierung, Blender-Projekt-Kompatibilität, 3D-Animations-Workflows und 3D-Grafiksoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Blender-Software, 3D-Modellierungstools, Blender-Projekt-Viewern, 3D-Animationsplattformen und professionellen 3D-Grafikanwendungen.',
+          keywords: 'BLEND-Beispieldateien, BLEND-Testdateien, BLEND-Beispiele herunterladen, kostenlose BLEND-Testdateien, Blender BLEND-Dateien, .blend-Testdateien, Blender-Projektdateien, 3D-Modellierungs-Testdateien, Blender-Testdateien, 3D-Animationsbeispiele, 3D-Grafik-BLEND-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose BLEND-Beispieldateien - Testdateien für Blender 3D-Projekte herunterladen',
+          description: 'Laden Sie kostenlose BLEND-Beispieldateien für Blender 3D-Projekte zum Testen von 3D-Modellierung, Blender-Projekt-Kompatibilität, 3D-Animations-Workflows und 3D-Grafiksoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Blender-Software, 3D-Modellierungstools, Blender-Projekt-Viewern, 3D-Animationsplattformen und professionellen 3D-Grafikanwendungen.'
+        },
+        hero: {
+          title: 'BLEND-Beispieldateien',
+          description: 'Laden Sie kostenlose BLEND-Beispieldateien für Blender 3D-Projekte zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Blender-Software, 3D-Modellierungstools und 3D-Animationsplattformen zu testen.'
+        },
+        about_description: 'Dies sind BLEND (Blender 3D-Projekt) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      bvh: {
+        meta: {
+          title: 'Kostenlose BVH-Beispieldateien herunterladen - Testdateien für Biovision Hierarchy Motion Capture | MorphyHub',
+          description: 'Laden Sie kostenlose BVH-Beispieldateien für Biovision Hierarchy Motion Capture zum Testen von Motion-Capture-Daten, Character-Animation, Skelett-Animationssystemen und 3D-Animationssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Motion-Capture-Viewern, Character-Animations-Tools, Skelett-Animationssystemen, 3D-Animationsplattformen und Motion-Capture-Analysesoftware.',
+          keywords: 'BVH-Beispieldateien, BVH-Testdateien, BVH-Beispiele herunterladen, kostenlose BVH-Testdateien, Biovision Hierarchy BVH-Dateien, .bvh-Testdateien, Motion-Capture-Dateien, Character-Animations-Testdateien, Skelett-Animationsdateien, 3D-Animations-BVH-Beispiele, Motion-Capture-Analyse-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose BVH-Beispieldateien - Testdateien für Biovision Hierarchy Motion Capture herunterladen',
+          description: 'Laden Sie kostenlose BVH-Beispieldateien für Biovision Hierarchy Motion Capture zum Testen von Motion-Capture-Daten, Character-Animation, Skelett-Animationssystemen und 3D-Animationssoftware herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Motion-Capture-Viewern, Character-Animations-Tools, Skelett-Animationssystemen, 3D-Animationsplattformen und Motion-Capture-Analysesoftware.'
+        },
+        hero: {
+          title: 'BVH-Beispieldateien',
+          description: 'Laden Sie kostenlose BVH-Beispieldateien für Biovision Hierarchy Motion Capture zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Motion-Capture-Viewer, Character-Animations-Tools und 3D-Animationsplattformen zu testen.'
+        },
+        about_description: 'Dies sind BVH (Biovision Hierarchy Motion Capture) Dateien in verschiedenen Größen für Testzwecke'
+      },
+      dwg: {
+        meta: {
+          title: 'Kostenlose DWG-Beispieldateien herunterladen - Testdateien für AutoCAD-Zeichnungen für CAD-Design | MorphyHub',
+          description: 'Laden Sie kostenlose DWG-Beispieldateien für AutoCAD-Zeichnungen zum Testen von CAD-Software, AutoCAD-Kompatibilität, technischen Zeichentools und Engineering-Design-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AutoCAD, CAD-Viewern, technischer Zeichensoftware, Engineering-Design-Tools und professionellen CAD-Plattformen.',
+          keywords: 'DWG-Beispieldateien, DWG-Testdateien, DWG-Beispiele herunterladen, kostenlose DWG-Testdateien, AutoCAD DWG-Dateien, .dwg-Testdateien, CAD-Zeichnungsdateien, AutoCAD-Testdateien, technische Zeichnungsdateien, Engineering-Design-Beispiele, CAD-Software-DWG-Dateien'
+        },
+        schema: {
+          name: 'Kostenlose DWG-Beispieldateien - Testdateien für AutoCAD-Zeichnungen für CAD-Design herunterladen',
+          description: 'Laden Sie kostenlose DWG-Beispieldateien für AutoCAD-Zeichnungen zum Testen von CAD-Software, AutoCAD-Kompatibilität, technischen Zeichentools und Engineering-Design-Anwendungen herunter. Verschiedene Dateigrößen: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von AutoCAD, CAD-Viewern, technischer Zeichensoftware, Engineering-Design-Tools und professionellen CAD-Plattformen.'
+        },
+        hero: {
+          title: 'DWG-Beispieldateien',
+          description: 'Laden Sie kostenlose DWG-Beispieldateien für AutoCAD-Zeichnungen zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre CAD-Software, AutoCAD-Kompatibilität und technischen Zeichentools zu testen.'
+        },
+        about_description: 'Dies sind DWG (AutoCAD-Zeichnung) Dateien in verschiedenen Größen für Testzwecke'
       }
     }
   }

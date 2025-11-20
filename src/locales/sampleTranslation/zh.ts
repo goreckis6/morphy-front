@@ -1007,6 +1007,262 @@ export const zh: SamplePageTranslations = {
           description: '下载免费MDX MDX (Markdown + JSX)示例文件用于测试。提供多种文件大小，用于测试您的MDX解析器、React文档工具和静态站点生成器。'
         },
         about_description: '这些是用于测试目的的各种大小的MDX (Markdown + JSX)文件'
+      },
+      apk: {
+        meta: {
+          title: '下载免费APK示例文件 - Android应用程序包测试文件 | MorphyHub',
+          description: '下载免费APK Android应用程序包示例文件用于测试Android应用安装、APK分析、逆向工程和移动开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试APK安装程序、Android模拟器、应用分析器、安全扫描器和移动应用开发平台。',
+          keywords: 'APK示例文件、APK测试文件、下载APK示例、免费APK测试文件、Android APK文件、.apk测试文件、Android应用包文件、APK安装程序测试文件、Android模拟器测试文件、移动应用开发示例、APK逆向工程文件'
+        },
+        schema: {
+          name: '免费APK示例文件 - 下载Android应用程序包测试文件',
+          description: '下载免费APK Android应用程序包示例文件用于测试Android应用安装、APK分析、逆向工程和移动开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试APK安装程序、Android模拟器、应用分析器、安全扫描器和移动应用开发平台。'
+        },
+        hero: {
+          title: 'APK示例文件',
+          description: '下载免费APK Android应用程序包示例文件用于测试。提供多种文件大小，用于测试您的Android应用安装工具、APK分析器和移动开发平台。'
+        },
+        about_description: '这些是用于测试目的的各种大小的APK (Android应用程序包)文件'
+      },
+      appimage: {
+        meta: {
+          title: '下载免费AppImage示例文件 - Linux便携式应用程序测试文件 | MorphyHub',
+          description: '下载免费AppImage Linux便携式应用程序示例文件用于测试Linux应用分发、AppImage执行和跨发行版兼容性。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试AppImage运行器、Linux应用程序启动器、便携式应用工具和通用Linux软件分发。',
+          keywords: 'AppImage示例文件、AppImage测试文件、下载AppImage示例、免费AppImage测试文件、Linux AppImage文件、.AppImage测试文件、Linux便携式应用、AppImage运行器测试文件、Linux应用程序文件、跨发行版应用、通用Linux软件示例'
+        },
+        schema: {
+          name: '免费AppImage示例文件 - 下载Linux便携式应用程序测试文件',
+          description: '下载免费AppImage Linux便携式应用程序示例文件用于测试Linux应用分发、AppImage执行和跨发行版兼容性。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试AppImage运行器、Linux应用程序启动器、便携式应用工具和通用Linux软件分发。'
+        },
+        hero: {
+          title: 'AppImage示例文件',
+          description: '下载免费AppImage Linux便携式应用程序示例文件用于测试。提供多种文件大小，用于测试您的AppImage运行器、Linux应用程序启动器和便携式应用工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AppImage (Linux便携式应用程序)文件'
+      },
+      elf: {
+        meta: {
+          title: '下载免费ELF示例文件 - Linux/Unix的Executable and Linkable Format测试文件 | MorphyHub',
+          description: '下载免费ELF Executable and Linkable Format示例文件用于测试Linux/Unix二进制分析、ELF解析、逆向工程和系统调试。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试ELF分析器、二进制反汇编器、逆向工程工具、系统调试器和Linux可执行文件分析平台。',
+          keywords: 'ELF示例文件、ELF测试文件、下载ELF示例、免费ELF测试文件、Linux ELF文件、.elf测试文件、Unix可执行文件、ELF二进制分析文件、逆向工程ELF文件、Linux二进制文件、ELF反汇编器测试文件'
+        },
+        schema: {
+          name: '免费ELF示例文件 - 下载Linux/Unix的Executable and Linkable Format测试文件',
+          description: '下载免费ELF Executable and Linkable Format示例文件用于测试Linux/Unix二进制分析、ELF解析、逆向工程和系统调试。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试ELF分析器、二进制反汇编器、逆向工程工具、系统调试器和Linux可执行文件分析平台。'
+        },
+        hero: {
+          title: 'ELF示例文件',
+          description: '下载免费ELF Executable and Linkable Format示例文件用于测试。提供多种文件大小，用于测试您的ELF分析器、二进制反汇编器和逆向工程工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ELF (Executable and Linkable Format)文件'
+      },
+      exe: {
+        meta: {
+          title: '下载免费EXE示例文件 - Windows可执行文件测试文件 | MorphyHub',
+          description: '下载免费EXE Windows可执行文件示例文件用于测试Windows应用程序执行、EXE分析、二进制解析和Windows开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Windows可执行文件分析器、二进制反汇编器、逆向工程工具、恶意软件分析平台和Windows应用程序开发。',
+          keywords: 'EXE示例文件、EXE测试文件、下载EXE示例、免费EXE测试文件、Windows EXE文件、.exe测试文件、Windows可执行文件、EXE二进制分析文件、Windows应用程序文件、逆向工程EXE文件、Windows二进制反汇编器测试文件'
+        },
+        schema: {
+          name: '免费EXE示例文件 - 下载Windows可执行文件测试文件',
+          description: '下载免费EXE Windows可执行文件示例文件用于测试Windows应用程序执行、EXE分析、二进制解析和Windows开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Windows可执行文件分析器、二进制反汇编器、逆向工程工具、恶意软件分析平台和Windows应用程序开发。'
+        },
+        hero: {
+          title: 'EXE示例文件',
+          description: '下载免费EXE Windows可执行文件示例文件用于测试。提供多种文件大小，用于测试您的Windows可执行文件分析器、二进制反汇编器和逆向工程工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的EXE (Windows可执行文件)文件'
+      },
+      ipa: {
+        meta: {
+          title: '下载免费IPA示例文件 - iOS应用程序包测试文件 | MorphyHub',
+          description: '下载免费IPA iOS应用程序包示例文件用于测试iOS应用安装、IPA分析、iOS应用分发和移动开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试IPA安装程序、iOS模拟器、应用分析器、iOS开发工具和移动应用分发平台。',
+          keywords: 'IPA示例文件、IPA测试文件、下载IPA示例、免费IPA测试文件、iOS IPA文件、.ipa测试文件、iOS应用包文件、IPA安装程序测试文件、iOS模拟器测试文件、移动应用开发示例、iOS应用分发文件'
+        },
+        schema: {
+          name: '免费IPA示例文件 - 下载iOS应用程序包测试文件',
+          description: '下载免费IPA iOS应用程序包示例文件用于测试iOS应用安装、IPA分析、iOS应用分发和移动开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试IPA安装程序、iOS模拟器、应用分析器、iOS开发工具和移动应用分发平台。'
+        },
+        hero: {
+          title: 'IPA示例文件',
+          description: '下载免费IPA iOS应用程序包示例文件用于测试。提供多种文件大小，用于测试您的iOS应用安装工具、IPA分析器和移动开发平台。'
+        },
+        about_description: '这些是用于测试目的的各种大小的IPA (iOS应用程序包)文件'
+      },
+      jar: {
+        meta: {
+          title: '下载免费JAR示例文件 - Java归档测试文件 | MorphyHub',
+          description: '下载免费JAR Java归档示例文件用于测试Java应用程序执行、JAR提取、JAR分析和Java开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JAR提取器、Java运行时环境、JAR分析器、Java开发工具和Java应用程序部署平台。',
+          keywords: 'JAR示例文件、JAR测试文件、下载JAR示例、免费JAR测试文件、Java JAR文件、.jar测试文件、Java归档文件、JAR提取器测试文件、Java运行时测试文件、Java开发示例、JAR分析文件'
+        },
+        schema: {
+          name: '免费JAR示例文件 - 下载Java归档测试文件',
+          description: '下载免费JAR Java归档示例文件用于测试Java应用程序执行、JAR提取、JAR分析和Java开发工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试JAR提取器、Java运行时环境、JAR分析器、Java开发工具和Java应用程序部署平台。'
+        },
+        hero: {
+          title: 'JAR示例文件',
+          description: '下载免费JAR Java归档示例文件用于测试。提供多种文件大小，用于测试您的JAR提取器、Java运行时环境和Java开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的JAR (Java归档)文件'
+      },
+      crx: {
+        meta: {
+          title: '下载免费CRX示例文件 - Chrome扩展程序包测试文件 | MorphyHub',
+          description: '下载免费CRX Chrome扩展程序包示例文件用于测试Chrome扩展程序安装、CRX分析、浏览器扩展程序开发和Web扩展程序工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试CRX安装程序、Chrome扩展程序分析器、浏览器扩展程序开发工具和Web扩展程序分发平台。',
+          keywords: 'CRX示例文件、CRX测试文件、下载CRX示例、免费CRX测试文件、Chrome CRX文件、.crx测试文件、Chrome扩展程序文件、CRX安装程序测试文件、浏览器扩展程序文件、Web扩展程序开发示例、Chrome扩展程序分析文件'
+        },
+        schema: {
+          name: '免费CRX示例文件 - 下载Chrome扩展程序包测试文件',
+          description: '下载免费CRX Chrome扩展程序包示例文件用于测试Chrome扩展程序安装、CRX分析、浏览器扩展程序开发和Web扩展程序工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试CRX安装程序、Chrome扩展程序分析器、浏览器扩展程序开发工具和Web扩展程序分发平台。'
+        },
+        hero: {
+          title: 'CRX示例文件',
+          description: '下载免费CRX Chrome扩展程序包示例文件用于测试。提供多种文件大小，用于测试您的Chrome扩展程序安装工具、CRX分析器和浏览器扩展程序开发平台。'
+        },
+        about_description: '这些是用于测试目的的各种大小的CRX (Chrome扩展程序包)文件'
+      },
+      '3ds': {
+        meta: {
+          title: '下载免费3DS示例文件 - 3D打印和建模的3D模型测试文件 | MorphyHub',
+          description: '下载免费3DS 3D模型示例文件用于测试3D建模软件、3D打印工具、网格转换和3D可视化应用程序。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试3D模型查看器、3D打印机、CAD软件、网格编辑器和3D图形应用程序。',
+          keywords: '3DS示例文件、3DS测试文件、下载3DS示例、免费3DS测试文件、3D模型3DS文件、.3ds测试文件、3D建模文件、3D打印测试文件、CAD 3DS文件、网格模型文件、3D图形示例'
+        },
+        schema: {
+          name: '免费3DS示例文件 - 下载3D打印和建模的3D模型测试文件',
+          description: '下载免费3DS 3D模型示例文件用于测试3D建模软件、3D打印工具、网格转换和3D可视化应用程序。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试3D模型查看器、3D打印机、CAD软件、网格编辑器和3D图形应用程序。'
+        },
+        hero: {
+          title: '3DS示例文件',
+          description: '下载免费3DS 3D模型示例文件用于测试。提供多种文件大小，用于测试您的3D建模软件、3D打印工具和3D可视化应用程序。'
+        },
+        about_description: '这些是用于测试目的的各种大小的3DS (3D模型)文件'
+      },
+      '3mf': {
+        meta: {
+          title: '下载免费3MF示例文件 - 3D打印的3D Manufacturing Format测试文件 | MorphyHub',
+          description: '下载免费3MF 3D Manufacturing Format示例文件用于测试3D打印、增材制造、3D模型切片和3D打印机兼容性。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试3D打印机切片器、增材制造软件、3MF查看器、3D打印工作流程和现代3D制造平台。',
+          keywords: '3MF示例文件、3MF测试文件、下载3MF示例、免费3MF测试文件、3D打印3MF文件、.3mf测试文件、增材制造文件、3D打印机切片器测试文件、3MF查看器测试文件、3D制造示例、现代3D打印文件'
+        },
+        schema: {
+          name: '免费3MF示例文件 - 下载3D打印的3D Manufacturing Format测试文件',
+          description: '下载免费3MF 3D Manufacturing Format示例文件用于测试3D打印、增材制造、3D模型切片和3D打印机兼容性。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试3D打印机切片器、增材制造软件、3MF查看器、3D打印工作流程和现代3D制造平台。'
+        },
+        hero: {
+          title: '3MF示例文件',
+          description: '下载免费3MF 3D Manufacturing Format示例文件用于测试。提供多种文件大小，用于测试您的3D打印机切片器、增材制造软件和3D打印工作流程。'
+        },
+        about_description: '这些是用于测试目的的各种大小的3MF (3D Manufacturing Format)文件'
+      },
+      ai: {
+        meta: {
+          title: '下载免费AI示例文件 - Adobe Illustrator矢量图形测试文件 | MorphyHub',
+          description: '下载免费AI Adobe Illustrator矢量图形示例文件用于测试矢量图形编辑、AI文件转换、设计软件兼容性和图形设计工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Adobe Illustrator、矢量图形编辑器、AI文件转换器、设计软件和专业图形设计平台。',
+          keywords: 'AI示例文件、AI测试文件、下载AI示例、免费AI测试文件、Adobe Illustrator AI文件、.ai测试文件、矢量图形文件、Illustrator测试文件、设计软件文件、矢量编辑示例、图形设计AI文件'
+        },
+        schema: {
+          name: '免费AI示例文件 - 下载Adobe Illustrator矢量图形测试文件',
+          description: '下载免费AI Adobe Illustrator矢量图形示例文件用于测试矢量图形编辑、AI文件转换、设计软件兼容性和图形设计工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Adobe Illustrator、矢量图形编辑器、AI文件转换器、设计软件和专业图形设计平台。'
+        },
+        hero: {
+          title: 'AI示例文件',
+          description: '下载免费AI Adobe Illustrator矢量图形示例文件用于测试。提供多种文件大小，用于测试您的矢量图形编辑器、AI文件转换器和设计软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AI (Adobe Illustrator)矢量图形文件'
+      },
+      ase: {
+        meta: {
+          title: '下载免费ASE示例文件 - Aseprite精灵动画测试文件 | MorphyHub',
+          description: '下载免费ASE Aseprite精灵动画示例文件用于测试像素艺术编辑、精灵动画、游戏开发工具和2D动画软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Aseprite、像素艺术编辑器、精灵动画工具、游戏开发软件和2D动画平台。',
+          keywords: 'ASE示例文件、ASE测试文件、下载ASE示例、免费ASE测试文件、Aseprite ASE文件、.ase测试文件、精灵动画文件、像素艺术测试文件、游戏开发文件、2D动画示例、Aseprite测试文件'
+        },
+        schema: {
+          name: '免费ASE示例文件 - 下载Aseprite精灵动画测试文件',
+          description: '下载免费ASE Aseprite精灵动画示例文件用于测试像素艺术编辑、精灵动画、游戏开发工具和2D动画软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Aseprite、像素艺术编辑器、精灵动画工具、游戏开发软件和2D动画平台。'
+        },
+        hero: {
+          title: 'ASE示例文件',
+          description: '下载免费ASE Aseprite精灵动画示例文件用于测试。提供多种文件大小，用于测试您的像素艺术编辑器、精灵动画工具和游戏开发软件。'
+        },
+        about_description: '这些是用于测试目的的各种大小的ASE (Aseprite精灵动画)文件'
+      },
+      'animation-fbx': {
+        meta: {
+          title: '下载免费Animation FBX示例文件 - Autodesk FBX 3D动画测试文件 | MorphyHub',
+          description: '下载免费Animation FBX Autodesk FBX 3D动画示例文件用于测试3D动画、角色绑定、动作捕捉数据和3D图形软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试3D动画软件、游戏引擎、动作捕捉工具、角色动画平台和3D图形应用程序。',
+          keywords: 'Animation FBX示例文件、FBX动画测试文件、下载FBX动画示例、免费FBX动画测试文件、Autodesk FBX文件、.fbx动画测试文件、3D动画文件、角色动画测试文件、动作捕捉文件、3D图形动画示例、游戏引擎FBX文件'
+        },
+        schema: {
+          name: '免费Animation FBX示例文件 - 下载Autodesk FBX 3D动画测试文件',
+          description: '下载免费Animation FBX Autodesk FBX 3D动画示例文件用于测试3D动画、角色绑定、动作捕捉数据和3D图形软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试3D动画软件、游戏引擎、动作捕捉工具、角色动画平台和3D图形应用程序。'
+        },
+        hero: {
+          title: 'Animation FBX示例文件',
+          description: '下载免费Animation FBX Autodesk FBX 3D动画示例文件用于测试。提供多种文件大小，用于测试您的3D动画软件、游戏引擎和动作捕捉工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的Animation FBX (Autodesk FBX 3D动画)文件'
+      },
+      assetbundle: {
+        meta: {
+          title: '下载免费AssetBundle示例文件 - 游戏开发的Unity AssetBundle测试文件 | MorphyHub',
+          description: '下载免费AssetBundle Unity AssetBundle示例文件用于测试Unity游戏开发、资源加载、游戏资源管理和Unity引擎工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Unity引擎、游戏资源加载器、Unity开发工具、游戏资源管理器和Unity游戏开发平台。',
+          keywords: 'AssetBundle示例文件、AssetBundle测试文件、下载AssetBundle示例、免费AssetBundle测试文件、Unity AssetBundle文件、Unity资源文件、游戏开发文件、Unity引擎测试文件、游戏资源加载器测试文件、Unity开发示例、游戏资源管理文件'
+        },
+        schema: {
+          name: '免费AssetBundle示例文件 - 下载游戏开发的Unity AssetBundle测试文件',
+          description: '下载免费AssetBundle Unity AssetBundle示例文件用于测试Unity游戏开发、资源加载、游戏资源管理和Unity引擎工具。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Unity引擎、游戏资源加载器、Unity开发工具、游戏资源管理器和Unity游戏开发平台。'
+        },
+        hero: {
+          title: 'AssetBundle示例文件',
+          description: '下载免费AssetBundle Unity AssetBundle示例文件用于测试。提供多种文件大小，用于测试您的Unity引擎、游戏资源加载器和Unity开发工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的AssetBundle (Unity AssetBundle)文件'
+      },
+      blend: {
+        meta: {
+          title: '下载免费BLEND示例文件 - Blender 3D项目测试文件 | MorphyHub',
+          description: '下载免费BLEND Blender 3D项目示例文件用于测试3D建模、Blender项目兼容性、3D动画工作流程和3D图形软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Blender软件、3D建模工具、Blender项目查看器、3D动画平台和专业3D图形应用程序。',
+          keywords: 'BLEND示例文件、BLEND测试文件、下载BLEND示例、免费BLEND测试文件、Blender BLEND文件、.blend测试文件、Blender项目文件、3D建模测试文件、Blender测试文件、3D动画示例、3D图形BLEND文件'
+        },
+        schema: {
+          name: '免费BLEND示例文件 - 下载Blender 3D项目测试文件',
+          description: '下载免费BLEND Blender 3D项目示例文件用于测试3D建模、Blender项目兼容性、3D动画工作流程和3D图形软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试Blender软件、3D建模工具、Blender项目查看器、3D动画平台和专业3D图形应用程序。'
+        },
+        hero: {
+          title: 'BLEND示例文件',
+          description: '下载免费BLEND Blender 3D项目示例文件用于测试。提供多种文件大小，用于测试您的Blender软件、3D建模工具和3D动画平台。'
+        },
+        about_description: '这些是用于测试目的的各种大小的BLEND (Blender 3D项目)文件'
+      },
+      bvh: {
+        meta: {
+          title: '下载免费BVH示例文件 - Biovision Hierarchy动作捕捉测试文件 | MorphyHub',
+          description: '下载免费BVH Biovision Hierarchy动作捕捉示例文件用于测试动作捕捉数据、角色动画、骨骼动画系统和3D动画软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试动作捕捉查看器、角色动画工具、骨骼动画系统、3D动画平台和动作捕捉分析软件。',
+          keywords: 'BVH示例文件、BVH测试文件、下载BVH示例、免费BVH测试文件、Biovision Hierarchy BVH文件、.bvh测试文件、动作捕捉文件、角色动画测试文件、骨骼动画文件、3D动画BVH示例、动作捕捉分析文件'
+        },
+        schema: {
+          name: '免费BVH示例文件 - 下载Biovision Hierarchy动作捕捉测试文件',
+          description: '下载免费BVH Biovision Hierarchy动作捕捉示例文件用于测试动作捕捉数据、角色动画、骨骼动画系统和3D动画软件。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试动作捕捉查看器、角色动画工具、骨骼动画系统、3D动画平台和动作捕捉分析软件。'
+        },
+        hero: {
+          title: 'BVH示例文件',
+          description: '下载免费BVH Biovision Hierarchy动作捕捉示例文件用于测试。提供多种文件大小，用于测试您的动作捕捉查看器、角色动画工具和3D动画平台。'
+        },
+        about_description: '这些是用于测试目的的各种大小的BVH (Biovision Hierarchy动作捕捉)文件'
+      },
+      dwg: {
+        meta: {
+          title: '下载免费DWG示例文件 - CAD设计的AutoCAD图纸测试文件 | MorphyHub',
+          description: '下载免费DWG AutoCAD图纸示例文件用于测试CAD软件、AutoCAD兼容性、技术绘图工具和工程设计应用程序。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试AutoCAD、CAD查看器、技术绘图软件、工程设计工具和专业CAD平台。',
+          keywords: 'DWG示例文件、DWG测试文件、下载DWG示例、免费DWG测试文件、AutoCAD DWG文件、.dwg测试文件、CAD图纸文件、AutoCAD测试文件、技术绘图文件、工程设计示例、CAD软件DWG文件'
+        },
+        schema: {
+          name: '免费DWG示例文件 - 下载CAD设计的AutoCAD图纸测试文件',
+          description: '下载免费DWG AutoCAD图纸示例文件用于测试CAD软件、AutoCAD兼容性、技术绘图工具和工程设计应用程序。提供多种文件大小：100 KB、1 MB、5 MB、50 MB 和 100 MB。非常适合测试AutoCAD、CAD查看器、技术绘图软件、工程设计工具和专业CAD平台。'
+        },
+        hero: {
+          title: 'DWG示例文件',
+          description: '下载免费DWG AutoCAD图纸示例文件用于测试。提供多种文件大小，用于测试您的CAD软件、AutoCAD兼容性和技术绘图工具。'
+        },
+        about_description: '这些是用于测试目的的各种大小的DWG (AutoCAD图纸)文件'
       }
     }
   }

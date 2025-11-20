@@ -1007,6 +1007,262 @@ export const pl: SamplePageTranslations = {
           description: 'Pobierz darmowe pliki przykładowe MDX MDX (Markdown + JSX) do testowania. Wiele rozmiarów plików dostępnych do testowania parserów MDX, narzędzi dokumentacji React i generatorów stron statycznych.'
         },
         about_description: 'To są testowe pliki MDX (Markdown + JSX) w różnych rozmiarach do celów testowych'
+      },
+      apk: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe APK - Pliki testowe pakietów aplikacji Android | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe APK pakietów aplikacji Android do testowania instalacji aplikacji Android, analizy APK, reverse engineering i narzędzi rozwoju mobilnego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalatorów APK, emulatorów Android, analizatorów aplikacji, skanerów bezpieczeństwa i platform rozwoju aplikacji mobilnych.',
+          keywords: 'pliki przykładowe APK, pliki testowe APK, pobierz przykłady APK, darmowe pliki testowe APK, pliki APK Android, pliki testowe .apk, pliki pakietów aplikacji Android, pliki testowe instalatora APK, pliki testowe emulatora Android, przykłady rozwoju aplikacji mobilnych, pliki reverse engineering APK'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe APK - Pobierz pliki testowe pakietów aplikacji Android',
+          description: 'Pobierz darmowe pliki przykładowe APK pakietów aplikacji Android do testowania instalacji aplikacji Android, analizy APK, reverse engineering i narzędzi rozwoju mobilnego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalatorów APK, emulatorów Android, analizatorów aplikacji, skanerów bezpieczeństwa i platform rozwoju aplikacji mobilnych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe APK',
+          description: 'Pobierz darmowe pliki przykładowe APK pakietów aplikacji Android do testowania. Różne rozmiary plików dostępne do testowania narzędzi instalacji aplikacji Android, analizatorów APK i platform rozwoju mobilnego.'
+        },
+        about_description: 'To są testowe pliki APK (pakiet aplikacji Android) w różnych rozmiarach do celów testowych'
+      },
+      appimage: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe AppImage - Pliki testowe przenośnych aplikacji Linux | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe AppImage przenośnych aplikacji Linux do testowania dystrybucji aplikacji Linux, wykonywania AppImage i kompatybilności między dystrybucjami. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania runnerów AppImage, launcherów aplikacji Linux, narzędzi przenośnych aplikacji i uniwersalnej dystrybucji oprogramowania Linux.',
+          keywords: 'pliki przykładowe AppImage, pliki testowe AppImage, pobierz przykłady AppImage, darmowe pliki testowe AppImage, pliki AppImage Linux, pliki testowe .AppImage, przenośne aplikacje Linux, pliki testowe runnera AppImage, pliki aplikacji Linux, aplikacje między dystrybucjami, przykłady uniwersalnego oprogramowania Linux'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe AppImage - Pobierz pliki testowe przenośnych aplikacji Linux',
+          description: 'Pobierz darmowe pliki przykładowe AppImage przenośnych aplikacji Linux do testowania dystrybucji aplikacji Linux, wykonywania AppImage i kompatybilności między dystrybucjami. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania runnerów AppImage, launcherów aplikacji Linux, narzędzi przenośnych aplikacji i uniwersalnej dystrybucji oprogramowania Linux.'
+        },
+        hero: {
+          title: 'Pliki przykładowe AppImage',
+          description: 'Pobierz darmowe pliki przykładowe AppImage przenośnych aplikacji Linux do testowania. Różne rozmiary plików dostępne do testowania runnerów AppImage, launcherów aplikacji Linux i narzędzi przenośnych aplikacji.'
+        },
+        about_description: 'To są testowe pliki AppImage (przenośna aplikacja Linux) w różnych rozmiarach do celów testowych'
+      },
+      elf: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe ELF - Pliki testowe Executable and Linkable Format dla Linux/Unix | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe ELF Executable and Linkable Format do testowania analizy binariów Linux/Unix, parsowania ELF, reverse engineering i debugowania systemu. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizatorów ELF, deasemblerów binarnych, narzędzi reverse engineering, debuggerów systemu i platform analizy wykonywalnych Linux.',
+          keywords: 'pliki przykładowe ELF, pliki testowe ELF, pobierz przykłady ELF, darmowe pliki testowe ELF, pliki ELF Linux, pliki testowe .elf, pliki wykonywalne Unix, pliki analizy binarnej ELF, pliki reverse engineering ELF, pliki binarne Linux, pliki testowe deasemblera ELF'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe ELF - Pobierz pliki testowe Executable and Linkable Format dla Linux/Unix',
+          description: 'Pobierz darmowe pliki przykładowe ELF Executable and Linkable Format do testowania analizy binariów Linux/Unix, parsowania ELF, reverse engineering i debugowania systemu. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizatorów ELF, deasemblerów binarnych, narzędzi reverse engineering, debuggerów systemu i platform analizy wykonywalnych Linux.'
+        },
+        hero: {
+          title: 'Pliki przykładowe ELF',
+          description: 'Pobierz darmowe pliki przykładowe ELF Executable and Linkable Format do testowania. Różne rozmiary plików dostępne do testowania analizatorów ELF, deasemblerów binarnych i narzędzi reverse engineering.'
+        },
+        about_description: 'To są testowe pliki ELF (Executable and Linkable Format) w różnych rozmiarach do celów testowych'
+      },
+      exe: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe EXE - Pliki testowe wykonywalne Windows | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe EXE wykonywalne Windows do testowania wykonywania aplikacji Windows, analizy EXE, parsowania binarnych i narzędzi rozwoju Windows. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizatorów wykonywalnych Windows, deasemblerów binarnych, narzędzi reverse engineering, platform analizy malware i rozwoju aplikacji Windows.',
+          keywords: 'pliki przykładowe EXE, pliki testowe EXE, pobierz przykłady EXE, darmowe pliki testowe EXE, pliki EXE Windows, pliki testowe .exe, pliki wykonywalne Windows, pliki analizy binarnej EXE, pliki aplikacji Windows, pliki reverse engineering EXE, pliki testowe deasemblera binarnych Windows'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe EXE - Pobierz pliki testowe wykonywalne Windows',
+          description: 'Pobierz darmowe pliki przykładowe EXE wykonywalne Windows do testowania wykonywania aplikacji Windows, analizy EXE, parsowania binarnych i narzędzi rozwoju Windows. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania analizatorów wykonywalnych Windows, deasemblerów binarnych, narzędzi reverse engineering, platform analizy malware i rozwoju aplikacji Windows.'
+        },
+        hero: {
+          title: 'Pliki przykładowe EXE',
+          description: 'Pobierz darmowe pliki przykładowe EXE wykonywalne Windows do testowania. Różne rozmiary plików dostępne do testowania analizatorów wykonywalnych Windows, deasemblerów binarnych i narzędzi reverse engineering.'
+        },
+        about_description: 'To są testowe pliki EXE (wykonywalne Windows) w różnych rozmiarach do celów testowych'
+      },
+      ipa: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe IPA - Pliki testowe pakietów aplikacji iOS | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe IPA pakietów aplikacji iOS do testowania instalacji aplikacji iOS, analizy IPA, dystrybucji aplikacji iOS i narzędzi rozwoju mobilnego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalatorów IPA, symulatorów iOS, analizatorów aplikacji, narzędzi rozwoju iOS i platform dystrybucji aplikacji mobilnych.',
+          keywords: 'pliki przykładowe IPA, pliki testowe IPA, pobierz przykłady IPA, darmowe pliki testowe IPA, pliki IPA iOS, pliki testowe .ipa, pliki pakietów aplikacji iOS, pliki testowe instalatora IPA, pliki testowe symulatora iOS, przykłady rozwoju aplikacji mobilnych, pliki dystrybucji aplikacji iOS'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe IPA - Pobierz pliki testowe pakietów aplikacji iOS',
+          description: 'Pobierz darmowe pliki przykładowe IPA pakietów aplikacji iOS do testowania instalacji aplikacji iOS, analizy IPA, dystrybucji aplikacji iOS i narzędzi rozwoju mobilnego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalatorów IPA, symulatorów iOS, analizatorów aplikacji, narzędzi rozwoju iOS i platform dystrybucji aplikacji mobilnych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe IPA',
+          description: 'Pobierz darmowe pliki przykładowe IPA pakietów aplikacji iOS do testowania. Różne rozmiary plików dostępne do testowania narzędzi instalacji aplikacji iOS, analizatorów IPA i platform rozwoju mobilnego.'
+        },
+        about_description: 'To są testowe pliki IPA (pakiet aplikacji iOS) w różnych rozmiarach do celów testowych'
+      },
+      jar: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe JAR - Pliki testowe archiwów Java | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe JAR archiwów Java do testowania wykonywania aplikacji Java, ekstrakcji JAR, analizy JAR i narzędzi rozwoju Java. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstraktorów JAR, środowisk wykonawczych Java, analizatorów JAR, narzędzi rozwoju Java i platform wdrażania aplikacji Java.',
+          keywords: 'pliki przykładowe JAR, pliki testowe JAR, pobierz przykłady JAR, darmowe pliki testowe JAR, pliki JAR Java, pliki testowe .jar, pliki archiwów Java, pliki testowe ekstraktora JAR, pliki testowe środowiska wykonawczego Java, przykłady rozwoju Java, pliki analizy JAR'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe JAR - Pobierz pliki testowe archiwów Java',
+          description: 'Pobierz darmowe pliki przykładowe JAR archiwów Java do testowania wykonywania aplikacji Java, ekstrakcji JAR, analizy JAR i narzędzi rozwoju Java. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania ekstraktorów JAR, środowisk wykonawczych Java, analizatorów JAR, narzędzi rozwoju Java i platform wdrażania aplikacji Java.'
+        },
+        hero: {
+          title: 'Pliki przykładowe JAR',
+          description: 'Pobierz darmowe pliki przykładowe JAR archiwów Java do testowania. Różne rozmiary plików dostępne do testowania ekstraktorów JAR, środowisk wykonawczych Java i narzędzi rozwoju Java.'
+        },
+        about_description: 'To są testowe pliki JAR (archiwum Java) w różnych rozmiarach do celów testowych'
+      },
+      crx: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe CRX - Pliki testowe pakietów rozszerzeń Chrome | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe CRX pakietów rozszerzeń Chrome do testowania instalacji rozszerzeń Chrome, analizy CRX, rozwoju rozszerzeń przeglądarki i narzędzi rozszerzeń internetowych. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalatorów CRX, analizatorów rozszerzeń Chrome, narzędzi rozwoju rozszerzeń przeglądarki i platform dystrybucji rozszerzeń internetowych.',
+          keywords: 'pliki przykładowe CRX, pliki testowe CRX, pobierz przykłady CRX, darmowe pliki testowe CRX, pliki CRX Chrome, pliki testowe .crx, pliki rozszerzeń Chrome, pliki testowe instalatora CRX, pliki rozszerzeń przeglądarki, przykłady rozwoju rozszerzeń internetowych, pliki analizy rozszerzeń Chrome'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe CRX - Pobierz pliki testowe pakietów rozszerzeń Chrome',
+          description: 'Pobierz darmowe pliki przykładowe CRX pakietów rozszerzeń Chrome do testowania instalacji rozszerzeń Chrome, analizy CRX, rozwoju rozszerzeń przeglądarki i narzędzi rozszerzeń internetowych. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania instalatorów CRX, analizatorów rozszerzeń Chrome, narzędzi rozwoju rozszerzeń przeglądarki i platform dystrybucji rozszerzeń internetowych.'
+        },
+        hero: {
+          title: 'Pliki przykładowe CRX',
+          description: 'Pobierz darmowe pliki przykładowe CRX pakietów rozszerzeń Chrome do testowania. Różne rozmiary plików dostępne do testowania narzędzi instalacji rozszerzeń Chrome, analizatorów CRX i platform rozwoju rozszerzeń przeglądarki.'
+        },
+        about_description: 'To są testowe pliki CRX (pakiet rozszerzeń Chrome) w różnych rozmiarach do celów testowych'
+      },
+      '3ds': {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe 3DS - Pliki testowe modeli 3D do druku 3D i modelowania | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe 3DS modeli 3D do testowania oprogramowania do modelowania 3D, narzędzi do druku 3D, konwersji siatek i aplikacji wizualizacji 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek modeli 3D, drukarek 3D, oprogramowania CAD, edytorów siatek i aplikacji grafiki 3D.',
+          keywords: 'pliki przykładowe 3DS, pliki testowe 3DS, pobierz przykłady 3DS, darmowe pliki testowe 3DS, pliki modeli 3D 3DS, pliki testowe .3ds, pliki modelowania 3D, pliki testowe druku 3D, pliki CAD 3DS, pliki modeli siatek, przykłady grafiki 3D'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe 3DS - Pobierz pliki testowe modeli 3D do druku 3D i modelowania',
+          description: 'Pobierz darmowe pliki przykładowe 3DS modeli 3D do testowania oprogramowania do modelowania 3D, narzędzi do druku 3D, konwersji siatek i aplikacji wizualizacji 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek modeli 3D, drukarek 3D, oprogramowania CAD, edytorów siatek i aplikacji grafiki 3D.'
+        },
+        hero: {
+          title: 'Pliki przykładowe 3DS',
+          description: 'Pobierz darmowe pliki przykładowe 3DS modeli 3D do testowania. Różne rozmiary plików dostępne do testowania oprogramowania do modelowania 3D, narzędzi do druku 3D i aplikacji wizualizacji 3D.'
+        },
+        about_description: 'To są testowe pliki 3DS (model 3D) w różnych rozmiarach do celów testowych'
+      },
+      '3mf': {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe 3MF - Pliki testowe 3D Manufacturing Format do druku 3D | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe 3MF 3D Manufacturing Format do testowania druku 3D, produkcji addytywnej, cięcia modeli 3D i kompatybilności drukarek 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania slicerów drukarek 3D, oprogramowania do produkcji addytywnej, przeglądarek 3MF, przepływów pracy druku 3D i nowoczesnych platform produkcji 3D.',
+          keywords: 'pliki przykładowe 3MF, pliki testowe 3MF, pobierz przykłady 3MF, darmowe pliki testowe 3MF, pliki druku 3D 3MF, pliki testowe .3mf, pliki produkcji addytywnej, pliki testowe slicera drukarki 3D, pliki testowe przeglądarki 3MF, przykłady produkcji 3D, pliki nowoczesnego druku 3D'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe 3MF - Pobierz pliki testowe 3D Manufacturing Format do druku 3D',
+          description: 'Pobierz darmowe pliki przykładowe 3MF 3D Manufacturing Format do testowania druku 3D, produkcji addytywnej, cięcia modeli 3D i kompatybilności drukarek 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania slicerów drukarek 3D, oprogramowania do produkcji addytywnej, przeglądarek 3MF, przepływów pracy druku 3D i nowoczesnych platform produkcji 3D.'
+        },
+        hero: {
+          title: 'Pliki przykładowe 3MF',
+          description: 'Pobierz darmowe pliki przykładowe 3MF 3D Manufacturing Format do testowania. Różne rozmiary plików dostępne do testowania slicerów drukarek 3D, oprogramowania do produkcji addytywnej i przepływów pracy druku 3D.'
+        },
+        about_description: 'To są testowe pliki 3MF (3D Manufacturing Format) w różnych rozmiarach do celów testowych'
+      },
+      ai: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe AI - Pliki testowe grafiki wektorowej Adobe Illustrator | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe AI grafiki wektorowej Adobe Illustrator do testowania edycji grafiki wektorowej, konwersji plików AI, kompatybilności oprogramowania do projektowania i narzędzi projektowania graficznego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Adobe Illustrator, edytorów grafiki wektorowej, konwerterów plików AI, oprogramowania do projektowania i profesjonalnych platform projektowania graficznego.',
+          keywords: 'pliki przykładowe AI, pliki testowe AI, pobierz przykłady AI, darmowe pliki testowe AI, pliki AI Adobe Illustrator, pliki testowe .ai, pliki grafiki wektorowej, pliki testowe Illustrator, pliki oprogramowania do projektowania, przykłady edycji wektorowej, pliki projektowania graficznego AI'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe AI - Pobierz pliki testowe grafiki wektorowej Adobe Illustrator',
+          description: 'Pobierz darmowe pliki przykładowe AI grafiki wektorowej Adobe Illustrator do testowania edycji grafiki wektorowej, konwersji plików AI, kompatybilności oprogramowania do projektowania i narzędzi projektowania graficznego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Adobe Illustrator, edytorów grafiki wektorowej, konwerterów plików AI, oprogramowania do projektowania i profesjonalnych platform projektowania graficznego.'
+        },
+        hero: {
+          title: 'Pliki przykładowe AI',
+          description: 'Pobierz darmowe pliki przykładowe AI grafiki wektorowej Adobe Illustrator do testowania. Różne rozmiary plików dostępne do testowania edytorów grafiki wektorowej, konwerterów plików AI i oprogramowania do projektowania.'
+        },
+        about_description: 'To są testowe pliki AI (Adobe Illustrator) grafiki wektorowej w różnych rozmiarach do celów testowych'
+      },
+      ase: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe ASE - Pliki testowe animacji sprite Aseprite | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe ASE animacji sprite Aseprite do testowania edycji pixel art, animacji sprite, narzędzi rozwoju gier i oprogramowania animacji 2D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Aseprite, edytorów pixel art, narzędzi animacji sprite, oprogramowania rozwoju gier i platform animacji 2D.',
+          keywords: 'pliki przykładowe ASE, pliki testowe ASE, pobierz przykłady ASE, darmowe pliki testowe ASE, pliki ASE Aseprite, pliki testowe .ase, pliki animacji sprite, pliki testowe pixel art, pliki rozwoju gier, przykłady animacji 2D, pliki testowe Aseprite'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe ASE - Pobierz pliki testowe animacji sprite Aseprite',
+          description: 'Pobierz darmowe pliki przykładowe ASE animacji sprite Aseprite do testowania edycji pixel art, animacji sprite, narzędzi rozwoju gier i oprogramowania animacji 2D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania Aseprite, edytorów pixel art, narzędzi animacji sprite, oprogramowania rozwoju gier i platform animacji 2D.'
+        },
+        hero: {
+          title: 'Pliki przykładowe ASE',
+          description: 'Pobierz darmowe pliki przykładowe ASE animacji sprite Aseprite do testowania. Różne rozmiary plików dostępne do testowania edytorów pixel art, narzędzi animacji sprite i oprogramowania rozwoju gier.'
+        },
+        about_description: 'To są testowe pliki ASE (animacja sprite Aseprite) w różnych rozmiarach do celów testowych'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe Animation FBX - Pliki testowe animacji 3D Autodesk FBX | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe Animation FBX animacji 3D Autodesk FBX do testowania animacji 3D, riggingu postaci, danych motion capture i oprogramowania grafiki 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania animacji 3D, silników gier, narzędzi motion capture, platform animacji postaci i aplikacji grafiki 3D.',
+          keywords: 'pliki przykładowe Animation FBX, pliki testowe animacji FBX, pobierz przykłady animacji FBX, darmowe pliki testowe animacji FBX, pliki Autodesk FBX, pliki testowe animacji .fbx, pliki animacji 3D, pliki testowe animacji postaci, pliki motion capture, przykłady animacji grafiki 3D, pliki FBX silnika gier'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe Animation FBX - Pobierz pliki testowe animacji 3D Autodesk FBX',
+          description: 'Pobierz darmowe pliki przykładowe Animation FBX animacji 3D Autodesk FBX do testowania animacji 3D, riggingu postaci, danych motion capture i oprogramowania grafiki 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania animacji 3D, silników gier, narzędzi motion capture, platform animacji postaci i aplikacji grafiki 3D.'
+        },
+        hero: {
+          title: 'Pliki przykładowe Animation FBX',
+          description: 'Pobierz darmowe pliki przykładowe Animation FBX animacji 3D Autodesk FBX do testowania. Różne rozmiary plików dostępne do testowania oprogramowania animacji 3D, silników gier i narzędzi motion capture.'
+        },
+        about_description: 'To są testowe pliki Animation FBX (animacja 3D Autodesk FBX) w różnych rozmiarach do celów testowych'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe AssetBundle - Pliki testowe Unity AssetBundle do rozwoju gier | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe AssetBundle Unity AssetBundle do testowania rozwoju gier Unity, ładowania zasobów, zarządzania zasobami gier i narzędzi silnika Unity. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania silnika Unity, ładowarek zasobów gier, narzędzi rozwoju Unity, menedżerów zasobów gier i platform rozwoju gier Unity.',
+          keywords: 'pliki przykładowe AssetBundle, pliki testowe AssetBundle, pobierz przykłady AssetBundle, darmowe pliki testowe AssetBundle, pliki Unity AssetBundle, pliki zasobów Unity, pliki rozwoju gier, pliki testowe silnika Unity, pliki testowe ładowarki zasobów gier, przykłady rozwoju Unity, pliki zarządzania zasobami gier'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe AssetBundle - Pobierz pliki testowe Unity AssetBundle do rozwoju gier',
+          description: 'Pobierz darmowe pliki przykładowe AssetBundle Unity AssetBundle do testowania rozwoju gier Unity, ładowania zasobów, zarządzania zasobami gier i narzędzi silnika Unity. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania silnika Unity, ładowarek zasobów gier, narzędzi rozwoju Unity, menedżerów zasobów gier i platform rozwoju gier Unity.'
+        },
+        hero: {
+          title: 'Pliki przykładowe AssetBundle',
+          description: 'Pobierz darmowe pliki przykładowe AssetBundle Unity AssetBundle do testowania. Różne rozmiary plików dostępne do testowania silnika Unity, ładowarek zasobów gier i narzędzi rozwoju Unity.'
+        },
+        about_description: 'To są testowe pliki AssetBundle (Unity AssetBundle) w różnych rozmiarach do celów testowych'
+      },
+      blend: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe BLEND - Pliki testowe projektów 3D Blender | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe BLEND projektów 3D Blender do testowania modelowania 3D, kompatybilności projektów Blender, przepływów pracy animacji 3D i oprogramowania grafiki 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania Blender, narzędzi modelowania 3D, przeglądarek projektów Blender, platform animacji 3D i profesjonalnych aplikacji grafiki 3D.',
+          keywords: 'pliki przykładowe BLEND, pliki testowe BLEND, pobierz przykłady BLEND, darmowe pliki testowe BLEND, pliki BLEND Blender, pliki testowe .blend, pliki projektów Blender, pliki testowe modelowania 3D, pliki testowe Blender, przykłady animacji 3D, pliki grafiki 3D BLEND'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe BLEND - Pobierz pliki testowe projektów 3D Blender',
+          description: 'Pobierz darmowe pliki przykładowe BLEND projektów 3D Blender do testowania modelowania 3D, kompatybilności projektów Blender, przepływów pracy animacji 3D i oprogramowania grafiki 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania oprogramowania Blender, narzędzi modelowania 3D, przeglądarek projektów Blender, platform animacji 3D i profesjonalnych aplikacji grafiki 3D.'
+        },
+        hero: {
+          title: 'Pliki przykładowe BLEND',
+          description: 'Pobierz darmowe pliki przykładowe BLEND projektów 3D Blender do testowania. Różne rozmiary plików dostępne do testowania oprogramowania Blender, narzędzi modelowania 3D i platform animacji 3D.'
+        },
+        about_description: 'To są testowe pliki BLEND (projekt 3D Blender) w różnych rozmiarach do celów testowych'
+      },
+      bvh: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe BVH - Pliki testowe motion capture Biovision Hierarchy | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe BVH motion capture Biovision Hierarchy do testowania danych motion capture, animacji postaci, systemów animacji szkieletowej i oprogramowania animacji 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek motion capture, narzędzi animacji postaci, systemów animacji szkieletowej, platform animacji 3D i oprogramowania analizy motion capture.',
+          keywords: 'pliki przykładowe BVH, pliki testowe BVH, pobierz przykłady BVH, darmowe pliki testowe BVH, pliki BVH Biovision Hierarchy, pliki testowe .bvh, pliki motion capture, pliki testowe animacji postaci, pliki animacji szkieletowej, przykłady animacji 3D BVH, pliki analizy motion capture'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe BVH - Pobierz pliki testowe motion capture Biovision Hierarchy',
+          description: 'Pobierz darmowe pliki przykładowe BVH motion capture Biovision Hierarchy do testowania danych motion capture, animacji postaci, systemów animacji szkieletowej i oprogramowania animacji 3D. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania przeglądarek motion capture, narzędzi animacji postaci, systemów animacji szkieletowej, platform animacji 3D i oprogramowania analizy motion capture.'
+        },
+        hero: {
+          title: 'Pliki przykładowe BVH',
+          description: 'Pobierz darmowe pliki przykładowe BVH motion capture Biovision Hierarchy do testowania. Różne rozmiary plików dostępne do testowania przeglądarek motion capture, narzędzi animacji postaci i platform animacji 3D.'
+        },
+        about_description: 'To są testowe pliki BVH (motion capture Biovision Hierarchy) w różnych rozmiarach do celów testowych'
+      },
+      dwg: {
+        meta: {
+          title: 'Pobierz darmowe pliki przykładowe DWG - Pliki testowe rysunków AutoCAD do projektowania CAD | MorphyHub',
+          description: 'Pobierz darmowe pliki przykładowe DWG rysunków AutoCAD do testowania oprogramowania CAD, kompatybilności AutoCAD, narzędzi rysunku technicznego i aplikacji projektowania inżynierskiego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania AutoCAD, przeglądarek CAD, oprogramowania rysunku technicznego, narzędzi projektowania inżynierskiego i profesjonalnych platform CAD.',
+          keywords: 'pliki przykładowe DWG, pliki testowe DWG, pobierz przykłady DWG, darmowe pliki testowe DWG, pliki DWG AutoCAD, pliki testowe .dwg, pliki rysunków CAD, pliki testowe AutoCAD, pliki rysunku technicznego, przykłady projektowania inżynierskiego, pliki oprogramowania CAD DWG'
+        },
+        schema: {
+          name: 'Darmowe pliki przykładowe DWG - Pobierz pliki testowe rysunków AutoCAD do projektowania CAD',
+          description: 'Pobierz darmowe pliki przykładowe DWG rysunków AutoCAD do testowania oprogramowania CAD, kompatybilności AutoCAD, narzędzi rysunku technicznego i aplikacji projektowania inżynierskiego. Różne rozmiary: 100 KB, 1 MB, 5 MB, 50 MB i 100 MB. Idealne do testowania AutoCAD, przeglądarek CAD, oprogramowania rysunku technicznego, narzędzi projektowania inżynierskiego i profesjonalnych platform CAD.'
+        },
+        hero: {
+          title: 'Pliki przykładowe DWG',
+          description: 'Pobierz darmowe pliki przykładowe DWG rysunków AutoCAD do testowania. Różne rozmiary plików dostępne do testowania oprogramowania CAD, kompatybilności AutoCAD i narzędzi rysunku technicznego.'
+        },
+        about_description: 'To są testowe pliki DWG (rysunek AutoCAD) w różnych rozmiarach do celów testowych'
       }
     }
   }

@@ -1007,6 +1007,262 @@ export const sv: SamplePageTranslations = {
           description: 'Ladda ner gratis MDX MDX (Markdown + JSX) exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina MDX-parsers, React-dokumentationsverktyg och statiska webbplatsgeneratorer.'
         },
         about_description: 'Detta är MDX (Markdown + JSX) filer i olika storlekar för teständamål'
+      },
+      apk: {
+        meta: {
+          title: 'Ladda ner gratis APK-exempelfiler - Android-applikationspaket testfiler | MorphyHub',
+          description: 'Ladda ner gratis APK Android-applikationspaket exempelfiler för att testa Android-appinstallation, APK-analys, reverse engineering och mobila utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa APK-installatörer, Android-emulatorer, app-analysatorer, säkerhetsskannrar och mobila apputvecklingsplattformar.',
+          keywords: 'APK-exempelfiler, APK-testfiler, ladda ner APK-exempel, gratis APK-testfiler, Android APK-filer, .apk-testfiler, Android-apppaketfiler, APK-installatörstestfiler, Android-emulatortestfiler, mobila apputvecklingsexempel, APK reverse engineering-filer'
+        },
+        schema: {
+          name: 'Gratis APK-exempelfiler - Ladda ner Android-applikationspaket testfiler',
+          description: 'Ladda ner gratis APK Android-applikationspaket exempelfiler för att testa Android-appinstallation, APK-analys, reverse engineering och mobila utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa APK-installatörer, Android-emulatorer, app-analysatorer, säkerhetsskannrar och mobila apputvecklingsplattformar.'
+        },
+        hero: {
+          title: 'APK-exempelfiler',
+          description: 'Ladda ner gratis APK Android-applikationspaket exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina Android-appinstallationsverktyg, APK-analysatorer och mobila utvecklingsplattformar.'
+        },
+        about_description: 'Detta är APK (Android-applikationspaket) filer i olika storlekar för teständamål'
+      },
+      appimage: {
+        meta: {
+          title: 'Ladda ner gratis AppImage-exempelfiler - Linux portabla applikationer testfiler | MorphyHub',
+          description: 'Ladda ner gratis AppImage Linux portabla applikationer exempelfiler för att testa Linux-appdistribution, AppImage-körning och kompatibilitet mellan distributioner. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AppImage-runners, Linux-applikationslanseringar, portabla appverktyg och universell Linux-mjukvarudistribution.',
+          keywords: 'AppImage-exempelfiler, AppImage-testfiler, ladda ner AppImage-exempel, gratis AppImage-testfiler, Linux AppImage-filer, .AppImage-testfiler, portabla Linux-appar, AppImage-runner-testfiler, Linux-applikationsfiler, appar mellan distributioner, universell Linux-mjukvaruexempel'
+        },
+        schema: {
+          name: 'Gratis AppImage-exempelfiler - Ladda ner Linux portabla applikationer testfiler',
+          description: 'Ladda ner gratis AppImage Linux portabla applikationer exempelfiler för att testa Linux-appdistribution, AppImage-körning och kompatibilitet mellan distributioner. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AppImage-runners, Linux-applikationslanseringar, portabla appverktyg och universell Linux-mjukvarudistribution.'
+        },
+        hero: {
+          title: 'AppImage-exempelfiler',
+          description: 'Ladda ner gratis AppImage Linux portabla applikationer exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina AppImage-runners, Linux-applikationslanseringar och portabla appverktyg.'
+        },
+        about_description: 'Detta är AppImage (Linux portabel applikation) filer i olika storlekar för teständamål'
+      },
+      elf: {
+        meta: {
+          title: 'Ladda ner gratis ELF-exempelfiler - Executable and Linkable Format testfiler för Linux/Unix | MorphyHub',
+          description: 'Ladda ner gratis ELF Executable and Linkable Format exempelfiler för att testa Linux/Unix-binäranalys, ELF-parsing, reverse engineering och systemfelsökning. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ELF-analysatorer, binära disassemblers, reverse engineering-verktyg, systemfelsökningsverktyg och Linux-executable-analysplattformar.',
+          keywords: 'ELF-exempelfiler, ELF-testfiler, ladda ner ELF-exempel, gratis ELF-testfiler, Linux ELF-filer, .elf-testfiler, Unix-executable-filer, ELF-binäranalysfiler, reverse engineering ELF-filer, Linux-binära filer, ELF-disassembler-testfiler'
+        },
+        schema: {
+          name: 'Gratis ELF-exempelfiler - Ladda ner Executable and Linkable Format testfiler för Linux/Unix',
+          description: 'Ladda ner gratis ELF Executable and Linkable Format exempelfiler för att testa Linux/Unix-binäranalys, ELF-parsing, reverse engineering och systemfelsökning. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa ELF-analysatorer, binära disassemblers, reverse engineering-verktyg, systemfelsökningsverktyg och Linux-executable-analysplattformar.'
+        },
+        hero: {
+          title: 'ELF-exempelfiler',
+          description: 'Ladda ner gratis ELF Executable and Linkable Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina ELF-analysatorer, binära disassemblers och reverse engineering-verktyg.'
+        },
+        about_description: 'Detta är ELF (Executable and Linkable Format) filer i olika storlekar för teständamål'
+      },
+      exe: {
+        meta: {
+          title: 'Ladda ner gratis EXE-exempelfiler - Windows executable testfiler | MorphyHub',
+          description: 'Ladda ner gratis EXE Windows executable exempelfiler för att testa Windows-applikationskörning, EXE-analys, binärparsing och Windows-utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Windows-executable-analysatorer, binära disassemblers, reverse engineering-verktyg, malware-analysplattformar och Windows-applikationsutveckling.',
+          keywords: 'EXE-exempelfiler, EXE-testfiler, ladda ner EXE-exempel, gratis EXE-testfiler, Windows EXE-filer, .exe-testfiler, Windows-executable-filer, EXE-binäranalysfiler, Windows-applikationsfiler, reverse engineering EXE-filer, Windows-binära disassembler-testfiler'
+        },
+        schema: {
+          name: 'Gratis EXE-exempelfiler - Ladda ner Windows executable testfiler',
+          description: 'Ladda ner gratis EXE Windows executable exempelfiler för att testa Windows-applikationskörning, EXE-analys, binärparsing och Windows-utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Windows-executable-analysatorer, binära disassemblers, reverse engineering-verktyg, malware-analysplattformar och Windows-applikationsutveckling.'
+        },
+        hero: {
+          title: 'EXE-exempelfiler',
+          description: 'Ladda ner gratis EXE Windows executable exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina Windows-executable-analysatorer, binära disassemblers och reverse engineering-verktyg.'
+        },
+        about_description: 'Detta är EXE (Windows executable) filer i olika storlekar för teständamål'
+      },
+      ipa: {
+        meta: {
+          title: 'Ladda ner gratis IPA-exempelfiler - iOS-applikationspaket testfiler | MorphyHub',
+          description: 'Ladda ner gratis IPA iOS-applikationspaket exempelfiler för att testa iOS-appinstallation, IPA-analys, iOS-appdistribution och mobila utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa IPA-installatörer, iOS-simulatorer, app-analysatorer, iOS-utvecklingsverktyg och mobila appdistributionsplattformar.',
+          keywords: 'IPA-exempelfiler, IPA-testfiler, ladda ner IPA-exempel, gratis IPA-testfiler, iOS IPA-filer, .ipa-testfiler, iOS-apppaketfiler, IPA-installatörstestfiler, iOS-simulatortestfiler, mobila apputvecklingsexempel, iOS-appdistributionsfiler'
+        },
+        schema: {
+          name: 'Gratis IPA-exempelfiler - Ladda ner iOS-applikationspaket testfiler',
+          description: 'Ladda ner gratis IPA iOS-applikationspaket exempelfiler för att testa iOS-appinstallation, IPA-analys, iOS-appdistribution och mobila utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa IPA-installatörer, iOS-simulatorer, app-analysatorer, iOS-utvecklingsverktyg och mobila appdistributionsplattformar.'
+        },
+        hero: {
+          title: 'IPA-exempelfiler',
+          description: 'Ladda ner gratis IPA iOS-applikationspaket exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina iOS-appinstallationsverktyg, IPA-analysatorer och mobila utvecklingsplattformar.'
+        },
+        about_description: 'Detta är IPA (iOS-applikationspaket) filer i olika storlekar för teständamål'
+      },
+      jar: {
+        meta: {
+          title: 'Ladda ner gratis JAR-exempelfiler - Java-arkiv testfiler | MorphyHub',
+          description: 'Ladda ner gratis JAR Java-arkiv exempelfiler för att testa Java-applikationskörning, JAR-extraktion, JAR-analys och Java-utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JAR-extraktorer, Java-körningsmiljöer, JAR-analysatorer, Java-utvecklingsverktyg och Java-applikationsdistributionsplattformar.',
+          keywords: 'JAR-exempelfiler, JAR-testfiler, ladda ner JAR-exempel, gratis JAR-testfiler, Java JAR-filer, .jar-testfiler, Java-arkivfiler, JAR-extraktortestfiler, Java-körningstestfiler, Java-utvecklingsexempel, JAR-analysfiler'
+        },
+        schema: {
+          name: 'Gratis JAR-exempelfiler - Ladda ner Java-arkiv testfiler',
+          description: 'Ladda ner gratis JAR Java-arkiv exempelfiler för att testa Java-applikationskörning, JAR-extraktion, JAR-analys och Java-utvecklingsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa JAR-extraktorer, Java-körningsmiljöer, JAR-analysatorer, Java-utvecklingsverktyg och Java-applikationsdistributionsplattformar.'
+        },
+        hero: {
+          title: 'JAR-exempelfiler',
+          description: 'Ladda ner gratis JAR Java-arkiv exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina JAR-extraktorer, Java-körningsmiljöer och Java-utvecklingsverktyg.'
+        },
+        about_description: 'Detta är JAR (Java-arkiv) filer i olika storlekar för teständamål'
+      },
+      crx: {
+        meta: {
+          title: 'Ladda ner gratis CRX-exempelfiler - Chrome-tilläggspaket testfiler | MorphyHub',
+          description: 'Ladda ner gratis CRX Chrome-tilläggspaket exempelfiler för att testa Chrome-tilläggsinstallation, CRX-analys, webbläsartilläggsutveckling och webbtilläggsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CRX-installatörer, Chrome-tilläggsanalysatorer, webbläsartilläggsutvecklingsverktyg och webbtilläggsdistributionsplattformar.',
+          keywords: 'CRX-exempelfiler, CRX-testfiler, ladda ner CRX-exempel, gratis CRX-testfiler, Chrome CRX-filer, .crx-testfiler, Chrome-tilläggsfiler, CRX-installatörstestfiler, webbläsartilläggsfiler, webbtilläggsutvecklingsexempel, Chrome-tilläggsanalysfiler'
+        },
+        schema: {
+          name: 'Gratis CRX-exempelfiler - Ladda ner Chrome-tilläggspaket testfiler',
+          description: 'Ladda ner gratis CRX Chrome-tilläggspaket exempelfiler för att testa Chrome-tilläggsinstallation, CRX-analys, webbläsartilläggsutveckling och webbtilläggsverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa CRX-installatörer, Chrome-tilläggsanalysatorer, webbläsartilläggsutvecklingsverktyg och webbtilläggsdistributionsplattformar.'
+        },
+        hero: {
+          title: 'CRX-exempelfiler',
+          description: 'Ladda ner gratis CRX Chrome-tilläggspaket exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina Chrome-tilläggsinstallationsverktyg, CRX-analysatorer och webbläsartilläggsutvecklingsplattformar.'
+        },
+        about_description: 'Detta är CRX (Chrome-tilläggspaket) filer i olika storlekar för teständamål'
+      },
+      '3ds': {
+        meta: {
+          title: 'Ladda ner gratis 3DS-exempelfiler - 3D-modell testfiler för 3D-utskrift och modellering | MorphyHub',
+          description: 'Ladda ner gratis 3DS 3D-modell exempelfiler för att testa 3D-modelleringsprogram, 3D-utskriftsverktyg, mesh-konvertering och 3D-visualiseringsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-modellvisare, 3D-skrivare, CAD-program, mesh-redigerare och 3D-grafikapplikationer.',
+          keywords: '3DS-exempelfiler, 3DS-testfiler, ladda ner 3DS-exempel, gratis 3DS-testfiler, 3D-modell 3DS-filer, .3ds-testfiler, 3D-modelleringsfiler, 3D-utskriftstestfiler, CAD 3DS-filer, mesh-modellfiler, 3D-grafikexempel'
+        },
+        schema: {
+          name: 'Gratis 3DS-exempelfiler - Ladda ner 3D-modell testfiler för 3D-utskrift och modellering',
+          description: 'Ladda ner gratis 3DS 3D-modell exempelfiler för att testa 3D-modelleringsprogram, 3D-utskriftsverktyg, mesh-konvertering och 3D-visualiseringsapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-modellvisare, 3D-skrivare, CAD-program, mesh-redigerare och 3D-grafikapplikationer.'
+        },
+        hero: {
+          title: '3DS-exempelfiler',
+          description: 'Ladda ner gratis 3DS 3D-modell exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina 3D-modelleringsprogram, 3D-utskriftsverktyg och 3D-visualiseringsapplikationer.'
+        },
+        about_description: 'Detta är 3DS (3D-modell) filer i olika storlekar för teständamål'
+      },
+      '3mf': {
+        meta: {
+          title: 'Ladda ner gratis 3MF-exempelfiler - 3D Manufacturing Format testfiler för 3D-utskrift | MorphyHub',
+          description: 'Ladda ner gratis 3MF 3D Manufacturing Format exempelfiler för att testa 3D-utskrift, additiv tillverkning, 3D-modellslicing och 3D-skrivarkompatibilitet. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-skrivarslicers, additiv tillverkningsprogram, 3MF-visare, 3D-utskriftsarbetsflöden och moderna 3D-tillverkningsplattformar.',
+          keywords: '3MF-exempelfiler, 3MF-testfiler, ladda ner 3MF-exempel, gratis 3MF-testfiler, 3D-utskrift 3MF-filer, .3mf-testfiler, additiv tillverkningsfiler, 3D-skrivarslicer-testfiler, 3MF-visartestfiler, 3D-tillverkningssexempel, moderna 3D-utskriftsfiler'
+        },
+        schema: {
+          name: 'Gratis 3MF-exempelfiler - Ladda ner 3D Manufacturing Format testfiler för 3D-utskrift',
+          description: 'Ladda ner gratis 3MF 3D Manufacturing Format exempelfiler för att testa 3D-utskrift, additiv tillverkning, 3D-modellslicing och 3D-skrivarkompatibilitet. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-skrivarslicers, additiv tillverkningsprogram, 3MF-visare, 3D-utskriftsarbetsflöden och moderna 3D-tillverkningsplattformar.'
+        },
+        hero: {
+          title: '3MF-exempelfiler',
+          description: 'Ladda ner gratis 3MF 3D Manufacturing Format exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina 3D-skrivarslicers, additiv tillverkningsprogram och 3D-utskriftsarbetsflöden.'
+        },
+        about_description: 'Detta är 3MF (3D Manufacturing Format) filer i olika storlekar för teständamål'
+      },
+      ai: {
+        meta: {
+          title: 'Ladda ner gratis AI-exempelfiler - Adobe Illustrator vektorgrafik testfiler | MorphyHub',
+          description: 'Ladda ner gratis AI Adobe Illustrator vektorgrafik exempelfiler för att testa vektorgrafikredigering, AI-filkonvertering, designprogramkompatibilitet och grafisk designverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Adobe Illustrator, vektorgrafikredigerare, AI-filkonverterare, designprogram och professionella grafisk designplattformar.',
+          keywords: 'AI-exempelfiler, AI-testfiler, ladda ner AI-exempel, gratis AI-testfiler, Adobe Illustrator AI-filer, .ai-testfiler, vektorgrafikfiler, Illustrator-testfiler, designprogramfiler, vektorredigeringssexempel, grafisk design AI-filer'
+        },
+        schema: {
+          name: 'Gratis AI-exempelfiler - Ladda ner Adobe Illustrator vektorgrafik testfiler',
+          description: 'Ladda ner gratis AI Adobe Illustrator vektorgrafik exempelfiler för att testa vektorgrafikredigering, AI-filkonvertering, designprogramkompatibilitet och grafisk designverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Adobe Illustrator, vektorgrafikredigerare, AI-filkonverterare, designprogram och professionella grafisk designplattformar.'
+        },
+        hero: {
+          title: 'AI-exempelfiler',
+          description: 'Ladda ner gratis AI Adobe Illustrator vektorgrafik exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina vektorgrafikredigerare, AI-filkonverterare och designprogram.'
+        },
+        about_description: 'Detta är AI (Adobe Illustrator) vektorgrafikfiler i olika storlekar för teständamål'
+      },
+      ase: {
+        meta: {
+          title: 'Ladda ner gratis ASE-exempelfiler - Aseprite sprite-animation testfiler | MorphyHub',
+          description: 'Ladda ner gratis ASE Aseprite sprite-animation exempelfiler för att testa pixel art-redigering, sprite-animation, spelutvecklingsverktyg och 2D-animationsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Aseprite, pixel art-redigerare, sprite-animationsverktyg, spelutvecklingsprogram och 2D-animationsplattformar.',
+          keywords: 'ASE-exempelfiler, ASE-testfiler, ladda ner ASE-exempel, gratis ASE-testfiler, Aseprite ASE-filer, .ase-testfiler, sprite-animationsfiler, pixel art-testfiler, spelutvecklingsfiler, 2D-animationssexempel, Aseprite-testfiler'
+        },
+        schema: {
+          name: 'Gratis ASE-exempelfiler - Ladda ner Aseprite sprite-animation testfiler',
+          description: 'Ladda ner gratis ASE Aseprite sprite-animation exempelfiler för att testa pixel art-redigering, sprite-animation, spelutvecklingsverktyg och 2D-animationsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Aseprite, pixel art-redigerare, sprite-animationsverktyg, spelutvecklingsprogram och 2D-animationsplattformar.'
+        },
+        hero: {
+          title: 'ASE-exempelfiler',
+          description: 'Ladda ner gratis ASE Aseprite sprite-animation exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina pixel art-redigerare, sprite-animationsverktyg och spelutvecklingsprogram.'
+        },
+        about_description: 'Detta är ASE (Aseprite sprite-animation) filer i olika storlekar för teständamål'
+      },
+      'animation-fbx': {
+        meta: {
+          title: 'Ladda ner gratis Animation FBX-exempelfiler - Autodesk FBX 3D-animation testfiler | MorphyHub',
+          description: 'Ladda ner gratis Animation FBX Autodesk FBX 3D-animation exempelfiler för att testa 3D-animation, karaktärsrigging, motion capture-data och 3D-grafikprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-animationsprogram, spelmotorer, motion capture-verktyg, karaktärsanimationsplattformar och 3D-grafikapplikationer.',
+          keywords: 'Animation FBX-exempelfiler, FBX-animation testfiler, ladda ner FBX-animation exempel, gratis FBX-animation testfiler, Autodesk FBX-filer, .fbx-animation testfiler, 3D-animationsfiler, karaktärsanimation testfiler, motion capture-filer, 3D-grafikanimationssexempel, spelmotor FBX-filer'
+        },
+        schema: {
+          name: 'Gratis Animation FBX-exempelfiler - Ladda ner Autodesk FBX 3D-animation testfiler',
+          description: 'Ladda ner gratis Animation FBX Autodesk FBX 3D-animation exempelfiler för att testa 3D-animation, karaktärsrigging, motion capture-data och 3D-grafikprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa 3D-animationsprogram, spelmotorer, motion capture-verktyg, karaktärsanimationsplattformar och 3D-grafikapplikationer.'
+        },
+        hero: {
+          title: 'Animation FBX-exempelfiler',
+          description: 'Ladda ner gratis Animation FBX Autodesk FBX 3D-animation exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina 3D-animationsprogram, spelmotorer och motion capture-verktyg.'
+        },
+        about_description: 'Detta är Animation FBX (Autodesk FBX 3D-animation) filer i olika storlekar för teständamål'
+      },
+      assetbundle: {
+        meta: {
+          title: 'Ladda ner gratis AssetBundle-exempelfiler - Unity AssetBundle testfiler för spelutveckling | MorphyHub',
+          description: 'Ladda ner gratis AssetBundle Unity AssetBundle exempelfiler för att testa Unity-spelutveckling, asset-laddning, spelmaterialhantering och Unity-motorverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Unity-motorn, spelmaterialladdare, Unity-utvecklingsverktyg, spelmaterialhanterare och Unity-spelutvecklingsplattformar.',
+          keywords: 'AssetBundle-exempelfiler, AssetBundle-testfiler, ladda ner AssetBundle-exempel, gratis AssetBundle-testfiler, Unity AssetBundle-filer, Unity-assetfiler, spelutvecklingsfiler, Unity-motortestfiler, spelmaterialladdartestfiler, Unity-utvecklingsexempel, spelmaterialhanteringsfiler'
+        },
+        schema: {
+          name: 'Gratis AssetBundle-exempelfiler - Ladda ner Unity AssetBundle testfiler för spelutveckling',
+          description: 'Ladda ner gratis AssetBundle Unity AssetBundle exempelfiler för att testa Unity-spelutveckling, asset-laddning, spelmaterialhantering och Unity-motorverktyg. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Unity-motorn, spelmaterialladdare, Unity-utvecklingsverktyg, spelmaterialhanterare och Unity-spelutvecklingsplattformar.'
+        },
+        hero: {
+          title: 'AssetBundle-exempelfiler',
+          description: 'Ladda ner gratis AssetBundle Unity AssetBundle exempelfiler för testning. Flera filstorlekar tillgängliga för att testa din Unity-motor, spelmaterialladdare och Unity-utvecklingsverktyg.'
+        },
+        about_description: 'Detta är AssetBundle (Unity AssetBundle) filer i olika storlekar för teständamål'
+      },
+      blend: {
+        meta: {
+          title: 'Ladda ner gratis BLEND-exempelfiler - Blender 3D-projekt testfiler | MorphyHub',
+          description: 'Ladda ner gratis BLEND Blender 3D-projekt exempelfiler för att testa 3D-modellering, Blender-projektkompatibilitet, 3D-animationsarbetsflöden och 3D-grafikprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Blender-program, 3D-modelleringsverktyg, Blender-projektvisare, 3D-animationsplattformar och professionella 3D-grafikapplikationer.',
+          keywords: 'BLEND-exempelfiler, BLEND-testfiler, ladda ner BLEND-exempel, gratis BLEND-testfiler, Blender BLEND-filer, .blend-testfiler, Blender-projektfiler, 3D-modellerings-testfiler, Blender-testfiler, 3D-animationssexempel, 3D-grafik BLEND-filer'
+        },
+        schema: {
+          name: 'Gratis BLEND-exempelfiler - Ladda ner Blender 3D-projekt testfiler',
+          description: 'Ladda ner gratis BLEND Blender 3D-projekt exempelfiler för att testa 3D-modellering, Blender-projektkompatibilitet, 3D-animationsarbetsflöden och 3D-grafikprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa Blender-program, 3D-modelleringsverktyg, Blender-projektvisare, 3D-animationsplattformar och professionella 3D-grafikapplikationer.'
+        },
+        hero: {
+          title: 'BLEND-exempelfiler',
+          description: 'Ladda ner gratis BLEND Blender 3D-projekt exempelfiler för testning. Flera filstorlekar tillgängliga för att testa ditt Blender-program, 3D-modelleringsverktyg och 3D-animationsplattformar.'
+        },
+        about_description: 'Detta är BLEND (Blender 3D-projekt) filer i olika storlekar för teständamål'
+      },
+      bvh: {
+        meta: {
+          title: 'Ladda ner gratis BVH-exempelfiler - Biovision Hierarchy motion capture testfiler | MorphyHub',
+          description: 'Ladda ner gratis BVH Biovision Hierarchy motion capture exempelfiler för att testa motion capture-data, karaktärsanimation, skelettanimationssystem och 3D-animationsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa motion capture-visare, karaktärsanimationsverktyg, skelettanimationssystem, 3D-animationsplattformar och motion capture-analysprogram.',
+          keywords: 'BVH-exempelfiler, BVH-testfiler, ladda ner BVH-exempel, gratis BVH-testfiler, Biovision Hierarchy BVH-filer, .bvh-testfiler, motion capture-filer, karaktärsanimation testfiler, skelettanimationsfiler, 3D-animation BVH-exempel, motion capture-analysfiler'
+        },
+        schema: {
+          name: 'Gratis BVH-exempelfiler - Ladda ner Biovision Hierarchy motion capture testfiler',
+          description: 'Ladda ner gratis BVH Biovision Hierarchy motion capture exempelfiler för att testa motion capture-data, karaktärsanimation, skelettanimationssystem och 3D-animationsprogram. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa motion capture-visare, karaktärsanimationsverktyg, skelettanimationssystem, 3D-animationsplattformar och motion capture-analysprogram.'
+        },
+        hero: {
+          title: 'BVH-exempelfiler',
+          description: 'Ladda ner gratis BVH Biovision Hierarchy motion capture exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina motion capture-visare, karaktärsanimationsverktyg och 3D-animationsplattformar.'
+        },
+        about_description: 'Detta är BVH (Biovision Hierarchy motion capture) filer i olika storlekar för teständamål'
+      },
+      dwg: {
+        meta: {
+          title: 'Ladda ner gratis DWG-exempelfiler - AutoCAD-ritning testfiler för CAD-design | MorphyHub',
+          description: 'Ladda ner gratis DWG AutoCAD-ritning exempelfiler för att testa CAD-program, AutoCAD-kompatibilitet, teknisk ritningsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AutoCAD, CAD-visare, teknisk ritningsprogram, ingenjörsdesignverktyg och professionella CAD-plattformar.',
+          keywords: 'DWG-exempelfiler, DWG-testfiler, ladda ner DWG-exempel, gratis DWG-testfiler, AutoCAD DWG-filer, .dwg-testfiler, CAD-ritningsfiler, AutoCAD-testfiler, teknisk ritningsfiler, ingenjörsdesignsexempel, CAD-program DWG-filer'
+        },
+        schema: {
+          name: 'Gratis DWG-exempelfiler - Ladda ner AutoCAD-ritning testfiler för CAD-design',
+          description: 'Ladda ner gratis DWG AutoCAD-ritning exempelfiler för att testa CAD-program, AutoCAD-kompatibilitet, teknisk ritningsverktyg och ingenjörsdesignapplikationer. Flera filstorlekar: 100 KB, 1 MB, 5 MB, 50 MB och 100 MB. Perfekt för att testa AutoCAD, CAD-visare, teknisk ritningsprogram, ingenjörsdesignverktyg och professionella CAD-plattformar.'
+        },
+        hero: {
+          title: 'DWG-exempelfiler',
+          description: 'Ladda ner gratis DWG AutoCAD-ritning exempelfiler för testning. Flera filstorlekar tillgängliga för att testa dina CAD-program, AutoCAD-kompatibilitet och teknisk ritningsverktyg.'
+        },
+        about_description: 'Detta är DWG (AutoCAD-ritning) filer i olika storlekar för teständamål'
       }
     }
   }
