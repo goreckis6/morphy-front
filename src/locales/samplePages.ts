@@ -6389,6 +6389,2217 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Laden Sie kostenlose AC3 AC3 Dolby Digital Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiowiedergabe, AC3-Konvertierung und Tools für Surround-Sound-Formate zu testen.'
           },
           about_description: 'Dies sind AC3 (Dolby Digital) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        '3ds': {
+          meta: {
+            title: 'Kostenlose 3DS Beispieldateien herunterladen – 3D Studio Mesh-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose 3DS 3D Studio Mesh- und Modell-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Modell-Anzeige, 3DS-Konvertierung und Tools für 3D-Grafiken.',
+            keywords: '3DS Beispieldateien, 3DS Testdateien, 3DS Beispiele herunterladen, kostenlose 3DS Testdateien, 3D Studio Mesh-Beispiele, 3D-Modell-Beispiele, .3ds Testdateien, 3D-Grafik-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose 3DS Beispieldateien – 3D Studio Mesh-Dateien testen',
+            description: 'Laden Sie kostenlose 3DS 3D Studio Mesh- und Modell-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von 3D-Modell-Anzeige, 3DS-Konvertierung und Tools für 3D-Grafiken.'
+          },
+          hero: {
+            title: '3DS Beispieldateien',
+            description: 'Laden Sie kostenlose 3DS 3D Studio Mesh- und Modell-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre 3D-Modell-Anzeige, 3DS-Konvertierung und Tools für 3D-Grafiken zu testen.'
+          },
+          about_description: 'Dies sind 3DS (3D Studio Mesh) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        '3gp': {
+          meta: {
+            title: 'Kostenlose 3GP Beispieldateien herunterladen – 3GPP-Videodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose 3GP 3GPP-Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videowiedergabe, 3GP-Konvertierung und Tools für mobile Videoformate.',
+            keywords: '3GP Beispieldateien, 3GP Testdateien, 3GP Beispiele herunterladen, kostenlose 3GP Testdateien, 3GPP-Video-Beispiele, mobile Video-Beispiele, .3gp Testdateien, Videoformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose 3GP Beispieldateien – 3GPP-Videodateien testen',
+            description: 'Laden Sie kostenlose 3GP 3GPP-Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Videowiedergabe, 3GP-Konvertierung und Tools für mobile Videoformate.'
+          },
+          hero: {
+            title: '3GP Beispieldateien',
+            description: 'Laden Sie kostenlose 3GP 3GPP-Video-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Videowiedergabe, 3GP-Konvertierung und Tools für mobile Videoformate zu testen.'
+          },
+          about_description: 'Dies sind 3GP (3GPP Video) Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        aac: {
+          meta: {
+            title: 'Kostenlose AAC Beispieldateien herunterladen – Advanced Audio Coding-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AAC Advanced Audio Coding Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AAC-Konvertierung und Tools für moderne Audioformate.',
+            keywords: 'AAC Beispieldateien, AAC Testdateien, AAC Beispiele herunterladen, kostenlose AAC Testdateien, Advanced Audio Coding-Beispiele, Audioformat-Beispiele, .aac Testdateien, Audio-Codec-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AAC Beispieldateien – Advanced Audio Coding-Dateien testen',
+            description: 'Laden Sie kostenlose AAC Advanced Audio Coding Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AAC-Konvertierung und Tools für moderne Audioformate.'
+          },
+          hero: {
+            title: 'AAC Beispieldateien',
+            description: 'Laden Sie kostenlose AAC Advanced Audio Coding Audio-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiowiedergabe, AAC-Konvertierung und Tools für moderne Audioformate zu testen.'
+          },
+          about_description: 'Dies sind AAC (Advanced Audio Coding) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        aif: {
+          meta: {
+            title: 'Kostenlose AIF Beispieldateien herunterladen – AIF-Audiodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AIF AIF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AIF-Konvertierung und Tools für professionelle Audioformate.',
+            keywords: 'AIF Beispieldateien, AIF Testdateien, AIF Beispiele herunterladen, kostenlose AIF Testdateien, AIF-Audio-Beispiele, professionelle Audio-Beispiele, AIF-Sound-Beispiele, .aif Testdateien, Audioformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AIF Beispieldateien – AIF-Audiodateien testen',
+            description: 'Laden Sie kostenlose AIF AIF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AIF-Konvertierung und Tools für professionelle Audioformate.'
+          },
+          hero: {
+            title: 'AIF Beispieldateien',
+            description: 'Laden Sie kostenlose AIF AIF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiowiedergabe, AIF-Konvertierung und Tools für professionelle Audioformate zu testen.'
+          },
+          about_description: 'Dies sind AIF (Audio Interchange File Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        aiff: {
+          meta: {
+            title: 'Kostenlose AIFF Beispieldateien herunterladen – AIFF-Audiodateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose AIFF AIFF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AIFF-Konvertierung und Tools für professionelle Audioformate.',
+            keywords: 'AIFF Beispieldateien, AIFF Testdateien, AIFF Beispiele herunterladen, kostenlose AIFF Testdateien, AIFF-Audio-Beispiele, professionelle Audio-Beispiele, AIFF-Sound-Beispiele, .aiff Testdateien, Audioformat-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose AIFF Beispieldateien – AIFF-Audiodateien testen',
+            description: 'Laden Sie kostenlose AIFF AIFF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Audiowiedergabe, AIFF-Konvertierung und Tools für professionelle Audioformate.'
+          },
+          hero: {
+            title: 'AIFF Beispieldateien',
+            description: 'Laden Sie kostenlose AIFF AIFF Audio Interchange File Format-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihre Audiowiedergabe, AIFF-Konvertierung und Tools für professionelle Audioformate zu testen.'
+          },
+          about_description: 'Dies sind AIFF (Audio Interchange File Format) Audio-Testdateien in verschiedenen Größen für Testzwecke'
+        },
+        icns: {
+          meta: {
+            title: 'Kostenlose ICNS Beispieldateien herunterladen – Apple Icon Image-Dateien testen | MorphyHub',
+            description: 'Laden Sie kostenlose ICNS Apple Icon Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Icon-Rendering, ICNS-Konvertierung und Tools für macOS-Icon-Formate.',
+            keywords: 'ICNS Beispieldateien, ICNS Testdateien, ICNS Beispiele herunterladen, kostenlose ICNS Testdateien, Apple Icon Image-Beispiele, macOS-Icon-Beispiele, .icns Testdateien, Icon-Format-Beispiele'
+          },
+          schema: {
+            name: 'Kostenlose ICNS Beispieldateien – Apple Icon Image-Dateien testen',
+            description: 'Laden Sie kostenlose ICNS Apple Icon Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar: 100 KB, 1 MB, 5 MB, 50 MB und 100 MB. Perfekt zum Testen von Icon-Rendering, ICNS-Konvertierung und Tools für macOS-Icon-Formate.'
+          },
+          hero: {
+            title: 'ICNS Beispieldateien',
+            description: 'Laden Sie kostenlose ICNS Apple Icon Image-Beispieldateien zum Testen herunter. Verschiedene Dateigrößen verfügbar, um Ihr Icon-Rendering, ICNS-Konvertierung und Tools für macOS-Icon-Formate zu testen.'
+          },
+          about_description: 'Dies sind ICNS (Apple Icon Image) Testdateien in verschiedenen Größen für Testzwecke'
+        }
+      }
+    }
+  },
+  es: {
+    sample_page: {
+      common: {
+        back_button: 'Volver al inicio',
+        file_size: 'Tamaño del archivo:',
+        download: 'Descargar',
+        download_now: 'Descargar ahora',
+        download_started: 'Descarga iniciada',
+        download_ready_in: 'Descarga lista en {{countdown}}s...',
+        about_title: 'Acerca de estos archivos de muestra',
+        about_items: [
+          'Estos son archivos de prueba en varios tamaños para fines de prueba',
+          'Los archivos están alojados de forma segura y disponibles para descarga gratuita',
+          'Perfecto para probar herramientas de conversión de documentos y procesadores de archivos',
+          'No se requiere registro ni cuenta'
+        ],
+        features: {
+          multiple_sizes: {
+            title: 'Múltiples tamaños',
+            description: 'Archivos de prueba que van desde 100 KB hasta 100 MB'
+          },
+          free_download: {
+            title: 'Descarga gratuita',
+            description: 'No se requiere registro ni pago'
+          },
+          safe_tested: {
+            title: 'Seguro y probado',
+            description: 'Todos los archivos son seguros y probados para compatibilidad'
+          }
+        }
+      },
+      formats: {
+        docx: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DOCX - Archivos de prueba | MorphyHub',
+            description: 'Descarga archivos de muestra DOCX gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión y procesamiento de documentos.',
+            keywords: 'archivos de muestra DOCX, archivos de prueba DOCX, descargar muestras DOCX, archivos de prueba DOCX gratuitos, muestras de documentos, muestras de Microsoft Word'
+          },
+          schema: {
+            name: 'Archivos de muestra DOCX gratuitos - Descargar archivos de prueba',
+            description: 'Descarga archivos de muestra DOCX gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de documentos.'
+          },
+          hero: {
+            title: 'Archivos de muestra DOCX',
+            description: 'Descarga archivos de muestra DOCX gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión y procesamiento de documentos.'
+          },
+          about_description: 'Estos son archivos de prueba DOCX en varios tamaños para fines de prueba'
+        },
+        doc: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DOC - Archivos de prueba | MorphyHub',
+            description: 'Descarga archivos de muestra DOC gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión y procesamiento de documentos.',
+            keywords: 'archivos de muestra DOC, archivos de prueba DOC, descargar muestras DOC, archivos de prueba DOC gratuitos, muestras de documentos, muestras de Microsoft Word DOC'
+          },
+          schema: {
+            name: 'Archivos de muestra DOC gratuitos - Descargar archivos de prueba',
+            description: 'Descarga archivos de muestra DOC gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de documentos.'
+          },
+          hero: {
+            title: 'Archivos de muestra DOC',
+            description: 'Descarga archivos de muestra DOC gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión y procesamiento de documentos.'
+          },
+          about_description: 'Estos son archivos de prueba DOC en varios tamaños para fines de prueba'
+        },
+        pdf: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra PDF - Archivos de prueba | MorphyHub',
+            description: 'Descarga archivos de muestra PDF gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión y procesamiento de documentos.',
+            keywords: 'archivos de muestra PDF, archivos de prueba PDF, descargar muestras PDF, archivos de prueba PDF gratuitos, muestras de documentos, muestras PDF'
+          },
+          schema: {
+            name: 'Archivos de muestra PDF gratuitos - Descargar archivos de prueba',
+            description: 'Descarga archivos de muestra PDF gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de documentos.'
+          },
+          hero: {
+            title: 'Archivos de muestra PDF',
+            description: 'Descarga archivos de muestra PDF gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión y procesamiento de documentos.'
+          },
+          about_description: 'Estos son archivos de prueba PDF en varios tamaños para fines de prueba'
+        },
+        odp: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ODP - Archivos de presentación OpenDocument | MorphyHub',
+            description: 'Descarga archivos de muestra ODP OpenDocument Presentation gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de presentaciones, visualización y procesamiento de formato OpenDocument.',
+            keywords: 'archivos de muestra ODP, archivos de prueba ODP, descargar muestras ODP, archivos de prueba ODP gratuitos, muestras de presentación OpenDocument, muestras de archivos de presentación, archivos de prueba de conversión ODP, archivos de prueba .odp, muestras de LibreOffice Impress, muestras de formato de presentación'
+          },
+          schema: {
+            name: 'Archivos de muestra ODP gratuitos - Descargar archivos de presentación de prueba',
+            description: 'Descarga archivos de muestra de presentación ODP gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de presentaciones, visualización y procesamiento de formato OpenDocument.'
+          },
+          hero: {
+            title: 'Archivos de muestra ODP',
+            description: 'Descarga archivos de muestra ODP OpenDocument Presentation gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión y visualización de presentaciones.'
+          },
+          about_description: 'Estos son archivos de prueba ODP en varios tamaños para fines de prueba'
+        },
+        rtf: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra RTF - Archivos Rich Text Format | MorphyHub',
+            description: 'Descarga archivos de muestra RTF Rich Text Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de documentos, visualización y procesamiento de formato RTF.',
+            keywords: 'archivos de muestra RTF, archivos de prueba RTF, descargar muestras RTF, archivos de prueba RTF gratuitos, muestras Rich Text Format, muestras de documentos, archivos de prueba de conversión RTF, archivos de prueba .rtf'
+          },
+          schema: {
+            name: 'Archivos de muestra RTF gratuitos - Descargar archivos Rich Text Format de prueba',
+            description: 'Descarga archivos de muestra RTF Rich Text Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de documentos, visualización y procesamiento de formato RTF.'
+          },
+          hero: {
+            title: 'Archivos de muestra RTF',
+            description: 'Descarga archivos de muestra RTF Rich Text Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión y visualización de documentos.'
+          },
+          about_description: 'Estos son archivos de prueba RTF en varios tamaños para fines de prueba'
+        },
+        epub: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra EPUB - Archivos de eBook | MorphyHub',
+            description: 'Descarga archivos de muestra EPUB eBook gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar lectores de eBooks, conversión EPUB y herramientas de publicación digital.',
+            keywords: 'archivos de muestra EPUB, archivos de prueba EPUB, descargar muestras EPUB, archivos de prueba EPUB gratuitos, muestras de eBook, archivos de prueba de conversión EPUB, archivos de prueba .epub, muestras de publicación digital'
+          },
+          schema: {
+            name: 'Archivos de muestra EPUB gratuitos - Descargar archivos de eBook de prueba',
+            description: 'Descarga archivos de muestra EPUB eBook gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar lectores de eBooks, conversión EPUB y herramientas de publicación digital.'
+          },
+          hero: {
+            title: 'Archivos de muestra EPUB',
+            description: 'Descarga archivos de muestra EPUB eBook gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus lectores de eBooks, conversión EPUB y herramientas de publicación digital.'
+          },
+          about_description: 'Estos son archivos de prueba EPUB en varios tamaños para fines de prueba'
+        },
+        'invoice-pdf': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Invoice PDF - Archivos de documento de factura | MorphyHub',
+            description: 'Descarga archivos de muestra Invoice PDF de documentos de factura gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de facturas PDF, análisis de facturas y gestión de documentos.',
+            keywords: 'archivos de muestra Invoice PDF, archivos de prueba Invoice PDF, descargar muestras Invoice PDF, archivos de prueba Invoice PDF gratuitos, muestras de documentos de factura, muestras de facturas PDF, archivos de prueba de procesamiento de facturas'
+          },
+          schema: {
+            name: 'Archivos de muestra Invoice PDF gratuitos - Descargar archivos de documento de factura de prueba',
+            description: 'Descarga archivos de muestra Invoice PDF de documentos de factura gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de facturas PDF, análisis de facturas y gestión de documentos.'
+          },
+          hero: {
+            title: 'Archivos de muestra Invoice PDF',
+            description: 'Descarga archivos de muestra Invoice PDF de documentos de factura gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de facturas PDF, análisis de facturas y gestión de documentos.'
+          },
+          about_description: 'Estos son archivos de prueba Invoice PDF en varios tamaños para fines de prueba'
+        },
+        mobi: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MOBI - Archivos de eBook MOBI | MorphyHub',
+            description: 'Descarga archivos de muestra MOBI eBook MOBI gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de eBooks MOBI, lectura MOBI y procesamiento de eBooks.',
+            keywords: 'archivos de muestra MOBI, archivos de prueba MOBI, descargar muestras MOBI, archivos de prueba MOBI gratuitos, muestras de eBook MOBI, archivos de prueba de conversión MOBI, archivos de prueba .mobi, muestras de eBook'
+          },
+          schema: {
+            name: 'Archivos de muestra MOBI gratuitos - Descargar archivos de eBook MOBI de prueba',
+            description: 'Descarga archivos de muestra MOBI eBook MOBI gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de eBooks MOBI, lectura MOBI y procesamiento de eBooks.'
+          },
+          hero: {
+            title: 'Archivos de muestra MOBI',
+            description: 'Descarga archivos de muestra MOBI eBook MOBI gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de eBooks MOBI, lectura MOBI y procesamiento de eBooks.'
+          },
+          about_description: 'Estos son archivos de prueba MOBI en varios tamaños para fines de prueba'
+        },
+        csv: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CSV - Archivos de datos | MorphyHub',
+            description: 'Descarga archivos de muestra CSV de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión CSV, procesamiento de datos y hojas de cálculo.',
+            keywords: 'archivos de muestra CSV, archivos de prueba CSV, descargar muestras CSV, archivos de prueba CSV gratuitos, muestras de archivos de datos, muestras de valores separados por comas, muestras de datos de hojas de cálculo, archivos de prueba de conversión CSV'
+          },
+          schema: {
+            name: 'Archivos de muestra CSV gratuitos - Descargar archivos de datos de prueba',
+            description: 'Descarga archivos de muestra CSV de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión CSV, procesamiento de datos y hojas de cálculo.'
+          },
+          hero: {
+            title: 'Archivos de muestra CSV',
+            description: 'Descarga archivos de muestra CSV de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión CSV, procesamiento de datos e importación de hojas de cálculo.'
+          },
+          about_description: 'Estos son archivos de prueba CSV en varios tamaños para fines de prueba'
+        },
+        xls: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra XLS - Archivos de hoja de cálculo Excel | MorphyHub',
+            description: 'Descarga archivos de muestra XLS Excel gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión Excel, procesamiento de datos y hojas de cálculo.',
+            keywords: 'archivos de muestra XLS, archivos de prueba XLS, descargar muestras XLS, archivos de prueba XLS gratuitos, muestras de Excel, muestras de datos de hojas de cálculo, muestras de Microsoft Excel, archivos de prueba de conversión XLS, archivos de prueba .xls'
+          },
+          schema: {
+            name: 'Archivos de muestra XLS gratuitos - Descargar archivos de hoja de cálculo de prueba',
+            description: 'Descarga archivos de muestra XLS Excel gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de archivos Excel, procesamiento de datos y hojas de cálculo.'
+          },
+          hero: {
+            title: 'Archivos de muestra XLS',
+            description: 'Descarga archivos de muestra XLS Excel gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión Excel, procesamiento de datos e importación de hojas de cálculo.'
+          },
+          about_description: 'Estos son archivos de prueba XLS en varios tamaños para fines de prueba'
+        },
+        xlsx: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra XLSX - Archivos de hoja de cálculo Excel | MorphyHub',
+            description: 'Descarga archivos de muestra XLSX Excel gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión Excel, procesamiento de datos y hojas de cálculo.',
+            keywords: 'archivos de muestra XLSX, archivos de prueba XLSX, descargar muestras XLSX, archivos de prueba XLSX gratuitos, muestras de Excel, muestras de datos de hojas de cálculo, muestras de Microsoft Excel, archivos de prueba de conversión XLSX, archivos de prueba .xlsx, muestras de Excel 2007+, muestras de Office Open XML'
+          },
+          schema: {
+            name: 'Archivos de muestra XLSX gratuitos - Descargar archivos de hoja de cálculo de prueba',
+            description: 'Descarga archivos de muestra XLSX Excel gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de archivos Excel, procesamiento de datos y hojas de cálculo.'
+          },
+          hero: {
+            title: 'Archivos de muestra XLSX',
+            description: 'Descarga archivos de muestra XLSX Excel gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión Excel, procesamiento de datos e importación de hojas de cálculo.'
+          },
+          about_description: 'Estos son archivos de prueba XLSX en varios tamaños para fines de prueba'
+        },
+        xml: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra XML - Archivos de datos de marcado | MorphyHub',
+            description: 'Descarga archivos de muestra XML de marcado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis XML, conversión de datos y procesamiento de marcado.',
+            keywords: 'archivos de muestra XML, archivos de prueba XML, descargar muestras XML, archivos de prueba XML gratuitos, muestras de archivos de marcado, muestras de datos estructurados, archivos de prueba de análisis XML, archivos de prueba .xml, muestras de Extensible Markup Language, archivos de prueba de conversión XML'
+          },
+          schema: {
+            name: 'Archivos de muestra XML gratuitos - Descargar archivos de marcado de prueba',
+            description: 'Descarga archivos de muestra XML de marcado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis XML, conversión de datos y procesamiento de marcado.'
+          },
+          hero: {
+            title: 'Archivos de muestra XML',
+            description: 'Descarga archivos de muestra XML de marcado gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis XML, conversión de datos y procesamiento de marcado.'
+          },
+          about_description: 'Estos son archivos de prueba XML en varios tamaños para fines de prueba'
+        },
+        zip: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ZIP - Archivos de archivo | MorphyHub',
+            description: 'Descarga archivos de muestra ZIP gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos, compresión de archivos y gestión de archivos.',
+            keywords: 'archivos de muestra ZIP, archivos de prueba ZIP, descargar muestras ZIP, archivos de prueba ZIP gratuitos, muestras de archivos comprimidos, muestras de archivos ZIP, archivos de prueba .zip, muestras de compresión de archivos'
+          },
+          schema: {
+            name: 'Archivos de muestra ZIP gratuitos - Descargar archivos de archivo de prueba',
+            description: 'Descarga archivos de muestra ZIP gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos, compresión de archivos y gestión de archivos.'
+          },
+          hero: {
+            title: 'Archivos de muestra ZIP',
+            description: 'Descarga archivos de muestra ZIP gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de archivos, compresión de archivos y gestión de archivos.'
+          },
+          about_description: 'Estos son archivos de prueba ZIP en varios tamaños para fines de prueba'
+        },
+        ods: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ODS - Archivos de hoja de cálculo OpenDocument | MorphyHub',
+            description: 'Descarga archivos de muestra ODS OpenDocument Spreadsheet gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de hojas de cálculo, procesamiento de datos y formato OpenDocument.',
+            keywords: 'archivos de muestra ODS, archivos de prueba ODS, descargar muestras ODS, archivos de prueba ODS gratuitos, muestras de hoja de cálculo OpenDocument, muestras de archivos de hoja de cálculo, archivos de prueba de conversión ODS, archivos de prueba .ods, muestras de LibreOffice Calc, muestras de formato de hoja de cálculo'
+          },
+          schema: {
+            name: 'Archivos de muestra ODS gratuitos - Descargar archivos de hoja de cálculo de prueba',
+            description: 'Descarga archivos de muestra de hoja de cálculo ODS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de hojas de cálculo, procesamiento de datos y formato OpenDocument.'
+          },
+          hero: {
+            title: 'Archivos de muestra ODS',
+            description: 'Descarga archivos de muestra ODS OpenDocument Spreadsheet gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de hojas de cálculo, procesamiento de datos y formato OpenDocument.'
+          },
+          about_description: 'Estos son archivos de prueba ODS en varios tamaños para fines de prueba'
+        },
+        json: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JSON - Archivos de datos JSON | MorphyHub',
+            description: 'Descarga archivos de muestra JSON de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis JSON, procesamiento de datos y manejo de respuestas API.',
+            keywords: 'archivos de muestra JSON, archivos de prueba JSON, descargar muestras JSON, archivos de prueba JSON gratuitos, muestras de datos JSON, archivos de formato JSON, archivos de prueba .json, archivos de intercambio de datos, archivos de prueba de análisis JSON'
+          },
+          schema: {
+            name: 'Archivos de muestra JSON gratuitos - Descargar archivos de datos JSON de prueba',
+            description: 'Descarga archivos de muestra JSON de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis JSON, procesamiento de datos y manejo de respuestas API.'
+          },
+          hero: {
+            title: 'Archivos de muestra JSON',
+            description: 'Descarga archivos de muestra JSON de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis JSON y procesamiento de datos.'
+          },
+          about_description: 'Estos son archivos de prueba JSON (datos) en varios tamaños para fines de prueba'
+        },
+        java: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Java - Archivos de código fuente Java | MorphyHub',
+            description: 'Descarga archivos de muestra Java de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código Java, verificación de sintaxis Java y desarrollo Java.',
+            keywords: 'archivos de muestra Java, archivos de prueba Java, descargar muestras Java, archivos de prueba Java gratuitos, muestras de código fuente Java, archivos de código Java, archivos de prueba .java, archivos de programación Java, archivos de prueba de compilación Java'
+          },
+          schema: {
+            name: 'Archivos de muestra Java gratuitos - Descargar archivos de código fuente Java de prueba',
+            description: 'Descarga archivos de muestra Java de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código Java, verificación de sintaxis Java y desarrollo Java.'
+          },
+          hero: {
+            title: 'Archivos de muestra Java',
+            description: 'Descarga archivos de muestra Java de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código Java y verificación de sintaxis Java.'
+          },
+          about_description: 'Estos son archivos de prueba de código fuente Java en varios tamaños para fines de prueba'
+        },
+        jpeg: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JPEG - Archivos de imagen JPEG | MorphyHub',
+            description: 'Descarga archivos de muestra JPEG de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de imágenes JPEG, compresión JPEG y procesamiento de imágenes.',
+            keywords: 'archivos de muestra JPEG, archivos de prueba JPEG, descargar muestras JPEG, archivos de prueba JPEG gratuitos, muestras de imagen JPEG, archivos de foto JPEG, archivos de prueba .jpeg, archivos de compresión de imagen, archivos de prueba de conversión JPEG'
+          },
+          schema: {
+            name: 'Archivos de muestra JPEG gratuitos - Descargar archivos de imagen JPEG de prueba',
+            description: 'Descarga archivos de muestra JPEG de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de imágenes JPEG, compresión JPEG y procesamiento de imágenes.'
+          },
+          hero: {
+            title: 'Archivos de muestra JPEG',
+            description: 'Descarga archivos de muestra JPEG de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de imágenes JPEG y compresión JPEG.'
+          },
+          about_description: 'Estos son archivos de prueba de imagen JPEG en varios tamaños para fines de prueba'
+        },
+        jpg: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JPG - Archivos de imagen JPG | MorphyHub',
+            description: 'Descarga archivos de muestra JPG de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de imágenes JPG, compresión JPG y procesamiento de imágenes.',
+            keywords: 'archivos de muestra JPG, archivos de prueba JPG, descargar muestras JPG, archivos de prueba JPG gratuitos, muestras de imagen JPG, archivos de foto JPG, archivos de prueba .jpg, archivos de compresión de imagen, archivos de prueba de conversión JPG'
+          },
+          schema: {
+            name: 'Archivos de muestra JPG gratuitos - Descargar archivos de imagen JPG de prueba',
+            description: 'Descarga archivos de muestra JPG de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de imágenes JPG, compresión JPG y procesamiento de imágenes.'
+          },
+          hero: {
+            title: 'Archivos de muestra JPG',
+            description: 'Descarga archivos de muestra JPG de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de imágenes JPG y compresión JPG.'
+          },
+          about_description: 'Estos son archivos de prueba de imagen JPG en varios tamaños para fines de prueba'
+        },
+        js: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JS - Archivos JavaScript | MorphyHub',
+            description: 'Descarga archivos de muestra JS JavaScript gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de código JavaScript, verificación de sintaxis JS y desarrollo web.',
+            keywords: 'archivos de muestra JS, archivos de prueba JS, descargar muestras JS, archivos de prueba JS gratuitos, muestras de código JavaScript, archivos de script JS, archivos de prueba .js, archivos de desarrollo web, archivos de prueba de verificación de sintaxis JS'
+          },
+          schema: {
+            name: 'Archivos de muestra JS gratuitos - Descargar archivos JavaScript de prueba',
+            description: 'Descarga archivos de muestra JS JavaScript gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de código JavaScript, verificación de sintaxis JS y desarrollo web.'
+          },
+          hero: {
+            title: 'Archivos de muestra JS',
+            description: 'Descarga archivos de muestra JS JavaScript gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de código JavaScript y verificación de sintaxis JS.'
+          },
+          about_description: 'Estos son archivos de prueba JavaScript en varios tamaños para fines de prueba'
+        },
+        html: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra HTML - Archivos HyperText Markup Language | MorphyHub',
+            description: 'Descarga archivos de muestra HTML HyperText Markup Language gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis HTML, desarrollo web y validación HTML.',
+            keywords: 'archivos de muestra HTML, archivos de prueba HTML, descargar muestras HTML, archivos de prueba HTML gratuitos, muestras HyperText Markup Language, muestras de página web HTML, archivos de prueba de análisis HTML, archivos de prueba .html, muestras de desarrollo web, archivos de validación HTML, muestras de editor HTML'
+          },
+          schema: {
+            name: 'Archivos de muestra HTML gratuitos - Descargar archivos HyperText Markup Language de prueba',
+            description: 'Descarga archivos de muestra HTML HyperText Markup Language gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis HTML, desarrollo web y validación HTML.'
+          },
+          hero: {
+            title: 'Archivos de muestra HTML',
+            description: 'Descarga archivos de muestra HTML HyperText Markup Language gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis HTML y desarrollo web.'
+          },
+          about_description: 'Estos son archivos de prueba HTML en varios tamaños para fines de prueba'
+        },
+        css: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CSS - Archivos Cascading Style Sheets | MorphyHub',
+            description: 'Descarga archivos de muestra CSS Cascading Style Sheets gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis CSS, estilos web y validación CSS.',
+            keywords: 'archivos de muestra CSS, archivos de prueba CSS, descargar muestras CSS, archivos de prueba CSS gratuitos, muestras Cascading Style Sheets, muestras de hoja de estilos CSS, archivos de prueba de análisis CSS, archivos de prueba .css, muestras de estilos web, archivos de validación CSS, muestras de editor CSS'
+          },
+          schema: {
+            name: 'Archivos de muestra CSS gratuitos - Descargar archivos Cascading Style Sheets de prueba',
+            description: 'Descarga archivos de muestra CSS Cascading Style Sheets gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis CSS, estilos web y validación CSS.'
+          },
+          hero: {
+            title: 'Archivos de muestra CSS',
+            description: 'Descarga archivos de muestra CSS Cascading Style Sheets gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis CSS y estilos web.'
+          },
+          about_description: 'Estos son archivos de prueba CSS en varios tamaños para fines de prueba'
+        },
+        md: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MD - Archivos Markdown | MorphyHub',
+            description: 'Descarga archivos de muestra MD Markdown gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis Markdown, herramientas de documentación y conversión Markdown.',
+            keywords: 'archivos de muestra MD, archivos de prueba MD, descargar muestras MD, archivos de prueba MD gratuitos, muestras Markdown, muestras de documentación MD, archivos de prueba de análisis Markdown, archivos de prueba .md, muestras de documentación, archivos de conversión Markdown, muestras de editor Markdown'
+          },
+          schema: {
+            name: 'Archivos de muestra MD gratuitos - Descargar archivos Markdown de prueba',
+            description: 'Descarga archivos de muestra MD Markdown gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis Markdown, herramientas de documentación y conversión Markdown.'
+          },
+          hero: {
+            title: 'Archivos de muestra MD',
+            description: 'Descarga archivos de muestra MD Markdown gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis Markdown y herramientas de documentación.'
+          },
+          about_description: 'Estos son archivos de prueba Markdown en varios tamaños para fines de prueba'
+        },
+        jsx: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JSX - Archivos JSX React | MorphyHub',
+            description: 'Descarga archivos de muestra JSX React gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis JSX, desarrollo React y verificación de sintaxis JSX.',
+            keywords: 'archivos de muestra JSX, archivos de prueba JSX, descargar muestras JSX, archivos de prueba JSX gratuitos, muestras JSX React, muestras de componentes JSX, archivos de prueba de análisis JSX, archivos de prueba .jsx, muestras de desarrollo React, archivos de verificación de sintaxis JSX, muestras de editor JSX'
+          },
+          schema: {
+            name: 'Archivos de muestra JSX gratuitos - Descargar archivos JSX React de prueba',
+            description: 'Descarga archivos de muestra JSX React gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis JSX, desarrollo React y verificación de sintaxis JSX.'
+          },
+          hero: {
+            title: 'Archivos de muestra JSX',
+            description: 'Descarga archivos de muestra JSX React gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis JSX y desarrollo React.'
+          },
+          about_description: 'Estos son archivos de prueba JSX React en varios tamaños para fines de prueba'
+        },
+        jsonl: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JSONL - Archivos JSON Lines | MorphyHub',
+            description: 'Descarga archivos de muestra JSONL JSON Lines gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis JSONL, procesamiento de datos y manejo de JSON Lines.',
+            keywords: 'archivos de muestra JSONL, archivos de prueba JSONL, descargar muestras JSONL, archivos de prueba JSONL gratuitos, muestras JSON Lines, muestras de datos JSONL, archivos de prueba de análisis JSONL, archivos de prueba .jsonl, muestras de procesamiento de datos, archivos de manejo de JSON Lines, muestras de editor JSONL'
+          },
+          schema: {
+            name: 'Archivos de muestra JSONL gratuitos - Descargar archivos JSON Lines de prueba',
+            description: 'Descarga archivos de muestra JSONL JSON Lines gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis JSONL, procesamiento de datos y manejo de JSON Lines.'
+          },
+          hero: {
+            title: 'Archivos de muestra JSONL',
+            description: 'Descarga archivos de muestra JSONL JSON Lines gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis JSONL y procesamiento de datos.'
+          },
+          about_description: 'Estos son archivos de prueba JSON Lines en varios tamaños para fines de prueba'
+        },
+        cpp: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CPP - Archivos de código fuente C++ | MorphyHub',
+            description: 'Descarga archivos de muestra CPP C++ de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C++, verificación de sintaxis C++ y desarrollo C++.',
+            keywords: 'archivos de muestra CPP, archivos de prueba CPP, descargar muestras CPP, archivos de prueba CPP gratuitos, muestras de código fuente C++, archivos de código C++, archivos de prueba .cpp, archivos de programación C++, archivos de prueba de compilación C++'
+          },
+          schema: {
+            name: 'Archivos de muestra CPP gratuitos - Descargar archivos de código fuente C++ de prueba',
+            description: 'Descarga archivos de muestra CPP C++ de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C++, verificación de sintaxis C++ y desarrollo C++.'
+          },
+          hero: {
+            title: 'Archivos de muestra CPP',
+            description: 'Descarga archivos de muestra CPP C++ de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C++ y verificación de sintaxis C++.'
+          },
+          about_description: 'Estos son archivos de prueba de código fuente C++ en varios tamaños para fines de prueba'
+        },
+        c: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra C - Archivos de código fuente C | MorphyHub',
+            description: 'Descarga archivos de muestra C de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C, verificación de sintaxis C y desarrollo C.',
+            keywords: 'archivos de muestra C, archivos de prueba C, descargar muestras C, archivos de prueba C gratuitos, muestras de código fuente C, archivos de código C, archivos de prueba .c, archivos de programación C, archivos de prueba de compilación C'
+          },
+          schema: {
+            name: 'Archivos de muestra C gratuitos - Descargar archivos de código fuente C de prueba',
+            description: 'Descarga archivos de muestra C de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C, verificación de sintaxis C y desarrollo C.'
+          },
+          hero: {
+            title: 'Archivos de muestra C',
+            description: 'Descarga archivos de muestra C de código fuente gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C y verificación de sintaxis C.'
+          },
+          about_description: 'Estos son archivos de prueba de código fuente C en varios tamaños para fines de prueba'
+        },
+        bmp: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra BMP - Archivos de imagen BMP | MorphyHub',
+            description: 'Descarga archivos de muestra BMP de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de imágenes BMP, compresión BMP y procesamiento de imágenes.',
+            keywords: 'archivos de muestra BMP, archivos de prueba BMP, descargar muestras BMP, archivos de prueba BMP gratuitos, muestras de imagen BMP, archivos de mapa de bits BMP, archivos de prueba .bmp, archivos de compresión de imagen, archivos de prueba de conversión BMP'
+          },
+          schema: {
+            name: 'Archivos de muestra BMP gratuitos - Descargar archivos de imagen BMP de prueba',
+            description: 'Descarga archivos de muestra BMP de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de imágenes BMP, compresión BMP y procesamiento de imágenes.'
+          },
+          hero: {
+            title: 'Archivos de muestra BMP',
+            description: 'Descarga archivos de muestra BMP de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de imágenes BMP y compresión BMP.'
+          },
+          about_description: 'Estos son archivos de prueba de imagen BMP en varios tamaños para fines de prueba'
+        },
+        'animated-gif': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra GIF animado - Archivos de animación | MorphyHub',
+            description: 'Descarga archivos de muestra GIF animado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de animación GIF, visualización y procesamiento de formato de animación.',
+            keywords: 'archivos de muestra GIF animado, archivos de prueba GIF animado, descargar muestras GIF animado, archivos de prueba GIF animado gratuitos, muestras de animación GIF, muestras de archivos de animación, archivos de prueba de conversión GIF animado, archivos de prueba .gif, muestras de animación web, muestras de imagen animada'
+          },
+          schema: {
+            name: 'Archivos de muestra GIF animado gratuitos - Descargar archivos de animación de prueba',
+            description: 'Descarga archivos de muestra GIF animado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de animación GIF, visualización y procesamiento de formato de animación.'
+          },
+          hero: {
+            title: 'Archivos de muestra GIF animado',
+            description: 'Descarga archivos de muestra GIF animado gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de animación GIF, visualización y procesamiento de formato de animación.'
+          },
+          about_description: 'Estos son archivos de prueba GIF animado (Graphics Interchange Format) en varios tamaños para fines de prueba'
+        },
+        apng: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra APNG - Archivos PNG animado | MorphyHub',
+            description: 'Descarga archivos de muestra APNG PNG animado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión PNG animado, visualización y procesamiento de formato APNG.',
+            keywords: 'archivos de muestra APNG, archivos de prueba APNG, descargar muestras APNG, archivos de prueba APNG gratuitos, muestras PNG animado, muestras de animación APNG, muestras de animación de imagen, archivos de prueba de conversión APNG, archivos de prueba .apng, muestras de animación web, muestras de animación PNG'
+          },
+          schema: {
+            name: 'Archivos de muestra APNG gratuitos - Descargar archivos PNG animado de prueba',
+            description: 'Descarga archivos de muestra APNG PNG animado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión PNG animado, visualización y procesamiento de formato APNG.'
+          },
+          hero: {
+            title: 'Archivos de muestra APNG',
+            description: 'Descarga archivos de muestra APNG PNG animado gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión PNG animado, visualización y procesamiento de formato APNG.'
+          },
+          about_description: 'Estos son archivos de prueba APNG (Animated Portable Network Graphics) en varios tamaños para fines de prueba'
+        },
+        avif: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AVIF - Archivos de imagen de próxima generación | MorphyHub',
+            description: 'Descarga archivos de muestra AVIF de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión AVIF, visualización y procesamiento de formato de imagen de próxima generación.',
+            keywords: 'archivos de muestra AVIF, archivos de prueba AVIF, descargar muestras AVIF, archivos de prueba AVIF gratuitos, muestras de imagen, muestras de formato de imagen AV1, muestras de imagen de próxima generación, archivos de prueba de conversión AVIF, archivos de prueba .avif, muestras de formato de imagen moderno, muestras de imagen web'
+          },
+          schema: {
+            name: 'Archivos de muestra AVIF gratuitos - Descargar archivos de imagen de próxima generación de prueba',
+            description: 'Descarga archivos de muestra AVIF de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión AVIF, visualización y procesamiento de formato de imagen de próxima generación.'
+          },
+          hero: {
+            title: 'Archivos de muestra AVIF',
+            description: 'Descarga archivos de muestra AVIF de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión AVIF, visualización y procesamiento de formato de imagen de próxima generación.'
+          },
+          about_description: 'Estos son archivos de prueba AVIF (AV1 Image File Format) de imagen en varios tamaños para fines de prueba'
+        },
+        avi: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AVI - Archivos de video | MorphyHub',
+            description: 'Descarga archivos de muestra AVI de video gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de video, reproducción y procesamiento de formato AVI.',
+            keywords: 'archivos de muestra AVI, archivos de prueba AVI, descargar muestras AVI, archivos de prueba AVI gratuitos, muestras de video, muestras Audio Video Interleave, archivos de prueba de conversión AVI, archivos de prueba .avi, muestras de reproducción de video, muestras de archivos multimedia'
+          },
+          schema: {
+            name: 'Archivos de muestra AVI gratuitos - Descargar archivos de video de prueba',
+            description: 'Descarga archivos de muestra AVI de video gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de video, reproducción y procesamiento de formato AVI.'
+          },
+          hero: {
+            title: 'Archivos de muestra AVI',
+            description: 'Descarga archivos de muestra AVI de video gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de video, reproducción y procesamiento de formato AVI.'
+          },
+          about_description: 'Estos son archivos de prueba AVI (Audio Video Interleave) de video en varios tamaños para fines de prueba'
+        },
+        bat: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra BAT - Archivos de script por lotes | MorphyHub',
+            description: 'Descarga archivos de muestra BAT de script por lotes gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de scripts por lotes, automatización de Windows y procesamiento de línea de comandos.',
+            keywords: 'archivos de muestra BAT, archivos de prueba BAT, descargar muestras BAT, archivos de prueba BAT gratuitos, muestras de script por lotes, archivos por lotes de Windows, muestras de script de automatización, archivos de prueba de conversión BAT, archivos de prueba .bat, muestras de script de línea de comandos, muestras de automatización de Windows'
+          },
+          schema: {
+            name: 'Archivos de muestra BAT gratuitos - Descargar archivos de script por lotes de prueba',
+            description: 'Descarga archivos de muestra BAT de script por lotes gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de scripts por lotes, automatización de Windows y procesamiento de línea de comandos.'
+          },
+          hero: {
+            title: 'Archivos de muestra BAT',
+            description: 'Descarga archivos de muestra BAT de script por lotes gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de scripts por lotes, automatización de Windows y procesamiento de línea de comandos.'
+          },
+          about_description: 'Estos son archivos de prueba BAT (Batch) de script en varios tamaños para fines de prueba'
+        },
+        bib: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra BIB - Archivos de bibliografía | MorphyHub',
+            description: 'Descarga archivos de muestra BIB de bibliografía gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de gestión de bibliografías, citas y procesamiento de formato BibTeX.',
+            keywords: 'archivos de muestra BIB, archivos de prueba BIB, descargar muestras BIB, archivos de prueba BIB gratuitos, muestras de bibliografía, archivos BibTeX, muestras de citas, archivos de prueba de conversión BIB, archivos de prueba .bib, muestras de gestión de referencias, muestras de citas académicas'
+          },
+          schema: {
+            name: 'Archivos de muestra BIB gratuitos - Descargar archivos de bibliografía de prueba',
+            description: 'Descarga archivos de muestra BIB de bibliografía gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de gestión de bibliografías, citas y procesamiento de formato BibTeX.'
+          },
+          hero: {
+            title: 'Archivos de muestra BIB',
+            description: 'Descarga archivos de muestra BIB de bibliografía gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de gestión de bibliografías y citas.'
+          },
+          about_description: 'Estos son archivos de prueba BIB (Bibliography) en varios tamaños para fines de prueba'
+        },
+        blend: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra BLEND - Archivos de modelo 3D | MorphyHub',
+            description: 'Descarga archivos de muestra BLEND de modelo 3D gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de modelado 3D, archivos de proyecto Blender y procesamiento de formato 3D.',
+            keywords: 'archivos de muestra BLEND, archivos de prueba BLEND, descargar muestras BLEND, archivos de prueba BLEND gratuitos, muestras de modelo 3D, archivos de proyecto Blender, muestras de modelado 3D, archivos de prueba de conversión BLEND, archivos de prueba .blend, muestras de gráficos 3D, muestras de archivos Blender'
+          },
+          schema: {
+            name: 'Archivos de muestra BLEND gratuitos - Descargar archivos de modelo 3D de prueba',
+            description: 'Descarga archivos de muestra BLEND de modelo 3D gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de modelado 3D, archivos de proyecto Blender y procesamiento de formato 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra BLEND',
+            description: 'Descarga archivos de muestra BLEND de modelo 3D gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de modelado 3D y procesamiento de archivos de proyecto Blender.'
+          },
+          about_description: 'Estos son archivos de prueba BLEND (Blender 3D) en varios tamaños para fines de prueba'
+        },
+        bz2: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra BZ2 - Archivos de archivo comprimido | MorphyHub',
+            description: 'Descarga archivos de muestra BZ2 de archivo comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión, descompresión y procesamiento de archivos BZ2.',
+            keywords: 'archivos de muestra BZ2, archivos de prueba BZ2, descargar muestras BZ2, archivos de prueba BZ2 gratuitos, muestras de archivo comprimido, archivos Bzip2, muestras de compresión, archivos de prueba de conversión BZ2, archivos de prueba .bz2, muestras de descompresión de archivos, muestras de compresión de archivos'
+          },
+          schema: {
+            name: 'Archivos de muestra BZ2 gratuitos - Descargar archivos de archivo comprimido de prueba',
+            description: 'Descarga archivos de muestra BZ2 de archivo comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión, descompresión y procesamiento de archivos BZ2.'
+          },
+          hero: {
+            title: 'Archivos de muestra BZ2',
+            description: 'Descarga archivos de muestra BZ2 de archivo comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compresión y descompresión.'
+          },
+          about_description: 'Estos son archivos de prueba BZ2 (Bzip2 comprimido) de archivo en varios tamaños para fines de prueba'
+        },
+        cab: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CAB - Archivos Windows Cabinet | MorphyHub',
+            description: 'Descarga archivos de muestra CAB Windows Cabinet gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción CAB, instalación de Windows y procesamiento de archivos cabinet.',
+            keywords: 'archivos de muestra CAB, archivos de prueba CAB, descargar muestras CAB, archivos de prueba CAB gratuitos, muestras Windows Cabinet, archivos de archivo CAB, muestras de instalación de Windows, archivos de prueba de conversión CAB, archivos de prueba .cab, muestras de extracción de archivos, muestras de instalador de Windows'
+          },
+          schema: {
+            name: 'Archivos de muestra CAB gratuitos - Descargar archivos Windows Cabinet de prueba',
+            description: 'Descarga archivos de muestra CAB Windows Cabinet gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción CAB, instalación de Windows y procesamiento de archivos cabinet.'
+          },
+          hero: {
+            title: 'Archivos de muestra CAB',
+            description: 'Descarga archivos de muestra CAB Windows Cabinet gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción CAB e instalación de Windows.'
+          },
+          about_description: 'Estos son archivos de prueba CAB (Windows Cabinet) de archivo en varios tamaños para fines de prueba'
+        },
+        caf: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CAF - Archivos Apple Core Audio | MorphyHub',
+            description: 'Descarga archivos de muestra CAF Apple Core Audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de audio, reproducción y procesamiento de formato CAF.',
+            keywords: 'archivos de muestra CAF, archivos de prueba CAF, descargar muestras CAF, archivos de prueba CAF gratuitos, muestras de audio, archivos Apple Core Audio, muestras de formato de audio, archivos de prueba de conversión CAF, archivos de prueba .caf, muestras de reproducción de audio, muestras de audio Apple'
+          },
+          schema: {
+            name: 'Archivos de muestra CAF gratuitos - Descargar archivos Apple Core Audio de prueba',
+            description: 'Descarga archivos de muestra CAF Apple Core Audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de audio, reproducción y procesamiento de formato CAF.'
+          },
+          hero: {
+            title: 'Archivos de muestra CAF',
+            description: 'Descarga archivos de muestra CAF Apple Core Audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de audio y reproducción.'
+          },
+          about_description: 'Estos son archivos de prueba CAF (Apple Core Audio Format) de audio en varios tamaños para fines de prueba'
+        },
+        key: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra KEY - Archivos de clave privada | MorphyHub',
+            description: 'Descarga archivos de muestra KEY de clave privada gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de gestión de certificados SSL, análisis de claves y almacenamiento de claves criptográficas.',
+            keywords: 'archivos de muestra KEY, archivos de prueba KEY, descargar muestras KEY, archivos de prueba KEY gratuitos, muestras de clave privada, archivos de clave SSL, archivos de certificado KEY, archivos de prueba .key, archivos de clave criptográfica, archivos de prueba de análisis KEY'
+          },
+          schema: {
+            name: 'Archivos de muestra KEY gratuitos - Descargar archivos de clave privada de prueba',
+            description: 'Descarga archivos de muestra KEY de clave privada gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de gestión de certificados SSL, análisis de claves y almacenamiento de claves criptográficas.'
+          },
+          hero: {
+            title: 'Archivos de muestra KEY',
+            description: 'Descarga archivos de muestra KEY de clave privada gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de gestión de certificados SSL y análisis de claves.'
+          },
+          about_description: 'Estos son archivos de prueba KEY (clave privada) en varios tamaños para fines de prueba'
+        },
+        crx: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CRX - Archivos de extensión Chrome | MorphyHub',
+            description: 'Descarga archivos de muestra CRX de paquete de extensión Chrome gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de extensiones Chrome, análisis CRX y procesamiento de extensiones de navegador.',
+            keywords: 'archivos de muestra CRX, archivos de prueba CRX, descargar muestras CRX, archivos de prueba CRX gratuitos, muestras de extensión Chrome, muestras de extensión de navegador, muestras de paquete CRX, archivos de prueba de conversión CRX, archivos de prueba .crx, muestras de instalación de extensión Chrome, muestras de extensión web'
+          },
+          schema: {
+            name: 'Archivos de muestra CRX gratuitos - Descargar archivos de extensión Chrome de prueba',
+            description: 'Descarga archivos de muestra CRX de paquete de extensión Chrome gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de extensiones Chrome, análisis CRX y procesamiento de extensiones de navegador.'
+          },
+          hero: {
+            title: 'Archivos de muestra CRX',
+            description: 'Descarga archivos de muestra CRX de paquete de extensión Chrome gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de extensiones Chrome, análisis CRX y procesamiento de extensiones de navegador.'
+          },
+          about_description: 'Estos son archivos de prueba CRX (Chrome Extension) de paquete en varios tamaños para fines de prueba'
+        },
+        hpp: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra HPP - Archivos de encabezado C++ | MorphyHub',
+            description: 'Descarga archivos de muestra HPP de encabezado C++ gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C++, procesamiento de archivos de encabezado y desarrollo.',
+            keywords: 'archivos de muestra HPP, archivos de prueba HPP, descargar muestras HPP, archivos de prueba HPP gratuitos, muestras de encabezado C++, muestras de archivos de encabezado, archivos de prueba .hpp, archivos de encabezado C++, muestras de encabezado de programación, archivos de encabezado de código, archivos de desarrollo C++'
+          },
+          schema: {
+            name: 'Archivos de muestra HPP gratuitos - Descargar archivos de encabezado C++ de prueba',
+            description: 'Descarga archivos de muestra HPP de encabezado C++ gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C++, procesamiento de archivos de encabezado y desarrollo.'
+          },
+          hero: {
+            title: 'Archivos de muestra HPP',
+            description: 'Descarga archivos de muestra HPP de encabezado C++ gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C++ y procesamiento de archivos de encabezado.'
+          },
+          about_description: 'Estos son archivos de prueba HPP (encabezado C++) en varios tamaños para fines de prueba'
+        },
+        hex: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra HEX - Archivos de formato hexadecimal | MorphyHub',
+            description: 'Descarga archivos de muestra HEX de formato hexadecimal gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis hexadecimal, análisis de datos binarios y procesamiento de archivos hex.',
+            keywords: 'archivos de muestra HEX, archivos de prueba HEX, descargar muestras HEX, archivos de prueba HEX gratuitos, muestras de formato hexadecimal, muestras de volcado hex, archivos de prueba de análisis HEX, archivos de prueba .hex, muestras binarias hex, archivos de editor hex, muestras de datos hexadecimales'
+          },
+          schema: {
+            name: 'Archivos de muestra HEX gratuitos - Descargar archivos de formato hexadecimal de prueba',
+            description: 'Descarga archivos de muestra HEX de formato hexadecimal gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis hexadecimal, análisis de datos binarios y procesamiento de archivos hex.'
+          },
+          hero: {
+            title: 'Archivos de muestra HEX',
+            description: 'Descarga archivos de muestra HEX de formato hexadecimal gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis hexadecimal y análisis de datos binarios.'
+          },
+          about_description: 'Estos son archivos de prueba HEX (formato hexadecimal) en varios tamaños para fines de prueba'
+        },
+        hdr: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra HDR - Archivos de imagen High Dynamic Range | MorphyHub',
+            description: 'Descarga archivos de muestra HDR High Dynamic Range de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de imágenes HDR, mapeo de tonos y visualización de alto rango dinámico.',
+            keywords: 'archivos de muestra HDR, archivos de prueba HDR, descargar muestras HDR, archivos de prueba HDR gratuitos, muestras High Dynamic Range, muestras de imagen HDR, archivos de prueba de mapeo de tonos HDR, archivos de prueba .hdr, muestras de procesamiento de imagen HDR, imágenes de alto rango dinámico, muestras de visor HDR'
+          },
+          schema: {
+            name: 'Archivos de muestra HDR gratuitos - Descargar archivos de imagen High Dynamic Range de prueba',
+            description: 'Descarga archivos de muestra HDR High Dynamic Range de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de imágenes HDR, mapeo de tonos y visualización de alto rango dinámico.'
+          },
+          hero: {
+            title: 'Archivos de muestra HDR',
+            description: 'Descarga archivos de muestra HDR High Dynamic Range de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de imágenes HDR y mapeo de tonos.'
+          },
+          about_description: 'Estos son archivos de prueba HDR (High Dynamic Range) de imagen en varios tamaños para fines de prueba'
+        },
+        h: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra H - Archivos de encabezado C/C++ | MorphyHub',
+            description: 'Descarga archivos de muestra H de encabezado C/C++ gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C/C++, procesamiento de archivos de encabezado y desarrollo.',
+            keywords: 'archivos de muestra H, archivos de prueba H, descargar muestras H, archivos de prueba H gratuitos, muestras de encabezado C, muestras de encabezado C++, muestras de archivos de encabezado, archivos de prueba .h, archivos de encabezado C/C++, muestras de encabezado de programación, archivos de encabezado de código'
+          },
+          schema: {
+            name: 'Archivos de muestra H gratuitos - Descargar archivos de encabezado C/C++ de prueba',
+            description: 'Descarga archivos de muestra H de encabezado C/C++ gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación de código C/C++, procesamiento de archivos de encabezado y desarrollo.'
+          },
+          hero: {
+            title: 'Archivos de muestra H',
+            description: 'Descarga archivos de muestra H de encabezado C/C++ gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación de código C/C++ y procesamiento de archivos de encabezado.'
+          },
+          about_description: 'Estos son archivos de prueba H (encabezado C/C++) en varios tamaños para fines de prueba'
+        },
+        gz: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra GZ - Archivos de archivo comprimido gzip | MorphyHub',
+            description: 'Descarga archivos de muestra GZ de archivo comprimido gzip gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión, extracción de archivos y procesamiento de archivos gzip.',
+            keywords: 'archivos de muestra GZ, archivos de prueba GZ, descargar muestras GZ, archivos de prueba GZ gratuitos, muestras comprimidas gzip, muestras de archivos, archivos de prueba de compresión GZ, archivos de prueba .gz, muestras de archivo gzip, muestras de archivos comprimidos, muestras de archivos GZ'
+          },
+          schema: {
+            name: 'Archivos de muestra GZ gratuitos - Descargar archivos de archivo comprimido gzip de prueba',
+            description: 'Descarga archivos de muestra GZ de archivo comprimido gzip gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión, extracción de archivos y procesamiento de archivos gzip.'
+          },
+          hero: {
+            title: 'Archivos de muestra GZ',
+            description: 'Descarga archivos de muestra GZ de archivo comprimido gzip gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compresión y software de extracción de archivos.'
+          },
+          about_description: 'Estos son archivos de prueba GZ (gzip) de archivo comprimido en varios tamaños para fines de prueba'
+        },
+        ace: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ACE - Archivos de archivo | MorphyHub',
+            description: 'Descarga archivos de muestra ACE de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos, compresión y procesamiento de formato ACE.',
+            keywords: 'archivos de muestra ACE, archivos de prueba ACE, descargar muestras ACE, archivos de prueba ACE gratuitos, muestras de archivos, muestras WinACE, muestras de archivos comprimidos, archivos de prueba .ace, muestras de compresión de archivos, muestras de formato de archivo'
+          },
+          schema: {
+            name: 'Archivos de muestra ACE gratuitos - Descargar archivos de archivo de prueba',
+            description: 'Descarga archivos de muestra ACE de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos, compresión y procesamiento de formato ACE.'
+          },
+          hero: {
+            title: 'Archivos de muestra ACE',
+            description: 'Descarga archivos de muestra ACE de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de archivos, compresión y procesamiento de formato ACE.'
+          },
+          about_description: 'Estos son archivos de prueba ACE (WinACE) de archivo en varios tamaños para fines de prueba'
+        },
+        '7z': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra 7Z - Archivos de archivo | MorphyHub',
+            description: 'Descarga archivos de muestra 7Z de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de archivos, compresión y extracción.',
+            keywords: 'archivos de muestra 7Z, archivos de prueba 7Z, descargar muestras 7Z, archivos de prueba 7Z gratuitos, muestras de archivos, muestras 7-Zip, muestras de archivos comprimidos, archivos de prueba .7z, muestras de conversión de archivos, muestras de compresión de archivos'
+          },
+          schema: {
+            name: 'Archivos de muestra 7Z gratuitos - Descargar archivos de prueba',
+            description: 'Descarga archivos de muestra 7Z de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de archivos y extracción.'
+          },
+          hero: {
+            title: 'Archivos de muestra 7Z',
+            description: 'Descarga archivos de muestra 7Z de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de archivos, compresión y extracción.'
+          },
+          about_description: 'Estos son archivos de prueba 7Z de archivo en varios tamaños para fines de prueba'
+        },
+        '3mf': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra 3MF - Archivos de impresión 3D | MorphyHub',
+            description: 'Descarga archivos de muestra 3MF de impresión 3D gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de impresión 3D, visualización y procesamiento de formato 3MF.',
+            keywords: 'archivos de muestra 3MF, archivos de prueba 3MF, descargar muestras 3MF, archivos de prueba 3MF gratuitos, muestras de impresión 3D, muestras de formato 3MF, archivos de prueba de conversión de impresión 3D, archivos de prueba .3mf, muestras de fabricación aditiva, muestras de impresora 3D'
+          },
+          schema: {
+            name: 'Archivos de muestra 3MF gratuitos - Descargar archivos de impresión 3D de prueba',
+            description: 'Descarga archivos de muestra 3MF de impresión 3D gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de impresión 3D, visualización y procesamiento de formato 3MF.'
+          },
+          hero: {
+            title: 'Archivos de muestra 3MF',
+            description: 'Descarga archivos de muestra 3MF de impresión 3D gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de impresión 3D, visualización y procesamiento de formato 3MF.'
+          },
+          about_description: 'Estos son archivos de prueba 3MF (3D Manufacturing Format) de impresión 3D en varios tamaños para fines de prueba'
+        },
+        apk: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra APK - Archivos de aplicación Android | MorphyHub',
+            description: 'Descarga archivos de muestra APK de paquete de aplicación Android gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones Android, análisis APK y procesamiento de aplicaciones móviles.',
+            keywords: 'archivos de muestra APK, archivos de prueba APK, descargar muestras APK, archivos de prueba APK gratuitos, muestras de aplicación Android, muestras de aplicación móvil, muestras de paquete APK, archivos de prueba de instalación APK, archivos de prueba .apk, muestras de aplicación Android, muestras de instalación de aplicaciones'
+          },
+          schema: {
+            name: 'Archivos de muestra APK gratuitos - Descargar archivos de aplicación Android de prueba',
+            description: 'Descarga archivos de muestra APK de paquete de aplicación Android gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones Android, análisis APK y procesamiento de aplicaciones móviles.'
+          },
+          hero: {
+            title: 'Archivos de muestra APK',
+            description: 'Descarga archivos de muestra APK de paquete de aplicación Android gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de aplicaciones Android, análisis APK y procesamiento de aplicaciones móviles.'
+          },
+          about_description: 'Estos son archivos de prueba APK (Android Package) de aplicación en varios tamaños para fines de prueba'
+        },
+        mkv: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MKV - Archivos de video Matroska | MorphyHub',
+            description: 'Descarga archivos de muestra MKV Matroska de contenedor de video gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de video, conversión de medios y procesamiento de formato MKV.',
+            keywords: 'archivos de muestra MKV, archivos de prueba MKV, descargar muestras MKV, archivos de prueba MKV gratuitos, muestras de video Matroska, muestras de contenedor de video, archivos de prueba de reproducción MKV, archivos de prueba .mkv, muestras de formato de video, muestras de contenedor de medios, muestras de video MKV'
+          },
+          schema: {
+            name: 'Archivos de muestra MKV gratuitos - Descargar archivos de video Matroska de prueba',
+            description: 'Descarga archivos de muestra MKV Matroska de contenedor de video gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de video, conversión de medios y procesamiento de formato MKV.'
+          },
+          hero: {
+            title: 'Archivos de muestra MKV',
+            description: 'Descarga archivos de muestra MKV Matroska de contenedor de video gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de video, conversión de medios y procesamiento de formato MKV.'
+          },
+          about_description: 'Estos son archivos de prueba MKV (Matroska Video) de contenedor en varios tamaños para fines de prueba'
+        },
+        midi: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MIDI - Archivos Musical Instrument Digital Interface | MorphyHub',
+            description: 'Descarga archivos de muestra MIDI Musical Instrument Digital Interface gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de síntesis musical, reproducción MIDI y procesamiento de música digital.',
+            keywords: 'archivos de muestra MIDI, archivos de prueba MIDI, descargar muestras MIDI, archivos de prueba MIDI gratuitos, muestras de síntesis musical, muestras de reproducción MIDI, muestras de música digital, archivos de prueba .midi, archivos de prueba .mid, muestras de formato musical, muestras de música MIDI'
+          },
+          schema: {
+            name: 'Archivos de muestra MIDI gratuitos - Descargar archivos Musical Instrument Digital Interface de prueba',
+            description: 'Descarga archivos de muestra MIDI Musical Instrument Digital Interface gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de síntesis musical, reproducción MIDI y procesamiento de música digital.'
+          },
+          hero: {
+            title: 'Archivos de muestra MIDI',
+            description: 'Descarga archivos de muestra MIDI Musical Instrument Digital Interface gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de síntesis musical, reproducción MIDI y procesamiento de música digital.'
+          },
+          about_description: 'Estos son archivos de prueba MIDI (Musical Instrument Digital Interface) en varios tamaños para fines de prueba'
+        },
+        mdx: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MDX - Archivos Markdown Extended | MorphyHub',
+            description: 'Descarga archivos de muestra MDX Markdown Extended gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de markdown, documentación de componentes y procesamiento de formato MDX.',
+            keywords: 'archivos de muestra MDX, archivos de prueba MDX, descargar muestras MDX, archivos de prueba MDX gratuitos, muestras Markdown Extended, muestras de documentación de componentes, archivos de prueba de procesamiento MDX, archivos de prueba .mdx, muestras de formato markdown, muestras de formato de documentación'
+          },
+          schema: {
+            name: 'Archivos de muestra MDX gratuitos - Descargar archivos Markdown Extended de prueba',
+            description: 'Descarga archivos de muestra MDX Markdown Extended gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de markdown, documentación de componentes y procesamiento de formato MDX.'
+          },
+          hero: {
+            title: 'Archivos de muestra MDX',
+            description: 'Descarga archivos de muestra MDX Markdown Extended gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de markdown, documentación de componentes y procesamiento de formato MDX.'
+          },
+          about_description: 'Estos son archivos de prueba MDX (Markdown Extended) en varios tamaños para fines de prueba'
+        },
+        ico: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ICO - Archivos de imagen de icono | MorphyHub',
+            description: 'Descarga archivos de muestra ICO de imagen de icono gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de iconos, conversión de imágenes y procesamiento de formato ICO.',
+            keywords: 'archivos de muestra ICO, archivos de prueba ICO, descargar muestras ICO, archivos de prueba ICO gratuitos, muestras de imagen de icono, muestras de favicon, archivos de prueba de extracción ICO, archivos de prueba .ico, muestras de formato de icono, muestras de formato de imagen, muestras de icono ICO'
+          },
+          schema: {
+            name: 'Archivos de muestra ICO gratuitos - Descargar archivos de imagen de icono de prueba',
+            description: 'Descarga archivos de muestra ICO de imagen de icono gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de iconos, conversión de imágenes y procesamiento de formato ICO.'
+          },
+          hero: {
+            title: 'Archivos de muestra ICO',
+            description: 'Descarga archivos de muestra ICO de imagen de icono gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de iconos, conversión de imágenes y procesamiento de formato ICO.'
+          },
+          about_description: 'Estos son archivos de prueba ICO (Icon) de imagen en varios tamaños para fines de prueba'
+        },
+        iso: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ISO - Archivos de imagen de disco | MorphyHub',
+            description: 'Descarga archivos de muestra ISO de imagen de disco gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de montaje de imagen de disco, extracción ISO y procesamiento de archivos.',
+            keywords: 'archivos de muestra ISO, archivos de prueba ISO, descargar muestras ISO, archivos de prueba ISO gratuitos, muestras de imagen de disco, muestras de archivo ISO, archivos de prueba de montaje de disco, archivos de prueba .iso, muestras de archivo de imagen, muestras de formato de disco, muestras de imagen ISO'
+          },
+          schema: {
+            name: 'Archivos de muestra ISO gratuitos - Descargar archivos de imagen de disco de prueba',
+            description: 'Descarga archivos de muestra ISO de imagen de disco gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de montaje de imagen de disco, extracción ISO y procesamiento de archivos.'
+          },
+          hero: {
+            title: 'Archivos de muestra ISO',
+            description: 'Descarga archivos de muestra ISO de imagen de disco gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de montaje de imagen de disco, extracción ISO y procesamiento de archivos.'
+          },
+          about_description: 'Estos son archivos de prueba ISO (International Organization for Standardization) de imagen de disco en varios tamaños para fines de prueba'
+        },
+        ipynb: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra IPYNB - Archivos Jupyter Notebook | MorphyHub',
+            description: 'Descarga archivos de muestra IPYNB Jupyter Notebook gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de notebooks, flujos de trabajo de ciencia de datos y procesamiento de formato IPYNB.',
+            keywords: 'archivos de muestra IPYNB, archivos de prueba IPYNB, descargar muestras IPYNB, archivos de prueba IPYNB gratuitos, muestras Jupyter Notebook, muestras de ciencia de datos, archivos de prueba de ejecución de notebooks, archivos de prueba .ipynb, muestras de formato de notebook, muestras de análisis de datos'
+          },
+          schema: {
+            name: 'Archivos de muestra IPYNB gratuitos - Descargar archivos Jupyter Notebook de prueba',
+            description: 'Descarga archivos de muestra IPYNB Jupyter Notebook gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de notebooks, flujos de trabajo de ciencia de datos y procesamiento de formato IPYNB.'
+          },
+          hero: {
+            title: 'Archivos de muestra IPYNB',
+            description: 'Descarga archivos de muestra IPYNB Jupyter Notebook gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de notebooks, flujos de trabajo de ciencia de datos y procesamiento de formato IPYNB.'
+          },
+          about_description: 'Estos son archivos de prueba IPYNB (Jupyter Notebook) en varios tamaños para fines de prueba'
+        },
+        ipa: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra IPA - Archivos de aplicación iOS | MorphyHub',
+            description: 'Descarga archivos de muestra IPA de archivo de aplicación iOS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones iOS, análisis IPA y procesamiento de aplicaciones móviles.',
+            keywords: 'archivos de muestra IPA, archivos de prueba IPA, descargar muestras IPA, archivos de prueba IPA gratuitos, muestras de aplicación iOS, muestras de aplicación móvil, muestras de paquete IPA, archivos de prueba de instalación IPA, archivos de prueba .ipa, muestras de aplicación iOS, muestras de archivo de aplicación'
+          },
+          schema: {
+            name: 'Archivos de muestra IPA gratuitos - Descargar archivos de aplicación iOS de prueba',
+            description: 'Descarga archivos de muestra IPA de archivo de aplicación iOS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones iOS, análisis IPA y procesamiento de aplicaciones móviles.'
+          },
+          hero: {
+            title: 'Archivos de muestra IPA',
+            description: 'Descarga archivos de muestra IPA de archivo de aplicación iOS gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de aplicaciones iOS, análisis IPA y procesamiento de aplicaciones móviles.'
+          },
+          about_description: 'Estos son archivos de prueba IPA (iOS App Store Package) de aplicación en varios tamaños para fines de prueba'
+        },
+        heif: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra HEIF - Archivos High Efficiency Image Format | MorphyHub',
+            description: 'Descarga archivos de muestra HEIF High Efficiency Image Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión de imágenes, conversión HEIF y procesamiento de formato de imagen moderno.',
+            keywords: 'archivos de muestra HEIF, archivos de prueba HEIF, descargar muestras HEIF, archivos de prueba HEIF gratuitos, muestras High Efficiency Image Format, muestras de imagen HEIF, archivos de prueba de compresión de imagen, archivos de prueba .heif, muestras de formato de imagen moderno, muestras de conversión HEIF'
+          },
+          schema: {
+            name: 'Archivos de muestra HEIF gratuitos - Descargar archivos High Efficiency Image Format de prueba',
+            description: 'Descarga archivos de muestra HEIF High Efficiency Image Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión de imágenes, conversión HEIF y procesamiento de formato de imagen moderno.'
+          },
+          hero: {
+            title: 'Archivos de muestra HEIF',
+            description: 'Descarga archivos de muestra HEIF High Efficiency Image Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compresión de imágenes, conversión HEIF y procesamiento de formato de imagen moderno.'
+          },
+          about_description: 'Estos son archivos de prueba HEIF (High Efficiency Image Format) en varios tamaños para fines de prueba'
+        },
+        heic: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra HEIC - Archivos High Efficiency Image Container | MorphyHub',
+            description: 'Descarga archivos de muestra HEIC High Efficiency Image Container gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión de imágenes, conversión HEIC y procesamiento de formato de imagen moderno.',
+            keywords: 'archivos de muestra HEIC, archivos de prueba HEIC, descargar muestras HEIC, archivos de prueba HEIC gratuitos, muestras High Efficiency Image Container, muestras de imagen HEIC, archivos de prueba de compresión de imagen, archivos de prueba .heic, muestras de formato de imagen moderno, muestras de conversión HEIC'
+          },
+          schema: {
+            name: 'Archivos de muestra HEIC gratuitos - Descargar archivos High Efficiency Image Container de prueba',
+            description: 'Descarga archivos de muestra HEIC High Efficiency Image Container gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compresión de imágenes, conversión HEIC y procesamiento de formato de imagen moderno.'
+          },
+          hero: {
+            title: 'Archivos de muestra HEIC',
+            description: 'Descarga archivos de muestra HEIC High Efficiency Image Container gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compresión de imágenes, conversión HEIC y procesamiento de formato de imagen moderno.'
+          },
+          about_description: 'Estos son archivos de prueba HEIC (High Efficiency Image Container) en varios tamaños para fines de prueba'
+        },
+        exr: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra EXR - Archivos de imagen OpenEXR | MorphyHub',
+            description: 'Descarga archivos de muestra EXR OpenEXR de alto rango dinámico de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de imágenes HDR, conversión EXR y visualización de alto rango dinámico.',
+            keywords: 'archivos de muestra EXR, archivos de prueba EXR, descargar muestras EXR, archivos de prueba EXR gratuitos, muestras de imagen OpenEXR, archivos de imagen HDR, archivos de imagen EXR, archivos de prueba .exr, imágenes de alto rango dinámico, archivos de prueba de conversión EXR'
+          },
+          schema: {
+            name: 'Archivos de muestra EXR gratuitos - Descargar archivos de imagen OpenEXR de prueba',
+            description: 'Descarga archivos de muestra EXR OpenEXR de alto rango dinámico de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de imágenes HDR, conversión EXR y visualización de alto rango dinámico.'
+          },
+          hero: {
+            title: 'Archivos de muestra EXR',
+            description: 'Descarga archivos de muestra EXR OpenEXR de alto rango dinámico de imagen gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de imágenes HDR, conversión EXR y visualización de alto rango dinámico.'
+          },
+          about_description: 'Estos son archivos de prueba EXR (OpenEXR) de alto rango dinámico de imagen en varios tamaños para fines de prueba'
+        },
+        exe: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra EXE - Archivos ejecutables Windows | MorphyHub',
+            description: 'Descarga archivos de muestra EXE de aplicación ejecutable Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis ejecutable, procesamiento de aplicaciones Windows y manejo de archivos binarios.',
+            keywords: 'archivos de muestra EXE, archivos de prueba EXE, descargar muestras EXE, archivos de prueba EXE gratuitos, muestras ejecutables Windows, archivos de aplicación, muestras binarias EXE, archivos de prueba .exe, muestras de análisis ejecutable, muestras de aplicación Windows'
+          },
+          schema: {
+            name: 'Archivos de muestra EXE gratuitos - Descargar archivos ejecutables Windows de prueba',
+            description: 'Descarga archivos de muestra EXE de aplicación ejecutable Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis ejecutable, procesamiento de aplicaciones Windows y manejo de archivos binarios.'
+          },
+          hero: {
+            title: 'Archivos de muestra EXE',
+            description: 'Descarga archivos de muestra EXE de aplicación ejecutable Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis ejecutable, procesamiento de aplicaciones Windows y manejo de archivos binarios.'
+          },
+          about_description: 'Estos son archivos de prueba EXE (Windows Executable) de aplicación en varios tamaños para fines de prueba'
+        },
+        eps: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra EPS - Archivos Encapsulated PostScript | MorphyHub',
+            description: 'Descarga archivos de muestra EPS Encapsulated PostScript de imagen vectorial gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de gráficos vectoriales, conversión EPS y manejo de formato PostScript.',
+            keywords: 'archivos de muestra EPS, archivos de prueba EPS, descargar muestras EPS, archivos de prueba EPS gratuitos, muestras Encapsulated PostScript, muestras de gráficos vectoriales, muestras de imagen EPS, archivos de prueba .eps, muestras de formato PostScript, muestras de formato vectorial'
+          },
+          schema: {
+            name: 'Archivos de muestra EPS gratuitos - Descargar archivos Encapsulated PostScript de prueba',
+            description: 'Descarga archivos de muestra EPS Encapsulated PostScript de imagen vectorial gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de gráficos vectoriales, conversión EPS y manejo de formato PostScript.'
+          },
+          hero: {
+            title: 'Archivos de muestra EPS',
+            description: 'Descarga archivos de muestra EPS Encapsulated PostScript de imagen vectorial gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de gráficos vectoriales, conversión EPS y manejo de formato PostScript.'
+          },
+          about_description: 'Estos son archivos de prueba EPS (Encapsulated PostScript) de imagen vectorial en varios tamaños para fines de prueba'
+        },
+        elf: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ELF - Archivos Executable and Linkable Format | MorphyHub',
+            description: 'Descarga archivos de muestra ELF Executable and Linkable Format binarios gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis binario, análisis ELF y procesamiento de formato ejecutable.',
+            keywords: 'archivos de muestra ELF, archivos de prueba ELF, descargar muestras ELF, archivos de prueba ELF gratuitos, muestras Executable and Linkable Format, muestras de archivos binarios, muestras ejecutables ELF, archivos de prueba .elf, muestras de análisis binario, muestras de formato ejecutable'
+          },
+          schema: {
+            name: 'Archivos de muestra ELF gratuitos - Descargar archivos Executable and Linkable Format de prueba',
+            description: 'Descarga archivos de muestra ELF Executable and Linkable Format binarios gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis binario, análisis ELF y procesamiento de formato ejecutable.'
+          },
+          hero: {
+            title: 'Archivos de muestra ELF',
+            description: 'Descarga archivos de muestra ELF Executable and Linkable Format binarios gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis binario, análisis ELF y procesamiento de formato ejecutable.'
+          },
+          about_description: 'Estos son archivos de prueba ELF (Executable and Linkable Format) binarios en varios tamaños para fines de prueba'
+        },
+        editorconfig: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra EditorConfig - Archivos de configuración de editor | MorphyHub',
+            description: 'Descarga archivos de muestra EditorConfig de configuración de editor gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de configuración de editor, herramientas de formato de código y configuración de entorno de desarrollo.',
+            keywords: 'archivos de muestra EditorConfig, archivos de prueba EditorConfig, descargar muestras EditorConfig, archivos de prueba EditorConfig gratuitos, muestras de configuración de editor, archivos de prueba .editorconfig, muestras de formato de código, muestras de configuración de editor, muestras de configuración de desarrollo'
+          },
+          schema: {
+            name: 'Archivos de muestra EditorConfig gratuitos - Descargar archivos de configuración de editor de prueba',
+            description: 'Descarga archivos de muestra EditorConfig de configuración de editor gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de configuración de editor, herramientas de formato de código y configuración de entorno de desarrollo.'
+          },
+          hero: {
+            title: 'Archivos de muestra EditorConfig',
+            description: 'Descarga archivos de muestra EditorConfig de configuración de editor gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de configuración de editor, herramientas de formato de código y configuración de entorno de desarrollo.'
+          },
+          about_description: 'Estos son archivos de prueba EditorConfig de configuración de editor en varios tamaños para fines de prueba'
+        },
+        dxf: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DXF - Archivos AutoCAD Drawing Exchange Format | MorphyHub',
+            description: 'Descarga archivos de muestra DXF AutoCAD Drawing Exchange Format CAD gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de archivos CAD, conversión DXF y manejo de formato de dibujo.',
+            keywords: 'archivos de muestra DXF, archivos de prueba DXF, descargar muestras DXF, archivos de prueba DXF gratuitos, muestras AutoCAD DXF, muestras de archivos CAD, muestras de dibujo DXF, archivos de prueba .dxf, muestras de formato CAD, muestras de formato de intercambio de dibujo'
+          },
+          schema: {
+            name: 'Archivos de muestra DXF gratuitos - Descargar archivos AutoCAD Drawing Exchange Format de prueba',
+            description: 'Descarga archivos de muestra DXF AutoCAD Drawing Exchange Format CAD gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de archivos CAD, conversión DXF y manejo de formato de dibujo.'
+          },
+          hero: {
+            title: 'Archivos de muestra DXF',
+            description: 'Descarga archivos de muestra DXF AutoCAD Drawing Exchange Format CAD gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de archivos CAD, conversión DXF y manejo de formato de dibujo.'
+          },
+          about_description: 'Estos son archivos de prueba DXF (AutoCAD Drawing Exchange Format) CAD en varios tamaños para fines de prueba'
+        },
+        dwg: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DWG - Archivos de dibujo AutoCAD | MorphyHub',
+            description: 'Descarga archivos de muestra DWG de dibujo AutoCAD CAD gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de archivos CAD, conversión DWG y manejo de formato AutoCAD.',
+            keywords: 'archivos de muestra DWG, archivos de prueba DWG, descargar muestras DWG, archivos de prueba DWG gratuitos, muestras AutoCAD DWG, muestras de archivos CAD, muestras de dibujo DWG, archivos de prueba .dwg, muestras de formato CAD, muestras de dibujo AutoCAD'
+          },
+          schema: {
+            name: 'Archivos de muestra DWG gratuitos - Descargar archivos de dibujo AutoCAD de prueba',
+            description: 'Descarga archivos de muestra DWG de dibujo AutoCAD CAD gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de archivos CAD, conversión DWG y manejo de formato AutoCAD.'
+          },
+          hero: {
+            title: 'Archivos de muestra DWG',
+            description: 'Descarga archivos de muestra DWG de dibujo AutoCAD CAD gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de archivos CAD, conversión DWG y manejo de formato AutoCAD.'
+          },
+          about_description: 'Estos son archivos de prueba DWG (AutoCAD Drawing) CAD en varios tamaños para fines de prueba'
+        },
+        dockerfile: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Dockerfile - Archivos de configuración Docker | MorphyHub',
+            description: 'Descarga archivos de muestra Dockerfile de configuración de contenedor Docker gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesos de compilación Docker, análisis de configuración de contenedor y herramientas DevOps.',
+            keywords: 'archivos de muestra Dockerfile, archivos de prueba Dockerfile, descargar muestras Dockerfile, archivos de prueba Dockerfile gratuitos, muestras de configuración Docker, muestras de configuración de contenedor, archivos de prueba .dockerfile, muestras de compilación Docker, muestras de contenedorización'
+          },
+          schema: {
+            name: 'Archivos de muestra Dockerfile gratuitos - Descargar archivos de configuración Docker de prueba',
+            description: 'Descarga archivos de muestra Dockerfile de configuración de contenedor Docker gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesos de compilación Docker, análisis de configuración de contenedor y herramientas DevOps.'
+          },
+          hero: {
+            title: 'Archivos de muestra Dockerfile',
+            description: 'Descarga archivos de muestra Dockerfile de configuración de contenedor Docker gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesos de compilación Docker, análisis de configuración de contenedor y herramientas DevOps.'
+          },
+          about_description: 'Estos son archivos de prueba Dockerfile de configuración de contenedor Docker en varios tamaños para fines de prueba'
+        },
+        'docker-compose-yml': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Docker Compose YML - Archivos de configuración Docker Compose | MorphyHub',
+            description: 'Descarga archivos de muestra Docker Compose YML de configuración multi-contenedor Docker gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis Docker Compose, orquestación multi-contenedor y herramientas de configuración DevOps.',
+            keywords: 'archivos de muestra Docker Compose YML, archivos de prueba docker-compose.yml, descargar muestras Docker Compose, archivos de prueba docker-compose gratuitos, muestras de configuración multi-contenedor, muestras de orquestación Docker, archivos de prueba .yml, muestras de orquestación de contenedores'
+          },
+          schema: {
+            name: 'Archivos de muestra Docker Compose YML gratuitos - Descargar archivos de configuración Docker Compose de prueba',
+            description: 'Descarga archivos de muestra Docker Compose YML de configuración multi-contenedor Docker gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis Docker Compose, orquestación multi-contenedor y herramientas de configuración DevOps.'
+          },
+          hero: {
+            title: 'Archivos de muestra Docker Compose YML',
+            description: 'Descarga archivos de muestra Docker Compose YML de configuración multi-contenedor Docker gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis Docker Compose, orquestación multi-contenedor y herramientas de configuración DevOps.'
+          },
+          about_description: 'Estos son archivos de prueba Docker Compose YML de configuración multi-contenedor Docker en varios tamaños para fines de prueba'
+        },
+        dmp: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DMP - Archivos de volcado de memoria Windows | MorphyHub',
+            description: 'Descarga archivos de muestra DMP de volcado de memoria Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de volcado de memoria, depuración de fallos y herramientas de diagnóstico del sistema.',
+            keywords: 'archivos de muestra DMP, archivos de prueba DMP, descargar muestras DMP, archivos de prueba DMP gratuitos, muestras de volcado de memoria Windows, muestras de volcado de fallos, archivos de prueba .dmp, muestras de análisis de memoria, muestras de diagnóstico del sistema'
+          },
+          schema: {
+            name: 'Archivos de muestra DMP gratuitos - Descargar archivos de volcado de memoria Windows de prueba',
+            description: 'Descarga archivos de muestra DMP de volcado de memoria Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de volcado de memoria, depuración de fallos y herramientas de diagnóstico del sistema.'
+          },
+          hero: {
+            title: 'Archivos de muestra DMP',
+            description: 'Descarga archivos de muestra DMP de volcado de memoria Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de volcado de memoria, depuración de fallos y herramientas de diagnóstico del sistema.'
+          },
+          about_description: 'Estos son archivos de prueba DMP (Windows Memory Dump) en varios tamaños para fines de prueba'
+        },
+        dng: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DNG - Archivos Digital Negative Format | MorphyHub',
+            description: 'Descarga archivos de muestra DNG Digital Negative de imagen RAW gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de imágenes RAW, conversión DNG y flujos de trabajo de fotografía digital.',
+            keywords: 'archivos de muestra DNG, archivos de prueba DNG, descargar muestras DNG, archivos de prueba DNG gratuitos, muestras Digital Negative, muestras de imagen RAW, muestras de foto DNG, archivos de prueba .dng, muestras de formato RAW, muestras RAW de cámara'
+          },
+          schema: {
+            name: 'Archivos de muestra DNG gratuitos - Descargar archivos Digital Negative Format de prueba',
+            description: 'Descarga archivos de muestra DNG Digital Negative de imagen RAW gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de imágenes RAW, conversión DNG y flujos de trabajo de fotografía digital.'
+          },
+          hero: {
+            title: 'Archivos de muestra DNG',
+            description: 'Descarga archivos de muestra DNG Digital Negative de imagen RAW gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de imágenes RAW, conversión DNG y flujos de trabajo de fotografía digital.'
+          },
+          about_description: 'Estos son archivos de prueba DNG (Digital Negative) de imagen RAW en varios tamaños para fines de prueba'
+        },
+        dmg: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DMG - Archivos de imagen de disco macOS | MorphyHub',
+            description: 'Descarga archivos de muestra DMG de imagen de disco macOS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones macOS, extracción DMG y procesamiento de imagen de disco.',
+            keywords: 'archivos de muestra DMG, archivos de prueba DMG, descargar muestras DMG, archivos de prueba DMG gratuitos, muestras de imagen de disco macOS, muestras de aplicación Mac, muestras de archivo DMG, archivos de prueba .dmg, muestras de imagen de disco, muestras de instalador macOS'
+          },
+          schema: {
+            name: 'Archivos de muestra DMG gratuitos - Descargar archivos de imagen de disco macOS de prueba',
+            description: 'Descarga archivos de muestra DMG de imagen de disco macOS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones macOS, extracción DMG y procesamiento de imagen de disco.'
+          },
+          hero: {
+            title: 'Archivos de muestra DMG',
+            description: 'Descarga archivos de muestra DMG de imagen de disco macOS gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de aplicaciones macOS, extracción DMG y procesamiento de imagen de disco.'
+          },
+          about_description: 'Estos son archivos de prueba DMG (macOS Disk Image) de archivo en varios tamaños para fines de prueba'
+        },
+        der: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DER - Archivos de certificado Distinguished Encoding Rules | MorphyHub',
+            description: 'Descarga archivos de muestra DER Distinguished Encoding Rules de certificado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de certificados, configuración SSL/TLS y procesamiento de archivos criptográficos.',
+            keywords: 'archivos de muestra DER, archivos de prueba DER, descargar muestras DER, archivos de prueba DER gratuitos, muestras de certificado, muestras de certificado SSL, muestras de certificado DER, archivos de prueba .der, muestras criptográficas, muestras de formato de certificado'
+          },
+          schema: {
+            name: 'Archivos de muestra DER gratuitos - Descargar archivos de certificado Distinguished Encoding Rules de prueba',
+            description: 'Descarga archivos de muestra DER Distinguished Encoding Rules de certificado gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de certificados, configuración SSL/TLS y procesamiento de archivos criptográficos.'
+          },
+          hero: {
+            title: 'Archivos de muestra DER',
+            description: 'Descarga archivos de muestra DER Distinguished Encoding Rules de certificado gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de certificados, configuración SSL/TLS y procesamiento de archivos criptográficos.'
+          },
+          about_description: 'Estos son archivos de prueba DER (Distinguished Encoding Rules) de certificado en varios tamaños para fines de prueba'
+        },
+        dem: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DEM - Archivos Digital Elevation Model | MorphyHub',
+            description: 'Descarga archivos de muestra DEM Digital Elevation Model de datos geográficos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software GIS, mapeo de terreno y procesamiento de datos de elevación.',
+            keywords: 'archivos de muestra DEM, archivos de prueba DEM, descargar muestras DEM, archivos de prueba DEM gratuitos, muestras Digital Elevation Model, muestras de datos GIS, muestras de datos de terreno, archivos de prueba .dem, muestras de modelo de elevación, muestras de datos geográficos'
+          },
+          schema: {
+            name: 'Archivos de muestra DEM gratuitos - Descargar archivos Digital Elevation Model de prueba',
+            description: 'Descarga archivos de muestra DEM Digital Elevation Model de datos geográficos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software GIS, mapeo de terreno y procesamiento de datos de elevación.'
+          },
+          hero: {
+            title: 'Archivos de muestra DEM',
+            description: 'Descarga archivos de muestra DEM Digital Elevation Model de datos geográficos gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de software GIS, mapeo de terreno y procesamiento de datos de elevación.'
+          },
+          about_description: 'Estos son archivos de prueba DEM (Digital Elevation Model) de datos geográficos en varios tamaños para fines de prueba'
+        },
+        dds: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DDS - Archivos de imagen DirectDraw Surface | MorphyHub',
+            description: 'Descarga archivos de muestra DDS DirectDraw Surface de imagen de textura gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de texturas de juegos, conversión DDS y herramientas de motor gráfico.',
+            keywords: 'archivos de muestra DDS, archivos de prueba DDS, descargar muestras DDS, archivos de prueba DDS gratuitos, muestras DirectDraw Surface, muestras de imagen de textura, muestras de textura DDS, archivos de prueba .dds, muestras de textura de juegos, muestras de formato gráfico'
+          },
+          schema: {
+            name: 'Archivos de muestra DDS gratuitos - Descargar archivos de imagen DirectDraw Surface de prueba',
+            description: 'Descarga archivos de muestra DDS DirectDraw Surface de imagen de textura gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de texturas de juegos, conversión DDS y herramientas de motor gráfico.'
+          },
+          hero: {
+            title: 'Archivos de muestra DDS',
+            description: 'Descarga archivos de muestra DDS DirectDraw Surface de imagen de textura gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de texturas de juegos, conversión DDS y herramientas de motor gráfico.'
+          },
+          about_description: 'Estos son archivos de prueba DDS (DirectDraw Surface) de imagen de textura en varios tamaños para fines de prueba'
+        },
+        dbf: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DBF - Archivos de base de datos dBASE | MorphyHub',
+            description: 'Descarga archivos de muestra DBF dBASE de tabla de base de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de base de datos, análisis DBF y manejo de formato de base de datos heredado.',
+            keywords: 'archivos de muestra DBF, archivos de prueba DBF, descargar muestras DBF, archivos de prueba DBF gratuitos, muestras de base de datos dBASE, muestras de tabla de base de datos, muestras de base de datos DBF, archivos de prueba .dbf, muestras de base de datos heredada, muestras de formato de base de datos'
+          },
+          schema: {
+            name: 'Archivos de muestra DBF gratuitos - Descargar archivos de base de datos dBASE de prueba',
+            description: 'Descarga archivos de muestra DBF dBASE de tabla de base de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de base de datos, análisis DBF y manejo de formato de base de datos heredado.'
+          },
+          hero: {
+            title: 'Archivos de muestra DBF',
+            description: 'Descarga archivos de muestra DBF dBASE de tabla de base de datos gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de base de datos, análisis DBF y manejo de formato de base de datos heredado.'
+          },
+          about_description: 'Estos son archivos de prueba DBF (dBASE Database) de tabla en varios tamaños para fines de prueba'
+        },
+        dav: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra DAV - Archivos de video DAV | MorphyHub',
+            description: 'Descarga archivos de muestra DAV de video de vigilancia DAV gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de video de vigilancia, conversión DAV y procesamiento de archivos de cámara de seguridad.',
+            keywords: 'archivos de muestra DAV, archivos de prueba DAV, descargar muestras DAV, archivos de prueba DAV gratuitos, muestras de video DAV, muestras de video de vigilancia, muestras de cámara DAV, archivos de prueba .dav, muestras de cámara de seguridad, muestras de formato de video'
+          },
+          schema: {
+            name: 'Archivos de muestra DAV gratuitos - Descargar archivos de video DAV de prueba',
+            description: 'Descarga archivos de muestra DAV de video de vigilancia DAV gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de video de vigilancia, conversión DAV y procesamiento de archivos de cámara de seguridad.'
+          },
+          hero: {
+            title: 'Archivos de muestra DAV',
+            description: 'Descarga archivos de muestra DAV de video de vigilancia DAV gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de video de vigilancia, conversión DAV y procesamiento de archivos de cámara de seguridad.'
+          },
+          about_description: 'Estos son archivos de prueba DAV de video de vigilancia en varios tamaños para fines de prueba'
+        },
+        'customer-database-sql': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Customer Database SQL - Archivos de base de datos SQL | MorphyHub',
+            description: 'Descarga archivos de muestra Customer Database SQL de script de base de datos SQL gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de importación de base de datos SQL, procesamiento de datos de clientes y herramientas de gestión de base de datos.',
+            keywords: 'archivos de muestra Customer Database SQL, archivos de prueba de base de datos SQL, descargar muestras SQL, archivos de prueba SQL gratuitos, muestras de script de base de datos, muestras de datos de clientes, muestras de importación SQL, archivos de prueba .sql, muestras de gestión de base de datos'
+          },
+          schema: {
+            name: 'Archivos de muestra Customer Database SQL gratuitos - Descargar archivos de base de datos SQL de prueba',
+            description: 'Descarga archivos de muestra Customer Database SQL de script de base de datos SQL gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de importación de base de datos SQL, procesamiento de datos de clientes y herramientas de gestión de base de datos.'
+          },
+          hero: {
+            title: 'Archivos de muestra Customer Database SQL',
+            description: 'Descarga archivos de muestra Customer Database SQL de script de base de datos SQL gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de importación de base de datos SQL, procesamiento de datos de clientes y herramientas de gestión de base de datos.'
+          },
+          about_description: 'Estos son archivos de prueba Customer Database SQL de script de base de datos en varios tamaños para fines de prueba'
+        },
+        cue: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CUE - Archivos CUE Sheet | MorphyHub',
+            description: 'Descarga archivos de muestra CUE CUE Sheet de imagen de disco de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de grabación de disco de audio, análisis CUE Sheet y creación de imagen CD/DVD.',
+            keywords: 'archivos de muestra CUE, archivos de prueba CUE, descargar muestras CUE, archivos de prueba CUE gratuitos, muestras CUE Sheet, muestras de disco de audio, muestras de imagen de disco CUE, archivos de prueba .cue, muestras de imagen CD, muestras de formato de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra CUE gratuitos - Descargar archivos CUE Sheet de prueba',
+            description: 'Descarga archivos de muestra CUE CUE Sheet de imagen de disco de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de grabación de disco de audio, análisis CUE Sheet y creación de imagen CD/DVD.'
+          },
+          hero: {
+            title: 'Archivos de muestra CUE',
+            description: 'Descarga archivos de muestra CUE CUE Sheet de imagen de disco de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de grabación de disco de audio, análisis CUE Sheet y creación de imagen CD/DVD.'
+          },
+          about_description: 'Estos son archivos de prueba CUE (CUE Sheet) de imagen de disco de audio en varios tamaños para fines de prueba'
+        },
+        csr: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CSR - Archivos Certificate Signing Request | MorphyHub',
+            description: 'Descarga archivos de muestra CSR Certificate Signing Request gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de generación de certificados SSL, análisis CSR y herramientas de autoridad certificadora.',
+            keywords: 'archivos de muestra CSR, archivos de prueba CSR, descargar muestras CSR, archivos de prueba CSR gratuitos, muestras Certificate Signing Request, muestras de certificado SSL, muestras de certificado CSR, archivos de prueba .csr, muestras de autoridad certificadora'
+          },
+          schema: {
+            name: 'Archivos de muestra CSR gratuitos - Descargar archivos Certificate Signing Request de prueba',
+            description: 'Descarga archivos de muestra CSR Certificate Signing Request gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de generación de certificados SSL, análisis CSR y herramientas de autoridad certificadora.'
+          },
+          hero: {
+            title: 'Archivos de muestra CSR',
+            description: 'Descarga archivos de muestra CSR Certificate Signing Request gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de generación de certificados SSL, análisis CSR y herramientas de autoridad certificadora.'
+          },
+          about_description: 'Estos son archivos de prueba CSR (Certificate Signing Request) en varios tamaños para fines de prueba'
+        },
+        cs: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra C# - Archivos de código fuente C# | MorphyHub',
+            description: 'Descarga archivos de muestra C# de código fuente C# gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de código C#, compilación .NET y desarrollo C#.',
+            keywords: 'archivos de muestra C#, archivos de prueba C#, descargar muestras C#, archivos de prueba C# gratuitos, muestras de código fuente C#, muestras de código .NET, muestras de programa C#, archivos de prueba .cs, muestras de desarrollo C#, muestras de código C#'
+          },
+          schema: {
+            name: 'Archivos de muestra C# gratuitos - Descargar archivos de código fuente C# de prueba',
+            description: 'Descarga archivos de muestra C# de código fuente C# gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de código C#, compilación .NET y desarrollo C#.'
+          },
+          hero: {
+            title: 'Archivos de muestra C#',
+            description: 'Descarga archivos de muestra C# de código fuente C# gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de código C#, compilación .NET y desarrollo C#.'
+          },
+          about_description: 'Estos son archivos de prueba de código fuente C# en varios tamaños para fines de prueba'
+        },
+        cpio: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CPIO - Archivos de archivo CPIO | MorphyHub',
+            description: 'Descarga archivos de muestra CPIO de archivo CPIO gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos CPIO, compresión CPIO y herramientas de archivo Unix.',
+            keywords: 'archivos de muestra CPIO, archivos de prueba CPIO, descargar muestras CPIO, archivos de prueba CPIO gratuitos, muestras de archivo CPIO, muestras de archivo Unix, muestras de compresión CPIO, archivos de prueba .cpio, muestras de formato de archivo'
+          },
+          schema: {
+            name: 'Archivos de muestra CPIO gratuitos - Descargar archivos de archivo CPIO de prueba',
+            description: 'Descarga archivos de muestra CPIO de archivo CPIO gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos CPIO, compresión CPIO y herramientas de archivo Unix.'
+          },
+          hero: {
+            title: 'Archivos de muestra CPIO',
+            description: 'Descarga archivos de muestra CPIO de archivo CPIO gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de archivos CPIO, compresión CPIO y herramientas de archivo Unix.'
+          },
+          about_description: 'Estos son archivos de prueba CPIO (Copy In, Copy Out) de archivo en varios tamaños para fines de prueba'
+        },
+        'config-ini': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Config INI - Archivos de configuración INI | MorphyHub',
+            description: 'Descarga archivos de muestra Config INI de configuración INI gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de archivos INI, gestión de configuración y herramientas de configuración de aplicaciones.',
+            keywords: 'archivos de muestra Config INI, archivos de prueba INI, descargar muestras INI, archivos de prueba INI gratuitos, muestras de configuración INI, muestras de configuración INI, archivos de prueba .ini, muestras de archivos de configuración'
+          },
+          schema: {
+            name: 'Archivos de muestra Config INI gratuitos - Descargar archivos de configuración INI de prueba',
+            description: 'Descarga archivos de muestra Config INI de configuración INI gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de archivos INI, gestión de configuración y herramientas de configuración de aplicaciones.'
+          },
+          hero: {
+            title: 'Archivos de muestra Config INI',
+            description: 'Descarga archivos de muestra Config INI de configuración INI gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de archivos INI, gestión de configuración y herramientas de configuración de aplicaciones.'
+          },
+          about_description: 'Estos son archivos de prueba Config INI de configuración en varios tamaños para fines de prueba'
+        },
+        conf: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CONF - Archivos de configuración | MorphyHub',
+            description: 'Descarga archivos de muestra CONF de configuración gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de archivos de configuración, configuración de servidor y herramientas de configuración de aplicaciones.',
+            keywords: 'archivos de muestra CONF, archivos de prueba CONF, descargar muestras CONF, archivos de prueba CONF gratuitos, muestras de archivos de configuración, muestras de configuración de servidor, archivos de prueba .conf, muestras de archivos de configuración'
+          },
+          schema: {
+            name: 'Archivos de muestra CONF gratuitos - Descargar archivos de configuración de prueba',
+            description: 'Descarga archivos de muestra CONF de configuración gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de archivos de configuración, configuración de servidor y herramientas de configuración de aplicaciones.'
+          },
+          hero: {
+            title: 'Archivos de muestra CONF',
+            description: 'Descarga archivos de muestra CONF de configuración gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de archivos de configuración, configuración de servidor y herramientas de configuración de aplicaciones.'
+          },
+          about_description: 'Estos son archivos de prueba CONF de configuración en varios tamaños para fines de prueba'
+        },
+        cmd: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CMD - Archivos de script de comando Windows | MorphyHub',
+            description: 'Descarga archivos de muestra CMD de script de comando Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de scripts por lotes, procesamiento de comandos Windows y herramientas de automatización.',
+            keywords: 'archivos de muestra CMD, archivos de prueba CMD, descargar muestras CMD, archivos de prueba CMD gratuitos, muestras de script de comando Windows, muestras de script por lotes, archivos de prueba .cmd, muestras de script de comando'
+          },
+          schema: {
+            name: 'Archivos de muestra CMD gratuitos - Descargar archivos de script de comando Windows de prueba',
+            description: 'Descarga archivos de muestra CMD de script de comando Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de scripts por lotes, procesamiento de comandos Windows y herramientas de automatización.'
+          },
+          hero: {
+            title: 'Archivos de muestra CMD',
+            description: 'Descarga archivos de muestra CMD de script de comando Windows gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de scripts por lotes, procesamiento de comandos Windows y herramientas de automatización.'
+          },
+          about_description: 'Estos son archivos de prueba CMD (Windows Command Script) en varios tamaños para fines de prueba'
+        },
+        'can-log': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra CAN Log - Archivos de registro Controller Area Network | MorphyHub',
+            description: 'Descarga archivos de muestra CAN Log de registro Controller Area Network gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de bus CAN, diagnósticos automotrices y herramientas de protocolo de red.',
+            keywords: 'archivos de muestra CAN Log, archivos de prueba de registro CAN, descargar muestras de registro CAN, archivos de prueba de registro CAN gratuitos, muestras Controller Area Network, muestras de bus CAN, archivos de prueba .log, muestras de diagnóstico automotriz'
+          },
+          schema: {
+            name: 'Archivos de muestra CAN Log gratuitos - Descargar archivos de registro Controller Area Network de prueba',
+            description: 'Descarga archivos de muestra CAN Log de registro Controller Area Network gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de bus CAN, diagnósticos automotrices y herramientas de protocolo de red.'
+          },
+          hero: {
+            title: 'Archivos de muestra CAN Log',
+            description: 'Descarga archivos de muestra CAN Log de registro Controller Area Network gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de bus CAN, diagnósticos automotrices y herramientas de protocolo de red.'
+          },
+          about_description: 'Estos son archivos de prueba CAN Log (Controller Area Network) de registro en varios tamaños para fines de prueba'
+        },
+        bvh: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra BVH - Archivos BioVision Hierarchy Motion Capture | MorphyHub',
+            description: 'Descarga archivos de muestra BVH BioVision Hierarchy de captura de movimiento gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de captura de movimiento, animación 3D y herramientas de rigging de personajes.',
+            keywords: 'archivos de muestra BVH, archivos de prueba BVH, descargar muestras BVH, archivos de prueba BVH gratuitos, muestras BioVision Hierarchy, muestras de captura de movimiento, muestras de animación BVH, archivos de prueba .bvh, muestras de animación 3D'
+          },
+          schema: {
+            name: 'Archivos de muestra BVH gratuitos - Descargar archivos BioVision Hierarchy Motion Capture de prueba',
+            description: 'Descarga archivos de muestra BVH BioVision Hierarchy de captura de movimiento gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de captura de movimiento, animación 3D y herramientas de rigging de personajes.'
+          },
+          hero: {
+            title: 'Archivos de muestra BVH',
+            description: 'Descarga archivos de muestra BVH BioVision Hierarchy de captura de movimiento gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de captura de movimiento, animación 3D y herramientas de rigging de personajes.'
+          },
+          about_description: 'Estos son archivos de prueba BVH (BioVision Hierarchy) de captura de movimiento en varios tamaños para fines de prueba'
+        },
+        'barcode-svg': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Barcode SVG - Archivos de imagen Barcode SVG | MorphyHub',
+            description: 'Descarga archivos de muestra Barcode SVG de imagen vectorial barcode SVG gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de escaneo de códigos de barras, renderizado SVG y herramientas de gráficos vectoriales.',
+            keywords: 'archivos de muestra Barcode SVG, archivos de prueba barcode SVG, descargar muestras barcode SVG, archivos de prueba barcode SVG gratuitos, muestras de imagen barcode, muestras barcode SVG, archivos de prueba .svg, muestras barcode vectoriales'
+          },
+          schema: {
+            name: 'Archivos de muestra Barcode SVG gratuitos - Descargar archivos de imagen Barcode SVG de prueba',
+            description: 'Descarga archivos de muestra Barcode SVG de imagen vectorial barcode SVG gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de escaneo de códigos de barras, renderizado SVG y herramientas de gráficos vectoriales.'
+          },
+          hero: {
+            title: 'Archivos de muestra Barcode SVG',
+            description: 'Descarga archivos de muestra Barcode SVG de imagen vectorial barcode SVG gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de escaneo de códigos de barras, renderizado SVG y herramientas de gráficos vectoriales.'
+          },
+          about_description: 'Estos son archivos de prueba Barcode SVG de imagen vectorial en varios tamaños para fines de prueba'
+        },
+        assetbundle: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AssetBundle - Archivos Unity AssetBundle | MorphyHub',
+            description: 'Descarga archivos de muestra AssetBundle Unity AssetBundle de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de carga de activos Unity, gestión de activos de juegos y herramientas de desarrollo Unity.',
+            keywords: 'archivos de muestra AssetBundle, archivos de prueba AssetBundle, descargar muestras AssetBundle, archivos de prueba AssetBundle gratuitos, muestras Unity AssetBundle, muestras de activos de juegos, archivos de prueba .assetbundle, muestras de activos Unity'
+          },
+          schema: {
+            name: 'Archivos de muestra AssetBundle gratuitos - Descargar archivos Unity AssetBundle de prueba',
+            description: 'Descarga archivos de muestra AssetBundle Unity AssetBundle de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de carga de activos Unity, gestión de activos de juegos y herramientas de desarrollo Unity.'
+          },
+          hero: {
+            title: 'Archivos de muestra AssetBundle',
+            description: 'Descarga archivos de muestra AssetBundle Unity AssetBundle de archivo gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de carga de activos Unity, gestión de activos de juegos y herramientas de desarrollo Unity.'
+          },
+          about_description: 'Estos son archivos de prueba AssetBundle Unity de archivo en varios tamaños para fines de prueba'
+        },
+        ase: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ASE - Archivos Adobe Swatch Exchange | MorphyHub',
+            description: 'Descarga archivos de muestra ASE Adobe Swatch Exchange de paleta de colores gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de importación de paleta de colores, integración de software de diseño y herramientas de gestión de color.',
+            keywords: 'archivos de muestra ASE, archivos de prueba ASE, descargar muestras ASE, archivos de prueba ASE gratuitos, muestras Adobe Swatch Exchange, muestras de paleta de colores, muestras de color ASE, archivos de prueba .ase, muestras de color de diseño'
+          },
+          schema: {
+            name: 'Archivos de muestra ASE gratuitos - Descargar archivos Adobe Swatch Exchange de prueba',
+            description: 'Descarga archivos de muestra ASE Adobe Swatch Exchange de paleta de colores gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de importación de paleta de colores, integración de software de diseño y herramientas de gestión de color.'
+          },
+          hero: {
+            title: 'Archivos de muestra ASE',
+            description: 'Descarga archivos de muestra ASE Adobe Swatch Exchange de paleta de colores gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de importación de paleta de colores, integración de software de diseño y herramientas de gestión de color.'
+          },
+          about_description: 'Estos son archivos de prueba ASE (Adobe Swatch Exchange) de paleta de colores en varios tamaños para fines de prueba'
+        },
+        asc: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ASC - Archivos de texto ASCII | MorphyHub',
+            description: 'Descarga archivos de muestra ASC de texto ASCII gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de texto, codificación ASCII y herramientas de manejo de archivos de texto plano.',
+            keywords: 'archivos de muestra ASC, archivos de prueba ASC, descargar muestras ASC, archivos de prueba ASC gratuitos, muestras de texto ASCII, muestras de texto plano, muestras de archivos ASC, archivos de prueba .asc, muestras de formato de texto'
+          },
+          schema: {
+            name: 'Archivos de muestra ASC gratuitos - Descargar archivos de texto ASCII de prueba',
+            description: 'Descarga archivos de muestra ASC de texto ASCII gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de texto, codificación ASCII y herramientas de manejo de archivos de texto plano.'
+          },
+          hero: {
+            title: 'Archivos de muestra ASC',
+            description: 'Descarga archivos de muestra ASC de texto ASCII gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de texto, codificación ASCII y herramientas de manejo de archivos de texto plano.'
+          },
+          about_description: 'Estos son archivos de prueba ASC (ASCII Text) en varios tamaños para fines de prueba'
+        },
+        arj: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ARJ - Archivos de archivo ARJ | MorphyHub',
+            description: 'Descarga archivos de muestra ARJ de archivo comprimido ARJ gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos, compresión ARJ y herramientas de formato de archivo heredado.',
+            keywords: 'archivos de muestra ARJ, archivos de prueba ARJ, descargar muestras ARJ, archivos de prueba ARJ gratuitos, muestras de archivo ARJ, muestras de archivo comprimido, muestras de archivo ARJ, archivos de prueba .arj, muestras de archivo heredado'
+          },
+          schema: {
+            name: 'Archivos de muestra ARJ gratuitos - Descargar archivos de archivo ARJ de prueba',
+            description: 'Descarga archivos de muestra ARJ de archivo comprimido ARJ gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos, compresión ARJ y herramientas de formato de archivo heredado.'
+          },
+          hero: {
+            title: 'Archivos de muestra ARJ',
+            description: 'Descarga archivos de muestra ARJ de archivo comprimido ARJ gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de archivos, compresión ARJ y herramientas de formato de archivo heredado.'
+          },
+          about_description: 'Estos son archivos de prueba ARJ (ARJ Archive) de archivo comprimido en varios tamaños para fines de prueba'
+        },
+        'arduino-ino': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Arduino INO - Archivos Arduino Sketch | MorphyHub',
+            description: 'Descarga archivos de muestra Arduino INO de código fuente Arduino sketch gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de desarrollo Arduino, compilación de sketch y herramientas de programación embebida.',
+            keywords: 'archivos de muestra Arduino INO, archivos de prueba Arduino INO, descargar muestras Arduino INO, archivos de prueba Arduino INO gratuitos, muestras Arduino sketch, muestras de código embebido, muestras Arduino .ino, archivos de prueba .ino, muestras de microcontrolador'
+          },
+          schema: {
+            name: 'Archivos de muestra Arduino INO gratuitos - Descargar archivos Arduino Sketch de prueba',
+            description: 'Descarga archivos de muestra Arduino INO de código fuente Arduino sketch gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de desarrollo Arduino, compilación de sketch y herramientas de programación embebida.'
+          },
+          hero: {
+            title: 'Archivos de muestra Arduino INO',
+            description: 'Descarga archivos de muestra Arduino INO de código fuente Arduino sketch gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de desarrollo Arduino, compilación de sketch y herramientas de programación embebida.'
+          },
+          about_description: 'Estos son archivos de prueba Arduino INO (Arduino Sketch) de código fuente en varios tamaños para fines de prueba'
+        },
+        appimage: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AppImage - Archivos de aplicación AppImage | MorphyHub',
+            description: 'Descarga archivos de muestra AppImage de aplicación portátil Linux AppImage gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones Linux, ejecución AppImage y herramientas de aplicación portátil.',
+            keywords: 'archivos de muestra AppImage, archivos de prueba AppImage, descargar muestras AppImage, archivos de prueba AppImage gratuitos, muestras de aplicación Linux, muestras de aplicación portátil, muestras de aplicación AppImage, archivos de prueba .appimage, muestras ejecutables Linux'
+          },
+          schema: {
+            name: 'Archivos de muestra AppImage gratuitos - Descargar archivos de aplicación AppImage de prueba',
+            description: 'Descarga archivos de muestra AppImage de aplicación portátil Linux AppImage gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de instalación de aplicaciones Linux, ejecución AppImage y herramientas de aplicación portátil.'
+          },
+          hero: {
+            title: 'Archivos de muestra AppImage',
+            description: 'Descarga archivos de muestra AppImage de aplicación portátil Linux AppImage gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de instalación de aplicaciones Linux, ejecución AppImage y herramientas de aplicación portátil.'
+          },
+          about_description: 'Estos son archivos de prueba AppImage de aplicación portátil Linux en varios tamaños para fines de prueba'
+        },
+        'animation-fbx': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Animation FBX - Archivos de animación 3D FBX | MorphyHub',
+            description: 'Descarga archivos de muestra Animation FBX de animación y modelo 3D FBX gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de animación 3D, importación FBX y herramientas de modelado 3D.',
+            keywords: 'archivos de muestra Animation FBX, archivos de prueba FBX animation, descargar muestras FBX animation, archivos de prueba FBX animation gratuitos, muestras de animación 3D, muestras de modelo FBX, muestras de animación FBX, archivos de prueba .fbx, muestras de modelo 3D'
+          },
+          schema: {
+            name: 'Archivos de muestra Animation FBX gratuitos - Descargar archivos de animación 3D FBX de prueba',
+            description: 'Descarga archivos de muestra Animation FBX de animación y modelo 3D FBX gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de animación 3D, importación FBX y herramientas de modelado 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra Animation FBX',
+            description: 'Descarga archivos de muestra Animation FBX de animación y modelo 3D FBX gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de animación 3D, importación FBX y herramientas de modelado 3D.'
+          },
+          about_description: 'Estos son archivos de prueba Animation FBX (FBX 3D Animation) en varios tamaños para fines de prueba'
+        },
+        amr: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AMR - Archivos de audio AMR | MorphyHub',
+            description: 'Descarga archivos de muestra AMR AMR Adaptive Multi-Rate de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AMR y herramientas de formato de grabación de voz.',
+            keywords: 'archivos de muestra AMR, archivos de prueba AMR, descargar muestras AMR, archivos de prueba AMR gratuitos, muestras de audio AMR, muestras de grabación de voz, muestras de sonido AMR, archivos de prueba .amr, muestras de formato de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra AMR gratuitos - Descargar archivos de audio AMR de prueba',
+            description: 'Descarga archivos de muestra AMR AMR Adaptive Multi-Rate de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AMR y herramientas de formato de grabación de voz.'
+          },
+          hero: {
+            title: 'Archivos de muestra AMR',
+            description: 'Descarga archivos de muestra AMR AMR Adaptive Multi-Rate de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de audio, conversión AMR y herramientas de formato de grabación de voz.'
+          },
+          about_description: 'Estos son archivos de prueba AMR (Adaptive Multi-Rate) de audio en varios tamaños para fines de prueba'
+        },
+        aiff: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AIFF - Archivos de audio AIFF | MorphyHub',
+            description: 'Descarga archivos de muestra AIFF AIFF Audio Interchange File Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AIFF y herramientas de formato de audio profesional.',
+            keywords: 'archivos de muestra AIFF, archivos de prueba AIFF, descargar muestras AIFF, archivos de prueba AIFF gratuitos, muestras de audio AIFF, muestras de audio profesional, muestras de sonido AIFF, archivos de prueba .aiff, muestras de formato de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra AIFF gratuitos - Descargar archivos de audio AIFF de prueba',
+            description: 'Descarga archivos de muestra AIFF AIFF Audio Interchange File Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AIFF y herramientas de formato de audio profesional.'
+          },
+          hero: {
+            title: 'Archivos de muestra AIFF',
+            description: 'Descarga archivos de muestra AIFF AIFF Audio Interchange File Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de audio, conversión AIFF y herramientas de formato de audio profesional.'
+          },
+          about_description: 'Estos son archivos de prueba AIFF (Audio Interchange File Format) de audio en varios tamaños para fines de prueba'
+        },
+        aif: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AIF - Archivos de audio AIF | MorphyHub',
+            description: 'Descarga archivos de muestra AIF AIF Audio Interchange File Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AIF y herramientas de formato de audio profesional.',
+            keywords: 'archivos de muestra AIF, archivos de prueba AIF, descargar muestras AIF, archivos de prueba AIF gratuitos, muestras de audio AIF, muestras de audio profesional, muestras de sonido AIF, archivos de prueba .aif, muestras de formato de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra AIF gratuitos - Descargar archivos de audio AIF de prueba',
+            description: 'Descarga archivos de muestra AIF AIF Audio Interchange File Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AIF y herramientas de formato de audio profesional.'
+          },
+          hero: {
+            title: 'Archivos de muestra AIF',
+            description: 'Descarga archivos de muestra AIF AIF Audio Interchange File Format gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de audio, conversión AIF y herramientas de formato de audio profesional.'
+          },
+          about_description: 'Estos son archivos de prueba AIF (Audio Interchange File Format) de audio en varios tamaños para fines de prueba'
+        },
+        ai: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AI - Archivos Adobe Illustrator | MorphyHub',
+            description: 'Descarga archivos de muestra AI Adobe Illustrator de gráficos vectoriales gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización de gráficos vectoriales, conversión AI y herramientas de diseño de ilustración.',
+            keywords: 'archivos de muestra AI, archivos de prueba AI, descargar muestras AI, archivos de prueba AI gratuitos, muestras Adobe Illustrator, muestras de gráficos vectoriales, muestras de ilustración AI, archivos de prueba .ai, muestras de formato de diseño'
+          },
+          schema: {
+            name: 'Archivos de muestra AI gratuitos - Descargar archivos Adobe Illustrator de prueba',
+            description: 'Descarga archivos de muestra AI Adobe Illustrator de gráficos vectoriales gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización de gráficos vectoriales, conversión AI y herramientas de diseño de ilustración.'
+          },
+          hero: {
+            title: 'Archivos de muestra AI',
+            description: 'Descarga archivos de muestra AI Adobe Illustrator de gráficos vectoriales gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de visualización de gráficos vectoriales, conversión AI y herramientas de diseño de ilustración.'
+          },
+          about_description: 'Estos son archivos de prueba AI (Adobe Illustrator) de gráficos vectoriales en varios tamaños para fines de prueba'
+        },
+        ac3: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AC3 - Archivos de audio AC3 | MorphyHub',
+            description: 'Descarga archivos de muestra AC3 AC3 Dolby Digital de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AC3 y herramientas de formato de sonido surround.',
+            keywords: 'archivos de muestra AC3, archivos de prueba AC3, descargar muestras AC3, archivos de prueba AC3 gratuitos, muestras de audio AC3, muestras Dolby Digital, muestras de sonido AC3, archivos de prueba .ac3, muestras de formato de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra AC3 gratuitos - Descargar archivos de audio AC3 de prueba',
+            description: 'Descarga archivos de muestra AC3 AC3 Dolby Digital de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AC3 y herramientas de formato de sonido surround.'
+          },
+          hero: {
+            title: 'Archivos de muestra AC3',
+            description: 'Descarga archivos de muestra AC3 AC3 Dolby Digital de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de audio, conversión AC3 y herramientas de formato de sonido surround.'
+          },
+          about_description: 'Estos son archivos de prueba AC3 (Dolby Digital) de audio en varios tamaños para fines de prueba'
+        },
+        '3ds': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra 3DS - Archivos 3D Studio Mesh | MorphyHub',
+            description: 'Descarga archivos de muestra 3DS de malla y modelo 3D Studio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización de modelos 3D, conversión 3DS y herramientas de gráficos 3D.',
+            keywords: 'archivos de muestra 3DS, archivos de prueba 3DS, descargar muestras 3DS, archivos de prueba 3DS gratuitos, muestras de malla 3D Studio, muestras de modelo 3D, archivos de prueba .3ds, muestras de gráficos 3D'
+          },
+          schema: {
+            name: 'Archivos de muestra 3DS gratuitos - Descargar archivos 3D Studio Mesh de prueba',
+            description: 'Descarga archivos de muestra 3DS de malla y modelo 3D Studio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización de modelos 3D, conversión 3DS y herramientas de gráficos 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra 3DS',
+            description: 'Descarga archivos de muestra 3DS de malla y modelo 3D Studio gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de visualización de modelos 3D, conversión 3DS y herramientas de gráficos 3D.'
+          },
+          about_description: 'Estos son archivos de prueba 3DS (3D Studio Mesh) en varios tamaños para fines de prueba'
+        },
+        '3gp': {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra 3GP - Archivos de video 3GPP | MorphyHub',
+            description: 'Descarga archivos de muestra 3GP de video 3GPP gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de video, conversión 3GP y herramientas de formato de video móvil.',
+            keywords: 'archivos de muestra 3GP, archivos de prueba 3GP, descargar muestras 3GP, archivos de prueba 3GP gratuitos, muestras de video 3GPP, muestras de video móvil, archivos de prueba .3gp, muestras de formato de video'
+          },
+          schema: {
+            name: 'Archivos de muestra 3GP gratuitos - Descargar archivos de video 3GPP de prueba',
+            description: 'Descarga archivos de muestra 3GP de video 3GPP gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de video, conversión 3GP y herramientas de formato de video móvil.'
+          },
+          hero: {
+            title: 'Archivos de muestra 3GP',
+            description: 'Descarga archivos de muestra 3GP de video 3GPP gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de video, conversión 3GP y herramientas de formato de video móvil.'
+          },
+          about_description: 'Estos son archivos de prueba 3GP (3GPP Video) en varios tamaños para fines de prueba'
+        },
+        aac: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra AAC - Archivos Advanced Audio Coding | MorphyHub',
+            description: 'Descarga archivos de muestra AAC Advanced Audio Coding de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AAC y herramientas de formato de audio moderno.',
+            keywords: 'archivos de muestra AAC, archivos de prueba AAC, descargar muestras AAC, archivos de prueba AAC gratuitos, muestras Advanced Audio Coding, muestras de formato de audio, archivos de prueba .aac, muestras de codec de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra AAC gratuitos - Descargar archivos Advanced Audio Coding de prueba',
+            description: 'Descarga archivos de muestra AAC Advanced Audio Coding de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de reproducción de audio, conversión AAC y herramientas de formato de audio moderno.'
+          },
+          hero: {
+            title: 'Archivos de muestra AAC',
+            description: 'Descarga archivos de muestra AAC Advanced Audio Coding de audio gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de reproducción de audio, conversión AAC y herramientas de formato de audio moderno.'
+          },
+          about_description: 'Estos son archivos de prueba AAC (Advanced Audio Coding) de audio en varios tamaños para fines de prueba'
+        },
+        icns: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra ICNS - Archivos Apple Icon Image | MorphyHub',
+            description: 'Descarga archivos de muestra ICNS Apple Icon Image gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de renderizado de iconos, conversión ICNS y herramientas de formato de icono macOS.',
+            keywords: 'archivos de muestra ICNS, archivos de prueba ICNS, descargar muestras ICNS, archivos de prueba ICNS gratuitos, muestras Apple Icon Image, muestras de icono macOS, archivos de prueba .icns, muestras de formato de icono'
+          },
+          schema: {
+            name: 'Archivos de muestra ICNS gratuitos - Descargar archivos Apple Icon Image de prueba',
+            description: 'Descarga archivos de muestra ICNS Apple Icon Image gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de renderizado de iconos, conversión ICNS y herramientas de formato de icono macOS.'
+          },
+          hero: {
+            title: 'Archivos de muestra ICNS',
+            description: 'Descarga archivos de muestra ICNS Apple Icon Image gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de renderizado de iconos, conversión ICNS y herramientas de formato de icono macOS.'
+          },
+          about_description: 'Estos son archivos de prueba ICNS (Apple Icon Image) en varios tamaños para fines de prueba'
+        },
+        kml: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra KML - Archivos Keyhole Markup Language | MorphyHub',
+            description: 'Descarga archivos de muestra KML Keyhole Markup Language de datos geográficos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización geográfica, renderizado de mapas y herramientas GIS.',
+            keywords: 'archivos de muestra KML, archivos de prueba KML, descargar muestras KML, archivos de prueba KML gratuitos, muestras Keyhole Markup Language, muestras de datos geográficos, archivos de prueba .kml, muestras de datos de mapas'
+          },
+          schema: {
+            name: 'Archivos de muestra KML gratuitos - Descargar archivos Keyhole Markup Language de prueba',
+            description: 'Descarga archivos de muestra KML Keyhole Markup Language de datos geográficos gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización geográfica, renderizado de mapas y herramientas GIS.'
+          },
+          hero: {
+            title: 'Archivos de muestra KML',
+            description: 'Descarga archivos de muestra KML Keyhole Markup Language de datos geográficos gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de visualización geográfica y herramientas GIS.'
+          },
+          about_description: 'Estos son archivos de prueba KML (Keyhole Markup Language) de datos geográficos en varios tamaños para fines de prueba'
+        },
+        kmz: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra KMZ - Archivos de archivo KML comprimido | MorphyHub',
+            description: 'Descarga archivos de muestra KMZ de archivo KML comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos KML, procesamiento de datos geográficos y herramientas GIS.',
+            keywords: 'archivos de muestra KMZ, archivos de prueba KMZ, descargar muestras KMZ, archivos de prueba KMZ gratuitos, muestras KML comprimido, muestras de archivo KML, archivos de prueba .kmz, muestras de archivo geográfico'
+          },
+          schema: {
+            name: 'Archivos de muestra KMZ gratuitos - Descargar archivos de archivo KML comprimido de prueba',
+            description: 'Descarga archivos de muestra KMZ de archivo KML comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos KML, procesamiento de datos geográficos y herramientas GIS.'
+          },
+          hero: {
+            title: 'Archivos de muestra KMZ',
+            description: 'Descarga archivos de muestra KMZ de archivo KML comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de archivos KML y herramientas GIS.'
+          },
+          about_description: 'Estos son archivos de prueba KMZ (archivo KML comprimido) en varios tamaños para fines de prueba'
+        },
+        laz: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra LAZ - Archivos de nube de puntos LAS comprimido | MorphyHub',
+            description: 'Descarga archivos de muestra LAZ de nube de puntos LAS comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de nubes de puntos, datos de escaneo 3D y herramientas LiDAR.',
+            keywords: 'archivos de muestra LAZ, archivos de prueba LAZ, descargar muestras LAZ, archivos de prueba LAZ gratuitos, muestras LAS comprimido, muestras de nube de puntos, archivos de prueba .laz, muestras de datos LiDAR'
+          },
+          schema: {
+            name: 'Archivos de muestra LAZ gratuitos - Descargar archivos de nube de puntos LAS comprimido de prueba',
+            description: 'Descarga archivos de muestra LAZ de nube de puntos LAS comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de procesamiento de nubes de puntos, datos de escaneo 3D y herramientas LiDAR.'
+          },
+          hero: {
+            title: 'Archivos de muestra LAZ',
+            description: 'Descarga archivos de muestra LAZ de nube de puntos LAS comprimido gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de procesamiento de nubes de puntos y herramientas LiDAR.'
+          },
+          about_description: 'Estos son archivos de prueba LAZ (nube de puntos LAS comprimido) en varios tamaños para fines de prueba'
+        },
+        las: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra LAS - Archivos de nube de puntos LAS | MorphyHub',
+            description: 'Descarga archivos de muestra LAS de nube de puntos LAS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización de nubes de puntos, datos de escaneo 3D y herramientas LiDAR.',
+            keywords: 'archivos de muestra LAS, archivos de prueba LAS, descargar muestras LAS, archivos de prueba LAS gratuitos, muestras de nube de puntos, muestras de datos LiDAR, archivos de prueba .las, muestras de escaneo 3D'
+          },
+          schema: {
+            name: 'Archivos de muestra LAS gratuitos - Descargar archivos de nube de puntos LAS de prueba',
+            description: 'Descarga archivos de muestra LAS de nube de puntos LAS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de visualización de nubes de puntos, datos de escaneo 3D y herramientas LiDAR.'
+          },
+          hero: {
+            title: 'Archivos de muestra LAS',
+            description: 'Descarga archivos de muestra LAS de nube de puntos LAS gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de visualización de nubes de puntos y herramientas LiDAR.'
+          },
+          about_description: 'Estos son archivos de prueba LAS (nube de puntos) en varios tamaños para fines de prueba'
+        },
+        log: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra LOG - Archivos de registro | MorphyHub',
+            description: 'Descarga archivos de muestra LOG de registro gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de registros, análisis de registros y herramientas de depuración.',
+            keywords: 'archivos de muestra LOG, archivos de prueba LOG, descargar muestras LOG, archivos de prueba LOG gratuitos, muestras de archivos de registro, muestras de datos de registro, archivos de prueba .log, muestras de análisis de registros'
+          },
+          schema: {
+            name: 'Archivos de muestra LOG gratuitos - Descargar archivos de registro de prueba',
+            description: 'Descarga archivos de muestra LOG de registro gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de registros, análisis de registros y herramientas de depuración.'
+          },
+          hero: {
+            title: 'Archivos de muestra LOG',
+            description: 'Descarga archivos de muestra LOG de registro gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de registros y análisis.'
+          },
+          about_description: 'Estos son archivos de prueba LOG en varios tamaños para fines de prueba'
+        },
+        lua: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra LUA - Archivos de script Lua | MorphyHub',
+            description: 'Descarga archivos de muestra LUA de script Lua gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de scripts Lua, desarrollo de juegos y herramientas de automatización.',
+            keywords: 'archivos de muestra LUA, archivos de prueba LUA, descargar muestras LUA, archivos de prueba LUA gratuitos, muestras de script Lua, muestras de código Lua, archivos de prueba .lua, muestras de scripting'
+          },
+          schema: {
+            name: 'Archivos de muestra LUA gratuitos - Descargar archivos de script Lua de prueba',
+            description: 'Descarga archivos de muestra LUA de script Lua gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de scripts Lua, desarrollo de juegos y herramientas de automatización.'
+          },
+          hero: {
+            title: 'Archivos de muestra LUA',
+            description: 'Descarga archivos de muestra LUA de script Lua gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de scripts Lua y automatización.'
+          },
+          about_description: 'Estos son archivos de prueba LUA (script Lua) en varios tamaños para fines de prueba'
+        },
+        lha: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra LHA - Archivos de archivo LHA | MorphyHub',
+            description: 'Descarga archivos de muestra LHA de archivo LHA gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos LHA, herramientas de compresión y formatos de archivo heredados.',
+            keywords: 'archivos de muestra LHA, archivos de prueba LHA, descargar muestras LHA, archivos de prueba LHA gratuitos, muestras de archivo LHA, muestras de archivo comprimido, archivos de prueba .lha, muestras de formato de archivo'
+          },
+          schema: {
+            name: 'Archivos de muestra LHA gratuitos - Descargar archivos de archivo LHA de prueba',
+            description: 'Descarga archivos de muestra LHA de archivo LHA gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos LHA, herramientas de compresión y formatos de archivo heredados.'
+          },
+          hero: {
+            title: 'Archivos de muestra LHA',
+            description: 'Descarga archivos de muestra LHA de archivo LHA gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de archivos LHA y herramientas de compresión.'
+          },
+          about_description: 'Estos son archivos de prueba LHA (archivo) en varios tamaños para fines de prueba'
+        },
+        lzh: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra LZH - Archivos de archivo LZH | MorphyHub',
+            description: 'Descarga archivos de muestra LZH de archivo LZH gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos LZH, herramientas de compresión y formatos de archivo heredados.',
+            keywords: 'archivos de muestra LZH, archivos de prueba LZH, descargar muestras LZH, archivos de prueba LZH gratuitos, muestras de archivo LZH, muestras de archivo comprimido, archivos de prueba .lzh, muestras de formato de archivo'
+          },
+          schema: {
+            name: 'Archivos de muestra LZH gratuitos - Descargar archivos de archivo LZH de prueba',
+            description: 'Descarga archivos de muestra LZH de archivo LZH gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de extracción de archivos LZH, herramientas de compresión y formatos de archivo heredados.'
+          },
+          hero: {
+            title: 'Archivos de muestra LZH',
+            description: 'Descarga archivos de muestra LZH de archivo LZH gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de extracción de archivos LZH y herramientas de compresión.'
+          },
+          about_description: 'Estos son archivos de prueba LZH (archivo) en varios tamaños para fines de prueba'
+        },
+        lzma: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra LZMA - Archivos comprimidos LZMA | MorphyHub',
+            description: 'Descarga archivos de muestra LZMA comprimidos LZMA gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de descompresión LZMA, extracción de archivos y herramientas de compresión de archivos.',
+            keywords: 'archivos de muestra LZMA, archivos de prueba LZMA, descargar muestras LZMA, archivos de prueba LZMA gratuitos, muestras de archivos comprimidos LZMA, muestras de archivos comprimidos, archivos de prueba .lzma, muestras de formatos de compresión'
+          },
+          schema: {
+            name: 'Archivos de muestra LZMA gratuitos - Descargar archivos comprimidos LZMA de prueba',
+            description: 'Descarga archivos de muestra LZMA comprimidos LZMA gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de descompresión LZMA, extracción de archivos y herramientas de compresión de archivos.'
+          },
+          hero: {
+            title: 'Archivos de muestra LZMA',
+            description: 'Descarga archivos de muestra LZMA comprimidos LZMA gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de descompresión LZMA, extracción de archivos y herramientas de compresión de archivos.'
+          },
+          about_description: 'Estos son archivos de prueba de archivos comprimidos LZMA (Lempel-Ziv-Markov chain Algorithm) en varios tamaños para fines de prueba'
+        },
+        jwt: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JWT - Archivos JSON Web Token | MorphyHub',
+            description: 'Descarga archivos de muestra JWT JSON Web Token gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de tokens JWT, autenticación y herramientas de seguridad API.',
+            keywords: 'archivos de muestra JWT, archivos de prueba JWT, descargar muestras JWT, archivos de prueba JWT gratuitos, muestras JSON Web Token, archivos de tokens JWT, archivos de prueba .jwt, archivos de tokens de autenticación, archivos de prueba de análisis JWT'
+          },
+          schema: {
+            name: 'Archivos de muestra JWT gratuitos - Descargar archivos JSON Web Token de prueba',
+            description: 'Descarga archivos de muestra JWT JSON Web Token gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de tokens JWT, autenticación y herramientas de seguridad API.'
+          },
+          hero: {
+            title: 'Archivos de muestra JWT',
+            description: 'Descarga archivos de muestra JWT JSON Web Token gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de tokens JWT y autenticación.'
+          },
+          about_description: 'Estos son archivos de prueba JWT (JSON Web Token) en varios tamaños para fines de prueba'
+        },
+        kt: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra KT - Archivos de código fuente Kotlin | MorphyHub',
+            description: 'Descarga archivos de muestra KT de código fuente Kotlin gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación Kotlin, soporte IDE y herramientas de desarrollo.',
+            keywords: 'archivos de muestra KT, archivos de prueba KT, descargar muestras KT, archivos de prueba KT gratuitos, muestras de código fuente Kotlin, muestras de código Kotlin, archivos de prueba .kt, muestras de programación Kotlin'
+          },
+          schema: {
+            name: 'Archivos de muestra KT gratuitos - Descargar archivos de código fuente Kotlin de prueba',
+            description: 'Descarga archivos de muestra KT de código fuente Kotlin gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de compilación Kotlin, soporte IDE y herramientas de desarrollo.'
+          },
+          hero: {
+            title: 'Archivos de muestra KT',
+            description: 'Descarga archivos de muestra KT de código fuente Kotlin gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de compilación Kotlin y herramientas de desarrollo.'
+          },
+          about_description: 'Estos son archivos de prueba KT (Kotlin) de código fuente en varios tamaños para fines de prueba'
+        },
+        ifc: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra IFC - Archivos Industry Foundation Classes | MorphyHub',
+            description: 'Descarga archivos de muestra IFC Industry Foundation Classes gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software BIM, conversión IFC y herramientas de modelado de información de construcción.',
+            keywords: 'archivos de muestra IFC, archivos de prueba IFC, descargar muestras IFC, archivos de prueba IFC gratuitos, muestras Industry Foundation Classes, muestras de archivos BIM, archivos de modelo de construcción IFC, archivos de prueba .ifc, archivos de modelado de información de construcción, archivos de prueba de conversión IFC'
+          },
+          schema: {
+            name: 'Archivos de muestra IFC gratuitos - Descargar archivos Industry Foundation Classes de prueba',
+            description: 'Descarga archivos de muestra IFC Industry Foundation Classes gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software BIM, conversión IFC y herramientas de modelado de información de construcción.'
+          },
+          hero: {
+            title: 'Archivos de muestra IFC',
+            description: 'Descarga archivos de muestra IFC Industry Foundation Classes gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de software BIM y conversión IFC.'
+          },
+          about_description: 'Estos son archivos de prueba IFC (Industry Foundation Classes) en varios tamaños para fines de prueba'
+        },
+        iges: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra IGES - Archivos Initial Graphics Exchange Specification | MorphyHub',
+            description: 'Descarga archivos de muestra IGES Initial Graphics Exchange Specification gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software CAD, conversión IGES y herramientas de intercambio de modelos 3D.',
+            keywords: 'archivos de muestra IGES, archivos de prueba IGES, descargar muestras IGES, archivos de prueba IGES gratuitos, muestras Initial Graphics Exchange Specification, muestras de archivos de modelo CAD, archivos 3D IGES, archivos de prueba .iges, archivos de intercambio CAD, archivos de prueba de conversión IGES'
+          },
+          schema: {
+            name: 'Archivos de muestra IGES gratuitos - Descargar archivos Initial Graphics Exchange Specification de prueba',
+            description: 'Descarga archivos de muestra IGES Initial Graphics Exchange Specification gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software CAD, conversión IGES y herramientas de intercambio de modelos 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra IGES',
+            description: 'Descarga archivos de muestra IGES Initial Graphics Exchange Specification gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de software CAD y conversión IGES.'
+          },
+          about_description: 'Estos son archivos de prueba IGES (Initial Graphics Exchange Specification) en varios tamaños para fines de prueba'
+        },
+        igs: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra IGS - Archivos Initial Graphics Exchange Specification | MorphyHub',
+            description: 'Descarga archivos de muestra IGS Initial Graphics Exchange Specification gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software CAD, conversión IGS y herramientas de intercambio de modelos 3D.',
+            keywords: 'archivos de muestra IGS, archivos de prueba IGS, descargar muestras IGS, archivos de prueba IGS gratuitos, muestras Initial Graphics Exchange Specification, muestras de archivos de modelo CAD, archivos 3D IGS, archivos de prueba .igs, archivos de intercambio CAD, archivos de prueba de conversión IGS'
+          },
+          schema: {
+            name: 'Archivos de muestra IGS gratuitos - Descargar archivos Initial Graphics Exchange Specification de prueba',
+            description: 'Descarga archivos de muestra IGS Initial Graphics Exchange Specification gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de software CAD, conversión IGS y herramientas de intercambio de modelos 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra IGS',
+            description: 'Descarga archivos de muestra IGS Initial Graphics Exchange Specification gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de software CAD y conversión IGS.'
+          },
+          about_description: 'Estos son archivos de prueba IGS (Initial Graphics Exchange Specification) en varios tamaños para fines de prueba'
+        },
+        img: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra IMG - Archivos de imagen de disco | MorphyHub',
+            description: 'Descarga archivos de muestra IMG de imagen de disco gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de montaje de imagen de disco, extracción IMG y herramientas de procesamiento de imagen de disco.',
+            keywords: 'archivos de muestra IMG, archivos de prueba IMG, descargar muestras IMG, archivos de prueba IMG gratuitos, muestras de imagen de disco, archivos de imagen de disco IMG, archivos de prueba .img, archivos de montaje de imagen de disco, archivos de prueba de extracción IMG'
+          },
+          schema: {
+            name: 'Archivos de muestra IMG gratuitos - Descargar archivos de imagen de disco de prueba',
+            description: 'Descarga archivos de muestra IMG de imagen de disco gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de montaje de imagen de disco, extracción IMG y herramientas de procesamiento de imagen de disco.'
+          },
+          hero: {
+            title: 'Archivos de muestra IMG',
+            description: 'Descarga archivos de muestra IMG de imagen de disco gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de montaje de imagen de disco y extracción IMG.'
+          },
+          about_description: 'Estos son archivos de prueba IMG (imagen de disco) en varios tamaños para fines de prueba'
+        },
+        indd: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra INDD - Archivos Adobe InDesign Document | MorphyHub',
+            description: 'Descarga archivos de muestra INDD Adobe InDesign Document gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de documentos InDesign, visualización INDD y herramientas de publicación de escritorio.',
+            keywords: 'archivos de muestra INDD, archivos de prueba INDD, descargar muestras INDD, archivos de prueba INDD gratuitos, muestras Adobe InDesign, archivos de publicación de escritorio, archivos de documento INDD, archivos de prueba .indd, archivos InDesign, archivos de prueba de conversión INDD'
+          },
+          schema: {
+            name: 'Archivos de muestra INDD gratuitos - Descargar archivos Adobe InDesign Document de prueba',
+            description: 'Descarga archivos de muestra INDD Adobe InDesign Document gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de documentos InDesign, visualización INDD y herramientas de publicación de escritorio.'
+          },
+          hero: {
+            title: 'Archivos de muestra INDD',
+            description: 'Descarga archivos de muestra INDD Adobe InDesign Document gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de documentos InDesign y visualización INDD.'
+          },
+          about_description: 'Estos son archivos de prueba INDD (Adobe InDesign) en varios tamaños para fines de prueba'
+        },
+        ini: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra INI - Archivos de configuración | MorphyHub',
+            description: 'Descarga archivos de muestra INI de configuración gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de archivos INI, gestión de configuración y herramientas de procesamiento de archivos de configuración.',
+            keywords: 'archivos de muestra INI, archivos de prueba INI, descargar muestras INI, archivos de prueba INI gratuitos, muestras de archivos de configuración, archivos de configuración INI, archivos de prueba .ini, muestras de archivos de configuración, archivos de prueba de análisis INI'
+          },
+          schema: {
+            name: 'Archivos de muestra INI gratuitos - Descargar archivos de configuración de prueba',
+            description: 'Descarga archivos de muestra INI de configuración gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de archivos INI, gestión de configuración y herramientas de procesamiento de archivos de configuración.'
+          },
+          hero: {
+            title: 'Archivos de muestra INI',
+            description: 'Descarga archivos de muestra INI de configuración gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de archivos INI y gestión de configuración.'
+          },
+          about_description: 'Estos son archivos de prueba INI (configuración) en varios tamaños para fines de prueba'
+        },
+        intelhex: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra IntelHex - Archivos hexadecimales Intel | MorphyHub',
+            description: 'Descarga archivos de muestra IntelHex hexadecimales Intel gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de programación de firmware, análisis IntelHex y herramientas de desarrollo de sistemas embebidos.',
+            keywords: 'archivos de muestra IntelHex, archivos de prueba IntelHex, descargar muestras IntelHex, archivos de prueba IntelHex gratuitos, muestras hexadecimales Intel, archivos de firmware, archivos hex IntelHex, archivos de prueba .intelhex, archivos de sistemas embebidos, archivos de prueba de análisis IntelHex'
+          },
+          schema: {
+            name: 'Archivos de muestra IntelHex gratuitos - Descargar archivos hexadecimales Intel de prueba',
+            description: 'Descarga archivos de muestra IntelHex hexadecimales Intel gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de programación de firmware, análisis IntelHex y herramientas de desarrollo de sistemas embebidos.'
+          },
+          hero: {
+            title: 'Archivos de muestra IntelHex',
+            description: 'Descarga archivos de muestra IntelHex hexadecimales Intel gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de programación de firmware y análisis IntelHex.'
+          },
+          about_description: 'Estos son archivos de prueba IntelHex (hexadecimal Intel) en varios tamaños para fines de prueba'
+        },
+        jar: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JAR - Archivos Java Archive | MorphyHub',
+            description: 'Descarga archivos de muestra JAR Java Archive gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de aplicaciones Java, extracción JAR y herramientas de desarrollo Java.',
+            keywords: 'archivos de muestra JAR, archivos de prueba JAR, descargar muestras JAR, archivos de prueba JAR gratuitos, muestras Java Archive, archivos de aplicación JAR, archivos de prueba .jar, archivos de paquete Java, archivos de prueba de extracción JAR'
+          },
+          schema: {
+            name: 'Archivos de muestra JAR gratuitos - Descargar archivos Java Archive de prueba',
+            description: 'Descarga archivos de muestra JAR Java Archive gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de ejecución de aplicaciones Java, extracción JAR y herramientas de desarrollo Java.'
+          },
+          hero: {
+            title: 'Archivos de muestra JAR',
+            description: 'Descarga archivos de muestra JAR Java Archive gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de ejecución de aplicaciones Java y extracción JAR.'
+          },
+          about_description: 'Estos son archivos de prueba JAR (Java Archive) en varios tamaños para fines de prueba'
+        },
+        jks: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra JKS - Archivos Java KeyStore | MorphyHub',
+            description: 'Descarga archivos de muestra JKS Java KeyStore gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de gestión de Java KeyStore, análisis JKS y herramientas de almacenamiento de certificados SSL.',
+            keywords: 'archivos de muestra JKS, archivos de prueba JKS, descargar muestras JKS, archivos de prueba JKS gratuitos, muestras Java KeyStore, archivos de certificados SSL, archivos de keystore JKS, archivos de prueba .jks, archivos de seguridad Java, archivos de prueba de análisis JKS'
+          },
+          schema: {
+            name: 'Archivos de muestra JKS gratuitos - Descargar archivos Java KeyStore de prueba',
+            description: 'Descarga archivos de muestra JKS Java KeyStore gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de gestión de Java KeyStore, análisis JKS y herramientas de almacenamiento de certificados SSL.'
+          },
+          hero: {
+            title: 'Archivos de muestra JKS',
+            description: 'Descarga archivos de muestra JKS Java KeyStore gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de gestión de Java KeyStore y análisis JKS.'
+          },
+          about_description: 'Estos son archivos de prueba JKS (Java KeyStore) en varios tamaños para fines de prueba'
+        },
+        m3u: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra M3U - Archivos de lista de reproducción M3U | MorphyHub',
+            description: 'Descarga archivos de muestra M3U de lista de reproducción M3U gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de listas de reproducción M3U, compatibilidad de reproductores multimedia y herramientas de transmisión de audio.',
+            keywords: 'archivos de muestra M3U, archivos de prueba M3U, descargar muestras M3U, archivos de prueba M3U gratuitos, muestras de lista de reproducción M3U, muestras de lista de reproducción de reproductores multimedia, archivos de prueba .m3u, muestras de lista de reproducción de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra M3U gratuitos - Descargar archivos de lista de reproducción M3U de prueba',
+            description: 'Descarga archivos de muestra M3U de lista de reproducción M3U gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de listas de reproducción M3U, compatibilidad de reproductores multimedia y herramientas de transmisión de audio.'
+          },
+          hero: {
+            title: 'Archivos de muestra M3U',
+            description: 'Descarga archivos de muestra M3U de lista de reproducción M3U gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de listas de reproducción M3U, compatibilidad de reproductores multimedia y herramientas de transmisión de audio.'
+          },
+          about_description: 'Estos son archivos de prueba M3U (MP3 URL) de lista de reproducción en varios tamaños para fines de prueba'
+        },
+        m3u8: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra M3U8 - Archivos de lista de reproducción M3U8 HLS | MorphyHub',
+            description: 'Descarga archivos de muestra M3U8 de lista de reproducción M3U8 HLS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de listas de reproducción M3U8, transmisión HLS y herramientas de compatibilidad de reproductores de video.',
+            keywords: 'archivos de muestra M3U8, archivos de prueba M3U8, descargar muestras M3U8, archivos de prueba M3U8 gratuitos, muestras de lista de reproducción M3U8 HLS, muestras de lista de reproducción de transmisión HLS, archivos de prueba .m3u8, muestras de lista de reproducción de video'
+          },
+          schema: {
+            name: 'Archivos de muestra M3U8 gratuitos - Descargar archivos de lista de reproducción M3U8 HLS de prueba',
+            description: 'Descarga archivos de muestra M3U8 de lista de reproducción M3U8 HLS gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis de listas de reproducción M3U8, transmisión HLS y herramientas de compatibilidad de reproductores de video.'
+          },
+          hero: {
+            title: 'Archivos de muestra M3U8',
+            description: 'Descarga archivos de muestra M3U8 de lista de reproducción M3U8 HLS gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis de listas de reproducción M3U8, transmisión HLS y herramientas de compatibilidad de reproductores de video.'
+          },
+          about_description: 'Estos son archivos de prueba M3U8 (HTTP Live Streaming) de lista de reproducción en varios tamaños para fines de prueba'
+        },
+        m4a: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra M4A - Archivos de audio M4A | MorphyHub',
+            description: 'Descarga archivos de muestra M4A de audio M4A gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de audio M4A, reproducción M4A y herramientas de procesamiento de audio.',
+            keywords: 'archivos de muestra M4A, archivos de prueba M4A, descargar muestras M4A, archivos de prueba M4A gratuitos, muestras de audio M4A, muestras de formato de audio Apple, archivos de prueba .m4a, muestras de formato de audio'
+          },
+          schema: {
+            name: 'Archivos de muestra M4A gratuitos - Descargar archivos de audio M4A de prueba',
+            description: 'Descarga archivos de muestra M4A de audio M4A gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de audio M4A, reproducción M4A y herramientas de procesamiento de audio.'
+          },
+          hero: {
+            title: 'Archivos de muestra M4A',
+            description: 'Descarga archivos de muestra M4A de audio M4A gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de audio M4A, reproducción M4A y herramientas de procesamiento de audio.'
+          },
+          about_description: 'Estos son archivos de prueba M4A (MPEG-4 Audio) de audio en varios tamaños para fines de prueba'
+        },
+        m4v: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra M4V - Archivos de video M4V | MorphyHub',
+            description: 'Descarga archivos de muestra M4V de video M4V gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de video M4V, reproducción M4V y herramientas de procesamiento de video.',
+            keywords: 'archivos de muestra M4V, archivos de prueba M4V, descargar muestras M4V, archivos de prueba M4V gratuitos, muestras de video M4V, muestras de formato de video Apple, archivos de prueba .m4v, muestras de formato de video'
+          },
+          schema: {
+            name: 'Archivos de muestra M4V gratuitos - Descargar archivos de video M4V de prueba',
+            description: 'Descarga archivos de muestra M4V de video M4V gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de video M4V, reproducción M4V y herramientas de procesamiento de video.'
+          },
+          hero: {
+            title: 'Archivos de muestra M4V',
+            description: 'Descarga archivos de muestra M4V de video M4V gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de video M4V, reproducción M4V y herramientas de procesamiento de video.'
+          },
+          about_description: 'Estos son archivos de prueba M4V (MPEG-4 Video) de video en varios tamaños para fines de prueba'
+        },
+        ma: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MA - Archivos Maya ASCII Scene | MorphyHub',
+            description: 'Descarga archivos de muestra MA Maya ASCII Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de escenas Maya, análisis de archivos MA y herramientas de animación 3D.',
+            keywords: 'archivos de muestra MA, archivos de prueba MA, descargar muestras MA, archivos de prueba MA gratuitos, muestras Maya ASCII Scene, muestras de escenas de animación 3D, archivos de prueba .ma, muestras de escenas Maya'
+          },
+          schema: {
+            name: 'Archivos de muestra MA gratuitos - Descargar archivos Maya ASCII Scene de prueba',
+            description: 'Descarga archivos de muestra MA Maya ASCII Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de escenas Maya, análisis de archivos MA y herramientas de animación 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra MA',
+            description: 'Descarga archivos de muestra MA Maya ASCII Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de escenas Maya, análisis de archivos MA y herramientas de animación 3D.'
+          },
+          about_description: 'Estos son archivos de prueba MA (Maya ASCII) de escenas en varios tamaños para fines de prueba'
+        },
+        makefile: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra Makefile - Archivos de configuración de compilación Makefile | MorphyHub',
+            description: 'Descarga archivos de muestra Makefile de configuración de compilación gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis Makefile, automatización de sistemas de compilación y herramientas de compilación de software.',
+            keywords: 'archivos de muestra Makefile, archivos de prueba Makefile, descargar muestras Makefile, archivos de prueba Makefile gratuitos, muestras de configuración de compilación, muestras de compilación Makefile, archivos de prueba Makefile, muestras de automatización de compilación'
+          },
+          schema: {
+            name: 'Archivos de muestra Makefile gratuitos - Descargar archivos de configuración de compilación Makefile de prueba',
+            description: 'Descarga archivos de muestra Makefile de configuración de compilación gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis Makefile, automatización de sistemas de compilación y herramientas de compilación de software.'
+          },
+          hero: {
+            title: 'Archivos de muestra Makefile',
+            description: 'Descarga archivos de muestra Makefile de configuración de compilación gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis Makefile, automatización de sistemas de compilación y herramientas de compilación de software.'
+          },
+          about_description: 'Estos son archivos de prueba Makefile de configuración de compilación en varios tamaños para fines de prueba'
+        },
+        max: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MAX - Archivos 3ds Max Scene | MorphyHub',
+            description: 'Descarga archivos de muestra MAX 3ds Max Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de escenas 3ds Max, análisis de archivos MAX y herramientas de modelado 3D.',
+            keywords: 'archivos de muestra MAX, archivos de prueba MAX, descargar muestras MAX, archivos de prueba MAX gratuitos, muestras de escenas 3ds Max, muestras de escenas de modelado 3D, archivos de prueba .max, muestras de escenas 3ds Max'
+          },
+          schema: {
+            name: 'Archivos de muestra MAX gratuitos - Descargar archivos 3ds Max Scene de prueba',
+            description: 'Descarga archivos de muestra MAX 3ds Max Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de escenas 3ds Max, análisis de archivos MAX y herramientas de modelado 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra MAX',
+            description: 'Descarga archivos de muestra MAX 3ds Max Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de escenas 3ds Max, análisis de archivos MAX y herramientas de modelado 3D.'
+          },
+          about_description: 'Estos son archivos de prueba MAX (3ds Max) de escenas en varios tamaños para fines de prueba'
+        },
+        mb: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MB - Archivos Maya Binary Scene | MorphyHub',
+            description: 'Descarga archivos de muestra MB Maya Binary Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de escenas Maya, análisis de archivos MB y herramientas de animación 3D.',
+            keywords: 'archivos de muestra MB, archivos de prueba MB, descargar muestras MB, archivos de prueba MB gratuitos, muestras Maya Binary Scene, muestras de escenas de animación 3D, archivos de prueba .mb, muestras de escenas Maya'
+          },
+          schema: {
+            name: 'Archivos de muestra MB gratuitos - Descargar archivos Maya Binary Scene de prueba',
+            description: 'Descarga archivos de muestra MB Maya Binary Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de conversión de escenas Maya, análisis de archivos MB y herramientas de animación 3D.'
+          },
+          hero: {
+            title: 'Archivos de muestra MB',
+            description: 'Descarga archivos de muestra MB Maya Binary Scene gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de conversión de escenas Maya, análisis de archivos MB y herramientas de animación 3D.'
+          },
+          about_description: 'Estos son archivos de prueba MB (Maya Binary) de escenas en varios tamaños para fines de prueba'
+        },
+        mbtiles: {
+          meta: {
+            title: 'Descarga gratuita de archivos de muestra MBTiles - Archivos de base de datos de mapas MBTiles | MorphyHub',
+            description: 'Descarga archivos de muestra MBTiles de base de datos de mapas gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis MBTiles, extracción de mosaicos de mapas y herramientas de procesamiento de datos geográficos.',
+            keywords: 'archivos de muestra MBTiles, archivos de prueba MBTiles, descargar muestras MBTiles, archivos de prueba MBTiles gratuitos, muestras de base de datos de mapas MBTiles, archivos geográficos MBTiles, archivos de prueba .mbtiles, archivos de mosaicos de mapas, archivos de prueba de análisis MBTiles'
+          },
+          schema: {
+            name: 'Archivos de muestra MBTiles gratuitos - Descargar archivos de base de datos de mapas MBTiles de prueba',
+            description: 'Descarga archivos de muestra MBTiles de base de datos de mapas gratuitos para pruebas. Múltiples tamaños de archivo disponibles: 100 KB, 1 MB, 5 MB, 50 MB y 100 MB. Perfecto para probar herramientas de análisis MBTiles, extracción de mosaicos de mapas y herramientas de procesamiento de datos geográficos.'
+          },
+          hero: {
+            title: 'Archivos de muestra MBTiles',
+            description: 'Descarga archivos de muestra MBTiles de base de datos de mapas gratuitos para pruebas. Múltiples tamaños de archivo disponibles para probar tus herramientas de análisis MBTiles y extracción de mosaicos de mapas.'
+          },
+          about_description: 'Estos son archivos de prueba MBTiles (base de datos de mapas) en varios tamaños para fines de prueba'
         }
       }
     }
