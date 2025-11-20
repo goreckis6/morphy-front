@@ -587,6 +587,20 @@ function App() {
         <Route path="/ja/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
         <Route path="/zh/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
         <Route path="/de/convert/csv-to-pdf" element={<CSVToPDFConverter />} />
+        <Route path="/id/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/sv/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/es/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/fr/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/it/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/nl/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/pt/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/vi/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/tr/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/ru/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/ar/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/th/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/ja/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
+        <Route path="/zh/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
         <Route path="/de/convert/csv-to-ppt" element={<CSVToPPTConverter />} />
         <Route path="/de/convert/csv-to-pptx" element={<CSVToPPTXConverter />} />
         <Route path="/de/convert/csv-to-rtf" element={<CSVToRTFConverter />} />
