@@ -2242,7 +2242,7 @@ const resources = {
 
       // HEIC to WEBP
       'heic_to_webp.title': 'HEIC to WEBP Converter',
-      'heic_to_webp.meta_title': 'Free HEIC to WEBP Converter Online',
+      'heic_to_webp.meta_title': 'Free HEIC to WebP Converter Online',
       'heic_to_webp.meta_description': 'Convert HEIC images (iPhone photos) to modern WEBP format online for free. Fast, secure HEIC to WEBP converter with batch support and adjustable quality.',
       'heic_to_webp.subtitle': 'Convert Apple HEIC photos to efficient WEBP images for web and apps. Fast, secure, and free with batch processing.',
       'heic_to_webp.upload_single': 'Upload HEIC File',
@@ -2670,7 +2670,7 @@ const resources = {
       
       // HEIC to PDF
       'heic_to_pdf.title': 'HEIC to PDF Converter',
-      'heic_to_pdf.meta_title': 'Free HEIC to PDF Converter Online ',
+      'heic_to_pdf.meta_title': 'Free HEIC to PDF Converter Online',
       'heic_to_pdf.meta_description': 'Convert HEIC (High Efficiency Image Container) files to PDF format online for free. Transform Apple iPhone photos and HEIF images into PDF documents for printing, sharing, and archiving. Free online converter with batch support powered by pillow-heif, ImageMagick, and reportlab.',
       'heic_to_pdf.subtitle': 'Convert HEIC images to PDF format for documents. Transform Apple iPhone photos into PDF files suitable for printing, sharing, archiving, and universal document compatibility.',
       'heic_to_pdf.upload_single': 'Upload HEIC File',
@@ -2739,7 +2739,7 @@ const resources = {
 
       // HEIC to PNG
       'heic_to_png.title': 'HEIC to PNG Converter',
-      'heic_to_png.meta_title': 'Free HEIC to PNG Converter Online ',
+      'heic_to_png.meta_title': 'Free HEIC to PNG Converter Online',
       'heic_to_png.meta_description': 'Convert HEIC images to PNG online for free. Preserve transparency and high quality. Batch conversion supported.',
       'heic_to_png.subtitle': 'Convert iPhone HEIC images to PNG with transparency and high quality.',
       'heic_to_png.upload_single': 'Upload HEIC File',
@@ -7974,7 +7974,7 @@ const resources = {
       
       // HEIC to PDF - Polish
       'heic_to_pdf.title': 'Darmowy Konwerter HEIC do PDF',
-      'heic_to_pdf.meta_title': 'Darmowy Konwerter HEIC do PDF Online - Konwertuj Zdjęcia iPhone na Dokumenty PDF ',
+      'heic_to_pdf.meta_title': 'Darmowy Konwerter HEIC do PDF Online',
       'heic_to_pdf.meta_description': 'Konwertuj pliki HEIC (High Efficiency Image Container) do formatu PDF online za darmo. Przekształć zdjęcia z iPhone Apple i obrazy HEIF w dokumenty PDF do druku, udostępniania i archiwizacji. Darmowy konwerter online z obsługą wsadową zasilany przez pillow-heif, ImageMagick i reportlab.',
       'heic_to_pdf.subtitle': 'Konwertuj obrazy HEIC do formatu PDF dla dokumentów. Przekształć zdjęcia z iPhone Apple w pliki PDF odpowiednie do druku, udostępniania, archiwizacji i uniwersalnej kompatybilności dokumentów.',
       'heic_to_pdf.upload_single': 'Prześlij Plik HEIC',
@@ -8043,7 +8043,7 @@ const resources = {
       
       // HEIC to PNG - Polish
       'heic_to_png.title': 'Konwerter HEIC do PNG',
-      'heic_to_png.meta_title': 'Darmowy konwerter HEIC do PNG online ',
+      'heic_to_png.meta_title': 'Darmowy Konwerter HEIC do PNG Online',
       'heic_to_png.meta_description': 'Konwertuj obrazy HEIC na PNG online za darmo. Zachowaj przezroczystość i wysoką jakość. Obsługa konwersji wsadowej.',
       'heic_to_png.subtitle': 'Konwertuj zdjęcia HEIC z iPhone na PNG z zachowaniem przezroczystości i wysokiej jakości.',
       'heic_to_png.upload_single': 'Prześlij Plik HEIC',
@@ -8104,7 +8104,7 @@ const resources = {
 
       // HEIC to EPS - Polish
       'heic_to_eps.title': 'Darmowy Konwerter HEIC do EPS',
-      'heic_to_eps.meta_title': 'Darmowy Konwerter HEIC do EPS Online ',
+      'heic_to_eps.meta_title': 'Darmowy Konwerter HEIC do EPS Online',
       'heic_to_eps.meta_description': 'Konwertuj obrazy HEIC na EPS online za darmo. Twórz pliki EPS gotowe do druku dla DTP, opakowań i dokumentacji. Szybka, niezawodna konwersja z obsługą trybu wsadowego.',
       'heic_to_eps.subtitle': 'Zamień zdjęcia HEIC z iPhone na pliki EPS gotowe do publikacji i profesjonalnych workflow.',
       'heic_to_eps.upload_single': 'Prześlij Plik HEIC',
@@ -8160,7 +8160,7 @@ const resources = {
 
       // HEIC to WEBP - Polish
       'heic_to_webp.title': 'Konwerter HEIC do WEBP',
-      'heic_to_webp.meta_title': 'Darmowy Konwerter HEIC do WEBP Online ',
+      'heic_to_webp.meta_title': 'Darmowy Konwerter HEIC do WebP Online',
       'heic_to_webp.meta_description': 'Konwertuj obrazy HEIC (zdjęcia z iPhone) na nowoczesny format WEBP online za darmo. Szybki, bezpieczny konwerter HEIC do WEBP z obsługą wsadową i regulacją jakości.',
       'heic_to_webp.subtitle': 'Konwertuj zdjęcia HEIC z Apple na wydajne obrazy WEBP dla sieci i aplikacji. Szybko, bezpiecznie i za darmo z obsługą wsadów.',
       'heic_to_webp.upload_single': 'Prześlij Plik HEIC',
@@ -13039,7 +13039,7 @@ const resources = {
       
       // HEIC to PDF - German
       'heic_to_pdf.title': 'Kostenloser HEIC zu PDF Konverter',
-      'heic_to_pdf.meta_title': 'Kostenloser HEIC zu PDF Konverter Online - Konvertieren Sie iPhone-Fotos in PDF-Dokumente ',
+      'heic_to_pdf.meta_title': 'Kostenloser HEIC zu PDF Konverter Online',
       'heic_to_pdf.meta_description': 'Konvertieren Sie HEIC (High Efficiency Image Container) Dateien kostenlos online in das PDF-Format. Transformieren Sie Apple iPhone-Fotos und HEIF-Bilder in PDF-Dokumente zum Drucken, Teilen und Archivieren. Kostenloser Online-Konverter mit Batch-Unterstützung, betrieben von pillow-heif, ImageMagick und reportlab.',
       'heic_to_pdf.subtitle': 'Konvertieren Sie HEIC Bilder in das PDF-Format für Dokumente. Transformieren Sie Apple iPhone-Fotos in PDF-Dateien, die sich zum Drucken, Teilen, Archivieren und für universelle Dokumentenkompatibilität eignen.',
       'heic_to_pdf.upload_single': 'HEIC-Datei Hochladen',
@@ -13108,7 +13108,7 @@ const resources = {
       
       // HEIC to PNG - German
       'heic_to_png.title': 'HEIC zu PNG Konverter',
-      'heic_to_png.meta_title': 'Kostenloser HEIC zu PNG Konverter online ',
+      'heic_to_png.meta_title': 'Kostenloser HEIC zu PNG Konverter Online',
       'heic_to_png.meta_description': 'Konvertiere HEIC-Bilder kostenlos online in PNG. Transparenz und hohe Qualität bleiben erhalten. Stapelverarbeitung wird unterstützt.',
       'heic_to_png.subtitle': 'Wandle HEIC-Fotos vom iPhone in PNG mit Transparenz und hoher Qualität um.',
       'heic_to_png.upload_single': 'HEIC-Datei Hochladen',
@@ -13169,7 +13169,7 @@ const resources = {
 
       // HEIC to EPS - German
       'heic_to_eps.title': 'HEIC zu EPS Konverter',
-      'heic_to_eps.meta_title': 'Kostenloser HEIC zu EPS Konverter Online ',
+      'heic_to_eps.meta_title': 'Kostenloser HEIC zu EPS Konverter Online',
       'heic_to_eps.meta_description': 'Konvertieren Sie HEIC-Bilder kostenlos online in EPS. Erstellen Sie druckfertige EPS-Dateien für DTP, Verpackungen und Dokumentation. Schnelle, zuverlässige Konvertierung mit Stapelunterstützung.',
       'heic_to_eps.subtitle': 'Verwandeln Sie iPhone HEIC-Fotos in druckfertige EPS-Dateien für professionelle Publishing-Workflows.',
       'heic_to_eps.upload_single': 'HEIC-Datei Hochladen',
@@ -13225,7 +13225,7 @@ const resources = {
 
       // HEIC to WEBP - German
       'heic_to_webp.title': 'HEIC zu WEBP Konverter',
-      'heic_to_webp.meta_title': 'Kostenloser HEIC zu WEBP Konverter Online ',
+      'heic_to_webp.meta_title': 'Kostenloser HEIC zu WebP Konverter Online',
       'heic_to_webp.meta_description': 'Konvertieren Sie HEIC-Bilder (iPhone-Fotos) kostenlos online in das moderne WEBP-Format. Schneller, sicherer HEIC-zu-WEBP-Konverter mit Stapelunterstützung und einstellbarer Qualität.',
       'heic_to_webp.subtitle': 'Konvertieren Sie Apple HEIC-Fotos in effiziente WEBP-Bilder für Web und Apps. Schnell, sicher und kostenlos mit Stapelverarbeitung.',
       'heic_to_webp.upload_single': 'HEIC-Datei Hochladen',
@@ -16254,7 +16254,7 @@ const resources = {
       
       // HEIC to WebP - Bahasa Indonesia
       'heic_to_webp.title': 'Konverter HEIC ke WEBP',
-      'heic_to_webp.meta_title': 'Konverter HEIC ke WEBP Gratis Online',
+      'heic_to_webp.meta_title': 'Konverter HEIC ke WebP Gratis Online',
       'heic_to_webp.meta_description': 'Konversi gambar HEIC (foto iPhone) ke format WEBP modern online gratis. Konverter HEIC ke WEBP cepat dan aman dengan dukungan batch dan kualitas yang dapat disesuaikan.',
       'heic_to_webp.subtitle': 'Konversi foto HEIC Apple menjadi gambar WEBP yang efisien untuk web dan aplikasi. Cepat, aman, dan gratis dengan pemrosesan batch.',
       'heic_to_webp.upload_single': 'Unggah File HEIC',
@@ -18233,7 +18233,7 @@ const resources = {
       
       // HEIC to WebP - Swedish
       'heic_to_webp.title': 'HEIC till WEBP Konverterare',
-      'heic_to_webp.meta_title': 'Gratis HEIC till WEBP Konverterare Online',
+      'heic_to_webp.meta_title': 'Gratis HEIC till WebP Konverterare Online',
       'heic_to_webp.meta_description': 'Konvertera HEIC-bilder (iPhone-foton) till modernt WEBP-format online gratis. Snabb, säker HEIC till WEBP-konverterare med batchstöd och justerbar kvalitet.',
       'heic_to_webp.subtitle': 'Konvertera Apple HEIC-foton till effektiva WEBP-bilder för webb och appar. Snabb, säker och gratis med batchbearbetning.',
       'heic_to_webp.upload_single': 'Ladda upp HEIC-fil',
@@ -20204,7 +20204,7 @@ const resources = {
       
       // HEIC to WebP - Spanish
       'heic_to_webp.title': 'Convertidor HEIC a WEBP',
-      'heic_to_webp.meta_title': 'Convertidor HEIC a WEBP Gratis Online',
+      'heic_to_webp.meta_title': 'Convertidor HEIC a WebP Gratis Online',
       'heic_to_webp.meta_description': 'Convierte imágenes HEIC (fotos de iPhone) al formato WEBP moderno online gratis. Convertidor HEIC a WEBP rápido y seguro con soporte por lotes y calidad ajustable.',
       'heic_to_webp.subtitle': 'Convierte fotos HEIC de Apple en imágenes WEBP eficientes para web y aplicaciones. Rápido, seguro y gratis con procesamiento por lotes.',
       'heic_to_webp.upload_single': 'Subir Archivo HEIC',
@@ -21920,7 +21920,7 @@ const resources = {
       
       // HEIC to PDF - French
       'heic_to_pdf.title': 'Convertisseur HEIC vers PDF',
-      'heic_to_pdf.meta_title': 'Convertisseur HEIC vers PDF Gratuit En Ligne',
+      'heic_to_pdf.meta_title': 'Convertisseur HEIC vers PDF Gratuit Online',
       'heic_to_pdf.meta_description': 'Convertissez les fichiers HEIC (High Efficiency Image Container) au format PDF en ligne gratuitement. Transformez les photos Apple iPhone et les images HEIF en documents PDF pour l\'impression, le partage et l\'archivage. Convertisseur en ligne gratuit avec support par lots alimenté par pillow-heif, ImageMagick et reportlab.',
       'heic_to_pdf.subtitle': 'Convertissez les images HEIC au format PDF pour les documents. Transformez les photos Apple iPhone en fichiers PDF adaptés à l\'impression, au partage, à l\'archivage et à la compatibilité universelle des documents.',
       'heic_to_pdf.upload_single': 'Télécharger un Fichier HEIC',
@@ -21989,7 +21989,7 @@ const resources = {
       
       // HEIC to PNG - French
       'heic_to_png.title': 'Convertisseur HEIC vers PNG',
-      'heic_to_png.meta_title': 'Convertisseur HEIC vers PNG Gratuit En Ligne',
+      'heic_to_png.meta_title': 'Convertisseur HEIC vers PNG Gratuit Online',
       'heic_to_png.meta_description': 'Convertissez les images HEIC en PNG en ligne gratuitement. Préservez la transparence et la haute qualité. Conversion par lots supportée.',
       'heic_to_png.subtitle': 'Convertissez les images HEIC iPhone en PNG avec transparence et haute qualité.',
       'heic_to_png.upload_single': 'Télécharger un Fichier HEIC',
@@ -22050,7 +22050,7 @@ const resources = {
       
       // HEIC to EPS - French
       'heic_to_eps.title': 'Convertisseur HEIC vers EPS',
-      'heic_to_eps.meta_title': 'Convertisseur HEIC vers EPS Gratuit En Ligne',
+      'heic_to_eps.meta_title': 'Convertisseur HEIC vers EPS Gratuit Online',
       'heic_to_eps.meta_description': 'Convertissez les images HEIC en EPS en ligne gratuitement. Générez des fichiers EPS adaptés à l\'impression pour la publication assistée par ordinateur (PAO), l\'emballage et la documentation. Rapide, fiable et prend en charge la conversion par lots.',
       'heic_to_eps.subtitle': 'Transformez les images HEIC iPhone en fichiers EPS prêts pour l\'impression pour les flux de travail professionnels de publication et de documentation.',
       'heic_to_eps.upload_single': 'Télécharger un Fichier HEIC',
@@ -22106,7 +22106,7 @@ const resources = {
       
       // HEIC to WebP - French
       'heic_to_webp.title': 'Convertisseur HEIC vers WEBP',
-      'heic_to_webp.meta_title': 'Convertisseur HEIC vers WEBP Gratuit En Ligne',
+      'heic_to_webp.meta_title': 'Convertisseur HEIC vers WebP Gratuit Online',
       'heic_to_webp.meta_description': 'Convertissez les images HEIC (photos iPhone) au format WEBP moderne en ligne gratuitement. Convertisseur HEIC vers WEBP rapide et sécurisé avec support par lots et qualité ajustable.',
       'heic_to_webp.subtitle': 'Convertissez les photos HEIC Apple en images WEBP efficaces pour le web et les applications. Rapide, sécurisé et gratuit avec traitement par lots.',
       'heic_to_webp.upload_single': 'Télécharger un Fichier HEIC',
@@ -24008,7 +24008,7 @@ const resources = {
       
       // HEIC to WebP - Italian
       'heic_to_webp.title': 'Convertitore HEIC in WEBP',
-      'heic_to_webp.meta_title': 'Convertitore HEIC in WEBP Gratuito Online',
+      'heic_to_webp.meta_title': 'Convertitore HEIC in WebP Gratuito Online',
       'heic_to_webp.meta_description': 'Converti immagini HEIC (foto iPhone) al formato WEBP moderno online gratuitamente. Convertitore HEIC in WEBP veloce e sicuro con supporto batch e qualità regolabile.',
       'heic_to_webp.subtitle': 'Converti foto HEIC Apple in immagini WEBP efficienti per web e app. Veloce, sicuro e gratuito con elaborazione batch.',
       'heic_to_webp.upload_single': 'Carica File HEIC',
@@ -25910,7 +25910,7 @@ const resources = {
       
       // HEIC to WebP - Dutch
       'heic_to_webp.title': 'HEIC naar WEBP Converter',
-      'heic_to_webp.meta_title': 'Gratis HEIC naar WEBP Converter Online',
+      'heic_to_webp.meta_title': 'Gratis HEIC naar WebP Converter Online',
       'heic_to_webp.meta_description': 'Converteer HEIC-afbeeldingen (iPhone-foto\'s) naar modern WEBP-formaat online gratis. Snelle, veilige HEIC naar WEBP converter met batchondersteuning en instelbare kwaliteit.',
       'heic_to_webp.subtitle': 'Converteer Apple HEIC-foto\'s naar efficiënte WEBP-afbeeldingen voor web en apps. Snel, veilig en gratis met batchverwerking.',
       'heic_to_webp.upload_single': 'Upload HEIC Bestand',
@@ -27812,7 +27812,7 @@ const resources = {
       
       // HEIC to WebP - Portuguese
       'heic_to_webp.title': 'Conversor HEIC para WEBP',
-      'heic_to_webp.meta_title': 'Conversor HEIC para WEBP Gratuito Online',
+      'heic_to_webp.meta_title': 'Conversor HEIC para WebP Gratuito Online',
       'heic_to_webp.meta_description': 'Converta imagens HEIC (fotos iPhone) para o formato WEBP moderno online gratuitamente. Conversor HEIC para WEBP rápido e seguro com suporte em lote e qualidade ajustável.',
       'heic_to_webp.subtitle': 'Converta fotos HEIC Apple em imagens WEBP eficientes para web e aplicativos. Rápido, seguro e gratuito com processamento em lote.',
       'heic_to_webp.upload_single': 'Enviar Arquivo HEIC',
@@ -29477,7 +29477,7 @@ const resources = {
       
       // HEIC to PDF - Vietnamese
       'heic_to_pdf.title': 'Bộ Chuyển Đổi HEIC sang PDF',
-      'heic_to_pdf.meta_title': 'Bộ Chuyển Đổi HEIC sang PDF Miễn Phí Trực Tuyến',
+      'heic_to_pdf.meta_title': 'Bộ Chuyển Đổi HEIC sang PDF Miễn Phí Online',
       'heic_to_pdf.meta_description': 'Chuyển đổi file HEIC (High Efficiency Image Container) sang định dạng PDF trực tuyến miễn phí. Chuyển đổi ảnh Apple iPhone và hình ảnh HEIF thành tài liệu PDF để in, chia sẻ và lưu trữ. Bộ chuyển đổi trực tuyến miễn phí với hỗ trợ hàng loạt được cung cấp bởi pillow-heif, ImageMagick và reportlab.',
       'heic_to_pdf.subtitle': 'Chuyển đổi hình ảnh HEIC sang định dạng PDF cho tài liệu. Chuyển đổi ảnh Apple iPhone thành file PDF phù hợp cho in, chia sẻ, lưu trữ và tương thích tài liệu phổ quát.',
       'heic_to_pdf.upload_single': 'Tải Lên File HEIC',
@@ -29546,7 +29546,7 @@ const resources = {
       
       // HEIC to PNG - Vietnamese
       'heic_to_png.title': 'Bộ Chuyển Đổi HEIC sang PNG',
-      'heic_to_png.meta_title': 'Bộ Chuyển Đổi HEIC sang PNG Miễn Phí Trực Tuyến',
+      'heic_to_png.meta_title': 'Bộ Chuyển Đổi HEIC sang PNG Miễn Phí Online',
       'heic_to_png.meta_description': 'Chuyển đổi hình ảnh HEIC sang PNG trực tuyến miễn phí. Giữ nguyên độ trong suốt và chất lượng cao. Hỗ trợ chuyển đổi hàng loạt.',
       'heic_to_png.subtitle': 'Chuyển đổi hình ảnh HEIC iPhone sang PNG với độ trong suốt và chất lượng cao.',
       'heic_to_png.upload_single': 'Tải Lên File HEIC',
@@ -29607,7 +29607,7 @@ const resources = {
       
       // HEIC to EPS - Vietnamese
       'heic_to_eps.title': 'Bộ Chuyển Đổi HEIC sang EPS',
-      'heic_to_eps.meta_title': 'Bộ Chuyển Đổi HEIC sang EPS Miễn Phí Trực Tuyến',
+      'heic_to_eps.meta_title': 'Bộ Chuyển Đổi HEIC sang EPS Miễn Phí Online',
       'heic_to_eps.meta_description': 'Chuyển đổi hình ảnh HEIC sang EPS trực tuyến miễn phí. Tạo file EPS thân thiện với in ấn cho desktop publishing (DTP), đóng gói và tài liệu. Nhanh, đáng tin cậy và hỗ trợ chuyển đổi hàng loạt.',
       'heic_to_eps.subtitle': 'Chuyển đổi hình ảnh HEIC iPhone thành file EPS sẵn sàng in cho quy trình làm việc xuất bản và tài liệu chuyên nghiệp.',
       'heic_to_eps.upload_single': 'Tải Lên File HEIC',
@@ -29663,7 +29663,7 @@ const resources = {
       
       // HEIC to WebP - Vietnamese
       'heic_to_webp.title': 'Bộ Chuyển Đổi HEIC sang WEBP',
-      'heic_to_webp.meta_title': 'Bộ Chuyển Đổi HEIC sang WEBP Miễn Phí Trực Tuyến',
+      'heic_to_webp.meta_title': 'Bộ Chuyển Đổi HEIC sang WebP Miễn Phí Online',
       'heic_to_webp.meta_description': 'Chuyển đổi hình ảnh HEIC (ảnh iPhone) sang định dạng WEBP hiện đại trực tuyến miễn phí. Bộ chuyển đổi HEIC sang WEBP nhanh và an toàn với hỗ trợ hàng loạt và chất lượng có thể điều chỉnh.',
       'heic_to_webp.subtitle': 'Chuyển đổi ảnh HEIC Apple thành hình ảnh WEBP hiệu quả cho web và ứng dụng. Nhanh, an toàn và miễn phí với xử lý hàng loạt.',
       'heic_to_webp.upload_single': 'Tải Lên File HEIC',
@@ -31520,7 +31520,7 @@ const resources = {
       
       // HEIC to WebP - Turkish
       'heic_to_webp.title': 'HEIC\'den WEBP\'ye Dönüştürücü',
-      'heic_to_webp.meta_title': 'Ücretsiz HEIC\'den WEBP\'ye Dönüştürücü Online',
+      'heic_to_webp.meta_title': 'Ücretsiz HEIC\'den WebP\'ye Dönüştürücü Online',
       'heic_to_webp.meta_description': 'HEIC görüntülerini (iPhone fotoğrafları) modern WEBP formatına ücretsiz olarak online çevirin. Hızlı, güvenli HEIC\'den WEBP\'ye dönüştürücü toplu destek ve ayarlanabilir kalite ile.',
       'heic_to_webp.subtitle': 'Apple HEIC fotoğraflarını web ve uygulamalar için verimli WEBP görüntülerine dönüştürün. Toplu işleme ile hızlı, güvenli ve ücretsiz.',
       'heic_to_webp.upload_single': 'HEIC Dosyası Yükle',
@@ -33206,7 +33206,7 @@ const resources = {
       
       // HEIC to PDF - Russian
       'heic_to_pdf.title': 'Конвертер HEIC в PDF',
-      'heic_to_pdf.meta_title': 'Бесплатный Конвертер HEIC в PDF Онлайн',
+      'heic_to_pdf.meta_title': 'Бесплатный Конвертер HEIC в PDF Online',
       'heic_to_pdf.meta_description': 'Конвертируйте файлы HEIC (High Efficiency Image Container) в формат PDF онлайн бесплатно. Преобразуйте фотографии Apple iPhone и изображения HEIF в PDF документы для печати, обмена и архивирования. Бесплатный онлайн конвертер с поддержкой пакетной обработки, работающий на pillow-heif, ImageMagick и reportlab.',
       'heic_to_pdf.subtitle': 'Конвертируйте изображения HEIC в формат PDF для документов. Преобразуйте фотографии Apple iPhone в PDF файлы, подходящие для печати, обмена, архивирования и универсальной совместимости документов.',
       'heic_to_pdf.upload_single': 'Загрузить Файл HEIC',
@@ -33275,7 +33275,7 @@ const resources = {
       
       // HEIC to PNG - Russian
       'heic_to_png.title': 'Конвертер HEIC в PNG',
-      'heic_to_png.meta_title': 'Бесплатный Конвертер HEIC в PNG Онлайн',
+      'heic_to_png.meta_title': 'Бесплатный Конвертер HEIC в PNG Online',
       'heic_to_png.meta_description': 'Конвертируйте изображения HEIC в PNG онлайн бесплатно. Сохраняйте прозрачность и высокое качество. Пакетная конвертация поддерживается.',
       'heic_to_png.subtitle': 'Конвертируйте изображения HEIC iPhone в PNG с прозрачностью и высоким качеством.',
       'heic_to_png.upload_single': 'Загрузить Файл HEIC',
@@ -33336,7 +33336,7 @@ const resources = {
       
       // HEIC to EPS - Russian
       'heic_to_eps.title': 'Конвертер HEIC в EPS',
-      'heic_to_eps.meta_title': 'Бесплатный Конвертер HEIC в EPS Онлайн',
+      'heic_to_eps.meta_title': 'Бесплатный Конвертер HEIC в EPS Online',
       'heic_to_eps.meta_description': 'Конвертируйте изображения HEIC в EPS онлайн бесплатно. Генерируйте файлы EPS, подходящие для печати, для настольных издательских систем (DTP), упаковки и документации. Быстро, надежно и поддерживает пакетную конвертацию.',
       'heic_to_eps.subtitle': 'Преобразуйте изображения HEIC iPhone в файлы EPS, готовые к печати, для профессиональных рабочих процессов публикации и документации.',
       'heic_to_eps.upload_single': 'Загрузить Файл HEIC',
@@ -33392,7 +33392,7 @@ const resources = {
       
       // HEIC to WebP - Russian
       'heic_to_webp.title': 'Конвертер HEIC в WEBP',
-      'heic_to_webp.meta_title': 'Бесплатный Конвертер HEIC в WEBP Онлайн',
+      'heic_to_webp.meta_title': 'Бесплатный Конвертер HEIC в WebP Online',
       'heic_to_webp.meta_description': 'Конвертируйте изображения HEIC (фото iPhone) в современный формат WEBP онлайн бесплатно. Быстрый, безопасный конвертер HEIC в WEBP с поддержкой пакетной конвертации и настраиваемым качеством.',
       'heic_to_webp.subtitle': 'Конвертируйте фото HEIC Apple в эффективные изображения WEBP для веб и приложений. Быстро, безопасно и бесплатно с пакетной обработкой.',
       'heic_to_webp.upload_single': 'Загрузить Файл HEIC',
@@ -35056,7 +35056,7 @@ const resources = {
       
       // HEIC to PDF - Arabic
       'heic_to_pdf.title': 'محول HEIC إلى PDF',
-      'heic_to_pdf.meta_title': 'محول HEIC إلى PDF مجاني عبر الإنترنت',
+      'heic_to_pdf.meta_title': 'محول HEIC إلى PDF مجاني Online',
       'heic_to_pdf.meta_description': 'قم بتحويل ملفات HEIC (High Efficiency Image Container) إلى تنسيق PDF عبر الإنترنت مجانًا. قم بتحويل صور Apple iPhone وصور HEIF إلى مستندات PDF للطباعة والمشاركة والأرشفة. محول مجاني عبر الإنترنت مع دعم الدفعات مدعوم من pillow-heif و ImageMagick و reportlab.',
       'heic_to_pdf.subtitle': 'قم بتحويل صور HEIC إلى تنسيق PDF للمستندات. قم بتحويل صور Apple iPhone إلى ملفات PDF مناسبة للطباعة والمشاركة والأرشفة والتوافق العالمي للمستندات.',
       'heic_to_pdf.upload_single': 'رفع ملف HEIC',
@@ -35125,7 +35125,7 @@ const resources = {
       
       // HEIC to PNG - Arabic
       'heic_to_png.title': 'محول HEIC إلى PNG',
-      'heic_to_png.meta_title': 'محول HEIC إلى PNG مجاني عبر الإنترنت',
+      'heic_to_png.meta_title': 'محول HEIC إلى PNG مجاني Online',
       'heic_to_png.meta_description': 'قم بتحويل صور HEIC إلى PNG عبر الإنترنت مجانًا. احتفظ بالشفافية والجودة العالية. يتم دعم التحويل المجمع.',
       'heic_to_png.subtitle': 'قم بتحويل صور HEIC iPhone إلى PNG مع الشفافية والجودة العالية.',
       'heic_to_png.upload_single': 'رفع ملف HEIC',
@@ -35186,7 +35186,7 @@ const resources = {
       
       // HEIC to EPS - Arabic
       'heic_to_eps.title': 'محول HEIC إلى EPS',
-      'heic_to_eps.meta_title': 'محول HEIC إلى EPS مجاني عبر الإنترنت',
+      'heic_to_eps.meta_title': 'محول HEIC إلى EPS مجاني Online',
       'heic_to_eps.meta_description': 'قم بتحويل صور HEIC إلى EPS عبر الإنترنت مجانًا. قم بإنشاء ملفات EPS مناسبة للطباعة لسطح المكتب للنشر (DTP)، والتغليف، والتوثيق. سريع وموثوق ويدعم التحويل المجمع.',
       'heic_to_eps.subtitle': 'قم بتحويل صور HEIC iPhone إلى ملفات EPS جاهزة للطباعة لسير عمل النشر والتوثيق الاحترافية.',
       'heic_to_eps.upload_single': 'رفع ملف HEIC',
@@ -35242,7 +35242,7 @@ const resources = {
       
       // HEIC to WebP - Arabic
       'heic_to_webp.title': 'محول HEIC إلى WEBP',
-      'heic_to_webp.meta_title': 'محول HEIC إلى WEBP مجاني عبر الإنترنت',
+      'heic_to_webp.meta_title': 'محول HEIC إلى WebP مجاني Online',
       'heic_to_webp.meta_description': 'قم بتحويل صور HEIC (صور iPhone) إلى تنسيق WEBP الحديث عبر الإنترنت مجانًا. محول HEIC إلى WEBP سريع وآمن مع دعم المجموعات وجودة قابلة للتعديل.',
       'heic_to_webp.subtitle': 'قم بتحويل صور HEIC من Apple إلى صور WEBP فعالة للويب والتطبيقات. سريع وآمن ومجاني مع المعالجة المجمعة.',
       'heic_to_webp.upload_single': 'رفع ملف HEIC',
@@ -36910,7 +36910,7 @@ const resources = {
       
       // HEIC to PDF - Thai
       'heic_to_pdf.title': 'ตัวแปลง HEIC เป็น PDF',
-      'heic_to_pdf.meta_title': 'ตัวแปลง HEIC เป็น PDF ฟรีออนไลน์',
+      'heic_to_pdf.meta_title': 'ตัวแปลง HEIC เป็น PDF ฟรี Online',
       'heic_to_pdf.meta_description': 'แปลงไฟล์ HEIC (High Efficiency Image Container) เป็นรูปแบบ PDF ออนไลน์ฟรี แปลงรูปภาพ Apple iPhone และรูปภาพ HEIF เป็นเอกสาร PDF สำหรับการพิมพ์ แชร์ และเก็บถาวร ตัวแปลงออนไลน์ฟรีพร้อมการสนับสนุนแบบกลุ่มที่ขับเคลื่อนโดย pillow-heif ImageMagick และ reportlab',
       'heic_to_pdf.subtitle': 'แปลงรูปภาพ HEIC เป็นรูปแบบ PDF สำหรับเอกสาร แปลงรูปภาพ Apple iPhone เป็นไฟล์ PDF ที่เหมาะสำหรับการพิมพ์ แชร์ เก็บถาวร และความเข้ากันได้ของเอกสารสากล',
       'heic_to_pdf.upload_single': 'อัปโหลดไฟล์ HEIC',
@@ -36979,7 +36979,7 @@ const resources = {
       
       // HEIC to PNG - Thai
       'heic_to_png.title': 'ตัวแปลง HEIC เป็น PNG',
-      'heic_to_png.meta_title': 'ตัวแปลง HEIC เป็น PNG ฟรีออนไลน์',
+      'heic_to_png.meta_title': 'ตัวแปลง HEIC เป็น PNG ฟรี Online',
       'heic_to_png.meta_description': 'แปลงรูปภาพ HEIC เป็น PNG ออนไลน์ฟรี รักษาความโปร่งใสและคุณภาพสูง รองรับการแปลงแบบกลุ่ม',
       'heic_to_png.subtitle': 'แปลงรูปภาพ HEIC iPhone เป็น PNG ด้วยความโปร่งใสและคุณภาพสูง',
       'heic_to_png.upload_single': 'อัปโหลดไฟล์ HEIC',
@@ -37040,7 +37040,7 @@ const resources = {
       
       // HEIC to EPS - Thai
       'heic_to_eps.title': 'ตัวแปลง HEIC เป็น EPS',
-      'heic_to_eps.meta_title': 'ตัวแปลง HEIC เป็น EPS ฟรีออนไลน์',
+      'heic_to_eps.meta_title': 'ตัวแปลง HEIC เป็น EPS ฟรี Online',
       'heic_to_eps.meta_description': 'แปลงรูปภาพ HEIC เป็น EPS ออนไลน์ฟรี สร้างไฟล์ EPS ที่เหมาะสำหรับการพิมพ์สำหรับ desktop publishing (DTP) บรรจุภัณฑ์ และเอกสาร เร็ว เชื่อถือได้ และรองรับการแปลงแบบกลุ่ม',
       'heic_to_eps.subtitle': 'แปลงรูปภาพ HEIC iPhone เป็นไฟล์ EPS พร้อมพิมพ์สำหรับเวิร์กโฟลว์การเผยแพร่และเอกสารมืออาชีพ',
       'heic_to_eps.upload_single': 'อัปโหลดไฟล์ HEIC',
@@ -37096,7 +37096,7 @@ const resources = {
       
       // HEIC to WebP - Thai
       'heic_to_webp.title': 'ตัวแปลง HEIC เป็น WEBP',
-      'heic_to_webp.meta_title': 'ตัวแปลง HEIC เป็น WEBP ฟรีออนไลน์',
+      'heic_to_webp.meta_title': 'ตัวแปลง HEIC เป็น WebP ฟรี Online',
       'heic_to_webp.meta_description': 'แปลงรูปภาพ HEIC (รูปภาพ iPhone) เป็นรูปแบบ WEBP สมัยใหม่ออนไลน์ฟรี ตัวแปลง HEIC เป็น WEBP ที่รวดเร็วและปลอดภัยพร้อมการสนับสนุนแบบกลุ่มและคุณภาพที่ปรับได้',
       'heic_to_webp.subtitle': 'แปลงรูปภาพ HEIC ของ Apple เป็นรูปภาพ WEBP ที่มีประสิทธิภาพสำหรับเว็บและแอป รวดเร็ว ปลอดภัย และฟรีพร้อมการประมวลผลแบบกลุ่ม',
       'heic_to_webp.upload_single': 'อัปโหลดไฟล์ HEIC',
@@ -38761,7 +38761,7 @@ const resources = {
       
       // HEIC to PDF - Japanese
       'heic_to_pdf.title': 'HEICからPDFへのコンバーター',
-      'heic_to_pdf.meta_title': '無料のHEICからPDFへのコンバーターオンライン',
+      'heic_to_pdf.meta_title': '無料HEICからPDFへのコンバーター Online',
       'heic_to_pdf.meta_description': 'HEIC（High Efficiency Image Container）ファイルを無料でオンラインでPDF形式に変換します。Apple iPhoneの写真やHEIF画像を印刷、共有、アーカイブ用のPDF文書に変換します。pillow-heif、ImageMagick、reportlabによって動力を供給されるバッチサポート付きの無料オンラインコンバーター。',
       'heic_to_pdf.subtitle': 'HEIC画像を文書用のPDF形式に変換します。Apple iPhoneの写真を印刷、共有、アーカイブ、およびユニバーサル文書互換性に適したPDFファイルに変換します。',
       'heic_to_pdf.upload_single': 'HEICファイルをアップロード',
@@ -38830,7 +38830,7 @@ const resources = {
       
       // HEIC to PNG - Japanese
       'heic_to_png.title': 'HEICからPNGへのコンバーター',
-      'heic_to_png.meta_title': '無料のHEICからPNGへのコンバーターオンライン',
+      'heic_to_png.meta_title': '無料HEICからPNGへのコンバーター Online',
       'heic_to_png.meta_description': 'HEIC画像を無料でオンラインでPNGに変換します。透明度と高品質を保持します。バッチ変換がサポートされています。',
       'heic_to_png.subtitle': 'iPhone HEIC画像を透明度と高品質でPNGに変換します。',
       'heic_to_png.upload_single': 'HEICファイルをアップロード',
@@ -38891,7 +38891,7 @@ const resources = {
       
       // HEIC to EPS - Japanese
       'heic_to_eps.title': 'HEICからEPSへのコンバーター',
-      'heic_to_eps.meta_title': '無料のHEICからEPSへのコンバーターオンライン',
+      'heic_to_eps.meta_title': '無料HEICからEPSへのコンバーター Online',
       'heic_to_eps.meta_description': 'HEIC画像を無料でオンラインでEPSに変換します。デスクトップパブリッシング（DTP）、パッケージング、ドキュメント用の印刷対応EPSファイルを生成します。高速、信頼性が高く、バッチ変換をサポートします。',
       'heic_to_eps.subtitle': 'iPhone HEIC画像をプロフェッショナルな出版およびドキュメントワークフロー用の印刷準備完了EPSファイルに変換します。',
       'heic_to_eps.upload_single': 'HEICファイルをアップロード',
@@ -38947,7 +38947,7 @@ const resources = {
       
       // HEIC to WebP - Japanese
       'heic_to_webp.title': 'HEICからWEBPへのコンバーター',
-      'heic_to_webp.meta_title': '無料のHEICからWEBPへのコンバーターオンライン',
+      'heic_to_webp.meta_title': '無料HEICからWebPへのコンバーター Online',
       'heic_to_webp.meta_description': 'HEIC画像（iPhone写真）を無料でオンラインで現代的なWEBP形式に変換します。バッチサポートと調整可能な品質を備えた高速で安全なHEICからWEBPへのコンバーター。',
       'heic_to_webp.subtitle': 'Apple HEIC写真をウェブとアプリ用の効率的なWEBP画像に変換します。バッチ処理で高速、安全、無料。',
       'heic_to_webp.upload_single': 'HEICファイルをアップロード',
@@ -40612,7 +40612,7 @@ const resources = {
       
       // HEIC to PDF - Chinese
       'heic_to_pdf.title': 'HEIC转PDF转换器',
-      'heic_to_pdf.meta_title': '免费HEIC转PDF转换器在线',
+      'heic_to_pdf.meta_title': '免费HEIC转PDF转换器 Online',
       'heic_to_pdf.meta_description': '免费在线将HEIC（高效图像容器）文件转换为PDF格式。将Apple iPhone照片和HEIF图像转换为用于打印、共享和归档的PDF文档。由pillow-heif、ImageMagick和reportlab驱动的支持批处理的免费在线转换器。',
       'heic_to_pdf.subtitle': '将HEIC图像转换为用于文档的PDF格式。将Apple iPhone照片转换为适合打印、共享、归档和通用文档兼容性的PDF文件。',
       'heic_to_pdf.upload_single': '上传HEIC文件',
@@ -40681,7 +40681,7 @@ const resources = {
       
       // HEIC to PNG - Chinese
       'heic_to_png.title': 'HEIC转PNG转换器',
-      'heic_to_png.meta_title': '免费HEIC转PNG转换器在线',
+      'heic_to_png.meta_title': '免费HEIC转PNG转换器 Online',
       'heic_to_png.meta_description': '免费在线将HEIC图像转换为PNG。保持透明度和高质量。支持批量转换。',
       'heic_to_png.subtitle': '将iPhone HEIC图像转换为具有透明度和高质量的PNG。',
       'heic_to_png.upload_single': '上传HEIC文件',
@@ -40742,7 +40742,7 @@ const resources = {
       
       // HEIC to EPS - Chinese
       'heic_to_eps.title': 'HEIC转EPS转换器',
-      'heic_to_eps.meta_title': '免费HEIC转EPS转换器在线',
+      'heic_to_eps.meta_title': '免费HEIC转EPS转换器 Online',
       'heic_to_eps.meta_description': '免费在线将HEIC图像转换为EPS。生成适合打印的EPS文件，用于桌面出版（DTP）、包装和文档。快速、可靠，支持批量转换。',
       'heic_to_eps.subtitle': '将iPhone HEIC图像转换为适合专业出版和文档工作流程的打印就绪EPS文件。',
       'heic_to_eps.upload_single': '上传HEIC文件',
@@ -40798,7 +40798,7 @@ const resources = {
       
       // HEIC to WebP - Chinese
       'heic_to_webp.title': 'HEIC转WEBP转换器',
-      'heic_to_webp.meta_title': '免费HEIC转WEBP转换器在线',
+      'heic_to_webp.meta_title': '免费HEIC转WebP转换器 Online',
       'heic_to_webp.meta_description': '免费在线将HEIC图像（iPhone照片）转换为现代WEBP格式。快速、安全的HEIC转WEBP转换器，支持批量转换和可调质量。',
       'heic_to_webp.subtitle': '将Apple HEIC照片转换为高效的WEBP图像，用于Web和应用程序。快速、安全、免费，支持批量处理。',
       'heic_to_webp.upload_single': '上传HEIC文件',
