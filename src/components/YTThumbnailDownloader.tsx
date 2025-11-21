@@ -68,32 +68,32 @@ export const YTThumbnailDownloader: React.FC = () => {
   const generateThumbnailUrls = (id: string): ThumbnailQuality[] => {
     return [
       {
-        name: t('yt_thumbnail.default_title'),
-        resolution: t('yt_thumbnail.default_desc'),
+        name: t('yt_thumbnail.quality_default'),
+        resolution: t('yt_thumbnail.resolution_default'),
         url: `https://img.youtube.com/vi/${id}/default.jpg`,
         quality: 'default'
       },
       {
-        name: t('yt_thumbnail.mqdefault_title'),
-        resolution: t('yt_thumbnail.mqdefault_desc'),
+        name: t('yt_thumbnail.quality_medium'),
+        resolution: t('yt_thumbnail.resolution_medium'),
         url: `https://img.youtube.com/vi/${id}/mqdefault.jpg`,
         quality: 'mqdefault'
       },
       {
-        name: t('yt_thumbnail.hqdefault_title'),
-        resolution: t('yt_thumbnail.hqdefault_desc'),
+        name: t('yt_thumbnail.quality_high'),
+        resolution: t('yt_thumbnail.resolution_high'),
         url: `https://img.youtube.com/vi/${id}/hqdefault.jpg`,
         quality: 'hqdefault'
       },
       {
-        name: t('yt_thumbnail.sddefault_title'),
-        resolution: t('yt_thumbnail.sddefault_desc'),
+        name: t('yt_thumbnail.quality_standard'),
+        resolution: t('yt_thumbnail.resolution_standard'),
         url: `https://img.youtube.com/vi/${id}/sddefault.jpg`,
         quality: 'sddefault'
       },
       {
-        name: t('yt_thumbnail.maxresdefault_title'),
-        resolution: t('yt_thumbnail.maxresdefault_desc'),
+        name: t('yt_thumbnail.quality_max'),
+        resolution: t('yt_thumbnail.resolution_max'),
         url: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
         quality: 'maxresdefault'
       }
@@ -209,54 +209,54 @@ export const YTThumbnailDownloader: React.FC = () => {
   };
 
   const heroFeatureBadges = [
-    { icon: Zap, label: t('yt_thumbnail.feature2_title') },
-    { icon: Shield, label: t('yt_thumbnail.feature3_title') },
-    { icon: Clock, label: 'No Registration' },
-    { icon: Globe, label: 'All YouTube URLs' }
+    { icon: Zap, label: t('yt_thumbnail.hero_badge_instant') },
+    { icon: Shield, label: t('yt_thumbnail.hero_badge_free') },
+    { icon: Clock, label: t('yt_thumbnail.hero_badge_no_reg') },
+    { icon: Globe, label: t('yt_thumbnail.hero_badge_all_urls') }
   ];
 
   const featureCards = [
     {
-      title: t('yt_thumbnail.feature1_title'),
-      description: t('yt_thumbnail.feature1_desc'),
+      title: t('yt_thumbnail.feature_all_urls_title'),
+      description: t('yt_thumbnail.feature_all_urls_desc'),
       color: 'bg-red-100',
       icon: LinkIcon
     },
     {
-      title: t('yt_thumbnail.feature1_title'),
-      description: t('yt_thumbnail.feature1_desc'),
+      title: t('yt_thumbnail.feature_qualities_title'),
+      description: t('yt_thumbnail.feature_qualities_desc'),
       color: 'bg-rose-100',
       icon: ImageIcon
     },
     {
-      title: t('yt_thumbnail.feature2_title'),
-      description: t('yt_thumbnail.feature2_desc'),
+      title: t('yt_thumbnail.feature_instant_title'),
+      description: t('yt_thumbnail.feature_instant_desc'),
       color: 'bg-pink-100',
       icon: Download
     },
     {
-      title: t('yt_thumbnail.feature4_title'),
-      description: t('yt_thumbnail.feature4_desc'),
+      title: t('yt_thumbnail.feature_creators_title'),
+      description: t('yt_thumbnail.feature_creators_desc'),
       color: 'bg-red-100',
       icon: Sparkles
     }
   ];
 
   const perfectFor = [
-    t('yt_thumbnail.use_case1_title'),
-    t('yt_thumbnail.use_case2_title'),
-    t('yt_thumbnail.use_case3_title'),
-    t('yt_thumbnail.use_case4_title'),
-    'Marketing professionals',
-    'YouTube channel owners'
+    t('yt_thumbnail.perfect_for_1'),
+    t('yt_thumbnail.perfect_for_2'),
+    t('yt_thumbnail.perfect_for_3'),
+    t('yt_thumbnail.perfect_for_4'),
+    t('yt_thumbnail.perfect_for_5'),
+    t('yt_thumbnail.perfect_for_6')
   ];
 
   const qualityDetails = [
-    { label: t('yt_thumbnail.default_title'), resolution: '120×90' },
-    { label: t('yt_thumbnail.mqdefault_title'), resolution: '320×180' },
-    { label: t('yt_thumbnail.hqdefault_title'), resolution: '480×360' },
-    { label: t('yt_thumbnail.sddefault_title'), resolution: '640×480' },
-    { label: t('yt_thumbnail.maxresdefault_title'), resolution: '1280×720+' }
+    { label: t('yt_thumbnail.quality_default'), resolution: t('yt_thumbnail.resolution_default') },
+    { label: t('yt_thumbnail.quality_medium'), resolution: t('yt_thumbnail.resolution_medium') },
+    { label: t('yt_thumbnail.quality_high'), resolution: t('yt_thumbnail.resolution_high') },
+    { label: t('yt_thumbnail.quality_standard'), resolution: t('yt_thumbnail.resolution_standard') },
+    { label: t('yt_thumbnail.quality_max'), resolution: t('yt_thumbnail.resolution_max') }
   ];
 
   const pageJsonLd = {
@@ -452,16 +452,16 @@ export const YTThumbnailDownloader: React.FC = () => {
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
-                        {isLoadingMetadata ? t('yt_thumbnail.downloading') : videoMetadata?.author || 'Unknown channel'}
+                        {isLoadingMetadata ? t('yt_thumbnail.loading') : videoMetadata?.author || t('yt_thumbnail.unknown_channel')}
                       </span>
                     </div>
 
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-600">{t('yt_thumbnail.faq6_q')}:</span>
+                        <span className="text-sm text-gray-600">{t('yt_thumbnail.channel_id')}</span>
                         <div className="flex items-center gap-2">
                           <span className="text-xs font-mono text-gray-800 truncate max-w-[140px]">
-                            {videoMetadata?.channelId || 'N/A'}
+                            {videoMetadata?.channelId || t('yt_thumbnail.na')}
                           </span>
                           <button
                             onClick={handleCopyChannelId}
@@ -682,10 +682,10 @@ export const YTThumbnailDownloader: React.FC = () => {
                 </div>
 
                 <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">
-                  {t('yt_thumbnail.faq2_q')}
+                  {t('yt_thumbnail.resolutions_title')}
                 </h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  YouTube provides multiple thumbnail resolutions for every video. Our downloader retrieves all official options, helping you find the exact size you need for any screen or platform.
+                  {t('yt_thumbnail.resolutions_desc')}
                 </p>
 
                 <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">{t('yt_thumbnail.use_cases_title')}</h3>
@@ -703,26 +703,26 @@ export const YTThumbnailDownloader: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 mt-10 mb-4 text-center">{t('yt_thumbnail.faq_title')}</h3>
                 <div className="space-y-4 text-gray-700">
                   <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq3_q')}</h4>
-                    <p>{t('yt_thumbnail.faq3_a')}</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq_q3')}</h4>
+                    <p>{t('yt_thumbnail.faq_a3')}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.benefit1_title')}</h4>
-                    <p>{t('yt_thumbnail.benefit1_desc')}</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq_q4')}</h4>
+                    <p>{t('yt_thumbnail.faq_a4')}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq2_q')}</h4>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq_q2')}</h4>
                     <p>
-                      {t('yt_thumbnail.faq2_a')}
+                      {t('yt_thumbnail.faq_a2')}
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq1_q')}</h4>
-                    <p>{t('yt_thumbnail.faq1_a')}</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq_q1')}</h4>
+                    <p>{t('yt_thumbnail.faq_a1')}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq5_q')}</h4>
-                    <p>{t('yt_thumbnail.faq5_a')}</p>
+                    <h4 className="font-semibold text-lg text-gray-900 mb-2">{t('yt_thumbnail.faq_q5')}</h4>
+                    <p>{t('yt_thumbnail.faq_a5')}</p>
                   </div>
                 </div>
               </div>
