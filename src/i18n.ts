@@ -2603,7 +2603,7 @@ const resources = {
       
       // HEIC to SVG
       'heic_to_svg.title': 'HEIC to SVG Converter',
-      'heic_to_svg.meta_title': 'Free HEIC to SVG Converter Online ',
+      'heic_to_svg.meta_title': 'Free HEIC to SVG Converter Online',
       'heic_to_svg.meta_description': 'Convert HEIC (High Efficiency Image Container) files to SVG format online for free. Transform Apple iPhone photos and HEIF images into scalable vector graphics. Free online converter with batch support powered by pillow-heif and ImageMagick.',
       'heic_to_svg.subtitle': 'Convert HEIC images to SVG scalable vector graphics format. Transform Apple iPhone photos into vector graphics suitable for web, design, and universal compatibility.',
       'heic_to_svg.heading': 'Convert HEIC to SVG',
@@ -7907,7 +7907,7 @@ const resources = {
       
       // HEIC to SVG
       'heic_to_svg.title': 'Konwerter HEIC na SVG',
-      'heic_to_svg.meta_title': 'Bezpłatny Konwerter HEIC na SVG Online - Konwertuj Obrazy Apple HEIC na Grafiki Wektorowe ',
+      'heic_to_svg.meta_title': 'Bezpłatny Konwerter HEIC na SVG Online',
       'heic_to_svg.meta_description': 'Konwertuj pliki HEIC (High Efficiency Image Container) na format SVG online za darmo. Przekształć zdjęcia z iPhone Apple i obrazy HEIF w skalowalne grafiki wektorowe. Bezpłatny konwerter online z obsługą wsadową zasilany przez pillow-heif i ImageMagick.',
       'heic_to_svg.subtitle': 'Konwertuj obrazy HEIC na skalowalny format grafik wektorowych SVG. Przekształć zdjęcia z iPhone Apple w grafiki wektorowe odpowiednie dla webu, projektowania i uniwersalnej kompatybilności.',
       'heic_to_svg.heading': 'Konwertuj HEIC na SVG',
@@ -12972,7 +12972,7 @@ const resources = {
       
       // HEIC to SVG
       'heic_to_svg.title': 'HEIC zu SVG Konverter',
-      'heic_to_svg.meta_title': 'Kostenloser HEIC zu SVG Konverter Online - Apple HEIC Bilder zu Skalierbare Vektorgrafiken konvertieren ',
+      'heic_to_svg.meta_title': 'Kostenloser HEIC zu SVG Konverter Online',
       'heic_to_svg.meta_description': 'Konvertieren Sie HEIC (High Efficiency Image Container) Dateien online kostenlos in das SVG-Format. Verwandeln Sie Apple iPhone Fotos und HEIF Bilder in skalierbare Vektorgrafiken. Kostenloser Online-Konverter mit Stapelunterstützung, angetrieben von pillow-heif und ImageMagick.',
       'heic_to_svg.subtitle': 'Konvertieren Sie HEIC Bilder in das SVG-Format für skalierbare Vektorgrafiken. Verwandeln Sie Apple iPhone Fotos in Vektorgrafiken für Web, Design und universelle Kompatibilität.',
       'heic_to_svg.heading': 'HEIC zu SVG konvertieren',
@@ -21853,7 +21853,7 @@ const resources = {
       
       // HEIC to SVG - French
       'heic_to_svg.title': 'Convertisseur HEIC vers SVG',
-      'heic_to_svg.meta_title': 'Convertisseur HEIC vers SVG Gratuit En Ligne',
+      'heic_to_svg.meta_title': 'Convertisseur HEIC vers SVG Gratuit Online',
       'heic_to_svg.meta_description': 'Convertissez les fichiers HEIC (High Efficiency Image Container) au format SVG en ligne gratuitement. Transformez les photos Apple iPhone et les images HEIF en graphiques vectoriels scalables. Convertisseur en ligne gratuit avec support par lots alimenté par pillow-heif et ImageMagick.',
       'heic_to_svg.subtitle': 'Convertissez les images HEIC au format de graphiques vectoriels scalables SVG. Transformez les photos Apple iPhone en graphiques vectoriels adaptés au web, au design et à la compatibilité universelle.',
       'heic_to_svg.heading': 'Convertir HEIC en SVG',
@@ -29410,7 +29410,7 @@ const resources = {
       
       // HEIC to SVG - Vietnamese
       'heic_to_svg.title': 'Bộ Chuyển Đổi HEIC sang SVG',
-      'heic_to_svg.meta_title': 'Bộ Chuyển Đổi HEIC sang SVG Miễn Phí Trực Tuyến',
+      'heic_to_svg.meta_title': 'Bộ Chuyển Đổi HEIC sang SVG Miễn Phí Online',
       'heic_to_svg.meta_description': 'Chuyển đổi file HEIC (High Efficiency Image Container) sang định dạng SVG trực tuyến miễn phí. Chuyển đổi ảnh Apple iPhone và hình ảnh HEIF thành đồ họa vector có thể mở rộng. Bộ chuyển đổi trực tuyến miễn phí với hỗ trợ hàng loạt được cung cấp bởi pillow-heif và ImageMagick.',
       'heic_to_svg.subtitle': 'Chuyển đổi hình ảnh HEIC sang định dạng đồ họa vector có thể mở rộng SVG. Chuyển đổi ảnh Apple iPhone thành đồ họa vector phù hợp cho web, thiết kế và tương thích phổ quát.',
       'heic_to_svg.heading': 'Chuyển Đổi HEIC sang SVG',
@@ -33062,7 +33062,7 @@ const resources = {
       
       // CR2 to WebP - Русский
       'cr2_to_webp.title': 'Конвертер CR2 в WebP',
-      'cr2_to_webp.meta_title': 'Бесплатный конвертер CR2 в WebP - Конвертация Canon RAW в формат WebP',
+      'cr2_to_webp.meta_title': 'Бесплатный конвертер CR2 в WebP Online',
       'cr2_to_webp.meta_description': 'Бесплатный онлайн конвертер CR2 в WebP. Конвертируйте файлы камеры Canon RAW в формат WebP с настройками качества (высокое, среднее, низкое) и режимом без потерь. Профессиональная конвертация RAW изображений, регистрация не требуется.',
       'cr2_to_webp.subtitle': 'Конвертируйте RAW изображения Canon CR2 в формат WebP для веб-оптимизации. Преобразуйте профессиональные файлы камеры в веб-готовые изображения с превосходным сжатием.',
       'cr2_to_webp.upload_single': 'Загрузить файл CR2',
@@ -33139,7 +33139,7 @@ const resources = {
       
       // HEIC to SVG - Russian
       'heic_to_svg.title': 'Конвертер HEIC в SVG',
-      'heic_to_svg.meta_title': 'Бесплатный Конвертер HEIC в SVG Онлайн',
+      'heic_to_svg.meta_title': 'Бесплатный Конвертер HEIC в SVG Online',
       'heic_to_svg.meta_description': 'Конвертируйте файлы HEIC (High Efficiency Image Container) в формат SVG онлайн бесплатно. Преобразуйте фотографии Apple iPhone и изображения HEIF в масштабируемую векторную графику. Бесплатный онлайн конвертер с поддержкой пакетной обработки, работающий на pillow-heif и ImageMagick.',
       'heic_to_svg.subtitle': 'Конвертируйте изображения HEIC в формат масштабируемой векторной графики SVG. Преобразуйте фотографии Apple iPhone в векторную графику, подходящую для веб, дизайна и универсальной совместимости.',
       'heic_to_svg.heading': 'Конвертировать HEIC в SVG',
@@ -34912,7 +34912,7 @@ const resources = {
       
       // CR2 to WebP - العربية
       'cr2_to_webp.title': 'محول CR2 إلى WebP',
-      'cr2_to_webp.meta_title': 'محول CR2 إلى WebP مجاني - تحويل Canon RAW إلى تنسيق WebP',
+      'cr2_to_webp.meta_title': 'محول CR2 إلى WebP مجاني Online',
       'cr2_to_webp.meta_description': 'محول CR2 إلى WebP مجاني على الإنترنت. قم بتحويل ملفات كاميرا Canon RAW إلى تنسيق WebP مع إعدادات الجودة (عالية، متوسطة، منخفضة) ووضع بدون فقدان. تحويل صور RAW احترافية، لا حاجة للتسجيل.',
       'cr2_to_webp.subtitle': 'قم بتحويل صور Canon CR2 الخام إلى تنسيق WebP لتحسين الويب. قم بتحويل ملفات الكاميرا الاحترافية إلى صور جاهزة للويب مع ضغط متفوق.',
       'cr2_to_webp.upload_single': 'رفع ملف CR2',
@@ -34989,7 +34989,7 @@ const resources = {
       
       // HEIC to SVG - Arabic
       'heic_to_svg.title': 'محول HEIC إلى SVG',
-      'heic_to_svg.meta_title': 'محول HEIC إلى SVG مجاني عبر الإنترنت',
+      'heic_to_svg.meta_title': 'محول HEIC إلى SVG مجاني Online',
       'heic_to_svg.meta_description': 'قم بتحويل ملفات HEIC (High Efficiency Image Container) إلى تنسيق SVG عبر الإنترنت مجانًا. قم بتحويل صور Apple iPhone وصور HEIF إلى رسومات متجهة قابلة للتطوير. محول مجاني عبر الإنترنت مع دعم الدفعات مدعوم من pillow-heif و ImageMagick.',
       'heic_to_svg.subtitle': 'قم بتحويل صور HEIC إلى تنسيق رسومات متجهة قابلة للتطوير SVG. قم بتحويل صور Apple iPhone إلى رسومات متجهة مناسبة للويب والتصميم والتوافق العالمي.',
       'heic_to_svg.heading': 'تحويل HEIC إلى SVG',
@@ -36766,7 +36766,7 @@ const resources = {
       
       // CR2 to WebP - ไทย
       'cr2_to_webp.title': 'ตัวแปลง CR2 เป็น WebP',
-      'cr2_to_webp.meta_title': 'ตัวแปลง CR2 เป็น WebP ฟรี - แปลง Canon RAW เป็นรูปแบบ WebP',
+      'cr2_to_webp.meta_title': 'ตัวแปลง CR2 เป็น WebP ฟรี Online',
       'cr2_to_webp.meta_description': 'ตัวแปลง CR2 เป็น WebP ออนไลน์ฟรี แปลงไฟล์กล้อง Canon RAW เป็นรูปแบบ WebP ด้วยการตั้งค่าคุณภาพ (สูง, กลาง, ต่ำ) และโหมดไม่สูญเสียข้อมูล การแปลงภาพ RAW ระดับมืออาชีพ ไม่ต้องลงทะเบียน',
       'cr2_to_webp.subtitle': 'แปลงภาพ RAW ของ Canon CR2 เป็นรูปแบบ WebP เพื่อเพิ่มประสิทธิภาพเว็บ แปลงไฟล์กล้องระดับมืออาชีพเป็นภาพพร้อมใช้งานบนเว็บด้วยการบีบอัดที่เหนือกว่า',
       'cr2_to_webp.upload_single': 'อัปโหลดไฟล์ CR2',
@@ -36843,7 +36843,7 @@ const resources = {
       
       // HEIC to SVG - Thai
       'heic_to_svg.title': 'ตัวแปลง HEIC เป็น SVG',
-      'heic_to_svg.meta_title': 'ตัวแปลง HEIC เป็น SVG ฟรีออนไลน์',
+      'heic_to_svg.meta_title': 'ตัวแปลง HEIC เป็น SVG ฟรี Online',
       'heic_to_svg.meta_description': 'แปลงไฟล์ HEIC (High Efficiency Image Container) เป็นรูปแบบ SVG ออนไลน์ฟรี แปลงรูปภาพ Apple iPhone และรูปภาพ HEIF เป็นกราฟิกแบบเวกเตอร์ที่ปรับขนาดได้ ตัวแปลงออนไลน์ฟรีพร้อมการสนับสนุนแบบกลุ่มที่ขับเคลื่อนโดย pillow-heif และ ImageMagick',
       'heic_to_svg.subtitle': 'แปลงรูปภาพ HEIC เป็นรูปแบบกราฟิกแบบเวกเตอร์ที่ปรับขนาดได้ SVG แปลงรูปภาพ Apple iPhone เป็นกราฟิกแบบเวกเตอร์ที่เหมาะสำหรับเว็บ การออกแบบ และความเข้ากันได้สากล',
       'heic_to_svg.heading': 'แปลง HEIC เป็น SVG',
@@ -38617,7 +38617,7 @@ const resources = {
       
       // CR2 to WebP - 日本語
       'cr2_to_webp.title': 'CR2からWebPへのコンバーター',
-      'cr2_to_webp.meta_title': '無料CR2からWebPへのコンバーター - Canon RAWをWebP形式に変換',
+      'cr2_to_webp.meta_title': '無料CR2からWebPへのコンバーター Online',
       'cr2_to_webp.meta_description': '無料オンラインCR2からWebPへのコンバーター。Canon RAWカメラファイルを品質設定（高、中、低）とロスレスモードでWebP形式に変換。プロ品質のRAW画像変換、登録不要。',
       'cr2_to_webp.subtitle': 'Canon CR2 RAW画像をWebP形式に変換してWeb最適化。プロフェッショナルなカメラファイルを優れた圧縮でWeb対応画像に変換します。',
       'cr2_to_webp.upload_single': 'CR2ファイルをアップロード',
@@ -38694,7 +38694,7 @@ const resources = {
       
       // HEIC to SVG - Japanese
       'heic_to_svg.title': 'HEICからSVGへのコンバーター',
-      'heic_to_svg.meta_title': '無料のHEICからSVGへのコンバーターオンライン',
+      'heic_to_svg.meta_title': '無料HEICからSVGへのコンバーター Online',
       'heic_to_svg.meta_description': 'HEIC（High Efficiency Image Container）ファイルを無料でオンラインでSVG形式に変換します。Apple iPhoneの写真やHEIF画像をスケーラブルなベクターグラフィックに変換します。pillow-heifとImageMagickによって動力を供給されるバッチサポート付きの無料オンラインコンバーター。',
       'heic_to_svg.subtitle': 'HEIC画像をSVGスケーラブルベクターグラフィック形式に変換します。Apple iPhoneの写真を、Web、デザイン、およびユニバーサル互換性に適したベクターグラフィックに変換します。',
       'heic_to_svg.heading': 'HEICをSVGに変換',
@@ -40468,7 +40468,7 @@ const resources = {
       
       // CR2 to WebP - 简体中文
       'cr2_to_webp.title': 'CR2转WebP转换器',
-      'cr2_to_webp.meta_title': '免费CR2转WebP转换器 - 将Canon RAW转换为WebP格式',
+      'cr2_to_webp.meta_title': '免费CR2转WebP转换器 Online',
       'cr2_to_webp.meta_description': '免费在线CR2转WebP转换器。将Canon RAW相机文件转换为WebP格式，支持质量设置（高、中、低）和无损模式。专业RAW图像转换，无需注册。',
       'cr2_to_webp.subtitle': '将Canon CR2原始图像转换为WebP格式以进行Web优化。将专业相机文件转换为具有卓越压缩的Web就绪图像。',
       'cr2_to_webp.upload_single': '上传CR2文件',
@@ -40545,7 +40545,7 @@ const resources = {
       
       // HEIC to SVG - Chinese
       'heic_to_svg.title': 'HEIC转SVG转换器',
-      'heic_to_svg.meta_title': '免费HEIC转SVG转换器在线',
+      'heic_to_svg.meta_title': '免费HEIC转SVG转换器 Online',
       'heic_to_svg.meta_description': '免费在线将HEIC（高效图像容器）文件转换为SVG格式。将Apple iPhone照片和HEIF图像转换为可缩放的矢量图形。由pillow-heif和ImageMagick驱动的支持批处理的免费在线转换器。',
       'heic_to_svg.subtitle': '将HEIC图像转换为SVG可缩放矢量图形格式。将Apple iPhone照片转换为适合Web、设计和通用兼容性的矢量图形。',
       'heic_to_svg.heading': '将HEIC转换为SVG',
