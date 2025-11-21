@@ -2856,7 +2856,7 @@ const resources = {
       
       // CR2 to ICO
       'cr2_to_ico.title': 'CR2 to ICO Converter',
-      'cr2_to_ico.meta_title': 'Free CR2 to ICO Converter - Convert Canon RAW to Windows Icons',
+      'cr2_to_ico.meta_title': 'Free CR2 to ICO Converter Online',
       'cr2_to_ico.meta_description': 'Free online CR2 to ICO converter. Convert Canon RAW camera files to Windows ICO icons with multiple sizes (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professional quality conversion, no registration required.',
       'cr2_to_ico.subtitle': 'Convert Canon CR2 raw images to ICO format for Windows icons. Extract high-quality icons from professional camera files.',
       'cr2_to_ico.upload_single': 'Upload CR2 File',
@@ -2941,7 +2941,7 @@ const resources = {
       
       // CR2 to WebP
       'cr2_to_webp.title': 'CR2 to WebP Converter',
-      'cr2_to_webp.meta_title': 'Free CR2 to WebP Converter - Convert Canon RAW to WebP Format',
+      'cr2_to_webp.meta_title': 'Free CR2 to WebP Converter Online',
       'cr2_to_webp.meta_description': 'Free online CR2 to WebP converter. Convert Canon RAW camera files to WebP format with quality settings (high, medium, low) and lossless mode. Professional RAW image conversion, no registration required.',
       'cr2_to_webp.subtitle': 'Convert Canon CR2 raw images to WebP format for web optimization. Transform professional camera files into web-ready images with superior compression.',
       'cr2_to_webp.upload_single': 'Upload CR2 File',
@@ -8368,7 +8368,7 @@ const resources = {
 
       // CR2 to ICO
       'cr2_to_ico.title': 'Konwerter CR2 na ICO',
-      'cr2_to_ico.meta_title': 'Darmowy Konwerter CR2 na ICO - Konwersja Canon RAW na ikony Windows',
+      'cr2_to_ico.meta_title': 'Darmowy Konwerter CR2 na ICO Online',
       'cr2_to_ico.meta_description': 'Darmowy online konwerter CR2 na ICO. Konwertuj pliki Canon RAW na ikony Windows ICO z wieloma rozmiarami (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Profesjonalna jakość konwersji, bez rejestracji.',
       'cr2_to_ico.subtitle': 'Konwertuj surowe obrazy Canon CR2 na format ICO dla ikon Windows. Wyodrębnij wysokiej jakości ikony z profesjonalnych plików aparatu.',
       'cr2_to_ico.upload_single': 'Prześlij plik CR2',
@@ -8453,7 +8453,7 @@ const resources = {
       
       // CR2 to WebP
       'cr2_to_webp.title': 'Konwerter CR2 na WebP',
-      'cr2_to_webp.meta_title': 'Darmowy Konwerter CR2 na WebP - Konwertuj Canon RAW na format WebP',
+      'cr2_to_webp.meta_title': 'Darmowy Konwerter CR2 na WebP Online',
       'cr2_to_webp.meta_description': 'Darmowy online konwerter CR2 na WebP. Konwertuj pliki Canon RAW na format WebP z ustawieniami jakości (wysoka, średnia, niska) i trybem bezstratnym. Profesjonalna konwersja obrazów RAW, bez rejestracji.',
       'cr2_to_webp.subtitle': 'Konwertuj obrazy Canon CR2 RAW na format WebP do optymalizacji sieci. Przekształć profesjonalne pliki aparatu w obrazy gotowe do sieci z lepszą kompresją.',
       'cr2_to_webp.upload_single': 'Prześlij plik CR2',
@@ -13432,7 +13432,7 @@ const resources = {
       'heif_to_jpg.seo.use_case_2_text': 'Bereiten Sie HEIF-Fotos im JPG-Format für Websites, CMS, Marktplätze und Social-Media-Plattformen vor.',
       // CR2 to ICO
       'cr2_to_ico.title': 'CR2 zu ICO Konverter',
-      'cr2_to_ico.meta_title': 'Kostenloser CR2 zu ICO Konverter - Canon RAW zu Windows Icons konvertieren',
+      'cr2_to_ico.meta_title': 'Kostenloser CR2 zu ICO Konverter Online',
       'cr2_to_ico.meta_description': 'Kostenloser Online CR2 zu ICO Konverter. Konvertieren Sie Canon RAW Kamera-Dateien zu Windows ICO Icons mit mehreren Größen (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professionelle Qualitätskonvertierung, keine Registrierung erforderlich.',
       'cr2_to_ico.subtitle': 'Konvertieren Sie Canon CR2 RAW-Bilder in das ICO-Format für Windows-Icons. Extrahieren Sie hochwertige Icons aus professionellen Kamera-Dateien.',
       'cr2_to_ico.upload_single': 'CR2-Datei hochladen',
@@ -13517,7 +13517,7 @@ const resources = {
       
       // CR2 to WebP
       'cr2_to_webp.title': 'CR2 zu WebP Konverter',
-      'cr2_to_webp.meta_title': 'Kostenloser CR2 zu WebP Konverter - Canon RAW zu WebP Format konvertieren',
+      'cr2_to_webp.meta_title': 'Kostenloser CR2 zu WebP Konverter Online',
       'cr2_to_webp.meta_description': 'Kostenloser Online CR2 zu WebP Konverter. Konvertieren Sie Canon RAW Kamera-Dateien zu WebP Format mit Qualitätseinstellungen (hoch, mittel, niedrig) und verlustfreiem Modus. Professionelle RAW-Bildkonvertierung, keine Registrierung erforderlich.',
       'cr2_to_webp.subtitle': 'Konvertieren Sie Canon CR2 RAW-Bilder zu WebP Format für Web-Optimierung. Transformieren Sie professionelle Kamera-Dateien in web-bereite Bilder mit überlegener Komprimierung.',
       'cr2_to_webp.upload_single': 'CR2 Datei hochladen',
@@ -15839,7 +15839,7 @@ const resources = {
       
       // CR2 to ICO - Bahasa Indonesia
       'cr2_to_ico.title': 'Konverter CR2 ke ICO',
-      'cr2_to_ico.meta_title': 'Konverter CR2 ke ICO Gratis - Konversi Canon RAW ke Ikon Windows',
+      'cr2_to_ico.meta_title': 'Konverter CR2 ke ICO Gratis Online',
       'cr2_to_ico.meta_description': 'Konverter CR2 ke ICO online gratis. Konversi file kamera Canon RAW ke ikon Windows ICO dengan berbagai ukuran (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Konversi berkualitas profesional, tidak perlu registrasi.',
       'cr2_to_ico.subtitle': 'Konversi gambar mentah Canon CR2 ke format ICO untuk ikon Windows. Ekstrak ikon berkualitas tinggi dari file kamera profesional.',
       'cr2_to_ico.upload_single': 'Unggah File CR2',
@@ -15924,7 +15924,7 @@ const resources = {
       
       // CR2 to WebP - Bahasa Indonesia
       'cr2_to_webp.title': 'Konverter CR2 ke WebP',
-      'cr2_to_webp.meta_title': 'Konverter CR2 ke WebP Gratis - Konversi Canon RAW ke Format WebP',
+      'cr2_to_webp.meta_title': 'Konverter CR2 ke WebP Gratis Online',
       'cr2_to_webp.meta_description': 'Konverter CR2 ke WebP online gratis. Konversi file kamera Canon RAW ke format WebP dengan pengaturan kualitas (tinggi, sedang, rendah) dan mode lossless. Konversi gambar RAW profesional, tidak perlu registrasi.',
       'cr2_to_webp.subtitle': 'Konversi gambar mentah Canon CR2 ke format WebP untuk optimasi web. Transformasikan file kamera profesional menjadi gambar siap web dengan kompresi superior.',
       'cr2_to_webp.upload_single': 'Unggah File CR2',
@@ -17818,7 +17818,7 @@ const resources = {
       
       // CR2 to ICO - Svenska
       'cr2_to_ico.title': 'CR2 till ICO-konverterare',
-      'cr2_to_ico.meta_title': 'Gratis CR2 till ICO-konverterare - Konvertera Canon RAW till Windows-ikoner',
+      'cr2_to_ico.meta_title': 'Gratis CR2 till ICO-konverterare Online',
       'cr2_to_ico.meta_description': 'Gratis online CR2 till ICO-konverterare. Konvertera Canon RAW-kamerafiler till Windows ICO-ikoner med flera storlekar (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professionell kvalitetskonvertering, ingen registrering krävs.',
       'cr2_to_ico.subtitle': 'Konvertera Canon CR2 råbilder till ICO-format för Windows-ikoner. Extrahera högkvalitativa ikoner från professionella kamerafiler.',
       'cr2_to_ico.upload_single': 'Ladda upp CR2-fil',
@@ -17903,7 +17903,7 @@ const resources = {
       
       // CR2 to WebP - Svenska
       'cr2_to_webp.title': 'CR2 till WebP-konverterare',
-      'cr2_to_webp.meta_title': 'Gratis CR2 till WebP-konverterare - Konvertera Canon RAW till WebP-format',
+      'cr2_to_webp.meta_title': 'Gratis CR2 till WebP-konverterare Online',
       'cr2_to_webp.meta_description': 'Gratis online CR2 till WebP-konverterare. Konvertera Canon RAW-kamerafiler till WebP-format med kvalitetsinställningar (hög, medel, låg) och lossless-läge. Professionell RAW-bildkonvertering, ingen registrering krävs.',
       'cr2_to_webp.subtitle': 'Konvertera Canon CR2 råbilder till WebP-format för webboptimering. Transformera professionella kamerafiler till webbklara bilder med överlägsen komprimering.',
       'cr2_to_webp.upload_single': 'Ladda upp CR2-fil',
@@ -19789,7 +19789,7 @@ const resources = {
       
       // CR2 to ICO - Español
       'cr2_to_ico.title': 'Convertidor CR2 a ICO',
-      'cr2_to_ico.meta_title': 'Convertidor CR2 a ICO Gratis - Convertir Canon RAW a Iconos de Windows',
+      'cr2_to_ico.meta_title': 'Convertidor CR2 a ICO Gratis Online',
       'cr2_to_ico.meta_description': 'Convertidor CR2 a ICO online gratis. Convierte archivos de cámara Canon RAW a iconos ICO de Windows con múltiples tamaños (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Conversión de calidad profesional, sin registro requerido.',
       'cr2_to_ico.subtitle': 'Convierte imágenes RAW de Canon CR2 al formato ICO para iconos de Windows. Extrae iconos de alta calidad de archivos de cámara profesionales.',
       'cr2_to_ico.upload_single': 'Subir Archivo CR2',
@@ -19874,7 +19874,7 @@ const resources = {
       
       // CR2 to WebP - Español
       'cr2_to_webp.title': 'Convertidor CR2 a WebP',
-      'cr2_to_webp.meta_title': 'Convertidor CR2 a WebP Gratis - Convertir Canon RAW a Formato WebP',
+      'cr2_to_webp.meta_title': 'Convertidor CR2 a WebP Gratis Online',
       'cr2_to_webp.meta_description': 'Convertidor CR2 a WebP online gratis. Convierte archivos de cámara Canon RAW a formato WebP con configuraciones de calidad (alta, media, baja) y modo sin pérdidas. Conversión de imágenes RAW profesionales, sin registro requerido.',
       'cr2_to_webp.subtitle': 'Convierte imágenes RAW de Canon CR2 al formato WebP para optimización web. Transforma archivos de cámara profesionales en imágenes listas para web con compresión superior.',
       'cr2_to_webp.upload_single': 'Subir Archivo CR2',
@@ -21691,7 +21691,7 @@ const resources = {
       
       // CR2 to ICO - Français
       'cr2_to_ico.title': 'Convertisseur CR2 vers ICO',
-      'cr2_to_ico.meta_title': 'Convertisseur CR2 vers ICO Gratuit - Convertir Canon RAW en Icônes Windows',
+      'cr2_to_ico.meta_title': 'Convertisseur CR2 vers ICO Gratuit Online',
       'cr2_to_ico.meta_description': 'Convertisseur CR2 vers ICO en ligne gratuit. Convertissez les fichiers d\'appareil photo Canon RAW en icônes ICO Windows avec plusieurs tailles (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Conversion de qualité professionnelle, aucune inscription requise.',
       'cr2_to_ico.subtitle': 'Convertissez les images RAW Canon CR2 au format ICO pour les icônes Windows. Extrayez des icônes de haute qualité à partir de fichiers d\'appareil photo professionnels.',
       'cr2_to_ico.upload_single': 'Télécharger un Fichier CR2',
@@ -21776,7 +21776,7 @@ const resources = {
       
       // CR2 to WebP - Français
       'cr2_to_webp.title': 'Convertisseur CR2 vers WebP',
-      'cr2_to_webp.meta_title': 'Convertisseur CR2 vers WebP Gratuit - Convertir Canon RAW en Format WebP',
+      'cr2_to_webp.meta_title': 'Convertisseur CR2 vers WebP Gratuit Online',
       'cr2_to_webp.meta_description': 'Convertisseur CR2 vers WebP en ligne gratuit. Convertissez les fichiers d\'appareil photo Canon RAW au format WebP avec des paramètres de qualité (élevé, moyen, faible) et mode sans perte. Conversion d\'images RAW professionnelles, aucune inscription requise.',
       'cr2_to_webp.subtitle': 'Convertissez les images RAW Canon CR2 au format WebP pour l\'optimisation web. Transformez les fichiers d\'appareil photo professionnels en images prêtes pour le web avec une compression supérieure.',
       'cr2_to_webp.upload_single': 'Télécharger un Fichier CR2',
@@ -23593,7 +23593,7 @@ const resources = {
       
       // CR2 to ICO - Italiano
       'cr2_to_ico.title': 'Convertitore CR2 in ICO',
-      'cr2_to_ico.meta_title': 'Convertitore CR2 in ICO Gratuito - Converti Canon RAW in Icone Windows',
+      'cr2_to_ico.meta_title': 'Convertitore CR2 in ICO Gratuito Online',
       'cr2_to_ico.meta_description': 'Convertitore CR2 in ICO online gratuito. Converti file fotocamera Canon RAW in icone ICO Windows con più dimensioni (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Conversione di qualità professionale, nessuna registrazione richiesta.',
       'cr2_to_ico.subtitle': 'Converti immagini RAW Canon CR2 in formato ICO per icone Windows. Estrai icone di alta qualità da file fotocamera professionali.',
       'cr2_to_ico.upload_single': 'Carica File CR2',
@@ -23678,7 +23678,7 @@ const resources = {
       
       // CR2 to WebP - Italiano
       'cr2_to_webp.title': 'Convertitore CR2 in WebP',
-      'cr2_to_webp.meta_title': 'Convertitore CR2 in WebP Gratuito - Converti Canon RAW in Formato WebP',
+      'cr2_to_webp.meta_title': 'Convertitore CR2 in WebP Gratuito Online',
       'cr2_to_webp.meta_description': 'Convertitore CR2 in WebP online gratuito. Converti file fotocamera Canon RAW in formato WebP con impostazioni di qualità (alta, media, bassa) e modalità senza perdita. Conversione di immagini RAW professionali, nessuna registrazione richiesta.',
       'cr2_to_webp.subtitle': 'Converti immagini RAW Canon CR2 in formato WebP per l\'ottimizzazione web. Trasforma file fotocamera professionali in immagini pronte per il web con compressione superiore.',
       'cr2_to_webp.upload_single': 'Carica File CR2',
@@ -25495,7 +25495,7 @@ const resources = {
       
       // CR2 to ICO - Nederlands
       'cr2_to_ico.title': 'CR2 naar ICO Converter',
-      'cr2_to_ico.meta_title': 'Gratis CR2 naar ICO Converter - Converteer Canon RAW naar Windows Pictogrammen',
+      'cr2_to_ico.meta_title': 'Gratis CR2 naar ICO Converter Online',
       'cr2_to_ico.meta_description': 'Gratis online CR2 naar ICO converter. Converteer Canon RAW camerabestanden naar Windows ICO pictogrammen met meerdere formaten (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Professionele kwaliteitsconversie, geen registratie vereist.',
       'cr2_to_ico.subtitle': 'Converteer Canon CR2 raw afbeeldingen naar ICO formaat voor Windows pictogrammen. Extraheer hoogwaardige pictogrammen uit professionele camerabestanden.',
       'cr2_to_ico.upload_single': 'Upload CR2 Bestand',
@@ -25580,7 +25580,7 @@ const resources = {
       
       // CR2 to WebP - Nederlands
       'cr2_to_webp.title': 'CR2 naar WebP Converter',
-      'cr2_to_webp.meta_title': 'Gratis CR2 naar WebP Converter - Converteer Canon RAW naar WebP Formaat',
+      'cr2_to_webp.meta_title': 'Gratis CR2 naar WebP Converter Online',
       'cr2_to_webp.meta_description': 'Gratis online CR2 naar WebP converter. Converteer Canon RAW camerabestanden naar WebP formaat met kwaliteitsinstellingen (hoog, gemiddeld, laag) en verliesvrije modus. Professionele RAW beeldconversie, geen registratie vereist.',
       'cr2_to_webp.subtitle': 'Converteer Canon CR2 raw afbeeldingen naar WebP formaat voor weboptimalisatie. Transformeer professionele camerabestanden in webklare afbeeldingen met superieure compressie.',
       'cr2_to_webp.upload_single': 'Upload CR2 Bestand',
@@ -27397,7 +27397,7 @@ const resources = {
       
       // CR2 to ICO - Português
       'cr2_to_ico.title': 'Conversor CR2 para ICO',
-      'cr2_to_ico.meta_title': 'Conversor CR2 para ICO Gratuito - Converter Canon RAW para Ícones Windows',
+      'cr2_to_ico.meta_title': 'Conversor CR2 para ICO Gratuito Online',
       'cr2_to_ico.meta_description': 'Conversor CR2 para ICO online gratuito. Converta arquivos de câmera Canon RAW para ícones ICO Windows com múltiplos tamanhos (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Conversão de qualidade profissional, sem registro necessário.',
       'cr2_to_ico.subtitle': 'Converta imagens RAW Canon CR2 para formato ICO para ícones Windows. Extraia ícones de alta qualidade de arquivos de câmera profissionais.',
       'cr2_to_ico.upload_single': 'Enviar Arquivo CR2',
@@ -27482,7 +27482,7 @@ const resources = {
       
       // CR2 to WebP - Português
       'cr2_to_webp.title': 'Conversor CR2 para WebP',
-      'cr2_to_webp.meta_title': 'Conversor CR2 para WebP Gratuito - Converter Canon RAW para Formato WebP',
+      'cr2_to_webp.meta_title': 'Conversor CR2 para WebP Gratuito Online',
       'cr2_to_webp.meta_description': 'Conversor CR2 para WebP online gratuito. Converta arquivos de câmera Canon RAW para formato WebP com configurações de qualidade (alta, média, baixa) e modo sem perdas. Conversão de imagens RAW profissionais, sem registro necessário.',
       'cr2_to_webp.subtitle': 'Converta imagens RAW Canon CR2 para formato WebP para otimização web. Transforme arquivos de câmera profissionais em imagens prontas para web com compressão superior.',
       'cr2_to_webp.upload_single': 'Enviar Arquivo CR2',
@@ -29248,7 +29248,7 @@ const resources = {
       
       // CR2 to ICO - Tiếng Việt
       'cr2_to_ico.title': 'Bộ Chuyển Đổi CR2 sang ICO',
-      'cr2_to_ico.meta_title': 'Bộ Chuyển Đổi CR2 sang ICO Miễn Phí - Chuyển Đổi Canon RAW sang Biểu Tượng Windows',
+      'cr2_to_ico.meta_title': 'Bộ Chuyển Đổi CR2 sang ICO Miễn Phí Online',
       'cr2_to_ico.meta_description': 'Bộ chuyển đổi CR2 sang ICO trực tuyến miễn phí. Chuyển đổi tệp máy ảnh Canon RAW sang biểu tượng ICO Windows với nhiều kích thước (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Chuyển đổi chất lượng chuyên nghiệp, không cần đăng ký.',
       'cr2_to_ico.subtitle': 'Chuyển đổi hình ảnh RAW Canon CR2 sang định dạng ICO cho biểu tượng Windows. Trích xuất biểu tượng chất lượng cao từ tệp máy ảnh chuyên nghiệp.',
       'cr2_to_ico.upload_single': 'Tải Lên Tệp CR2',
@@ -29333,7 +29333,7 @@ const resources = {
       
       // CR2 to WebP - Tiếng Việt
       'cr2_to_webp.title': 'Bộ Chuyển Đổi CR2 sang WebP',
-      'cr2_to_webp.meta_title': 'Bộ Chuyển Đổi CR2 sang WebP Miễn Phí - Chuyển Đổi Canon RAW sang Định Dạng WebP',
+      'cr2_to_webp.meta_title': 'Bộ Chuyển Đổi CR2 sang WebP Miễn Phí Online',
       'cr2_to_webp.meta_description': 'Bộ chuyển đổi CR2 sang WebP trực tuyến miễn phí. Chuyển đổi tệp máy ảnh Canon RAW sang định dạng WebP với cài đặt chất lượng (cao, trung bình, thấp) và chế độ không mất dữ liệu. Chuyển đổi hình ảnh RAW chuyên nghiệp, không cần đăng ký.',
       'cr2_to_webp.subtitle': 'Chuyển đổi hình ảnh RAW Canon CR2 sang định dạng WebP để tối ưu hóa web. Chuyển đổi tệp máy ảnh chuyên nghiệp thành hình ảnh sẵn sàng cho web với nén vượt trội.',
       'cr2_to_webp.upload_single': 'Tải Lên Tệp CR2',
@@ -31105,7 +31105,7 @@ const resources = {
       
       // CR2 to ICO - Türkçe
       'cr2_to_ico.title': 'CR2\'den ICO\'ya Dönüştürücü',
-      'cr2_to_ico.meta_title': 'Ücretsiz CR2\'den ICO\'ya Dönüştürücü - Canon RAW\'ı Windows İkonlarına Dönüştür',
+      'cr2_to_ico.meta_title': 'Ücretsiz CR2\'den ICO\'ya Dönüştürücü Online',
       'cr2_to_ico.meta_description': 'Ücretsiz online CR2\'den ICO\'ya dönüştürücü. Canon RAW kamera dosyalarını birden fazla boyutta (16x16, 32x32, 48x48, 64x64, 128x128, 256x256) Windows ICO ikonlarına dönüştürün. Profesyonel kalite dönüşüm, kayıt gerekmez.',
       'cr2_to_ico.subtitle': 'Canon CR2 ham görüntülerini Windows ikonları için ICO formatına dönüştürün. Profesyonel kamera dosyalarından yüksek kaliteli ikonlar çıkarın.',
       'cr2_to_ico.upload_single': 'CR2 Dosyası Yükle',
@@ -31190,7 +31190,7 @@ const resources = {
       
       // CR2 to WebP - Türkçe
       'cr2_to_webp.title': 'CR2\'den WebP\'ye Dönüştürücü',
-      'cr2_to_webp.meta_title': 'Ücretsiz CR2\'den WebP\'ye Dönüştürücü - Canon RAW\'ı WebP Formatına Dönüştür',
+      'cr2_to_webp.meta_title': 'Ücretsiz CR2\'den WebP\'ye Dönüştürücü Online',
       'cr2_to_webp.meta_description': 'Ücretsiz online CR2\'den WebP\'ye dönüştürücü. Canon RAW kamera dosyalarını kalite ayarları (yüksek, orta, düşük) ve kayıpsız mod ile WebP formatına dönüştürün. Profesyonel RAW görüntü dönüşümü, kayıt gerekmez.',
       'cr2_to_webp.subtitle': 'Canon CR2 ham görüntülerini web optimizasyonu için WebP formatına dönüştürün. Profesyonel kamera dosyalarını üstün sıkıştırma ile web hazır görüntülere dönüştürün.',
       'cr2_to_webp.upload_single': 'CR2 Dosyası Yükle',
@@ -32977,7 +32977,7 @@ const resources = {
       
       // CR2 to ICO - Русский
       'cr2_to_ico.title': 'Конвертер CR2 в ICO',
-      'cr2_to_ico.meta_title': 'Бесплатный конвертер CR2 в ICO - Конвертация Canon RAW в иконки Windows',
+      'cr2_to_ico.meta_title': 'Бесплатный конвертер CR2 в ICO Online',
       'cr2_to_ico.meta_description': 'Бесплатный онлайн конвертер CR2 в ICO. Конвертируйте файлы камеры Canon RAW в иконки Windows ICO с несколькими размерами (16x16, 32x32, 48x48, 64x64, 128x128, 256x256). Профессиональное качество конвертации, регистрация не требуется.',
       'cr2_to_ico.subtitle': 'Конвертируйте RAW изображения Canon CR2 в формат ICO для иконок Windows. Извлекайте высококачественные иконки из профессиональных файлов камеры.',
       'cr2_to_ico.upload_single': 'Загрузить файл CR2',
@@ -34827,7 +34827,7 @@ const resources = {
       
       // CR2 to ICO - العربية
       'cr2_to_ico.title': 'محول CR2 إلى ICO',
-      'cr2_to_ico.meta_title': 'محول CR2 إلى ICO مجاني - تحويل Canon RAW إلى أيقونات Windows',
+      'cr2_to_ico.meta_title': 'محول CR2 إلى ICO مجاني Online',
       'cr2_to_ico.meta_description': 'محول CR2 إلى ICO مجاني على الإنترنت. قم بتحويل ملفات كاميرا Canon RAW إلى أيقونات Windows ICO بأحجام متعددة (16x16، 32x32، 48x48، 64x64، 128x128، 256x256). تحويل بجودة احترافية، لا حاجة للتسجيل.',
       'cr2_to_ico.subtitle': 'قم بتحويل صور Canon CR2 الخام إلى تنسيق ICO لأيقونات Windows. استخرج أيقونات عالية الجودة من ملفات الكاميرا الاحترافية.',
       'cr2_to_ico.upload_single': 'رفع ملف CR2',
@@ -36681,7 +36681,7 @@ const resources = {
       
       // CR2 to ICO - ไทย
       'cr2_to_ico.title': 'ตัวแปลง CR2 เป็น ICO',
-      'cr2_to_ico.meta_title': 'ตัวแปลง CR2 เป็น ICO ฟรี - แปลง Canon RAW เป็นไอคอน Windows',
+      'cr2_to_ico.meta_title': 'ตัวแปลง CR2 เป็น ICO ฟรี Online',
       'cr2_to_ico.meta_description': 'ตัวแปลง CR2 เป็น ICO ออนไลน์ฟรี แปลงไฟล์กล้อง Canon RAW เป็นไอคอน Windows ICO ด้วยหลายขนาด (16x16, 32x32, 48x48, 64x64, 128x128, 256x256) การแปลงคุณภาพระดับมืออาชีพ ไม่ต้องลงทะเบียน',
       'cr2_to_ico.subtitle': 'แปลงภาพ RAW ของ Canon CR2 เป็นรูปแบบ ICO สำหรับไอคอน Windows แยกไอคอนคุณภาพสูงจากไฟล์กล้องระดับมืออาชีพ',
       'cr2_to_ico.upload_single': 'อัปโหลดไฟล์ CR2',
@@ -38532,7 +38532,7 @@ const resources = {
       
       // CR2 to ICO - 日本語
       'cr2_to_ico.title': 'CR2からICOへのコンバーター',
-      'cr2_to_ico.meta_title': '無料CR2からICOへのコンバーター - Canon RAWをWindowsアイコンに変換',
+      'cr2_to_ico.meta_title': '無料CR2からICOへのコンバーター Online',
       'cr2_to_ico.meta_description': '無料オンラインCR2からICOへのコンバーター。Canon RAWカメラファイルを複数のサイズ（16x16、32x32、48x48、64x64、128x128、256x256）のWindows ICOアイコンに変換。プロ品質の変換、登録不要。',
       'cr2_to_ico.subtitle': 'Canon CR2 RAW画像をWindowsアイコン用のICO形式に変換。プロフェッショナルなカメラファイルから高品質なアイコンを抽出。',
       'cr2_to_ico.upload_single': 'CR2ファイルをアップロード',
@@ -40383,7 +40383,7 @@ const resources = {
       
       // CR2 to ICO - 简体中文
       'cr2_to_ico.title': 'CR2转ICO转换器',
-      'cr2_to_ico.meta_title': '免费CR2转ICO转换器 - 将Canon RAW转换为Windows图标',
+      'cr2_to_ico.meta_title': '免费CR2转ICO转换器 Online',
       'cr2_to_ico.meta_description': '免费在线CR2转ICO转换器。将Canon RAW相机文件转换为多种尺寸（16x16、32x32、48x48、64x64、128x128、256x256）的Windows ICO图标。专业质量转换，无需注册。',
       'cr2_to_ico.subtitle': '将Canon CR2原始图像转换为Windows图标的ICO格式。从专业相机文件中提取高质量图标。',
       'cr2_to_ico.upload_single': '上传CR2文件',

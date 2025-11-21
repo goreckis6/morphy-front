@@ -25776,6 +25776,2550 @@ const samplePagesResources: Record<string, SamplePageTranslations> = {
             description: 'Unduh file sampel XLS Microsoft Excel gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan spreadsheet, konversi XLS, dan alat analisis data Anda.'
           },
           about_description: 'Ini adalah file uji XLS (Microsoft Excel) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        xlsx: {
+          meta: {
+            title: 'Unduh File Sampel XLSX Gratis - File Microsoft Excel | MorphyHub',
+            description: 'Unduh file sampel XLSX Microsoft Excel gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan spreadsheet, konversi XLSX, dan alat analisis data.',
+            keywords: 'file sampel XLSX, file uji XLSX, unduh sampel XLSX, file uji XLSX gratis, sampel Microsoft Excel, sampel spreadsheet'
+          },
+          schema: {
+            name: 'File Sampel XLSX Gratis - Unduh File Microsoft Excel Uji',
+            description: 'Unduh file sampel XLSX Microsoft Excel gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan spreadsheet, konversi XLSX, dan alat analisis data.'
+          },
+          hero: {
+            title: 'File Sampel XLSX',
+            description: 'Unduh file sampel XLSX Microsoft Excel gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan spreadsheet, konversi XLSX, dan alat analisis data Anda.'
+          },
+          about_description: 'Ini adalah file uji XLSX (Microsoft Excel) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        xml: {
+          meta: {
+            title: 'Unduh File Sampel XML Gratis - File Extensible Markup Language | MorphyHub',
+            description: 'Unduh file sampel XML Extensible Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan XML, konversi XML, dan alat analisis data terstruktur.',
+            keywords: 'file sampel XML, file uji XML, unduh sampel XML, file uji XML gratis, sampel Extensible Markup Language, sampel data terstruktur'
+          },
+          schema: {
+            name: 'File Sampel XML Gratis - Unduh File Extensible Markup Language Uji',
+            description: 'Unduh file sampel XML Extensible Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan XML, konversi XML, dan alat analisis data terstruktur.'
+          },
+          hero: {
+            title: 'File Sampel XML',
+            description: 'Unduh file sampel XML Extensible Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan XML, konversi XML, dan alat analisis data terstruktur Anda.'
+          },
+          about_description: 'Ini adalah file uji XML (Extensible Markup Language) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ods: {
+          meta: {
+            title: 'Unduh File Sampel ODS Gratis - File OpenDocument Spreadsheet | MorphyHub',
+            description: 'Unduh file sampel ODS OpenDocument Spreadsheet gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan spreadsheet, konversi ODS, dan alat analisis data.',
+            keywords: 'file sampel ODS, file uji ODS, unduh sampel ODS, file uji ODS gratis, sampel OpenDocument Spreadsheet, sampel spreadsheet'
+          },
+          schema: {
+            name: 'File Sampel ODS Gratis - Unduh File OpenDocument Spreadsheet Uji',
+            description: 'Unduh file sampel ODS OpenDocument Spreadsheet gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan spreadsheet, konversi ODS, dan alat analisis data.'
+          },
+          hero: {
+            title: 'File Sampel ODS',
+            description: 'Unduh file sampel ODS OpenDocument Spreadsheet gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan spreadsheet, konversi ODS, dan alat analisis data Anda.'
+          },
+          about_description: 'Ini adalah file uji ODS (OpenDocument Spreadsheet) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        zip: {
+          meta: {
+            title: 'Unduh File Sampel ZIP Gratis - File Archive ZIP | MorphyHub',
+            description: 'Unduh file sampel ZIP archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi ZIP, dan alat pemrosesan file archive.',
+            keywords: 'file sampel ZIP, file uji ZIP, unduh sampel ZIP, file uji ZIP gratis, sampel archive ZIP, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel ZIP Gratis - Unduh File Archive ZIP Uji',
+            description: 'Unduh file sampel ZIP archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi ZIP, dan alat pemrosesan file archive.'
+          },
+          hero: {
+            title: 'File Sampel ZIP',
+            description: 'Unduh file sampel ZIP archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi ZIP, dan alat pemrosesan file archive Anda.'
+          },
+          about_description: 'Ini adalah file uji ZIP archive dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        json: {
+          meta: {
+            title: 'Unduh File Sampel JSON Gratis - File JavaScript Object Notation | MorphyHub',
+            description: 'Unduh file sampel JSON JavaScript Object Notation gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data JSON, konversi JSON, dan alat analisis data terstruktur.',
+            keywords: 'file sampel JSON, file uji JSON, unduh sampel JSON, file uji JSON gratis, sampel JavaScript Object Notation, sampel data terstruktur'
+          },
+          schema: {
+            name: 'File Sampel JSON Gratis - Unduh File JavaScript Object Notation Uji',
+            description: 'Unduh file sampel JSON JavaScript Object Notation gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data JSON, konversi JSON, dan alat analisis data terstruktur.'
+          },
+          hero: {
+            title: 'File Sampel JSON',
+            description: 'Unduh file sampel JSON JavaScript Object Notation gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data JSON, konversi JSON, dan alat analisis data terstruktur Anda.'
+          },
+          about_description: 'Ini adalah file uji JSON (JavaScript Object Notation) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        java: {
+          meta: {
+            title: 'Unduh File Sampel JAVA Gratis - File Java Source Code | MorphyHub',
+            description: 'Unduh file sampel JAVA Java Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi Java, analisis kode Java, dan alat pengembangan aplikasi.',
+            keywords: 'file sampel JAVA, file uji JAVA, unduh sampel JAVA, file uji JAVA gratis, sampel Java Source Code, sampel kode Java'
+          },
+          schema: {
+            name: 'File Sampel JAVA Gratis - Unduh File Java Source Code Uji',
+            description: 'Unduh file sampel JAVA Java Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi Java, analisis kode Java, dan alat pengembangan aplikasi.'
+          },
+          hero: {
+            title: 'File Sampel JAVA',
+            description: 'Unduh file sampel JAVA Java Source Code gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi Java, analisis kode Java, dan alat pengembangan aplikasi Anda.'
+          },
+          about_description: 'Ini adalah file uji JAVA (Java Source Code) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        jpeg: {
+          meta: {
+            title: 'Unduh File Sampel JPEG Gratis - File Gambar JPEG | MorphyHub',
+            description: 'Unduh file sampel JPEG gambar gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi JPEG, dan alat penampil gambar.',
+            keywords: 'file sampel JPEG, file uji JPEG, unduh sampel JPEG, file uji JPEG gratis, sampel gambar JPEG, sampel foto'
+          },
+          schema: {
+            name: 'File Sampel JPEG Gratis - Unduh File Gambar JPEG Uji',
+            description: 'Unduh file sampel JPEG gambar gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi JPEG, dan alat penampil gambar.'
+          },
+          hero: {
+            title: 'File Sampel JPEG',
+            description: 'Unduh file sampel JPEG gambar gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi JPEG, dan alat penampil gambar Anda.'
+          },
+          about_description: 'Ini adalah file uji JPEG gambar dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        jpg: {
+          meta: {
+            title: 'Unduh File Sampel JPG Gratis - File Gambar JPG | MorphyHub',
+            description: 'Unduh file sampel JPG gambar gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi JPG, dan alat penampil gambar.',
+            keywords: 'file sampel JPG, file uji JPG, unduh sampel JPG, file uji JPG gratis, sampel gambar JPG, sampel foto'
+          },
+          schema: {
+            name: 'File Sampel JPG Gratis - Unduh File Gambar JPG Uji',
+            description: 'Unduh file sampel JPG gambar gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi JPG, dan alat penampil gambar.'
+          },
+          hero: {
+            title: 'File Sampel JPG',
+            description: 'Unduh file sampel JPG gambar gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi JPG, dan alat penampil gambar Anda.'
+          },
+          about_description: 'Ini adalah file uji JPG gambar dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        js: {
+          meta: {
+            title: 'Unduh File Sampel JS Gratis - File JavaScript | MorphyHub',
+            description: 'Unduh file sampel JS JavaScript gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi JavaScript, analisis kode JS, dan alat pengembangan web.',
+            keywords: 'file sampel JS, file uji JS, unduh sampel JS, file uji JS gratis, sampel JavaScript, sampel kode JavaScript'
+          },
+          schema: {
+            name: 'File Sampel JS Gratis - Unduh File JavaScript Uji',
+            description: 'Unduh file sampel JS JavaScript gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi JavaScript, analisis kode JS, dan alat pengembangan web.'
+          },
+          hero: {
+            title: 'File Sampel JS',
+            description: 'Unduh file sampel JS JavaScript gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji eksekusi JavaScript, analisis kode JS, dan alat pengembangan web Anda.'
+          },
+          about_description: 'Ini adalah file uji JS (JavaScript) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        html: {
+          meta: {
+            title: 'Unduh File Sampel HTML Gratis - File HyperText Markup Language | MorphyHub',
+            description: 'Unduh file sampel HTML HyperText Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji rendering HTML, konversi HTML, dan alat pengembangan web.',
+            keywords: 'file sampel HTML, file uji HTML, unduh sampel HTML, file uji HTML gratis, sampel HyperText Markup Language, sampel halaman web'
+          },
+          schema: {
+            name: 'File Sampel HTML Gratis - Unduh File HyperText Markup Language Uji',
+            description: 'Unduh file sampel HTML HyperText Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji rendering HTML, konversi HTML, dan alat pengembangan web.'
+          },
+          hero: {
+            title: 'File Sampel HTML',
+            description: 'Unduh file sampel HTML HyperText Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji rendering HTML, konversi HTML, dan alat pengembangan web Anda.'
+          },
+          about_description: 'Ini adalah file uji HTML (HyperText Markup Language) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        css: {
+          meta: {
+            title: 'Unduh File Sampel CSS Gratis - File Cascading Style Sheets | MorphyHub',
+            description: 'Unduh file sampel CSS Cascading Style Sheets gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan CSS, konversi CSS, dan alat pengembangan web.',
+            keywords: 'file sampel CSS, file uji CSS, unduh sampel CSS, file uji CSS gratis, sampel Cascading Style Sheets, sampel gaya web'
+          },
+          schema: {
+            name: 'File Sampel CSS Gratis - Unduh File Cascading Style Sheets Uji',
+            description: 'Unduh file sampel CSS Cascading Style Sheets gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan CSS, konversi CSS, dan alat pengembangan web.'
+          },
+          hero: {
+            title: 'File Sampel CSS',
+            description: 'Unduh file sampel CSS Cascading Style Sheets gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan CSS, konversi CSS, dan alat pengembangan web Anda.'
+          },
+          about_description: 'Ini adalah file uji CSS (Cascading Style Sheets) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        md: {
+          meta: {
+            title: 'Unduh File Sampel MD Gratis - File Markdown | MorphyHub',
+            description: 'Unduh file sampel MD Markdown gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan Markdown, konversi MD, dan alat dokumentasi teknis.',
+            keywords: 'file sampel MD, file uji MD, unduh sampel MD, file uji MD gratis, sampel Markdown, sampel dokumen'
+          },
+          schema: {
+            name: 'File Sampel MD Gratis - Unduh File Markdown Uji',
+            description: 'Unduh file sampel MD Markdown gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan Markdown, konversi MD, dan alat dokumentasi teknis.'
+          },
+          hero: {
+            title: 'File Sampel MD',
+            description: 'Unduh file sampel MD Markdown gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan Markdown, konversi MD, dan alat dokumentasi teknis Anda.'
+          },
+          about_description: 'Ini adalah file uji MD (Markdown) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        jsx: {
+          meta: {
+            title: 'Unduh File Sampel JSX Gratis - File React JSX | MorphyHub',
+            description: 'Unduh file sampel JSX React JSX gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi JSX, analisis kode React, dan alat pengembangan aplikasi React.',
+            keywords: 'file sampel JSX, file uji JSX, unduh sampel JSX, file uji JSX gratis, sampel React JSX, sampel kode React'
+          },
+          schema: {
+            name: 'File Sampel JSX Gratis - Unduh File React JSX Uji',
+            description: 'Unduh file sampel JSX React JSX gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi JSX, analisis kode React, dan alat pengembangan aplikasi React.'
+          },
+          hero: {
+            title: 'File Sampel JSX',
+            description: 'Unduh file sampel JSX React JSX gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi JSX, analisis kode React, dan alat pengembangan aplikasi React Anda.'
+          },
+          about_description: 'Ini adalah file uji JSX (React JSX) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        jsonl: {
+          meta: {
+            title: 'Unduh File Sampel JSONL Gratis - File JSON Lines | MorphyHub',
+            description: 'Unduh file sampel JSONL JSON Lines gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data JSONL, konversi JSONL, dan alat analisis data streaming.',
+            keywords: 'file sampel JSONL, file uji JSONL, unduh sampel JSONL, file uji JSONL gratis, sampel JSON Lines, sampel data streaming'
+          },
+          schema: {
+            name: 'File Sampel JSONL Gratis - Unduh File JSON Lines Uji',
+            description: 'Unduh file sampel JSONL JSON Lines gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data JSONL, konversi JSONL, dan alat analisis data streaming.'
+          },
+          hero: {
+            title: 'File Sampel JSONL',
+            description: 'Unduh file sampel JSONL JSON Lines gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data JSONL, konversi JSONL, dan alat analisis data streaming Anda.'
+          },
+          about_description: 'Ini adalah file uji JSONL (JSON Lines) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        cpp: {
+          meta: {
+            title: 'Unduh File Sampel CPP Gratis - File C++ Source Code | MorphyHub',
+            description: 'Unduh file sampel CPP C++ Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi C++, analisis kode C++, dan alat pengembangan aplikasi.',
+            keywords: 'file sampel CPP, file uji CPP, unduh sampel CPP, file uji CPP gratis, sampel C++ Source Code, sampel kode C++'
+          },
+          schema: {
+            name: 'File Sampel CPP Gratis - Unduh File C++ Source Code Uji',
+            description: 'Unduh file sampel CPP C++ Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi C++, analisis kode C++, dan alat pengembangan aplikasi.'
+          },
+          hero: {
+            title: 'File Sampel CPP',
+            description: 'Unduh file sampel CPP C++ Source Code gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi C++, analisis kode C++, dan alat pengembangan aplikasi Anda.'
+          },
+          about_description: 'Ini adalah file uji CPP (C++ Source Code) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        c: {
+          meta: {
+            title: 'Unduh File Sampel C Gratis - File C Source Code | MorphyHub',
+            description: 'Unduh file sampel C C Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi C, analisis kode C, dan alat pengembangan aplikasi sistem.',
+            keywords: 'file sampel C, file uji C, unduh sampel C, file uji C gratis, sampel C Source Code, sampel kode C'
+          },
+          schema: {
+            name: 'File Sampel C Gratis - Unduh File C Source Code Uji',
+            description: 'Unduh file sampel C C Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi C, analisis kode C, dan alat pengembangan aplikasi sistem.'
+          },
+          hero: {
+            title: 'File Sampel C',
+            description: 'Unduh file sampel C C Source Code gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi C, analisis kode C, dan alat pengembangan aplikasi sistem Anda.'
+          },
+          about_description: 'Ini adalah file uji C (C Source Code) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        bmp: {
+          meta: {
+            title: 'Unduh File Sampel BMP Gratis - File Bitmap Image | MorphyHub',
+            description: 'Unduh file sampel BMP Bitmap Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi BMP, dan alat penampil gambar bitmap.',
+            keywords: 'file sampel BMP, file uji BMP, unduh sampel BMP, file uji BMP gratis, sampel Bitmap Image, sampel gambar bitmap'
+          },
+          schema: {
+            name: 'File Sampel BMP Gratis - Unduh File Bitmap Image Uji',
+            description: 'Unduh file sampel BMP Bitmap Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi BMP, dan alat penampil gambar bitmap.'
+          },
+          hero: {
+            title: 'File Sampel BMP',
+            description: 'Unduh file sampel BMP Bitmap Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi BMP, dan alat penampil gambar bitmap Anda.'
+          },
+          about_description: 'Ini adalah file uji BMP (Bitmap Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'animated-gif': {
+          meta: {
+            title: 'Unduh File Sampel Animated GIF Gratis - File GIF Animasi | MorphyHub',
+            description: 'Unduh file sampel Animated GIF GIF animasi gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan animasi, konversi GIF animasi, dan alat penampil animasi.',
+            keywords: 'file sampel Animated GIF, file uji Animated GIF, unduh sampel Animated GIF, file uji Animated GIF gratis, sampel GIF animasi, sampel animasi'
+          },
+          schema: {
+            name: 'File Sampel Animated GIF Gratis - Unduh File GIF Animasi Uji',
+            description: 'Unduh file sampel Animated GIF GIF animasi gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan animasi, konversi GIF animasi, dan alat penampil animasi.'
+          },
+          hero: {
+            title: 'File Sampel Animated GIF',
+            description: 'Unduh file sampel Animated GIF GIF animasi gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan animasi, konversi GIF animasi, dan alat penampil animasi Anda.'
+          },
+          about_description: 'Ini adalah file uji Animated GIF (GIF animasi) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        apng: {
+          meta: {
+            title: 'Unduh File Sampel APNG Gratis - File Animated Portable Network Graphics | MorphyHub',
+            description: 'Unduh file sampel APNG Animated Portable Network Graphics gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan animasi, konversi APNG, dan alat penampil animasi PNG.',
+            keywords: 'file sampel APNG, file uji APNG, unduh sampel APNG, file uji APNG gratis, sampel Animated Portable Network Graphics, sampel animasi PNG'
+          },
+          schema: {
+            name: 'File Sampel APNG Gratis - Unduh File Animated Portable Network Graphics Uji',
+            description: 'Unduh file sampel APNG Animated Portable Network Graphics gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan animasi, konversi APNG, dan alat penampil animasi PNG.'
+          },
+          hero: {
+            title: 'File Sampel APNG',
+            description: 'Unduh file sampel APNG Animated Portable Network Graphics gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan animasi, konversi APNG, dan alat penampil animasi PNG Anda.'
+          },
+          about_description: 'Ini adalah file uji APNG (Animated Portable Network Graphics) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        avif: {
+          meta: {
+            title: 'Unduh File Sampel AVIF Gratis - File AV1 Image File Format | MorphyHub',
+            description: 'Unduh file sampel AVIF AV1 Image File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi AVIF, dan alat penampil gambar modern.',
+            keywords: 'file sampel AVIF, file uji AVIF, unduh sampel AVIF, file uji AVIF gratis, sampel AV1 Image File Format, sampel gambar modern'
+          },
+          schema: {
+            name: 'File Sampel AVIF Gratis - Unduh File AV1 Image File Format Uji',
+            description: 'Unduh file sampel AVIF AV1 Image File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi AVIF, dan alat penampil gambar modern.'
+          },
+          hero: {
+            title: 'File Sampel AVIF',
+            description: 'Unduh file sampel AVIF AV1 Image File Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi AVIF, dan alat penampil gambar modern Anda.'
+          },
+          about_description: 'Ini adalah file uji AVIF (AV1 Image File Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        avi: {
+          meta: {
+            title: 'Unduh File Sampel AVI Gratis - File Audio Video Interleave | MorphyHub',
+            description: 'Unduh file sampel AVI Audio Video Interleave gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi AVI, dan alat pemrosesan file video.',
+            keywords: 'file sampel AVI, file uji AVI, unduh sampel AVI, file uji AVI gratis, sampel Audio Video Interleave, sampel file video'
+          },
+          schema: {
+            name: 'File Sampel AVI Gratis - Unduh File Audio Video Interleave Uji',
+            description: 'Unduh file sampel AVI Audio Video Interleave gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi AVI, dan alat pemrosesan file video.'
+          },
+          hero: {
+            title: 'File Sampel AVI',
+            description: 'Unduh file sampel AVI Audio Video Interleave gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi AVI, dan alat pemrosesan file video Anda.'
+          },
+          about_description: 'Ini adalah file uji AVI (Audio Video Interleave) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        bat: {
+          meta: {
+            title: 'Unduh File Sampel BAT Gratis - File Batch Script | MorphyHub',
+            description: 'Unduh file sampel BAT Batch Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi batch script, otomasi Windows, dan alat pemrosesan baris perintah.',
+            keywords: 'file sampel BAT, file uji BAT, unduh sampel BAT, file uji BAT gratis, sampel Batch Script, sampel script Windows'
+          },
+          schema: {
+            name: 'File Sampel BAT Gratis - Unduh File Batch Script Uji',
+            description: 'Unduh file sampel BAT Batch Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi batch script, otomasi Windows, dan alat pemrosesan baris perintah.'
+          },
+          hero: {
+            title: 'File Sampel BAT',
+            description: 'Unduh file sampel BAT Batch Script gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji eksekusi batch script, otomasi Windows, dan alat pemrosesan baris perintah Anda.'
+          },
+          about_description: 'Ini adalah file uji BAT (Batch Script) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        bib: {
+          meta: {
+            title: 'Unduh File Sampel BIB Gratis - File Bibliography | MorphyHub',
+            description: 'Unduh file sampel BIB Bibliography gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji manajemen referensi, alat kutipan, dan pemrosesan format BibTeX.',
+            keywords: 'file sampel BIB, file uji BIB, unduh sampel BIB, file uji BIB gratis, sampel Bibliography, sampel BibTeX'
+          },
+          schema: {
+            name: 'File Sampel BIB Gratis - Unduh File Bibliography Uji',
+            description: 'Unduh file sampel BIB Bibliography gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji manajemen referensi, alat kutipan, dan pemrosesan format BibTeX.'
+          },
+          hero: {
+            title: 'File Sampel BIB',
+            description: 'Unduh file sampel BIB Bibliography gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji manajemen referensi dan alat kutipan Anda.'
+          },
+          about_description: 'Ini adalah file uji BIB (Bibliography) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        blend: {
+          meta: {
+            title: 'Unduh File Sampel BLEND Gratis - File 3D Model | MorphyHub',
+            description: 'Unduh file sampel BLEND 3D Model gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemodelan 3D, file proyek Blender, dan alat pemrosesan format 3D.',
+            keywords: 'file sampel BLEND, file uji BLEND, unduh sampel BLEND, file uji BLEND gratis, sampel 3D Model, sampel Blender'
+          },
+          schema: {
+            name: 'File Sampel BLEND Gratis - Unduh File 3D Model Uji',
+            description: 'Unduh file sampel BLEND 3D Model gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemodelan 3D, file proyek Blender, dan alat pemrosesan format 3D.'
+          },
+          hero: {
+            title: 'File Sampel BLEND',
+            description: 'Unduh file sampel BLEND 3D Model gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pemodelan 3D dan pemrosesan file proyek Blender Anda.'
+          },
+          about_description: 'Ini adalah file uji BLEND (Blender 3D) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        bz2: {
+          meta: {
+            title: 'Unduh File Sampel BZ2 Gratis - File Bzip2 Compressed Archive | MorphyHub',
+            description: 'Unduh file sampel BZ2 Bzip2 Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi BZ2, dan alat pemrosesan file archive Unix.',
+            keywords: 'file sampel BZ2, file uji BZ2, unduh sampel BZ2, file uji BZ2 gratis, sampel Bzip2 Compressed Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel BZ2 Gratis - Unduh File Bzip2 Compressed Archive Uji',
+            description: 'Unduh file sampel BZ2 Bzip2 Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi BZ2, dan alat pemrosesan file archive Unix.'
+          },
+          hero: {
+            title: 'File Sampel BZ2',
+            description: 'Unduh file sampel BZ2 Bzip2 Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi BZ2, dan alat pemrosesan file archive Unix Anda.'
+          },
+          about_description: 'Ini adalah file uji BZ2 (Bzip2 Compressed Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        cab: {
+          meta: {
+            title: 'Unduh File Sampel CAB Gratis - File Cabinet Archive | MorphyHub',
+            description: 'Unduh file sampel CAB Cabinet Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi CAB, dan alat pemrosesan file archive Windows.',
+            keywords: 'file sampel CAB, file uji CAB, unduh sampel CAB, file uji CAB gratis, sampel Cabinet Archive, sampel archive Windows'
+          },
+          schema: {
+            name: 'File Sampel CAB Gratis - Unduh File Cabinet Archive Uji',
+            description: 'Unduh file sampel CAB Cabinet Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi CAB, dan alat pemrosesan file archive Windows.'
+          },
+          hero: {
+            title: 'File Sampel CAB',
+            description: 'Unduh file sampel CAB Cabinet Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi CAB, dan alat pemrosesan file archive Windows Anda.'
+          },
+          about_description: 'Ini adalah file uji CAB (Cabinet Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        caf: {
+          meta: {
+            title: 'Unduh File Sampel CAF Gratis - File Core Audio Format | MorphyHub',
+            description: 'Unduh file sampel CAF Core Audio Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi CAF, dan alat pemrosesan format audio Apple.',
+            keywords: 'file sampel CAF, file uji CAF, unduh sampel CAF, file uji CAF gratis, sampel Core Audio Format, sampel format audio Apple'
+          },
+          schema: {
+            name: 'File Sampel CAF Gratis - Unduh File Core Audio Format Uji',
+            description: 'Unduh file sampel CAF Core Audio Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi CAF, dan alat pemrosesan format audio Apple.'
+          },
+          hero: {
+            title: 'File Sampel CAF',
+            description: 'Unduh file sampel CAF Core Audio Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi CAF, dan alat pemrosesan format audio Apple Anda.'
+          },
+          about_description: 'Ini adalah file uji CAF (Core Audio Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        key: {
+          meta: {
+            title: 'Unduh File Sampel KEY Gratis - File Apple Keynote | MorphyHub',
+            description: 'Unduh file sampel KEY Apple Keynote gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji penampil presentasi, konversi KEY, dan alat pemrosesan presentasi Apple.',
+            keywords: 'file sampel KEY, file uji KEY, unduh sampel KEY, file uji KEY gratis, sampel Apple Keynote, sampel presentasi Apple'
+          },
+          schema: {
+            name: 'File Sampel KEY Gratis - Unduh File Apple Keynote Uji',
+            description: 'Unduh file sampel KEY Apple Keynote gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji penampil presentasi, konversi KEY, dan alat pemrosesan presentasi Apple.'
+          },
+          hero: {
+            title: 'File Sampel KEY',
+            description: 'Unduh file sampel KEY Apple Keynote gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji penampil presentasi, konversi KEY, dan alat pemrosesan presentasi Apple Anda.'
+          },
+          about_description: 'Ini adalah file uji KEY (Apple Keynote) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        crx: {
+          meta: {
+            title: 'Unduh File Sampel CRX Gratis - File Chrome Extension | MorphyHub',
+            description: 'Unduh file sampel CRX Chrome Extension gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi ekstensi Chrome, analisis CRX, dan alat pemrosesan ekstensi browser.',
+            keywords: 'file sampel CRX, file uji CRX, unduh sampel CRX, file uji CRX gratis, sampel Chrome Extension, sampel ekstensi browser'
+          },
+          schema: {
+            name: 'File Sampel CRX Gratis - Unduh File Chrome Extension Uji',
+            description: 'Unduh file sampel CRX Chrome Extension gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi ekstensi Chrome, analisis CRX, dan alat pemrosesan ekstensi browser.'
+          },
+          hero: {
+            title: 'File Sampel CRX',
+            description: 'Unduh file sampel CRX Chrome Extension gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji instalasi ekstensi Chrome, analisis CRX, dan alat pemrosesan ekstensi browser Anda.'
+          },
+          about_description: 'Ini adalah file uji CRX (Chrome Extension) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        hpp: {
+          meta: {
+            title: 'Unduh File Sampel HPP Gratis - File C++ Header | MorphyHub',
+            description: 'Unduh file sampel HPP C++ Header gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi C++, analisis kode C++, dan alat pengembangan aplikasi.',
+            keywords: 'file sampel HPP, file uji HPP, unduh sampel HPP, file uji HPP gratis, sampel C++ Header, sampel kode C++'
+          },
+          schema: {
+            name: 'File Sampel HPP Gratis - Unduh File C++ Header Uji',
+            description: 'Unduh file sampel HPP C++ Header gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi C++, analisis kode C++, dan alat pengembangan aplikasi.'
+          },
+          hero: {
+            title: 'File Sampel HPP',
+            description: 'Unduh file sampel HPP C++ Header gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi C++, analisis kode C++, dan alat pengembangan aplikasi Anda.'
+          },
+          about_description: 'Ini adalah file uji HPP (C++ Header) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        '3ds': {
+          meta: {
+            title: 'Unduh File Sampel 3DS Gratis - File 3D Studio Scene | MorphyHub',
+            description: 'Unduh file sampel 3DS 3D Studio Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemodelan 3D, konversi 3DS, dan alat pemrosesan format 3D.',
+            keywords: 'file sampel 3DS, file uji 3DS, unduh sampel 3DS, file uji 3DS gratis, sampel 3D Studio Scene, sampel model 3D'
+          },
+          schema: {
+            name: 'File Sampel 3DS Gratis - Unduh File 3D Studio Scene Uji',
+            description: 'Unduh file sampel 3DS 3D Studio Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemodelan 3D, konversi 3DS, dan alat pemrosesan format 3D.'
+          },
+          hero: {
+            title: 'File Sampel 3DS',
+            description: 'Unduh file sampel 3DS 3D Studio Scene gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pemodelan 3D, konversi 3DS, dan pemrosesan format 3D Anda.'
+          },
+          about_description: 'Ini adalah file uji 3DS (3D Studio Scene) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        '3gp': {
+          meta: {
+            title: 'Unduh File Sampel 3GP Gratis - File 3GPP Multimedia | MorphyHub',
+            description: 'Unduh file sampel 3GP 3GPP Multimedia gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi 3GP, dan alat pemrosesan file video mobile.',
+            keywords: 'file sampel 3GP, file uji 3GP, unduh sampel 3GP, file uji 3GP gratis, sampel 3GPP Multimedia, sampel video mobile'
+          },
+          schema: {
+            name: 'File Sampel 3GP Gratis - Unduh File 3GPP Multimedia Uji',
+            description: 'Unduh file sampel 3GP 3GPP Multimedia gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi 3GP, dan alat pemrosesan file video mobile.'
+          },
+          hero: {
+            title: 'File Sampel 3GP',
+            description: 'Unduh file sampel 3GP 3GPP Multimedia gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi 3GP, dan alat pemrosesan file video mobile Anda.'
+          },
+          about_description: 'Ini adalah file uji 3GP (3GPP Multimedia) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        '3mf': {
+          meta: {
+            title: 'Unduh File Sampel 3MF Gratis - File 3D Manufacturing Format | MorphyHub',
+            description: 'Unduh file sampel 3MF 3D Manufacturing Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pencetakan 3D, konversi 3MF, dan alat pemrosesan format manufaktur 3D.',
+            keywords: 'file sampel 3MF, file uji 3MF, unduh sampel 3MF, file uji 3MF gratis, sampel 3D Manufacturing Format, sampel pencetakan 3D'
+          },
+          schema: {
+            name: 'File Sampel 3MF Gratis - Unduh File 3D Manufacturing Format Uji',
+            description: 'Unduh file sampel 3MF 3D Manufacturing Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pencetakan 3D, konversi 3MF, dan alat pemrosesan format manufaktur 3D.'
+          },
+          hero: {
+            title: 'File Sampel 3MF',
+            description: 'Unduh file sampel 3MF 3D Manufacturing Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pencetakan 3D, konversi 3MF, dan pemrosesan format manufaktur 3D Anda.'
+          },
+          about_description: 'Ini adalah file uji 3MF (3D Manufacturing Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        '7z': {
+          meta: {
+            title: 'Unduh File Sampel 7Z Gratis - File 7-Zip Archive | MorphyHub',
+            description: 'Unduh file sampel 7Z 7-Zip Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi 7Z, dan alat pemrosesan file archive dengan rasio kompresi tinggi.',
+            keywords: 'file sampel 7Z, file uji 7Z, unduh sampel 7Z, file uji 7Z gratis, sampel 7-Zip Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel 7Z Gratis - Unduh File 7-Zip Archive Uji',
+            description: 'Unduh file sampel 7Z 7-Zip Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi 7Z, dan alat pemrosesan file archive dengan rasio kompresi tinggi.'
+          },
+          hero: {
+            title: 'File Sampel 7Z',
+            description: 'Unduh file sampel 7Z 7-Zip Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi 7Z, dan alat pemrosesan file archive dengan rasio kompresi tinggi Anda.'
+          },
+          about_description: 'Ini adalah file uji 7Z (7-Zip Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        aac: {
+          meta: {
+            title: 'Unduh File Sampel AAC Gratis - File Advanced Audio Coding | MorphyHub',
+            description: 'Unduh file sampel AAC Advanced Audio Coding gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AAC, dan alat pemrosesan format audio berkualitas tinggi.',
+            keywords: 'file sampel AAC, file uji AAC, unduh sampel AAC, file uji AAC gratis, sampel Advanced Audio Coding, sampel file audio'
+          },
+          schema: {
+            name: 'File Sampel AAC Gratis - Unduh File Advanced Audio Coding Uji',
+            description: 'Unduh file sampel AAC Advanced Audio Coding gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AAC, dan alat pemrosesan format audio berkualitas tinggi.'
+          },
+          hero: {
+            title: 'File Sampel AAC',
+            description: 'Unduh file sampel AAC Advanced Audio Coding gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi AAC, dan alat pemrosesan format audio berkualitas tinggi Anda.'
+          },
+          about_description: 'Ini adalah file uji AAC (Advanced Audio Coding) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ac3: {
+          meta: {
+            title: 'Unduh File Sampel AC3 Gratis - File Audio Codec 3 | MorphyHub',
+            description: 'Unduh file sampel AC3 Audio Codec 3 gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AC3, dan alat pemrosesan format audio surround.',
+            keywords: 'file sampel AC3, file uji AC3, unduh sampel AC3, file uji AC3 gratis, sampel Audio Codec 3, sampel audio surround'
+          },
+          schema: {
+            name: 'File Sampel AC3 Gratis - Unduh File Audio Codec 3 Uji',
+            description: 'Unduh file sampel AC3 Audio Codec 3 gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AC3, dan alat pemrosesan format audio surround.'
+          },
+          hero: {
+            title: 'File Sampel AC3',
+            description: 'Unduh file sampel AC3 Audio Codec 3 gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi AC3, dan alat pemrosesan format audio surround Anda.'
+          },
+          about_description: 'Ini adalah file uji AC3 (Audio Codec 3) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ace: {
+          meta: {
+            title: 'Unduh File Sampel ACE Gratis - File ACE Archive | MorphyHub',
+            description: 'Unduh file sampel ACE ACE Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi ACE, dan alat pemrosesan file archive ACE.',
+            keywords: 'file sampel ACE, file uji ACE, unduh sampel ACE, file uji ACE gratis, sampel ACE Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel ACE Gratis - Unduh File ACE Archive Uji',
+            description: 'Unduh file sampel ACE ACE Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi ACE, dan alat pemrosesan file archive ACE.'
+          },
+          hero: {
+            title: 'File Sampel ACE',
+            description: 'Unduh file sampel ACE ACE Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi ACE, dan alat pemrosesan file archive ACE Anda.'
+          },
+          about_description: 'Ini adalah file uji ACE (ACE Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ai: {
+          meta: {
+            title: 'Unduh File Sampel AI Gratis - File Adobe Illustrator | MorphyHub',
+            description: 'Unduh file sampel AI Adobe Illustrator gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji editing grafik vektor, konversi AI, dan alat pemrosesan format Adobe Illustrator.',
+            keywords: 'file sampel AI, file uji AI, unduh sampel AI, file uji AI gratis, sampel Adobe Illustrator, sampel grafik vektor'
+          },
+          schema: {
+            name: 'File Sampel AI Gratis - Unduh File Adobe Illustrator Uji',
+            description: 'Unduh file sampel AI Adobe Illustrator gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji editing grafik vektor, konversi AI, dan alat pemrosesan format Adobe Illustrator.'
+          },
+          hero: {
+            title: 'File Sampel AI',
+            description: 'Unduh file sampel AI Adobe Illustrator gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat editing grafik vektor, konversi AI, dan pemrosesan format Adobe Illustrator Anda.'
+          },
+          about_description: 'Ini adalah file uji AI (Adobe Illustrator) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        aif: {
+          meta: {
+            title: 'Unduh File Sampel AIF Gratis - File Audio Interchange File Format | MorphyHub',
+            description: 'Unduh file sampel AIF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AIF, dan alat pemrosesan format audio Apple.',
+            keywords: 'file sampel AIF, file uji AIF, unduh sampel AIF, file uji AIF gratis, sampel Audio Interchange File Format, sampel format audio Apple'
+          },
+          schema: {
+            name: 'File Sampel AIF Gratis - Unduh File Audio Interchange File Format Uji',
+            description: 'Unduh file sampel AIF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AIF, dan alat pemrosesan format audio Apple.'
+          },
+          hero: {
+            title: 'File Sampel AIF',
+            description: 'Unduh file sampel AIF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi AIF, dan alat pemrosesan format audio Apple Anda.'
+          },
+          about_description: 'Ini adalah file uji AIF (Audio Interchange File Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        aiff: {
+          meta: {
+            title: 'Unduh File Sampel AIFF Gratis - File Audio Interchange File Format | MorphyHub',
+            description: 'Unduh file sampel AIFF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AIFF, dan alat pemrosesan format audio Apple.',
+            keywords: 'file sampel AIFF, file uji AIFF, unduh sampel AIFF, file uji AIFF gratis, sampel Audio Interchange File Format, sampel format audio Apple'
+          },
+          schema: {
+            name: 'File Sampel AIFF Gratis - Unduh File Audio Interchange File Format Uji',
+            description: 'Unduh file sampel AIFF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AIFF, dan alat pemrosesan format audio Apple.'
+          },
+          hero: {
+            title: 'File Sampel AIFF',
+            description: 'Unduh file sampel AIFF Audio Interchange File Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi AIFF, dan alat pemrosesan format audio Apple Anda.'
+          },
+          about_description: 'Ini adalah file uji AIFF (Audio Interchange File Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        amr: {
+          meta: {
+            title: 'Unduh File Sampel AMR Gratis - File Adaptive Multi-Rate Audio | MorphyHub',
+            description: 'Unduh file sampel AMR Adaptive Multi-Rate Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AMR, dan alat pemrosesan format audio mobile.',
+            keywords: 'file sampel AMR, file uji AMR, unduh sampel AMR, file uji AMR gratis, sampel Adaptive Multi-Rate Audio, sampel audio mobile'
+          },
+          schema: {
+            name: 'File Sampel AMR Gratis - Unduh File Adaptive Multi-Rate Audio Uji',
+            description: 'Unduh file sampel AMR Adaptive Multi-Rate Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi AMR, dan alat pemrosesan format audio mobile.'
+          },
+          hero: {
+            title: 'File Sampel AMR',
+            description: 'Unduh file sampel AMR Adaptive Multi-Rate Audio gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi AMR, dan alat pemrosesan format audio mobile Anda.'
+          },
+          about_description: 'Ini adalah file uji AMR (Adaptive Multi-Rate Audio) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'animation-fbx': {
+          meta: {
+            title: 'Unduh File Sampel Animation FBX Gratis - File Autodesk FBX Animation | MorphyHub',
+            description: 'Unduh file sampel Animation FBX Autodesk FBX Animation gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji animasi 3D, konversi FBX, dan alat pemrosesan format animasi 3D.',
+            keywords: 'file sampel Animation FBX, file uji Animation FBX, unduh sampel Animation FBX, file uji Animation FBX gratis, sampel Autodesk FBX Animation, sampel animasi 3D'
+          },
+          schema: {
+            name: 'File Sampel Animation FBX Gratis - Unduh File Autodesk FBX Animation Uji',
+            description: 'Unduh file sampel Animation FBX Autodesk FBX Animation gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji animasi 3D, konversi FBX, dan alat pemrosesan format animasi 3D.'
+          },
+          hero: {
+            title: 'File Sampel Animation FBX',
+            description: 'Unduh file sampel Animation FBX Autodesk FBX Animation gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat pemrosesan animasi 3D, konversi FBX, dan pemrosesan format animasi 3D Anda.'
+          },
+          about_description: 'Ini adalah file uji Animation FBX (Autodesk FBX Animation) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        apk: {
+          meta: {
+            title: 'Unduh File Sampel APK Gratis - File Android Application Package | MorphyHub',
+            description: 'Unduh file sampel APK Android Application Package gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi aplikasi Android, analisis APK, dan alat pemrosesan aplikasi mobile.',
+            keywords: 'file sampel APK, file uji APK, unduh sampel APK, file uji APK gratis, sampel Android Application Package, sampel aplikasi Android'
+          },
+          schema: {
+            name: 'File Sampel APK Gratis - Unduh File Android Application Package Uji',
+            description: 'Unduh file sampel APK Android Application Package gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi aplikasi Android, analisis APK, dan alat pemrosesan aplikasi mobile.'
+          },
+          hero: {
+            title: 'File Sampel APK',
+            description: 'Unduh file sampel APK Android Application Package gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji instalasi aplikasi Android, analisis APK, dan alat pemrosesan aplikasi mobile Anda.'
+          },
+          about_description: 'Ini adalah file uji APK (Android Application Package) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        appimage: {
+          meta: {
+            title: 'Unduh File Sampel AppImage Gratis - File AppImage Application | MorphyHub',
+            description: 'Unduh file sampel AppImage Application gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi aplikasi Linux, analisis AppImage, dan alat pemrosesan aplikasi Linux.',
+            keywords: 'file sampel AppImage, file uji AppImage, unduh sampel AppImage, file uji AppImage gratis, sampel AppImage Application, sampel aplikasi Linux'
+          },
+          schema: {
+            name: 'File Sampel AppImage Gratis - Unduh File AppImage Application Uji',
+            description: 'Unduh file sampel AppImage Application gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi aplikasi Linux, analisis AppImage, dan alat pemrosesan aplikasi Linux.'
+          },
+          hero: {
+            title: 'File Sampel AppImage',
+            description: 'Unduh file sampel AppImage Application gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji eksekusi aplikasi Linux, analisis AppImage, dan alat pemrosesan aplikasi Linux Anda.'
+          },
+          about_description: 'Ini adalah file uji AppImage (AppImage Application) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'arduino-ino': {
+          meta: {
+            title: 'Unduh File Sampel Arduino INO Gratis - File Arduino Sketch | MorphyHub',
+            description: 'Unduh file sampel Arduino INO Arduino Sketch gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi Arduino, analisis kode Arduino, dan alat pengembangan sistem embedded.',
+            keywords: 'file sampel Arduino INO, file uji Arduino INO, unduh sampel Arduino INO, file uji Arduino INO gratis, sampel Arduino Sketch, sampel kode Arduino'
+          },
+          schema: {
+            name: 'File Sampel Arduino INO Gratis - Unduh File Arduino Sketch Uji',
+            description: 'Unduh file sampel Arduino INO Arduino Sketch gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi Arduino, analisis kode Arduino, dan alat pengembangan sistem embedded.'
+          },
+          hero: {
+            title: 'File Sampel Arduino INO',
+            description: 'Unduh file sampel Arduino INO Arduino Sketch gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi Arduino, analisis kode Arduino, dan alat pengembangan sistem embedded Anda.'
+          },
+          about_description: 'Ini adalah file uji Arduino INO (Arduino Sketch) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        arj: {
+          meta: {
+            title: 'Unduh File Sampel ARJ Gratis - File ARJ Archive | MorphyHub',
+            description: 'Unduh file sampel ARJ ARJ Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi ARJ, dan alat pemrosesan file archive ARJ.',
+            keywords: 'file sampel ARJ, file uji ARJ, unduh sampel ARJ, file uji ARJ gratis, sampel ARJ Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel ARJ Gratis - Unduh File ARJ Archive Uji',
+            description: 'Unduh file sampel ARJ ARJ Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi ARJ, dan alat pemrosesan file archive ARJ.'
+          },
+          hero: {
+            title: 'File Sampel ARJ',
+            description: 'Unduh file sampel ARJ ARJ Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi ARJ, dan alat pemrosesan file archive ARJ Anda.'
+          },
+          about_description: 'Ini adalah file uji ARJ (ARJ Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ase: {
+          meta: {
+            title: 'Unduh File Sampel ASE Gratis - File Adobe Swatch Exchange | MorphyHub',
+            description: 'Unduh file sampel ASE Adobe Swatch Exchange gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan palet warna, konversi ASE, dan alat pemrosesan format swatch warna Adobe.',
+            keywords: 'file sampel ASE, file uji ASE, unduh sampel ASE, file uji ASE gratis, sampel Adobe Swatch Exchange, sampel palet warna'
+          },
+          schema: {
+            name: 'File Sampel ASE Gratis - Unduh File Adobe Swatch Exchange Uji',
+            description: 'Unduh file sampel ASE Adobe Swatch Exchange gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan palet warna, konversi ASE, dan alat pemrosesan format swatch warna Adobe.'
+          },
+          hero: {
+            title: 'File Sampel ASE',
+            description: 'Unduh file sampel ASE Adobe Swatch Exchange gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan palet warna, konversi ASE, dan alat pemrosesan format swatch warna Adobe Anda.'
+          },
+          about_description: 'Ini adalah file uji ASE (Adobe Swatch Exchange) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        assetbundle: {
+          meta: {
+            title: 'Unduh File Sampel AssetBundle Gratis - File Unity AssetBundle | MorphyHub',
+            description: 'Unduh file sampel AssetBundle Unity AssetBundle gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemuatan asset Unity, analisis AssetBundle, dan alat pengembangan game Unity.',
+            keywords: 'file sampel AssetBundle, file uji AssetBundle, unduh sampel AssetBundle, file uji AssetBundle gratis, sampel Unity AssetBundle, sampel asset Unity'
+          },
+          schema: {
+            name: 'File Sampel AssetBundle Gratis - Unduh File Unity AssetBundle Uji',
+            description: 'Unduh file sampel AssetBundle Unity AssetBundle gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemuatan asset Unity, analisis AssetBundle, dan alat pengembangan game Unity.'
+          },
+          hero: {
+            title: 'File Sampel AssetBundle',
+            description: 'Unduh file sampel AssetBundle Unity AssetBundle gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemuatan asset Unity, analisis AssetBundle, dan alat pengembangan game Unity Anda.'
+          },
+          about_description: 'Ini adalah file uji AssetBundle (Unity AssetBundle) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'audio-flac': {
+          meta: {
+            title: 'Unduh File Sampel Audio FLAC Gratis - File Free Lossless Audio Codec | MorphyHub',
+            description: 'Unduh file sampel Audio FLAC Free Lossless Audio Codec gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi FLAC, dan alat pemrosesan format audio lossless.',
+            keywords: 'file sampel Audio FLAC, file uji Audio FLAC, unduh sampel Audio FLAC, file uji Audio FLAC gratis, sampel Free Lossless Audio Codec, sampel audio lossless'
+          },
+          schema: {
+            name: 'File Sampel Audio FLAC Gratis - Unduh File Free Lossless Audio Codec Uji',
+            description: 'Unduh file sampel Audio FLAC Free Lossless Audio Codec gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi FLAC, dan alat pemrosesan format audio lossless.'
+          },
+          hero: {
+            title: 'File Sampel Audio FLAC',
+            description: 'Unduh file sampel Audio FLAC Free Lossless Audio Codec gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi FLAC, dan alat pemrosesan format audio lossless Anda.'
+          },
+          about_description: 'Ini adalah file uji Audio FLAC (Free Lossless Audio Codec) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'audio-ogg': {
+          meta: {
+            title: 'Unduh File Sampel Audio OGG Gratis - File Ogg Vorbis Audio | MorphyHub',
+            description: 'Unduh file sampel Audio OGG Ogg Vorbis Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi OGG, dan alat pemrosesan format audio open source.',
+            keywords: 'file sampel Audio OGG, file uji Audio OGG, unduh sampel Audio OGG, file uji Audio OGG gratis, sampel Ogg Vorbis Audio, sampel audio open source'
+          },
+          schema: {
+            name: 'File Sampel Audio OGG Gratis - Unduh File Ogg Vorbis Audio Uji',
+            description: 'Unduh file sampel Audio OGG Ogg Vorbis Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi OGG, dan alat pemrosesan format audio open source.'
+          },
+          hero: {
+            title: 'File Sampel Audio OGG',
+            description: 'Unduh file sampel Audio OGG Ogg Vorbis Audio gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi OGG, dan alat pemrosesan format audio open source Anda.'
+          },
+          about_description: 'Ini adalah file uji Audio OGG (Ogg Vorbis Audio) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'audio-wav': {
+          meta: {
+            title: 'Unduh File Sampel Audio WAV Gratis - File Waveform Audio | MorphyHub',
+            description: 'Unduh file sampel Audio WAV Waveform Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi WAV, dan alat pemrosesan format audio tidak terkompresi.',
+            keywords: 'file sampel Audio WAV, file uji Audio WAV, unduh sampel Audio WAV, file uji Audio WAV gratis, sampel Waveform Audio, sampel audio tidak terkompresi'
+          },
+          schema: {
+            name: 'File Sampel Audio WAV Gratis - Unduh File Waveform Audio Uji',
+            description: 'Unduh file sampel Audio WAV Waveform Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi WAV, dan alat pemrosesan format audio tidak terkompresi.'
+          },
+          hero: {
+            title: 'File Sampel Audio WAV',
+            description: 'Unduh file sampel Audio WAV Waveform Audio gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi WAV, dan alat pemrosesan format audio tidak terkompresi Anda.'
+          },
+          about_description: 'Ini adalah file uji Audio WAV (Waveform Audio) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'barcode-svg': {
+          meta: {
+            title: 'Unduh File Sampel Barcode SVG Gratis - File Barcode SVG | MorphyHub',
+            description: 'Unduh file sampel Barcode SVG barcode SVG gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pembacaan barcode, pemrosesan barcode SVG, dan alat pemindaian barcode.',
+            keywords: 'file sampel Barcode SVG, file uji Barcode SVG, unduh sampel Barcode SVG, file uji Barcode SVG gratis, sampel Barcode SVG, sampel barcode'
+          },
+          schema: {
+            name: 'File Sampel Barcode SVG Gratis - Unduh File Barcode SVG Uji',
+            description: 'Unduh file sampel Barcode SVG barcode SVG gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pembacaan barcode, pemrosesan barcode SVG, dan alat pemindaian barcode.'
+          },
+          hero: {
+            title: 'File Sampel Barcode SVG',
+            description: 'Unduh file sampel Barcode SVG barcode SVG gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pembacaan barcode, pemrosesan barcode SVG, dan alat pemindaian barcode Anda.'
+          },
+          about_description: 'Ini adalah file uji Barcode SVG (barcode SVG) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        bvh: {
+          meta: {
+            title: 'Unduh File Sampel BVH Gratis - File Biovision Hierarchy | MorphyHub',
+            description: 'Unduh file sampel BVH Biovision Hierarchy gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji motion capture, konversi BVH, dan alat pemrosesan format animasi 3D.',
+            keywords: 'file sampel BVH, file uji BVH, unduh sampel BVH, file uji BVH gratis, sampel Biovision Hierarchy, sampel motion capture'
+          },
+          schema: {
+            name: 'File Sampel BVH Gratis - Unduh File Biovision Hierarchy Uji',
+            description: 'Unduh file sampel BVH Biovision Hierarchy gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji motion capture, konversi BVH, dan alat pemrosesan format animasi 3D.'
+          },
+          hero: {
+            title: 'File Sampel BVH',
+            description: 'Unduh file sampel BVH Biovision Hierarchy gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji alat motion capture, konversi BVH, dan pemrosesan format animasi 3D Anda.'
+          },
+          about_description: 'Ini adalah file uji BVH (Biovision Hierarchy) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        conf: {
+          meta: {
+            title: 'Unduh File Sampel CONF Gratis - File Configuration | MorphyHub',
+            description: 'Unduh file sampel CONF Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing CONF, dan alat manajemen konfigurasi sistem.',
+            keywords: 'file sampel CONF, file uji CONF, unduh sampel CONF, file uji CONF gratis, sampel Configuration, sampel file konfigurasi'
+          },
+          schema: {
+            name: 'File Sampel CONF Gratis - Unduh File Configuration Uji',
+            description: 'Unduh file sampel CONF Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing CONF, dan alat manajemen konfigurasi sistem.'
+          },
+          hero: {
+            title: 'File Sampel CONF',
+            description: 'Unduh file sampel CONF Configuration gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan file konfigurasi, parsing CONF, dan alat manajemen konfigurasi sistem Anda.'
+          },
+          about_description: 'Ini adalah file uji CONF (Configuration) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        cpio: {
+          meta: {
+            title: 'Unduh File Sampel CPIO Gratis - File Copy In/Out Archive | MorphyHub',
+            description: 'Unduh file sampel CPIO Copy In/Out Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi CPIO, dan alat pemrosesan file archive Unix.',
+            keywords: 'file sampel CPIO, file uji CPIO, unduh sampel CPIO, file uji CPIO gratis, sampel Copy In/Out Archive, sampel archive Unix'
+          },
+          schema: {
+            name: 'File Sampel CPIO Gratis - Unduh File Copy In/Out Archive Uji',
+            description: 'Unduh file sampel CPIO Copy In/Out Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi CPIO, dan alat pemrosesan file archive Unix.'
+          },
+          hero: {
+            title: 'File Sampel CPIO',
+            description: 'Unduh file sampel CPIO Copy In/Out Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi CPIO, dan alat pemrosesan file archive Unix Anda.'
+          },
+          about_description: 'Ini adalah file uji CPIO (Copy In/Out Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        csr: {
+          meta: {
+            title: 'Unduh File Sampel CSR Gratis - File Certificate Signing Request | MorphyHub',
+            description: 'Unduh file sampel CSR Certificate Signing Request gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan sertifikat SSL, parsing CSR, dan alat manajemen sertifikat keamanan.',
+            keywords: 'file sampel CSR, file uji CSR, unduh sampel CSR, file uji CSR gratis, sampel Certificate Signing Request, sampel sertifikat SSL'
+          },
+          schema: {
+            name: 'File Sampel CSR Gratis - Unduh File Certificate Signing Request Uji',
+            description: 'Unduh file sampel CSR Certificate Signing Request gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan sertifikat SSL, parsing CSR, dan alat manajemen sertifikat keamanan.'
+          },
+          hero: {
+            title: 'File Sampel CSR',
+            description: 'Unduh file sampel CSR Certificate Signing Request gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan sertifikat SSL, parsing CSR, dan alat manajemen sertifikat keamanan Anda.'
+          },
+          about_description: 'Ini adalah file uji CSR (Certificate Signing Request) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'customer-database-sql': {
+          meta: {
+            title: 'Unduh File Sampel Customer Database SQL Gratis - File SQL Database | MorphyHub',
+            description: 'Unduh file sampel Customer Database SQL gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan database, eksekusi SQL, dan alat manajemen database pelanggan.',
+            keywords: 'file sampel Customer Database SQL, file uji Customer Database SQL, unduh sampel Customer Database SQL, file uji Customer Database SQL gratis, sampel SQL Database, sampel database pelanggan'
+          },
+          schema: {
+            name: 'File Sampel Customer Database SQL Gratis - Unduh File SQL Database Uji',
+            description: 'Unduh file sampel Customer Database SQL gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan database, eksekusi SQL, dan alat manajemen database pelanggan.'
+          },
+          hero: {
+            title: 'File Sampel Customer Database SQL',
+            description: 'Unduh file sampel Customer Database SQL gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan database, eksekusi SQL, dan alat manajemen database pelanggan Anda.'
+          },
+          about_description: 'Ini adalah file uji Customer Database SQL (SQL Database) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dav: {
+          meta: {
+            title: 'Unduh File Sampel DAV Gratis - File DAV Video | MorphyHub',
+            description: 'Unduh file sampel DAV DAV Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi DAV, dan alat pemrosesan format video kamera keamanan.',
+            keywords: 'file sampel DAV, file uji DAV, unduh sampel DAV, file uji DAV gratis, sampel DAV Video, sampel video kamera keamanan'
+          },
+          schema: {
+            name: 'File Sampel DAV Gratis - Unduh File DAV Video Uji',
+            description: 'Unduh file sampel DAV DAV Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi DAV, dan alat pemrosesan format video kamera keamanan.'
+          },
+          hero: {
+            title: 'File Sampel DAV',
+            description: 'Unduh file sampel DAV DAV Video gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi DAV, dan alat pemrosesan format video kamera keamanan Anda.'
+          },
+          about_description: 'Ini adalah file uji DAV (DAV Video) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dbf: {
+          meta: {
+            title: 'Unduh File Sampel DBF Gratis - File dBASE Database | MorphyHub',
+            description: 'Unduh file sampel DBF dBASE Database gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan database, konversi DBF, dan alat manajemen database dBASE.',
+            keywords: 'file sampel DBF, file uji DBF, unduh sampel DBF, file uji DBF gratis, sampel dBASE Database, sampel database'
+          },
+          schema: {
+            name: 'File Sampel DBF Gratis - Unduh File dBASE Database Uji',
+            description: 'Unduh file sampel DBF dBASE Database gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan database, konversi DBF, dan alat manajemen database dBASE.'
+          },
+          hero: {
+            title: 'File Sampel DBF',
+            description: 'Unduh file sampel DBF dBASE Database gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan database, konversi DBF, dan alat manajemen database dBASE Anda.'
+          },
+          about_description: 'Ini adalah file uji DBF (dBASE Database) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dds: {
+          meta: {
+            title: 'Unduh File Sampel DDS Gratis - File DirectDraw Surface | MorphyHub',
+            description: 'Unduh file sampel DDS DirectDraw Surface gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan tekstur, konversi DDS, dan alat pemrosesan format tekstur game.',
+            keywords: 'file sampel DDS, file uji DDS, unduh sampel DDS, file uji DDS gratis, sampel DirectDraw Surface, sampel tekstur game'
+          },
+          schema: {
+            name: 'File Sampel DDS Gratis - Unduh File DirectDraw Surface Uji',
+            description: 'Unduh file sampel DDS DirectDraw Surface gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan tekstur, konversi DDS, dan alat pemrosesan format tekstur game.'
+          },
+          hero: {
+            title: 'File Sampel DDS',
+            description: 'Unduh file sampel DDS DirectDraw Surface gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan tekstur, konversi DDS, dan alat pemrosesan format tekstur game Anda.'
+          },
+          about_description: 'Ini adalah file uji DDS (DirectDraw Surface) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dem: {
+          meta: {
+            title: 'Unduh File Sampel DEM Gratis - File Digital Elevation Model | MorphyHub',
+            description: 'Unduh file sampel DEM Digital Elevation Model gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data topografi, konversi DEM, dan alat sistem informasi geografis (GIS).',
+            keywords: 'file sampel DEM, file uji DEM, unduh sampel DEM, file uji DEM gratis, sampel Digital Elevation Model, sampel data topografi'
+          },
+          schema: {
+            name: 'File Sampel DEM Gratis - Unduh File Digital Elevation Model Uji',
+            description: 'Unduh file sampel DEM Digital Elevation Model gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data topografi, konversi DEM, dan alat sistem informasi geografis (GIS).'
+          },
+          hero: {
+            title: 'File Sampel DEM',
+            description: 'Unduh file sampel DEM Digital Elevation Model gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data topografi, konversi DEM, dan alat sistem informasi geografis (GIS) Anda.'
+          },
+          about_description: 'Ini adalah file uji DEM (Digital Elevation Model) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        der: {
+          meta: {
+            title: 'Unduh File Sampel DER Gratis - File Distinguished Encoding Rules Certificate | MorphyHub',
+            description: 'Unduh file sampel DER Distinguished Encoding Rules Certificate gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan sertifikat, parsing DER, dan alat manajemen sertifikat keamanan.',
+            keywords: 'file sampel DER, file uji DER, unduh sampel DER, file uji DER gratis, sampel Distinguished Encoding Rules Certificate, sampel sertifikat'
+          },
+          schema: {
+            name: 'File Sampel DER Gratis - Unduh File Distinguished Encoding Rules Certificate Uji',
+            description: 'Unduh file sampel DER Distinguished Encoding Rules Certificate gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan sertifikat, parsing DER, dan alat manajemen sertifikat keamanan.'
+          },
+          hero: {
+            title: 'File Sampel DER',
+            description: 'Unduh file sampel DER Distinguished Encoding Rules Certificate gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan sertifikat, parsing DER, dan alat manajemen sertifikat keamanan Anda.'
+          },
+          about_description: 'Ini adalah file uji DER (Distinguished Encoding Rules Certificate) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dmp: {
+          meta: {
+            title: 'Unduh File Sampel DMP Gratis - File Memory Dump | MorphyHub',
+            description: 'Unduh file sampel DMP Memory Dump gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisis memory dump, pemrosesan DMP, dan alat debugging sistem.',
+            keywords: 'file sampel DMP, file uji DMP, unduh sampel DMP, file uji DMP gratis, sampel Memory Dump, sampel memory dump'
+          },
+          schema: {
+            name: 'File Sampel DMP Gratis - Unduh File Memory Dump Uji',
+            description: 'Unduh file sampel DMP Memory Dump gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisis memory dump, pemrosesan DMP, dan alat debugging sistem.'
+          },
+          hero: {
+            title: 'File Sampel DMP',
+            description: 'Unduh file sampel DMP Memory Dump gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji analisis memory dump, pemrosesan DMP, dan alat debugging sistem Anda.'
+          },
+          about_description: 'Ini adalah file uji DMP (Memory Dump) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dng: {
+          meta: {
+            title: 'Unduh File Sampel DNG Gratis - File Digital Negative | MorphyHub',
+            description: 'Unduh file sampel DNG Digital Negative gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar RAW, konversi DNG, dan alat editing foto digital.',
+            keywords: 'file sampel DNG, file uji DNG, unduh sampel DNG, file uji DNG gratis, sampel Digital Negative, sampel gambar RAW'
+          },
+          schema: {
+            name: 'File Sampel DNG Gratis - Unduh File Digital Negative Uji',
+            description: 'Unduh file sampel DNG Digital Negative gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar RAW, konversi DNG, dan alat editing foto digital.'
+          },
+          hero: {
+            title: 'File Sampel DNG',
+            description: 'Unduh file sampel DNG Digital Negative gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar RAW, konversi DNG, dan alat editing foto digital Anda.'
+          },
+          about_description: 'Ini adalah file uji DNG (Digital Negative) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'docker-compose-yml': {
+          meta: {
+            title: 'Unduh File Sampel Docker Compose YML Gratis - File Docker Compose Configuration | MorphyHub',
+            description: 'Unduh file sampel Docker Compose YML Docker Compose Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan Docker Compose, parsing YML, dan alat orkestrasi container.',
+            keywords: 'file sampel Docker Compose YML, file uji Docker Compose YML, unduh sampel Docker Compose YML, file uji Docker Compose YML gratis, sampel Docker Compose Configuration, sampel konfigurasi container'
+          },
+          schema: {
+            name: 'File Sampel Docker Compose YML Gratis - Unduh File Docker Compose Configuration Uji',
+            description: 'Unduh file sampel Docker Compose YML Docker Compose Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan Docker Compose, parsing YML, dan alat orkestrasi container.'
+          },
+          hero: {
+            title: 'File Sampel Docker Compose YML',
+            description: 'Unduh file sampel Docker Compose YML Docker Compose Configuration gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan Docker Compose, parsing YML, dan alat orkestrasi container Anda.'
+          },
+          about_description: 'Ini adalah file uji Docker Compose YML (Docker Compose Configuration) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dockerfile: {
+          meta: {
+            title: 'Unduh File Sampel Dockerfile Gratis - File Docker Configuration | MorphyHub',
+            description: 'Unduh file sampel Dockerfile Docker Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji build Docker, parsing Dockerfile, dan alat containerisasi.',
+            keywords: 'file sampel Dockerfile, file uji Dockerfile, unduh sampel Dockerfile, file uji Dockerfile gratis, sampel Docker Configuration, sampel konfigurasi container'
+          },
+          schema: {
+            name: 'File Sampel Dockerfile Gratis - Unduh File Docker Configuration Uji',
+            description: 'Unduh file sampel Dockerfile Docker Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji build Docker, parsing Dockerfile, dan alat containerisasi.'
+          },
+          hero: {
+            title: 'File Sampel Dockerfile',
+            description: 'Unduh file sampel Dockerfile Docker Configuration gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji build Docker, parsing Dockerfile, dan alat containerisasi Anda.'
+          },
+          about_description: 'Ini adalah file uji Dockerfile (Docker Configuration) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dwg: {
+          meta: {
+            title: 'Unduh File Sampel DWG Gratis - File AutoCAD Drawing | MorphyHub',
+            description: 'Unduh file sampel DWG AutoCAD Drawing gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi DWG, dan alat pemrosesan format AutoCAD.',
+            keywords: 'file sampel DWG, file uji DWG, unduh sampel DWG, file uji DWG gratis, sampel AutoCAD Drawing, sampel gambar CAD'
+          },
+          schema: {
+            name: 'File Sampel DWG Gratis - Unduh File AutoCAD Drawing Uji',
+            description: 'Unduh file sampel DWG AutoCAD Drawing gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi DWG, dan alat pemrosesan format AutoCAD.'
+          },
+          hero: {
+            title: 'File Sampel DWG',
+            description: 'Unduh file sampel DWG AutoCAD Drawing gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar CAD, konversi DWG, dan alat pemrosesan format AutoCAD Anda.'
+          },
+          about_description: 'Ini adalah file uji DWG (AutoCAD Drawing) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        dxf: {
+          meta: {
+            title: 'Unduh File Sampel DXF Gratis - File Drawing Exchange Format | MorphyHub',
+            description: 'Unduh file sampel DXF Drawing Exchange Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi DXF, dan alat pemrosesan format pertukaran gambar.',
+            keywords: 'file sampel DXF, file uji DXF, unduh sampel DXF, file uji DXF gratis, sampel Drawing Exchange Format, sampel gambar CAD'
+          },
+          schema: {
+            name: 'File Sampel DXF Gratis - Unduh File Drawing Exchange Format Uji',
+            description: 'Unduh file sampel DXF Drawing Exchange Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi DXF, dan alat pemrosesan format pertukaran gambar.'
+          },
+          hero: {
+            title: 'File Sampel DXF',
+            description: 'Unduh file sampel DXF Drawing Exchange Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar CAD, konversi DXF, dan alat pemrosesan format pertukaran gambar Anda.'
+          },
+          about_description: 'Ini adalah file uji DXF (Drawing Exchange Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        editorconfig: {
+          meta: {
+            title: 'Unduh File Sampel EditorConfig Gratis - File Editor Configuration | MorphyHub',
+            description: 'Unduh file sampel EditorConfig Editor Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan konfigurasi editor, parsing EditorConfig, dan alat manajemen gaya kode.',
+            keywords: 'file sampel EditorConfig, file uji EditorConfig, unduh sampel EditorConfig, file uji EditorConfig gratis, sampel Editor Configuration, sampel konfigurasi editor'
+          },
+          schema: {
+            name: 'File Sampel EditorConfig Gratis - Unduh File Editor Configuration Uji',
+            description: 'Unduh file sampel EditorConfig Editor Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan konfigurasi editor, parsing EditorConfig, dan alat manajemen gaya kode.'
+          },
+          hero: {
+            title: 'File Sampel EditorConfig',
+            description: 'Unduh file sampel EditorConfig Editor Configuration gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan konfigurasi editor, parsing EditorConfig, dan alat manajemen gaya kode Anda.'
+          },
+          about_description: 'Ini adalah file uji EditorConfig (Editor Configuration) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        elf: {
+          meta: {
+            title: 'Unduh File Sampel ELF Gratis - File Executable and Linkable Format | MorphyHub',
+            description: 'Unduh file sampel ELF Executable and Linkable Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisis file executable, pemrosesan ELF, dan alat pemrosesan format file executable Linux.',
+            keywords: 'file sampel ELF, file uji ELF, unduh sampel ELF, file uji ELF gratis, sampel Executable and Linkable Format, sampel file executable Linux'
+          },
+          schema: {
+            name: 'File Sampel ELF Gratis - Unduh File Executable and Linkable Format Uji',
+            description: 'Unduh file sampel ELF Executable and Linkable Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisis file executable, pemrosesan ELF, dan alat pemrosesan format file executable Linux.'
+          },
+          hero: {
+            title: 'File Sampel ELF',
+            description: 'Unduh file sampel ELF Executable and Linkable Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji analisis file executable, pemrosesan ELF, dan alat pemrosesan format file executable Linux Anda.'
+          },
+          about_description: 'Ini adalah file uji ELF (Executable and Linkable Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        eps: {
+          meta: {
+            title: 'Unduh File Sampel EPS Gratis - File Encapsulated PostScript | MorphyHub',
+            description: 'Unduh file sampel EPS Encapsulated PostScript gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan grafik vektor, konversi EPS, dan alat pemrosesan format grafik untuk cetak.',
+            keywords: 'file sampel EPS, file uji EPS, unduh sampel EPS, file uji EPS gratis, sampel Encapsulated PostScript, sampel grafik vektor'
+          },
+          schema: {
+            name: 'File Sampel EPS Gratis - Unduh File Encapsulated PostScript Uji',
+            description: 'Unduh file sampel EPS Encapsulated PostScript gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan grafik vektor, konversi EPS, dan alat pemrosesan format grafik untuk cetak.'
+          },
+          hero: {
+            title: 'File Sampel EPS',
+            description: 'Unduh file sampel EPS Encapsulated PostScript gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan grafik vektor, konversi EPS, dan alat pemrosesan format grafik untuk cetak Anda.'
+          },
+          about_description: 'Ini adalah file uji EPS (Encapsulated PostScript) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        exr: {
+          meta: {
+            title: 'Unduh File Sampel EXR Gratis - File OpenEXR Image | MorphyHub',
+            description: 'Unduh file sampel EXR OpenEXR Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar HDR, konversi EXR, dan alat pemrosesan format gambar dynamic range tinggi.',
+            keywords: 'file sampel EXR, file uji EXR, unduh sampel EXR, file uji EXR gratis, sampel OpenEXR Image, sampel gambar HDR'
+          },
+          schema: {
+            name: 'File Sampel EXR Gratis - Unduh File OpenEXR Image Uji',
+            description: 'Unduh file sampel EXR OpenEXR Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar HDR, konversi EXR, dan alat pemrosesan format gambar dynamic range tinggi.'
+          },
+          hero: {
+            title: 'File Sampel EXR',
+            description: 'Unduh file sampel EXR OpenEXR Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar HDR, konversi EXR, dan alat pemrosesan format gambar dynamic range tinggi Anda.'
+          },
+          about_description: 'Ini adalah file uji EXR (OpenEXR Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        fbx: {
+          meta: {
+            title: 'Unduh File Sampel FBX Gratis - File Autodesk FBX | MorphyHub',
+            description: 'Unduh file sampel FBX Autodesk FBX gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan model 3D, konversi FBX, dan alat pemrosesan format 3D.',
+            keywords: 'file sampel FBX, file uji FBX, unduh sampel FBX, file uji FBX gratis, sampel Autodesk FBX, sampel model 3D'
+          },
+          schema: {
+            name: 'File Sampel FBX Gratis - Unduh File Autodesk FBX Uji',
+            description: 'Unduh file sampel FBX Autodesk FBX gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan model 3D, konversi FBX, dan alat pemrosesan format 3D.'
+          },
+          hero: {
+            title: 'File Sampel FBX',
+            description: 'Unduh file sampel FBX Autodesk FBX gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan model 3D, konversi FBX, dan alat pemrosesan format 3D Anda.'
+          },
+          about_description: 'Ini adalah file uji FBX (Autodesk FBX) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        gz: {
+          meta: {
+            title: 'Unduh File Sampel GZ Gratis - File Gzip Compressed Archive | MorphyHub',
+            description: 'Unduh file sampel GZ Gzip Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi GZ, dan alat pemrosesan file archive Unix.',
+            keywords: 'file sampel GZ, file uji GZ, unduh sampel GZ, file uji GZ gratis, sampel Gzip Compressed Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel GZ Gratis - Unduh File Gzip Compressed Archive Uji',
+            description: 'Unduh file sampel GZ Gzip Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi GZ, dan alat pemrosesan file archive Unix.'
+          },
+          hero: {
+            title: 'File Sampel GZ',
+            description: 'Unduh file sampel GZ Gzip Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi GZ, dan alat pemrosesan file archive Unix Anda.'
+          },
+          about_description: 'Ini adalah file uji GZ (Gzip Compressed Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        icns: {
+          meta: {
+            title: 'Unduh File Sampel ICNS Gratis - File Apple Icon Image | MorphyHub',
+            description: 'Unduh file sampel ICNS Apple Icon Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan ikon, konversi ICNS, dan alat pemrosesan format ikon Apple.',
+            keywords: 'file sampel ICNS, file uji ICNS, unduh sampel ICNS, file uji ICNS gratis, sampel Apple Icon Image, sampel ikon Apple'
+          },
+          schema: {
+            name: 'File Sampel ICNS Gratis - Unduh File Apple Icon Image Uji',
+            description: 'Unduh file sampel ICNS Apple Icon Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan ikon, konversi ICNS, dan alat pemrosesan format ikon Apple.'
+          },
+          hero: {
+            title: 'File Sampel ICNS',
+            description: 'Unduh file sampel ICNS Apple Icon Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan ikon, konversi ICNS, dan alat pemrosesan format ikon Apple Anda.'
+          },
+          about_description: 'Ini adalah file uji ICNS (Apple Icon Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ifc: {
+          meta: {
+            title: 'Unduh File Sampel IFC Gratis - File Industry Foundation Classes | MorphyHub',
+            description: 'Unduh file sampel IFC Industry Foundation Classes gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data BIM, konversi IFC, dan alat pemrosesan format building information modeling.',
+            keywords: 'file sampel IFC, file uji IFC, unduh sampel IFC, file uji IFC gratis, sampel Industry Foundation Classes, sampel data BIM'
+          },
+          schema: {
+            name: 'File Sampel IFC Gratis - Unduh File Industry Foundation Classes Uji',
+            description: 'Unduh file sampel IFC Industry Foundation Classes gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data BIM, konversi IFC, dan alat pemrosesan format building information modeling.'
+          },
+          hero: {
+            title: 'File Sampel IFC',
+            description: 'Unduh file sampel IFC Industry Foundation Classes gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data BIM, konversi IFC, dan alat pemrosesan format building information modeling Anda.'
+          },
+          about_description: 'Ini adalah file uji IFC (Industry Foundation Classes) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        iges: {
+          meta: {
+            title: 'Unduh File Sampel IGES Gratis - File Initial Graphics Exchange Specification | MorphyHub',
+            description: 'Unduh file sampel IGES Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi IGES, dan alat pemrosesan format pertukaran gambar.',
+            keywords: 'file sampel IGES, file uji IGES, unduh sampel IGES, file uji IGES gratis, sampel Initial Graphics Exchange Specification, sampel gambar CAD'
+          },
+          schema: {
+            name: 'File Sampel IGES Gratis - Unduh File Initial Graphics Exchange Specification Uji',
+            description: 'Unduh file sampel IGES Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi IGES, dan alat pemrosesan format pertukaran gambar.'
+          },
+          hero: {
+            title: 'File Sampel IGES',
+            description: 'Unduh file sampel IGES Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar CAD, konversi IGES, dan alat pemrosesan format pertukaran gambar Anda.'
+          },
+          about_description: 'Ini adalah file uji IGES (Initial Graphics Exchange Specification) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        igs: {
+          meta: {
+            title: 'Unduh File Sampel IGS Gratis - File Initial Graphics Exchange Specification | MorphyHub',
+            description: 'Unduh file sampel IGS Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi IGS, dan alat pemrosesan format pertukaran gambar.',
+            keywords: 'file sampel IGS, file uji IGS, unduh sampel IGS, file uji IGS gratis, sampel Initial Graphics Exchange Specification, sampel gambar CAD'
+          },
+          schema: {
+            name: 'File Sampel IGS Gratis - Unduh File Initial Graphics Exchange Specification Uji',
+            description: 'Unduh file sampel IGS Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar CAD, konversi IGS, dan alat pemrosesan format pertukaran gambar.'
+          },
+          hero: {
+            title: 'File Sampel IGS',
+            description: 'Unduh file sampel IGS Initial Graphics Exchange Specification gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar CAD, konversi IGS, dan alat pemrosesan format pertukaran gambar Anda.'
+          },
+          about_description: 'Ini adalah file uji IGS (Initial Graphics Exchange Specification) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        indd: {
+          meta: {
+            title: 'Unduh File Sampel INDD Gratis - File Adobe InDesign Document | MorphyHub',
+            description: 'Unduh file sampel INDD Adobe InDesign Document gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan DTP, konversi INDD, dan alat pemrosesan format Adobe InDesign.',
+            keywords: 'file sampel INDD, file uji INDD, unduh sampel INDD, file uji INDD gratis, sampel Adobe InDesign Document, sampel DTP'
+          },
+          schema: {
+            name: 'File Sampel INDD Gratis - Unduh File Adobe InDesign Document Uji',
+            description: 'Unduh file sampel INDD Adobe InDesign Document gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan DTP, konversi INDD, dan alat pemrosesan format Adobe InDesign.'
+          },
+          hero: {
+            title: 'File Sampel INDD',
+            description: 'Unduh file sampel INDD Adobe InDesign Document gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan DTP, konversi INDD, dan alat pemrosesan format Adobe InDesign Anda.'
+          },
+          about_description: 'Ini adalah file uji INDD (Adobe InDesign Document) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ini: {
+          meta: {
+            title: 'Unduh File Sampel INI Gratis - File Initialization Configuration | MorphyHub',
+            description: 'Unduh file sampel INI Initialization Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing INI, dan alat manajemen konfigurasi Windows.',
+            keywords: 'file sampel INI, file uji INI, unduh sampel INI, file uji INI gratis, sampel Initialization Configuration, sampel file konfigurasi'
+          },
+          schema: {
+            name: 'File Sampel INI Gratis - Unduh File Initialization Configuration Uji',
+            description: 'Unduh file sampel INI Initialization Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing INI, dan alat manajemen konfigurasi Windows.'
+          },
+          hero: {
+            title: 'File Sampel INI',
+            description: 'Unduh file sampel INI Initialization Configuration gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan file konfigurasi, parsing INI, dan alat manajemen konfigurasi Windows Anda.'
+          },
+          about_description: 'Ini adalah file uji INI (Initialization Configuration) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ipa: {
+          meta: {
+            title: 'Unduh File Sampel IPA Gratis - File iOS Application Package | MorphyHub',
+            description: 'Unduh file sampel IPA iOS Application Package gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi aplikasi iOS, analisis IPA, dan alat pemrosesan aplikasi mobile.',
+            keywords: 'file sampel IPA, file uji IPA, unduh sampel IPA, file uji IPA gratis, sampel iOS Application Package, sampel aplikasi iOS'
+          },
+          schema: {
+            name: 'File Sampel IPA Gratis - Unduh File iOS Application Package Uji',
+            description: 'Unduh file sampel IPA iOS Application Package gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi aplikasi iOS, analisis IPA, dan alat pemrosesan aplikasi mobile.'
+          },
+          hero: {
+            title: 'File Sampel IPA',
+            description: 'Unduh file sampel IPA iOS Application Package gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji instalasi aplikasi iOS, analisis IPA, dan alat pemrosesan aplikasi mobile Anda.'
+          },
+          about_description: 'Ini adalah file uji IPA (iOS Application Package) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ipynb: {
+          meta: {
+            title: 'Unduh File Sampel IPYNB Gratis - File Jupyter Notebook | MorphyHub',
+            description: 'Unduh file sampel IPYNB Jupyter Notebook gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan Jupyter Notebook, parsing IPYNB, dan alat data science.',
+            keywords: 'file sampel IPYNB, file uji IPYNB, unduh sampel IPYNB, file uji IPYNB gratis, sampel Jupyter Notebook, sampel data science'
+          },
+          schema: {
+            name: 'File Sampel IPYNB Gratis - Unduh File Jupyter Notebook Uji',
+            description: 'Unduh file sampel IPYNB Jupyter Notebook gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan Jupyter Notebook, parsing IPYNB, dan alat data science.'
+          },
+          hero: {
+            title: 'File Sampel IPYNB',
+            description: 'Unduh file sampel IPYNB Jupyter Notebook gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan Jupyter Notebook, parsing IPYNB, dan alat data science Anda.'
+          },
+          about_description: 'Ini adalah file uji IPYNB (Jupyter Notebook) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        iso: {
+          meta: {
+            title: 'Unduh File Sampel ISO Gratis - File ISO 9660 Image | MorphyHub',
+            description: 'Unduh file sampel ISO ISO 9660 Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan disk image, mount ISO, dan alat pemrosesan format disk image optik.',
+            keywords: 'file sampel ISO, file uji ISO, unduh sampel ISO, file uji ISO gratis, sampel ISO 9660 Image, sampel disk image'
+          },
+          schema: {
+            name: 'File Sampel ISO Gratis - Unduh File ISO 9660 Image Uji',
+            description: 'Unduh file sampel ISO ISO 9660 Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan disk image, mount ISO, dan alat pemrosesan format disk image optik.'
+          },
+          hero: {
+            title: 'File Sampel ISO',
+            description: 'Unduh file sampel ISO ISO 9660 Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan disk image, mount ISO, dan alat pemrosesan format disk image optik Anda.'
+          },
+          about_description: 'Ini adalah file uji ISO (ISO 9660 Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        jar: {
+          meta: {
+            title: 'Unduh File Sampel JAR Gratis - File Java Archive | MorphyHub',
+            description: 'Unduh file sampel JAR Java Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan archive Java, eksekusi JAR, dan alat pemrosesan aplikasi Java.',
+            keywords: 'file sampel JAR, file uji JAR, unduh sampel JAR, file uji JAR gratis, sampel Java Archive, sampel archive Java'
+          },
+          schema: {
+            name: 'File Sampel JAR Gratis - Unduh File Java Archive Uji',
+            description: 'Unduh file sampel JAR Java Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan archive Java, eksekusi JAR, dan alat pemrosesan aplikasi Java.'
+          },
+          hero: {
+            title: 'File Sampel JAR',
+            description: 'Unduh file sampel JAR Java Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan archive Java, eksekusi JAR, dan alat pemrosesan aplikasi Java Anda.'
+          },
+          about_description: 'Ini adalah file uji JAR (Java Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        jks: {
+          meta: {
+            title: 'Unduh File Sampel JKS Gratis - File Java KeyStore | MorphyHub',
+            description: 'Unduh file sampel JKS Java KeyStore gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji manajemen sertifikat, parsing JKS, dan alat manajemen sertifikat keamanan Java.',
+            keywords: 'file sampel JKS, file uji JKS, unduh sampel JKS, file uji JKS gratis, sampel Java KeyStore, sampel sertifikat Java'
+          },
+          schema: {
+            name: 'File Sampel JKS Gratis - Unduh File Java KeyStore Uji',
+            description: 'Unduh file sampel JKS Java KeyStore gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji manajemen sertifikat, parsing JKS, dan alat manajemen sertifikat keamanan Java.'
+          },
+          hero: {
+            title: 'File Sampel JKS',
+            description: 'Unduh file sampel JKS Java KeyStore gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji manajemen sertifikat, parsing JKS, dan alat manajemen sertifikat keamanan Java Anda.'
+          },
+          about_description: 'Ini adalah file uji JKS (Java KeyStore) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        jwt: {
+          meta: {
+            title: 'Unduh File Sampel JWT Gratis - File JSON Web Token | MorphyHub',
+            description: 'Unduh file sampel JWT JSON Web Token gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan token autentikasi, parsing JWT, dan alat keamanan autentikasi web.',
+            keywords: 'file sampel JWT, file uji JWT, unduh sampel JWT, file uji JWT gratis, sampel JSON Web Token, sampel token autentikasi'
+          },
+          schema: {
+            name: 'File Sampel JWT Gratis - Unduh File JSON Web Token Uji',
+            description: 'Unduh file sampel JWT JSON Web Token gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan token autentikasi, parsing JWT, dan alat keamanan autentikasi web.'
+          },
+          hero: {
+            title: 'File Sampel JWT',
+            description: 'Unduh file sampel JWT JSON Web Token gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan token autentikasi, parsing JWT, dan alat keamanan autentikasi web Anda.'
+          },
+          about_description: 'Ini adalah file uji JWT (JSON Web Token) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        kml: {
+          meta: {
+            title: 'Unduh File Sampel KML Gratis - File Keyhole Markup Language | MorphyHub',
+            description: 'Unduh file sampel KML Keyhole Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data geografis, konversi KML, dan alat pemrosesan format Google Earth.',
+            keywords: 'file sampel KML, file uji KML, unduh sampel KML, file uji KML gratis, sampel Keyhole Markup Language, sampel data geografis'
+          },
+          schema: {
+            name: 'File Sampel KML Gratis - Unduh File Keyhole Markup Language Uji',
+            description: 'Unduh file sampel KML Keyhole Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data geografis, konversi KML, dan alat pemrosesan format Google Earth.'
+          },
+          hero: {
+            title: 'File Sampel KML',
+            description: 'Unduh file sampel KML Keyhole Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data geografis, konversi KML, dan alat pemrosesan format Google Earth Anda.'
+          },
+          about_description: 'Ini adalah file uji KML (Keyhole Markup Language) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        kmz: {
+          meta: {
+            title: 'Unduh File Sampel KMZ Gratis - File Keyhole Markup Language Zipped | MorphyHub',
+            description: 'Unduh file sampel KMZ Keyhole Markup Language Zipped gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data geografis, ekstraksi KMZ, dan alat pemrosesan format Google Earth terkompresi.',
+            keywords: 'file sampel KMZ, file uji KMZ, unduh sampel KMZ, file uji KMZ gratis, sampel Keyhole Markup Language Zipped, sampel data geografis'
+          },
+          schema: {
+            name: 'File Sampel KMZ Gratis - Unduh File Keyhole Markup Language Zipped Uji',
+            description: 'Unduh file sampel KMZ Keyhole Markup Language Zipped gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data geografis, ekstraksi KMZ, dan alat pemrosesan format Google Earth terkompresi.'
+          },
+          hero: {
+            title: 'File Sampel KMZ',
+            description: 'Unduh file sampel KMZ Keyhole Markup Language Zipped gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data geografis, ekstraksi KMZ, dan alat pemrosesan format Google Earth terkompresi Anda.'
+          },
+          about_description: 'Ini adalah file uji KMZ (Keyhole Markup Language Zipped) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        kt: {
+          meta: {
+            title: 'Unduh File Sampel KT Gratis - File Kotlin Source Code | MorphyHub',
+            description: 'Unduh file sampel KT Kotlin Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi Kotlin, analisis kode Kotlin, dan alat pengembangan aplikasi Android.',
+            keywords: 'file sampel KT, file uji KT, unduh sampel KT, file uji KT gratis, sampel Kotlin Source Code, sampel kode Kotlin'
+          },
+          schema: {
+            name: 'File Sampel KT Gratis - Unduh File Kotlin Source Code Uji',
+            description: 'Unduh file sampel KT Kotlin Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi Kotlin, analisis kode Kotlin, dan alat pengembangan aplikasi Android.'
+          },
+          hero: {
+            title: 'File Sampel KT',
+            description: 'Unduh file sampel KT Kotlin Source Code gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi Kotlin, analisis kode Kotlin, dan alat pengembangan aplikasi Android Anda.'
+          },
+          about_description: 'Ini adalah file uji KT (Kotlin Source Code) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        las: {
+          meta: {
+            title: 'Unduh File Sampel LAS Gratis - File LiDAR Point Cloud | MorphyHub',
+            description: 'Unduh file sampel LAS LiDAR Point Cloud gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data point cloud, konversi LAS, dan alat pemrosesan format data LiDAR.',
+            keywords: 'file sampel LAS, file uji LAS, unduh sampel LAS, file uji LAS gratis, sampel LiDAR Point Cloud, sampel data point cloud'
+          },
+          schema: {
+            name: 'File Sampel LAS Gratis - Unduh File LiDAR Point Cloud Uji',
+            description: 'Unduh file sampel LAS LiDAR Point Cloud gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data point cloud, konversi LAS, dan alat pemrosesan format data LiDAR.'
+          },
+          hero: {
+            title: 'File Sampel LAS',
+            description: 'Unduh file sampel LAS LiDAR Point Cloud gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data point cloud, konversi LAS, dan alat pemrosesan format data LiDAR Anda.'
+          },
+          about_description: 'Ini adalah file uji LAS (LiDAR Point Cloud) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        laz: {
+          meta: {
+            title: 'Unduh File Sampel LAZ Gratis - File Compressed LiDAR Point Cloud | MorphyHub',
+            description: 'Unduh file sampel LAZ Compressed LiDAR Point Cloud gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data point cloud, ekstraksi LAZ, dan alat pemrosesan format data LiDAR terkompresi.',
+            keywords: 'file sampel LAZ, file uji LAZ, unduh sampel LAZ, file uji LAZ gratis, sampel Compressed LiDAR Point Cloud, sampel data point cloud terkompresi'
+          },
+          schema: {
+            name: 'File Sampel LAZ Gratis - Unduh File Compressed LiDAR Point Cloud Uji',
+            description: 'Unduh file sampel LAZ Compressed LiDAR Point Cloud gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan data point cloud, ekstraksi LAZ, dan alat pemrosesan format data LiDAR terkompresi.'
+          },
+          hero: {
+            title: 'File Sampel LAZ',
+            description: 'Unduh file sampel LAZ Compressed LiDAR Point Cloud gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan data point cloud, ekstraksi LAZ, dan alat pemrosesan format data LiDAR terkompresi Anda.'
+          },
+          about_description: 'Ini adalah file uji LAZ (Compressed LiDAR Point Cloud) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        lha: {
+          meta: {
+            title: 'Unduh File Sampel LHA Gratis - File LHA Archive | MorphyHub',
+            description: 'Unduh file sampel LHA LHA Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi LHA, dan alat pemrosesan file archive LHA.',
+            keywords: 'file sampel LHA, file uji LHA, unduh sampel LHA, file uji LHA gratis, sampel LHA Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel LHA Gratis - Unduh File LHA Archive Uji',
+            description: 'Unduh file sampel LHA LHA Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi LHA, dan alat pemrosesan file archive LHA.'
+          },
+          hero: {
+            title: 'File Sampel LHA',
+            description: 'Unduh file sampel LHA LHA Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi LHA, dan alat pemrosesan file archive LHA Anda.'
+          },
+          about_description: 'Ini adalah file uji LHA (LHA Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        log: {
+          meta: {
+            title: 'Unduh File Sampel LOG Gratis - File Log File | MorphyHub',
+            description: 'Unduh file sampel LOG Log File gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file log, parsing LOG, dan alat analisis log sistem.',
+            keywords: 'file sampel LOG, file uji LOG, unduh sampel LOG, file uji LOG gratis, sampel Log File, sampel file log'
+          },
+          schema: {
+            name: 'File Sampel LOG Gratis - Unduh File Log File Uji',
+            description: 'Unduh file sampel LOG Log File gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file log, parsing LOG, dan alat analisis log sistem.'
+          },
+          hero: {
+            title: 'File Sampel LOG',
+            description: 'Unduh file sampel LOG Log File gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan file log, parsing LOG, dan alat analisis log sistem Anda.'
+          },
+          about_description: 'Ini adalah file uji LOG (Log File) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        lua: {
+          meta: {
+            title: 'Unduh File Sampel LUA Gratis - File Lua Script | MorphyHub',
+            description: 'Unduh file sampel LUA Lua Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script Lua, analisis kode LUA, dan alat pemrosesan bahasa script.',
+            keywords: 'file sampel LUA, file uji LUA, unduh sampel LUA, file uji LUA gratis, sampel Lua Script, sampel script'
+          },
+          schema: {
+            name: 'File Sampel LUA Gratis - Unduh File Lua Script Uji',
+            description: 'Unduh file sampel LUA Lua Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script Lua, analisis kode LUA, dan alat pemrosesan bahasa script.'
+          },
+          hero: {
+            title: 'File Sampel LUA',
+            description: 'Unduh file sampel LUA Lua Script gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji eksekusi script Lua, analisis kode LUA, dan alat pemrosesan bahasa script Anda.'
+          },
+          about_description: 'Ini adalah file uji LUA (Lua Script) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        lzh: {
+          meta: {
+            title: 'Unduh File Sampel LZH Gratis - File LZH Archive | MorphyHub',
+            description: 'Unduh file sampel LZH LZH Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi LZH, dan alat pemrosesan file archive LZH.',
+            keywords: 'file sampel LZH, file uji LZH, unduh sampel LZH, file uji LZH gratis, sampel LZH Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel LZH Gratis - Unduh File LZH Archive Uji',
+            description: 'Unduh file sampel LZH LZH Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi LZH, dan alat pemrosesan file archive LZH.'
+          },
+          hero: {
+            title: 'File Sampel LZH',
+            description: 'Unduh file sampel LZH LZH Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi LZH, dan alat pemrosesan file archive LZH Anda.'
+          },
+          about_description: 'Ini adalah file uji LZH (LZH Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        lzma: {
+          meta: {
+            title: 'Unduh File Sampel LZMA Gratis - File Lempel-Ziv-Markov Chain Algorithm Archive | MorphyHub',
+            description: 'Unduh file sampel LZMA Lempel-Ziv-Markov Chain Algorithm Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi LZMA, dan alat pemrosesan file archive dengan rasio kompresi tinggi.',
+            keywords: 'file sampel LZMA, file uji LZMA, unduh sampel LZMA, file uji LZMA gratis, sampel Lempel-Ziv-Markov Chain Algorithm Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel LZMA Gratis - Unduh File Lempel-Ziv-Markov Chain Algorithm Archive Uji',
+            description: 'Unduh file sampel LZMA Lempel-Ziv-Markov Chain Algorithm Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi LZMA, dan alat pemrosesan file archive dengan rasio kompresi tinggi.'
+          },
+          hero: {
+            title: 'File Sampel LZMA',
+            description: 'Unduh file sampel LZMA Lempel-Ziv-Markov Chain Algorithm Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi LZMA, dan alat pemrosesan file archive dengan rasio kompresi tinggi Anda.'
+          },
+          about_description: 'Ini adalah file uji LZMA (Lempel-Ziv-Markov Chain Algorithm Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        m3u: {
+          meta: {
+            title: 'Unduh File Sampel M3U Gratis - File Media Playlist | MorphyHub',
+            description: 'Unduh file sampel M3U Media Playlist gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan playlist, parsing M3U, dan alat manajemen playlist media.',
+            keywords: 'file sampel M3U, file uji M3U, unduh sampel M3U, file uji M3U gratis, sampel Media Playlist, sampel playlist'
+          },
+          schema: {
+            name: 'File Sampel M3U Gratis - Unduh File Media Playlist Uji',
+            description: 'Unduh file sampel M3U Media Playlist gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan playlist, parsing M3U, dan alat manajemen playlist media.'
+          },
+          hero: {
+            title: 'File Sampel M3U',
+            description: 'Unduh file sampel M3U Media Playlist gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan playlist, parsing M3U, dan alat manajemen playlist media Anda.'
+          },
+          about_description: 'Ini adalah file uji M3U (Media Playlist) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        'm3u8': {
+          meta: {
+            title: 'Unduh File Sampel M3U8 Gratis - File UTF-8 Media Playlist | MorphyHub',
+            description: 'Unduh file sampel M3U8 UTF-8 Media Playlist gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan playlist HLS, parsing M3U8, dan alat manajemen playlist media streaming.',
+            keywords: 'file sampel M3U8, file uji M3U8, unduh sampel M3U8, file uji M3U8 gratis, sampel UTF-8 Media Playlist, sampel playlist HLS'
+          },
+          schema: {
+            name: 'File Sampel M3U8 Gratis - Unduh File UTF-8 Media Playlist Uji',
+            description: 'Unduh file sampel M3U8 UTF-8 Media Playlist gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan playlist HLS, parsing M3U8, dan alat manajemen playlist media streaming.'
+          },
+          hero: {
+            title: 'File Sampel M3U8',
+            description: 'Unduh file sampel M3U8 UTF-8 Media Playlist gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan playlist HLS, parsing M3U8, dan alat manajemen playlist media streaming Anda.'
+          },
+          about_description: 'Ini adalah file uji M3U8 (UTF-8 Media Playlist) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        m4a: {
+          meta: {
+            title: 'Unduh File Sampel M4A Gratis - File MPEG-4 Audio | MorphyHub',
+            description: 'Unduh file sampel M4A MPEG-4 Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi M4A, dan alat pemrosesan format audio MPEG-4.',
+            keywords: 'file sampel M4A, file uji M4A, unduh sampel M4A, file uji M4A gratis, sampel MPEG-4 Audio, sampel file audio'
+          },
+          schema: {
+            name: 'File Sampel M4A Gratis - Unduh File MPEG-4 Audio Uji',
+            description: 'Unduh file sampel M4A MPEG-4 Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi M4A, dan alat pemrosesan format audio MPEG-4.'
+          },
+          hero: {
+            title: 'File Sampel M4A',
+            description: 'Unduh file sampel M4A MPEG-4 Audio gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi M4A, dan alat pemrosesan format audio MPEG-4 Anda.'
+          },
+          about_description: 'Ini adalah file uji M4A (MPEG-4 Audio) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        m4v: {
+          meta: {
+            title: 'Unduh File Sampel M4V Gratis - File MPEG-4 Video | MorphyHub',
+            description: 'Unduh file sampel M4V MPEG-4 Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi M4V, dan alat pemrosesan format video MPEG-4.',
+            keywords: 'file sampel M4V, file uji M4V, unduh sampel M4V, file uji M4V gratis, sampel MPEG-4 Video, sampel file video'
+          },
+          schema: {
+            name: 'File Sampel M4V Gratis - Unduh File MPEG-4 Video Uji',
+            description: 'Unduh file sampel M4V MPEG-4 Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi M4V, dan alat pemrosesan format video MPEG-4.'
+          },
+          hero: {
+            title: 'File Sampel M4V',
+            description: 'Unduh file sampel M4V MPEG-4 Video gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi M4V, dan alat pemrosesan format video MPEG-4 Anda.'
+          },
+          about_description: 'Ini adalah file uji M4V (MPEG-4 Video) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ma: {
+          meta: {
+            title: 'Unduh File Sampel MA Gratis - File Maya ASCII Scene | MorphyHub',
+            description: 'Unduh file sampel MA Maya ASCII Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan scene 3D, konversi MA, dan alat pemrosesan format Autodesk Maya.',
+            keywords: 'file sampel MA, file uji MA, unduh sampel MA, file uji MA gratis, sampel Maya ASCII Scene, sampel scene 3D'
+          },
+          schema: {
+            name: 'File Sampel MA Gratis - Unduh File Maya ASCII Scene Uji',
+            description: 'Unduh file sampel MA Maya ASCII Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan scene 3D, konversi MA, dan alat pemrosesan format Autodesk Maya.'
+          },
+          hero: {
+            title: 'File Sampel MA',
+            description: 'Unduh file sampel MA Maya ASCII Scene gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan scene 3D, konversi MA, dan alat pemrosesan format Autodesk Maya Anda.'
+          },
+          about_description: 'Ini adalah file uji MA (Maya ASCII Scene) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        makefile: {
+          meta: {
+            title: 'Unduh File Sampel Makefile Gratis - File Build Configuration | MorphyHub',
+            description: 'Unduh file sampel Makefile Build Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan build, parsing Makefile, dan alat manajemen build perangkat lunak.',
+            keywords: 'file sampel Makefile, file uji Makefile, unduh sampel Makefile, file uji Makefile gratis, sampel Build Configuration, sampel konfigurasi build'
+          },
+          schema: {
+            name: 'File Sampel Makefile Gratis - Unduh File Build Configuration Uji',
+            description: 'Unduh file sampel Makefile Build Configuration gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan build, parsing Makefile, dan alat manajemen build perangkat lunak.'
+          },
+          hero: {
+            title: 'File Sampel Makefile',
+            description: 'Unduh file sampel Makefile Build Configuration gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan build, parsing Makefile, dan alat manajemen build perangkat lunak Anda.'
+          },
+          about_description: 'Ini adalah file uji Makefile (Build Configuration) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        max: {
+          meta: {
+            title: 'Unduh File Sampel MAX Gratis - File 3ds Max Scene | MorphyHub',
+            description: 'Unduh file sampel MAX 3ds Max Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan scene 3D, konversi MAX, dan alat pemrosesan format Autodesk 3ds Max.',
+            keywords: 'file sampel MAX, file uji MAX, unduh sampel MAX, file uji MAX gratis, sampel 3ds Max Scene, sampel scene 3D'
+          },
+          schema: {
+            name: 'File Sampel MAX Gratis - Unduh File 3ds Max Scene Uji',
+            description: 'Unduh file sampel MAX 3ds Max Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan scene 3D, konversi MAX, dan alat pemrosesan format Autodesk 3ds Max.'
+          },
+          hero: {
+            title: 'File Sampel MAX',
+            description: 'Unduh file sampel MAX 3ds Max Scene gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan scene 3D, konversi MAX, dan alat pemrosesan format Autodesk 3ds Max Anda.'
+          },
+          about_description: 'Ini adalah file uji MAX (3ds Max Scene) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mb: {
+          meta: {
+            title: 'Unduh File Sampel MB Gratis - File Maya Binary Scene | MorphyHub',
+            description: 'Unduh file sampel MB Maya Binary Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan scene 3D, konversi MB, dan alat pemrosesan format Autodesk Maya.',
+            keywords: 'file sampel MB, file uji MB, unduh sampel MB, file uji MB gratis, sampel Maya Binary Scene, sampel scene 3D'
+          },
+          schema: {
+            name: 'File Sampel MB Gratis - Unduh File Maya Binary Scene Uji',
+            description: 'Unduh file sampel MB Maya Binary Scene gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan scene 3D, konversi MB, dan alat pemrosesan format Autodesk Maya.'
+          },
+          hero: {
+            title: 'File Sampel MB',
+            description: 'Unduh file sampel MB Maya Binary Scene gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan scene 3D, konversi MB, dan alat pemrosesan format Autodesk Maya Anda.'
+          },
+          about_description: 'Ini adalah file uji MB (Maya Binary Scene) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mbtiles: {
+          meta: {
+            title: 'Unduh File Sampel MBTiles Gratis - File Mapbox Tiles | MorphyHub',
+            description: 'Unduh file sampel MBTiles Mapbox Tiles gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan tile peta, parsing MBTiles, dan alat pemrosesan format tile peta.',
+            keywords: 'file sampel MBTiles, file uji MBTiles, unduh sampel MBTiles, file uji MBTiles gratis, sampel Mapbox Tiles, sampel tile peta'
+          },
+          schema: {
+            name: 'File Sampel MBTiles Gratis - Unduh File Mapbox Tiles Uji',
+            description: 'Unduh file sampel MBTiles Mapbox Tiles gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan tile peta, parsing MBTiles, dan alat pemrosesan format tile peta.'
+          },
+          hero: {
+            title: 'File Sampel MBTiles',
+            description: 'Unduh file sampel MBTiles Mapbox Tiles gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan tile peta, parsing MBTiles, dan alat pemrosesan format tile peta Anda.'
+          },
+          about_description: 'Ini adalah file uji MBTiles (Mapbox Tiles) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mdx: {
+          meta: {
+            title: 'Unduh File Sampel MDX Gratis - File MDX Model | MorphyHub',
+            description: 'Unduh file sampel MDX MDX Model gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan model 3D, konversi MDX, dan alat pemrosesan format model Warcraft 3.',
+            keywords: 'file sampel MDX, file uji MDX, unduh sampel MDX, file uji MDX gratis, sampel MDX Model, sampel model 3D'
+          },
+          schema: {
+            name: 'File Sampel MDX Gratis - Unduh File MDX Model Uji',
+            description: 'Unduh file sampel MDX MDX Model gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan model 3D, konversi MDX, dan alat pemrosesan format model Warcraft 3.'
+          },
+          hero: {
+            title: 'File Sampel MDX',
+            description: 'Unduh file sampel MDX MDX Model gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan model 3D, konversi MDX, dan alat pemrosesan format model Warcraft 3 Anda.'
+          },
+          about_description: 'Ini adalah file uji MDX (MDX Model) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        midi: {
+          meta: {
+            title: 'Unduh File Sampel MIDI Gratis - File Musical Instrument Digital Interface | MorphyHub',
+            description: 'Unduh file sampel MIDI Musical Instrument Digital Interface gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran MIDI, konversi MIDI, dan alat produksi musik.',
+            keywords: 'file sampel MIDI, file uji MIDI, unduh sampel MIDI, file uji MIDI gratis, sampel Musical Instrument Digital Interface, sampel file musik'
+          },
+          schema: {
+            name: 'File Sampel MIDI Gratis - Unduh File Musical Instrument Digital Interface Uji',
+            description: 'Unduh file sampel MIDI Musical Instrument Digital Interface gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran MIDI, konversi MIDI, dan alat produksi musik.'
+          },
+          hero: {
+            title: 'File Sampel MIDI',
+            description: 'Unduh file sampel MIDI Musical Instrument Digital Interface gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran MIDI, konversi MIDI, dan alat produksi musik Anda.'
+          },
+          about_description: 'Ini adalah file uji MIDI (Musical Instrument Digital Interface) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mov: {
+          meta: {
+            title: 'Unduh File Sampel MOV Gratis - File QuickTime Movie | MorphyHub',
+            description: 'Unduh file sampel MOV QuickTime Movie gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MOV, dan alat pemrosesan format video Apple.',
+            keywords: 'file sampel MOV, file uji MOV, unduh sampel MOV, file uji MOV gratis, sampel QuickTime Movie, sampel file video'
+          },
+          schema: {
+            name: 'File Sampel MOV Gratis - Unduh File QuickTime Movie Uji',
+            description: 'Unduh file sampel MOV QuickTime Movie gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MOV, dan alat pemrosesan format video Apple.'
+          },
+          hero: {
+            title: 'File Sampel MOV',
+            description: 'Unduh file sampel MOV QuickTime Movie gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi MOV, dan alat pemrosesan format video Apple Anda.'
+          },
+          about_description: 'Ini adalah file uji MOV (QuickTime Movie) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mp3: {
+          meta: {
+            title: 'Unduh File Sampel MP3 Gratis - File MPEG Audio Layer 3 | MorphyHub',
+            description: 'Unduh file sampel MP3 MPEG Audio Layer 3 gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi MP3, dan alat pemrosesan format audio digital.',
+            keywords: 'file sampel MP3, file uji MP3, unduh sampel MP3, file uji MP3 gratis, sampel MPEG Audio Layer 3, sampel file audio'
+          },
+          schema: {
+            name: 'File Sampel MP3 Gratis - Unduh File MPEG Audio Layer 3 Uji',
+            description: 'Unduh file sampel MP3 MPEG Audio Layer 3 gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi MP3, dan alat pemrosesan format audio digital.'
+          },
+          hero: {
+            title: 'File Sampel MP3',
+            description: 'Unduh file sampel MP3 MPEG Audio Layer 3 gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi MP3, dan alat pemrosesan format audio digital Anda.'
+          },
+          about_description: 'Ini adalah file uji MP3 (MPEG Audio Layer 3) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mp4: {
+          meta: {
+            title: 'Unduh File Sampel MP4 Gratis - File MPEG-4 Video | MorphyHub',
+            description: 'Unduh file sampel MP4 MPEG-4 Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MP4, dan alat pemrosesan format video digital.',
+            keywords: 'file sampel MP4, file uji MP4, unduh sampel MP4, file uji MP4 gratis, sampel MPEG-4 Video, sampel file video'
+          },
+          schema: {
+            name: 'File Sampel MP4 Gratis - Unduh File MPEG-4 Video Uji',
+            description: 'Unduh file sampel MP4 MPEG-4 Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MP4, dan alat pemrosesan format video digital.'
+          },
+          hero: {
+            title: 'File Sampel MP4',
+            description: 'Unduh file sampel MP4 MPEG-4 Video gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi MP4, dan alat pemrosesan format video digital Anda.'
+          },
+          about_description: 'Ini adalah file uji MP4 (MPEG-4 Video) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mpeg: {
+          meta: {
+            title: 'Unduh File Sampel MPEG Gratis - File MPEG Video | MorphyHub',
+            description: 'Unduh file sampel MPEG MPEG Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MPEG, dan alat pemrosesan format video MPEG.',
+            keywords: 'file sampel MPEG, file uji MPEG, unduh sampel MPEG, file uji MPEG gratis, sampel MPEG Video, sampel file video'
+          },
+          schema: {
+            name: 'File Sampel MPEG Gratis - Unduh File MPEG Video Uji',
+            description: 'Unduh file sampel MPEG MPEG Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MPEG, dan alat pemrosesan format video MPEG.'
+          },
+          hero: {
+            title: 'File Sampel MPEG',
+            description: 'Unduh file sampel MPEG MPEG Video gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi MPEG, dan alat pemrosesan format video MPEG Anda.'
+          },
+          about_description: 'Ini adalah file uji MPEG (MPEG Video) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mpg: {
+          meta: {
+            title: 'Unduh File Sampel MPG Gratis - File MPEG Video | MorphyHub',
+            description: 'Unduh file sampel MPG MPEG Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MPG, dan alat pemrosesan format video MPEG.',
+            keywords: 'file sampel MPG, file uji MPG, unduh sampel MPG, file uji MPG gratis, sampel MPEG Video, sampel file video'
+          },
+          schema: {
+            name: 'File Sampel MPG Gratis - Unduh File MPEG Video Uji',
+            description: 'Unduh file sampel MPG MPEG Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi MPG, dan alat pemrosesan format video MPEG.'
+          },
+          hero: {
+            title: 'File Sampel MPG',
+            description: 'Unduh file sampel MPG MPEG Video gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi MPG, dan alat pemrosesan format video MPEG Anda.'
+          },
+          about_description: 'Ini adalah file uji MPG (MPEG Video) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        msg: {
+          meta: {
+            title: 'Unduh File Sampel MSG Gratis - File Outlook Message | MorphyHub',
+            description: 'Unduh file sampel MSG Outlook Message gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan email, konversi MSG, dan alat pemrosesan format Microsoft Outlook.',
+            keywords: 'file sampel MSG, file uji MSG, unduh sampel MSG, file uji MSG gratis, sampel Outlook Message, sampel file email'
+          },
+          schema: {
+            name: 'File Sampel MSG Gratis - Unduh File Outlook Message Uji',
+            description: 'Unduh file sampel MSG Outlook Message gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan email, konversi MSG, dan alat pemrosesan format Microsoft Outlook.'
+          },
+          hero: {
+            title: 'File Sampel MSG',
+            description: 'Unduh file sampel MSG Outlook Message gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan email, konversi MSG, dan alat pemrosesan format Microsoft Outlook Anda.'
+          },
+          about_description: 'Ini adalah file uji MSG (Outlook Message) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        msi: {
+          meta: {
+            title: 'Unduh File Sampel MSI Gratis - File Windows Installer Package | MorphyHub',
+            description: 'Unduh file sampel MSI Windows Installer Package gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi Windows, analisis MSI, dan alat pemrosesan aplikasi instalasi Windows.',
+            keywords: 'file sampel MSI, file uji MSI, unduh sampel MSI, file uji MSI gratis, sampel Windows Installer Package, sampel instalasi Windows'
+          },
+          schema: {
+            name: 'File Sampel MSI Gratis - Unduh File Windows Installer Package Uji',
+            description: 'Unduh file sampel MSI Windows Installer Package gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi Windows, analisis MSI, dan alat pemrosesan aplikasi instalasi Windows.'
+          },
+          hero: {
+            title: 'File Sampel MSI',
+            description: 'Unduh file sampel MSI Windows Installer Package gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji instalasi Windows, analisis MSI, dan alat pemrosesan aplikasi instalasi Windows Anda.'
+          },
+          about_description: 'Ini adalah file uji MSI (Windows Installer Package) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        mxf: {
+          meta: {
+            title: 'Unduh File Sampel MXF Gratis - File Material Exchange Format | MorphyHub',
+            description: 'Unduh file sampel MXF Material Exchange Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan video, konversi MXF, dan alat pemrosesan format video profesional.',
+            keywords: 'file sampel MXF, file uji MXF, unduh sampel MXF, file uji MXF gratis, sampel Material Exchange Format, sampel video profesional'
+          },
+          schema: {
+            name: 'File Sampel MXF Gratis - Unduh File Material Exchange Format Uji',
+            description: 'Unduh file sampel MXF Material Exchange Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan video, konversi MXF, dan alat pemrosesan format video profesional.'
+          },
+          hero: {
+            title: 'File Sampel MXF',
+            description: 'Unduh file sampel MXF Material Exchange Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan video, konversi MXF, dan alat pemrosesan format video profesional Anda.'
+          },
+          about_description: 'Ini adalah file uji MXF (Material Exchange Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        obj: {
+          meta: {
+            title: 'Unduh File Sampel OBJ Gratis - File Wavefront 3D Object | MorphyHub',
+            description: 'Unduh file sampel OBJ Wavefront 3D Object gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan model 3D, konversi OBJ, dan alat pemrosesan format objek 3D.',
+            keywords: 'file sampel OBJ, file uji OBJ, unduh sampel OBJ, file uji OBJ gratis, sampel Wavefront 3D Object, sampel model 3D'
+          },
+          schema: {
+            name: 'File Sampel OBJ Gratis - Unduh File Wavefront 3D Object Uji',
+            description: 'Unduh file sampel OBJ Wavefront 3D Object gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan model 3D, konversi OBJ, dan alat pemrosesan format objek 3D.'
+          },
+          hero: {
+            title: 'File Sampel OBJ',
+            description: 'Unduh file sampel OBJ Wavefront 3D Object gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan model 3D, konversi OBJ, dan alat pemrosesan format objek 3D Anda.'
+          },
+          about_description: 'Ini adalah file uji OBJ (Wavefront 3D Object) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        odt: {
+          meta: {
+            title: 'Unduh File Sampel ODT Gratis - File OpenDocument Text | MorphyHub',
+            description: 'Unduh file sampel ODT OpenDocument Text gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan dokumen, konversi ODT, dan alat pemrosesan format OpenDocument.',
+            keywords: 'file sampel ODT, file uji ODT, unduh sampel ODT, file uji ODT gratis, sampel OpenDocument Text, sampel dokumen'
+          },
+          schema: {
+            name: 'File Sampel ODT Gratis - Unduh File OpenDocument Text Uji',
+            description: 'Unduh file sampel ODT OpenDocument Text gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan dokumen, konversi ODT, dan alat pemrosesan format OpenDocument.'
+          },
+          hero: {
+            title: 'File Sampel ODT',
+            description: 'Unduh file sampel ODT OpenDocument Text gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan dokumen, konversi ODT, dan alat pemrosesan format OpenDocument Anda.'
+          },
+          about_description: 'Ini adalah file uji ODT (OpenDocument Text) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ogg: {
+          meta: {
+            title: 'Unduh File Sampel OGG Gratis - File Ogg Vorbis | MorphyHub',
+            description: 'Unduh file sampel OGG Ogg Vorbis gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi OGG, dan alat pemrosesan format audio open source.',
+            keywords: 'file sampel OGG, file uji OGG, unduh sampel OGG, file uji OGG gratis, sampel Ogg Vorbis, sampel file audio'
+          },
+          schema: {
+            name: 'File Sampel OGG Gratis - Unduh File Ogg Vorbis Uji',
+            description: 'Unduh file sampel OGG Ogg Vorbis gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi OGG, dan alat pemrosesan format audio open source.'
+          },
+          hero: {
+            title: 'File Sampel OGG',
+            description: 'Unduh file sampel OGG Ogg Vorbis gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi OGG, dan alat pemrosesan format audio open source Anda.'
+          },
+          about_description: 'Ini adalah file uji OGG (Ogg Vorbis) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        otp: {
+          meta: {
+            title: 'Unduh File Sampel OTP Gratis - File OpenDocument Presentation Template | MorphyHub',
+            description: 'Unduh file sampel OTP OpenDocument Presentation Template gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan template presentasi, konversi OTP, dan alat pemrosesan format OpenDocument.',
+            keywords: 'file sampel OTP, file uji OTP, unduh sampel OTP, file uji OTP gratis, sampel OpenDocument Presentation Template, sampel template presentasi'
+          },
+          schema: {
+            name: 'File Sampel OTP Gratis - Unduh File OpenDocument Presentation Template Uji',
+            description: 'Unduh file sampel OTP OpenDocument Presentation Template gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan template presentasi, konversi OTP, dan alat pemrosesan format OpenDocument.'
+          },
+          hero: {
+            title: 'File Sampel OTP',
+            description: 'Unduh file sampel OTP OpenDocument Presentation Template gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan template presentasi, konversi OTP, dan alat pemrosesan format OpenDocument Anda.'
+          },
+          about_description: 'Ini adalah file uji OTP (OpenDocument Presentation Template) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ots: {
+          meta: {
+            title: 'Unduh File Sampel OTS Gratis - File OpenDocument Spreadsheet Template | MorphyHub',
+            description: 'Unduh file sampel OTS OpenDocument Spreadsheet Template gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan template spreadsheet, konversi OTS, dan alat pemrosesan format OpenDocument.',
+            keywords: 'file sampel OTS, file uji OTS, unduh sampel OTS, file uji OTS gratis, sampel OpenDocument Spreadsheet Template, sampel template spreadsheet'
+          },
+          schema: {
+            name: 'File Sampel OTS Gratis - Unduh File OpenDocument Spreadsheet Template Uji',
+            description: 'Unduh file sampel OTS OpenDocument Spreadsheet Template gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan template spreadsheet, konversi OTS, dan alat pemrosesan format OpenDocument.'
+          },
+          hero: {
+            title: 'File Sampel OTS',
+            description: 'Unduh file sampel OTS OpenDocument Spreadsheet Template gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan template spreadsheet, konversi OTS, dan alat pemrosesan format OpenDocument Anda.'
+          },
+          about_description: 'Ini adalah file uji OTS (OpenDocument Spreadsheet Template) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ovf: {
+          meta: {
+            title: 'Unduh File Sampel OVF Gratis - File Open Virtualization Format | MorphyHub',
+            description: 'Unduh file sampel OVF Open Virtualization Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan virtualisasi, konversi OVF, dan alat pemrosesan format mesin virtual.',
+            keywords: 'file sampel OVF, file uji OVF, unduh sampel OVF, file uji OVF gratis, sampel Open Virtualization Format, sampel virtualisasi'
+          },
+          schema: {
+            name: 'File Sampel OVF Gratis - Unduh File Open Virtualization Format Uji',
+            description: 'Unduh file sampel OVF Open Virtualization Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan virtualisasi, konversi OVF, dan alat pemrosesan format mesin virtual.'
+          },
+          hero: {
+            title: 'File Sampel OVF',
+            description: 'Unduh file sampel OVF Open Virtualization Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan virtualisasi, konversi OVF, dan alat pemrosesan format mesin virtual Anda.'
+          },
+          about_description: 'Ini adalah file uji OVF (Open Virtualization Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        pcap: {
+          meta: {
+            title: 'Unduh File Sampel PCAP Gratis - File Packet Capture | MorphyHub',
+            description: 'Unduh file sampel PCAP Packet Capture gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisis paket jaringan, pemrosesan PCAP, dan alat analisis jaringan.',
+            keywords: 'file sampel PCAP, file uji PCAP, unduh sampel PCAP, file uji PCAP gratis, sampel Packet Capture, sampel paket jaringan'
+          },
+          schema: {
+            name: 'File Sampel PCAP Gratis - Unduh File Packet Capture Uji',
+            description: 'Unduh file sampel PCAP Packet Capture gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji analisis paket jaringan, pemrosesan PCAP, dan alat analisis jaringan.'
+          },
+          hero: {
+            title: 'File Sampel PCAP',
+            description: 'Unduh file sampel PCAP Packet Capture gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji analisis paket jaringan, pemrosesan PCAP, dan alat analisis jaringan Anda.'
+          },
+          about_description: 'Ini adalah file uji PCAP (Packet Capture) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        pcx: {
+          meta: {
+            title: 'Unduh File Sampel PCX Gratis - File PC Paintbrush Image | MorphyHub',
+            description: 'Unduh file sampel PCX PC Paintbrush Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PCX, dan alat pemrosesan format gambar PC Paintbrush.',
+            keywords: 'file sampel PCX, file uji PCX, unduh sampel PCX, file uji PCX gratis, sampel PC Paintbrush Image, sampel gambar'
+          },
+          schema: {
+            name: 'File Sampel PCX Gratis - Unduh File PC Paintbrush Image Uji',
+            description: 'Unduh file sampel PCX PC Paintbrush Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PCX, dan alat pemrosesan format gambar PC Paintbrush.'
+          },
+          hero: {
+            title: 'File Sampel PCX',
+            description: 'Unduh file sampel PCX PC Paintbrush Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi PCX, dan alat pemrosesan format gambar PC Paintbrush Anda.'
+          },
+          about_description: 'Ini adalah file uji PCX (PC Paintbrush Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        pgm: {
+          meta: {
+            title: 'Unduh File Sampel PGM Gratis - File Portable Gray Map | MorphyHub',
+            description: 'Unduh file sampel PGM Portable Gray Map gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PGM, dan alat pemrosesan format gambar grayscale.',
+            keywords: 'file sampel PGM, file uji PGM, unduh sampel PGM, file uji PGM gratis, sampel Portable Gray Map, sampel gambar grayscale'
+          },
+          schema: {
+            name: 'File Sampel PGM Gratis - Unduh File Portable Gray Map Uji',
+            description: 'Unduh file sampel PGM Portable Gray Map gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PGM, dan alat pemrosesan format gambar grayscale.'
+          },
+          hero: {
+            title: 'File Sampel PGM',
+            description: 'Unduh file sampel PGM Portable Gray Map gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi PGM, dan alat pemrosesan format gambar grayscale Anda.'
+          },
+          about_description: 'Ini adalah file uji PGM (Portable Gray Map) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        php: {
+          meta: {
+            title: 'Unduh File Sampel PHP Gratis - File PHP Script | MorphyHub',
+            description: 'Unduh file sampel PHP PHP Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script PHP, analisis kode PHP, dan alat pengembangan web.',
+            keywords: 'file sampel PHP, file uji PHP, unduh sampel PHP, file uji PHP gratis, sampel PHP Script, sampel kode PHP'
+          },
+          schema: {
+            name: 'File Sampel PHP Gratis - Unduh File PHP Script Uji',
+            description: 'Unduh file sampel PHP PHP Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script PHP, analisis kode PHP, dan alat pengembangan web.'
+          },
+          hero: {
+            title: 'File Sampel PHP',
+            description: 'Unduh file sampel PHP PHP Script gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji eksekusi script PHP, analisis kode PHP, dan alat pengembangan web Anda.'
+          },
+          about_description: 'Ini adalah file uji PHP (PHP Script) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        plist: {
+          meta: {
+            title: 'Unduh File Sampel PLIST Gratis - File Property List | MorphyHub',
+            description: 'Unduh file sampel PLIST Property List gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing PLIST, dan alat manajemen konfigurasi macOS.',
+            keywords: 'file sampel PLIST, file uji PLIST, unduh sampel PLIST, file uji PLIST gratis, sampel Property List, sampel file konfigurasi'
+          },
+          schema: {
+            name: 'File Sampel PLIST Gratis - Unduh File Property List Uji',
+            description: 'Unduh file sampel PLIST Property List gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing PLIST, dan alat manajemen konfigurasi macOS.'
+          },
+          hero: {
+            title: 'File Sampel PLIST',
+            description: 'Unduh file sampel PLIST Property List gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan file konfigurasi, parsing PLIST, dan alat manajemen konfigurasi macOS Anda.'
+          },
+          about_description: 'Ini adalah file uji PLIST (Property List) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        png: {
+          meta: {
+            title: 'Unduh File Sampel PNG Gratis - File Portable Network Graphics | MorphyHub',
+            description: 'Unduh file sampel PNG Portable Network Graphics gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PNG, dan alat penampil gambar.',
+            keywords: 'file sampel PNG, file uji PNG, unduh sampel PNG, file uji PNG gratis, sampel Portable Network Graphics, sampel gambar'
+          },
+          schema: {
+            name: 'File Sampel PNG Gratis - Unduh File Portable Network Graphics Uji',
+            description: 'Unduh file sampel PNG Portable Network Graphics gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PNG, dan alat penampil gambar.'
+          },
+          hero: {
+            title: 'File Sampel PNG',
+            description: 'Unduh file sampel PNG Portable Network Graphics gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi PNG, dan alat penampil gambar Anda.'
+          },
+          about_description: 'Ini adalah file uji PNG (Portable Network Graphics) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ppm: {
+          meta: {
+            title: 'Unduh File Sampel PPM Gratis - File Portable Pixmap | MorphyHub',
+            description: 'Unduh file sampel PPM Portable Pixmap gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PPM, dan alat pemrosesan format gambar warna.',
+            keywords: 'file sampel PPM, file uji PPM, unduh sampel PPM, file uji PPM gratis, sampel Portable Pixmap, sampel gambar warna'
+          },
+          schema: {
+            name: 'File Sampel PPM Gratis - Unduh File Portable Pixmap Uji',
+            description: 'Unduh file sampel PPM Portable Pixmap gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi PPM, dan alat pemrosesan format gambar warna.'
+          },
+          hero: {
+            title: 'File Sampel PPM',
+            description: 'Unduh file sampel PPM Portable Pixmap gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi PPM, dan alat pemrosesan format gambar warna Anda.'
+          },
+          about_description: 'Ini adalah file uji PPM (Portable Pixmap) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ppt: {
+          meta: {
+            title: 'Unduh File Sampel PPT Gratis - File Microsoft PowerPoint | MorphyHub',
+            description: 'Unduh file sampel PPT Microsoft PowerPoint gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan presentasi, konversi PPT, dan alat pemrosesan format Microsoft PowerPoint.',
+            keywords: 'file sampel PPT, file uji PPT, unduh sampel PPT, file uji PPT gratis, sampel Microsoft PowerPoint, sampel presentasi'
+          },
+          schema: {
+            name: 'File Sampel PPT Gratis - Unduh File Microsoft PowerPoint Uji',
+            description: 'Unduh file sampel PPT Microsoft PowerPoint gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan presentasi, konversi PPT, dan alat pemrosesan format Microsoft PowerPoint.'
+          },
+          hero: {
+            title: 'File Sampel PPT',
+            description: 'Unduh file sampel PPT Microsoft PowerPoint gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan presentasi, konversi PPT, dan alat pemrosesan format Microsoft PowerPoint Anda.'
+          },
+          about_description: 'Ini adalah file uji PPT (Microsoft PowerPoint) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        pptx: {
+          meta: {
+            title: 'Unduh File Sampel PPTX Gratis - File Microsoft PowerPoint | MorphyHub',
+            description: 'Unduh file sampel PPTX Microsoft PowerPoint gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan presentasi, konversi PPTX, dan alat pemrosesan format Microsoft PowerPoint.',
+            keywords: 'file sampel PPTX, file uji PPTX, unduh sampel PPTX, file uji PPTX gratis, sampel Microsoft PowerPoint, sampel presentasi'
+          },
+          schema: {
+            name: 'File Sampel PPTX Gratis - Unduh File Microsoft PowerPoint Uji',
+            description: 'Unduh file sampel PPTX Microsoft PowerPoint gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan presentasi, konversi PPTX, dan alat pemrosesan format Microsoft PowerPoint.'
+          },
+          hero: {
+            title: 'File Sampel PPTX',
+            description: 'Unduh file sampel PPTX Microsoft PowerPoint gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan presentasi, konversi PPTX, dan alat pemrosesan format Microsoft PowerPoint Anda.'
+          },
+          about_description: 'Ini adalah file uji PPTX (Microsoft PowerPoint) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ps: {
+          meta: {
+            title: 'Unduh File Sampel PS Gratis - File PostScript | MorphyHub',
+            description: 'Unduh file sampel PS PostScript gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan PostScript, konversi PS, dan alat pemrosesan format grafik untuk cetak.',
+            keywords: 'file sampel PS, file uji PS, unduh sampel PS, file uji PS gratis, sampel PostScript, sampel grafik untuk cetak'
+          },
+          schema: {
+            name: 'File Sampel PS Gratis - Unduh File PostScript Uji',
+            description: 'Unduh file sampel PS PostScript gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan PostScript, konversi PS, dan alat pemrosesan format grafik untuk cetak.'
+          },
+          hero: {
+            title: 'File Sampel PS',
+            description: 'Unduh file sampel PS PostScript gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan PostScript, konversi PS, dan alat pemrosesan format grafik untuk cetak Anda.'
+          },
+          about_description: 'Ini adalah file uji PS (PostScript) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        psd: {
+          meta: {
+            title: 'Unduh File Sampel PSD Gratis - File Adobe Photoshop Document | MorphyHub',
+            description: 'Unduh file sampel PSD Adobe Photoshop Document gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji editing gambar, konversi PSD, dan alat pemrosesan format Adobe Photoshop.',
+            keywords: 'file sampel PSD, file uji PSD, unduh sampel PSD, file uji PSD gratis, sampel Adobe Photoshop Document, sampel editing gambar'
+          },
+          schema: {
+            name: 'File Sampel PSD Gratis - Unduh File Adobe Photoshop Document Uji',
+            description: 'Unduh file sampel PSD Adobe Photoshop Document gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji editing gambar, konversi PSD, dan alat pemrosesan format Adobe Photoshop.'
+          },
+          hero: {
+            title: 'File Sampel PSD',
+            description: 'Unduh file sampel PSD Adobe Photoshop Document gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji editing gambar, konversi PSD, dan alat pemrosesan format Adobe Photoshop Anda.'
+          },
+          about_description: 'Ini adalah file uji PSD (Adobe Photoshop Document) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        pub: {
+          meta: {
+            title: 'Unduh File Sampel PUB Gratis - File Microsoft Publisher | MorphyHub',
+            description: 'Unduh file sampel PUB Microsoft Publisher gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan DTP, konversi PUB, dan alat pemrosesan format Microsoft Publisher.',
+            keywords: 'file sampel PUB, file uji PUB, unduh sampel PUB, file uji PUB gratis, sampel Microsoft Publisher, sampel DTP'
+          },
+          schema: {
+            name: 'File Sampel PUB Gratis - Unduh File Microsoft Publisher Uji',
+            description: 'Unduh file sampel PUB Microsoft Publisher gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan DTP, konversi PUB, dan alat pemrosesan format Microsoft Publisher.'
+          },
+          hero: {
+            title: 'File Sampel PUB',
+            description: 'Unduh file sampel PUB Microsoft Publisher gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan DTP, konversi PUB, dan alat pemrosesan format Microsoft Publisher Anda.'
+          },
+          about_description: 'Ini adalah file uji PUB (Microsoft Publisher) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        py: {
+          meta: {
+            title: 'Unduh File Sampel PY Gratis - File Python Script | MorphyHub',
+            description: 'Unduh file sampel PY Python Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script Python, analisis kode Python, dan alat pengembangan Python.',
+            keywords: 'file sampel PY, file uji PY, unduh sampel PY, file uji PY gratis, sampel Python Script, sampel kode Python'
+          },
+          schema: {
+            name: 'File Sampel PY Gratis - Unduh File Python Script Uji',
+            description: 'Unduh file sampel PY Python Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi script Python, analisis kode Python, dan alat pengembangan Python.'
+          },
+          hero: {
+            title: 'File Sampel PY',
+            description: 'Unduh file sampel PY Python Script gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji eksekusi script Python, analisis kode Python, dan alat pengembangan Python Anda.'
+          },
+          about_description: 'Ini adalah file uji PY (Python Script) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        rar: {
+          meta: {
+            title: 'Unduh File Sampel RAR Gratis - File RAR Archive | MorphyHub',
+            description: 'Unduh file sampel RAR RAR Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi RAR, dan alat pemrosesan file archive RAR.',
+            keywords: 'file sampel RAR, file uji RAR, unduh sampel RAR, file uji RAR gratis, sampel RAR Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel RAR Gratis - Unduh File RAR Archive Uji',
+            description: 'Unduh file sampel RAR RAR Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi RAR, dan alat pemrosesan file archive RAR.'
+          },
+          hero: {
+            title: 'File Sampel RAR',
+            description: 'Unduh file sampel RAR RAR Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi RAR, dan alat pemrosesan file archive RAR Anda.'
+          },
+          about_description: 'Ini adalah file uji RAR (RAR Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        raw: {
+          meta: {
+            title: 'Unduh File Sampel RAW Gratis - File RAW Image | MorphyHub',
+            description: 'Unduh file sampel RAW RAW Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar RAW, konversi RAW, dan alat editing foto digital.',
+            keywords: 'file sampel RAW, file uji RAW, unduh sampel RAW, file uji RAW gratis, sampel RAW Image, sampel gambar RAW'
+          },
+          schema: {
+            name: 'File Sampel RAW Gratis - Unduh File RAW Image Uji',
+            description: 'Unduh file sampel RAW RAW Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar RAW, konversi RAW, dan alat editing foto digital.'
+          },
+          hero: {
+            title: 'File Sampel RAW',
+            description: 'Unduh file sampel RAW RAW Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar RAW, konversi RAW, dan alat editing foto digital Anda.'
+          },
+          about_description: 'Ini adalah file uji RAW (RAW Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        rpm: {
+          meta: {
+            title: 'Unduh File Sampel RPM Gratis - File Red Hat Package Manager | MorphyHub',
+            description: 'Unduh file sampel RPM Red Hat Package Manager gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi paket Linux, analisis RPM, dan alat manajemen paket Linux.',
+            keywords: 'file sampel RPM, file uji RPM, unduh sampel RPM, file uji RPM gratis, sampel Red Hat Package Manager, sampel paket Linux'
+          },
+          schema: {
+            name: 'File Sampel RPM Gratis - Unduh File Red Hat Package Manager Uji',
+            description: 'Unduh file sampel RPM Red Hat Package Manager gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji instalasi paket Linux, analisis RPM, dan alat manajemen paket Linux.'
+          },
+          hero: {
+            title: 'File Sampel RPM',
+            description: 'Unduh file sampel RPM Red Hat Package Manager gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji instalasi paket Linux, analisis RPM, dan alat manajemen paket Linux Anda.'
+          },
+          about_description: 'Ini adalah file uji RPM (Red Hat Package Manager) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        rss: {
+          meta: {
+            title: 'Unduh File Sampel RSS Gratis - File Really Simple Syndication | MorphyHub',
+            description: 'Unduh file sampel RSS Really Simple Syndication gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan feed RSS, parsing RSS, dan alat manajemen feed web.',
+            keywords: 'file sampel RSS, file uji RSS, unduh sampel RSS, file uji RSS gratis, sampel Really Simple Syndication, sampel feed web'
+          },
+          schema: {
+            name: 'File Sampel RSS Gratis - Unduh File Really Simple Syndication Uji',
+            description: 'Unduh file sampel RSS Really Simple Syndication gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan feed RSS, parsing RSS, dan alat manajemen feed web.'
+          },
+          hero: {
+            title: 'File Sampel RSS',
+            description: 'Unduh file sampel RSS Really Simple Syndication gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan feed RSS, parsing RSS, dan alat manajemen feed web Anda.'
+          },
+          about_description: 'Ini adalah file uji RSS (Really Simple Syndication) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        scss: {
+          meta: {
+            title: 'Unduh File Sampel SCSS Gratis - File Sass Stylesheet | MorphyHub',
+            description: 'Unduh file sampel SCSS Sass Stylesheet gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan SCSS, konversi SCSS, dan alat pengembangan gaya web.',
+            keywords: 'file sampel SCSS, file uji SCSS, unduh sampel SCSS, file uji SCSS gratis, sampel Sass Stylesheet, sampel gaya web'
+          },
+          schema: {
+            name: 'File Sampel SCSS Gratis - Unduh File Sass Stylesheet Uji',
+            description: 'Unduh file sampel SCSS Sass Stylesheet gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan SCSS, konversi SCSS, dan alat pengembangan gaya web.'
+          },
+          hero: {
+            title: 'File Sampel SCSS',
+            description: 'Unduh file sampel SCSS Sass Stylesheet gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan SCSS, konversi SCSS, dan alat pengembangan gaya web Anda.'
+          },
+          about_description: 'Ini adalah file uji SCSS (Sass Stylesheet) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        sh: {
+          meta: {
+            title: 'Unduh File Sampel SH Gratis - File Shell Script | MorphyHub',
+            description: 'Unduh file sampel SH Shell Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi shell script, analisis kode SH, dan alat otomasi Unix/Linux.',
+            keywords: 'file sampel SH, file uji SH, unduh sampel SH, file uji SH gratis, sampel Shell Script, sampel shell script'
+          },
+          schema: {
+            name: 'File Sampel SH Gratis - Unduh File Shell Script Uji',
+            description: 'Unduh file sampel SH Shell Script gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji eksekusi shell script, analisis kode SH, dan alat otomasi Unix/Linux.'
+          },
+          hero: {
+            title: 'File Sampel SH',
+            description: 'Unduh file sampel SH Shell Script gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji eksekusi shell script, analisis kode SH, dan alat otomasi Unix/Linux Anda.'
+          },
+          about_description: 'Ini adalah file uji SH (Shell Script) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        sql: {
+          meta: {
+            title: 'Unduh File Sampel SQL Gratis - File Structured Query Language | MorphyHub',
+            description: 'Unduh file sampel SQL Structured Query Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan database, eksekusi SQL, dan alat manajemen database.',
+            keywords: 'file sampel SQL, file uji SQL, unduh sampel SQL, file uji SQL gratis, sampel Structured Query Language, sampel database'
+          },
+          schema: {
+            name: 'File Sampel SQL Gratis - Unduh File Structured Query Language Uji',
+            description: 'Unduh file sampel SQL Structured Query Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan database, eksekusi SQL, dan alat manajemen database.'
+          },
+          hero: {
+            title: 'File Sampel SQL',
+            description: 'Unduh file sampel SQL Structured Query Language gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan database, eksekusi SQL, dan alat manajemen database Anda.'
+          },
+          about_description: 'Ini adalah file uji SQL (Structured Query Language) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        svg: {
+          meta: {
+            title: 'Unduh File Sampel SVG Gratis - File Scalable Vector Graphics | MorphyHub',
+            description: 'Unduh file sampel SVG Scalable Vector Graphics gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan grafik vektor, konversi SVG, dan alat pemrosesan format grafik vektor scalable.',
+            keywords: 'file sampel SVG, file uji SVG, unduh sampel SVG, file uji SVG gratis, sampel Scalable Vector Graphics, sampel grafik vektor'
+          },
+          schema: {
+            name: 'File Sampel SVG Gratis - Unduh File Scalable Vector Graphics Uji',
+            description: 'Unduh file sampel SVG Scalable Vector Graphics gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan grafik vektor, konversi SVG, dan alat pemrosesan format grafik vektor scalable.'
+          },
+          hero: {
+            title: 'File Sampel SVG',
+            description: 'Unduh file sampel SVG Scalable Vector Graphics gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan grafik vektor, konversi SVG, dan alat pemrosesan format grafik vektor scalable Anda.'
+          },
+          about_description: 'Ini adalah file uji SVG (Scalable Vector Graphics) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        swf: {
+          meta: {
+            title: 'Unduh File Sampel SWF Gratis - File Shockwave Flash | MorphyHub',
+            description: 'Unduh file sampel SWF Shockwave Flash gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran animasi Flash, konversi SWF, dan alat pemrosesan format Flash.',
+            keywords: 'file sampel SWF, file uji SWF, unduh sampel SWF, file uji SWF gratis, sampel Shockwave Flash, sampel animasi Flash'
+          },
+          schema: {
+            name: 'File Sampel SWF Gratis - Unduh File Shockwave Flash Uji',
+            description: 'Unduh file sampel SWF Shockwave Flash gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran animasi Flash, konversi SWF, dan alat pemrosesan format Flash.'
+          },
+          hero: {
+            title: 'File Sampel SWF',
+            description: 'Unduh file sampel SWF Shockwave Flash gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran animasi Flash, konversi SWF, dan alat pemrosesan format Flash Anda.'
+          },
+          about_description: 'Ini adalah file uji SWF (Shockwave Flash) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        tar: {
+          meta: {
+            title: 'Unduh File Sampel TAR Gratis - File Tape Archive | MorphyHub',
+            description: 'Unduh file sampel TAR Tape Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi TAR, dan alat pemrosesan file archive Unix.',
+            keywords: 'file sampel TAR, file uji TAR, unduh sampel TAR, file uji TAR gratis, sampel Tape Archive, sampel archive Unix'
+          },
+          schema: {
+            name: 'File Sampel TAR Gratis - Unduh File Tape Archive Uji',
+            description: 'Unduh file sampel TAR Tape Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi TAR, dan alat pemrosesan file archive Unix.'
+          },
+          hero: {
+            title: 'File Sampel TAR',
+            description: 'Unduh file sampel TAR Tape Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi TAR, dan alat pemrosesan file archive Unix Anda.'
+          },
+          about_description: 'Ini adalah file uji TAR (Tape Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        tiff: {
+          meta: {
+            title: 'Unduh File Sampel TIFF Gratis - File Tagged Image File Format | MorphyHub',
+            description: 'Unduh file sampel TIFF Tagged Image File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi TIFF, dan alat pemrosesan format gambar berkualitas tinggi.',
+            keywords: 'file sampel TIFF, file uji TIFF, unduh sampel TIFF, file uji TIFF gratis, sampel Tagged Image File Format, sampel gambar berkualitas tinggi'
+          },
+          schema: {
+            name: 'File Sampel TIFF Gratis - Unduh File Tagged Image File Format Uji',
+            description: 'Unduh file sampel TIFF Tagged Image File Format gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi TIFF, dan alat pemrosesan format gambar berkualitas tinggi.'
+          },
+          hero: {
+            title: 'File Sampel TIFF',
+            description: 'Unduh file sampel TIFF Tagged Image File Format gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi TIFF, dan alat pemrosesan format gambar berkualitas tinggi Anda.'
+          },
+          about_description: 'Ini adalah file uji TIFF (Tagged Image File Format) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        torrent: {
+          meta: {
+            title: 'Unduh File Sampel Torrent Gratis - File BitTorrent | MorphyHub',
+            description: 'Unduh file sampel Torrent BitTorrent gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan BitTorrent, parsing Torrent, dan alat berbagi file P2P.',
+            keywords: 'file sampel Torrent, file uji Torrent, unduh sampel Torrent, file uji Torrent gratis, sampel BitTorrent, sampel berbagi file P2P'
+          },
+          schema: {
+            name: 'File Sampel Torrent Gratis - Unduh File BitTorrent Uji',
+            description: 'Unduh file sampel Torrent BitTorrent gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan BitTorrent, parsing Torrent, dan alat berbagi file P2P.'
+          },
+          hero: {
+            title: 'File Sampel Torrent',
+            description: 'Unduh file sampel Torrent BitTorrent gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan BitTorrent, parsing Torrent, dan alat berbagi file P2P Anda.'
+          },
+          about_description: 'Ini adalah file uji Torrent (BitTorrent) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        ts: {
+          meta: {
+            title: 'Unduh File Sampel TS Gratis - File TypeScript Source Code | MorphyHub',
+            description: 'Unduh file sampel TS TypeScript Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi TypeScript, analisis kode TS, dan alat pengembangan TypeScript.',
+            keywords: 'file sampel TS, file uji TS, unduh sampel TS, file uji TS gratis, sampel TypeScript Source Code, sampel kode TypeScript'
+          },
+          schema: {
+            name: 'File Sampel TS Gratis - Unduh File TypeScript Source Code Uji',
+            description: 'Unduh file sampel TS TypeScript Source Code gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji kompilasi TypeScript, analisis kode TS, dan alat pengembangan TypeScript.'
+          },
+          hero: {
+            title: 'File Sampel TS',
+            description: 'Unduh file sampel TS TypeScript Source Code gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji kompilasi TypeScript, analisis kode TS, dan alat pengembangan TypeScript Anda.'
+          },
+          about_description: 'Ini adalah file uji TS (TypeScript Source Code) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        txt: {
+          meta: {
+            title: 'Unduh File Sampel TXT Gratis - File Plain Text | MorphyHub',
+            description: 'Unduh file sampel TXT Plain Text gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan teks, konversi TXT, dan alat pemrosesan format teks biasa.',
+            keywords: 'file sampel TXT, file uji TXT, unduh sampel TXT, file uji TXT gratis, sampel Plain Text, sampel file teks'
+          },
+          schema: {
+            name: 'File Sampel TXT Gratis - Unduh File Plain Text Uji',
+            description: 'Unduh file sampel TXT Plain Text gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan teks, konversi TXT, dan alat pemrosesan format teks biasa.'
+          },
+          hero: {
+            title: 'File Sampel TXT',
+            description: 'Unduh file sampel TXT Plain Text gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan teks, konversi TXT, dan alat pemrosesan format teks biasa Anda.'
+          },
+          about_description: 'Ini adalah file uji TXT (Plain Text) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        vcf: {
+          meta: {
+            title: 'Unduh File Sampel VCF Gratis - File vCard | MorphyHub',
+            description: 'Unduh file sampel VCF vCard gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan kontak, konversi VCF, dan alat pemrosesan format vCard.',
+            keywords: 'file sampel VCF, file uji VCF, unduh sampel VCF, file uji VCF gratis, sampel vCard, sampel kontak'
+          },
+          schema: {
+            name: 'File Sampel VCF Gratis - Unduh File vCard Uji',
+            description: 'Unduh file sampel VCF vCard gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan kontak, konversi VCF, dan alat pemrosesan format vCard.'
+          },
+          hero: {
+            title: 'File Sampel VCF',
+            description: 'Unduh file sampel VCF vCard gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan kontak, konversi VCF, dan alat pemrosesan format vCard Anda.'
+          },
+          about_description: 'Ini adalah file uji VCF (vCard) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        vmdk: {
+          meta: {
+            title: 'Unduh File Sampel VMDK Gratis - File VMware Virtual Disk | MorphyHub',
+            description: 'Unduh file sampel VMDK VMware Virtual Disk gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan disk virtual, konversi VMDK, dan alat pemrosesan format mesin virtual VMware.',
+            keywords: 'file sampel VMDK, file uji VMDK, unduh sampel VMDK, file uji VMDK gratis, sampel VMware Virtual Disk, sampel disk virtual'
+          },
+          schema: {
+            name: 'File Sampel VMDK Gratis - Unduh File VMware Virtual Disk Uji',
+            description: 'Unduh file sampel VMDK VMware Virtual Disk gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan disk virtual, konversi VMDK, dan alat pemrosesan format mesin virtual VMware.'
+          },
+          hero: {
+            title: 'File Sampel VMDK',
+            description: 'Unduh file sampel VMDK VMware Virtual Disk gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan disk virtual, konversi VMDK, dan alat pemrosesan format mesin virtual VMware Anda.'
+          },
+          about_description: 'Ini adalah file uji VMDK (VMware Virtual Disk) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        vsd: {
+          meta: {
+            title: 'Unduh File Sampel VSD Gratis - File Visio Drawing | MorphyHub',
+            description: 'Unduh file sampel VSD Visio Drawing gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi VSD, dan alat pemrosesan format Microsoft Visio.',
+            keywords: 'file sampel VSD, file uji VSD, unduh sampel VSD, file uji VSD gratis, sampel Visio Drawing, sampel gambar'
+          },
+          schema: {
+            name: 'File Sampel VSD Gratis - Unduh File Visio Drawing Uji',
+            description: 'Unduh file sampel VSD Visio Drawing gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi VSD, dan alat pemrosesan format Microsoft Visio.'
+          },
+          hero: {
+            title: 'File Sampel VSD',
+            description: 'Unduh file sampel VSD Visio Drawing gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi VSD, dan alat pemrosesan format Microsoft Visio Anda.'
+          },
+          about_description: 'Ini adalah file uji VSD (Visio Drawing) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        webm: {
+          meta: {
+            title: 'Unduh File Sampel WebM Gratis - File WebM Video | MorphyHub',
+            description: 'Unduh file sampel WebM WebM Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi WebM, dan alat pemrosesan format video web.',
+            keywords: 'file sampel WebM, file uji WebM, unduh sampel WebM, file uji WebM gratis, sampel WebM Video, sampel video web'
+          },
+          schema: {
+            name: 'File Sampel WebM Gratis - Unduh File WebM Video Uji',
+            description: 'Unduh file sampel WebM WebM Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi WebM, dan alat pemrosesan format video web.'
+          },
+          hero: {
+            title: 'File Sampel WebM',
+            description: 'Unduh file sampel WebM WebM Video gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi WebM, dan alat pemrosesan format video web Anda.'
+          },
+          about_description: 'Ini adalah file uji WebM (WebM Video) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        webp: {
+          meta: {
+            title: 'Unduh File Sampel WebP Gratis - File WebP Image | MorphyHub',
+            description: 'Unduh file sampel WebP WebP Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi WebP, dan alat pemrosesan format gambar web.',
+            keywords: 'file sampel WebP, file uji WebP, unduh sampel WebP, file uji WebP gratis, sampel WebP Image, sampel gambar web'
+          },
+          schema: {
+            name: 'File Sampel WebP Gratis - Unduh File WebP Image Uji',
+            description: 'Unduh file sampel WebP WebP Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan gambar, konversi WebP, dan alat pemrosesan format gambar web.'
+          },
+          hero: {
+            title: 'File Sampel WebP',
+            description: 'Unduh file sampel WebP WebP Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan gambar, konversi WebP, dan alat pemrosesan format gambar web Anda.'
+          },
+          about_description: 'Ini adalah file uji WebP (WebP Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        wma: {
+          meta: {
+            title: 'Unduh File Sampel WMA Gratis - File Windows Media Audio | MorphyHub',
+            description: 'Unduh file sampel WMA Windows Media Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi WMA, dan alat pemrosesan format audio Windows Media.',
+            keywords: 'file sampel WMA, file uji WMA, unduh sampel WMA, file uji WMA gratis, sampel Windows Media Audio, sampel audio Windows Media'
+          },
+          schema: {
+            name: 'File Sampel WMA Gratis - Unduh File Windows Media Audio Uji',
+            description: 'Unduh file sampel WMA Windows Media Audio gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran audio, konversi WMA, dan alat pemrosesan format audio Windows Media.'
+          },
+          hero: {
+            title: 'File Sampel WMA',
+            description: 'Unduh file sampel WMA Windows Media Audio gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran audio, konversi WMA, dan alat pemrosesan format audio Windows Media Anda.'
+          },
+          about_description: 'Ini adalah file uji WMA (Windows Media Audio) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        wmv: {
+          meta: {
+            title: 'Unduh File Sampel WMV Gratis - File Windows Media Video | MorphyHub',
+            description: 'Unduh file sampel WMV Windows Media Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi WMV, dan alat pemrosesan format video Windows Media.',
+            keywords: 'file sampel WMV, file uji WMV, unduh sampel WMV, file uji WMV gratis, sampel Windows Media Video, sampel video Windows Media'
+          },
+          schema: {
+            name: 'File Sampel WMV Gratis - Unduh File Windows Media Video Uji',
+            description: 'Unduh file sampel WMV Windows Media Video gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemutaran video, konversi WMV, dan alat pemrosesan format video Windows Media.'
+          },
+          hero: {
+            title: 'File Sampel WMV',
+            description: 'Unduh file sampel WMV Windows Media Video gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemutaran video, konversi WMV, dan alat pemrosesan format video Windows Media Anda.'
+          },
+          about_description: 'Ini adalah file uji WMV (Windows Media Video) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        xcf: {
+          meta: {
+            title: 'Unduh File Sampel XCF Gratis - File GIMP Image | MorphyHub',
+            description: 'Unduh file sampel XCF GIMP Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji editing gambar, konversi XCF, dan alat pemrosesan format gambar GIMP.',
+            keywords: 'file sampel XCF, file uji XCF, unduh sampel XCF, file uji XCF gratis, sampel GIMP Image, sampel gambar GIMP'
+          },
+          schema: {
+            name: 'File Sampel XCF Gratis - Unduh File GIMP Image Uji',
+            description: 'Unduh file sampel XCF GIMP Image gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji editing gambar, konversi XCF, dan alat pemrosesan format gambar GIMP.'
+          },
+          hero: {
+            title: 'File Sampel XCF',
+            description: 'Unduh file sampel XCF GIMP Image gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji editing gambar, konversi XCF, dan alat pemrosesan format gambar GIMP Anda.'
+          },
+          about_description: 'Ini adalah file uji XCF (GIMP Image) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        xmp: {
+          meta: {
+            title: 'Unduh File Sampel XMP Gratis - File Extensible Metadata Platform | MorphyHub',
+            description: 'Unduh file sampel XMP Extensible Metadata Platform gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan metadata, parsing XMP, dan alat manajemen aset digital.',
+            keywords: 'file sampel XMP, file uji XMP, unduh sampel XMP, file uji XMP gratis, sampel Extensible Metadata Platform, sampel metadata'
+          },
+          schema: {
+            name: 'File Sampel XMP Gratis - Unduh File Extensible Metadata Platform Uji',
+            description: 'Unduh file sampel XMP Extensible Metadata Platform gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan metadata, parsing XMP, dan alat manajemen aset digital.'
+          },
+          hero: {
+            title: 'File Sampel XMP',
+            description: 'Unduh file sampel XMP Extensible Metadata Platform gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan metadata, parsing XMP, dan alat manajemen aset digital Anda.'
+          },
+          about_description: 'Ini adalah file uji XMP (Extensible Metadata Platform) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        xz: {
+          meta: {
+            title: 'Unduh File Sampel XZ Gratis - File XZ Compressed Archive | MorphyHub',
+            description: 'Unduh file sampel XZ XZ Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi XZ, dan alat pemrosesan file archive dengan rasio kompresi tinggi.',
+            keywords: 'file sampel XZ, file uji XZ, unduh sampel XZ, file uji XZ gratis, sampel XZ Compressed Archive, sampel file terkompresi'
+          },
+          schema: {
+            name: 'File Sampel XZ Gratis - Unduh File XZ Compressed Archive Uji',
+            description: 'Unduh file sampel XZ XZ Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji ekstraksi archive, kompresi XZ, dan alat pemrosesan file archive dengan rasio kompresi tinggi.'
+          },
+          hero: {
+            title: 'File Sampel XZ',
+            description: 'Unduh file sampel XZ XZ Compressed Archive gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji ekstraksi archive, kompresi XZ, dan alat pemrosesan file archive dengan rasio kompresi tinggi Anda.'
+          },
+          about_description: 'Ini adalah file uji XZ (XZ Compressed Archive) dalam berbagai ukuran untuk keperluan pengujian'
+        },
+        yaml: {
+          meta: {
+            title: 'Unduh File Sampel YAML Gratis - File YAML Ain\'t Markup Language | MorphyHub',
+            description: 'Unduh file sampel YAML YAML Ain\'t Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing YAML, dan alat serialisasi data.',
+            keywords: 'file sampel YAML, file uji YAML, unduh sampel YAML, file uji YAML gratis, sampel YAML Ain\'t Markup Language, sampel file konfigurasi'
+          },
+          schema: {
+            name: 'File Sampel YAML Gratis - Unduh File YAML Ain\'t Markup Language Uji',
+            description: 'Unduh file sampel YAML YAML Ain\'t Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia: 100 KB, 1 MB, 5 MB, 50 MB, dan 100 MB. Sempurna untuk menguji pemrosesan file konfigurasi, parsing YAML, dan alat serialisasi data.'
+          },
+          hero: {
+            title: 'File Sampel YAML',
+            description: 'Unduh file sampel YAML YAML Ain\'t Markup Language gratis untuk pengujian. Berbagai ukuran file tersedia untuk menguji pemrosesan file konfigurasi, parsing YAML, dan alat serialisasi data Anda.'
+          },
+          about_description: 'Ini adalah file uji YAML (YAML Ain\'t Markup Language) dalam berbagai ukuran untuk keperluan pengujian'
         }
       }
     }
