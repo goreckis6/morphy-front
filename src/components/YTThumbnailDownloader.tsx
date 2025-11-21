@@ -639,7 +639,7 @@ export const YTThumbnailDownloader: React.FC = () => {
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">{t('yt_thumbnail.how_it_works_title')}</h2>
                 <p className="text-gray-700 mb-6 text-lg leading-relaxed text-center">
-                  Our YouTube thumbnail downloader is a free online tool that allows you to extract and download high-quality thumbnails from any YouTube video. Whether you're a content creator, social media manager, or need a thumbnail for a project, our tool makes it simple to get the perfect image.
+                  {t('yt_thumbnail.how_to_intro')}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
