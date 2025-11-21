@@ -353,6 +353,20 @@ function App() {
         <Route path="/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
         <Route path="/pl/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
         <Route path="/de/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/id/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/sv/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/es/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/fr/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/it/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/nl/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/pt/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/vi/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/tr/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/ru/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/ar/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/th/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/ja/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+        <Route path="/zh/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
 
         {/* Samples Hub */}
         <Route path="/samples" element={<Samples />} />
