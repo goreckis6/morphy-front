@@ -8699,7 +8699,7 @@ const resources = {
 
       // CSV to HTML
       'csv_to_html.title': 'Konwerter CSV na HTML',
-      'csv_to_html.meta_title': 'Darmowy Konwerter CSV do HTML Online',
+      'csv_to_html.meta_title': 'Darmowy Konwerter CSV na HTML Online',
       'csv_to_html.meta_description': 'Konwertuj pliki CSV na format HTML do publikacji internetowych. Przekształć dane tabelaryczne w sformatowane tabele HTML. Darmowy konwerter online z opcjami stylowania.',
       'csv_to_html.subtitle': 'Konwertuj pliki CSV na format HTML. Przekształć dane tabelaryczne w gotowe do sieci tabele HTML z niestandardowym stylowaniem.',
       'csv_to_html.upload_single': 'Prześlij plik CSV',
@@ -8758,7 +8758,7 @@ const resources = {
 
       // CSV to Markdown
       'csv_to_md.title': 'Konwerter CSV na Markdown',
-      'csv_to_md.meta_title': 'Darmowy Konwerter CSV do Markdown Online',
+      'csv_to_md.meta_title': 'Darmowy Konwerter CSV na Markdown Online',
       'csv_to_md.meta_description': 'Konwertuj pliki CSV na format Markdown do dokumentacji. Profesjonalna konwersja danych na Markdown z formatowaniem. Darmowe narzędzie online.',
       'csv_to_md.subtitle': 'Konwertuj pliki CSV na format Markdown. Przekształć dane tabelaryczne w tabele Markdown do dokumentacji i projektów GitHub.',
       'csv_to_md.upload_single': 'Prześlij plik CSV',
@@ -8817,7 +8817,7 @@ const resources = {
       
       // CSV to ODP
       'csv_to_odp.title': 'Konwerter CSV na ODP',
-      'csv_to_odp.meta_title': 'Darmowy Konwerter CSV do ODP Online',
+      'csv_to_odp.meta_title': 'Darmowy Konwerter CSV na ODP Online',
       'csv_to_odp.meta_description': 'Konwertuj pliki CSV na format prezentacji ODP dla LibreOffice Impress. Przekształć dane w profesjonalne prezentacje z wykresami. Darmowe narzędzie online.',
       'csv_to_odp.subtitle': 'Konwertuj pliki CSV na format OpenDocument Presentation (ODP). Przekształć dane tabelaryczne w prezentacje LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Prześlij plik CSV',
@@ -8878,7 +8878,7 @@ const resources = {
       
       // CSV to ODT
       'csv_to_odt.title': 'Konwerter CSV na ODT',
-      'csv_to_odt.meta_title': 'Darmowy Konwerter CSV do ODT Online',
+      'csv_to_odt.meta_title': 'Darmowy Konwerter CSV na ODT Online',
       'csv_to_odt.meta_description': 'Konwertuj pliki CSV na format ODT dla LibreOffice Writer. Profesjonalna konwersja tabeli do dokumentu z formatowaniem. Darmowy konwerter online.',
       'csv_to_odt.subtitle': 'Konwertuj pliki CSV na format OpenDocument Text (ODT). Przekształć dane tabelaryczne w dokumenty LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Prześlij plik CSV',
@@ -8937,7 +8937,7 @@ const resources = {
       
       // CSV to MOBI
       'csv_to_mobi.title': 'Konwerter CSV na MOBI',
-      'csv_to_mobi.meta_title': 'Darmowy Konwerter CSV do MOBI Online',
+      'csv_to_mobi.meta_title': 'Darmowy Konwerter CSV na MOBI Online',
       'csv_to_mobi.meta_description': 'Konwertuj dane CSV na format MOBI dla Amazon Kindle. Przekształć dane arkusza kalkulacyjnego w kompatybilne z Kindle e-booki. Darmowy konwerter online z obsługą wsadową.',
       'csv_to_mobi.subtitle': 'Konwertuj pliki CSV na format MOBI. Przekształć dane tabelaryczne w kompatybilne z Kindle e-booki z sformatowanymi tabelami.',
       'csv_to_mobi.upload_single': 'Prześlij plik CSV',
@@ -20605,7 +20605,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} de {{totalCount}} archivos convertidos exitosamente.',
       // CSV to MD
       'csv_to_md.title': 'Convertidor CSV a MD',
-      'csv_to_md.meta_title': 'Convertidor CSV a Markdown Online Gratis - Convierte CSV a Tablas MD al Instante | Mejor Herramienta CSV a Markdown',
+      'csv_to_md.meta_title': 'Convertidor CSV a Markdown Online Gratis',
       'csv_to_md.meta_description': 'Convierte archivos CSV a formato Markdown en línea gratis. Transforma datos de hojas de cálculo en tablas Markdown profesionales con formato adecuado, opciones de alineación y compatibilidad con GitHub. Rápido, seguro, soporte para conversión por lotes. Perfecto para documentación, archivos README, proyectos GitHub y wikis. No se requiere registro.',
       'csv_to_md.subtitle': 'Convierte archivos CSV a formato Markdown. Transforma datos tabulares en tablas Markdown para documentación y proyectos GitHub.',
       'csv_to_md.upload_single': 'Subir Archivo CSV',
@@ -22507,7 +22507,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} sur {{totalCount}} fichiers convertis avec succès.',
       // CSV to MD
       'csv_to_md.title': 'Convertisseur CSV vers MD',
-      'csv_to_md.meta_title': 'Convertisseur CSV vers Markdown Gratuit en Ligne - Convertissez CSV en Tableaux MD Instantanément | Meilleur Outil CSV vers Markdown',
+      'csv_to_md.meta_title': 'Convertisseur CSV vers Markdown Gratuit en Ligne',
       'csv_to_md.meta_description': 'Convertissez les fichiers CSV au format Markdown en ligne gratuitement. Transformez les données de feuilles de calcul en tableaux Markdown professionnels avec formatage approprié, options d\'alignement et compatibilité GitHub. Rapide, sécurisé, support de conversion par lots. Parfait pour la documentation, les fichiers README, les projets GitHub et les wikis. Aucune inscription requise.',
       'csv_to_md.subtitle': 'Convertissez les fichiers CSV au format Markdown. Transformez les données tabulaires en tableaux Markdown pour la documentation et les projets GitHub.',
       'csv_to_md.upload_single': 'Télécharger un Fichier CSV',
@@ -22698,7 +22698,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} sur {{totalCount}} fichiers convertis avec succès.',
       // CSV to ODT
       'csv_to_odt.title': 'Convertisseur CSV vers ODT',
-      'csv_to_odt.meta_title': 'Convertisseur CSV vers ODT en Ligne Gratuit - Convertissez CSV en Format OpenDocument Text Instantanément | Meilleur Outil CSV vers ODT',
+      'csv_to_odt.meta_title': 'Convertisseur CSV vers ODT en Ligne Gratuit',
       'csv_to_odt.meta_description': 'Convertissez les fichiers CSV au format ODT en ligne gratuitement. Transformez les données de feuille de calcul en documents professionnels LibreOffice Writer avec des tableaux formatés, un style approprié et une structure de document. Rapide, sécurisé, support de conversion par lots. Parfait pour les rapports commerciaux, la documentation, les articles académiques et l\'édition collaborative. Aucune inscription requise.',
       'csv_to_odt.subtitle': 'Convertissez les fichiers CSV au format OpenDocument Text (ODT). Transformez les données tabulaires en documents LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Télécharger un fichier CSV',
@@ -24340,7 +24340,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Distribuzione contenuti',
       // CSV to HTML
       'csv_to_html.title': 'Convertitore CSV in HTML',
-      'csv_to_html.meta_title': 'Convertitore CSV in HTML Gratuito Online - Converti CSV in Tabelle HTML Istantaneamente | Miglior Strumento CSV in HTML',
+      'csv_to_html.meta_title': 'Convertitore CSV in HTML Gratuito Online',
       'csv_to_html.meta_description': 'Converti file CSV nel formato HTML online gratuitamente. Trasforma dati di fogli di calcolo in tabelle HTML professionali con stili personalizzabili, design responsive e markup semantico. Veloce, sicuro, supporto conversione batch. Perfetto per dashboard web, documentazione e visualizzazione dati. Nessuna registrazione richiesta.',
       'csv_to_html.subtitle': 'Converti file CSV nel formato HTML. Trasforma dati tabulari in tabelle HTML pronte per il web con stili personalizzabili.',
       'csv_to_html.upload_single': 'Carica File CSV',
@@ -24409,7 +24409,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} di {{totalCount}} file convertiti con successo.',
       // CSV to MD
       'csv_to_md.title': 'Convertitore CSV in MD',
-      'csv_to_md.meta_title': 'Convertitore CSV in Markdown Gratuito Online - Converti CSV in Tabelle MD Istantaneamente | Miglior Strumento CSV in Markdown',
+      'csv_to_md.meta_title': 'Convertitore CSV in Markdown Gratuito Online',
       'csv_to_md.meta_description': 'Converti file CSV nel formato Markdown online gratuitamente. Trasforma dati di fogli di calcolo in tabelle Markdown professionali con formattazione corretta, opzioni di allineamento e compatibilità GitHub. Veloce, sicuro, supporto conversione batch. Perfetto per documentazione, file README, progetti GitHub e wiki. Nessuna registrazione richiesta.',
       'csv_to_md.subtitle': 'Converti file CSV nel formato Markdown. Trasforma dati tabulari in tabelle Markdown per documentazione e progetti GitHub.',
       'csv_to_md.upload_single': 'Carica File CSV',
@@ -24476,7 +24476,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} di {{totalCount}} file convertiti con successo.',
       // CSV to MOBI
       'csv_to_mobi.title': 'Convertitore CSV in MOBI',
-      'csv_to_mobi.meta_title': 'Convertitore CSV in MOBI Gratuito Online - Converti CSV in Formato Ebook Kindle Istantaneamente | Miglior Strumento CSV in MOBI',
+      'csv_to_mobi.meta_title': 'Convertitore CSV in MOBI Gratuito Online',
       'csv_to_mobi.meta_description': 'Converti file CSV nel formato MOBI online gratuitamente. Trasforma dati di fogli di calcolo in ebook Kindle compatibili e professionali con tabelle formattate, tipografia corretta e layout responsive. Veloce, sicuro, supporto conversione batch. Perfetto per creazione e-book, pubblicazione dati, contenuti educativi e distribuzione digitale. Nessuna registrazione richiesta.',
       'csv_to_mobi.subtitle': 'Converti file CSV nel formato MOBI. Trasforma dati tabulari in ebook compatibili Kindle con tabelle formattate.',
       'csv_to_mobi.upload_single': 'Carica File CSV',
@@ -24540,7 +24540,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} di {{totalCount}} file convertiti con successo.',
       // CSV to ODP
       'csv_to_odp.title': 'Convertitore CSV in ODP',
-      'csv_to_odp.meta_title': 'Convertitore CSV in ODP Gratuito Online - Converti CSV in Presentazioni LibreOffice Istantaneamente | Miglior Strumento CSV in ODP',
+      'csv_to_odp.meta_title': 'Convertitore CSV in ODP Gratuito Online',
       'csv_to_odp.meta_description': 'Converti file CSV nel formato di presentazione ODP online gratuitamente. Trasforma dati di fogli di calcolo in presentazioni professionali LibreOffice Impress con tabelle, grafici e più layout di diapositive. Veloce, sicuro, supporto conversione batch. Perfetto per presentazioni aziendali, rapporti dati, presentazioni accademiche e materiali formativi. Nessuna registrazione richiesta.',
       'csv_to_odp.subtitle': 'Converti file CSV nel formato di presentazione OpenDocument ODP. Trasforma dati tabulari in presentazioni LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Carica File CSV',
@@ -24600,7 +24600,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} di {{totalCount}} file convertiti con successo.',
       // CSV to ODT
       'csv_to_odt.title': 'Convertitore CSV in ODT',
-      'csv_to_odt.meta_title': 'Convertitore CSV in ODT Online Gratuito - Converti CSV in Formato OpenDocument Text Istantaneamente | Miglior Strumento CSV in ODT',
+      'csv_to_odt.meta_title': 'Convertitore CSV in ODT Online Gratuito',
       'csv_to_odt.meta_description': 'Converti file CSV in formato ODT online gratuitamente. Trasforma dati di fogli di calcolo in documenti professionali LibreOffice Writer con tabelle formattate, stile appropriato e struttura del documento. Veloce, sicuro, supporto per conversione batch. Perfetto per rapporti aziendali, documentazione, articoli accademici e modifica collaborativa. Nessuna registrazione richiesta.',
       'csv_to_odt.subtitle': 'Converti file CSV nel formato OpenDocument Text (ODT). Trasforma dati tabulari in documenti LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Carica File CSV',
@@ -26242,7 +26242,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Contentdistributie',
       // CSV to HTML
       'csv_to_html.title': 'CSV naar HTML Converter',
-      'csv_to_html.meta_title': 'Gratis CSV naar HTML Converter Online - Converteer CSV naar HTML Tabellen Direct | Beste CSV naar HTML Tool',
+      'csv_to_html.meta_title': 'Gratis CSV naar HTML Converter Online',
       'csv_to_html.meta_description': 'Converteer CSV-bestanden naar HTML-formaat online gratis. Transformeer spreadsheetgegevens naar professionele HTML-tabellen met aanpasbare styling, responsief ontwerp en semantische markup. Snel, veilig, batchconversie ondersteuning. Perfect voor webdashboards, documentatie en gegevensvisualisatie. Geen registratie vereist.',
       'csv_to_html.subtitle': 'Converteer CSV-bestanden naar HTML-formaat. Transformeer tabelgegevens naar webklare HTML-tabellen met aanpasbare styling.',
       'csv_to_html.upload_single': 'Upload CSV Bestand',
@@ -26311,7 +26311,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} van {{totalCount}} bestanden succesvol geconverteerd.',
       // CSV to MD
       'csv_to_md.title': 'CSV naar MD Converter',
-      'csv_to_md.meta_title': 'Gratis CSV naar Markdown Converter Online - Converteer CSV naar MD Tabellen Direct | Beste CSV naar Markdown Tool',
+      'csv_to_md.meta_title': 'Gratis CSV naar Markdown Converter Online',
       'csv_to_md.meta_description': 'Converteer CSV-bestanden naar Markdown-formaat online gratis. Transformeer spreadsheetgegevens naar professionele Markdown-tabellen met juiste formatering, uitlijningsopties en GitHub-compatibiliteit. Snel, veilig, batchconversie ondersteuning. Perfect voor documentatie, README-bestanden, GitHub-projecten en wiki\'s. Geen registratie vereist.',
       'csv_to_md.subtitle': 'Converteer CSV-bestanden naar Markdown-formaat. Transformeer tabelgegevens naar Markdown-tabellen voor documentatie en GitHub-projecten.',
       'csv_to_md.upload_single': 'Upload CSV Bestand',
@@ -26378,7 +26378,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} van {{totalCount}} bestanden succesvol geconverteerd.',
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV naar MOBI Converter',
-      'csv_to_mobi.meta_title': 'Gratis CSV naar MOBI Converter Online - Converteer CSV naar Kindle E-boekformaat Direct | Beste CSV naar MOBI Tool',
+      'csv_to_mobi.meta_title': 'Gratis CSV naar MOBI Converter Online',
       'csv_to_mobi.meta_description': 'Converteer CSV-bestanden naar MOBI-formaat online gratis. Transformeer spreadsheetgegevens naar professionele Kindle-compatibele e-boeken met geformatteerde tabellen, juiste typografie en responsief ontwerp. Snel, veilig, batchconversie ondersteuning. Perfect voor e-boekcreatie, gegevenspublicatie, educatieve inhoud en digitale distributie. Geen registratie vereist.',
       'csv_to_mobi.subtitle': 'Converteer CSV-bestanden naar MOBI-formaat. Transformeer tabelgegevens naar Kindle-compatibele e-boeken met geformatteerde tabellen.',
       'csv_to_mobi.upload_single': 'Upload CSV Bestand',
@@ -26442,7 +26442,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} van {{totalCount}} bestanden succesvol geconverteerd.',
       // CSV to ODP
       'csv_to_odp.title': 'CSV naar ODP Converter',
-      'csv_to_odp.meta_title': 'Gratis CSV naar ODP Converter Online - Converteer CSV naar LibreOffice Presentaties Direct | Beste CSV naar ODP Tool',
+      'csv_to_odp.meta_title': 'Gratis CSV naar ODP Converter Online',
       'csv_to_odp.meta_description': 'Converteer CSV-bestanden naar ODP-presentatieformaat online gratis. Transformeer spreadsheetgegevens naar professionele LibreOffice Impress-presentaties met tabellen, grafieken en meerdere dia-indelingen. Snel, veilig, batchconversie ondersteuning. Perfect voor zakelijke presentaties, datarapporten, academische presentaties en trainingsmateriaal. Geen registratie vereist.',
       'csv_to_odp.subtitle': 'Converteer CSV-bestanden naar OpenDocument ODP-presentatieformaat. Transformeer tabelgegevens naar LibreOffice Impress-presentaties.',
       'csv_to_odp.upload_single': 'Upload CSV Bestand',
@@ -26502,7 +26502,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} van {{totalCount}} bestanden succesvol geconverteerd.',
       // CSV to ODT
       'csv_to_odt.title': 'CSV naar ODT Converter',
-      'csv_to_odt.meta_title': 'Gratis CSV naar ODT Converter Online - Converteer CSV naar OpenDocument Text Formaat Direct | Beste CSV naar ODT Tool',
+      'csv_to_odt.meta_title': 'Gratis CSV naar ODT Converter Online',
       'csv_to_odt.meta_description': 'Converteer CSV-bestanden naar ODT-formaat online gratis. Transformeer spreadsheetgegevens naar professionele LibreOffice Writer-documenten met geformatteerde tabellen, juiste opmaak en documentstructuur. Snel, veilig, batchconversie ondersteuning. Perfect voor bedrijfsrapporten, documentatie, academische artikelen en collaboratieve bewerking. Geen registratie vereist.',
       'csv_to_odt.subtitle': 'Converteer CSV-bestanden naar OpenDocument Text (ODT) formaat. Transformeer tabelgegevens naar LibreOffice Writer-documenten.',
       'csv_to_odt.upload_single': 'Upload CSV Bestand',
@@ -28093,7 +28093,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Distribuição de conteúdo',
       // CSV to HTML
       'csv_to_html.title': 'Conversor CSV para HTML',
-      'csv_to_html.meta_title': 'Conversor CSV para HTML Online Gratuito - Converta CSV para Tabelas HTML Instantaneamente | Melhor Ferramenta CSV para HTML',
+      'csv_to_html.meta_title': 'Conversor CSV para HTML Online Gratuito',
       'csv_to_html.meta_description': 'Converta arquivos CSV para o formato HTML online gratuitamente. Transforme dados de planilhas em tabelas HTML profissionais com estilos personalizáveis, design responsivo e marcação semântica. Rápido, seguro, suporte a conversão em lote. Perfeito para dashboards web, documentação e visualização de dados. Nenhum registro necessário.',
       'csv_to_html.subtitle': 'Converta arquivos CSV para o formato HTML. Transforme dados tabulares em tabelas HTML prontas para web com estilos personalizáveis.',
       'csv_to_html.upload_single': 'Enviar Arquivo CSV',
@@ -28162,7 +28162,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} de {{totalCount}} arquivos convertidos com sucesso.',
       // CSV to MD
       'csv_to_md.title': 'Conversor CSV para MD',
-      'csv_to_md.meta_title': 'Conversor CSV para Markdown Online Gratuito - Converta CSV para Tabelas MD Instantaneamente | Melhor Ferramenta CSV para Markdown',
+      'csv_to_md.meta_title': 'Conversor CSV para Markdown Online Gratuito',
       'csv_to_md.meta_description': 'Converta arquivos CSV para o formato Markdown online gratuitamente. Transforme dados de planilhas em tabelas Markdown profissionais com formatação adequada, opções de alinhamento e compatibilidade GitHub. Rápido, seguro, suporte a conversão em lote. Perfeito para documentação, arquivos README, projetos GitHub e wikis. Nenhum registro necessário.',
       'csv_to_md.subtitle': 'Converta arquivos CSV para o formato Markdown. Transforme dados tabulares em tabelas Markdown para documentação e projetos GitHub.',
       'csv_to_md.upload_single': 'Enviar Arquivo CSV',
@@ -28229,7 +28229,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} de {{totalCount}} arquivos convertidos com sucesso.',
       // CSV to MOBI
       'csv_to_mobi.title': 'Conversor CSV para MOBI',
-      'csv_to_mobi.meta_title': 'Conversor CSV para MOBI Online Gratuito - Converta CSV para Formato Ebook Kindle Instantaneamente | Melhor Ferramenta CSV para MOBI',
+      'csv_to_mobi.meta_title': 'Conversor CSV para MOBI Online Gratuito',
       'csv_to_mobi.meta_description': 'Converta arquivos CSV para o formato MOBI online gratuitamente. Transforme dados de planilhas em ebooks Kindle compatíveis e profissionais com tabelas formatadas, tipografia adequada e layout responsivo. Rápido, seguro, suporte a conversão em lote. Perfeito para criação de e-books, publicação de dados, conteúdo educacional e distribuição digital. Nenhum registro necessário.',
       'csv_to_mobi.subtitle': 'Converta arquivos CSV para o formato MOBI. Transforme dados tabulares em ebooks compatíveis com Kindle com tabelas formatadas.',
       'csv_to_mobi.upload_single': 'Enviar Arquivo CSV',
@@ -28293,7 +28293,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} de {{totalCount}} arquivos convertidos com sucesso.',
       // CSV to ODP
       'csv_to_odp.title': 'Conversor CSV para ODP',
-      'csv_to_odp.meta_title': 'Conversor CSV para ODP Online Gratuito - Converta CSV para Apresentações LibreOffice Instantaneamente | Melhor Ferramenta CSV para ODP',
+      'csv_to_odp.meta_title': 'Conversor CSV para ODP Online Gratuito',
       'csv_to_odp.meta_description': 'Converta arquivos CSV para o formato de apresentação ODP online gratuitamente. Transforme dados de planilhas em apresentações profissionais do LibreOffice Impress com tabelas, gráficos e vários layouts de slides. Rápido, seguro, suporte a conversão em lote. Perfeito para apresentações empresariais, relatórios de dados, apresentações acadêmicas e materiais de treinamento. Nenhum registro necessário.',
       'csv_to_odp.subtitle': 'Converta arquivos CSV para o formato de apresentação OpenDocument ODP. Transforme dados tabulares em apresentações do LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Enviar Arquivo CSV',
@@ -28353,7 +28353,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} de {{totalCount}} arquivos convertidos com sucesso.',
       // CSV to ODT
       'csv_to_odt.title': 'Conversor CSV para ODT',
-      'csv_to_odt.meta_title': 'Conversor CSV para ODT Online Gratuito - Converta CSV para Formato OpenDocument Text Instantaneamente | Melhor Ferramenta CSV para ODT',
+      'csv_to_odt.meta_title': 'Conversor CSV para ODT Online Gratuito',
       'csv_to_odt.meta_description': 'Converta arquivos CSV para formato ODT online gratuitamente. Transforme dados de planilha em documentos profissionais do LibreOffice Writer com tabelas formatadas, estilo adequado e estrutura de documento. Rápido, seguro, suporte para conversão em lote. Perfeito para relatórios comerciais, documentação, artigos acadêmicos e edição colaborativa. Nenhum registro necessário.',
       'csv_to_odt.subtitle': 'Converta arquivos CSV para o formato OpenDocument Text (ODT). Transforme dados tabulares em documentos do LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Enviar Arquivo CSV',
@@ -29944,7 +29944,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Phân phối nội dung',
       // CSV to HTML
       'csv_to_html.title': 'Chuyển Đổi CSV sang HTML',
-      'csv_to_html.meta_title': 'Chuyển Đổi CSV sang HTML Trực Tuyến Miễn Phí - Chuyển Đổi CSV sang Bảng HTML Ngay Lập Tức | Công Cụ CSV sang HTML Tốt Nhất',
+      'csv_to_html.meta_title': 'Chuyển Đổi CSV sang HTML Trực Tuyến Miễn Phí',
       'csv_to_html.meta_description': 'Chuyển đổi tệp CSV sang định dạng HTML trực tuyến miễn phí. Biến đổi dữ liệu bảng tính thành bảng HTML chuyên nghiệp với kiểu dáng tùy chỉnh, thiết kế phản hồi và đánh dấu ngữ nghĩa. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Hoàn hảo cho bảng điều khiển web, tài liệu và trực quan hóa dữ liệu. Không cần đăng ký.',
       'csv_to_html.subtitle': 'Chuyển đổi tệp CSV sang định dạng HTML. Biến đổi dữ liệu bảng thành bảng HTML sẵn sàng cho web với kiểu dáng tùy chỉnh.',
       'csv_to_html.upload_single': 'Tải Lên Tệp CSV',
@@ -30013,7 +30013,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} trong số {{totalCount}} tệp đã được chuyển đổi thành công.',
       // CSV to MD
       'csv_to_md.title': 'Chuyển Đổi CSV sang MD',
-      'csv_to_md.meta_title': 'Chuyển Đổi CSV sang Markdown Trực Tuyến Miễn Phí - Chuyển CSV sang Bảng MD Ngay Lập Tức | Công Cụ CSV sang Markdown Tốt Nhất',
+      'csv_to_md.meta_title': 'Chuyển Đổi CSV sang Markdown Trực Tuyến Miễn Phí',
       'csv_to_md.meta_description': 'Chuyển đổi tệp CSV sang định dạng Markdown trực tuyến miễn phí. Biến đổi dữ liệu bảng tính thành bảng Markdown chuyên nghiệp với định dạng phù hợp, tùy chọn căn chỉnh và tương thích GitHub. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Hoàn hảo cho tài liệu, tệp README, dự án GitHub và wiki. Không cần đăng ký.',
       'csv_to_md.subtitle': 'Chuyển đổi tệp CSV sang định dạng Markdown. Biến đổi dữ liệu bảng thành bảng Markdown cho tài liệu và dự án GitHub.',
       'csv_to_md.upload_single': 'Tải Lên Tệp CSV',
@@ -30080,7 +30080,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} trong số {{totalCount}} tệp đã được chuyển đổi thành công.',
       // CSV to MOBI
       'csv_to_mobi.title': 'Chuyển Đổi CSV sang MOBI',
-      'csv_to_mobi.meta_title': 'Chuyển Đổi CSV sang MOBI Trực Tuyến Miễn Phí - Chuyển CSV sang Định Dạng Ebook Kindle Ngay Lập Tức | Công Cụ CSV sang MOBI Tốt Nhất',
+      'csv_to_mobi.meta_title': 'Chuyển Đổi CSV sang MOBI Trực Tuyến Miễn Phí',
       'csv_to_mobi.meta_description': 'Chuyển đổi tệp CSV sang định dạng MOBI trực tuyến miễn phí. Biến đổi dữ liệu bảng tính thành sách điện tử tương thích Kindle chuyên nghiệp với bảng được định dạng, kiểu chữ phù hợp và bố cục phản hồi. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Hoàn hảo cho việc tạo sách điện tử, xuất bản dữ liệu, nội dung giáo dục và phân phối kỹ thuật số. Không cần đăng ký.',
       'csv_to_mobi.subtitle': 'Chuyển đổi tệp CSV sang định dạng MOBI. Biến đổi dữ liệu bảng thành sách điện tử tương thích Kindle với bảng được định dạng.',
       'csv_to_mobi.upload_single': 'Tải Lên Tệp CSV',
@@ -30148,7 +30148,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} trong số {{totalCount}} tệp đã được chuyển đổi thành công.',
       // CSV to ODP
       'csv_to_odp.title': 'Chuyển Đổi CSV sang ODP',
-      'csv_to_odp.meta_title': 'Bộ Chuyển Đổi CSV sang ODP Miễn Phí Trực Tuyến - Chuyển CSV sang Trình Bày LibreOffice Ngay Lập Tức | Công Cụ CSV sang ODP Tốt Nhất',
+      'csv_to_odp.meta_title': 'Bộ Chuyển Đổi CSV sang ODP Miễn Phí Trực Tuyến',
       'csv_to_odp.meta_description': 'Chuyển đổi tệp CSV sang định dạng trình bày ODP trực tuyến miễn phí. Biến đổi dữ liệu bảng tính thành trình bày LibreOffice Impress chuyên nghiệp với bảng, biểu đồ và nhiều bố cục slide. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Hoàn hảo cho trình bày kinh doanh, báo cáo dữ liệu, trình bày học thuật và tài liệu đào tạo. Không cần đăng ký.',
       'csv_to_odp.subtitle': 'Chuyển đổi tệp CSV sang định dạng trình bày OpenDocument (ODP). Biến đổi dữ liệu bảng thành trình bày LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Tải Lên Tệp CSV',
@@ -30210,7 +30210,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} trong số {{totalCount}} tệp đã được chuyển đổi thành công.',
       // CSV to ODT
       'csv_to_odt.title': 'Chuyển Đổi CSV sang ODT',
-      'csv_to_odt.meta_title': 'Chuyển Đổi CSV sang ODT Trực Tuyến Miễn Phí - Chuyển CSV sang Định Dạng OpenDocument Text Ngay Lập Tức | Công Cụ CSV sang ODT Tốt Nhất',
+      'csv_to_odt.meta_title': 'Chuyển Đổi CSV sang ODT Trực Tuyến Miễn Phí',
       'csv_to_odt.meta_description': 'Chuyển đổi tệp CSV sang định dạng ODT trực tuyến miễn phí. Biến đổi dữ liệu bảng tính thành tài liệu LibreOffice Writer chuyên nghiệp với bảng được định dạng, kiểu dáng phù hợp và cấu trúc tài liệu. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Hoàn hảo cho báo cáo kinh doanh, tài liệu, bài báo học thuật và chỉnh sửa cộng tác. Không cần đăng ký.',
       'csv_to_odt.subtitle': 'Chuyển đổi tệp CSV sang định dạng OpenDocument Text (ODT). Biến đổi dữ liệu bảng thành tài liệu LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Tải Lên Tệp CSV',
@@ -31801,7 +31801,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'İçerik dağıtımı',
       // CSV to HTML
       'csv_to_html.title': 'CSV\'den HTML\'e Dönüştürücü',
-      'csv_to_html.meta_title': 'Ücretsiz CSV\'den HTML\'e Dönüştürücü Online - CSV\'yi HTML Tablolarına Anında Dönüştürün | En İyi CSV\'den HTML\'e Araç',
+      'csv_to_html.meta_title': 'Ücretsiz CSV\'den HTML\'e Dönüştürücü Online',
       'csv_to_html.meta_description': 'CSV dosyalarını HTML formatına online ücretsiz dönüştürün. Elektronik tablo verilerini özelleştirilebilir stiller, duyarlı tasarım ve semantik işaretleme ile profesyonel HTML tablolarına dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. Web panelleri, dokümantasyon ve veri görselleştirme için mükemmel. Kayıt gerekmez.',
       'csv_to_html.subtitle': 'CSV dosyalarını HTML formatına dönüştürün. Tablo verilerini özelleştirilebilir stiller ile web hazır HTML tablolarına dönüştürün.',
       'csv_to_html.upload_single': 'CSV Dosyası Yükle',
@@ -31870,7 +31870,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} / {{totalCount}} dosya başarıyla dönüştürüldü.',
       // CSV to MD
       'csv_to_md.title': 'CSV\'den MD\'ye Dönüştürücü',
-      'csv_to_md.meta_title': 'Ücretsiz CSV\'den Markdown\'a Dönüştürücü Online - CSV\'yi MD Tablolarına Anında Dönüştürün | En İyi CSV\'den Markdown\'a Araç',
+      'csv_to_md.meta_title': 'Ücretsiz CSV\'den Markdown\'a Dönüştürücü Online',
       'csv_to_md.meta_description': 'CSV dosyalarını Markdown formatına çevrimiçi olarak ücretsiz dönüştürün. Elektronik tablo verilerini uygun formatlama, hizalama seçenekleri ve GitHub uyumluluğu ile profesyonel Markdown tablolarına dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. Dokümantasyon, README dosyaları, GitHub projeleri ve wiki\'ler için mükemmel. Kayıt gerekmez.',
       'csv_to_md.subtitle': 'CSV dosyalarını Markdown formatına dönüştürün. Tablo verilerini dokümantasyon ve GitHub projeleri için Markdown tablolarına dönüştürün.',
       'csv_to_md.upload_single': 'CSV Dosyası Yükle',
@@ -31937,7 +31937,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} / {{totalCount}} dosya başarıyla dönüştürüldü.',
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV\'den MOBI\'ye Dönüştürücü',
-      'csv_to_mobi.meta_title': 'Ücretsiz CSV\'den MOBI\'ye Dönüştürücü Online - CSV\'yi Kindle E-kitap Formatına Anında Dönüştürün | En İyi CSV\'den MOBI\'ye Araç',
+      'csv_to_mobi.meta_title': 'Ücretsiz CSV\'den MOBI\'ye Dönüştürücü Online',
       'csv_to_mobi.meta_description': 'CSV dosyalarını MOBI formatına çevrimiçi olarak ücretsiz dönüştürün. Elektronik tablo verilerini formatlanmış tablolar, uygun tipografi ve responsif düzen ile profesyonel Kindle uyumlu e-kitaplara dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. E-kitap oluşturma, veri yayınlama, eğitim içeriği ve dijital dağıtım için mükemmel. Kayıt gerekmez.',
       'csv_to_mobi.subtitle': 'CSV dosyalarını MOBI formatına dönüştürün. Tablo verilerini formatlanmış tablolarla Kindle uyumlu e-kitaplara dönüştürün.',
       'csv_to_mobi.upload_single': 'CSV Dosyası Yükle',
@@ -32001,7 +32001,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} / {{totalCount}} dosya başarıyla dönüştürüldü.',
       // CSV to ODP
       'csv_to_odp.title': 'CSV\'den ODP\'ye Dönüştürücü',
-      'csv_to_odp.meta_title': 'Ücretsiz CSV\'den ODP\'ye Dönüştürücü Online - CSV\'yi LibreOffice Sunumlarına Anında Dönüştürün | En İyi CSV\'den ODP\'ye Araç',
+      'csv_to_odp.meta_title': 'Ücretsiz CSV\'den ODP\'ye Dönüştürücü Online',
       'csv_to_odp.meta_description': 'CSV dosyalarını ODP sunum formatına çevrimiçi olarak ücretsiz dönüştürün. Elektronik tablo verilerini tablolar, grafikler ve birden fazla slayt düzeni ile profesyonel LibreOffice Impress sunumlarına dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. İş sunumları, veri raporları, akademik sunumlar ve eğitim materyalleri için mükemmel. Kayıt gerekmez.',
       'csv_to_odp.subtitle': 'CSV dosyalarını OpenDocument ODP sunum formatına dönüştürün. Tablo verilerini LibreOffice Impress sunumlarına dönüştürün.',
       'csv_to_odp.upload_single': 'CSV Dosyası Yükle',
@@ -32082,7 +32082,7 @@ const resources = {
       'csv_to_odp.subtitle': 'CSV dosyalarını OpenDocument ODP sunum formatına dönüştürün.',
       // CSV to ODT
       'csv_to_odt.title': 'CSV\'den ODT\'ye Dönüştürücü',
-      'csv_to_odt.meta_title': 'Ücretsiz CSV\'den ODT\'ye Dönüştürücü Online - CSV\'yi OpenDocument Text Formatına Anında Dönüştürün | En İyi CSV\'den ODT\'ye Araç',
+      'csv_to_odt.meta_title': 'Ücretsiz CSV\'den ODT\'ye Dönüştürücü Online',
       'csv_to_odt.meta_description': 'CSV dosyalarını ODT formatına çevrimiçi olarak ücretsiz dönüştürün. Elektronik tablo verilerini formatlanmış tablolar, uygun stil ve belge yapısıyla profesyonel LibreOffice Writer belgelerine dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. İş raporları, dokümantasyon, akademik makaleler ve işbirlikçi düzenleme için mükemmel. Kayıt gerekmez.',
       'csv_to_odt.subtitle': 'CSV dosyalarını OpenDocument Text (ODT) formatına dönüştürün. Tablo verilerini LibreOffice Writer belgelerine dönüştürün.',
       'csv_to_odt.upload_single': 'CSV Dosyası Yükle',
@@ -33673,7 +33673,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Распространение контента',
       // CSV to HTML
       'csv_to_html.title': 'Конвертер CSV в HTML',
-      'csv_to_html.meta_title': 'Бесплатный Конвертер CSV в HTML Онлайн - Конвертируйте CSV в HTML Таблицы Мгновенно | Лучший Инструмент CSV в HTML',
+      'csv_to_html.meta_title': 'Бесплатный Конвертер CSV в HTML Онлайн',
       'csv_to_html.meta_description': 'Конвертируйте файлы CSV в формат HTML онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные HTML таблицы с настраиваемыми стилями, адаптивным дизайном и семантической разметкой. Быстро, безопасно, поддержка пакетного преобразования. Идеально для веб-панелей, документации и визуализации данных. Регистрация не требуется.',
       'csv_to_html.subtitle': 'Конвертируйте файлы CSV в формат HTML. Преобразуйте табличные данные в готовые для веб HTML таблицы с настраиваемыми стилями.',
       'csv_to_html.upload_single': 'Загрузить CSV Файл',
@@ -33742,7 +33742,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} из {{totalCount}} файлов успешно конвертировано.',
       // CSV to MD
       'csv_to_md.title': 'Конвертер CSV в MD',
-      'csv_to_md.meta_title': 'Бесплатный Конвертер CSV в Markdown Онлайн - Конвертируйте CSV в Таблицы MD Мгновенно | Лучший Инструмент CSV в Markdown',
+      'csv_to_md.meta_title': 'Бесплатный Конвертер CSV в Markdown Онлайн',
       'csv_to_md.meta_description': 'Конвертируйте файлы CSV в формат Markdown онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные таблицы Markdown с правильным форматированием, опциями выравнивания и совместимостью с GitHub. Быстро, безопасно, поддержка пакетного преобразования. Идеально для документации, файлов README, проектов GitHub и вики. Регистрация не требуется.',
       'csv_to_md.subtitle': 'Конвертируйте файлы CSV в формат Markdown. Преобразуйте табличные данные в таблицы Markdown для документации и проектов GitHub.',
       'csv_to_md.upload_single': 'Загрузить CSV Файл',
@@ -33809,7 +33809,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} из {{totalCount}} файлов успешно конвертировано.',
       // CSV to MOBI
       'csv_to_mobi.title': 'Конвертер CSV в MOBI',
-      'csv_to_mobi.meta_title': 'Бесплатный Конвертер CSV в MOBI Онлайн - Конвертируйте CSV в Формат Ebook Kindle Мгновенно | Лучший Инструмент CSV в MOBI',
+      'csv_to_mobi.meta_title': 'Бесплатный Конвертер CSV в MOBI Онлайн',
       'csv_to_mobi.meta_description': 'Конвертируйте файлы CSV в формат MOBI онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные Kindle-совместимые электронные книги с форматированными таблицами, правильной типографикой и адаптивным макетом. Быстро, безопасно, поддержка пакетного преобразования. Идеально для создания e-book, публикации данных, образовательного контента и цифрового распространения. Регистрация не требуется.',
       'csv_to_mobi.subtitle': 'Конвертируйте файлы CSV в формат MOBI. Преобразуйте табличные данные в Kindle-совместимые электронные книги с форматированными таблицами.',
       'csv_to_mobi.upload_single': 'Загрузить CSV Файл',
@@ -33873,7 +33873,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} из {{totalCount}} файлов успешно конвертировано.',
       // CSV to ODP
       'csv_to_odp.title': 'Конвертер CSV в ODP',
-      'csv_to_odp.meta_title': 'Бесплатный Конвертер CSV в ODP Онлайн - Конвертируйте CSV в Презентации LibreOffice Мгновенно | Лучший Инструмент CSV в ODP',
+      'csv_to_odp.meta_title': 'Бесплатный Конвертер CSV в ODP Онлайн',
       'csv_to_odp.meta_description': 'Конвертируйте файлы CSV в формат презентации ODP онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные презентации LibreOffice Impress с таблицами, графиками и несколькими макетами слайдов. Быстро, безопасно, поддержка пакетного преобразования. Идеально для бизнес-презентаций, отчетов о данных, академических презентаций и учебных материалов. Регистрация не требуется.',
       'csv_to_odp.subtitle': 'Конвертируйте файлы CSV в формат презентации OpenDocument ODP. Преобразуйте табличные данные в презентации LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Загрузить CSV Файл',
@@ -33933,7 +33933,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} из {{totalCount}} файлов успешно конвертировано.',
       // CSV to ODT
       'csv_to_odt.title': 'Конвертер CSV в ODT',
-      'csv_to_odt.meta_title': 'Бесплатный Конвертер CSV в ODT Онлайн - Конвертируйте CSV в Формат OpenDocument Text Мгновенно | Лучший Инструмент CSV в ODT',
+      'csv_to_odt.meta_title': 'Бесплатный Конвертер CSV в ODT Онлайн',
       'csv_to_odt.meta_description': 'Конвертируйте файлы CSV в формат ODT онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные документы LibreOffice Writer с отформатированными таблицами, правильным стилем и структурой документа. Быстро, безопасно, поддержка пакетного преобразования. Идеально для бизнес-отчетов, документации, академических статей и совместного редактирования. Регистрация не требуется.',
       'csv_to_odt.subtitle': 'Конвертируйте файлы CSV в формат OpenDocument Text (ODT). Преобразуйте табличные данные в документы LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Загрузить CSV файл',
@@ -35523,7 +35523,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'توزيع المحتوى',
       // CSV to HTML
       'csv_to_html.title': 'محول CSV إلى HTML',
-      'csv_to_html.meta_title': 'محول CSV إلى HTML مجاني عبر الإنترنت - قم بتحويل CSV إلى جداول HTML على الفور | أفضل أداة CSV إلى HTML',
+      'csv_to_html.meta_title': 'محول CSV إلى HTML مجاني عبر الإنترنت',
       'csv_to_html.meta_description': 'قم بتحويل ملفات CSV إلى تنسيق HTML عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى جداول HTML احترافية مع أنماط قابلة للتخصيص وتصميم متجاوب وعلامات دلالية. سريع وآمن ودعم تحويل الدفعات. مثالي لواجهات الويب والوثائق وتصور البيانات. لا يلزم التسجيل.',
       'csv_to_html.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق HTML. قم بتحويل البيانات الجدولية إلى جداول HTML جاهزة للويب مع أنماط قابلة للتخصيص.',
       'csv_to_html.upload_single': 'تحميل ملف CSV',
@@ -35592,7 +35592,7 @@ const resources = {
       'csv_to_html.batch_success_message': 'تم تحويل {{successCount}} من {{totalCount}} ملف بنجاح.',
       // CSV to MD
       'csv_to_md.title': 'محول CSV إلى MD',
-      'csv_to_md.meta_title': 'محول CSV إلى Markdown مجاني عبر الإنترنت - قم بتحويل CSV إلى جداول MD على الفور | أفضل أداة CSV إلى Markdown',
+      'csv_to_md.meta_title': 'محول CSV إلى Markdown مجاني عبر الإنترنت',
       'csv_to_md.meta_description': 'قم بتحويل ملفات CSV إلى تنسيق Markdown عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى جداول Markdown احترافية مع تنسيق مناسب وخيارات محاذاة وتوافق GitHub. سريع وآمن ودعم تحويل الدفعات. مثالي للتوثيق وملفات README ومشاريع GitHub والويكي. لا يلزم التسجيل.',
       'csv_to_md.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق Markdown. قم بتحويل البيانات الجدولية إلى جداول Markdown للتوثيق ومشاريع GitHub.',
       'csv_to_md.upload_single': 'تحميل ملف CSV',
@@ -35659,7 +35659,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} من {{totalCount}} ملف تم تحويله بنجاح.',
       // CSV to MOBI
       'csv_to_mobi.title': 'محول CSV إلى MOBI',
-      'csv_to_mobi.meta_title': 'محول CSV إلى MOBI مجاني عبر الإنترنت - قم بتحويل CSV إلى تنسيق Ebook Kindle على الفور | أفضل أداة CSV إلى MOBI',
+      'csv_to_mobi.meta_title': 'محول CSV إلى MOBI مجاني عبر الإنترنت',
       'csv_to_mobi.meta_description': 'قم بتحويل ملفات CSV إلى تنسيق MOBI عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى كتب إلكترونية Kindle متوافقة واحترافية مع جداول منسقة، وتنضيد مناسب، وتخطيط متجاوب. سريع وآمن ودعم تحويل الدفعات. مثالي لإنشاء الكتب الإلكترونية ونشر البيانات والمحتوى التعليمي والتوزيع الرقمي. لا يلزم التسجيل.',
       'csv_to_mobi.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق MOBI. قم بتحويل البيانات الجدولية إلى كتب إلكترونية متوافقة مع Kindle مع جداول منسقة.',
       'csv_to_mobi.upload_single': 'تحميل ملف CSV',
@@ -35723,7 +35723,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': 'تم تحويل {{successCount}} من {{totalCount}} ملف بنجاح.',
       // CSV to ODP
       'csv_to_odp.title': 'محول CSV إلى ODP',
-      'csv_to_odp.meta_title': 'محول CSV إلى ODP مجاني عبر الإنترنت - قم بتحويل CSV إلى عروض LibreOffice على الفور | أفضل أداة CSV إلى ODP',
+      'csv_to_odp.meta_title': 'محول CSV إلى ODP مجاني عبر الإنترنت',
       'csv_to_odp.meta_description': 'قم بتحويل ملفات CSV إلى تنسيق عرض ODP عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى عروض LibreOffice Impress احترافية مع جداول ورسوم بيانية وتخطيطات شرائح متعددة. سريع وآمن ودعم تحويل الدفعات. مثالي للعروض التجارية وتقارير البيانات والعروض الأكاديمية ومواد التدريب. لا يلزم التسجيل.',
       'csv_to_odp.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق عرض OpenDocument ODP. قم بتحويل البيانات الجدولية إلى عروض LibreOffice Impress.',
       'csv_to_odp.upload_single': 'تحميل ملف CSV',
@@ -35786,7 +35786,7 @@ const resources = {
       'csv_to_mobi.subtitle': 'قم بتحويل بيانات CSV إلى تنسيق كتاب إلكتروني MOBI لأجهزة Kindle وأجهزة القراءة الإلكترونية.',
       // CSV to ODT
       'csv_to_odt.title': 'محول CSV إلى ODT',
-      'csv_to_odt.meta_title': 'محول CSV إلى ODT مجاني على الإنترنت - قم بتحويل CSV إلى تنسيق OpenDocument Text فوراً | أفضل أداة CSV إلى ODT',
+      'csv_to_odt.meta_title': 'محول CSV إلى ODT مجاني على الإنترنت',
       'csv_to_odt.meta_description': 'قم بتحويل ملفات CSV إلى تنسيق ODT على الإنترنت مجاناً. قم بتحويل بيانات جداول البيانات إلى مستندات LibreOffice Writer احترافية مع جداول منسقة ونمط مناسب وهيكل المستند. سريع وآمن ودعم التحويل المجمع. مثالي لتقارير الأعمال والوثائق والمقالات الأكاديمية والتحرير التعاوني. لا يلزم التسجيل.',
       'csv_to_odt.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق OpenDocument Text (ODT). قم بتحويل البيانات الجدولية إلى مستندات LibreOffice Writer.',
       'csv_to_odt.upload_single': 'رفع ملف CSV',
@@ -37377,7 +37377,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'การจัดจำหน่ายเนื้อหา',
       // CSV to HTML
       'csv_to_html.title': 'ตัวแปลง CSV เป็น HTML',
-      'csv_to_html.meta_title': 'ตัวแปลง CSV เป็น HTML ออนไลน์ฟรี - แปลง CSV เป็นตาราง HTML ทันที | เครื่องมือ CSV เป็น HTML ที่ดีที่สุด',
+      'csv_to_html.meta_title': 'ตัวแปลง CSV เป็น HTML ออนไลน์ฟรี',
       'csv_to_html.meta_description': 'แปลงไฟล์ CSV เป็นรูปแบบ HTML ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นตาราง HTML แบบมืออาชีพพร้อมสไตล์ที่ปรับแต่งได้ การออกแบบที่ตอบสนอง และมาร์กอัปเชิงความหมาย เร็ว ปลอดภัย รองรับการแปลงแบบกลุ่ม เหมาะสำหรับแดชบอร์ดเว็บ เอกสาร และการแสดงภาพข้อมูล ไม่ต้องลงทะเบียน',
       'csv_to_html.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ HTML แปลงข้อมูลตารางเป็นตาราง HTML ที่พร้อมสำหรับเว็บพร้อมสไตล์ที่ปรับแต่งได้',
       'csv_to_html.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -37446,7 +37446,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} จาก {{totalCount}} ไฟล์ถูกแปลงเรียบร้อยแล้ว',
       // CSV to MD
       'csv_to_md.title': 'ตัวแปลง CSV เป็น MD',
-      'csv_to_md.meta_title': 'ตัวแปลง CSV เป็น Markdown ออนไลน์ฟรี - แปลง CSV เป็นตาราง MD ทันที | เครื่องมือ CSV เป็น Markdown ที่ดีที่สุด',
+      'csv_to_md.meta_title': 'ตัวแปลง CSV เป็น Markdown ออนไลน์ฟรี',
       'csv_to_md.meta_description': 'แปลงไฟล์ CSV เป็นรูปแบบ Markdown ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นตาราง Markdown แบบมืออาชีพพร้อมรูปแบบที่เหมาะสม ตัวเลือกการจัดตำแหน่ง และความเข้ากันได้กับ GitHub เร็ว ปลอดภัย รองรับการแปลงแบบกลุ่ม เหมาะสำหรับเอกสาร ไฟล์ README โปรเจกต์ GitHub และวิกิ ไม่ต้องลงทะเบียน',
       'csv_to_md.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ Markdown แปลงข้อมูลตารางเป็นตาราง Markdown สำหรับเอกสารและโปรเจกต์ GitHub',
       'csv_to_md.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -37513,7 +37513,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} จาก {{totalCount}} ไฟล์ถูกแปลงเรียบร้อยแล้ว',
       // CSV to MOBI
       'csv_to_mobi.title': 'ตัวแปลง CSV เป็น MOBI',
-      'csv_to_mobi.meta_title': 'ตัวแปลง CSV เป็น MOBI ออนไลน์ฟรี - แปลง CSV เป็นรูปแบบ Ebook Kindle ทันที | เครื่องมือ CSV เป็น MOBI ที่ดีที่สุด',
+      'csv_to_mobi.meta_title': 'ตัวแปลง CSV เป็น MOBI ออนไลน์ฟรี',
       'csv_to_mobi.meta_description': 'แปลงไฟล์ CSV เป็นรูปแบบ MOBI ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นหนังสืออิเล็กทรอนิกส์ Kindle ที่เข้ากันได้และเป็นมืออาชีพพร้อมตารางที่จัดรูปแบบ ตัวอักษรที่เหมาะสม และเลย์เอาต์ที่ตอบสนอง เร็ว ปลอดภัย รองรับการแปลงแบบกลุ่ม เหมาะสำหรับการสร้าง e-book การเผยแพร่ข้อมูลเนื้อหาการศึกษาและการจัดจำหน่ายดิจิทัล ไม่ต้องลงทะเบียน',
       'csv_to_mobi.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ MOBI แปลงข้อมูลตารางเป็นหนังสืออิเล็กทรอนิกส์ที่เข้ากันได้กับ Kindle พร้อมตารางที่จัดรูปแบบ',
       'csv_to_mobi.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -37577,7 +37577,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} จาก {{totalCount}} ไฟล์ถูกแปลงเรียบร้อยแล้ว',
       // CSV to ODP
       'csv_to_odp.title': 'ตัวแปลง CSV เป็น ODP',
-      'csv_to_odp.meta_title': 'ตัวแปลง CSV เป็น ODP ออนไลน์ฟรี - แปลง CSV เป็นการนำเสนอ LibreOffice ทันที | เครื่องมือ CSV เป็น ODP ที่ดีที่สุด',
+      'csv_to_odp.meta_title': 'ตัวแปลง CSV เป็น ODP ออนไลน์ฟรี',
       'csv_to_odp.meta_description': 'แปลงไฟล์ CSV เป็นรูปแบบการนำเสนอ ODP ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นการนำเสนอ LibreOffice Impress มืออาชีพพร้อมตาราง กราฟ และเลย์เอาต์สไลด์หลายแบบ เร็ว ปลอดภัย รองรับการแปลงแบบกลุ่ม เหมาะสำหรับการนำเสนอทางธุรกิจ รายงานข้อมูล การนำเสนอทางวิชาการและสื่อการฝึกอบรม ไม่ต้องลงทะเบียน',
       'csv_to_odp.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบการนำเสนอ OpenDocument ODP แปลงข้อมูลตารางเป็นการนำเสนอ LibreOffice Impress',
       'csv_to_odp.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -37637,7 +37637,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} จาก {{totalCount}} ไฟล์ถูกแปลงเรียบร้อยแล้ว',
       // CSV to ODT
       'csv_to_odt.title': 'ตัวแปลง CSV เป็น ODT',
-      'csv_to_odt.meta_title': 'ตัวแปลง CSV เป็น ODT ออนไลน์ฟรี - แปลง CSV เป็นรูปแบบ OpenDocument Text ทันที | เครื่องมือ CSV เป็น ODT ที่ดีที่สุด',
+      'csv_to_odt.meta_title': 'ตัวแปลง CSV เป็น ODT ออนไลน์ฟรี',
       'csv_to_odt.meta_description': 'แปลงไฟล์ CSV เป็นรูปแบบ ODT ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นเอกสาร LibreOffice Writer มืออาชีพพร้อมตารางที่จัดรูปแบบสไตล์ที่เหมาะสมและโครงสร้างเอกสาร เร็วปลอดภัยรองรับการแปลงแบบกลุ่ม เหมาะสำหรับรายงานทางธุรกิจเอกสารบทความทางวิชาการและการแก้ไขแบบร่วมมือ ไม่ต้องลงทะเบียน',
       'csv_to_odt.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ OpenDocument Text (ODT) แปลงข้อมูลตารางเป็นเอกสาร LibreOffice Writer',
       'csv_to_odt.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -39228,7 +39228,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'コンテンツ配布',
       // CSV to HTML
       'csv_to_html.title': 'CSVからHTMLへのコンバーター',
-      'csv_to_html.meta_title': '無料CSVからHTMLへのコンバーターオンライン - CSVをHTMLテーブルに即座に変換 | 最高のCSVからHTMLツール',
+      'csv_to_html.meta_title': '無料CSVからHTMLへのコンバーターオンライン',
       'csv_to_html.meta_description': 'CSVファイルをHTML形式にオンラインで無料変換。スプレッドシートデータをカスタマイズ可能なスタイル、レスポンシブデザイン、セマンティックマークアップ付きのプロフェッショナルなHTMLテーブルに変換。高速、安全、バッチ変換サポート。ウェブダッシュボード、ドキュメント、データ可視化に最適。登録不要。',
       'csv_to_html.subtitle': 'CSVファイルをHTML形式に変換。表形式データをカスタマイズ可能なスタイル付きのウェブ対応HTMLテーブルに変換。',
       'csv_to_html.upload_single': 'CSVファイルをアップロード',
@@ -39297,7 +39297,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} / {{totalCount}}ファイルが正常に変換されました。',
       // CSV to MD
       'csv_to_md.title': 'CSVからMDへのコンバーター',
-      'csv_to_md.meta_title': '無料CSVからMarkdownへのコンバーターオンライン - CSVをMDテーブルに即座に変換 | 最高のCSVからMarkdownツール',
+      'csv_to_md.meta_title': '無料CSVからMarkdownへのコンバーターオンライン',
       'csv_to_md.meta_description': 'CSVファイルをMarkdown形式にオンラインで無料変換。スプレッドシートデータをカスタマイズ可能なスタイル、レスポンシブデザイン、セマンティックマークアップ付きのプロフェッショナルなMarkdownテーブルに変換。高速、安全、バッチ変換サポート。ウェブダッシュボード、ドキュメント、データ可視化に最適。登録不要。',
       'csv_to_md.subtitle': 'CSVファイルをMarkdown形式に変換。表形式データをドキュメントとGitHubプロジェクト用のMarkdownテーブルに変換。',
       'csv_to_md.upload_single': 'CSVファイルをアップロード',
@@ -39364,7 +39364,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} / {{totalCount}}ファイルが正常に変換されました。',
       // CSV to MOBI
       'csv_to_mobi.title': 'CSVからMOBIへのコンバーター',
-      'csv_to_mobi.meta_title': '無料CSVからMOBIへのコンバーターオンライン - CSVをKindle Eブック形式に即座に変換 | 最高のCSVからMOBIツール',
+      'csv_to_mobi.meta_title': '無料CSVからMOBIへのコンバーターオンライン',
       'csv_to_mobi.meta_description': 'CSVファイルをMOBI形式にオンラインで無料変換。スプレッドシートデータをフォーマットされたテーブル、適切なタイポグラフィ、レスポンシブレイアウト付きのプロフェッショナルなKindle互換Eブックに変換。高速、安全、バッチ変換サポート。Eブック作成、データ公開、教育コンテンツ、デジタル配布に最適。登録不要。',
       'csv_to_mobi.subtitle': 'CSVファイルをMOBI形式に変換。表形式データをフォーマットされたテーブル付きのKindle互換Eブックに変換。',
       'csv_to_mobi.upload_single': 'CSVファイルをアップロード',
@@ -39428,7 +39428,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} / {{totalCount}}ファイルが正常に変換されました。',
       // CSV to ODP
       'csv_to_odp.title': 'CSVからODPへのコンバーター',
-      'csv_to_odp.meta_title': '無料CSVからODPへのコンバーターオンライン - CSVをLibreOfficeプレゼンテーションに即座に変換 | 最高のCSVからODPツール',
+      'csv_to_odp.meta_title': '無料CSVからODPへのコンバーターオンライン',
       'csv_to_odp.meta_description': 'CSVファイルをODPプレゼンテーション形式にオンラインで無料変換。スプレッドシートデータをテーブル、グラフ、複数のスライドレイアウト付きのプロフェッショナルなLibreOffice Impressプレゼンテーションに変換。高速、安全、バッチ変換サポート。ビジネスプレゼンテーション、データレポート、学術プレゼンテーション、トレーニング資料に最適。登録不要。',
       'csv_to_odp.subtitle': 'CSVファイルをOpenDocument ODPプレゼンテーション形式に変換。表形式データをLibreOffice Impressプレゼンテーションに変換。',
       'csv_to_odp.upload_single': 'CSVファイルをアップロード',
@@ -39488,7 +39488,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} / {{totalCount}}ファイルが正常に変換されました。',
       // CSV to ODT
       'csv_to_odt.title': 'CSVからODTへのコンバーター',
-      'csv_to_odt.meta_title': '無料CSVからODTへのコンバーターオンライン - CSVをOpenDocument Text形式に即座に変換 | 最高のCSVからODTツール',
+      'csv_to_odt.meta_title': '無料CSVからODTへのコンバーターオンライン',
       'csv_to_odt.meta_description': 'CSVファイルをODT形式にオンラインで無料変換。スプレッドシートデータを、フォーマットされたテーブル、適切なスタイル、文書構造を持つプロフェッショナルなLibreOffice Writer文書に変換。高速、安全、バッチ変換サポート。ビジネスレポート、ドキュメント、学術論文、共同編集に最適。登録不要。',
       'csv_to_odt.subtitle': 'CSVファイルをOpenDocument Text（ODT）形式に変換。表形式データをLibreOffice Writer文書に変換。',
       'csv_to_odt.upload_single': 'CSVファイルをアップロード',
@@ -41079,7 +41079,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': '内容分发',
       // CSV to HTML
       'csv_to_html.title': 'CSV转HTML转换器',
-      'csv_to_html.meta_title': '免费CSV转HTML转换器在线 - 立即将CSV转换为HTML表格 | 最佳CSV转HTML工具',
+      'csv_to_html.meta_title': '免费CSV转HTML转换器在线',
       'csv_to_html.meta_description': '在线免费将CSV文件转换为HTML格式。将电子表格数据转换为具有可自定义样式、响应式设计和语义标记的专业HTML表格。快速、安全、支持批量转换。非常适合Web仪表板、文档和数据可视化。无需注册。',
       'csv_to_html.subtitle': '将CSV文件转换为HTML格式。将表格数据转换为具有可自定义样式的Web就绪HTML表格。',
       'csv_to_html.upload_single': '上传CSV文件',
@@ -41148,7 +41148,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} / {{totalCount}}个文件已成功转换。',
       // CSV to MD
       'csv_to_md.title': 'CSV转MD转换器',
-      'csv_to_md.meta_title': '免费CSV转Markdown转换器在线 - 立即将CSV转换为MD表格 | 最佳CSV转Markdown工具',
+      'csv_to_md.meta_title': '免费CSV转Markdown转换器在线',
       'csv_to_md.meta_description': '在线免费将CSV文件转换为Markdown格式。将电子表格数据转换为具有正确格式、对齐选项和GitHub兼容性的专业Markdown表格。快速、安全、支持批量转换。非常适合文档、README文件、GitHub项目和wiki。无需注册。',
       'csv_to_md.subtitle': '将CSV文件转换为Markdown格式。将表格数据转换为用于文档和GitHub项目的Markdown表格。',
       'csv_to_md.upload_single': '上传CSV文件',
@@ -41215,7 +41215,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} / {{totalCount}}个文件已成功转换。',
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV转MOBI转换器',
-      'csv_to_mobi.meta_title': '免费CSV转MOBI转换器在线 - 立即将CSV转换为Kindle电子书格式 | 最佳CSV转MOBI工具',
+      'csv_to_mobi.meta_title': '免费CSV转MOBI转换器在线',
       'csv_to_mobi.meta_description': '在线免费将CSV文件转换为MOBI格式。将电子表格数据转换为具有格式化表格、适当排版和响应式布局的专业Kindle兼容电子书。快速、安全、支持批量转换。非常适合电子书创建、数据发布、教育内容和数字分发。无需注册。',
       'csv_to_mobi.subtitle': '将CSV文件转换为MOBI格式。将表格数据转换为具有格式化表格的Kindle兼容电子书。',
       'csv_to_mobi.upload_single': '上传CSV文件',
@@ -41279,7 +41279,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} / {{totalCount}}个文件已成功转换。',
       // CSV to ODP
       'csv_to_odp.title': 'CSV转ODP转换器',
-      'csv_to_odp.meta_title': '免费CSV转ODP转换器在线 - 立即将CSV转换为LibreOffice演示文稿 | 最佳CSV转ODP工具',
+      'csv_to_odp.meta_title': '免费CSV转ODP转换器在线',
       'csv_to_odp.meta_description': '在线免费将CSV文件转换为ODP演示文稿格式。将电子表格数据转换为具有表格、图表和多种幻灯片布局的专业LibreOffice Impress演示文稿。快速、安全、支持批量转换。非常适合商业演示、数据报告、学术演示和培训材料。无需注册。',
       'csv_to_odp.subtitle': '将CSV文件转换为OpenDocument ODP演示文稿格式。将表格数据转换为LibreOffice Impress演示文稿。',
       'csv_to_odp.upload_single': '上传CSV文件',
@@ -41339,7 +41339,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} / {{totalCount}}个文件已成功转换。',
       // CSV to ODT
       'csv_to_odt.title': 'CSV转ODT转换器',
-      'csv_to_odt.meta_title': '免费CSV转ODT转换器在线 - 立即将CSV转换为OpenDocument Text格式 | 最佳CSV转ODT工具',
+      'csv_to_odt.meta_title': '免费CSV转ODT转换器在线',
       'csv_to_odt.meta_description': '在线免费将CSV文件转换为ODT格式。将电子表格数据转换为专业的LibreOffice Writer文档，包含格式化的表格、适当的样式和文档结构。快速、安全、支持批量转换。非常适合商业报告、文档、学术论文和协作编辑。无需注册。',
       'csv_to_odt.subtitle': '将CSV文件转换为OpenDocument Text（ODT）格式。将表格数据转换为LibreOffice Writer文档。',
       'csv_to_odt.upload_single': '上传CSV文件',
