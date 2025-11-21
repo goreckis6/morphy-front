@@ -27,45 +27,60 @@ const languages = [
   { code: 'zh', name: 'Chinese', startMarker: "zh: {", section: 'zh' }
 ];
 
+// Build quick lookup of language start indices
+const languageStarts = languages.reduce((acc, l) => {
+  const idx = content.indexOf(`\n  ${l.code}: {`);
+  if (idx !== -1) acc[l.code] = idx;
+  return acc;
+}, {});
+
+function getLanguageSection(langCode) {
+  // For English we specifically want the translation object contents
+  if (langCode === 'en') {
+    const translationMatch = content.match(/en:\s*{[\s\S]*?translation:\s*{([\s\S]*?)}\s*,\s*\n\s*}\s*,/);
+    return translationMatch ? translationMatch[1] : '';
+  }
+  const startIdx = languageStarts[langCode];
+  if (startIdx === undefined) return '';
+  // Find next language start to cap search window (optimization)
+  const following = Object.entries(languageStarts)
+    .map(([code, idx]) => ({ code, idx }))
+    .filter(e => e.idx > startIdx)
+    .sort((a, b) => a.idx - b.idx)[0];
+  const windowEnd = following ? following.idx : content.length;
+
+  // Walk from first '{' after marker, counting braces outside quotes
+  const braceStart = content.indexOf('{', startIdx);
+  if (braceStart === -1) return '';
+  let i = braceStart;
+  let depth = 0;
+  let inSingle = false;
+  let inDouble = false;
+  let escaped = false;
+  for (; i < windowEnd; i++) {
+    const ch = content[i];
+    if (escaped) { escaped = false; continue; }
+    if (ch === '\\') { escaped = true; continue; }
+    if (!inDouble && ch === "'" ) { inSingle = !inSingle; continue; }
+    if (!inSingle && ch === '"') { inDouble = !inDouble; continue; }
+    if (inSingle || inDouble) continue;
+    if (ch === '{') depth++;
+    else if (ch === '}') {
+      depth--;
+      // When depth returns to 0 we've closed the language object
+      if (depth === 0) { i++; break; }
+    }
+  }
+  const section = content.substring(startIdx, i);
+  return section;
+}
+
 function extractKeysForConverter(content, converter, langCode) {
   const keys = [];
   const regex = new RegExp(`'(${converter}\\.\\w+)'\\s*:`, 'g');
   let match;
-  
-  // Extract language section
-  let langSection = '';
-  if (langCode === 'en') {
-    // For English, it's in the translation object
-    const translationMatch = content.match(/translation:\s*{([\s\S]*?)(?=\n\s*}\s*,\s*\n\s*}\s*,\s*\n\s*pl:|$)/);
-    if (translationMatch) {
-      langSection = translationMatch[1];
-    }
-  } else {
-    // For other languages
-    const langMarker = `${langCode}: {`;
-    const startIdx = content.indexOf(langMarker);
-    if (startIdx === -1) return keys;
-    
-    // Find the end of this language section (next language or end of resources)
-    let braceCount = 0;
-    let inSection = false;
-    let endIdx = startIdx;
-    
-    for (let i = startIdx; i < content.length; i++) {
-      if (content[i] === '{') {
-        braceCount++;
-        inSection = true;
-      } else if (content[i] === '}') {
-        braceCount--;
-        if (inSection && braceCount === 1) {
-          endIdx = i;
-          break;
-        }
-      }
-    }
-    
-    langSection = content.substring(startIdx, endIdx);
-  }
+  // Extract language section using marker boundaries (ignores braces inside strings like {{count}})
+  const langSection = getLanguageSection(langCode);
   
   // Extract all keys for this converter
   while ((match = regex.exec(langSection)) !== null) {
