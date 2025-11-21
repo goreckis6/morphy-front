@@ -4207,7 +4207,7 @@ const resources = {
       
       // CSV to PPT
       'csv_to_ppt.title': 'CSV to PPT Converter',
-      'csv_to_ppt.meta_title': 'Free CSV to PPT Converter - Convert CSV Files to PowerPoint Presentations Online',
+      'csv_to_ppt.meta_title': 'Free CSV to PPT Converter Online',
       'csv_to_ppt.meta_description': 'Convert CSV files to PPT format online for free. Transform spreadsheet data into professional PowerPoint presentations with tables and charts. Fast, secure, and no registration required.',
       'csv_to_ppt.subtitle': 'Convert CSV files to PPT format. Transform tabular data into professional PowerPoint presentations with formatted tables and layouts.',
       'csv_to_ppt.upload_single': 'Upload CSV File',
@@ -9052,7 +9052,7 @@ const resources = {
       
       // CSV to PPT
       'csv_to_ppt.title': 'Konwerter CSV na PPT',
-      'csv_to_ppt.meta_title': 'Darmowy konwerter CSV na PPT - Konwertuj pliki CSV na prezentacje PowerPoint online',
+      'csv_to_ppt.meta_title': 'Darmowy Konwerter CSV na PPT Online',
       'csv_to_ppt.meta_description': 'Konwertuj pliki CSV na format PPT online za darmo. Przekształć dane arkusza kalkulacyjnego w profesjonalne prezentacje PowerPoint z tabelami i wykresami. Szybko, bezpiecznie i bez rejestracji.',
       'csv_to_ppt.subtitle': 'Konwertuj pliki CSV na format PPT. Przekształć dane tabelaryczne w profesjonalne prezentacje PowerPoint z sformatowanymi tabelami i układami.',
       'csv_to_ppt.upload_single': 'Prześlij plik CSV',
@@ -14116,7 +14116,7 @@ const resources = {
       
       // CSV to PPT
       'csv_to_ppt.title': 'CSV zu PPT Konverter',
-      'csv_to_ppt.meta_title': 'Kostenloser CSV zu PPT Konverter - Konvertieren Sie CSV-Dateien zu PowerPoint-Präsentationen online',
+      'csv_to_ppt.meta_title': 'Kostenloser CSV zu PPT Konverter Online',
       'csv_to_ppt.meta_description': 'Konvertieren Sie CSV-Dateien kostenlos online in PPT-Format. Transformieren Sie Tabellendaten in professionelle PowerPoint-Präsentationen mit Tabellen und Diagrammen. Schnell, sicher und ohne Registrierung.',
       'csv_to_ppt.subtitle': 'Konvertieren Sie CSV-Dateien in PPT-Format. Transformieren Sie Tabellendaten in professionelle PowerPoint-Präsentationen mit formatierten Tabellen und Layouts.',
       'csv_to_ppt.upload_single': 'CSV-Datei hochladen',
@@ -16956,7 +16956,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Mulai Mengonversi Sekarang',
       // CSV to PPT
       'csv_to_ppt.title': 'Konverter CSV ke PPT',
-      'csv_to_ppt.meta_title': 'Konverter CSV ke PPT Gratis - Konversi File CSV ke Presentasi PowerPoint Online',
+      'csv_to_ppt.meta_title': 'Konverter CSV ke PPT Gratis Online',
       'csv_to_ppt.meta_description': 'Konversi file CSV ke format PPT online secara gratis. Transformasikan data spreadsheet menjadi presentasi PowerPoint profesional dengan tabel dan grafik. Cepat, aman, dan tanpa registrasi.',
       'csv_to_ppt.subtitle': 'Konversi file CSV ke format PPT. Transformasikan data tabel menjadi presentasi PowerPoint profesional dengan tabel dan tata letak yang diformat.',
       'csv_to_ppt.upload_single': 'Unggah File CSV',
@@ -18935,7 +18935,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Börja konvertera nu',
       // CSV to PPT
       'csv_to_ppt.title': 'CSV till PPT Konverterare',
-      'csv_to_ppt.meta_title': 'Gratis CSV till PPT Konverterare - Konvertera CSV-filer till PowerPoint-presentationer Online',
+      'csv_to_ppt.meta_title': 'Gratis CSV till PPT Konverterare Online',
       'csv_to_ppt.meta_description': 'Konvertera CSV-filer till PPT-format online gratis. Transformera kalkylbladsdata till professionella PowerPoint-presentationer med tabeller och diagram. Snabbt, säkert och utan registrering.',
       'csv_to_ppt.subtitle': 'Konvertera CSV-filer till PPT-format. Transformera tabulära data till professionella PowerPoint-presentationer med formaterade tabeller och layouter.',
       'csv_to_ppt.upload_single': 'Ladda upp CSV-fil',
@@ -20906,7 +20906,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Comenzar a convertir ahora',
       // CSV to PPT
       'csv_to_ppt.title': 'Convertidor CSV a PPT',
-      'csv_to_ppt.meta_title': 'Convertidor Gratis de CSV a PPT - Convierte Archivos CSV a Presentaciones PowerPoint Online',
+      'csv_to_ppt.meta_title': 'Convertidor CSV a PPT Gratis Online',
       'csv_to_ppt.meta_description': 'Convierte archivos CSV al formato PPT online gratis. Transforma datos de hojas de cálculo en presentaciones PowerPoint profesionales con tablas y gráficos. Rápido, seguro y sin registro.',
       'csv_to_ppt.subtitle': 'Convierte archivos CSV al formato PPT. Transforma datos tabulares en presentaciones PowerPoint profesionales con tablas y diseños formateados.',
       'csv_to_ppt.upload_single': 'Subir Archivo CSV',
@@ -21175,6 +21175,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'Comenzar a Convertir Ahora',
       // CSV to TXT
       'csv_to_txt.title': 'Convertidor CSV a TXT',
+      'csv_to_txt.meta_title': 'Convertidor CSV a TXT Gratis Online',
       'csv_to_txt.subtitle': 'Convierte archivos CSV al formato de texto plano TXT para compatibilidad universal.',
       // CSV to XLS
       'csv_to_xls.title': 'Convertidor CSV a XLS',
@@ -22808,7 +22809,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Commencer à convertir maintenant',
       // CSV to PPT
       'csv_to_ppt.title': 'Convertisseur CSV vers PPT',
-      'csv_to_ppt.meta_title': 'Convertisseur Gratuit CSV vers PPT - Convertissez les Fichiers CSV en Présentations PowerPoint en Ligne',
+      'csv_to_ppt.meta_title': 'Convertisseur CSV vers PPT Gratuit en Ligne',
       'csv_to_ppt.meta_description': 'Convertissez les fichiers CSV au format PPT en ligne gratuitement. Transformez les données de feuille de calcul en présentations PowerPoint professionnelles avec des tableaux et des graphiques. Rapide, sécurisé et sans inscription.',
       'csv_to_ppt.subtitle': 'Convertissez les fichiers CSV au format PPT. Transformez les données tabulaires en présentations PowerPoint professionnelles avec des tableaux et des mises en page formatés.',
       'csv_to_ppt.upload_single': 'Télécharger un Fichier CSV',
@@ -23077,6 +23078,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'Commencer la Conversion Maintenant',
       // CSV to TXT
       'csv_to_txt.title': 'Convertisseur CSV vers TXT',
+      'csv_to_txt.meta_title': 'Convertisseur CSV vers TXT Gratuit en Ligne',
       'csv_to_txt.subtitle': 'Convertissez les fichiers CSV au format de texte brut TXT pour une compatibilité universelle.',
       // CSV to XLS
       'csv_to_xls.title': 'Convertisseur CSV vers XLS',
@@ -24710,7 +24712,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Inizia a convertire ora',
       // CSV to PPT
       'csv_to_ppt.title': 'Convertitore CSV in PPT',
-      'csv_to_ppt.meta_title': 'Convertitore Gratuito CSV in PPT - Converti File CSV in Presentazioni PowerPoint Online',
+      'csv_to_ppt.meta_title': 'Convertitore CSV in PPT Gratuito Online',
       'csv_to_ppt.meta_description': 'Converti file CSV in formato PPT online gratuitamente. Trasforma i dati del foglio di calcolo in presentazioni PowerPoint professionali con tabelle e grafici. Veloce, sicuro e senza registrazione.',
       'csv_to_ppt.subtitle': 'Converti file CSV in formato PPT. Trasforma dati tabulari in presentazioni PowerPoint professionali con tabelle e layout formattati.',
       'csv_to_ppt.upload_single': 'Carica File CSV',
@@ -24979,6 +24981,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'Inizia a Convertire Ora',
       // CSV to TXT
       'csv_to_txt.title': 'Convertitore CSV in TXT',
+      'csv_to_txt.meta_title': 'Convertitore CSV in TXT Gratuito Online',
       'csv_to_txt.subtitle': 'Converti file CSV nel formato testo semplice TXT per compatibilità universale.',
       // CSV to XLS
       'csv_to_xls.title': 'Convertitore CSV in XLS',
@@ -26612,7 +26615,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Begin nu met converteren',
       // CSV to PPT
       'csv_to_ppt.title': 'CSV naar PPT Converter',
-      'csv_to_ppt.meta_title': 'Gratis CSV naar PPT Converter - Converteer CSV-bestanden naar PowerPoint-presentaties Online',
+      'csv_to_ppt.meta_title': 'Gratis CSV naar PPT Converter Online',
       'csv_to_ppt.meta_description': 'Converteer CSV-bestanden naar PPT-formaat online gratis. Transformeer spreadsheetgegevens naar professionele PowerPoint-presentaties met tabellen en grafieken. Snel, veilig en zonder registratie.',
       'csv_to_ppt.subtitle': 'Converteer CSV-bestanden naar PPT-formaat. Transformeer tabelgegevens naar professionele PowerPoint-presentaties met geformatteerde tabellen en lay-outs.',
       'csv_to_ppt.upload_single': 'Upload CSV-bestand',
@@ -26881,6 +26884,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'Begin Nu met Converteren',
       // CSV to TXT
       'csv_to_txt.title': 'CSV naar TXT Converter',
+      'csv_to_txt.meta_title': 'Gratis CSV naar TXT Converter Online',
       'csv_to_txt.subtitle': 'Converteer CSV-bestanden naar gewoon tekstformaat TXT voor universele compatibiliteit.',
       // CSV to XLS
       'csv_to_xls.title': 'CSV naar XLS Converter',
@@ -28463,7 +28467,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Começar a converter agora',
       // CSV to PPT
       'csv_to_ppt.title': 'Conversor CSV para PPT',
-      'csv_to_ppt.meta_title': 'Conversor Gratuito CSV para PPT - Converta Arquivos CSV em Apresentações PowerPoint Online',
+      'csv_to_ppt.meta_title': 'Conversor CSV para PPT Grátis Online',
       'csv_to_ppt.meta_description': 'Converta arquivos CSV para formato PPT online gratuitamente. Transforme dados de planilha em apresentações PowerPoint profissionais com tabelas e gráficos. Rápido, seguro e sem registro.',
       'csv_to_ppt.subtitle': 'Converta arquivos CSV para formato PPT. Transforme dados tabulares em apresentações PowerPoint profissionais com tabelas e layouts formatados.',
       'csv_to_ppt.upload_single': 'Enviar Arquivo CSV',
@@ -28545,7 +28549,7 @@ const resources = {
       'csv_to_ppt.include_charts_desc': 'Gere gráficos e diagramas a partir dos seus dados',
       // CSV to PPTX
       'csv_to_pptx.title': 'Conversor CSV para PPTX',
-      'csv_to_pptx.meta_title': 'Conversor CSV para PPTX Online Gratuito',
+      'csv_to_pptx.meta_title': 'Conversor CSV para PPTX Grátis Online',
       'csv_to_pptx.meta_description': 'Converta arquivos CSV para formato PPTX online gratuitamente. Transforme dados de planilha em apresentações PowerPoint profissionais com tabelas, gráficos e formatação avançada. Rápido, seguro, conversão em lote. Perfeito para apresentações comerciais, relatórios financeiros, visualizações de dados, dashboards executivos e colaboração em equipe. Sem registro, conversões ilimitadas, saída de alta qualidade.',
       'csv_to_pptx.subtitle': 'Converta arquivos CSV para formato PPTX. Transforme dados tabulares em apresentações PowerPoint modernas com tabelas e layouts formatados.',
       'csv_to_pptx.upload_single': 'Enviar Arquivo CSV',
@@ -28651,7 +28655,7 @@ const resources = {
       'csv_to_pptx.conversion_time_info': 'A conversão pode levar 2-5 minutos para arquivos grandes',
       // CSV to RTF
       'csv_to_rtf.title': 'Conversor CSV para RTF',
-      'csv_to_rtf.meta_title': 'Conversor CSV para RTF Online Gratuito',
+      'csv_to_rtf.meta_title': 'Conversor CSV para RTF Grátis Online',
       'csv_to_rtf.meta_description': 'Converta arquivos CSV para formato RTF online gratuitamente. Transforme dados de planilha em documentos rich text com formatação, tabelas e layouts profissionais. Rápido, seguro, conversão em lote. Perfeito para relatórios comerciais, criação de documentos, apresentação de dados, arquivamento de documentos, edição de texto e compatibilidade multiplataforma. Sem registro, conversões ilimitadas, saída de alta qualidade.',
       'csv_to_rtf.subtitle': 'Converta arquivos CSV para formato RTF. Transforme dados tabulares em documentos rich text com tabelas e layouts formatados.',
       'csv_to_rtf.upload_single': 'Enviar Arquivo CSV',
@@ -28732,10 +28736,11 @@ const resources = {
       'csv_to_rtf.start_converting': 'Começar a Converter Agora',
       // CSV to TXT
       'csv_to_txt.title': 'Conversor CSV para TXT',
+      'csv_to_txt.meta_title': 'Conversor CSV para TXT Grátis Online',
       'csv_to_txt.subtitle': 'Converta arquivos CSV para o formato de texto simples TXT para compatibilidade universal.',
       // CSV to XLS
       'csv_to_xls.title': 'Conversor CSV para XLS',
-      'csv_to_xls.meta_title': 'Conversor CSV para XLS Online Gratuito',
+      'csv_to_xls.meta_title': 'Conversor CSV para XLS Grátis Online',
       'csv_to_xls.meta_description': 'Converta arquivos CSV para formato XLS online grátis instantaneamente. Transforme dados de planilhas em pastas de trabalho Excel 97-2003 com formatação avançada, fórmulas Excel, múltiplas planilhas, suporte a tabelas dinâmicas e layouts profissionais. Rápido, seguro, conversão em lote ilimitada. Perfeito para compatibilidade com Excel antigo, planilhas comerciais, modelagem financeira, análise de dados, relatórios contábeis, planejamento orçamentário, gestão de estoque, rastreamento de vendas e fluxos de trabalho baseados em Excel. Sem registro, conversões ilimitadas, saída Excel de alta qualidade, preservação de fórmulas, formatação de células, geração de gráficos, compatibilidade com macros. Melhor conversor CSV para Excel para versões antigas do Excel.',
       'csv_to_xls.subtitle': 'Converta arquivos CSV para formato XLS. Transforme dados tabulares em pastas de trabalho Excel com formatação e fórmulas.',
       'csv_to_xls.upload_single': 'Enviar Arquivo CSV',
@@ -28800,7 +28805,7 @@ const resources = {
       'csv_to_xls.start_converting': 'Começar a Converter Agora',
       // CSV to XLSX
       'csv_to_xlsx.title': 'Conversor CSV para XLSX',
-      'csv_to_xlsx.meta_title': 'Conversor CSV para XLSX Online Gratuito',
+      'csv_to_xlsx.meta_title': 'Conversor CSV para XLSX Grátis Online',
       'csv_to_xlsx.meta_description': 'Converta arquivos CSV para formato XLSX online gratuitamente. Transforme dados de planilha em pastas de trabalho Excel modernas com formatação avançada, fórmulas, várias planilhas, gráficos e layouts profissionais. Rápido, seguro, conversão em lote. Perfeito para planilhas comerciais, análise financeira, análise de dados, business intelligence, geração de relatórios, colaboração em equipe e fluxos de trabalho modernos do Excel. Sem registro, conversões ilimitadas, saída Excel de alta qualidade, suporte a recursos avançados.',
       'csv_to_xlsx.subtitle': 'Converta arquivos CSV para formato XLSX. Transforme dados tabulares em pastas de trabalho Excel modernas com formatação e recursos avançados.',
       'csv_to_xlsx.upload_single': 'Enviar Arquivo CSV',
@@ -30320,7 +30325,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Bắt đầu chuyển đổi ngay',
       // CSV to PPT
       'csv_to_ppt.title': 'Chuyển Đổi CSV sang PPT',
-      'csv_to_ppt.meta_title': 'Chuyển Đổi CSV sang PPT Miễn Phí - Chuyển Đổi Tệp CSV sang Trình Bày PowerPoint Trực Tuyến',
+      'csv_to_ppt.meta_title': 'Chuyển Đổi CSV sang PPT Miễn Phí Trực Tuyến',
       'csv_to_ppt.meta_description': 'Chuyển đổi tệp CSV sang định dạng PPT trực tuyến miễn phí. Chuyển đổi dữ liệu bảng tính thành trình bày PowerPoint chuyên nghiệp với bảng và biểu đồ. Nhanh chóng, an toàn và không cần đăng ký.',
       'csv_to_ppt.subtitle': 'Chuyển đổi tệp CSV sang định dạng PPT. Chuyển đổi dữ liệu bảng thành trình bày PowerPoint chuyên nghiệp với bảng và bố cục được định dạng.',
       'csv_to_ppt.upload_single': 'Tải Lên Tệp CSV',
@@ -30589,6 +30594,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'Bắt Đầu Chuyển Đổi Ngay',
       // CSV to TXT
       'csv_to_txt.title': 'Chuyển Đổi CSV sang TXT',
+      'csv_to_txt.meta_title': 'Bộ Chuyển Đổi CSV sang TXT Miễn Phí Trực Tuyến',
       'csv_to_txt.subtitle': 'Chuyển đổi tệp CSV sang định dạng văn bản thuần TXT để tương thích phổ biến.',
       // CSV to XLS
       'csv_to_xls.title': 'Chuyển Đổi CSV sang XLS',
@@ -32192,7 +32198,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Şimdi Dönüştürmeye Başlayın',
       // CSV to PPT
       'csv_to_ppt.title': 'CSV\'den PPT\'ye Dönüştürücü',
-      'csv_to_ppt.meta_title': 'Ücretsiz CSV\'den PPT\'ye Dönüştürücü - CSV Dosyalarını PowerPoint Sunumlarına Çevrimiçi Dönüştürün',
+      'csv_to_ppt.meta_title': 'Ücretsiz CSV\'den PPT\'ye Dönüştürücü Çevrimiçi',
       'csv_to_ppt.meta_description': 'CSV dosyalarını PPT formatına çevrimiçi ücretsiz olarak dönüştürün. Elektronik tablo verilerini tablolar ve grafiklerle profesyonel PowerPoint sunumlarına dönüştürün. Hızlı, güvenli ve kayıt gerektirmez.',
       'csv_to_ppt.subtitle': 'CSV dosyalarını PPT formatına dönüştürün. Tablo verilerini biçimlendirilmiş tablolar ve düzenlerle profesyonel PowerPoint sunumlarına dönüştürün.',
       'csv_to_ppt.upload_single': 'CSV Dosyası Yükle',
@@ -32461,6 +32467,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'Şimdi Dönüştürmeye Başla',
       // CSV to TXT
       'csv_to_txt.title': 'CSV\'den TXT\'ye Dönüştürücü',
+      'csv_to_txt.meta_title': 'Ücretsiz CSV\'den TXT\'ye Dönüştürücü Online',
       'csv_to_txt.subtitle': 'CSV dosyalarını evrensel uyumluluk için düz metin TXT formatına dönüştürün.',
       // CSV to XLS
       'csv_to_xls.title': 'CSV\'den XLS\'ye Dönüştürücü',
@@ -34043,7 +34050,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'Начать конвертацию сейчас',
       // CSV to PPT
       'csv_to_ppt.title': 'Конвертер CSV в PPT',
-      'csv_to_ppt.meta_title': 'Бесплатный Конвертер CSV в PPT - Конвертируйте Файлы CSV в Презентации PowerPoint Онлайн',
+      'csv_to_ppt.meta_title': 'Бесплатный Конвертер CSV в PPT Онлайн',
       'csv_to_ppt.meta_description': 'Конвертируйте файлы CSV в формат PPT онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные презентации PowerPoint с таблицами и графиками. Быстро, безопасно и без регистрации.',
       'csv_to_ppt.subtitle': 'Конвертируйте файлы CSV в формат PPT. Преобразуйте табличные данные в профессиональные презентации PowerPoint с отформатированными таблицами и макетами.',
       'csv_to_ppt.upload_single': 'Загрузить Файл CSV',
@@ -34312,6 +34319,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'Начать Конвертацию Сейчас',
       // CSV to TXT
       'csv_to_txt.title': 'Конвертер CSV в TXT',
+      'csv_to_txt.meta_title': 'Бесплатный Конвертер CSV в TXT Онлайн',
       'csv_to_txt.subtitle': 'Конвертируйте файлы CSV в формат обычного текста TXT для универсальной совместимости.',
       // CSV to XLS
       'csv_to_xls.title': 'Конвертер CSV в XLS',
@@ -35896,7 +35904,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'ابدأ التحويل الآن',
       // CSV to PPT
       'csv_to_ppt.title': 'محول CSV إلى PPT',
-      'csv_to_ppt.meta_title': 'محول CSV إلى PPT مجاني - قم بتحويل ملفات CSV إلى عروض PowerPoint التقديمية عبر الإنترنت',
+      'csv_to_ppt.meta_title': 'محول CSV إلى PPT مجاني عبر الإنترنت',
       'csv_to_ppt.meta_description': 'قم بتحويل ملفات CSV إلى تنسيق PPT عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى عروض PowerPoint التقديمية الاحترافية مع الجداول والرسوم البيانية. سريع وآمن ولا يتطلب تسجيل.',
       'csv_to_ppt.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق PPT. قم بتحويل البيانات الجدولية إلى عروض PowerPoint التقديمية الاحترافية مع الجداول والتخطيطات المنسقة.',
       'csv_to_ppt.upload_single': 'رفع ملف CSV',
@@ -36165,6 +36173,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'ابدأ التحويل الآن',
       // CSV to TXT
       'csv_to_txt.title': 'محول CSV إلى TXT',
+      'csv_to_txt.meta_title': 'محول CSV إلى TXT مجاني عبر الإنترنت',
       'csv_to_txt.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق نص عادي TXT للتوافق العالمي.',
       // CSV to XLS
       'csv_to_xls.title': 'محول CSV إلى XLS',
@@ -37747,7 +37756,7 @@ const resources = {
       'csv_to_pdf.start_converting': 'เริ่มแปลงเลย',
       // CSV to PPT
       'csv_to_ppt.title': 'ตัวแปลง CSV เป็น PPT',
-      'csv_to_ppt.meta_title': 'ตัวแปลง CSV เป็น PPT ฟรี - แปลงไฟล์ CSV เป็นการนำเสนอ PowerPoint ออนไลน์',
+      'csv_to_ppt.meta_title': 'ตัวแปลง CSV เป็น PPT ฟรีออนไลน์',
       'csv_to_ppt.meta_description': 'แปลงไฟล์ CSV เป็นรูปแบบ PPT ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นการนำเสนอ PowerPoint แบบมืออาชีพพร้อมตารางและกราฟ เร็ว ปลอดภัย และไม่ต้องลงทะเบียน',
       'csv_to_ppt.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ PPT แปลงข้อมูลตารางเป็นการนำเสนอ PowerPoint แบบมืออาชีพพร้อมตารางและเค้าโครงที่จัดรูปแบบแล้ว',
       'csv_to_ppt.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -38016,6 +38025,7 @@ const resources = {
       'csv_to_rtf.start_converting': 'เริ่มแปลงเลย',
       // CSV to TXT
       'csv_to_txt.title': 'ตัวแปลง CSV เป็น TXT',
+      'csv_to_txt.meta_title': 'ตัวแปลง CSV เป็น TXT ฟรีออนไลน์',
       'csv_to_txt.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบข้อความธรรมดา TXT สำหรับความเข้ากันได้สากล',
       // CSV to XLS
       'csv_to_xls.title': 'ตัวแปลง CSV เป็น XLS',
@@ -39598,7 +39608,7 @@ const resources = {
       'csv_to_pdf.start_converting': '今すぐ変換を開始',
       // CSV to PPT
       'csv_to_ppt.title': 'CSVからPPTへのコンバーター',
-      'csv_to_ppt.meta_title': '無料CSVからPPTへのコンバーター - CSVファイルをPowerPointプレゼンテーションにオンライン変換',
+      'csv_to_ppt.meta_title': '無料CSVからPPTへのコンバーターオンライン',
       'csv_to_ppt.meta_description': 'CSVファイルをPPT形式にオンラインで無料変換。スプレッドシートデータを表とグラフ付きのプロフェッショナルなPowerPointプレゼンテーションに変換。高速、安全、登録不要。',
       'csv_to_ppt.subtitle': 'CSVファイルをPPT形式に変換。表形式のデータをフォーマットされた表とレイアウト付きのプロフェッショナルなPowerPointプレゼンテーションに変換。',
       'csv_to_ppt.upload_single': 'CSVファイルをアップロード',
@@ -39867,6 +39877,7 @@ const resources = {
       'csv_to_rtf.start_converting': '今すぐ変換を開始',
       // CSV to TXT
       'csv_to_txt.title': 'CSVからTXTへのコンバーター',
+      'csv_to_txt.meta_title': '無料CSVからTXTへのコンバーターオンライン',
       'csv_to_txt.subtitle': 'CSVファイルをユニバーサル互換性用のプレーンテキストTXT形式に変換。',
       // CSV to XLS
       'csv_to_xls.title': 'CSVからXLSへのコンバーター',
@@ -41449,7 +41460,7 @@ const resources = {
       'csv_to_pdf.start_converting': '立即开始转换',
       // CSV to PPT
       'csv_to_ppt.title': 'CSV转PPT转换器',
-      'csv_to_ppt.meta_title': '免费CSV转PPT转换器 - 在线将CSV文件转换为PowerPoint演示文稿',
+      'csv_to_ppt.meta_title': '免费CSV转PPT转换器在线',
       'csv_to_ppt.meta_description': '在线免费将CSV文件转换为PPT格式。将电子表格数据转换为带有表格和图表的专业PowerPoint演示文稿。快速、安全且无需注册。',
       'csv_to_ppt.subtitle': '将CSV文件转换为PPT格式。将表格数据转换为带有格式化表格和布局的专业PowerPoint演示文稿。',
       'csv_to_ppt.upload_single': '上传CSV文件',
@@ -41718,6 +41729,7 @@ const resources = {
       'csv_to_rtf.start_converting': '立即开始转换',
       // CSV to TXT
       'csv_to_txt.title': 'CSV转TXT转换器',
+      'csv_to_txt.meta_title': '免费CSV转TXT转换器在线',
       'csv_to_txt.subtitle': '将CSV文件转换为纯文本TXT格式，用于通用兼容性。',
       // CSV to XLS
       'csv_to_xls.title': 'CSV转XLS转换器',
