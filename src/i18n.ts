@@ -235,7 +235,7 @@ const resources = {
       
       // HEIF to JPG
       'heif_to_jpg.title': 'HEIF to JPG Converter',
-      'heif_to_jpg.meta_title': 'Free HEIF to JPG Converter Online - Convert iPhone Photos to JPEG ',
+      'heif_to_jpg.meta_title': 'Free HEIF to JPG Converter Online',
       'heif_to_jpg.meta_description': 'Convert HEIF (iPhone) photos to standard JPG online for free. Fast, secure HEIF to JPEG converter with batch support, quality control, and smart downscaling.',
       'heif_to_jpg.subtitle': 'Convert HEIF images to universally compatible JPG for websites, apps, and sharing. Fast, secure, free — with batch processing.',
       'heif_to_jpg.upload_single': 'Upload HEIF File',
@@ -3691,7 +3691,7 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'CSV to DOCX Converter',
-      'csv_to_docx.meta_title': 'Free CSV to DOCX Converter Online - Convert CSV to Word Documents Instantly',
+      'csv_to_docx.meta_title': 'Free CSV to DOCX Converter Online',
       'csv_to_docx.meta_description': 'Convert CSV files to DOCX Word documents online for free. Transform spreadsheet data into professional Word documents with table formatting, styling, and layout. Fast, secure, batch conversion support. No registration required.',
       'csv_to_docx.subtitle': 'Convert CSV files to Microsoft Word DOCX format. Transform tabular data into formatted documents for reports and presentations with professional styling.',
       'csv_to_docx.upload_single': 'Upload CSV File',
@@ -3749,7 +3749,7 @@ const resources = {
 
       // CSV to EPUB
       'csv_to_epub.title': 'CSV to EPUB Converter',
-      'csv_to_epub.meta_title': 'Free CSV to EPUB Converter Online - Convert CSV to eBook Format Instantly',
+      'csv_to_epub.meta_title': 'Free CSV to EPUB Converter Online',
       'csv_to_epub.meta_description': 'Convert CSV files to EPUB ebook format online for free. Transform spreadsheet data into digital books with chapters, metadata, and professional formatting. Fast, secure, batch conversion support. No registration required.',
       'csv_to_epub.subtitle': 'Convert CSV files to EPUB format for e-books. Transform tabular data into readable electronic publications with professional formatting and metadata.',
       'csv_to_epub.upload_single': 'Upload CSV File',
@@ -3817,7 +3817,7 @@ const resources = {
 
       // CSV to HTML
       'csv_to_html.title': 'CSV to HTML Converter',
-      'csv_to_html.meta_title': 'Free CSV to HTML Converter Online - Convert CSV to HTML Tables Instantly | Best CSV to HTML Tool',
+      'csv_to_html.meta_title': 'Free CSV to HTML Converter Online',
       'csv_to_html.meta_description': 'Convert CSV files to HTML format online for free. Transform spreadsheet data into professional HTML tables with customizable styling, responsive design, and semantic markup. Fast, secure, batch conversion support. Perfect for web dashboards, documentation, and data visualization. No registration required.',
       'csv_to_html.subtitle': 'Convert CSV files to HTML format. Transform tabular data into web-ready HTML tables with customizable styling.',
       'csv_to_html.upload_single': 'Upload CSV File',
@@ -3897,7 +3897,7 @@ const resources = {
 
       // CSV to Markdown
       'csv_to_md.title': 'CSV to Markdown Converter',
-      'csv_to_md.meta_title': 'Free CSV to Markdown Converter Online - Convert CSV to MD Tables Instantly | Best CSV to Markdown Tool',
+      'csv_to_md.meta_title': 'Free CSV to Markdown Converter Online',
       'csv_to_md.meta_description': 'Convert CSV files to Markdown format online for free. Transform spreadsheet data into professional Markdown tables with proper formatting, alignment options, and GitHub compatibility. Fast, secure, batch conversion support. Perfect for documentation, README files, GitHub projects, and wikis. No registration required.',
       'csv_to_md.subtitle': 'Convert CSV files to Markdown format. Transform tabular data into Markdown tables for documentation and GitHub projects.',
       'csv_to_md.upload_single': 'Upload CSV File',
@@ -3965,7 +3965,7 @@ const resources = {
       
       // CSV to ODP
       'csv_to_odp.title': 'CSV to ODP Converter',
-      'csv_to_odp.meta_title': 'Free CSV to ODP Converter Online - Convert CSV to LibreOffice Presentations Instantly | Best CSV to ODP Tool',
+      'csv_to_odp.meta_title': 'Free CSV to ODP Converter Online',
       'csv_to_odp.meta_description': 'Convert CSV files to ODP presentation format online for free. Transform spreadsheet data into professional LibreOffice Impress presentations with tables, charts, and multiple slide layouts. Fast, secure, batch conversion support. Perfect for business presentations, data reports, academic presentations, and training materials. No registration required.',
       'csv_to_odp.subtitle': 'Convert CSV files to OpenDocument Presentation (ODP) format. Transform tabular data into LibreOffice Impress presentations.',
       'csv_to_odp.upload_single': 'Upload CSV File',
@@ -4028,7 +4028,7 @@ const resources = {
       
       // CSV to ODT
       'csv_to_odt.title': 'CSV to ODT Converter',
-      'csv_to_odt.meta_title': 'Free CSV to ODT Converter Online - Convert CSV to OpenDocument Text Format Instantly | Best CSV to ODT Tool',
+      'csv_to_odt.meta_title': 'Free CSV to ODT Converter Online',
       'csv_to_odt.meta_description': 'Convert CSV files to ODT format online for free. Transform spreadsheet data into professional LibreOffice Writer documents with formatted tables, proper styling, and document structure. Fast, secure, batch conversion support. Perfect for business reports, documentation, academic papers, and collaborative editing. No registration required.',
       'csv_to_odt.subtitle': 'Convert CSV files to OpenDocument Text (ODT) format. Transform tabular data into LibreOffice Writer documents.',
       'csv_to_odt.upload_single': 'Upload CSV File',
@@ -4087,7 +4087,7 @@ const resources = {
       
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV to MOBI Converter',
-      'csv_to_mobi.meta_title': 'Free CSV to MOBI Converter Online - Convert CSV to Kindle Ebook Format Instantly | Best CSV to MOBI Tool',
+      'csv_to_mobi.meta_title': 'Free CSV to MOBI Converter Online',
       'csv_to_mobi.meta_description': 'Convert CSV files to MOBI format online for free. Transform spreadsheet data into professional Kindle-compatible ebooks with formatted tables, proper typography, and responsive layout. Fast, secure, batch conversion support. Perfect for e-book creation, data publishing, educational content, and digital distribution. No registration required.',
       'csv_to_mobi.subtitle': 'Convert CSV files to MOBI format. Transform tabular data into Kindle-compatible ebooks with formatted tables.',
       'csv_to_mobi.upload_single': 'Upload CSV File',
@@ -8317,7 +8317,7 @@ const resources = {
 
       // HEIF to JPG - Polish
       'heif_to_jpg.title': 'Konwerter HEIF do JPG',
-      'heif_to_jpg.meta_title': 'Darmowy Konwerter HEIF do JPG Online - Konwertuj Zdjęcia iPhone na JPG ',
+      'heif_to_jpg.meta_title': 'Darmowy Konwerter HEIF do JPG Online',
       'heif_to_jpg.meta_description': 'Konwertuj obrazy HEIF (zdjęcia z iPhone) na standardowy format JPG online za darmo. Szybki, bezpieczny konwerter HEIF do JPG z obsługą wsadową i regulacją jakości.',
       'heif_to_jpg.subtitle': 'Konwertuj zdjęcia HEIF na powszechnie wspierane JPG, zachowując wysoką jakość i przyspieszając udostępnianie.',
       'heif_to_jpg.upload_single': 'Prześlij Plik HEIF',
@@ -8597,7 +8597,7 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'Konwerter CSV na DOCX',
-      'csv_to_docx.meta_title': 'Darmowy konwerter CSV na DOCX - Konwertuj CSV na dokumenty Word',
+      'csv_to_docx.meta_title': 'Darmowy Konwerter CSV do DOCX Online',
       'csv_to_docx.meta_description': 'Konwertuj pliki arkuszy CSV na format DOCX dla Microsoft Word. Przekształć dane tabelaryczne w sformatowane dokumenty Word. Darmowy konwerter online.',
       'csv_to_docx.subtitle': 'Konwertuj pliki CSV na format Microsoft Word DOCX. Przekształć dane tabelaryczne w sformatowane dokumenty do raportów i prezentacji z profesjonalnym stylowaniem.',
       'csv_to_docx.upload_single': 'Prześlij plik CSV',
@@ -8645,7 +8645,7 @@ const resources = {
 
       // CSV to EPUB
       'csv_to_epub.title': 'Konwerter CSV na EPUB',
-      'csv_to_epub.meta_title': 'Darmowy konwerter CSV na EPUB - Konwertuj CSV na format e-booka',
+      'csv_to_epub.meta_title': 'Darmowy Konwerter CSV do EPUB Online',
       'csv_to_epub.meta_description': 'Konwertuj dane CSV na format EPUB e-booka. Przekształć dane tabelaryczne w cyfrowe książki z rozdziałami i metadanymi. Darmowy konwerter online.',
       'csv_to_epub.subtitle': 'Konwertuj pliki CSV na format EPUB dla e-booków. Przekształć dane tabelaryczne w czytelne publikacje elektroniczne z profesjonalnym formatowaniem i metadanymi.',
       'csv_to_epub.upload_single': 'Prześlij plik CSV',
@@ -8699,7 +8699,7 @@ const resources = {
 
       // CSV to HTML
       'csv_to_html.title': 'Konwerter CSV na HTML',
-      'csv_to_html.meta_title': 'Darmowy konwerter CSV na HTML - Konwertuj CSV na tabele internetowe',
+      'csv_to_html.meta_title': 'Darmowy Konwerter CSV do HTML Online',
       'csv_to_html.meta_description': 'Konwertuj pliki CSV na format HTML do publikacji internetowych. Przekształć dane tabelaryczne w sformatowane tabele HTML. Darmowy konwerter online z opcjami stylowania.',
       'csv_to_html.subtitle': 'Konwertuj pliki CSV na format HTML. Przekształć dane tabelaryczne w gotowe do sieci tabele HTML z niestandardowym stylowaniem.',
       'csv_to_html.upload_single': 'Prześlij plik CSV',
@@ -8758,7 +8758,7 @@ const resources = {
 
       // CSV to Markdown
       'csv_to_md.title': 'Konwerter CSV na Markdown',
-      'csv_to_md.meta_title': 'Darmowy konwerter CSV na Markdown - Konwertuj CSV na tabele MD',
+      'csv_to_md.meta_title': 'Darmowy Konwerter CSV do Markdown Online',
       'csv_to_md.meta_description': 'Konwertuj pliki CSV na format Markdown do dokumentacji. Profesjonalna konwersja danych na Markdown z formatowaniem. Darmowe narzędzie online.',
       'csv_to_md.subtitle': 'Konwertuj pliki CSV na format Markdown. Przekształć dane tabelaryczne w tabele Markdown do dokumentacji i projektów GitHub.',
       'csv_to_md.upload_single': 'Prześlij plik CSV',
@@ -8817,7 +8817,7 @@ const resources = {
       
       // CSV to ODP
       'csv_to_odp.title': 'Konwerter CSV na ODP',
-      'csv_to_odp.meta_title': 'Darmowy konwerter CSV na ODP - Konwertuj CSV na prezentacje online',
+      'csv_to_odp.meta_title': 'Darmowy Konwerter CSV do ODP Online',
       'csv_to_odp.meta_description': 'Konwertuj pliki CSV na format prezentacji ODP dla LibreOffice Impress. Przekształć dane w profesjonalne prezentacje z wykresami. Darmowe narzędzie online.',
       'csv_to_odp.subtitle': 'Konwertuj pliki CSV na format OpenDocument Presentation (ODP). Przekształć dane tabelaryczne w prezentacje LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Prześlij plik CSV',
@@ -8878,7 +8878,7 @@ const resources = {
       
       // CSV to ODT
       'csv_to_odt.title': 'Konwerter CSV na ODT',
-      'csv_to_odt.meta_title': 'Darmowy konwerter CSV na ODP - Konwertuj pliki CSV na prezentacje online',
+      'csv_to_odt.meta_title': 'Darmowy Konwerter CSV do ODT Online',
       'csv_to_odt.meta_description': 'Konwertuj pliki CSV na format ODT dla LibreOffice Writer. Profesjonalna konwersja tabeli do dokumentu z formatowaniem. Darmowy konwerter online.',
       'csv_to_odt.subtitle': 'Konwertuj pliki CSV na format OpenDocument Text (ODT). Przekształć dane tabelaryczne w dokumenty LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Prześlij plik CSV',
@@ -8937,7 +8937,7 @@ const resources = {
       
       // CSV to MOBI
       'csv_to_mobi.title': 'Konwerter CSV na MOBI',
-      'csv_to_mobi.meta_title': 'Darmowy konwerter CSV na MOBI - Konwertuj CSV na format Kindle',
+      'csv_to_mobi.meta_title': 'Darmowy Konwerter CSV do MOBI Online',
       'csv_to_mobi.meta_description': 'Konwertuj dane CSV na format MOBI dla Amazon Kindle. Przekształć dane arkusza kalkulacyjnego w kompatybilne z Kindle e-booki. Darmowy konwerter online z obsługą wsadową.',
       'csv_to_mobi.subtitle': 'Konwertuj pliki CSV na format MOBI. Przekształć dane tabelaryczne w kompatybilne z Kindle e-booki z sformatowanymi tabelami.',
       'csv_to_mobi.upload_single': 'Prześlij plik CSV',
@@ -13382,7 +13382,7 @@ const resources = {
 
       // HEIF to JPG - German
       'heif_to_jpg.title': 'HEIF zu JPG Konverter',
-      'heif_to_jpg.meta_title': 'Kostenloser HEIF zu JPG Konverter Online - HEIF-Fotos in JPG umwandeln ',
+      'heif_to_jpg.meta_title': 'Kostenloser HEIF zu JPG Konverter Online',
       'heif_to_jpg.meta_description': 'Konvertieren Sie HEIF-Bilder (iPhone-Fotos) kostenlos online in das weit verbreitete JPG-Format. Schneller, sicherer HEIF-zu-JPG-Konverter mit Stapelverarbeitung und Qualitätssteuerung.',
       'heif_to_jpg.subtitle': 'Verwandeln Sie HEIF-Fotos in JPG-Dateien, die überall funktionieren – mit hoher Qualität, bereit zum Teilen und Veröffentlichen.',
       'heif_to_jpg.upload_single': 'HEIF-Datei Hochladen',
@@ -13661,7 +13661,7 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'CSV zu DOCX Konverter',
-      'csv_to_docx.meta_title': 'Kostenloser CSV zu DOCX Konverter - Konvertieren Sie CSV zu Word-Dokumenten',
+      'csv_to_docx.meta_title': 'Kostenloser CSV zu DOCX Konverter Online',
       'csv_to_docx.meta_description': 'Konvertieren Sie CSV-Tabellenkalkulationsdateien zu DOCX-Format für Microsoft Word. Transformieren Sie Tabellendaten in formatierte Word-Dokumente. Kostenloser Online-Konverter.',
       'csv_to_docx.subtitle': 'Konvertieren Sie CSV-Dateien zu Microsoft Word DOCX-Format. Transformieren Sie Tabellendaten in formatierte Dokumente für Berichte und Präsentationen mit professionellem Styling.',
       'csv_to_docx.upload_single': 'CSV Datei hochladen',
@@ -13709,7 +13709,7 @@ const resources = {
 
       // CSV to EPUB
       'csv_to_epub.title': 'CSV zu EPUB Konverter',
-      'csv_to_epub.meta_title': 'Kostenloser CSV zu EPUB Konverter - Konvertieren Sie CSV zu eBook-Format',
+      'csv_to_epub.meta_title': 'Kostenloser CSV zu EPUB Konverter Online',
       'csv_to_epub.meta_description': 'Konvertieren Sie CSV-Daten zu EPUB eBook-Format. Transformieren Sie Tabellendaten in digitale Bücher mit Kapiteln und Metadaten. Kostenloser Online-Konverter.',
       'csv_to_epub.subtitle': 'Konvertieren Sie CSV-Dateien zu EPUB-Format für E-Books. Transformieren Sie Tabellendaten in lesbare elektronische Publikationen mit professioneller Formatierung und Metadaten.',
       'csv_to_epub.upload_single': 'CSV Datei hochladen',
@@ -13763,7 +13763,7 @@ const resources = {
 
       // CSV to HTML
       'csv_to_html.title': 'CSV zu HTML Konverter',
-      'csv_to_html.meta_title': 'Kostenloser CSV zu HTML Konverter - Konvertieren Sie CSV zu Web-Tabellen',
+      'csv_to_html.meta_title': 'Kostenloser CSV zu HTML Konverter Online',
       'csv_to_html.meta_description': 'Konvertieren Sie CSV-Dateien in HTML-Format für Web-Publishing. Wandeln Sie Tabellendaten in formatierte HTML-Tabellen um. Kostenloser Online-Konverter mit Styling-Optionen.',
       'csv_to_html.subtitle': 'Konvertieren Sie CSV-Dateien in HTML-Format. Wandeln Sie Tabellendaten in web-fertige HTML-Tabellen mit benutzerdefiniertem Styling um.',
       'csv_to_html.upload_single': 'CSV-Datei hochladen',
@@ -13822,7 +13822,7 @@ const resources = {
 
       // CSV to Markdown
       'csv_to_md.title': 'CSV zu Markdown Konverter',
-      'csv_to_md.meta_title': 'Kostenloser CSV zu Markdown Konverter - Konvertieren Sie CSV zu MD-Tabellen',
+      'csv_to_md.meta_title': 'Kostenloser CSV zu Markdown Konverter Online',
       'csv_to_md.meta_description': 'Konvertieren Sie CSV-Dateien in Markdown-Format für Dokumentation. Professionelle Daten-zu-Markdown-Konvertierung mit Formatierung. Kostenloses Online-Tool.',
       'csv_to_md.subtitle': 'Konvertieren Sie CSV-Dateien in Markdown-Format. Transformieren Sie Tabellendaten in Markdown-Tabellen für Dokumentation und GitHub-Projekte.',
       'csv_to_md.upload_single': 'CSV-Datei hochladen',
@@ -13881,7 +13881,7 @@ const resources = {
       
       // CSV to ODP
       'csv_to_odp.title': 'CSV zu ODP Konverter',
-      'csv_to_odp.meta_title': 'Kostenloser CSV zu ODP Konverter - Konvertieren Sie CSV zu Präsentationen online',
+      'csv_to_odp.meta_title': 'Kostenloser CSV zu ODP Konverter Online',
       'csv_to_odp.meta_description': 'Konvertieren Sie CSV-Dateien in ODP-Präsentationsformat für LibreOffice Impress. Transformieren Sie Daten in professionelle Präsentationen mit Diagrammen. Kostenloses Online-Tool.',
       'csv_to_odp.subtitle': 'Konvertieren Sie CSV-Dateien in OpenDocument Presentation (ODP) Format. Transformieren Sie Tabellendaten in LibreOffice Impress Präsentationen.',
       'csv_to_odp.upload_single': 'CSV-Datei hochladen',
@@ -13942,7 +13942,7 @@ const resources = {
       
       // CSV to ODT
       'csv_to_odt.title': 'CSV zu ODT Konverter',
-      'csv_to_odt.meta_title': 'Kostenloser CSV zu ODP Konverter - Konvertieren Sie CSV-Dateien zu Präsentationen online',
+      'csv_to_odt.meta_title': 'Kostenloser CSV zu ODT Konverter Online',
       'csv_to_odt.meta_description': 'Konvertieren Sie CSV-Dateien in ODT-Format für LibreOffice Writer. Professionelle Tabellen-zu-Dokument-Konvertierung mit Formatierung. Kostenloser Online-Konverter.',
       'csv_to_odt.subtitle': 'Konvertieren Sie CSV-Dateien in OpenDocument Text (ODT) Format. Verwandeln Sie Tabellendaten in LibreOffice Writer Dokumente.',
       'csv_to_odt.upload_single': 'CSV-Datei hochladen',
@@ -14001,7 +14001,7 @@ const resources = {
       
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV zu MOBI Konverter',
-      'csv_to_mobi.meta_title': 'Kostenloser CSV zu MOBI Konverter - CSV in Kindle-Format umwandeln',
+      'csv_to_mobi.meta_title': 'Kostenloser CSV zu MOBI Konverter Online',
       'csv_to_mobi.meta_description': 'Konvertieren Sie CSV-Daten in MOBI-Format für Amazon Kindle. Verwandeln Sie Tabellenkalkulationsdaten in Kindle-kompatible E-Books. Kostenloser Online-Konverter mit Stapelverarbeitung.',
       'csv_to_mobi.subtitle': 'Konvertieren Sie CSV-Dateien in MOBI-Format. Verwandeln Sie Tabellendaten in Kindle-kompatible E-Books mit formatierten Tabellen.',
       'csv_to_mobi.upload_single': 'CSV-Datei hochladen',
@@ -16411,7 +16411,7 @@ const resources = {
 
       // HEIF to JPG - Bahasa Indonesia
       'heif_to_jpg.title': 'Konverter HEIF ke JPG',
-      'heif_to_jpg.meta_title': 'Konverter HEIF ke JPG Gratis Online - Konversi Foto iPhone ke JPEG',
+      'heif_to_jpg.meta_title': 'Konverter HEIF ke JPG Gratis Online',
       'heif_to_jpg.meta_description': 'Konversi foto HEIF (iPhone) ke format JPG standar online gratis. Konverter HEIF ke JPEG cepat dan aman dengan dukungan batch, kontrol kualitas, dan pengecilan otomatis.',
       'heif_to_jpg.subtitle': 'Konversi gambar HEIF ke JPG yang kompatibel universal untuk website, aplikasi, dan berbagi. Cepat, aman, gratis — dengan pemrosesan batch.',
       'heif_to_jpg.upload_single': 'Unggah File HEIF',
@@ -16462,7 +16462,7 @@ const resources = {
 
       // CSV to DOCX - Bahasa Indonesia
       'csv_to_docx.title': 'Konverter CSV ke DOCX',
-      'csv_to_docx.meta_title': 'Konverter CSV ke DOCX Gratis Online - Konversi CSV ke Dokumen Word Secara Instan',
+      'csv_to_docx.meta_title': 'Konverter CSV ke DOCX Gratis Online',
       'csv_to_docx.meta_description': 'Konversi file CSV ke dokumen Word DOCX online gratis. Transformasikan data spreadsheet menjadi dokumen Word profesional dengan format tabel, styling, dan layout. Cepat, aman, dukungan konversi batch. Tidak perlu registrasi.',
       'csv_to_docx.subtitle': 'Konversi file CSV ke format Microsoft Word DOCX. Transformasikan data tabel menjadi dokumen terformat untuk laporan dan presentasi dengan styling profesional.',
       'csv_to_docx.upload_single': 'Unggah File CSV',
@@ -16519,7 +16519,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Berbagi dokumen',
       // CSV to EPUB
       'csv_to_epub.title': 'Konverter CSV ke EPUB',
-      'csv_to_epub.meta_title': 'Konverter CSV ke EPUB Online Gratis - Konversi CSV ke Format eBook Secara Instan',
+      'csv_to_epub.meta_title': 'Konverter CSV ke EPUB Gratis Online',
       'csv_to_epub.meta_description': 'Konversi file CSV ke format ebook EPUB online secara gratis. Transformasikan data spreadsheet menjadi buku digital dengan bab, metadata, dan format profesional. Cepat, aman, dukungan konversi batch. Tidak perlu registrasi.',
       'csv_to_epub.subtitle': 'Konversi file CSV ke format EPUB untuk e-book. Transformasikan data tabel menjadi publikasi elektronik yang dapat dibaca dengan format dan metadata profesional.',
       'csv_to_epub.upload_single': 'Unggah File CSV',
@@ -16586,7 +16586,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Distribusi konten',
       // CSV to HTML
       'csv_to_html.title': 'Konverter CSV ke HTML',
-      'csv_to_html.meta_title': 'Konverter CSV ke HTML Online Gratis - Konversi CSV ke Tabel HTML Secara Instan | Alat CSV ke HTML Terbaik',
+      'csv_to_html.meta_title': 'Konverter CSV ke HTML Gratis Online',
       'csv_to_html.meta_description': 'Konversi file CSV ke format HTML online secara gratis. Transformasikan data spreadsheet menjadi tabel HTML profesional dengan styling yang dapat disesuaikan, desain responsif, dan markup semantik. Cepat, aman, dukungan konversi batch. Sempurna untuk dashboard web, dokumentasi, dan visualisasi data. Tidak perlu registrasi.',
       'csv_to_html.subtitle': 'Konversi file CSV ke format HTML. Transformasikan data tabel menjadi tabel HTML siap web dengan styling yang dapat disesuaikan.',
       'csv_to_html.upload_single': 'Unggah File CSV',
@@ -16655,7 +16655,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} dari {{totalCount}} file berhasil dikonversi.',
       // CSV to MD
       'csv_to_md.title': 'Konverter CSV ke MD',
-      'csv_to_md.meta_title': 'Konverter CSV ke Markdown Online Gratis - Konversi CSV ke Tabel MD Secara Instan | Alat CSV ke Markdown Terbaik',
+      'csv_to_md.meta_title': 'Konverter CSV ke Markdown Gratis Online',
       'csv_to_md.meta_description': 'Konversi file CSV ke format Markdown online secara gratis. Transformasikan data spreadsheet menjadi tabel Markdown profesional dengan format yang tepat, opsi perataan, dan kompatibilitas GitHub. Cepat, aman, dukungan konversi batch. Sempurna untuk dokumentasi, file README, proyek GitHub, dan wiki. Tidak perlu registrasi.',
       'csv_to_md.subtitle': 'Konversi file CSV ke format Markdown. Transformasikan data tabel menjadi tabel Markdown untuk dokumentasi dan proyek GitHub.',
       'csv_to_md.upload_single': 'Unggah File CSV',
@@ -16722,7 +16722,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} dari {{totalCount}} file berhasil dikonversi.',
       // CSV to MOBI
       'csv_to_mobi.title': 'Konverter CSV ke MOBI',
-      'csv_to_mobi.meta_title': 'Konverter CSV ke MOBI Online Gratis - Konversi CSV ke Format Ebook Kindle Secara Instan | Alat CSV ke MOBI Terbaik',
+      'csv_to_mobi.meta_title': 'Konverter CSV ke MOBI Gratis Online',
       'csv_to_mobi.meta_description': 'Konversi file CSV ke format MOBI online secara gratis. Transformasikan data spreadsheet menjadi ebook Kindle yang kompatibel dan profesional dengan tabel yang diformat, tipografi yang tepat, dan tata letak responsif. Cepat, aman, dukungan konversi batch. Sempurna untuk pembuatan e-book, penerbitan data, konten pendidikan, dan distribusi digital. Tidak perlu registrasi.',
       'csv_to_mobi.subtitle': 'Konversi file CSV ke format MOBI. Transformasikan data tabel menjadi ebook yang kompatibel dengan Kindle dengan tabel yang diformat.',
       'csv_to_mobi.upload_single': 'Unggah File CSV',
@@ -16786,7 +16786,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} dari {{totalCount}} file berhasil dikonversi.',
       // CSV to ODP
       'csv_to_odp.title': 'Konverter CSV ke ODP',
-      'csv_to_odp.meta_title': 'Konverter CSV ke ODP Online Gratis - Konversi CSV ke Presentasi LibreOffice Secara Instan | Alat CSV ke ODP Terbaik',
+      'csv_to_odp.meta_title': 'Konverter CSV ke ODP Gratis Online',
       'csv_to_odp.meta_description': 'Konversi file CSV ke format presentasi ODP online secara gratis. Transformasikan data spreadsheet menjadi presentasi LibreOffice Impress yang profesional dengan tabel, grafik, dan beberapa tata letak slide. Cepat, aman, dukungan konversi batch. Sempurna untuk presentasi bisnis, laporan data, presentasi akademik, dan materi pelatihan. Tidak perlu registrasi.',
       'csv_to_odp.subtitle': 'Konversi file CSV ke format presentasi OpenDocument ODP. Transformasikan data tabel menjadi presentasi LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Unggah File CSV',
@@ -16846,7 +16846,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} dari {{totalCount}} file berhasil dikonversi.',
       // CSV to ODT
       'csv_to_odt.title': 'Konverter CSV ke ODT',
-      'csv_to_odt.meta_title': 'Konverter CSV ke ODT Online Gratis - Konversi CSV ke Format OpenDocument Text Instan | Alat CSV ke ODT Terbaik',
+      'csv_to_odt.meta_title': 'Konverter CSV ke ODT Gratis Online',
       'csv_to_odt.meta_description': 'Konversi file CSV ke format ODT secara online gratis. Ubah data spreadsheet menjadi dokumen LibreOffice Writer profesional dengan tabel yang diformat, penataan yang tepat, dan struktur dokumen. Cepat, aman, dukungan konversi batch. Sempurna untuk laporan bisnis, dokumentasi, makalah akademik, dan pengeditan kolaboratif. Tidak perlu registrasi.',
       'csv_to_odt.subtitle': 'Konversi file CSV ke format OpenDocument Text (ODT). Ubah data tabel menjadi dokumen LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Unggah File CSV',
@@ -18390,7 +18390,7 @@ const resources = {
 
       // HEIF to JPG - Swedish
       'heif_to_jpg.title': 'HEIF till JPG Konverterare',
-      'heif_to_jpg.meta_title': 'Gratis HEIF till JPG Konverterare Online - Konvertera iPhone-foton till JPEG',
+      'heif_to_jpg.meta_title': 'Gratis HEIF till JPG Konverterare Online',
       'heif_to_jpg.meta_description': 'Konvertera HEIF (iPhone) foton till standard JPG online gratis. Snabb, säker HEIF till JPEG-konverterare med batchstöd, kvalitetskontroll och smart nedskalning.',
       'heif_to_jpg.subtitle': 'Konvertera HEIF-bilder till universellt kompatibla JPG för webbplatser, appar och delning. Snabb, säker, gratis — med batchbearbetning.',
       'heif_to_jpg.upload_single': 'Ladda upp HEIF-fil',
@@ -18441,7 +18441,7 @@ const resources = {
 
       // CSV to DOCX - Swedish
       'csv_to_docx.title': 'CSV till DOCX Konverterare',
-      'csv_to_docx.meta_title': 'Gratis CSV till DOCX Konverterare Online - Konvertera CSV till Word-dokument Omedelbart',
+      'csv_to_docx.meta_title': 'Gratis CSV till DOCX Konverterare Online',
       'csv_to_docx.meta_description': 'Konvertera CSV-filer till DOCX Word-dokument online gratis. Transformera kalkylbladsdata till professionella Word-dokument med tabellformatering, styling och layout. Snabb, säker, batchkonverteringsstöd. Ingen registrering krävs.',
       'csv_to_docx.subtitle': 'Konvertera CSV-filer till Microsoft Word DOCX-format. Transformera tabelldata till formaterade dokument för rapporter och presentationer med professionell styling.',
       'csv_to_docx.upload_single': 'Ladda upp CSV-fil',
@@ -18498,7 +18498,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Dokumentdelning',
       // CSV to EPUB
       'csv_to_epub.title': 'CSV till EPUB Konverterare',
-      'csv_to_epub.meta_title': 'Gratis CSV till EPUB Konverterare Online - Konvertera CSV till eBook-format Omedelbart',
+      'csv_to_epub.meta_title': 'Gratis CSV till EPUB Konverterare Online',
       'csv_to_epub.meta_description': 'Konvertera CSV-filer till EPUB e-bokformat online gratis. Transformera kalkylbladsdata till digitala böcker med kapitel, metadata och professionell formatering. Snabb, säker, stöd för batchkonvertering. Ingen registrering krävs.',
       'csv_to_epub.subtitle': 'Konvertera CSV-filer till EPUB-format för e-böcker. Transformera tabelldata till läsbara elektroniska publikationer med professionell formatering och metadata.',
       'csv_to_epub.upload_single': 'Ladda upp CSV-fil',
@@ -18565,7 +18565,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Innehållsdistribution',
       // CSV to HTML
       'csv_to_html.title': 'CSV till HTML Konverterare',
-      'csv_to_html.meta_title': 'Gratis CSV till HTML-konverterare Online - Konvertera CSV till HTML-tabeller Omedelbart | Bästa CSV till HTML-verktyget',
+      'csv_to_html.meta_title': 'Gratis CSV till HTML Konverterare Online',
       'csv_to_html.meta_description': 'Konvertera CSV-filer till HTML-format online gratis. Transformera kalkylbladsdata till professionella HTML-tabeller med anpassningsbar styling, responsiv design och semantisk markup. Snabb, säker, stöd för batchkonvertering. Perfekt för webbdashboards, dokumentation och datavisualisering. Ingen registrering krävs.',
       'csv_to_html.subtitle': 'Konvertera CSV-filer till HTML-format. Transformera tabulära data till webbklara HTML-tabeller med anpassningsbar styling.',
       'csv_to_html.upload_single': 'Ladda upp CSV-fil',
@@ -18634,7 +18634,7 @@ const resources = {
       'csv_to_html.batch_success_message': '{{successCount}} av {{totalCount}} filer konverterades framgångsrikt.',
       // CSV to MD
       'csv_to_md.title': 'CSV till MD Konverterare',
-      'csv_to_md.meta_title': 'Gratis CSV till Markdown Konverterare Online - Konvertera CSV till MD Tabeller Omedelbart | Bästa CSV till Markdown Verktyget',
+      'csv_to_md.meta_title': 'Gratis CSV till Markdown Konverterare Online',
       'csv_to_md.meta_description': 'Konvertera CSV-filer till Markdown-format online gratis. Transformera kalkylbladsdata till professionella Markdown-tabeller med korrekt formatering, justeringsalternativ och GitHub-kompatibilitet. Snabb, säker, stöd för batchkonvertering. Perfekt för dokumentation, README-filer, GitHub-projekt och wikis. Ingen registrering krävs.',
       'csv_to_md.subtitle': 'Konvertera CSV-filer till Markdown-format. Transformera tabulära data till Markdown-tabeller för dokumentation och GitHub-projekt.',
       'csv_to_md.upload_single': 'Ladda upp CSV-fil',
@@ -18701,7 +18701,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} av {{totalCount}} filer konverterades framgångsrikt.',
       // CSV to MOBI
       'csv_to_mobi.title': 'CSV till MOBI Konverterare',
-      'csv_to_mobi.meta_title': 'Gratis CSV till MOBI Konverterare Online - Konvertera CSV till Kindle E-bokformat Omedelbart | Bästa CSV till MOBI Verktyget',
+      'csv_to_mobi.meta_title': 'Gratis CSV till MOBI Konverterare Online',
       'csv_to_mobi.meta_description': 'Konvertera CSV-filer till MOBI-format online gratis. Transformera kalkylbladsdata till professionella Kindle-kompatibla e-böcker med formaterade tabeller, korrekt typografi och responsiv layout. Snabb, säker, stöd för batchkonvertering. Perfekt för e-bokskapande, datapublicering, utbildningsinnehåll och digital distribution. Ingen registrering krävs.',
       'csv_to_mobi.subtitle': 'Konvertera CSV-filer till MOBI-format. Transformera tabulära data till Kindle-kompatibla e-böcker med formaterade tabeller.',
       'csv_to_mobi.upload_single': 'Ladda upp CSV-fil',
@@ -18765,7 +18765,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} av {{totalCount}} filer konverterades framgångsrikt.',
       // CSV to ODP
       'csv_to_odp.title': 'CSV till ODP Konverterare',
-      'csv_to_odp.meta_title': 'Gratis CSV till ODP Konverterare Online - Konvertera CSV till LibreOffice Presentationer Omedelbart | Bästa CSV till ODP Verktyget',
+      'csv_to_odp.meta_title': 'Gratis CSV till ODP Konverterare Online',
       'csv_to_odp.meta_description': 'Konvertera CSV-filer till ODP-presentationsformat online gratis. Transformera kalkylbladsdata till professionella LibreOffice Impress-presentationer med tabeller, diagram och flera bildlayouts. Snabb, säker, stöd för batchkonvertering. Perfekt för affärspresentationer, datarapporter, akademiska presentationer och utbildningsmaterial. Ingen registrering krävs.',
       'csv_to_odp.subtitle': 'Konvertera CSV-filer till OpenDocument ODP-presentationsformat. Transformera tabulära data till LibreOffice Impress-presentationer.',
       'csv_to_odp.upload_single': 'Ladda upp CSV-fil',
@@ -18825,7 +18825,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} av {{totalCount}} filer konverterades framgångsrikt.',
       // CSV to ODT
       'csv_to_odt.title': 'CSV till ODT Konverterare',
-      'csv_to_odt.meta_title': 'Gratis CSV till ODT Konverterare Online - Konvertera CSV till OpenDocument Text Format Omedelbart | Bästa CSV till ODT Verktyget',
+      'csv_to_odt.meta_title': 'Gratis CSV till ODT Konverterare Online',
       'csv_to_odt.meta_description': 'Konvertera CSV-filer till ODT-format online gratis. Omvandla kalkylbladsdata till professionella LibreOffice Writer-dokument med formaterade tabeller, korrekt formatering och dokumentstruktur. Snabb, säker, stöd för batchkonvertering. Perfekt för affärsrapporter, dokumentation, akademiska artiklar och samarbetsredigering. Ingen registrering krävs.',
       'csv_to_odt.subtitle': 'Konvertera CSV-filer till OpenDocument Text (ODT) format. Omvandla tabulära data till LibreOffice Writer-dokument.',
       'csv_to_odt.upload_single': 'Ladda upp CSV-fil',
@@ -20361,7 +20361,7 @@ const resources = {
 
       // HEIF to JPG - Spanish
       'heif_to_jpg.title': 'Convertidor HEIF a JPG',
-      'heif_to_jpg.meta_title': 'Convertidor Gratis HEIF a JPG Online - Convertir Fotos de iPhone a JPEG',
+      'heif_to_jpg.meta_title': 'Convertidor Gratis HEIF a JPG Online',
       'heif_to_jpg.meta_description': 'Convierte fotos HEIF (iPhone) a JPG estándar online gratis. Convertidor rápido y seguro de HEIF a JPEG con soporte por lotes, control de calidad y reducción inteligente.',
       'heif_to_jpg.subtitle': 'Convierte imágenes HEIF a JPG universalmente compatibles para sitios web, aplicaciones y compartir. Rápido, seguro, gratis — con procesamiento por lotes.',
       'heif_to_jpg.upload_single': 'Subir Archivo HEIF',
@@ -20412,7 +20412,7 @@ const resources = {
 
       // CSV to DOCX - Spanish
       'csv_to_docx.title': 'Convertidor CSV a DOCX',
-      'csv_to_docx.meta_title': 'Convertidor CSV a DOCX Gratis Online - Convierte CSV a Documentos Word al Instante',
+      'csv_to_docx.meta_title': 'Convertidor CSV a DOCX Gratis Online',
       'csv_to_docx.meta_description': 'Convierte archivos CSV a documentos Word DOCX online gratis. Transforma datos de hojas de cálculo en documentos Word profesionales con formato de tabla, estilo y diseño. Rápido, seguro, soporte de conversión por lotes. No se requiere registro.',
       'csv_to_docx.subtitle': 'Convierte archivos CSV al formato Microsoft Word DOCX. Transforma datos tabulares en documentos formateados para informes y presentaciones con estilo profesional.',
       'csv_to_docx.upload_single': 'Subir Archivo CSV',
@@ -20469,7 +20469,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Compartir documentos',
       // CSV to EPUB
       'csv_to_epub.title': 'Convertidor CSV a EPUB',
-      'csv_to_epub.meta_title': 'Convertidor CSV a EPUB Online Gratis - Convierte CSV a Formato eBook al Instante',
+      'csv_to_epub.meta_title': 'Convertidor CSV a EPUB Gratis Online',
       'csv_to_epub.meta_description': 'Convierte archivos CSV al formato de libro electrónico EPUB online gratis. Transforma datos de hojas de cálculo en libros digitales con capítulos, metadatos y formato profesional. Rápido, seguro, soporte de conversión por lotes. No se requiere registro.',
       'csv_to_epub.subtitle': 'Convierte archivos CSV al formato EPUB para libros electrónicos. Transforma datos tabulares en publicaciones electrónicas legibles con formato y metadatos profesionales.',
       'csv_to_epub.upload_single': 'Subir Archivo CSV',
@@ -20536,7 +20536,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Distribución de contenido',
       // CSV to HTML
       'csv_to_html.title': 'Convertidor CSV a HTML',
-      'csv_to_html.meta_title': 'Convertidor CSV a HTML Online Gratis - Convierte CSV a Tablas HTML al Instante | Mejor Herramienta CSV a HTML',
+      'csv_to_html.meta_title': 'Convertidor CSV a HTML Gratis Online',
       'csv_to_html.meta_description': 'Convierte archivos CSV a formato HTML en línea gratis. Transforma datos de hojas de cálculo en tablas HTML profesionales con estilos personalizables, diseño responsivo y marcado semántico. Rápido, seguro, soporte para conversión por lotes. Perfecto para dashboards web, documentación y visualización de datos. No se requiere registro.',
       'csv_to_html.subtitle': 'Convierte archivos CSV a formato HTML. Transforma datos tabulares en tablas HTML listas para web con estilos personalizables.',
       'csv_to_html.upload_single': 'Subir Archivo CSV',
@@ -20672,7 +20672,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} de {{totalCount}} archivos convertidos exitosamente.',
       // CSV to MOBI
       'csv_to_mobi.title': 'Convertidor CSV a MOBI',
-      'csv_to_mobi.meta_title': 'Convertidor CSV a MOBI Online Gratis - Convierte CSV a Formato Ebook Kindle al Instante | Mejor Herramienta CSV a MOBI',
+      'csv_to_mobi.meta_title': 'Convertidor CSV a MOBI Gratis Online',
       'csv_to_mobi.meta_description': 'Convierte archivos CSV a formato MOBI en línea gratis. Transforma datos de hojas de cálculo en ebooks Kindle compatibles y profesionales con tablas formateadas, tipografía adecuada y diseño responsivo. Rápido, seguro, soporte para conversión por lotes. Perfecto para creación de e-books, publicación de datos, contenido educativo y distribución digital. No se requiere registro.',
       'csv_to_mobi.subtitle': 'Convierte archivos CSV a formato MOBI. Transforma datos tabulares en ebooks compatibles con Kindle con tablas formateadas.',
       'csv_to_mobi.upload_single': 'Subir Archivo CSV',
@@ -20736,7 +20736,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} de {{totalCount}} archivos convertidos exitosamente.',
       // CSV to ODP
       'csv_to_odp.title': 'Convertidor CSV a ODP',
-      'csv_to_odp.meta_title': 'Convertidor CSV a ODP Online Gratis - Convierte CSV a Presentaciones LibreOffice al Instante | Mejor Herramienta CSV a ODP',
+      'csv_to_odp.meta_title': 'Convertidor CSV a ODP Gratis Online',
       'csv_to_odp.meta_description': 'Convierte archivos CSV al formato de presentación ODP en línea gratis. Transforma datos de hojas de cálculo en presentaciones profesionales de LibreOffice Impress con tablas, gráficos y múltiples diseños de diapositivas. Rápido, seguro, soporte para conversión por lotes. Perfecto para presentaciones empresariales, informes de datos, presentaciones académicas y materiales de capacitación. No se requiere registro.',
       'csv_to_odp.subtitle': 'Convierte archivos CSV al formato de presentación OpenDocument ODP. Transforma datos tabulares en presentaciones de LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Subir Archivo CSV',
@@ -20796,7 +20796,7 @@ const resources = {
       'csv_to_odp.batch_success_message': '{{successCount}} de {{totalCount}} archivos convertidos exitosamente.',
       // CSV to ODT
       'csv_to_odt.title': 'Convertidor CSV a ODT',
-      'csv_to_odt.meta_title': 'Convertidor CSV a ODT Online Gratis - Convierte CSV a Formato OpenDocument Text Instantáneamente | Mejor Herramienta CSV a ODT',
+      'csv_to_odt.meta_title': 'Convertidor CSV a ODT Gratis Online',
       'csv_to_odt.meta_description': 'Convierte archivos CSV a formato ODT en línea gratis. Transforma datos de hojas de cálculo en documentos profesionales de LibreOffice Writer con tablas formateadas, estilo adecuado y estructura de documento. Rápido, seguro, soporte para conversión por lotes. Perfecto para informes comerciales, documentación, artículos académicos y edición colaborativa. No se requiere registro.',
       'csv_to_odt.subtitle': 'Convierte archivos CSV al formato OpenDocument Text (ODT). Transforma datos tabulares en documentos de LibreOffice Writer.',
       'csv_to_odt.upload_single': 'Subir archivo CSV',
@@ -22263,7 +22263,7 @@ const resources = {
 
       // HEIF to JPG - French
       'heif_to_jpg.title': 'Convertisseur HEIF en JPG',
-      'heif_to_jpg.meta_title': 'Convertisseur Gratuit HEIF en JPG en Ligne - Convertir les Photos iPhone en JPEG',
+      'heif_to_jpg.meta_title': 'Convertisseur Gratuit HEIF en JPG en Ligne',
       'heif_to_jpg.meta_description': 'Convertissez les photos HEIF (iPhone) en JPG standard en ligne gratuitement. Convertisseur rapide et sécurisé HEIF en JPEG avec support par lots, contrôle de qualité et réduction intelligente.',
       'heif_to_jpg.subtitle': 'Convertissez les images HEIF en JPG universellement compatibles pour les sites web, applications et partage. Rapide, sécurisé, gratuit — avec traitement par lots.',
       'heif_to_jpg.upload_single': 'Télécharger un Fichier HEIF',
@@ -22314,7 +22314,7 @@ const resources = {
 
       // CSV to DOCX - French
       'csv_to_docx.title': 'Convertisseur CSV vers DOCX',
-      'csv_to_docx.meta_title': 'Convertisseur CSV vers DOCX Gratuit en Ligne - Convertissez CSV en Documents Word Instantanément',
+      'csv_to_docx.meta_title': 'Convertisseur CSV vers DOCX Gratuit en Ligne',
       'csv_to_docx.meta_description': 'Convertissez les fichiers CSV en documents Word DOCX en ligne gratuitement. Transformez les données de feuille de calcul en documents Word professionnels avec formatage de tableau, style et mise en page. Rapide, sécurisé, support de conversion par lots. Aucune inscription requise.',
       'csv_to_docx.subtitle': 'Convertissez les fichiers CSV au format Microsoft Word DOCX. Transformez les données tabulaires en documents formatés pour les rapports et présentations avec un style professionnel.',
       'csv_to_docx.upload_single': 'Télécharger un Fichier CSV',
@@ -22371,7 +22371,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Partage de documents',
       // CSV to EPUB
       'csv_to_epub.title': 'Convertisseur CSV vers EPUB',
-      'csv_to_epub.meta_title': 'Convertisseur CSV vers EPUB en Ligne Gratuit - Convertissez CSV en Format eBook Instantanément',
+      'csv_to_epub.meta_title': 'Convertisseur CSV vers EPUB Gratuit en Ligne',
       'csv_to_epub.meta_description': 'Convertissez les fichiers CSV au format de livre électronique EPUB en ligne gratuitement. Transformez les données de feuille de calcul en livres numériques avec chapitres, métadonnées et formatage professionnel. Rapide, sécurisé, support de conversion par lots. Aucune inscription requise.',
       'csv_to_epub.subtitle': 'Convertissez les fichiers CSV au format EPUB pour les livres électroniques. Transformez les données tabulaires en publications électroniques lisibles avec formatage et métadonnées professionnels.',
       'csv_to_epub.upload_single': 'Télécharger le Fichier CSV',
@@ -22438,7 +22438,7 @@ const resources = {
       'csv_to_epub.perfect_for_6': 'Distribution de contenu',
       // CSV to HTML
       'csv_to_html.title': 'Convertisseur CSV vers HTML',
-      'csv_to_html.meta_title': 'Convertisseur CSV vers HTML Gratuit en Ligne - Convertissez CSV en Tableaux HTML Instantanément | Meilleur Outil CSV vers HTML',
+      'csv_to_html.meta_title': 'Convertisseur CSV vers HTML Gratuit en Ligne',
       'csv_to_html.meta_description': 'Convertissez les fichiers CSV au format HTML en ligne gratuitement. Transformez les données de feuilles de calcul en tableaux HTML professionnels avec styles personnalisables, conception responsive et balisage sémantique. Rapide, sécurisé, support de conversion par lots. Parfait pour les tableaux de bord web, la documentation et la visualisation de données. Aucune inscription requise.',
       'csv_to_html.subtitle': 'Convertissez les fichiers CSV au format HTML. Transformez les données tabulaires en tableaux HTML prêts pour le web avec styles personnalisables.',
       'csv_to_html.upload_single': 'Télécharger un Fichier CSV',
@@ -22574,7 +22574,7 @@ const resources = {
       'csv_to_md.batch_success_message': '{{successCount}} sur {{totalCount}} fichiers convertis avec succès.',
       // CSV to MOBI
       'csv_to_mobi.title': 'Convertisseur CSV vers MOBI',
-      'csv_to_mobi.meta_title': 'Convertisseur CSV vers MOBI Gratuit en Ligne - Convertissez CSV en Format Ebook Kindle Instantanément | Meilleur Outil CSV vers MOBI',
+      'csv_to_mobi.meta_title': 'Convertisseur CSV vers MOBI Gratuit en Ligne',
       'csv_to_mobi.meta_description': 'Convertissez les fichiers CSV au format MOBI en ligne gratuitement. Transformez les données de feuilles de calcul en ebooks Kindle compatibles et professionnels avec tableaux formatés, typographie appropriée et mise en page responsive. Rapide, sécurisé, support de conversion par lots. Parfait pour la création d\'e-books, la publication de données, le contenu éducatif et la distribution numérique. Aucune inscription requise.',
       'csv_to_mobi.subtitle': 'Convertissez les fichiers CSV au format MOBI. Transformez les données tabulaires en ebooks compatibles Kindle avec tableaux formatés.',
       'csv_to_mobi.upload_single': 'Télécharger un Fichier CSV',
@@ -22638,7 +22638,7 @@ const resources = {
       'csv_to_mobi.batch_success_message': '{{successCount}} sur {{totalCount}} fichiers convertis avec succès.',
       // CSV to ODP
       'csv_to_odp.title': 'Convertisseur CSV vers ODP',
-      'csv_to_odp.meta_title': 'Convertisseur CSV vers ODP Gratuit en Ligne - Convertissez CSV en Présentations LibreOffice Instantanément | Meilleur Outil CSV vers ODP',
+      'csv_to_odp.meta_title': 'Convertisseur CSV vers ODP Gratuit en Ligne',
       'csv_to_odp.meta_description': 'Convertissez les fichiers CSV au format de présentation ODP en ligne gratuitement. Transformez les données de feuilles de calcul en présentations professionnelles LibreOffice Impress avec tableaux, graphiques et plusieurs mises en page de diapositives. Rapide, sécurisé, support de conversion par lots. Parfait pour les présentations d\'entreprise, les rapports de données, les présentations académiques et les matériels de formation. Aucune inscription requise.',
       'csv_to_odp.subtitle': 'Convertissez les fichiers CSV au format de présentation OpenDocument ODP. Transformez les données tabulaires en présentations LibreOffice Impress.',
       'csv_to_odp.upload_single': 'Télécharger un Fichier CSV',
@@ -24165,7 +24165,7 @@ const resources = {
 
       // HEIF to JPG - Italian
       'heif_to_jpg.title': 'Convertitore HEIF in JPG',
-      'heif_to_jpg.meta_title': 'Convertitore Gratuito HEIF in JPG Online - Converti Foto iPhone in JPEG',
+      'heif_to_jpg.meta_title': 'Convertitore Gratuito HEIF in JPG Online',
       'heif_to_jpg.meta_description': 'Converti foto HEIF (iPhone) in JPG standard online gratuitamente. Convertitore rapido e sicuro HEIF in JPEG con supporto batch, controllo qualità e ridimensionamento intelligente.',
       'heif_to_jpg.subtitle': 'Converti immagini HEIF in JPG universalmente compatibili per siti web, app e condivisione. Veloce, sicuro, gratuito — con elaborazione batch.',
       'heif_to_jpg.upload_single': 'Carica File HEIF',
@@ -24216,7 +24216,7 @@ const resources = {
 
       // CSV to DOCX - Italian
       'csv_to_docx.title': 'Convertitore CSV in DOCX',
-      'csv_to_docx.meta_title': 'Convertitore CSV in DOCX Gratuito Online - Converti CSV in Documenti Word Istantaneamente',
+      'csv_to_docx.meta_title': 'Convertitore CSV in DOCX Gratuito Online',
       'csv_to_docx.meta_description': 'Converti file CSV in documenti Word DOCX online gratuitamente. Trasforma dati di fogli di calcolo in documenti Word professionali con formattazione tabella, stile e layout. Veloce, sicuro, supporto conversione batch. Nessuna registrazione richiesta.',
       'csv_to_docx.subtitle': 'Converti file CSV nel formato Microsoft Word DOCX. Trasforma dati tabulari in documenti formattati per rapporti e presentazioni con stile professionale.',
       'csv_to_docx.upload_single': 'Carica File CSV',
@@ -24273,7 +24273,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Condivisione documenti',
       // CSV to EPUB
       'csv_to_epub.title': 'Convertitore CSV in EPUB',
-      'csv_to_epub.meta_title': 'Convertitore CSV in EPUB Online Gratis - Converti CSV in Formato eBook all\'Istant',
+      'csv_to_epub.meta_title': 'Convertitore CSV in EPUB Gratuito Online',
       'csv_to_epub.meta_description': 'Converti file CSV nel formato ebook EPUB online gratis. Trasforma dati di fogli di calcolo in libri digitali con capitoli, metadati e formattazione professionale. Veloce, sicuro, supporto conversione batch. Nessuna registrazione richiesta.',
       'csv_to_epub.subtitle': 'Converti file CSV nel formato EPUB per e-book. Trasforma dati tabulari in pubblicazioni elettroniche leggibili con formattazione e metadati professionali.',
       'csv_to_epub.upload_single': 'Carica File CSV',
@@ -26067,7 +26067,7 @@ const resources = {
 
       // HEIF to JPG - Dutch
       'heif_to_jpg.title': 'HEIF naar JPG Converter',
-      'heif_to_jpg.meta_title': 'Gratis HEIF naar JPG Converter Online - Converteer iPhone Foto\'s naar JPEG',
+      'heif_to_jpg.meta_title': 'Gratis HEIF naar JPG Converter Online',
       'heif_to_jpg.meta_description': 'Converteer HEIF (iPhone) foto\'s naar standaard JPG online gratis. Snelle, veilige HEIF naar JPEG converter met batchondersteuning, kwaliteitscontrole en slimme verkleining.',
       'heif_to_jpg.subtitle': 'Converteer HEIF-afbeeldingen naar universeel compatibele JPG voor websites, apps en delen. Snel, veilig, gratis — met batchverwerking.',
       'heif_to_jpg.upload_single': 'Upload HEIF Bestand',
@@ -26118,7 +26118,7 @@ const resources = {
 
       // CSV to DOCX - Dutch
       'csv_to_docx.title': 'CSV naar DOCX Converter',
-      'csv_to_docx.meta_title': 'Gratis CSV naar DOCX Converter Online - Converteer CSV naar Word-documenten Direct',
+      'csv_to_docx.meta_title': 'Gratis CSV naar DOCX Converter Online',
       'csv_to_docx.meta_description': 'Converteer CSV-bestanden naar DOCX Word-documenten online gratis. Transformeer spreadsheetgegevens naar professionele Word-documenten met tabelformatering, styling en lay-out. Snel, veilig, batchconversie-ondersteuning. Geen registratie vereist.',
       'csv_to_docx.subtitle': 'Converteer CSV-bestanden naar Microsoft Word DOCX-formaat. Transformeer tabelgegevens naar geformatteerde documenten voor rapporten en presentaties met professionele styling.',
       'csv_to_docx.upload_single': 'Upload CSV Bestand',
@@ -26175,7 +26175,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Documentdeling',
       // CSV to EPUB
       'csv_to_epub.title': 'CSV naar EPUB Converter',
-      'csv_to_epub.meta_title': 'Gratis CSV naar EPUB Converter Online - Converteer CSV naar eBook Formaat Direct',
+      'csv_to_epub.meta_title': 'Gratis CSV naar EPUB Converter Online',
       'csv_to_epub.meta_description': 'Converteer CSV-bestanden naar EPUB e-boekformaat online gratis. Transformeer spreadsheetgegevens naar digitale boeken met hoofdstukken, metadata en professionele formatering. Snel, veilig, batchconversie ondersteuning. Geen registratie vereist.',
       'csv_to_epub.subtitle': 'Converteer CSV-bestanden naar EPUB-formaat voor e-boeken. Transformeer tabelgegevens naar leesbare elektronische publicaties met professionele formatering en metadata.',
       'csv_to_epub.upload_single': 'CSV-bestand Uploaden',
@@ -27918,7 +27918,7 @@ const resources = {
 
       // HEIF to JPG - Portuguese
       'heif_to_jpg.title': 'Conversor HEIF para JPG',
-      'heif_to_jpg.meta_title': 'Conversor Gratuito HEIF para JPG Online - Converter Fotos iPhone para JPEG',
+      'heif_to_jpg.meta_title': 'Conversor Gratuito HEIF para JPG Online',
       'heif_to_jpg.meta_description': 'Converta fotos HEIF (iPhone) para JPG padrão online gratuitamente. Conversor rápido e seguro HEIF para JPEG com suporte em lote, controle de qualidade e redução inteligente.',
       'heif_to_jpg.subtitle': 'Converta imagens HEIF para JPG universalmente compatíveis para sites, aplicativos e compartilhamento. Rápido, seguro, gratuito — com processamento em lote.',
       'heif_to_jpg.upload_single': 'Enviar Arquivo HEIF',
@@ -27969,7 +27969,7 @@ const resources = {
 
       // CSV to DOCX - Portuguese
       'csv_to_docx.title': 'Conversor CSV para DOCX',
-      'csv_to_docx.meta_title': 'Conversor CSV para DOCX Gratuito Online - Converta CSV para Documentos Word Instantaneamente',
+      'csv_to_docx.meta_title': 'Conversor CSV para DOCX Gratuito Online',
       'csv_to_docx.meta_description': 'Converta arquivos CSV para documentos Word DOCX online gratuitamente. Transforme dados de planilha em documentos Word profissionais com formatação de tabela, estilo e layout. Rápido, seguro, suporte a conversão em lote. Nenhum registro necessário.',
       'csv_to_docx.subtitle': 'Converta arquivos CSV para o formato Microsoft Word DOCX. Transforme dados tabulares em documentos formatados para relatórios e apresentações com estilo profissional.',
       'csv_to_docx.upload_single': 'Enviar Arquivo CSV',
@@ -28026,7 +28026,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Compartilhamento de documentos',
       // CSV to EPUB
       'csv_to_epub.title': 'Conversor CSV para EPUB',
-      'csv_to_epub.meta_title': 'Conversor CSV para EPUB Online Gratuito - Converta CSV para Formato eBook Instantaneamente',
+      'csv_to_epub.meta_title': 'Conversor CSV para EPUB Gratuito Online',
       'csv_to_epub.meta_description': 'Converta arquivos CSV para o formato de ebook EPUB online gratuitamente. Transforme dados de planilhas em livros digitais com capítulos, metadados e formatação profissional. Rápido, seguro, suporte a conversão em lote. Nenhum registro necessário.',
       'csv_to_epub.subtitle': 'Converta arquivos CSV para o formato EPUB para e-books. Transforme dados tabulares em publicações eletrônicas legíveis com formatação e metadados profissionais.',
       'csv_to_epub.upload_single': 'Enviar Arquivo CSV',
@@ -29769,7 +29769,7 @@ const resources = {
 
       // HEIF to JPG - Vietnamese
       'heif_to_jpg.title': 'Bộ Chuyển Đổi HEIF sang JPG',
-      'heif_to_jpg.meta_title': 'Bộ Chuyển Đổi HEIF sang JPG Miễn Phí Trực Tuyến - Chuyển Đổi Ảnh iPhone sang JPEG',
+      'heif_to_jpg.meta_title': 'Bộ Chuyển Đổi HEIF sang JPG Miễn Phí Trực Tuyến',
       'heif_to_jpg.meta_description': 'Chuyển đổi ảnh HEIF (iPhone) sang JPG tiêu chuẩn trực tuyến miễn phí. Bộ chuyển đổi HEIF sang JPEG nhanh và an toàn với hỗ trợ hàng loạt, kiểm soát chất lượng và giảm kích thước thông minh.',
       'heif_to_jpg.subtitle': 'Chuyển đổi hình ảnh HEIF sang JPG tương thích phổ biến cho trang web, ứng dụng và chia sẻ. Nhanh, an toàn, miễn phí — với xử lý hàng loạt.',
       'heif_to_jpg.upload_single': 'Tải Lên Tệp HEIF',
@@ -29820,7 +29820,7 @@ const resources = {
 
       // CSV to DOCX - Vietnamese
       'csv_to_docx.title': 'Chuyển Đổi CSV sang DOCX',
-      'csv_to_docx.meta_title': 'Chuyển Đổi CSV sang DOCX Miễn Phí Online - Chuyển Đổi CSV sang Tài Liệu Word Ngay Lập Tức',
+      'csv_to_docx.meta_title': 'Bộ Chuyển Đổi CSV sang DOCX Miễn Phí Trực Tuyến',
       'csv_to_docx.meta_description': 'Chuyển đổi tệp CSV sang tài liệu Word DOCX online miễn phí. Chuyển đổi dữ liệu bảng tính thành tài liệu Word chuyên nghiệp với định dạng bảng, kiểu dáng và bố cục. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Không cần đăng ký.',
       'csv_to_docx.subtitle': 'Chuyển đổi tệp CSV sang định dạng Microsoft Word DOCX. Chuyển đổi dữ liệu bảng thành tài liệu được định dạng cho báo cáo và trình bày với kiểu dáng chuyên nghiệp.',
       'csv_to_docx.upload_single': 'Tải Lên Tệp CSV',
@@ -29877,7 +29877,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Chia sẻ tài liệu',
       // CSV to EPUB
       'csv_to_epub.title': 'Chuyển Đổi CSV sang EPUB',
-      'csv_to_epub.meta_title': 'Chuyển Đổi CSV sang EPUB Trực Tuyến Miễn Phí - Chuyển Đổi CSV sang Định Dạng eBook Ngay Lập Tức',
+      'csv_to_epub.meta_title': 'Bộ Chuyển Đổi CSV sang EPUB Miễn Phí Trực Tuyến',
       'csv_to_epub.meta_description': 'Chuyển đổi tệp CSV sang định dạng sách điện tử EPUB trực tuyến miễn phí. Biến đổi dữ liệu bảng tính thành sách kỹ thuật số với chương, siêu dữ liệu và định dạng chuyên nghiệp. Nhanh, an toàn, hỗ trợ chuyển đổi hàng loạt. Không cần đăng ký.',
       'csv_to_epub.subtitle': 'Chuyển đổi tệp CSV sang định dạng EPUB cho sách điện tử. Biến đổi dữ liệu bảng thành ấn phẩm điện tử có thể đọc được với định dạng và siêu dữ liệu chuyên nghiệp.',
       'csv_to_epub.upload_single': 'Tải Lên Tệp CSV',
@@ -31626,7 +31626,7 @@ const resources = {
 
       // HEIF to JPG - Turkish
       'heif_to_jpg.title': 'HEIF\'den JPG\'ye Dönüştürücü',
-      'heif_to_jpg.meta_title': 'Ücretsiz HEIF\'den JPG\'ye Dönüştürücü Online - iPhone Fotoğraflarını JPEG\'e Dönüştür',
+      'heif_to_jpg.meta_title': 'Ücretsiz HEIF\'den JPG\'ye Dönüştürücü Online',
       'heif_to_jpg.meta_description': 'HEIF (iPhone) fotoğraflarını standart JPG\'ye online ücretsiz dönüştürün. Toplu destek, kalite kontrolü ve akıllı küçültme ile hızlı, güvenli HEIF\'den JPEG\'e dönüştürücü.',
       'heif_to_jpg.subtitle': 'HEIF görüntülerini web siteleri, uygulamalar ve paylaşım için evrensel olarak uyumlu JPG\'ye dönüştürün. Hızlı, güvenli, ücretsiz — toplu işleme ile.',
       'heif_to_jpg.upload_single': 'HEIF Dosyası Yükle',
@@ -31677,7 +31677,7 @@ const resources = {
 
       // CSV to DOCX - Turkish
       'csv_to_docx.title': 'CSV\'den DOCX\'e Dönüştürücü',
-      'csv_to_docx.meta_title': 'Ücretsiz CSV\'den DOCX\'e Dönüştürücü Online - CSV\'yi Word Belgelerine Anında Dönüştür',
+      'csv_to_docx.meta_title': 'Ücretsiz CSV\'den DOCX\'e Dönüştürücü Online',
       'csv_to_docx.meta_description': 'CSV dosyalarını DOCX Word belgelerine online ücretsiz dönüştürün. Elektronik tablo verilerini tablo formatlaması, stil ve düzen ile profesyonel Word belgelerine dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. Kayıt gerekmez.',
       'csv_to_docx.subtitle': 'CSV dosyalarını Microsoft Word DOCX formatına dönüştürün. Tablo verilerini raporlar ve sunumlar için profesyonel stillendirme ile formatlanmış belgelere dönüştürün.',
       'csv_to_docx.upload_single': 'CSV Dosyası Yükle',
@@ -31734,7 +31734,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Belge paylaşımı',
       // CSV to EPUB
       'csv_to_epub.title': 'CSV\'den EPUB\'a Dönüştürücü',
-      'csv_to_epub.meta_title': 'Ücretsiz CSV\'den EPUB\'a Dönüştürücü Online - CSV\'yi eBook Formatına Anında Dönüştürün',
+      'csv_to_epub.meta_title': 'Ücretsiz CSV\'den EPUB\'a Dönüştürücü Online',
       'csv_to_epub.meta_description': 'CSV dosyalarını EPUB e-kitap formatına online ücretsiz dönüştürün. Elektronik tablo verilerini bölümler, metadata ve profesyonel formatlama ile dijital kitaplara dönüştürün. Hızlı, güvenli, toplu dönüştürme desteği. Kayıt gerekmez.',
       'csv_to_epub.subtitle': 'E-kitaplar için CSV dosyalarını EPUB formatına dönüştürün. Tablo verilerini profesyonel formatlama ve metadata ile okunabilir elektronik yayınlara dönüştürün.',
       'csv_to_epub.upload_single': 'CSV Dosyası Yükle',
@@ -33498,7 +33498,7 @@ const resources = {
 
       // HEIF to JPG - Russian
       'heif_to_jpg.title': 'Конвертер HEIF в JPG',
-      'heif_to_jpg.meta_title': 'Бесплатный Конвертер HEIF в JPG Онлайн - Конвертировать Фото iPhone в JPEG',
+      'heif_to_jpg.meta_title': 'Бесплатный Конвертер HEIF в JPG Онлайн',
       'heif_to_jpg.meta_description': 'Конвертируйте фото HEIF (iPhone) в стандартный JPG онлайн бесплатно. Быстрый, безопасный конвертер HEIF в JPEG с поддержкой пакетной конвертации, контролем качества и умным уменьшением размера.',
       'heif_to_jpg.subtitle': 'Конвертируйте изображения HEIF в универсально совместимый JPG для веб-сайтов, приложений и обмена. Быстро, безопасно, бесплатно — с пакетной обработкой.',
       'heif_to_jpg.upload_single': 'Загрузить Файл HEIF',
@@ -33549,7 +33549,7 @@ const resources = {
 
       // CSV to DOCX - Russian
       'csv_to_docx.title': 'Конвертер CSV в DOCX',
-      'csv_to_docx.meta_title': 'Бесплатный Конвертер CSV в DOCX Онлайн - Конвертируйте CSV в Документы Word Мгновенно',
+      'csv_to_docx.meta_title': 'Бесплатный Конвертер CSV в DOCX Онлайн',
       'csv_to_docx.meta_description': 'Конвертируйте файлы CSV в документы Word DOCX онлайн бесплатно. Преобразуйте данные электронных таблиц в профессиональные документы Word с форматированием таблиц, стилями и макетом. Быстро, безопасно, поддержка пакетной конвертации. Регистрация не требуется.',
       'csv_to_docx.subtitle': 'Конвертируйте файлы CSV в формат Microsoft Word DOCX. Преобразуйте табличные данные в отформатированные документы для отчетов и презентаций с профессиональным стилем.',
       'csv_to_docx.upload_single': 'Загрузить Файл CSV',
@@ -33606,7 +33606,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'Обмен документами',
       // CSV to EPUB
       'csv_to_epub.title': 'Конвертер CSV в EPUB',
-      'csv_to_epub.meta_title': 'Бесплатный Конвертер CSV в EPUB Онлайн - Конвертируйте CSV в Формат eBook Мгновенно',
+      'csv_to_epub.meta_title': 'Бесплатный Конвертер CSV в EPUB Онлайн',
       'csv_to_epub.meta_description': 'Конвертируйте файлы CSV в формат электронной книги EPUB онлайн бесплатно. Преобразуйте данные электронных таблиц в цифровые книги с главами, метаданными и профессиональным форматированием. Быстро, безопасно, поддержка пакетного преобразования. Регистрация не требуется.',
       'csv_to_epub.subtitle': 'Конвертируйте файлы CSV в формат EPUB для электронных книг. Преобразуйте табличные данные в читаемые электронные публикации с профессиональным форматированием и метаданными.',
       'csv_to_epub.upload_single': 'Загрузить CSV Файл',
@@ -35348,7 +35348,7 @@ const resources = {
 
       // HEIF to JPG - Arabic
       'heif_to_jpg.title': 'محول HEIF إلى JPG',
-      'heif_to_jpg.meta_title': 'محول HEIF إلى JPG مجاني عبر الإنترنت - تحويل صور iPhone إلى JPEG',
+      'heif_to_jpg.meta_title': 'محول HEIF إلى JPG مجاني عبر الإنترنت',
       'heif_to_jpg.meta_description': 'قم بتحويل صور HEIF (iPhone) إلى JPG القياسي عبر الإنترنت مجانًا. محول HEIF إلى JPEG سريع وآمن مع دعم المجموعات والتحكم في الجودة والتصغير الذكي.',
       'heif_to_jpg.subtitle': 'قم بتحويل صور HEIF إلى JPG متوافق عالميًا للمواقع والتطبيقات والمشاركة. سريع وآمن ومجاني — مع المعالجة المجمعة.',
       'heif_to_jpg.upload_single': 'رفع ملف HEIF',
@@ -35399,7 +35399,7 @@ const resources = {
 
       // CSV to DOCX - Arabic
       'csv_to_docx.title': 'محول CSV إلى DOCX',
-      'csv_to_docx.meta_title': 'محول CSV إلى DOCX مجاني عبر الإنترنت - قم بتحويل CSV إلى مستندات Word على الفور',
+      'csv_to_docx.meta_title': 'محول CSV إلى DOCX مجاني عبر الإنترنت',
       'csv_to_docx.meta_description': 'قم بتحويل ملفات CSV إلى مستندات Word DOCX عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى مستندات Word احترافية مع تنسيق الجداول والأنماط والتخطيط. سريع وآمن ودعم التحويل المجمع. لا يلزم التسجيل.',
       'csv_to_docx.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق Microsoft Word DOCX. قم بتحويل البيانات الجدولية إلى مستندات منسقة للتقارير والعروض التقديمية مع الأنماط الاحترافية.',
       'csv_to_docx.upload_single': 'رفع ملف CSV',
@@ -35456,7 +35456,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'مشاركة المستندات',
       // CSV to EPUB
       'csv_to_epub.title': 'محول CSV إلى EPUB',
-      'csv_to_epub.meta_title': 'محول CSV إلى EPUB مجاني عبر الإنترنت - قم بتحويل CSV إلى تنسيق eBook على الفور',
+      'csv_to_epub.meta_title': 'محول CSV إلى EPUB مجاني عبر الإنترنت',
       'csv_to_epub.meta_description': 'قم بتحويل ملفات CSV إلى تنسيق كتاب إلكتروني EPUB عبر الإنترنت مجانًا. قم بتحويل بيانات جداول البيانات إلى كتب رقمية مع فصول وبيانات وصفية وتنسيق احترافي. سريع وآمن ودعم تحويل الدفعات. لا يلزم التسجيل.',
       'csv_to_epub.subtitle': 'قم بتحويل ملفات CSV إلى تنسيق EPUB للكتب الإلكترونية. قم بتحويل البيانات الجدولية إلى منشورات إلكترونية قابلة للقراءة مع تنسيق وبيانات وصفية احترافية.',
       'csv_to_epub.upload_single': 'تحميل ملف CSV',
@@ -37202,7 +37202,7 @@ const resources = {
 
       // HEIF to JPG - Thai
       'heif_to_jpg.title': 'ตัวแปลง HEIF เป็น JPG',
-      'heif_to_jpg.meta_title': 'ตัวแปลง HEIF เป็น JPG ฟรีออนไลน์ - แปลงรูปภาพ iPhone เป็น JPEG',
+      'heif_to_jpg.meta_title': 'ตัวแปลง HEIF เป็น JPG ฟรีออนไลน์',
       'heif_to_jpg.meta_description': 'แปลงรูปภาพ HEIF (iPhone) เป็น JPG มาตรฐานออนไลน์ฟรี ตัวแปลง HEIF เป็น JPEG ที่รวดเร็วและปลอดภัยพร้อมการรองรับแบบกลุ่ม การควบคุมคุณภาพ และการลดขนาดอัจฉริยะ',
       'heif_to_jpg.subtitle': 'แปลงรูปภาพ HEIF เป็น JPG ที่เข้ากันได้ทั่วโลกสำหรับเว็บไซต์ แอป และการแชร์ รวดเร็ว ปลอดภัย ฟรี — พร้อมการประมวลผลแบบกลุ่ม',
       'heif_to_jpg.upload_single': 'อัปโหลดไฟล์ HEIF',
@@ -37253,7 +37253,7 @@ const resources = {
 
       // CSV to DOCX - Thai
       'csv_to_docx.title': 'ตัวแปลง CSV เป็น DOCX',
-      'csv_to_docx.meta_title': 'ตัวแปลง CSV เป็น DOCX ฟรีออนไลน์ - แปลง CSV เป็นเอกสาร Word ทันที',
+      'csv_to_docx.meta_title': 'ตัวแปลง CSV เป็น DOCX ฟรีออนไลน์',
       'csv_to_docx.meta_description': 'แปลงไฟล์ CSV เป็นเอกสาร Word DOCX ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นเอกสาร Word มืออาชีพพร้อมการจัดรูปแบบตาราง สไตล์ และเลย์เอาต์ เร็ว ปลอดภัย รองรับการแปลงแบบกลุ่ม ไม่ต้องลงทะเบียน',
       'csv_to_docx.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ Microsoft Word DOCX แปลงข้อมูลตารางเป็นเอกสารที่จัดรูปแบบสำหรับรายงานและการนำเสนอด้วยสไตล์มืออาชีพ',
       'csv_to_docx.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -37310,7 +37310,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': 'การแชร์เอกสาร',
       // CSV to EPUB
       'csv_to_epub.title': 'ตัวแปลง CSV เป็น EPUB',
-      'csv_to_epub.meta_title': 'ตัวแปลง CSV เป็น EPUB ออนไลน์ฟรี - แปลง CSV เป็นรูปแบบ eBook ทันที',
+      'csv_to_epub.meta_title': 'ตัวแปลง CSV เป็น EPUB ฟรีออนไลน์',
       'csv_to_epub.meta_description': 'แปลงไฟล์ CSV เป็นรูปแบบหนังสืออิเล็กทรอนิกส์ EPUB ออนไลน์ฟรี แปลงข้อมูลสเปรดชีตเป็นหนังสือดิจิทัลพร้อมบท ข้อมูลเมตา และการจัดรูปแบบแบบมืออาชีพ เร็ว ปลอดภัย รองรับการแปลงแบบกลุ่ม ไม่ต้องลงทะเบียน',
       'csv_to_epub.subtitle': 'แปลงไฟล์ CSV เป็นรูปแบบ EPUB สำหรับหนังสืออิเล็กทรอนิกส์ แปลงข้อมูลตารางเป็นสิ่งพิมพ์อิเล็กทรอนิกส์ที่อ่านได้พร้อมการจัดรูปแบบและข้อมูลเมตาแบบมืออาชีพ',
       'csv_to_epub.upload_single': 'อัปโหลดไฟล์ CSV',
@@ -39053,7 +39053,7 @@ const resources = {
 
       // HEIF to JPG - Japanese
       'heif_to_jpg.title': 'HEIFからJPGへのコンバーター',
-      'heif_to_jpg.meta_title': '無料HEIFからJPGへのコンバーターオンライン - iPhone写真をJPEGに変換',
+      'heif_to_jpg.meta_title': '無料HEIFからJPGへのコンバーターオンライン',
       'heif_to_jpg.meta_description': 'HEIF（iPhone）写真を標準JPGにオンラインで無料変換。バッチサポート、品質制御、スマートダウンサイジングを備えた高速で安全なHEIFからJPEGへのコンバーター。',
       'heif_to_jpg.subtitle': 'HEIF画像を、Webサイト、アプリ、共有用の普遍的に互換性のあるJPGに変換。高速、安全、無料 — バッチ処理付き。',
       'heif_to_jpg.upload_single': 'HEIFファイルをアップロード',
@@ -39104,7 +39104,7 @@ const resources = {
 
       // CSV to DOCX - Japanese
       'csv_to_docx.title': 'CSVからDOCXへのコンバーター',
-      'csv_to_docx.meta_title': '無料CSVからDOCXへのコンバーターオンライン - CSVをWord文書に即座に変換',
+      'csv_to_docx.meta_title': '無料CSVからDOCXへのコンバーターオンライン',
       'csv_to_docx.meta_description': 'CSVファイルをDOCX Word文書にオンラインで無料変換。スプレッドシートデータを表形式、スタイル、レイアウト付きのプロフェッショナルなWord文書に変換。高速、安全、バッチ変換サポート。登録不要。',
       'csv_to_docx.subtitle': 'CSVファイルをMicrosoft Word DOCX形式に変換。表形式データをレポートやプレゼンテーション用のプロフェッショナルなスタイル付きフォーマット済み文書に変換。',
       'csv_to_docx.upload_single': 'CSVファイルをアップロード',
@@ -39161,7 +39161,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': '文書共有',
       // CSV to EPUB
       'csv_to_epub.title': 'CSVからEPUBへのコンバーター',
-      'csv_to_epub.meta_title': '無料CSVからEPUBへのコンバーターオンライン - CSVをeBook形式に即座に変換',
+      'csv_to_epub.meta_title': '無料CSVからEPUBへのコンバーターオンライン',
       'csv_to_epub.meta_description': 'CSVファイルをEPUB電子書籍形式にオンラインで無料変換。スプレッドシートデータを章、メタデータ、プロフェッショナルなフォーマット付きのデジタル書籍に変換。高速、安全、バッチ変換サポート。登録不要。',
       'csv_to_epub.subtitle': '電子書籍用にCSVファイルをEPUB形式に変換。表形式データをプロフェッショナルなフォーマットとメタデータ付きの読みやすい電子出版物に変換。',
       'csv_to_epub.upload_single': 'CSVファイルをアップロード',
@@ -40904,7 +40904,7 @@ const resources = {
 
       // HEIF to JPG - Chinese
       'heif_to_jpg.title': 'HEIF转JPG转换器',
-      'heif_to_jpg.meta_title': '免费HEIF转JPG转换器在线 - 将iPhone照片转换为JPEG',
+      'heif_to_jpg.meta_title': '免费HEIF转JPG转换器在线',
       'heif_to_jpg.meta_description': '免费在线将HEIF（iPhone）照片转换为标准JPG。快速、安全的HEIF转JPEG转换器，支持批量转换、质量控制智能缩小。',
       'heif_to_jpg.subtitle': '将HEIF图像转换为普遍兼容的JPG，用于网站、应用程序和共享。快速、安全、免费 — 支持批量处理。',
       'heif_to_jpg.upload_single': '上传HEIF文件',
@@ -40955,7 +40955,7 @@ const resources = {
 
       // CSV to DOCX - Chinese
       'csv_to_docx.title': 'CSV转DOCX转换器',
-      'csv_to_docx.meta_title': '免费CSV转DOCX转换器在线 - 立即将CSV转换为Word文档',
+      'csv_to_docx.meta_title': '免费CSV转DOCX转换器在线',
       'csv_to_docx.meta_description': '在线免费将CSV文件转换为DOCX Word文档。将电子表格数据转换为具有表格格式、样式和布局的专业Word文档。快速、安全、支持批量转换。无需注册。',
       'csv_to_docx.subtitle': '将CSV文件转换为Microsoft Word DOCX格式。将表格数据转换为用于报告和演示的格式化文档，具有专业样式。',
       'csv_to_docx.upload_single': '上传CSV文件',
@@ -41012,7 +41012,7 @@ const resources = {
       'csv_to_docx.perfect_for_6': '文档共享',
       // CSV to EPUB
       'csv_to_epub.title': 'CSV转EPUB转换器',
-      'csv_to_epub.meta_title': '免费CSV转EPUB转换器在线 - 立即将CSV转换为eBook格式',
+      'csv_to_epub.meta_title': '免费CSV转EPUB转换器在线',
       'csv_to_epub.meta_description': '在线免费将CSV文件转换为EPUB电子书格式。将电子表格数据转换为带有章节、元数据和专业格式的数字图书。快速、安全、支持批量转换。无需注册。',
       'csv_to_epub.subtitle': '将CSV文件转换为EPUB格式用于电子书。将表格数据转换为具有专业格式和元数据的可读电子出版物。',
       'csv_to_epub.upload_single': '上传CSV文件',
