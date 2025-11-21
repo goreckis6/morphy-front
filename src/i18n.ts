@@ -286,7 +286,7 @@ const resources = {
 
       // HEIF to PNG
       'heif_to_png.title': 'HEIF to PNG Converter',
-      'heif_to_png.meta_title': 'Free HEIF to PNG Converter Online - Convert iPhone Photos to PNG',
+      'heif_to_png.meta_title': 'Free HEIF to PNG Converter Online',
       'heif_to_png.meta_description': 'Convert HEIF images (iPhone photos) to PNG format online for free. Fast, secure HEIF to PNG converter with batch support, quality control, and transparency preservation.',
       'heif_to_png.subtitle': 'Convert HEIF images to high-quality PNG for transparent graphics, editing, and archiving. Fast, secure, and free with batch support.',
       'heif_to_png.upload_single': 'Upload HEIF File',
@@ -7974,7 +7974,7 @@ const resources = {
       
       // HEIC to PDF - Polish
       'heic_to_pdf.title': 'Darmowy Konwerter HEIC do PDF',
-      'heic_to_pdf.meta_title': 'Darmowy Konwerter HEIC do PDF Online',
+      'heic_to_pdf.meta_title': 'Darmowy Konwerter HEIC na PDF Online',
       'heic_to_pdf.meta_description': 'Konwertuj pliki HEIC (High Efficiency Image Container) do formatu PDF online za darmo. Przekształć zdjęcia z iPhone Apple i obrazy HEIF w dokumenty PDF do druku, udostępniania i archiwizacji. Darmowy konwerter online z obsługą wsadową zasilany przez pillow-heif, ImageMagick i reportlab.',
       'heic_to_pdf.subtitle': 'Konwertuj obrazy HEIC do formatu PDF dla dokumentów. Przekształć zdjęcia z iPhone Apple w pliki PDF odpowiednie do druku, udostępniania, archiwizacji i uniwersalnej kompatybilności dokumentów.',
       'heic_to_pdf.upload_single': 'Prześlij Plik HEIC',
@@ -8043,7 +8043,7 @@ const resources = {
       
       // HEIC to PNG - Polish
       'heic_to_png.title': 'Konwerter HEIC do PNG',
-      'heic_to_png.meta_title': 'Darmowy Konwerter HEIC do PNG Online',
+      'heic_to_png.meta_title': 'Darmowy Konwerter HEIC na PNG Online',
       'heic_to_png.meta_description': 'Konwertuj obrazy HEIC na PNG online za darmo. Zachowaj przezroczystość i wysoką jakość. Obsługa konwersji wsadowej.',
       'heic_to_png.subtitle': 'Konwertuj zdjęcia HEIC z iPhone na PNG z zachowaniem przezroczystości i wysokiej jakości.',
       'heic_to_png.upload_single': 'Prześlij Plik HEIC',
@@ -8104,7 +8104,7 @@ const resources = {
 
       // HEIC to EPS - Polish
       'heic_to_eps.title': 'Darmowy Konwerter HEIC do EPS',
-      'heic_to_eps.meta_title': 'Darmowy Konwerter HEIC do EPS Online',
+      'heic_to_eps.meta_title': 'Darmowy Konwerter HEIC na EPS Online',
       'heic_to_eps.meta_description': 'Konwertuj obrazy HEIC na EPS online za darmo. Twórz pliki EPS gotowe do druku dla DTP, opakowań i dokumentacji. Szybka, niezawodna konwersja z obsługą trybu wsadowego.',
       'heic_to_eps.subtitle': 'Zamień zdjęcia HEIC z iPhone na pliki EPS gotowe do publikacji i profesjonalnych workflow.',
       'heic_to_eps.upload_single': 'Prześlij Plik HEIC',
@@ -8160,7 +8160,7 @@ const resources = {
 
       // HEIC to WEBP - Polish
       'heic_to_webp.title': 'Konwerter HEIC do WEBP',
-      'heic_to_webp.meta_title': 'Darmowy Konwerter HEIC do WebP Online',
+      'heic_to_webp.meta_title': 'Darmowy Konwerter HEIC na WebP Online',
       'heic_to_webp.meta_description': 'Konwertuj obrazy HEIC (zdjęcia z iPhone) na nowoczesny format WEBP online za darmo. Szybki, bezpieczny konwerter HEIC do WEBP z obsługą wsadową i regulacją jakości.',
       'heic_to_webp.subtitle': 'Konwertuj zdjęcia HEIC z Apple na wydajne obrazy WEBP dla sieci i aplikacji. Szybko, bezpiecznie i za darmo z obsługą wsadów.',
       'heic_to_webp.upload_single': 'Prześlij Plik HEIC',
@@ -8213,7 +8213,7 @@ const resources = {
 
       // HEIF to PNG - Polish
       'heif_to_png.title': 'Konwerter HEIF do PNG',
-      'heif_to_png.meta_title': 'Darmowy Konwerter HEIF do PNG Online - Konwertuj Zdjęcia iPhone do PNG ',
+      'heif_to_png.meta_title': 'Darmowy Konwerter HEIF na PNG Online',
       'heif_to_png.meta_description': 'Konwertuj zdjęcia HEIF na PNG online za darmo. Szybki, bezpieczny konwerter HEIF do PNG z obsługą wsadową, kontrolą jakości (poziom kompresji) i inteligentnym skalowaniem.',
       'heif_to_png.subtitle': 'Konwertuj obrazy HEIF na wysokiej jakości PNG do grafik z przezroczystością, edycji i archiwizacji. Szybko, bezpiecznie i za darmo z obsługą wsadów.',
       'heif_to_png.upload_single': 'Prześlij Plik HEIF',
@@ -8264,7 +8264,7 @@ const resources = {
 
       // HEIF to WEBP - Polish_v1
       'heif_to_webp.title': 'Konwerter HEIF do WEBP',
-      'heif_to_webp.meta_title': 'Darmowy Konwerter HEIF do WEBP Online ',
+      'heif_to_webp.meta_title': 'Darmowy Konwerter HEIF na WEBP Online',
       'heif_to_webp.meta_description': 'Konwertuj obrazy HEIF (zdjęcia z iPhone) na nowoczesny format WEBP online za darmo. Szybki, bezpieczny konwerter HEIF do WEBP z obsługą wsadową i regulacją jakości.',
       'heif_to_webp.subtitle': 'Konwertuj zdjęcia HEIF na wydajne obrazy WEBP dla sieci i aplikacji. Szybko, bezpiecznie i za darmo z pełną kontrolą jakości.',
       'heif_to_webp.upload_single': 'Prześlij Plik HEIF',
@@ -8317,7 +8317,7 @@ const resources = {
 
       // HEIF to JPG - Polish
       'heif_to_jpg.title': 'Konwerter HEIF do JPG',
-      'heif_to_jpg.meta_title': 'Darmowy Konwerter HEIF do JPG Online',
+      'heif_to_jpg.meta_title': 'Darmowy Konwerter HEIF na JPG Online',
       'heif_to_jpg.meta_description': 'Konwertuj obrazy HEIF (zdjęcia z iPhone) na standardowy format JPG online za darmo. Szybki, bezpieczny konwerter HEIF do JPG z obsługą wsadową i regulacją jakości.',
       'heif_to_jpg.subtitle': 'Konwertuj zdjęcia HEIF na powszechnie wspierane JPG, zachowując wysoką jakość i przyspieszając udostępnianie.',
       'heif_to_jpg.upload_single': 'Prześlij Plik HEIF',
@@ -8597,7 +8597,7 @@ const resources = {
       
       // CSV to DOCX
       'csv_to_docx.title': 'Konwerter CSV na DOCX',
-      'csv_to_docx.meta_title': 'Darmowy Konwerter CSV do DOCX Online',
+      'csv_to_docx.meta_title': 'Darmowy Konwerter CSV na DOCX Online',
       'csv_to_docx.meta_description': 'Konwertuj pliki arkuszy CSV na format DOCX dla Microsoft Word. Przekształć dane tabelaryczne w sformatowane dokumenty Word. Darmowy konwerter online.',
       'csv_to_docx.subtitle': 'Konwertuj pliki CSV na format Microsoft Word DOCX. Przekształć dane tabelaryczne w sformatowane dokumenty do raportów i prezentacji z profesjonalnym stylowaniem.',
       'csv_to_docx.upload_single': 'Prześlij plik CSV',
@@ -8645,7 +8645,7 @@ const resources = {
 
       // CSV to EPUB
       'csv_to_epub.title': 'Konwerter CSV na EPUB',
-      'csv_to_epub.meta_title': 'Darmowy Konwerter CSV do EPUB Online',
+      'csv_to_epub.meta_title': 'Darmowy Konwerter CSV na EPUB Online',
       'csv_to_epub.meta_description': 'Konwertuj dane CSV na format EPUB e-booka. Przekształć dane tabelaryczne w cyfrowe książki z rozdziałami i metadanymi. Darmowy konwerter online.',
       'csv_to_epub.subtitle': 'Konwertuj pliki CSV na format EPUB dla e-booków. Przekształć dane tabelaryczne w czytelne publikacje elektroniczne z profesjonalnym formatowaniem i metadanymi.',
       'csv_to_epub.upload_single': 'Prześlij plik CSV',
@@ -13278,7 +13278,7 @@ const resources = {
 
       // HEIF to PNG - German
       'heif_to_png.title': 'HEIF zu PNG Konverter',
-      'heif_to_png.meta_title': 'Kostenloser HEIF zu PNG Konverter Online - iPhone-Fotos in PNG Konvertieren ',
+      'heif_to_png.meta_title': 'Kostenloser HEIF zu PNG Konverter Online',
       'heif_to_png.meta_description': 'Konvertieren Sie HEIF-Fotos kostenlos online in PNG. Schneller, sicherer HEIF-zu-PNG-Konverter mit Stapelverarbeitung, Qualitätskontrolle (Kompressionsstufe) und intelligentem Downscaling.',
       'heif_to_png.subtitle': 'Verwandeln Sie HEIF-Bilder in hochwertige PNG-Dateien für transparente Grafiken, Bearbeitung und Archivierung. Schnell, sicher und kostenlos mit Stapelunterstützung.',
       'heif_to_png.upload_single': 'HEIF-Datei Hochladen',
@@ -13329,7 +13329,7 @@ const resources = {
 
       // HEIF to WEBP - German_v1 
       'heif_to_webp.title': 'HEIF zu WEBP Konverter',
-      'heif_to_webp.meta_title': 'Kostenloser HEIF zu WEBP Konverter Online ',
+      'heif_to_webp.meta_title': 'Kostenloser HEIF zu WEBP Konverter Online',
       'heif_to_webp.meta_description': 'Konvertieren Sie HEIF-Bilder (iPhone-Fotos) kostenlos online in das moderne WEBP-Format. Schneller, sicherer HEIF-zu-WEBP-Konverter mit Stapelverarbeitung und einstellbarer Qualität.',
       'heif_to_webp.subtitle': 'Verwandeln Sie HEIF-Fotos in effizient komprimierte WEBP-Bilder für Web und Apps. Schnell, sicher und kostenlos mit voller Qualitätskontrolle.',
       'heif_to_webp.upload_single': 'HEIF-Datei Hochladen',
@@ -16360,7 +16360,7 @@ const resources = {
       
       // HEIF to PNG
       'heif_to_png.title': 'Konverter HEIF ke PNG',
-      'heif_to_png.meta_title': 'Konverter HEIF ke PNG Gratis Online - Konversi Foto iPhone ke PNG',
+      'heif_to_png.meta_title': 'Konverter HEIF ke PNG Gratis Online',
       'heif_to_png.meta_description': 'Konversi gambar HEIF (foto iPhone) ke format PNG online gratis. Konverter HEIF ke PNG cepat dan aman dengan dukungan batch, kontrol kualitas, dan preservasi transparansi.',
       'heif_to_png.subtitle': 'Konversi gambar HEIF menjadi PNG berkualitas tinggi untuk grafik transparan, pengeditan, dan arsip. Cepat, aman, dan gratis dengan dukungan batch.',
       'heif_to_png.upload_single': 'Unggah File HEIF',
@@ -18339,7 +18339,7 @@ const resources = {
       
       // HEIF to PNG
       'heif_to_png.title': 'HEIF till PNG Konverterare',
-      'heif_to_png.meta_title': 'Gratis HEIF till PNG Konverterare Online - Konvertera iPhone-foton till PNG',
+      'heif_to_png.meta_title': 'Gratis HEIF till PNG Konverterare Online',
       'heif_to_png.meta_description': 'Konvertera HEIF-bilder (iPhone-foton) till PNG-format online gratis. Snabb, säker HEIF till PNG-konverterare med batchstöd, kvalitetskontroll och bevarande av transparens.',
       'heif_to_png.subtitle': 'Konvertera HEIF-bilder till hög kvalitet PNG för transparenta grafik, redigering och arkivering. Snabb, säker och gratis med batchstöd.',
       'heif_to_png.upload_single': 'Ladda upp HEIF-fil',
@@ -20310,7 +20310,7 @@ const resources = {
       
       // HEIF to PNG
       'heif_to_png.title': 'Convertidor HEIF a PNG',
-      'heif_to_png.meta_title': 'Convertidor HEIF a PNG Gratis Online - Convertir Fotos de iPhone a PNG',
+      'heif_to_png.meta_title': 'Convertidor HEIF a PNG Gratis Online',
       'heif_to_png.meta_description': 'Convierte imágenes HEIF (fotos de iPhone) al formato PNG online gratis. Convertidor HEIF a PNG rápido y seguro con soporte por lotes, control de calidad y preservación de transparencia.',
       'heif_to_png.subtitle': 'Convierte imágenes HEIF a PNG de alta calidad para gráficos transparentes, edición y archivado. Rápido, seguro y gratis con soporte por lotes.',
       'heif_to_png.upload_single': 'Subir Archivo HEIF',
@@ -20361,7 +20361,7 @@ const resources = {
 
       // HEIF to JPG - Spanish
       'heif_to_jpg.title': 'Convertidor HEIF a JPG',
-      'heif_to_jpg.meta_title': 'Convertidor Gratis HEIF a JPG Online',
+      'heif_to_jpg.meta_title': 'Convertidor HEIF a JPG Gratis Online',
       'heif_to_jpg.meta_description': 'Convierte fotos HEIF (iPhone) a JPG estándar online gratis. Convertidor rápido y seguro de HEIF a JPEG con soporte por lotes, control de calidad y reducción inteligente.',
       'heif_to_jpg.subtitle': 'Convierte imágenes HEIF a JPG universalmente compatibles para sitios web, aplicaciones y compartir. Rápido, seguro, gratis — con procesamiento por lotes.',
       'heif_to_jpg.upload_single': 'Subir Archivo HEIF',
@@ -22159,7 +22159,7 @@ const resources = {
       
       // HEIF to WebP (alias for ConverterHub - slug: heif-to-webp)
       'heif_to_webp.title': 'Convertisseur HEIF vers WEBP',
-      'heif_to_webp.meta_title': 'Convertisseur HEIF vers WEBP Gratuit En Ligne',
+      'heif_to_webp.meta_title': 'Convertisseur HEIF vers WEBP Gratuit en Ligne',
       'heif_to_webp.meta_description': 'Convertissez les images HEIF (photos iPhone) au format WEBP moderne en ligne gratuitement. Convertisseur HEIF vers WEBP rapide et sécurisé avec support par lots et qualité ajustable.',
       'heif_to_webp.subtitle': 'Convertissez les photos HEIF Apple en images WEBP efficaces pour le web et les applications. Rapide, sécurisé et gratuit avec traitement par lots.',
       'heif_to_webp.upload_single': 'Télécharger un Fichier HEIF',
@@ -22212,7 +22212,7 @@ const resources = {
       
       // HEIF to PNG
       'heif_to_png.title': 'Convertisseur HEIF vers PNG',
-      'heif_to_png.meta_title': 'Convertisseur HEIF vers PNG Gratuit En Ligne - Convertir Photos iPhone en PNG',
+      'heif_to_png.meta_title': 'Convertisseur HEIF vers PNG Gratuit en Ligne',
       'heif_to_png.meta_description': 'Convertissez les images HEIF (photos iPhone) au format PNG en ligne gratuitement. Convertisseur HEIF vers PNG rapide et sécurisé avec support par lots, contrôle de qualité et préservation de la transparence.',
       'heif_to_png.subtitle': 'Convertissez les images HEIF en PNG de haute qualité pour graphiques transparents, édition et archivage. Rapide, sécurisé et gratuit avec support par lots.',
       'heif_to_png.upload_single': 'Télécharger un Fichier HEIF',
@@ -22263,7 +22263,7 @@ const resources = {
 
       // HEIF to JPG - French
       'heif_to_jpg.title': 'Convertisseur HEIF en JPG',
-      'heif_to_jpg.meta_title': 'Convertisseur Gratuit HEIF en JPG en Ligne',
+      'heif_to_jpg.meta_title': 'Convertisseur HEIF vers JPG Gratuit en Ligne',
       'heif_to_jpg.meta_description': 'Convertissez les photos HEIF (iPhone) en JPG standard en ligne gratuitement. Convertisseur rapide et sécurisé HEIF en JPEG avec support par lots, contrôle de qualité et réduction intelligente.',
       'heif_to_jpg.subtitle': 'Convertissez les images HEIF en JPG universellement compatibles pour les sites web, applications et partage. Rapide, sécurisé, gratuit — avec traitement par lots.',
       'heif_to_jpg.upload_single': 'Télécharger un Fichier HEIF',
@@ -24114,7 +24114,7 @@ const resources = {
       
       // HEIF to PNG
       'heif_to_png.title': 'Convertitore HEIF in PNG',
-      'heif_to_png.meta_title': 'Convertitore HEIF in PNG Gratuito Online - Converti Foto iPhone in PNG',
+      'heif_to_png.meta_title': 'Convertitore HEIF in PNG Gratuito Online',
       'heif_to_png.meta_description': 'Converti immagini HEIF (foto iPhone) al formato PNG online gratuitamente. Convertitore HEIF in PNG veloce e sicuro con supporto batch, controllo qualità e preservazione trasparenza.',
       'heif_to_png.subtitle': 'Converti immagini HEIF in PNG di alta qualità per grafiche trasparenti, modifica e archiviazione. Veloce, sicuro e gratuito con supporto batch.',
       'heif_to_png.upload_single': 'Carica File HEIF',
@@ -24165,7 +24165,7 @@ const resources = {
 
       // HEIF to JPG - Italian
       'heif_to_jpg.title': 'Convertitore HEIF in JPG',
-      'heif_to_jpg.meta_title': 'Convertitore Gratuito HEIF in JPG Online',
+      'heif_to_jpg.meta_title': 'Convertitore HEIF in JPG Gratuito Online',
       'heif_to_jpg.meta_description': 'Converti foto HEIF (iPhone) in JPG standard online gratuitamente. Convertitore rapido e sicuro HEIF in JPEG con supporto batch, controllo qualità e ridimensionamento intelligente.',
       'heif_to_jpg.subtitle': 'Converti immagini HEIF in JPG universalmente compatibili per siti web, app e condivisione. Veloce, sicuro, gratuito — con elaborazione batch.',
       'heif_to_jpg.upload_single': 'Carica File HEIF',
@@ -26016,7 +26016,7 @@ const resources = {
       
       // HEIF to PNG
       'heif_to_png.title': 'HEIF naar PNG Converter',
-      'heif_to_png.meta_title': 'Gratis HEIF naar PNG Converter Online - Converteer iPhone Foto\'s naar PNG',
+      'heif_to_png.meta_title': 'Gratis HEIF naar PNG Converter Online',
       'heif_to_png.meta_description': 'Converteer HEIF-afbeeldingen (iPhone-foto\'s) naar PNG-formaat online gratis. Snelle, veilige HEIF naar PNG converter met batchondersteuning, kwaliteitscontrole en behoud van transparantie.',
       'heif_to_png.subtitle': 'Converteer HEIF-afbeeldingen naar hoogwaardige PNG voor transparante afbeeldingen, bewerking en archivering. Snel, veilig en gratis met batchondersteuning.',
       'heif_to_png.upload_single': 'Upload HEIF Bestand',
@@ -27918,7 +27918,7 @@ const resources = {
 
       // HEIF to JPG - Portuguese
       'heif_to_jpg.title': 'Conversor HEIF para JPG',
-      'heif_to_jpg.meta_title': 'Conversor Gratuito HEIF para JPG Online',
+      'heif_to_jpg.meta_title': 'Conversor HEIF para JPG Gratuito Online',
       'heif_to_jpg.meta_description': 'Converta fotos HEIF (iPhone) para JPG padrão online gratuitamente. Conversor rápido e seguro HEIF para JPEG com suporte em lote, controle de qualidade e redução inteligente.',
       'heif_to_jpg.subtitle': 'Converta imagens HEIF para JPG universalmente compatíveis para sites, aplicativos e compartilhamento. Rápido, seguro, gratuito — com processamento em lote.',
       'heif_to_jpg.upload_single': 'Enviar Arquivo HEIF',
