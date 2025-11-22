@@ -557,78 +557,78 @@ export const EPSToWebPConverter: React.FC = () => {
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPS to WebP?
+            {t('eps_to_webp.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting Encapsulated PostScript EPS files to WebP format is essential for modern web development, digital marketing, and online graphics optimization. While EPS files contain high-quality vector graphics, WebP provides superior compression, faster loading times, and better web performance without sacrificing image quality.
+              {t('eps_to_webp.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_webp.key_benefits')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_webp.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-emerald-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-emerald-900 mb-3">Superior Compression</h4>
+                <h4 className="text-xl font-semibold text-emerald-900 mb-3">{t('eps_to_webp.benefit_compression_title')}</h4>
                 <p className="text-gray-700">
-                  WebP provides 25-35% better compression than JPEG and PNG, significantly reducing file sizes while maintaining high image quality from your EPS vector graphics.
+                  {t('eps_to_webp.benefit_compression_text')}
                 </p>
               </div>
               
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Faster Loading Times</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('eps_to_webp.benefit_loading_title')}</h4>
                 <p className="text-gray-700">
-                  Smaller file sizes mean faster page load times, improved user experience, and better SEO rankings for your website.
+                  {t('eps_to_webp.benefit_loading_text')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Modern Web Standard</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('eps_to_webp.benefit_standard_title')}</h4>
                 <p className="text-gray-700">
-                  WebP is supported by all modern browsers and is the recommended format for web images by Google and other major platforms.
+                  {t('eps_to_webp.benefit_standard_text')}
                 </p>
               </div>
               
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Vector Graphics Support</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('eps_to_webp.benefit_quality_title')}</h4>
                 <p className="text-gray-700">
-                  WebP can preserve the quality of EPS vector graphics while providing efficient compression, making it ideal for professional web galleries.
+                  {t('eps_to_webp.benefit_quality_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_webp.common_use_cases')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('eps_to_webp.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Web Image Optimization</h4>
-                  <p className="text-gray-700">Optimize your EPS vector graphics for web use by converting them to WebP, ensuring fast loading times and excellent visual quality.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('eps_to_webp.use_case_optimization_title')}</h4>
+                  <p className="text-gray-700">{t('eps_to_webp.use_case_optimization_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Vector Graphics for Web</h4>
-                  <p className="text-gray-700">Convert EPS vector graphics to WebP for use in modern web applications, ensuring crisp display across all devices and screen sizes.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('eps_to_webp.use_case_vector_title')}</h4>
+                  <p className="text-gray-700">{t('eps_to_webp.use_case_vector_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Modern Web Development</h4>
-                  <p className="text-gray-700">Integrate EPS vector graphics into modern web development workflows by converting them to WebP format for optimal performance.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('eps_to_webp.use_case_development_title')}</h4>
+                  <p className="text-gray-700">{t('eps_to_webp.use_case_development_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Digital Marketing Materials</h4>
-                  <p className="text-gray-700">Create optimized digital marketing materials by converting EPS graphics to WebP, ensuring fast loading and professional appearance.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('eps_to_webp.use_case_marketing_title')}</h4>
+                  <p className="text-gray-700">{t('eps_to_webp.use_case_marketing_text')}</p>
                 </div>
               </div>
             </div>
