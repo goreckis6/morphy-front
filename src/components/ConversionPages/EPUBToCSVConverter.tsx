@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { API_BASE_URL } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToCSVConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -258,8 +260,8 @@ export const EPUBToCSVConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to CSV Converter Online - Extract eBook Content to CSV Format | MorphyHub</title>
-        <meta name="description" content="Convert EPUB ebook files to CSV format online for free. Extract text content, chapters, and metadata from EPUB files for data analysis, content management, and text processing." />
+        <title>{t('epub_to_csv.meta_title')} | MorphyHub</title>
+        <meta name="description" content={t('epub_to_csv.meta_description')} />
         <meta name="keywords" content="EPUB to CSV, ebook converter, EPUB extractor, CSV converter, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
@@ -271,23 +273,23 @@ export const EPUBToCSVConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Free EPUB to CSV Converter
+              {t('epub_to_csv.title')}
             </h1>
             <p className="text-lg sm:text-xl text-blue-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB ebook files to CSV format for easy data analysis and content extraction. Extract chapters, paragraphs, and metadata from your ebooks.
+              {t('epub_to_csv.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_csv.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_csv.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_csv.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -318,7 +320,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                     <line x1="16" y1="17" x2="8" y2="17"></line>
                     <polyline points="10,9 9,9 8,9"></polyline>
                   </svg>
-                  Single File
+                  {t('epub_to_csv.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -331,7 +333,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="inline mr-2">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                   </svg>
-                  Batch Convert
+                  {t('epub_to_csv.batch_convert')}
                 </button>
               </div>
 
@@ -453,7 +455,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                         <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
                         <path d="M3 21v-5h5"></path>
                       </svg>
-                      Converting...
+                      {t('epub_to_csv.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
@@ -474,10 +476,10 @@ export const EPUBToCSVConverter: React.FC = () => {
                 <div className={`mt-6 p-6 rounded-xl border bg-green-50 border-green-200`}>
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_csv.conversion_success')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to CSV format.
+                    {t('epub_to_csv.conversion_success')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -501,7 +503,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                         <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
                         <path d="M3 21v-5h5"></path>
                       </svg>
-                      Convert Another
+                      {t('epub_to_csv.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -580,7 +582,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                   <circle cx="12" cy="12" r="3"></circle>
                   <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
                 </svg>
-                CSV Settings
+                {t('epub_to_csv.csv_settings')}
               </h3>
               
               {/* Include Metadata */}
@@ -592,25 +594,25 @@ export const EPUBToCSVConverter: React.FC = () => {
                     onChange={(e) => setIncludeMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_csv.include_metadata')}</span>
                 </label>
-                <p className="text-xs text-gray-500 mt-1 ml-6">Add book title, author, and chapter info</p>
+                <p className="text-xs text-gray-500 mt-1 ml-6">{t('epub_to_csv.include_metadata_desc')}</p>
               </div>
 
               {/* CSV Delimiter */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  CSV Delimiter
+                  {t('epub_to_csv.delimiter')}
                 </label>
                 <select
                   value={delimiter}
                   onChange={(e) => setDelimiter(e.target.value)}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
-                  <option value=",">Comma (,)</option>
-                  <option value=";">Semicolon (;)</option>
-                  <option value="\t">Tab (\t)</option>
-                  <option value="|">Pipe (|)</option>
+                  <option value=",">{t('epub_to_csv.delimiter_comma')}</option>
+                  <option value=";">{t('epub_to_csv.delimiter_semicolon')}</option>
+                  <option value="\t">{t('epub_to_csv.delimiter_tab')}</option>
+                  <option value="|">{t('epub_to_csv.delimiter_pipe')}</option>
                 </select>
               </div>
             </div>
@@ -621,7 +623,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-blue-600">
                   <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
                 </svg>
-                Why Choose Our Converter?
+                {t('epub_to_csv.why_choose')}
               </h3>
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start">
@@ -629,42 +631,42 @@ export const EPUBToCSVConverter: React.FC = () => {
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22,4 12,14.01 9,11.01"></polyline>
                   </svg>
-                  <span>Extract all chapters and paragraphs</span>
+                  <span>{t('epub_to_csv.feature_extract')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500 mr-2 mt-0.5 flex-shrink-0">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22,4 12,14.01 9,11.01"></polyline>
                   </svg>
-                  <span>Preserve book metadata</span>
+                  <span>{t('epub_to_csv.feature_metadata')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500 mr-2 mt-0.5 flex-shrink-0">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22,4 12,14.01 9,11.01"></polyline>
                   </svg>
-                  <span>Batch conversion support</span>
+                  <span>{t('epub_to_csv.feature_batch')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500 mr-2 mt-0.5 flex-shrink-0">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22,4 12,14.01 9,11.01"></polyline>
                   </svg>
-                  <span>Custom CSV delimiters</span>
+                  <span>{t('epub_to_csv.feature_delimiters')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500 mr-2 mt-0.5 flex-shrink-0">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22,4 12,14.01 9,11.01"></polyline>
                   </svg>
-                  <span>100% free and secure</span>
+                  <span>{t('epub_to_csv.feature_free')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500 mr-2 mt-0.5 flex-shrink-0">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22,4 12,14.01 9,11.01"></polyline>
                   </svg>
-                  <span>No registration required</span>
+                  <span>{t('epub_to_csv.feature_no_reg')}</span>
                 </li>
               </ul>
             </div>
@@ -673,22 +675,33 @@ export const EPUBToCSVConverter: React.FC = () => {
              <div className="bg-white rounded-2xl shadow-xl p-6">
                <h3 className="text-xl font-semibold mb-6 flex items-center">
                  <BarChart3 className="w-5 h-5 mr-2 text-slate-600" />
-                 Perfect For
+                 {t('epub_to_csv.use_cases_title')}
                </h3>
                <div className="space-y-3">
-                 {[
-                   "Content analysis and research",
-                   "Text mining and NLP",
-                   "Data science projects",
-                   "Research analysis",
-                   "Content management systems",
-                   "Database imports"
-                 ].map((useCase, index) => (
-                   <div key={index} className="flex items-center">
-                     <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
-                     <span className="text-sm text-gray-700">{useCase}</span>
-                   </div>
-                 ))}
+                 <div className="flex items-center">
+                   <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
+                   <span className="text-sm text-gray-700">{t('epub_to_csv.use_case_content')}</span>
+                 </div>
+                 <div className="flex items-center">
+                   <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
+                   <span className="text-sm text-gray-700">{t('epub_to_csv.use_case_mining')}</span>
+                 </div>
+                 <div className="flex items-center">
+                   <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
+                   <span className="text-sm text-gray-700">{t('epub_to_csv.use_case_science')}</span>
+                 </div>
+                 <div className="flex items-center">
+                   <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
+                   <span className="text-sm text-gray-700">{t('epub_to_csv.use_case_research')}</span>
+                 </div>
+                 <div className="flex items-center">
+                   <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
+                   <span className="text-sm text-gray-700">{t('epub_to_csv.use_case_cms')}</span>
+                 </div>
+                 <div className="flex items-center">
+                   <div className="w-2 h-2 bg-slate-500 rounded-full mr-3 flex-shrink-0"></div>
+                   <span className="text-sm text-gray-700">{t('epub_to_csv.use_case_database')}</span>
+                 </div>
                </div>
              </div>
           </div>
@@ -707,78 +720,78 @@ export const EPUBToCSVConverter: React.FC = () => {
          {/* SEO Content Section */}
          <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to CSV?
+            {t('epub_to_csv.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to CSV format is essential for data analysis, content extraction, and text processing. While EPUB files are excellent for reading and digital publishing, CSV format provides structured data that can be easily analyzed, imported into databases, and processed with data science tools.
+              {t('epub_to_csv.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of CSV Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_csv.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-emerald-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-emerald-900 mb-3">Data Analysis Ready</h4>
+                <h4 className="text-xl font-semibold text-emerald-900 mb-3">{t('epub_to_csv.benefit_structured_title')}</h4>
                 <p className="text-gray-700">
-                  CSV format makes it easy to import e-book content into data analysis tools like Excel, Python pandas, and R for text mining and statistical analysis.
+                  {t('epub_to_csv.benefit_structured_text')}
                 </p>
               </div>
               
               <div className="bg-teal-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-teal-900 mb-3">Structured Content Extraction</h4>
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">{t('epub_to_csv.benefit_analysis_title')}</h4>
                 <p className="text-gray-700">
-                  CSV format allows you to extract structured data from e-books including chapters, paragraphs, and metadata in a tabular format for easy processing.
+                  {t('epub_to_csv.benefit_analysis_text')}
                 </p>
               </div>
               
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Universal Compatibility</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('epub_to_csv.benefit_compatibility_title')}</h4>
                 <p className="text-gray-700">
-                  CSV files are supported by virtually all data processing tools, making your e-book content accessible across different platforms and systems.
+                  {t('epub_to_csv.benefit_compatibility_text')}
                 </p>
               </div>
               
               <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">Database Integration</h4>
+                <h4 className="text-xl font-semibold text-green-900 mb-3">{t('epub_to_csv.benefit_metadata_title')}</h4>
                 <p className="text-gray-700">
-                  CSV format enables seamless integration with databases, content management systems, and data pipelines for automated processing.
+                  {t('epub_to_csv.benefit_metadata_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_csv.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Analysis and Research</h4>
-                  <p className="text-gray-700">Extract text content from e-books for academic research, sentiment analysis, and content trend analysis.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_csv.use_case_research_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_csv.use_case_research_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Text Mining and NLP</h4>
-                  <p className="text-gray-700">Convert e-books to CSV for natural language processing tasks, including entity extraction, topic modeling, and language analysis.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_csv.use_case_mining_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_csv.use_case_mining_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Management Systems</h4>
-                  <p className="text-gray-700">Import e-book content into CMS platforms, wikis, and knowledge bases for structured content management.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_csv.use_case_content_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_csv.use_case_content_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Science Projects</h4>
-                  <p className="text-gray-700">Transform e-book content into structured data for machine learning, predictive modeling, and statistical analysis.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_csv.use_case_catalog_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_csv.use_case_catalog_text')}</p>
                 </div>
               </div>
             </div>
