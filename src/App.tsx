@@ -892,6 +892,20 @@ function App() {
         <Route path="/de/convert/docx-to-odt" element={<DOCXToODTConverter />} />
         <Route path="/de/convert/docx-to-txt" element={<DOCXToTXTConverter />} />
         <Route path="/de/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/id/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/sv/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/es/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/fr/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/it/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/nl/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/pt/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/vi/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/tr/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/ru/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/ar/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/th/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/ja/convert/eps-to-webp" element={<EPSToWebPConverter />} />
+        <Route path="/zh/convert/eps-to-webp" element={<EPSToWebPConverter />} />
         <Route path="/de/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
         <Route path="/de/convert/epub-to-doc" element={<EPUBToDOCConverter />} />
         <Route path="/de/convert/epub-to-docx" element={<EPUBToDOCXConverter />} />

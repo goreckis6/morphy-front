@@ -42,11 +42,14 @@ export const DNGToWebPConverter: React.FC = () => {
   // Language detection from URL
   useEffect(() => {
     const path = window.location.pathname;
-    if (path.startsWith('/pl/')) {
-      i18n.changeLanguage('pl');
-    } else if (path.startsWith('/de/')) {
-      i18n.changeLanguage('de');
-    } else {
+    const languageMatch = path.match(/^\/(pl|de|id|sv|es|fr|it|nl|pt|vi|tr|ru|ar|th|ja|zh)\//);
+    
+    if (languageMatch) {
+      const detectedLang = languageMatch[1];
+      if (i18n.language !== detectedLang) {
+        i18n.changeLanguage(detectedLang);
+      }
+    } else if (i18n.language !== 'en') {
       i18n.changeLanguage('en');
     }
   }, []);
