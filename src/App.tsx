@@ -953,6 +953,22 @@ function App() {
         <Route path="/ja/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
         <Route path="/zh/convert/cr2-to-webp" element={<CR2ToWebPConverter />} />
 
+        {/* New Languages Converter Routes - EPUB to CSV */}
+        <Route path="/id/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/sv/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/es/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/fr/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/it/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/nl/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/pt/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/vi/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/tr/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/ru/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/ar/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/th/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/ja/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+        <Route path="/zh/convert/epub-to-csv" element={<EPUBToCSVConverter />} />
+
         {/* New Languages Converter Routes - HEIC to SVG */}
         <Route path="/id/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
         <Route path="/sv/convert/heic-to-svg" element={<HEICtoSVGConverter />} />

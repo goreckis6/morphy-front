@@ -345,12 +345,12 @@ export const EPUBToCSVConverter: React.FC = () => {
                   <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_csv.upload_multiple') : t('epub_to_csv.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_csv.upload_multiple_desc')
+                    : t('epub_to_csv.upload_single_desc')
                   }
                 </p>
                 {!batchMode && (
@@ -375,7 +375,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_csv.choose_files')}
                 </button>
               </div>
 
