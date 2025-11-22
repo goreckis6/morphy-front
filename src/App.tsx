@@ -600,6 +600,20 @@ function App() {
         <Route path="/ja/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
         <Route path="/zh/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
         <Route path="/de/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/id/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/sv/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/es/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/fr/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/it/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/nl/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/pt/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/vi/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/tr/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/ru/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/ar/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/th/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/ja/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
+        <Route path="/zh/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
         <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/id/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/sv/convert/csv-to-odp" element={<CSVToODPConverter />} />
