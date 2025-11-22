@@ -810,6 +810,20 @@ function App() {
         <Route path="/ja/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
         <Route path="/zh/convert/csv-to-yaml" element={<CSVToYAMLConverter />} />
         <Route path="/de/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/id/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/sv/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/es/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/fr/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/it/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/nl/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/pt/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/vi/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/tr/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/ru/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/ar/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/th/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/ja/convert/dng-to-webp" element={<DNGToWebPConverter />} />
+        <Route path="/zh/convert/dng-to-webp" element={<DNGToWebPConverter />} />
         <Route path="/de/convert/doc-to-csv" element={<DOCToCSVConverter />} />
         <Route path="/de/convert/doc-to-epub" element={<DOCToEPUBConverter />} />
         <Route path="/de/convert/doc-to-mobi" element={<DOCToMOBIConverter />} />
