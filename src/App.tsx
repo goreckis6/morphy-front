@@ -585,6 +585,20 @@ function App() {
         <Route path="/ja/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
         <Route path="/zh/convert/csv-to-mobi" element={<CSVToMOBIConverter />} />
         <Route path="/de/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/id/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/sv/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/es/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/fr/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/it/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/nl/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/pt/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/vi/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/tr/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/ru/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/ar/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/th/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/ja/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
+        <Route path="/zh/convert/csv-to-ndjson" element={<CSVToNDJSONConverter />} />
         <Route path="/de/convert/csv-to-parquet" element={<CSVToParquetConverter />} />
         <Route path="/de/convert/csv-to-odp" element={<CSVToODPConverter />} />
         <Route path="/id/convert/csv-to-odp" element={<CSVToODPConverter />} />
