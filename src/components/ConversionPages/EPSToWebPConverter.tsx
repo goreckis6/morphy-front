@@ -226,15 +226,15 @@ export const EPSToWebPConverter: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-emerald-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('eps_to_webp.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('eps_to_webp.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('eps_to_webp.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -262,7 +262,7 @@ export const EPSToWebPConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('eps_to_webp.single_file')}
                 </button>
                 <button
                   onClick={() => {
@@ -276,7 +276,7 @@ export const EPSToWebPConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('eps_to_webp.batch_convert')}
                 </button>
               </div>
 
@@ -319,7 +319,7 @@ export const EPSToWebPConverter: React.FC = () => {
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('eps_to_webp.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <File className="w-12 h-12 text-gray-400" />
@@ -385,7 +385,7 @@ export const EPSToWebPConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('eps_to_webp.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
@@ -404,7 +404,7 @@ export const EPSToWebPConverter: React.FC = () => {
                     <h4 className="text-lg font-semibold text-green-800">{t('common.batch_conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPS file has been successfully converted to WebP format.
+                    {t('eps_to_webp.conversion_success')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -419,7 +419,7 @@ export const EPSToWebPConverter: React.FC = () => {
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('eps_to_webp.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -456,22 +456,22 @@ export const EPSToWebPConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-emerald-600" />
-                WebP Settings
+                {t('eps_to_webp.webp_settings')}
               </h3>
               
               {/* Quality */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Quality
+                  {t('eps_to_webp.quality')}
                 </label>
                 <select
                   value={quality}
                   onChange={(e) => setQuality(e.target.value as 'high' | 'medium' | 'low')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
                 >
-                  <option value="high">High Quality (90-100%)</option>
-                  <option value="medium">Medium Quality (70-89%)</option>
-                  <option value="low">Low Quality (50-69%)</option>
+                  <option value="high">{t('eps_to_webp.quality_high')}</option>
+                  <option value="medium">{t('eps_to_webp.quality_medium')}</option>
+                  <option value="low">{t('eps_to_webp.quality_low')}</option>
                 </select>
               </div>
 
@@ -484,7 +484,7 @@ export const EPSToWebPConverter: React.FC = () => {
                     onChange={(e) => setLossless(e.target.checked)}
                     className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Lossless compression</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('eps_to_webp.lossless')}</span>
                 </label>
               </div>
             </div>
@@ -493,16 +493,16 @@ export const EPSToWebPConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('eps_to_webp.why_choose')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "Vector graphics support",
-                  "Web-optimized compression",
-                  "Modern web format compatibility",
-                  "High-quality output",
-                  "Superior file size reduction",
-                  "Batch processing support"
+                  t('eps_to_webp.feature_vector'),
+                  t('eps_to_webp.feature_optimized'),
+                  t('eps_to_webp.feature_compatibility'),
+                  t('eps_to_webp.feature_quality'),
+                  t('eps_to_webp.feature_reduction'),
+                  t('eps_to_webp.feature_batch')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -520,12 +520,12 @@ export const EPSToWebPConverter: React.FC = () => {
               </h3>
               <div className="space-y-3">
                 {[
-                  "Web image optimization",
-                  "Vector graphics for web",
-                  "Modern web development",
-                  "Website performance improvement",
-                  "Digital marketing materials",
-                  "Online graphics optimization"
+                  t('eps_to_webp.use_case_web_optimization'),
+                  t('eps_to_webp.use_case_vector_web'),
+                  t('eps_to_webp.use_case_modern_dev'),
+                  t('eps_to_webp.use_case_performance'),
+                  t('eps_to_webp.use_case_digital_marketing'),
+                  t('eps_to_webp.use_case_online_graphics')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3 flex-shrink-0"></div>
