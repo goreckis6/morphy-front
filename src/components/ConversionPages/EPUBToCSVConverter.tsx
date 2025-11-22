@@ -355,12 +355,12 @@ export const EPUBToCSVConverter: React.FC = () => {
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-blue-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_csv.single_limit_message')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-blue-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                    {t('epub_to_csv.batch_limit_message')}
                   </p>
                 )}
                 <input
@@ -403,7 +403,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_csv.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -413,7 +413,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_csv.size_warning')}
                               </span>
                             </div>
                           </div>
@@ -465,7 +465,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                         <path d="M2 9h20"></path>
                         <path d="M2 15h20"></path>
                       </svg>
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to CSV'}
+                      {batchMode ? t('epub_to_csv.convert_files_count', { count: batchFiles.length }) : t('epub_to_csv.convert_to_csv')}
                     </div>
                   )}
                 </button>
@@ -525,7 +525,7 @@ export const EPUBToCSVConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_csv.batch_complete') : t('epub_to_csv.batch_failed')}
                     </h4>
                   </div>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
@@ -713,7 +713,7 @@ export const EPUBToCSVConverter: React.FC = () => {
              onClick={handleBack}
              className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
            >
-             ← Back to Home
+             ← {t('epub_to_csv.back_home')}
            </button>
          </div>
 
@@ -796,45 +796,45 @@ export const EPUBToCSVConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">How It Works</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_csv.how_it_works_title')}</h3>
             <div className="bg-blue-50 p-6 rounded-lg">
               <div className="space-y-3">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-700">Upload your EPUB file using our drag-and-drop interface or file browser</p>
+                  <p className="text-gray-700">{t('epub_to_csv.how_step1')}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-700">Our converter extracts structured content including chapter titles, paragraph text, and metadata</p>
+                  <p className="text-gray-700">{t('epub_to_csv.how_step2')}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-700">The output CSV file contains columns for chapter number, title, paragraph number, and content</p>
+                  <p className="text-gray-700">{t('epub_to_csv.how_step3')}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-700">Download your converted CSV file and analyze the data using your preferred tools</p>
+                  <p className="text-gray-700">{t('epub_to_csv.how_step4')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-slate-600 to-gray-600 text-white p-8 rounded-xl text-center mt-8">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_csv.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to CSV converter to transform your e-books into structured data.
+                {t('epub_to_csv.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_csv.start_now')}
                 </button>
                 <button
                   onClick={() => window.location.href = '/'}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_csv.back_home')}
                 </button>
               </div>
             </div>
