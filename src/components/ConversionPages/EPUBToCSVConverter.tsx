@@ -260,7 +260,7 @@ export const EPUBToCSVConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{t('epub_to_csv.meta_title')} | MorphyHub</title>
+        <title>{t('epub_to_csv.meta_title')}</title>
         <meta name="description" content={t('epub_to_csv.meta_description')} />
         <meta name="keywords" content="EPUB to CSV, ebook converter, EPUB extractor, CSV converter, batch conversion" />
       </Helmet>
