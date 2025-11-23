@@ -401,7 +401,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('epub_to_xlsx.convert_batch', { count: batchFiles.length }) : 't('epub_to_xlsx.convert_button')'}
+                      {batchMode ? t('epub_to_xlsx.convert_batch', { count: batchFiles.length }) : t('epub_to_xlsx.convert_button')}
                     </div>
                   )}
                 </button>

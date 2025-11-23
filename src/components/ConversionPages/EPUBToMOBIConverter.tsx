@@ -398,7 +398,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('epub_to_mobi.convert_batch', { count: batchFiles.length }) : 't('epub_to_mobi.convert_button')'}
+                      {batchMode ? t('epub_to_mobi.convert_batch', { count: batchFiles.length }) : t('epub_to_mobi.convert_button')}
                     </div>
                   )}
                 </button>
