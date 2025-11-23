@@ -270,7 +270,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_html.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -281,7 +281,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_html.batch_convert')}
                 </button>
               </div>
 
@@ -294,7 +294,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                 <p className="text-gray-600 mb-4">
                   {batchMode 
                     ? t('epub_to_html.select_multiple_desc') 
-                    : t('epub_to_html.drag_drop_desc')
+                    : t('epub_to_html.upload_single_desc')
                   }
                 </p>
                 {!batchMode && (
@@ -319,7 +319,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-orange-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_html.choose_files')}
                 </button>
               </div>
 
@@ -512,7 +512,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-orange-600" />
-                HTML Settings
+                {t('epub_to_html.html_settings')}
               </h3>
               
               {/* Include CSS */}
@@ -524,7 +524,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                     onChange={(e) => setIncludeCSS(e.target.checked)}
                     className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include CSS styling</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_html.preserve_formatting_desc')}</span>
                 </label>
               </div>
 
@@ -537,7 +537,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_html.include_images_desc')}</span>
                 </label>
               </div>
 
@@ -550,7 +550,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                     onChange={(e) => setExtractMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Extract book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_html.extract_metadata_desc')}</span>
                 </label>
               </div>
 
@@ -563,7 +563,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                     onChange={(e) => setResponsiveDesign(e.target.checked)}
                     className="rounded border-gray-300 text-orange-600 focus:ring-orange-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Responsive design</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_html.benefit_card_1_title')}</span>
                 </label>
               </div>
             </div>
@@ -629,42 +629,42 @@ export const EPUBToHTMLConverter: React.FC = () => {
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to HTML?
+            {t('epub_to_html.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to HTML format is essential for web publishing, online reading platforms, and digital content distribution. While EPUB files are excellent for e-readers and mobile devices, HTML format provides universal web compatibility, enabling seamless integration with websites, content management systems, and online reading platforms.
+              {t('epub_to_html.seo_intro')}
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_html.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Universal Web Compatibility</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('epub_to_html.benefit_browser_title')}</h4>
                 <p className="text-gray-700">
-                  HTML files can be displayed in any web browser, making them perfect for web publishing and online content distribution across all platforms.
+                  {t('epub_to_html.benefit_browser_text')}
                 </p>
               </div>
               
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">Proper HTML Structure</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('epub_to_html.benefit_html5_title')}</h4>
                 <p className="text-gray-700">
-                  HTML format provides proper semantic structure with headings, paragraphs, lists, and other elements for better accessibility and SEO.
+                  {t('epub_to_html.benefit_html5_text')}
                 </p>
               </div>
               
               <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">CSS Styling Support</h4>
+                <h4 className="text-xl font-semibold text-pink-900 mb-3">{t('epub_to_html.benefit_seo_title')}</h4>
                 <p className="text-gray-700">
-                  HTML files support CSS styling, allowing for custom design, responsive layouts, and professional presentation of e-book content.
+                  {t('epub_to_html.benefit_seo_text')}
                 </p>
               </div>
               
               <div className="bg-rose-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-rose-900 mb-3">Browser Compatibility</h4>
+                <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('epub_to_html.benefit_responsive_title')}</h4>
                 <p className="text-gray-700">
-                  HTML format ensures compatibility with all modern web browsers, providing consistent display across different devices and platforms.
+                  {t('epub_to_html.benefit_responsive_text')}
                 </p>
               </div>
             </div>
@@ -675,32 +675,32 @@ export const EPUBToHTMLConverter: React.FC = () => {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Web Publishing</h4>
-                  <p className="text-gray-700">Convert e-books to HTML format for web publishing, enabling easy integration with websites and content management systems.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_html.use_case_web_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_html.use_case_web_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Online Reading Platforms</h4>
-                  <p className="text-gray-700">Create web-compatible content for online reading platforms by converting e-books to HTML format with proper structure and styling.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_html.use_case_docs_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_html.use_case_docs_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Management Systems</h4>
-                  <p className="text-gray-700">Integrate e-book content into content management systems by converting it to HTML format for easy editing and publishing.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_html.use_case_cms_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_html.use_case_cms_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Digital Content Distribution</h4>
-                  <p className="text-gray-700">Distribute e-book content online by converting it to HTML format, ensuring compatibility with all web browsers and devices.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_html.use_case_mobile_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_html.use_case_mobile_text')}</p>
                 </div>
               </div>
             </div>
@@ -715,13 +715,13 @@ export const EPUBToHTMLConverter: React.FC = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_html.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_html.back_home')}
                 </button>
               </div>
             </div>
