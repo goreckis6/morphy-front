@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToMOBIConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -214,8 +216,8 @@ export const EPUBToMOBIConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to MOBI Converter - Convert eBooks for Kindle</title>
-        <meta name="description" content="Free EPUB to MOBI converter. Convert EPUB ebook files to MOBI format for Amazon Kindle devices. Professional ebook conversion with metadata preservation. Free online converter." />
+        <title>{t('epub_to_mobi.meta_title')}</title>
+        <meta name="description" content={t('epub_to_mobi.meta_description')} />
         <meta name="keywords" content="EPUB to MOBI, Kindle converter, ebook format, Amazon Kindle, batch conversion" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-yellow-50">
@@ -227,23 +229,23 @@ export const EPUBToMOBIConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to MOBI Converter
+              {t('epub_to_mobi.title')}
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to MOBI format for Kindle e-readers. Transform e-books into Amazon Kindle-compatible format for enhanced reading experience.
+              {t('epub_to_mobi.subtitle')} Transform e-books into Amazon Kindle-compatible format for enhanced reading experience.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_mobi.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_mobi.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_mobi.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -287,23 +289,22 @@ export const EPUBToMOBIConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_mobi.upload_multiple') : t('epub_to_mobi.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_mobi.select_multiple_desc') 
+                    : t('epub_to_mobi.drag_drop_desc')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-amber-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_mobi.single_limit_message')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-amber-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
-                  </p>
+                    {t('epub_to_mobi.batch_limit_message')}</p>
                 )}
                 <input
                   ref={fileInputRef}
@@ -324,7 +325,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_mobi.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -345,7 +346,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_mobi.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -355,7 +356,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_mobi.size_warning')} Consider processing fewer files for better performance.
                               </span>
                             </div>
                           </div>
@@ -392,12 +393,12 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_mobi.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to MOBI'}
+                      {batchMode ? t('epub_to_mobi.convert_batch', { count: batchFiles.length }) : 't('epub_to_mobi.convert_button')'}
                     </div>
                   )}
                 </button>
@@ -408,10 +409,10 @@ export const EPUBToMOBIConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_mobi.conversion_success')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to MOBI format.
+                    {t('epub_to_mobi.conversion_success_desc')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -419,14 +420,14 @@ export const EPUBToMOBIConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download MOBI File
+                      {t('epub_to_mobi.download_file')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_mobi.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -449,7 +450,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_mobi.batch_success') : t('epub_to_mobi.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
@@ -498,7 +499,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_mobi.convert_more')}
                   </button>
                 </div>
               )}</div>
@@ -621,7 +622,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('epub_to_mobi.back_home')}
           </button>
         </div>
 
@@ -636,7 +637,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
               Converting EPUB e-book files to MOBI format is essential for Kindle e-reader compatibility, Amazon publishing workflows, and cross-platform e-book distribution. While EPUB files are excellent for most e-readers, MOBI format provides specific optimization for Amazon Kindle devices and the Kindle ecosystem, ensuring the best reading experience for Kindle users.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of MOBI Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_mobi.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
@@ -668,7 +669,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_mobi.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -705,9 +706,9 @@ export const EPUBToMOBIConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-amber-600 to-yellow-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_mobi.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to MOBI converter to transform your e-books into Kindle-compatible MOBI files.
+                {t('epub_to_mobi.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button

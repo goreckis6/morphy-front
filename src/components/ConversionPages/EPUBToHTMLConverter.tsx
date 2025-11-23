@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToHTMLConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -188,6 +190,19 @@ export const EPUBToHTMLConverter: React.FC = () => {
     }
   };
 
+  const resetForm = () => {
+    setSelectedFile(null);
+    setConvertedFile(null);
+    setConvertedFilename(null);
+    setError(null);
+    setPreviewUrl(null);
+    setBatchFiles([]);
+    setBatchResults([]);
+    setBatchConverted(false);
+    clearValidationError();
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
   const handleBack = () => {
     window.location.href = '/';
   };
@@ -205,8 +220,8 @@ export const EPUBToHTMLConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to HTML Converter - Convert eBooks to Web Format</title>
-        <meta name="description" content="Free EPUB to HTML converter. Convert EPUB ebook files to HTML for web publishing. Extract ebook content as HTML with CSS styling and images. Free online converter with batch processing." />
+        <title>{t('epub_to_html.meta_title')}</title>
+        <meta name="description" content={t('epub_to_html.meta_description')} />
         <meta name="keywords" content="EPUB to HTML, ebook to web, ebook converter, HTML format, web publishing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
@@ -218,19 +233,19 @@ export const EPUBToHTMLConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to HTML Converter
+              {t('epub_to_html.title')}
             </h1>
             <p className="text-lg sm:text-xl text-orange-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to HTML format for web display. Transform e-books into web-compatible HTML documents with proper structure and formatting.
+              {t('epub_to_html.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-orange-200">
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_html.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_html.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -274,17 +289,17 @@ export const EPUBToHTMLConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-orange-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_html.upload_multiple') : t('epub_to_html.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_html.select_multiple_desc') 
+                    : t('epub_to_html.drag_drop_desc')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-orange-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_html.single_limit_message')}
                   </p>
                 )}
                 {batchMode && (
@@ -311,7 +326,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_html.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -332,7 +347,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_html.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-700' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -341,7 +356,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                           <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-600 mr-2" />
-                              <span className="text-sm text-orange-800">Batch size is getting close to the 100MB limit. Consider 5–10 files for best performance.</span>
+                              <span className="text-sm text-orange-800">{t('epub_to_html.size_warning')} Consider 5–10 files for best performance.</span>
                             </div>
                           </div>
                         )}
@@ -378,12 +393,12 @@ export const EPUBToHTMLConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_html.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to HTML'}
+                      {batchMode ? t('epub_to_html.convert_batch', { count: batchFiles.length }) : t('epub_to_html.convert_button')}
                     </div>
                   )}
                 </button>
@@ -394,10 +409,10 @@ export const EPUBToHTMLConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_html.conversion_success')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to HTML format.
+                    {t('epub_to_html.conversion_success_desc')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -405,14 +420,14 @@ export const EPUBToHTMLConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download HTML File
+                      {t('epub_to_html.download_file')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_html.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -434,7 +449,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_html.batch_success') : t('epub_to_html.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
@@ -483,7 +498,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_html.convert_more')}
                   </button>
                 </div>
               )}
@@ -607,7 +622,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('epub_to_html.back_home')}
           </button>
         </div>
 
@@ -622,7 +637,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
               Converting EPUB e-book files to HTML format is essential for web publishing, online reading platforms, and digital content distribution. While EPUB files are excellent for e-readers and mobile devices, HTML format provides universal web compatibility, enabling seamless integration with websites, content management systems, and online reading platforms.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of HTML Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_html.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-orange-50 p-6 rounded-lg">
@@ -654,7 +669,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_html.use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -691,9 +706,9 @@ export const EPUBToHTMLConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_html.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to HTML converter to transform your e-books into web-compatible HTML documents.
+                Use our free online {t('epub_to_html.title')} to transform your e-books into web-compatible HTML documents.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button

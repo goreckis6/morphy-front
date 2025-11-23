@@ -1,4 +1,6 @@
 import React, { useState, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +24,7 @@ import {
 import { Helmet } from 'react-helmet-async';
 
 export const EPUBToODTConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -215,8 +218,8 @@ export const EPUBToODTConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to ODT Converter - Convert eBooks to OpenDocument</title>
-        <meta name="description" content="Free EPUB to ODT converter. Convert EPUB ebook files to ODT format for LibreOffice Writer. Transform digital books into editable OpenDocument text files. Free online tool." />
+        <title>{t('epub_to_odt.meta_title')}</title>
+        <meta name="description" content={t('epub_to_odt.meta_description')} />
         <meta name="keywords" content="EPUB to ODT, ebook converter, OpenDocument, LibreOffice, text format" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-lime-50">
@@ -228,23 +231,23 @@ export const EPUBToODTConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to ODT Converter
+              {t('epub_to_odt.title')}
             </h1>
             <p className="text-lg sm:text-xl text-green-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to OpenDocument Text (ODT) format for document editing. Transform e-books into editable documents with cross-platform compatibility.
+              {t('epub_to_odt.subtitle')} Transform e-books into editable documents with cross-platform compatibility.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_odt.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_odt.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_odt.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -288,23 +291,22 @@ export const EPUBToODTConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_odt.upload_multiple') : t('epub_to_odt.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode
-                    ? 'Select multiple EPUB files to convert them all at once'
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_odt.select_multiple_desc')
+                    : t('epub_to_odt.drag_drop_desc')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-green-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_odt.single_limit_message')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-green-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
-                  </p>
+                    {t('epub_to_odt.batch_limit_message')}</p>
                 )}
                 <input
                   ref={fileInputRef}
@@ -325,7 +327,7 @@ export const EPUBToODTConverter: React.FC = () => {
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_odt.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -346,7 +348,7 @@ export const EPUBToODTConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_odt.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -356,7 +358,7 @@ export const EPUBToODTConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_odt.size_warning')} Consider processing fewer files for better performance.
                               </span>
                             </div>
                           </div>
@@ -393,12 +395,12 @@ export const EPUBToODTConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_odt.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to ODT'}
+                      {batchMode ? t('epub_to_odt.convert_batch', { count: batchFiles.length }) : 't('epub_to_odt.convert_button')'}
                     </div>
                   )}
                 </button>
@@ -409,10 +411,10 @@ export const EPUBToODTConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_odt.conversion_success')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to ODT format.
+                    {t('epub_to_odt.conversion_success_desc')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -420,14 +422,14 @@ export const EPUBToODTConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download ODT File
+                      {t('epub_to_odt.download_file')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_odt.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -488,7 +490,7 @@ export const EPUBToODTConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_odt.convert_more')}
                   </button>
                 </div>
               )}
@@ -612,7 +614,7 @@ export const EPUBToODTConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('epub_to_odt.back_home')}
           </button>
         </div>
 
@@ -627,7 +629,7 @@ export const EPUBToODTConverter: React.FC = () => {
               Converting EPUB e-book files to OpenDocument Text (ODT) format is essential for cross-platform document editing, open-source office workflows, and universal document compatibility. While EPUB files are excellent for reading, ODT format provides full document editing capabilities with seamless integration across different operating systems and office suites.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of ODT Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_odt.benefits_title')}</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-lg">
@@ -659,7 +661,7 @@ export const EPUBToODTConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_odt.use_cases_title')}</h3>
 
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -696,9 +698,9 @@ export const EPUBToODTConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-green-600 to-lime-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_odt.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to ODT converter to transform your e-books into editable OpenDocument files.
+                {t('epub_to_odt.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
