@@ -224,7 +224,7 @@ export const EPUBToDOCConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{t('epub_to_doc.meta_title')} | MorphyHub</title>
+        <title>{t('epub_to_doc.meta_title')}</title>
         <meta name="description" content={t('epub_to_doc.meta_description')} />
         <meta name="keywords" content={t('epub_to_doc.meta_keywords')} />
       </Helmet>
