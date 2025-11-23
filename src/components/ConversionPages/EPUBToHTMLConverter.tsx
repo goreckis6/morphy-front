@@ -58,7 +58,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
         // Validate single file size using shared validation
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
+          setError(validation.error?.message || t('epub_to_html.error_file_validation'));
           setSelectedFile(null);
           setPreviewUrl(null);
           if (fileInputRef.current) fileInputRef.current.value = '';
@@ -69,7 +69,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
         clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
-        setError('Please select a valid EPUB file');
+        setError(t('epub_to_html.error_invalid_file'));
       }
     }
   };
@@ -83,14 +83,14 @@ export const EPUBToHTMLConverter: React.FC = () => {
     );
     
     if (epubFiles.length === 0) {
-      setError('No valid EPUB files selected.');
+      setError(t('epub_to_html.error_no_files'));
       return;
     }
 
     // Validate batch files using shared validation
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+      setError(validation.error?.message || t('epub_to_html.error_batch_validation'));
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -123,7 +123,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
       setConvertedFilename(result.filename);
       setBatchResults([]);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      setError(t('epub_to_html.error_conversion_failed'));
     } finally {
       setIsConverting(false);
     }
@@ -151,12 +151,12 @@ export const EPUBToHTMLConverter: React.FC = () => {
         const failures = (result.results ?? []).filter(r => !r.success);
         setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
       } else {
-        setError('Batch conversion failed. Please try again.');
+        setError(t('epub_to_html.error_batch_failed'));
       }
       setConvertedFile(null);
       setConvertedFilename(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      setError(t('epub_to_html.error_batch_failed'));
       setBatchResults([]);
       setBatchConverted(false);
     } finally {
@@ -180,13 +180,13 @@ export const EPUBToHTMLConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError('Download link is missing. Please reconvert.');
+      setError(t('epub_to_html.error_download_missing'));
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (e) {
-      setError('Failed to download file. Please try again.');
+      setError(t('epub_to_html.error_download_failed'));
     }
   };
 
@@ -356,7 +356,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
                           <div className="mb-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-600 mr-2" />
-                              <span className="text-sm text-orange-800">{t('epub_to_html.size_warning')} Consider 5–10 files for best performance.</span>
+                              <span className="text-sm text-orange-800">{t('epub_to_html.size_warning')}</span>
                             </div>
                           </div>
                         )}
@@ -572,16 +572,16 @@ export const EPUBToHTMLConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('epub_to_html.why_choose')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book to web conversion",
-                  "Web-compatible output",
-                  "Proper HTML structure",
-                  "CSS styling support",
-                  "Browser compatibility",
-                  "Batch processing support"
+                  t('epub_to_html.feature_ebook'),
+                  t('epub_to_html.feature_html5'),
+                  t('epub_to_html.feature_css'),
+                  t('epub_to_html.feature_mobile'),
+                  t('epub_to_html.feature_web'),
+                  t('epub_to_html.feature_batch')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -595,16 +595,16 @@ export const EPUBToHTMLConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-orange-600" />
-                Perfect For
+                {t('epub_to_html.perfect_for_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Web publishing",
-                  "Online reading platforms",
-                  "Content management systems",
-                  "Website integration",
-                  "Digital content distribution",
-                  "Web-based e-book readers"
+                  t('epub_to_html.perfect_for_1'),
+                  t('epub_to_html.perfect_for_2'),
+                  t('epub_to_html.perfect_for_3'),
+                  t('epub_to_html.perfect_for_4'),
+                  t('epub_to_html.perfect_for_5'),
+                  t('epub_to_html.perfect_for_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -708,7 +708,7 @@ export const EPUBToHTMLConverter: React.FC = () => {
             <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-8 rounded-xl text-center">
               <h3 className="text-2xl font-bold mb-4">{t('epub_to_html.ready_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online {t('epub_to_html.title')} to transform your e-books into web-compatible HTML documents.
+                {t('epub_to_html.ready_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
