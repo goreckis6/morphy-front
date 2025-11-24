@@ -6,6 +6,7 @@ import Converters from './pages/Converters';
 import Viewers from './pages/Viewers';
 import Compress from './pages/Compress';
 import Samples from './pages/Samples';
+import IndexNow from './pages/IndexNow';
 import NotFound from './pages/NotFound';
 import SampleDocx from './components/Samples/SampleDocx';
 import SampleDoc from './components/Samples/SampleDoc';
@@ -367,6 +368,9 @@ function App() {
         <Route path="/th/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
         <Route path="/ja/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
         <Route path="/zh/yt-thumbnail-downloader" element={<YTThumbnailDownloader />} />
+
+        {/* IndexNow URL Submission - Admin Only */}
+        <Route path="/indexnow" element={<IndexNow />} />
 
         {/* Samples Hub */}
         <Route path="/samples" element={<Samples />} />
