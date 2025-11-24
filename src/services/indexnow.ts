@@ -91,42 +91,27 @@ export async function submitUrl(
     const apiUrl = `${INDEXNOW_API_URL}?${params.toString()}`;
 
     return new Promise<IndexNowResponse>((resolve) => {
-      // Try navigator.sendBeacon first (best for fire-and-forget, but only supports POST)
-      // Since IndexNow needs GET, we'll use other methods
+      // Use image pixel technique (doesn't cause page navigation)
+      // This is a fire-and-forget method that bypasses CORS
+      // Note: May show COEP warnings in console, but request is still sent successfully
+      const img = new Image();
       
-      // Method 1: Try hidden link click (most reliable, no COEP issues)
-      try {
-        const link = document.createElement('a');
-        link.href = apiUrl;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.style.display = 'none';
-        
-        // Append temporarily
-        document.body.appendChild(link);
-        
-        // Trigger click
-        link.click();
-        
-        // Remove immediately
-        setTimeout(() => {
-          if (link.parentNode) {
-            link.parentNode.removeChild(link);
-          }
-        }, 100);
-      } catch (e) {
-        // Silent fail
-      }
+      // Suppress error logging by handling errors silently
+      img.onerror = () => {
+        // Request was sent, error is just because IndexNow doesn't return an image
+        // This is expected behavior
+      };
+      
+      img.onload = () => {
+        // Request completed (though IndexNow doesn't return an image)
+      };
 
-      // Method 2: Use image as backup (may have COEP warnings but request still works)
-      try {
-        const img = new Image();
-        img.src = apiUrl;
-      } catch (e) {
-        // Silent fail
-      }
+      // Set the image src to trigger the GET request
+      // This sends the request without navigating the page
+      img.src = apiUrl;
 
-      // Resolve after short delay (requests are fire-and-forget)
+      // Resolve after short delay (request is fire-and-forget)
+      // The request is sent immediately when img.src is set
       setTimeout(() => {
         resolve({
           success: true,

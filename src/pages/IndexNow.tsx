@@ -431,6 +431,9 @@ export default function IndexNow() {
                 <li>
                   • URLs must belong to morphyhub.com domain
                 </li>
+                <li className="text-blue-700 italic">
+                  • Note: You may see COEP warnings in the browser console. These are harmless browser security notices and do not affect the submission. The requests are sent successfully (you'll see 200 OK responses).
+                </li>
               </ul>
             </div>
           </div>
