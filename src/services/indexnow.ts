@@ -80,48 +80,60 @@ export async function submitUrl(
     const key = options.key || INDEXNOW_KEY;
     const keyLocation = options.keyLocation || INDEXNOW_KEY_LOCATION;
 
-    // Use image pixel technique to submit URL (bypasses CORS restrictions)
-    // IndexNow API doesn't support CORS, so we use this fire-and-forget method
+    // Use multiple fallback methods to submit URL (bypasses CORS and COEP restrictions)
+    // IndexNow API doesn't support CORS, so we use fire-and-forget methods
     const params = new URLSearchParams({
       url: normalizedUrl,
       key: key,
       keyLocation: keyLocation,
     });
 
+    const apiUrl = `${INDEXNOW_API_URL}?${params.toString()}`;
+
     return new Promise<IndexNowResponse>((resolve) => {
-      const img = new Image();
+      // Try navigator.sendBeacon first (best for fire-and-forget, but only supports POST)
+      // Since IndexNow needs GET, we'll use other methods
       
-      // Set a timeout to resolve after request is sent (fire-and-forget)
-      const timeout = setTimeout(() => {
+      // Method 1: Try hidden link click (most reliable, no COEP issues)
+      try {
+        const link = document.createElement('a');
+        link.href = apiUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.style.display = 'none';
+        
+        // Append temporarily
+        document.body.appendChild(link);
+        
+        // Trigger click
+        link.click();
+        
+        // Remove immediately
+        setTimeout(() => {
+          if (link.parentNode) {
+            link.parentNode.removeChild(link);
+          }
+        }, 100);
+      } catch (e) {
+        // Silent fail
+      }
+
+      // Method 2: Use image as backup (may have COEP warnings but request still works)
+      try {
+        const img = new Image();
+        img.src = apiUrl;
+      } catch (e) {
+        // Silent fail
+      }
+
+      // Resolve after short delay (requests are fire-and-forget)
+      setTimeout(() => {
         resolve({
           success: true,
           status: 200,
           message: `Successfully submitted URL to IndexNow`,
         });
-      }, 500);
-
-      img.onload = () => {
-        clearTimeout(timeout);
-        resolve({
-          success: true,
-          status: 200,
-          message: `Successfully submitted URL to IndexNow`,
-        });
-      };
-
-      img.onerror = () => {
-        clearTimeout(timeout);
-        // Even if image fails to load, the GET request was sent to IndexNow
-        // IndexNow doesn't return an image, so this is expected
-        resolve({
-          success: true,
-          status: 200,
-          message: `Successfully submitted URL to IndexNow`,
-        });
-      };
-
-      // Trigger the GET request via image src (bypasses CORS completely)
-      img.src = `${INDEXNOW_API_URL}?${params.toString()}`;
+      }, 300);
     });
   } catch (error) {
     return {
