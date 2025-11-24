@@ -269,7 +269,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_pdf.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -280,7 +280,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_pdf.batch_convert')}
                 </button>
               </div>
 
@@ -317,7 +317,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_pdf.choose_files')}
                 </button>
               </div>
 
@@ -355,7 +355,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                {t('epub_to_pdf.size_warning')} Consider processing fewer files for better performance.
+                                {t('epub_to_pdf.size_warning')}
                               </span>
                             </div>
                           </div>
