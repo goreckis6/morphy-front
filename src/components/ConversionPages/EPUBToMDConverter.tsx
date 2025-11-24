@@ -454,7 +454,10 @@ export const EPUBToMDConverter: React.FC = () => {
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('epub_to_md.batch_summary', { 
+                      success: batchResults.filter(r => r.success).length, 
+                      total: batchResults.length 
+                    })}
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -522,7 +525,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.preserve_formatting')}</span>
                 </label>
               </div>
 
@@ -535,7 +538,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.include_images')}</span>
                 </label>
               </div>
 
@@ -548,7 +551,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setExtractMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Extract book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.extract_metadata')}</span>
                 </label>
               </div>
 
@@ -561,7 +564,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setGithubCompatible(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">GitHub compatible format</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.github_format')}</span>
                 </label>
               </div>
             </div>
@@ -574,12 +577,12 @@ export const EPUBToMDConverter: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book to Markdown conversion",
-                  "Plain text formatting",
-                  "Version control friendly",
-                  "Documentation ready",
-                  "GitHub compatible",
-                  "Batch processing support"
+                  t('epub_to_md.feature_ebook'),
+                  t('epub_to_md.feature_plaintext'),
+                  t('epub_to_md.feature_vcs'),
+                  t('epub_to_md.feature_docs'),
+                  t('epub_to_md.feature_github'),
+                  t('epub_to_md.feature_batch')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -597,12 +600,12 @@ export const EPUBToMDConverter: React.FC = () => {
               </h3>
               <div className="space-y-3">
                 {[
-                  "Documentation creation",
-                  "Version control workflows",
-                  "GitHub integration",
-                  "Technical writing",
-                  "Content migration",
-                  "Plain text processing"
+                  t('epub_to_md.perfect_1'),
+                  t('epub_to_md.perfect_2'),
+                  t('epub_to_md.perfect_3'),
+                  t('epub_to_md.perfect_4'),
+                  t('epub_to_md.perfect_5'),
+                  t('epub_to_md.perfect_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 flex-shrink-0"></div>
