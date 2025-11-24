@@ -80,9 +80,6 @@ export async function submitUrl(
     const key = options.key || INDEXNOW_KEY;
     const keyLocation = options.keyLocation || INDEXNOW_KEY_LOCATION;
 
-    const key = options.key || INDEXNOW_KEY;
-    const keyLocation = options.keyLocation || INDEXNOW_KEY_LOCATION;
-
     // Use GET request with query parameters (IndexNow supports this for single URLs)
     // This avoids CORS preflight issues
     const params = new URLSearchParams({
