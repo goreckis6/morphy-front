@@ -456,7 +456,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('epub_to_mobi.batch_summary', { success: batchResults.filter(r => r.success).length, total: batchResults.length })}
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -478,7 +478,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                             )}
                             {!result.success && result.error && (
                               <div className="text-xs text-red-600 mt-1 ml-6 break-words">
-                                Failed to convert {result.originalName}
+                                {t('epub_to_mobi.failed_convert')} {result.originalName}
                               </div>
                             )}
                           </div>
@@ -487,7 +487,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                               onClick={() => handleBatchDownload(result)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
                             >
-                              Download
+                              {t('epub_to_mobi.download')}
                             </button>
                           )}
                         </div>
@@ -512,7 +512,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-amber-600" />
-                MOBI Settings
+                {t('epub_to_mobi.settings_title')}
               </h3>
               
               {/* Preserve Formatting */}
@@ -524,7 +524,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.preserve_formatting')}</span>
                 </label>
               </div>
 
@@ -537,7 +537,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.include_images')}</span>
                 </label>
               </div>
 
@@ -550,7 +550,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setExtractMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Extract book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.extract_metadata')}</span>
                 </label>
               </div>
 
@@ -563,7 +563,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setKindleOptimized(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Kindle optimized format</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.optimize_kindle')}</span>
                 </label>
               </div>
             </div>
@@ -572,16 +572,16 @@ export const EPUBToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('epub_to_mobi.why_choose')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book format conversion",
-                  "Kindle e-reader compatibility",
-                  "Amazon format support",
-                  "Enhanced reading features",
-                  "Professional e-book output",
-                  "Batch processing support"
+                  t('epub_to_mobi.feature_ebook'),
+                  t('epub_to_mobi.feature_kindle'),
+                  t('epub_to_mobi.feature_quality'),
+                  t('epub_to_mobi.feature_formatting'),
+                  t('epub_to_mobi.feature_metadata'),
+                  t('epub_to_mobi.feature_batch')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -595,16 +595,16 @@ export const EPUBToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-amber-600" />
-                Perfect For
+                {t('epub_to_mobi.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Kindle e-book publishing",
-                  "E-reader format conversion",
-                  "Amazon publishing workflows",
-                  "Cross-platform e-book distribution",
-                  "Personal e-book library",
-                  "E-book format standardization"
+                  t('epub_to_mobi.perfect_1'),
+                  t('epub_to_mobi.perfect_2'),
+                  t('epub_to_mobi.perfect_3'),
+                  t('epub_to_mobi.perfect_4'),
+                  t('epub_to_mobi.perfect_5'),
+                  t('epub_to_mobi.perfect_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -629,42 +629,42 @@ export const EPUBToMOBIConverter: React.FC = () => {
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to MOBI?
+            {t('epub_to_mobi.why_convert_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to MOBI format is essential for Kindle e-reader compatibility, Amazon publishing workflows, and cross-platform e-book distribution. While EPUB files are excellent for most e-readers, MOBI format provides specific optimization for Amazon Kindle devices and the Kindle ecosystem, ensuring the best reading experience for Kindle users.
+              {t('epub_to_mobi.seo_intro')}
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_mobi.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-amber-900 mb-3">Kindle E-reader Compatibility</h4>
+                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('epub_to_mobi.benefit_kindle_title')}</h4>
                 <p className="text-gray-700">
-                  MOBI files are specifically designed for Amazon Kindle e-readers, providing optimal display, navigation, and reading features on Kindle devices.
+                  {t('epub_to_mobi.benefit_kindle_text')}
                 </p>
               </div>
               
               <div className="bg-yellow-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-yellow-900 mb-3">Amazon Format Support</h4>
+                <h4 className="text-xl font-semibold text-yellow-900 mb-3">{t('epub_to_mobi.benefit_amazon_title')}</h4>
                 <p className="text-gray-700">
-                  MOBI format is fully supported by Amazon's publishing platform, making it essential for authors and publishers using Amazon's services.
+                  {t('epub_to_mobi.benefit_amazon_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Enhanced Reading Features</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('epub_to_mobi.benefit_features_title')}</h4>
                 <p className="text-gray-700">
-                  MOBI format supports advanced Kindle features including X-Ray, Word Wise, and enhanced typography for improved reading experience.
+                  {t('epub_to_mobi.benefit_features_text')}
                 </p>
               </div>
               
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">Professional E-book Output</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('epub_to_mobi.benefit_drm_title')}</h4>
                 <p className="text-gray-700">
-                  MOBI format provides professional-quality e-book output with proper formatting, metadata, and Kindle-specific optimizations.
+                  {t('epub_to_mobi.benefit_drm_text')}
                 </p>
               </div>
             </div>
@@ -675,32 +675,32 @@ export const EPUBToMOBIConverter: React.FC = () => {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Kindle E-book Publishing</h4>
-                  <p className="text-gray-700">Convert e-books to MOBI format for publishing on Amazon Kindle Direct Publishing (KDP) platform.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.usecase_reading_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.usecase_reading_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">E-reader Format Conversion</h4>
-                  <p className="text-gray-700">Convert e-books from EPUB to MOBI format for use on Amazon Kindle e-readers and Kindle apps.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.usecase_publishing_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.usecase_publishing_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Amazon Publishing Workflows</h4>
-                  <p className="text-gray-700">Integrate e-book content into Amazon publishing workflows by converting it to MOBI format for KDP submission.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.usecase_library_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.usecase_library_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Cross-platform E-book Distribution</h4>
-                  <p className="text-gray-700">Distribute e-books across multiple platforms by converting them to MOBI format for Amazon Kindle compatibility.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.usecase_education_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.usecase_education_text')}</p>
                 </div>
               </div>
             </div>
@@ -715,13 +715,13 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_mobi.start_now')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_mobi.back_home')}
                 </button>
               </div>
             </div>
