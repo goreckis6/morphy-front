@@ -7,6 +7,7 @@ export default function IndexNow() {
   const { submitPage, submitPages, submitSitemapUrls } = useIndexNow();
   const [urls, setUrls] = useState<string[]>(['']);
   const [currentUrl, setCurrentUrl] = useState('');
+  const [pasteText, setPasteText] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{ success: boolean; message?: string; error?: string } | null>(null);
 
@@ -22,6 +23,58 @@ export default function IndexNow() {
     const newUrls = [...urls];
     newUrls[index] = value;
     setUrls(newUrls);
+  };
+
+  const handlePasteUrls = () => {
+    if (!pasteText.trim()) {
+      setResult({ success: false, error: 'Please paste URLs in the textarea' });
+      return;
+    }
+
+    // Split by newlines and filter out empty lines
+    const pastedUrls = pasteText
+      .split('\n')
+      .map(url => url.trim())
+      .filter(url => url !== '');
+
+    if (pastedUrls.length === 0) {
+      setResult({ success: false, error: 'No valid URLs found in pasted text' });
+      return;
+    }
+
+    // Validate URLs
+    const validUrls: string[] = [];
+    const invalidUrls: string[] = [];
+
+    pastedUrls.forEach(url => {
+      try {
+        new URL(url);
+        validUrls.push(url);
+      } catch {
+        invalidUrls.push(url);
+      }
+    });
+
+    if (validUrls.length === 0) {
+      setResult({ success: false, error: 'No valid URLs found. Please check the format.' });
+      return;
+    }
+
+    // Set the valid URLs (replace existing or add to existing)
+    setUrls(validUrls);
+    setPasteText(''); // Clear the textarea
+
+    if (invalidUrls.length > 0) {
+      setResult({ 
+        success: true, 
+        message: `Imported ${validUrls.length} valid URL(s). ${invalidUrls.length} invalid URL(s) were skipped.` 
+      });
+    } else {
+      setResult({ 
+        success: true, 
+        message: `Imported ${validUrls.length} URL(s) successfully.` 
+      });
+    }
   };
 
   const handleSubmitUrls = async () => {
@@ -244,8 +297,32 @@ export default function IndexNow() {
                 </h2>
               </div>
               <p className="text-gray-600 mb-4">
-                Add multiple URLs to submit in bulk
+                Add multiple URLs to submit in bulk. You can paste multiple URLs (one per line) in the textarea below.
               </p>
+              
+              {/* Paste URLs Textarea */}
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Paste URLs (one per line)
+                </label>
+                <textarea
+                  value={pasteText}
+                  onChange={(e) => setPasteText(e.target.value)}
+                  placeholder="https://morphyhub.com/page1&#10;https://morphyhub.com/page2&#10;https://morphyhub.com/page3"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-y min-h-[120px] font-mono text-sm"
+                  disabled={loading}
+                  rows={5}
+                />
+                <button
+                  onClick={handlePasteUrls}
+                  disabled={loading || !pasteText.trim()}
+                  className="mt-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-lg font-medium hover:bg-blue-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 transition-colors text-sm"
+                >
+                  <Plus className="w-4 h-4" />
+                  Import URLs from Textarea
+                </button>
+              </div>
+
               <div className="space-y-3 mb-4">
                 {urls.map((url, index) => (
                   <div key={index} className="flex gap-2">

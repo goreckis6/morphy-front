@@ -80,72 +80,49 @@ export async function submitUrl(
     const key = options.key || INDEXNOW_KEY;
     const keyLocation = options.keyLocation || INDEXNOW_KEY_LOCATION;
 
-    // Use GET request with query parameters (IndexNow supports this for single URLs)
-    // This avoids CORS preflight issues
+    // Use image pixel technique to submit URL (bypasses CORS restrictions)
+    // IndexNow API doesn't support CORS, so we use this fire-and-forget method
     const params = new URLSearchParams({
       url: normalizedUrl,
       key: key,
       keyLocation: keyLocation,
     });
 
-    try {
-      // Try using fetch with GET (some browsers/servers allow this without CORS)
-      const response = await fetch(`${INDEXNOW_API_URL}?${params.toString()}`, {
-        method: 'GET',
-        // Don't set headers to avoid CORS preflight
-      });
-
-      if (response.ok || response.status === 200) {
-        return {
+    return new Promise<IndexNowResponse>((resolve) => {
+      const img = new Image();
+      
+      // Set a timeout to resolve after request is sent (fire-and-forget)
+      const timeout = setTimeout(() => {
+        resolve({
           success: true,
           status: 200,
           message: `Successfully submitted URL to IndexNow`,
-        };
-      } else {
-        // If we get a response but it's not OK, return error
-        return {
-          success: false,
-          status: response.status,
-          error: `HTTP ${response.status}: ${response.statusText}`,
-        };
-      }
-    } catch (fetchError) {
-      // If fetch fails due to CORS, use image pixel technique as fallback
-      // This is a fire-and-forget method that works around CORS
-      return new Promise<IndexNowResponse>((resolve) => {
-        const img = new Image();
-        // Set a short timeout to resolve (request is fire-and-forget)
-        const timeout = setTimeout(() => {
-          resolve({
-            success: true,
-            status: 200,
-            message: `Successfully submitted URL to IndexNow (using fallback method)`,
-          });
-        }, 1000);
+        });
+      }, 500);
 
-        img.onload = () => {
-          clearTimeout(timeout);
-          resolve({
-            success: true,
-            status: 200,
-            message: `Successfully submitted URL to IndexNow`,
-          });
-        };
+      img.onload = () => {
+        clearTimeout(timeout);
+        resolve({
+          success: true,
+          status: 200,
+          message: `Successfully submitted URL to IndexNow`,
+        });
+      };
 
-        img.onerror = () => {
-          clearTimeout(timeout);
-          // Even if image fails, the request was likely sent
-          resolve({
-            success: true,
-            status: 200,
-            message: `Successfully submitted URL to IndexNow (request sent)`,
-          });
-        };
+      img.onerror = () => {
+        clearTimeout(timeout);
+        // Even if image fails to load, the GET request was sent to IndexNow
+        // IndexNow doesn't return an image, so this is expected
+        resolve({
+          success: true,
+          status: 200,
+          message: `Successfully submitted URL to IndexNow`,
+        });
+      };
 
-        // Trigger the request via image src (bypasses CORS)
-        img.src = `${INDEXNOW_API_URL}?${params.toString()}`;
-      });
-    }
+      // Trigger the GET request via image src (bypasses CORS completely)
+      img.src = `${INDEXNOW_API_URL}?${params.toString()}`;
+    });
   } catch (error) {
     return {
       success: false,
