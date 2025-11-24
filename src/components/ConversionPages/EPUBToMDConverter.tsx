@@ -632,37 +632,37 @@ export const EPUBToMDConverter: React.FC = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to Markdown format is essential for documentation creation, version control workflows, and technical writing. While EPUB files are excellent for reading and digital publishing, Markdown format provides plain text simplicity, version control compatibility, and seamless integration with documentation platforms and development workflows.
+              {t('epub_to_md.seo_intro')}
             </p>
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_md.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-teal-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-teal-900 mb-3">Plain Text Formatting</h4>
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">{t('epub_to_md.benefit_plaintext_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown uses simple plain text formatting that is easy to read, write, and edit, making it perfect for documentation and technical writing.
+                  {t('epub_to_md.benefit_plaintext_text')}
                 </p>
               </div>
               
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Version Control Friendly</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('epub_to_md.benefit_vcs_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown files work seamlessly with Git and other version control systems, enabling easy tracking of changes and collaboration on documentation.
+                  {t('epub_to_md.benefit_vcs_text')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">GitHub Compatible</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('epub_to_md.benefit_github_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown files are fully supported by GitHub and other Git platforms, providing rich rendering and easy integration with development workflows.
+                  {t('epub_to_md.benefit_github_text')}
                 </p>
               </div>
               
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Documentation Ready</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('epub_to_md.benefit_docs_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown format is perfect for creating documentation, README files, and technical content that can be easily rendered and shared.
+                  {t('epub_to_md.benefit_docs_text')}
                 </p>
               </div>
             </div>
@@ -673,32 +673,32 @@ export const EPUBToMDConverter: React.FC = () => {
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Documentation Creation</h4>
-                  <p className="text-gray-700">Convert e-books to Markdown format for creating technical documentation, user guides, and project documentation.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.usecase_docs_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.usecase_docs_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Version Control Workflows</h4>
-                  <p className="text-gray-700">Integrate e-book content into version control workflows by converting it to Markdown format for easy tracking and collaboration.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.usecase_vcs_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.usecase_vcs_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">GitHub Integration</h4>
-                  <p className="text-gray-700">Convert e-books to Markdown format for use in GitHub repositories, enabling rich rendering and easy collaboration.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.usecase_github_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.usecase_github_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Technical Writing</h4>
-                  <p className="text-gray-700">Create technical content and documentation by converting e-books to Markdown format for use in development and technical writing workflows.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.usecase_technical_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.usecase_technical_text')}</p>
                 </div>
               </div>
             </div>
