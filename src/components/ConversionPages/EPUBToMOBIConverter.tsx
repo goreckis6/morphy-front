@@ -270,7 +270,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_mobi.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -281,7 +281,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_mobi.batch_convert')}
                 </button>
               </div>
 
@@ -318,7 +318,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_mobi.choose_files')}
                 </button>
               </div>
 
