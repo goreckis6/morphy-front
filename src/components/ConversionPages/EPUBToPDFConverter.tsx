@@ -56,7 +56,7 @@ export const EPUBToPDFConverter: React.FC = () => {
       if (file.name.toLowerCase().endsWith('.epub')) {
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
+          setError(validation.error?.message || t('epub_to_pdf.error_validation_failed'));
           setSelectedFile(null);
           setPreviewUrl(null);
           if (fileInputRef.current) fileInputRef.current.value = '';
@@ -67,7 +67,7 @@ export const EPUBToPDFConverter: React.FC = () => {
         clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
-        setError('Please select a valid EPUB file');
+        setError(t('epub_to_pdf.error_invalid_file'));
       }
     }
   };
@@ -79,13 +79,13 @@ export const EPUBToPDFConverter: React.FC = () => {
     );
     
     if (epubFiles.length === 0) {
-      setError('No valid EPUB files selected.');
+      setError(t('epub_to_pdf.error_no_files'));
       return;
     }
 
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+      setError(validation.error?.message || t('epub_to_pdf.error_batch_validation_failed'));
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;

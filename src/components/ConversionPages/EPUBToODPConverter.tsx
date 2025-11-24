@@ -57,7 +57,7 @@ export const EPUBToODPConverter: React.FC = () => {
       if (file.name.toLowerCase().endsWith('.epub')) {
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
+          setError(validation.error?.message || t('epub_to_odp.error_validation_failed'));
           setSelectedFile(null);
           setPreviewUrl(null);
           if (fileInputRef.current) fileInputRef.current.value = '';
@@ -68,7 +68,7 @@ export const EPUBToODPConverter: React.FC = () => {
         clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
-        setError('Please select a valid EPUB file');
+        setError(t('epub_to_odp.error_invalid_file'));
       }
     }
   };
@@ -80,13 +80,13 @@ export const EPUBToODPConverter: React.FC = () => {
     );
     
     if (epubFiles.length === 0) {
-      setError('No valid EPUB files selected.');
+      setError(t('epub_to_odp.error_no_files'));
       return;
     }
 
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+      setError(validation.error?.message || t('epub_to_odp.error_batch_validation_failed'));
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -270,7 +270,7 @@ export const EPUBToODPConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_odp.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -281,7 +281,7 @@ export const EPUBToODPConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_odp.batch_convert')}
                 </button>
               </div>
 
@@ -318,7 +318,7 @@ export const EPUBToODPConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_odp.choose_files')}
                 </button>
               </div>
 
