@@ -479,7 +479,7 @@ export const EPUBToMDConverter: React.FC = () => {
                             )}
                             {!result.success && result.error && (
                               <div className="text-xs text-red-600 mt-1 ml-6 break-words">
-                                Failed to convert {result.originalName}
+                                {t('epub_to_md.failed_convert')} {result.originalName}
                               </div>
                             )}
                           </div>
@@ -488,7 +488,7 @@ export const EPUBToMDConverter: React.FC = () => {
                               onClick={() => handleBatchDownload(result)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
                             >
-                              Download
+                              {t('epub_to_md.download')}
                             </button>
                           )}
                         </div>
