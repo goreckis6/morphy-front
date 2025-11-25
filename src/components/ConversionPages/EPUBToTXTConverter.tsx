@@ -277,7 +277,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
                       ? 'bg-purple-600 text-white shadow-lg' 
-                      : 'bg-purple-100 text-purple-600 hover:bg-purple-200'
+                      : 'bg-white text-purple-600 hover:bg-purple-100'
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
