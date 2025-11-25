@@ -1,5 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
+import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +24,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToMDConverter: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -37,6 +40,9 @@ export const EPUBToMDConverter: React.FC = () => {
   const [batchResults, setBatchResults] = useState<any[]>([]);
   const [batchConverted, setBatchConverted] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Language synchronization
+  usePathLanguageSync(i18n);
 
   // Use shared validation hook
   const {
@@ -55,7 +61,7 @@ export const EPUBToMDConverter: React.FC = () => {
       if (file.name.toLowerCase().endsWith('.epub')) {
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
+          setError(validation.error?.message || t('epub_to_md.error_validation_failed'));
           setSelectedFile(null);
           setPreviewUrl(null);
           if (fileInputRef.current) fileInputRef.current.value = '';
@@ -66,7 +72,7 @@ export const EPUBToMDConverter: React.FC = () => {
         clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
-        setError('Please select a valid EPUB file');
+        setError(t('epub_to_md.error_invalid_file'));
       }
     }
   };
@@ -78,13 +84,13 @@ export const EPUBToMDConverter: React.FC = () => {
     );
     
     if (epubFiles.length === 0) {
-      setError('No valid EPUB files selected.');
+      setError(t('epub_to_md.error_invalid_file'));
       return;
     }
 
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+      setError(validation.error?.message || t('epub_to_md.error_batch_validation_failed'));
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -116,7 +122,7 @@ export const EPUBToMDConverter: React.FC = () => {
       setConvertedFile(result.blob);
       setConvertedFilename(result.filename);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      setError(t('epub_to_md.error_conversion_failed'));
     } finally {
       setIsConverting(false);
     }
@@ -141,12 +147,12 @@ export const EPUBToMDConverter: React.FC = () => {
       const successes = (result.results ?? []).filter(r => r.success);
       if (successes.length > 0) {
         const failures = (result.results ?? []).filter(r => !r.success);
-        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
+        setError(failures.length ? t('epub_to_md.files_failed', { count: failures.length }) : null);
       } else {
-        setError('Batch conversion failed. Please try again.');
+        setError(t('epub_to_md.error_batch_failed'));
       }
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      setError(t('epub_to_md.error_batch_failed'));
       setBatchResults([]);
       setBatchConverted(false);
     } finally {
@@ -159,13 +165,13 @@ export const EPUBToMDConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError('Download link is missing. Please reconvert.');
+      setError(t('epub_to_md.error_download_missing'));
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (error) {
-      setError('Download failed. Please try again.');
+      setError(t('epub_to_md.error_download_failed'));
     }
   };
 
@@ -211,9 +217,9 @@ export const EPUBToMDConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to Markdown Converter - Convert eBooks to MD Format</title>
-        <meta name="description" content="Free EPUB to Markdown converter. Convert EPUB ebook files to Markdown format for documentation and publishing. Transform digital books into clean Markdown text. Free online tool." />
-        <meta name="keywords" content="EPUB to Markdown, ebook converter, MD format, documentation, text conversion" />
+        <title>{t('epub_to_md.meta_title')}</title>
+        <meta name="description" content={t('epub_to_md.meta_description')} />
+        <meta name="keywords" content={t('epub_to_md.meta_keywords')} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50">
       <Header />
@@ -224,23 +230,23 @@ export const EPUBToMDConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to MD Converter
+              {t('epub_to_md.title')}
             </h1>
             <p className="text-lg sm:text-xl text-teal-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to Markdown format for documentation and version control. Transform e-books into plain text format with simple formatting.
+              {t('epub_to_md.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-teal-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_md.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_md.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_md.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -265,7 +271,7 @@ export const EPUBToMDConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_md.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -276,7 +282,7 @@ export const EPUBToMDConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_md.batch_convert')}
                 </button>
               </div>
 
@@ -284,22 +290,22 @@ export const EPUBToMDConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-teal-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_md.upload_multiple') : t('epub_to_md.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_md.upload_multiple_desc') 
+                    : t('epub_to_md.upload_single_desc')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-gray-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_md.single_limit_message')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-gray-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                    {getBatchInfoMessage()}
                   </p>
                 )}
                 <input
@@ -314,14 +320,14 @@ export const EPUBToMDConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-teal-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_md.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('common.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -342,7 +348,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_md.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -352,7 +358,7 @@ export const EPUBToMDConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_md.size_warning')}
                               </span>
                             </div>
                           </div>
@@ -372,10 +378,10 @@ export const EPUBToMDConverter: React.FC = () => {
               )}
 
               {/* Error Message */}
-              {error && (
+              {(error || validationError) && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error}</span>
+                  <span className="text-red-700">{error || validationError?.message}</span>
                 </div>
               )}
 
@@ -389,12 +395,12 @@ export const EPUBToMDConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_md.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to MD'}
+                      {batchMode ? t('epub_to_md.convert_files_count', { count: batchFiles.length }) : t('epub_to_md.convert_to_md')}
                     </div>
                   )}
                 </button>
@@ -405,10 +411,10 @@ export const EPUBToMDConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_md.conversion_success')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to Markdown format.
+                    {t('epub_to_md.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -416,14 +422,14 @@ export const EPUBToMDConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download MD File
+                      {t('epub_to_md.download_md')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_md.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -446,13 +452,13 @@ export const EPUBToMDConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_md.batch_complete') : t('epub_to_md.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('epub_to_md.batch_success_count', { successful: batchResults.filter(r => r.success).length, total: batchResults.length })}
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -474,7 +480,7 @@ export const EPUBToMDConverter: React.FC = () => {
                             )}
                             {!result.success && result.error && (
                               <div className="text-xs text-red-600 mt-1 ml-6 break-words">
-                                Failed to convert {result.originalName}
+                                {t('epub_to_md.failed_convert')} {result.originalName}
                               </div>
                             )}
                           </div>
@@ -483,7 +489,7 @@ export const EPUBToMDConverter: React.FC = () => {
                               onClick={() => handleBatchDownload(result)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
                             >
-                              Download
+                              {t('epub_to_md.download')}
                             </button>
                           )}
                         </div>
@@ -495,7 +501,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_md.convert_more')}
                   </button>
                 </div>
               )}</div>
@@ -508,7 +514,7 @@ export const EPUBToMDConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-teal-600" />
-                Markdown Settings
+                {t('epub_to_md.markdown_settings')}
               </h3>
               
               {/* Preserve Formatting */}
@@ -520,7 +526,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.preserve_formatting')}</span>
                 </label>
               </div>
 
@@ -533,7 +539,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.include_images')}</span>
                 </label>
               </div>
 
@@ -546,7 +552,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setExtractMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Extract book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.extract_metadata')}</span>
                 </label>
               </div>
 
@@ -559,7 +565,7 @@ export const EPUBToMDConverter: React.FC = () => {
                     onChange={(e) => setGithubCompatible(e.target.checked)}
                     className="rounded border-gray-300 text-teal-600 focus:ring-teal-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">GitHub compatible format</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_md.github_compatible')}</span>
                 </label>
               </div>
             </div>
@@ -568,16 +574,16 @@ export const EPUBToMDConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('epub_to_md.why_choose')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book to Markdown conversion",
-                  "Plain text formatting",
-                  "Version control friendly",
-                  "Documentation ready",
-                  "GitHub compatible",
-                  "Batch processing support"
+                  t('epub_to_md.benefit_1'),
+                  t('epub_to_md.benefit_2'),
+                  t('epub_to_md.benefit_3'),
+                  t('epub_to_md.benefit_4'),
+                  t('epub_to_md.benefit_5'),
+                  t('epub_to_md.benefit_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -591,16 +597,16 @@ export const EPUBToMDConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-teal-600" />
-                Perfect For
+                {t('epub_to_md.perfect_for')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Documentation creation",
-                  "Version control workflows",
-                  "GitHub integration",
-                  "Technical writing",
-                  "Content migration",
-                  "Plain text processing"
+                  t('epub_to_md.perfect_1'),
+                  t('epub_to_md.perfect_2'),
+                  t('epub_to_md.perfect_3'),
+                  t('epub_to_md.perfect_4'),
+                  t('epub_to_md.perfect_5'),
+                  t('epub_to_md.perfect_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -618,106 +624,106 @@ export const EPUBToMDConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('epub_to_md.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to MD?
+            {t('epub_to_md.seo_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to Markdown format is essential for documentation creation, version control workflows, and technical writing. While EPUB files are excellent for reading and digital publishing, Markdown format provides plain text simplicity, version control compatibility, and seamless integration with documentation platforms and development workflows.
+              {t('epub_to_md.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of Markdown Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_md.benefits_heading')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-teal-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-teal-900 mb-3">Plain Text Formatting</h4>
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">{t('epub_to_md.benefit_card_1_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown uses simple plain text formatting that is easy to read, write, and edit, making it perfect for documentation and technical writing.
+                  {t('epub_to_md.benefit_card_1_desc')}
                 </p>
               </div>
               
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Version Control Friendly</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('epub_to_md.benefit_card_2_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown files work seamlessly with Git and other version control systems, enabling easy tracking of changes and collaboration on documentation.
+                  {t('epub_to_md.benefit_card_2_desc')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">GitHub Compatible</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('epub_to_md.benefit_card_3_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown files are fully supported by GitHub and other Git platforms, providing rich rendering and easy integration with development workflows.
+                  {t('epub_to_md.benefit_card_3_desc')}
                 </p>
               </div>
               
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Documentation Ready</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('epub_to_md.benefit_card_4_title')}</h4>
                 <p className="text-gray-700">
-                  Markdown format is perfect for creating documentation, README files, and technical content that can be easily rendered and shared.
+                  {t('epub_to_md.benefit_card_4_desc')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_md.use_cases_heading')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Documentation Creation</h4>
-                  <p className="text-gray-700">Convert e-books to Markdown format for creating technical documentation, user guides, and project documentation.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.use_case_card_1_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.use_case_card_1_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Version Control Workflows</h4>
-                  <p className="text-gray-700">Integrate e-book content into version control workflows by converting it to Markdown format for easy tracking and collaboration.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.use_case_card_2_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.use_case_card_2_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">GitHub Integration</h4>
-                  <p className="text-gray-700">Convert e-books to Markdown format for use in GitHub repositories, enabling rich rendering and easy collaboration.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.use_case_card_3_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.use_case_card_3_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Technical Writing</h4>
-                  <p className="text-gray-700">Create technical content and documentation by converting e-books to Markdown format for use in development and technical writing workflows.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_md.use_case_card_4_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_md.use_case_card_4_desc')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_md.cta_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to Markdown converter to transform your e-books into documentation-ready Markdown files.
+                {t('epub_to_md.cta_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_md.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_md.back_to_home')}
                 </button>
               </div>
             </div>

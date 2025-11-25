@@ -1017,6 +1017,22 @@ function App() {
         <Route path="/ja/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
         <Route path="/zh/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
 
+        {/* EPUB to MD Routes for All Languages */}
+        <Route path="/id/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/sv/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/es/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/fr/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/it/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/nl/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/pt/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/vi/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/tr/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/ru/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/ar/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/th/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/ja/convert/epub-to-md" element={<EPUBToMDConverter />} />
+        <Route path="/zh/convert/epub-to-md" element={<EPUBToMDConverter />} />
+
         {/* New Languages Converter Routes - HEIC to SVG */}
         <Route path="/id/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
         <Route path="/sv/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
