@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -23,7 +22,6 @@ import {
 } from 'lucide-react';
 
 export const EPUBToXLSXConverter: React.FC = () => {
-  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -179,13 +177,13 @@ export const EPUBToXLSXConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError(t('epub_to_xlsx.error_download_missing'));
+      setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (e) {
-      setError(t('epub_to_xlsx.error_download_failed'));
+      setError('Failed to download file. Please try again.');
     }
   };
 
@@ -219,8 +217,8 @@ export const EPUBToXLSXConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{t('epub_to_xlsx.meta_title')}</title>
-        <meta name="description" content={t('epub_to_xlsx.meta_description')} />
+        <title>Free EPUB to XLSX Converter - Convert eBooks to Excel Format</title>
+        <meta name="description" content="Free EPUB to XLSX converter. Convert EPUB ebook files to XLSX spreadsheet format. Extract ebook metadata and content into Excel-compatible format. Free online tool." />
         <meta name="keywords" content="EPUB to XLSX, ebook to Excel, spreadsheet converter, Excel format" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
@@ -232,23 +230,23 @@ export const EPUBToXLSXConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t('epub_to_xlsx.title')}
+              EPUB to XLSX Converter
             </h1>
             <p className="text-lg sm:text-xl text-green-100 mb-6 max-w-2xl mx-auto">
-              {t('epub_to_xlsx.subtitle')} Extract tabular data and metadata from e-books and transform into spreadsheet format.
+              Convert EPUB e-book files to Excel XLSX format for data analysis. Extract tabular data and metadata from e-books and transform into spreadsheet format.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>{t('epub_to_xlsx.lightning_fast')}</span>
+                <span>Lightning Fast</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>{t('epub_to_xlsx.secure')}</span>
+                <span>100% Secure</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>{t('epub_to_xlsx.no_registration')}</span>
+                <span>No Registration</span>
               </div>
             </div>
           </div>
@@ -273,7 +271,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  {t('epub_to_xlsx.single_file')}
+                  Single File
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -284,7 +282,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  {t('epub_to_xlsx.batch_convert')}
+                  Batch Convert
                 </button>
               </div>
 
@@ -292,22 +290,23 @@ export const EPUBToXLSXConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? t('epub_to_xlsx.upload_multiple') : t('epub_to_xlsx.upload_single')}
+                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? t('epub_to_xlsx.select_multiple_desc') 
-                    : t('epub_to_xlsx.drag_drop_desc')
+                    ? 'Select multiple EPUB files to convert them all at once' 
+                    : 'Drag and drop your EPUB file here or click to browse'
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-green-600 mb-4">
-                    {t('epub_to_xlsx.single_limit_message')}
+                    Single file limit: 100.00 MB per file.
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-green-600 mb-4">
-                    {t('epub_to_xlsx.batch_limit_message')}</p>
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                  </p>
                 )}
                 <input
                   ref={fileInputRef}
@@ -321,14 +320,14 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
-                  {t('epub_to_xlsx.choose_files')}
+                  Choose Files
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_xlsx.preview')}</h4>
+                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -349,7 +348,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">{t('epub_to_xlsx.selected_files')} ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -359,7 +358,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                {t('epub_to_xlsx.size_warning')} Consider processing fewer files for better performance.
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
                               </span>
                             </div>
                           </div>
@@ -396,12 +395,12 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      {t('epub_to_xlsx.converting')}
+                      Converting...
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('epub_to_xlsx.convert_batch', { count: batchFiles.length }) : t('epub_to_xlsx.convert_button')}
+                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to XLSX'}
                     </div>
                   )}
                 </button>
@@ -412,10 +411,10 @@ export const EPUBToXLSXConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_xlsx.conversion_success')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {t('epub_to_xlsx.conversion_success_desc')}
+                    Your EPUB file has been successfully converted to XLSX format.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -423,14 +422,14 @@ export const EPUBToXLSXConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      {t('epub_to_xlsx.download_file')}
+                      Download XLSX File
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      {t('epub_to_xlsx.convert_another')}
+                      Convert Another
                     </button>
                   </div>
                 </div>
@@ -453,7 +452,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_xlsx.batch_success') : t('epub_to_xlsx.batch_failed')}
+                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
@@ -502,7 +501,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    {t('epub_to_xlsx.convert_more')}
+                    Convert More Files
                   </button>
                 </div>
               )}</div>
@@ -628,7 +627,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← {t('epub_to_xlsx.back_home')}
+            ← Back to Home
           </button>
         </div>
 
@@ -643,7 +642,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
               Converting EPUB e-book files to Excel XLSX format is essential for e-book content analysis, digital library management, and data analysis workflows. While EPUB files are excellent for reading, XLSX format provides powerful data analysis capabilities, enabling you to extract, organize, and analyze e-book content, metadata, and structured data for research, management, and analytical purposes.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_xlsx.benefits_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of XLSX Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-lg">
@@ -675,7 +674,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_xlsx.use_cases_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
@@ -712,9 +711,9 @@ export const EPUBToXLSXConverter: React.FC = () => {
             </div>
 
             <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">{t('epub_to_xlsx.ready_title')}</h3>
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                {t('epub_to_xlsx.ready_text')}
+                Use our free online EPUB to XLSX converter to transform your e-books into data-ready Excel spreadsheets.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button

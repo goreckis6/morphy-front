@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -23,7 +22,6 @@ import {
 } from 'lucide-react';
 
 export const EPUBToPDFConverter: React.FC = () => {
-  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -56,7 +54,7 @@ export const EPUBToPDFConverter: React.FC = () => {
       if (file.name.toLowerCase().endsWith('.epub')) {
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || t('epub_to_pdf.error_validation_failed'));
+          setError(validation.error?.message || 'File validation failed');
           setSelectedFile(null);
           setPreviewUrl(null);
           if (fileInputRef.current) fileInputRef.current.value = '';
@@ -67,7 +65,7 @@ export const EPUBToPDFConverter: React.FC = () => {
         clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
-        setError(t('epub_to_pdf.error_invalid_file'));
+        setError('Please select a valid EPUB file');
       }
     }
   };
@@ -79,13 +77,13 @@ export const EPUBToPDFConverter: React.FC = () => {
     );
     
     if (epubFiles.length === 0) {
-      setError(t('epub_to_pdf.error_no_files'));
+      setError('No valid EPUB files selected.');
       return;
     }
 
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || t('epub_to_pdf.error_batch_validation_failed'));
+      setError(validation.error?.message || 'Batch validation failed');
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -163,13 +161,13 @@ export const EPUBToPDFConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError(t('epub_to_pdf.error_download_missing'));
+      setError('Download link is missing. Please reconvert.');
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
-    } catch (e) {
-      setError(t('epub_to_pdf.error_download_failed'));
+    } catch (error) {
+      setError('Download failed. Please try again.');
     }
   };
 
@@ -215,8 +213,8 @@ export const EPUBToPDFConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{t('epub_to_pdf.meta_title')}</title>
-        <meta name="description" content={t('epub_to_pdf.meta_description')} />
+        <title>Free EPUB to PDF Converter - Convert eBooks to PDF Format</title>
+        <meta name="description" content="Free EPUB to PDF converter. Convert EPUB ebook files to PDF format for universal compatibility. Professional ebook conversion with layout preservation. Free online converter." />
         <meta name="keywords" content="EPUB to PDF, ebook converter, PDF format, document conversion, batch processing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -228,23 +226,23 @@ export const EPUBToPDFConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t('epub_to_pdf.title')}
+              EPUB to PDF Converter
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-              {t('epub_to_pdf.subtitle')}
+              Convert EPUB e-book files to PDF format for universal document sharing. Transform e-books into PDF documents with preserved formatting and layout.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>{t('epub_to_pdf.lightning_fast')}</span>
+                <span>Lightning Fast</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>{t('epub_to_pdf.secure')}</span>
+                <span>100% Secure</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>{t('epub_to_pdf.no_registration')}</span>
+                <span>No Registration</span>
               </div>
             </div>
           </div>
@@ -269,7 +267,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  {t('epub_to_pdf.single_file')}
+                  Single File
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -280,7 +278,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  {t('epub_to_pdf.batch_convert')}
+                  Batch Convert
                 </button>
               </div>
 
@@ -288,22 +286,23 @@ export const EPUBToPDFConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-purple-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? t('epub_to_pdf.upload_multiple') : t('epub_to_pdf.upload_single')}
+                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? t('epub_to_pdf.select_multiple_desc') 
-                    : t('epub_to_pdf.drag_drop_desc')
+                    ? 'Select multiple EPUB files to convert them all at once' 
+                    : 'Drag and drop your EPUB file here or click to browse'
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-purple-600 mb-4">
-                    {t('epub_to_pdf.single_limit_message')}
+                    Single file limit: 100.00 MB per file.
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-purple-600 mb-4">
-                    {t('epub_to_pdf.batch_limit_message')}</p>
+                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                  </p>
                 )}
                 <input
                   ref={fileInputRef}
@@ -317,14 +316,14 @@ export const EPUBToPDFConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
                 >
-                  {t('epub_to_pdf.choose_files')}
+                  Choose Files
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_pdf.preview')}</h4>
+                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -345,7 +344,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">{t('epub_to_pdf.selected_files')} ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -355,7 +354,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                {t('epub_to_pdf.size_warning')}
+                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
                               </span>
                             </div>
                           </div>
@@ -392,12 +391,12 @@ export const EPUBToPDFConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      {t('epub_to_pdf.converting')}
+                      Converting...
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('epub_to_pdf.convert_batch', { count: batchFiles.length }) : t('epub_to_pdf.convert_button')}
+                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to PDF'}
                     </div>
                   )}
                 </button>
@@ -408,10 +407,10 @@ export const EPUBToPDFConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_pdf.conversion_success')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    {t('epub_to_pdf.conversion_success_desc')}
+                    Your EPUB file has been successfully converted to PDF format.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -419,14 +418,14 @@ export const EPUBToPDFConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      {t('epub_to_pdf.download_file')}
+                      Download PDF File
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      {t('epub_to_pdf.convert_another')}
+                      Convert Another
                     </button>
                   </div>
                 </div>
@@ -449,13 +448,13 @@ export const EPUBToPDFConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_pdf.batch_success') : t('epub_to_pdf.batch_failed')}
+                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {t('epub_to_pdf.batch_success_count', { success: batchResults.filter(r => r.success).length, total: batchResults.length })}
+                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => {
@@ -480,7 +479,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                               )}
                               {!result.success && result.error && (
                                 <div className="text-xs text-red-600 mt-1 ml-6 break-words">
-                                  {t('epub_to_pdf.failed_to_convert')}: {result.originalName}
+                                  Failed to convert {result.originalName}
                                 </div>
                               )}
                             </div>
@@ -489,7 +488,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                                 onClick={() => handleBatchDownload(result)}
                                 className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
                               >
-                                {t('epub_to_pdf.download')}
+                                Download
                               </button>
                             )}
                           </div>
@@ -502,7 +501,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    {t('epub_to_pdf.convert_more')}
+                    Convert More Files
                   </button>
                 </div>
               )}</div>
@@ -515,29 +514,29 @@ export const EPUBToPDFConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-purple-600" />
-                {t('epub_to_pdf.settings_title')}
+                PDF Settings
               </h3>
               
               {/* Page Size */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  {t('epub_to_pdf.page_size')}
+                  Page Size
                 </label>
                 <select
                   value={pageSize}
                   onChange={(e) => setPageSize(e.target.value as 'A4' | 'A3' | 'Letter')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 >
-                  <option value="A4">{t('epub_to_pdf.page_a4')}</option>
-                  <option value="A3">{t('epub_to_pdf.page_a3')}</option>
-                  <option value="Letter">{t('epub_to_pdf.page_letter')}</option>
+                  <option value="A4">A4 (210 × 297 mm)</option>
+                  <option value="A3">A3 (297 × 420 mm)</option>
+                  <option value="Letter">Letter (8.5 × 11 in)</option>
                 </select>
               </div>
 
               {/* Orientation */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  {t('epub_to_pdf.orientation')}
+                  Orientation
                 </label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
@@ -548,7 +547,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                         : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                     }`}
                   >
-                    {t('epub_to_pdf.portrait')}
+                    Portrait
                   </button>
                   <button
                     onClick={() => setOrientation('landscape')}
@@ -558,7 +557,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                         : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                     }`}
                   >
-                    {t('epub_to_pdf.landscape')}
+                    Landscape
                   </button>
                 </div>
               </div>
@@ -572,7 +571,7 @@ export const EPUBToPDFConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_pdf.include_images')}</span>
+                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
                 </label>
               </div>
             </div>
@@ -581,16 +580,16 @@ export const EPUBToPDFConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                {t('epub_to_pdf.why_choose')}
+                Why Choose Our Converter?
               </h3>
               <div className="space-y-4">
                 {[
-                  t('epub_to_pdf.feature_document'),
-                  t('epub_to_pdf.feature_format'),
-                  t('epub_to_pdf.feature_formatting'),
-                  t('epub_to_pdf.feature_quality'),
-                  t('epub_to_pdf.feature_metadata'),
-                  t('epub_to_pdf.feature_batch')
+                  "E-book to PDF conversion",
+                  "Universal document format",
+                  "Formatting preservation",
+                  "Print-ready output",
+                  "Cross-platform compatibility",
+                  "Batch processing support"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -604,16 +603,16 @@ export const EPUBToPDFConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-purple-600" />
-                {t('epub_to_pdf.perfect_for')}
+                Perfect For
               </h3>
               <div className="space-y-3">
                 {[
-                  t('epub_to_pdf.perfect_1'),
-                  t('epub_to_pdf.perfect_2'),
-                  t('epub_to_pdf.perfect_3'),
-                  t('epub_to_pdf.perfect_4'),
-                  t('epub_to_pdf.perfect_5'),
-                  t('epub_to_pdf.perfect_6')
+                  "Document sharing and distribution",
+                  "E-book archiving",
+                  "Print-ready documents",
+                  "Universal document format",
+                  "Content preservation",
+                  "Professional document workflows"
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -631,106 +630,106 @@ export const EPUBToPDFConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← {t('epub_to_pdf.back_home')}
+            ← Back to Home
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            {t('epub_to_pdf.seo_title')}
+            Why Convert EPUB to PDF?
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              {t('epub_to_pdf.seo_intro')}
+              Converting EPUB e-book files to PDF format is essential for universal document sharing, archiving, and professional workflows. While EPUB is excellent for digital reading, PDF provides universal compatibility, print-ready output, and ensures your content is accessible across all platforms and devices.
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_pdf.benefits_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of PDF Format</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('epub_to_pdf.benefit_1_title')}</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">Universal Compatibility</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_pdf.benefit_1_desc')}
+                  PDF files can be opened on any device, operating system, or platform, ensuring your e-book content is accessible to everyone, everywhere.
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('epub_to_pdf.benefit_2_title')}</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">Print-Ready Format</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_pdf.benefit_2_desc')}
+                  PDF files are optimized for printing, ensuring your e-book content looks crisp and professional when printed on paper or converted to physical books.
                 </p>
               </div>
               
               <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">{t('epub_to_pdf.benefit_3_title')}</h4>
+                <h4 className="text-xl font-semibold text-green-900 mb-3">Format Preservation</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_pdf.benefit_3_desc')}
+                  PDF maintains exact formatting, fonts, images, and layout, ensuring your e-book content looks identical across all devices and platforms.
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('epub_to_pdf.benefit_4_title')}</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">Professional Sharing</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_pdf.benefit_4_desc')}
+                  PDF is the standard format for professional document sharing, making it ideal for business communications, academic papers, and official documents.
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_pdf.use_cases_title')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_pdf.use_case_1_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_pdf.use_case_1_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Document Sharing and Distribution</h4>
+                  <p className="text-gray-700">Convert EPUB e-books to PDF for easy sharing via email, cloud storage, or document management systems that require PDF format.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_pdf.use_case_2_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_pdf.use_case_2_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">E-book Archiving</h4>
+                  <p className="text-gray-700">Archive your digital library by converting EPUB files to PDF, ensuring long-term accessibility and preservation of your e-book collection.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_pdf.use_case_3_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_pdf.use_case_3_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Print-Ready Documents</h4>
+                  <p className="text-gray-700">Create print-ready versions of your e-books for physical printing, ensuring professional quality and consistent formatting.</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_pdf.use_case_4_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_pdf.use_case_4_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Professional Document Workflows</h4>
+                  <p className="text-gray-700">Integrate e-book content into professional workflows that require PDF format for review, approval, and distribution processes.</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">{t('epub_to_pdf.ready_title')}</h3>
+              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
               <p className="text-lg mb-6 opacity-90">
-                {t('epub_to_pdf.ready_text')}
+                Use our free online EPUB to PDF converter to transform your e-books into universal PDF documents.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  {t('epub_to_pdf.cta_start')}
+                  Start Converting Now
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  {t('epub_to_pdf.back_home')}
+                  Back to Home
                 </button>
               </div>
             </div>
