@@ -233,7 +233,7 @@ export const EPUBToPPTXConverter: React.FC = () => {
               {t('epub_to_pptx.title')}
             </h1>
             <p className="text-lg sm:text-xl text-purple-100 mb-6 max-w-2xl mx-auto">
-              {t('epub_to_pptx.subtitle')} Transform e-books into advanced presentation slides with enhanced features.
+              {t('epub_to_pptx.subtitle')} {t('epub_to_pptx.subtitle_extended')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-purple-200">
               <div className="flex items-center gap-2">
