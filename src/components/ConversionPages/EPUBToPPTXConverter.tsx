@@ -58,7 +58,7 @@ export const EPUBToPPTXConverter: React.FC = () => {
       if (file.name.toLowerCase().endsWith('.epub')) {
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || 'File validation failed');
+          setError(validation.error?.message || t('epub_to_pptx.error_validation_failed'));
           setSelectedFile(null);
           setPreviewUrl(null);
           if (fileInputRef.current) fileInputRef.current.value = '';
@@ -69,7 +69,7 @@ export const EPUBToPPTXConverter: React.FC = () => {
         clearValidationError();
         setPreviewUrl(URL.createObjectURL(file));
       } else {
-        setError('Please select a valid EPUB file');
+        setError(t('epub_to_pptx.error_invalid_file'));
       }
     }
   };
@@ -81,13 +81,13 @@ export const EPUBToPPTXConverter: React.FC = () => {
     );
     
     if (epubFiles.length === 0) {
-      setError('No valid EPUB files selected.');
+      setError(t('epub_to_pptx.error_no_files'));
       return;
     }
 
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || 'Batch validation failed');
+      setError(validation.error?.message || t('epub_to_pptx.error_batch_validation_failed'));
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -120,7 +120,7 @@ export const EPUBToPPTXConverter: React.FC = () => {
       setConvertedFilename(result.filename);
       setBatchResults([]);
     } catch (err) {
-      setError('Conversion failed. Please try again.');
+      setError(t('epub_to_pptx.error_conversion_failed'));
     } finally {
       setIsConverting(false);
     }
@@ -145,15 +145,15 @@ export const EPUBToPPTXConverter: React.FC = () => {
       const successes = (result.results ?? []).filter(r => r.success);
       if (successes.length > 0) {
         const failures = (result.results ?? []).filter(r => !r.success);
-        setError(failures.length ? `${failures.length} file${failures.length > 1 ? 's' : ''} failed.` : null);
+        setError(failures.length ? t('epub_to_pptx.error_batch_partial', { count: failures.length }) : null);
       } else {
-        setError('Batch conversion failed. Please try again.');
+        setError(t('epub_to_pptx.error_batch_failed'));
         setBatchConverted(false);
       }
       setConvertedFile(null);
       setConvertedFilename(null);
     } catch (err) {
-      setError('Batch conversion failed. Please try again.');
+      setError(t('epub_to_pptx.error_batch_failed'));
       setBatchResults([]);
       setBatchConverted(false);
     } finally {
@@ -177,13 +177,13 @@ export const EPUBToPPTXConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError('Download link is missing. Please reconvert.');
+      setError(t('epub_to_pptx.error_download_missing'));
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (e) {
-      setError('Failed to download file. Please try again.');
+      setError(t('epub_to_pptx.error_download_failed'));
     }
   };
 
@@ -219,7 +219,7 @@ export const EPUBToPPTXConverter: React.FC = () => {
       <Helmet>
         <title>{t('epub_to_pptx.meta_title')}</title>
         <meta name="description" content={t('epub_to_pptx.meta_description')} />
-        <meta name="keywords" content="EPUB to PPTX, ebook to PowerPoint, presentation converter, batch conversion" />
+        <meta name="keywords" content={t('epub_to_pptx.meta_keywords')} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
       <Header />
