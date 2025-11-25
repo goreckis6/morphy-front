@@ -1001,6 +1001,22 @@ function App() {
         <Route path="/ja/convert/epub-to-docx" element={<EPUBToDOCXConverter />} />
         <Route path="/zh/convert/epub-to-docx" element={<EPUBToDOCXConverter />} />
 
+        {/* EPUB to HTML Routes for All Languages */}
+        <Route path="/id/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/sv/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/es/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/fr/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/it/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/nl/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/pt/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/vi/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/tr/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/ru/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/ar/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/th/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/ja/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+        <Route path="/zh/convert/epub-to-html" element={<EPUBToHTMLConverter />} />
+
         {/* New Languages Converter Routes - HEIC to SVG */}
         <Route path="/id/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
         <Route path="/sv/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
