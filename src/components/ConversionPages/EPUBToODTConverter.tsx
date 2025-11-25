@@ -272,7 +272,7 @@ export const EPUBToODTConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_odt.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -283,7 +283,7 @@ export const EPUBToODTConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_odt.batch_convert')}
                 </button>
               </div>
 
@@ -318,9 +318,9 @@ export const EPUBToODTConverter: React.FC = () => {
                 />
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_odt.choose_files')}
                 </button>
               </div>
 

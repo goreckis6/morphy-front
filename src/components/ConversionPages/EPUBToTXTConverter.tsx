@@ -176,13 +176,13 @@ export const EPUBToTXTConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError('Download link is missing. Please reconvert.');
+      setError(t('epub_to_txt.error_download_missing'));
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (e) {
-      setError('Failed to download file. Please try again.');
+      setError(t('epub_to_txt.error_download_failed'));
     }
   };
 
@@ -270,7 +270,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_txt.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -281,7 +281,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_txt.batch_convert')}
                 </button>
               </div>
 
@@ -356,7 +356,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                {t('epub_to_txt.size_warning')} Consider processing fewer files for better performance.
+                                {t('epub_to_txt.size_warning')} {t('epub_to_txt.size_warning_performance')}
                               </span>
                             </div>
                           </div>

@@ -179,13 +179,13 @@ export const EPUBToXLSXConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError('Download link is missing. Please reconvert.');
+      setError(t('epub_to_xlsx.error_download_missing'));
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
     } catch (e) {
-      setError('Failed to download file. Please try again.');
+      setError(t('epub_to_xlsx.error_download_failed'));
     }
   };
 
@@ -273,7 +273,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_xlsx.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -284,7 +284,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_xlsx.batch_convert')}
                 </button>
               </div>
 
@@ -321,7 +321,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_xlsx.choose_files')}
                 </button>
               </div>
 

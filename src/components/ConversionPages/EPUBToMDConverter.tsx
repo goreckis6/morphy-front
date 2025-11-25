@@ -161,13 +161,13 @@ export const EPUBToMDConverter: React.FC = () => {
     // Use downloadPath if available, otherwise fall back to storedFilename
     const downloadPath = result.downloadPath || (result.storedFilename ? `/download/${encodeURIComponent(result.storedFilename)}` : null);
     if (!downloadPath) {
-      setError('Download link is missing. Please reconvert.');
+      setError(t('epub_to_md.error_download_missing'));
       return;
     }
     try {
       await apiService.downloadAndSaveFile(downloadPath, result.outputFilename);
-    } catch (error) {
-      setError('Download failed. Please try again.');
+    } catch (e) {
+      setError(t('epub_to_md.error_download_failed'));
     }
   };
 
