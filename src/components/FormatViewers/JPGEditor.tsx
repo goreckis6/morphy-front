@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Search, X, Download, Print, FileText, RotateCw, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, X, Download, Printer, FileText, RotateCw, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FileProcessor } from '../../utils/fileProcessing';
 
 interface JPGEditorProps {
@@ -368,7 +368,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                 className="btn-icon w-9 h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
                 title="Print Image"
               >
-                <Print className="w-4 h-4" />
+                <Printer className="w-4 h-4" />
               </button>
 
               <button
