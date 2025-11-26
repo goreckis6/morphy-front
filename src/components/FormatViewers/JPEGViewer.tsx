@@ -112,7 +112,7 @@ export const JPEGViewer: React.FC = () => {
               </div>
 
               {/* Title - Smaller and moved up */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1.5 sm:mb-2 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-5 leading-tight">
                 {t('viewers.jpeg.hero_title')}
               </h1>
               
