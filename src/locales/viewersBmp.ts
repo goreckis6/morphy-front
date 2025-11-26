@@ -38,7 +38,7 @@ const resources: Record<string, ViewerBmpTranslations> = {
   en: {
     viewers: {
       bmp: {
-        meta_title: 'Free BMP Viewer - View Bitmap Images Online | MorphyHub',
+        meta_title: 'Free BMP Viewer - View Bitmap Images Online',
         meta_description:
           'View BMP bitmap images online instantly. Free BMP viewer with color-depth support, pixel inspection tools, and batch preview for up to 20 files.',
         meta_keywords:
@@ -107,7 +107,7 @@ const resources: Record<string, ViewerBmpTranslations> = {
   pl: {
     viewers: {
       bmp: {
-        meta_title: 'Darmowy Podgląd BMP - Wyświetlaj Obrazy Bitmapy Online | MorphyHub',
+        meta_title: 'Darmowy Podgląd BMP - Wyświetlaj Obrazy Bitmapy Online',
         meta_description:
           'Wyświetlaj bitmapy BMP online w kilka sekund. Darmowy podgląd BMP z obsługą głębi kolorów, inspekcją pikseli i podglądem wsadowym do 20 plików.',
         meta_keywords:
@@ -176,7 +176,7 @@ const resources: Record<string, ViewerBmpTranslations> = {
   de: {
     viewers: {
       bmp: {
-        meta_title: 'Kostenloser BMP Viewer – Bitmap-Bilder Online Anzeigen | MorphyHub',
+        meta_title: 'Kostenloser BMP Viewer – Bitmap-Bilder Online Anzeigen',
         meta_description:
           'Zeige Bitmap-Bilder (BMP) direkt im Browser. Kostenloser BMP-Viewer mit Farbtiefe-Unterstützung, Pixel-Inspektion und Stapelvorschau für bis zu 20 Dateien.',
         meta_keywords:

@@ -54,7 +54,7 @@ const resources: Record<string, ViewerCr2Translations> = {
   en: {
     viewers: {
       cr2: {
-        meta_title: 'Free CR2 Viewer - Preview Canon Raw Files Online | MorphyHub',
+        meta_title: 'Free CR2 Viewer - Preview Canon Raw Files Online',
         meta_description:
           'Open and inspect CR2 (Canon Raw) photos directly in your browser. Our free CR2 viewer delivers sensor-accurate rendering, metadata insights, zoom controls, and batch support for up to 20 raw files.',
         meta_keywords:
@@ -144,7 +144,7 @@ const resources: Record<string, ViewerCr2Translations> = {
   pl: {
     viewers: {
       cr2: {
-        meta_title: 'Darmowy Podgląd CR2 - Podglądaj Pliki RAW Canon Online | MorphyHub',
+        meta_title: 'Darmowy Podgląd CR2 - Podglądaj Pliki RAW Canon Online',
         meta_description:
           'Otwieraj i przeglądaj zdjęcia CR2 (Canon Raw) bezpośrednio w przeglądarce. Nasz darmowy podgląd CR2 zapewnia wierne odwzorowanie z sensora, metadane, kontrolę powiększenia i obsługę wsadową do 20 plików RAW.',
         meta_keywords:
@@ -234,7 +234,7 @@ const resources: Record<string, ViewerCr2Translations> = {
   de: {
     viewers: {
       cr2: {
-        meta_title: 'Kostenloser CR2 Viewer – Canon Raw Dateien Online Anzeigen | MorphyHub',
+        meta_title: 'Kostenloser CR2 Viewer – Canon Raw Dateien Online Anzeigen',
         meta_description:
           'Öffnen und überprüfen Sie CR2 (Canon Raw) Fotos direkt in Ihrem Browser. Unser kostenloser CR2 Viewer liefert sensorgenaues Rendering, Metadaten-Einblicke, Zoom-Kontrollen und Batch-Unterstützung für bis zu 20 Raw-Dateien.',
         meta_keywords:

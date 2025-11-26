@@ -54,7 +54,7 @@ const resources: Record<string, ViewerAvifTranslations> = {
   en: {
     viewers: {
       avif: {
-        meta_title: 'Free AVIF Viewer - Preview AVIF Images Online | MorphyHub',
+        meta_title: 'Free AVIF Viewer - Preview AVIF Images Online',
         meta_description:
           'View and preview AVIF (AV1 Image File Format) images directly in your browser. Our free AVIF viewer features high-quality rendering, color accuracy, and professional image viewing tools.',
         meta_keywords:
@@ -145,7 +145,7 @@ const resources: Record<string, ViewerAvifTranslations> = {
   pl: {
     viewers: {
       avif: {
-        meta_title: 'Darmowy Podgląd AVIF - Podglądaj Obrazy AVIF Online | MorphyHub',
+        meta_title: 'Darmowy Podgląd AVIF - Podglądaj Obrazy AVIF Online',
         meta_description:
           'Przeglądaj i podglądaj obrazy AVIF (AV1 Image File Format) bezpośrednio w przeglądarce. Nasz darmowy podgląd AVIF oferuje wysokiej jakości renderowanie, dokładność kolorów i profesjonalne narzędzia do przeglądania obrazów.',
         meta_keywords:
@@ -236,7 +236,7 @@ const resources: Record<string, ViewerAvifTranslations> = {
   de: {
     viewers: {
       avif: {
-        meta_title: 'Kostenloser AVIF Viewer – AVIF Bilder Online Anzeigen | MorphyHub',
+        meta_title: 'Kostenloser AVIF Viewer – AVIF Bilder Online Anzeigen',
         meta_description:
           'Betrachten und zeigen Sie AVIF (AV1 Image File Format) Bilder direkt in Ihrem Browser an. Unser kostenloser AVIF Viewer bietet hochwertiges Rendering, Farbgenauigkeit und professionelle Bildanzeigetools.',
         meta_keywords:

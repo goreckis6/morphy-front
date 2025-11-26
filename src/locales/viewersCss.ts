@@ -54,7 +54,7 @@ const resources: Record<string, ViewerCssTranslations> = {
   en: {
     viewers: {
       css: {
-        meta_title: 'Free CSS Viewer - Preview CSS Files Online with Syntax Highlighting | MorphyHub',
+        meta_title: 'Free CSS Viewer - Preview CSS Files Online with Syntax Highlighting',
         meta_description:
           'View and preview CSS, SCSS, SASS, and LESS files directly in your browser. Our free CSS viewer features syntax highlighting, live preview, and professional styling tools for web developers.',
         meta_keywords:
@@ -144,7 +144,7 @@ const resources: Record<string, ViewerCssTranslations> = {
   pl: {
     viewers: {
       css: {
-        meta_title: 'Darmowy Podgląd CSS - Podglądaj Pliki CSS Online z Podświetlaniem Składni | MorphyHub',
+        meta_title: 'Darmowy Podgląd CSS - Podglądaj Pliki CSS Online z Podświetlaniem Składni',
         meta_description:
           'Przeglądaj i podglądaj pliki CSS, SCSS, SASS i LESS bezpośrednio w przeglądarce. Nasz darmowy podgląd CSS oferuje podświetlanie składni, podgląd na żywo i profesjonalne narzędzia stylowania dla programistów internetowych.',
         meta_keywords:
@@ -234,7 +234,7 @@ const resources: Record<string, ViewerCssTranslations> = {
   de: {
     viewers: {
       css: {
-        meta_title: 'Kostenloser CSS Viewer – CSS Dateien Online mit Syntax-Hervorhebung Anzeigen | MorphyHub',
+        meta_title: 'Kostenloser CSS Viewer – CSS Dateien Online mit Syntax-Hervorhebung Anzeigen',
         meta_description:
           'Betrachten und zeigen Sie CSS, SCSS, SASS und LESS Dateien direkt in Ihrem Browser an. Unser kostenloser CSS Viewer bietet Syntax-Hervorhebung, Live-Vorschau und professionelle Styling-Tools für Webentwickler.',
         meta_keywords:

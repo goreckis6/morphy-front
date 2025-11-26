@@ -54,7 +54,7 @@ const resources: Record<string, ViewersDngTranslations> = {
   en: {
     viewers: {
       dng: {
-        meta_title: 'Free DNG Viewer - Preview Digital Negative Files Online | MorphyHub',
+        meta_title: 'Free DNG Viewer - Preview Digital Negative Files Online',
         meta_description:
           'Open and inspect DNG (Digital Negative) photos directly in your browser. Our free DNG viewer delivers sensor-accurate rendering, metadata insights, zoom controls, and batch support for up to 20 raw files.',
         meta_keywords:
@@ -145,7 +145,7 @@ const resources: Record<string, ViewersDngTranslations> = {
   pl: {
     viewers: {
       dng: {
-        meta_title: 'Darmowy podgląd DNG – Otwieraj pliki Digital Negative online | MorphyHub',
+        meta_title: 'Darmowy podgląd DNG – Otwieraj pliki Digital Negative online',
         meta_description:
           'Przeglądaj pliki DNG (Digital Negative) bezpośrednio w przeglądarce. Darmowy podgląd DNG oferuje wierne odwzorowanie sensora, szczegółowe metadane, powiększanie i obsługę do 20 surowych plików naraz.',
         meta_keywords:
@@ -236,7 +236,7 @@ const resources: Record<string, ViewersDngTranslations> = {
   de: {
     viewers: {
       dng: {
-        meta_title: 'Kostenloser DNG Viewer – Digital-Negative-Dateien online anzeigen | MorphyHub',
+        meta_title: 'Kostenloser DNG Viewer – Digital-Negative-Dateien online anzeigen',
         meta_description:
           'Öffne und inspiziere DNG (Digital Negative) Fotos direkt im Browser. Unser kostenloser DNG Viewer bietet sensorgetreue Darstellung, umfangreiche Metadaten, Zoom-Werkzeuge und Stapelverarbeitung für bis zu 20 RAW-Dateien.',
         meta_keywords:

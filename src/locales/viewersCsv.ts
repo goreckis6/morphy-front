@@ -54,7 +54,7 @@ const resources: Record<string, ViewerCsvTranslations> = {
   en: {
     viewers: {
       csv: {
-        meta_title: 'Free CSV Viewer - Preview CSV Files Online | MorphyHub',
+        meta_title: 'Free CSV Viewer - Preview CSV Files Online',
         meta_description:
           'View and preview CSV, TSV, and TAB files directly in your browser. Our free CSV viewer features table display, data analysis tools, and professional data viewing capabilities for spreadsheet files.',
         meta_keywords:
@@ -144,7 +144,7 @@ const resources: Record<string, ViewerCsvTranslations> = {
   pl: {
     viewers: {
       csv: {
-        meta_title: 'Darmowy Podgląd CSV - Podglądaj Pliki CSV Online | MorphyHub',
+        meta_title: 'Darmowy Podgląd CSV - Podglądaj Pliki CSV Online',
         meta_description:
           'Przeglądaj i podglądaj pliki CSV, TSV i TAB bezpośrednio w przeglądarce. Nasz darmowy podgląd CSV oferuje wyświetlanie tabel, narzędzia analizy danych i profesjonalne możliwości przeglądania danych dla plików arkuszy kalkulacyjnych.',
         meta_keywords:
@@ -234,7 +234,7 @@ const resources: Record<string, ViewerCsvTranslations> = {
   de: {
     viewers: {
       csv: {
-        meta_title: 'Kostenloser CSV Viewer – CSV Dateien Online Anzeigen | MorphyHub',
+        meta_title: 'Kostenloser CSV Viewer – CSV Dateien Online Anzeigen',
         meta_description:
           'Betrachten und zeigen Sie CSV, TSV und TAB Dateien direkt in Ihrem Browser an. Unser kostenloser CSV Viewer bietet Tabellenanzeige, Datenanalysetools und professionelle Datenanzeigefunktionen für Tabellenkalkulationsdateien.',
         meta_keywords:

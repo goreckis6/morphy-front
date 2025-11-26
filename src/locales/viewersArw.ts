@@ -54,7 +54,7 @@ const resources: Record<string, ViewerArwTranslations> = {
   en: {
     viewers: {
       arw: {
-        meta_title: 'Free ARW Viewer - Preview Sony Alpha Raw Files Online | MorphyHub',
+        meta_title: 'Free ARW Viewer - Preview Sony Alpha Raw Files Online',
         meta_description:
           'Open and inspect ARW (Sony Alpha Raw) photos directly in your browser. Our free ARW viewer delivers sensor-accurate rendering, metadata insights, zoom controls, and batch support for up to 20 raw files.',
         meta_keywords:
@@ -144,7 +144,7 @@ const resources: Record<string, ViewerArwTranslations> = {
   pl: {
     viewers: {
       arw: {
-        meta_title: 'Darmowy Podgląd ARW - Podglądaj Pliki RAW Sony Alpha Online | MorphyHub',
+        meta_title: 'Darmowy Podgląd ARW - Podglądaj Pliki RAW Sony Alpha Online',
         meta_description:
           'Otwieraj i przeglądaj zdjęcia ARW (Sony Alpha Raw) bezpośrednio w przeglądarce. Nasz darmowy podgląd ARW zapewnia wierne odwzorowanie z sensora, metadane, kontrolę powiększenia i obsługę wsadową do 20 plików RAW.',
         meta_keywords:
@@ -234,7 +234,7 @@ const resources: Record<string, ViewerArwTranslations> = {
   de: {
     viewers: {
       arw: {
-        meta_title: 'Kostenloser ARW Viewer – Sony Alpha Raw Dateien Online Anzeigen | MorphyHub',
+        meta_title: 'Kostenloser ARW Viewer – Sony Alpha Raw Dateien Online Anzeigen',
         meta_description:
           'Öffnen und überprüfen Sie ARW (Sony Alpha Raw) Fotos direkt in Ihrem Browser. Unser kostenloser ARW Viewer liefert sensorgenaues Rendering, Metadaten-Einblicke, Zoom-Kontrollen und Batch-Unterstützung für bis zu 20 Raw-Dateien.',
         meta_keywords:

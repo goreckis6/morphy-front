@@ -54,7 +54,7 @@ const resources: Record<string, ViewerDcrTranslations> = {
   en: {
     viewers: {
       dcr: {
-        meta_title: 'Free DCR Viewer - Preview Kodak Raw Files Online | MorphyHub',
+        meta_title: 'Free DCR Viewer - Preview Kodak Raw Files Online',
         meta_description:
           'Open and inspect DCR (Kodak Raw) photos directly in your browser. Our free DCR viewer delivers sensor-accurate rendering, metadata insights, zoom controls, and batch support for up to 20 raw files.',
         meta_keywords:
@@ -144,7 +144,7 @@ const resources: Record<string, ViewerDcrTranslations> = {
   pl: {
     viewers: {
       dcr: {
-        meta_title: 'Darmowy Podgląd DCR - Podglądaj Pliki RAW Kodak Online | MorphyHub',
+        meta_title: 'Darmowy Podgląd DCR - Podglądaj Pliki RAW Kodak Online',
         meta_description:
           'Otwieraj i przeglądaj zdjęcia DCR (Kodak Raw) bezpośrednio w przeglądarce. Nasz darmowy podgląd DCR zapewnia wierne odwzorowanie z sensora, metadane, kontrolę powiększenia i obsługę wsadową do 20 plików RAW.',
         meta_keywords:
@@ -234,7 +234,7 @@ const resources: Record<string, ViewerDcrTranslations> = {
   de: {
     viewers: {
       dcr: {
-        meta_title: 'Kostenloser DCR Viewer – Kodak Raw Dateien Online Anzeigen | MorphyHub',
+        meta_title: 'Kostenloser DCR Viewer – Kodak Raw Dateien Online Anzeigen',
         meta_description:
           'Öffnen und überprüfen Sie DCR (Kodak Raw) Fotos direkt in Ihrem Browser. Unser kostenloser DCR Viewer liefert sensorgenaues Rendering, Metadaten-Einblicke, Zoom-Kontrollen und Batch-Unterstützung für bis zu 20 Raw-Dateien.',
         meta_keywords:
