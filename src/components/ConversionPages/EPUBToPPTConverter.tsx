@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToPPTConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -215,9 +217,9 @@ export const EPUBToPPTConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to PPT Converter - Convert eBooks to PowerPoint</title>
-        <meta name="description" content="Free EPUB to PPT converter. Convert EPUB ebook files to PPT presentation format. Transform ebook content into classic PowerPoint presentations. Free online tool." />
-        <meta name="keywords" content="EPUB to PPT, ebook to PowerPoint, presentation converter, PowerPoint format" />
+        <title>{t('epub_to_ppt.meta_title')}</title>
+        <meta name="description" content={t('epub_to_ppt.meta_description')} />
+        <meta name="keywords" content={t('epub_to_ppt.meta_keywords')} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-pink-50">
       <Header />
@@ -228,23 +230,23 @@ export const EPUBToPPTConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to PPT Converter
+              {t('epub_to_ppt.heading')}
             </h1>
             <p className="text-lg sm:text-xl text-red-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to PowerPoint PPT format for presentations. Transform e-books into presentation slides with preserved content structure.
+              {t('epub_to_ppt.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-red-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_ppt.badge_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_ppt.badge_secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_ppt.badge_no_registration')}</span>
               </div>
             </div>
           </div>
@@ -269,7 +271,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_ppt.mode_single')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -280,7 +282,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_ppt.mode_batch')}
                 </button>
               </div>
 
@@ -288,22 +290,22 @@ export const EPUBToPPTConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-red-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_ppt.upload_batch') : t('epub_to_ppt.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_ppt.upload_text_batch')
+                    : t('epub_to_ppt.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-red-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_ppt.file_limits_single')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-red-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                    {t('epub_to_ppt.file_limits_batch')}
                   </p>
                 )}
                 <input
@@ -318,14 +320,14 @@ export const EPUBToPPTConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-red-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_ppt.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_ppt.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -346,8 +348,8 @@ export const EPUBToPPTConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
-                          <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
+                          <h4 className="text-lg font-semibold">{t('epub_to_ppt.selected_files')} ({batchFiles.length})</h4>
+                          <div className={`text-sm font-medium ${ sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
                         </div>
@@ -356,7 +358,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_ppt.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -393,12 +395,12 @@ export const EPUBToPPTConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_ppt.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to PPT'}
+                      {batchMode ? t('epub_to_ppt.convert_files', { count: batchFiles.length }) : t('epub_to_ppt.convert_to_ppt')}
                     </div>
                   )}
                 </button>
@@ -409,10 +411,10 @@ export const EPUBToPPTConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_ppt.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to PPT format.
+                    {t('epub_to_ppt.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -420,14 +422,14 @@ export const EPUBToPPTConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download PPT File
+                      {t('epub_to_ppt.download_ppt')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_ppt.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -449,13 +451,16 @@ export const EPUBToPPTConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_ppt.batch_complete') : t('epub_to_ppt.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('epub_to_ppt.files_converted', { 
+                      success: batchResults.filter(r => r.success).length, 
+                      total: batchResults.length 
+                    })}
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => {
@@ -479,7 +484,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                                 <div className="text-xs text-gray-500 mt-1 ml-6">{displaySize}</div>
                               )}
                               {!result.success && (
-                                <div className="text-xs text-red-600 mt-1 ml-6 break-words">Failed to convert {result.originalName}</div>
+                                <div className="text-xs text-red-600 mt-1 ml-6 break-words">{t('epub_to_ppt.failed_to_convert', { filename: result.originalName })}</div>
                               )}
                             </div>
                             {result.success && result.downloadPath && (
@@ -487,7 +492,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                                 onClick={() => handleBatchDownload(result)}
                                 className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
                               >
-                                Download
+                                {t('epub_to_ppt.download')}
                               </button>
                             )}
                           </div>
@@ -500,7 +505,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_ppt.convert_more')}
                   </button>
                 </div>
               )}
@@ -514,23 +519,23 @@ export const EPUBToPPTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-red-600" />
-                PPT Settings
+                {t('epub_to_ppt.settings_title')}
               </h3>
               
               {/* Slide Layout */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Slide Layout
+                  {t('epub_to_ppt.slide_layout')}
                 </label>
                 <select
                   value={slideLayout}
                   onChange={(e) => setSlideLayout(e.target.value as 'auto' | 'title' | 'content' | 'mixed')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
                 >
-                  <option value="auto">Auto-detect</option>
-                  <option value="title">Title slides</option>
-                  <option value="content">Content slides</option>
-                  <option value="mixed">Mixed layout</option>
+                  <option value="auto">{t('epub_to_ppt.slide_layout_auto')}</option>
+                  <option value="title">{t('epub_to_ppt.slide_layout_title')}</option>
+                  <option value="content">{t('epub_to_ppt.slide_layout_content')}</option>
+                  <option value="mixed">{t('epub_to_ppt.slide_layout_mixed')}</option>
                 </select>
               </div>
 
@@ -543,7 +548,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-red-600 focus:ring-red-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_ppt.preserve_formatting')}</span>
                 </label>
               </div>
 
@@ -556,7 +561,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-red-600 focus:ring-red-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_ppt.include_images')}</span>
                 </label>
               </div>
 
@@ -569,7 +574,7 @@ export const EPUBToPPTConverter: React.FC = () => {
                     onChange={(e) => setExtractMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-red-600 focus:ring-red-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Extract book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_ppt.extract_metadata')}</span>
                 </label>
               </div>
             </div>
@@ -578,16 +583,16 @@ export const EPUBToPPTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('epub_to_ppt.features_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book to presentation conversion",
-                  "PowerPoint compatibility",
-                  "Slide generation",
-                  "Content structure preservation",
-                  "Legacy presentation support",
-                  "Batch processing support"
+                  t('epub_to_ppt.feature_1'),
+                  t('epub_to_ppt.feature_2'),
+                  t('epub_to_ppt.feature_3'),
+                  t('epub_to_ppt.feature_4'),
+                  t('epub_to_ppt.feature_5'),
+                  t('epub_to_ppt.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -601,16 +606,16 @@ export const EPUBToPPTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-red-600" />
-                Perfect For
+                {t('epub_to_ppt.use_cases_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Educational presentations",
-                  "Business presentations",
-                  "Content repurposing",
-                  "Academic presentations",
-                  "Training materials",
-                  "Content visualization"
+                  t('epub_to_ppt.use_case_1'),
+                  t('epub_to_ppt.use_case_2'),
+                  t('epub_to_ppt.use_case_3'),
+                  t('epub_to_ppt.use_case_4'),
+                  t('epub_to_ppt.use_case_5'),
+                  t('epub_to_ppt.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-red-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -628,106 +633,106 @@ export const EPUBToPPTConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            {t('epub_to_ppt.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to PPT?
+            {t('epub_to_ppt.seo_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to PowerPoint PPT format is essential for educational presentations, business presentations, and content repurposing. While EPUB files are excellent for reading, PPT format provides presentation capabilities, enabling you to transform e-book content into engaging slides for educational, academic, and professional purposes.
+              {t('epub_to_ppt.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of PPT Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_ppt.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">PowerPoint Compatibility</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('epub_to_ppt.benefit_1_title')}</h4>
                 <p className="text-gray-700">
-                  PPT files are fully compatible with Microsoft PowerPoint and other presentation software, ensuring universal accessibility and editing capabilities.
+                  {t('epub_to_ppt.benefit_1_text')}
                 </p>
               </div>
               
               <div className="bg-pink-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-pink-900 mb-3">Slide Generation</h4>
+                <h4 className="text-xl font-semibold text-pink-900 mb-3">{t('epub_to_ppt.benefit_2_title')}</h4>
                 <p className="text-gray-700">
-                  PPT format automatically generates presentation slides from e-book content, creating structured presentations with proper slide layouts.
+                  {t('epub_to_ppt.benefit_2_text')}
                 </p>
               </div>
               
               <div className="bg-rose-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-rose-900 mb-3">Content Structure Preservation</h4>
+                <h4 className="text-xl font-semibold text-rose-900 mb-3">{t('epub_to_ppt.benefit_3_title')}</h4>
                 <p className="text-gray-700">
-                  PPT format preserves the original content structure of e-books while adapting it for presentation format with proper headings and sections.
+                  {t('epub_to_ppt.benefit_3_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">Legacy Presentation Support</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('epub_to_ppt.benefit_4_title')}</h4>
                 <p className="text-gray-700">
-                  PPT format provides compatibility with older versions of PowerPoint and legacy presentation systems, ensuring broad accessibility.
+                  {t('epub_to_ppt.benefit_4_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_ppt.common_uses_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Educational Presentations</h4>
-                  <p className="text-gray-700">Convert e-books to PPT format for creating educational presentations, lectures, and training materials.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_ppt.common_use_1_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_ppt.common_use_1_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-pink-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Business Presentations</h4>
-                  <p className="text-gray-700">Create business presentations from e-book content by converting it to PPT format for professional use.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_ppt.common_use_2_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_ppt.common_use_2_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-rose-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Repurposing</h4>
-                  <p className="text-gray-700">Repurpose e-book content for presentations by converting it to PPT format, enabling creative content adaptation.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_ppt.common_use_3_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_ppt.common_use_3_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Academic Presentations</h4>
-                  <p className="text-gray-700">Create academic presentations from e-book content by converting it to PPT format for research and educational purposes.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_ppt.common_use_4_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_ppt.common_use_4_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-red-600 to-pink-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_ppt.cta_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to PPT converter to transform your e-books into presentation-ready slides.
+                {t('epub_to_ppt.cta_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_ppt.cta_button')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_ppt.back_to_home')}
                 </button>
               </div>
             </div>

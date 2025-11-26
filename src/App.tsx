@@ -922,19 +922,33 @@ function App() {
         <Route path="/de/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
 
         <Route path="/id/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/id/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/sv/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/sv/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/es/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/es/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/fr/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/fr/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/it/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/it/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/nl/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/nl/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/pt/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/pt/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/vi/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/vi/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/tr/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/tr/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/ru/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/ru/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/ar/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/ar/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/th/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/th/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/ja/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/ja/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/zh/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/zh/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
 
         {/* New Languages Converter Routes - CR2 to ICO */}
         <Route path="/id/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
