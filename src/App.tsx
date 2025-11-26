@@ -1051,18 +1051,31 @@ function App() {
         <Route path="/id/convert/epub-to-odp" element={<EPUBToODPConverter />} />
         <Route path="/id/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/sv/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/sv/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/es/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/es/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/fr/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/fr/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/it/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/it/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/nl/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/nl/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/pt/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/pt/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/vi/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/vi/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/tr/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/tr/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/ru/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/ru/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/ar/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/ar/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/th/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/th/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/ja/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/ja/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/zh/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/zh/convert/epub-to-odt" element={<EPUBToODTConverter />} />
 
         {/* New Languages Converter Routes - HEIC to SVG */}
         <Route path="/id/convert/heic-to-svg" element={<HEICtoSVGConverter />} />
