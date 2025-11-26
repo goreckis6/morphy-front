@@ -1049,6 +1049,7 @@ function App() {
 
         {/* New Languages Converter Routes - EPUB to ODP */}
         <Route path="/id/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/id/convert/epub-to-odt" element={<EPUBToODTConverter />} />
         <Route path="/sv/convert/epub-to-odp" element={<EPUBToODPConverter />} />
         <Route path="/es/convert/epub-to-odp" element={<EPUBToODPConverter />} />
         <Route path="/fr/convert/epub-to-odp" element={<EPUBToODPConverter />} />

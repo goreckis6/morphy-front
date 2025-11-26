@@ -320,7 +320,7 @@ export const EPUBToODTConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_odt.choose_files')}
                 </button>
               </div>
 
@@ -358,7 +358,7 @@ export const EPUBToODTConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_odt.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -614,7 +614,7 @@ export const EPUBToODTConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            ← {t('epub_to_odt.back_to_home')}
           </button>
         </div>
 
@@ -723,13 +723,13 @@ export const EPUBToODTConverter: React.FC = () => {
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_odt.start_converting')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_odt.back_to_home')}
                 </button>
               </div>
             </div>
