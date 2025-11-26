@@ -117,22 +117,21 @@ export const JPEGViewer: React.FC = () => {
             <div className="flex justify-center mb-6">
               <button
                 onClick={() => setIsEditorOpen(true)}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center gap-3 text-lg"
+                className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center gap-3 text-lg"
               >
                 <Eye className="w-6 h-6" />
-                <span>View Files</span>
+                <span>{t('viewers.jpeg.buttons.view_files', 'View Files')}</span>
               </button>
             </div>
 
-            {/* Thumbnail Grid (Optional - can be hidden or shown) */}
+            {/* Thumbnail Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-4">
               {selectedFiles.slice(0, 12).map((file, index) => (
                 <div
                   key={index}
-                  className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden border border-gray-200 hover:border-purple-400 transition-colors cursor-pointer group"
+                  className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden border border-gray-200 hover:border-blue-400 hover:shadow-md transition-all cursor-pointer group"
                   onClick={() => {
                     setIsEditorOpen(true);
-                    // You could set initial index here if needed
                   }}
                 >
                   <img
@@ -144,8 +143,8 @@ export const JPEGViewer: React.FC = () => {
                 </div>
               ))}
               {selectedFiles.length > 12 && (
-                <div className="relative aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg border-2 border-dashed border-purple-300 flex items-center justify-center">
-                  <span className="text-sm font-semibold text-purple-700">
+                <div className="relative aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg border-2 border-dashed border-blue-300 flex items-center justify-center hover:border-blue-400 transition-colors">
+                  <span className="text-sm font-semibold text-blue-700">
                     +{selectedFiles.length - 12} more
                   </span>
                 </div>
@@ -159,20 +158,25 @@ export const JPEGViewer: React.FC = () => {
           {features.map((feature, index) => {
             const cardStyles = [
               'from-blue-50 to-indigo-50 border border-blue-200',
-              'from-yellow-50 to-orange-50 border border-yellow-200',
+              'from-indigo-50 to-purple-50 border border-indigo-200',
               'from-purple-50 to-pink-50 border border-purple-200'
             ];
+            const iconColors = [
+              'text-blue-600',
+              'text-indigo-600',
+              'text-purple-600'
+            ];
             const iconNodes = [
-              <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" key="camera" />,
-              <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" key="zap" />,
-              <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" key="palette" />
+              <Camera className={`w-6 h-6 sm:w-8 sm:h-8 ${iconColors[index]}`} key="camera" />,
+              <Zap className={`w-6 h-6 sm:w-8 sm:h-8 ${iconColors[index]}`} key="zap" />,
+              <Palette className={`w-6 h-6 sm:w-8 sm:h-8 ${iconColors[index]}`} key="palette" />
             ];
             return (
               <div
                 key={feature.title}
-                className={`bg-gradient-to-br ${cardStyles[index]} rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all transform hover:scale-105 ${index === 2 ? 'sm:col-span-2 lg:col-span-1' : ''}`}
+                className={`bg-gradient-to-br ${cardStyles[index]} rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-all transform hover:scale-105`}
               >
-                <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4">
+                <div className="bg-white p-2 sm:p-3 rounded-xl w-fit mb-3 sm:mb-4 shadow-sm">
                   {iconNodes[index]}
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
@@ -291,9 +295,10 @@ export const JPEGViewer: React.FC = () => {
         <div className="text-center mt-6 sm:mt-8">
           <a
             href="/viewers"
-            className="inline-block bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold py-3 sm:py-4 px-6 sm:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
           >
-            {t('viewers.jpeg.buttons.back')}
+            <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span>{t('viewers.jpeg.buttons.back', '← Back to All Viewers')}</span>
           </a>
         </div>
       </div>

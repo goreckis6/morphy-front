@@ -45,18 +45,18 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
   const handleNext = useCallback(() => {
     if (selectedIndex < filteredFiles.length - 1) {
       setSelectedIndex(selectedIndex + 1);
-      setRotation(0);
+      setRotation(0); // Reset rotation when switching files
     } else if (isPresentationMode) {
-      setSelectedIndex(0);
+      setSelectedIndex(0); // Loop back to start
     }
   }, [selectedIndex, filteredFiles.length, isPresentationMode]);
 
   const handlePrevious = useCallback(() => {
     if (selectedIndex > 0) {
       setSelectedIndex(selectedIndex - 1);
-      setRotation(0);
+      setRotation(0); // Reset rotation when switching files
     } else if (isPresentationMode) {
-      setSelectedIndex(filteredFiles.length - 1);
+      setSelectedIndex(filteredFiles.length - 1); // Loop to end
     }
   }, [selectedIndex, filteredFiles.length, isPresentationMode]);
 
@@ -99,6 +99,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
 
   const handlePrint = () => {
     if (currentImageUrl && currentFile) {
+      // Create a hidden iframe for printing in the same window context
       const iframe = document.createElement('iframe');
       iframe.style.position = 'fixed';
       iframe.style.right = '0';
@@ -150,6 +151,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
         setTimeout(() => {
           iframe.contentWindow?.focus();
           iframe.contentWindow?.print();
+          // Clean up after printing
           setTimeout(() => {
             document.body.removeChild(iframe);
           }, 1000);
@@ -157,6 +159,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
       };
     }
   };
+
 
   const handleFileSelect = (index: number) => {
     setSelectedIndex(index);
@@ -185,10 +188,11 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
     }
   }, [filteredFiles.length, selectedIndex]);
 
-  // Handle fullscreen changes
+  // Handle fullscreen changes (e.g., when user presses F11 or ESC)
   useEffect(() => {
     const handleFullscreenChange = () => {
       if (!document.fullscreenElement && isPresentationMode) {
+        // User exited fullscreen, exit presentation mode
         setIsPresentationMode(false);
         setIsFullscreen(false);
       } else if (document.fullscreenElement) {
@@ -202,9 +206,10 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
     };
   }, [isPresentationMode]);
 
-  // Keyboard navigation
+  // Keyboard navigation (after all handlers are defined)
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
+      // Don't handle keyboard shortcuts when typing in input fields
       if (e.target instanceof HTMLInputElement) {
         return;
       }
@@ -250,25 +255,27 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
   }, [selectedIndex, filteredFiles.length, isPresentationMode, handleNext, handlePrevious, onClose, handleZoomIn, handleZoomOut, handleRotate, toggleFullscreen]);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-gray-50" ref={viewerRef}>
+    <div className="fixed inset-0 z-50 flex flex-col bg-white" ref={viewerRef}>
       {/* Header */}
-      <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shadow-sm z-20">
+      <header className="h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between px-6 shadow-md z-20">
         <div className="flex items-center gap-3">
           <img 
             src="/logo.jpg" 
             alt="MorphyHub" 
             className="h-10 w-auto object-contain"
             onError={(e) => {
+              // Fallback to logo.png if logo.jpg doesn't exist
               const target = e.target as HTMLImageElement;
               if (target.src.includes('logo.jpg')) {
                 target.src = '/logo.png';
               }
             }}
           />
+          <span className="font-bold text-lg tracking-tight">MorphyHub</span>
         </div>
         <button
           onClick={onClose}
-          className="p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-600 hover:text-gray-900"
+          className="p-2 hover:bg-white/20 rounded transition-colors"
           title="Close (Esc)"
         >
           <X className="w-5 h-5" />
@@ -277,11 +284,11 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
 
       <main className="flex-1 flex overflow-hidden">
         {/* Sidebar */}
-        <aside className="w-72 bg-white border-r border-gray-200 flex flex-col z-10">
+        <aside className="w-80 bg-white border-r border-gray-200 flex flex-col z-10 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
           {/* Search */}
-          <div className="p-4 border-b border-gray-200">
+          <div className="p-3 border-b border-gray-100">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search files..."
@@ -290,20 +297,20 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                   setSearchQuery(e.target.value);
                   setSelectedIndex(0);
                 }}
-                className="w-full pl-9 pr-3 py-2 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                className="w-full pl-9 pr-3 py-2 bg-gray-50 border border-gray-200 rounded-md text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
               />
             </div>
           </div>
 
           {/* Files Header */}
-          <div className="px-4 py-3 flex justify-between items-center bg-gray-50 border-b border-gray-200">
-            <span className="text-xs font-semibold text-gray-600 uppercase tracking-wider">
+          <div className="px-4 py-2 flex justify-between items-center bg-gray-50/50">
+            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
               Files ({filteredFiles.length})
             </span>
             {onAddFiles && (
               <button
                 onClick={() => fileInputRef.current?.click()}
-                className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                className="text-purple-600 hover:text-purple-700 text-xs font-bold uppercase tracking-wide transition-colors"
               >
                 + Add
               </button>
@@ -319,7 +326,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
           </div>
 
           {/* File List */}
-          <div className="flex-1 overflow-y-auto p-3 space-y-2">
+          <div className="flex-1 overflow-y-auto scroller p-3 space-y-2">
             {filteredFiles.map((file, index) => {
               const fileIndex = files.indexOf(file);
               const isSelected = fileIndex === selectedIndex;
@@ -329,13 +336,13 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                 <div
                   key={fileIndex}
                   onClick={() => handleFileSelect(fileIndex)}
-                  className={`group flex items-start gap-3 p-2.5 rounded-lg cursor-pointer transition-all ${
+                  className={`group flex items-start gap-3 p-2 rounded-lg cursor-pointer transition-all ${
                     isSelected
-                      ? 'bg-blue-50 border border-blue-200 shadow-sm'
-                      : 'border border-transparent hover:bg-gray-50'
+                      ? 'bg-purple-50 border border-purple-200 shadow-sm'
+                      : 'border border-transparent hover:bg-gray-100'
                   }`}
                 >
-                  <div className="w-14 h-14 bg-gray-100 rounded-md overflow-hidden flex-shrink-0 border border-gray-200">
+                  <div className="w-12 h-12 bg-gray-200 rounded overflow-hidden flex-shrink-0">
                     {imageUrl ? (
                       <img
                         src={imageUrl}
@@ -343,19 +350,19 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gray-200" />
+                      <div className="w-full h-full bg-gray-300" />
                     )}
                   </div>
-                  <div className="flex-1 min-w-0 flex flex-col justify-center">
+                  <div className="flex-1 min-w-0 flex flex-col justify-center h-12">
                     <p
                       className={`text-sm truncate ${
-                        isSelected ? 'font-semibold text-gray-900' : 'font-medium text-gray-700'
+                        isSelected ? 'font-semibold text-purple-900' : 'font-medium text-gray-700'
                       }`}
                       title={file.name}
                     >
                       {file.name}
                     </p>
-                    <p className={`text-xs mt-0.5 ${isSelected ? 'text-blue-600' : 'text-gray-500'}`}>
+                    <p className={`text-xs ${isSelected ? 'text-purple-600' : 'text-gray-400'}`}>
                       {formatFileSize(file.size)}
                     </p>
                   </div>
@@ -366,16 +373,16 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
         </aside>
 
         {/* Main Viewer */}
-        <section className="flex-1 flex flex-col min-w-0 bg-white relative">
+        <section className="flex-1 flex flex-col min-w-0 bg-gray-50 relative">
           {/* Toolbar */}
-          <div className="h-14 border-b border-gray-200 bg-white flex justify-between items-center px-6 z-10">
-            <div className="flex items-center gap-3">
-              <span className="font-semibold text-gray-900 text-sm">{currentFile?.name}</span>
-              <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-md font-medium">
+          <div className="h-14 border-b border-gray-200 bg-white flex justify-between items-center px-4 shadow-sm z-10">
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-gray-700">{currentFile?.name}</span>
+              <span className="text-xs px-2 py-0.5 bg-gray-100 text-gray-500 rounded border border-gray-200">
                 JPG
               </span>
               {currentFile && (
-                <span className="text-xs text-gray-500">
+                <span className="text-xs text-gray-400">
                   {formatFileSize(currentFile.size)}
                 </span>
               )}
@@ -386,27 +393,31 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                 onClick={() => {
                   setIsPresentationMode(!isPresentationMode);
                   if (!isPresentationMode) {
+                    // Enter fullscreen when starting presentation
                     viewerRef.current?.requestFullscreen().catch(err => {
                       console.error('Error entering fullscreen:', err);
                     });
                   } else {
+                    // Exit fullscreen when exiting presentation
                     if (document.fullscreenElement) {
                       document.exitFullscreen();
                     }
                   }
                 }}
-                className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                className="btn-icon flex items-center gap-2 px-3 py-1.5 text-gray-600 hover:bg-purple-50 hover:text-purple-700 rounded transition-colors"
                 title="Start Presentation (Space/Arrows to navigate)"
               >
                 <Play className="w-4 h-4" />
-                <span>{isPresentationMode ? 'Exit' : 'Present'}</span>
+                <span className="text-sm font-medium">
+                  {isPresentationMode ? 'Exit' : 'Present'}
+                </span>
               </button>
 
-              <div className="w-px h-6 bg-gray-300 mx-1" />
+              <div className="w-px h-6 bg-gray-200 mx-1" />
 
               <button
                 onClick={handlePrint}
-                className="p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 rounded-lg transition-colors"
+                className="btn-icon w-9 h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
                 title="Print Image"
               >
                 <Printer className="w-4 h-4" />
@@ -414,7 +425,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
 
               <button
                 onClick={handleDownload}
-                className="p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 rounded-lg transition-colors"
+                className="btn-icon w-9 h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
                 title="Download Image"
               >
                 <Download className="w-4 h-4" />
@@ -423,23 +434,23 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
           </div>
 
           {/* Image Viewer */}
-          <div className="flex-1 overflow-auto p-8 bg-gray-100 flex justify-center items-center relative">
-            {/* Navigation Arrows */}
+          <div className="flex-1 overflow-auto p-8 checkerboard flex justify-center items-center relative">
+            {/* Navigation Arrows (in presentation mode or always visible) */}
             {filteredFiles.length > 1 && (
               <>
                 <button
                   onClick={handlePrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white border border-gray-300 shadow-md rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all z-20"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-purple-600 transition-all z-20"
                   title="Previous (←)"
                 >
-                  <ChevronLeft className="w-5 h-5 text-gray-700" />
+                  <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white border border-gray-300 shadow-md rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all z-20"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-purple-600 transition-all z-20"
                   title="Next (→)"
                 >
-                  <ChevronRight className="w-5 h-5 text-gray-700" />
+                  <ChevronRight className="w-6 h-6" />
                 </button>
               </>
             )}
@@ -449,7 +460,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               <img
                 src={currentImageUrl}
                 alt={currentFile?.name}
-                className="max-w-full max-h-full shadow-lg border border-gray-300 rounded-sm transition-transform duration-200"
+                className="max-w-full max-h-full shadow-2xl border border-gray-200 transition-transform duration-200"
                 style={{
                   transform: `scale(${zoom / 100}) rotate(${rotation}deg)`,
                   transformOrigin: 'center center',
@@ -459,40 +470,40 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
             )}
 
             {/* Zoom Controls */}
-            <div className="absolute bottom-6 bg-white border border-gray-300 shadow-lg rounded-lg px-3 py-2 flex items-center gap-3 z-20">
+            <div className="absolute bottom-6 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full px-4 py-2 flex items-center gap-4 z-20">
               <button
                 onClick={handleZoomOut}
-                className="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600 hover:text-gray-900"
+                className="hover:text-purple-600 transition-colors"
                 title="Zoom Out (-)"
               >
                 <ZoomOut className="w-4 h-4" />
               </button>
               <button
                 onClick={handleResetZoom}
-                className="text-xs font-mono font-medium w-14 text-center hover:text-gray-900 transition-colors text-gray-600"
+                className="text-xs font-mono font-medium w-16 text-center hover:text-purple-600 transition-colors"
                 title="Click to reset zoom"
               >
                 {zoom}%
               </button>
               <button
                 onClick={handleZoomIn}
-                className="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600 hover:text-gray-900"
+                className="hover:text-purple-600 transition-colors"
                 title="Zoom In (+)"
               >
                 <ZoomIn className="w-4 h-4" />
               </button>
-              <div className="w-px h-5 bg-gray-300" />
+              <div className="w-px h-4 bg-gray-300" />
               <button
                 onClick={handleRotate}
-                className="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600 hover:text-gray-900"
+                className="hover:text-purple-600 transition-colors"
                 title="Rotate (R)"
               >
                 <RotateCw className="w-4 h-4" />
               </button>
-              <div className="w-px h-5 bg-gray-300" />
+              <div className="w-px h-4 bg-gray-300" />
               <button
                 onClick={toggleFullscreen}
-                className="p-1.5 hover:bg-gray-100 rounded transition-colors text-gray-600 hover:text-gray-900"
+                className="hover:text-purple-600 transition-colors"
                 title="Fullscreen (F)"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -501,7 +512,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
 
             {/* Image Counter */}
             {filteredFiles.length > 1 && (
-              <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-white border border-gray-300 shadow-lg rounded-lg px-4 py-2 text-xs font-medium text-gray-700 z-20">
+              <div className="absolute top-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full px-4 py-2 text-xs font-medium text-gray-700 z-20">
                 {selectedIndex + 1} / {filteredFiles.length}
               </div>
             )}
@@ -511,19 +522,32 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
 
       <style>{`
         .scroller::-webkit-scrollbar {
-          width: 8px;
-        }
-        .scroller::-webkit-scrollbar-track {
-          background: #f9fafb;
+          width: 6px;
         }
         .scroller::-webkit-scrollbar-thumb {
-          background-color: #d1d5db;
+          background-color: #cbd5e1;
           border-radius: 4px;
         }
         .scroller::-webkit-scrollbar-thumb:hover {
-          background-color: #9ca3af;
+          background-color: #94a3b8;
+        }
+        .checkerboard {
+          background-color: #f3f4f6;
+          background-image:
+            linear-gradient(45deg, #e5e7eb 25%, transparent 25%),
+            linear-gradient(-45deg, #e5e7eb 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #e5e7eb 75%),
+            linear-gradient(-45deg, transparent 75%, #e5e7eb 75%);
+          background-size: 20px 20px;
+          background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        .btn-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       `}</style>
     </div>
   );
 };
+
