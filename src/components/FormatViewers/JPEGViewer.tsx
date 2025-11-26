@@ -140,7 +140,7 @@ export const JPEGViewer: React.FC = () => {
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 sm:-mt-16 lg:-mt-20 relative z-10">
           {/* Upload Section - Glassmorphism Card */}
-          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50 mt-5">
+          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 border border-white/50 mt-5 mb-5">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <Upload className="w-8 h-8 text-white" />
