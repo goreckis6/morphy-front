@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Image, Upload, Eye, Download, ArrowLeft, Camera, Palette, Zap, Info, CheckCircle, Star, Sparkles, Layers, FileImage } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Image, Upload, Eye, ArrowLeft, Camera, Palette, Zap, Info, Star, Sparkles, Layers, FileImage } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
 import { JPGEditor } from './JPGEditor';
@@ -13,8 +14,38 @@ export const JPEGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
   const [isEditorOpen, setIsEditorOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
+
+  // Check if URL ends with /editor and open editor if files exist
+  useEffect(() => {
+    if (location.pathname.endsWith('/editor') && selectedFiles.length > 0 && !isEditorOpen) {
+      setIsEditorOpen(true);
+    } else if (!location.pathname.endsWith('/editor') && isEditorOpen) {
+      // If URL doesn't have /editor but editor is open, close it
+      setIsEditorOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, selectedFiles.length]);
+
+  // Get the base path (jpg or jpeg)
+  const getBasePath = () => {
+    const path = location.pathname;
+    if (path.includes('/viewers/jpg')) {
+      return path.replace('/editor', '').replace(/\/viewers\/jpg.*/, '/viewers/jpg');
+    } else if (path.includes('/viewers/jpeg')) {
+      return path.replace('/editor', '').replace(/\/viewers\/jpeg.*/, '/viewers/jpeg');
+    }
+    // Handle language prefixes
+    const langMatch = path.match(/\/([a-z]{2})\/viewers\/(jpg|jpeg)/);
+    if (langMatch) {
+      const [, lang, format] = langMatch;
+      return `/${lang}/viewers/${format}`;
+    }
+    return '/viewers/jpg'; // fallback
+  };
 
   const features = t('viewers.jpeg.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
   const advantages = t('viewers.jpeg.advantages', { returnObjects: true }) as string[];
@@ -27,11 +58,11 @@ export const JPEGViewer: React.FC = () => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return ['jpg', 'jpeg', 'jpe'].includes(extension || '');
     });
-    setSelectedFiles(prev => [...prev, ...jpegFiles]);
+    setSelectedFiles((prev: File[]) => [...prev, ...jpegFiles]);
   };
 
   const handleAddFilesToEditor = (newFiles: File[]) => {
-    setSelectedFiles(prev => [...prev, ...newFiles]);
+    setSelectedFiles((prev: File[]) => [...prev, ...newFiles]);
   };
 
   return (
@@ -62,7 +93,7 @@ export const JPEGViewer: React.FC = () => {
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
             <div className="flex flex-col items-center text-center">
               {/* Back Button - Floating */}
               <button
@@ -73,35 +104,35 @@ export const JPEGViewer: React.FC = () => {
               </button>
 
               {/* Icon with Glow Effect */}
-              <div className="relative mb-8">
+              <div className="relative mb-4">
                 <div className="absolute inset-0 bg-white/30 rounded-3xl blur-2xl transform scale-150"></div>
-                <div className="relative p-6 bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl">
-                  <Image className="w-16 h-16 sm:w-20 sm:h-20 text-white" />
+                <div className="relative p-4 bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl">
+                  <Image className="w-12 h-12 sm:w-16 sm:h-16 text-white" />
                 </div>
               </div>
 
               {/* Title */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-3 leading-tight">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-purple-100">
                   {t('viewers.jpeg.hero_title')}
                 </span>
               </h1>
               
               {/* Subtitle */}
-              <p className="text-lg sm:text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-4 leading-relaxed">
                 {t('viewers.jpeg.hero_subtitle')}
               </p>
 
               {/* Quick Stats */}
-              <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8">
-                <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                  <span className="text-white text-sm font-semibold">✓ Universal Format</span>
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-4">
+                <div className="px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                  <span className="text-white text-xs sm:text-sm font-semibold">✓ Universal Format</span>
                 </div>
-                <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                  <span className="text-white text-sm font-semibold">⚡ Fast Processing</span>
+                <div className="px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                  <span className="text-white text-xs sm:text-sm font-semibold">⚡ Fast Processing</span>
                 </div>
-                <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                  <span className="text-white text-sm font-semibold">🎨 High Quality</span>
+                <div className="px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+                  <span className="text-white text-xs sm:text-sm font-semibold">🎨 High Quality</span>
                 </div>
               </div>
             </div>
@@ -135,74 +166,22 @@ export const JPEGViewer: React.FC = () => {
             />
           </div>
 
-          {/* Preview Section - Modern Card Design */}
+          {/* View Files Button - Prominent */}
           {selectedFiles.length > 0 && (
-            <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50 overflow-hidden">
-              {/* Header with Gradient */}
-              <div className="relative mb-8">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-2xl"></div>
-                <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl shadow-lg">
-                      <CheckCircle className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                        {t('viewers.jpeg.files_heading', { count: selectedFiles.length })}
-                      </h2>
-                      <p className="text-gray-600 text-sm mt-1">Ready to view and edit</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* View Files Button - Prominent */}
-              <div className="flex justify-center mb-8">
-                <button
-                  onClick={() => setIsEditorOpen(true)}
-                  className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-                  <Eye className="w-6 h-6 relative z-10" />
-                  <span className="relative z-10">{t('viewers.jpeg.buttons.view_files', 'View Files')}</span>
-                  <Sparkles className="w-5 h-5 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </button>
-              </div>
-
-              {/* Thumbnail Grid - Enhanced */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-                {selectedFiles.slice(0, 12).map((file, index) => (
-                  <div
-                    key={index}
-                    className="group relative aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2"
-                    onClick={() => setIsEditorOpen(true)}
-                  >
-                    <img
-                      src={URL.createObjectURL(file)}
-                      alt={file.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute bottom-2 left-2 right-2">
-                        <p className="text-white text-xs font-semibold truncate drop-shadow-lg">
-                          {file.name}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="absolute top-2 right-2 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-0 group-hover:scale-100">
-                      <Eye className="w-3 h-3 text-white" />
-                    </div>
-                  </div>
-                ))}
-                {selectedFiles.length > 12 && (
-                  <div className="relative aspect-square bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 rounded-2xl border-2 border-dashed border-blue-300 hover:border-blue-400 transition-all flex items-center justify-center group cursor-pointer">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600 mb-1">+{selectedFiles.length - 12}</div>
-                      <div className="text-xs font-semibold text-blue-700">more files</div>
-                    </div>
-                  </div>
-                )}
-              </div>
+            <div className="flex justify-center mb-8">
+              <button
+                onClick={() => {
+                  setIsEditorOpen(true);
+                  const basePath = getBasePath();
+                  navigate(`${basePath}/editor`, { replace: true });
+                }}
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+                <Eye className="w-6 h-6 relative z-10" />
+                <span className="relative z-10">{t('viewers.jpeg.buttons.view_files', 'View Files')}</span>
+                <Sparkles className="w-5 h-5 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </button>
             </div>
           )}
 
@@ -271,9 +250,16 @@ export const JPEGViewer: React.FC = () => {
                     <h3 className="text-xl font-bold text-gray-900">{t('viewers.jpeg.advantages_title')}</h3>
                   </div>
                   <ul className="space-y-3">
-                    {advantages.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-gray-700" dangerouslySetInnerHTML={{ __html: `<span class="text-blue-600 font-bold mr-2">•</span>${item}` }} />
-                    ))}
+                    {advantages.map((item, idx) => {
+                      // Remove existing bullet points from the item if present
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-blue-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 
@@ -284,9 +270,16 @@ export const JPEGViewer: React.FC = () => {
                     <h3 className="text-xl font-bold text-gray-900">{t('viewers.jpeg.use_cases_title')}</h3>
                   </div>
                   <ul className="space-y-3">
-                    {useCases.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-gray-700" dangerouslySetInnerHTML={{ __html: `<span class="text-purple-600 font-bold mr-2">•</span>${item}` }} />
-                    ))}
+                    {useCases.map((item, idx) => {
+                      // Remove existing bullet points from the item if present
+                      const cleanItem = item.replace(/^•\s*/, '').trim();
+                      return (
+                        <li key={idx} className="flex items-start gap-3 text-gray-700">
+                          <span className="text-purple-600 font-bold mt-0.5">•</span>
+                          <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
@@ -296,7 +289,7 @@ export const JPEGViewer: React.FC = () => {
           {/* Technical Specifications - Modern Table */}
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50 overflow-hidden">
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-4 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl shadow-lg">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg">
                 <FileImage className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -381,7 +374,7 @@ export const JPEGViewer: React.FC = () => {
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-              <span>{t('viewers.jpeg.buttons.back', '← Back to All Viewers')}</span>
+              <span>{t('viewers.jpeg.buttons.back', 'Back to All Viewers')}</span>
             </a>
           </div>
         </div>
@@ -400,7 +393,11 @@ export const JPEGViewer: React.FC = () => {
         {isEditorOpen && (
           <JPGEditor
             files={selectedFiles}
-            onClose={() => setIsEditorOpen(false)}
+            onClose={() => {
+              setIsEditorOpen(false);
+              const basePath = getBasePath();
+              navigate(basePath, { replace: true });
+            }}
             onAddFiles={handleAddFilesToEditor}
           />
         )}
