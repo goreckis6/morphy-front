@@ -1175,7 +1175,9 @@ function App() {
 
         {/* Viewer Routes */}
         <Route path="/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/viewers/jpeg/editor" element={<JPEGViewer />} />
         <Route path="/viewers/png" element={<PNGViewer />} />
         <Route path="/viewers/webp" element={<WebPViewer />} />
         <Route path="/viewers/gif" element={<GIFViewer />} />
@@ -1227,7 +1229,9 @@ function App() {
         {/* Polish (PL) Viewer Routes */}
         <Route path="/pl/viewers" element={<Viewers />} />
         <Route path="/pl/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/pl/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/pl/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/pl/viewers/jpeg/editor" element={<JPEGViewer />} />
         <Route path="/pl/viewers/png" element={<PNGViewer />} />
         <Route path="/pl/viewers/webp" element={<WebPViewer />} />
         <Route path="/pl/viewers/gif" element={<GIFViewer />} />
@@ -1279,7 +1283,9 @@ function App() {
         {/* German (DE) Viewer Routes */}
         <Route path="/de/viewers" element={<Viewers />} />
         <Route path="/de/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/de/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/de/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/de/viewers/jpeg/editor" element={<JPEGViewer />} />
         <Route path="/de/viewers/png" element={<PNGViewer />} />
         <Route path="/de/viewers/webp" element={<WebPViewer />} />
         <Route path="/de/viewers/gif" element={<GIFViewer />} />

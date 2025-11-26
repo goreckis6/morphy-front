@@ -93,46 +93,44 @@ export const JPEGViewer: React.FC = () => {
           <div className="absolute top-40 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
 
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+          <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
             <div className="flex flex-col items-center text-center">
               {/* Back Button - Floating */}
               <button
                 onClick={() => window.location.href = '/viewers'}
-                className="absolute top-6 left-4 sm:left-6 p-3 bg-white/10 backdrop-blur-md text-white/90 hover:text-white hover:bg-white/20 rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg border border-white/20"
+                className="absolute top-4 left-4 sm:top-6 sm:left-6 p-2.5 sm:p-3 bg-white/10 backdrop-blur-md text-white/90 hover:text-white hover:bg-white/20 rounded-xl transition-all duration-300 transform hover:scale-110 shadow-lg border border-white/20 z-10"
               >
-                <ArrowLeft className="w-5 h-5" />
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
 
               {/* Icon with Glow Effect */}
-              <div className="relative mb-4">
-                <div className="absolute inset-0 bg-white/30 rounded-3xl blur-2xl transform scale-150"></div>
-                <div className="relative p-4 bg-white/20 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl">
-                  <Image className="w-12 h-12 sm:w-16 sm:h-16 text-white" />
+              <div className="relative mb-6 sm:mb-8">
+                <div className="absolute inset-0 bg-white/20 rounded-3xl blur-3xl transform scale-150"></div>
+                <div className="relative p-5 sm:p-6 bg-white/15 backdrop-blur-xl rounded-3xl border border-white/30 shadow-2xl">
+                  <Image className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 text-white" />
                 </div>
               </div>
 
               {/* Title */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-3 leading-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-purple-100">
-                  {t('viewers.jpeg.hero_title')}
-                </span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 sm:mb-5 leading-tight">
+                {t('viewers.jpeg.hero_title')}
               </h1>
               
               {/* Subtitle */}
-              <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-4 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed font-medium">
                 {t('viewers.jpeg.hero_subtitle')}
               </p>
 
               {/* Quick Stats */}
-              <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-4">
-                <div className="px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                  <span className="text-white text-xs sm:text-sm font-semibold">✓ Universal Format</span>
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                <div className="px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/25 shadow-lg">
+                  <span className="text-white text-sm sm:text-base font-semibold">✓ Universal Format</span>
                 </div>
-                <div className="px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                  <span className="text-white text-xs sm:text-sm font-semibold">⚡ Fast Processing</span>
+                <div className="px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/25 shadow-lg">
+                  <span className="text-white text-sm sm:text-base font-semibold">⚡ Fast Processing</span>
                 </div>
-                <div className="px-3 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
-                  <span className="text-white text-xs sm:text-sm font-semibold">🎨 High Quality</span>
+                <div className="px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/25 shadow-lg">
+                  <span className="text-white text-sm sm:text-base font-semibold">🎨 High Quality</span>
                 </div>
               </div>
             </div>
@@ -140,30 +138,37 @@ export const JPEGViewer: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 sm:-mt-16 lg:-mt-20 relative z-10">
-          {/* Upload Section - Glassmorphism Card */}
-          <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                <Upload className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                  {t('viewers.jpeg.upload_title')}
-                </h2>
-                <p className="text-gray-600 mt-1 text-sm sm:text-base">
-                  {t('viewers.jpeg.upload_description')}
-                </p>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 sm:-mt-12 lg:-mt-16 relative z-10">
+          {/* Upload Section - Enhanced Design */}
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8 border border-gray-100">
+            {/* Header Section */}
+            <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-6 sm:px-8 lg:px-10 py-6 sm:py-8">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">
+                  <Upload className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
+                    {t('viewers.jpeg.upload_title')}
+                  </h2>
+                  <p className="text-blue-100 text-sm sm:text-base leading-relaxed">
+                    {t('viewers.jpeg.upload_description')}
+                  </p>
+                </div>
               </div>
             </div>
-            <FileUpload 
-              onFilesSelected={handleFilesSelected}
-              acceptedFormats={['jpg', 'jpeg', 'jpe']}
-              maxFiles={20}
-              maxSize={100 * 1024 * 1024}
-              hideFormatList={true}
-              showTotalSize={true}
-            />
+            
+            {/* Upload Area */}
+            <div className="p-6 sm:p-8 lg:p-10">
+              <FileUpload 
+                onFilesSelected={handleFilesSelected}
+                acceptedFormats={['jpg', 'jpeg', 'jpe']}
+                maxFiles={20}
+                maxSize={100 * 1024 * 1024}
+                hideFormatList={true}
+                showTotalSize={true}
+              />
+            </div>
           </div>
 
           {/* View Files Button - Prominent */}
