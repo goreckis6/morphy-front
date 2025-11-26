@@ -921,6 +921,21 @@ function App() {
         <Route path="/de/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
         <Route path="/de/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
 
+        <Route path="/id/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/sv/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/es/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/fr/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/it/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/nl/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/pt/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/vi/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/tr/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/ru/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/ar/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/th/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/ja/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+        <Route path="/zh/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
+
         {/* New Languages Converter Routes - CR2 to ICO */}
         <Route path="/id/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
         <Route path="/sv/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
