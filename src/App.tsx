@@ -1032,22 +1032,20 @@ function App() {
         <Route path="/th/convert/epub-to-md" element={<EPUBToMDConverter />} />
         <Route path="/ja/convert/epub-to-md" element={<EPUBToMDConverter />} />
         <Route path="/zh/convert/epub-to-md" element={<EPUBToMDConverter />} />
-
-        {/* EPUB to ODP Routes */}
-        <Route path="/id/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/sv/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/es/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/fr/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/it/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/nl/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/pt/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/vi/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/tr/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/ru/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/ar/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/th/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/ja/convert/epub-to-odp" element={<EPUBToODPConverter />} />
-        <Route path="/zh/convert/epub-to-odp" element={<EPUBToODPConverter />} />
+        <Route path="/id/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/sv/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/es/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/fr/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/it/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/nl/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/pt/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/vi/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/tr/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/ru/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/ar/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/th/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/ja/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
+        <Route path="/zh/convert/epub-to-mobi" element={<EPUBToMOBIConverter />} />
 
         {/* New Languages Converter Routes - HEIC to SVG */}
         <Route path="/id/convert/heic-to-svg" element={<HEICtoSVGConverter />} />

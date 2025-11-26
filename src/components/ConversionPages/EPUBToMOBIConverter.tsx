@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
-import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useFileValidation } from '../../hooks/useFileValidation';
+import i18n, { getLanguageFromUrl } from '../../i18n';
 import { 
   Upload, 
   Download, 
@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToMOBIConverter: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -42,7 +42,12 @@ export const EPUBToMOBIConverter: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Language synchronization
-  usePathLanguageSync(i18n);
+  useEffect(() => {
+    const language = getLanguageFromUrl();
+    if (language && i18n.language !== language) {
+      i18n.changeLanguage(language);
+    }
+  }, []);
 
   // Use shared validation hook
   const {
@@ -61,7 +66,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
       if (file.name.toLowerCase().endsWith('.epub')) {
         const validation = validateSingleFile(file);
         if (!validation.isValid) {
-          setError(validation.error?.message || t('epub_to_mobi.error_validation_failed'));
+          setError(validation.error?.message || 'File validation failed');
           setSelectedFile(null);
           setPreviewUrl(null);
           if (fileInputRef.current) fileInputRef.current.value = '';
@@ -84,13 +89,13 @@ export const EPUBToMOBIConverter: React.FC = () => {
     );
     
     if (epubFiles.length === 0) {
-      setError(t('epub_to_mobi.error_no_files_selected'));
+      setError(t('epub_to_mobi.error_no_files'));
       return;
     }
 
     const validation = validateBatchFiles(epubFiles);
     if (!validation.isValid) {
-      setError(validation.error?.message || t('epub_to_mobi.error_batch_validation_failed'));
+      setError(validation.error?.message || 'Batch validation failed');
       setBatchFiles([]);
       if (fileInputRef.current) fileInputRef.current.value = '';
       return;
@@ -149,7 +154,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
       const successes = (result.results ?? []).filter(r => r.success);
       if (successes.length > 0) {
         const failures = (result.results ?? []).filter(r => !r.success);
-        setError(failures.length ? t('epub_to_mobi.files_failed', { count: failures.length }) : null);
+        setError(failures.length ? t('epub_to_mobi.error_files_failed', { count: failures.length, defaultValue: '{{count}} files failed.' }) : null);
       } else {
         setError(t('epub_to_mobi.error_batch_failed'));
       }
@@ -233,7 +238,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t('epub_to_mobi.heading')}
+              {t('epub_to_mobi.title')}
             </h1>
             <p className="text-lg sm:text-xl text-amber-100 mb-6 max-w-2xl mx-auto">
               {t('epub_to_mobi.subtitle')}
@@ -241,15 +246,15 @@ export const EPUBToMOBIConverter: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm text-amber-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>{t('epub_to_mobi.lightning_fast')}</span>
+                <span>{t('features.lightning_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>{t('epub_to_mobi.secure')}</span>
+                <span>{t('features.secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>{t('epub_to_mobi.no_registration')}</span>
+                <span>{t('features.no_registration')}</span>
               </div>
             </div>
           </div>
@@ -274,7 +279,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  {t('epub_to_mobi.single_file')}
+                  {t('common.single_file')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -285,7 +290,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  {t('epub_to_mobi.batch_convert')}
+                  {t('common.batch_convert')}
                 </button>
               </div>
 
@@ -293,22 +298,22 @@ export const EPUBToMOBIConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-amber-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? t('epub_to_mobi.upload_multiple') : t('epub_to_mobi.upload_single')}
+                  {batchMode ? t('epub_to_mobi.upload_batch') : t('epub_to_mobi.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? t('epub_to_mobi.upload_multiple_desc')
-                    : t('epub_to_mobi.upload_single_desc')
+                    ? t('epub_to_mobi.upload_text_batch')
+                    : t('epub_to_mobi.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-amber-600 mb-4">
-                    {t('epub_to_mobi.single_limit_message')}
+                    {t('epub_to_mobi.file_limit_single')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-amber-600 mb-4">
-                    {t('epub_to_mobi.batch_limit_message')}
+                    {t('epub_to_mobi.file_limit_batch')}
                   </p>
                 )}
                 <input
@@ -323,14 +328,14 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-amber-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-700 transition-colors"
                 >
-                  {t('epub_to_mobi.choose_files')}
+                  {t('common.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_mobi.preview')}</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('common.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -351,7 +356,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">{t('epub_to_mobi.selected_files')} ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('common.selected_files', { count: batchFiles.length })}</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -361,7 +366,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                {t('epub_to_mobi.size_warning')}
+                                {t('epub_to_mobi.batch_warning')}
                               </span>
                             </div>
                           </div>
@@ -381,10 +386,10 @@ export const EPUBToMOBIConverter: React.FC = () => {
               )}
 
               {/* Error Message */}
-              {(error || validationError) && (
+              {error && (
                 <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center">
                   <AlertCircle className="w-5 h-5 text-red-500 mr-3" />
-                  <span className="text-red-700">{error || validationError?.message}</span>
+                  <span className="text-red-700">{error}</span>
                 </div>
               )}
 
@@ -403,7 +408,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? t('epub_to_mobi.convert_files_count', { count: batchFiles.length }) : t('epub_to_mobi.convert_to_mobi')}
+                      {batchMode ? t('epub_to_mobi.convert_batch', { count: batchFiles.length }) : t('epub_to_mobi.convert_single')}
                     </div>
                   )}
                 </button>
@@ -414,7 +419,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_mobi.conversion_success')}</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_mobi.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
                     {t('epub_to_mobi.success_message')}
@@ -483,7 +488,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                             )}
                             {!result.success && result.error && (
                               <div className="text-xs text-red-600 mt-1 ml-6 break-words">
-                                {t('epub_to_mobi.failed_convert')} {result.originalName}
+                                {t('epub_to_mobi.failed_to_convert', { filename: result.originalName })}
                               </div>
                             )}
                           </div>
@@ -517,7 +522,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-amber-600" />
-                {t('epub_to_mobi.mobi_settings')}
+                {t('epub_to_mobi.settings_title')}
               </h3>
               
               {/* Preserve Formatting */}
@@ -529,7 +534,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.preserve_formatting')}</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.setting_preserve_formatting')}</span>
                 </label>
               </div>
 
@@ -542,7 +547,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.include_images')}</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.setting_include_images')}</span>
                 </label>
               </div>
 
@@ -555,7 +560,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setExtractMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.extract_metadata')}</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.setting_extract_metadata')}</span>
                 </label>
               </div>
 
@@ -568,7 +573,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
                     onChange={(e) => setKindleOptimized(e.target.checked)}
                     className="rounded border-gray-300 text-amber-600 focus:ring-amber-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.kindle_optimized')}</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_mobi.setting_kindle_optimized')}</span>
                 </label>
               </div>
             </div>
@@ -577,16 +582,16 @@ export const EPUBToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                {t('epub_to_mobi.why_choose')}
+                {t('epub_to_mobi.features_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  t('epub_to_mobi.benefit_1'),
-                  t('epub_to_mobi.benefit_2'),
-                  t('epub_to_mobi.benefit_3'),
-                  t('epub_to_mobi.benefit_4'),
-                  t('epub_to_mobi.benefit_5'),
-                  t('epub_to_mobi.benefit_6')
+                  t('epub_to_mobi.feature_1'),
+                  t('epub_to_mobi.feature_2'),
+                  t('epub_to_mobi.feature_3'),
+                  t('epub_to_mobi.feature_4'),
+                  t('epub_to_mobi.feature_5'),
+                  t('epub_to_mobi.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -600,16 +605,16 @@ export const EPUBToMOBIConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-amber-600" />
-                {t('epub_to_mobi.perfect_for')}
+                {t('epub_to_mobi.use_cases_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  t('epub_to_mobi.perfect_1'),
-                  t('epub_to_mobi.perfect_2'),
-                  t('epub_to_mobi.perfect_3'),
-                  t('epub_to_mobi.perfect_4'),
-                  t('epub_to_mobi.perfect_5'),
-                  t('epub_to_mobi.perfect_6')
+                  t('epub_to_mobi.use_case_1'),
+                  t('epub_to_mobi.use_case_2'),
+                  t('epub_to_mobi.use_case_3'),
+                  t('epub_to_mobi.use_case_4'),
+                  t('epub_to_mobi.use_case_5'),
+                  t('epub_to_mobi.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -627,7 +632,7 @@ export const EPUBToMOBIConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← {t('epub_to_mobi.back_to_home')}
+            ← {t('common.back_to_home')}
           </button>
         </div>
 
@@ -642,91 +647,91 @@ export const EPUBToMOBIConverter: React.FC = () => {
               {t('epub_to_mobi.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_mobi.benefits_heading')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_mobi.seo_benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-amber-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('epub_to_mobi.benefit_card_1_title')}</h4>
+                <h4 className="text-xl font-semibold text-amber-900 mb-3">{t('epub_to_mobi.seo_benefit_1_title')}</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_mobi.benefit_card_1_desc')}
+                  {t('epub_to_mobi.seo_benefit_1_text')}
                 </p>
               </div>
               
               <div className="bg-yellow-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-yellow-900 mb-3">{t('epub_to_mobi.benefit_card_2_title')}</h4>
+                <h4 className="text-xl font-semibold text-yellow-900 mb-3">{t('epub_to_mobi.seo_benefit_2_title')}</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_mobi.benefit_card_2_desc')}
+                  {t('epub_to_mobi.seo_benefit_2_text')}
                 </p>
               </div>
               
               <div className="bg-orange-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('epub_to_mobi.benefit_card_3_title')}</h4>
+                <h4 className="text-xl font-semibold text-orange-900 mb-3">{t('epub_to_mobi.seo_benefit_3_title')}</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_mobi.benefit_card_3_desc')}
+                  {t('epub_to_mobi.seo_benefit_3_text')}
                 </p>
               </div>
               
               <div className="bg-red-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('epub_to_mobi.benefit_card_4_title')}</h4>
+                <h4 className="text-xl font-semibold text-red-900 mb-3">{t('epub_to_mobi.seo_benefit_4_title')}</h4>
                 <p className="text-gray-700">
-                  {t('epub_to_mobi.benefit_card_4_desc')}
+                  {t('epub_to_mobi.seo_benefit_4_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_mobi.use_cases_heading')}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_mobi.seo_use_cases_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.use_case_card_1_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_mobi.use_case_card_1_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.seo_use_case_1_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.seo_use_case_1_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.use_case_card_2_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_mobi.use_case_card_2_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.seo_use_case_2_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.seo_use_case_2_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.use_case_card_3_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_mobi.use_case_card_3_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.seo_use_case_3_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.seo_use_case_3_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-red-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.use_case_card_4_title')}</h4>
-                  <p className="text-gray-700">{t('epub_to_mobi.use_case_card_4_desc')}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_mobi.seo_use_case_4_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_mobi.seo_use_case_4_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-amber-600 to-yellow-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">{t('epub_to_mobi.cta_title')}</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_mobi.seo_cta_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                {t('epub_to_mobi.cta_description')}
+                {t('epub_to_mobi.seo_cta_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  {t('epub_to_mobi.start_converting')}
+                  {t('epub_to_mobi.seo_cta_button')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors"
                 >
-                  {t('epub_to_mobi.back_to_home')}
+                  {t('common.back_to_home')}
                 </button>
               </div>
             </div>
