@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Search, X, Download, Printer, FileText, RotateCw, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, X, Download, Printer, RotateCw, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { FileProcessor } from '../../utils/fileProcessing';
 
 interface JPGEditorProps {
@@ -98,58 +98,68 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
   };
 
   const handlePrint = () => {
-    const printWindow = window.open('', '_blank');
-    if (printWindow && currentImageUrl) {
-      printWindow.document.write(`
+    if (currentImageUrl && currentFile) {
+      // Create a hidden iframe for printing in the same window context
+      const iframe = document.createElement('iframe');
+      iframe.style.position = 'fixed';
+      iframe.style.right = '0';
+      iframe.style.bottom = '0';
+      iframe.style.width = '0';
+      iframe.style.height = '0';
+      iframe.style.border = '0';
+      document.body.appendChild(iframe);
+
+      const printContent = `
+        <!DOCTYPE html>
         <html>
-          <head><title>${currentFile.name}</title></head>
-          <body style="margin:0;display:flex;justify-content:center;align-items:center;min-height:100vh;">
-            <img src="${currentImageUrl}" style="max-width:100%;max-height:100vh;object-fit:contain;" />
+          <head>
+            <title>${currentFile.name}</title>
+            <style>
+              @media print {
+                * {
+                  margin: 0;
+                  padding: 0;
+                }
+                body {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  min-height: 100vh;
+                }
+                img {
+                  max-width: 100%;
+                  max-height: 100vh;
+                  object-fit: contain;
+                }
+              }
+              @page {
+                margin: 0;
+              }
+            </style>
+          </head>
+          <body>
+            <img src="${currentImageUrl}" alt="${currentFile.name}" />
           </body>
         </html>
-      `);
-      printWindow.document.close();
-      printWindow.focus();
-      setTimeout(() => {
-        printWindow.print();
-      }, 250);
+      `;
+
+      iframe.contentWindow?.document.open();
+      iframe.contentWindow?.document.write(printContent);
+      iframe.contentWindow?.document.close();
+
+      iframe.onload = () => {
+        setTimeout(() => {
+          iframe.contentWindow?.focus();
+          iframe.contentWindow?.print();
+          // Clean up after printing
+          setTimeout(() => {
+            document.body.removeChild(iframe);
+          }, 1000);
+        }, 250);
+      };
     }
   };
 
-  const handleDownloadAsPDF = async () => {
-    // Simple PDF download using canvas
-    try {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.src = currentImageUrl;
-      
-      await new Promise((resolve, reject) => {
-        img.onload = resolve;
-        img.onerror = reject;
-      });
-
-      const canvas = document.createElement('canvas');
-      canvas.width = img.width;
-      canvas.height = img.height;
-      const ctx = canvas.getContext('2d');
-      if (ctx) {
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob((blob) => {
-          if (blob) {
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = currentFile.name.replace(/\.(jpg|jpeg)$/i, '.pdf');
-            a.click();
-            URL.revokeObjectURL(url);
-          }
-        }, 'application/pdf');
-      }
-    } catch (error) {
-      console.error('Error creating PDF:', error);
-      alert('Failed to create PDF. Please try downloading the image instead.');
-    }
-  };
 
   const handleFileSelect = (index: number) => {
     setSelectedIndex(index);
@@ -177,6 +187,24 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
       setSelectedIndex(0);
     }
   }, [filteredFiles.length, selectedIndex]);
+
+  // Handle fullscreen changes (e.g., when user presses F11 or ESC)
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement && isPresentationMode) {
+        // User exited fullscreen, exit presentation mode
+        setIsPresentationMode(false);
+        setIsFullscreen(false);
+      } else if (document.fullscreenElement) {
+        setIsFullscreen(true);
+      }
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, [isPresentationMode]);
 
   // Keyboard navigation (after all handlers are defined)
   useEffect(() => {
@@ -231,7 +259,18 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
       {/* Header */}
       <header className="h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between px-6 shadow-md z-20">
         <div className="flex items-center gap-3">
-          <div className="bg-white text-purple-600 p-1 rounded font-bold text-xs">MH</div>
+          <img 
+            src="/favicon.png" 
+            alt="MorphyHub" 
+            className="w-8 h-8 object-contain"
+            onError={(e) => {
+              // Fallback to favicon2.png if favicon.png doesn't exist
+              const target = e.target as HTMLImageElement;
+              if (target.src.includes('favicon.png')) {
+                target.src = '/favicon2.png';
+              }
+            }}
+          />
           <span className="font-bold text-lg tracking-tight">MorphyHub</span>
         </div>
         <button
@@ -351,7 +390,20 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => setIsPresentationMode(!isPresentationMode)}
+                onClick={() => {
+                  setIsPresentationMode(!isPresentationMode);
+                  if (!isPresentationMode) {
+                    // Enter fullscreen when starting presentation
+                    viewerRef.current?.requestFullscreen().catch(err => {
+                      console.error('Error entering fullscreen:', err);
+                    });
+                  } else {
+                    // Exit fullscreen when exiting presentation
+                    if (document.fullscreenElement) {
+                      document.exitFullscreen();
+                    }
+                  }
+                }}
                 className="btn-icon flex items-center gap-2 px-3 py-1.5 text-gray-600 hover:bg-purple-50 hover:text-purple-700 rounded transition-colors"
                 title="Start Presentation (Space/Arrows to navigate)"
               >
@@ -369,14 +421,6 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                 title="Print Image"
               >
                 <Printer className="w-4 h-4" />
-              </button>
-
-              <button
-                onClick={handleDownloadAsPDF}
-                className="btn-icon w-9 h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
-                title="Download as PDF"
-              >
-                <FileText className="w-4 h-4" />
               </button>
 
               <button
