@@ -1923,6 +1923,45 @@ function App() {
         <Route path="/sv/samples/sample-barcode-svg" element={<SampleBarcodeSvg />} />
         <Route path="/sv/samples/sample-avi" element={<SampleAvi />} />
         <Route path="/sv/samples/sample-3gp" element={<Sample3gp />} />
+        <Route path="/sv/samples/sample-zip" element={<SampleZip />} />
+        <Route path="/sv/samples/sample-aac" element={<SampleAac />} />
+        <Route path="/sv/samples/sample-ac3" element={<SampleAc3 />} />
+        <Route path="/sv/samples/sample-ace" element={<SampleAce />} />
+        <Route path="/sv/samples/sample-aif" element={<SampleAif />} />
+        <Route path="/sv/samples/sample-aiff" element={<SampleAiff />} />
+        <Route path="/sv/samples/sample-amr" element={<SampleAmr />} />
+        <Route path="/sv/samples/sample-arj" element={<SampleArj />} />
+        <Route path="/sv/samples/sample-bz2" element={<SampleBz2 />} />
+        <Route path="/sv/samples/sample-cab" element={<SampleCab />} />
+        <Route path="/sv/samples/sample-caf" element={<SampleCaf />} />
+        <Route path="/sv/samples/sample-cpio" element={<SampleCpio />} />
+        <Route path="/sv/samples/sample-cue" element={<SampleCue />} />
+        <Route path="/sv/samples/sample-dav" element={<SampleDav />} />
+        <Route path="/sv/samples/sample-dds" element={<SampleDds />} />
+        <Route path="/sv/samples/sample-dmg" element={<SampleDmg />} />
+        <Route path="/sv/samples/sample-dng" element={<SampleDng />} />
+        <Route path="/sv/samples/sample-eps" element={<SampleEps />} />
+        <Route path="/sv/samples/sample-exr" element={<SampleExr />} />
+        <Route path="/sv/samples/sample-gz" element={<SampleGz />} />
+        <Route path="/sv/samples/sample-hdr" element={<SampleHdr />} />
+        <Route path="/sv/samples/sample-heic" element={<SampleHeic />} />
+        <Route path="/sv/samples/sample-heif" element={<SampleHeif />} />
+        <Route path="/sv/samples/sample-icns" element={<SampleIcns />} />
+        <Route path="/sv/samples/sample-ico" element={<SampleIco />} />
+        <Route path="/sv/samples/sample-img" element={<SampleImg />} />
+        <Route path="/sv/samples/sample-iso" element={<SampleIso />} />
+        <Route path="/sv/samples/sample-jpeg" element={<SampleJpeg />} />
+        <Route path="/sv/samples/sample-jpg" element={<SampleJpg />} />
+        <Route path="/sv/samples/sample-kmz" element={<SampleKmz />} />
+        <Route path="/sv/samples/sample-laz" element={<SampleLaz />} />
+        <Route path="/sv/samples/sample-lha" element={<SampleLha />} />
+        <Route path="/sv/samples/sample-lzh" element={<SampleLzh />} />
+        <Route path="/sv/samples/sample-lzma" element={<SampleLzma />} />
+        <Route path="/sv/samples/sample-m4a" element={<SampleM4a />} />
+        <Route path="/sv/samples/sample-m4v" element={<SampleM4v />} />
+        <Route path="/sv/samples/sample-midi" element={<SampleMidi />} />
+        <Route path="/sv/samples/sample-mkv" element={<SampleMkv />} />
+        <Route path="/sv/samples/sample-7z" element={<Sample7z />} />
 
         {/* Español (ES) Sample Files Routes */}
         <Route path="/es/samples/sample-docx" element={<SampleDocx />} />
