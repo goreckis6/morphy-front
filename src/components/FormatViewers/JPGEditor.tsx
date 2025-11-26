@@ -260,14 +260,14 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
       <header className="h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between px-6 shadow-md z-20">
         <div className="flex items-center gap-3">
           <img 
-            src="/logo.jpg" 
+            src="/logo.png" 
             alt="MorphyHub" 
             className="h-10 w-auto object-contain"
             onError={(e) => {
-              // Fallback to logo.png if logo.jpg doesn't exist
+              // Fallback to logo.jpg if logo.png doesn't exist
               const target = e.target as HTMLImageElement;
-              if (target.src.includes('logo.jpg')) {
-                target.src = '/logo.png';
+              if (target.src.includes('logo.png')) {
+                target.src = '/logo.jpg';
               }
             }}
           />
