@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Image, Upload, Eye, Download, ArrowLeft, Camera, Palette, Zap, Info, CheckCircle, Star } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
+import { JPGEditor } from './JPGEditor';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +12,7 @@ import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 export const JPEGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
   const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
 
@@ -25,7 +27,11 @@ export const JPEGViewer: React.FC = () => {
       const extension = file.name.split('.').pop()?.toLowerCase();
       return ['jpg', 'jpeg', 'jpe'].includes(extension || '');
     });
-    setSelectedFiles(jpegFiles);
+    setSelectedFiles(prev => [...prev, ...jpegFiles]);
+  };
+
+  const handleAddFilesToEditor = (newFiles: File[]) => {
+    setSelectedFiles(prev => [...prev, ...newFiles]);
   };
 
   return (
@@ -107,48 +113,43 @@ export const JPEGViewer: React.FC = () => {
               </div>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {selectedFiles.map((file, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-3 sm:p-4 hover:shadow-lg transition-all transform hover:scale-105 border border-gray-200">
-                  <div className="aspect-square bg-white rounded-xl mb-2 sm:mb-3 overflow-hidden shadow-md">
-                    <img
-                      src={URL.createObjectURL(file)}
-                      alt={file.name}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="text-xs sm:text-sm font-semibold text-gray-900 truncate mb-1 sm:mb-2" title={file.name}>
-                    {file.name}
-                  </div>
-                  <div className="text-xs text-gray-600 mb-2 sm:mb-3 font-medium">
-                    {(file.size / 1024 / 1024).toFixed(2)} MB • JPEG
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <button
-                      onClick={() => setViewerFile(file)}
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-xs sm:text-sm font-semibold py-2 sm:py-2.5 px-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-1.5"
-                    >
-                      <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
-                      <span>{t('viewers.jpeg.buttons.view')}</span>
-                    </button>
-                    <button 
-                      onClick={() => {
-                        const url = URL.createObjectURL(file);
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = file.name;
-                        a.click();
-                        URL.revokeObjectURL(url);
-                      }}
-                      className="p-2 text-green-600 hover:bg-green-100 rounded-lg transition-colors"
-                      title={t('viewers.jpeg.buttons.download')}
-                    >
-                      <Download className="w-3 h-3 sm:w-4 sm:h-4" />
-                      <span className="sr-only">{t('viewers.jpeg.buttons.download')}</span>
-                    </button>
-                  </div>
+            {/* View Files Button */}
+            <div className="flex justify-center mb-6">
+              <button
+                onClick={() => setIsEditorOpen(true)}
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center gap-3 text-lg"
+              >
+                <Eye className="w-6 h-6" />
+                <span>View Files</span>
+              </button>
+            </div>
+
+            {/* Thumbnail Grid (Optional - can be hidden or shown) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 sm:gap-4">
+              {selectedFiles.slice(0, 12).map((file, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden border border-gray-200 hover:border-purple-400 transition-colors cursor-pointer group"
+                  onClick={() => {
+                    setIsEditorOpen(true);
+                    // You could set initial index here if needed
+                  }}
+                >
+                  <img
+                    src={URL.createObjectURL(file)}
+                    alt={file.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                 </div>
               ))}
+              {selectedFiles.length > 12 && (
+                <div className="relative aspect-square bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg border-2 border-dashed border-purple-300 flex items-center justify-center">
+                  <span className="text-sm font-semibold text-purple-700">
+                    +{selectedFiles.length - 12} more
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -304,6 +305,15 @@ export const JPEGViewer: React.FC = () => {
         <FileViewer
           file={viewerFile}
           onClose={() => setViewerFile(null)}
+        />
+      )}
+
+      {/* JPG Editor */}
+      {isEditorOpen && (
+        <JPGEditor
+          files={selectedFiles}
+          onClose={() => setIsEditorOpen(false)}
+          onAddFiles={handleAddFilesToEditor}
         />
       )}
       </div>
