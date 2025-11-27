@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Search, X, Download, Printer, RotateCw, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../LanguageSwitcher';
 import { FileProcessor } from '../../utils/fileProcessing';
 
 interface JPGEditorProps {
@@ -286,13 +287,16 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
           </div>
           <span className="font-bold text-sm sm:text-lg tracking-tight hidden sm:inline">MorphyHub</span>
         </div>
-        <button
-          onClick={onClose}
-          className="p-2 hover:bg-white/20 rounded transition-colors"
-          title={t('viewers.jpeg.editor.close', 'Close (Esc)')}
-        >
-          <X className="w-4 h-4 sm:w-5 sm:h-5" />
-        </button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-white/20 rounded transition-colors"
+            title={t('viewers.jpeg.editor.close', 'Close (Esc)')}
+          >
+            <X className="w-4 h-4 sm:w-5 sm:h-5" />
+          </button>
+        </div>
       </header>
 
       <main className="flex-1 flex overflow-hidden">
