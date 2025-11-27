@@ -265,8 +265,8 @@ export const EPUBToTXTConverter: React.FC = () => {
                   onClick={handleSwitchToSingle}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     !batchMode 
-                      ? 'bg-blue-600 text-white shadow-lg' 
-                      : 'bg-blue-100 text-blue-600 hover:bg-blue-200'
+                      ? 'bg-sky-600 text-white shadow-lg' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
@@ -276,8 +276,8 @@ export const EPUBToTXTConverter: React.FC = () => {
                   onClick={handleSwitchToBatch}
                   className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all ${
                     batchMode 
-                      ? 'bg-purple-600 text-white shadow-lg' 
-                      : 'bg-purple-100 text-purple-600 hover:bg-purple-200'
+                      ? 'bg-sky-600 text-white shadow-lg' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
@@ -740,23 +740,7 @@ export const EPUBToTXTConverter: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-8 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">MorphyHub</h3>
-            <p className="text-gray-400 mb-6">
-              Convert and view files online for free. Support for 50+ formats.
-            </p>
-            <div className="flex justify-center space-x-6 text-sm text-gray-400">
-              <span>© 2024 MorphyHub</span>
-              <span>•</span>
-              <span>Privacy Policy</span>
-              <span>•</span>
-              <span>Terms of Service</span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       </div>
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Search, X, Download, Printer, RotateCw, ZoomIn, ZoomOut, Maximize2, Play, ChevronLeft, ChevronRight, Menu } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { FileProcessor } from '../../utils/fileProcessing';
 
 interface JPGEditorProps {
@@ -9,6 +10,7 @@ interface JPGEditorProps {
 }
 
 export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles }) => {
+  const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
   const [zoom, setZoom] = useState(100);
@@ -264,7 +266,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             className="lg:hidden p-2 hover:bg-white/20 rounded transition-colors"
-            title="Toggle Sidebar"
+            title={t('viewers.jpeg.editor.toggle_sidebar', 'Toggle Sidebar')}
           >
             <Menu className="w-5 h-5" />
           </button>
@@ -287,7 +289,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
         <button
           onClick={onClose}
           className="p-2 hover:bg-white/20 rounded transition-colors"
-          title="Close (Esc)"
+          title={t('viewers.jpeg.editor.close', 'Close (Esc)')}
         >
           <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
@@ -302,7 +304,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="lg:hidden absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded transition-colors z-40"
-            title="Close Sidebar"
+            title={t('viewers.jpeg.editor.close_sidebar', 'Close Sidebar')}
           >
             <X className="w-5 h-5" />
           </button>
@@ -312,7 +314,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               <Search className="absolute left-2 sm:left-3 top-2.5 w-4 h-4 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search files..."
+                placeholder={t('viewers.jpeg.editor.search_placeholder', 'Search files...')}
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
@@ -326,14 +328,14 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
           {/* Files Header */}
           <div className="px-3 sm:px-4 py-1.5 sm:py-2 flex justify-between items-center bg-gray-50/50">
             <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Files ({filteredFiles.length})
+              {t('viewers.jpeg.editor.files_header', 'Files')} ({filteredFiles.length})
             </span>
             {onAddFiles && (
               <button
                 onClick={() => fileInputRef.current?.click()}
                 className="text-purple-600 hover:text-purple-700 text-xs font-bold uppercase tracking-wide transition-colors"
               >
-                + Add
+                {t('viewers.jpeg.editor.add_files', '+ Add')}
               </button>
             )}
             <input
@@ -403,7 +405,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
             <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-1">
               <span className="font-semibold text-gray-700 text-xs sm:text-sm truncate">{currentFile?.name}</span>
               <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-gray-100 text-gray-500 rounded border border-gray-200 flex-shrink-0">
-                JPG
+                {t('viewers.jpeg.editor.format_badge', 'JPG')}
               </span>
               {currentFile && (
                 <span className="text-xs text-gray-400 hidden sm:inline flex-shrink-0">
@@ -429,11 +431,11 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                   }
                 }}
                 className="btn-icon flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 text-gray-600 hover:bg-purple-50 hover:text-purple-700 rounded transition-colors text-xs sm:text-sm"
-                title="Start Presentation (Space/Arrows to navigate)"
+                title={t('viewers.jpeg.editor.start_presentation', 'Start Presentation (Space/Arrows to navigate)')}
               >
                 <Play className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span className="font-medium hidden sm:inline">
-                  {isPresentationMode ? 'Exit' : 'Present'}
+                  {isPresentationMode ? t('viewers.jpeg.editor.exit_presentation', 'Exit') : t('viewers.jpeg.editor.present', 'Present')}
                 </span>
               </button>
 
@@ -442,7 +444,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               <button
                 onClick={handlePrint}
                 className="btn-icon w-8 h-8 sm:w-9 sm:h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
-                title="Print Image"
+                title={t('viewers.jpeg.editor.print_image', 'Print Image')}
               >
                 <Printer className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
@@ -450,7 +452,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               <button
                 onClick={handleDownload}
                 className="btn-icon w-8 h-8 sm:w-9 sm:h-9 text-gray-600 hover:bg-gray-100 rounded transition-colors"
-                title="Download Image"
+                title={t('viewers.jpeg.editor.download_image', 'Download Image')}
               >
                 <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
@@ -465,14 +467,14 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
                 <button
                   onClick={handlePrevious}
                   className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-purple-600 transition-all z-20"
-                  title="Previous (←)"
+                  title={t('viewers.jpeg.editor.previous', 'Previous (←)')}
                 >
                   <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
                 </button>
                 <button
                   onClick={handleNext}
                   className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 p-2 sm:p-3 bg-white/90 backdrop-blur border border-gray-200 shadow-lg rounded-full hover:bg-white hover:text-purple-600 transition-all z-20"
-                  title="Next (→)"
+                  title={t('viewers.jpeg.editor.next', 'Next (→)')}
                 >
                   <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
                 </button>
@@ -498,21 +500,21 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               <button
                 onClick={handleZoomOut}
                 className="hover:text-purple-600 transition-colors p-1"
-                title="Zoom Out (-)"
+                title={t('viewers.jpeg.editor.zoom_out', 'Zoom Out (-)')}
               >
                 <ZoomOut className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
               <button
                 onClick={handleResetZoom}
                 className="text-xs font-mono font-medium w-12 sm:w-14 md:w-16 text-center hover:text-purple-600 transition-colors"
-                title="Click to reset zoom"
+                title={t('viewers.jpeg.editor.reset_zoom', 'Click to reset zoom')}
               >
                 {zoom}%
               </button>
               <button
                 onClick={handleZoomIn}
                 className="hover:text-purple-600 transition-colors p-1"
-                title="Zoom In (+)"
+                title={t('viewers.jpeg.editor.zoom_in', 'Zoom In (+)')}
               >
                 <ZoomIn className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
@@ -520,7 +522,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               <button
                 onClick={handleRotate}
                 className="hover:text-purple-600 transition-colors p-1"
-                title="Rotate (R)"
+                title={t('viewers.jpeg.editor.rotate', 'Rotate (R)')}
               >
                 <RotateCw className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
@@ -528,7 +530,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               <button
                 onClick={toggleFullscreen}
                 className="hover:text-purple-600 transition-colors p-1 hidden sm:block"
-                title="Fullscreen (F)"
+                title={t('viewers.jpeg.editor.fullscreen', 'Fullscreen (F)')}
               >
                 <Maximize2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>

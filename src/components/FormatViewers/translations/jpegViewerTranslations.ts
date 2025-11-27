@@ -15,6 +15,27 @@ type JPEGViewerTranslations = {
         view_files: string;
         back: string;
       };
+      editor: {
+        toggle_sidebar: string;
+        close: string;
+        close_sidebar: string;
+        search_placeholder: string;
+        files_header: string;
+        add_files: string;
+        format_badge: string;
+        present: string;
+        exit_presentation: string;
+        start_presentation: string;
+        print_image: string;
+        download_image: string;
+        previous: string;
+        next: string;
+        zoom_out: string;
+        zoom_in: string;
+        reset_zoom: string;
+        rotate: string;
+        fullscreen: string;
+      };
       quick_stats: {
         universal_format: string;
         fast_processing: string;
@@ -39,6 +60,27 @@ type JPEGViewerTranslations = {
       seo_conversion_text: string;
       seo_optimization_title: string;
       seo_optimization_text: string;
+      editor: {
+        toggle_sidebar: string;
+        close: string;
+        close_sidebar: string;
+        search_placeholder: string;
+        files_header: string;
+        add_files: string;
+        format_badge: string;
+        present: string;
+        exit_presentation: string;
+        start_presentation: string;
+        print_image: string;
+        download_image: string;
+        previous: string;
+        next: string;
+        zoom_out: string;
+        zoom_in: string;
+        reset_zoom: string;
+        rotate: string;
+        fullscreen: string;
+      };
     };
   };
 };
@@ -57,6 +99,27 @@ const resources: Record<string, JPEGViewerTranslations> = {
         buttons: {
           view_files: 'View Files',
           back: 'Back to All Viewers'
+        },
+        editor: {
+          toggle_sidebar: 'Toggle Sidebar',
+          close: 'Close (Esc)',
+          close_sidebar: 'Close Sidebar',
+          search_placeholder: 'Search files...',
+          files_header: 'Files',
+          add_files: '+ Add',
+          format_badge: 'JPG',
+          present: 'Present',
+          exit_presentation: 'Exit',
+          start_presentation: 'Start Presentation (Space/Arrows to navigate)',
+          print_image: 'Print Image',
+          download_image: 'Download Image',
+          previous: 'Previous (←)',
+          next: 'Next (→)',
+          zoom_out: 'Zoom Out (-)',
+          zoom_in: 'Zoom In (+)',
+          reset_zoom: 'Click to reset zoom',
+          rotate: 'Rotate (R)',
+          fullscreen: 'Fullscreen (F)'
         },
         quick_stats: {
           universal_format: '✓ Universal Format',
@@ -108,7 +171,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Professional Conversion Tools',
         seo_conversion_text: 'Convert JPEG files to PNG, WebP, AVIF, TIFF, and other formats while maintaining optimal quality. Our conversion engine offers adjustable quality settings, resize options, and batch processing capabilities for handling multiple files simultaneously.',
         seo_optimization_title: 'Quality Optimization',
-        seo_optimization_text: 'Optimize JPEG files for web use with our smart compression algorithms that reduce file sizes by up to 80% while preserving visual quality. Perfect for website optimization, email attachments, and social media sharing where file size matters.'
+        seo_optimization_text: 'Optimize JPEG files for web use with our smart compression algorithms that reduce file sizes by up to 80% while preserving visual quality. Perfect for website optimization, email attachments, and social media sharing where file size matters.',
+        editor: {
+          toggle_sidebar: 'Toggle Sidebar',
+          close: 'Close (Esc)',
+          close_sidebar: 'Close Sidebar',
+          search_placeholder: 'Search files...',
+          files_header: 'Files',
+          add_files: '+ Add',
+          format_badge: 'JPG',
+          present: 'Present',
+          exit_presentation: 'Exit',
+          start_presentation: 'Start Presentation (Space/Arrows to navigate)',
+          print_image: 'Print Image',
+          download_image: 'Download Image',
+          previous: 'Previous (←)',
+          next: 'Next (→)',
+          zoom_out: 'Zoom Out (-)',
+          zoom_in: 'Zoom In (+)',
+          reset_zoom: 'Click to reset zoom',
+          rotate: 'Rotate (R)',
+          fullscreen: 'Fullscreen (F)'
+        }
       }
     }
   },
@@ -176,7 +260,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Zaawansowane narzędzia konwersji',
         seo_conversion_text: 'Konwertuj pliki JPEG do PNG, WebP, AVIF, TIFF i innych formatów przy zachowaniu optymalnej jakości. Oferujemy regulację jakości, zmianę rozmiaru i przetwarzanie wsadowe wielu plików jednocześnie.',
         seo_optimization_title: 'Optymalizacja jakości',
-        seo_optimization_text: 'Optymalizuj pliki JPEG do użycia w sieci dzięki inteligentnym algorytmom kompresji, które zmniejszają rozmiar nawet o 80% przy zachowaniu jakości. Idealne rozwiązanie dla stron WWW, e-maili i mediów społecznościowych.'
+        seo_optimization_text: 'Optymalizuj pliki JPEG do użycia w sieci dzięki inteligentnym algorytmom kompresji, które zmniejszają rozmiar nawet o 80% przy zachowaniu jakości. Idealne rozwiązanie dla stron WWW, e-maili i mediów społecznościowych.',
+        editor: {
+          toggle_sidebar: 'Przełącz Panel',
+          close: 'Zamknij (Esc)',
+          close_sidebar: 'Zamknij Panel',
+          search_placeholder: 'Szukaj plików...',
+          files_header: 'Pliki',
+          add_files: '+ Dodaj',
+          format_badge: 'JPG',
+          present: 'Prezentuj',
+          exit_presentation: 'Wyjdź',
+          start_presentation: 'Rozpocznij Prezentację (Spacja/Strzałki do nawigacji)',
+          print_image: 'Drukuj Obraz',
+          download_image: 'Pobierz Obraz',
+          previous: 'Poprzedni (←)',
+          next: 'Następny (→)',
+          zoom_out: 'Pomniejsz (-)',
+          zoom_in: 'Powiększ (+)',
+          reset_zoom: 'Kliknij, aby zresetować powiększenie',
+          rotate: 'Obróć (R)',
+          fullscreen: 'Pełny Ekran (F)'
+        }
       }
     }
   },
@@ -244,7 +349,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Professionelle Konvertierungstools',
         seo_conversion_text: 'Konvertieren Sie JPEG-Dateien in PNG, WebP, AVIF, TIFF und andere Formate bei optimaler Qualität. Unsere Konvertierungs-Engine bietet einstellbare Qualitätseinstellungen, Größenänderungsoptionen und Stapelverarbeitungsfunktionen für die gleichzeitige Bearbeitung mehrerer Dateien.',
         seo_optimization_title: 'Qualitätsoptimierung',
-        seo_optimization_text: 'Optimieren Sie JPEG-Dateien für die Webnutzung mit unseren intelligenten Komprimierungsalgorithmen, die Dateigrößen um bis zu 80% reduzieren und gleichzeitig die visuelle Qualität erhalten. Perfekt für Website-Optimierung, E-Mail-Anhänge und Social-Media-Sharing, wo die Dateigröße wichtig ist.'
+        seo_optimization_text: 'Optimieren Sie JPEG-Dateien für die Webnutzung mit unseren intelligenten Komprimierungsalgorithmen, die Dateigrößen um bis zu 80% reduzieren und gleichzeitig die visuelle Qualität erhalten. Perfekt für Website-Optimierung, E-Mail-Anhänge und Social-Media-Sharing, wo die Dateigröße wichtig ist.',
+        editor: {
+          toggle_sidebar: 'Sidebar Umschalten',
+          close: 'Schließen (Esc)',
+          close_sidebar: 'Sidebar Schließen',
+          search_placeholder: 'Dateien suchen...',
+          files_header: 'Dateien',
+          add_files: '+ Hinzufügen',
+          format_badge: 'JPG',
+          present: 'Präsentieren',
+          exit_presentation: 'Beenden',
+          start_presentation: 'Präsentation Starten (Leertaste/Pfeile zum Navigieren)',
+          print_image: 'Bild Drucken',
+          download_image: 'Bild Herunterladen',
+          previous: 'Zurück (←)',
+          next: 'Weiter (→)',
+          zoom_out: 'Verkleinern (-)',
+          zoom_in: 'Vergrößern (+)',
+          reset_zoom: 'Klicken zum Zurücksetzen des Zooms',
+          rotate: 'Drehen (R)',
+          fullscreen: 'Vollbild (F)'
+        }
       }
     }
   },
@@ -312,7 +438,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Herramientas de Conversión Profesionales',
         seo_conversion_text: 'Convertir archivos JPEG a PNG, WebP, AVIF, TIFF y otros formatos manteniendo una calidad óptima. Nuestro motor de conversión ofrece configuraciones de calidad ajustables, opciones de redimensionamiento y capacidades de procesamiento por lotes para manejar múltiples archivos simultáneamente.',
         seo_optimization_title: 'Optimización de Calidad',
-        seo_optimization_text: 'Optimiza archivos JPEG para uso web con nuestros algoritmos de compresión inteligentes que reducen el tamaño de los archivos hasta en un 80% mientras preservan la calidad visual. Perfecto para optimización de sitios web, adjuntos de correo electrónico y compartir en redes sociales donde el tamaño del archivo importa.'
+        seo_optimization_text: 'Optimiza archivos JPEG para uso web con nuestros algoritmos de compresión inteligentes que reducen el tamaño de los archivos hasta en un 80% mientras preservan la calidad visual. Perfecto para optimización de sitios web, adjuntos de correo electrónico y compartir en redes sociales donde el tamaño del archivo importa.',
+        editor: {
+          toggle_sidebar: 'Alternar Barra Lateral',
+          close: 'Cerrar (Esc)',
+          close_sidebar: 'Cerrar Barra Lateral',
+          search_placeholder: 'Buscar archivos...',
+          files_header: 'Archivos',
+          add_files: '+ Añadir',
+          format_badge: 'JPG',
+          present: 'Presentar',
+          exit_presentation: 'Salir',
+          start_presentation: 'Iniciar Presentación (Espacio/Flechas para navegar)',
+          print_image: 'Imprimir Imagen',
+          download_image: 'Descargar Imagen',
+          previous: 'Anterior (←)',
+          next: 'Siguiente (→)',
+          zoom_out: 'Alejar (-)',
+          zoom_in: 'Acercar (+)',
+          reset_zoom: 'Clic para restablecer zoom',
+          rotate: 'Rotar (R)',
+          fullscreen: 'Pantalla Completa (F)'
+        }
       }
     }
   },
@@ -380,7 +527,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Outils de Conversion Professionnels',
         seo_conversion_text: 'Convertir les fichiers JPEG en PNG, WebP, AVIF, TIFF et autres formats tout en maintenant une qualité optimale. Notre moteur de conversion offre des paramètres de qualité ajustables, des options de redimensionnement et des capacités de traitement par lots pour gérer plusieurs fichiers simultanément.',
         seo_optimization_title: 'Optimisation de la Qualité',
-        seo_optimization_text: 'Optimisez les fichiers JPEG pour une utilisation web avec nos algorithmes de compression intelligents qui réduisent la taille des fichiers jusqu\'à 80% tout en préservant la qualité visuelle. Parfait pour l\'optimisation de sites web, les pièces jointes email et le partage sur les réseaux sociaux où la taille du fichier compte.'
+        seo_optimization_text: 'Optimisez les fichiers JPEG pour une utilisation web avec nos algorithmes de compression intelligents qui réduisent la taille des fichiers jusqu\'à 80% tout en préservant la qualité visuelle. Parfait pour l\'optimisation de sites web, les pièces jointes email et le partage sur les réseaux sociaux où la taille du fichier compte.',
+        editor: {
+          toggle_sidebar: 'Basculer la Barre Latérale',
+          close: 'Fermer (Esc)',
+          close_sidebar: 'Fermer la Barre Latérale',
+          search_placeholder: 'Rechercher des fichiers...',
+          files_header: 'Fichiers',
+          add_files: '+ Ajouter',
+          format_badge: 'JPG',
+          present: 'Présenter',
+          exit_presentation: 'Quitter',
+          start_presentation: 'Démarrer la Présentation (Espace/Flèches pour naviguer)',
+          print_image: 'Imprimer l\'Image',
+          download_image: 'Télécharger l\'Image',
+          previous: 'Précédent (←)',
+          next: 'Suivant (→)',
+          zoom_out: 'Dézoomer (-)',
+          zoom_in: 'Zoomer (+)',
+          reset_zoom: 'Cliquer pour réinitialiser le zoom',
+          rotate: 'Tourner (R)',
+          fullscreen: 'Plein Écran (F)'
+        }
       }
     }
   },
@@ -448,7 +616,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Strumenti di Conversione Professionali',
         seo_conversion_text: 'Converti file JPEG in PNG, WebP, AVIF, TIFF e altri formati mantenendo una qualità ottimale. Il nostro motore di conversione offre impostazioni di qualità regolabili, opzioni di ridimensionamento e capacità di elaborazione batch per gestire più file contemporaneamente.',
         seo_optimization_title: 'Ottimizzazione Qualità',
-        seo_optimization_text: 'Ottimizza file JPEG per uso web con i nostri algoritmi di compressione intelligenti che riducono le dimensioni dei file fino all\'80% preservando la qualità visiva. Perfetto per l\'ottimizzazione di siti web, allegati email e condivisione sui social media dove la dimensione del file conta.'
+        seo_optimization_text: 'Ottimizza file JPEG per uso web con i nostri algoritmi di compressione intelligenti che riducono le dimensioni dei file fino all\'80% preservando la qualità visiva. Perfetto per l\'ottimizzazione di siti web, allegati email e condivisione sui social media dove la dimensione del file conta.',
+        editor: {
+          toggle_sidebar: 'Mostra/Nascondi Barra Laterale',
+          close: 'Chiudi (Esc)',
+          close_sidebar: 'Chiudi Barra Laterale',
+          search_placeholder: 'Cerca file...',
+          files_header: 'File',
+          add_files: '+ Aggiungi',
+          format_badge: 'JPG',
+          present: 'Presenta',
+          exit_presentation: 'Esci',
+          start_presentation: 'Avvia Presentazione (Spazio/Frecce per navigare)',
+          print_image: 'Stampa Immagine',
+          download_image: 'Scarica Immagine',
+          previous: 'Precedente (←)',
+          next: 'Successivo (→)',
+          zoom_out: 'Riduci (-)',
+          zoom_in: 'Ingrandisci (+)',
+          reset_zoom: 'Clicca per resettare lo zoom',
+          rotate: 'Ruota (R)',
+          fullscreen: 'Schermo Intero (F)'
+        }
       }
     }
   },
@@ -516,7 +705,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Professionele Conversietools',
         seo_conversion_text: 'Converteer JPEG bestanden naar PNG, WebP, AVIF, TIFF en andere formaten terwijl optimale kwaliteit behouden blijft. Onze conversie-engine biedt aanpasbare kwaliteitsinstellingen, formaatwijzigingsopties en batchverwerkingsmogelijkheden voor het gelijktijdig verwerken van meerdere bestanden.',
         seo_optimization_title: 'Kwaliteitsoptimalisatie',
-        seo_optimization_text: 'Optimaliseer JPEG bestanden voor webgebruik met onze slimme compressie-algoritmen die bestandsgroottes tot 80% verkleinen terwijl de visuele kwaliteit behouden blijft. Perfect voor website-optimalisatie, e-mailbijlagen en sociale media delen waar bestandsgrootte belangrijk is.'
+        seo_optimization_text: 'Optimaliseer JPEG bestanden voor webgebruik met onze slimme compressie-algoritmen die bestandsgroottes tot 80% verkleinen terwijl de visuele kwaliteit behouden blijft. Perfect voor website-optimalisatie, e-mailbijlagen en sociale media delen waar bestandsgrootte belangrijk is.',
+        editor: {
+          toggle_sidebar: 'Zijbalk In-/Uitschakelen',
+          close: 'Sluiten (Esc)',
+          close_sidebar: 'Zijbalk Sluiten',
+          search_placeholder: 'Zoek bestanden...',
+          files_header: 'Bestanden',
+          add_files: '+ Toevoegen',
+          format_badge: 'JPG',
+          present: 'Presenteren',
+          exit_presentation: 'Afsluiten',
+          start_presentation: 'Start Presentatie (Spatie/Pijlen om te navigeren)',
+          print_image: 'Afbeelding Afdrukken',
+          download_image: 'Afbeelding Downloaden',
+          previous: 'Vorige (←)',
+          next: 'Volgende (→)',
+          zoom_out: 'Uitzoomen (-)',
+          zoom_in: 'Inzoomen (+)',
+          reset_zoom: 'Klik om zoom te resetten',
+          rotate: 'Draaien (R)',
+          fullscreen: 'Volledig Scherm (F)'
+        }
       }
     }
   },
@@ -584,7 +794,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Ferramentas de Conversão Profissionais',
         seo_conversion_text: 'Converter arquivos JPEG para PNG, WebP, AVIF, TIFF e outros formatos mantendo qualidade ótima. Nosso mecanismo de conversão oferece configurações de qualidade ajustáveis, opções de redimensionamento e capacidades de processamento em lote para lidar com vários arquivos simultaneamente.',
         seo_optimization_title: 'Otimização de Qualidade',
-        seo_optimization_text: 'Otimize arquivos JPEG para uso na web com nossos algoritmos de compressão inteligentes que reduzem o tamanho dos arquivos em até 80% preservando a qualidade visual. Perfeito para otimização de sites, anexos de email e compartilhamento em redes sociais onde o tamanho do arquivo importa.'
+        seo_optimization_text: 'Otimize arquivos JPEG para uso na web com nossos algoritmos de compressão inteligentes que reduzem o tamanho dos arquivos em até 80% preservando a qualidade visual. Perfeito para otimização de sites, anexos de email e compartilhamento em redes sociais onde o tamanho do arquivo importa.',
+        editor: {
+          toggle_sidebar: 'Alternar Barra Lateral',
+          close: 'Fechar (Esc)',
+          close_sidebar: 'Fechar Barra Lateral',
+          search_placeholder: 'Pesquisar arquivos...',
+          files_header: 'Arquivos',
+          add_files: '+ Adicionar',
+          format_badge: 'JPG',
+          present: 'Apresentar',
+          exit_presentation: 'Sair',
+          start_presentation: 'Iniciar Apresentação (Espaço/Setas para navegar)',
+          print_image: 'Imprimir Imagem',
+          download_image: 'Baixar Imagem',
+          previous: 'Anterior (←)',
+          next: 'Próximo (→)',
+          zoom_out: 'Diminuir Zoom (-)',
+          zoom_in: 'Aumentar Zoom (+)',
+          reset_zoom: 'Clique para redefinir zoom',
+          rotate: 'Girar (R)',
+          fullscreen: 'Tela Cheia (F)'
+        }
       }
     }
   },
@@ -652,7 +883,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Công Cụ Chuyển Đổi Chuyên Nghiệp',
         seo_conversion_text: 'Chuyển đổi tệp JPEG sang PNG, WebP, AVIF, TIFF và các định dạng khác trong khi duy trì chất lượng tối ưu. Công cụ chuyển đổi của chúng tôi cung cấp cài đặt chất lượng có thể điều chỉnh, tùy chọn thay đổi kích thước và khả năng xử lý hàng loạt để xử lý nhiều tệp đồng thời.',
         seo_optimization_title: 'Tối Ưu Hóa Chất Lượng',
-        seo_optimization_text: 'Tối ưu hóa tệp JPEG cho sử dụng web với các thuật toán nén thông minh của chúng tôi giảm kích thước tệp lên đến 80% trong khi bảo toàn chất lượng hình ảnh. Hoàn hảo cho tối ưu hóa trang web, tệp đính kèm email và chia sẻ mạng xã hội nơi kích thước tệp quan trọng.'
+        seo_optimization_text: 'Tối ưu hóa tệp JPEG cho sử dụng web với các thuật toán nén thông minh của chúng tôi giảm kích thước tệp lên đến 80% trong khi bảo toàn chất lượng hình ảnh. Hoàn hảo cho tối ưu hóa trang web, tệp đính kèm email và chia sẻ mạng xã hội nơi kích thước tệp quan trọng.',
+        editor: {
+          toggle_sidebar: 'Chuyển Thanh Bên',
+          close: 'Đóng (Esc)',
+          close_sidebar: 'Đóng Thanh Bên',
+          search_placeholder: 'Tìm kiếm tệp...',
+          files_header: 'Tệp',
+          add_files: '+ Thêm',
+          format_badge: 'JPG',
+          present: 'Trình Chiếu',
+          exit_presentation: 'Thoát',
+          start_presentation: 'Bắt Đầu Trình Chiếu (Phím Cách/Mũi Tên để điều hướng)',
+          print_image: 'In Hình Ảnh',
+          download_image: 'Tải Xuống Hình Ảnh',
+          previous: 'Trước (←)',
+          next: 'Tiếp (→)',
+          zoom_out: 'Thu Nhỏ (-)',
+          zoom_in: 'Phóng To (+)',
+          reset_zoom: 'Nhấp để đặt lại thu phóng',
+          rotate: 'Xoay (R)',
+          fullscreen: 'Toàn Màn Hình (F)'
+        }
       }
     }
   },
@@ -720,7 +972,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Profesyonel Dönüştürme Araçları',
         seo_conversion_text: 'Optimal kaliteyi korurken JPEG dosyalarını PNG, WebP, AVIF, TIFF ve diğer formatlara dönüştür. Dönüştürme motorumuz, birden fazla dosyayı aynı anda işlemek için ayarlanabilir kalite ayarları, yeniden boyutlandırma seçenekleri ve toplu işleme yetenekleri sunar.',
         seo_optimization_title: 'Kalite Optimizasyonu',
-        seo_optimization_text: 'Dosya boyutlarını %80\'e kadar azaltırken görsel kaliteyi koruyan akıllı sıkıştırma algoritmalarımızla JPEG dosyalarını web kullanımı için optimize edin. Dosya boyutunun önemli olduğu web sitesi optimizasyonu, e-posta ekleri ve sosyal medya paylaşımı için mükemmel.'
+        seo_optimization_text: 'Dosya boyutlarını %80\'e kadar azaltırken görsel kaliteyi koruyan akıllı sıkıştırma algoritmalarımızla JPEG dosyalarını web kullanımı için optimize edin. Dosya boyutunun önemli olduğu web sitesi optimizasyonu, e-posta ekleri ve sosyal medya paylaşımı için mükemmel.',
+        editor: {
+          toggle_sidebar: 'Kenar Çubuğunu Aç/Kapat',
+          close: 'Kapat (Esc)',
+          close_sidebar: 'Kenar Çubuğunu Kapat',
+          search_placeholder: 'Dosyaları ara...',
+          files_header: 'Dosyalar',
+          add_files: '+ Ekle',
+          format_badge: 'JPG',
+          present: 'Sun',
+          exit_presentation: 'Çık',
+          start_presentation: 'Sunumu Başlat (Boşluk/Ok tuşları ile gez)',
+          print_image: 'Görseli Yazdır',
+          download_image: 'Görseli İndir',
+          previous: 'Önceki (←)',
+          next: 'Sonraki (→)',
+          zoom_out: 'Uzaklaştır (-)',
+          zoom_in: 'Yakınlaştır (+)',
+          reset_zoom: 'Yakınlaştırmayı sıfırlamak için tıkla',
+          rotate: 'Döndür (R)',
+          fullscreen: 'Tam Ekran (F)'
+        }
       }
     }
   },
@@ -788,7 +1061,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Профессиональные Инструменты Конвертации',
         seo_conversion_text: 'Конвертируйте файлы JPEG в PNG, WebP, AVIF, TIFF и другие форматы, сохраняя оптимальное качество. Наш движок конвертации предлагает настраиваемые параметры качества, опции изменения размера и возможности пакетной обработки для одновременной обработки нескольких файлов.',
         seo_optimization_title: 'Оптимизация Качества',
-        seo_optimization_text: 'Оптимизируйте файлы JPEG для веб-использования с помощью наших интеллектуальных алгоритмов сжатия, которые уменьшают размеры файлов до 80%, сохраняя визуальное качество. Идеально для оптимизации веб-сайтов, вложений электронной почты и обмена в социальных сетях, где важен размер файла.'
+        seo_optimization_text: 'Оптимизируйте файлы JPEG для веб-использования с помощью наших интеллектуальных алгоритмов сжатия, которые уменьшают размеры файлов до 80%, сохраняя визуальное качество. Идеально для оптимизации веб-сайтов, вложений электронной почты и обмена в социальных сетях, где важен размер файла.',
+        editor: {
+          toggle_sidebar: 'Переключить Боковую Панель',
+          close: 'Закрыть (Esc)',
+          close_sidebar: 'Закрыть Боковую Панель',
+          search_placeholder: 'Поиск файлов...',
+          files_header: 'Файлы',
+          add_files: '+ Добавить',
+          format_badge: 'JPG',
+          present: 'Презентация',
+          exit_presentation: 'Выход',
+          start_presentation: 'Начать Презентацию (Пробел/Стрелки для навигации)',
+          print_image: 'Печать Изображения',
+          download_image: 'Скачать Изображение',
+          previous: 'Предыдущее (←)',
+          next: 'Следующее (→)',
+          zoom_out: 'Уменьшить (-)',
+          zoom_in: 'Увеличить (+)',
+          reset_zoom: 'Нажмите для сброса масштаба',
+          rotate: 'Повернуть (R)',
+          fullscreen: 'Полный Экран (F)'
+        }
       }
     }
   },
@@ -856,7 +1150,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'أدوات التحويل الاحترافية',
         seo_conversion_text: 'حول ملفات JPEG إلى PNG و WebP و AVIF و TIFF وتنسيقات أخرى مع الحفاظ على الجودة المثلى. يوفر محرك التحويل لدينا إعدادات جودة قابلة للتعديل وخيارات تغيير الحجم وإمكانيات المعالجة المجمعة للتعامل مع ملفات متعددة في وقت واحد.',
         seo_optimization_title: 'تحسين الجودة',
-        seo_optimization_text: 'حسّن ملفات JPEG للاستخدام على الويب باستخدام خوارزميات الضغط الذكية لدينا التي تقلل أحجام الملفات بنسبة تصل إلى 80% مع الحفاظ على الجودة البصرية. مثالي لتحسين المواقع ومرفقات البريد الإلكتروني ومشاركة وسائل التواصل الاجتماعي حيث يهم حجم الملف.'
+        seo_optimization_text: 'حسّن ملفات JPEG للاستخدام على الويب باستخدام خوارزميات الضغط الذكية لدينا التي تقلل أحجام الملفات بنسبة تصل إلى 80% مع الحفاظ على الجودة البصرية. مثالي لتحسين المواقع ومرفقات البريد الإلكتروني ومشاركة وسائل التواصل الاجتماعي حيث يهم حجم الملف.',
+        editor: {
+          toggle_sidebar: 'تبديل الشريط الجانبي',
+          close: 'إغلاق (Esc)',
+          close_sidebar: 'إغلاق الشريط الجانبي',
+          search_placeholder: 'البحث عن الملفات...',
+          files_header: 'الملفات',
+          add_files: '+ إضافة',
+          format_badge: 'JPG',
+          present: 'عرض',
+          exit_presentation: 'خروج',
+          start_presentation: 'بدء العرض (المسافة/الأسهم للتنقل)',
+          print_image: 'طباعة الصورة',
+          download_image: 'تحميل الصورة',
+          previous: 'السابق (←)',
+          next: 'التالي (→)',
+          zoom_out: 'تصغير (-)',
+          zoom_in: 'تكبير (+)',
+          reset_zoom: 'انقر لإعادة تعيين التكبير',
+          rotate: 'تدوير (R)',
+          fullscreen: 'ملء الشاشة (F)'
+        }
       }
     }
   },
@@ -924,7 +1239,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'เครื่องมือแปลงระดับมืออาชีพ',
         seo_conversion_text: 'แปลงไฟล์ JPEG เป็น PNG, WebP, AVIF, TIFF และรูปแบบอื่นๆ ในขณะที่รักษาคุณภาพที่เหมาะสม เครื่องมือแปลงของเรามีการตั้งค่าคุณภาพที่ปรับได้ ตัวเลือกปรับขนาด และความสามารถในการประมวลผลแบบกลุ่มสำหรับการจัดการไฟล์หลายไฟล์พร้อมกัน',
         seo_optimization_title: 'การปรับปรุงคุณภาพ',
-        seo_optimization_text: 'ปรับปรุงไฟล์ JPEG สำหรับการใช้งานบนเว็บด้วยอัลกอริทึมการบีบอัดอัจฉริยะของเราที่ลดขนาดไฟล์ได้สูงสุด 80% ในขณะที่รักษาคุณภาพภาพ เหมาะสำหรับการปรับปรุงเว็บไซต์ ไฟล์แนบอีเมล และการแชร์โซเชียลมีเดียที่ขนาดไฟล์มีความสำคัญ'
+        seo_optimization_text: 'ปรับปรุงไฟล์ JPEG สำหรับการใช้งานบนเว็บด้วยอัลกอริทึมการบีบอัดอัจฉริยะของเราที่ลดขนาดไฟล์ได้สูงสุด 80% ในขณะที่รักษาคุณภาพภาพ เหมาะสำหรับการปรับปรุงเว็บไซต์ ไฟล์แนบอีเมล และการแชร์โซเชียลมีเดียที่ขนาดไฟล์มีความสำคัญ',
+        editor: {
+          toggle_sidebar: 'สลับแถบด้านข้าง',
+          close: 'ปิด (Esc)',
+          close_sidebar: 'ปิดแถบด้านข้าง',
+          search_placeholder: 'ค้นหาไฟล์...',
+          files_header: 'ไฟล์',
+          add_files: '+ เพิ่ม',
+          format_badge: 'JPG',
+          present: 'นำเสนอ',
+          exit_presentation: 'ออก',
+          start_presentation: 'เริ่มการนำเสนอ (Space/ลูกศรเพื่อนำทาง)',
+          print_image: 'พิมพ์ภาพ',
+          download_image: 'ดาวน์โหลดภาพ',
+          previous: 'ก่อนหน้า (←)',
+          next: 'ถัดไป (→)',
+          zoom_out: 'ซูมออก (-)',
+          zoom_in: 'ซูมเข้า (+)',
+          reset_zoom: 'คลิกเพื่อรีเซ็ตการซูม',
+          rotate: 'หมุน (R)',
+          fullscreen: 'เต็มหน้าจอ (F)'
+        }
       }
     }
   },
@@ -992,7 +1328,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'プロフェッショナル変換ツール',
         seo_conversion_text: '最適な品質を維持しながら、JPEGファイルをPNG、WebP、AVIF、TIFF、その他のフォーマットに変換します。当社の変換エンジンは、複数のファイルを同時に処理するための調整可能な品質設定、サイズ変更オプション、バッチ処理機能を提供します。',
         seo_optimization_title: '品質最適化',
-        seo_optimization_text: 'ファイルサイズを最大80%削減しながら視覚品質を保持する当社のスマート圧縮アルゴリズムで、Web使用のためにJPEGファイルを最適化します。ファイルサイズが重要なWebサイト最適化、メール添付、ソーシャルメディア共有に最適です。'
+        seo_optimization_text: 'ファイルサイズを最大80%削減しながら視覚品質を保持する当社のスマート圧縮アルゴリズムで、Web使用のためにJPEGファイルを最適化します。ファイルサイズが重要なWebサイト最適化、メール添付、ソーシャルメディア共有に最適です。',
+        editor: {
+          toggle_sidebar: 'サイドバーの切り替え',
+          close: '閉じる (Esc)',
+          close_sidebar: 'サイドバーを閉じる',
+          search_placeholder: 'ファイルを検索...',
+          files_header: 'ファイル',
+          add_files: '+ 追加',
+          format_badge: 'JPG',
+          present: 'プレゼン',
+          exit_presentation: '終了',
+          start_presentation: 'プレゼンテーション開始 (スペース/矢印キーでナビゲート)',
+          print_image: '画像を印刷',
+          download_image: '画像をダウンロード',
+          previous: '前へ (←)',
+          next: '次へ (→)',
+          zoom_out: 'ズームアウト (-)',
+          zoom_in: 'ズームイン (+)',
+          reset_zoom: 'クリックしてズームをリセット',
+          rotate: '回転 (R)',
+          fullscreen: 'フルスクリーン (F)'
+        }
       }
     }
   },
@@ -1060,7 +1417,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: '专业转换工具',
         seo_conversion_text: '在保持最佳质量的同时，将JPEG文件转换为PNG、WebP、AVIF、TIFF和其他格式。我们的转换引擎提供可调的质量设置、调整大小选项和批处理功能，可同时处理多个文件。',
         seo_optimization_title: '质量优化',
-        seo_optimization_text: '使用我们的智能压缩算法优化JPEG文件用于网络使用，该算法可将文件大小减少高达80%，同时保持视觉质量。非常适合网站优化、电子邮件附件和社交媒体分享，其中文件大小很重要。'
+        seo_optimization_text: '使用我们的智能压缩算法优化JPEG文件用于网络使用，该算法可将文件大小减少高达80%，同时保持视觉质量。非常适合网站优化、电子邮件附件和社交媒体分享，其中文件大小很重要。',
+        editor: {
+          toggle_sidebar: '切换侧边栏',
+          close: '关闭 (Esc)',
+          close_sidebar: '关闭侧边栏',
+          search_placeholder: '搜索文件...',
+          files_header: '文件',
+          add_files: '+ 添加',
+          format_badge: 'JPG',
+          present: '演示',
+          exit_presentation: '退出',
+          start_presentation: '开始演示 (空格/箭头键导航)',
+          print_image: '打印图片',
+          download_image: '下载图片',
+          previous: '上一个 (←)',
+          next: '下一个 (→)',
+          zoom_out: '缩小 (-)',
+          zoom_in: '放大 (+)',
+          reset_zoom: '点击重置缩放',
+          rotate: '旋转 (R)',
+          fullscreen: '全屏 (F)'
+        }
       }
     }
   },
@@ -1128,7 +1506,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Alat Konversi Profesional',
         seo_conversion_text: 'Konversi file JPEG ke PNG, WebP, AVIF, TIFF dan format lain sambil mempertahankan kualitas optimal. Mesin konversi kami menawarkan pengaturan kualitas yang dapat disesuaikan, opsi pengubahan ukuran dan kemampuan pemrosesan batch untuk menangani beberapa file secara bersamaan.',
         seo_optimization_title: 'Optimasi Kualitas',
-        seo_optimization_text: 'Optimalkan file JPEG untuk penggunaan web dengan algoritma kompresi cerdas kami yang mengurangi ukuran file hingga 80% sambil mempertahankan kualitas visual. Sempurna untuk optimasi situs web, lampiran email dan berbagi media sosial di mana ukuran file penting.'
+        seo_optimization_text: 'Optimalkan file JPEG untuk penggunaan web dengan algoritma kompresi cerdas kami yang mengurangi ukuran file hingga 80% sambil mempertahankan kualitas visual. Sempurna untuk optimasi situs web, lampiran email dan berbagi media sosial di mana ukuran file penting.',
+        editor: {
+          toggle_sidebar: 'Alihkan Sidebar',
+          close: 'Tutup (Esc)',
+          close_sidebar: 'Tutup Sidebar',
+          search_placeholder: 'Cari file...',
+          files_header: 'File',
+          add_files: '+ Tambah',
+          format_badge: 'JPG',
+          present: 'Presentasikan',
+          exit_presentation: 'Keluar',
+          start_presentation: 'Mulai Presentasi (Spasi/Panah untuk navigasi)',
+          print_image: 'Cetak Gambar',
+          download_image: 'Unduh Gambar',
+          previous: 'Sebelumnya (←)',
+          next: 'Selanjutnya (→)',
+          zoom_out: 'Perkecil (-)',
+          zoom_in: 'Perbesar (+)',
+          reset_zoom: 'Klik untuk mengatur ulang zoom',
+          rotate: 'Putar (R)',
+          fullscreen: 'Layar Penuh (F)'
+        }
       }
     }
   },
@@ -1196,7 +1595,28 @@ const resources: Record<string, JPEGViewerTranslations> = {
         seo_conversion_title: 'Professionella Konverteringsverktyg',
         seo_conversion_text: 'Konvertera JPEG-filer till PNG, WebP, AVIF, TIFF och andra format samtidigt som optimal kvalitet bibehålls. Vår konverteringsmotor erbjuder justerbara kvalitetsinställningar, storleksändringsalternativ och batchbearbetningsfunktioner för att hantera flera filer samtidigt.',
         seo_optimization_title: 'Kvalitetsoptimering',
-        seo_optimization_text: 'Optimalisera JPEG-filer för webbanvändning med våra smarta komprimeringsalgoritmer som minskar filstorlekar med upp till 80% samtidigt som visuell kvalitet bevaras. Perfekt för webbplatsoptimering, e-postbilagor och sociala medier-delning där filstorlek är viktigt.'
+        seo_optimization_text: 'Optimalisera JPEG-filer för webbanvändning med våra smarta komprimeringsalgoritmer som minskar filstorlekar med upp till 80% samtidigt som visuell kvalitet bevaras. Perfekt för webbplatsoptimering, e-postbilagor och sociala medier-delning där filstorlek är viktigt.',
+        editor: {
+          toggle_sidebar: 'Växla Sidofält',
+          close: 'Stäng (Esc)',
+          close_sidebar: 'Stäng Sidofält',
+          search_placeholder: 'Sök filer...',
+          files_header: 'Filer',
+          add_files: '+ Lägg till',
+          format_badge: 'JPG',
+          present: 'Presentera',
+          exit_presentation: 'Avsluta',
+          start_presentation: 'Starta Presentation (Mellanslag/Pilar för navigering)',
+          print_image: 'Skriv Ut Bild',
+          download_image: 'Ladda Ner Bild',
+          previous: 'Föregående (←)',
+          next: 'Nästa (→)',
+          zoom_out: 'Zooma Ut (-)',
+          zoom_in: 'Zooma In (+)',
+          reset_zoom: 'Klicka för att återställa zoom',
+          rotate: 'Rotera (R)',
+          fullscreen: 'Helskärm (F)'
+        }
       }
     }
   }
