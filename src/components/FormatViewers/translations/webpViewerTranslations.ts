@@ -76,8 +76,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   en: {
     viewers: {
       webp: {
-        meta_title: 'Free WebP Viewer - Open and View WebP Images Online',
-        meta_description: 'Free WebP viewer. View Online and convert WebP images online for free. Modern image format with superior compression, transparency support, and animation. No registration required.',
+        meta_title: 'FREE WebP Viewer Online - Open WebP Files Instantly',
+        meta_description: 'Need to open a WebP file? Use our FREE online viewer to see WebP images instantly without any download or software installation. Secure and compatible.',
         meta_keywords: 'WebP viewer, WebP to JPG, WebP to PNG, image viewer, web optimization, lossless compression, transparency, batch processing',
         hero_title: 'Free WebP Viewer',
         hero_subtitle: 'View and convert WebP images with modern compression',
@@ -171,8 +171,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   pl: {
     viewers: {
       webp: {
-        meta_title: 'Darmowy Podgląd WebP - Otwórz i Wyświetlaj Obrazy WebP Online',
-        meta_description: 'Darmowy podgląd WebP. Wyświetlaj online i konwertuj obrazy WebP online za darmo. Nowoczesny format obrazu z doskonałą kompresją, obsługą przezroczystości i animacji. Bez rejestracji.',
+        meta_title: 'DARMOWY Podgląd WebP Online - Otwórz Pliki WebP Natychmiast',
+        meta_description: 'Musisz otworzyć plik WebP? Użyj naszego DARMOWEGO podglądu online, aby zobaczyć obrazy WebP natychmiast bez pobierania lub instalacji oprogramowania. Bezpieczne i kompatybilne.',
         meta_keywords: 'podgląd WebP, WebP do JPG, WebP do PNG, podgląd obrazów, optymalizacja internetowa, kompresja bezstratna, przezroczystość, przetwarzanie wsadowe',
         hero_title: 'Darmowy Podgląd WebP',
         hero_subtitle: 'Wyświetlaj i konwertuj obrazy WebP z nowoczesną kompresją',
@@ -266,8 +266,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   de: {
     viewers: {
       webp: {
-        meta_title: 'Kostenloser WebP Viewer – WebP-Bilder Online Anzeigen',
-        meta_description: 'Kostenloser WebP-Viewer. Zeigen Sie WebP-Bilder online an und konvertieren Sie sie kostenlos online. Modernes Bildformat mit überlegener Kompression, Transparenzunterstützung und Animation. Keine Registrierung erforderlich.',
+        meta_title: 'KOSTENLOSER WebP Viewer Online - Öffnen Sie WebP-Dateien Sofort',
+        meta_description: 'Müssen Sie eine WebP-Datei öffnen? Verwenden Sie unseren KOSTENLOSEN Online-Viewer, um WebP-Bilder sofort ohne Download oder Softwareinstallation anzuzeigen. Sicher und kompatibel.',
         meta_keywords: 'WebP Viewer, WebP zu JPG, WebP zu PNG, Bildbetrachter, Web-Optimierung, verlustfreie Kompression, Transparenz, Stapelverarbeitung',
         hero_title: 'Kostenloser WebP-Viewer',
         hero_subtitle: 'WebP-Bilder mit moderner Kompression anzeigen und konvertieren',
@@ -361,8 +361,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   es: {
     viewers: {
       webp: {
-        meta_title: 'Visor WebP Gratis - Abrir y Ver Imágenes WebP Online',
-        meta_description: 'Visor WebP gratis. Ver online y convertir imágenes WebP online gratis. Formato de imagen moderno con compresión superior, soporte de transparencia y animación. Sin registro requerido.',
+        meta_title: 'VISOR WebP GRATIS Online - Abre Archivos WebP Instantáneamente',
+        meta_description: '¿Necesitas abrir un archivo WebP? Usa nuestro VISOR GRATIS online para ver imágenes WebP instantáneamente sin descarga ni instalación de software. Seguro y compatible.',
         meta_keywords: 'visor WebP, WebP a JPG, WebP a PNG, visor de imágenes, optimización web, compresión sin pérdidas, transparencia, procesamiento por lotes',
         hero_title: 'Visor WebP Gratis',
         hero_subtitle: 'Ver y convertir imágenes WebP con compresión moderna',
@@ -456,8 +456,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   fr: {
     viewers: {
       webp: {
-        meta_title: 'Visionneuse WebP Gratuite - Ouvrir et Voir les Images WebP en Ligne',
-        meta_description: 'Visionneuse WebP gratuite. Voir en ligne et convertir des images WebP en ligne gratuitement. Format d\'image moderne avec compression supérieure, support de transparence et animation. Aucune inscription requise.',
+        meta_title: 'VISIONNEUSE WebP GRATUITE en Ligne - Ouvrir les Fichiers WebP Instantanément',
+        meta_description: 'Besoin d\'ouvrir un fichier WebP? Utilisez notre VISIONNEUSE GRATUITE en ligne pour voir les images WebP instantanément sans téléchargement ni installation de logiciel. Sécurisé et compatible.',
         meta_keywords: 'visionneuse WebP, WebP vers JPG, WebP vers PNG, visionneuse d\'images, optimisation web, compression sans perte, transparence, traitement par lots',
         hero_title: 'Visionneuse WebP Gratuite',
         hero_subtitle: 'Voir et convertir les images WebP avec compression moderne',
@@ -551,8 +551,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   it: {
     viewers: {
       webp: {
-        meta_title: 'Visualizzatore WebP Gratuito - Apri e Visualizza Immagini WebP Online',
-        meta_description: 'Visualizzatore WebP gratuito. Visualizza online e converti immagini WebP online gratuitamente. Formato immagine moderno con compressione superiore, supporto trasparenza e animazione. Nessuna registrazione richiesta.',
+        meta_title: 'VISUALIZZATORE WebP GRATUITO Online - Apri File WebP Istantaneamente',
+        meta_description: 'Devi aprire un file WebP? Usa il nostro VISUALIZZATORE GRATUITO online per vedere immagini WebP istantaneamente senza download o installazione di software. Sicuro e compatibile.',
         meta_keywords: 'visualizzatore WebP, WebP a JPG, WebP a PNG, visualizzatore immagini, ottimizzazione web, compressione senza perdite, trasparenza, elaborazione batch',
         hero_title: 'Visualizzatore WebP Gratuito',
         hero_subtitle: 'Visualizza e converti immagini WebP con compressione moderna',
@@ -646,8 +646,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   nl: {
     viewers: {
       webp: {
-        meta_title: 'Gratis WebP Viewer - Open en Bekijk WebP Afbeeldingen Online',
-        meta_description: 'Gratis WebP viewer. Bekijk online en converteer WebP afbeeldingen online gratis. Modern beeldformaat met superieure compressie, transparantieondersteuning en animatie. Geen registratie vereist.',
+        meta_title: 'GRATIS WebP Viewer Online - Open WebP Bestanden Direct',
+        meta_description: 'Moet u een WebP-bestand openen? Gebruik onze GRATIS online viewer om WebP afbeeldingen direct te bekijken zonder download of software-installatie. Veilig en compatibel.',
         meta_keywords: 'WebP viewer, WebP naar JPG, WebP naar PNG, afbeeldingsviewer, web optimalisatie, verliesloze compressie, transparantie, batchverwerking',
         hero_title: 'Gratis WebP Viewer',
         hero_subtitle: 'Bekijk en converteer WebP afbeeldingen met moderne compressie',
@@ -741,8 +741,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   pt: {
     viewers: {
       webp: {
-        meta_title: 'Visualizador WebP Gratuito - Abrir e Ver Imagens WebP Online',
-        meta_description: 'Visualizador WebP gratuito. Ver online e converter imagens WebP online gratuitamente. Formato de imagem moderno com compressão superior, suporte de transparência e animação. Nenhum registro necessário.',
+        meta_title: 'VISUALIZADOR WebP GRATUITO Online - Abra Arquivos WebP Instantaneamente',
+        meta_description: 'Precisa abrir um arquivo WebP? Use nosso VISUALIZADOR GRATUITO online para ver imagens WebP instantaneamente sem download ou instalação de software. Seguro e compatível.',
         meta_keywords: 'visualizador WebP, WebP para JPG, WebP para PNG, visualizador de imagens, otimização web, compressão sem perdas, transparência, processamento em lote',
         hero_title: 'Visualizador WebP Gratuito',
         hero_subtitle: 'Ver e converter imagens WebP com compressão moderna',
@@ -836,8 +836,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   vi: {
     viewers: {
       webp: {
-        meta_title: 'Trình Xem WebP Miễn Phí - Mở và Xem Hình Ảnh WebP Trực Tuyến',
-        meta_description: 'Trình xem WebP miễn phí. Xem trực tuyến và chuyển đổi hình ảnh WebP trực tuyến miễn phí. Định dạng hình ảnh hiện đại với nén vượt trội, hỗ trợ trong suốt và hoạt hình. Không cần đăng ký.',
+        meta_title: 'TRÌNH XEM WebP MIỄN PHÍ Trực Tuyến - Mở Tệp WebP Ngay Lập Tức',
+        meta_description: 'Cần mở tệp WebP? Sử dụng trình xem TRỰC TUYẾN MIỄN PHÍ của chúng tôi để xem hình ảnh WebP ngay lập tức mà không cần tải xuống hoặc cài đặt phần mềm. An toàn và tương thích.',
         meta_keywords: 'trình xem WebP, WebP sang JPG, WebP sang PNG, trình xem hình ảnh, tối ưu hóa web, nén không mất mát, trong suốt, xử lý hàng loạt',
         hero_title: 'Trình Xem WebP Miễn Phí',
         hero_subtitle: 'Xem và chuyển đổi hình ảnh WebP với nén hiện đại',
@@ -931,8 +931,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   tr: {
     viewers: {
       webp: {
-        meta_title: 'Ücretsiz WebP Görüntüleyici - WebP Görsellerini Çevrimiçi Aç ve Görüntüle',
-        meta_description: 'Ücretsiz WebP görüntüleyici. WebP görsellerini çevrimiçi görüntüle ve ücretsiz çevrimiçi dönüştür. Üstün sıkıştırma, şeffaflık desteği ve animasyon ile modern görsel formatı. Kayıt gerekmez.',
+        meta_title: 'ÜCRETSİZ WebP Görüntüleyici Çevrimiçi - WebP Dosyalarını Anında Aç',
+        meta_description: 'WebP dosyası açmanız mı gerekiyor? WebP görsellerini indirme veya yazılım kurulumu olmadan anında görmek için ÜCRETSİZ çevrimiçi görüntüleyicimizi kullanın. Güvenli ve uyumlu.',
         meta_keywords: 'WebP görüntüleyici, WebP\'den JPG\'ye, WebP\'den PNG\'ye, görsel görüntüleyici, web optimizasyonu, kayıpsız sıkıştırma, şeffaflık, toplu işleme',
         hero_title: 'Ücretsiz WebP Görüntüleyici',
         hero_subtitle: 'WebP görsellerini modern sıkıştırma ile görüntüle ve dönüştür',
@@ -1026,8 +1026,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   ru: {
     viewers: {
       webp: {
-        meta_title: 'Бесплатный Просмотрщик WebP - Открыть и Просмотреть Изображения WebP Онлайн',
-        meta_description: 'Бесплатный просмотрщик WebP. Просматривайте онлайн и конвертируйте изображения WebP онлайн бесплатно. Современный формат изображения с превосходным сжатием, поддержкой прозрачности и анимации. Регистрация не требуется.',
+        meta_title: 'БЕСПЛАТНЫЙ Просмотрщик WebP Онлайн - Открыть Файлы WebP Мгновенно',
+        meta_description: 'Нужно открыть файл WebP? Используйте наш БЕСПЛАТНЫЙ онлайн-просмотрщик, чтобы мгновенно просматривать изображения WebP без загрузки или установки программного обеспечения. Безопасно и совместимо.',
         meta_keywords: 'просмотрщик WebP, WebP в JPG, WebP в PNG, просмотрщик изображений, веб-оптимизация, сжатие без потерь, прозрачность, пакетная обработка',
         hero_title: 'Бесплатный Просмотрщик WebP',
         hero_subtitle: 'Просматривайте и конвертируйте изображения WebP с современным сжатием',
@@ -1121,8 +1121,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   ar: {
     viewers: {
       webp: {
-        meta_title: 'عارض WebP مجاني - افتح واعرض صور WebP عبر الإنترنت',
-        meta_description: 'عارض WebP مجاني. اعرض عبر الإنترنت واعرض صور WebP عبر الإنترنت مجاناً. تنسيق صورة حديث مع ضغط متفوق ودعم الشفافية والرسوم المتحركة. لا يلزم التسجيل.',
+        meta_title: 'عارض WebP مجاني عبر الإنترنت - افتح ملفات WebP على الفور',
+        meta_description: 'تحتاج إلى فتح ملف WebP? استخدم عارضنا المجاني عبر الإنترنت لمشاهدة صور WebP على الفور دون تنزيل أو تثبيت برنامج. آمن ومتوافق.',
         meta_keywords: 'عارض WebP، WebP إلى JPG، WebP إلى PNG، عارض الصور، تحسين الويب، ضغط بدون فقدان، الشفافية، المعالجة المجمعة',
         hero_title: 'عارض WebP مجاني',
         hero_subtitle: 'اعرض وحول صور WebP مع ضغط حديث',
@@ -1216,8 +1216,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   th: {
     viewers: {
       webp: {
-        meta_title: 'โปรแกรมดู WebP ฟรี - เปิดและดูรูปภาพ WebP ออนไลน์',
-        meta_description: 'โปรแกรมดู WebP ฟรี ดูออนไลน์และแปลงรูปภาพ WebP ออนไลน์ฟรี รูปแบบภาพสมัยใหม่พร้อมการบีบอัดที่เหนือกว่า การรองรับความโปร่งใส และภาพเคลื่อนไหว ไม่ต้องลงทะเบียน',
+        meta_title: 'โปรแกรมดู WebP ฟรีออนไลน์ - เปิดไฟล์ WebP ทันที',
+        meta_description: 'ต้องการเปิดไฟล์ WebP? ใช้โปรแกรมดูออนไลน์ฟรีของเราเพื่อดูรูปภาพ WebP ทันทีโดยไม่ต้องดาวน์โหลดหรือติดตั้งซอฟต์แวร์ ปลอดภัยและเข้ากันได้',
         meta_keywords: 'โปรแกรมดู WebP, WebP เป็น JPG, WebP เป็น PNG, โปรแกรมดูรูปภาพ, การปรับปรุงเว็บ, การบีบอัดแบบไม่สูญเสีย, ความโปร่งใส, การประมวลผลแบบกลุ่ม',
         hero_title: 'โปรแกรมดู WebP ฟรี',
         hero_subtitle: 'ดูและแปลงรูปภาพ WebP ด้วยการบีบอัดสมัยใหม่',
@@ -1311,8 +1311,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   ja: {
     viewers: {
       webp: {
-        meta_title: '無料WebPビューアー - WebP画像をオンラインで開いて表示',
-        meta_description: '無料WebPビューアー。WebP画像をオンラインで表示し、無料でオンライン変換します。優れた圧縮、透明度サポート、アニメーションを備えた現代的な画像フォーマット。登録不要。',
+        meta_title: '無料WebPビューアーオンライン - WebPファイルを即座に開く',
+        meta_description: 'WebPファイルを開く必要がありますか? 無料のオンラインビューアーを使用して、ダウンロードやソフトウェアのインストールなしでWebP画像を即座に表示します。安全で互換性があります。',
         meta_keywords: 'WebPビューアー、WebPからJPG、WebPからPNG、画像ビューアー、Web最適化、可逆圧縮、透明度、バッチ処理',
         hero_title: '無料WebPビューアー',
         hero_subtitle: '現代的な圧縮でWebP画像を表示・変換',
@@ -1406,8 +1406,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   zh: {
     viewers: {
       webp: {
-        meta_title: '免费WebP查看器 - 在线打开和查看WebP图片',
-        meta_description: '免费WebP查看器。在线查看和免费在线转换WebP图片。具有卓越压缩、透明度支持和动画的现代图片格式。无需注册。',
+        meta_title: '免费WebP查看器在线 - 即时打开WebP文件',
+        meta_description: '需要打开WebP文件？使用我们的免费在线查看器，无需下载或安装软件即可即时查看WebP图片。安全且兼容。',
         meta_keywords: 'WebP查看器，WebP转JPG，WebP转PNG，图片查看器，网络优化，无损压缩，透明度，批量处理',
         hero_title: '免费WebP查看器',
         hero_subtitle: '使用现代压缩查看和转换WebP图片',
@@ -1501,8 +1501,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   id: {
     viewers: {
       webp: {
-        meta_title: 'Penampil WebP Gratis - Buka dan Lihat Gambar WebP Online',
-        meta_description: 'Penampil WebP gratis. Lihat online dan konversi gambar WebP online gratis. Format gambar modern dengan kompresi superior, dukungan transparansi dan animasi. Tidak perlu registrasi.',
+        meta_title: 'PENAMPIL WebP GRATIS Online - Buka File WebP Secara Instan',
+        meta_description: 'Perlu membuka file WebP? Gunakan penampil online GRATIS kami untuk melihat gambar WebP secara instan tanpa unduhan atau instalasi perangkat lunak. Aman dan kompatibel.',
         meta_keywords: 'penampil WebP, WebP ke JPG, WebP ke PNG, penampil gambar, optimisasi web, kompresi tanpa loss, transparansi, pemrosesan batch',
         hero_title: 'Penampil WebP Gratis',
         hero_subtitle: 'Lihat dan konversi gambar WebP dengan kompresi modern',
@@ -1596,8 +1596,8 @@ const resources: Record<string, WebPViewerTranslations> = {
   sv: {
     viewers: {
       webp: {
-        meta_title: 'Gratis WebP-visare - Öppna och Visa WebP-bilder Online',
-        meta_description: 'Gratis WebP-visare. Visa online och konvertera WebP-bilder online gratis. Modern bildformat med överlägsen komprimering, transparensstöd och animation. Ingen registrering krävs.',
+        meta_title: 'GRATIS WebP-visare Online - Öppna WebP-filer Omedelbart',
+        meta_description: 'Behöver du öppna en WebP-fil? Använd vår GRATIS online-visare för att se WebP-bilder omedelbart utan nedladdning eller programvaruinstallation. Säker och kompatibel.',
         meta_keywords: 'WebP-visare, WebP till JPG, WebP till PNG, bildvisare, webboptimering, förlustfri komprimering, transparens, batchbearbetning',
         hero_title: 'Gratis WebP-visare',
         hero_subtitle: 'Visa och konvertera WebP-bilder med modern komprimering',
