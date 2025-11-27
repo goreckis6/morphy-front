@@ -160,6 +160,12 @@ export const WebPViewer: React.FC = () => {
               maxSize={100 * 1024 * 1024}
               hideFormatList={true}
               showTotalSize={true}
+              translationKeys={{
+                dragDropText: t('viewers.webp.upload.drag_drop_text'),
+                clickBrowseText: t('viewers.webp.upload.click_browse_text'),
+                chooseFilesButton: t('viewers.webp.upload.choose_files_button'),
+                maxFilesInfo: t('viewers.webp.upload.max_files_info')
+              }}
             />
           </div>
 

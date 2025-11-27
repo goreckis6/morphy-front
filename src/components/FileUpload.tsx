@@ -9,6 +9,12 @@ interface FileUploadProps {
   acceptedFormats?: string[];
   hideFormatList?: boolean;
   showTotalSize?: boolean;
+  translationKeys?: {
+    dragDropText?: string;
+    clickBrowseText?: string;
+    chooseFilesButton?: string;
+    maxFilesInfo?: string;
+  };
 }
 
 export const FileUpload: React.FC<FileUploadProps> = ({
@@ -17,10 +23,18 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   maxSize = 100 * 1024 * 1024, // 100MB
   acceptedFormats,
   hideFormatList = false,
-  showTotalSize = false
+  showTotalSize = false,
+  translationKeys
 }) => {
   const [dragActive, setDragActive] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  
+  // Use translation keys if provided, otherwise use defaults
+  const dragDropText = translationKeys?.dragDropText || 'Drag & Drop Your Files Here';
+  const clickBrowseText = translationKeys?.clickBrowseText || 'or click the button below to browse';
+  const chooseFilesButton = translationKeys?.chooseFilesButton || 'Choose Files';
+  const maxFilesInfoRaw = translationKeys?.maxFilesInfo || `✓ Max ${maxFiles} files • Up to ${FileProcessor.formatFileSize(maxSize)} ${showTotalSize ? 'Total' : 'each'}`;
+  const maxFilesInfo = maxFilesInfoRaw.replace(/{maxFiles}/g, maxFiles.toString()).replace(/{maxSize}/g, FileProcessor.formatFileSize(maxSize));
 
   const handleFiles = useCallback((files: FileList) => {
     const fileArray = Array.from(files).slice(0, maxFiles);
@@ -118,10 +132,10 @@ export const FileUpload: React.FC<FileUploadProps> = ({
             <Upload className="w-10 h-10 text-blue-600" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-3">
-            Drag & Drop Your Files Here
+            {dragDropText}
           </h3>
           <p className="text-lg text-gray-600 mb-6">
-            or click the button below to browse
+            {clickBrowseText}
           </p>
           <input
             type="file"
@@ -135,10 +149,10 @@ export const FileUpload: React.FC<FileUploadProps> = ({
             htmlFor="file-upload"
             className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-xl cursor-pointer transition-all transform hover:scale-105 shadow-lg"
           >
-            Choose Files
+            {chooseFilesButton}
           </label>
           <div className="text-sm text-gray-500 mt-4 space-y-1">
-            <p className="font-medium">✓ Max {maxFiles} files • Up to {FileProcessor.formatFileSize(maxSize)} {showTotalSize ? 'Total' : 'each'}</p>
+            <p className="font-medium">{maxFilesInfo.replace('{maxFiles}', maxFiles.toString()).replace('{maxSize}', FileProcessor.formatFileSize(maxSize))}</p>
             {!hideFormatList && (
               <p>✓ CSV, EPUB, DOC, DOCX, DNG, CR2, EPS, GIF, BMP & more</p>
             )}

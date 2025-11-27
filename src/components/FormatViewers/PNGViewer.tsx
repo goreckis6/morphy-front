@@ -160,6 +160,12 @@ export const PNGViewer: React.FC = () => {
               maxSize={100 * 1024 * 1024}
               hideFormatList={true}
               showTotalSize={true}
+              translationKeys={{
+                dragDropText: t('viewers.png.upload.drag_drop_text'),
+                clickBrowseText: t('viewers.png.upload.click_browse_text'),
+                chooseFilesButton: t('viewers.png.upload.choose_files_button'),
+                maxFilesInfo: t('viewers.png.upload.max_files_info')
+              }}
             />
           </div>
 

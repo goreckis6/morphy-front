@@ -162,6 +162,12 @@ export const JPEGViewer: React.FC = () => {
               maxSize={100 * 1024 * 1024}
               hideFormatList={true}
               showTotalSize={true}
+              translationKeys={{
+                dragDropText: t('viewers.jpeg.upload.drag_drop_text'),
+                clickBrowseText: t('viewers.jpeg.upload.click_browse_text'),
+                chooseFilesButton: t('viewers.jpeg.upload.choose_files_button'),
+                maxFilesInfo: t('viewers.jpeg.upload.max_files_info')
+              }}
             />
           </div>
 

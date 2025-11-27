@@ -13,6 +13,12 @@ type WebPViewerTranslations = {
       hero_subtitle: string;
       upload_title: string;
       upload_description: string;
+      upload: {
+        drag_drop_text: string;
+        click_browse_text: string;
+        choose_files_button: string;
+        max_files_info: string;
+      };
       buttons: {
         view_files: string;
         back: string;
@@ -77,6 +83,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'View and convert WebP images with modern compression',
         upload_title: 'Upload WebP Files',
         upload_description: 'Drag and drop your WebP images or click to browse. Supports modern compression and transparency up to 100MB total.',
+        upload: {
+          drag_drop_text: 'Drag & Drop Your Files Here',
+          click_browse_text: 'or click the button below to browse',
+          choose_files_button: 'Choose Files',
+          max_files_info: 'Max {maxFiles} files • Up to {maxSize} Total'
+        },
         buttons: {
           view_files: 'View Files',
           back: 'Back to All Viewers'
@@ -166,6 +178,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Wyświetlaj i konwertuj obrazy WebP z nowoczesną kompresją',
         upload_title: 'Prześlij pliki WebP',
         upload_description: 'Przeciągnij i upuść swoje obrazy WebP lub kliknij, aby przeglądać. Obsługuje nowoczesną kompresję i przezroczystość do 100MB łącznie.',
+        upload: {
+          drag_drop_text: 'Przeciągnij i Upuść Pliki Tutaj',
+          click_browse_text: 'lub kliknij przycisk poniżej, aby przeglądać',
+          choose_files_button: 'Wybierz Pliki',
+          max_files_info: 'Maks. {maxFiles} plików • Do {maxSize} Łącznie'
+        },
         buttons: {
           view_files: 'Wyświetl Pliki',
           back: 'Powrót do wszystkich podglądów'
@@ -255,6 +273,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'WebP-Bilder mit moderner Kompression anzeigen und konvertieren',
         upload_title: 'WebP-Dateien hochladen',
         upload_description: 'Ziehen Sie Ihre WebP-Bilder hierher oder klicken Sie zum Auswählen. Unterstützt moderne Kompression und Transparenz bis zu 100MB insgesamt.',
+        upload: {
+          drag_drop_text: 'Dateien Hier Ziehen & Ablegen',
+          click_browse_text: 'oder klicken Sie auf die Schaltfläche unten zum Durchsuchen',
+          choose_files_button: 'Dateien Auswählen',
+          max_files_info: 'Max. {maxFiles} Dateien • Bis zu {maxSize} Gesamt'
+        },
         buttons: {
           view_files: 'Dateien anzeigen',
           back: 'Zurück zu allen Viewern'
@@ -344,6 +368,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Ver y convertir imágenes WebP con compresión moderna',
         upload_title: 'Subir Archivos WebP',
         upload_description: 'Arrastra y suelta tus imágenes WebP o haz clic para explorar. Soporta compresión moderna y transparencia hasta 100MB en total.',
+        upload: {
+          drag_drop_text: 'Arrastra y Suelta Tus Archivos Aquí',
+          click_browse_text: 'o haz clic en el botón de abajo para explorar',
+          choose_files_button: 'Elegir Archivos',
+          max_files_info: 'Máx. {maxFiles} archivos • Hasta {maxSize} Total'
+        },
         buttons: {
           view_files: 'Ver Archivos',
           back: 'Volver a Todos los Visores'
@@ -433,6 +463,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Voir et convertir les images WebP avec compression moderne',
         upload_title: 'Télécharger des Fichiers WebP',
         upload_description: 'Glissez-déposez vos images WebP ou cliquez pour parcourir. Prend en charge la compression moderne et la transparence jusqu\'à 100 Mo au total.',
+        upload: {
+          drag_drop_text: 'Glissez-Déposez Vos Fichiers Ici',
+          click_browse_text: 'ou cliquez sur le bouton ci-dessous pour parcourir',
+          choose_files_button: 'Choisir des Fichiers',
+          max_files_info: 'Max {maxFiles} fichiers • Jusqu\'à {maxSize} Total'
+        },
         buttons: {
           view_files: 'Voir les Fichiers',
           back: 'Retour à Tous les Visionneuses'
@@ -522,6 +558,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Visualizza e converti immagini WebP con compressione moderna',
         upload_title: 'Carica File WebP',
         upload_description: 'Trascina e rilascia le tue immagini WebP o fai clic per sfogliare. Supporta compressione moderna e trasparenza fino a 100MB totali.',
+        upload: {
+          drag_drop_text: 'Trascina e Rilascia i Tuoi File Qui',
+          click_browse_text: 'o fai clic sul pulsante qui sotto per sfogliare',
+          choose_files_button: 'Scegli File',
+          max_files_info: 'Max {maxFiles} file • Fino a {maxSize} Totale'
+        },
         buttons: {
           view_files: 'Visualizza File',
           back: 'Torna a Tutti i Visualizzatori'
@@ -611,6 +653,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Bekijk en converteer WebP afbeeldingen met moderne compressie',
         upload_title: 'Upload WebP Bestanden',
         upload_description: 'Sleep en zet je WebP afbeeldingen neer of klik om te bladeren. Ondersteunt moderne compressie en transparantie tot 100MB totaal.',
+        upload: {
+          drag_drop_text: 'Sleep en Zet Je Bestanden Hier Neer',
+          click_browse_text: 'of klik op de knop hieronder om te bladeren',
+          choose_files_button: 'Kies Bestanden',
+          max_files_info: 'Max {maxFiles} bestanden • Tot {maxSize} Totaal'
+        },
         buttons: {
           view_files: 'Bekijk Bestanden',
           back: 'Terug naar Alle Viewers'
@@ -700,6 +748,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Ver e converter imagens WebP com compressão moderna',
         upload_title: 'Carregar Arquivos WebP',
         upload_description: 'Arraste e solte suas imagens WebP ou clique para procurar. Suporta compressão moderna e transparência até 100MB no total.',
+        upload: {
+          drag_drop_text: 'Arraste e Solte Seus Arquivos Aqui',
+          click_browse_text: 'ou clique no botão abaixo para procurar',
+          choose_files_button: 'Escolher Arquivos',
+          max_files_info: 'Máx. {maxFiles} arquivos • Até {maxSize} Total'
+        },
         buttons: {
           view_files: 'Ver Arquivos',
           back: 'Voltar para Todos os Visualizadores'
@@ -789,6 +843,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Xem và chuyển đổi hình ảnh WebP với nén hiện đại',
         upload_title: 'Tải Lên Tệp WebP',
         upload_description: 'Kéo và thả hình ảnh WebP của bạn hoặc nhấp để duyệt. Hỗ trợ nén hiện đại và trong suốt lên đến 100MB tổng cộng.',
+        upload: {
+          drag_drop_text: 'Kéo và Thả Tệp Của Bạn Vào Đây',
+          click_browse_text: 'hoặc nhấp vào nút bên dưới để duyệt',
+          choose_files_button: 'Chọn Tệp',
+          max_files_info: 'Tối đa {maxFiles} tệp • Lên đến {maxSize} Tổng cộng'
+        },
         buttons: {
           view_files: 'Xem Tệp',
           back: 'Quay Lại Tất Cả Trình Xem'
@@ -878,6 +938,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'WebP görsellerini modern sıkıştırma ile görüntüle ve dönüştür',
         upload_title: 'WebP Dosyalarını Yükle',
         upload_description: 'WebP görsellerinizi sürükleyip bırakın veya göz atmak için tıklayın. Toplam 100MB\'a kadar modern sıkıştırma ve şeffaflık destekler.',
+        upload: {
+          drag_drop_text: 'Dosyalarınızı Buraya Sürükleyip Bırakın',
+          click_browse_text: 'veya göz atmak için aşağıdaki düğmeye tıklayın',
+          choose_files_button: 'Dosya Seç',
+          max_files_info: 'Maks. {maxFiles} dosya • Toplam {maxSize}'
+        },
         buttons: {
           view_files: 'Dosyaları Görüntüle',
           back: 'Tüm Görüntüleyicilere Dön'
@@ -967,6 +1033,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Просматривайте и конвертируйте изображения WebP с современным сжатием',
         upload_title: 'Загрузить Файлы WebP',
         upload_description: 'Перетащите изображения WebP или нажмите для просмотра. Поддерживает современное сжатие и прозрачность до 100 МБ всего.',
+        upload: {
+          drag_drop_text: 'Перетащите Ваши Файлы Сюда',
+          click_browse_text: 'или нажмите кнопку ниже для просмотра',
+          choose_files_button: 'Выбрать Файлы',
+          max_files_info: 'Макс. {maxFiles} файлов • До {maxSize} Всего'
+        },
         buttons: {
           view_files: 'Просмотреть Файлы',
           back: 'Вернуться ко Всем Просмотрщикам'
@@ -1056,6 +1128,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'اعرض وحول صور WebP مع ضغط حديث',
         upload_title: 'رفع ملفات WebP',
         upload_description: 'اسحب وأفلت صور WebP الخاصة بك أو انقر للتصفح. يدعم الضغط الحديث والشفافية حتى 100 ميجابايت إجمالي.',
+        upload: {
+          drag_drop_text: 'اسحب وأفلت ملفاتك هنا',
+          click_browse_text: 'أو انقر على الزر أدناه للتصفح',
+          choose_files_button: 'اختر الملفات',
+          max_files_info: 'الحد الأقصى {maxFiles} ملف • حتى {maxSize} إجمالي'
+        },
         buttons: {
           view_files: 'عرض الملفات',
           back: 'العودة إلى جميع العارضين'
@@ -1145,6 +1223,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'ดูและแปลงรูปภาพ WebP ด้วยการบีบอัดสมัยใหม่',
         upload_title: 'อัปโหลดไฟล์ WebP',
         upload_description: 'ลากและวางรูปภาพ WebP ของคุณหรือคลิกเพื่อเรียกดู รองรับการบีบอัดสมัยใหม่และความโปร่งใสสูงสุด 100MB รวม',
+        upload: {
+          drag_drop_text: 'ลากและวางไฟล์ของคุณที่นี่',
+          click_browse_text: 'หรือคลิกปุ่มด้านล่างเพื่อเรียกดู',
+          choose_files_button: 'เลือกไฟล์',
+          max_files_info: 'สูงสุด {maxFiles} ไฟล์ • สูงสุด {maxSize} รวม'
+        },
         buttons: {
           view_files: 'ดูไฟล์',
           back: 'กลับไปที่โปรแกรมดูทั้งหมด'
@@ -1234,6 +1318,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: '現代的な圧縮でWebP画像を表示・変換',
         upload_title: 'WebPファイルをアップロード',
         upload_description: 'WebP画像をドラッグ＆ドロップするか、クリックして参照します。合計100MBまで現代的な圧縮と透明度をサポートします。',
+        upload: {
+          drag_drop_text: 'ファイルをここにドラッグ＆ドロップ',
+          click_browse_text: 'または下のボタンをクリックして参照',
+          choose_files_button: 'ファイルを選択',
+          max_files_info: '最大 {maxFiles} ファイル • 合計 {maxSize}'
+        },
         buttons: {
           view_files: 'ファイルを表示',
           back: 'すべてのビューアーに戻る'
@@ -1323,6 +1413,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: '使用现代压缩查看和转换WebP图片',
         upload_title: '上传WebP文件',
         upload_description: '拖放您的WebP图片或点击浏览。支持现代压缩和透明度，总计最多100MB。',
+        upload: {
+          drag_drop_text: '在此拖放您的文件',
+          click_browse_text: '或点击下面的按钮浏览',
+          choose_files_button: '选择文件',
+          max_files_info: '最多 {maxFiles} 个文件 • 总计 {maxSize}'
+        },
         buttons: {
           view_files: '查看文件',
           back: '返回所有查看器'
@@ -1412,6 +1508,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Lihat dan konversi gambar WebP dengan kompresi modern',
         upload_title: 'Unggah File WebP',
         upload_description: 'Seret dan lepas gambar WebP Anda atau klik untuk menjelajah. Mendukung kompresi modern dan transparansi hingga 100MB total.',
+        upload: {
+          drag_drop_text: 'Seret dan Lepas File Anda Di Sini',
+          click_browse_text: 'atau klik tombol di bawah untuk menjelajah',
+          choose_files_button: 'Pilih File',
+          max_files_info: 'Maks. {maxFiles} file • Hingga {maxSize} Total'
+        },
         buttons: {
           view_files: 'Lihat File',
           back: 'Kembali ke Semua Penampil'
@@ -1501,6 +1603,12 @@ const resources: Record<string, WebPViewerTranslations> = {
         hero_subtitle: 'Visa och konvertera WebP-bilder med modern komprimering',
         upload_title: 'Ladda Upp WebP-filer',
         upload_description: 'Dra och släpp dina WebP-bilder eller klicka för att bläddra. Stöder modern komprimering och transparens upp till 100MB totalt.',
+        upload: {
+          drag_drop_text: 'Dra och Släpp Dina Filer Här',
+          click_browse_text: 'eller klicka på knappen nedan för att bläddra',
+          choose_files_button: 'Välj Filer',
+          max_files_info: 'Max {maxFiles} filer • Upp till {maxSize} Totalt'
+        },
         buttons: {
           view_files: 'Visa Filer',
           back: 'Tillbaka till Alla Visare'

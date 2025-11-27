@@ -11,6 +11,12 @@ type JPEGViewerTranslations = {
       hero_subtitle: string;
       upload_title: string;
       upload_description: string;
+      upload: {
+        drag_drop_text: string;
+        click_browse_text: string;
+        choose_files_button: string;
+        max_files_info: string;
+      };
       buttons: {
         view_files: string;
         back: string;
@@ -60,27 +66,6 @@ type JPEGViewerTranslations = {
       seo_conversion_text: string;
       seo_optimization_title: string;
       seo_optimization_text: string;
-      editor: {
-        toggle_sidebar: string;
-        close: string;
-        close_sidebar: string;
-        search_placeholder: string;
-        files_header: string;
-        add_files: string;
-        format_badge: string;
-        present: string;
-        exit_presentation: string;
-        start_presentation: string;
-        print_image: string;
-        download_image: string;
-        previous: string;
-        next: string;
-        zoom_out: string;
-        zoom_in: string;
-        reset_zoom: string;
-        rotate: string;
-        fullscreen: string;
-      };
     };
   };
 };
@@ -96,30 +81,15 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'View and analyze JPEG images with professional tools',
         upload_title: 'Upload JPEG Files',
         upload_description: 'Drag and drop your JPEG images or click to browse. Supports .jpg, .jpeg, and .jpe files up to 100MB each.',
+        upload: {
+          drag_drop_text: 'Drag & Drop Your Files Here',
+          click_browse_text: 'or click the button below to browse',
+          choose_files_button: 'Choose Files',
+          max_files_info: 'Max {maxFiles} files • Up to {maxSize} Total'
+        },
         buttons: {
           view_files: 'View Files',
           back: 'Back to All Viewers'
-        },
-        editor: {
-          toggle_sidebar: 'Toggle Sidebar',
-          close: 'Close (Esc)',
-          close_sidebar: 'Close Sidebar',
-          search_placeholder: 'Search files...',
-          files_header: 'Files',
-          add_files: '+ Add',
-          format_badge: 'JPG',
-          present: 'Present',
-          exit_presentation: 'Exit',
-          start_presentation: 'Start Presentation (Space/Arrows to navigate)',
-          print_image: 'Print Image',
-          download_image: 'Download Image',
-          previous: 'Previous (←)',
-          next: 'Next (→)',
-          zoom_out: 'Zoom Out (-)',
-          zoom_in: 'Zoom In (+)',
-          reset_zoom: 'Click to reset zoom',
-          rotate: 'Rotate (R)',
-          fullscreen: 'Fullscreen (F)'
         },
         quick_stats: {
           universal_format: '✓ Universal Format',
@@ -206,6 +176,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Analizuj obrazy JPEG z profesjonalnymi narzędziami',
         upload_title: 'Prześlij pliki JPEG',
         upload_description: 'Przeciągnij i upuść obrazy JPEG lub kliknij, aby je wybrać. Obsługuje pliki .jpg, .jpeg i .jpe do 100 MB.',
+        upload: {
+          drag_drop_text: 'Przeciągnij i Upuść Pliki Tutaj',
+          click_browse_text: 'lub kliknij przycisk poniżej, aby przeglądać',
+          choose_files_button: 'Wybierz Pliki',
+          max_files_info: 'Maks. {maxFiles} plików • Do {maxSize} Łącznie'
+        },
         buttons: {
           view_files: 'Wyświetl Pliki',
           back: 'Powrót do wszystkich podglądów'
@@ -295,6 +271,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'JPEG-Bilder mit professionellen Werkzeugen analysieren',
         upload_title: 'JPEG-Dateien hochladen',
         upload_description: 'Ziehen Sie Ihre JPEG-Bilder hierher oder klicken Sie zum Auswählen. Unterstützt .jpg, .jpeg, .jpe bis 100 MB pro Datei.',
+        upload: {
+          drag_drop_text: 'Dateien Hier Ziehen & Ablegen',
+          click_browse_text: 'oder klicken Sie auf die Schaltfläche unten zum Durchsuchen',
+          choose_files_button: 'Dateien Auswählen',
+          max_files_info: 'Max. {maxFiles} Dateien • Bis zu {maxSize} Gesamt'
+        },
         buttons: {
           view_files: 'Dateien anzeigen',
           back: 'Zurück zu allen Viewern'
@@ -384,6 +366,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Ver y analizar imágenes JPEG con herramientas profesionales',
         upload_title: 'Subir Archivos JPEG',
         upload_description: 'Arrastra y suelta tus imágenes JPEG o haz clic para explorar. Soporta archivos .jpg, .jpeg y .jpe de hasta 100MB cada uno.',
+        upload: {
+          drag_drop_text: 'Arrastra y Suelta Tus Archivos Aquí',
+          click_browse_text: 'o haz clic en el botón de abajo para explorar',
+          choose_files_button: 'Elegir Archivos',
+          max_files_info: 'Máx. {maxFiles} archivos • Hasta {maxSize} Total'
+        },
         buttons: {
           view_files: 'Ver Archivos',
           back: 'Volver a Todos los Visores'
@@ -473,6 +461,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Voir et analyser les images JPEG avec des outils professionnels',
         upload_title: 'Télécharger des Fichiers JPEG',
         upload_description: 'Glissez-déposez vos images JPEG ou cliquez pour parcourir. Prend en charge les fichiers .jpg, .jpeg et .jpe jusqu\'à 100 Mo chacun.',
+        upload: {
+          drag_drop_text: 'Glissez-Déposez Vos Fichiers Ici',
+          click_browse_text: 'ou cliquez sur le bouton ci-dessous pour parcourir',
+          choose_files_button: 'Choisir des Fichiers',
+          max_files_info: 'Max {maxFiles} fichiers • Jusqu\'à {maxSize} Total'
+        },
         buttons: {
           view_files: 'Voir les Fichiers',
           back: 'Retour à Tous les Visionneuses'
@@ -562,6 +556,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Visualizza e analizza immagini JPEG con strumenti professionali',
         upload_title: 'Carica File JPEG',
         upload_description: 'Trascina e rilascia le tue immagini JPEG o fai clic per sfogliare. Supporta file .jpg, .jpeg e .jpe fino a 100MB ciascuno.',
+        upload: {
+          drag_drop_text: 'Trascina e Rilascia i Tuoi File Qui',
+          click_browse_text: 'o fai clic sul pulsante qui sotto per sfogliare',
+          choose_files_button: 'Scegli File',
+          max_files_info: 'Max {maxFiles} file • Fino a {maxSize} Totale'
+        },
         buttons: {
           view_files: 'Visualizza File',
           back: 'Torna a Tutti i Visualizzatori'
@@ -651,6 +651,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Bekijk en analyseer JPEG afbeeldingen met professionele tools',
         upload_title: 'Upload JPEG Bestanden',
         upload_description: 'Sleep en zet je JPEG afbeeldingen neer of klik om te bladeren. Ondersteunt .jpg, .jpeg en .jpe bestanden tot 100MB elk.',
+        upload: {
+          drag_drop_text: 'Sleep en Zet Je Bestanden Hier Neer',
+          click_browse_text: 'of klik op de knop hieronder om te bladeren',
+          choose_files_button: 'Kies Bestanden',
+          max_files_info: 'Max {maxFiles} bestanden • Tot {maxSize} Totaal'
+        },
         buttons: {
           view_files: 'Bekijk Bestanden',
           back: 'Terug naar Alle Viewers'
@@ -740,6 +746,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Ver e analisar imagens JPEG com ferramentas profissionais',
         upload_title: 'Carregar Arquivos JPEG',
         upload_description: 'Arraste e solte suas imagens JPEG ou clique para procurar. Suporta arquivos .jpg, .jpeg e .jpe de até 100MB cada.',
+        upload: {
+          drag_drop_text: 'Arraste e Solte Seus Arquivos Aqui',
+          click_browse_text: 'ou clique no botão abaixo para procurar',
+          choose_files_button: 'Escolher Arquivos',
+          max_files_info: 'Máx. {maxFiles} arquivos • Até {maxSize} Total'
+        },
         buttons: {
           view_files: 'Ver Arquivos',
           back: 'Voltar para Todos os Visualizadores'
@@ -829,6 +841,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Xem và phân tích hình ảnh JPEG với các công cụ chuyên nghiệp',
         upload_title: 'Tải Lên Tệp JPEG',
         upload_description: 'Kéo và thả hình ảnh JPEG của bạn hoặc nhấp để duyệt. Hỗ trợ tệp .jpg, .jpeg và .jpe lên đến 100MB mỗi tệp.',
+        upload: {
+          drag_drop_text: 'Kéo và Thả Tệp Của Bạn Vào Đây',
+          click_browse_text: 'hoặc nhấp vào nút bên dưới để duyệt',
+          choose_files_button: 'Chọn Tệp',
+          max_files_info: 'Tối đa {maxFiles} tệp • Lên đến {maxSize} Tổng cộng'
+        },
         buttons: {
           view_files: 'Xem Tệp',
           back: 'Quay Lại Tất Cả Trình Xem'
@@ -918,6 +936,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'JPEG görsellerini profesyonel araçlarla görüntüle ve analiz et',
         upload_title: 'JPEG Dosyalarını Yükle',
         upload_description: 'JPEG görsellerinizi sürükleyip bırakın veya göz atmak için tıklayın. Her biri 100MB\'a kadar .jpg, .jpeg ve .jpe dosyalarını destekler.',
+        upload: {
+          drag_drop_text: 'Dosyalarınızı Buraya Sürükleyip Bırakın',
+          click_browse_text: 'veya göz atmak için aşağıdaki düğmeye tıklayın',
+          choose_files_button: 'Dosya Seç',
+          max_files_info: 'Maks. {maxFiles} dosya • Toplam {maxSize}'
+        },
         buttons: {
           view_files: 'Dosyaları Görüntüle',
           back: 'Tüm Görüntüleyicilere Dön'
@@ -1007,6 +1031,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Просматривайте и анализируйте изображения JPEG с профессиональными инструментами',
         upload_title: 'Загрузить Файлы JPEG',
         upload_description: 'Перетащите изображения JPEG или нажмите для просмотра. Поддерживает файлы .jpg, .jpeg и .jpe до 100 МБ каждый.',
+        upload: {
+          drag_drop_text: 'Перетащите Ваши Файлы Сюда',
+          click_browse_text: 'или нажмите кнопку ниже для просмотра',
+          choose_files_button: 'Выбрать Файлы',
+          max_files_info: 'Макс. {maxFiles} файлов • До {maxSize} Всего'
+        },
         buttons: {
           view_files: 'Просмотреть Файлы',
           back: 'Вернуться ко Всем Просмотрщикам'
@@ -1096,6 +1126,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'اعرض وحلل صور JPEG بأدوات احترافية',
         upload_title: 'رفع ملفات JPEG',
         upload_description: 'اسحب وأفلت صور JPEG الخاصة بك أو انقر للتصفح. يدعم ملفات .jpg و .jpeg و .jpe حتى 100 ميجابايت لكل ملف.',
+        upload: {
+          drag_drop_text: 'اسحب وأفلت ملفاتك هنا',
+          click_browse_text: 'أو انقر على الزر أدناه للتصفح',
+          choose_files_button: 'اختر الملفات',
+          max_files_info: 'الحد الأقصى {maxFiles} ملف • حتى {maxSize} إجمالي'
+        },
         buttons: {
           view_files: 'عرض الملفات',
           back: 'العودة إلى جميع العارضين'
@@ -1185,6 +1221,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'ดูและวิเคราะห์รูปภาพ JPEG ด้วยเครื่องมือระดับมืออาชีพ',
         upload_title: 'อัปโหลดไฟล์ JPEG',
         upload_description: 'ลากและวางรูปภาพ JPEG ของคุณหรือคลิกเพื่อเรียกดู รองรับไฟล์ .jpg, .jpeg และ .jpe สูงสุด 100MB ต่อไฟล์',
+        upload: {
+          drag_drop_text: 'ลากและวางไฟล์ของคุณที่นี่',
+          click_browse_text: 'หรือคลิกปุ่มด้านล่างเพื่อเรียกดู',
+          choose_files_button: 'เลือกไฟล์',
+          max_files_info: 'สูงสุด {maxFiles} ไฟล์ • สูงสุด {maxSize} รวม'
+        },
         buttons: {
           view_files: 'ดูไฟล์',
           back: 'กลับไปที่โปรแกรมดูทั้งหมด'
@@ -1274,6 +1316,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'プロフェッショナルツールでJPEG画像を表示・分析',
         upload_title: 'JPEGファイルをアップロード',
         upload_description: 'JPEG画像をドラッグ＆ドロップするか、クリックして参照します。各ファイル最大100MBの.jpg、.jpeg、.jpeファイルをサポートします。',
+        upload: {
+          drag_drop_text: 'ファイルをここにドラッグ＆ドロップ',
+          click_browse_text: 'または下のボタンをクリックして参照',
+          choose_files_button: 'ファイルを選択',
+          max_files_info: '最大 {maxFiles} ファイル • 合計 {maxSize}'
+        },
         buttons: {
           view_files: 'ファイルを表示',
           back: 'すべてのビューアーに戻る'
@@ -1363,6 +1411,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: '使用专业工具查看和分析JPEG图片',
         upload_title: '上传JPEG文件',
         upload_description: '拖放您的JPEG图片或点击浏览。支持每个文件最大100MB的.jpg、.jpeg和.jpe文件。',
+        upload: {
+          drag_drop_text: '在此拖放您的文件',
+          click_browse_text: '或点击下面的按钮浏览',
+          choose_files_button: '选择文件',
+          max_files_info: '最多 {maxFiles} 个文件 • 总计 {maxSize}'
+        },
         buttons: {
           view_files: '查看文件',
           back: '返回所有查看器'
@@ -1452,6 +1506,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Lihat dan analisis gambar JPEG dengan alat profesional',
         upload_title: 'Unggah File JPEG',
         upload_description: 'Seret dan lepas gambar JPEG Anda atau klik untuk menjelajah. Mendukung file .jpg, .jpeg, dan .jpe hingga 100MB per file.',
+        upload: {
+          drag_drop_text: 'Seret dan Lepas File Anda Di Sini',
+          click_browse_text: 'atau klik tombol di bawah untuk menjelajah',
+          choose_files_button: 'Pilih File',
+          max_files_info: 'Maks. {maxFiles} file • Hingga {maxSize} Total'
+        },
         buttons: {
           view_files: 'Lihat File',
           back: 'Kembali ke Semua Penampil'
@@ -1541,6 +1601,12 @@ const resources: Record<string, JPEGViewerTranslations> = {
         hero_subtitle: 'Visa och analysera JPEG-bilder med professionella verktyg',
         upload_title: 'Ladda Upp JPEG-filer',
         upload_description: 'Dra och släpp dina JPEG-bilder eller klicka för att bläddra. Stöder .jpg, .jpeg och .jpe-filer upp till 100MB vardera.',
+        upload: {
+          drag_drop_text: 'Dra och Släpp Dina Filer Här',
+          click_browse_text: 'eller klicka på knappen nedan för att bläddra',
+          choose_files_button: 'Välj Filer',
+          max_files_info: 'Max {maxFiles} filer • Upp till {maxSize} Totalt'
+        },
         buttons: {
           view_files: 'Visa Filer',
           back: 'Tillbaka till Alla Visare'
