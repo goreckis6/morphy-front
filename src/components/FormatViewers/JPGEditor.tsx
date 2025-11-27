@@ -8,9 +8,11 @@ interface JPGEditorProps {
   files: File[];
   onClose: () => void;
   onAddFiles?: (files: File[]) => void;
+  acceptedFormats?: string[]; // e.g., ['jpg', 'jpeg', 'jpe'] or ['webp']
+  formatBadge?: string; // e.g., 'JPG' or 'WebP'
 }
 
-export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles }) => {
+export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles, acceptedFormats = ['jpg', 'jpeg', 'jpe'], formatBadge = 'JPG' }) => {
   const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
@@ -183,7 +185,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
     if (e.target.files && onAddFiles) {
       const newFiles = Array.from(e.target.files).filter(file => {
         const ext = file.name.split('.').pop()?.toLowerCase();
-        return ['jpg', 'jpeg', 'jpe'].includes(ext || '');
+        return acceptedFormats.includes(ext || '');
       });
       onAddFiles(newFiles);
     }
@@ -354,7 +356,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
               ref={fileInputRef}
               type="file"
               multiple
-              accept=".jpg,.jpeg,.jpe"
+              accept={acceptedFormats.map(f => `.${f}`).join(',')}
               onChange={handleAddFiles}
               className="hidden"
             />
@@ -417,7 +419,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
             <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 flex-1">
               <span className="font-semibold text-gray-700 text-xs sm:text-sm truncate">{currentFile?.name}</span>
               <span className="text-xs px-1.5 sm:px-2 py-0.5 bg-gray-100 text-gray-500 rounded border border-gray-200 flex-shrink-0">
-                {t('viewers.jpeg.editor.format_badge', 'JPG')}
+                {formatBadge}
               </span>
               {currentFile && (
                 <span className="text-xs text-gray-400 hidden sm:inline flex-shrink-0">

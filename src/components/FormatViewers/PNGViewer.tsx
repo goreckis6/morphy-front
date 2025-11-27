@@ -9,6 +9,7 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import './translations/pngViewerTranslations'; // Register translations
 
 export const PNGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -70,13 +71,13 @@ export const PNGViewer: React.FC = () => {
         <meta name="description" content={t('viewers.png.meta_description')} />
         <meta name="keywords" content={t('viewers.png.meta_keywords')} />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-emerald-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50">
         <Header />
       
         {/* Hero Section - Redesigned */}
         <div className="relative overflow-hidden">
           {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-700">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-indigo-700">
             <div 
               className="absolute inset-0 opacity-20"
               style={{
@@ -87,9 +88,9 @@ export const PNGViewer: React.FC = () => {
           </div>
           
           {/* Floating Orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-green-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
             <div className="flex flex-col items-center text-center">
@@ -122,13 +123,13 @@ export const PNGViewer: React.FC = () => {
               {/* Quick Stats - More visible */}
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                 <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
-                  <span className="text-white text-xs sm:text-sm font-semibold">✓ Lossless Quality</span>
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.png.quick_stats.lossless_quality', '✓ Lossless Quality')}</span>
                 </div>
                 <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
-                  <span className="text-white text-xs sm:text-sm font-semibold">🎨 Transparency Support</span>
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.png.quick_stats.transparency_support', '🎨 Transparency Support')}</span>
                 </div>
                 <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
-                  <span className="text-white text-xs sm:text-sm font-semibold">⚡ Fast Processing</span>
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.png.quick_stats.fast_processing', '⚡ Fast Processing')}</span>
                 </div>
               </div>
             </div>
@@ -140,7 +141,7 @@ export const PNGViewer: React.FC = () => {
           {/* Upload Section - Glassmorphism Card */}
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <Upload className="w-8 h-8 text-white" />
               </div>
               <div>
@@ -171,7 +172,7 @@ export const PNGViewer: React.FC = () => {
                   const basePath = getBasePath();
                   navigate(`${basePath}/editor`, { replace: true });
                 }}
-                className="group relative px-8 py-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
+                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-indigo-600 hover:from-blue-700 hover:via-cyan-700 hover:to-indigo-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 <Eye className="w-6 h-6 relative z-10" />
@@ -185,9 +186,9 @@ export const PNGViewer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {features.map((feature, index) => {
               const gradients = [
-                'from-green-500 to-emerald-500',
-                'from-emerald-500 to-teal-500',
-                'from-teal-500 to-cyan-500'
+                'from-blue-500 to-cyan-500',
+                'from-cyan-500 to-indigo-500',
+                'from-indigo-500 to-blue-500'
               ];
               const iconNodes = [
                 <Camera className="w-8 h-8 text-white" key="camera" />,
@@ -225,7 +226,7 @@ export const PNGViewer: React.FC = () => {
           {/* About Section - Split Layout */}
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50">
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-4 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl shadow-lg">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg">
                 <Info className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -240,9 +241,9 @@ export const PNGViewer: React.FC = () => {
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Advantages */}
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100">
                   <div className="flex items-center gap-3 mb-4">
-                    <Star className="w-6 h-6 text-green-600" />
+                    <Star className="w-6 h-6 text-blue-600" />
                     <h3 className="text-xl font-bold text-gray-900">{t('viewers.png.advantages_title')}</h3>
                   </div>
                   <ul className="space-y-3">
@@ -251,7 +252,7 @@ export const PNGViewer: React.FC = () => {
                       const cleanItem = item.replace(/^•\s*/, '').trim();
                       return (
                         <li key={idx} className="flex items-start gap-3 text-gray-700">
-                          <span className="text-green-600 font-bold mt-0.5">•</span>
+                          <span className="text-blue-600 font-bold mt-0.5">•</span>
                           <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
                         </li>
                       );
@@ -260,9 +261,9 @@ export const PNGViewer: React.FC = () => {
                 </div>
                 
                 {/* Use Cases */}
-                <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-6 border border-teal-100">
+                <div className="bg-gradient-to-br from-cyan-50 to-indigo-50 rounded-2xl p-6 border border-cyan-100">
                   <div className="flex items-center gap-3 mb-4">
-                    <Layers className="w-6 h-6 text-teal-600" />
+                    <Layers className="w-6 h-6 text-cyan-600" />
                     <h3 className="text-xl font-bold text-gray-900">{t('viewers.png.use_cases_title')}</h3>
                   </div>
                   <ul className="space-y-3">
@@ -271,7 +272,7 @@ export const PNGViewer: React.FC = () => {
                       const cleanItem = item.replace(/^•\s*/, '').trim();
                       return (
                         <li key={idx} className="flex items-start gap-3 text-gray-700">
-                          <span className="text-teal-600 font-bold mt-0.5">•</span>
+                          <span className="text-cyan-600 font-bold mt-0.5">•</span>
                           <span dangerouslySetInnerHTML={{ __html: cleanItem }} />
                         </li>
                       );
@@ -285,7 +286,7 @@ export const PNGViewer: React.FC = () => {
           {/* Technical Specifications - Modern Table */}
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-white/50 overflow-hidden">
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-4 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl shadow-lg">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg">
                 <FileImage className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -303,7 +304,7 @@ export const PNGViewer: React.FC = () => {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {specs.map((row, idx) => (
-                    <tr key={row.label} className={`hover:bg-green-50/50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+                    <tr key={row.label} className={`hover:bg-blue-50/50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
                       <td className="px-6 py-4 text-sm font-semibold text-gray-900">{row.label}</td>
                       <td className="px-6 py-4 text-sm text-gray-700">{row.value}</td>
                     </tr>
@@ -314,9 +315,9 @@ export const PNGViewer: React.FC = () => {
           </div>
 
           {/* SEO Content - Enhanced */}
-          <div className="bg-gradient-to-br from-white via-green-50/50 to-emerald-50/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-green-100">
+          <div className="bg-gradient-to-br from-white via-blue-50/50 to-cyan-50/50 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-10 mb-8 border border-blue-100">
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-4 bg-gradient-to-br from-green-500 to-teal-600 rounded-2xl shadow-lg">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl shadow-lg">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -330,33 +331,33 @@ export const PNGViewer: React.FC = () => {
               </p>
               
               <div className="space-y-6">
-                <div className="bg-white/60 rounded-xl p-6 border border-green-100">
+                <div className="bg-white/60 rounded-xl p-6 border border-blue-100">
                   <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <Camera className="w-5 h-5 text-green-600" />
-                    {t('viewers.png.seo_advanced_title', 'Advanced PNG Viewing')}
+                    <Camera className="w-5 h-5 text-blue-600" />
+                    {t('viewers.png.seo_viewing_title')}
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    {t('viewers.png.seo_advanced_text', 'Our PNG viewer provides professional tools for viewing and analyzing PNG images with transparency support.')}
+                    {t('viewers.png.seo_viewing_text')}
                   </p>
                 </div>
                 
-                <div className="bg-white/60 rounded-xl p-6 border border-green-100">
+                <div className="bg-white/60 rounded-xl p-6 border border-blue-100">
                   <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <Palette className="w-5 h-5 text-green-600" />
-                    {t('viewers.png.seo_professional_title', 'Professional Features')}
+                    <Palette className="w-5 h-5 text-blue-600" />
+                    {t('viewers.png.seo_conversion_title')}
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    {t('viewers.png.seo_professional_text', 'Experience lossless quality viewing with support for transparency, alpha channels, and high-resolution images.')}
+                    {t('viewers.png.seo_conversion_text')}
                   </p>
                 </div>
                 
-                <div className="bg-white/60 rounded-xl p-6 border border-green-100">
+                <div className="bg-white/60 rounded-xl p-6 border border-blue-100">
                   <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-green-600" />
-                    {t('viewers.png.seo_optimization_title', 'Optimization Tools')}
+                    <Zap className="w-5 h-5 text-blue-600" />
+                    {t('viewers.png.seo_optimization_title')}
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    {t('viewers.png.seo_optimization_text', 'Optimize your PNG files for web and print with our comprehensive viewing and analysis tools.')}
+                    {t('viewers.png.seo_optimization_text')}
                   </p>
                 </div>
               </div>
@@ -367,7 +368,7 @@ export const PNGViewer: React.FC = () => {
           <div className="text-center mb-12">
             <a
               href="/viewers"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-indigo-600 hover:from-blue-700 hover:via-cyan-700 hover:to-indigo-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
               <span>{t('viewers.png.buttons.back', 'Back to All Viewers').replace(/^←\s*/, '')}</span>
@@ -396,6 +397,8 @@ export const PNGViewer: React.FC = () => {
             navigate(basePath, { replace: true });
           }}
           onAddFiles={handleAddFilesToEditor}
+          acceptedFormats={['png']}
+          formatBadge="PNG"
         />
       )}
 

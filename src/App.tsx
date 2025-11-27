@@ -1252,6 +1252,7 @@ function App() {
         <Route path="/viewers/png" element={<PNGViewer />} />
         <Route path="/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/viewers/webp" element={<WebPViewer />} />
+        <Route path="/viewers/webp/editor" element={<WebPViewer />} />
         <Route path="/viewers/gif" element={<GIFViewer />} />
         <Route path="/viewers/svg" element={<SVGViewer />} />
         <Route path="/viewers/bmp" element={<BMPViewer />} />
@@ -1307,6 +1308,7 @@ function App() {
         <Route path="/pl/viewers/png" element={<PNGViewer />} />
         <Route path="/pl/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/pl/viewers/webp" element={<WebPViewer />} />
+        <Route path="/pl/viewers/webp/editor" element={<WebPViewer />} />
         <Route path="/pl/viewers/gif" element={<GIFViewer />} />
         <Route path="/pl/viewers/svg" element={<SVGViewer />} />
         <Route path="/pl/viewers/bmp" element={<BMPViewer />} />
@@ -1362,6 +1364,7 @@ function App() {
         <Route path="/de/viewers/png" element={<PNGViewer />} />
         <Route path="/de/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/de/viewers/webp" element={<WebPViewer />} />
+        <Route path="/de/viewers/webp/editor" element={<WebPViewer />} />
         <Route path="/de/viewers/gif" element={<GIFViewer />} />
         <Route path="/de/viewers/svg" element={<SVGViewer />} />
         <Route path="/de/viewers/bmp" element={<BMPViewer />} />
@@ -1410,6 +1413,8 @@ function App() {
 
         {/* Indonesian (ID) Viewer Routes */}
         <Route path="/id/viewers" element={<Viewers />} />
+        <Route path="/id/viewers/png" element={<PNGViewer />} />
+        <Route path="/id/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/id/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/id/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/id/viewers/jpeg" element={<JPEGViewer />} />
@@ -1417,6 +1422,8 @@ function App() {
 
         {/* Swedish (SV) Viewer Routes */}
         <Route path="/sv/viewers" element={<Viewers />} />
+        <Route path="/sv/viewers/png" element={<PNGViewer />} />
+        <Route path="/sv/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/sv/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/sv/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/sv/viewers/jpeg" element={<JPEGViewer />} />
@@ -1424,6 +1431,8 @@ function App() {
 
         {/* Spanish (ES) Viewer Routes */}
         <Route path="/es/viewers" element={<Viewers />} />
+        <Route path="/es/viewers/png" element={<PNGViewer />} />
+        <Route path="/es/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/es/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/es/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/es/viewers/jpeg" element={<JPEGViewer />} />
@@ -1431,6 +1440,8 @@ function App() {
 
         {/* French (FR) Viewer Routes */}
         <Route path="/fr/viewers" element={<Viewers />} />
+        <Route path="/fr/viewers/png" element={<PNGViewer />} />
+        <Route path="/fr/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/fr/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/fr/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/fr/viewers/jpeg" element={<JPEGViewer />} />
@@ -1438,6 +1449,8 @@ function App() {
 
         {/* Italian (IT) Viewer Routes */}
         <Route path="/it/viewers" element={<Viewers />} />
+        <Route path="/it/viewers/png" element={<PNGViewer />} />
+        <Route path="/it/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/it/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/it/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/it/viewers/jpeg" element={<JPEGViewer />} />
@@ -1445,6 +1458,8 @@ function App() {
 
         {/* Dutch (NL) Viewer Routes */}
         <Route path="/nl/viewers" element={<Viewers />} />
+        <Route path="/nl/viewers/png" element={<PNGViewer />} />
+        <Route path="/nl/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/nl/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/nl/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/nl/viewers/jpeg" element={<JPEGViewer />} />
@@ -1452,6 +1467,8 @@ function App() {
 
         {/* Portuguese (PT) Viewer Routes */}
         <Route path="/pt/viewers" element={<Viewers />} />
+        <Route path="/pt/viewers/png" element={<PNGViewer />} />
+        <Route path="/pt/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/pt/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/pt/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/pt/viewers/jpeg" element={<JPEGViewer />} />
@@ -1459,6 +1476,8 @@ function App() {
 
         {/* Vietnamese (VI) Viewer Routes */}
         <Route path="/vi/viewers" element={<Viewers />} />
+        <Route path="/vi/viewers/png" element={<PNGViewer />} />
+        <Route path="/vi/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/vi/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/vi/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/vi/viewers/jpeg" element={<JPEGViewer />} />
@@ -1466,6 +1485,8 @@ function App() {
 
         {/* Turkish (TR) Viewer Routes */}
         <Route path="/tr/viewers" element={<Viewers />} />
+        <Route path="/tr/viewers/png" element={<PNGViewer />} />
+        <Route path="/tr/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/tr/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/tr/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/tr/viewers/jpeg" element={<JPEGViewer />} />
@@ -1473,6 +1494,8 @@ function App() {
 
         {/* Russian (RU) Viewer Routes */}
         <Route path="/ru/viewers" element={<Viewers />} />
+        <Route path="/ru/viewers/png" element={<PNGViewer />} />
+        <Route path="/ru/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/ru/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/ru/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/ru/viewers/jpeg" element={<JPEGViewer />} />
@@ -1480,6 +1503,8 @@ function App() {
 
         {/* Arabic (AR) Viewer Routes */}
         <Route path="/ar/viewers" element={<Viewers />} />
+        <Route path="/ar/viewers/png" element={<PNGViewer />} />
+        <Route path="/ar/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/ar/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/ar/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/ar/viewers/jpeg" element={<JPEGViewer />} />
@@ -1487,6 +1512,8 @@ function App() {
 
         {/* Thai (TH) Viewer Routes */}
         <Route path="/th/viewers" element={<Viewers />} />
+        <Route path="/th/viewers/png" element={<PNGViewer />} />
+        <Route path="/th/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/th/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/th/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/th/viewers/jpeg" element={<JPEGViewer />} />
@@ -1494,6 +1521,8 @@ function App() {
 
         {/* Japanese (JA) Viewer Routes */}
         <Route path="/ja/viewers" element={<Viewers />} />
+        <Route path="/ja/viewers/png" element={<PNGViewer />} />
+        <Route path="/ja/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/ja/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/ja/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/ja/viewers/jpeg" element={<JPEGViewer />} />
@@ -1501,10 +1530,68 @@ function App() {
 
         {/* Chinese (ZH) Viewer Routes */}
         <Route path="/zh/viewers" element={<Viewers />} />
+        <Route path="/zh/viewers/png" element={<PNGViewer />} />
+        <Route path="/zh/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/zh/viewers/jpg" element={<JPEGViewer />} />
         <Route path="/zh/viewers/jpg/editor" element={<JPEGViewer />} />
         <Route path="/zh/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/zh/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Indonesian (ID) WebP Viewer Routes */}
+        <Route path="/id/viewers/webp" element={<WebPViewer />} />
+        <Route path="/id/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Swedish (SV) WebP Viewer Routes */}
+        <Route path="/sv/viewers/webp" element={<WebPViewer />} />
+        <Route path="/sv/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Spanish (ES) WebP Viewer Routes */}
+        <Route path="/es/viewers/webp" element={<WebPViewer />} />
+        <Route path="/es/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* French (FR) WebP Viewer Routes */}
+        <Route path="/fr/viewers/webp" element={<WebPViewer />} />
+        <Route path="/fr/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Italian (IT) WebP Viewer Routes */}
+        <Route path="/it/viewers/webp" element={<WebPViewer />} />
+        <Route path="/it/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Dutch (NL) WebP Viewer Routes */}
+        <Route path="/nl/viewers/webp" element={<WebPViewer />} />
+        <Route path="/nl/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Portuguese (PT) WebP Viewer Routes */}
+        <Route path="/pt/viewers/webp" element={<WebPViewer />} />
+        <Route path="/pt/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Vietnamese (VI) WebP Viewer Routes */}
+        <Route path="/vi/viewers/webp" element={<WebPViewer />} />
+        <Route path="/vi/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Turkish (TR) WebP Viewer Routes */}
+        <Route path="/tr/viewers/webp" element={<WebPViewer />} />
+        <Route path="/tr/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Russian (RU) WebP Viewer Routes */}
+        <Route path="/ru/viewers/webp" element={<WebPViewer />} />
+        <Route path="/ru/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Arabic (AR) WebP Viewer Routes */}
+        <Route path="/ar/viewers/webp" element={<WebPViewer />} />
+        <Route path="/ar/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Thai (TH) WebP Viewer Routes */}
+        <Route path="/th/viewers/webp" element={<WebPViewer />} />
+        <Route path="/th/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Japanese (JA) WebP Viewer Routes */}
+        <Route path="/ja/viewers/webp" element={<WebPViewer />} />
+        <Route path="/ja/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Chinese (ZH) WebP Viewer Routes */}
+        <Route path="/zh/viewers/webp" element={<WebPViewer />} />
+        <Route path="/zh/viewers/webp/editor" element={<WebPViewer />} />
 
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />
