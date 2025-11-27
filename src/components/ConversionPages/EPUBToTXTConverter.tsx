@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18n';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToTXTConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -214,9 +216,9 @@ export const EPUBToTXTConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to TXT Converter - Convert eBooks to Plain Text</title>
-        <meta name="description" content="Free EPUB to TXT converter. Convert EPUB ebook files to plain text format. Extract clean text from digital books for reading and analysis. Free online converter with batch processing." />
-        <meta name="keywords" content="EPUB to TXT, ebook to text, plain text, text extraction, batch conversion" />
+        <title>{t('epub_to_txt.meta_title')}</title>
+        <meta name="description" content={t('epub_to_txt.meta_description')} />
+        <meta name="keywords" content={t('epub_to_txt.meta_keywords')} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-slate-50">
       <Header />
@@ -227,23 +229,23 @@ export const EPUBToTXTConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to TXT Converter
+              {t('epub_to_txt.heading')}
             </h1>
             <p className="text-lg sm:text-xl text-gray-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to plain text format for universal compatibility. Extract text content from e-books and save as simple text files.
+              {t('epub_to_txt.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_txt.badge_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_txt.badge_secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_txt.badge_no_registration')}</span>
               </div>
             </div>
           </div>
@@ -268,7 +270,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_txt.mode_single')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -279,7 +281,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_txt.mode_batch')}
                 </button>
               </div>
 
@@ -287,22 +289,22 @@ export const EPUBToTXTConverter: React.FC = () => {
               <div className="border-2 border-dashed border-blue-300 rounded-xl p-8 text-center hover:border-blue-400 transition-colors">
                 <Upload className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_txt.upload_multiple') : t('epub_to_txt.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_txt.upload_multiple_desc')
+                    : t('epub_to_txt.upload_single_desc')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-gray-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_txt.file_limit_single')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-gray-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                    {t('epub_to_txt.file_limit_batch')}
                   </p>
                 )}
                 <input
@@ -317,14 +319,14 @@ export const EPUBToTXTConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_txt.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_txt.preview')}</h4>
                   <div className="bg-blue-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded">
                       <BookOpen className="w-12 h-12 text-blue-500" />
@@ -345,7 +347,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_txt.selected_files', { count: batchFiles.length })}</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -355,7 +357,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_txt.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -392,12 +394,12 @@ export const EPUBToTXTConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_txt.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to TXT'}
+                      {batchMode ? t('epub_to_txt.convert_files', { count: batchFiles.length }) : t('epub_to_txt.convert_button')}
                     </div>
                   )}
                 </button>
@@ -408,10 +410,10 @@ export const EPUBToTXTConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_txt.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to TXT format.
+                    {t('epub_to_txt.conversion_success')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -419,14 +421,14 @@ export const EPUBToTXTConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download TXT File
+                      {t('epub_to_txt.download_txt')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_txt.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -448,13 +450,16 @@ export const EPUBToTXTConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_txt.batch_complete') : t('epub_to_txt.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('epub_to_txt.batch_summary', { 
+                      success: batchResults.filter(r => r.success).length, 
+                      total: batchResults.length 
+                    })}
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -497,7 +502,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                     className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_txt.convert_more')}
                   </button>
                 </div>
               )}
@@ -511,38 +516,38 @@ export const EPUBToTXTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-blue-600" />
-                TXT Settings
+                {t('epub_to_txt.settings_title')}
               </h3>
               
               {/* Encoding */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Text Encoding
+                  {t('epub_to_txt.settings_encoding_label')}
                 </label>
                 <select
                   value={encoding}
                   onChange={(e) => setEncoding(e.target.value as 'utf-8' | 'ascii' | 'utf-16')}
                   className="w-full p-3 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 >
-                  <option value="utf-8">UTF-8 (Recommended)</option>
-                  <option value="ascii">ASCII</option>
-                  <option value="utf-16">UTF-16</option>
+                  <option value="utf-8">{t('epub_to_txt.settings_encoding_utf8')}</option>
+                  <option value="ascii">{t('epub_to_txt.settings_encoding_ascii')}</option>
+                  <option value="utf-16">{t('epub_to_txt.settings_encoding_utf16')}</option>
                 </select>
               </div>
 
               {/* Line Endings */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Line Endings
+                  {t('epub_to_txt.settings_line_endings_label')}
                 </label>
                 <select
                   value={lineEndings}
                   onChange={(e) => setLineEndings(e.target.value as 'unix' | 'windows' | 'mac')}
                   className="w-full p-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 >
-                  <option value="unix">Unix/Linux (LF)</option>
-                  <option value="windows">Windows (CRLF)</option>
-                  <option value="mac">Mac (CR)</option>
+                  <option value="unix">{t('epub_to_txt.settings_line_endings_unix')}</option>
+                  <option value="windows">{t('epub_to_txt.settings_line_endings_windows')}</option>
+                  <option value="mac">{t('epub_to_txt.settings_line_endings_mac')}</option>
                 </select>
               </div>
 
@@ -555,7 +560,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                     onChange={(e) => setPreserveStructure(e.target.checked)}
                     className="rounded border-blue-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve document structure</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_txt.settings_preserve_structure')}</span>
                 </label>
               </div>
 
@@ -568,7 +573,7 @@ export const EPUBToTXTConverter: React.FC = () => {
                     onChange={(e) => setIncludeMetadata(e.target.checked)}
                     className="rounded border-purple-300 text-purple-600 focus:ring-purple-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_txt.settings_include_metadata')}</span>
                 </label>
               </div>
             </div>
@@ -577,16 +582,16 @@ export const EPUBToTXTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('epub_to_txt.features_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book text extraction",
-                  "Plain text output",
-                  "Universal compatibility",
-                  "No formatting dependencies",
-                  "Cross-platform support",
-                  "Batch processing support"
+                  t('epub_to_txt.feature_1'),
+                  t('epub_to_txt.feature_2'),
+                  t('epub_to_txt.feature_3'),
+                  t('epub_to_txt.feature_4'),
+                  t('epub_to_txt.feature_5'),
+                  t('epub_to_txt.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -600,16 +605,16 @@ export const EPUBToTXTConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-indigo-600" />
-                Perfect For
+                {t('epub_to_txt.use_cases_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Text content extraction",
-                  "Universal document sharing",
-                  "Text processing workflows",
-                  "Content analysis",
-                  "Simple document conversion",
-                  "Legacy system integration"
+                  t('epub_to_txt.use_case_1'),
+                  t('epub_to_txt.use_case_2'),
+                  t('epub_to_txt.use_case_3'),
+                  t('epub_to_txt.use_case_4'),
+                  t('epub_to_txt.use_case_5'),
+                  t('epub_to_txt.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -627,106 +632,106 @@ export const EPUBToTXTConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors"
           >
-            ← Back to Home
+            {t('epub_to_txt.back_button')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to TXT?
+            {t('epub_to_txt.seo_heading')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to plain text format is essential for text content extraction, universal document sharing, and text processing workflows. While EPUB files are excellent for reading with rich formatting, TXT format provides the purest form of text content, ensuring universal compatibility across all platforms, systems, and applications without any formatting dependencies.
+              {t('epub_to_txt.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of TXT Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_txt.seo_benefits_heading')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Universal Compatibility</h4>
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">{t('epub_to_txt.seo_benefit_1_title')}</h4>
                 <p className="text-gray-700">
-                  TXT files can be opened and read by virtually any text editor, word processor, or application on any operating system, ensuring maximum accessibility.
+                  {t('epub_to_txt.seo_benefit_1_desc')}
                 </p>
               </div>
               
               <div className="bg-slate-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-slate-900 mb-3">No Formatting Dependencies</h4>
+                <h4 className="text-xl font-semibold text-slate-900 mb-3">{t('epub_to_txt.seo_benefit_2_title')}</h4>
                 <p className="text-gray-700">
-                  TXT format contains only plain text without any formatting, fonts, or styling, making it perfect for text processing and analysis applications.
+                  {t('epub_to_txt.seo_benefit_2_desc')}
                 </p>
               </div>
               
               <div className="bg-zinc-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-zinc-900 mb-3">Cross-platform Support</h4>
+                <h4 className="text-xl font-semibold text-zinc-900 mb-3">{t('epub_to_txt.seo_benefit_3_title')}</h4>
                 <p className="text-gray-700">
-                  TXT files work seamlessly across all operating systems, programming languages, and text processing tools without any compatibility issues.
+                  {t('epub_to_txt.seo_benefit_3_desc')}
                 </p>
               </div>
               
               <div className="bg-neutral-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-neutral-900 mb-3">Text Processing Ready</h4>
+                <h4 className="text-xl font-semibold text-neutral-900 mb-3">{t('epub_to_txt.seo_benefit_4_title')}</h4>
                 <p className="text-gray-700">
-                  TXT format is ideal for text analysis, natural language processing, search indexing, and other text-based computational tasks.
+                  {t('epub_to_txt.seo_benefit_4_desc')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_txt.seo_use_cases_heading')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-gray-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Text Content Extraction</h4>
-                  <p className="text-gray-700">Extract pure text content from e-books by converting them to TXT format for use in text analysis and processing applications.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_txt.seo_use_case_1_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_txt.seo_use_case_1_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-slate-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Universal Document Sharing</h4>
-                  <p className="text-gray-700">Share e-book content in the most universally compatible format by converting it to TXT format for maximum accessibility.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_txt.seo_use_case_2_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_txt.seo_use_case_2_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-zinc-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Text Processing Workflows</h4>
-                  <p className="text-gray-700">Integrate e-book content into text processing workflows by converting it to TXT format for use with programming and analysis tools.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_txt.seo_use_case_3_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_txt.seo_use_case_3_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-neutral-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Analysis</h4>
-                  <p className="text-gray-700">Perform content analysis on e-book text by converting it to TXT format for use with natural language processing and text mining tools.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_txt.seo_use_case_4_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_txt.seo_use_case_4_desc')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_txt.seo_cta_heading')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to TXT converter to extract pure text content from your e-books.
+                {t('epub_to_txt.seo_cta_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_txt.seo_cta_start')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_txt.seo_cta_back')}
                 </button>
               </div>
             </div>
