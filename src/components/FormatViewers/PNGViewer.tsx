@@ -370,7 +370,7 @@ export const PNGViewer: React.FC = () => {
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-              <span>{t('viewers.png.buttons.back', 'Back to All Viewers')}</span>
+              <span>{t('viewers.png.buttons.back', 'Back to All Viewers').replace(/^←\s*/, '')}</span>
             </a>
           </div>
         </div>
