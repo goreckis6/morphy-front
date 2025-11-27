@@ -1408,6 +1408,104 @@ function App() {
         <Route path="/de/viewers/sx" element={<SXViewer />} />
         <Route path="/de/viewers/stl" element={<STLViewer />} />
 
+        {/* Indonesian (ID) Viewer Routes */}
+        <Route path="/id/viewers" element={<Viewers />} />
+        <Route path="/id/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/id/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/id/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/id/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Swedish (SV) Viewer Routes */}
+        <Route path="/sv/viewers" element={<Viewers />} />
+        <Route path="/sv/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/sv/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/sv/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/sv/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Spanish (ES) Viewer Routes */}
+        <Route path="/es/viewers" element={<Viewers />} />
+        <Route path="/es/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/es/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/es/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/es/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* French (FR) Viewer Routes */}
+        <Route path="/fr/viewers" element={<Viewers />} />
+        <Route path="/fr/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/fr/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/fr/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/fr/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Italian (IT) Viewer Routes */}
+        <Route path="/it/viewers" element={<Viewers />} />
+        <Route path="/it/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/it/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/it/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/it/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Dutch (NL) Viewer Routes */}
+        <Route path="/nl/viewers" element={<Viewers />} />
+        <Route path="/nl/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/nl/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/nl/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/nl/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Portuguese (PT) Viewer Routes */}
+        <Route path="/pt/viewers" element={<Viewers />} />
+        <Route path="/pt/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/pt/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/pt/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/pt/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Vietnamese (VI) Viewer Routes */}
+        <Route path="/vi/viewers" element={<Viewers />} />
+        <Route path="/vi/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/vi/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/vi/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/vi/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Turkish (TR) Viewer Routes */}
+        <Route path="/tr/viewers" element={<Viewers />} />
+        <Route path="/tr/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/tr/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/tr/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/tr/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Russian (RU) Viewer Routes */}
+        <Route path="/ru/viewers" element={<Viewers />} />
+        <Route path="/ru/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/ru/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/ru/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/ru/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Arabic (AR) Viewer Routes */}
+        <Route path="/ar/viewers" element={<Viewers />} />
+        <Route path="/ar/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/ar/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/ar/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/ar/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Thai (TH) Viewer Routes */}
+        <Route path="/th/viewers" element={<Viewers />} />
+        <Route path="/th/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/th/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/th/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/th/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Japanese (JA) Viewer Routes */}
+        <Route path="/ja/viewers" element={<Viewers />} />
+        <Route path="/ja/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/ja/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/ja/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/ja/viewers/jpeg/editor" element={<JPEGViewer />} />
+
+        {/* Chinese (ZH) Viewer Routes */}
+        <Route path="/zh/viewers" element={<Viewers />} />
+        <Route path="/zh/viewers/jpg" element={<JPEGViewer />} />
+        <Route path="/zh/viewers/jpg/editor" element={<JPEGViewer />} />
+        <Route path="/zh/viewers/jpeg" element={<JPEGViewer />} />
+        <Route path="/zh/viewers/jpeg/editor" element={<JPEGViewer />} />
+
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />
         <Route path="/compress/jpeg" element={<JPGCompressor />} />
