@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToRTFConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -216,9 +218,9 @@ export const EPUBToRTFConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to RTF Converter - Convert eBooks to Rich Text</title>
-        <meta name="description" content="Free EPUB to RTF converter. Convert EPUB ebook files to RTF format for universal word processing. Transform digital books into Rich Text Format. Free online tool with batch support." />
-        <meta name="keywords" content="EPUB to RTF, ebook converter, Rich Text Format, word processing" />
+        <title>{t('epub_to_rtf.meta_title')}</title>
+        <meta name="description" content={t('epub_to_rtf.meta_description')} />
+        <meta name="keywords" content={t('epub_to_rtf.meta_keywords')} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
       <Header />
@@ -229,23 +231,23 @@ export const EPUBToRTFConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to RTF Converter
+              {t('epub_to_rtf.heading')}
             </h1>
             <p className="text-lg sm:text-xl text-sky-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to Rich Text Format (RTF) for cross-platform document sharing. Transform e-books into universally compatible documents with basic formatting.
+              {t('epub_to_rtf.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-sky-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_rtf.badge_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_rtf.badge_secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_rtf.badge_no_registration')}</span>
               </div>
             </div>
           </div>
@@ -270,7 +272,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_rtf.mode_single')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -281,7 +283,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_rtf.mode_batch')}
                 </button>
               </div>
 
@@ -289,22 +291,22 @@ export const EPUBToRTFConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-sky-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_rtf.upload_batch') : t('epub_to_rtf.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_rtf.upload_text_batch') 
+                    : t('epub_to_rtf.upload_text_single')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-blue-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_rtf.file_limits_single')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-sky-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                    {t('epub_to_rtf.file_limits_batch')}
                   </p>
                 )}
                 <input
@@ -319,14 +321,14 @@ export const EPUBToRTFConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-sky-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-sky-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_rtf.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_rtf.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -347,7 +349,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_rtf.selected_files')} ({batchFiles.length})</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -357,7 +359,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_rtf.batch_size_warning', { count: batchFiles.length })}
                               </span>
                             </div>
                           </div>
@@ -394,12 +396,12 @@ export const EPUBToRTFConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_rtf.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to RTF'}
+                      {batchMode ? t('epub_to_rtf.convert_files', { count: batchFiles.length }) : t('epub_to_rtf.convert_to_rtf')}
                     </div>
                   )}
                 </button>
@@ -410,10 +412,10 @@ export const EPUBToRTFConverter: React.FC = () => {
                 <div className="mt-6 p-6 bg-green-50 border border-green-200 rounded-xl">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_rtf.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to RTF format.
+                    {t('epub_to_rtf.success_message')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -421,14 +423,14 @@ export const EPUBToRTFConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download RTF File
+                      {t('epub_to_rtf.download_rtf')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_rtf.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -449,15 +451,15 @@ export const EPUBToRTFConverter: React.FC = () => {
                       <AlertCircle className="w-6 h-6 text-red-500 mr-3" />
                     )}
                     <h4 className={`text-lg font-semibold ${
-                      batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
-                    }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                    {batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
+                  }`}>
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_rtf.batch_complete') : t('epub_to_rtf.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('epub_to_rtf.files_converted', { count: batchResults.filter(r => r.success).length })}
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -479,7 +481,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                             )}
                             {!result.success && result.error && (
                               <div className="text-xs text-red-600 mt-1 ml-6 break-words">
-                                Failed to convert {result.originalName}
+                                {t('epub_to_rtf.failed_to_convert', { filename: result.originalName })}
                               </div>
                             )}
                           </div>
@@ -488,7 +490,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                               onClick={() => handleBatchDownload(result)}
                               className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors flex-shrink-0 w-full sm:w-auto"
                             >
-                              Download
+                              {t('epub_to_rtf.download')}
                             </button>
                           )}
                         </div>
@@ -500,7 +502,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_rtf.convert_more')}
                   </button>
                 </div>
               )}</div>
@@ -513,7 +515,7 @@ export const EPUBToRTFConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-sky-600" />
-                RTF Settings
+                {t('epub_to_rtf.settings_title')}
               </h3>
               
               {/* Preserve Formatting */}
@@ -525,7 +527,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                     onChange={(e) => setPreserveFormatting(e.target.checked)}
                     className="rounded border-gray-300 text-sky-600 focus:ring-sky-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Preserve formatting</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_rtf.preserve_formatting')}</span>
                 </label>
               </div>
 
@@ -538,7 +540,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                     onChange={(e) => setIncludeImages(e.target.checked)}
                     className="rounded border-gray-300 text-sky-600 focus:ring-sky-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include images and graphics</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_rtf.include_images')}</span>
                 </label>
               </div>
 
@@ -551,7 +553,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                     onChange={(e) => setExtractMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-sky-600 focus:ring-sky-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Extract book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_rtf.extract_metadata')}</span>
                 </label>
               </div>
 
@@ -564,7 +566,7 @@ export const EPUBToRTFConverter: React.FC = () => {
                     onChange={(e) => setUniversalCompatible(e.target.checked)}
                     className="rounded border-gray-300 text-sky-600 focus:ring-sky-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Universal compatibility mode</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_rtf.universal_compatible')}</span>
                 </label>
               </div>
             </div>
@@ -573,16 +575,16 @@ export const EPUBToRTFConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('epub_to_rtf.features_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book to document conversion",
-                  "Cross-platform compatibility",
-                  "Rich text formatting",
-                  "Universal document support",
-                  "Legacy system integration",
-                  "Batch processing support"
+                  t('epub_to_rtf.feature_1'),
+                  t('epub_to_rtf.feature_2'),
+                  t('epub_to_rtf.feature_3'),
+                  t('epub_to_rtf.feature_4'),
+                  t('epub_to_rtf.feature_5'),
+                  t('epub_to_rtf.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -596,16 +598,16 @@ export const EPUBToRTFConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-sky-600" />
-                Perfect For
+                {t('epub_to_rtf.use_cases_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "Cross-platform document sharing",
-                  "Legacy system integration",
-                  "Universal document format",
-                  "Content repurposing",
-                  "Document archiving",
-                  "Simple document workflows"
+                  t('epub_to_rtf.use_case_1'),
+                  t('epub_to_rtf.use_case_2'),
+                  t('epub_to_rtf.use_case_3'),
+                  t('epub_to_rtf.use_case_4'),
+                  t('epub_to_rtf.use_case_5'),
+                  t('epub_to_rtf.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-sky-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -623,106 +625,106 @@ export const EPUBToRTFConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            {t('epub_to_rtf.back_to_home')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to RTF?
+            {t('epub_to_rtf.seo_title')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to Rich Text Format (RTF) is essential for cross-platform document sharing, legacy system integration, and universal document compatibility. While EPUB files are excellent for reading, RTF format provides universal compatibility across different operating systems, word processors, and document management systems, ensuring your content can be accessed and edited anywhere.
+              {t('epub_to_rtf.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of RTF Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_rtf.benefits_title')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-sky-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-sky-900 mb-3">Cross-platform Compatibility</h4>
+                <h4 className="text-xl font-semibold text-sky-900 mb-3">{t('epub_to_rtf.benefit_1_title')}</h4>
                 <p className="text-gray-700">
-                  RTF files can be opened and edited by virtually any word processor on any operating system, ensuring universal accessibility and compatibility.
+                  {t('epub_to_rtf.benefit_1_text')}
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">Rich Text Formatting</h4>
+                <h4 className="text-xl font-semibold text-blue-900 mb-3">{t('epub_to_rtf.benefit_2_title')}</h4>
                 <p className="text-gray-700">
-                  RTF format supports basic rich text formatting including bold, italic, fonts, colors, and basic layout while maintaining universal compatibility.
+                  {t('epub_to_rtf.benefit_2_text')}
                 </p>
               </div>
               
               <div className="bg-indigo-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-indigo-900 mb-3">Universal Document Support</h4>
+                <h4 className="text-xl font-semibold text-indigo-900 mb-3">{t('epub_to_rtf.benefit_3_title')}</h4>
                 <p className="text-gray-700">
-                  RTF format is supported by all major word processors including Microsoft Word, Google Docs, LibreOffice, and many others across all platforms.
+                  {t('epub_to_rtf.benefit_3_text')}
                 </p>
               </div>
               
               <div className="bg-purple-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">Legacy System Integration</h4>
+                <h4 className="text-xl font-semibold text-purple-900 mb-3">{t('epub_to_rtf.benefit_4_title')}</h4>
                 <p className="text-gray-700">
-                  RTF format integrates seamlessly with legacy document management systems and older software that may not support modern document formats.
+                  {t('epub_to_rtf.benefit_4_text')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_rtf.common_uses_title')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-sky-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Cross-platform Document Sharing</h4>
-                  <p className="text-gray-700">Convert e-books to RTF format for sharing documents across different operating systems and word processors with guaranteed compatibility.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_rtf.common_use_1_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_rtf.common_use_1_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Legacy System Integration</h4>
-                  <p className="text-gray-700">Integrate e-book content into legacy document management systems by converting it to RTF format for maximum compatibility.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_rtf.common_use_2_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_rtf.common_use_2_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-indigo-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Universal Document Format</h4>
-                  <p className="text-gray-700">Create universally compatible documents by converting e-books to RTF format for use across different platforms and software.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_rtf.common_use_3_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_rtf.common_use_3_text')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Content Repurposing</h4>
-                  <p className="text-gray-700">Repurpose e-book content for different purposes by converting it to RTF format for easy editing and adaptation across platforms.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_rtf.common_use_4_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_rtf.common_use_4_text')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-sky-600 to-blue-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_rtf.cta_title')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to RTF converter to transform your e-books into universally compatible documents.
+                {t('epub_to_rtf.cta_text')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-sky-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_rtf.cta_button')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-sky-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_rtf.back_to_home')}
                 </button>
               </div>
             </div>
