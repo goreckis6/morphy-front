@@ -9,6 +9,7 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
+import './translations/jpegViewerTranslations'; // Register translations
 
 export const JPEGViewer: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
@@ -124,13 +125,13 @@ export const JPEGViewer: React.FC = () => {
               {/* Quick Stats - More visible */}
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                 <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
-                  <span className="text-white text-xs sm:text-sm font-semibold">✓ Universal Format</span>
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.jpeg.quick_stats.universal_format', '✓ Universal Format')}</span>
                 </div>
                 <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
-                  <span className="text-white text-xs sm:text-sm font-semibold">⚡ Fast Processing</span>
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.jpeg.quick_stats.fast_processing', '⚡ Fast Processing')}</span>
                 </div>
                 <div className="px-2.5 sm:px-3 py-1 sm:py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-md">
-                  <span className="text-white text-xs sm:text-sm font-semibold">🎨 High Quality</span>
+                  <span className="text-white text-xs sm:text-sm font-semibold">{t('viewers.jpeg.quick_stats.high_quality', '🎨 High Quality')}</span>
                 </div>
               </div>
             </div>
@@ -177,7 +178,7 @@ export const JPEGViewer: React.FC = () => {
               >
                 <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 <Eye className="w-6 h-6 relative z-10" />
-                <span className="relative z-10">{t('viewers.jpeg.buttons.view_files', 'View Files')}</span>
+                <span className="relative z-10">{t('viewers.jpeg.buttons.view_files')}</span>
                 <Sparkles className="w-5 h-5 relative z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
             </div>
@@ -372,7 +373,7 @@ export const JPEGViewer: React.FC = () => {
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-base sm:text-lg group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-              <span>{t('viewers.jpeg.buttons.back', 'Back to All Viewers')}</span>
+              <span>{t('viewers.jpeg.buttons.back').replace(/^←\s*/, '')}</span>
             </a>
           </div>
         </div>
