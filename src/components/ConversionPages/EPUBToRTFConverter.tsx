@@ -449,11 +449,11 @@ export const EPUBToRTFConverter: React.FC = () => {
                       <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
                     ) : (
                       <AlertCircle className="w-6 h-6 text-red-500 mr-3" />
-                    )}
-                    <h4 className={`text-lg font-semibold ${
-                    {batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
-                  }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_rtf.batch_complete') : t('epub_to_rtf.batch_failed')}
+                  )}
+                  <h4 className={`text-lg font-semibold ${
+                  batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
+                }`}>
+                    {batchResults.filter(r => r.success).length > 0 ? t('epub_to_rtf.batch_complete') : t('epub_to_rtf.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${

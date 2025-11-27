@@ -1222,6 +1222,7 @@ function App() {
         <Route path="/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/viewers/jpeg/editor" element={<JPEGViewer />} />
         <Route path="/viewers/png" element={<PNGViewer />} />
+        <Route path="/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/viewers/webp" element={<WebPViewer />} />
         <Route path="/viewers/gif" element={<GIFViewer />} />
         <Route path="/viewers/svg" element={<SVGViewer />} />
@@ -1276,6 +1277,7 @@ function App() {
         <Route path="/pl/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/pl/viewers/jpeg/editor" element={<JPEGViewer />} />
         <Route path="/pl/viewers/png" element={<PNGViewer />} />
+        <Route path="/pl/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/pl/viewers/webp" element={<WebPViewer />} />
         <Route path="/pl/viewers/gif" element={<GIFViewer />} />
         <Route path="/pl/viewers/svg" element={<SVGViewer />} />
@@ -1330,6 +1332,7 @@ function App() {
         <Route path="/de/viewers/jpeg" element={<JPEGViewer />} />
         <Route path="/de/viewers/jpeg/editor" element={<JPEGViewer />} />
         <Route path="/de/viewers/png" element={<PNGViewer />} />
+        <Route path="/de/viewers/png/editor" element={<PNGViewer />} />
         <Route path="/de/viewers/webp" element={<WebPViewer />} />
         <Route path="/de/viewers/gif" element={<GIFViewer />} />
         <Route path="/de/viewers/svg" element={<SVGViewer />} />

@@ -1,18 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Image, Upload, Eye, ArrowLeft, Camera, Palette, Zap, Info, Star, Sparkles, Layers, FileImage } from 'lucide-react';
 import { FileUpload } from '../FileUpload';
 import { FileViewer } from '../FileViewer';
+import { JPGEditor } from './JPGEditor';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
+import { useTranslation } from 'react-i18next';
 import { usePathLanguageSync } from '../../hooks/usePathLanguageSync';
 
 export const PNGViewer: React.FC = () => {
-  const { t, i18n } = useTranslation();
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [viewerFile, setViewerFile] = useState<File | null>(null);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { t, i18n } = useTranslation();
   usePathLanguageSync(i18n);
+
+  // Check if URL ends with /editor and open editor if files exist
+  useEffect(() => {
+    if (location.pathname.endsWith('/editor') && selectedFiles.length > 0 && !isEditorOpen) {
+      setIsEditorOpen(true);
+    } else if (!location.pathname.endsWith('/editor') && isEditorOpen) {
+      // If URL doesn't have /editor but editor is open, close it
+      setIsEditorOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, selectedFiles.length]);
+
+  // Get the base path
+  const getBasePath = () => {
+    const path = location.pathname;
+    if (path.includes('/viewers/png')) {
+      return path.replace('/editor', '').replace(/\/viewers\/png.*/, '/viewers/png');
+    }
+    // Handle language prefixes
+    const langMatch = path.match(/\/([a-z]{2})\/viewers\/png/);
+    if (langMatch) {
+      const [, lang] = langMatch;
+      return `/${lang}/viewers/png`;
+    }
+    return '/viewers/png'; // fallback
+  };
 
   const features = t('viewers.png.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
   const advantages = t('viewers.png.advantages', { returnObjects: true }) as string[];
@@ -26,6 +57,10 @@ export const PNGViewer: React.FC = () => {
       return extension === 'png';
     });
     setSelectedFiles((prev: File[]) => [...prev, ...pngFiles]);
+  };
+
+  const handleAddFilesToEditor = (newFiles: File[]) => {
+    setSelectedFiles((prev: File[]) => [...prev, ...newFiles]);
   };
 
   return (
@@ -131,7 +166,11 @@ export const PNGViewer: React.FC = () => {
           {selectedFiles.length > 0 && (
             <div className="flex justify-center mb-8">
               <button
-                onClick={() => setViewerFile(selectedFiles[0])}
+                onClick={() => {
+                  setIsEditorOpen(true);
+                  const basePath = getBasePath();
+                  navigate(`${basePath}/editor`, { replace: true });
+                }}
                 className="group relative px-8 py-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-3 text-lg overflow-hidden"
               >
                 <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
@@ -344,6 +383,19 @@ export const PNGViewer: React.FC = () => {
         <FileViewer
           file={viewerFile}
           onClose={() => setViewerFile(null)}
+        />
+      )}
+
+      {/* PNG Editor */}
+      {isEditorOpen && (
+        <JPGEditor
+          files={selectedFiles}
+          onClose={() => {
+            setIsEditorOpen(false);
+            const basePath = getBasePath();
+            navigate(basePath, { replace: true });
+          }}
+          onAddFiles={handleAddFilesToEditor}
         />
       )}
 
