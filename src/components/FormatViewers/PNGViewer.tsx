@@ -339,16 +339,13 @@ export const PNGViewer: React.FC = () => {
       
       <Footer />
 
-        <Footer />
-
-        {/* File Viewer Modal */}
-        {viewerFile && (
-          <FileViewer
-            file={viewerFile}
-            onClose={() => setViewerFile(null)}
-          />
-        )}
-      </div>
+      {/* File Viewer Modal */}
+      {viewerFile && (
+        <FileViewer
+          file={viewerFile}
+          onClose={() => setViewerFile(null)}
+        />
+      )}
 
       {/* Custom Animations */}
       <style>{`
