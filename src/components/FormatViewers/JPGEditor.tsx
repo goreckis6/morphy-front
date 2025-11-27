@@ -23,6 +23,14 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
   const fileInputRef = useRef<HTMLInputElement>(null);
   const viewerRef = useRef<HTMLDivElement>(null);
 
+  // Prevent body scroll when editor is open
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   // Create object URLs for images
   useEffect(() => {
     const urls = new Map<string, string>();
@@ -259,7 +267,7 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
   }, [selectedIndex, filteredFiles.length, isPresentationMode, handleNext, handlePrevious, onClose, handleZoomIn, handleZoomOut, handleRotate, toggleFullscreen]);
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-white" ref={viewerRef}>
+    <div className="fixed inset-0 z-50 flex flex-col bg-white overflow-hidden" ref={viewerRef}>
       {/* Header */}
       <header className="h-12 sm:h-14 bg-gradient-to-r from-blue-600 to-purple-600 text-white flex items-center justify-between px-3 sm:px-6 shadow-md z-20">
         <div className="flex items-center gap-2 sm:gap-3">
@@ -559,6 +567,10 @@ export const JPGEditor: React.FC<JPGEditorProps> = ({ files, onClose, onAddFiles
       )}
 
       <style>{`
+        /* Hide scrollbar on main container */
+        body {
+          overflow: hidden !important;
+        }
         .scroller::-webkit-scrollbar {
           width: 4px;
         }
