@@ -1274,6 +1274,7 @@ function App() {
         <Route path="/viewers/bmp" element={<BMPViewer />} />
         <Route path="/viewers/bmp/editor" element={<BMPViewer />} />
         <Route path="/viewers/ico" element={<ICOViewer />} />
+        <Route path="/viewers/ico/editor" element={<ICOViewer />} />
         <Route path="/viewers/heic" element={<HEICViewer />} />
         <Route path="/viewers/heif" element={<HEICViewer />} />
         <Route path="/viewers/avif" element={<AVIFViewer />} />
@@ -1333,6 +1334,7 @@ function App() {
         <Route path="/pl/viewers/bmp" element={<BMPViewer />} />
         <Route path="/pl/viewers/bmp/editor" element={<BMPViewer />} />
         <Route path="/pl/viewers/ico" element={<ICOViewer />} />
+        <Route path="/pl/viewers/ico/editor" element={<ICOViewer />} />
         <Route path="/pl/viewers/heic" element={<HEICViewer />} />
         <Route path="/pl/viewers/heif" element={<HEICViewer />} />
         <Route path="/pl/viewers/avif" element={<AVIFViewer />} />
@@ -1392,6 +1394,7 @@ function App() {
         <Route path="/de/viewers/bmp" element={<BMPViewer />} />
         <Route path="/de/viewers/bmp/editor" element={<BMPViewer />} />
         <Route path="/de/viewers/ico" element={<ICOViewer />} />
+        <Route path="/de/viewers/ico/editor" element={<ICOViewer />} />
         <Route path="/de/viewers/heic" element={<HEICViewer />} />
         <Route path="/de/viewers/heif" element={<HEICViewer />} />
         <Route path="/de/viewers/avif" element={<AVIFViewer />} />
@@ -1783,6 +1786,62 @@ function App() {
         {/* Chinese (ZH) BMP Viewer Routes */}
         <Route path="/zh/viewers/bmp" element={<BMPViewer />} />
         <Route path="/zh/viewers/bmp/editor" element={<BMPViewer />} />
+
+        {/* Indonesian (ID) ICO Viewer Routes */}
+        <Route path="/id/viewers/ico" element={<ICOViewer />} />
+        <Route path="/id/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Swedish (SV) ICO Viewer Routes */}
+        <Route path="/sv/viewers/ico" element={<ICOViewer />} />
+        <Route path="/sv/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Spanish (ES) ICO Viewer Routes */}
+        <Route path="/es/viewers/ico" element={<ICOViewer />} />
+        <Route path="/es/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* French (FR) ICO Viewer Routes */}
+        <Route path="/fr/viewers/ico" element={<ICOViewer />} />
+        <Route path="/fr/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Italian (IT) ICO Viewer Routes */}
+        <Route path="/it/viewers/ico" element={<ICOViewer />} />
+        <Route path="/it/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Dutch (NL) ICO Viewer Routes */}
+        <Route path="/nl/viewers/ico" element={<ICOViewer />} />
+        <Route path="/nl/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Portuguese (PT) ICO Viewer Routes */}
+        <Route path="/pt/viewers/ico" element={<ICOViewer />} />
+        <Route path="/pt/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Vietnamese (VI) ICO Viewer Routes */}
+        <Route path="/vi/viewers/ico" element={<ICOViewer />} />
+        <Route path="/vi/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Turkish (TR) ICO Viewer Routes */}
+        <Route path="/tr/viewers/ico" element={<ICOViewer />} />
+        <Route path="/tr/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Russian (RU) ICO Viewer Routes */}
+        <Route path="/ru/viewers/ico" element={<ICOViewer />} />
+        <Route path="/ru/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Arabic (AR) ICO Viewer Routes */}
+        <Route path="/ar/viewers/ico" element={<ICOViewer />} />
+        <Route path="/ar/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Thai (TH) ICO Viewer Routes */}
+        <Route path="/th/viewers/ico" element={<ICOViewer />} />
+        <Route path="/th/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Japanese (JA) ICO Viewer Routes */}
+        <Route path="/ja/viewers/ico" element={<ICOViewer />} />
+        <Route path="/ja/viewers/ico/editor" element={<ICOViewer />} />
+
+        {/* Chinese (ZH) ICO Viewer Routes */}
+        <Route path="/zh/viewers/ico" element={<ICOViewer />} />
+        <Route path="/zh/viewers/ico/editor" element={<ICOViewer />} />
 
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />
