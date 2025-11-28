@@ -1254,6 +1254,7 @@ function App() {
         <Route path="/viewers/webp" element={<WebPViewer />} />
         <Route path="/viewers/webp/editor" element={<WebPViewer />} />
         <Route path="/viewers/gif" element={<GIFViewer />} />
+        <Route path="/viewers/gif/editor" element={<GIFViewer />} />
         <Route path="/viewers/svg" element={<SVGViewer />} />
         <Route path="/viewers/bmp" element={<BMPViewer />} />
         <Route path="/viewers/ico" element={<ICOViewer />} />
@@ -1310,6 +1311,7 @@ function App() {
         <Route path="/pl/viewers/webp" element={<WebPViewer />} />
         <Route path="/pl/viewers/webp/editor" element={<WebPViewer />} />
         <Route path="/pl/viewers/gif" element={<GIFViewer />} />
+        <Route path="/pl/viewers/gif/editor" element={<GIFViewer />} />
         <Route path="/pl/viewers/svg" element={<SVGViewer />} />
         <Route path="/pl/viewers/bmp" element={<BMPViewer />} />
         <Route path="/pl/viewers/ico" element={<ICOViewer />} />
@@ -1366,6 +1368,7 @@ function App() {
         <Route path="/de/viewers/webp" element={<WebPViewer />} />
         <Route path="/de/viewers/webp/editor" element={<WebPViewer />} />
         <Route path="/de/viewers/gif" element={<GIFViewer />} />
+        <Route path="/de/viewers/gif/editor" element={<GIFViewer />} />
         <Route path="/de/viewers/svg" element={<SVGViewer />} />
         <Route path="/de/viewers/bmp" element={<BMPViewer />} />
         <Route path="/de/viewers/ico" element={<ICOViewer />} />
@@ -1592,6 +1595,62 @@ function App() {
         {/* Chinese (ZH) WebP Viewer Routes */}
         <Route path="/zh/viewers/webp" element={<WebPViewer />} />
         <Route path="/zh/viewers/webp/editor" element={<WebPViewer />} />
+
+        {/* Indonesian (ID) GIF Viewer Routes */}
+        <Route path="/id/viewers/gif" element={<GIFViewer />} />
+        <Route path="/id/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Swedish (SV) GIF Viewer Routes */}
+        <Route path="/sv/viewers/gif" element={<GIFViewer />} />
+        <Route path="/sv/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Spanish (ES) GIF Viewer Routes */}
+        <Route path="/es/viewers/gif" element={<GIFViewer />} />
+        <Route path="/es/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* French (FR) GIF Viewer Routes */}
+        <Route path="/fr/viewers/gif" element={<GIFViewer />} />
+        <Route path="/fr/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Italian (IT) GIF Viewer Routes */}
+        <Route path="/it/viewers/gif" element={<GIFViewer />} />
+        <Route path="/it/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Dutch (NL) GIF Viewer Routes */}
+        <Route path="/nl/viewers/gif" element={<GIFViewer />} />
+        <Route path="/nl/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Portuguese (PT) GIF Viewer Routes */}
+        <Route path="/pt/viewers/gif" element={<GIFViewer />} />
+        <Route path="/pt/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Vietnamese (VI) GIF Viewer Routes */}
+        <Route path="/vi/viewers/gif" element={<GIFViewer />} />
+        <Route path="/vi/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Turkish (TR) GIF Viewer Routes */}
+        <Route path="/tr/viewers/gif" element={<GIFViewer />} />
+        <Route path="/tr/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Russian (RU) GIF Viewer Routes */}
+        <Route path="/ru/viewers/gif" element={<GIFViewer />} />
+        <Route path="/ru/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Arabic (AR) GIF Viewer Routes */}
+        <Route path="/ar/viewers/gif" element={<GIFViewer />} />
+        <Route path="/ar/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Thai (TH) GIF Viewer Routes */}
+        <Route path="/th/viewers/gif" element={<GIFViewer />} />
+        <Route path="/th/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Japanese (JA) GIF Viewer Routes */}
+        <Route path="/ja/viewers/gif" element={<GIFViewer />} />
+        <Route path="/ja/viewers/gif/editor" element={<GIFViewer />} />
+
+        {/* Chinese (ZH) GIF Viewer Routes */}
+        <Route path="/zh/viewers/gif" element={<GIFViewer />} />
+        <Route path="/zh/viewers/gif/editor" element={<GIFViewer />} />
 
         {/* Compression Routes */}
         <Route path="/compress/jpg" element={<JPGCompressor />} />

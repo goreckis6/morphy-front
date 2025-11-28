@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import { apiService } from '../../services/api';
 import { Header } from '../Header';
 import { Footer } from '../Footer';
@@ -22,6 +23,7 @@ import {
 } from 'lucide-react';
 
 export const EPUBToXLSXConverter: React.FC = () => {
+  const { t } = useTranslation();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [convertedFile, setConvertedFile] = useState<Blob | null>(null);
   const [convertedFilename, setConvertedFilename] = useState<string | null>(null);
@@ -217,9 +219,9 @@ export const EPUBToXLSXConverter: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Free EPUB to XLSX Converter - Convert eBooks to Excel Format</title>
-        <meta name="description" content="Free EPUB to XLSX converter. Convert EPUB ebook files to XLSX spreadsheet format. Extract ebook metadata and content into Excel-compatible format. Free online tool." />
-        <meta name="keywords" content="EPUB to XLSX, ebook to Excel, spreadsheet converter, Excel format" />
+        <title>{t('epub_to_xlsx.meta_title')}</title>
+        <meta name="description" content={t('epub_to_xlsx.meta_description')} />
+        <meta name="keywords" content={t('epub_to_xlsx.meta_keywords')} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
       <Header />
@@ -230,23 +232,23 @@ export const EPUBToXLSXConverter: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              EPUB to XLSX Converter
+              {t('epub_to_xlsx.heading')}
             </h1>
             <p className="text-lg sm:text-xl text-green-100 mb-6 max-w-2xl mx-auto">
-              Convert EPUB e-book files to Excel XLSX format for data analysis. Extract tabular data and metadata from e-books and transform into spreadsheet format.
+              {t('epub_to_xlsx.subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-green-200">
               <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4" />
-                <span>Lightning Fast</span>
+                <span>{t('epub_to_xlsx.badge_fast')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />
-                <span>100% Secure</span>
+                <span>{t('epub_to_xlsx.badge_secure')}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                <span>No Registration</span>
+                <span>{t('epub_to_xlsx.badge_no_registration')}</span>
               </div>
             </div>
           </div>
@@ -271,7 +273,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   }`}
                 >
                   <FileText className="w-5 h-5 inline mr-2" />
-                  Single File
+                  {t('epub_to_xlsx.mode_single')}
                 </button>
                 <button
                   onClick={handleSwitchToBatch}
@@ -282,7 +284,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   }`}
                 >
                   <FileImage className="w-5 h-5 inline mr-2" />
-                  Batch Convert
+                  {t('epub_to_xlsx.mode_batch')}
                 </button>
               </div>
 
@@ -290,22 +292,22 @@ export const EPUBToXLSXConverter: React.FC = () => {
               <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-green-400 transition-colors">
                 <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {batchMode ? 'Upload Multiple EPUB Files' : 'Upload EPUB File'}
+                  {batchMode ? t('epub_to_xlsx.upload_multiple') : t('epub_to_xlsx.upload_single')}
                 </h3>
                 <p className="text-gray-600 mb-4">
                   {batchMode 
-                    ? 'Select multiple EPUB files to convert them all at once' 
-                    : 'Drag and drop your EPUB file here or click to browse'
+                    ? t('epub_to_xlsx.upload_multiple_desc')
+                    : t('epub_to_xlsx.upload_single_desc')
                   }
                 </p>
                 {!batchMode && (
                   <p className="text-sm text-green-600 mb-4">
-                    Single file limit: 100.00 MB per file.
+                    {t('epub_to_xlsx.file_limit_single')}
                   </p>
                 )}
                 {batchMode && (
                   <p className="text-sm text-green-600 mb-4">
-                    Batch conversion supports up to 20 files, 100.00 MB per file, 100.00 MB total.
+                    {t('epub_to_xlsx.file_limit_batch')}
                   </p>
                 )}
                 <input
@@ -320,14 +322,14 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
                 >
-                  Choose Files
+                  {t('epub_to_xlsx.choose_files')}
                 </button>
               </div>
 
               {/* File Preview */}
               {previewUrl && !batchMode && (
                 <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Preview</h4>
+                  <h4 className="text-lg font-semibold mb-4">{t('epub_to_xlsx.preview')}</h4>
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="flex items-center justify-center h-32 bg-gray-100 rounded">
                       <BookOpen className="w-12 h-12 text-gray-400" />
@@ -348,7 +350,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     return (
                       <>
                         <div className="flex items-center justify-between mb-4">
-                          <h4 className="text-lg font-semibold">Selected Files ({batchFiles.length})</h4>
+                          <h4 className="text-lg font-semibold">{t('epub_to_xlsx.selected_files', { count: batchFiles.length })}</h4>
                           <div className={`text-sm font-medium ${sizeDisplay.isWarning ? 'text-orange-600' : 'text-gray-600'}`}>
                             {sizeDisplay.text}
                           </div>
@@ -358,7 +360,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                             <div className="flex items-center">
                               <AlertCircle className="w-4 h-4 text-orange-500 mr-2" />
                               <span className="text-sm text-orange-700">
-                                Batch size is getting close to the 100MB limit. Consider processing fewer files for better performance.
+                                {t('epub_to_xlsx.batch_size_warning')}
                               </span>
                             </div>
                           </div>
@@ -395,12 +397,12 @@ export const EPUBToXLSXConverter: React.FC = () => {
                   {isConverting ? (
                     <div className="flex items-center justify-center">
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Converting...
+                      {t('epub_to_xlsx.converting')}
                     </div>
                   ) : (
                     <div className="flex items-center justify-center">
                       <Zap className="w-5 h-5 mr-2" />
-                      {batchMode ? `Convert ${batchFiles.length} Files` : 'Convert to XLSX'}
+                      {batchMode ? t('epub_to_xlsx.convert_files', { count: batchFiles.length }) : t('epub_to_xlsx.convert_button')}
                     </div>
                   )}
                 </button>
@@ -411,10 +413,10 @@ export const EPUBToXLSXConverter: React.FC = () => {
                 <div className="mt-6 p-6 rounded-xl border bg-green-50 border-green-200">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
-                    <h4 className="text-lg font-semibold text-green-800">Conversion Complete!</h4>
+                    <h4 className="text-lg font-semibold text-green-800">{t('epub_to_xlsx.conversion_complete')}</h4>
                   </div>
                   <p className="text-green-700 mb-4">
-                    Your EPUB file has been successfully converted to XLSX format.
+                    {t('epub_to_xlsx.conversion_success')}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <button
@@ -422,14 +424,14 @@ export const EPUBToXLSXConverter: React.FC = () => {
                       className="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Download XLSX File
+                      {t('epub_to_xlsx.download_xlsx')}
                     </button>
                     <button
                       onClick={resetForm}
                       className="flex-1 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                     >
                       <RefreshCw className="w-5 h-5 mr-2" />
-                      Convert Another
+                      {t('epub_to_xlsx.convert_another')}
                     </button>
                   </div>
                 </div>
@@ -452,13 +454,16 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     <h4 className={`text-lg font-semibold ${
                       batchResults.filter(r => r.success).length > 0 ? 'text-green-800' : 'text-red-800'
                     }`}>
-                      {batchResults.filter(r => r.success).length > 0 ? 'Batch Conversion Complete!' : 'Batch Conversion Failed'}
+                      {batchResults.filter(r => r.success).length > 0 ? t('epub_to_xlsx.batch_complete') : t('epub_to_xlsx.batch_failed')}
                     </h4>
                   </div>
                   <p className={`mb-4 ${
                     batchResults.filter(r => r.success).length > 0 ? 'text-green-700' : 'text-red-700'
                   }`}>
-                    {batchResults.filter(r => r.success).length} of {batchResults.length} files converted successfully.
+                    {t('epub_to_xlsx.batch_summary', {
+                      success: batchResults.filter(r => r.success).length,
+                      total: batchResults.length
+                    })}
                   </p>
                   <div className="space-y-2 max-h-60 overflow-y-auto">
                     {batchResults.map((result, index) => (
@@ -501,7 +506,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     className="w-full mt-4 bg-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center justify-center"
                   >
                     <RefreshCw className="w-5 h-5 mr-2" />
-                    Convert More Files
+                    {t('epub_to_xlsx.convert_more')}
                   </button>
                 </div>
               )}</div>
@@ -514,22 +519,22 @@ export const EPUBToXLSXConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Settings className="w-5 h-5 mr-2 text-green-600" />
-                XLSX Settings
+                {t('epub_to_xlsx.settings_title')}
               </h3>
               
               {/* Data Format */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Data Format
+                  {t('epub_to_xlsx.settings_data_format_label')}
                 </label>
                 <select
                   value={dataFormat}
                   onChange={(e) => setDataFormat(e.target.value as 'structured' | 'flat' | 'mixed')}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
                 >
-                  <option value="structured">Structured (Tables & Metadata)</option>
-                  <option value="flat">Flat (Single Sheet)</option>
-                  <option value="mixed">Mixed (Multiple Sheets)</option>
+                  <option value="structured">{t('epub_to_xlsx.settings_data_format_structured')}</option>
+                  <option value="flat">{t('epub_to_xlsx.settings_data_format_flat')}</option>
+                  <option value="mixed">{t('epub_to_xlsx.settings_data_format_mixed')}</option>
                 </select>
               </div>
 
@@ -542,7 +547,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     onChange={(e) => setExtractTables(e.target.checked)}
                     className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Extract table data</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_xlsx.settings_extract_tables')}</span>
                 </label>
               </div>
 
@@ -555,7 +560,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     onChange={(e) => setIncludeMetadata(e.target.checked)}
                     className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include book metadata</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_xlsx.settings_include_metadata')}</span>
                 </label>
               </div>
 
@@ -568,7 +573,7 @@ export const EPUBToXLSXConverter: React.FC = () => {
                     onChange={(e) => setIncludeChapters(e.target.checked)}
                     className="rounded border-gray-300 text-green-600 focus:ring-green-500"
                   />
-                  <span className="ml-2 text-sm text-gray-700">Include chapter structure</span>
+                  <span className="ml-2 text-sm text-gray-700">{t('epub_to_xlsx.settings_include_chapters')}</span>
                 </label>
               </div>
             </div>
@@ -577,16 +582,16 @@ export const EPUBToXLSXConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <Star className="w-5 h-5 mr-2 text-yellow-500" />
-                Why Choose Our Converter?
+                {t('epub_to_xlsx.features_title')}
               </h3>
               <div className="space-y-4">
                 {[
-                  "E-book data extraction",
-                  "Excel spreadsheet creation",
-                  "Data analysis ready",
-                  "Metadata processing",
-                  "Modern spreadsheet features",
-                  "Batch processing support"
+                  t('epub_to_xlsx.feature_1'),
+                  t('epub_to_xlsx.feature_2'),
+                  t('epub_to_xlsx.feature_3'),
+                  t('epub_to_xlsx.feature_4'),
+                  t('epub_to_xlsx.feature_5'),
+                  t('epub_to_xlsx.feature_6')
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -600,16 +605,16 @@ export const EPUBToXLSXConverter: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-6">
               <h3 className="text-xl font-semibold mb-6 flex items-center">
                 <BarChart3 className="w-5 h-5 mr-2 text-green-600" />
-                Perfect For
+                {t('epub_to_xlsx.use_cases_title')}
               </h3>
               <div className="space-y-3">
                 {[
-                  "E-book content analysis",
-                  "Digital library management",
-                  "Metadata processing",
-                  "Data analysis workflows",
-                  "Content management systems",
-                  "Research data collection"
+                  t('epub_to_xlsx.use_case_1'),
+                  t('epub_to_xlsx.use_case_2'),
+                  t('epub_to_xlsx.use_case_3'),
+                  t('epub_to_xlsx.use_case_4'),
+                  t('epub_to_xlsx.use_case_5'),
+                  t('epub_to_xlsx.use_case_6')
                 ].map((useCase, index) => (
                   <div key={index} className="flex items-center">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -627,106 +632,106 @@ export const EPUBToXLSXConverter: React.FC = () => {
             onClick={handleBack}
             className="bg-gray-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
           >
-            ← Back to Home
+            {t('epub_to_xlsx.back_button')}
           </button>
         </div>
 
         {/* SEO Content Section */}
         <div className="mt-16 bg-white rounded-2xl shadow-xl p-8 sm:p-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Why Convert EPUB to XLSX?
+            {t('epub_to_xlsx.seo_heading')}
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Converting EPUB e-book files to Excel XLSX format is essential for e-book content analysis, digital library management, and data analysis workflows. While EPUB files are excellent for reading, XLSX format provides powerful data analysis capabilities, enabling you to extract, organize, and analyze e-book content, metadata, and structured data for research, management, and analytical purposes.
+              {t('epub_to_xlsx.seo_intro')}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Key Benefits of XLSX Format</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_xlsx.seo_benefits_heading')}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">Excel Spreadsheet Creation</h4>
+                <h4 className="text-xl font-semibold text-green-900 mb-3">{t('epub_to_xlsx.seo_benefit_1_title')}</h4>
                 <p className="text-gray-700">
-                  XLSX files are fully compatible with Microsoft Excel and other spreadsheet applications, providing powerful data analysis and visualization capabilities.
+                  {t('epub_to_xlsx.seo_benefit_1_desc')}
                 </p>
               </div>
               
               <div className="bg-emerald-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-emerald-900 mb-3">Data Analysis Ready</h4>
+                <h4 className="text-xl font-semibold text-emerald-900 mb-3">{t('epub_to_xlsx.seo_benefit_2_title')}</h4>
                 <p className="text-gray-700">
-                  XLSX format enables advanced data analysis including sorting, filtering, formulas, charts, and pivot tables for comprehensive e-book content analysis.
+                  {t('epub_to_xlsx.seo_benefit_2_desc')}
                 </p>
               </div>
               
               <div className="bg-teal-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-teal-900 mb-3">Metadata Processing</h4>
+                <h4 className="text-xl font-semibold text-teal-900 mb-3">{t('epub_to_xlsx.seo_benefit_3_title')}</h4>
                 <p className="text-gray-700">
-                  XLSX format can contain structured metadata from e-books, making it ideal for digital library management and cataloging systems.
+                  {t('epub_to_xlsx.seo_benefit_3_desc')}
                 </p>
               </div>
               
               <div className="bg-cyan-50 p-6 rounded-lg">
-                <h4 className="text-xl font-semibold text-cyan-900 mb-3">Modern Spreadsheet Features</h4>
+                <h4 className="text-xl font-semibold text-cyan-900 mb-3">{t('epub_to_xlsx.seo_benefit_4_title')}</h4>
                 <p className="text-gray-700">
-                  XLSX format supports modern spreadsheet features including multiple sheets, advanced formatting, and integration with business intelligence tools.
+                  {t('epub_to_xlsx.seo_benefit_4_desc')}
                 </p>
               </div>
             </div>
 
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">Common Use Cases</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 mt-8">{t('epub_to_xlsx.seo_use_cases_heading')}</h3>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">E-book Content Analysis</h4>
-                  <p className="text-gray-700">Analyze e-book content by converting it to XLSX format for use with Excel's powerful data analysis and visualization tools.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_xlsx.seo_use_case_1_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_xlsx.seo_use_case_1_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Digital Library Management</h4>
-                  <p className="text-gray-700">Manage digital library collections by converting e-book metadata to XLSX format for cataloging and organization systems.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_xlsx.seo_use_case_2_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_xlsx.seo_use_case_2_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Data Analysis Workflows</h4>
-                  <p className="text-gray-700">Integrate e-book content into data analysis workflows by converting it to XLSX format for use with analytical tools and processes.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_xlsx.seo_use_case_3_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_xlsx.seo_use_case_3_desc')}</p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Research Data Collection</h4>
-                  <p className="text-gray-700">Collect research data from e-books by converting them to XLSX format for systematic analysis and research purposes.</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t('epub_to_xlsx.seo_use_case_4_title')}</h4>
+                  <p className="text-gray-700">{t('epub_to_xlsx.seo_use_case_4_desc')}</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Convert Your EPUB Files?</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('epub_to_xlsx.seo_cta_heading')}</h3>
               <p className="text-lg mb-6 opacity-90">
-                Use our free online EPUB to XLSX converter to transform your e-books into data-ready Excel spreadsheets.
+                {t('epub_to_xlsx.seo_cta_description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Converting Now
+                  {t('epub_to_xlsx.seo_cta_start')}
                 </button>
                 <button
                   onClick={handleBack}
                   className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                 >
-                  Back to Home
+                  {t('epub_to_xlsx.seo_cta_back')}
                 </button>
               </div>
             </div>
