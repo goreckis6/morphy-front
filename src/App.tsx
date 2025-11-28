@@ -926,71 +926,85 @@ function App() {
         <Route path="/id/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/id/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/id/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/id/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/sv/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/sv/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/sv/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/sv/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/sv/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/sv/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/es/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/es/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/es/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/es/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/es/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/es/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/fr/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/fr/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/fr/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/fr/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/fr/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/fr/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/it/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/it/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/it/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/it/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/it/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/it/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/nl/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/nl/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/nl/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/nl/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/nl/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/nl/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/pt/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/pt/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/pt/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/pt/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/pt/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/pt/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/vi/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/vi/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/vi/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/vi/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/vi/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/vi/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/tr/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/tr/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/tr/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/tr/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/tr/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/tr/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/ru/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/ru/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/ru/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/ru/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/ru/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/ru/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/ar/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/ar/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/ar/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/ar/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/ar/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/ar/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/th/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/th/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/th/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/th/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/th/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/th/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/ja/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/ja/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/ja/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/ja/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/ja/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/ja/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
         <Route path="/zh/convert/epub-to-pdf" element={<EPUBToPDFConverter />} />
         <Route path="/zh/convert/epub-to-ppt" element={<EPUBToPPTConverter />} />
         <Route path="/zh/convert/epub-to-pptx" element={<EPUBToPPTXConverter />} />
         <Route path="/zh/convert/epub-to-rtf" element={<EPUBToRTFConverter />} />
         <Route path="/zh/convert/epub-to-txt" element={<EPUBToTXTConverter />} />
+        <Route path="/zh/convert/epub-to-xlsx" element={<EPUBToXLSXConverter />} />
 
         {/* New Languages Converter Routes - CR2 to ICO */}
         <Route path="/id/convert/cr2-to-ico" element={<CR2ToICOConverter />} />
